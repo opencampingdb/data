@@ -18,22 +18,29 @@ Keeps nodes, closed ways and multipolygon relations that `pipeline.kinds`
 classifies as a place (see "Kind" below). A node is placed at its own
 position. A closed way or a multipolygon relation is placed at the centroid of
 its area, with holes taken out, so `osm.type` is `node`, `way` or `relation`.
-pyosmium's area handler assembles the multipolygons. Relations of any other
-type (such as `type=site`), ways that are not closed, and objects with missing
-node locations are skipped, with one exception: an open way that is a
-`boat_ramp` or an `attraction` (slipways and walls are often drawn as lines)
-is placed at its middle vertex, node number `len(nodes) // 2` counting from
-0. Coordinates are rounded to 6 decimal places.
+pyosmium's area handler assembles the multipolygons. A `type=site` relation
+with a kind tag is a place too (`osm.type` is `relation`). It is placed at the
+mean of its members' positions: a member node's location, a member way's
+centroid (the area centroid of a closed way, the mean of the nodes of an open
+one) and the area centroid of a member multipolygon. Nested site relations are
+not followed. Relations of any other type, ways that are not closed, and
+objects with missing node locations are skipped, with one exception: an open
+way that is a `boat_ramp` or an `attraction` (slipways and walls are often
+drawn as lines) is placed at its middle vertex, node number `len(nodes) // 2`
+counting from 0. Coordinates are rounded to 6 decimal places.
 
 The centroid treats degrees as flat x and y, which is close enough over the
 size of a camp ground. A shape with no area falls back to the mean of its
 outer ring points.
 
-The file is read twice. The first pass reads only ways and relations, without
+The file is read three times. A first, quick pass reads only relations and
+finds the site relations that are places, with their members. The next pass
+reads only ways and relations, without
 node locations. It notes the closed ways that are a place or a container (see
 "Containers" below), and the member ways of multipolygon and boundary
-relations that are a place or a container. Every other relation is dropped
-before the area builder sees it. The second pass reads everything with a node
+relations that are a place or a container, and the member ways and member
+multipolygons of those site relations. Every other relation is dropped before
+the area builder sees it. The second pass reads everything with a node
 location cache, and a way id filter in front of the area builder lets through
 only the ways noted in the first pass. Buildings and other untagged closed
 ways are never assembled into areas. (pyosmium's `FileProcessor.with_areas()`
