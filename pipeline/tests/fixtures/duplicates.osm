@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Possible duplicates. Test data written for this repo. The places are invented.
+     The same free camp is mapped twice: node 8001 and the closed way 8101,
+     about 40 m apart, with slightly different names. A public toilet
+     (node 8002) and a drinking water point (node 8003), both unnamed, stand
+     at the same spot and must not be paired. -->
+<osm version="0.6" generator="hand">
+  <node id="8001" version="1" lat="-35.0000000" lon="145.0000000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Lake Bend Camp"/>
+    <tag k="fee" v="no"/>
+  </node>
+  <node id="8002" version="1" lat="-35.0100000" lon="145.0100000">
+    <tag k="amenity" v="toilets"/>
+  </node>
+  <node id="8003" version="1" lat="-35.0100000" lon="145.0100000">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="8011" version="1" lat="-35.0001000" lon="145.0001000"/>
+  <node id="8012" version="1" lat="-35.0001000" lon="145.0007000"/>
+  <node id="8013" version="1" lat="-35.0007000" lon="145.0007000"/>
+  <node id="8014" version="1" lat="-35.0007000" lon="145.0001000"/>
+  <way id="8101" version="2">
+    <nd ref="8011"/>
+    <nd ref="8012"/>
+    <nd ref="8013"/>
+    <nd ref="8014"/>
+    <nd ref="8011"/>
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Lake Bend Campground"/>
+    <tag k="fee" v="no"/>
+  </way>
+</osm>

@@ -23,7 +23,7 @@ Start with the manifest:
 https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```
 
-It names its release, a `data_version`, and for each of the two data files
+It names its release, a `data_version`, and for each of the three data files
 an absolute `url`, its SHA-256, its size and its record count. Each `url`
 points at the file in that same release, for example:
 
@@ -114,9 +114,15 @@ Anything that shows this data must show:
    `status: "closed"` with `fact_sources.status` set to `"contributed"`. The
    OSM sync never changes a place without an OSM link, and keeps a
    contributed status.
-4. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
+4. **Duplicates.** After every OSM sync, likely duplicates (for example a
+   campground mapped as both a node and a way) are listed in the PR body under
+   "Possible duplicates". Nothing is merged automatically. A person merges a
+   pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR:
+   the dropped record stays as a tombstone that points at the kept one, and
+   releases list it in `merged.ndjson.gz` so apps can redirect old ids.
+5. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
    the tests, the schema and content checks, and a trial build of the release.
-5. **Release** (`.github/workflows/release.yml`) runs every hour and on
+6. **Release** (`.github/workflows/release.yml`) runs every hour and on
    demand. When `main` has changed since the newest release, it publishes the
    files described above as a new release and prunes the oldest.
 

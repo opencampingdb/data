@@ -49,9 +49,24 @@ def gzip_bytes(data: bytes) -> bytes:
 
 
 def places_ndjson(root: Path) -> tuple[bytes, int]:
-    """Every place record, one per line, sorted by id."""
+    """Every place record except merged ones (tombstones), one per line, sorted by id."""
     places = load_places(root)
-    lines = [dump_line(places[place_id]) + "\n" for place_id in sorted(places)]
+    lines = [
+        dump_line(places[place_id]) + "\n"
+        for place_id in sorted(places)
+        if places[place_id].get("status") != "merged"
+    ]
+    return "".join(lines).encode("utf-8"), len(lines)
+
+
+def merged_ndjson(root: Path) -> tuple[bytes, int]:
+    """One {"id", "merged_into"} line per tombstone, sorted by id, so apps can redirect old ids."""
+    places = load_places(root)
+    lines = [
+        dump_line({"id": place_id, "merged_into": places[place_id]["merged_into"]}) + "\n"
+        for place_id in sorted(places)
+        if places[place_id].get("status") == "merged"
+    ]
     return "".join(lines).encode("utf-8"), len(lines)
 
 
@@ -97,6 +112,7 @@ def build_release(
 
     places_raw, places_count = places_ndjson(root)
     reviews_raw, reviews_count = reviews_ndjson(root)
+    merged_raw, merged_count = merged_ndjson(root)
 
     manifest = {
         "format_version": FORMAT_VERSION,
@@ -110,6 +126,10 @@ def build_release(
         "reviews": write_asset(
             out_dir, "reviews.ndjson.gz", reviews_raw, reviews_count,
             asset_url(repository, release, "reviews.ndjson.gz"),
+        ),
+        "merged": write_asset(
+            out_dir, "merged.ndjson.gz", merged_raw, merged_count,
+            asset_url(repository, release, "merged.ndjson.gz"),
         ),
         "licence": LICENCE,
         "attribution": ATTRIBUTION,

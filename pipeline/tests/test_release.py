@@ -42,6 +42,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
 
     assert sorted(p.name for p in out.iterdir()) == [
         "manifest.json",
+        "merged.ndjson.gz",
         "places.ndjson.gz",
         "reviews.ndjson.gz",
     ]
@@ -74,7 +75,7 @@ def test_release_is_byte_identical_on_rerun(repo, v1_osm, tmp_path):
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     build(repo, tmp_path / "a")
     build(repo, tmp_path / "b")
-    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz"):
+    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "merged.ndjson.gz"):
         assert (tmp_path / "a" / name).read_bytes() == (tmp_path / "b" / name).read_bytes()
 
 

@@ -8,7 +8,9 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/manifest.json` |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Duplicates | `python -m pipeline.duplicates --root .` | `places/` | likely duplicate pairs, one JSON object per line (sync runs this too) |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/` | the kept record, a tombstone, moved reviews. Run by a person only |
 
 Tests: `python -m pytest`.
 
@@ -236,6 +238,45 @@ Review lines are compact JSON with sorted keys, one per line, sorted by
 (4.25 becomes 4.3). Python's `round()` rounds half to even, so use
 `decimal.Decimal` with `ROUND_HALF_UP`, as `pipeline.common.rating_mean` does.
 
+## Duplicates
+
+`pipeline.duplicates` finds pairs of places that are likely the same place.
+Sync runs it after every merge into `places/` and lists the pairs in the
+report under "Possible duplicates". It only flags. A pair is likely when:
+
+- both places are in the overnight group, whatever their kinds (a caravan
+  park and a paid campground can be the same place), or both have the same
+  kind (every other group);
+- they are within 200 m;
+- their names are similar: a `difflib` ratio of 0.8 or more once the names
+  are lower-cased, stripped of punctuation and of the words campground,
+  campgrounds, camping, camp, camps, area, reserve, park, caravan, holiday
+  and the. Or one of them has no name and they are within 50 m.
+
+Two utility places that both have no name are never paired, and tombstones
+are never paired. Places are bucketed in a grid of 0.0025 by 0.004 degree
+cells (at least 200 m across everywhere in Australia), so only neighbouring
+cells are compared.
+
+## Merge
+
+`python -m pipeline.merge <keep_id> <drop_id>` merges two records of one
+place. A person runs it and opens a PR with the result:
+
+- The kept record gains `merged_osm`, the dropped record's OSM link and any
+  links already merged into it, sorted. Sync matches these objects to the
+  kept record and never creates them again.
+- Facts the dropped record got from `feedback` or `contributed` move to the
+  kept record where it has no value. OSM facts do not move.
+- The dropped record's reviews move to the kept record, and the kept record's
+  rating is recalculated.
+- The dropped record stays as a tombstone: `status: "merged"` and
+  `merged_into: <keep_id>`, nothing else changed. Older tombstones that
+  pointed at the dropped record now point at the kept one.
+
+It refuses to merge a record into itself, an unknown id, or a record that is
+already merged.
+
 ## Validate
 
 Checks every place file against `schema/place.schema.json` and every review
@@ -245,7 +286,9 @@ record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
 other fact (plus optional `name`, `location` and `status`, each `osm`,
 `feedback` or `contributed`), that no two records share an
-id or an OSM object, that review lines are canonical and sorted by id, that
+id or an OSM object (counting `merged_osm`, leaving tombstones out), that a
+tombstone has a `merged_into` naming a record that is not itself merged and
+no reviews, that review lines are canonical and sorted by id, that
 each review's place exists, that each `rating` has the exact count and
 rounded mean of its reviews, and that review text has no email
 address, phone number, link, social media handle or obvious personal name.
@@ -257,7 +300,9 @@ feedback engine's moderation does the same.
 
 ## Release
 
-`places.ndjson.gz` holds every record on one line each, sorted by `id`.
+`places.ndjson.gz` holds every record except tombstones on one line each,
+sorted by `id`. `merged.ndjson.gz` holds one `{"id","merged_into"}` line per
+tombstone, sorted by `id`.
 `reviews.ndjson.gz` holds every review, grouped by place in id order. Lines
 use compact JSON with sorted keys. Gzip is written with no file name and a
 zero timestamp.
