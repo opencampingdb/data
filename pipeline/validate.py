@@ -20,6 +20,10 @@ exits 1. Checks:
 - review lines are compact JSON with sorted keys, sorted by id
 - reviews belong to a place that exists, have unique ids, and the place's
   rating has the right count and the mean rounded to 1 decimal place, half up
+- values with the source owner need owner_verified true. A farm_stay has
+  osm null, entry private, booking_required true, and a booking_url or a
+  phone. A description is checked like review text. reopens is a real date
+  and only goes with status temporarily_closed
 - review text has no email addresses, phone numbers, links, social media
   handles or obvious personal names ("my name is", sign-offs like "Cheers, Sam")
 """
@@ -28,6 +32,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
@@ -137,7 +142,45 @@ def check_place_file(root: Path, path: Path, validator) -> tuple[dict | None, li
             f"differ on {differ}"
         )
 
+    errors += owner_errors(record, where)
     return record, errors
+
+
+def owner_errors(record: dict, where: str) -> list[str]:
+    """Rules for owner values, farm stays, descriptions and temporary closures."""
+    errors = []
+    facts = record["facts"]
+
+    # Values from an owner need an owner a person has approved.
+    owned = sorted(k for k, source in record["fact_sources"].items() if source == "owner")
+    if owned and record.get("owner_verified") is not True:
+        errors.append(f"{where}: {owned} have the source owner, so owner_verified must be true")
+
+    # A farm stay is private land listed by its owner, booked before arriving.
+    if record["kind"] == "farm_stay":
+        if record["osm"] is not None:
+            errors.append(f"{where}: a farm_stay is listed by its owner, so osm must be null")
+        if facts.get("entry") != "private":
+            errors.append(f"{where}: a farm_stay must have the fact entry private")
+        if facts.get("booking_required") is not True:
+            errors.append(f"{where}: a farm_stay must have the fact booking_required true")
+        if "booking_url" not in facts and "phone" not in facts:
+            errors.append(f"{where}: a farm_stay needs a booking_url or a phone fact")
+
+    # The description is published, so it is checked like review text.
+    if "description" in record:
+        for reason in text_problems(record["description"]):
+            errors.append(f"{where}: description contains {reason}")
+
+    # reopens goes with a temporary closure, and is a real date.
+    if "reopens" in record:
+        if record["status"] != "temporarily_closed":
+            errors.append(f"{where}: reopens is set but status is not temporarily_closed")
+        try:
+            date.fromisoformat(record["reopens"])
+        except ValueError:
+            errors.append(f"{where}: reopens {record['reopens']} is not a real date")
+    return errors
 
 
 def check_places(root: Path) -> tuple[dict[str, dict], list[str]]:
