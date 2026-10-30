@@ -253,8 +253,10 @@ report under "Possible duplicates". It only flags. A pair is likely when:
   campgrounds, camping, camp, camps, area, reserve, park, caravan, holiday
   and the. Or one of them has no name and they are within 50 m.
 
-Two utility places that both have no name are never paired, and tombstones
-are never paired. Places are bucketed in a grid of 0.0025 by 0.004 degree
+Never paired: two utility places that both have no name, two overnight
+places that both have no name (often parts or pitches of one park), two
+places whose names differ only in their numbers unless the numbers are equal
+("Site 20" and "Site 26" are separate pitches), and tombstones. Places are bucketed in a grid of 0.0025 by 0.004 degree
 cells (at least 200 m across everywhere in Australia), so only neighbouring
 cells are compared.
 

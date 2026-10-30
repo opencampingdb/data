@@ -319,3 +319,21 @@ def test_validate_refuses_an_osm_object_claimed_twice(pair):
     other["osm"] = {"type": "way", "id": 8101, "version": 2}
     write(repo, other)
     assert any("same OSM object" in e for e in validate_repo(repo))
+
+
+def test_names_that_differ_only_in_numbers_are_not_a_pair():
+    a = place("ocdb_A", "campground", "Site 20")
+    b = place("ocdb_B", "campground", "Site 26", lat=-35.0 - 30 * M)
+    assert find_duplicates([a, b]) == []
+
+
+def test_names_with_equal_numbers_still_pair():
+    a = place("ocdb_A", "campground", "Site 20")
+    b = place("ocdb_B", "campground", "Site 20 Camping Area", lat=-35.0 - 30 * M)
+    assert ids(find_duplicates([a, b])) == {("ocdb_A", "ocdb_B")}
+
+
+def test_two_unnamed_overnight_places_are_never_paired():
+    a = place("ocdb_A", "caravan_park", None)
+    b = place("ocdb_B", "caravan_park", None, lat=-35.0 - 10 * M)
+    assert find_duplicates([a, b]) == []

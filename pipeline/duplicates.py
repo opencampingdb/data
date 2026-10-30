@@ -14,9 +14,13 @@ Two places are a likely duplicate when all of these hold:
 - Their names are similar (a ratio of 0.8 or more once generic words such as
   "campground" or "caravan park" are removed), or one of them has no name and
   they are within 50 m.
-Two utility places that both have no name are never paired: unnamed toilets
-and taps often stand side by side. Merged records (tombstones) are never
-paired.
+Never paired:
+- two utility places that both have no name (unnamed toilets and taps often
+  stand side by side) or two overnight places that both have no name (often
+  separate parts or pitches of one park);
+- two places whose names differ only in their numbers, unless the numbers
+  are equal ("Site 20" and "Site 26" are separate pitches);
+- merged records (tombstones).
 """
 
 import argparse
@@ -62,6 +66,14 @@ def distance_m(a: dict, b: dict) -> float:
     return 2 * 6_371_008.8 * math.asin(math.sqrt(h))
 
 
+NUMBER = re.compile(r"\d+")
+
+
+def differ_only_in_numbers(a: str, b: str) -> bool:
+    """True when two normalised names are the same apart from different numbers."""
+    return NUMBER.sub("#", a) == NUMBER.sub("#", b) and NUMBER.findall(a) != NUMBER.findall(b)
+
+
 def comparable(a: dict, b: dict) -> bool:
     if a["group"] == "overnight" and b["group"] == "overnight":
         return True
@@ -72,11 +84,13 @@ def likely_duplicate(a: dict, b: dict, distance: float) -> bool:
     if distance > MAX_DISTANCE_M or not comparable(a, b):
         return False
     if a["name"] is None or b["name"] is None:
-        if a["name"] is None and b["name"] is None and a["group"] == "utility":
+        if a["name"] is None and b["name"] is None and a["group"] in ("utility", "overnight"):
             return False
         return distance <= UNNAMED_MAX_DISTANCE_M
-    ratio = SequenceMatcher(None, normalise_name(a["name"]), normalise_name(b["name"])).ratio()
-    return ratio >= NAME_RATIO
+    name_a, name_b = normalise_name(a["name"]), normalise_name(b["name"])
+    if differ_only_in_numbers(name_a, name_b):
+        return False
+    return SequenceMatcher(None, name_a, name_b).ratio() >= NAME_RATIO
 
 
 def find_duplicates(records: list[dict]) -> list[dict]:
