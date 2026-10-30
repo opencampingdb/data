@@ -16,7 +16,7 @@ def test_keeps_only_spec_tags_and_skips_relations_and_open_ways(v1_osm):
     records = extract_file(v1_osm)
     keys = sorted(by_osm(records))
     # node 1003 has no tags, node 1005 is a bench, way 2002 is not closed,
-    # relation 4001 is not a multipolygon. None of them belong in the extract.
+    # relation 4001 is a type=route relation. None of them belong in the extract.
     # The area pyosmium builds from closed way 2001 is not a second record.
     assert keys == [("node", 1001), ("node", 1002), ("way", 2001)]
 
@@ -106,7 +106,7 @@ def test_fact_value_parsing():
 
 def test_multipolygon_relation_uses_centroid_of_its_area():
     records = extract_file(MULTIPOLYGON)
-    # Relation 4002 is tagged camp_site but is not a multipolygon: skipped.
+    # Relation 4002 is tagged camp_site but is a type=route relation: skipped.
     # The untagged member ways are not places either.
     assert [(r["osm"]["type"], r["osm"]["id"]) for r in records] == [("relation", 4001)]
     camp = records[0]
@@ -144,7 +144,7 @@ def test_area_builder_only_gets_ways_it_needs():
 
 def test_tagged_closed_way_also_passes_the_area_gate(v1_osm):
     # The camp site way 2001 must still reach the extract loop. It is the
-    # only way let through: the open way 2002 is not closed and the type=site
+    # only way let through: the open way 2002 is not closed and the type=route
     # relation has no multipolygon members.
     stats = {}
     records = extract_file(v1_osm, stats)
@@ -263,3 +263,43 @@ def test_open_way_boat_ramps_and_attractions_sit_at_their_middle_vertex():
     assert ("way", 3903) not in records
     assert stats["open_way_places"] == 2
     assert stats["open_ways"] == 1
+
+
+SITES = FIXTURES / "sites.osm"
+
+
+def test_site_relations_with_a_kind_tag_are_places():
+    records = by_osm(extract_file(SITES))
+    assert sorted(records) == [("relation", 7001), ("relation", 7002)]
+
+    camp = records[("relation", 7001)]
+    assert camp["kind"] == "free_camp"
+    assert camp["name"] == "Fixture Site Camp"
+    assert camp["osm"] == {"type": "relation", "id": 7001, "version": 3}
+    # Mean of the member positions: node 7101 (-36.0, 141.0), the centroid of
+    # closed way 7201 (-36.015, 141.015) and the centroid of the area of
+    # multipolygon 7301 (-36.035, 141.035).
+    assert camp["location"] == {"lat": -36.016667, "lon": 141.016667}
+
+    toilet = records[("relation", 7002)]
+    assert toilet["kind"] == "public_toilet"
+    # The only member is the open way 7203: the mean of its two nodes.
+    assert toilet["location"] == {"lat": -36.105, "lon": 141.105}
+
+
+def test_site_relation_members_are_not_places_themselves():
+    records = by_osm(extract_file(SITES))
+    for member in (("node", 7101), ("way", 7201), ("relation", 7301), ("way", 7203)):
+        assert member not in records
+
+
+def test_site_relations_without_a_kind_tag_and_other_types_are_skipped():
+    ids = {r["osm"]["id"] for r in extract_file(SITES)}
+    assert 7003 not in ids  # type=site with no kind tag
+    assert 7004 not in ids  # type=route with tourism=camp_site
+
+
+def test_site_relation_count_in_stats():
+    stats = {}
+    extract_file(SITES, stats)
+    assert stats["site_relations"] == 2

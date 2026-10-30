@@ -12,7 +12,7 @@ exits 1. Checks:
 - kind is one of schema/kinds.json and group is that kind's group
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
-  name and location entries
+  name, location and status entries
 - no two records share an id or an OSM object
 - review lines are compact JSON with sorted keys, sorted by id
 - reviews belong to a place that exists, have unique ids, and the place's

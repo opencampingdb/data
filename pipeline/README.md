@@ -18,22 +18,29 @@ Keeps nodes, closed ways and multipolygon relations that `pipeline.kinds`
 classifies as a place (see "Kind" below). A node is placed at its own
 position. A closed way or a multipolygon relation is placed at the centroid of
 its area, with holes taken out, so `osm.type` is `node`, `way` or `relation`.
-pyosmium's area handler assembles the multipolygons. Relations of any other
-type (such as `type=site`), ways that are not closed, and objects with missing
-node locations are skipped, with one exception: an open way that is a
-`boat_ramp` or an `attraction` (slipways and walls are often drawn as lines)
-is placed at its middle vertex, node number `len(nodes) // 2` counting from
-0. Coordinates are rounded to 6 decimal places.
+pyosmium's area handler assembles the multipolygons. A `type=site` relation
+with a kind tag is a place too (`osm.type` is `relation`). It is placed at the
+mean of its members' positions: a member node's location, a member way's
+centroid (the area centroid of a closed way, the mean of the nodes of an open
+one) and the area centroid of a member multipolygon. Nested site relations are
+not followed. Relations of any other type, ways that are not closed, and
+objects with missing node locations are skipped, with one exception: an open
+way that is a `boat_ramp` or an `attraction` (slipways and walls are often
+drawn as lines) is placed at its middle vertex, node number `len(nodes) // 2`
+counting from 0. Coordinates are rounded to 6 decimal places.
 
 The centroid treats degrees as flat x and y, which is close enough over the
 size of a camp ground. A shape with no area falls back to the mean of its
 outer ring points.
 
-The file is read twice. The first pass reads only ways and relations, without
+The file is read three times. A first, quick pass reads only relations and
+finds the site relations that are places, with their members. The next pass
+reads only ways and relations, without
 node locations. It notes the closed ways that are a place or a container (see
 "Containers" below), and the member ways of multipolygon and boundary
-relations that are a place or a container. Every other relation is dropped
-before the area builder sees it. The second pass reads everything with a node
+relations that are a place or a container, and the member ways and member
+multipolygons of those site relations. Every other relation is dropped before
+the area builder sees it. The second pass reads everything with a node
 location cache, and a way id filter in front of the area builder lets through
 only the ways noted in the first pass. Buildings and other untagged closed
 ways are never assembled into areas. (pyosmium's `FileProcessor.with_areas()`
@@ -184,23 +191,28 @@ fact that depends on the kind.
   `rating: null` and every fact sourced from `osm`.
 - For a matched record, `name`, `kind`, `group`, `location`, `osm` and the
   OSM-sourced facts are replaced with what OSM says now. A fact whose
-  `fact_sources` entry is `feedback` is kept. An OSM-sourced fact whose tag has
-  gone is removed. `status` and `rating` are never touched. A kind change
-  counts as an update.
+  `fact_sources` entry is `feedback` or `contributed` is kept. An OSM-sourced
+  fact whose tag has gone is removed. `status` and `rating` are never
+  touched, and a `status` entry in `fact_sources` is kept as it is. A kind
+  change counts as an update.
+- A record without an OSM link (`osm: null`: a contributed place, or a new
+  place from feedback) is never touched, flagged or deleted.
 - A record that still has one of the eight kinds used before the OTWD
   vocabulary keeps its id and moves to a new kind. A record matched to the
-  extract takes the extract's kind. Any other record (gone from OSM, or not
-  from OSM) is moved by `LEGACY_KINDS` in `pipeline/sync.py`: `camp_site`
+  extract takes the extract's kind. A record gone from OSM is moved by
+  `LEGACY_KINDS` in `pipeline/sync.py`: `camp_site`
   becomes `free_camp` when its `fee` fact is false, `paid_campground` when it
   is true and `campground` otherwise. `caravan_site` becomes `caravan_park`,
   `dump_station` becomes `dump_point`, `drinking_water` becomes
   `drinking_water_point`, `toilets` becomes `public_toilet`, `shower` becomes
   `public_shower`, and `rest_area` and `picnic_site` stay as they are. The
   first sync after this change updates every record, so its PR waits for a
-  person.
-- `fact_sources` may also hold `name` and `location`. When either is
-  `feedback`, sync keeps the record's own value. When it is missing or `osm`,
-  the value comes from OSM. Sync never adds these two entries itself.
+  person. A record without an OSM link that still has an old kind is left
+  for a person to fix: validation reports it.
+- `fact_sources` may also hold `name`, `location` and `status`. When `name`
+  or `location` is `feedback` or `contributed`, sync keeps the record's own
+  value. When it is missing or `osm`, the value comes from OSM. Sync never
+  adds these entries itself.
 - `updated` is set to the time of the run only when the record's content
   changed. Running the same extract twice changes no file.
 - A record whose OSM object is no longer in the extract is never deleted. It
@@ -231,7 +243,8 @@ line against `schema/review.schema.json`. Neither schema allows a key it does
 not list. On top of the schemas it checks that `group` is the group of the
 record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
-other fact (plus optional `name` and `location`), that no two records share an
+other fact (plus optional `name`, `location` and `status`, each `osm`,
+`feedback` or `contributed`), that no two records share an
 id or an OSM object, that review lines are canonical and sorted by id, that
 each review's place exists, that each `rating` has the exact count and
 rounded mean of its reviews, and that review text has no email

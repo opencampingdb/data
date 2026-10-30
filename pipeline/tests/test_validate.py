@@ -296,3 +296,36 @@ def test_water_type_fact(synced):
     rec["facts"]["water_type"] = "bore"
     write_place(path, rec)
     assert any("water_type" in e for e in validate_repo(synced))
+
+
+def test_contributed_place_without_osm_link_is_valid(synced):
+    rec = {
+        "id": "ocdb_01JBX0000000000000000000C1",
+        "name": "Contributed Camp",
+        "kind": "free_camp",
+        "group": "overnight",
+        "location": {"lat": -30.0, "lon": 140.0},
+        "osm": None,
+        "facts": {},
+        "status": "open",
+        "rating": None,
+        "fact_sources": {"name": "contributed", "location": "contributed"},
+        "updated": "2026-10-01T16:00:00Z",
+    }
+    write_place(place_path(synced, rec["id"]), rec)
+    assert validate_repo(synced) == []
+
+
+def test_contributed_status_source_is_valid(synced):
+    path, rec = first_place(synced)
+    rec["status"] = "closed"
+    rec["fact_sources"]["status"] = "contributed"
+    write_place(path, rec)
+    assert validate_repo(synced) == []
+
+
+def test_unknown_source_value_is_refused(synced):
+    path, rec = first_place(synced)
+    rec["fact_sources"]["name"] = "scraped"
+    write_place(path, rec)
+    assert any("scraped" in e for e in validate_repo(synced))
