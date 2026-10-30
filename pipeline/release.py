@@ -25,7 +25,9 @@ from pathlib import Path
 
 from .common import ATTRIBUTION, LICENCE, dump_line, iter_review_files, load_places, write_text
 
-FORMAT_VERSION = 1
+# 1: the first record format. 2: kinds are the OTWD vocabulary and records
+# carry a group.
+FORMAT_VERSION = 2
 DEFAULT_REPOSITORY = "opencampingdb/data"
 
 

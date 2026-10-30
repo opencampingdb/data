@@ -19,7 +19,8 @@ def test_real_sample_end_to_end(repo, tmp_path):
     records = extract_file(SAMPLE)
     assert len(records) > 100
     kinds = {r["kind"] for r in records}
-    assert {"camp_site", "caravan_site", "toilets"} <= kinds
+    assert {"caravan_park", "public_toilet", "drinking_water_point"} <= kinds
+    assert kinds & {"free_camp", "paid_campground", "campground", "national_park_campsite"}
     assert any(r["osm"]["type"] == "way" for r in records)
 
     first = sync(repo, records, now="2026-10-30T16:00:00Z")

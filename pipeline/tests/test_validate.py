@@ -264,3 +264,35 @@ def test_phone_number_next_to_a_date_is_still_refused(synced):
     place_id = set_rating(synced, 1, 4.0)
     write_review(synced, place_id, text="On 2026-10-30 ring 0412 345 678 for the key")
     assert any("phone number" in e for e in validate_repo(synced))
+
+
+def test_old_kind_is_refused(synced):
+    path, rec = first_place(synced)
+    rec["kind"] = "camp_site"
+    write_place(path, rec)
+    assert any("camp_site" in e for e in validate_repo(synced))
+
+
+def test_group_must_match_kind(synced):
+    path, rec = first_place(synced)
+    rec["group"] = "emergency" if rec["group"] != "emergency" else "utility"
+    write_place(path, rec)
+    assert any("group" in e for e in validate_repo(synced))
+
+
+def test_missing_group_is_refused(synced):
+    path, rec = first_place(synced)
+    del rec["group"]
+    write_place(path, rec)
+    assert any("group" in e for e in validate_repo(synced))
+
+
+def test_water_type_fact(synced):
+    path, rec = first_place(synced)
+    rec["facts"]["water_type"] = "tank_fill"
+    rec["fact_sources"]["water_type"] = "osm"
+    write_place(path, rec)
+    assert validate_repo(synced) == []
+    rec["facts"]["water_type"] = "bore"
+    write_place(path, rec)
+    assert any("water_type" in e for e in validate_repo(synced))

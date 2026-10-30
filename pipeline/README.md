@@ -14,42 +14,131 @@ Tests: `python -m pytest`.
 
 ## Extract
 
-Keeps nodes, closed ways and multipolygon relations tagged with one of the
-tags below. A node is placed at its own position. A closed way or a
-multipolygon relation is placed at the centroid of its area, with holes taken
-out, so `osm.type` is `node`, `way` or `relation`. pyosmium's area handler
-assembles the multipolygons. Relations of any other type (such as
-`type=site`), ways that are not closed, and objects with missing node
-locations are skipped. Coordinates are rounded to 6 decimal places.
+Keeps nodes, closed ways and multipolygon relations that `pipeline.kinds`
+classifies as a place (see "Kind" below). A node is placed at its own
+position. A closed way or a multipolygon relation is placed at the centroid of
+its area, with holes taken out, so `osm.type` is `node`, `way` or `relation`.
+pyosmium's area handler assembles the multipolygons. Relations of any other
+type (such as `type=site`), ways that are not closed, and objects with missing
+node locations are skipped. Coordinates are rounded to 6 decimal places.
 
 The centroid treats degrees as flat x and y, which is close enough over the
 size of a camp ground. A shape with no area falls back to the mean of its
 outer ring points.
 
 The file is read twice. The first pass reads only ways and relations, without
-node locations, and notes the closed ways with a SPEC tag and the member ways
-of multipolygon relations with a SPEC tag. The second pass reads everything
-with a node location cache, and a way id filter in front of the area builder
-lets through only the ways noted in the first pass. Buildings and other
-untagged closed ways are never assembled into areas. (pyosmium's
-`FileProcessor.with_areas()` filters only relations, so it would assemble an
-area for every closed way in Australia.) The log line "Handed N ways to the
-area builder" shows how many got through.
+node locations. It notes the closed ways that are a place or a container (see
+"Containers" below), and the member ways of multipolygon and boundary
+relations that are a place or a container. Every other relation is dropped
+before the area builder sees it. The second pass reads everything with a node
+location cache, and a way id filter in front of the area builder lets through
+only the ways noted in the first pass. Buildings and other untagged closed
+ways are never assembled into areas. (pyosmium's `FileProcessor.with_areas()`
+filters only relations, so it would assemble an area for every closed way in
+Australia.) The log line "Handed N ways to the area builder" shows how many
+got through.
 
 ### Kind
 
-When an object has more than one of these tags, the first row that matches wins.
+`kind` is one of the codes in `schema/kinds.json`: the 22 site types of the
+OTWD (Open Touring and Waypoint Database) vocabulary, version 1.0.0, under
+Apache-2.0, plus two Open Camping DB extensions, `campground` and
+`picnic_site`. Each kind belongs to a group, and every record carries its
+`group`.
 
-| OSM tag | `kind` |
-|---|---|
-| `tourism=camp_site` | `camp_site` |
-| `tourism=caravan_site` | `caravan_site` |
-| `highway=rest_area` | `rest_area` |
-| `amenity=sanitary_dump_station` | `dump_station` |
-| `amenity=drinking_water` | `drinking_water` |
-| `amenity=toilets` | `toilets` |
-| `amenity=shower` | `shower` |
-| `tourism=picnic_site` | `picnic_site` |
+| Code | Label | Group | Origin |
+|---|---|---|---|
+| `free_camp` | Free camp | overnight | OTWD |
+| `paid_campground` | Paid campground | overnight | OTWD |
+| `caravan_park` | Caravan park | overnight | OTWD |
+| `national_park_campsite` | National park campsite | overnight | OTWD |
+| `state_forest_campsite` | State forest campsite | overnight | OTWD |
+| `showground` | Showground | overnight | OTWD |
+| `campground` | Campground | overnight | Open Camping DB: a camp site whose fee is not known |
+| `rest_area` | Rest area | utility | OTWD |
+| `dump_point` | Dump point | utility | OTWD |
+| `drinking_water_point` | Drinking water point | utility | OTWD |
+| `public_toilet` | Public toilet | utility | OTWD |
+| `public_shower` | Public shower | utility | OTWD |
+| `laundromat` | Laundromat | utility | OTWD |
+| `picnic_site` | Picnic area | utility | Open Camping DB |
+| `information_centre` | Information centre | services | OTWD |
+| `fuel` | Fuel | services | OTWD |
+| `lpg_refill_swap` | LPG refill or swap | services | OTWD |
+| `mechanic` | Mechanic | services | OTWD |
+| `attraction` | Attraction | attraction | OTWD |
+| `lookout` | Lookout | attraction | OTWD |
+| `swimming_spot` | Swimming spot | attraction | OTWD |
+| `boat_ramp` | Boat ramp | attraction | OTWD |
+| `hospital_emergency` | Hospital (emergency) | emergency | OTWD |
+| `ferry_terminal` | Ferry terminal | transport | OTWD |
+
+#### Precedence
+
+The rules are tried in this order, and the first that matches wins. An object
+with several tags gets the kind of the earliest rule it matches: a camp site
+that is also a rest area is a camp site, a viewpoint that is also an
+attraction is a lookout, and a picnic site with `amenity=toilets` is a public
+toilet.
+
+| Order | OSM tags | `kind` | OTWD match | Notes |
+|---|---|---|---|---|
+| 1a | `tourism=camp_site`, inside a park | `national_park_campsite` | broader | Park: see "Containers" |
+| 1b | `tourism=camp_site`, inside a state forest | `state_forest_campsite` | broader | |
+| 1c | `tourism=camp_site`, inside a showground | `showground` | related | |
+| 1d | `tourism=camp_site` + `fee=no` | `free_camp` | exact | |
+| 1e | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
+| 1f | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
+| 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles |
+| 2b | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
+| 3 | `highway=rest_area` | `rest_area` | exact | |
+| 4 | `amenity=sanitary_dump_station` | `dump_point` | exact | |
+| 5 | `amenity=water_point` or `amenity=drinking_water` | `drinking_water_point` | exact, narrower | Fact `water_type`: `tank_fill` for water_point, `fountain` for drinking_water |
+| 6 | `amenity=toilets` | `public_toilet` | exact | |
+| 7 | `amenity=shower` | `public_shower` | exact | |
+| 8 | `shop=laundry` + `self_service=yes` | `laundromat` | exact | A laundry without `self_service=yes` is left out |
+| 9 | `amenity=hospital` + `emergency=yes` | `hospital_emergency` | exact | A hospital without `emergency=yes` is left out |
+| 10 | `amenity=ferry_terminal` | `ferry_terminal` | exact | |
+| 11 | `amenity=fuel` | `fuel` | exact | |
+| 12 | `shop=gas` | `lpg_refill_swap` | exact | |
+| 13 | `shop=car_repair` | `mechanic` | exact | |
+| 14 | `tourism=information` + `information=office` or `visitor_centre` | `information_centre` | exact, related | Other information values (boards, maps, guideposts) are left out |
+| 15 | `tourism=viewpoint` | `lookout` | exact | |
+| 16 | `leisure=swimming_area` or `leisure=bathing_place` | `swimming_spot` | narrower | |
+| 17 | `leisure=swimming_pool` + `access=yes` or `access=public` | `swimming_spot` | related | Public pools only. Pools without public access are left out |
+| 18 | `leisure=slipway` | `boat_ramp` | exact | |
+| 19 | `tourism=picnic_site` | `picnic_site` | | Open Camping DB extension |
+| 20 | `tourism=attraction` | `attraction` | exact | Last, because OTWD uses it only when no more specific type fits |
+
+OTWD mappings not used, and why:
+
+| OTWD mapping | Match | Why not |
+|---|---|---|
+| `tourism=camp_site` + `caravans=yes` as `caravan_park` | related | Most free camps and campgrounds that allow caravans carry this tag. It would turn them into caravan parks |
+| `tourism=camp_site` + `maxstay=*` as `rest_area` | related | Free camps and paid campgrounds often have a stay limit. `maxstay` is kept as the `max_stay` fact instead |
+| `highway=services` as `rest_area` | related | Service centres are fuel and food stops. Their fuel stations are mapped as `amenity=fuel` |
+| `landuse=recreation_ground` + `recreation_ground=showground` as a place | narrower | A showground is a place to stay only where it takes campers, and the tags do not say so. The ground is used as a container for camp sites inside it (rule 1c) |
+| `natural=beach` as `swimming_spot` | related | Far too many beach polygons, most of them not swimming spots |
+| `amenity=fuel` + `fuel:lpg=yes` as `lpg_refill_swap` | related | Autogas for vehicles is not a bottle refill. These stay `fuel` |
+
+#### Containers
+
+Only camp sites use containers. A camp site's position (its node, or the
+centroid of its way or relation) is tested against every container with an
+STRtree (shapely), and a point on a container's edge counts as inside.
+Containers are closed ways and multipolygon or boundary relations. An area is
+one container type at most, checked in this order:
+
+| Order | Container | Tags |
+|---|---|---|
+| 1 | state forest | `landuse=forest` or `boundary=protected_area` whose `name`, `official_name` or `protection_title` contains "State Forest" |
+| 2 | state forest | `landuse=forest` with an `operator` that is a forestry agency or a government department (Forestry Corporation, VicForests, Forest Products Commission, Sustainable Timber Tasmania, or containing "department", "government" or "crown"). Private plantation companies do not count |
+| 3 | park | `boundary=national_park` |
+| 4 | park | `boundary=protected_area` with `protect_class` 1a, 1b or 1 to 6 (the IUCN categories), or with an `operator` that is a park agency (a national parks service, Parks Victoria, Parks Australia, Parks Tasmania, Parks SA, a parks and wildlife service, NPWS, QPWS or DBCA) |
+| 5 | showground | `landuse=recreation_ground` + `recreation_ground=showground`, or `leisure=showground` |
+
+State forests are checked first because a state forest tagged as a protected
+area often carries `protect_class=6`, which would otherwise make it a park.
 
 `name` is the `name` tag, or `null` when there is none.
 
@@ -75,23 +164,37 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
 | `phone`, then `contact:phone` | `phone` | copied as is |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
+| `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`. Others, such as `destination`, are left out. |
 
 `access` (the fact) is about the road and the vehicle. `entry` is about who
 may stay, and comes from the OSM `access` tag.
 
-Facts are never inferred from the kind: a `caravan_site` does not get
-`caravans: true` unless the `caravans` tag says so.
+Facts are never inferred from the kind: a `caravan_park` does not get
+`caravans: true` unless the `caravans` tag says so. `water_type` is the one
+fact that depends on the kind.
 
 ## Sync
 
 - Matches each extract line to a record by `osm.type` and `osm.id`.
 - A new OSM object gets a new record with the id `ocdb_<ULID>`, `status: open`,
   `rating: null` and every fact sourced from `osm`.
-- For a matched record, `name`, `kind`, `location`, `osm` and the OSM-sourced
-  facts are replaced with what OSM says now. A fact whose `fact_sources` entry
-  is `feedback` is kept. An OSM-sourced fact whose tag has gone is removed.
-  `status` and `rating` are never touched.
+- For a matched record, `name`, `kind`, `group`, `location`, `osm` and the
+  OSM-sourced facts are replaced with what OSM says now. A fact whose
+  `fact_sources` entry is `feedback` is kept. An OSM-sourced fact whose tag has
+  gone is removed. `status` and `rating` are never touched. A kind change
+  counts as an update.
+- A record that still has one of the eight kinds used before the OTWD
+  vocabulary keeps its id and moves to a new kind. A record matched to the
+  extract takes the extract's kind. Any other record (gone from OSM, or not
+  from OSM) is moved by `LEGACY_KINDS` in `pipeline/sync.py`: `camp_site`
+  becomes `free_camp` when its `fee` fact is false, `paid_campground` when it
+  is true and `campground` otherwise. `caravan_site` becomes `caravan_park`,
+  `dump_station` becomes `dump_point`, `drinking_water` becomes
+  `drinking_water_point`, `toilets` becomes `public_toilet`, `shower` becomes
+  `public_shower`, and `rest_area` and `picnic_site` stay as they are. The
+  first sync after this change updates every record, so its PR waits for a
+  person.
 - `fact_sources` may also hold `name` and `location`. When either is
   `feedback`, sync keeps the record's own value. When it is missing or `osm`,
   the value comes from OSM. Sync never adds these two entries itself.
@@ -100,8 +203,8 @@ Facts are never inferred from the kind: a `caravan_site` does not get
 - A record whose OSM object is no longer in the extract is never deleted. It
   is listed under "Gone from OSM" in the report until a person sets its
   `status` to `closed` or removes it.
-- Change percentage is new + updated + gone, divided by the number of records
-  after the sync. The nightly PR merges itself only below 2%.
+- Change percentage is the number of records that are new, updated or gone
+  (each record counted once), divided by the number of records after the sync. The nightly PR merges itself only below 2%.
 
 Place files are written in one canonical form: sorted keys, 2-space indent,
 UTF-8 characters as they are, LF line endings and one trailing newline. They
@@ -122,7 +225,8 @@ Review lines are compact JSON with sorted keys, one per line, sorted by
 
 Checks every place file against `schema/place.schema.json` and every review
 line against `schema/review.schema.json`. Neither schema allows a key it does
-not list. On top of the schemas it checks the canonical form, the file path,
+not list. On top of the schemas it checks that `group` is the group of the
+record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
 other fact (plus optional `name` and `location`), that no two records share an
 id or an OSM object, that review lines are canonical and sorted by id, that

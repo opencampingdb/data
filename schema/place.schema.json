@@ -5,7 +5,7 @@
   "description": "One file per place at places/<last 2 characters of id, lower case>/<id>.json. No key outside this schema is allowed.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "kind", "location", "osm", "facts", "status", "rating", "fact_sources", "updated"],
+  "required": ["id", "name", "kind", "group", "location", "osm", "facts", "status", "rating", "fact_sources", "updated"],
   "properties": {
     "id": {
       "description": "ocdb_ followed by a ULID. Assigned once, never reused.",
@@ -19,7 +19,37 @@
       "maxLength": 300
     },
     "kind": {
-      "enum": ["camp_site", "caravan_site", "rest_area", "dump_station", "drinking_water", "toilets", "shower", "picnic_site"]
+      "description": "What the place is. The codes of schema/kinds.json: the OTWD site_types vocabulary plus campground and picnic_site.",
+      "enum": [
+        "free_camp",
+        "paid_campground",
+        "caravan_park",
+        "national_park_campsite",
+        "state_forest_campsite",
+        "showground",
+        "rest_area",
+        "dump_point",
+        "drinking_water_point",
+        "public_toilet",
+        "public_shower",
+        "laundromat",
+        "information_centre",
+        "attraction",
+        "lookout",
+        "swimming_spot",
+        "boat_ramp",
+        "fuel",
+        "lpg_refill_swap",
+        "mechanic",
+        "hospital_emergency",
+        "ferry_terminal",
+        "campground",
+        "picnic_site"
+      ]
+    },
+    "group": {
+      "description": "The kind's group, as listed in schema/kinds.json.",
+      "enum": ["overnight", "utility", "services", "attraction", "emergency", "transport"]
     },
     "location": {
       "description": "Node position, or the centroid of a closed way or multipolygon relation. At most 6 decimal places.",
@@ -72,6 +102,10 @@
         "entry": {
           "description": "Who may stay, from OSM access=*.",
           "enum": ["public", "customers", "permit", "private"]
+        },
+        "water_type": {
+          "description": "For a drinking_water_point: tank_fill (a tap for filling tanks, amenity=water_point) or fountain (amenity=drinking_water).",
+          "enum": ["tank_fill", "fountain"]
         }
       }
     },
@@ -98,7 +132,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(fee|power|pets|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|name|location)$": {
+        "^(fee|power|pets|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|name|location)$": {
           "enum": ["osm", "feedback"]
         }
       }

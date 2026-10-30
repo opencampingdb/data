@@ -1,17 +1,22 @@
-"""Read an OSM file and write the camping places in it as NDJSON.
+"""Read an OSM file and write the places in it as NDJSON.
 
 Usage:
     python -m pipeline.extract australia-latest.osm.pbf --out extract.ndjson
 
 Reads .osm.pbf or .osm XML with pyosmium. Keeps nodes, closed ways and
-multipolygon relations that carry one of the SPEC tags. A node is placed at
-its own position. A closed way or a multipolygon is placed at the centroid of
-its area (holes taken out). Other relations and open ways are skipped.
+multipolygon relations that pipeline.kinds classifies as a place. A node is
+placed at its own position. A closed way or a multipolygon is placed at the
+centroid of its area (holes taken out). Other relations and open ways are
+skipped.
+
+Camp sites are classified by the areas they lie in: national parks and other
+parks, state forests and showgrounds. Those areas are built in the same read
+and tested with an STRtree (shapely).
 
 Each output line is one place:
     {"osm": {...}, "kind": "...", "name": ..., "location": {...}, "facts": {...}}
 sorted by OSM type and then id, so the same input always gives the same file.
-The tag to fact mapping is documented in pipeline/README.md.
+The tag mappings are documented in pipeline/README.md.
 """
 
 import argparse
@@ -20,21 +25,17 @@ import sys
 from pathlib import Path
 
 import osmium
+import shapely
+from shapely import MultiPolygon, Polygon, STRtree
 
 from .common import dump_line, round_coord, write_text
-
-# (OSM key, OSM value, place kind). When an object matches more than one,
-# the first match in this list wins, so a camp site that is also tagged
-# amenity=toilets stays a camp site.
-KIND_TAGS = (
-    ("tourism", "camp_site", "camp_site"),
-    ("tourism", "caravan_site", "caravan_site"),
-    ("highway", "rest_area", "rest_area"),
-    ("amenity", "sanitary_dump_station", "dump_station"),
-    ("amenity", "drinking_water", "drinking_water"),
-    ("amenity", "toilets", "toilets"),
-    ("amenity", "shower", "shower"),
-    ("tourism", "picnic_site", "picnic_site"),
+from .kinds import (
+    CONTAINER_TAG_PAIRS,
+    PLACE_TAG_PAIRS,
+    classify,
+    container_type,
+    parse_fee,
+    water_type,
 )
 
 # Simple yes/no tags: OSM key -> fact key.
@@ -68,14 +69,6 @@ ENTRY_VALUES = {
 }
 
 
-def kind_from_tags(tags: dict) -> str | None:
-    """The place kind for a set of OSM tags, or None if it is not a place we keep."""
-    for key, value, kind in KIND_TAGS:
-        if tags.get(key) == value:
-            return kind
-    return None
-
-
 def first_value(value: str) -> str:
     """OSM allows several values separated by ';'. Keep the first."""
     return value.split(";")[0].strip()
@@ -90,16 +83,6 @@ def yes_no(value: str | None) -> bool | None:
         return True
     if value == "no":
         return False
-    return None
-
-
-def parse_fee(value: str) -> bool | None:
-    """fee=no is free. fee=yes or a price (any value with a digit or $) is paid."""
-    value = value.strip().lower()
-    if value == "no":
-        return False
-    if value == "yes" or "$" in value or any(c.isdigit() for c in value):
-        return True
     return None
 
 
@@ -252,21 +235,28 @@ def relation_area_centroid(area) -> tuple[float, float] | None:
     return area_centroid(polygons)
 
 
-def place_tag_filter() -> "osmium.filter.TagFilter":
-    """A C++ filter that lets through only objects with one of the SPEC tags.
+def interesting_tag_filter() -> "osmium.filter.TagFilter":
+    """A C++ filter that lets through objects that may be a place or a container.
 
     A filter object belongs to one handler chain, so each chain gets its own.
     """
-    return osmium.filter.TagFilter(*((k, v) for k, v, _ in KIND_TAGS))
+    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS)
 
 
-class AreaCandidates:
+def tag_dict(obj) -> dict:
+    return {tag.k: tag.v for tag in obj.tags}
+
+
+class FirstPass:
     """First pass: finds the ways the main pass must keep.
 
-    Sees only ways and relations that carry a SPEC tag. Records the closed
-    tagged ways (places in their own right) and the member ways of tagged
-    multipolygon relations (needed to assemble those relations' areas).
+    Sees only ways and relations that passed the tag filter. Records the
+    closed ways that are a place or a container, and the member ways of
+    multipolygon and boundary relations that are a place or a container.
     Every other way, buildings included, is kept away from the area builder.
+
+    relation() returns True for a relation the area builder must not
+    assemble, which drops it from the rest of the handler chain.
     """
 
     def __init__(self, stats: dict) -> None:
@@ -274,16 +264,25 @@ class AreaCandidates:
         self.stats = stats
 
     def way(self, way) -> None:
+        tags = tag_dict(way)
+        is_place = classify(tags) is not None
+        if not is_place and container_type(tags) is None:
+            return
         if way.is_closed():
             self.way_ids.add(way.id)
-        else:
+        elif is_place:
             self.stats["open_ways"] += 1
 
-    def relation(self, relation) -> None:
-        if relation.tags.get("type") == "multipolygon":
-            for member in relation.members:
-                if member.type == "w":
-                    self.way_ids.add(member.ref)
+    def relation(self, relation) -> bool:
+        tags = tag_dict(relation)
+        if tags.get("type") not in ("multipolygon", "boundary"):
+            return True
+        if classify(tags) is None and container_type(tags) is None:
+            return True
+        for member in relation.members:
+            if member.type == "w":
+                self.way_ids.add(member.ref)
+        return False
 
 
 class AreaWayCounter:
@@ -296,16 +295,16 @@ class AreaWayCounter:
         self.stats["ways_to_area_builder"] += 1
 
 
-def read_places(path: Path, stats: dict):
-    """Yield every OSM object or area with a SPEC tag, with node locations filled in.
+def read_objects(path: Path, stats: dict):
+    """Yield every OSM object or area that may be a place or a container.
 
     Two passes over the file:
     1. Ways and relations only, no locations: collect the ways that matter
-       (AreaCandidates), and let the area builder choose its tagged
-       multipolygon relations.
+       (FirstPass), and let the area builder take note of the relations
+       FirstPass keeps.
     2. Everything, with a node location cache. A way id filter sits in front
        of the area builder, so it never sees a way it does not need. Only
-       objects with a SPEC tag come out at the end.
+       objects with an interesting tag come out at the end.
 
     pyosmium's FileProcessor.with_areas() filters only the relations, and
     would assemble an area for every closed way in the file, so this chain
@@ -315,19 +314,19 @@ def read_places(path: Path, stats: dict):
     # the handlers keep only pointers to each other, so an object that
     # Python frees early crashes the reader.
     area_manager = osmium.area.AreaManager()
-    candidates = AreaCandidates(stats)
-    first_filter = place_tag_filter()
+    first = FirstPass(stats)
+    first_filter = interesting_tag_filter()
     first_pass = area_manager.first_pass_handler()
     with osmium.io.Reader(str(path), osmium.osm.WAY | osmium.osm.RELATION) as reader:
-        osmium.apply(reader, first_filter, first_pass, candidates)
+        osmium.apply(reader, first_filter, first, first_pass)
 
-    area_gate = osmium.filter.IdFilter(candidates.way_ids)
+    area_gate = osmium.filter.IdFilter(first.way_ids)
     area_gate.enable_for(osmium.osm.WAY)
-    area_filter = place_tag_filter()
+    area_filter = interesting_tag_filter()
     areas = osmium.BufferIterator(area_filter)
     second_pass = area_manager.second_pass_to_buffer(areas)
     counter = AreaWayCounter(stats)
-    output_filter = place_tag_filter()
+    output_filter = interesting_tag_filter()
     location_store = osmium.index.create_map("flex_mem")
     locations = osmium.NodeLocationsForWays(location_store)
     locations.ignore_errors()
@@ -344,67 +343,127 @@ def read_places(path: Path, stats: dict):
         yield from areas
 
 
-def place_record(obj, stats: dict) -> dict | None:
-    """The extract record for one OSM object or area, or None if it is not a place."""
-    tags = {tag.k: tag.v for tag in obj.tags}
-    kind = kind_from_tags(tags)
-    if kind is None:
-        return None
+def object_position(obj, stats: dict) -> tuple[str, int, float, float] | None:
+    """(osm type, osm id, lat, lon) of a node, closed way or multipolygon area.
 
+    None for relations (used through their areas), for areas built from
+    ways (the way itself is used), for open ways and when a node location is
+    missing.
+    """
     if obj.is_node():
-        osm_type, osm_id = "node", obj.id
         if not obj.location.valid():
             stats["missing_locations"] += 1
             return None
-        lat, lon = obj.location.lat, obj.location.lon
-    elif obj.is_relation():
-        # A relation is used through the area built from it.
+        return "node", obj.id, obj.location.lat, obj.location.lon
+    if obj.is_relation():
         return None
-    elif obj.is_area():
-        # Closed ways are handled as ways, so their areas are not used.
-        # Only multipolygon relations produce areas here. Any other relation
-        # (type=site, for example) has no area and is skipped.
+    if obj.is_area():
         if obj.from_way():
             return None
-        osm_type, osm_id = "relation", obj.orig_id()
         centroid = relation_area_centroid(obj)
         if centroid is None:
             stats["missing_locations"] += 1
             return None
-        lat, lon = centroid
-    else:
-        osm_type, osm_id = "way", obj.id
-        if not obj.is_closed():
-            return None  # already counted in the first pass
-        centroid = way_centroid(obj)
-        if centroid is None:
-            stats["missing_locations"] += 1
-            return None
-        lat, lon = centroid
+        return "relation", obj.orig_id(), *centroid
+    if not obj.is_closed():
+        return None  # already counted in the first pass
+    centroid = way_centroid(obj)
+    if centroid is None:
+        stats["missing_locations"] += 1
+        return None
+    return "way", obj.id, *centroid
 
-    return {
-        "osm": {"type": osm_type, "id": osm_id, "version": obj.version},
-        "kind": kind,
-        "name": tags.get("name", "").strip() or None,
-        "location": {"lat": round_coord(lat), "lon": round_coord(lon)},
-        "facts": facts_from_tags(tags),
-    }
+
+def container_geometry(obj):
+    """A shapely polygon for a closed way or multipolygon area, or None."""
+    if obj.is_area():
+        if obj.from_way():
+            return None
+        polygons = []
+        for outer in obj.outer_rings():
+            outer_points = ring_points(outer)
+            if outer_points is None or len(outer_points) < 4:
+                return None
+            inners = [ring_points(inner) for inner in obj.inner_rings(outer)]
+            polygons.append(Polygon(outer_points, [i for i in inners if i and len(i) >= 4]))
+        geometry = MultiPolygon(polygons) if polygons else None
+    elif obj.is_way() and obj.is_closed():
+        points = ring_points(obj.nodes)
+        geometry = Polygon(points) if points and len(points) >= 4 else None
+    else:
+        return None
+    if geometry is not None and not geometry.is_valid:
+        geometry = shapely.make_valid(geometry)
+    return geometry
+
+
+def containers_for(points: list[tuple[float, float]], containers: list[tuple]) -> list[set[str]]:
+    """For each (lat, lon) point, the set of container types it lies in."""
+    found: list[set[str]] = [set() for _ in points]
+    if not points or not containers:
+        return found
+    tree = STRtree([geometry for geometry, _ in containers])
+    query = shapely.points([(lon, lat) for lat, lon in points])
+    point_index, container_index = tree.query(query, predicate="intersects")
+    for p, c in zip(point_index, container_index):
+        found[p].add(containers[c][1])
+    return found
 
 
 def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
     """Read an OSM file and return the place records found in it, sorted.
 
     If a dict is passed as stats it is filled with counts of what was kept
-    and skipped, and of the ways handed to the area builder, for the log.
+    and skipped, of the ways handed to the area builder and of the
+    containers found, for the log.
     """
     stats = stats if stats is not None else {}
     stats.update(kept=0, open_ways=0, missing_locations=0, ways_to_area_builder=0)
+    container_counts = {"park": 0, "forest": 0, "showground": 0}
+
+    places: list[tuple[dict, dict]] = []  # (record without kind, tags)
+    containers: list[tuple] = []  # (shapely geometry, container type)
+
+    for obj in read_objects(path, stats):
+        tags = tag_dict(obj)
+
+        kind_of_container = container_type(tags)
+        if kind_of_container is not None:
+            geometry = container_geometry(obj)
+            if geometry is not None:
+                containers.append((geometry, kind_of_container))
+                container_counts[kind_of_container] += 1
+
+        if classify(tags) is None:
+            continue
+        position = object_position(obj, stats)
+        if position is None:
+            continue
+        osm_type, osm_id, lat, lon = position
+        record = {
+            "osm": {"type": osm_type, "id": osm_id, "version": obj.version},
+            "name": tags.get("name", "").strip() or None,
+            "location": {"lat": round_coord(lat), "lon": round_coord(lon)},
+            "facts": facts_from_tags(tags),
+        }
+        places.append((record, tags))
+
+    # Only camp sites depend on the areas they lie in.
+    camp_indexes = [i for i, (_, tags) in enumerate(places) if tags.get("tourism") == "camp_site"]
+    camp_points = [
+        (places[i][0]["location"]["lat"], places[i][0]["location"]["lon"]) for i in camp_indexes
+    ]
+    inside_by_index = dict(zip(camp_indexes, containers_for(camp_points, containers)))
+
     records = []
-    for obj in read_places(path, stats):
-        record = place_record(obj, stats)
-        if record is not None:
-            records.append(record)
-            stats["kept"] += 1
+    for i, (record, tags) in enumerate(places):
+        record["kind"] = classify(tags, frozenset(inside_by_index.get(i, ())))
+        if record["kind"] == "drinking_water_point":
+            record["facts"]["water_type"] = water_type(tags)
+        records.append(record)
+
+    stats["kept"] = len(records)
+    stats["containers"] = container_counts
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -431,6 +490,7 @@ def main(argv: list[str] | None = None) -> int:
         file=sys.stderr,
     )
     print(f"Handed {stats['ways_to_area_builder']} ways to the area builder", file=sys.stderr)
+    print(f"Containers: {stats['containers']}", file=sys.stderr)
     return 0
 
 

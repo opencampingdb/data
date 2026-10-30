@@ -217,3 +217,103 @@ def test_osm_name_source_is_refreshed(repo, v1_osm, v2_osm):
     camp = json.loads(path.read_text(encoding="utf-8"))
     assert camp["name"] == "Fixture Creek Bush Camp"
     assert camp["fact_sources"]["name"] == "osm"
+
+
+LEGACY_ID = "ocdb_01JBX00000000000000000MGR1"
+
+
+def legacy_record(place_id, kind, osm, facts, fact_sources=None):
+    """A record in the format before the OTWD kinds: old kind, no group."""
+    return {
+        "id": place_id,
+        "name": "Old Record",
+        "kind": kind,
+        "location": {"lat": -37.15, "lon": 142.5},
+        "osm": osm,
+        "facts": facts,
+        "status": "open",
+        "rating": None,
+        "fact_sources": fact_sources or {key: "osm" for key in facts},
+        "updated": "2026-10-01T16:00:00Z",
+    }
+
+
+def write_legacy(repo, rec):
+    path = place_path(repo, rec["id"])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    rewrite(path, rec)
+    return path
+
+
+def test_migration_keeps_id_and_reclassifies(repo, v1_osm):
+    # An old camp_site record for node 1001, written before the OTWD kinds.
+    write_legacy(repo, legacy_record(
+        LEGACY_ID, "camp_site", {"type": "node", "id": 1001, "version": 1}, {"fee": False}
+    ))
+    result = sync(repo, extract_file(v1_osm), now=T2)
+
+    camp = load_all(repo)[("node", 1001)]
+    assert camp["id"] == LEGACY_ID
+    assert camp["kind"] == "free_camp"
+    assert camp["group"] == "overnight"
+    assert camp["updated"] == T2
+    assert LEGACY_ID in [r["id"] for r in result.updated]
+    # Node 1001 was matched, so it is not new; the other two are.
+    assert len(result.new) == 2
+
+
+def test_migration_of_records_gone_from_osm(repo, v1_osm):
+    # Old records whose OSM objects are not in the extract still move to the
+    # new kinds, so that they validate. They stay listed as gone.
+    gone_camp = legacy_record(
+        "ocdb_01JBX00000000000000000MGR2", "camp_site",
+        {"type": "node", "id": 999001, "version": 1}, {},
+    )
+    gone_toilet = legacy_record(
+        "ocdb_01JBX00000000000000000MGR3", "toilets",
+        {"type": "node", "id": 999002, "version": 1}, {},
+    )
+    gone_paid = legacy_record(
+        "ocdb_01JBX00000000000000000MGR4", "camp_site",
+        {"type": "node", "id": 999003, "version": 1}, {"fee": True},
+    )
+    for rec in (gone_camp, gone_toilet, gone_paid):
+        write_legacy(repo, rec)
+
+    result = sync(repo, extract_file(v1_osm), now=T2)
+    records = {r["id"]: r for r in load_all(repo).values()}
+    assert records[gone_camp["id"]]["kind"] == "campground"
+    assert records[gone_toilet["id"]]["kind"] == "public_toilet"
+    assert records[gone_toilet["id"]]["group"] == "utility"
+    assert records[gone_paid["id"]]["kind"] == "paid_campground"
+    gone_ids = {r["id"] for r in result.gone}
+    assert gone_ids == {gone_camp["id"], gone_toilet["id"], gone_paid["id"]}
+    updated_ids = {r["id"] for r in result.updated}
+    assert gone_ids <= updated_ids
+    # Each record counts once in the change percentage: 3 new, 3 migrated
+    # and gone, out of 6 records.
+    assert result.change_percent == 100.0
+
+
+def test_every_old_kind_has_a_new_one():
+    from pipeline.sync import LEGACY_KINDS
+
+    assert set(LEGACY_KINDS) == {
+        "camp_site", "caravan_site", "rest_area", "dump_station",
+        "drinking_water", "toilets", "shower", "picnic_site",
+    }
+
+
+def test_kind_change_from_osm_counts_as_updated(repo, v1_osm, v2_osm):
+    sync(repo, extract_file(v1_osm), now=T1)
+    # In v2, node 1001 goes from fee=no to fee=yes: free_camp to paid_campground.
+    result = sync(repo, extract_file(v2_osm), now=T2)
+    camp = load_all(repo)[("node", 1001)]
+    assert camp["kind"] == "paid_campground"
+    assert camp["id"] in [r["id"] for r in result.updated]
+
+
+def test_new_records_carry_their_group(repo, v1_osm):
+    sync(repo, extract_file(v1_osm), now=T1)
+    groups = {r["kind"]: r["group"] for r in load_all(repo).values()}
+    assert groups == {"free_camp": "overnight", "rest_area": "utility", "caravan_park": "overnight"}
