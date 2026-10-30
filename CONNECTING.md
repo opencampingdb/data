@@ -74,6 +74,24 @@ and need nothing else. If they differ, download and check the files as above
 and swap them in only once both checks pass, so a failed update never leaves
 you with half a dataset.
 
+### Redirect merged places
+
+Sometimes one place is recorded twice, and a person merges the two records
+into one. The record that is dropped leaves `places.ndjson.gz`, and its id is
+listed in `merged.ndjson.gz` (the `merged` entry in the manifest), one line
+per merged id:
+
+```json
+{"id":"ocdb_01M66H48SBTFGJFH6HPDK5WAF8","merged_into":"ocdb_01M66H48SBTFGJFH6HPDK5WAF7"}
+```
+
+If your app stored an id (a favourite, a note, a trip) that no longer appears
+in `places.ndjson.gz`, look it up in `merged.ndjson.gz` and move what you
+stored to `merged_into`. A redirect always takes one step: `merged_into` is
+never itself merged. The kept place also carries the merged place's reviews
+and rating. An id found in neither file has been removed, which only a
+person does, for example on a takedown request.
+
 Treat `data_version` as an opaque string and compare it only for equality.
 Checking once a day is plenty: the OSM sync runs once a night and a new
 release is published at most once an hour. Do not poll more often than once
@@ -88,7 +106,8 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   It is never reused.
 - Every fact is optional. A missing fact means "not known", not "no".
 - `status` is `open`, `reported_closed` (at least one user said it has
-  closed, not yet confirmed) or `closed`. Show `reported_closed` as a warning
+  closed, not yet confirmed) or `closed`. (`merged` exists only in the
+  repository, on tombstones, and never appears in `places.ndjson.gz`.) Show `reported_closed` as a warning
   rather than hiding the place.
 - `rating` is `null` until a place has accepted reviews.
 - `osm` is `null` for places that did not come from OpenStreetMap: places

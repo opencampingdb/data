@@ -17,6 +17,12 @@ Rules (SPEC, "OSM sync"):
   sync leaves them alone, and keeps a fact_sources entry for status as it is.
 - A record without an OSM link (osm is null) is never touched, flagged or
   deleted. Sync does not even read it beyond its id.
+- A merged record (a tombstone, status "merged") is never touched or
+  revived. An OSM object listed in a record's merged_osm belongs to that
+  record: it is never made into a new record, and it does not change the
+  record (which follows its own osm link).
+- After the merge into places/, likely duplicates are listed in the report
+  (pipeline.duplicates). Sync never merges them.
 - kind is refreshed from the extract, and group follows kind. A kind change
   counts as an update.
 - Records still carrying a kind from before the OTWD vocabulary (camp_site,
@@ -34,6 +40,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from ulid import ULID
+
+from .duplicates import find_duplicates
 
 from .common import (
     EXTRA_SOURCE_KEYS,
@@ -73,6 +81,7 @@ class SyncResult:
     new: list[dict] = field(default_factory=list)
     updated: list[dict] = field(default_factory=list)
     gone: list[dict] = field(default_factory=list)
+    duplicates: list[dict] = field(default_factory=list)
     unchanged: int = 0
     records_before: int = 0
     records_after: int = 0
@@ -190,12 +199,18 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
     places = load_places(root)
     result = SyncResult(records_before=len(places))
 
-    by_osm = {osm_key(r["osm"]): r for r in places.values() if r.get("osm")}
+    live = [r for r in places.values() if r.get("status") != "merged"]
+    by_osm = {osm_key(r["osm"]): r for r in live if r.get("osm")}
+    merged_osm = {
+        (m["type"], m["id"]): r["id"] for r in live for m in r.get("merged_osm", [])
+    }
     seen = set()
 
     for place in extract:
         key = osm_key(place["osm"])
         seen.add(key)
+        if key in merged_osm and key not in by_osm:
+            continue  # merged into another record by a person
         existing = by_osm.get(key)
         if existing is None:
             record = new_record(place, now, make_id)
@@ -211,7 +226,7 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
     # Records gone from OSM keep everything except an old kind, which moves
     # to the new vocabulary. Records without an OSM link are left alone.
     updated_ids = {r["id"] for r in result.updated}
-    for record in sorted(places.values(), key=lambda r: r["id"]):
+    for record in sorted(live, key=lambda r: r["id"]):
         osm = record.get("osm")
         if not osm or osm_key(osm) in seen:
             continue
@@ -224,6 +239,7 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
     result.gone.sort(key=lambda r: osm_key(r["osm"]))
 
     result.records_after = result.records_before + len(result.new)
+    result.duplicates = find_duplicates(list(load_places(root).values()))
     return result
 
 
@@ -257,6 +273,26 @@ def table(records: list[dict]) -> list[str]:
     if len(records) > REPORT_LIST_LIMIT:
         lines.append("")
         lines.append(f"And {len(records) - REPORT_LIST_LIMIT} more, not listed here.")
+    return lines
+
+
+def duplicates_table(pairs: list[dict]) -> list[str]:
+    lines = [
+        "Pairs that are likely the same place. Nothing was merged. To merge, keep one "
+        "and run `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR.",
+        "",
+        "| Record A | Name A | Kind A | Record B | Name B | Kind B | Distance |",
+        "|---|---|---|---|---|---|---:|",
+    ]
+    for pair in pairs[:REPORT_LIST_LIMIT]:
+        a, b = pair["a"], pair["b"]
+        lines.append(
+            f"| `{a['id']}` | {escape_cell(a['name'])} | {a['kind']} "
+            f"| `{b['id']}` | {escape_cell(b['name'])} | {b['kind']} | {pair['distance_m']:.0f} m |"
+        )
+    if len(pairs) > REPORT_LIST_LIMIT:
+        lines.append("")
+        lines.append(f"And {len(pairs) - REPORT_LIST_LIMIT} more, not listed here.")
     return lines
 
 
@@ -297,6 +333,8 @@ def render_report(result: SyncResult, source: str | None = None) -> str:
         ]
     else:
         lines.append("None.")
+    lines += ["", "## Possible duplicates", ""]
+    lines += duplicates_table(result.duplicates) if result.duplicates else ["None."]
     lines += ["", "## New", ""]
     lines += table(result.new) if result.new else ["None."]
     lines += ["", "## Updated", ""]
@@ -330,6 +368,7 @@ def main(argv: list[str] | None = None) -> int:
         "records_after": result.records_after,
         "change_percent": result.change_percent,
         "auto_merge": result.change_percent < AUTO_MERGE_BELOW_PERCENT,
+        "possible_duplicates": len(result.duplicates),
     }
     if args.summary:
         write_text(args.summary, json.dumps(summary, indent=2, sort_keys=True) + "\n")
