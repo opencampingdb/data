@@ -54,8 +54,9 @@ got through.
 
 `kind` is one of the codes in `schema/kinds.json`: the 22 site types of the
 OTWD (Open Touring and Waypoint Database) vocabulary, version 1.0.0, under
-Apache-2.0, plus two Open Camping DB extensions, `campground` and
-`picnic_site`. Each kind belongs to a group, and every record carries its
+Apache-2.0, plus three Open Camping DB extensions, `campground`,
+`picnic_site` and `farm_stay`. `farm_stay` never comes from OSM: it is private
+land listed by its owner. Each kind belongs to a group, and every record carries its
 `group`.
 
 | Code | Label | Group | Origin |
@@ -67,6 +68,7 @@ Apache-2.0, plus two Open Camping DB extensions, `campground` and
 | `state_forest_campsite` | State forest campsite | overnight | OTWD |
 | `showground` | Showground | overnight | OTWD |
 | `campground` | Campground | overnight | Open Camping DB: a camp site whose fee is not known |
+| `farm_stay` | Farm stay | overnight | Open Camping DB: private land listed by its owner. Never from OSM |
 | `rest_area` | Rest area | utility | OTWD |
 | `dump_point` | Dump point | utility | OTWD |
 | `drinking_water_point` | Drinking water point | utility | OTWD |
@@ -231,6 +233,10 @@ as the feedback workflow) must use the same form, or validation fails. In
 Python that is
 `json.dumps(record, sort_keys=True, indent=2, ensure_ascii=False) + "\n"`.
 
+Values from a place's verified owner have the source `owner`. Sync never
+overwrites them, and never touches `description`, `owner_verified`,
+`reopens` or `status`, none of which come from OSM.
+
 Review lines are compact JSON with sorted keys, one per line, sorted by
 `id`, with LF line endings and a trailing newline. In Python that is
 `json.dumps(review, sort_keys=True, separators=(",", ":"), ensure_ascii=False)`.
@@ -290,7 +296,11 @@ other fact (plus optional `name`, `location` and `status`, each `osm`,
 `feedback` or `contributed`), that no two records share an
 id or an OSM object (counting `merged_osm`, leaving tombstones out), that a
 tombstone has a `merged_into` naming a record that is not itself merged and
-no reviews, that review lines are canonical and sorted by id, that
+no reviews, the owner rules (a value with the source `owner` needs
+`owner_verified: true`; a `farm_stay` has `osm: null`, `entry: private`,
+`booking_required: true` and a `booking_url` or `phone`; a `description` is
+checked like review text; `reopens` is a real date and only goes with
+`status: temporarily_closed`), that review lines are canonical and sorted by id, that
 each review's place exists, that each `rating` has the exact count and
 rounded mean of its reviews, and that review text has no email
 address, phone number, link, social media handle or obvious personal name.

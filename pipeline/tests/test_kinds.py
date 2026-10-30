@@ -6,7 +6,7 @@ from pipeline.common import GROUPS, KIND_GROUP, KINDS
 from pipeline.kinds import classify, container_type
 
 
-def test_vocabulary_has_the_otwd_codes_and_our_two_extensions():
+def test_vocabulary_has_the_otwd_codes_and_our_extensions():
     otwd = [
         "free_camp", "paid_campground", "caravan_park", "national_park_campsite",
         "state_forest_campsite", "showground", "rest_area", "dump_point",
@@ -14,7 +14,7 @@ def test_vocabulary_has_the_otwd_codes_and_our_two_extensions():
         "information_centre", "attraction", "lookout", "swimming_spot", "boat_ramp",
         "fuel", "lpg_refill_swap", "mechanic", "hospital_emergency", "ferry_terminal",
     ]
-    assert list(KINDS) == otwd + ["campground", "picnic_site"]
+    assert list(KINDS) == otwd + ["campground", "picnic_site", "farm_stay"]
     assert set(KIND_GROUP.values()) == set(GROUPS)
     assert KIND_GROUP["campground"] == "overnight"
     assert KIND_GROUP["picnic_site"] == "utility"

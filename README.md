@@ -5,9 +5,9 @@ stop at in Australia: free camps, campgrounds, national park and state forest
 campsites, caravan parks and showgrounds; rest areas, dump points, drinking
 water, toilets, showers, laundromats and picnic areas; information centres,
 fuel, LPG, mechanics, emergency hospitals and ferry terminals; and lookouts,
-swimming spots, boat ramps and attractions. Its kinds of place are the site
-types of the OTWD (Open Touring and Waypoint Database) vocabulary, plus two of
-its own. It is built from OpenStreetMap every night
+swimming spots, boat ramps and attractions; and farm stays listed by their
+owners. Its kinds of place are the site types of the OTWD (Open Touring and
+Waypoint Database) vocabulary, plus three of its own. It is built from OpenStreetMap every night
 and improved by feedback from the apps that use it. Any app may use the data
 and send feedback. CampOracle is the first.
 
@@ -114,15 +114,23 @@ Anything that shows this data must show:
    `status: "closed"` with `fact_sources.status` set to `"contributed"`. The
    OSM sync never changes a place without an OSM link, and keeps a
    contributed status.
-4. **Duplicates.** After every OSM sync, likely duplicates (for example a
+4. **Owners.** A place's owner can claim it through the owner page at
+   `https://opencampingdb.github.io/owners/`. A person approves every claim
+   and every private property listing before anything is published. After
+   that the owner's updates (facts, booking details, a short description, a
+   temporary closure) are marked `"owner"` in `fact_sources`, and the OSM
+   sync never overwrites them. Private land appears only as a `farm_stay`
+   listed by its owner, and apps show it as "Private property. Book with the
+   owner first."
+5. **Duplicates.** After every OSM sync, likely duplicates (for example a
    campground mapped as both a node and a way) are listed in the PR body under
    "Possible duplicates". Nothing is merged automatically. A person merges a
    pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR:
    the dropped record stays as a tombstone that points at the kept one, and
    releases list it in `merged.ndjson.gz` so apps can redirect old ids.
-5. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
+6. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
    the tests, the schema and content checks, and a trial build of the release.
-6. **Release** (`.github/workflows/release.yml`) runs every hour and on
+7. **Release** (`.github/workflows/release.yml`) runs every hour and on
    demand. When `main` has changed since the newest release, it publishes the
    files described above as a new release and prunes the oldest.
 
