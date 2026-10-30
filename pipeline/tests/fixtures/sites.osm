@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- type=site relations. Test data written for this repo. The places are invented.
+     Relation 7001 is a camp site whose members are a node, a closed way and a
+     multipolygon relation, none of them tagged. Relation 7002 is a toilet
+     block whose only member is an open way. Relation 7003 is a site with no
+     kind tag and relation 7004 is a route tagged as a camp site: both skipped. -->
+<osm version="0.6" generator="hand">
+  <node id="7101" version="1" lat="-36.0000000" lon="141.0000000"/>
+  <node id="7111" version="1" lat="-36.0100000" lon="141.0100000"/>
+  <node id="7112" version="1" lat="-36.0100000" lon="141.0200000"/>
+  <node id="7113" version="1" lat="-36.0200000" lon="141.0200000"/>
+  <node id="7114" version="1" lat="-36.0200000" lon="141.0100000"/>
+  <node id="7121" version="1" lat="-36.0300000" lon="141.0300000"/>
+  <node id="7122" version="1" lat="-36.0300000" lon="141.0400000"/>
+  <node id="7123" version="1" lat="-36.0400000" lon="141.0400000"/>
+  <node id="7124" version="1" lat="-36.0400000" lon="141.0300000"/>
+  <node id="7131" version="1" lat="-36.1000000" lon="141.1000000"/>
+  <node id="7132" version="1" lat="-36.1100000" lon="141.1100000"/>
+  <node id="7141" version="1" lat="-36.5000000" lon="141.5000000"/>
+  <way id="7201" version="1">
+    <nd ref="7111"/>
+    <nd ref="7112"/>
+    <nd ref="7113"/>
+    <nd ref="7114"/>
+    <nd ref="7111"/>
+  </way>
+  <way id="7203" version="1">
+    <nd ref="7131"/>
+    <nd ref="7132"/>
+  </way>
+  <way id="7302" version="1">
+    <nd ref="7121"/>
+    <nd ref="7122"/>
+    <nd ref="7123"/>
+    <nd ref="7124"/>
+    <nd ref="7121"/>
+  </way>
+  <relation id="7301" version="1">
+    <member type="way" ref="7302" role="outer"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+  <relation id="7001" version="3">
+    <member type="node" ref="7101" role="entrance"/>
+    <member type="way" ref="7201" role="perimeter"/>
+    <member type="relation" ref="7301" role=""/>
+    <tag k="type" v="site"/>
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="no"/>
+    <tag k="name" v="Fixture Site Camp"/>
+  </relation>
+  <relation id="7002" version="1">
+    <member type="way" ref="7203" role=""/>
+    <tag k="type" v="site"/>
+    <tag k="amenity" v="toilets"/>
+  </relation>
+  <relation id="7003" version="1">
+    <member type="node" ref="7141" role=""/>
+    <tag k="type" v="site"/>
+    <tag k="name" v="Fixture Site Without Kind"/>
+  </relation>
+  <relation id="7004" version="1">
+    <member type="node" ref="7141" role=""/>
+    <tag k="type" v="route"/>
+    <tag k="tourism" v="camp_site"/>
+  </relation>
+</osm>

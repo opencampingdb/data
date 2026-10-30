@@ -4,11 +4,13 @@ Usage:
     python -m pipeline.extract australia-latest.osm.pbf --out extract.ndjson
 
 Reads .osm.pbf or .osm XML with pyosmium. Keeps nodes, closed ways and
-multipolygon relations that pipeline.kinds classifies as a place. A node is
-placed at its own position. A closed way or a multipolygon is placed at the
-centroid of its area (holes taken out). An open way that is a boat ramp or
-an attraction (slipways and walls are often drawn as lines) is placed at its
-middle vertex. Other relations and open ways are skipped.
+multipolygon relations that pipeline.kinds classifies as a place, and
+type=site relations with a kind tag. A node is placed at its own position. A
+closed way or a multipolygon is placed at the centroid of its area (holes
+taken out). A site relation is placed at the mean of its members' positions.
+An open way that is a boat ramp or an attraction (slipways and walls are
+often drawn as lines) is placed at its middle vertex. Other relations and
+open ways are skipped.
 
 Camp sites are classified by the areas they lie in: national parks and other
 parks, state forests and showgrounds. Those areas are built in the same read
@@ -254,21 +256,112 @@ def tag_dict(obj) -> dict:
     return {tag.k: tag.v for tag in obj.tags}
 
 
+class SiteRelations:
+    """type=site relations that are places, and the positions of their members.
+
+    A site relation groups the parts of one place (a camp ground's entrance
+    node, its outline way, its toilet block) without being an area itself. It
+    is placed at the mean of its members' positions: a node's location, a
+    way's centroid (the area centroid of a closed way, the mean of the nodes
+    of an open one) and the centroid of a member multipolygon's area. Nested
+    site relations are not followed.
+    """
+
+    def __init__(self) -> None:
+        self.sites: dict[int, dict] = {}
+        self.member_nodes: set[int] = set()
+        self.member_ways: set[int] = set()
+        self.member_relations: set[int] = set()
+        self.positions: dict[tuple[str, int], tuple[float, float]] = {}
+
+    def relation(self, relation) -> None:
+        tags = tag_dict(relation)
+        if tags.get("type") != "site" or classify(tags) is None:
+            return
+        members = [(m.type, m.ref) for m in relation.members]
+        self.sites[relation.id] = {"tags": tags, "version": relation.version, "members": members}
+        for member_type, ref in members:
+            if member_type == "n":
+                self.member_nodes.add(ref)
+            elif member_type == "w":
+                self.member_ways.add(ref)
+            elif member_type == "r":
+                self.member_relations.add(ref)
+
+    def note_way(self, way) -> None:
+        """Second pass: note the position of a member way."""
+        if way.id not in self.member_ways:
+            return
+        points = ring_points(way.nodes)
+        if not points:
+            return
+        if way.is_closed() and len(points) >= 4:
+            position = way_centroid(way)
+        else:
+            position = (
+                sum(p[1] for p in points) / len(points),
+                sum(p[0] for p in points) / len(points),
+            )
+        if position is not None:
+            self.positions[("w", way.id)] = position
+
+    def note_area(self, area) -> None:
+        if not area.from_way() and area.orig_id() in self.member_relations:
+            position = relation_area_centroid(area)
+            if position is not None:
+                self.positions[("r", area.orig_id())] = position
+
+    def note_nodes(self, location_store) -> None:
+        for node_id in self.member_nodes:
+            try:
+                location = location_store.get(node_id)
+            except KeyError:
+                continue
+            if location.valid():
+                self.positions[("n", node_id)] = (location.lat, location.lon)
+
+    def position(self, relation_id: int) -> tuple[float, float] | None:
+        """Mean of the positions of the members that could be placed, or None."""
+        found = [
+            self.positions[key]
+            for key in self.sites[relation_id]["members"]
+            if key in self.positions
+        ]
+        if not found:
+            return None
+        return (
+            sum(lat for lat, _ in found) / len(found),
+            sum(lon for _, lon in found) / len(found),
+        )
+
+
+class SiteWayCollector:
+    """Second-pass handler that hands ways to SiteRelations. Passes every object on."""
+
+    def __init__(self, sites: SiteRelations) -> None:
+        self.sites = sites
+
+    def way(self, way) -> None:
+        self.sites.note_way(way)
+
+
 class FirstPass:
     """First pass: finds the ways the main pass must keep.
 
-    Sees only ways and relations that passed the tag filter. Records the
-    closed ways that are a place or a container, and the member ways of
-    multipolygon and boundary relations that are a place or a container.
-    Every other way, buildings included, is kept away from the area builder.
+    Sees the ways that passed the tag filter, and every relation. Records
+    the closed ways that are a place or a container, and the member ways of
+    multipolygon and boundary relations that are a place or a container or a
+    member of a site relation that is a place. Every other way, buildings
+    included, is kept away from the area builder.
 
     relation() returns True for a relation the area builder must not
     assemble, which drops it from the rest of the handler chain.
     """
 
-    def __init__(self, stats: dict) -> None:
-        self.way_ids: set[int] = set()
+    def __init__(self, stats: dict, sites: SiteRelations) -> None:
+        self.way_ids: set[int] = set(sites.member_ways)
         self.stats = stats
+        self.sites = sites
 
     def way(self, way) -> None:
         tags = tag_dict(way)
@@ -284,7 +377,8 @@ class FirstPass:
         tags = tag_dict(relation)
         if tags.get("type") not in ("multipolygon", "boundary"):
             return True
-        if classify(tags) is None and container_type(tags) is None:
+        wanted = relation.id in self.sites.member_relations
+        if not wanted and classify(tags) is None and container_type(tags) is None:
             return True
         for member in relation.members:
             if member.type == "w":
@@ -302,10 +396,15 @@ class AreaWayCounter:
         self.stats["ways_to_area_builder"] += 1
 
 
-def read_objects(path: Path, stats: dict):
+def read_objects(path: Path, stats: dict, sites: SiteRelations):
     """Yield every OSM object or area that may be a place or a container.
 
-    Two passes over the file:
+    Fills sites with the site relations that are places and the positions of
+    their members.
+
+    Three passes over the file:
+    0. Relations only: find the site relations that are places, and their
+       members (SiteRelations).
     1. Ways and relations only, no locations: collect the ways that matter
        (FirstPass), and let the area builder take note of the relations
        FirstPass keeps.
@@ -320,19 +419,29 @@ def read_objects(path: Path, stats: dict):
     # Every native object is held in a local variable for the whole read:
     # the handlers keep only pointers to each other, so an object that
     # Python frees early crashes the reader.
+    site_filter = osmium.filter.TagFilter(*PLACE_TAG_PAIRS)
+    with osmium.io.Reader(str(path), osmium.osm.RELATION) as reader:
+        osmium.apply(reader, site_filter, sites)
+
     area_manager = osmium.area.AreaManager()
-    first = FirstPass(stats)
+    first = FirstPass(stats, sites)
+    # The tag filter applies to ways only. Every relation reaches FirstPass,
+    # which keeps untagged multipolygons that are members of a site.
     first_filter = interesting_tag_filter()
+    first_filter.enable_for(osmium.osm.WAY)
     first_pass = area_manager.first_pass_handler()
     with osmium.io.Reader(str(path), osmium.osm.WAY | osmium.osm.RELATION) as reader:
         osmium.apply(reader, first_filter, first, first_pass)
 
     area_gate = osmium.filter.IdFilter(first.way_ids)
     area_gate.enable_for(osmium.osm.WAY)
-    area_filter = interesting_tag_filter()
-    areas = osmium.BufferIterator(area_filter)
+    # Areas are not filtered by tag, so that untagged multipolygons that are
+    # members of a site come out. Only gated ways and kept relations are
+    # assembled, so there are few.
+    areas = osmium.BufferIterator()
     second_pass = area_manager.second_pass_to_buffer(areas)
     counter = AreaWayCounter(stats)
+    site_ways = SiteWayCollector(sites)
     output_filter = interesting_tag_filter()
     location_store = osmium.index.create_map("flex_mem")
     locations = osmium.NodeLocationsForWays(location_store)
@@ -340,14 +449,21 @@ def read_objects(path: Path, stats: dict):
 
     with osmium.io.Reader(str(path)) as reader:
         objects = osmium.OsmFileIterator(
-            reader, locations, area_gate, counter, second_pass, output_filter
+            reader, locations, area_gate, site_ways, counter, second_pass, output_filter
         )
         for obj in objects:
             yield obj
             if areas:
-                yield from areas
+                yield from yield_areas(areas, sites)
     if areas:
-        yield from areas
+        yield from yield_areas(areas, sites)
+    sites.note_nodes(location_store)
+
+
+def yield_areas(areas, sites: SiteRelations):
+    for area in areas:
+        sites.note_area(area)
+        yield area
 
 
 def object_position(obj, stats: dict, kind: str | None = None) -> tuple[str, int, float, float] | None:
@@ -440,8 +556,9 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
 
     places: list[tuple[dict, dict]] = []  # (record without kind, tags)
     containers: list[tuple] = []  # (shapely geometry, container type)
+    sites = SiteRelations()
 
-    for obj in read_objects(path, stats):
+    for obj in read_objects(path, stats, sites):
         tags = tag_dict(obj)
 
         kind_of_container = container_type(tags)
@@ -464,6 +581,22 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
             "facts": facts_from_tags(tags),
         }
         places.append((record, tags))
+
+    stats["site_relations"] = 0
+    for relation_id, site in sorted(sites.sites.items()):
+        position = sites.position(relation_id)
+        if position is None:
+            stats["missing_locations"] += 1
+            continue
+        tags = site["tags"]
+        record = {
+            "osm": {"type": "relation", "id": relation_id, "version": site["version"]},
+            "name": tags.get("name", "").strip() or None,
+            "location": {"lat": round_coord(position[0]), "lon": round_coord(position[1])},
+            "facts": facts_from_tags(tags),
+        }
+        places.append((record, tags))
+        stats["site_relations"] += 1
 
     # Only camp sites depend on the areas they lie in.
     camp_indexes = [i for i, (_, tags) in enumerate(places) if tags.get("tourism") == "camp_site"]
@@ -509,6 +642,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Placed {stats['open_way_places']} open ways at their middle vertex", file=sys.stderr)
     print(f"Handed {stats['ways_to_area_builder']} ways to the area builder", file=sys.stderr)
     print(f"Containers: {stats['containers']}", file=sys.stderr)
+    print(f"Site relations: {stats['site_relations']}", file=sys.stderr)
     return 0
 
 
