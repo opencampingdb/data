@@ -1,12 +1,15 @@
 {
   "fact_sources": {
-    "pets": "osm"
+    "pets": "osm",
+    "water_type": "osm"
   },
   "facts": {
-    "pets": "yes"
+    "pets": "yes",
+    "water_type": "fountain"
   },
+  "group": "utility",
   "id": "ocdb_01M66ESC7N9GGMN4Z7T116NGKG",
-  "kind": "drinking_water",
+  "kind": "drinking_water_point",
   "location": {
     "lat": -33.896045,
     "lon": 151.257985
@@ -19,5 +22,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T13:08:01Z"
+  "updated": "2026-10-30T14:16:00Z"
 }

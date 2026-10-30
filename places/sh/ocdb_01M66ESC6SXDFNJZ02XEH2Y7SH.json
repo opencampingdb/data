@@ -1,12 +1,15 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "water_type": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "water_type": "fountain"
   },
+  "group": "utility",
   "id": "ocdb_01M66ESC6SXDFNJZ02XEH2Y7SH",
-  "kind": "drinking_water",
+  "kind": "drinking_water_point",
   "location": {
     "lat": -27.433117,
     "lon": 153.543698
@@ -19,5 +22,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T13:08:01Z"
+  "updated": "2026-10-30T14:16:00Z"
 }

@@ -2,15 +2,18 @@
   "fact_sources": {
     "fee": "osm",
     "opening_hours": "osm",
-    "pets": "osm"
+    "pets": "osm",
+    "water_type": "osm"
   },
   "facts": {
     "fee": false,
     "opening_hours": "24/7",
-    "pets": "yes"
+    "pets": "yes",
+    "water_type": "fountain"
   },
+  "group": "utility",
   "id": "ocdb_01M66ESDDVGQ71XG4D7X0FK60G",
-  "kind": "drinking_water",
+  "kind": "drinking_water_point",
   "location": {
     "lat": -37.742308,
     "lon": 144.999968
@@ -23,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T13:08:01Z"
+  "updated": "2026-10-30T14:16:00Z"
 }
