@@ -245,6 +245,21 @@ def test_services_attraction_emergency_and_transport_kinds():
         319: "mechanic",
         320: "hospital_emergency",
         323: "ferry_terminal",
+        3901: "boat_ramp",  # an open way, at its middle vertex
+        3902: "attraction",  # an open way, at its middle vertex
         # Left out: 303 information board, 312 and 313 pools without public
-        # access, 314 natural=beach, 321 and 322 hospitals without emergency=yes.
+        # access, 314 natural=beach, 321 and 322 hospitals without
+        # emergency=yes, and 3903, an open viewpoint way.
     }
+
+
+def test_open_way_boat_ramps_and_attractions_sit_at_their_middle_vertex():
+    stats = {}
+    records = by_osm(extract_file(FIXTURES / "services.osm", stats))
+    # Three nodes: the middle one is the second (node 3912).
+    assert records[("way", 3901)]["location"] == {"lat": -34.3001, "lon": 146.0002}
+    # Four nodes: the middle vertex is the third (index 4 // 2, node 3923).
+    assert records[("way", 3902)]["location"] == {"lat": -34.311, "lon": 146.001}
+    assert ("way", 3903) not in records
+    assert stats["open_way_places"] == 2
+    assert stats["open_ways"] == 1

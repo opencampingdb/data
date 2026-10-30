@@ -6,8 +6,9 @@ Usage:
 Reads .osm.pbf or .osm XML with pyosmium. Keeps nodes, closed ways and
 multipolygon relations that pipeline.kinds classifies as a place. A node is
 placed at its own position. A closed way or a multipolygon is placed at the
-centroid of its area (holes taken out). Other relations and open ways are
-skipped.
+centroid of its area (holes taken out). An open way that is a boat ramp or
+an attraction (slipways and walls are often drawn as lines) is placed at its
+middle vertex. Other relations and open ways are skipped.
 
 Camp sites are classified by the areas they lie in: national parks and other
 parks, state forests and showgrounds. Those areas are built in the same read
@@ -235,6 +236,12 @@ def relation_area_centroid(area) -> tuple[float, float] | None:
     return area_centroid(polygons)
 
 
+# Kinds that are often mapped as an open line, such as a slipway drawn down
+# into the water. Such a way is placed at its middle vertex. Open ways of
+# every other kind are skipped.
+OPEN_WAY_KINDS = ("boat_ramp", "attraction")
+
+
 def interesting_tag_filter() -> "osmium.filter.TagFilter":
     """A C++ filter that lets through objects that may be a place or a container.
 
@@ -265,12 +272,12 @@ class FirstPass:
 
     def way(self, way) -> None:
         tags = tag_dict(way)
-        is_place = classify(tags) is not None
-        if not is_place and container_type(tags) is None:
+        kind = classify(tags)
+        if kind is None and container_type(tags) is None:
             return
-        if way.is_closed():
+        if way.is_closed() or kind in OPEN_WAY_KINDS:
             self.way_ids.add(way.id)
-        elif is_place:
+        elif kind is not None:
             self.stats["open_ways"] += 1
 
     def relation(self, relation) -> bool:
@@ -343,7 +350,7 @@ def read_objects(path: Path, stats: dict):
         yield from areas
 
 
-def object_position(obj, stats: dict) -> tuple[str, int, float, float] | None:
+def object_position(obj, stats: dict, kind: str | None = None) -> tuple[str, int, float, float] | None:
     """(osm type, osm id, lat, lon) of a node, closed way or multipolygon area.
 
     None for relations (used through their areas), for areas built from
@@ -366,7 +373,15 @@ def object_position(obj, stats: dict) -> tuple[str, int, float, float] | None:
             return None
         return "relation", obj.orig_id(), *centroid
     if not obj.is_closed():
-        return None  # already counted in the first pass
+        if kind not in OPEN_WAY_KINDS:
+            return None  # already counted in the first pass
+        nodes = list(obj.nodes)
+        middle = nodes[len(nodes) // 2] if nodes else None
+        if middle is None or not middle.location.valid():
+            stats["missing_locations"] += 1
+            return None
+        stats["open_way_places"] += 1
+        return "way", obj.id, middle.location.lat, middle.location.lon
     centroid = way_centroid(obj)
     if centroid is None:
         stats["missing_locations"] += 1
@@ -418,7 +433,9 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
     containers found, for the log.
     """
     stats = stats if stats is not None else {}
-    stats.update(kept=0, open_ways=0, missing_locations=0, ways_to_area_builder=0)
+    stats.update(
+        kept=0, open_ways=0, open_way_places=0, missing_locations=0, ways_to_area_builder=0
+    )
     container_counts = {"park": 0, "forest": 0, "showground": 0}
 
     places: list[tuple[dict, dict]] = []  # (record without kind, tags)
@@ -436,7 +453,7 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
 
         if classify(tags) is None:
             continue
-        position = object_position(obj, stats)
+        position = object_position(obj, stats, classify(tags))
         if position is None:
             continue
         osm_type, osm_id, lat, lon = position
@@ -489,6 +506,7 @@ def main(argv: list[str] | None = None) -> int:
         f"{stats['missing_locations']} objects with missing node locations",
         file=sys.stderr,
     )
+    print(f"Placed {stats['open_way_places']} open ways at their middle vertex", file=sys.stderr)
     print(f"Handed {stats['ways_to_area_builder']} ways to the area builder", file=sys.stderr)
     print(f"Containers: {stats['containers']}", file=sys.stderr)
     return 0

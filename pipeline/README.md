@@ -20,7 +20,10 @@ position. A closed way or a multipolygon relation is placed at the centroid of
 its area, with holes taken out, so `osm.type` is `node`, `way` or `relation`.
 pyosmium's area handler assembles the multipolygons. Relations of any other
 type (such as `type=site`), ways that are not closed, and objects with missing
-node locations are skipped. Coordinates are rounded to 6 decimal places.
+node locations are skipped, with one exception: an open way that is a
+`boat_ramp` or an `attraction` (slipways and walls are often drawn as lines)
+is placed at its middle vertex, node number `len(nodes) // 2` counting from
+0. Coordinates are rounded to 6 decimal places.
 
 The centroid treats degrees as flat x and y, which is close enough over the
 size of a camp ground. A shape with no area falls back to the mean of its
@@ -106,9 +109,9 @@ toilet.
 | 15 | `tourism=viewpoint` | `lookout` | exact | |
 | 16 | `leisure=swimming_area` or `leisure=bathing_place` | `swimming_spot` | narrower | |
 | 17 | `leisure=swimming_pool` + `access=yes` or `access=public` | `swimming_spot` | related | Public pools only. Pools without public access are left out |
-| 18 | `leisure=slipway` | `boat_ramp` | exact | |
+| 18 | `leisure=slipway` | `boat_ramp` | exact | An open way is placed at its middle vertex |
 | 19 | `tourism=picnic_site` | `picnic_site` | | Open Camping DB extension |
-| 20 | `tourism=attraction` | `attraction` | exact | Last, because OTWD uses it only when no more specific type fits |
+| 20 | `tourism=attraction` | `attraction` | exact | Last, because OTWD uses it only when no more specific type fits. An open way is placed at its middle vertex |
 
 OTWD mappings not used, and why:
 
