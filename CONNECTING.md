@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 1,
+  "format_version": 2,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -37,6 +37,11 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 If `format_version` is higher than the one your app understands, keep the
 data you have and stop: the record format has changed in a way your app
 cannot read.
+
+Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
+`dump_station`, `drinking_water`, `toilets`, `shower`, `picnic_site`) and no
+`group`. Format 2 uses the kinds listed in section 4 and adds `group`. Every
+place kept its `id` across the change.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -95,6 +100,48 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   Consider leaving `private` places out of what you show.
 - Records gone from OpenStreetMap are kept until a person reviews them, so a
   place may linger for a while after it has really closed.
+
+### Kinds and groups
+
+`kind` says what a place is and `group` says which family it belongs to:
+`overnight`, `utility`, `services`, `attraction`, `emergency` or `transport`.
+Filter on `group` to show, for example, only places to stay. The kinds are the
+site types of the OTWD (Open Touring and Waypoint Database) vocabulary, plus
+`campground` and `picnic_site`. [schema/kinds.json](schema/kinds.json) holds
+the same list in machine-readable form, and new kinds may be added in later
+versions, so show an unknown kind under its group rather than dropping it.
+
+| `kind` | Label | `group` |
+|---|---|---|
+| `free_camp` | Free camp | overnight |
+| `paid_campground` | Paid campground | overnight |
+| `caravan_park` | Caravan park | overnight |
+| `national_park_campsite` | National park campsite | overnight |
+| `state_forest_campsite` | State forest campsite | overnight |
+| `showground` | Showground | overnight |
+| `campground` | Campground (fee not known) | overnight |
+| `rest_area` | Rest area | utility |
+| `dump_point` | Dump point | utility |
+| `drinking_water_point` | Drinking water point | utility |
+| `public_toilet` | Public toilet | utility |
+| `public_shower` | Public shower | utility |
+| `laundromat` | Laundromat | utility |
+| `picnic_site` | Picnic area | utility |
+| `information_centre` | Information centre | services |
+| `fuel` | Fuel | services |
+| `lpg_refill_swap` | LPG refill or swap | services |
+| `mechanic` | Mechanic | services |
+| `attraction` | Attraction | attraction |
+| `lookout` | Lookout | attraction |
+| `swimming_spot` | Swimming spot | attraction |
+| `boat_ramp` | Boat ramp | attraction |
+| `hospital_emergency` | Hospital (emergency) | emergency |
+| `ferry_terminal` | Ferry terminal | transport |
+
+How each kind is derived from OpenStreetMap is described in
+[pipeline/README.md](pipeline/README.md). A `drinking_water_point` may carry
+the fact `water_type`: `tank_fill` for a tap suited to filling tanks, or
+`fountain` for a drinking fountain, which often is not.
 
 ## 5. Show the attribution
 

@@ -50,7 +50,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert [json.loads(line)["id"] for line in lines] == place_ids
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
-    assert manifest["format_version"] == 1
+    # 2: OTWD kinds and the group field replaced the eight kinds of format 1.
+    assert manifest["format_version"] == 2
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
