@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Second version of v1.osm: node 1001 changed, node 1002 is gone, node 1004 is new. -->
+<osm version="0.6" generator="hand">
+  <node id="1001" version="2" lat="-37.1500000" lon="142.5000000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Creek Bush Camp"/>
+    <tag k="fee" v="yes"/>
+    <tag k="dog" v="leashed"/>
+    <tag k="toilets" v="yes"/>
+    <tag k="power_supply" v="no"/>
+    <tag k="drinking_water" v="yes"/>
+    <tag k="maxstay" v="2 days"/>
+    <tag k="4wd_only" v="yes"/>
+    <tag k="tents" v="yes"/>
+    <tag k="caravans" v="no"/>
+  </node>
+  <node id="1003" version="1" lat="-37.3000000" lon="142.4000000"/>
+  <node id="1004" version="1" lat="-37.2500000" lon="142.3500000">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="1005" version="1" lat="-37.3100000" lon="142.4100000">
+    <tag k="amenity" v="bench"/>
+  </node>
+  <node id="3001" version="1" lat="-37.0000000" lon="142.0000000"/>
+  <node id="3002" version="1" lat="-37.0000000" lon="142.0100000"/>
+  <node id="3003" version="1" lat="-37.0100000" lon="142.0100000"/>
+  <node id="3004" version="1" lat="-37.0100000" lon="142.0000000"/>
+  <way id="2001" version="4">
+    <nd ref="3001"/>
+    <nd ref="3002"/>
+    <nd ref="3003"/>
+    <nd ref="3004"/>
+    <nd ref="3001"/>
+    <tag k="tourism" v="caravan_site"/>
+    <tag k="name" v="Fixture Caravan Park"/>
+    <tag k="fee" v="yes"/>
+    <tag k="power_supply" v="yes"/>
+    <tag k="shower" v="hot"/>
+    <tag k="sanitary_dump_station" v="yes"/>
+    <tag k="contact:phone" v="+61 3 5555 0000"/>
+    <tag k="opening_hours" v="Mo-Su 08:00-18:00"/>
+    <tag k="dog" v="no"/>
+  </way>
+</osm>

@@ -1,0 +1,120 @@
+name: OSM sync
+
+# Nightly at 16:00 UTC (02:00 or 03:00 in Melbourne and Sydney). Downloads the
+# Geofabrik extract for Australia, merges it into places/ and opens or updates
+# one pull request from the osm-sync branch. Auto-merge is turned on only when
+# fewer than 2% of records changed.
+#
+# The branch push, the PR and the merge use a token for the opencampingdb-bot
+# GitHub App, never GITHUB_TOKEN: events caused by GITHUB_TOKEN do not start
+# other workflows, so a PR opened with it would never get its Validate check.
+# See README.md, "Repository setup".
+on:
+  schedule:
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: osm-sync
+  cancel-in-progress: false
+
+env:
+  EXTRACT_URL: https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf
+  USER_AGENT: OpenCampingDB-pipeline (+https://github.com/opencampingdb/data)
+
+jobs:
+  sync:
+    name: Sync from OpenStreetMap
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Download the Australia extract
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o australia-latest.osm.pbf "$EXTRACT_URL"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o australia-latest.osm.pbf.md5 "$EXTRACT_URL.md5"
+          md5sum -c australia-latest.osm.pbf.md5
+          ls -l australia-latest.osm.pbf
+
+      - name: Extract camping places
+        run: python -m pipeline.extract "$RUNNER_TEMP/australia-latest.osm.pbf" --out "$RUNNER_TEMP/extract.ndjson"
+
+      - name: Merge into places/
+        run: |
+          set -euo pipefail
+          python -m pipeline.sync "$RUNNER_TEMP/extract.ndjson" --root . \
+            --report "$RUNNER_TEMP/sync-report.md" \
+            --summary "$RUNNER_TEMP/sync-summary.json" \
+            --source "Geofabrik australia-latest.osm.pbf, downloaded $(date -u +%Y-%m-%dT%H:%MZ)"
+
+      - name: Validate
+        run: python -m pipeline.validate --root .
+
+      - name: Create an opencampingdb-bot token
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.OCDB_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.OCDB_BOT_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Open or update the sync pull request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain -- places)" ]; then
+            echo "No record changed. Nothing to propose."
+            exit 0
+          fi
+
+          gh auth setup-git
+          # Commit as the App's bot user, with GitHub's no-reply address for it.
+          bot_id="$(gh api '/users/opencampingdb-bot%5Bbot%5D' --jq .id)"
+          git config user.name "opencampingdb-bot[bot]"
+          git config user.email "${bot_id}+opencampingdb-bot[bot]@users.noreply.github.com"
+
+          # The branch is rebuilt from main every night, so the PR always
+          # shows main plus tonight's sync and nothing older.
+          git switch -C osm-sync
+          git add -- places
+          git commit -q -m "chore(osm): sync places from OpenStreetMap $(date -u +%Y-%m-%d)"
+          git push --force origin HEAD:osm-sync
+
+          title="OSM sync $(date -u +%Y-%m-%d)"
+          number="$(gh pr list --head osm-sync --base main --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$number" ]; then
+            gh pr create --base main --head osm-sync --title "$title" --body-file "$RUNNER_TEMP/sync-report.md"
+            number="$(gh pr list --head osm-sync --base main --state open --json number --jq '.[0].number')"
+          else
+            gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/sync-report.md"
+          fi
+
+          auto_merge="$(python -c 'import json, sys; print(str(json.load(open(sys.argv[1]))["auto_merge"]).lower())' "$RUNNER_TEMP/sync-summary.json")"
+          if [ "$auto_merge" = "true" ]; then
+            gh pr merge "$number" --auto --squash
+          else
+            # A big change waits for a person, even if last night's run had
+            # turned auto-merge on for this PR.
+            gh pr merge "$number" --disable-auto || true
+          fi
