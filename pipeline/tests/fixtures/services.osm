@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Services, attraction, emergency and transport kinds. Test data written for this repo. The places are invented. -->
+<!-- Services, attraction, emergency and transport kinds. Ways 3901 (slipway) and 3902 (attraction) are open ways placed at their middle vertex; open way 3903 (viewpoint) is skipped. Test data written for this repo. The places are invented. -->
 <osm version="0.6" generator="hand">
   <node id="301" version="1" lat="-34.0000000" lon="146.0000000">
     <tag k="tourism" v="information"/>
@@ -81,4 +81,32 @@
   <node id="323" version="1" lat="-34.2000000" lon="146.2000000">
     <tag k="amenity" v="ferry_terminal"/>
   </node>
+  <node id="3911" version="1" lat="-34.3000000" lon="146.0000000"/>
+  <node id="3912" version="1" lat="-34.3001000" lon="146.0002000"/>
+  <node id="3913" version="1" lat="-34.3003000" lon="146.0003000"/>
+  <node id="3921" version="1" lat="-34.3100000" lon="146.0000000"/>
+  <node id="3922" version="1" lat="-34.3100000" lon="146.0010000"/>
+  <node id="3923" version="1" lat="-34.3110000" lon="146.0010000"/>
+  <node id="3924" version="1" lat="-34.3110000" lon="146.0020000"/>
+  <node id="3931" version="1" lat="-34.3200000" lon="146.0000000"/>
+  <node id="3932" version="1" lat="-34.3200000" lon="146.0010000"/>
+  <way id="3901" version="1">
+    <nd ref="3911"/>
+    <nd ref="3912"/>
+    <nd ref="3913"/>
+    <tag k="leisure" v="slipway"/>
+  </way>
+  <way id="3902" version="1">
+    <nd ref="3921"/>
+    <nd ref="3922"/>
+    <nd ref="3923"/>
+    <nd ref="3924"/>
+    <tag k="tourism" v="attraction"/>
+    <tag k="name" v="Fixture Rock Wall"/>
+  </way>
+  <way id="3903" version="1">
+    <nd ref="3931"/>
+    <nd ref="3932"/>
+    <tag k="tourism" v="viewpoint"/>
+  </way>
 </osm>
