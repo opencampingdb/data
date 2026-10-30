@@ -13,7 +13,10 @@ exits 1. Checks:
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
   name, location and status entries
-- no two records share an id or an OSM object
+- no two records share an id or an OSM object (merged_osm included,
+  tombstones left out)
+- a tombstone (status merged) has merged_into, naming a record that is not
+  itself merged, and has no reviews. No other record has merged_into
 - review lines are compact JSON with sorted keys, sorted by id
 - reviews belong to a place that exists, have unique ids, and the place's
   rating has the right count and the mean rounded to 1 decimal place, half up
@@ -155,15 +158,34 @@ def check_places(root: Path) -> tuple[dict[str, dict], list[str]]:
         if record["id"] in places:
             errors.append(f"{path.relative_to(root).as_posix()}: id {record['id']} used twice")
         places[record["id"]] = record
+        if record.get("status") == "merged":
+            continue  # a tombstone's OSM links now belong to the record it was merged into
         osm = record.get("osm")
+        keys = []
         if isinstance(osm, dict) and "type" in osm and "id" in osm:
-            key = (osm["type"], osm["id"])
+            keys.append((osm["type"], osm["id"]))
+        keys += [(m["type"], m["id"]) for m in record.get("merged_osm", []) if isinstance(m, dict)]
+        for key in keys:
             if key in osm_owner:
                 errors.append(
                     f"{record['id']}: same OSM object {key[0]}/{key[1]} as {osm_owner[key]}"
                 )
             else:
                 osm_owner[key] = record["id"]
+
+    # Tombstones: status "merged" and merged_into go together, and
+    # merged_into names a record that is not itself merged.
+    for place_id, record in places.items():
+        merged = record.get("status") == "merged"
+        target = record.get("merged_into")
+        if merged and target is None:
+            errors.append(f"{place_id}: status is merged but merged_into is missing")
+        elif not merged and target is not None:
+            errors.append(f"{place_id}: merged_into is set but status is not merged")
+        elif merged and target not in places:
+            errors.append(f"{place_id}: merged_into {target} is not a place")
+        elif merged and places[target].get("status") == "merged":
+            errors.append(f"{place_id}: merged_into {target} is itself merged; point at the place that is left")
     return places, errors
 
 
@@ -215,10 +237,15 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
                 errors.append(f"{here}: text contains {reason}")
             stars_by_place.setdefault(place_id, []).append(review["stars"])
 
-    # The rating on each place must agree with its reviews.
+    # The rating on each place must agree with its reviews. A tombstone keeps
+    # the rating it had, but its reviews have moved, so it may have none.
     for place_id, record in places.items():
         stars = stars_by_place.get(place_id, [])
         rating = record.get("rating")
+        if record.get("status") == "merged":
+            if stars:
+                errors.append(f"{place_id}: is merged, its reviews belong to {record.get('merged_into')}")
+            continue
         if not stars:
             if rating is not None:
                 errors.append(f"{place_id}: rating is set but the place has no reviews")

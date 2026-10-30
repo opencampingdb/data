@@ -110,7 +110,28 @@
       }
     },
     "status": {
-      "enum": ["open", "reported_closed", "closed"]
+      "description": "merged marks a tombstone: a record merged into another by a person (see merged_into).",
+      "enum": ["open", "reported_closed", "closed", "merged"]
+    },
+    "merged_into": {
+      "description": "Only on a tombstone (status merged): the id of the record this one was merged into. Apps that stored this id should use that one.",
+      "type": "string",
+      "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "merged_osm": {
+      "description": "OSM objects of records merged into this one. The OSM sync matches them to this record and never creates them again.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "id"],
+        "properties": {
+          "type": {"enum": ["node", "way", "relation"]},
+          "id": {"type": "integer", "minimum": 1}
+        }
+      }
     },
     "rating": {
       "description": "From accepted reviews, or null when there are none.",
