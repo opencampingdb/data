@@ -39,9 +39,14 @@ FACT_KEYS = (
     "water_type",
 )
 
-# Keys fact_sources may hold besides the facts. A missing entry means the
-# value comes from OSM.
-EXTRA_SOURCE_KEYS = ("name", "location")
+# Keys fact_sources may hold besides the facts. A missing name or location
+# entry means the value comes from OSM. status never comes from OSM, so a
+# status entry says who set it (feedback or contributed).
+EXTRA_SOURCE_KEYS = ("name", "location", "status")
+
+# Where a value came from: OpenStreetMap, app feedback, or a place or
+# closure contributed directly to Open Camping DB.
+SOURCES = ("osm", "feedback", "contributed")
 
 ATTRIBUTION = "© OpenStreetMap contributors, Open Camping DB"
 LICENCE = "ODbL-1.0"

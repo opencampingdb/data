@@ -13,7 +13,10 @@ Rules (SPEC, "OSM sync"):
 - A record whose OSM object has gone is never deleted. It is listed in the
   report as "gone from OSM" for a person to decide. Records a person has
   already set to "closed" are no longer listed.
-- status and rating come from feedback, never from OSM, so sync leaves them alone.
+- status and rating come from feedback or contributions, never from OSM, so
+  sync leaves them alone, and keeps a fact_sources entry for status as it is.
+- A record without an OSM link (osm is null) is never touched, flagged or
+  deleted. Sync does not even read it beyond its id.
 - kind is refreshed from the extract, and group follows kind. A kind change
   counts as an update.
 - Records still carrying a kind from before the OTWD vocabulary (camp_site,
@@ -98,7 +101,7 @@ def osm_key(osm: dict) -> tuple[str, int]:
 def merge_facts(record: dict, osm_facts: dict) -> tuple[dict, dict]:
     """Combine a record's feedback facts with fresh OSM facts.
 
-    Returns (facts, fact_sources). Feedback-sourced facts win. Every other
+    Returns (facts, fact_sources). Facts from feedback or contributions win. Every other
     fact is whatever OSM says now, so a tag removed in OSM removes its fact.
     """
     old_facts = record.get("facts", {})
@@ -108,9 +111,9 @@ def merge_facts(record: dict, osm_facts: dict) -> tuple[dict, dict]:
     for key, source in old_sources.items():
         if key in EXTRA_SOURCE_KEYS:
             continue  # name and location are handled in refreshed_record
-        if source == "feedback" and key in old_facts:
+        if source != "osm" and key in old_facts:
             facts[key] = old_facts[key]
-            sources[key] = "feedback"
+            sources[key] = source
     for key, value in osm_facts.items():
         if key not in sources:
             facts[key] = value
@@ -167,12 +170,14 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     fresh["group"] = KIND_GROUP[place["kind"]]
     fresh["osm"] = place["osm"]
     fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"])
-    # name and location follow OSM unless feedback set them. An explicit
-    # "osm" or "feedback" entry is carried over as it was.
+    # Source entries for name, location and status are carried over as they
+    # were. name and location follow OSM unless their source is something
+    # else (feedback or contributed). status never comes from OSM.
     for key in EXTRA_SOURCE_KEYS:
         if key in old_sources:
             fresh["fact_sources"][key] = old_sources[key]
-        if old_sources.get(key) != "feedback":
+    for key in ("name", "location"):
+        if old_sources.get(key, "osm") == "osm":
             fresh[key] = place[key]
     if fresh != record:
         fresh["updated"] = now
@@ -203,19 +208,18 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
             result.updated.append(record)
         write_text(place_path(root, record["id"]), dump_record(record))
 
-    # Records not refreshed from OSM: those gone from OSM and those that never
-    # came from it. They keep everything except an old kind, which moves to
-    # the new vocabulary.
+    # Records gone from OSM keep everything except an old kind, which moves
+    # to the new vocabulary. Records without an OSM link are left alone.
     updated_ids = {r["id"] for r in result.updated}
     for record in sorted(places.values(), key=lambda r: r["id"]):
         osm = record.get("osm")
-        if osm and osm_key(osm) in seen:
+        if not osm or osm_key(osm) in seen:
             continue
         current = migrated_record(record, now)
         if current != record and current["id"] not in updated_ids:
             write_text(place_path(root, current["id"]), dump_record(current))
             result.updated.append(current)
-        if osm and current.get("status") != "closed":
+        if current.get("status") != "closed":
             result.gone.append(current)
     result.gone.sort(key=lambda r: osm_key(r["osm"]))
 

@@ -317,3 +317,79 @@ def test_new_records_carry_their_group(repo, v1_osm):
     sync(repo, extract_file(v1_osm), now=T1)
     groups = {r["kind"]: r["group"] for r in load_all(repo).values()}
     assert groups == {"free_camp": "overnight", "rest_area": "utility", "caravan_park": "overnight"}
+
+
+def contributed_record(place_id, kind="free_camp"):
+    """A place that did not come from OSM."""
+    return {
+        "id": place_id,
+        "name": "Contributed Camp",
+        "kind": kind,
+        "group": "overnight",
+        "location": {"lat": -30.0, "lon": 140.0},
+        "osm": None,
+        "facts": {},
+        "status": "open",
+        "rating": None,
+        "fact_sources": {"name": "contributed", "location": "contributed"},
+        "updated": "2026-10-01T16:00:00Z",
+    }
+
+
+def test_place_without_osm_link_is_never_touched(repo, v1_osm, v2_osm):
+    rec = contributed_record("ocdb_01JBX0000000000000000000C1")
+    path = place_path(repo, rec["id"])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    rewrite(path, rec)
+    before = path.read_bytes()
+
+    for osm_file, now in ((v1_osm, T1), (v2_osm, T2)):
+        result = sync(repo, extract_file(osm_file), now=now)
+        touched = {r["id"] for r in result.new + result.updated + result.gone}
+        assert rec["id"] not in touched
+        assert path.read_bytes() == before
+
+
+def test_place_without_osm_link_keeps_even_an_old_kind(repo, v1_osm):
+    # Sync never rewrites a record without an OSM link, not even to migrate
+    # its kind. Validation reports it instead, for a person to fix.
+    rec = contributed_record("ocdb_01JBX0000000000000000000C2", kind="camp_site")
+    del rec["group"]
+    path = place_path(repo, rec["id"])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    rewrite(path, rec)
+    before = path.read_bytes()
+    result = sync(repo, extract_file(v1_osm), now=T1)
+    assert rec["id"] not in {r["id"] for r in result.updated}
+    assert path.read_bytes() == before
+
+
+def test_contributed_status_is_kept(repo, v1_osm, v2_osm):
+    sync(repo, extract_file(v1_osm), now=T1)
+    camp_id = load_all(repo)[("node", 1001)]["id"]
+    path = place_path(repo, camp_id)
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    rec["status"] = "closed"
+    rec["fact_sources"]["status"] = "contributed"
+    rewrite(path, rec)
+
+    sync(repo, extract_file(v2_osm), now=T2)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert camp["status"] == "closed"
+    assert camp["fact_sources"]["status"] == "contributed"
+    # The rest of the record is still refreshed from OSM.
+    assert camp["name"] == "Fixture Creek Bush Camp"
+
+
+def test_contributed_fact_is_kept(repo, v1_osm, v2_osm):
+    sync(repo, extract_file(v1_osm), now=T1)
+    camp_id = load_all(repo)[("node", 1001)]["id"]
+    path = place_path(repo, camp_id)
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    rec["facts"]["power"] = True
+    rec["fact_sources"]["power"] = "contributed"
+    rewrite(path, rec)
+    sync(repo, extract_file(v2_osm), now=T2)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert camp["facts"]["power"] is True
+    assert camp["fact_sources"]["power"] == "contributed"
