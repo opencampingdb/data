@@ -1,0 +1,101 @@
+name: Release
+
+# Every hour, if main has changed since the newest release, builds the release
+# files and publishes them as a new release tagged data-<YYYYMMDDTHHMMSSZ>
+# (the commit time), marked as the repository's Latest release. The stable URL
+# https://github.com/opencampingdb/data/releases/latest/download/manifest.json
+# therefore always serves the newest manifest, and the url fields in that
+# manifest point at the files in the same release. Only the newest 60 dated
+# releases are kept. Older ones are deleted together with their tags.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  KEEP_RELEASES: "60"
+
+jobs:
+  release:
+    name: Build and publish
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Check whether main changed since the newest release
+        id: check
+        run: |
+          set -euo pipefail
+          head="$(git rev-parse HEAD)"
+          newest="$(gh release list --limit 100 --json tagName --jq '.[].tagName' | grep '^data-' | sort -r | head -n 1 || true)"
+          released=""
+          if [ -n "$newest" ]; then
+            released="$(gh api "repos/$GH_REPO/commits/$newest" --jq .sha)"
+          fi
+          if [ "$released" = "$head" ]; then
+            echo "main is at $head, already released as $newest. Nothing to do."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "main is at $head, newest release is ${newest:-none}."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.check.outputs.changed == 'true'
+        run: python -m pip install -r requirements.txt
+
+      - name: Validate
+        if: steps.check.outputs.changed == 'true'
+        run: python -m pipeline.validate --root .
+
+      - name: Build release files
+        if: steps.check.outputs.changed == 'true'
+        run: python -m pipeline.release --root . --out dist --repository "$GH_REPO"
+
+      - name: Publish
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          tag="$(python -c 'import json; print(json.load(open("dist/manifest.json"))["release"])')"
+          version="$(python -c 'import json; print(json.load(open("dist/manifest.json"))["data_version"])')"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag already exists. Nothing to publish."
+            exit 0
+          fi
+          notes="Open Camping DB data version ${version}. Licence: ODbL 1.0 (database), DbCL 1.0 (contents). Attribution: © OpenStreetMap contributors, Open Camping DB."
+          gh release create "$tag" dist/manifest.json dist/places.ndjson.gz dist/reviews.ndjson.gz \
+            --target "$(git rev-parse HEAD)" --title "$tag" --notes "$notes" --latest
+
+      - name: Keep only the newest dated releases
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          gh release list --limit 1000 --json tagName --jq '.[].tagName' \
+            | { grep '^data-' || true; } | sort -r | tail -n "+$((KEEP_RELEASES + 1))" \
+            | while read -r old; do
+                echo "Deleting release and tag $old"
+                gh release delete "$old" --cleanup-tag --yes
+              done

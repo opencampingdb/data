@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hand-written test data for relations. The places are invented.
+     Relation 4001 is a multipolygon camp site: its outer ring is split over
+     two untagged ways (2101, 2102), and it has a square hole (way 2103) towards
+     the north-west corner. Relation 4002 is tagged as a camp site but is not
+     a multipolygon, so it has no area and is skipped. Way 2201 is a building
+     and way 2202 is an untagged closed way: neither may reach the area
+     builder. -->
+<osm version="0.6" generator="hand">
+  <node id="5001" version="1" lat="-37.1000000" lon="142.1000000"/>
+  <node id="5002" version="1" lat="-37.1000000" lon="142.1200000"/>
+  <node id="5003" version="1" lat="-37.1200000" lon="142.1200000"/>
+  <node id="5004" version="1" lat="-37.1200000" lon="142.1000000"/>
+  <node id="5011" version="1" lat="-37.1010000" lon="142.1010000"/>
+  <node id="5012" version="1" lat="-37.1010000" lon="142.1060000"/>
+  <node id="5013" version="1" lat="-37.1060000" lon="142.1060000"/>
+  <node id="5014" version="1" lat="-37.1060000" lon="142.1010000"/>
+  <node id="5021" version="1" lat="-37.2000000" lon="142.2000000"/>
+  <node id="5031" version="1" lat="-37.3000000" lon="142.3000000"/>
+  <node id="5032" version="1" lat="-37.3000000" lon="142.3010000"/>
+  <node id="5033" version="1" lat="-37.3010000" lon="142.3010000"/>
+  <node id="5034" version="1" lat="-37.3010000" lon="142.3000000"/>
+  <way id="2101" version="1">
+    <nd ref="5001"/>
+    <nd ref="5002"/>
+    <nd ref="5003"/>
+  </way>
+  <way id="2102" version="1">
+    <nd ref="5003"/>
+    <nd ref="5004"/>
+    <nd ref="5001"/>
+  </way>
+  <way id="2103" version="1">
+    <nd ref="5011"/>
+    <nd ref="5012"/>
+    <nd ref="5013"/>
+    <nd ref="5014"/>
+    <nd ref="5011"/>
+  </way>
+  <way id="2201" version="1">
+    <nd ref="5031"/>
+    <nd ref="5032"/>
+    <nd ref="5033"/>
+    <nd ref="5031"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="2202" version="1">
+    <nd ref="5031"/>
+    <nd ref="5033"/>
+    <nd ref="5034"/>
+    <nd ref="5031"/>
+  </way>
+  <relation id="4001" version="6">
+    <member type="way" ref="2101" role="outer"/>
+    <member type="way" ref="2102" role="outer"/>
+    <member type="way" ref="2103" role="inner"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Bush Camp"/>
+    <tag k="access" v="permit"/>
+  </relation>
+  <relation id="4002" version="1">
+    <member type="node" ref="5021" role=""/>
+    <tag k="type" v="site"/>
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Site Relation Camp"/>
+  </relation>
+</osm>

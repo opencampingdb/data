@@ -1,0 +1,13 @@
+# Pipeline outputs that are never committed
+dist/
+extract.ndjson
+sync-report.md
+sync-summary.json
+*.osm.pbf
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
