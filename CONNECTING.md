@@ -106,7 +106,8 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   It is never reused.
 - Every fact is optional. A missing fact means "not known", not "no".
 - `status` is `open`, `reported_closed` (at least one user said it has
-  closed, not yet confirmed) or `closed`. (`merged` exists only in the
+  closed, not yet confirmed), `temporarily_closed` (set by the owner, often
+  with a `reopens` date, YYYY-MM-DD) or `closed`. (`merged` exists only in the
   repository, on tombstones, and never appears in `places.ndjson.gz`.) Show `reported_closed` as a warning
   rather than hiding the place.
 - `rating` is `null` until a place has accepted reviews.
@@ -124,13 +125,38 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
 - Records gone from OpenStreetMap are kept until a person reviews them, so a
   place may linger for a while after it has really closed.
 
+### Owners and private property
+
+A place's owner can claim it through the owner page at
+`https://opencampingdb.github.io/owners/`. Once a person has approved the
+claim, the place has `owner_verified: true`, and the owner can update its
+facts, phone, website, `booking_url`, a short `description` and a temporary
+closure directly. Those values have the source `owner` in `fact_sources`.
+An app can offer a "Do you run this place?" button that opens the owner page
+with the place's id.
+
+- `description` is plain text from the owner, at most 500 characters,
+  moderated like reviews. Show it as the owner's words.
+- `booking_url` (always https) and `booking_required` say how and whether to
+  book.
+- `farm_stay` is private land that its owner has listed. Open Camping DB
+  never lists private land unless its owner adds it. A farm stay always has
+  `osm: null`, `entry: "private"`, `booking_required: true`, and a
+  `booking_url` or a `phone`. Show it as private property and tell people to
+  book first, in these words or close to them: "Private property. Book with
+  the owner first." Do not show a farm stay as a free camp or a public
+  place, and do not offer directions without the booking link or phone next
+  to them.
+- Any place with `entry: "private"` is private property. Label it the same
+  way.
+
 ### Kinds and groups
 
 `kind` says what a place is and `group` says which family it belongs to:
 `overnight`, `utility`, `services`, `attraction`, `emergency` or `transport`.
 Filter on `group` to show, for example, only places to stay. The kinds are the
 site types of the OTWD (Open Touring and Waypoint Database) vocabulary, plus
-`campground` and `picnic_site`. [schema/kinds.json](schema/kinds.json) holds
+`campground`, `picnic_site` and `farm_stay`. [schema/kinds.json](schema/kinds.json) holds
 the same list in machine-readable form, and new kinds may be added in later
 versions, so show an unknown kind under its group rather than dropping it.
 
@@ -143,6 +169,7 @@ versions, so show an unknown kind under its group rather than dropping it.
 | `state_forest_campsite` | State forest campsite | overnight |
 | `showground` | Showground | overnight |
 | `campground` | Campground (fee not known) | overnight |
+| `farm_stay` | Farm stay (private, book first) | overnight |
 | `rest_area` | Rest area | utility |
 | `dump_point` | Dump point | utility |
 | `drinking_water_point` | Drinking water point | utility |

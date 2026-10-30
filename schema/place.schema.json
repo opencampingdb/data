@@ -44,7 +44,8 @@
         "hospital_emergency",
         "ferry_terminal",
         "campground",
-        "picnic_site"
+        "picnic_site",
+        "farm_stay"
       ]
     },
     "group": {
@@ -103,6 +104,16 @@
           "description": "Who may stay, from OSM access=*.",
           "enum": ["public", "customers", "permit", "private"]
         },
+        "booking_url": {
+          "description": "Where to book. https only.",
+          "type": "string",
+          "pattern": "^https://",
+          "maxLength": 500
+        },
+        "booking_required": {
+          "description": "true when guests must book before arriving.",
+          "type": "boolean"
+        },
         "water_type": {
           "description": "For a drinking_water_point: tank_fill (a tap for filling tanks, amenity=water_point) or fountain (amenity=drinking_water).",
           "enum": ["tank_fill", "fountain"]
@@ -111,7 +122,22 @@
     },
     "status": {
       "description": "merged marks a tombstone: a record merged into another by a person (see merged_into).",
-      "enum": ["open", "reported_closed", "closed", "merged"]
+      "enum": ["open", "reported_closed", "closed", "temporarily_closed", "merged"]
+    },
+    "reopens": {
+      "description": "Only with status temporarily_closed: the date the place reopens, YYYY-MM-DD.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "description": {
+      "description": "Plain text from the place's verified owner, at most 500 characters, moderated like review text.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "owner_verified": {
+      "description": "true when a person has approved the place's owner. Values with the source owner need it.",
+      "type": "boolean"
     },
     "merged_into": {
       "description": "Only on a tombstone (status merged): the id of the record this one was merged into. Apps that stored this id should use that one.",
@@ -149,12 +175,12 @@
       ]
     },
     "fact_sources": {
-      "description": "Where each value came from: osm, feedback (from apps) or contributed (given directly to Open Camping DB). Has exactly the keys of facts, plus optionally name, location and status. A missing name or location entry means OSM.",
+      "description": "Where each value came from: osm, feedback (from apps), contributed (given directly to Open Camping DB) or owner (the place's verified owner). Has exactly the keys of facts, plus optionally name, location, status and description. A missing name or location entry means OSM.",
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(fee|power|pets|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|name|location|status)$": {
-          "enum": ["osm", "feedback", "contributed"]
+        "^(fee|power|pets|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|booking_url|booking_required|name|location|status|description)$": {
+          "enum": ["osm", "feedback", "contributed", "owner"]
         }
       }
     },

@@ -1,7 +1,8 @@
 """Which kind of place an OSM object is, and which areas can contain a camp site.
 
-The kinds are the OTWD site_types vocabulary plus two Open Camping DB
-extensions (schema/kinds.json). The rules follow the OTWD OSM mappings. Every
+The kinds are the OTWD site_types vocabulary plus three Open Camping DB
+extensions (schema/kinds.json). farm_stay is never classified from OSM: it
+is private land listed by its owner. The rules follow the OTWD OSM mappings. Every
 decision, and the order the rules are tried in, is listed in
 pipeline/README.md under "Kind".
 

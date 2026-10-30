@@ -8,13 +8,14 @@ Rules (SPEC, "OSM sync"):
 - A record is matched to an OSM object by osm.type + osm.id.
 - An OSM object with no record gets a new record and a new id, ocdb_<ULID>.
 - OSM-sourced facts, name and location are refreshed. Any of them whose
-  fact_sources entry is "feedback" is kept as it is. A record with no
+  fact_sources entry is not "osm" (feedback, contributed or owner) is kept
+  as it is. Sync never overwrites a value whose source is owner. A record with no
   fact_sources entry for name or location takes both from OSM.
 - A record whose OSM object has gone is never deleted. It is listed in the
   report as "gone from OSM" for a person to decide. Records a person has
   already set to "closed" are no longer listed.
-- status and rating come from feedback or contributions, never from OSM, so
-  sync leaves them alone, and keeps a fact_sources entry for status as it is.
+- status, reopens, description, owner_verified and rating never come from
+  OSM, so sync leaves them alone, with their fact_sources entries.
 - A record without an OSM link (osm is null) is never touched, flagged or
   deleted. Sync does not even read it beyond its id.
 - A merged record (a tombstone, status "merged") is never touched or
