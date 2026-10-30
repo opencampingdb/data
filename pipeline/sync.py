@@ -14,6 +14,11 @@ Rules (SPEC, "OSM sync"):
   report as "gone from OSM" for a person to decide. Records a person has
   already set to "closed" are no longer listed.
 - status and rating come from feedback, never from OSM, so sync leaves them alone.
+- kind is refreshed from the extract, and group follows kind. A kind change
+  counts as an update.
+- Records still carrying a kind from before the OTWD vocabulary (camp_site,
+  toilets and so on) are moved to the new kind even when their OSM object is
+  gone, so that every record validates. See LEGACY_KINDS.
 - "updated" moves only when the record's content changes, so running the
   same extract twice changes nothing.
 """
@@ -27,7 +32,15 @@ from pathlib import Path
 
 from ulid import ULID
 
-from .common import EXTRA_SOURCE_KEYS, dump_record, load_places, place_path, utc_now, write_text
+from .common import (
+    EXTRA_SOURCE_KEYS,
+    KIND_GROUP,
+    dump_record,
+    load_places,
+    place_path,
+    utc_now,
+    write_text,
+)
 
 # Lists in the report are cut at this length so the PR body stays under
 # GitHub's 65,536 character limit.
@@ -35,6 +48,19 @@ REPORT_LIST_LIMIT = 200
 
 # The sync PR merges itself only below this change percentage (SPEC).
 AUTO_MERGE_BELOW_PERCENT = 2.0
+
+# Kinds used before the OTWD vocabulary, and the kind each one becomes when
+# the record is not refreshed from OSM. camp_site is decided by the fee fact.
+LEGACY_KINDS = {
+    "camp_site": None,
+    "caravan_site": "caravan_park",
+    "rest_area": "rest_area",
+    "dump_station": "dump_point",
+    "drinking_water": "drinking_water_point",
+    "toilets": "public_toilet",
+    "shower": "public_shower",
+    "picnic_site": "picnic_site",
+}
 
 
 @dataclass
@@ -50,8 +76,12 @@ class SyncResult:
 
     @property
     def change_percent(self) -> float:
-        """New, updated and gone records as a percentage of all records after the sync."""
-        changed = len(self.new) + len(self.updated) + len(self.gone)
+        """New, updated and gone records as a percentage of all records after the sync.
+
+        A record that is both updated and gone (an old record migrated to the
+        new kinds) counts once.
+        """
+        changed = len({r["id"] for r in self.new + self.updated + self.gone})
         if changed == 0:
             return 0.0
         return round(100.0 * changed / max(self.records_after, 1), 2)
@@ -88,12 +118,37 @@ def merge_facts(record: dict, osm_facts: dict) -> tuple[dict, dict]:
     return facts, sources
 
 
+def migrated_kind(record: dict) -> str:
+    """The new kind for a record that still has a kind from before the OTWD vocabulary."""
+    kind = LEGACY_KINDS[record["kind"]]
+    if kind is not None:
+        return kind
+    fee = record.get("facts", {}).get("fee")
+    if fee is False:
+        return "free_camp"
+    if fee is True:
+        return "paid_campground"
+    return "campground"
+
+
+def migrated_record(record: dict, now: str) -> dict:
+    """The record moved to the new kinds, with its group. Unchanged if already current."""
+    fresh = copy.deepcopy(record)
+    if fresh["kind"] in LEGACY_KINDS and fresh["kind"] not in KIND_GROUP:
+        fresh["kind"] = migrated_kind(fresh)
+    fresh["group"] = KIND_GROUP[fresh["kind"]]
+    if fresh != record:
+        fresh["updated"] = now
+    return fresh
+
+
 def new_record(place: dict, now: str, make_id) -> dict:
     """A brand new record for an OSM object we have not seen before."""
     return {
         "id": make_id(),
         "name": place["name"],
         "kind": place["kind"],
+        "group": KIND_GROUP[place["kind"]],
         "location": place["location"],
         "osm": place["osm"],
         "facts": dict(place["facts"]),
@@ -109,6 +164,7 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     fresh = copy.deepcopy(record)
     old_sources = record.get("fact_sources", {})
     fresh["kind"] = place["kind"]
+    fresh["group"] = KIND_GROUP[place["kind"]]
     fresh["osm"] = place["osm"]
     fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"])
     # name and location follow OSM unless feedback set them. An explicit
@@ -147,9 +203,21 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
             result.updated.append(record)
         write_text(place_path(root, record["id"]), dump_record(record))
 
-    for key, record in sorted(by_osm.items()):
-        if key not in seen and record.get("status") != "closed":
-            result.gone.append(record)
+    # Records not refreshed from OSM: those gone from OSM and those that never
+    # came from it. They keep everything except an old kind, which moves to
+    # the new vocabulary.
+    updated_ids = {r["id"] for r in result.updated}
+    for record in sorted(places.values(), key=lambda r: r["id"]):
+        osm = record.get("osm")
+        if osm and osm_key(osm) in seen:
+            continue
+        current = migrated_record(record, now)
+        if current != record and current["id"] not in updated_ids:
+            write_text(place_path(root, current["id"]), dump_record(current))
+            result.updated.append(current)
+        if osm and current.get("status") != "closed":
+            result.gone.append(current)
+    result.gone.sort(key=lambda r: osm_key(r["osm"]))
 
     result.records_after = result.records_before + len(result.new)
     return result

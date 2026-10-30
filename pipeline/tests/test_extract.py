@@ -2,9 +2,10 @@
 
 from pathlib import Path
 
-from pipeline.extract import extract_file, facts_from_tags, kind_from_tags
+from pipeline.extract import extract_file, facts_from_tags
 
-MULTIPOLYGON = Path(__file__).parent / "fixtures" / "multipolygon.osm"
+FIXTURES = Path(__file__).parent / "fixtures"
+MULTIPOLYGON = FIXTURES / "multipolygon.osm"
 
 
 def by_osm(records):
@@ -33,7 +34,7 @@ def test_camp_site_node(v1_osm):
     camp = by_osm(extract_file(v1_osm))[("node", 1001)]
     assert camp == {
         "osm": {"type": "node", "id": 1001, "version": 1},
-        "kind": "camp_site",
+        "kind": "free_camp",
         "name": "Fixture Creek Camp",
         "location": {"lat": -37.15, "lon": 142.5},
         "facts": {
@@ -53,7 +54,7 @@ def test_camp_site_node(v1_osm):
 
 def test_caravan_site_closed_way_uses_centroid(v1_osm):
     park = by_osm(extract_file(v1_osm))[("way", 2001)]
-    assert park["kind"] == "caravan_site"
+    assert park["kind"] == "caravan_park"
     assert park["osm"] == {"type": "way", "id": 2001, "version": 4}
     # Centroid of the four corners; the closing node is not counted twice.
     assert park["location"] == {"lat": -37.005, "lon": 142.005}
@@ -76,18 +77,9 @@ def test_rest_area(v1_osm):
 
 def test_unnamed_place_has_null_name(v2_osm):
     water = by_osm(extract_file(v2_osm))[("node", 1004)]
-    assert water["kind"] == "drinking_water"
+    assert water["kind"] == "drinking_water_point"
     assert water["name"] is None
-    assert water["facts"] == {}
-
-
-def test_kind_priority_when_several_tags_match():
-    # A camp site that is also tagged as toilets is a camp site.
-    assert kind_from_tags({"amenity": "toilets", "tourism": "camp_site"}) == "camp_site"
-    assert kind_from_tags({"amenity": "sanitary_dump_station"}) == "dump_station"
-    assert kind_from_tags({"amenity": "shower"}) == "shower"
-    assert kind_from_tags({"tourism": "picnic_site"}) == "picnic_site"
-    assert kind_from_tags({"amenity": "bench"}) is None
+    assert water["facts"] == {"water_type": "fountain"}
 
 
 def test_fact_value_parsing():
@@ -119,7 +111,8 @@ def test_multipolygon_relation_uses_centroid_of_its_area():
     assert [(r["osm"]["type"], r["osm"]["id"]) for r in records] == [("relation", 4001)]
     camp = records[0]
     assert camp["osm"] == {"type": "relation", "id": 4001, "version": 6}
-    assert camp["kind"] == "camp_site"
+    # No fee tag and not inside a park, forest or showground.
+    assert camp["kind"] == "campground"
     assert camp["name"] == "Fixture Bush Camp"
     assert camp["facts"] == {"entry": "permit"}
     # Outer square 0.02 degrees wide, centre 0.01 in from the north-west
@@ -157,3 +150,116 @@ def test_tagged_closed_way_also_passes_the_area_gate(v1_osm):
     records = extract_file(v1_osm, stats)
     assert stats["ways_to_area_builder"] == 1
     assert ("way", 2001) in {(r["osm"]["type"], r["osm"]["id"]) for r in records}
+
+
+def kinds_by_id(path, stats=None):
+    return {r["osm"]["id"]: r["kind"] for r in extract_file(path, stats)}
+
+
+def test_overnight_kinds_and_containment():
+    kinds = kinds_by_id(FIXTURES / "overnight.osm")
+    assert kinds == {
+        101: "national_park_campsite",  # inside boundary=national_park, fee does not matter
+        102: "national_park_campsite",  # inside protected_area class 2
+        103: "free_camp",  # inside protected_area class 7, which is not a park
+        104: "national_park_campsite",  # inside a protected area run by Parks Victoria
+        105: "state_forest_campsite",  # inside landuse=forest run by Forestry Corporation
+        106: "paid_campground",  # inside a private forest, which is not a state forest
+        107: "state_forest_campsite",  # inside a relation titled State Forest
+        108: "showground",  # inside landuse=recreation_ground + showground
+        109: "showground",  # inside leisure=showground
+        110: "national_park_campsite",  # inside a showground inside a park: park wins
+        111: "free_camp",
+        112: "paid_campground",
+        113: "campground",  # fee not known
+        114: "campground",  # fee=donation is not fee=no
+        115: "free_camp",  # camp site and rest area: classified as a camp site
+        116: "caravan_park",
+        117: "free_camp",  # caravan_site + fee=no
+        118: "caravan_park",  # caravan sites ignore containment
+        2301: "national_park_campsite",  # a camp site way, by its centroid
+    }
+
+
+def test_camp_site_outside_and_inside_a_park_polygon():
+    kinds = kinds_by_id(FIXTURES / "overnight.osm")
+    assert kinds[101] == "national_park_campsite"
+    assert kinds[111] == "free_camp"
+
+
+def test_containers_and_buildings_are_not_places():
+    kinds = kinds_by_id(FIXTURES / "overnight.osm")
+    for container in (9001, 9002, 9003, 9004, 9005, 9006, 9007, 9008, 9009, 9101):
+        assert container not in kinds
+    assert 2401 not in kinds
+
+
+def test_overnight_area_builder_gets_containers_but_no_building():
+    # Way 2301 (a camp site), the seven qualifying container ways (9001,
+    # 9002, 9004, 9005, 9007, 9008, 9009) and the member way 9102 of the
+    # State Forest relation. Not the class 7 area (9003), not the private
+    # forest (9006) and never the building (2401).
+    stats = {}
+    extract_file(FIXTURES / "overnight.osm", stats)
+    assert stats["ways_to_area_builder"] == 9
+    assert stats["containers"] == {"park": 3, "forest": 2, "showground": 3}
+
+
+def test_utility_kinds():
+    records = by_osm(extract_file(FIXTURES / "utility.osm"))
+    kinds = {key[1]: r["kind"] for key, r in records.items()}
+    assert kinds == {
+        201: "rest_area",
+        202: "dump_point",
+        203: "drinking_water_point",
+        204: "drinking_water_point",
+        205: "drinking_water_point",
+        206: "public_toilet",
+        207: "public_shower",
+        208: "laundromat",
+        210: "picnic_site",
+        # 209 is a laundry without self_service=yes; 211 is highway=services.
+    }
+    assert records[("node", 203)]["facts"] == {"water_type": "tank_fill"}
+    assert records[("node", 204)]["facts"] == {"water_type": "fountain"}
+    assert records[("node", 205)]["facts"] == {"water_type": "tank_fill", "drinking_water": True}
+
+
+def test_services_attraction_emergency_and_transport_kinds():
+    kinds = kinds_by_id(FIXTURES / "services.osm")
+    assert kinds == {
+        301: "information_centre",
+        302: "information_centre",
+        304: "attraction",
+        305: "lookout",
+        306: "lookout",
+        307: "boat_ramp",
+        308: "swimming_spot",
+        309: "swimming_spot",
+        310: "swimming_spot",
+        311: "swimming_spot",
+        315: "boat_ramp",
+        316: "fuel",
+        317: "fuel",
+        318: "lpg_refill_swap",
+        319: "mechanic",
+        320: "hospital_emergency",
+        323: "ferry_terminal",
+        3901: "boat_ramp",  # an open way, at its middle vertex
+        3902: "attraction",  # an open way, at its middle vertex
+        # Left out: 303 information board, 312 and 313 pools without public
+        # access, 314 natural=beach, 321 and 322 hospitals without
+        # emergency=yes, and 3903, an open viewpoint way.
+    }
+
+
+def test_open_way_boat_ramps_and_attractions_sit_at_their_middle_vertex():
+    stats = {}
+    records = by_osm(extract_file(FIXTURES / "services.osm", stats))
+    # Three nodes: the middle one is the second (node 3912).
+    assert records[("way", 3901)]["location"] == {"lat": -34.3001, "lon": 146.0002}
+    # Four nodes: the middle vertex is the third (index 4 // 2, node 3923).
+    assert records[("way", 3902)]["location"] == {"lat": -34.311, "lon": 146.001}
+    assert ("way", 3903) not in records
+    assert stats["open_way_places"] == 2
+    assert stats["open_ways"] == 1

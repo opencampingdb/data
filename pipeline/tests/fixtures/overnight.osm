@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Overnight kinds and containment. Test data written for this repo. The places are invented. Squares are 0.1 degrees wide unless noted. Containers: 9001 national park (A), 9002 protected area class 2 (B), 9003 protected area class 7, not a park (C), 9004 protected area run by Parks Victoria, no class (D), 9005 state forest by operator (E), 9006 private forest, not a state forest (F), relation 9101 protected area titled State Forest (G), 9007 showground by landuse (H), 9008 leisure=showground (I), 9009 showground inside park A (J). Way 2401 is a building inside park A and must never reach the area builder. -->
+<osm version="0.6" generator="hand">
+  <node id="101" version="1" lat="-37.0500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="yes"/>
+    <tag k="name" v="Park Camp"/>
+  </node>
+  <node id="102" version="1" lat="-37.2500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="103" version="1" lat="-37.4500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="no"/>
+  </node>
+  <node id="104" version="1" lat="-37.6500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="105" version="1" lat="-37.8500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="106" version="1" lat="-38.0500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="yes"/>
+  </node>
+  <node id="107" version="1" lat="-38.2500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="108" version="1" lat="-38.4500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="109" version="1" lat="-38.6500000" lon="142.0500000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="110" version="1" lat="-37.0300000" lon="142.0300000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="111" version="1" lat="-36.5000000" lon="143.0000000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="no"/>
+  </node>
+  <node id="112" version="1" lat="-36.5000000" lon="143.1000000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="yes"/>
+  </node>
+  <node id="113" version="1" lat="-36.5000000" lon="143.2000000">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <node id="114" version="1" lat="-36.5000000" lon="143.3000000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="donation"/>
+  </node>
+  <node id="115" version="1" lat="-36.5000000" lon="143.4000000">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="highway" v="rest_area"/>
+    <tag k="fee" v="no"/>
+  </node>
+  <node id="116" version="1" lat="-36.5000000" lon="143.5000000">
+    <tag k="tourism" v="caravan_site"/>
+  </node>
+  <node id="117" version="1" lat="-36.5000000" lon="143.6000000">
+    <tag k="tourism" v="caravan_site"/>
+    <tag k="fee" v="no"/>
+  </node>
+  <node id="118" version="1" lat="-37.0800000" lon="142.0800000">
+    <tag k="tourism" v="caravan_site"/>
+  </node>
+  <node id="50001" version="1" lat="-37.0000000" lon="142.0000000"/>
+  <node id="50002" version="1" lat="-37.0000000" lon="142.1000000"/>
+  <node id="50003" version="1" lat="-37.1000000" lon="142.1000000"/>
+  <node id="50004" version="1" lat="-37.1000000" lon="142.0000000"/>
+  <node id="50005" version="1" lat="-37.2000000" lon="142.0000000"/>
+  <node id="50006" version="1" lat="-37.2000000" lon="142.1000000"/>
+  <node id="50007" version="1" lat="-37.3000000" lon="142.1000000"/>
+  <node id="50008" version="1" lat="-37.3000000" lon="142.0000000"/>
+  <node id="50009" version="1" lat="-37.4000000" lon="142.0000000"/>
+  <node id="50010" version="1" lat="-37.4000000" lon="142.1000000"/>
+  <node id="50011" version="1" lat="-37.5000000" lon="142.1000000"/>
+  <node id="50012" version="1" lat="-37.5000000" lon="142.0000000"/>
+  <node id="50013" version="1" lat="-37.6000000" lon="142.0000000"/>
+  <node id="50014" version="1" lat="-37.6000000" lon="142.1000000"/>
+  <node id="50015" version="1" lat="-37.7000000" lon="142.1000000"/>
+  <node id="50016" version="1" lat="-37.7000000" lon="142.0000000"/>
+  <node id="50017" version="1" lat="-37.8000000" lon="142.0000000"/>
+  <node id="50018" version="1" lat="-37.8000000" lon="142.1000000"/>
+  <node id="50019" version="1" lat="-37.9000000" lon="142.1000000"/>
+  <node id="50020" version="1" lat="-37.9000000" lon="142.0000000"/>
+  <node id="50021" version="1" lat="-38.0000000" lon="142.0000000"/>
+  <node id="50022" version="1" lat="-38.0000000" lon="142.1000000"/>
+  <node id="50023" version="1" lat="-38.1000000" lon="142.1000000"/>
+  <node id="50024" version="1" lat="-38.1000000" lon="142.0000000"/>
+  <node id="50025" version="1" lat="-38.2000000" lon="142.0000000"/>
+  <node id="50026" version="1" lat="-38.2000000" lon="142.1000000"/>
+  <node id="50027" version="1" lat="-38.3000000" lon="142.1000000"/>
+  <node id="50028" version="1" lat="-38.3000000" lon="142.0000000"/>
+  <node id="50029" version="1" lat="-38.4000000" lon="142.0000000"/>
+  <node id="50030" version="1" lat="-38.4000000" lon="142.1000000"/>
+  <node id="50031" version="1" lat="-38.5000000" lon="142.1000000"/>
+  <node id="50032" version="1" lat="-38.5000000" lon="142.0000000"/>
+  <node id="50033" version="1" lat="-38.6000000" lon="142.0000000"/>
+  <node id="50034" version="1" lat="-38.6000000" lon="142.1000000"/>
+  <node id="50035" version="1" lat="-38.7000000" lon="142.1000000"/>
+  <node id="50036" version="1" lat="-38.7000000" lon="142.0000000"/>
+  <node id="50037" version="1" lat="-37.0200000" lon="142.0200000"/>
+  <node id="50038" version="1" lat="-37.0200000" lon="142.0400000"/>
+  <node id="50039" version="1" lat="-37.0400000" lon="142.0400000"/>
+  <node id="50040" version="1" lat="-37.0400000" lon="142.0200000"/>
+  <node id="50041" version="1" lat="-37.0600000" lon="142.0600000"/>
+  <node id="50042" version="1" lat="-37.0600000" lon="142.0700000"/>
+  <node id="50043" version="1" lat="-37.0700000" lon="142.0700000"/>
+  <node id="50044" version="1" lat="-37.0700000" lon="142.0600000"/>
+  <node id="50045" version="1" lat="-37.0700000" lon="142.0700000"/>
+  <node id="50046" version="1" lat="-37.0700000" lon="142.0750000"/>
+  <node id="50047" version="1" lat="-37.0750000" lon="142.0750000"/>
+  <node id="50048" version="1" lat="-37.0750000" lon="142.0700000"/>
+  <way id="2301" version="1">
+    <nd ref="50041"/>
+    <nd ref="50042"/>
+    <nd ref="50043"/>
+    <nd ref="50044"/>
+    <nd ref="50041"/>
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Way Camp"/>
+  </way>
+  <way id="2401" version="1">
+    <nd ref="50045"/>
+    <nd ref="50046"/>
+    <nd ref="50047"/>
+    <nd ref="50048"/>
+    <nd ref="50045"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="9001" version="1">
+    <nd ref="50001"/>
+    <nd ref="50002"/>
+    <nd ref="50003"/>
+    <nd ref="50004"/>
+    <nd ref="50001"/>
+    <tag k="boundary" v="national_park"/>
+    <tag k="name" v="Fixture National Park"/>
+  </way>
+  <way id="9002" version="1">
+    <nd ref="50005"/>
+    <nd ref="50006"/>
+    <nd ref="50007"/>
+    <nd ref="50008"/>
+    <nd ref="50005"/>
+    <tag k="boundary" v="protected_area"/>
+    <tag k="protect_class" v="2"/>
+  </way>
+  <way id="9003" version="1">
+    <nd ref="50009"/>
+    <nd ref="50010"/>
+    <nd ref="50011"/>
+    <nd ref="50012"/>
+    <nd ref="50009"/>
+    <tag k="boundary" v="protected_area"/>
+    <tag k="protect_class" v="7"/>
+  </way>
+  <way id="9004" version="1">
+    <nd ref="50013"/>
+    <nd ref="50014"/>
+    <nd ref="50015"/>
+    <nd ref="50016"/>
+    <nd ref="50013"/>
+    <tag k="boundary" v="protected_area"/>
+    <tag k="operator" v="Parks Victoria"/>
+  </way>
+  <way id="9005" version="1">
+    <nd ref="50017"/>
+    <nd ref="50018"/>
+    <nd ref="50019"/>
+    <nd ref="50020"/>
+    <nd ref="50017"/>
+    <tag k="landuse" v="forest"/>
+    <tag k="operator" v="Forestry Corporation of NSW"/>
+  </way>
+  <way id="9006" version="1">
+    <nd ref="50021"/>
+    <nd ref="50022"/>
+    <nd ref="50023"/>
+    <nd ref="50024"/>
+    <nd ref="50021"/>
+    <tag k="landuse" v="forest"/>
+    <tag k="operator" v="Acme Timber Pty Ltd"/>
+  </way>
+  <way id="9007" version="1">
+    <nd ref="50029"/>
+    <nd ref="50030"/>
+    <nd ref="50031"/>
+    <nd ref="50032"/>
+    <nd ref="50029"/>
+    <tag k="landuse" v="recreation_ground"/>
+    <tag k="recreation_ground" v="showground"/>
+  </way>
+  <way id="9008" version="1">
+    <nd ref="50033"/>
+    <nd ref="50034"/>
+    <nd ref="50035"/>
+    <nd ref="50036"/>
+    <nd ref="50033"/>
+    <tag k="leisure" v="showground"/>
+  </way>
+  <way id="9009" version="1">
+    <nd ref="50037"/>
+    <nd ref="50038"/>
+    <nd ref="50039"/>
+    <nd ref="50040"/>
+    <nd ref="50037"/>
+    <tag k="leisure" v="showground"/>
+  </way>
+  <way id="9102" version="1">
+    <nd ref="50025"/>
+    <nd ref="50026"/>
+    <nd ref="50027"/>
+    <nd ref="50028"/>
+    <nd ref="50025"/>
+  </way>
+  <relation id="9101" version="1">
+    <member type="way" ref="9102" role="outer"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="boundary" v="protected_area"/>
+    <tag k="protect_class" v="6"/>
+    <tag k="protection_title" v="State Forest"/>
+    <tag k="name" v="Fixture State Forest"/>
+  </relation>
+</osm>

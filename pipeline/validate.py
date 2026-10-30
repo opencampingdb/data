@@ -9,6 +9,7 @@ exits 1. Checks:
   against schema/review.schema.json (no key outside the schema is allowed)
 - place files are in canonical form (sorted keys, 2-space indent, trailing
   newline) and sit at places/<last 2 characters of id, lower case>/<id>.json
+- kind is one of schema/kinds.json and group is that kind's group
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
   name and location entries
@@ -30,6 +31,7 @@ from jsonschema import Draft202012Validator
 
 from .common import (
     EXTRA_SOURCE_KEYS,
+    KIND_GROUP,
     dump_line,
     dump_record,
     iter_place_files,
@@ -113,6 +115,12 @@ def check_place_file(root: Path, path: Path, validator) -> tuple[dict | None, li
     expected = place_path(root, record["id"])
     if path.resolve() != expected.resolve():
         errors.append(f"{where}: should be at {expected.relative_to(root).as_posix()}")
+
+    if record["group"] != KIND_GROUP[record["kind"]]:
+        errors.append(
+            f"{where}: group {record['group']} does not match kind {record['kind']}, "
+            f"which is in group {KIND_GROUP[record['kind']]}"
+        )
 
     for axis in ("lat", "lon"):
         if not has_at_most_places(record["location"][axis]):
