@@ -86,7 +86,7 @@ jobs:
             exit 0
           fi
           notes="Open Camping DB data version ${version}. Licence: ODbL 1.0 (database), DbCL 1.0 (contents). Attribution: © OpenStreetMap contributors, Open Camping DB."
-          gh release create "$tag" dist/manifest.json dist/places.ndjson.gz dist/reviews.ndjson.gz \
+          gh release create "$tag" dist/manifest.json dist/places.ndjson.gz dist/reviews.ndjson.gz dist/merged.ndjson.gz \
             --target "$(git rev-parse HEAD)" --title "$tag" --notes "$notes" --latest
 
       - name: Keep only the newest dated releases
