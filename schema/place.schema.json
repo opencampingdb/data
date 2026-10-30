@@ -62,7 +62,7 @@
       }
     },
     "osm": {
-      "description": "The OSM object this record came from, or null when it is not from OSM.",
+      "description": "The OSM object this record came from, or null when it is not from OSM (a contributed or feedback place, which the OSM sync never changes).",
       "oneOf": [
         {"type": "null"},
         {
@@ -128,12 +128,12 @@
       ]
     },
     "fact_sources": {
-      "description": "Where each value came from. Has exactly the keys of facts, plus optionally name and location. A missing name or location entry means OSM.",
+      "description": "Where each value came from: osm, feedback (from apps) or contributed (given directly to Open Camping DB). Has exactly the keys of facts, plus optionally name, location and status. A missing name or location entry means OSM.",
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(fee|power|pets|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|name|location)$": {
-          "enum": ["osm", "feedback"]
+        "^(fee|power|pets|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|name|location|status)$": {
+          "enum": ["osm", "feedback", "contributed"]
         }
       }
     },

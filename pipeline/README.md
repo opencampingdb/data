@@ -191,23 +191,28 @@ fact that depends on the kind.
   `rating: null` and every fact sourced from `osm`.
 - For a matched record, `name`, `kind`, `group`, `location`, `osm` and the
   OSM-sourced facts are replaced with what OSM says now. A fact whose
-  `fact_sources` entry is `feedback` is kept. An OSM-sourced fact whose tag has
-  gone is removed. `status` and `rating` are never touched. A kind change
-  counts as an update.
+  `fact_sources` entry is `feedback` or `contributed` is kept. An OSM-sourced
+  fact whose tag has gone is removed. `status` and `rating` are never
+  touched, and a `status` entry in `fact_sources` is kept as it is. A kind
+  change counts as an update.
+- A record without an OSM link (`osm: null`: a contributed place, or a new
+  place from feedback) is never touched, flagged or deleted.
 - A record that still has one of the eight kinds used before the OTWD
   vocabulary keeps its id and moves to a new kind. A record matched to the
-  extract takes the extract's kind. Any other record (gone from OSM, or not
-  from OSM) is moved by `LEGACY_KINDS` in `pipeline/sync.py`: `camp_site`
+  extract takes the extract's kind. A record gone from OSM is moved by
+  `LEGACY_KINDS` in `pipeline/sync.py`: `camp_site`
   becomes `free_camp` when its `fee` fact is false, `paid_campground` when it
   is true and `campground` otherwise. `caravan_site` becomes `caravan_park`,
   `dump_station` becomes `dump_point`, `drinking_water` becomes
   `drinking_water_point`, `toilets` becomes `public_toilet`, `shower` becomes
   `public_shower`, and `rest_area` and `picnic_site` stay as they are. The
   first sync after this change updates every record, so its PR waits for a
-  person.
-- `fact_sources` may also hold `name` and `location`. When either is
-  `feedback`, sync keeps the record's own value. When it is missing or `osm`,
-  the value comes from OSM. Sync never adds these two entries itself.
+  person. A record without an OSM link that still has an old kind is left
+  for a person to fix: validation reports it.
+- `fact_sources` may also hold `name`, `location` and `status`. When `name`
+  or `location` is `feedback` or `contributed`, sync keeps the record's own
+  value. When it is missing or `osm`, the value comes from OSM. Sync never
+  adds these entries itself.
 - `updated` is set to the time of the run only when the record's content
   changed. Running the same extract twice changes no file.
 - A record whose OSM object is no longer in the extract is never deleted. It
@@ -238,7 +243,8 @@ line against `schema/review.schema.json`. Neither schema allows a key it does
 not list. On top of the schemas it checks that `group` is the group of the
 record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
-other fact (plus optional `name` and `location`), that no two records share an
+other fact (plus optional `name`, `location` and `status`, each `osm`,
+`feedback` or `contributed`), that no two records share an
 id or an OSM object, that review lines are canonical and sorted by id, that
 each review's place exists, that each `rating` has the exact count and
 rounded mean of its reviews, and that review text has no email
