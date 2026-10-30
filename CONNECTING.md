@@ -91,10 +91,14 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   closed, not yet confirmed) or `closed`. Show `reported_closed` as a warning
   rather than hiding the place.
 - `rating` is `null` until a place has accepted reviews.
-- `osm` is `null` for places that did not come from OpenStreetMap.
-- `fact_sources` says whether each fact came from `osm` or from `feedback`.
-  It may also have `name` and `location` entries. When those are missing,
-  the name and position come from OSM.
+- `osm` is `null` for places that did not come from OpenStreetMap: places
+  contributed directly to Open Camping DB, and new places from feedback.
+- `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
+  or `contributed` (given directly to Open Camping DB under the ODbL). It may
+  also have `name`, `location` and `status` entries. When `name` or
+  `location` is missing, the name and position come from OSM. A place with
+  `osm: null` and `contributed` name and location is a contributed place. A
+  `status` entry says who closed or reopened the place.
 - `access` is the vehicle needed on the road in (`2wd`, `awd`, `4wd`).
   `entry` is who may stay (`public`, `customers`, `permit`, `private`).
   Consider leaving `private` places out of what you show.

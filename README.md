@@ -107,9 +107,16 @@ Anything that shows this data must show:
    `feedback/review` for anything a person must check. Facts, names and
    positions set by feedback are marked `"feedback"` in `fact_sources` and the
    OSM sync leaves them alone.
-3. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
+3. **Contributed places and closures.** Places that are not in OSM, and
+   closures of existing places, can be contributed directly under the ODbL
+   by pull request. A contributed place has `osm: null` and `"contributed"`
+   in `fact_sources` for its name and location. A contributed closure sets
+   `status: "closed"` with `fact_sources.status` set to `"contributed"`. The
+   OSM sync never changes a place without an OSM link, and keeps a
+   contributed status.
+4. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
    the tests, the schema and content checks, and a trial build of the release.
-4. **Release** (`.github/workflows/release.yml`) runs every hour and on
+5. **Release** (`.github/workflows/release.yml`) runs every hour and on
    demand. When `main` has changed since the newest release, it publishes the
    files described above as a new release and prunes the oldest.
 
