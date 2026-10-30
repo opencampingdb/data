@@ -9,17 +9,15 @@ from datetime import datetime, timezone
 from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
-# Place kinds, in the order the SPEC lists them.
-KINDS = (
-    "camp_site",
-    "caravan_site",
-    "rest_area",
-    "dump_station",
-    "drinking_water",
-    "toilets",
-    "shower",
-    "picnic_site",
-)
+SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
+
+# Place kinds and their groups, from schema/kinds.json: the OTWD site_types
+# vocabulary plus the Open Camping DB extensions, in file order.
+_VOCABULARY = json.loads((SCHEMA_DIR / "kinds.json").read_text(encoding="utf-8"))
+GROUPS = tuple(_VOCABULARY["groups"])
+KINDS = tuple(entry["code"] for entry in _VOCABULARY["kinds"])
+KIND_GROUP = {entry["code"]: entry["group"] for entry in _VOCABULARY["kinds"]}
+KIND_LABEL = {entry["code"]: entry["label"] for entry in _VOCABULARY["kinds"]}
 
 # Every fact key a place record may carry.
 FACT_KEYS = (
@@ -38,6 +36,7 @@ FACT_KEYS = (
     "phone",
     "access",
     "entry",
+    "water_type",
 )
 
 # Keys fact_sources may hold besides the facts. A missing entry means the

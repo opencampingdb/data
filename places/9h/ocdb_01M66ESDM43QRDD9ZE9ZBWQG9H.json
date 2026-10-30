@@ -1,12 +1,15 @@
 {
   "fact_sources": {
-    "drinking_water": "osm"
+    "drinking_water": "osm",
+    "water_type": "osm"
   },
   "facts": {
-    "drinking_water": true
+    "drinking_water": true,
+    "water_type": "fountain"
   },
+  "group": "utility",
   "id": "ocdb_01M66ESDM43QRDD9ZE9ZBWQG9H",
-  "kind": "drinking_water",
+  "kind": "drinking_water_point",
   "location": {
     "lat": -19.330916,
     "lon": 146.734703
@@ -19,5 +22,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T13:08:01Z"
+  "updated": "2026-10-30T14:16:00Z"
 }

@@ -18,3 +18,10 @@ https://opendatacommons.org/licenses/dbcl/1-0/.
 
 The test file pipeline/tests/fixtures/grampians-overpass.osm is an extract of
 OpenStreetMap data, © OpenStreetMap contributors, under the ODbL 1.0.
+
+The place kinds in schema/kinds.json (every entry with "origin": "otwd") are
+the site_types list of the Open Touring and Waypoint Database (OTWD)
+vocabulary, version 1.0.0, licensed under the Apache License 2.0, in the file
+LICENSE-APACHE-2.0. Open Camping DB uses the codes, labels and groups. The
+OSM tag mappings in pipeline/kinds.py follow the OTWD OSM mappings, with the
+changes listed in pipeline/README.md.

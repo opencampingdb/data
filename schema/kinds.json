@@ -1,0 +1,164 @@
+{
+  "$comment": "Place kinds. Every entry with origin otwd is the site_types list of the Open Touring and Waypoint Database (OTWD) vocabulary, version 1.0.0, Apache-2.0. Entries with origin ocdb are Open Camping DB extensions.",
+  "source": {
+    "name": "OTWD site_types",
+    "version": "1.0.0",
+    "licence": "Apache-2.0"
+  },
+  "groups": [
+    "overnight",
+    "utility",
+    "services",
+    "attraction",
+    "emergency",
+    "transport"
+  ],
+  "kinds": [
+    {
+      "code": "free_camp",
+      "label": "Free camp",
+      "group": "overnight",
+      "origin": "otwd"
+    },
+    {
+      "code": "paid_campground",
+      "label": "Paid campground",
+      "group": "overnight",
+      "origin": "otwd"
+    },
+    {
+      "code": "caravan_park",
+      "label": "Caravan park",
+      "group": "overnight",
+      "origin": "otwd"
+    },
+    {
+      "code": "national_park_campsite",
+      "label": "National park campsite",
+      "group": "overnight",
+      "origin": "otwd"
+    },
+    {
+      "code": "state_forest_campsite",
+      "label": "State forest campsite",
+      "group": "overnight",
+      "origin": "otwd"
+    },
+    {
+      "code": "showground",
+      "label": "Showground",
+      "group": "overnight",
+      "origin": "otwd"
+    },
+    {
+      "code": "rest_area",
+      "label": "Rest area",
+      "group": "utility",
+      "origin": "otwd"
+    },
+    {
+      "code": "dump_point",
+      "label": "Dump point",
+      "group": "utility",
+      "origin": "otwd"
+    },
+    {
+      "code": "drinking_water_point",
+      "label": "Drinking water point",
+      "group": "utility",
+      "origin": "otwd"
+    },
+    {
+      "code": "public_toilet",
+      "label": "Public toilet",
+      "group": "utility",
+      "origin": "otwd"
+    },
+    {
+      "code": "public_shower",
+      "label": "Public shower",
+      "group": "utility",
+      "origin": "otwd"
+    },
+    {
+      "code": "laundromat",
+      "label": "Laundromat",
+      "group": "utility",
+      "origin": "otwd"
+    },
+    {
+      "code": "information_centre",
+      "label": "Information centre",
+      "group": "services",
+      "origin": "otwd"
+    },
+    {
+      "code": "attraction",
+      "label": "Attraction",
+      "group": "attraction",
+      "origin": "otwd"
+    },
+    {
+      "code": "lookout",
+      "label": "Lookout",
+      "group": "attraction",
+      "origin": "otwd"
+    },
+    {
+      "code": "swimming_spot",
+      "label": "Swimming spot",
+      "group": "attraction",
+      "origin": "otwd"
+    },
+    {
+      "code": "boat_ramp",
+      "label": "Boat ramp",
+      "group": "attraction",
+      "origin": "otwd"
+    },
+    {
+      "code": "fuel",
+      "label": "Fuel",
+      "group": "services",
+      "origin": "otwd"
+    },
+    {
+      "code": "lpg_refill_swap",
+      "label": "LPG refill or swap",
+      "group": "services",
+      "origin": "otwd"
+    },
+    {
+      "code": "mechanic",
+      "label": "Mechanic",
+      "group": "services",
+      "origin": "otwd"
+    },
+    {
+      "code": "hospital_emergency",
+      "label": "Hospital (emergency)",
+      "group": "emergency",
+      "origin": "otwd"
+    },
+    {
+      "code": "ferry_terminal",
+      "label": "Ferry terminal",
+      "group": "transport",
+      "origin": "otwd"
+    },
+    {
+      "code": "campground",
+      "label": "Campground",
+      "group": "overnight",
+      "origin": "ocdb",
+      "note": "A camp site whose fee is not known. Open Camping DB extension."
+    },
+    {
+      "code": "picnic_site",
+      "label": "Picnic area",
+      "group": "utility",
+      "origin": "ocdb",
+      "note": "A day-use picnic area. Open Camping DB extension."
+    }
+  ]
+}

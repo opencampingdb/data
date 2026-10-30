@@ -1,8 +1,13 @@
 # Open Camping DB data
 
-Open Camping DB is a free, open dataset of places to camp and stop in
-Australia: camp sites, caravan parks, rest areas, dump points, drinking water,
-toilets, showers and picnic areas. It is built from OpenStreetMap every night
+Open Camping DB is a free, open dataset of the places travellers camp and
+stop at in Australia: free camps, campgrounds, national park and state forest
+campsites, caravan parks and showgrounds; rest areas, dump points, drinking
+water, toilets, showers, laundromats and picnic areas; information centres,
+fuel, LPG, mechanics, emergency hospitals and ferry terminals; and lookouts,
+swimming spots, boat ramps and attractions. Its kinds of place are the site
+types of the OTWD (Open Touring and Waypoint Database) vocabulary, plus two of
+its own. It is built from OpenStreetMap every night
 and improved by feedback from the apps that use it. Any app may use the data
 and send feedback. CampOracle is the first.
 
@@ -41,7 +46,8 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 {
   "id": "ocdb_01M66CKP2X55A8CVGR95ZFJ170",
   "name": "Smiths Mill Campground",
-  "kind": "camp_site",
+  "kind": "national_park_campsite",
+  "group": "overnight",
   "location": {"lat": -37.107745, "lon": 142.423232},
   "osm": {"type": "node", "id": 316599210, "version": 5},
   "facts": {"fee": true, "tents": true, "caravans": true},
@@ -53,7 +59,9 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 ```
 
 The full contract is in [schema/place.schema.json](schema/place.schema.json)
-and [schema/review.schema.json](schema/review.schema.json). In the repository
+and [schema/review.schema.json](schema/review.schema.json). The kinds and
+their groups are listed in [schema/kinds.json](schema/kinds.json) and in
+[CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, and the reviews
 of a place are at `reviews/<place id>.ndjson`.
 
@@ -63,6 +71,10 @@ The database is licensed under the [Open Database License (ODbL) 1.0](LICENSE).
 Any rights in its individual contents are licensed under the
 [Database Contents License (DbCL) 1.0](LICENSE-CONTENTS). It contains
 OpenStreetMap data, which is also under the ODbL. See [NOTICE](NOTICE).
+
+The kind vocabulary in [schema/kinds.json](schema/kinds.json) comes from the
+OTWD site types and is under the Apache License 2.0
+([LICENSE-APACHE-2.0](LICENSE-APACHE-2.0)).
 
 In short: you may use, share and adapt the data, including commercially, if
 you show the attribution below, and if you publicly use or share an adapted
@@ -79,7 +91,9 @@ Anything that shows this data must show:
 ## How it is built
 
 1. **Nightly OSM sync** (`.github/workflows/sync-osm.yml`, 16:00 UTC). Downloads
-   the Geofabrik extract for Australia, keeps the camping tags, merges the result
+   the Geofabrik extract for Australia, keeps the tags that map to a kind of
+   place, classifies camp sites by the park, state forest or showground they
+   lie in, merges the result
    into `places/` and opens or updates one pull request from the `osm-sync`
    branch. The PR body lists what is new, what changed and what has gone from
    OSM. Records that have gone from OSM are never deleted: a person decides. The
