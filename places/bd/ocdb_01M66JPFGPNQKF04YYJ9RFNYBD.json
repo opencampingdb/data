@@ -1,10 +1,14 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "entry": "osm",
+    "fee": "osm",
     "water_type": "osm"
   },
   "facts": {
     "drinking_water": true,
+    "entry": "customers",
+    "fee": true,
     "water_type": "tank_fill"
   },
   "group": "utility",
@@ -18,9 +22,9 @@
   "osm": {
     "id": 9494363797,
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-10-31T19:40:21Z"
 }

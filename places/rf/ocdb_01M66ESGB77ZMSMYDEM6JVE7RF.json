@@ -1,9 +1,25 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "drinking_water": "osm",
+    "dump_station": "osm",
+    "fee": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "drinking_water": false,
+    "dump_station": false,
+    "fee": false,
+    "power": false,
+    "showers": false,
+    "tents": false,
+    "toilets": false
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESGB77ZMSMYDEM6JVE7RF",
-  "kind": "caravan_park",
+  "kind": "free_camp",
   "location": {
     "lat": -16.732625,
     "lon": 145.657805
@@ -12,9 +28,9 @@
   "osm": {
     "id": 1536837298,
     "type": "way",
-    "version": 1
+    "version": 9
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-10-31T19:40:21Z"
 }
