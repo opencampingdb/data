@@ -96,16 +96,30 @@ jobs:
 
           # The branch is rebuilt from main every night, so the PR always
           # shows main plus tonight's sync and nothing older.
+          # Stop rather than overwrite an osm-sync PR that someone else opened
+          # from this repository.
+          other="$(gh pr list --head osm-sync --base main --state open \
+            --json number,isCrossRepository,author \
+            --jq '[.[] | select(.isCrossRepository == false and .author.login != "app/opencampingdb-bot" and .author.login != "opencampingdb-bot[bot]")][0].number // empty')"
+          if [ -n "$other" ]; then
+            echo "::error::PR #${other} uses the osm-sync branch but was not opened by the bot"
+            exit 1
+          fi
+
           git switch -C osm-sync
           git add -- places
           git commit -q -m "chore(osm): sync places from OpenStreetMap $(date -u +%Y-%m-%d)"
           git push --force origin HEAD:osm-sync
 
           title="OSM sync $(date -u +%Y-%m-%d)"
-          number="$(gh pr list --head osm-sync --base main --state open --json number --jq '.[0].number // empty')"
+          # Only the bot's own PR from this repository's osm-sync branch counts.
+          # A PR from a fork can use the same branch name.
+          number="$(gh pr list --head osm-sync --base main --state open \
+            --json number,isCrossRepository,author \
+            --jq '[.[] | select(.isCrossRepository == false and (.author.login == "app/opencampingdb-bot" or .author.login == "opencampingdb-bot[bot]"))][0].number // empty')"
           if [ -z "$number" ]; then
-            gh pr create --base main --head osm-sync --title "$title" --body-file "$RUNNER_TEMP/sync-report.md"
-            number="$(gh pr list --head osm-sync --base main --state open --json number --jq '.[0].number')"
+            url="$(gh pr create --base main --head osm-sync --title "$title" --body-file "$RUNNER_TEMP/sync-report.md")"
+            number="${url##*/}"
           else
             gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/sync-report.md"
           fi
