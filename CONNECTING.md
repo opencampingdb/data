@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 2,
+  "format_version": 3,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -41,10 +41,9 @@ cannot read.
 Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
 `dump_station`, `drinking_water`, `toilets`, `shower`, `picnic_site`) and no
 `group`. Format 2 uses the kinds listed in section 4 and adds `group`. Every
-place kept its `id` across the change.
-
-New optional keys that an app can safely ignore, such as `osm.timestamp`
-and `fact_dates`, do not raise `format_version`.
+place kept its `id` across the change. Format 3 adds `osm.timestamp` and
+`fact_dates` (see section 4). Records without them read the same as in
+format 2.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
