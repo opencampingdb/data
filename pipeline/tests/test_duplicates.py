@@ -145,6 +145,7 @@ def review(review_id, place_id, stars):
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
         "app": "example-app",
+        "contributor": "ctr_0123456789abcdef",
     }
 
 
@@ -213,6 +214,19 @@ def test_merge_moves_feedback_facts_and_reviews(pair):
     assert len(moved) == 3
     assert kept["rating"] == {"count": 3, "mean": 4.0}
     assert not (repo / "reviews" / f"{drop['id']}.ndjson").exists()
+    assert validate_repo(repo) == []
+
+
+def test_merge_rating_leaves_out_hidden_reviews(pair):
+    repo, keep, drop = pair
+    hidden = dict(review("rev_01JBX0000000000000000000D3", drop["id"], 1), hidden="reported")
+    write_reviews(repo, drop["id"], [
+        review("rev_01JBX0000000000000000000D1", drop["id"], 3),
+        review("rev_01JBX0000000000000000000D2", drop["id"], 4),
+        hidden,
+    ])
+    merge(repo, keep["id"], drop["id"], now=T2)
+    assert load_places(repo)[keep["id"]]["rating"] == {"count": 3, "mean": 4.0}
     assert validate_repo(repo) == []
 
 
