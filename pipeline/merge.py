@@ -11,6 +11,7 @@ What it does:
 - Facts the dropped record got from feedback or contributions move to the
   kept record where it has no value for them, with their fact_dates. OSM
   facts do not move: the kept record has its own.
+- The kept record takes the newer last_confirmed of the two.
 - The dropped record's reviews move to the kept record, which gets a new
   rating from all its reviews.
 - The dropped record stays as a tombstone: status "merged" and merged_into
@@ -94,6 +95,11 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None) -> dic
                 kept["fact_sources"][key] = source
                 if key in dropped.get("fact_dates", {}):
                     kept.setdefault("fact_dates", {})[key] = dropped["fact_dates"][key]
+
+    # The newer of the two confirmations.
+    confirmed = max(kept.get("last_confirmed", ""), dropped.get("last_confirmed", ""))
+    if confirmed:
+        kept["last_confirmed"] = confirmed
 
     # Reviews.
     moved = [dict(r, place=keep_id) for r in read_reviews(root, drop_id)]

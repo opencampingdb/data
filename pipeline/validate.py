@@ -15,6 +15,8 @@ exits 1. Checks:
   name, location and status entries
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
+- last_confirmed is not in the future. It may be later than updated, which
+  a confirmation does not move
 - no two records share an id or an OSM object (merged_osm included,
   tombstones left out)
 - a tombstone (status merged) has merged_into, naming a record that is not
@@ -48,6 +50,7 @@ from .common import (
     iter_review_files,
     place_path,
     rating_mean,
+    utc_now,
 )
 
 SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
@@ -103,8 +106,11 @@ def has_at_most_places(value: float, places: int = 6) -> bool:
     return round(value, places) == value
 
 
-def check_place_file(root: Path, path: Path, validator) -> tuple[dict | None, list[str]]:
-    """Validate one place file. Returns the record (if it parsed) and the errors."""
+def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict | None, list[str]]:
+    """Validate one place file. Returns the record (if it parsed) and the errors.
+
+    now is the time of the check, ISO 8601 UTC.
+    """
     where = str(path.relative_to(root)).replace("\\", "/")
     try:
         text = path.read_bytes().decode("utf-8")
@@ -145,6 +151,8 @@ def check_place_file(root: Path, path: Path, validator) -> tuple[dict | None, li
         )
 
     errors += fact_date_errors(record, where)
+    if record.get("last_confirmed", "") > now:
+        errors.append(f"{where}: last_confirmed {record['last_confirmed']} is in the future")
     errors += owner_errors(record, where)
     return record, errors
 
@@ -202,7 +210,7 @@ def owner_errors(record: dict, where: str) -> list[str]:
     return errors
 
 
-def check_places(root: Path) -> tuple[dict[str, dict], list[str]]:
+def check_places(root: Path, now: str) -> tuple[dict[str, dict], list[str]]:
     validator = load_validator("place.schema.json")
     errors: list[str] = []
     places: dict[str, dict] = {}
@@ -213,7 +221,7 @@ def check_places(root: Path) -> tuple[dict[str, dict], list[str]]:
             errors.append(f"{path.relative_to(root).as_posix()}: unexpected file in places/")
 
     for path in iter_place_files(root):
-        record, file_errors = check_place_file(root, path, validator)
+        record, file_errors = check_place_file(root, path, validator, now)
         errors += file_errors
         if record is None or "id" not in record:
             continue
@@ -323,10 +331,13 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
     return errors
 
 
-def validate_repo(root: Path) -> list[str]:
-    """Every problem found in the repository, as readable lines. Empty means valid."""
+def validate_repo(root: Path, now: str | None = None) -> list[str]:
+    """Every problem found in the repository, as readable lines. Empty means valid.
+
+    now is the time last_confirmed may not pass, the current time by default.
+    """
     root = Path(root)
-    places, errors = check_places(root)
+    places, errors = check_places(root, now or utc_now())
     errors += check_reviews(root, places)
     return errors
 

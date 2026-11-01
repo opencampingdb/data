@@ -362,3 +362,24 @@ def test_osm_timestamp_must_be_utc_seconds(synced):
     rec["osm"]["timestamp"] = "2024-05-06 07:08"
     write_place(path, rec)
     assert any("timestamp" in e for e in validate_repo(synced))
+
+
+def test_last_confirmed_may_be_later_than_updated(synced):
+    path, rec = first_place(synced)
+    rec["last_confirmed"] = "2026-10-20T03:00:00Z"
+    write_place(path, rec)
+    assert validate_repo(synced, now="2026-10-21T00:00:00Z") == []
+
+
+def test_last_confirmed_in_the_future_is_refused(synced):
+    path, rec = first_place(synced)
+    rec["last_confirmed"] = "2026-10-22T00:00:00Z"
+    write_place(path, rec)
+    assert any("last_confirmed" in e for e in validate_repo(synced, now="2026-10-21T00:00:00Z"))
+
+
+def test_last_confirmed_must_be_utc_seconds(synced):
+    path, rec = first_place(synced)
+    rec["last_confirmed"] = "2026-10-20"
+    write_place(path, rec)
+    assert any("last_confirmed" in e for e in validate_repo(synced, now="2026-10-21T00:00:00Z"))

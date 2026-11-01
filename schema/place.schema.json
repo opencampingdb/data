@@ -201,8 +201,13 @@
         }
       }
     },
+    "last_confirmed": {
+      "description": "When a traveller last checked the place and found it there, UTC: the time of the feedback apply run that accepted the check. Set only while the place is open. It does not move updated, so it may be later than updated. Left out when no check has confirmed the place.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
     "updated": {
-      "description": "When the record's content last changed, UTC. Adding osm.timestamp to a record that had none does not move it.",
+      "description": "When the record's content last changed, UTC. Adding osm.timestamp to a record that had none, or a new last_confirmed, does not move it.",
       "type": "string",
       "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
     }
