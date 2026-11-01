@@ -224,6 +224,7 @@ def test_name_and_location_sources_are_allowed(synced):
     path, rec = first_place(synced)
     rec["fact_sources"]["name"] = "feedback"
     rec["fact_sources"]["location"] = "osm"
+    rec["fact_dates"] = {"name": rec["updated"]}
     write_place(path, rec)
     assert validate_repo(synced) == []
 
@@ -310,6 +311,7 @@ def test_contributed_place_without_osm_link_is_valid(synced):
         "status": "open",
         "rating": None,
         "fact_sources": {"name": "contributed", "location": "contributed"},
+        "fact_dates": {"name": "2026-10-01T16:00:00Z", "location": "2026-10-01T16:00:00Z"},
         "updated": "2026-10-01T16:00:00Z",
     }
     write_place(place_path(synced, rec["id"]), rec)
@@ -320,6 +322,7 @@ def test_contributed_status_source_is_valid(synced):
     path, rec = first_place(synced)
     rec["status"] = "closed"
     rec["fact_sources"]["status"] = "contributed"
+    rec["fact_dates"] = {"status": rec["updated"]}
     write_place(path, rec)
     assert validate_repo(synced) == []
 
@@ -329,3 +332,33 @@ def test_unknown_source_value_is_refused(synced):
     rec["fact_sources"]["name"] = "scraped"
     write_place(path, rec)
     assert any("scraped" in e for e in validate_repo(synced))
+
+
+def test_value_not_from_osm_needs_a_date(synced):
+    path, rec = first_place(synced)
+    rec["fact_sources"]["name"] = "feedback"
+    write_place(path, rec)
+    assert any("fact_dates" in e for e in validate_repo(synced))
+
+
+def test_date_for_an_osm_value_is_refused(synced):
+    path, rec = first_place(synced)
+    key = next(iter(rec["facts"]))
+    rec["fact_dates"] = {key: rec["updated"]}
+    write_place(path, rec)
+    assert any("fact_dates" in e for e in validate_repo(synced))
+
+
+def test_fact_date_after_updated_is_refused(synced):
+    path, rec = first_place(synced)
+    rec["fact_sources"]["status"] = "contributed"
+    rec["fact_dates"] = {"status": "2099-01-01T00:00:00Z"}
+    write_place(path, rec)
+    assert any("later than updated" in e for e in validate_repo(synced))
+
+
+def test_osm_timestamp_must_be_utc_seconds(synced):
+    path, rec = first_place(synced)
+    rec["osm"]["timestamp"] = "2024-05-06 07:08"
+    write_place(path, rec)
+    assert any("timestamp" in e for e in validate_repo(synced))

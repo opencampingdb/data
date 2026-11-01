@@ -29,6 +29,12 @@ Rules (SPEC, "OSM sync"):
 - Records still carrying a kind from before the OTWD vocabulary (camp_site,
   toilets and so on) are moved to the new kind even when their OSM object is
   gone, so that every record validates. See LEGACY_KINDS.
+- osm.timestamp is the time of the OSM object's current version. An extract
+  without timestamps keeps the record's timestamp while the version is the
+  same. Adding a timestamp to a record that had none does not move
+  "updated", since the place itself did not change.
+- fact_dates follows fact_sources: a date is kept for every value that is
+  not from OSM. Sync never adds one, because it never adds such a value.
 - "updated" moves only when the record's content changes, so running the
   same extract twice changes nothing.
 """
@@ -156,7 +162,10 @@ def migrated_record(record: dict, now: str) -> dict:
 
 
 def new_record(place: dict, now: str, make_id) -> dict:
-    """A brand new record for an OSM object we have not seen before."""
+    """A brand new record for an OSM object we have not seen before.
+
+    Every value is from OSM, so it has no fact_dates.
+    """
     return {
         "id": make_id(),
         "name": place["name"],
@@ -172,13 +181,39 @@ def new_record(place: dict, now: str, make_id) -> dict:
     }
 
 
+def without_osm_timestamp(record: dict) -> dict:
+    """The record without osm.timestamp, to tell a timestamp backfill from a change."""
+    if not record.get("osm") or "timestamp" not in record["osm"]:
+        return record
+    bare = dict(record, osm=dict(record["osm"]))
+    del bare["osm"]["timestamp"]
+    return bare
+
+
+def refreshed_osm(old: dict | None, new: dict) -> dict:
+    """The extract's osm link, keeping the old timestamp if the extract has none for this version."""
+    fresh = dict(new)
+    if (
+        "timestamp" not in fresh
+        and old
+        and "timestamp" in old
+        and old.get("version") == fresh["version"]
+    ):
+        fresh["timestamp"] = old["timestamp"]
+    return fresh
+
+
 def refreshed_record(record: dict, place: dict, now: str) -> dict:
-    """The record with OSM data refreshed. "updated" moves only if something changed."""
+    """The record with OSM data refreshed. "updated" moves only if something changed.
+
+    A timestamp added to an osm link that had none is not a change to the
+    place, so it alone does not move "updated".
+    """
     fresh = copy.deepcopy(record)
     old_sources = record.get("fact_sources", {})
     fresh["kind"] = place["kind"]
     fresh["group"] = KIND_GROUP[place["kind"]]
-    fresh["osm"] = place["osm"]
+    fresh["osm"] = refreshed_osm(record.get("osm"), place["osm"])
     fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"])
     # Source entries for name, location and status are carried over as they
     # were. name and location follow OSM unless their source is something
@@ -189,7 +224,15 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     for key in ("name", "location"):
         if old_sources.get(key, "osm") == "osm":
             fresh[key] = place[key]
-    if fresh != record:
+    dates = {
+        key: when
+        for key, when in record.get("fact_dates", {}).items()
+        if fresh["fact_sources"].get(key, "osm") != "osm"
+    }
+    fresh.pop("fact_dates", None)
+    if dates:
+        fresh["fact_dates"] = dates
+    if without_osm_timestamp(fresh) != without_osm_timestamp(record):
         fresh["updated"] = now
     return fresh
 

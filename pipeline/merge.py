@@ -9,8 +9,8 @@ What it does:
   matches these objects to the kept record from then on, so the dropped
   place is never created again.
 - Facts the dropped record got from feedback or contributions move to the
-  kept record where it has no value for them. OSM facts do not move: the
-  kept record has its own.
+  kept record where it has no value for them, with their fact_dates. OSM
+  facts do not move: the kept record has its own.
 - The dropped record's reviews move to the kept record, which gets a new
   rating from all its reviews.
 - The dropped record stays as a tombstone: status "merged" and merged_into
@@ -92,6 +92,8 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None) -> dic
             if key in dropped["facts"]:
                 kept["facts"][key] = dropped["facts"][key]
                 kept["fact_sources"][key] = source
+                if key in dropped.get("fact_dates", {}):
+                    kept.setdefault("fact_dates", {})[key] = dropped["fact_dates"][key]
 
     # Reviews.
     moved = [dict(r, place=keep_id) for r in read_reviews(root, drop_id)]

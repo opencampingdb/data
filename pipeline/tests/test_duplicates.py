@@ -169,6 +169,8 @@ def pair(repo):
     drop["fact_sources"]["toilets"] = "osm"
     keep["facts"]["showers"] = True
     keep["fact_sources"]["showers"] = "feedback"
+    drop["fact_dates"] = {"power": T1, "showers": T1}
+    keep["fact_dates"] = {"showers": T1}
     keep["rating"] = {"count": 1, "mean": 5.0}
     drop["rating"] = {"count": 2, "mean": 3.5}
     write(repo, keep)
@@ -193,6 +195,7 @@ def test_merge_moves_feedback_facts_and_reviews(pair):
     assert kept["fact_sources"]["power"] == "feedback"
     assert kept["facts"]["showers"] is True
     assert kept["fact_sources"]["showers"] == "feedback"
+    assert kept["fact_dates"] == {"power": T1, "showers": T1}
     # OSM facts of the dropped record do not move.
     assert "toilets" not in kept["facts"]
 
