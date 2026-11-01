@@ -156,10 +156,9 @@ def owner_errors(record: dict, where: str) -> list[str]:
     if owned and record.get("owner_verified") is not True:
         errors.append(f"{where}: {owned} have the source owner, so owner_verified must be true")
 
-    # A farm stay is private land listed by its owner, booked before arriving.
-    if record["kind"] == "farm_stay":
-        if record["osm"] is not None:
-            errors.append(f"{where}: a farm_stay is listed by its owner, so osm must be null")
+    # A farm stay its owner lists (osm null) is private land booked before
+    # arriving. One from OSM keeps whatever OSM says about entry and booking.
+    if record["kind"] == "farm_stay" and record["osm"] is None:
         if facts.get("entry") != "private":
             errors.append(f"{where}: a farm_stay must have the fact entry private")
         if facts.get("booking_required") is not True:

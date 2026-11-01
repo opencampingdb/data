@@ -55,8 +55,11 @@ got through.
 `kind` is one of the codes in `schema/kinds.json`: the 22 site types of the
 OTWD (Open Touring and Waypoint Database) vocabulary, version 1.0.0, under
 Apache-2.0, plus three Open Camping DB extensions, `campground`,
-`picnic_site` and `farm_stay`. `farm_stay` never comes from OSM: it is private
-land listed by its owner. Each kind belongs to a group, and every record carries its
+`picnic_site` and `farm_stay`. A `farm_stay` is a station or farm stay: an OSM
+camp or caravan site outside a park, forest or showground whose name says so
+("Mount Gipps Station", "Bonus Downs Farmstay", "Olive Hill Farm", but not a
+pump station, Farm Beach or a wind farm; `kinds.is_farm_stay`), or private land
+listed by its owner. Each kind belongs to a group, and every record carries its
 `group`.
 
 | Code | Label | Group | Origin |
@@ -68,7 +71,7 @@ land listed by its owner. Each kind belongs to a group, and every record carries
 | `state_forest_campsite` | State forest campsite | overnight | OTWD |
 | `showground` | Showground | overnight | OTWD |
 | `campground` | Campground | overnight | Open Camping DB: a camp site whose fee is not known |
-| `farm_stay` | Farm stay | overnight | Open Camping DB: private land listed by its owner. Never from OSM |
+| `farm_stay` | Farm stay | overnight | Open Camping DB: a station or farm stay, named so in OSM or listed by its owner |
 | `rest_area` | Rest area | utility | OTWD |
 | `dump_point` | Dump point | utility | OTWD |
 | `drinking_water_point` | Drinking water point | utility | OTWD |
@@ -297,7 +300,7 @@ other fact (plus optional `name`, `location` and `status`, each `osm`,
 id or an OSM object (counting `merged_osm`, leaving tombstones out), that a
 tombstone has a `merged_into` naming a record that is not itself merged and
 no reviews, the owner rules (a value with the source `owner` needs
-`owner_verified: true`; a `farm_stay` has `osm: null`, `entry: private`,
+`owner_verified: true`; a `farm_stay` its owner lists (`osm: null`) has `entry: private`,
 `booking_required: true` and a `booking_url` or `phone`; a `description` is
 checked like review text; `reopens` is a real date and only goes with
 `status: temporarily_closed`), that review lines are canonical and sorted by id, that

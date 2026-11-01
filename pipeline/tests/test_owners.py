@@ -79,7 +79,6 @@ def test_farm_stay_with_phone_instead_of_booking_url_passes(repo):
 @pytest.mark.parametrize(
     "change, expected",
     [
-        ({"osm": {"type": "node", "id": 1, "version": 1}}, "farm_stay"),
         ({"facts": {"entry": "public", "booking_required": True, "booking_url": "https://example.org/book", "fee": True}}, "private"),
         ({"facts": {"entry": "private", "booking_url": "https://example.org/book", "fee": True}}, "booking_required"),
         ({"facts": {"entry": "private", "booking_required": True, "fee": True}}, "booking_url"),
@@ -92,6 +91,12 @@ def test_farm_stay_rules(repo, change, expected):
     }
     errors = errors_for(repo, record)
     assert any(expected in e for e in errors), errors
+
+
+def test_farm_stay_from_osm_needs_no_booking_facts(repo):
+    record = farm_stay(osm={"type": "node", "id": 1, "version": 1}, facts={"fee": True})
+    record["fact_sources"] = {"fee": "osm"}
+    assert not any("farm_stay" in e for e in errors_for(repo, record))
 
 
 def test_booking_url_must_be_https(repo):

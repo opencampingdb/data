@@ -50,6 +50,21 @@ CAMP = {"tourism": "camp_site"}
         ({"tourism": "caravan_site"}, {"park"}, "caravan_park"),
         ({"tourism": "caravan_site", "fee": "no"}, set(), "free_camp"),
         ({"tourism": "caravan_site", "fee": "yes"}, set(), "caravan_park"),
+        # A station or farm stay by its name, ahead of the fee.
+        ({**CAMP, "name": "Mount Gipps Station", "fee": "yes"}, set(), "farm_stay"),
+        ({**CAMP, "name": "Bonus Downs Farmstay"}, set(), "farm_stay"),
+        ({**CAMP, "name": "Glen Erin Farm Stay"}, set(), "farm_stay"),
+        ({**CAMP, "name": "Olive Hill Farm, Margaret River"}, set(), "farm_stay"),
+        ({"tourism": "caravan_site", "name": "Fraser Range Station Caravan Park"}, set(), "farm_stay"),
+        # Containment still comes first: a homestead camp in a park is a park camp.
+        ({**CAMP, "name": "Bullita Station Campground"}, {"park"}, "national_park_campsite"),
+        # Names that only look like a station or farm.
+        ({**CAMP, "name": "Cobdogla Pump Station", "fee": "no"}, set(), "free_camp"),
+        ({**CAMP, "name": "Farm Beach Campground"}, set(), "campground"),
+        ({**CAMP, "name": "Wind Farm Lookout Parking Area"}, set(), "campground"),
+        ({**CAMP, "name": "Whaling Station"}, set(), "campground"),
+        ({**CAMP, "name": "Watheroo Station Tavern", "fee": "no"}, set(), "free_camp"),
+        ({**CAMP, "name": "Stationery Creek"}, set(), "campground"),
     ],
 )
 def test_overnight_precedence(tags, inside, kind):

@@ -1,8 +1,8 @@
 """Which kind of place an OSM object is, and which areas can contain a camp site.
 
 The kinds are the OTWD site_types vocabulary plus three Open Camping DB
-extensions (schema/kinds.json). farm_stay is never classified from OSM: it
-is private land listed by its owner. The rules follow the OTWD OSM mappings. Every
+extensions (schema/kinds.json). A camp or caravan site whose name says it is
+a station or farm stay is a farm_stay (is_farm_stay); owners list the rest. The rules follow the OTWD OSM mappings. Every
 decision, and the order the rules are tried in, is listed in
 pipeline/README.md under "Kind".
 
@@ -90,6 +90,24 @@ def parse_fee(value: str) -> bool | None:
     return None
 
 
+# A station or farm stay names itself so: "Mount Gipps Station", "Bonus Downs
+# Farmstay", "Olive Hill Farm". FARM_NOT_STAY holds the words that make such a
+# name something else on the map (a pump station, Farm Beach, a wind farm).
+FARM_STAY = re.compile(r"\b(farm\s?stay|farm|station)\b", re.IGNORECASE)
+FARM_NOT_STAY = re.compile(
+    r"\b(pump|pumping|repeater|railway|rail|service|fire|police|ranger|bus|power|weather|research|radio|"
+    r"telegraph|petrol|fuel|roadhouse|whaling|checking|logging|payment|tavern|lookout|parking|rest area|"
+    r"wind farm|farm beach)\b",
+    re.IGNORECASE,
+)
+
+
+def is_farm_stay(tags: dict) -> bool:
+    """Whether a camp or caravan site is a station or farm stay, by its name."""
+    name = tags.get("name") or ""
+    return bool(FARM_STAY.search(name)) and not FARM_NOT_STAY.search(name)
+
+
 def _fee(tags: dict) -> bool | None:
     return parse_fee(tags.get("fee", ""))
 
@@ -144,6 +162,8 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
             return "state_forest_campsite"
         if "showground" in inside:
             return "showground"
+        if is_farm_stay(tags):
+            return "farm_stay"
         fee = _fee(tags)
         if fee is False:
             return "free_camp"
@@ -153,6 +173,8 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
 
     # 2. Caravan sites. OTWD maps tourism=caravan_site + fee=no to free_camp.
     if tourism == "caravan_site":
+        if is_farm_stay(tags):
+            return "farm_stay"
         return "free_camp" if _fee(tags) is False else "caravan_park"
 
     # 3. Utility.
