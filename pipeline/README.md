@@ -159,6 +159,13 @@ area often carries `protect_class=6`, which would otherwise make it a park.
 
 `name` is the `name` tag, or `null` when there is none.
 
+`osm` is `{"type", "id", "version", "timestamp"}`. `timestamp` is when that
+version of the object was saved in OSM, the last time anyone edited it, in
+UTC (`2025-03-04T07:59:37Z`). A multipolygon place takes its relation's
+time and a site relation its own, not its members'. Geofabrik extracts and
+Overpass `out meta` carry timestamps. A file without them (pyosmium then
+reports the Unix epoch) gives no `timestamp`.
+
 ### Facts
 
 A fact is only written when the tag has a value we can read. Any other value
@@ -220,6 +227,19 @@ fact that depends on the kind.
   or `location` is `feedback` or `contributed`, sync keeps the record's own
   value. When it is missing or `osm`, the value comes from OSM. Sync never
   adds these entries itself.
+- `osm.timestamp` comes from the extract with the rest of `osm`. When the
+  extract has no timestamp for an object, the record keeps its own as long
+  as the version is the same. A record that gains a timestamp it did not
+  have (the first sync after timestamps were added) is written, and counts
+  as updated in the report, but its `updated` does not move: the place did
+  not change.
+- `fact_dates` says when each value that is not from OSM was accepted: one
+  entry, in the same UTC form as `updated`, for every `fact_sources` entry
+  that is `feedback`, `contributed` or `owner`. Whoever sets such a value
+  sets its date, the feedback engine for `feedback` and `owner` and the
+  person opening the PR for `contributed`. Sync keeps the dates of the
+  values it keeps and never adds one. Values from OSM are as fresh as
+  `osm.timestamp`.
 - `updated` is set to the time of the run only when the record's content
   changed. Running the same extract twice changes no file.
 - A record whose OSM object is no longer in the extract is never deleted. It
@@ -278,7 +298,8 @@ place. A person runs it and opens a PR with the result:
   links already merged into it, sorted. Sync matches these objects to the
   kept record and never creates them again.
 - Facts the dropped record got from `feedback` or `contributed` move to the
-  kept record where it has no value. OSM facts do not move.
+  kept record where it has no value, with their `fact_dates`. OSM facts do
+  not move.
 - The dropped record's reviews move to the kept record, and the kept record's
   rating is recalculated.
 - The dropped record stays as a tombstone: `status: "merged"` and
@@ -296,7 +317,9 @@ not list. On top of the schemas it checks that `group` is the group of the
 record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
 other fact (plus optional `name`, `location` and `status`, each `osm`,
-`feedback` or `contributed`), that no two records share an
+`feedback` or `contributed`), that `fact_dates` has a date for exactly the
+`fact_sources` entries that are not `osm` and none later than `updated`,
+that no two records share an
 id or an OSM object (counting `merged_osm`, leaving tombstones out), that a
 tombstone has a `merged_into` naming a record that is not itself merged and
 no reviews, the owner rules (a value with the source `owner` needs
