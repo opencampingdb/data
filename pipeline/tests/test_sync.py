@@ -388,8 +388,75 @@ def test_contributed_fact_is_kept(repo, v1_osm, v2_osm):
     rec = json.loads(path.read_text(encoding="utf-8"))
     rec["facts"]["power"] = True
     rec["fact_sources"]["power"] = "contributed"
+    rec["fact_dates"] = {"power": T1}
     rewrite(path, rec)
     sync(repo, extract_file(v2_osm), now=T2)
     camp = json.loads(path.read_text(encoding="utf-8"))
     assert camp["facts"]["power"] is True
     assert camp["fact_sources"]["power"] == "contributed"
+    assert camp["fact_dates"] == {"power": T1}
+
+
+def stamped(osm_file: Path, tmp_path: Path, when: str) -> Path:
+    """A copy of a hand-written OSM file in which every object carries a timestamp."""
+    text = re.sub(r'( version="\d+")', rf'\1 timestamp="{when}"', osm_file.read_text(encoding="utf-8"))
+    out = tmp_path / f"stamped-{osm_file.name}"
+    out.write_text(text, encoding="utf-8")
+    return out
+
+
+def test_osm_timestamp_is_carried_into_new_records(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(stamped(v1_osm, tmp_path, "2024-05-06T07:08:09Z")), now=T1)
+    for rec in load_all(repo).values():
+        assert rec["osm"]["timestamp"] == "2024-05-06T07:08:09Z"
+
+
+def test_adding_osm_timestamp_does_not_move_updated(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now=T1)
+    assert all("timestamp" not in r["osm"] for r in load_all(repo).values())
+
+    result = sync(repo, extract_file(stamped(v1_osm, tmp_path, "2024-05-06T07:08:09Z")), now=T2)
+    records = load_all(repo)
+    # Every file gains the timestamp, but no place changed.
+    assert len(result.updated) == len(records)
+    for rec in records.values():
+        assert rec["osm"]["timestamp"] == "2024-05-06T07:08:09Z"
+        assert rec["updated"] == T1
+
+
+def test_extract_without_timestamps_keeps_them_for_the_same_version(repo, v1_osm, v2_osm, tmp_path):
+    sync(repo, extract_file(stamped(v1_osm, tmp_path, "2024-05-06T07:08:09Z")), now=T1)
+    before = snapshot(repo)
+    result = sync(repo, extract_file(v1_osm), now=T2)
+    assert result.updated == []
+    assert snapshot(repo) == before
+
+    # A new version without a timestamp has no known edit time.
+    sync(repo, extract_file(v2_osm), now=T3)
+    camp = load_all(repo)[("node", 1001)]
+    assert camp["osm"]["version"] == 2
+    assert "timestamp" not in camp["osm"]
+
+
+def test_new_osm_version_brings_its_timestamp(repo, v1_osm, v2_osm, tmp_path):
+    sync(repo, extract_file(stamped(v1_osm, tmp_path, "2024-05-06T07:08:09Z")), now=T1)
+    sync(repo, extract_file(stamped(v2_osm, tmp_path, "2026-09-30T01:02:03Z")), now=T2)
+    camp = load_all(repo)[("node", 1001)]
+    assert camp["osm"] == {"type": "node", "id": 1001, "version": 2, "timestamp": "2026-09-30T01:02:03Z"}
+    assert camp["updated"] == T2
+
+
+def test_fact_dates_go_with_values_that_become_osm(repo, v1_osm):
+    # A feedback source entry with no value behind it is dropped by sync, and
+    # its date goes with it.
+    sync(repo, extract_file(v1_osm), now=T1)
+    camp_id = load_all(repo)[("node", 1001)]["id"]
+    path = place_path(repo, camp_id)
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    rec["fact_sources"]["showers"] = "feedback"
+    rec["fact_dates"] = {"showers": T1}
+    rewrite(path, rec)
+    sync(repo, extract_file(v1_osm), now=T2)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert "showers" not in camp["fact_sources"]
+    assert "fact_dates" not in camp

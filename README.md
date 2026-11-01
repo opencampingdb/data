@@ -49,7 +49,7 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
   "kind": "national_park_campsite",
   "group": "overnight",
   "location": {"lat": -37.107745, "lon": 142.423232},
-  "osm": {"type": "node", "id": 316599210, "version": 5},
+  "osm": {"type": "node", "id": 316599210, "version": 5, "timestamp": "2021-06-05T03:07:04Z"},
   "facts": {"fee": true, "tents": true, "caravans": true},
   "fact_sources": {"fee": "osm", "tents": "osm", "caravans": "osm"},
   "status": "open",
@@ -111,9 +111,10 @@ Anything that shows this data must show:
    closures of existing places, can be contributed directly under the ODbL
    by pull request. A contributed place has `osm: null` and `"contributed"`
    in `fact_sources` for its name and location. A contributed closure sets
-   `status: "closed"` with `fact_sources.status` set to `"contributed"`. The
-   OSM sync never changes a place without an OSM link, and keeps a
-   contributed status.
+   `status: "closed"` with `fact_sources.status` set to `"contributed"`.
+   Every contributed value also gets the time it was accepted in
+   `fact_dates`, as feedback and owner values do. The OSM sync never changes
+   a place without an OSM link, and keeps a contributed status.
 4. **Owners.** A place's owner can claim it through the owner page at
    `https://opencampingdb.github.io/owners/`. A person approves every claim
    and every private property listing before anything is published. After
