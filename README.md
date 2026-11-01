@@ -59,7 +59,10 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 ```
 
 The full contract is in [schema/place.schema.json](schema/place.schema.json)
-and [schema/review.schema.json](schema/review.schema.json). The kinds and
+and [schema/review.schema.json](schema/review.schema.json). Contributors a
+person has blocked are listed in
+[moderation/blocked_contributors.json](moderation/blocked_contributors.json)
+([schema](schema/blocked_contributors.schema.json)). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, and the reviews
