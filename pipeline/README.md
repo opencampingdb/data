@@ -240,6 +240,8 @@ fact that depends on the kind.
   person opening the PR for `contributed`. Sync keeps the dates of the
   values it keeps and never adds one. Values from OSM are as fresh as
   `osm.timestamp`.
+- `last_confirmed` is kept as it is. Only the feedback engine sets it, when
+  a traveller's check finds an open place still there.
 - `updated` is set to the time of the run only when the record's content
   changed. Running the same extract twice changes no file.
 - A record whose OSM object is no longer in the extract is never deleted. It
@@ -300,6 +302,7 @@ place. A person runs it and opens a PR with the result:
 - Facts the dropped record got from `feedback` or `contributed` move to the
   kept record where it has no value, with their `fact_dates`. OSM facts do
   not move.
+- The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
   rating is recalculated.
 - The dropped record stays as a tombstone: `status: "merged"` and
@@ -319,6 +322,7 @@ record's `kind`, the canonical form, the file path,
 other fact (plus optional `name`, `location` and `status`, each `osm`,
 `feedback` or `contributed`), that `fact_dates` has a date for exactly the
 `fact_sources` entries that are not `osm` and none later than `updated`,
+that `last_confirmed` is not in the future (it may be later than `updated`),
 that no two records share an
 id or an OSM object (counting `merged_osm`, leaving tombstones out), that a
 tombstone has a `merged_into` naming a record that is not itself merged and

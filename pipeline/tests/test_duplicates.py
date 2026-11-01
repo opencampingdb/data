@@ -173,6 +173,8 @@ def pair(repo):
     keep["fact_dates"] = {"showers": T1}
     keep["rating"] = {"count": 1, "mean": 5.0}
     drop["rating"] = {"count": 2, "mean": 3.5}
+    keep["last_confirmed"] = T1
+    drop["last_confirmed"] = T2
     write(repo, keep)
     write(repo, drop)
     write_reviews(repo, keep["id"], [review("rev_01JBX0000000000000000000K1", keep["id"], 5)])
@@ -201,6 +203,8 @@ def test_merge_moves_feedback_facts_and_reviews(pair):
 
     assert kept["merged_osm"] == [{"type": "way", "id": 8101}]
     assert kept["updated"] == T2
+    # The newer confirmation wins, whichever record had it.
+    assert kept["last_confirmed"] == T2
 
     lines = (repo / "reviews" / f"{keep['id']}.ndjson").read_text(encoding="utf-8").splitlines()
     moved = [json.loads(line) for line in lines]
