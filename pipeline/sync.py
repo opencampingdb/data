@@ -35,6 +35,7 @@ Rules (SPEC, "OSM sync"):
   "updated", since the place itself did not change.
 - fact_dates follows fact_sources: a date is kept for every value that is
   not from OSM. Sync never adds one, because it never adds such a value.
+- last_confirmed is kept as it is. Only the feedback engine sets it.
 - "updated" moves only when the record's content changes, so running the
   same extract twice changes nothing.
 """

@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 3,
+  "format_version": 4,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -43,7 +43,8 @@ Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
 `group`. Format 2 uses the kinds listed in section 4 and adds `group`. Every
 place kept its `id` across the change. Format 3 adds `osm.timestamp` and
 `fact_dates` (see section 4). Records without them read the same as in
-format 2.
+format 2. Format 4 adds `last_confirmed` (see section 4). Records without it
+read the same as in format 3.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -129,6 +130,15 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   record's content last changed in Open Camping DB, which is not the same:
   it moves when OSM data is refreshed, whatever its age. Older records may
   lack `osm.timestamp` until the next OSM sync.
+- `last_confirmed` is when a traveller last checked the place in an app and
+  found it there, in UTC. It is the time the check was accepted, usually
+  within the hour after it was sent. One traveller's check is enough to set it, and it
+  is only set while the place is open: if `status` changed later, the date
+  in `fact_dates.status` is newer. It does not move `updated`, so it can be
+  later than `updated`. Places nobody has checked have no `last_confirmed`.
+  Show it as "Confirmed by a traveller" with its date, apart from the
+  freshness of the information, because it says the place exists, not that
+  its facts are right.
 - `access` is the vehicle needed on the road in (`2wd`, `awd`, `4wd`).
   `entry` is who may stay (`public`, `customers`, `permit`, `private`).
   Consider leaving `private` places out of what you show.
