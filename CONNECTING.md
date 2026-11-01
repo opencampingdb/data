@@ -43,6 +43,9 @@ Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
 `group`. Format 2 uses the kinds listed in section 4 and adds `group`. Every
 place kept its `id` across the change.
 
+New optional keys that an app can safely ignore, such as `osm.timestamp`
+and `fact_dates`, do not raise `format_version`.
+
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
 the files always match the manifest even if a newer release is published
@@ -119,6 +122,14 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `location` is missing, the name and position come from OSM. A place with
   `osm: null` and `contributed` name and location is a contributed place. A
   `status` entry says who closed or reopened the place.
+- How fresh a place's information is: `osm.timestamp` is when its OSM object
+  was last edited by anyone, in UTC. `fact_dates` gives, for each value that
+  did not come from OSM (each `fact_sources` entry that is `feedback`,
+  `contributed` or `owner`), when it was accepted. The newest of these is
+  when someone last said something about the place. `updated` is when the
+  record's content last changed in Open Camping DB, which is not the same:
+  it moves when OSM data is refreshed, whatever its age. Older records may
+  lack `osm.timestamp` until the next OSM sync.
 - `access` is the vehicle needed on the road in (`2wd`, `awd`, `4wd`).
   `entry` is who may stay (`public`, `customers`, `permit`, `private`).
   Consider leaving `private` places out of what you show.

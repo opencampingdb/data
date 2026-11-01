@@ -26,7 +26,9 @@ from pathlib import Path
 from .common import ATTRIBUTION, LICENCE, dump_line, iter_review_files, load_places, write_text
 
 # 1: the first record format. 2: kinds are the OTWD vocabulary and records
-# carry a group.
+# carry a group. Apps stop updating when this is higher than they know, so
+# it rises only for a change they cannot read. New optional keys (such as
+# osm.timestamp and fact_dates) leave it alone.
 FORMAT_VERSION = 2
 DEFAULT_REPOSITORY = "opencampingdb/data"
 

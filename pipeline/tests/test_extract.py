@@ -1,5 +1,6 @@
 """Tests for pipeline.extract: OSM file in, plain place records out."""
 
+import re
 from pathlib import Path
 
 from pipeline.extract import extract_file, facts_from_tags
@@ -303,3 +304,31 @@ def test_site_relation_count_in_stats():
     stats = {}
     extract_file(SITES, stats)
     assert stats["site_relations"] == 2
+
+
+def test_osm_timestamp_from_overpass_meta():
+    records = {(r["osm"]["type"], r["osm"]["id"]): r for r in extract_file(FIXTURES / "grampians-overpass.osm")}
+    assert records[("node", 316596843)]["osm"] == {
+        "type": "node",
+        "id": 316596843,
+        "version": 3,
+        "timestamp": "2019-10-21T13:06:14Z",
+    }
+    assert all("timestamp" in r["osm"] for r in records.values())
+
+
+def test_osm_timestamp_on_areas_and_site_relations(tmp_path):
+    # Every way, multipolygon and site relation place takes the edit time of
+    # its own OSM object.
+    for name in ("multipolygon.osm", "sites.osm"):
+        text = (FIXTURES / name).read_text(encoding="utf-8")
+        text = re.sub(r'( version="\d+")', r'\1 timestamp="2024-05-06T07:08:09Z"', text)
+        path = tmp_path / name
+        path.write_text(text, encoding="utf-8")
+        records = extract_file(path)
+        assert records
+        assert {r["osm"]["timestamp"] for r in records} == {"2024-05-06T07:08:09Z"}
+
+
+def test_no_osm_timestamp_when_the_file_has_none(v1_osm):
+    assert all("timestamp" not in r["osm"] for r in extract_file(v1_osm))

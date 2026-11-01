@@ -38,6 +38,10 @@ def farm_stay(**changes):
             "name": "owner",
             "location": "owner",
         },
+        "fact_dates": {
+            key: T1
+            for key in ("entry", "booking_required", "booking_url", "fee", "name", "location")
+        },
         "owner_verified": True,
         "description": "Sheep farm with room for six vans by the dam. Book ahead.",
         "updated": T1,
@@ -71,8 +75,10 @@ def test_farm_stay_with_phone_instead_of_booking_url_passes(repo):
     record = farm_stay()
     del record["facts"]["booking_url"]
     del record["fact_sources"]["booking_url"]
+    del record["fact_dates"]["booking_url"]
     record["facts"]["phone"] = "+61 3 5555 0101"
     record["fact_sources"]["phone"] = "owner"
+    record["fact_dates"]["phone"] = T1
     assert errors_for(repo, record) == []
 
 
@@ -126,6 +132,7 @@ def test_description_is_moderated_like_review_text(repo, text):
 def test_temporarily_closed_with_reopens(repo):
     record = farm_stay(status="temporarily_closed", reopens="2027-01-15")
     record["fact_sources"]["status"] = "owner"
+    record["fact_dates"]["status"] = T1
     assert errors_for(repo, record) == []
 
 
@@ -166,6 +173,9 @@ def test_sync_never_overwrites_owner_values(repo, v1_osm, v2_osm):
     camp["fact_sources"]["status"] = "owner"
     camp["description"] = "Creek-side camp. Closed while the bridge is rebuilt."
     camp["fact_sources"]["description"] = "owner"
+    camp["fact_dates"] = {
+        key: T1 for key in ("name", "fee", "booking_url", "status", "description")
+    }
     path.write_text(dump_record(camp), encoding="utf-8", newline="\n")
     assert validate_repo(repo) == []
 
@@ -176,4 +186,5 @@ def test_sync_never_overwrites_owner_values(repo, v1_osm, v2_osm):
     assert after["facts"]["fee"] is False
     assert after["fact_sources"]["fee"] == "owner"
     assert after["facts"]["booking_url"] == "https://example.org/camp/book"
+    assert after["fact_dates"] == camp["fact_dates"]
     assert validate_repo(repo) == []

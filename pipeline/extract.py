@@ -18,6 +18,8 @@ and tested with an STRtree (shapely).
 
 Each output line is one place:
     {"osm": {...}, "kind": "...", "name": ..., "location": {...}, "facts": {...}}
+osm holds type, id, version and, when the file carries it, the timestamp of
+that version.
 sorted by OSM type and then id, so the same input always gives the same file.
 The tag mappings are documented in pipeline/README.md.
 """
@@ -25,6 +27,7 @@ The tag mappings are documented in pipeline/README.md.
 import argparse
 import re
 import sys
+from datetime import timezone
 from pathlib import Path
 
 import osmium
@@ -256,6 +259,26 @@ def tag_dict(obj) -> dict:
     return {tag.k: tag.v for tag in obj.tags}
 
 
+def osm_timestamp(obj) -> str | None:
+    """When the object's current version was saved in OSM, as ISO 8601 UTC.
+
+    None when the file does not carry timestamps: pyosmium then reports the
+    Unix epoch. Geofabrik extracts and Overpass "out meta" both carry them.
+    """
+    stamp = obj.timestamp
+    if stamp is None or stamp.timestamp() <= 0:
+        return None
+    return stamp.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def osm_link(osm_type: str, osm_id: int, version: int, timestamp: str | None) -> dict:
+    """The record's osm object. timestamp is left out when the file has none."""
+    link = {"type": osm_type, "id": osm_id, "version": version}
+    if timestamp is not None:
+        link["timestamp"] = timestamp
+    return link
+
+
 class SiteRelations:
     """type=site relations that are places, and the positions of their members.
 
@@ -279,7 +302,12 @@ class SiteRelations:
         if tags.get("type") != "site" or classify(tags) is None:
             return
         members = [(m.type, m.ref) for m in relation.members]
-        self.sites[relation.id] = {"tags": tags, "version": relation.version, "members": members}
+        self.sites[relation.id] = {
+            "tags": tags,
+            "version": relation.version,
+            "timestamp": osm_timestamp(relation),
+            "members": members,
+        }
         for member_type, ref in members:
             if member_type == "n":
                 self.member_nodes.add(ref)
@@ -575,7 +603,7 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
             continue
         osm_type, osm_id, lat, lon = position
         record = {
-            "osm": {"type": osm_type, "id": osm_id, "version": obj.version},
+            "osm": osm_link(osm_type, osm_id, obj.version, osm_timestamp(obj)),
             "name": tags.get("name", "").strip() or None,
             "location": {"lat": round_coord(lat), "lon": round_coord(lon)},
             "facts": facts_from_tags(tags),
@@ -590,7 +618,7 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
             continue
         tags = site["tags"]
         record = {
-            "osm": {"type": "relation", "id": relation_id, "version": site["version"]},
+            "osm": osm_link("relation", relation_id, site["version"], site["timestamp"]),
             "name": tags.get("name", "").strip() or None,
             "location": {"lat": round_coord(position[0]), "lon": round_coord(position[1])},
             "facts": facts_from_tags(tags),

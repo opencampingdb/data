@@ -13,6 +13,8 @@ exits 1. Checks:
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
   name, location and status entries
+- fact_dates has a date for exactly the fact_sources entries whose source is
+  not osm, none of them later than updated
 - no two records share an id or an OSM object (merged_osm included,
   tombstones left out)
 - a tombstone (status merged) has merged_into, naming a record that is not
@@ -142,8 +144,26 @@ def check_place_file(root: Path, path: Path, validator) -> tuple[dict | None, li
             f"differ on {differ}"
         )
 
+    errors += fact_date_errors(record, where)
     errors += owner_errors(record, where)
     return record, errors
+
+
+def fact_date_errors(record: dict, where: str) -> list[str]:
+    """fact_dates dates every value that did not come from OSM, and nothing else."""
+    dates = record.get("fact_dates", {})
+    not_osm = {k for k, source in record["fact_sources"].items() if source != "osm"}
+    errors = []
+    if set(dates) != not_osm:
+        differ = sorted(set(dates) ^ not_osm)
+        errors.append(
+            f"{where}: fact_dates must have an entry for every fact_sources entry that is "
+            f"not osm and no other, differ on {differ}"
+        )
+    later = sorted(k for k, when in dates.items() if when > record["updated"])
+    if later:
+        errors.append(f"{where}: fact_dates later than updated for {later}")
+    return errors
 
 
 def owner_errors(record: dict, where: str) -> list[str]:
