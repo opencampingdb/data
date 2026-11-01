@@ -35,6 +35,7 @@ def make_review(place_id, **changes):
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
         "app": "camporacle",
+        "contributor": "ctr_0123456789abcdef",
     }
     review.update(changes)
     return review
@@ -383,3 +384,75 @@ def test_last_confirmed_must_be_utc_seconds(synced):
     rec["last_confirmed"] = "2026-10-20"
     write_place(path, rec)
     assert any("last_confirmed" in e for e in validate_repo(synced, now="2026-10-21T00:00:00Z"))
+
+
+def write_blocked(repo, contributors, text=None):
+    path = repo / "moderation" / "blocked_contributors.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    body = {"contributors": [{"contributor": c, "added": "2026-11-02", "reason": "spam_ad"} for c in contributors]}
+    path.write_text(text if text is not None else dump_record(body), encoding="utf-8", newline="\n")
+
+
+def test_review_needs_a_contributor(synced):
+    place_id = set_rating(synced, 1, 4.0)
+    review = make_review(place_id)
+    del review["contributor"]
+    write_review_lines(synced, place_id, [dump_line(review)])
+    assert any("contributor" in e for e in validate_repo(synced))
+
+
+def test_visited_nearby_is_only_true(synced):
+    place_id = set_rating(synced, 1, 4.0)
+    write_review(synced, place_id, visited_nearby=True)
+    assert validate_repo(synced) == []
+    write_review(synced, place_id, visited_nearby=False)
+    assert validate_repo(synced) != []
+
+
+def test_hidden_review_is_left_out_of_the_rating(synced):
+    place_id = set_rating(synced, 1, 5.0)
+    shown = make_review(place_id, id="rev_01JBX0000000000000000000AA", stars=5)
+    hidden = make_review(place_id, id="rev_01JBX0000000000000000000AB", stars=1, hidden="reported")
+    write_review_lines(synced, place_id, [dump_line(shown), dump_line(hidden)])
+    assert validate_repo(synced) == []
+
+
+def test_only_hidden_reviews_means_no_rating(synced):
+    path, rec = first_place(synced)
+    write_review(synced, rec["id"], hidden="moderator")
+    assert validate_repo(synced) == []
+    set_rating(synced, 1, 4.0)
+    assert any("no visible reviews" in e for e in validate_repo(synced))
+
+
+def test_unknown_hidden_value_is_refused(synced):
+    place_id = set_rating(synced, 1, 4.0)
+    write_review(synced, place_id, hidden="spam")
+    assert validate_repo(synced) != []
+
+
+def test_blocked_contributor_is_left_out_of_the_rating(synced):
+    place_id = set_rating(synced, 1, 5.0)
+    shown = make_review(place_id, id="rev_01JBX0000000000000000000AA", stars=5)
+    blocked = make_review(place_id, id="rev_01JBX0000000000000000000AB", stars=1, contributor="ctr_ffffffffffffffff")
+    write_review_lines(synced, place_id, [dump_line(shown), dump_line(blocked)])
+    write_blocked(synced, ["ctr_ffffffffffffffff"])
+    assert validate_repo(synced) == []
+
+
+def test_blocked_list_must_be_sorted_and_unique(synced):
+    write_blocked(synced, ["ctr_ffffffffffffffff", "ctr_0000000000000000"])
+    assert any("sorted" in e for e in validate_repo(synced))
+    write_blocked(synced, ["ctr_0000000000000000", "ctr_0000000000000000"])
+    assert validate_repo(synced) != []
+
+
+def test_blocked_list_must_match_its_schema(synced):
+    write_blocked(synced, [], text='{\n  "contributors": [\n    {\n      "contributor": "Sam"\n    }\n  ]\n}\n')
+    assert any("blocked_contributors" in e for e in validate_repo(synced))
+
+
+def test_unexpected_file_in_moderation_is_refused(synced):
+    (synced / "moderation").mkdir()
+    (synced / "moderation" / "notes.txt").write_text("x", encoding="utf-8")
+    assert any("unexpected file in moderation" in e for e in validate_repo(synced))

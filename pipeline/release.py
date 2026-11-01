@@ -23,12 +23,23 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .common import ATTRIBUTION, LICENCE, dump_line, iter_review_files, load_places, write_text
+from .common import (
+    ATTRIBUTION,
+    LICENCE,
+    dump_line,
+    is_visible,
+    iter_review_files,
+    load_blocked,
+    load_places,
+    write_text,
+)
 
 # 1: the first record format. 2: kinds are the OTWD vocabulary and records
 # carry a group. 3: osm.timestamp and fact_dates say how fresh a place is.
 # 4: last_confirmed, when a traveller last found the place there.
-FORMAT_VERSION = 4
+# 5: reviews carry contributor and visited_nearby, and hidden reviews and
+# reviews from blocked contributors are left out.
+FORMAT_VERSION = 5
 DEFAULT_REPOSITORY = "opencampingdb/data"
 
 
@@ -72,13 +83,19 @@ def merged_ndjson(root: Path) -> tuple[bytes, int]:
 
 
 def reviews_ndjson(root: Path) -> tuple[bytes, int]:
-    """Every review, grouped by place in id order, each file's lines in their id order."""
+    """Every visible review, grouped by place in id order, each file's lines in their id order.
+
+    Hidden reviews and reviews from blocked contributors are left out.
+    """
+    blocked = load_blocked(root)
     lines = []
     for path in iter_review_files(root):
         with open(path, encoding="utf-8") as f:
             for line in f:
                 if line.strip():
-                    lines.append(dump_line(json.loads(line)) + "\n")
+                    review = json.loads(line)
+                    if is_visible(review, blocked):
+                        lines.append(dump_line(review) + "\n")
     return "".join(lines).encode("utf-8"), len(lines)
 
 

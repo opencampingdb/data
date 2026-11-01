@@ -13,7 +13,7 @@ VERSION = "20261030T160000Z-abc1234"
 GENERATED = "2026-10-30T16:00:00Z"
 
 
-def add_review(repo, place_id, review_id):
+def add_review(repo, place_id, review_id, **changes):
     review = {
         "id": review_id,
         "place": place_id,
@@ -22,6 +22,8 @@ def add_review(repo, place_id, review_id):
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
         "app": "camporacle",
+        "contributor": "ctr_0123456789abcdef",
+        **changes,
     }
     path = repo / "reviews" / f"{place_id}.ndjson"
     with open(path, "a", encoding="utf-8", newline="\n") as f:
@@ -51,8 +53,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert [json.loads(line)["id"] for line in lines] == place_ids
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
-    # 2: OTWD kinds and the group field replaced the eight kinds of format 1.
-    assert manifest["format_version"] == 4
+    # 5: reviews carry contributor, and hidden or blocked reviews are left out.
+    assert manifest["format_version"] == 5
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
@@ -101,3 +103,24 @@ def test_release_tag_and_repository_can_be_set(repo, tmp_path):
     assert manifest["places"]["url"] == (
         "https://github.com/someone/fork/releases/download/data-test/places.ndjson.gz"
     )
+
+
+def test_release_leaves_out_hidden_and_blocked_reviews(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    place_id = sorted(p.stem for p in (repo / "places").rglob("*.json"))[0]
+    add_review(repo, place_id, "rev_01JBX0000000000000000000AA", visited_nearby=True)
+    add_review(repo, place_id, "rev_01JBX0000000000000000000AB", hidden="reported")
+    add_review(repo, place_id, "rev_01JBX0000000000000000000AC", contributor="ctr_ffffffffffffffff")
+    blocked = repo / "moderation" / "blocked_contributors.json"
+    blocked.parent.mkdir()
+    blocked.write_text(json.dumps({"contributors": [
+        {"contributor": "ctr_ffffffffffffffff", "added": "2026-11-02", "reason": "spam_ad"},
+    ]}), encoding="utf-8")
+
+    manifest = build(repo, tmp_path / "dist")
+
+    lines = gzip.decompress((tmp_path / "dist" / "reviews.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
+    assert [json.loads(line)["id"] for line in lines] == ["rev_01JBX0000000000000000000AA"]
+    assert json.loads(lines[0])["contributor"] == "ctr_0123456789abcdef"
+    assert json.loads(lines[0])["visited_nearby"] is True
+    assert manifest["reviews"]["count"] == 1

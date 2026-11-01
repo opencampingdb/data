@@ -7,8 +7,8 @@ Run them from the repository root after `python -m pip install -r requirements.t
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/` | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/` | the kept record, a tombstone, moved reviews. Run by a person only |
 
@@ -304,7 +304,7 @@ place. A person runs it and opens a PR with the result:
   not move.
 - The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
-  rating is recalculated.
+  rating is recalculated from its visible reviews.
 - The dropped record stays as a tombstone: `status: "merged"` and
   `merged_into: <keep_id>`, nothing else changed. Older tombstones that
   pointed at the dropped record now point at the kept one.
@@ -332,7 +332,9 @@ no reviews, the owner rules (a value with the source `owner` needs
 checked like review text; `reopens` is a real date and only goes with
 `status: temporarily_closed`), that review lines are canonical and sorted by id, that
 each review's place exists, that each `rating` has the exact count and
-rounded mean of its reviews, and that review text has no email
+rounded mean of its visible reviews (no `hidden`, no blocked `contributor`),
+that `moderation/blocked_contributors.json` matches its schema and is sorted
+by contributor with no repeats, and that review text has no email
 address, phone number, link, social media handle or obvious personal name.
 The name check catches phrases such as "my name is" and sign-offs such as
 "Cheers, Sam". It cannot catch every name, so the feedback moderation step
@@ -345,7 +347,10 @@ feedback engine's moderation does the same.
 `places.ndjson.gz` holds every record except tombstones on one line each,
 sorted by `id`. `merged.ndjson.gz` holds one `{"id","merged_into"}` line per
 tombstone, sorted by `id`.
-`reviews.ndjson.gz` holds every review, grouped by place in id order. Lines
+`reviews.ndjson.gz` holds every visible review, grouped by place in id
+order: lines with `hidden` and lines from a contributor in
+`moderation/blocked_contributors.json` stay in the repository and are left
+out. Lines
 use compact JSON with sorted keys. Gzip is written with no file name and a
 zero timestamp.
 
