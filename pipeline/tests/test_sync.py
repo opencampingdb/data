@@ -460,3 +460,21 @@ def test_fact_dates_go_with_values_that_become_osm(repo, v1_osm):
     camp = json.loads(path.read_text(encoding="utf-8"))
     assert "showers" not in camp["fact_sources"]
     assert "fact_dates" not in camp
+
+
+def test_last_confirmed_is_kept_and_does_not_move_updated(repo, v1_osm, v2_osm):
+    sync(repo, extract_file(v1_osm), now=T1)
+    camp_id = load_all(repo)[("node", 1001)]["id"]
+    path = place_path(repo, camp_id)
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    rec["last_confirmed"] = T2
+    rewrite(path, rec)
+    before = snapshot(repo)
+    assert sync(repo, extract_file(v1_osm), now=T3).updated == []
+    assert snapshot(repo) == before
+
+    # A real change to the place moves updated and still keeps the confirmation.
+    sync(repo, extract_file(v2_osm), now=T3)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert camp["last_confirmed"] == T2
+    assert camp["updated"] == T3

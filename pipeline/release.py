@@ -27,7 +27,8 @@ from .common import ATTRIBUTION, LICENCE, dump_line, iter_review_files, load_pla
 
 # 1: the first record format. 2: kinds are the OTWD vocabulary and records
 # carry a group. 3: osm.timestamp and fact_dates say how fresh a place is.
-FORMAT_VERSION = 3
+# 4: last_confirmed, when a traveller last found the place there.
+FORMAT_VERSION = 4
 DEFAULT_REPOSITORY = "opencampingdb/data"
 
 

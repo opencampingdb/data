@@ -106,7 +106,8 @@ Anything that shows this data must show:
    automatic rules made, which merges itself once CI passes, and
    `feedback/review` for anything a person must check. Facts, names and
    positions set by feedback are marked `"feedback"` in `fact_sources` and the
-   OSM sync leaves them alone.
+   OSM sync leaves them alone. A check that finds an open place still there
+   sets `last_confirmed`.
 3. **Contributed places and closures.** Places that are not in OSM, and
    closures of existing places, can be contributed directly under the ODbL
    by pull request. A contributed place has `osm: null` and `"contributed"`
