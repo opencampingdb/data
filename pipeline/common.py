@@ -120,6 +120,29 @@ def iter_review_files(root: Path):
     return sorted((Path(root) / "reviews").glob("*.ndjson"))
 
 
+def blocked_path(root: Path) -> Path:
+    """The list of blocked contributors: moderation/blocked_contributors.json."""
+    return Path(root) / "moderation" / "blocked_contributors.json"
+
+
+def load_blocked(root: Path) -> set[str]:
+    """Contributor ids on the blocked list. Empty when the file is missing."""
+    path = blocked_path(root)
+    if not path.exists():
+        return set()
+    entries = json.loads(path.read_text(encoding="utf-8")).get("contributors", [])
+    return {entry["contributor"] for entry in entries if isinstance(entry, dict) and "contributor" in entry}
+
+
+def is_visible(review: dict, blocked: set[str]) -> bool:
+    """Whether a review is published and counts in the rating.
+
+    A hidden review, or one from a blocked contributor, stays in the
+    repository but is left out of the release and the rating.
+    """
+    return "hidden" not in review and review.get("contributor") not in blocked
+
+
 def load_places(root: Path) -> dict[str, dict]:
     """All place records keyed by id."""
     places = {}

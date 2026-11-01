@@ -23,7 +23,10 @@ exits 1. Checks:
   itself merged, and has no reviews. No other record has merged_into
 - review lines are compact JSON with sorted keys, sorted by id
 - reviews belong to a place that exists, have unique ids, and the place's
-  rating has the right count and the mean rounded to 1 decimal place, half up
+  rating has the right count and the mean rounded to 1 decimal place, half up,
+  counting only visible reviews (not hidden, not from a blocked contributor)
+- moderation/blocked_contributors.json matches its schema, sorted by
+  contributor, each contributor once
 - values with the source owner need owner_verified true. A farm_stay has
   osm null, entry private, booking_required true, and a booking_url or a
   phone. A description is checked like review text. reopens is a real date
@@ -47,7 +50,10 @@ from .common import (
     dump_line,
     dump_record,
     iter_place_files,
+    blocked_path,
+    is_visible,
     iter_review_files,
+    load_blocked,
     place_path,
     rating_mean,
     utc_now,
@@ -259,10 +265,40 @@ def check_places(root: Path, now: str) -> tuple[dict[str, dict], list[str]]:
     return places, errors
 
 
+def check_blocked(root: Path) -> list[str]:
+    """Problems with moderation/blocked_contributors.json. A missing file is fine."""
+    path = blocked_path(root)
+    where = "moderation/blocked_contributors.json"
+    errors = [
+        f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
+        for p in sorted((root / "moderation").rglob("*"))
+        if p.is_file() and p != path
+    ]
+    if not path.exists():
+        return errors
+    try:
+        text = path.read_bytes().decode("utf-8")
+        blocked = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return errors + [f"{where}: not valid UTF-8 JSON: {exc}"]
+    schema = schema_errors(load_validator("blocked_contributors.schema.json"), blocked, where)
+    if schema:
+        return errors + schema
+    if text != dump_record(blocked):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    ids = [entry["contributor"] for entry in blocked["contributors"]]
+    if ids != sorted(ids):
+        errors.append(f"{where}: contributors must be sorted by contributor")
+    if len(ids) != len(set(ids)):
+        errors.append(f"{where}: a contributor is listed twice")
+    return errors
+
+
 def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
     validator = load_validator("review.schema.json")
     errors: list[str] = []
     seen_ids: set[str] = set()
+    blocked = load_blocked(root) if not check_blocked(root) else set()
     stars_by_place: dict[str, list[int]] = {}
 
     for path in sorted((root / "reviews").rglob("*")):
@@ -305,23 +341,25 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
             seen_ids.add(review["id"])
             for reason in text_problems(review["text"]):
                 errors.append(f"{here}: text contains {reason}")
-            stars_by_place.setdefault(place_id, []).append(review["stars"])
+            if is_visible(review, blocked):
+                stars_by_place.setdefault(place_id, []).append(review["stars"])
 
-    # The rating on each place must agree with its reviews. A tombstone keeps
+    reviewed = {path.stem for path in iter_review_files(root)}
+    # The rating on each place must agree with its visible reviews. A tombstone keeps
     # the rating it had, but its reviews have moved, so it may have none.
     for place_id, record in places.items():
         stars = stars_by_place.get(place_id, [])
         rating = record.get("rating")
         if record.get("status") == "merged":
-            if stars:
+            if place_id in reviewed:
                 errors.append(f"{place_id}: is merged, its reviews belong to {record.get('merged_into')}")
             continue
         if not stars:
             if rating is not None:
-                errors.append(f"{place_id}: rating is set but the place has no reviews")
+                errors.append(f"{place_id}: rating is set but the place has no visible reviews")
             continue
         if rating is None:
-            errors.append(f"{place_id}: has {len(stars)} reviews but rating is null")
+            errors.append(f"{place_id}: has {len(stars)} visible reviews but rating is null")
             continue
         expected = {"count": len(stars), "mean": rating_mean(stars)}
         if rating != expected:
@@ -338,6 +376,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     """
     root = Path(root)
     places, errors = check_places(root, now or utc_now())
+    errors += check_blocked(root)
     errors += check_reviews(root, places)
     return errors
 

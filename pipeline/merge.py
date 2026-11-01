@@ -13,7 +13,8 @@ What it does:
   facts do not move: the kept record has its own.
 - The kept record takes the newer last_confirmed of the two.
 - The dropped record's reviews move to the kept record, which gets a new
-  rating from all its reviews.
+  rating from all its visible reviews (not hidden, not from a blocked
+  contributor).
 - The dropped record stays as a tombstone: status "merged" and merged_into
   set to the kept id, nothing else changed. Releases leave tombstones out of
   places.ndjson.gz and list them in merged.ndjson.gz, so apps that stored the
@@ -32,6 +33,8 @@ from .common import (
     FACT_KEYS,
     dump_line,
     dump_record,
+    is_visible,
+    load_blocked,
     load_places,
     place_path,
     rating_mean,
@@ -105,8 +108,9 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None) -> dic
     moved = [dict(r, place=keep_id) for r in read_reviews(root, drop_id)]
     reviews = sorted(read_reviews(root, keep_id) + moved, key=lambda r: r["id"])
     if reviews:
-        stars = [r["stars"] for r in reviews]
-        kept["rating"] = {"count": len(stars), "mean": rating_mean(stars)}
+        blocked = load_blocked(root)
+        stars = [r["stars"] for r in reviews if is_visible(r, blocked)]
+        kept["rating"] = {"count": len(stars), "mean": rating_mean(stars)} if stars else None
         write_text(review_path(root, keep_id), "".join(dump_line(r) + "\n" for r in reviews))
     if moved:
         review_path(root, drop_id).unlink()

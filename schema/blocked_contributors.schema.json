@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/blocked_contributors.schema.json",
+  "title": "Open Camping DB blocked contributors",
+  "description": "moderation/blocked_contributors.json. The feedback engine refuses every submission from these contributors, and their reviews are left out of the release and the rating. A person adds an entry from the feedback/review PR.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contributors"
+  ],
+  "properties": {
+    "contributors": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "contributor",
+          "added",
+          "reason"
+        ],
+        "properties": {
+          "contributor": {
+            "type": "string",
+            "pattern": "^ctr_[0-9a-f]{16}$"
+          },
+          "added": {
+            "description": "Day the block was added, YYYY-MM-DD.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          },
+          "reason": {
+            "enum": [
+              "spam_ad",
+              "offensive",
+              "off_topic",
+              "fake",
+              "personal_details",
+              "abuse"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
