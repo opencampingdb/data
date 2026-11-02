@@ -2,12 +2,16 @@
 
 Open Camping DB is a free, open dataset of the places travellers camp and
 stop at in Australia: free camps, campgrounds, national park and state forest
-campsites, caravan parks and showgrounds; rest areas, dump points, drinking
-water, toilets, showers, laundromats and picnic areas; information centres,
-fuel, LPG, mechanics, emergency hospitals and ferry terminals; and lookouts,
-swimming spots, boat ramps and attractions; and farm stays listed by their
-owners. Its kinds of place are the site types of the OTWD (Open Touring and
-Waypoint Database) vocabulary, plus three of its own. It is built from OpenStreetMap every night
+campsites, caravan parks, showgrounds, backpacker hostels and motels; rest
+areas, dump points, drinking water, toilets, showers, laundromats, picnic
+areas and long vehicle parking; information centres, fuel, LPG, mechanics,
+pubs, emergency hospitals and ferry terminals; lookouts, swimming spots, boat
+ramps, museums and galleries, recreation areas, experiences and attractions;
+and farm stays listed by their owners. Its kinds of place are the site types
+of the OTWD (Open Touring and Waypoint Database) vocabulary, plus ten of its
+own. Each place can carry its site features (who can get in, what is there,
+what to do, phone and internet signal, warnings), its park chain and its
+contacts. It is built from OpenStreetMap every night
 and improved by feedback from the apps that use it. Any app may use the data
 and send feedback. CampOracle is the first.
 
@@ -23,7 +27,7 @@ Start with the manifest:
 https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```
 
-It names its release, a `data_version`, and for each of the three data files
+It names its release, a `data_version`, the `format_version` of the records, and for each of the four data files
 an absolute `url`, its SHA-256, its size and its record count. Each `url`
 points at the file in that same release, for example:
 
@@ -57,6 +61,11 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
   "updated": "2026-10-30T16:00:00Z"
 }
 ```
+
+A place can carry many more facts than this one: site features such as
+`campfires`, `big_rigs`, `telstra_signal` and `crocodiles`, a park chain in
+`brand`, and contacts. [CONNECTING.md](CONNECTING.md) lists them, and section
+1 there says what changed in each record format (the current one is 7).
 
 The full contract is in [schema/place.schema.json](schema/place.schema.json),
 [schema/review.schema.json](schema/review.schema.json) and
@@ -108,15 +117,17 @@ Anything that shows this data must show:
    branch. The PR body lists what is new, what changed and what has gone from
    OSM. Records that have gone from OSM are never deleted: a person decides. The
    PR merges itself once CI passes if fewer than 2% of records changed, and
-   waits for a person otherwise.
+   waits for a person otherwise. A change to the tag mapping reaches the data
+   only through this sync, so after one merges, run the sync (it can be
+   started by hand) before expecting a release to carry it.
 2. **Feedback.** Apps send reports, reviews, checks and fees to the intake run by the
    [feedback-engine](https://github.com/opencampingdb/feedback-engine). A
    workflow in the private `inbox` repository applies them every hour and
    keeps at most two pull requests open here: `feedback/auto` for changes the
    automatic rules made, which merges itself once CI passes, and
-   `feedback/review` for anything a person must check. Facts, names and
-   positions set by feedback are marked `"feedback"` in `fact_sources` and the
-   OSM sync leaves them alone. A check that finds an open place still there
+   `feedback/review` for anything a person must check. Facts, names,
+   positions, kinds and descriptions set by feedback are marked `"feedback"`
+   in `fact_sources` and the OSM sync leaves them alone. A check that finds an open place still there
    sets `last_confirmed`.
 3. **Contributed places and closures.** Places that are not in OSM, and
    closures of existing places, can be contributed directly under the ODbL
