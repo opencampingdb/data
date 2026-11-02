@@ -1,17 +1,21 @@
 {
   "fact_sources": {
+    "cabins": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "fee": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "cabins": false,
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
+    "fee": false,
     "power": false,
     "showers": false,
     "tents": true,
@@ -19,7 +23,7 @@
   },
   "group": "overnight",
   "id": "ocdb_01M66ES923EC6B3PX71FFC0C18",
-  "kind": "campground",
+  "kind": "free_camp",
   "location": {
     "lat": -18.11861,
     "lon": 145.91194
@@ -27,11 +31,11 @@
   "name": "Bilyana Rest Area",
   "osm": {
     "id": 316605115,
-    "timestamp": "2024-12-21T23:11:38Z",
+    "timestamp": "2026-11-01T10:16:14Z",
     "type": "node",
-    "version": 8
+    "version": 10
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }
