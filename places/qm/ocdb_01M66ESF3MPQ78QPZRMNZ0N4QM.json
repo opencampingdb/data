@@ -1,27 +1,33 @@
 {
   "fact_sources": {
+    "cabins": "osm",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "kitchen": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "cabins": true,
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "kitchen": true,
     "phone": "+61 7 4956 8350",
     "power": true,
     "showers": true,
     "tents": true,
     "toilets": true,
-    "website": "https://www.lchomestead.com"
+    "website": "https://www.lchomestead.com",
+    "wifi": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3MPQ78QPZRMNZ0N4QM",
@@ -39,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }

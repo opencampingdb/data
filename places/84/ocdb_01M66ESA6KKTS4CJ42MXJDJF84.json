@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "bbq": "osm",
+    "cabins": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
@@ -7,9 +9,12 @@
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "bbq": true,
+    "cabins": false,
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
@@ -17,7 +22,8 @@
     "power": false,
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA6KKTS4CJ42MXJDJF84",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }
