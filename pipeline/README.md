@@ -9,7 +9,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
-| Duplicates | `python -m pipeline.duplicates --root .` | `places/` | likely duplicate pairs, one JSON object per line (sync runs this too) |
+| Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 
@@ -304,9 +304,29 @@ report under "Possible duplicates". It only flags. A pair is likely when:
 Never paired: two utility places that both have no name, two overnight
 places that both have no name (often parts or pitches of one park), two
 places whose names differ only in their numbers unless the numbers are equal
-("Site 20" and "Site 26" are separate pitches), and tombstones. Places are bucketed in a grid of 0.0025 by 0.004 degree
+("Site 20" and "Site 26" are separate pitches), tombstones, and pairs on the
+distinct list. Places are bucketed in a grid of 0.0025 by 0.004 degree
 cells (at least 200 m across everywhere in Australia), so only neighbouring
 cells are compared.
+
+### Distinct list
+
+`moderation/distinct_places.json`
+([schema](../schema/distinct_places.schema.json)) lists flagged pairs that a
+person checked and found to be separate places. The finder and sync leave
+them out from then on. Each entry has the two ids (`a` sorts before `b`), the
+day it was `added`, a `reason` and an optional `note`:
+
+| `reason` | Meaning |
+|---|---|
+| `pitches` | Separate pitches, access points or camp spots |
+| `sections` | Parts of one ground with different rules, such as a caravan area and a tent area |
+| `direction` | One for each side of a road |
+| `gender` | Separate facilities for men and women |
+| `other` | Anything else, said in `note` |
+
+Add an entry by hand in the PR that sorts the pairs, keeping the list sorted
+by `a`, then `b`.
 
 ## Merge
 
@@ -371,7 +391,9 @@ checked like review text; `reopens` is a real date and only goes with
 each review's place exists, that each `rating` has the exact count and
 rounded mean of its visible reviews (no `hidden`, no blocked `contributor`),
 that `moderation/blocked_contributors.json` matches its schema and is sorted
-by contributor with no repeats, and that review text has no email
+by contributor with no repeats, that `moderation/distinct_places.json`
+matches its schema, is sorted, lists each pair once with `a` before `b` and
+names places that exist, and that review text has no email
 address, phone number, link, social media handle or obvious personal name.
 The name check catches phrases such as "my name is" and sign-offs such as
 "Cheers, Sam". It cannot catch every name, so the feedback moderation step

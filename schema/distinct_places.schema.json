@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/distinct_places.schema.json",
+  "title": "Open Camping DB distinct places",
+  "description": "moderation/distinct_places.json. Pairs the duplicate finder flagged that a person checked and found to be separate places. The finder leaves these pairs out from then on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pairs"
+  ],
+  "properties": {
+    "pairs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "a",
+          "b",
+          "added",
+          "reason"
+        ],
+        "properties": {
+          "a": {
+            "description": "The place id that sorts first.",
+            "type": "string",
+            "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "b": {
+            "description": "The other place id.",
+            "type": "string",
+            "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "added": {
+            "description": "Day the pair was checked, YYYY-MM-DD.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          },
+          "reason": {
+            "description": "pitches: separate pitches, access points or camp spots. sections: parts of one ground with different rules, such as a caravan area and a tent area. direction: one for each side of a road. gender: separate facilities for men and women. other: see note.",
+            "enum": [
+              "pitches",
+              "sections",
+              "direction",
+              "gender",
+              "other"
+            ]
+          },
+          "note": {
+            "description": "What the person saw, in a sentence.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        }
+      }
+    }
+  }
+}

@@ -63,7 +63,10 @@ The full contract is in [schema/place.schema.json](schema/place.schema.json),
 [schema/fee.schema.json](schema/fee.schema.json). Contributors a
 person has blocked are listed in
 [moderation/blocked_contributors.json](moderation/blocked_contributors.json)
-([schema](schema/blocked_contributors.schema.json)). The kinds and
+([schema](schema/blocked_contributors.schema.json)). Pairs a person found to
+be separate places, which the duplicate finder skips, are listed in
+[moderation/distinct_places.json](moderation/distinct_places.json)
+([schema](schema/distinct_places.schema.json)). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, the reviews
