@@ -358,3 +358,47 @@ def test_two_unnamed_overnight_places_are_never_paired():
     a = place("ocdb_A", "caravan_park", None)
     b = place("ocdb_B", "caravan_park", None, lat=-35.0 - 10 * M)
     assert find_duplicates([a, b]) == []
+
+
+# ---------------------------------------------------------------- distinct list
+
+
+def write_distinct(repo, pairs, text=None):
+    path = repo / "moderation" / "distinct_places.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text if text is not None else dump_record({"pairs": pairs}), encoding="utf-8")
+
+
+def test_distinct_pairs_are_left_out():
+    a = place("ocdb_A", "campground", "Riverside")
+    b = place("ocdb_B", "campground", "Riverside", lat=-35.0 - 30 * M)
+    c = place("ocdb_C", "campground", "Riverside", lat=-35.0 - 60 * M)
+    pairs = find_duplicates([a, b, c], {frozenset(("ocdb_A", "ocdb_B"))})
+    assert ids(pairs) == {("ocdb_A", "ocdb_C"), ("ocdb_B", "ocdb_C")}
+
+
+def test_sync_reads_the_distinct_list(repo):
+    (found,) = sync(repo, extract_file(DUPLICATES), now=T1).duplicates
+    a, b = found["a"]["id"], found["b"]["id"]
+    write_distinct(repo, [{"a": a, "b": b, "added": "2026-11-02", "reason": "pitches"}])
+    assert validate_repo(repo) == []
+    assert sync(repo, extract_file(DUPLICATES), now=T2).duplicates == []
+
+
+def test_validate_distinct_list_rules(pair):
+    repo, keep, drop = pair
+    a, b = sorted((keep["id"], drop["id"]))
+    entry = {"a": a, "b": b, "added": "2026-11-02", "reason": "sections", "note": "Caravan area and tent area."}
+    write_distinct(repo, [entry])
+    assert validate_repo(repo) == []
+
+    write_distinct(repo, [dict(entry, a=b, b=a)])
+    assert any("a must sort before b" in e for e in validate_repo(repo))
+    write_distinct(repo, [entry, entry])
+    assert any("listed twice" in e for e in validate_repo(repo))
+    write_distinct(repo, [dict(entry, b="ocdb_01JBX00000000000000000ZZZZ")])
+    assert any("is not a place" in e for e in validate_repo(repo))
+    write_distinct(repo, [dict(entry, reason="looks different")])
+    assert any("distinct_places.json" in e for e in validate_repo(repo))
+    write_distinct(repo, [entry], text=json.dumps({"pairs": [entry]}))
+    assert any("canonical form" in e for e in validate_repo(repo))

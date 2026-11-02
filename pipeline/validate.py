@@ -27,6 +27,8 @@ exits 1. Checks:
   counting only visible reviews (not hidden, not from a blocked contributor)
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once
+- moderation/distinct_places.json matches its schema, each pair once with a
+  before b, sorted, naming places that exist
 - values with the source owner need owner_verified true. A farm_stay has
   osm null, entry private, booking_required true, and a booking_url or a
   phone. A description is checked like review text. reopens is a real date
@@ -51,6 +53,7 @@ from .common import (
     dump_record,
     iter_place_files,
     blocked_path,
+    distinct_path,
     is_visible,
     iter_review_files,
     load_blocked,
@@ -272,7 +275,7 @@ def check_blocked(root: Path) -> list[str]:
     errors = [
         f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
         for p in sorted((root / "moderation").rglob("*"))
-        if p.is_file() and p != path
+        if p.is_file() and p not in (path, distinct_path(root))
     ]
     if not path.exists():
         return errors
@@ -291,6 +294,37 @@ def check_blocked(root: Path) -> list[str]:
         errors.append(f"{where}: contributors must be sorted by contributor")
     if len(ids) != len(set(ids)):
         errors.append(f"{where}: a contributor is listed twice")
+    return errors
+
+
+def check_distinct(root: Path, places: dict[str, dict]) -> list[str]:
+    """Problems with moderation/distinct_places.json. A missing file is fine."""
+    path = distinct_path(root)
+    where = "moderation/distinct_places.json"
+    if not path.exists():
+        return []
+    try:
+        text = path.read_bytes().decode("utf-8")
+        distinct = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return [f"{where}: not valid UTF-8 JSON: {exc}"]
+    schema = schema_errors(load_validator("distinct_places.schema.json"), distinct, where)
+    if schema:
+        return schema
+    errors = []
+    if text != dump_record(distinct):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    pairs = [(entry["a"], entry["b"]) for entry in distinct["pairs"]]
+    if pairs != sorted(pairs):
+        errors.append(f"{where}: pairs must be sorted by a, then b")
+    if len(pairs) != len(set(pairs)):
+        errors.append(f"{where}: a pair is listed twice")
+    for a, b in pairs:
+        if a >= b:
+            errors.append(f"{where}: {a} and {b}: a must sort before b")
+        for place_id in (a, b):
+            if place_id not in places:
+                errors.append(f"{where}: {place_id} is not a place")
     return errors
 
 
@@ -377,6 +411,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     root = Path(root)
     places, errors = check_places(root, now or utc_now())
     errors += check_blocked(root)
+    errors += check_distinct(root, places)
     errors += check_reviews(root, places)
     return errors
 
