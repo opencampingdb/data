@@ -63,6 +63,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
         "fees.ndjson.gz",
         "manifest.json",
         "merged.ndjson.gz",
+        "photos.ndjson.gz",
         "places.ndjson.gz",
         "reviews.ndjson.gz",
     ]
@@ -71,8 +72,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert [json.loads(line)["id"] for line in lines] == place_ids
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
-    # 6: fees.ndjson.gz, what travellers paid per night.
-    assert manifest["format_version"] == 7
+    # 8: photos.ndjson.gz, travellers' photos.
+    assert manifest["format_version"] == 8
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
@@ -92,13 +93,15 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest["fees"]["file"] == "fees.ndjson.gz"
     assert manifest["fees"]["url"].endswith("/data-20261030T160000Z/fees.ndjson.gz")
     assert manifest["fees"]["count"] == 0
+    assert manifest["photos"]["url"].endswith("/data-20261030T160000Z/photos.ndjson.gz")
+    assert manifest["photos"]["count"] == 0
 
 
 def test_release_is_byte_identical_on_rerun(repo, v1_osm, tmp_path):
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     build(repo, tmp_path / "a")
     build(repo, tmp_path / "b")
-    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "fees.ndjson.gz", "merged.ndjson.gz"):
+    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "fees.ndjson.gz", "photos.ndjson.gz", "merged.ndjson.gz"):
         assert (tmp_path / "a" / name).read_bytes() == (tmp_path / "b" / name).read_bytes()
 
 
