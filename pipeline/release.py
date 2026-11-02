@@ -1,5 +1,5 @@
 """Build the release files: places.ndjson.gz, reviews.ndjson.gz, fees.ndjson.gz,
-merged.ndjson.gz and manifest.json.
+photos.ndjson.gz, merged.ndjson.gz and manifest.json.
 
 Usage:
     python -m pipeline.release --root . --out dist [--repository opencampingdb/data]
@@ -30,6 +30,7 @@ from .common import (
     dump_line,
     is_visible,
     iter_fee_files,
+    iter_photo_files,
     iter_review_files,
     load_blocked,
     load_places,
@@ -42,7 +43,9 @@ from .common import (
 # 5: reviews carry contributor and visited_nearby, and hidden reviews and
 # reviews from blocked contributors are left out.
 # 6: fees.ndjson.gz, what travellers paid per night in the last 24 months.
-FORMAT_VERSION = 7
+# 7: site features, brand and contacts, and seven Open Camping DB kinds.
+# 8: photos.ndjson.gz, travellers' photos (CC BY 4.0) served by the photo server.
+FORMAT_VERSION = 8
 # Fees paid more than this many months before the release are left out.
 FEE_MONTHS = 24
 DEFAULT_REPOSITORY = "opencampingdb/data"
@@ -104,6 +107,23 @@ def reviews_ndjson(root: Path) -> tuple[bytes, int]:
     return "".join(lines).encode("utf-8"), len(lines)
 
 
+def photos_ndjson(root: Path) -> tuple[bytes, int]:
+    """Every visible photo, grouped by place in id order, each file's lines in their id order.
+
+    Hidden photos and photos from blocked contributors are left out.
+    """
+    blocked = load_blocked(root)
+    lines = []
+    for path in iter_photo_files(root):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    photo = json.loads(line)
+                    if is_visible(photo, blocked):
+                        lines.append(dump_line(photo) + "\n")
+    return "".join(lines).encode("utf-8"), len(lines)
+
+
 def month_index(year_month: str) -> int:
     """Months since year 0 of a YYYY-MM value (or the start of an ISO date)."""
     return int(year_month[:4]) * 12 + int(year_month[5:7]) - 1
@@ -149,7 +169,7 @@ def build_release(
     release: str | None = None,
     repository: str = DEFAULT_REPOSITORY,
 ) -> dict:
-    """Write the four data files and manifest.json into out_dir and return the manifest.
+    """Write the five data files and manifest.json into out_dir and return the manifest.
 
     release defaults to data-<timestamp> taken from data_version.
     """
@@ -160,6 +180,7 @@ def build_release(
     places_raw, places_count = places_ndjson(root)
     reviews_raw, reviews_count = reviews_ndjson(root)
     fees_raw, fees_count = fees_ndjson(root, generated)
+    photos_raw, photos_count = photos_ndjson(root)
     merged_raw, merged_count = merged_ndjson(root)
 
     manifest = {
@@ -178,6 +199,10 @@ def build_release(
         "fees": write_asset(
             out_dir, "fees.ndjson.gz", fees_raw, fees_count,
             asset_url(repository, release, "fees.ndjson.gz"),
+        ),
+        "photos": write_asset(
+            out_dir, "photos.ndjson.gz", photos_raw, photos_count,
+            asset_url(repository, release, "photos.ndjson.gz"),
         ),
         "merged": write_asset(
             out_dir, "merged.ndjson.gz", merged_raw, merged_count,

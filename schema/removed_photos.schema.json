@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/removed_photos.schema.json",
+  "title": "Open Camping DB removed photos",
+  "description": "moderation/removed_photos.json: photos whose files are deleted from storage. A removed id never comes back.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["photos"],
+  "properties": {
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["photo", "removed", "reason"],
+        "properties": {
+          "photo": {
+            "type": "string",
+            "pattern": "^pho_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "removed": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+          },
+          "reason": {
+            "description": "refused: the apply rules or a person turned the upload down. erased: the contributor asked for their photos to be removed. moderator: a person removed it.",
+            "enum": ["refused", "erased", "moderator"]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-"""Check every place, review and fee file in the repository.
+"""Check every place, review, fee and photo file in the repository.
 
 Usage:
     python -m pipeline.validate --root .
@@ -29,6 +29,11 @@ exits 1. Checks:
 - fee lines are compact JSON with sorted keys, sorted by id, with unique
   ids, an amount with at most 2 decimal places, and belong to a place that
   exists
+- photo lines match schema/photo.schema.json, are compact JSON with sorted
+  keys, sorted by id, with unique ids, belong to a place that exists, and are
+  not on moderation/removed_photos.json
+- moderation/removed_photos.json matches its schema, sorted by photo, each
+  photo once
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once
 - moderation/distinct_places.json matches its schema, each pair once with a
@@ -60,6 +65,9 @@ from .common import (
     distinct_path,
     is_visible,
     iter_fee_files,
+    iter_photo_files,
+    load_removed_photos,
+    removed_photos_path,
     iter_review_files,
     load_blocked,
     place_path,
@@ -459,6 +467,79 @@ def check_fees(root: Path, places: dict[str, dict]) -> list[str]:
     return errors
 
 
+def check_removed_photos(root: Path) -> list[str]:
+    """Problems with moderation/removed_photos.json. A missing file is fine."""
+    path = removed_photos_path(root)
+    where = "moderation/removed_photos.json"
+    if not path.exists():
+        return []
+    try:
+        removed = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        return [f"{where}: not valid JSON: {exc}"]
+    errors = schema_errors(load_validator("removed_photos.schema.json"), removed, where)
+    if errors:
+        return errors
+    if path.read_text(encoding="utf-8") != dump_record(removed):
+        errors.append(f"{where}: not in canonical form (sorted keys, two-space indent, trailing newline)")
+    ids = [entry["photo"] for entry in removed["photos"]]
+    if ids != sorted(set(ids)):
+        errors.append(f"{where}: photos must be sorted by id, each once")
+    return errors
+
+
+def check_photos(root: Path, places: dict[str, dict]) -> list[str]:
+    validator = load_validator("photo.schema.json")
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+    removed = load_removed_photos(root)
+
+    for path in sorted((root / "photos").rglob("*")):
+        if path.is_file() and path.suffix != ".ndjson" and path.name != ".gitkeep":
+            errors.append(f"{path.relative_to(root).as_posix()}: unexpected file in photos/")
+
+    for path in iter_photo_files(root):
+        where = f"photos/{path.name}"
+        place_id = path.stem
+        record = places.get(place_id)
+        if record is None:
+            errors.append(f"{where}: no such place {place_id}")
+        elif record.get("status") == "merged":
+            errors.append(f"{where}: {place_id} is merged, its photos belong to {record.get('merged_into')}")
+        raw = path.read_bytes()
+        if b"\r" in raw:
+            errors.append(f"{where}: use LF line endings")
+        if raw and not raw.endswith(b"\n"):
+            errors.append(f"{where}: missing trailing newline")
+        previous_id = None
+        for number, line in enumerate(raw.decode("utf-8", errors="replace").split("\n"), 1):
+            if not line.strip():
+                continue
+            here = f"{where} line {number}"
+            try:
+                photo = json.loads(line)
+            except json.JSONDecodeError as exc:
+                errors.append(f"{here}: not valid JSON: {exc}")
+                continue
+            line_errors = schema_errors(validator, photo, here)
+            errors += line_errors
+            if line_errors or not isinstance(photo, dict):
+                continue
+            if line != dump_line(photo):
+                errors.append(f"{here}: not in canonical form (compact JSON, sorted keys)")
+            if previous_id is not None and photo["id"] <= previous_id:
+                errors.append(f"{here}: lines must be sorted by id")
+            previous_id = photo["id"]
+            if photo["place"] != place_id:
+                errors.append(f"{here}: place {photo['place']} does not match file name")
+            if photo["id"] in seen_ids:
+                errors.append(f"{here}: photo id {photo['id']} used twice")
+            seen_ids.add(photo["id"])
+            if photo["id"] in removed:
+                errors.append(f"{here}: photo {photo['id']} is on moderation/removed_photos.json")
+    return errors
+
+
 def validate_repo(root: Path, now: str | None = None) -> list[str]:
     """Every problem found in the repository, as readable lines. Empty means valid.
 
@@ -470,6 +551,8 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     errors += check_distinct(root, places)
     errors += check_reviews(root, places)
     errors += check_fees(root, places)
+    errors += check_removed_photos(root)
+    errors += check_photos(root, places)
     return errors
 
 
@@ -484,7 +567,7 @@ def main(argv: list[str] | None = None) -> int:
     if errors:
         print(f"{len(errors)} problem(s) found", file=sys.stderr)
         return 1
-    print("All place, review and fee files are valid", file=sys.stderr)
+    print("All place, review, fee and photo files are valid", file=sys.stderr)
     return 0
 
 
