@@ -6,7 +6,7 @@ from pathlib import Path
 
 from pipeline.common import place_path
 from pipeline.extract import extract_file
-from pipeline.sync import render_report, sync
+from pipeline.sync import MAX_REPORT_CHARS, SyncResult, render_report, sync
 
 T1 = "2026-10-01T16:00:00Z"
 T2 = "2026-10-02T16:00:00Z"
@@ -496,3 +496,18 @@ def test_last_confirmed_is_kept_and_does_not_move_updated(repo, v1_osm, v2_osm):
     camp = json.loads(path.read_text(encoding="utf-8"))
     assert camp["last_confirmed"] == T2
     assert camp["updated"] == T3
+
+
+def test_report_fits_a_pr_body_when_nearly_every_record_changes():
+    def rec(n):
+        return {"id": f"ocdb_01M66ES{n:017d}", "kind": "caravan_park",
+                "name": f"A long caravan park name number {n}", "osm": {"type": "way", "id": n}}
+    result = SyncResult(records_before=25000)
+    result.updated = [rec(n) for n in range(25000)]
+    result.new = [rec(n) for n in range(25000, 26000)]
+    result.duplicates = [{"a": rec(n), "b": rec(n + 1), "distance_m": 50} for n in range(3000)]
+    result.records_after = 26000
+    report = render_report(result)
+    assert len(report) <= MAX_REPORT_CHARS
+    assert "| Updated | 25000 |" in report
+    assert "more, not listed here." in report
