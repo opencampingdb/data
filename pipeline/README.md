@@ -123,6 +123,7 @@ toilet.
 | 11 | `amenity=fuel` | `fuel` | exact | |
 | 12 | `shop=gas` | `lpg_refill_swap` | exact | |
 | 13 | `shop=car_repair` | `mechanic` | exact | |
+| 13a | `amenity=pub` | `food_and_drink` | | Open Camping DB extension. Cafes and restaurants are left out: there are too many |
 | 14 | `tourism=information` + `information=office` or `visitor_centre` | `information_centre` | exact, related | Other information values (boards, maps, guideposts) are left out |
 | 15 | `tourism=viewpoint` | `lookout` | exact | |
 | 16 | `leisure=swimming_area` or `leisure=bathing_place` | `swimming_spot` | narrower | |

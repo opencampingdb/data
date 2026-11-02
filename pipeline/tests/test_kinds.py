@@ -202,7 +202,9 @@ def test_container_types(tags, expected):
         ({"tourism": "museum"}, "heritage"),
         ({"tourism": "gallery"}, "heritage"),
         ({"tourism": "attraction", "historic": "monument"}, "attraction"),
+        ({"amenity": "pub"}, "food_and_drink"),
         ({"amenity": "cafe"}, None),
+        ({"amenity": "restaurant"}, None),
     ],
 )
 def test_new_kinds_from_osm(tags, kind):
