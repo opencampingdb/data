@@ -217,6 +217,50 @@ def test_merge_moves_feedback_facts_and_reviews(pair):
     assert validate_repo(repo) == []
 
 
+def fee(fee_id, place_id, contributor, site, amount):
+    return {
+        "id": fee_id,
+        "place": place_id,
+        "amount": amount,
+        "site": site,
+        "paid": "2026-09",
+        "created": "2026-10-01T10:00:00Z",
+        "app": "camporacle",
+        "contributor": contributor,
+    }
+
+
+def write_fees(repo, place_id, fees):
+    path = repo / "fees" / f"{place_id}.ndjson"
+    path.write_text("".join(dump_line(f) + "\n" for f in fees), encoding="utf-8", newline="\n")
+
+
+def test_merge_moves_fees_keeping_the_newer_per_contributor_and_site(pair):
+    repo, keep, drop = pair
+    sam, kim = "ctr_5a5a5a5a5a5a5a5a", "ctr_4b4b4b4b4b4b4b4b"
+    write_fees(repo, keep["id"], [
+        fee("fee_01JBX0000000000000000000K1", keep["id"], sam, "powered", 30),
+        fee("fee_01JBX0000000000000000000K2", keep["id"], kim, "powered", 35),
+    ])
+    write_fees(repo, drop["id"], [
+        fee("fee_01JBX0000000000000000000D1", drop["id"], sam, "unpowered", 20),
+        fee("fee_01JBX0000000000000000000M1", drop["id"], sam, "powered", 32.5),
+    ])
+    assert validate_repo(repo) == []
+
+    merge(repo, keep["id"], drop["id"], now=T2)
+
+    lines = (repo / "fees" / f"{keep['id']}.ndjson").read_text(encoding="utf-8").splitlines()
+    fees = [json.loads(line) for line in lines]
+    assert [(f["id"], f["place"], f["amount"]) for f in fees] == [
+        ("fee_01JBX0000000000000000000D1", keep["id"], 20),
+        ("fee_01JBX0000000000000000000K2", keep["id"], 35),
+        ("fee_01JBX0000000000000000000M1", keep["id"], 32.5),
+    ]
+    assert not (repo / "fees" / f"{drop['id']}.ndjson").exists()
+    assert validate_repo(repo) == []
+
+
 def test_merge_rating_leaves_out_hidden_reviews(pair):
     repo, keep, drop = pair
     hidden = dict(review("rev_01JBX0000000000000000000D3", drop["id"], 1), hidden="reported")

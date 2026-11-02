@@ -7,10 +7,10 @@ Run them from the repository root after `python -m pip install -r requirements.t
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/` | likely duplicate pairs, one JSON object per line (sync runs this too) |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/` | the kept record, a tombstone, moved reviews. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 
 Tests: `python -m pytest`.
@@ -270,6 +270,10 @@ Review lines are compact JSON with sorted keys, one per line, sorted by
 (4.25 becomes 4.3). Python's `round()` rounds half to even, so use
 `decimal.Decimal` with `ROUND_HALF_UP`, as `pipeline.common.rating_mean` does.
 
+Fee lines in `fees/<place id>.ndjson` take the same form. The release keeps
+the fees paid in the 24 months before the release time, leaving out fees
+from blocked contributors.
+
 ## Duplicates
 
 `pipeline.duplicates` finds pairs of places that are likely the same place.
@@ -306,6 +310,8 @@ place. A person runs it and opens a PR with the result:
 - The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
   rating is recalculated from its visible reviews.
+- The dropped record's fees move to the kept record. Where one contributor
+  has a fee for the same site type at both, only the newer is kept.
 - The dropped record stays as a tombstone: `status: "merged"` and
   `merged_into: <keep_id>`, nothing else changed. Older tombstones that
   pointed at the dropped record now point at the kept one.
