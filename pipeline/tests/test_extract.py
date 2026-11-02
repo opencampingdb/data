@@ -85,7 +85,8 @@ def test_unnamed_place_has_null_name(v2_osm):
 
 def test_fact_value_parsing():
     assert facts_from_tags({"fee": "$10 per night"}) == {"fee": True}
-    assert facts_from_tags({"fee": "donation"}) == {}
+    assert facts_from_tags({"fee": "donation"}) == {"fee": "donation"}
+    assert facts_from_tags({"fee": "by donation"}) == {}
     assert facts_from_tags({"fee": "YES"}) == {"fee": True}
     # fee=no on a camp or caravan site that is a commercial park is not known.
     assert facts_from_tags(
@@ -346,3 +347,35 @@ def test_osm_timestamp_on_areas_and_site_relations(tmp_path):
 
 def test_no_osm_timestamp_when_the_file_has_none(v1_osm):
     assert all("timestamp" not in r["osm"] for r in extract_file(v1_osm))
+
+
+def test_site_feature_facts():
+    assert facts_from_tags({
+        "wheelchair": "yes", "motorhome": "no", "washing_machine": "yes", "kitchen": "yes",
+        "bbq": "no", "picnic_table": "yes", "openfire": "yes", "cabins": "no", "playground": "yes",
+    }) == {
+        "wheelchair": True, "motorhomes": False, "laundry": True, "kitchen": True, "bbq": False,
+        "picnic_tables": True, "campfires": True, "cabins": False, "playground": True,
+    }
+    assert facts_from_tags({"wheelchair": "limited"}) == {}
+    assert facts_from_tags({"internet_access": "wlan"}) == {"wifi": True}
+    assert facts_from_tags({"internet_access": "no"}) == {"wifi": False}
+    assert facts_from_tags({"internet_access": "terminal"}) == {}
+    assert facts_from_tags({"nudism": "designated"}) == {"nudist": True}
+    assert facts_from_tags({"nudism": "no"}) == {"nudist": False}
+    assert facts_from_tags({"min_age": "50"}) == {"over_50s": True}
+    assert facts_from_tags({"min_age": "18"}) == {}
+
+
+def test_brand_contacts_and_social_pages():
+    assert facts_from_tags({"brand": "BIG4"}) == {"brand": "big4"}
+    assert facts_from_tags({"brand": "Discovery Parks"}) == {"brand": "discovery"}
+    assert facts_from_tags({"brand": "Some Local Park"}) == {}
+    assert facts_from_tags({"contact:email": "stay@example.com.au"}) == {"email": "stay@example.com.au"}
+    assert facts_from_tags({"email": "not an email"}) == {}
+    assert facts_from_tags({
+        "contact:facebook": "https://www.facebook.com/lakebend",
+        "contact:instagram": "lakebend",
+        "contact:twitter": "https://x.com/lakebend",
+        "contact:tiktok": "http://tiktok.com/@lakebend",
+    }) == {"facebook": "https://www.facebook.com/lakebend", "x": "https://x.com/lakebend"}

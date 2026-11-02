@@ -19,7 +19,7 @@
       "maxLength": 300
     },
     "kind": {
-      "description": "What the place is. The codes of schema/kinds.json: the OTWD site_types vocabulary plus the Open Camping DB extensions campground, picnic_site and farm_stay.",
+      "description": "What the place is. The codes of schema/kinds.json: the OTWD site_types vocabulary plus the Open Camping DB extensions campground, picnic_site, farm_stay, backpacker_hostel, roofed_accommodation, long_vehicle_parking, food_and_drink, recreation_area, heritage and experience.",
       "enum": [
         "free_camp",
         "paid_campground",
@@ -45,7 +45,14 @@
         "ferry_terminal",
         "campground",
         "picnic_site",
-        "farm_stay"
+        "farm_stay",
+        "backpacker_hostel",
+        "roofed_accommodation",
+        "long_vehicle_parking",
+        "food_and_drink",
+        "recreation_area",
+        "heritage",
+        "experience"
       ]
     },
     "group": {

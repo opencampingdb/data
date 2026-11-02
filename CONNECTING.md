@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 6,
+  "format_version": 7,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -58,7 +58,13 @@ read the same as in format 3. Format 5 changes reviews: every line carries
 `contributor` and may carry `visited_nearby`, and reviews a person or three
 reports have hidden are left out (see section 4). Format 6 adds
 `fees.ndjson.gz`, what travellers paid per night (see section 4). Places and
-reviews read the same as in format 5.
+reviews read the same as in format 5. Format 7 widens three facts: `fee` may
+be `"donation"`, `caravans` may be `"offroad"` and `pets` may be `"seasonal"`.
+It adds 51 facts for site features and contacts (section 4), seven kinds
+(`backpacker_hostel`, `roofed_accommodation`, `long_vehicle_parking`,
+`food_and_drink`, `recreation_area`, `heritage` and `experience`) and a
+`kind` entry in `fact_sources` for a kind set by feedback or the owner. An
+app that reads `fee` as a plain boolean must handle `"donation"`.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -152,8 +158,8 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   contributed directly to Open Camping DB, and new places from feedback.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
   or `contributed` (given directly to Open Camping DB under the ODbL). It may
-  also have `name`, `location` and `status` entries. When `name` or
-  `location` is missing, the name and position come from OSM. A place with
+  also have `name`, `location`, `kind` and `status` entries. When `name`,
+  `location` or `kind` is missing, the name, position and kind come from OSM. A place with
   `osm: null` and `contributed` name and location is a contributed place. A
   `status` entry says who closed or reopened the place.
 - How fresh a place's information is: `osm.timestamp` is when its OSM object
@@ -173,6 +179,20 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   Show it as "Confirmed by a traveller" with its date, apart from the
   freshness of the information, because it says the place exists, not that
   its facts are right.
+- Site features are true or false facts: who can get in (`wheelchair`,
+  `motorhomes`, `camper_trailers`, `motorbikes`, `big_rigs`, `generators`),
+  what is there (`non_drinking_water`, `laundry`, `kitchen`, `bbq`,
+  `drive_through`, `ensuite_sites`, `bins`, `picnic_tables`, `campfires`,
+  `cabins`, `pub`), what to do (`swimming`, `fishing`, `walking_tracks`,
+  `scenery`, `wildlife`, `playground`, `games_room`, `shade`,
+  `cycling_tracks`, `offroad_tracks`, `boat_ramp_nearby`, `near_road`),
+  services (`telstra_signal`, `mobile_signal`, `wifi`, `tv_reception`,
+  `pet_sitting`, `fuel`, `lpg`, `car_wash`, `vehicle_storage`) and warnings
+  (`self_contained_only`, `crocodiles`, `seasonal_closure`,
+  `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
+  club, `email` and `phone_2` are contacts, and `facebook`, `instagram`,
+  `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)
+  describes each one.
 - `access` is the vehicle needed on the road in (`2wd`, `awd`, `4wd`).
   `entry` is who may stay (`public`, `customers`, `permit`, `private`).
   Consider leaving `private` places out of what you show.
@@ -210,7 +230,7 @@ with the place's id.
 `overnight`, `utility`, `services`, `attraction`, `emergency` or `transport`.
 Filter on `group` to show, for example, only places to stay. The kinds are the
 site types of the OTWD (Open Touring and Waypoint Database) vocabulary, plus
-`campground`, `picnic_site` and `farm_stay`. [schema/kinds.json](schema/kinds.json) holds
+the Open Camping DB extensions at the end of the table. [schema/kinds.json](schema/kinds.json) holds
 the same list in machine-readable form, and new kinds may be added in later
 versions, so show an unknown kind under its group rather than dropping it.
 
@@ -224,6 +244,8 @@ versions, so show an unknown kind under its group rather than dropping it.
 | `showground` | Showground | overnight |
 | `campground` | Campground (fee not known) | overnight |
 | `farm_stay` | Farm stay (private, book first) | overnight |
+| `backpacker_hostel` | Backpacker hostel | overnight |
+| `roofed_accommodation` | Roofed accommodation (cabins, motels) | overnight |
 | `rest_area` | Rest area | utility |
 | `dump_point` | Dump point | utility |
 | `drinking_water_point` | Drinking water point | utility |
@@ -231,14 +253,19 @@ versions, so show an unknown kind under its group rather than dropping it.
 | `public_shower` | Public shower | utility |
 | `laundromat` | Laundromat | utility |
 | `picnic_site` | Picnic area | utility |
+| `long_vehicle_parking` | Long vehicle parking | utility |
 | `information_centre` | Information centre | services |
 | `fuel` | Fuel | services |
 | `lpg_refill_swap` | LPG refill or swap | services |
 | `mechanic` | Mechanic | services |
+| `food_and_drink` | Food and drink | services |
 | `attraction` | Attraction | attraction |
 | `lookout` | Lookout | attraction |
 | `swimming_spot` | Swimming spot | attraction |
 | `boat_ramp` | Boat ramp | attraction |
+| `recreation_area` | Recreation area (day use) | attraction |
+| `heritage` | Arts, history and culture | attraction |
+| `experience` | Experience (tours, tastings) | attraction |
 | `hospital_emergency` | Hospital (emergency) | emergency |
 | `ferry_terminal` | Ferry terminal | transport |
 

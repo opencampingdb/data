@@ -205,6 +205,24 @@ def test_feedback_name_and_location_are_kept(repo, v1_osm, v2_osm):
     assert camp["facts"]["fee"] is True
 
 
+def test_feedback_kind_is_kept(repo, v1_osm, v2_osm):
+    sync(repo, extract_file(v1_osm), now=T1)
+    camp_id = load_all(repo)[("node", 1001)]["id"]
+    path = place_path(repo, camp_id)
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    rec["kind"] = "farm_stay"
+    rec["group"] = "overnight"
+    rec["fact_sources"]["kind"] = "feedback"
+    rec.setdefault("fact_dates", {})["kind"] = T1
+    rewrite(path, rec)
+
+    sync(repo, extract_file(v2_osm), now=T2)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert camp["kind"] == "farm_stay"
+    assert camp["fact_sources"]["kind"] == "feedback"
+    assert camp["fact_dates"]["kind"] == T1
+
+
 def test_osm_name_source_is_refreshed(repo, v1_osm, v2_osm):
     sync(repo, extract_file(v1_osm), now=T1)
     camp_id = load_all(repo)[("node", 1001)]["id"]
