@@ -145,6 +145,7 @@ def review(review_id, place_id, stars):
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
         "app": "example-app",
+        "contributor": "ctr_0123456789abcdef",
     }
 
 
@@ -213,6 +214,63 @@ def test_merge_moves_feedback_facts_and_reviews(pair):
     assert len(moved) == 3
     assert kept["rating"] == {"count": 3, "mean": 4.0}
     assert not (repo / "reviews" / f"{drop['id']}.ndjson").exists()
+    assert validate_repo(repo) == []
+
+
+def fee(fee_id, place_id, contributor, site, amount):
+    return {
+        "id": fee_id,
+        "place": place_id,
+        "amount": amount,
+        "site": site,
+        "paid": "2026-09",
+        "created": "2026-10-01T10:00:00Z",
+        "app": "example-app",
+        "contributor": contributor,
+    }
+
+
+def write_fees(repo, place_id, fees):
+    path = repo / "fees" / f"{place_id}.ndjson"
+    path.write_text("".join(dump_line(f) + "\n" for f in fees), encoding="utf-8", newline="\n")
+
+
+def test_merge_moves_fees_keeping_the_newer_per_contributor_and_site(pair):
+    repo, keep, drop = pair
+    sam, kim = "ctr_5a5a5a5a5a5a5a5a", "ctr_4b4b4b4b4b4b4b4b"
+    write_fees(repo, keep["id"], [
+        fee("fee_01JBX0000000000000000000K1", keep["id"], sam, "powered", 30),
+        fee("fee_01JBX0000000000000000000K2", keep["id"], kim, "powered", 35),
+    ])
+    write_fees(repo, drop["id"], [
+        fee("fee_01JBX0000000000000000000D1", drop["id"], sam, "unpowered", 20),
+        fee("fee_01JBX0000000000000000000M1", drop["id"], sam, "powered", 32.5),
+    ])
+    assert validate_repo(repo) == []
+
+    merge(repo, keep["id"], drop["id"], now=T2)
+
+    lines = (repo / "fees" / f"{keep['id']}.ndjson").read_text(encoding="utf-8").splitlines()
+    fees = [json.loads(line) for line in lines]
+    assert [(f["id"], f["place"], f["amount"]) for f in fees] == [
+        ("fee_01JBX0000000000000000000D1", keep["id"], 20),
+        ("fee_01JBX0000000000000000000K2", keep["id"], 35),
+        ("fee_01JBX0000000000000000000M1", keep["id"], 32.5),
+    ]
+    assert not (repo / "fees" / f"{drop['id']}.ndjson").exists()
+    assert validate_repo(repo) == []
+
+
+def test_merge_rating_leaves_out_hidden_reviews(pair):
+    repo, keep, drop = pair
+    hidden = dict(review("rev_01JBX0000000000000000000D3", drop["id"], 1), hidden="reported")
+    write_reviews(repo, drop["id"], [
+        review("rev_01JBX0000000000000000000D1", drop["id"], 3),
+        review("rev_01JBX0000000000000000000D2", drop["id"], 4),
+        hidden,
+    ])
+    merge(repo, keep["id"], drop["id"], now=T2)
+    assert load_places(repo)[keep["id"]]["rating"] == {"count": 3, "mean": 4.0}
     assert validate_repo(repo) == []
 
 
@@ -344,3 +402,47 @@ def test_two_unnamed_overnight_places_are_never_paired():
     a = place("ocdb_A", "caravan_park", None)
     b = place("ocdb_B", "caravan_park", None, lat=-35.0 - 10 * M)
     assert find_duplicates([a, b]) == []
+
+
+# ---------------------------------------------------------------- distinct list
+
+
+def write_distinct(repo, pairs, text=None):
+    path = repo / "moderation" / "distinct_places.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text if text is not None else dump_record({"pairs": pairs}), encoding="utf-8")
+
+
+def test_distinct_pairs_are_left_out():
+    a = place("ocdb_A", "campground", "Riverside")
+    b = place("ocdb_B", "campground", "Riverside", lat=-35.0 - 30 * M)
+    c = place("ocdb_C", "campground", "Riverside", lat=-35.0 - 60 * M)
+    pairs = find_duplicates([a, b, c], {frozenset(("ocdb_A", "ocdb_B"))})
+    assert ids(pairs) == {("ocdb_A", "ocdb_C"), ("ocdb_B", "ocdb_C")}
+
+
+def test_sync_reads_the_distinct_list(repo):
+    (found,) = sync(repo, extract_file(DUPLICATES), now=T1).duplicates
+    a, b = found["a"]["id"], found["b"]["id"]
+    write_distinct(repo, [{"a": a, "b": b, "added": "2026-11-02", "reason": "pitches"}])
+    assert validate_repo(repo) == []
+    assert sync(repo, extract_file(DUPLICATES), now=T2).duplicates == []
+
+
+def test_validate_distinct_list_rules(pair):
+    repo, keep, drop = pair
+    a, b = sorted((keep["id"], drop["id"]))
+    entry = {"a": a, "b": b, "added": "2026-11-02", "reason": "sections", "note": "Caravan area and tent area."}
+    write_distinct(repo, [entry])
+    assert validate_repo(repo) == []
+
+    write_distinct(repo, [dict(entry, a=b, b=a)])
+    assert any("a must sort before b" in e for e in validate_repo(repo))
+    write_distinct(repo, [entry, entry])
+    assert any("listed twice" in e for e in validate_repo(repo))
+    write_distinct(repo, [dict(entry, b="ocdb_01JBX00000000000000000ZZZZ")])
+    assert any("is not a place" in e for e in validate_repo(repo))
+    write_distinct(repo, [dict(entry, reason="looks different")])
+    assert any("distinct_places.json" in e for e in validate_repo(repo))
+    write_distinct(repo, [entry], text=json.dumps({"pairs": [entry]}))
+    assert any("canonical form" in e for e in validate_repo(repo))

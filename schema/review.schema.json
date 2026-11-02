@@ -5,7 +5,16 @@
   "description": "One line of reviews/<place id>.ndjson. No names, emails or device IDs, and no key outside this schema.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "place", "stars", "text", "visited", "created", "app"],
+  "required": [
+    "id",
+    "place",
+    "stars",
+    "text",
+    "visited",
+    "created",
+    "app",
+    "contributor"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -37,6 +46,22 @@
       "description": "Short name of the app that sent the review.",
       "type": "string",
       "pattern": "^[a-z0-9][a-z0-9-]{0,39}$"
+    },
+    "contributor": {
+      "description": "Opaque id of the account or attested install that wrote the review: ctr_ and 16 hex characters, a salted hash made by the feedback intake. The same contributor has the same id on every review from one app, so an app can hide everything from one contributor. It never holds a name or email.",
+      "type": "string",
+      "pattern": "^ctr_[0-9a-f]{16}$"
+    },
+    "visited_nearby": {
+      "description": "The app saw the phone near the place in the 60 days before the review. The location itself is never sent. Left out when not known.",
+      "const": true
+    },
+    "hidden": {
+      "description": "The review is kept for the record but left out of the release and the rating. reported: three contributors reported it and a person has not decided yet. moderator: a person hid it.",
+      "enum": [
+        "reported",
+        "moderator"
+      ]
     }
   }
 }

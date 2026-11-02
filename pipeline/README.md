@@ -7,10 +7,11 @@ Run them from the repository root after `python -m pip install -r requirements.t
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
-| Duplicates | `python -m pipeline.duplicates --root .` | `places/` | likely duplicate pairs, one JSON object per line (sync runs this too) |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/` | the kept record, a tombstone, moved reviews. Run by a person only |
+| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
+| Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 
 Tests: `python -m pytest`.
 
@@ -103,10 +104,10 @@ toilet.
 | 1a | `tourism=camp_site`, inside a park | `national_park_campsite` | broader | Park: see "Containers" |
 | 1b | `tourism=camp_site`, inside a state forest | `state_forest_campsite` | broader | |
 | 1c | `tourism=camp_site`, inside a showground | `showground` | related | |
-| 1d | `tourism=camp_site` + `fee=no` | `free_camp` | exact | |
+| 1d | `tourism=camp_site` + `fee=no` | `free_camp` | exact | Not for a commercial park (see "Facts") |
 | 1e | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
 | 1f | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
-| 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles |
+| 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles. Not for a commercial park (see "Facts") |
 | 2b | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
 | 3 | `highway=rest_area` | `rest_area` | exact | |
 | 4 | `amenity=sanitary_dump_station` | `dump_point` | exact | |
@@ -174,7 +175,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 
 | OSM tag | Fact | Mapping |
 |---|---|---|
-| `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. Others, such as `donation`, are left out. |
+| `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. Others, such as `donation`, are left out. `fee=no` on a commercial park is left out too (see below). |
 | `power_supply` | `power` | `yes` is `true`, `no` is `false` |
 | `dog` | `pets` | `yes`, `leashed` or `no`, copied as is |
 | `tents` | `tents` | `yes` / `no` |
@@ -190,6 +191,18 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`. Others, such as `destination`, are left out. |
+
+A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
+name says holiday park, tourist park, caravan park, holiday village, caravan
+village or resort, or names a park chain (Discovery Parks, BIG4, NRMA Parks,
+Ingenia Holidays, G'day Parks), or whose website's domain does
+(`lighthousebeachholidayvillage.com.au`, `discoveryholidayparks.com.au`).
+`fee=no` on one is taken as a mapping slip and the `fee` fact is left out, so
+the place is not a `free_camp` (rules 1d and 2a). A name that says free
+("Barbour Park Free Caravan Park") keeps `fee=no`. Only the website's domain
+is read, because council sites file free camps under paths such as
+`/Caravan-Parks-and-Campgrounds/`. Other objects, such as the toilets in a
+tourist park, keep `fee=no`.
 
 `access` (the fact) is about the road and the vehicle. `entry` is about who
 may stay, and comes from the OSM `access` tag.
@@ -269,6 +282,10 @@ Review lines are compact JSON with sorted keys, one per line, sorted by
 (4.25 becomes 4.3). Python's `round()` rounds half to even, so use
 `decimal.Decimal` with `ROUND_HALF_UP`, as `pipeline.common.rating_mean` does.
 
+Fee lines in `fees/<place id>.ndjson` take the same form. The release keeps
+the fees paid in the 24 months before the release time, leaving out fees
+from blocked contributors.
+
 ## Duplicates
 
 `pipeline.duplicates` finds pairs of places that are likely the same place.
@@ -287,9 +304,29 @@ report under "Possible duplicates". It only flags. A pair is likely when:
 Never paired: two utility places that both have no name, two overnight
 places that both have no name (often parts or pitches of one park), two
 places whose names differ only in their numbers unless the numbers are equal
-("Site 20" and "Site 26" are separate pitches), and tombstones. Places are bucketed in a grid of 0.0025 by 0.004 degree
+("Site 20" and "Site 26" are separate pitches), tombstones, and pairs on the
+distinct list. Places are bucketed in a grid of 0.0025 by 0.004 degree
 cells (at least 200 m across everywhere in Australia), so only neighbouring
 cells are compared.
+
+### Distinct list
+
+`moderation/distinct_places.json`
+([schema](../schema/distinct_places.schema.json)) lists flagged pairs that a
+person checked and found to be separate places. The finder and sync leave
+them out from then on. Each entry has the two ids (`a` sorts before `b`), the
+day it was `added`, a `reason` and an optional `note`:
+
+| `reason` | Meaning |
+|---|---|
+| `pitches` | Separate pitches, access points or camp spots |
+| `sections` | Parts of one ground with different rules, such as a caravan area and a tent area |
+| `direction` | One for each side of a road |
+| `gender` | Separate facilities for men and women |
+| `other` | Anything else, said in `note` |
+
+Add an entry by hand in the PR that sorts the pairs, keeping the list sorted
+by `a`, then `b`.
 
 ## Merge
 
@@ -304,13 +341,33 @@ place. A person runs it and opens a PR with the result:
   not move.
 - The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
-  rating is recalculated.
+  rating is recalculated from its visible reviews.
+- The dropped record's fees move to the kept record. Where one contributor
+  has a fee for the same site type at both, only the newer is kept.
 - The dropped record stays as a tombstone: `status: "merged"` and
   `merged_into: <keep_id>`, nothing else changed. Older tombstones that
   pointed at the dropped record now point at the kept one.
 
 It refuses to merge a record into itself, an unknown id, or a record that is
 already merged.
+
+## Moderate
+
+A person decides on reported reviews from the `feedback/review` PR, where
+each report is listed. Three reports from different contributors have
+already hidden a review (`hidden: "reported"`) on the automatic branch.
+
+- `hide <review id>` sets `hidden: "moderator"`. `show <review id>` removes
+  `hidden`, whether a person or reports set it.
+- `block <contributor> --reason <reason>` adds the contributor to
+  `moderation/blocked_contributors.json` with today's date. The reason is
+  `spam_ad`, `offensive`, `off_topic`, `fake`, `personal_details` or
+  `abuse`. The feedback engine then refuses everything they send, and their
+  reviews are left out of the release and the rating. `unblock` removes them.
+
+Each command recalculates the rating of every place it touches and sets
+that place's `updated`, so validation passes. Commit the result on a branch
+and open a PR.
 
 ## Validate
 
@@ -332,7 +389,11 @@ no reviews, the owner rules (a value with the source `owner` needs
 checked like review text; `reopens` is a real date and only goes with
 `status: temporarily_closed`), that review lines are canonical and sorted by id, that
 each review's place exists, that each `rating` has the exact count and
-rounded mean of its reviews, and that review text has no email
+rounded mean of its visible reviews (no `hidden`, no blocked `contributor`),
+that `moderation/blocked_contributors.json` matches its schema and is sorted
+by contributor with no repeats, that `moderation/distinct_places.json`
+matches its schema, is sorted, lists each pair once with `a` before `b` and
+names places that exist, and that review text has no email
 address, phone number, link, social media handle or obvious personal name.
 The name check catches phrases such as "my name is" and sign-offs such as
 "Cheers, Sam". It cannot catch every name, so the feedback moderation step
@@ -345,7 +406,10 @@ feedback engine's moderation does the same.
 `places.ndjson.gz` holds every record except tombstones on one line each,
 sorted by `id`. `merged.ndjson.gz` holds one `{"id","merged_into"}` line per
 tombstone, sorted by `id`.
-`reviews.ndjson.gz` holds every review, grouped by place in id order. Lines
+`reviews.ndjson.gz` holds every visible review, grouped by place in id
+order: lines with `hidden` and lines from a contributor in
+`moderation/blocked_contributors.json` stay in the repository and are left
+out. Lines
 use compact JSON with sorted keys. Gzip is written with no file name and a
 zero timestamp.
 

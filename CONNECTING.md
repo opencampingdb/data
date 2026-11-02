@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 4,
+  "format_version": 6,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -28,6 +28,16 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
     "file": "reviews.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/reviews.ndjson.gz",
     "sha256": "...", "bytes": 2345, "count": 12
+  },
+  "fees": {
+    "file": "fees.ndjson.gz",
+    "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/fees.ndjson.gz",
+    "sha256": "...", "bytes": 456, "count": 7
+  },
+  "merged": {
+    "file": "merged.ndjson.gz",
+    "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/merged.ndjson.gz",
+    "sha256": "...", "bytes": 20, "count": 0
   },
   "licence": "ODbL-1.0",
   "attribution": "© OpenStreetMap contributors, Open Camping DB"
@@ -44,7 +54,11 @@ Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
 place kept its `id` across the change. Format 3 adds `osm.timestamp` and
 `fact_dates` (see section 4). Records without them read the same as in
 format 2. Format 4 adds `last_confirmed` (see section 4). Records without it
-read the same as in format 3.
+read the same as in format 3. Format 5 changes reviews: every line carries
+`contributor` and may carry `visited_nearby`, and reviews a person or three
+reports have hidden are left out (see section 4). Format 6 adds
+`fees.ndjson.gz`, what travellers paid per night (see section 4). Places and
+reviews read the same as in format 5.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -113,7 +127,27 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   with a `reopens` date, YYYY-MM-DD) or `closed`. (`merged` exists only in the
   repository, on tombstones, and never appears in `places.ndjson.gz`.) Show `reported_closed` as a warning
   rather than hiding the place.
-- `rating` is `null` until a place has accepted reviews.
+- `rating` is `null` until a place has accepted reviews. It counts only the
+  reviews in `reviews.ndjson.gz`.
+- Each line of `reviews.ndjson.gz` has a stable `id` (`rev_<ulid>`), the
+  `place`, `stars`, `text`, `visited` (YYYY-MM), `created`, the `app` that
+  sent it and `contributor`, an opaque id (`ctr_` and 16 hex characters) of
+  the account or attested install that wrote it. It is never a name or email,
+  and it is the same on every review from one contributor through one app, so
+  your app can let a traveller hide everything from one contributor on their
+  own phone. `visited_nearby: true` means the app saw the phone near the
+  place in the 60 days before the review. One contributor has at most one
+  review per place: a newer one replaces the older. Reviews hidden after
+  reports and reviews from blocked contributors are left out of the release.
+  Let travellers report a review (see section 6).
+- Each line of `fees.ndjson.gz` is what a traveller paid for one night: a
+  stable `id` (`fee_<ulid>`), the `place`, `amount` (Australian dollars per
+  night, at most 2 decimal places), `site` (`unpowered`, `powered` or
+  `cabin`), `paid` (the month, YYYY-MM), `created`, the `app` that sent it
+  and `contributor`, as on reviews. One contributor has at most one fee per
+  place per site type: a newer one replaces the older. The release holds
+  fees paid in the 24 months before it was built, and none from blocked
+  contributors. Show recent fees with their month, since prices change.
 - `osm` is `null` for places that did not come from OpenStreetMap: places
   contributed directly to Open Camping DB, and new places from feedback.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
@@ -258,17 +292,36 @@ Content-Type: application/json
 }
 ```
 
-- `type` is `report`, `review` or `check`, with a matching `report`,
-  `review` or `check` object.
+- `type` is `report`, `review`, `check`, `review_report` or `fee`, with a
+  matching `report`, `review`, `check`, `review_report` or `fee` object.
 - `place` is the record `id`, or `null` for a new place, in which case
   `location` (`{"lat": ..., "lon": ...}`) is required and `report.kind` is
   `new_place`.
 - `report.kind` is `closed`, `reopened`, `fact`, `wrong_location`,
   `new_place` or `other`. A `fact` report also carries `fact` (a key from the
   place schema) and `value`.
-- `review` is `{"stars": 1-5, "text": "...", "visited": "YYYY-MM"}`. Review
-  text is published, so it must not hold names, email addresses, phone
-  numbers or links. Reviews that do are refused.
+- `review` is `{"stars": 1-5, "text": "...", "visited": "YYYY-MM"}`, with
+  `"visited_nearby": true` when the app saw the phone near the place in the
+  last 60 days (never send the location itself). Review text is published,
+  so it must not hold names, email addresses, phone numbers, links or
+  advertising. Reviews that do are refused.
+- `review_report` is `{"review": "rev_<ulid>", "reason": "..."}`, a
+  traveller's report of a published review. `reason` is `spam_ad`,
+  `offensive`, `off_topic`, `fake` or `personal_details`. `place` is the
+  review's place.
+- `fee` is `{"amount": 32.5, "site": "powered", "paid": "YYYY-MM"}`, what
+  the traveller paid per night in Australian dollars (more than 0, at most
+  1000, at most 2 decimal places), for an `unpowered` or `powered` site or a
+  `cabin`, in a month that is not in the future and not more than 24 months
+  ago.
+- `contributor` is an opaque id for the traveller's account (a keyed hash,
+  never a name or email), 16 to 128 characters of letters, digits, `_` and
+  `-`. Reviews, review reports and fees need it, unless the app key proves the
+  install with App Attest instead. The intake hashes it again before storing
+  it. The feedback engine's
+  [integration guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md)
+  covers it, and the App Attest and Play Integrity headers an app key may
+  require.
 - `check` is `{"visited": "YYYY-MM-DD", "still_there": true}`, a confirmation
   that a place is as described.
 - `device` is a random UUID your app creates once per install. Never send a
@@ -294,7 +347,17 @@ Feedback is applied by a scheduled job, usually within the hour, and reaches
 apps with the next release.
 
 - A review is published if it passes moderation, and the place's rating is
-  recalculated.
+  recalculated. A contributor's first review goes to a person; once one is
+  accepted, later ones are published straight away. A newer review from the
+  same contributor replaces their older one for that place.
+- A fee holds no free text, so it is published at the next apply run. A
+  newer fee from the same contributor for the same site type replaces their
+  older one for that place.
+- Every `review_report` goes to a person. Reports from 3 different
+  contributors hide the review until a person decides. A person can hide a
+  review or block a contributor (`moderation/blocked_contributors.json`).
+  Everything from a blocked contributor is refused, and their reviews and
+  fees are left out of the release and their reviews out of the rating.
 - A `closed` report marks the place `reported_closed` at once. It becomes
   `closed` after reports from 2 different devices within 90 days, or 1 report
   and a person's approval. A `reopened` report or a check with

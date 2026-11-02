@@ -40,7 +40,7 @@ from .kinds import (
     PLACE_TAG_PAIRS,
     classify,
     container_type,
-    parse_fee,
+    osm_fee,
     water_type,
 )
 
@@ -105,10 +105,9 @@ def facts_from_tags(tags: dict) -> dict:
     """Map OSM tags to the facts in a place record. Unknown values are left out."""
     facts = {}
 
-    if "fee" in tags:
-        fee = parse_fee(tags["fee"])
-        if fee is not None:
-            facts["fee"] = fee
+    fee = osm_fee(tags)
+    if fee is not None:
+        facts["fee"] = fee
 
     for osm_key, fact_key in YES_NO_TAGS.items():
         value = yes_no(tags.get(osm_key))

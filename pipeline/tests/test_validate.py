@@ -35,6 +35,7 @@ def make_review(place_id, **changes):
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
         "app": "example-app",
+        "contributor": "ctr_0123456789abcdef",
     }
     review.update(changes)
     return review
@@ -383,3 +384,188 @@ def test_last_confirmed_must_be_utc_seconds(synced):
     rec["last_confirmed"] = "2026-10-20"
     write_place(path, rec)
     assert any("last_confirmed" in e for e in validate_repo(synced, now="2026-10-21T00:00:00Z"))
+
+
+def write_blocked(repo, contributors, text=None):
+    path = repo / "moderation" / "blocked_contributors.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    body = {"contributors": [{"contributor": c, "added": "2026-11-02", "reason": "spam_ad"} for c in contributors]}
+    path.write_text(text if text is not None else dump_record(body), encoding="utf-8", newline="\n")
+
+
+def test_review_needs_a_contributor(synced):
+    place_id = set_rating(synced, 1, 4.0)
+    review = make_review(place_id)
+    del review["contributor"]
+    write_review_lines(synced, place_id, [dump_line(review)])
+    assert any("contributor" in e for e in validate_repo(synced))
+
+
+def test_visited_nearby_is_only_true(synced):
+    place_id = set_rating(synced, 1, 4.0)
+    write_review(synced, place_id, visited_nearby=True)
+    assert validate_repo(synced) == []
+    write_review(synced, place_id, visited_nearby=False)
+    assert validate_repo(synced) != []
+
+
+def test_hidden_review_is_left_out_of_the_rating(synced):
+    place_id = set_rating(synced, 1, 5.0)
+    shown = make_review(place_id, id="rev_01JBX0000000000000000000AA", stars=5)
+    hidden = make_review(place_id, id="rev_01JBX0000000000000000000AB", stars=1, hidden="reported")
+    write_review_lines(synced, place_id, [dump_line(shown), dump_line(hidden)])
+    assert validate_repo(synced) == []
+
+
+def test_only_hidden_reviews_means_no_rating(synced):
+    path, rec = first_place(synced)
+    write_review(synced, rec["id"], hidden="moderator")
+    assert validate_repo(synced) == []
+    set_rating(synced, 1, 4.0)
+    assert any("no visible reviews" in e for e in validate_repo(synced))
+
+
+def test_unknown_hidden_value_is_refused(synced):
+    place_id = set_rating(synced, 1, 4.0)
+    write_review(synced, place_id, hidden="spam")
+    assert validate_repo(synced) != []
+
+
+def test_blocked_contributor_is_left_out_of_the_rating(synced):
+    place_id = set_rating(synced, 1, 5.0)
+    shown = make_review(place_id, id="rev_01JBX0000000000000000000AA", stars=5)
+    blocked = make_review(place_id, id="rev_01JBX0000000000000000000AB", stars=1, contributor="ctr_ffffffffffffffff")
+    write_review_lines(synced, place_id, [dump_line(shown), dump_line(blocked)])
+    write_blocked(synced, ["ctr_ffffffffffffffff"])
+    assert validate_repo(synced) == []
+
+
+def test_blocked_list_must_be_sorted_and_unique(synced):
+    write_blocked(synced, ["ctr_ffffffffffffffff", "ctr_0000000000000000"])
+    assert any("sorted" in e for e in validate_repo(synced))
+    write_blocked(synced, ["ctr_0000000000000000", "ctr_0000000000000000"])
+    assert validate_repo(synced) != []
+
+
+def test_blocked_list_must_match_its_schema(synced):
+    write_blocked(synced, [], text='{\n  "contributors": [\n    {\n      "contributor": "Sam"\n    }\n  ]\n}\n')
+    assert any("blocked_contributors" in e for e in validate_repo(synced))
+
+
+def test_unexpected_file_in_moderation_is_refused(synced):
+    (synced / "moderation").mkdir()
+    (synced / "moderation" / "notes.txt").write_text("x", encoding="utf-8")
+    assert any("unexpected file in moderation" in e for e in validate_repo(synced))
+
+
+# ---------------------------------------------------------------- fees
+
+
+def make_fee(place_id, **changes):
+    fee = {
+        "id": "fee_01JBX0000000000000000000AA",
+        "place": place_id,
+        "amount": 32.5,
+        "site": "powered",
+        "paid": "2026-09",
+        "created": "2026-10-01T10:00:00Z",
+        "app": "example-app",
+        "contributor": "ctr_0123456789abcdef",
+    }
+    fee.update(changes)
+    return fee
+
+
+def write_fee_lines(repo, place_id, lines):
+    path = repo / "fees" / f"{place_id}.ndjson"
+    path.write_text("".join(line + "\n" for line in lines), encoding="utf-8", newline="\n")
+    return path
+
+
+def write_fee(repo, place_id, **changes):
+    return write_fee_lines(repo, place_id, [dump_line(make_fee(place_id, **changes))])
+
+
+def test_valid_fees_pass(synced):
+    _, rec = first_place(synced)
+    write_fee_lines(synced, rec["id"], [
+        dump_line(make_fee(rec["id"])),
+        dump_line(make_fee(rec["id"], id="fee_01JBX0000000000000000000AB", amount=120, site="cabin")),
+        dump_line(make_fee(rec["id"], id="fee_01JBX0000000000000000000AC", amount=0.01, site="unpowered")),
+        dump_line(make_fee(rec["id"], id="fee_01JBX0000000000000000000AD", amount=1000)),
+    ])
+    assert validate_repo(synced) == []
+
+
+def test_fee_for_unknown_place_is_refused(synced):
+    write_fee(synced, "ocdb_01JBX00000000000000000ZZZZ")
+    assert any("no such place" in e for e in validate_repo(synced))
+
+
+def test_fee_for_merged_place_is_refused(synced):
+    paths = sorted((synced / "places").rglob("*.json"))
+    keep = json.loads(paths[0].read_text(encoding="utf-8"))
+    drop = json.loads(paths[1].read_text(encoding="utf-8"))
+    write_place(paths[1], dict(drop, status="merged", merged_into=keep["id"]))
+    write_fee(synced, drop["id"])
+    assert any(f"its fees belong to {keep['id']}" in e for e in validate_repo(synced))
+
+
+@pytest.mark.parametrize(
+    "changes",
+    [
+        {"extra": "x"},
+        {"amount": 0},
+        {"amount": -5},
+        {"amount": 1000.5},
+        {"amount": "32.50"},
+        {"site": "tent"},
+        {"paid": "2026-13"},
+        {"paid": "2026-09-01"},
+        {"id": "rev_01JBX0000000000000000000AA"},
+        {"contributor": "someone@example.com"},
+    ],
+)
+def test_fee_outside_the_schema_is_refused(synced, changes):
+    _, rec = first_place(synced)
+    write_fee(synced, rec["id"], **changes)
+    assert validate_repo(synced) != []
+
+
+def test_fee_missing_a_field_is_refused(synced):
+    _, rec = first_place(synced)
+    fee = make_fee(rec["id"])
+    del fee["contributor"]
+    write_fee_lines(synced, rec["id"], [dump_line(fee)])
+    assert any("contributor" in e for e in validate_repo(synced))
+
+
+def test_fee_with_more_than_2_decimal_places_is_refused(synced):
+    _, rec = first_place(synced)
+    write_fee(synced, rec["id"], amount=12.345)
+    assert any("more than 2 decimal places" in e for e in validate_repo(synced))
+
+
+def test_fee_lines_must_be_canonical_sorted_and_unique(synced):
+    _, rec = first_place(synced)
+    a = make_fee(rec["id"], id="fee_01JBX0000000000000000000AB")
+    b = make_fee(rec["id"], id="fee_01JBX0000000000000000000AA")
+    write_fee_lines(synced, rec["id"], [dump_line(a), dump_line(b)])
+    assert any("sorted by id" in e for e in validate_repo(synced))
+    write_fee_lines(synced, rec["id"], [json.dumps(a, sort_keys=True)])
+    assert any("canonical form" in e for e in validate_repo(synced))
+    write_fee_lines(synced, rec["id"], [dump_line(a), dump_line(a)])
+    assert any("used twice" in e for e in validate_repo(synced))
+
+
+def test_fee_place_must_match_file_name(synced):
+    paths = sorted((synced / "places").rglob("*.json"))
+    first = json.loads(paths[0].read_text(encoding="utf-8"))
+    second = json.loads(paths[1].read_text(encoding="utf-8"))
+    write_fee_lines(synced, first["id"], [dump_line(make_fee(second["id"]))])
+    assert any("does not match file name" in e for e in validate_repo(synced))
+
+
+def test_unexpected_file_in_fees_is_refused(synced):
+    (synced / "fees" / "notes.txt").write_text("x", encoding="utf-8")
+    assert any("unexpected file in fees/" in e for e in validate_repo(synced))

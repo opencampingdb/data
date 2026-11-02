@@ -80,6 +80,11 @@ def review_path(root: Path, place_id: str) -> Path:
     return Path(root) / "reviews" / f"{place_id}.ndjson"
 
 
+def fee_path(root: Path, place_id: str) -> Path:
+    """Where the fees reported for one place live: fees/<place id>.ndjson."""
+    return Path(root) / "fees" / f"{place_id}.ndjson"
+
+
 def dump_record(record: dict) -> str:
     """Canonical text of a place record file.
 
@@ -90,7 +95,7 @@ def dump_record(record: dict) -> str:
 
 
 def dump_line(obj: dict) -> str:
-    """Canonical one-line JSON (review lines, NDJSON output), without the newline.
+    """Canonical one-line JSON (review and fee lines, NDJSON output), without the newline.
 
     Compact, sorted keys, UTF-8 characters as they are.
     """
@@ -118,6 +123,52 @@ def iter_place_files(root: Path):
 def iter_review_files(root: Path):
     """Every review file, in sorted path order."""
     return sorted((Path(root) / "reviews").glob("*.ndjson"))
+
+
+def iter_fee_files(root: Path):
+    """Every fee file, in sorted path order."""
+    return sorted((Path(root) / "fees").glob("*.ndjson"))
+
+
+def blocked_path(root: Path) -> Path:
+    """The list of blocked contributors: moderation/blocked_contributors.json."""
+    return Path(root) / "moderation" / "blocked_contributors.json"
+
+
+def load_blocked(root: Path) -> set[str]:
+    """Contributor ids on the blocked list. Empty when the file is missing."""
+    path = blocked_path(root)
+    if not path.exists():
+        return set()
+    entries = json.loads(path.read_text(encoding="utf-8")).get("contributors", [])
+    return {entry["contributor"] for entry in entries if isinstance(entry, dict) and "contributor" in entry}
+
+
+def distinct_path(root: Path) -> Path:
+    """Pairs a person checked and found to be separate places: moderation/distinct_places.json."""
+    return Path(root) / "moderation" / "distinct_places.json"
+
+
+def load_distinct(root: Path) -> set[frozenset[str]]:
+    """Place id pairs on the distinct list. Empty when the file is missing."""
+    path = distinct_path(root)
+    if not path.exists():
+        return set()
+    entries = json.loads(path.read_text(encoding="utf-8")).get("pairs", [])
+    return {
+        frozenset((entry["a"], entry["b"]))
+        for entry in entries
+        if isinstance(entry, dict) and "a" in entry and "b" in entry
+    }
+
+
+def is_visible(review: dict, blocked: set[str]) -> bool:
+    """Whether a review is published and counts in the rating.
+
+    A hidden review, or one from a blocked contributor, stays in the
+    repository but is left out of the release and the rating.
+    """
+    return "hidden" not in review and review.get("contributor") not in blocked
 
 
 def load_places(root: Path) -> dict[str, dict]:

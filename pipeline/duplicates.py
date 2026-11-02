@@ -20,7 +20,9 @@ Never paired:
   separate parts or pitches of one park);
 - two places whose names differ only in their numbers, unless the numbers
   are equal ("Site 20" and "Site 26" are separate pitches);
-- merged records (tombstones).
+- merged records (tombstones);
+- pairs a person checked and listed in moderation/distinct_places.json as
+  separate places.
 """
 
 import argparse
@@ -31,7 +33,7 @@ import sys
 from difflib import SequenceMatcher
 from pathlib import Path
 
-from .common import load_places
+from .common import load_distinct, load_places
 
 MAX_DISTANCE_M = 200
 UNNAMED_MAX_DISTANCE_M = 50
@@ -93,8 +95,11 @@ def likely_duplicate(a: dict, b: dict, distance: float) -> bool:
     return SequenceMatcher(None, name_a, name_b).ratio() >= NAME_RATIO
 
 
-def find_duplicates(records: list[dict]) -> list[dict]:
-    """Likely duplicate pairs, as {"a", "b", "distance_m"} with a's id before b's, sorted."""
+def find_duplicates(records: list[dict], distinct: set[frozenset[str]] = frozenset()) -> list[dict]:
+    """Likely duplicate pairs, as {"a", "b", "distance_m"} with a's id before b's, sorted.
+
+    distinct holds id pairs known to be separate places, which are left out.
+    """
     live = [r for r in records if r.get("status") != "merged"]
     grid: dict[tuple[int, int], list[dict]] = {}
     for record in live:
@@ -114,7 +119,7 @@ def find_duplicates(records: list[dict]) -> list[dict]:
         ]
         for a in here:
             for b in nearby:
-                if a["id"] >= b["id"]:
+                if a["id"] >= b["id"] or frozenset((a["id"], b["id"])) in distinct:
                     continue
                 distance = distance_m(a, b)
                 if likely_duplicate(a, b, distance):
@@ -129,7 +134,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     # One JSON object per line, always UTF-8, whatever the console uses.
     sys.stdout.reconfigure(encoding="utf-8")
-    for pair in find_duplicates(list(load_places(args.root).values())):
+    for pair in find_duplicates(list(load_places(args.root).values()), load_distinct(args.root)):
         a, b = pair["a"], pair["b"]
         print(json.dumps({
             "a": a["id"], "a_name": a["name"], "a_kind": a["kind"],

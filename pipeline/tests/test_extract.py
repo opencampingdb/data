@@ -87,6 +87,20 @@ def test_fact_value_parsing():
     assert facts_from_tags({"fee": "$10 per night"}) == {"fee": True}
     assert facts_from_tags({"fee": "donation"}) == {}
     assert facts_from_tags({"fee": "YES"}) == {"fee": True}
+    # fee=no on a camp or caravan site that is a commercial park is not known.
+    assert facts_from_tags(
+        {"tourism": "caravan_site", "name": "Lane Cove River Tourist Park", "fee": "no"}
+    ) == {}
+    assert facts_from_tags(
+        {"tourism": "caravan_site", "name": "Lane Cove River Tourist Park", "fee": "yes"}
+    ) == {"fee": True}
+    assert facts_from_tags(
+        {"tourism": "camp_site", "name": "Barbour Park Free Caravan Park", "fee": "no"}
+    ) == {"fee": False}
+    # Toilets in a tourist park can be free.
+    assert facts_from_tags(
+        {"amenity": "toilets", "name": "Armidale Tourist Park Customers", "fee": "no"}
+    ) == {"fee": False}
     assert facts_from_tags({"maxstay": "48 hours"}) == {"max_stay": "48h"}
     assert facts_from_tags({"maxstay": "1 week"}) == {"max_stay": "1w"}
     assert facts_from_tags({"maxstay": "until the creek floods"}) == {
