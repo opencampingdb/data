@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "cabins": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
@@ -8,9 +9,11 @@
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "cabins": false,
     "drinking_water": false,
     "dump_station": false,
     "entry": "permit",
@@ -19,7 +22,8 @@
     "showers": false,
     "tents": true,
     "toilets": false,
-    "website": "https://www.carpentaria.qld.gov.au/Discover/Camping"
+    "website": "https://www.carpentaria.qld.gov.au/Discover/Camping",
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFR3B5AEQJ4HKSE3931T",
@@ -37,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }

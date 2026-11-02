@@ -1,27 +1,39 @@
 {
   "fact_sources": {
+    "cabins": "osm",
+    "campfires": "osm",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nudist": "osm",
     "pets": "osm",
+    "picnic_tables": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wheelchair": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "cabins": false,
+    "campfires": false,
     "caravans": false,
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "nudist": false,
     "pets": "no",
+    "picnic_tables": true,
     "power": false,
     "showers": false,
     "tents": true,
     "toilets": true,
-    "website": "https://www.parks.sa.gov.au/parks/wild-south-coast-way/booking/141387"
+    "website": "https://www.parks.sa.gov.au/parks/wild-south-coast-way/booking/141387",
+    "wheelchair": false,
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCXTMNN05HDCF0EC3Y9R",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }

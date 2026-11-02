@@ -1,8 +1,10 @@
 {
   "fact_sources": {
+    "campfires": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "email": "osm",
     "entry": "osm",
     "fee": "osm",
     "pets": "osm",
@@ -11,12 +13,15 @@
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "campfires": false,
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "email": "enquiry@scarboroughholidayvillage.com.au",
     "entry": "customers",
     "fee": true,
     "pets": "leashed",
@@ -25,7 +30,8 @@
     "showers": true,
     "tents": false,
     "toilets": true,
-    "website": "https://www.scarboroughholidayvillage.com.au/"
+    "website": "https://www.scarboroughholidayvillage.com.au/",
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQZ8DC9YNTYHYY4QM7J",
@@ -43,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }

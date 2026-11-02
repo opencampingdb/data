@@ -1,8 +1,10 @@
 {
   "fact_sources": {
+    "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "kitchen": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,9 +12,11 @@
     "website": "osm"
   },
   "facts": {
+    "cabins": true,
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "kitchen": true,
     "power": true,
     "showers": true,
     "tents": true,
@@ -35,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-01T01:44:13Z"
+  "updated": "2026-11-02T21:44:17Z"
 }
