@@ -51,9 +51,13 @@ jobs:
                   link = f"[open the challenge](https://maproulette.org/admin/project/{project}/challenge/{challenge})"
               else:
                   link = "not set up in MapRoulette yet"
-              print(f"- [ ] `maproulette/{name}`: {tasks} task(s), {link}")
+              if tasks:
+                  print(f"- [ ] `maproulette/{name}`: {tasks} task(s), {link}")
+              else:
+                  # MapRoulette fails to build from an empty file, so there is nothing to press.
+                  print(f"- [x] `maproulette/{name}`: no tasks, so no rebuild. MapRoulette cannot build from an empty file.")
           print()
-          print('In MapRoulette, press "Rebuild Tasks", keep the remote file and tick "Remove unmatched tasks", then rebuild. Close this issue when every box is ticked.')
+          print('In MapRoulette, press "Rebuild Tasks", tick "First remove incomplete tasks" and press "Proceed". Tick each box here as you go, and close this issue when every box is ticked.')
           PY
           title="Rebuild the MapRoulette challenges"
           number="$(gh issue list --state open --search "in:title \"$title\"" --json number,title --jq "[.[] | select(.title == \"$title\")][0].number // empty")"
