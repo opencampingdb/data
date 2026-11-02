@@ -15,6 +15,8 @@ What it does:
 - The dropped record's reviews move to the kept record, which gets a new
   rating from all its visible reviews (not hidden, not from a blocked
   contributor).
+- The dropped record's fees move to the kept record. Where one contributor
+  has a fee for the same site type at both, only the newer is kept.
 - The dropped record stays as a tombstone: status "merged" and merged_into
   set to the kept id, nothing else changed. Releases leave tombstones out of
   places.ndjson.gz and list them in merged.ndjson.gz, so apps that stored the
@@ -33,6 +35,7 @@ from .common import (
     FACT_KEYS,
     dump_line,
     dump_record,
+    fee_path,
     is_visible,
     load_blocked,
     load_places,
@@ -51,12 +54,19 @@ class MergeError(Exception):
     """The merge was refused. Nothing was written."""
 
 
-def read_reviews(root: Path, place_id: str) -> list[dict]:
-    path = review_path(root, place_id)
+def read_lines(path: Path) -> list[dict]:
     if not path.exists():
         return []
     with open(path, encoding="utf-8") as f:
         return [json.loads(line) for line in f if line.strip()]
+
+
+def read_reviews(root: Path, place_id: str) -> list[dict]:
+    return read_lines(review_path(root, place_id))
+
+
+def read_fees(root: Path, place_id: str) -> list[dict]:
+    return read_lines(fee_path(root, place_id))
 
 
 def osm_links(record: dict) -> set[tuple[str, int]]:
@@ -114,6 +124,17 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None) -> dic
         write_text(review_path(root, keep_id), "".join(dump_line(r) + "\n" for r in reviews))
     if moved:
         review_path(root, drop_id).unlink()
+
+    # Fees.
+    moved_fees = [dict(f, place=keep_id) for f in read_fees(root, drop_id)]
+    if moved_fees:
+        # One fee per contributor per site type: ids are ULIDs, so the larger is newer.
+        newest: dict[tuple[str, str], dict] = {}
+        for fee in sorted(read_fees(root, keep_id) + moved_fees, key=lambda f: f["id"]):
+            newest[(fee["contributor"], fee["site"])] = fee
+        fees = sorted(newest.values(), key=lambda f: f["id"])
+        write_text(fee_path(root, keep_id), "".join(dump_line(f) + "\n" for f in fees))
+        fee_path(root, drop_id).unlink()
 
     kept["updated"] = now
     write_text(place_path(root, keep_id), dump_record(kept))

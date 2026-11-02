@@ -30,6 +30,23 @@ def add_review(repo, place_id, review_id, **changes):
         f.write(dump_line(review) + "\n")
 
 
+def add_fee(repo, place_id, fee_id, **changes):
+    fee = {
+        "id": fee_id,
+        "place": place_id,
+        "amount": 32.5,
+        "site": "powered",
+        "paid": "2026-09",
+        "created": "2026-10-01T10:00:00Z",
+        "app": "example-app",
+        "contributor": "ctr_0123456789abcdef",
+        **changes,
+    }
+    path = repo / "fees" / f"{place_id}.ndjson"
+    with open(path, "a", encoding="utf-8", newline="\n") as f:
+        f.write(dump_line(fee) + "\n")
+
+
 def build(repo, out):
     return build_release(repo, out, data_version=VERSION, generated=GENERATED)
 
@@ -43,6 +60,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     manifest = build(repo, out)
 
     assert sorted(p.name for p in out.iterdir()) == [
+        "fees.ndjson.gz",
         "manifest.json",
         "merged.ndjson.gz",
         "places.ndjson.gz",
@@ -53,8 +71,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert [json.loads(line)["id"] for line in lines] == place_ids
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
-    # 5: reviews carry contributor, and hidden or blocked reviews are left out.
-    assert manifest["format_version"] == 5
+    # 6: fees.ndjson.gz, what travellers paid per night.
+    assert manifest["format_version"] == 6
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
@@ -71,13 +89,16 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest["reviews"]["file"] == "reviews.ndjson.gz"
     assert manifest["reviews"]["url"].endswith("/data-20261030T160000Z/reviews.ndjson.gz")
     assert manifest["reviews"]["count"] == 1
+    assert manifest["fees"]["file"] == "fees.ndjson.gz"
+    assert manifest["fees"]["url"].endswith("/data-20261030T160000Z/fees.ndjson.gz")
+    assert manifest["fees"]["count"] == 0
 
 
 def test_release_is_byte_identical_on_rerun(repo, v1_osm, tmp_path):
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     build(repo, tmp_path / "a")
     build(repo, tmp_path / "b")
-    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "merged.ndjson.gz"):
+    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "fees.ndjson.gz", "merged.ndjson.gz"):
         assert (tmp_path / "a" / name).read_bytes() == (tmp_path / "b" / name).read_bytes()
 
 
@@ -93,6 +114,7 @@ def test_empty_repo_builds_empty_release(repo, tmp_path):
     manifest = build(repo, tmp_path / "dist")
     assert manifest["places"]["count"] == 0
     assert manifest["reviews"]["count"] == 0
+    assert manifest["fees"]["count"] == 0
 
 
 def test_release_tag_and_repository_can_be_set(repo, tmp_path):
@@ -124,3 +146,33 @@ def test_release_leaves_out_hidden_and_blocked_reviews(repo, v1_osm, tmp_path):
     assert json.loads(lines[0])["contributor"] == "ctr_0123456789abcdef"
     assert json.loads(lines[0])["visited_nearby"] is True
     assert manifest["reviews"]["count"] == 1
+
+
+def test_release_holds_fees_paid_in_the_last_24_months(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    first, second = sorted(p.stem for p in (repo / "places").rglob("*.json"))[:2]
+    # The release time is 2026-10-30, so 2024-10 is the oldest month kept.
+    add_fee(repo, first, "fee_01JBX0000000000000000000AA", paid="2024-09")
+    add_fee(repo, first, "fee_01JBX0000000000000000000AB", paid="2024-10", site="cabin", amount=120)
+    add_fee(repo, first, "fee_01JBX0000000000000000000AC", paid="2026-10", contributor="ctr_ffffffffffffffff")
+    add_fee(repo, second, "fee_01JBX0000000000000000000AD", paid="2026-10", site="unpowered", amount=18)
+    blocked = repo / "moderation" / "blocked_contributors.json"
+    blocked.parent.mkdir()
+    blocked.write_text(json.dumps({"contributors": [
+        {"contributor": "ctr_ffffffffffffffff", "added": "2026-11-02", "reason": "spam_ad"},
+    ]}), encoding="utf-8")
+
+    manifest = build(repo, tmp_path / "dist")
+
+    fees_bytes = (tmp_path / "dist" / "fees.ndjson.gz").read_bytes()
+    lines = gzip.decompress(fees_bytes).decode("utf-8").splitlines()
+    expected_order = sorted([(first, "fee_01JBX0000000000000000000AB"), (second, "fee_01JBX0000000000000000000AD")])
+    assert [json.loads(line)["id"] for line in lines] == [fee_id for _, fee_id in expected_order]
+    assert all(line == dump_line(json.loads(line)) for line in lines)
+    assert manifest["fees"] == {
+        "file": "fees.ndjson.gz",
+        "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/fees.ndjson.gz",
+        "sha256": hashlib.sha256(fees_bytes).hexdigest(),
+        "bytes": len(fees_bytes),
+        "count": 2,
+    }
