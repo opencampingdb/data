@@ -29,6 +29,7 @@ PLACE_TAG_PAIRS = (
     ("tourism", "museum"),
     ("tourism", "gallery"),
     ("amenity", "parking"),
+    ("amenity", "pub"),
     ("highway", "rest_area"),
     ("amenity", "sanitary_dump_station"),
     ("amenity", "water_point"),
@@ -300,6 +301,9 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
         return "lpg_refill_swap"
     if shop == "car_repair":
         return "mechanic"
+    # Pubs only: cafes and restaurants would swamp the camping places.
+    if amenity == "pub":
+        return "food_and_drink"
     if tourism == "information" and tags.get("information") in ("office", "visitor_centre"):
         return "information_centre"
 
