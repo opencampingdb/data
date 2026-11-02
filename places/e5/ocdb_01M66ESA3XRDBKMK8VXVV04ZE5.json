@@ -1,31 +1,43 @@
 {
   "fact_sources": {
+    "cabins": "osm",
+    "campfires": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nudist": "osm",
     "pets": "osm",
     "phone": "osm",
+    "picnic_tables": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wheelchair": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "cabins": false,
+    "campfires": false,
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nudist": false,
     "pets": "leashed",
     "phone": "+61 2 6977 1801",
+    "picnic_tables": false,
     "power": true,
     "showers": true,
     "tents": true,
     "toilets": true,
-    "website": "https://temora.com.au/stays/temora-showground-caravan-and-camping"
+    "website": "https://temora.com.au/stays/temora-showground-caravan-and-camping",
+    "wheelchair": true,
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA3XRDBKMK8VXVV04ZE5",
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }

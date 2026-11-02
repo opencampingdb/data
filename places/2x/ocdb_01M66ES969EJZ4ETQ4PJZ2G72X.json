@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "cabins": "osm",
+    "campfires": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
@@ -7,13 +9,18 @@
     "fee": "osm",
     "opening_hours": "osm",
     "pets": "osm",
+    "picnic_tables": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wheelchair": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "cabins": false,
+    "campfires": false,
     "caravans": false,
     "drinking_water": false,
     "dump_station": false,
@@ -21,11 +28,14 @@
     "fee": true,
     "opening_hours": "Feb 01-Nov 30 Mo-Su 00:00-24:00",
     "pets": "no",
+    "picnic_tables": false,
     "power": false,
     "showers": false,
     "tents": true,
     "toilets": false,
-    "website": "https://parks.qld.gov.au/parks/lamington/camping/rat-a-tat-remote"
+    "website": "https://parks.qld.gov.au/parks/lamington/camping/rat-a-tat-remote",
+    "wheelchair": false,
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ES969EJZ4ETQ4PJZ2G72X",
@@ -43,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-02T21:44:17Z"
 }
