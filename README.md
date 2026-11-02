@@ -66,7 +66,9 @@ person has blocked are listed in
 ([schema](schema/blocked_contributors.schema.json)). Pairs a person found to
 be separate places, which the duplicate finder skips, are listed in
 [moderation/distinct_places.json](moderation/distinct_places.json)
-([schema](schema/distinct_places.schema.json)). The kinds and
+([schema](schema/distinct_places.schema.json)). What OSM's mappers should
+check, such as places OSM maps twice, is passed to them as MapRoulette
+challenges built from [maproulette/](maproulette/README.md). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, the reviews

@@ -10,8 +10,9 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root .` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --report sync-report.md` | the extract and `places/` | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). See [maproulette/README.md](../maproulette/README.md) |
 
 Tests: `python -m pytest`.
 
@@ -356,6 +357,10 @@ place. A person runs it and opens a PR with the result:
 - The kept record gains `merged_osm`, the dropped record's OSM link and any
   links already merged into it, sorted. Sync matches these objects to the
   kept record and never creates them again.
+- With `--part`, the dropped record's own link gets `"part": true`: OSM
+  draws the two as parts of one place on purpose, such as separate camping
+  areas of one ground. The MapRoulette double mapping challenge leaves parts
+  out. Part flags already on either record are kept.
 - Facts the dropped record got from `feedback` or `contributed` move to the
   kept record where it has no value, with their `fact_dates`. OSM facts do
   not move.

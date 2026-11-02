@@ -1,13 +1,18 @@
 """Merge two records of the same place. Run by a person, never by a workflow.
 
 Usage:
-    python -m pipeline.merge <keep_id> <drop_id> --root .
+    python -m pipeline.merge <keep_id> <drop_id> --root . [--part]
 
 What it does:
 - The kept record gains merged_osm: the dropped record's OSM link, and any
   OSM links already merged into the dropped record, sorted. The OSM sync
   matches these objects to the kept record from then on, so the dropped
   place is never created again.
+- --part says the two OSM objects are parts of one place drawn apart on
+  purpose, such as separate camping areas of one ground, rather than the
+  same place mapped twice. The dropped record's own link gets "part": true
+  in merged_osm, and the MapRoulette double mapping challenge leaves it out.
+  Part flags already on either record are kept.
 - Facts the dropped record got from feedback or contributions move to the
   kept record where it has no value for them, with their fact_dates. OSM
   facts do not move: the kept record has its own.
@@ -77,7 +82,12 @@ def osm_links(record: dict) -> set[tuple[str, int]]:
     return links
 
 
-def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None) -> dict:
+def part_links(record: dict) -> set[tuple[str, int]]:
+    """Links in merged_osm marked as a part drawn apart on purpose."""
+    return {(m["type"], m["id"]) for m in record.get("merged_osm", []) if m.get("part")}
+
+
+def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None, part: bool = False) -> dict:
     """Merge drop_id into keep_id. Returns the kept record."""
     root = Path(root)
     now = now or utc_now()
@@ -97,8 +107,13 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None) -> dic
     # OSM links. The kept record's own link is not repeated in merged_osm.
     own = {(kept["osm"]["type"], kept["osm"]["id"])} if kept.get("osm") else set()
     links = (osm_links(kept) | osm_links(dropped)) - own
+    parts = part_links(kept) | part_links(dropped)
+    if part and dropped.get("osm"):
+        parts.add((dropped["osm"]["type"], dropped["osm"]["id"]))
     if links:
-        kept["merged_osm"] = [{"type": t, "id": i} for t, i in sorted(links)]
+        kept["merged_osm"] = [
+            {"type": t, "id": i, **({"part": True} if (t, i) in parts else {})} for t, i in sorted(links)
+        ]
 
     # Facts from feedback and contributions, where the kept record has none.
     for key, source in sorted(dropped.get("fact_sources", {}).items()):
@@ -154,9 +169,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("keep_id")
     parser.add_argument("drop_id")
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
+    parser.add_argument("--part", action="store_true", help="the OSM objects are parts of one place, not double mapping")
     args = parser.parse_args(argv)
     try:
-        kept = merge(args.root, args.keep_id, args.drop_id)
+        kept = merge(args.root, args.keep_id, args.drop_id, part=args.part)
     except MergeError as exc:
         print(f"Not merged: {exc}", file=sys.stderr)
         return 1

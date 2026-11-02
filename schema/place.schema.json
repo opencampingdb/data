@@ -230,7 +230,11 @@
         "required": ["type", "id"],
         "properties": {
           "type": {"enum": ["node", "way", "relation"]},
-          "id": {"type": "integer", "minimum": 1}
+          "id": {"type": "integer", "minimum": 1},
+          "part": {
+            "description": "true when OSM draws this object as a separate part of the same place on purpose, such as one camping area of a larger ground, rather than mapping the place twice.",
+            "const": true
+          }
         }
       }
     },

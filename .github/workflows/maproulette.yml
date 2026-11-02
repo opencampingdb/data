@@ -1,0 +1,64 @@
+name: MapRoulette
+
+# MapRoulette builds its challenges from the files in maproulette/ on main,
+# but only when someone presses Rebuild: it has no API for a workflow to do
+# it. When a merge changes those files, this opens or updates one issue
+# saying which challenges need a rebuild, with a direct link to each. Close
+# the issue once they are rebuilt. See maproulette/README.md.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "maproulette/*.geojson"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: maproulette
+  cancel-in-progress: false
+
+jobs:
+  rebuild-issue:
+    name: Ask for a rebuild
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Open or update the rebuild issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          python3 - "$SHA" > "$RUNNER_TEMP/issue.md" <<'PY'
+          import json, sys
+          from pathlib import Path
+
+          config = json.loads(Path("maproulette/challenges.json").read_text(encoding="utf-8"))
+          project = config["project"]
+          print(f"The MapRoulette files changed on main in {sys.argv[1][:9]}. Rebuild each challenge below so MapRoulette picks up the new tasks:")
+          print()
+          for name, challenge in config["challenges"].items():
+              tasks = sum(1 for line in Path("maproulette", name).read_text(encoding="utf-8").split("\n") if line.strip("\x1e").strip())
+              if project and challenge:
+                  link = f"[open the challenge](https://maproulette.org/admin/project/{project}/challenge/{challenge})"
+              else:
+                  link = "not set up in MapRoulette yet"
+              print(f"- [ ] `maproulette/{name}`: {tasks} task(s), {link}")
+          print()
+          print('In MapRoulette, press "Rebuild Tasks", keep the remote file and tick "Remove unmatched tasks", then rebuild. Close this issue when every box is ticked.')
+          PY
+          title="Rebuild the MapRoulette challenges"
+          number="$(gh issue list --state open --search "in:title \"$title\"" --json number,title --jq "[.[] | select(.title == \"$title\")][0].number // empty")"
+          if [ -z "$number" ]; then
+            gh issue create --title "$title" --body-file "$RUNNER_TEMP/issue.md"
+          else
+            gh issue edit "$number" --body-file "$RUNNER_TEMP/issue.md"
+          fi
