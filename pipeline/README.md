@@ -7,10 +7,11 @@ Run them from the repository root after `python -m pip install -r requirements.t
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `photos/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `photos/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/photos.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Photos | `python -m pipeline.photos --root . [--dry-run]` | `photos/`, `moderation/`, the two photo buckets | the serving bucket holding exactly the visible photos. Run by the Photos workflow |
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/`, `photos/` | the kept record, a tombstone, moved reviews, fees and photos. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --report sync-report.md` | the extract and `places/` | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). See [maproulette/README.md](../maproulette/README.md) |
 
@@ -307,6 +308,35 @@ Fee lines in `fees/<place id>.ndjson` take the same form. The release keeps
 the fees paid in the 24 months before the release time, leaving out fees
 from blocked contributors.
 
+Photo lines in `photos/<place id>.ndjson` take the same form too. A photo on
+`moderation/removed_photos.json` may not have a line. The release leaves out
+hidden photos and photos from blocked contributors.
+
+## Photos
+
+The feedback intake puts each uploaded photo in the private
+`ocdb-photos-pending` bucket as `<id>/full.jpg` and `<id>/thumb.jpg`. The
+apply rules add its line to `photos/` (a contributor's first photo, or a
+file also sent for another place, goes to a person on the review PR). After
+every merge that touches `photos/` or the moderation lists, and once a day,
+the Photos workflow runs `pipeline.photos`, which makes the public
+`ocdb-photos` bucket hold exactly the visible photos:
+
+- a visible photo is copied there from the pending bucket
+- a photo hidden by reports or a person, or from a blocked contributor, is
+  deleted from it, with a copy kept in the pending bucket under `kept/` so it
+  can be shown again
+- a photo on `moderation/removed_photos.json` is deleted from both buckets
+
+To hide a photo, set `"hidden": "moderator"` on its line. To delete one for
+good, take its line out and add its id to `moderation/removed_photos.json`
+with the reason `moderator`. The photo server's edge cache keeps a photo for
+up to 24 hours after it leaves the bucket.
+
+The workflow needs the repository secrets `R2_ACCOUNT_ID`,
+`R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY`: an R2 API token with Object
+Read and Write on both buckets. Without them it does nothing.
+
 ## Duplicates
 
 `pipeline.duplicates` finds pairs of places that are likely the same place.
@@ -369,6 +399,7 @@ place. A person runs it and opens a PR with the result:
   rating is recalculated from its visible reviews.
 - The dropped record's fees move to the kept record. Where one contributor
   has a fee for the same site type at both, only the newer is kept.
+- The dropped record's photos move to the kept record.
 - The dropped record stays as a tombstone: `status: "merged"` and
   `merged_into: <keep_id>`, nothing else changed. Older tombstones that
   pointed at the dropped record now point at the kept one.
@@ -434,7 +465,7 @@ tombstone, sorted by `id`.
 `reviews.ndjson.gz` holds every visible review, grouped by place in id
 order: lines with `hidden` and lines from a contributor in
 `moderation/blocked_contributors.json` stay in the repository and are left
-out. Lines
+out. `photos.ndjson.gz` holds every visible photo the same way. Lines
 use compact JSON with sorted keys. Gzip is written with no file name and a
 zero timestamp.
 

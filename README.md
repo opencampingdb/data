@@ -27,7 +27,7 @@ Start with the manifest:
 https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```
 
-It names its release, a `data_version`, the `format_version` of the records, and for each of the four data files
+It names its release, a `data_version`, the `format_version` of the records, and for each of the five data files
 an absolute `url`, its SHA-256, its size and its record count. Each `url`
 points at the file in that same release, for example:
 
@@ -82,7 +82,13 @@ their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, the reviews
 of a place are at `reviews/<place id>.ndjson`, and the fees travellers paid there are at
-`fees/<place id>.ndjson`.
+`fees/<place id>.ndjson`, and travellers' photos of it are at `photos/<place id>.ndjson`.
+
+Photo records are part of the database. The photo files themselves are not in
+this repository: each one is the work of the traveller who took it, licensed
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and served
+by the Open Camping DB photo server to apps with a key (see
+[CONNECTING.md](CONNECTING.md) section 4).
 
 ## Licence
 
