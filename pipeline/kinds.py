@@ -108,8 +108,47 @@ def is_farm_stay(tags: dict) -> bool:
     return bool(FARM_STAY.search(name)) and not FARM_NOT_STAY.search(name)
 
 
-def _fee(tags: dict) -> bool | None:
-    return parse_fee(tags.get("fee", ""))
+# A holiday park, tourist park, caravan park or resort names itself so, or
+# says so in its website's domain. fee=no on one is a mapping slip (Lane Cove
+# River Tourist Park, a paid park, carries it), unless its name says the place
+# is free ("Barbour Park Free Caravan Park"). Only the website's domain is
+# read: council pages file free camps under paths like /Caravan-Parks-and-Campgrounds/.
+COMMERCIAL_PARK = re.compile(
+    r"\b(holiday|tourist|caravan)[\s-]?(park|village)s?\b|\bresorts?\b", re.IGNORECASE
+)
+COMMERCIAL_PARK_DOMAIN = re.compile(r"(holiday|tourist|caravan)(park|village)|resort", re.IGNORECASE)
+FREE_IN_NAME = re.compile(r"\bfree", re.IGNORECASE)
+
+
+def _website_domain(tags: dict) -> str:
+    for key in ("website", "contact:website"):
+        if key in tags:
+            url = tags[key].split(";")[0].strip().lower()
+            return re.sub(r"^https?://", "", url).split("/")[0]
+    return ""
+
+
+def is_commercial_park(tags: dict) -> bool:
+    """Whether a place's name or website domain says it is a holiday, tourist or caravan park or a resort."""
+    name = tags.get("name") or ""
+    if FREE_IN_NAME.search(name):
+        return False
+    return bool(COMMERCIAL_PARK.search(name) or COMMERCIAL_PARK_DOMAIN.search(_website_domain(tags)))
+
+
+def osm_fee(tags: dict) -> bool | None:
+    """The fee an object's tags state: parse_fee, except that fee=no on a camp or
+    caravan site that is a commercial park is not known. A toilet block in a
+    tourist park can be free, so other objects keep fee=no.
+    """
+    fee = parse_fee(tags.get("fee", ""))
+    if (
+        fee is False
+        and tags.get("tourism") in ("camp_site", "caravan_site")
+        and is_commercial_park(tags)
+    ):
+        return None
+    return fee
 
 
 def container_type(tags: dict) -> str | None:
@@ -164,7 +203,7 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
             return "showground"
         if is_farm_stay(tags):
             return "farm_stay"
-        fee = _fee(tags)
+        fee = osm_fee(tags)
         if fee is False:
             return "free_camp"
         if fee is True:
@@ -175,7 +214,7 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
     if tourism == "caravan_site":
         if is_farm_stay(tags):
             return "farm_stay"
-        return "free_camp" if _fee(tags) is False else "caravan_park"
+        return "free_camp" if osm_fee(tags) is False else "caravan_park"
 
     # 3. Utility.
     if tags.get("highway") == "rest_area":
