@@ -1,4 +1,4 @@
-"""Check every place and review file in the repository.
+"""Check every place, review and fee file in the repository.
 
 Usage:
     python -m pipeline.validate --root .
@@ -6,7 +6,8 @@ Usage:
 Exits 0 when everything is valid. Otherwise prints one line per problem and
 exits 1. Checks:
 - every place file against schema/place.schema.json, every review line
-  against schema/review.schema.json (no key outside the schema is allowed)
+  against schema/review.schema.json and every fee line against
+  schema/fee.schema.json (no key outside the schema is allowed)
 - place files are in canonical form (sorted keys, 2-space indent, trailing
   newline) and sit at places/<last 2 characters of id, lower case>/<id>.json
 - kind is one of schema/kinds.json and group is that kind's group
@@ -20,10 +21,18 @@ exits 1. Checks:
 - no two records share an id or an OSM object (merged_osm included,
   tombstones left out)
 - a tombstone (status merged) has merged_into, naming a record that is not
-  itself merged, and has no reviews. No other record has merged_into
+  itself merged, and has no reviews or fees. No other record has merged_into
 - review lines are compact JSON with sorted keys, sorted by id
 - reviews belong to a place that exists, have unique ids, and the place's
-  rating has the right count and the mean rounded to 1 decimal place, half up
+  rating has the right count and the mean rounded to 1 decimal place, half up,
+  counting only visible reviews (not hidden, not from a blocked contributor)
+- fee lines are compact JSON with sorted keys, sorted by id, with unique
+  ids, an amount with at most 2 decimal places, and belong to a place that
+  exists
+- moderation/blocked_contributors.json matches its schema, sorted by
+  contributor, each contributor once
+- moderation/distinct_places.json matches its schema, each pair once with a
+  before b, sorted, naming places that exist
 - values with the source owner need owner_verified true. A farm_stay has
   osm null, entry private, booking_required true, and a booking_url or a
   phone. A description is checked like review text. reopens is a real date
@@ -47,7 +56,12 @@ from .common import (
     dump_line,
     dump_record,
     iter_place_files,
+    blocked_path,
+    distinct_path,
+    is_visible,
+    iter_fee_files,
     iter_review_files,
+    load_blocked,
     place_path,
     rating_mean,
     utc_now,
@@ -259,10 +273,71 @@ def check_places(root: Path, now: str) -> tuple[dict[str, dict], list[str]]:
     return places, errors
 
 
+def check_blocked(root: Path) -> list[str]:
+    """Problems with moderation/blocked_contributors.json. A missing file is fine."""
+    path = blocked_path(root)
+    where = "moderation/blocked_contributors.json"
+    errors = [
+        f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
+        for p in sorted((root / "moderation").rglob("*"))
+        if p.is_file() and p not in (path, distinct_path(root))
+    ]
+    if not path.exists():
+        return errors
+    try:
+        text = path.read_bytes().decode("utf-8")
+        blocked = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return errors + [f"{where}: not valid UTF-8 JSON: {exc}"]
+    schema = schema_errors(load_validator("blocked_contributors.schema.json"), blocked, where)
+    if schema:
+        return errors + schema
+    if text != dump_record(blocked):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    ids = [entry["contributor"] for entry in blocked["contributors"]]
+    if ids != sorted(ids):
+        errors.append(f"{where}: contributors must be sorted by contributor")
+    if len(ids) != len(set(ids)):
+        errors.append(f"{where}: a contributor is listed twice")
+    return errors
+
+
+def check_distinct(root: Path, places: dict[str, dict]) -> list[str]:
+    """Problems with moderation/distinct_places.json. A missing file is fine."""
+    path = distinct_path(root)
+    where = "moderation/distinct_places.json"
+    if not path.exists():
+        return []
+    try:
+        text = path.read_bytes().decode("utf-8")
+        distinct = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return [f"{where}: not valid UTF-8 JSON: {exc}"]
+    schema = schema_errors(load_validator("distinct_places.schema.json"), distinct, where)
+    if schema:
+        return schema
+    errors = []
+    if text != dump_record(distinct):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    pairs = [(entry["a"], entry["b"]) for entry in distinct["pairs"]]
+    if pairs != sorted(pairs):
+        errors.append(f"{where}: pairs must be sorted by a, then b")
+    if len(pairs) != len(set(pairs)):
+        errors.append(f"{where}: a pair is listed twice")
+    for a, b in pairs:
+        if a >= b:
+            errors.append(f"{where}: {a} and {b}: a must sort before b")
+        for place_id in (a, b):
+            if place_id not in places:
+                errors.append(f"{where}: {place_id} is not a place")
+    return errors
+
+
 def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
     validator = load_validator("review.schema.json")
     errors: list[str] = []
     seen_ids: set[str] = set()
+    blocked = load_blocked(root) if not check_blocked(root) else set()
     stars_by_place: dict[str, list[int]] = {}
 
     for path in sorted((root / "reviews").rglob("*")):
@@ -305,29 +380,82 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
             seen_ids.add(review["id"])
             for reason in text_problems(review["text"]):
                 errors.append(f"{here}: text contains {reason}")
-            stars_by_place.setdefault(place_id, []).append(review["stars"])
+            if is_visible(review, blocked):
+                stars_by_place.setdefault(place_id, []).append(review["stars"])
 
-    # The rating on each place must agree with its reviews. A tombstone keeps
+    reviewed = {path.stem for path in iter_review_files(root)}
+    # The rating on each place must agree with its visible reviews. A tombstone keeps
     # the rating it had, but its reviews have moved, so it may have none.
     for place_id, record in places.items():
         stars = stars_by_place.get(place_id, [])
         rating = record.get("rating")
         if record.get("status") == "merged":
-            if stars:
+            if place_id in reviewed:
                 errors.append(f"{place_id}: is merged, its reviews belong to {record.get('merged_into')}")
             continue
         if not stars:
             if rating is not None:
-                errors.append(f"{place_id}: rating is set but the place has no reviews")
+                errors.append(f"{place_id}: rating is set but the place has no visible reviews")
             continue
         if rating is None:
-            errors.append(f"{place_id}: has {len(stars)} reviews but rating is null")
+            errors.append(f"{place_id}: has {len(stars)} visible reviews but rating is null")
             continue
         expected = {"count": len(stars), "mean": rating_mean(stars)}
         if rating != expected:
             errors.append(
                 f"{place_id}: rating {rating} does not match its reviews, expected {expected}"
             )
+    return errors
+
+
+def check_fees(root: Path, places: dict[str, dict]) -> list[str]:
+    validator = load_validator("fee.schema.json")
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+
+    for path in sorted((root / "fees").rglob("*")):
+        if path.is_file() and path.suffix != ".ndjson" and path.name != ".gitkeep":
+            errors.append(f"{path.relative_to(root).as_posix()}: unexpected file in fees/")
+
+    for path in iter_fee_files(root):
+        where = f"fees/{path.name}"
+        place_id = path.stem
+        record = places.get(place_id)
+        if record is None:
+            errors.append(f"{where}: no such place {place_id}")
+        elif record.get("status") == "merged":
+            errors.append(f"{where}: {place_id} is merged, its fees belong to {record.get('merged_into')}")
+        raw = path.read_bytes()
+        if b"\r" in raw:
+            errors.append(f"{where}: use LF line endings")
+        if raw and not raw.endswith(b"\n"):
+            errors.append(f"{where}: missing trailing newline")
+        previous_id = None
+        for number, line in enumerate(raw.decode("utf-8", errors="replace").split("\n"), 1):
+            if not line.strip():
+                continue
+            here = f"{where} line {number}"
+            try:
+                fee = json.loads(line)
+            except json.JSONDecodeError as exc:
+                errors.append(f"{here}: not valid JSON: {exc}")
+                continue
+            line_errors = schema_errors(validator, fee, here)
+            errors += line_errors
+            if line_errors or not isinstance(fee, dict):
+                continue
+            if line != dump_line(fee):
+                errors.append(f"{here}: not in canonical form (compact JSON, sorted keys)")
+            if previous_id is not None and fee["id"] <= previous_id:
+                errors.append(f"{here}: lines must be sorted by id")
+            previous_id = fee["id"]
+            if fee["place"] != place_id:
+                errors.append(f"{here}: place {fee['place']} does not match file name")
+            if fee["id"] in seen_ids:
+                errors.append(f"{here}: fee id {fee['id']} used twice")
+            seen_ids.add(fee["id"])
+            if isinstance(fee["amount"], bool) or abs(round(fee["amount"] * 100) - fee["amount"] * 100) > 1e-6:
+                errors.append(f"{here}: amount {fee['amount']} has more than 2 decimal places")
     return errors
 
 
@@ -338,7 +466,10 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     """
     root = Path(root)
     places, errors = check_places(root, now or utc_now())
+    errors += check_blocked(root)
+    errors += check_distinct(root, places)
     errors += check_reviews(root, places)
+    errors += check_fees(root, places)
     return errors
 
 
@@ -353,7 +484,7 @@ def main(argv: list[str] | None = None) -> int:
     if errors:
         print(f"{len(errors)} problem(s) found", file=sys.stderr)
         return 1
-    print("All place and review files are valid", file=sys.stderr)
+    print("All place, review and fee files are valid", file=sys.stderr)
     return 0
 
 

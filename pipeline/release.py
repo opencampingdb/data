@@ -1,4 +1,5 @@
-"""Build the release files: places.ndjson.gz, reviews.ndjson.gz and manifest.json.
+"""Build the release files: places.ndjson.gz, reviews.ndjson.gz, fees.ndjson.gz,
+merged.ndjson.gz and manifest.json.
 
 Usage:
     python -m pipeline.release --root . --out dist [--repository opencampingdb/data]
@@ -23,12 +24,27 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .common import ATTRIBUTION, LICENCE, dump_line, iter_review_files, load_places, write_text
+from .common import (
+    ATTRIBUTION,
+    LICENCE,
+    dump_line,
+    is_visible,
+    iter_fee_files,
+    iter_review_files,
+    load_blocked,
+    load_places,
+    write_text,
+)
 
 # 1: the first record format. 2: kinds are the OTWD vocabulary and records
 # carry a group. 3: osm.timestamp and fact_dates say how fresh a place is.
 # 4: last_confirmed, when a traveller last found the place there.
-FORMAT_VERSION = 4
+# 5: reviews carry contributor and visited_nearby, and hidden reviews and
+# reviews from blocked contributors are left out.
+# 6: fees.ndjson.gz, what travellers paid per night in the last 24 months.
+FORMAT_VERSION = 6
+# Fees paid more than this many months before the release are left out.
+FEE_MONTHS = 24
 DEFAULT_REPOSITORY = "opencampingdb/data"
 
 
@@ -72,13 +88,43 @@ def merged_ndjson(root: Path) -> tuple[bytes, int]:
 
 
 def reviews_ndjson(root: Path) -> tuple[bytes, int]:
-    """Every review, grouped by place in id order, each file's lines in their id order."""
+    """Every visible review, grouped by place in id order, each file's lines in their id order.
+
+    Hidden reviews and reviews from blocked contributors are left out.
+    """
+    blocked = load_blocked(root)
     lines = []
     for path in iter_review_files(root):
         with open(path, encoding="utf-8") as f:
             for line in f:
                 if line.strip():
-                    lines.append(dump_line(json.loads(line)) + "\n")
+                    review = json.loads(line)
+                    if is_visible(review, blocked):
+                        lines.append(dump_line(review) + "\n")
+    return "".join(lines).encode("utf-8"), len(lines)
+
+
+def month_index(year_month: str) -> int:
+    """Months since year 0 of a YYYY-MM value (or the start of an ISO date)."""
+    return int(year_month[:4]) * 12 + int(year_month[5:7]) - 1
+
+
+def fees_ndjson(root: Path, generated: str) -> tuple[bytes, int]:
+    """Every fee paid within FEE_MONTHS months of the release time, grouped by
+    place in id order, each file's lines in their id order.
+
+    Fees from blocked contributors are left out.
+    """
+    blocked = load_blocked(root)
+    earliest = month_index(generated) - FEE_MONTHS
+    lines = []
+    for path in iter_fee_files(root):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    fee = json.loads(line)
+                    if month_index(fee["paid"]) >= earliest and fee.get("contributor") not in blocked:
+                        lines.append(dump_line(fee) + "\n")
     return "".join(lines).encode("utf-8"), len(lines)
 
 
@@ -103,7 +149,7 @@ def build_release(
     release: str | None = None,
     repository: str = DEFAULT_REPOSITORY,
 ) -> dict:
-    """Write the three release files into out_dir and return the manifest.
+    """Write the four data files and manifest.json into out_dir and return the manifest.
 
     release defaults to data-<timestamp> taken from data_version.
     """
@@ -113,6 +159,7 @@ def build_release(
 
     places_raw, places_count = places_ndjson(root)
     reviews_raw, reviews_count = reviews_ndjson(root)
+    fees_raw, fees_count = fees_ndjson(root, generated)
     merged_raw, merged_count = merged_ndjson(root)
 
     manifest = {
@@ -127,6 +174,10 @@ def build_release(
         "reviews": write_asset(
             out_dir, "reviews.ndjson.gz", reviews_raw, reviews_count,
             asset_url(repository, release, "reviews.ndjson.gz"),
+        ),
+        "fees": write_asset(
+            out_dir, "fees.ndjson.gz", fees_raw, fees_count,
+            asset_url(repository, release, "fees.ndjson.gz"),
         ),
         "merged": write_asset(
             out_dir, "merged.ndjson.gz", merged_raw, merged_count,
