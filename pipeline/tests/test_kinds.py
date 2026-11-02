@@ -77,6 +77,17 @@ CAMP = {"tourism": "camp_site"}
             set(),
             "caravan_park",
         ),
+        # A park chain's name or domain says so too.
+        ({"tourism": "caravan_site", "name": "Discovery Parks - Lane Cove", "fee": "no"}, set(), "caravan_park"),
+        ({"tourism": "caravan_site", "name": "BIG4 Bright Holiday Park", "fee": "no"}, set(), "caravan_park"),
+        ({"tourism": "caravan_site", "name": "NRMA Parks Ocean Beach", "fee": "no"}, set(), "caravan_park"),
+        (
+            {"tourism": "caravan_site", "name": "Lane Cove", "fee": "no",
+             "website": "https://www.discoveryholidayparks.com.au/caravan-parks/new-south-wales/sydney/lane-cove"},
+            set(),
+            "caravan_park",
+        ),
+        ({"tourism": "caravan_site", "name": "Gday Rest Stop", "fee": "no"}, set(), "free_camp"),
         # Unless the name says it is free, or only a website path mentions parks.
         ({"tourism": "caravan_site", "name": "Barbour Park Free Caravan Park", "fee": "no"}, set(), "free_camp"),
         ({"tourism": "caravan_site", "name": "free caravan park", "fee": "no"}, set(), "free_camp"),

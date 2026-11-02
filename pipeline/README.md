@@ -194,7 +194,9 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 
 A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
 name says holiday park, tourist park, caravan park, holiday village, caravan
-village or resort, or whose website's domain does (`lighthousebeachholidayvillage.com.au`).
+village or resort, or names a park chain (Discovery Parks, BIG4, NRMA Parks,
+Ingenia Holidays, G'day Parks), or whose website's domain does
+(`lighthousebeachholidayvillage.com.au`, `discoveryholidayparks.com.au`).
 `fee=no` on one is taken as a mapping slip and the `fee` fact is left out, so
 the place is not a `free_camp` (rules 1d and 2a). A name that says free
 ("Barbour Park Free Caravan Park") keeps `fee=no`. Only the website's domain
