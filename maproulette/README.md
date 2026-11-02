@@ -14,7 +14,9 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 
 1. **The sync PR.** Each night's OSM sync PR lists, under "MapRoulette", the tasks each file gains and loses. Merging the PR approves them. Small syncs merge on their own, which is fine: every task comes from a change already approved, a merge a person made or feedback the apply rules accepted.
 2. **The rebuild issue.** When a merge changes the files on main, the MapRoulette workflow opens an issue called "Rebuild the MapRoulette challenges" with a link to each challenge. MapRoulette has no API for a workflow to rebuild, so a person presses the button.
-3. **Rebuild.** Sign in to MapRoulette with your OSM account, open the link, press **Rebuild Tasks**, keep the remote file and choose to remove unmatched tasks. Tick the box in the issue, and close it when both are done.
+3. **Rebuild.** Sign in to MapRoulette with your OSM account, open the link, press **Rebuild Tasks**, tick **First remove incomplete tasks** and press **Proceed**. That removes the tasks nobody has finished and builds them again from the file, so a task that left the file goes. Finished tasks, "Not an Issue" among them, stay. Tick the box in the issue, and close it when every box is ticked.
+
+   A file with no tasks can't be built, so the issue ticks it for you. Tasks already in that challenge stay until the file has tasks again.
 
 Anyone who is an admin of the MapRoulette project can rebuild. Add people under the project's **Manage** page.
 
@@ -49,4 +51,4 @@ Open Camping DB record: {{record}}
 Please check before editing. If you cannot confirm a report, skip the task. Open Camping DB does not edit OpenStreetMap itself.
 ```
 
-After creating a challenge, put its id in `challenges.json`, along with the project id.
+After creating a challenge, put its id in `challenges.json`, along with the project id. The project is "Open Camping DB" (66368). Its challenges are "Camp sites mapped twice" (57405) and "What travellers report" (57406). Both stay out of MapRoulette's listings until the project is made discoverable.
