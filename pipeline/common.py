@@ -144,6 +144,24 @@ def load_blocked(root: Path) -> set[str]:
     return {entry["contributor"] for entry in entries if isinstance(entry, dict) and "contributor" in entry}
 
 
+def distinct_path(root: Path) -> Path:
+    """Pairs a person checked and found to be separate places: moderation/distinct_places.json."""
+    return Path(root) / "moderation" / "distinct_places.json"
+
+
+def load_distinct(root: Path) -> set[frozenset[str]]:
+    """Place id pairs on the distinct list. Empty when the file is missing."""
+    path = distinct_path(root)
+    if not path.exists():
+        return set()
+    entries = json.loads(path.read_text(encoding="utf-8")).get("pairs", [])
+    return {
+        frozenset((entry["a"], entry["b"]))
+        for entry in entries
+        if isinstance(entry, dict) and "a" in entry and "b" in entry
+    }
+
+
 def is_visible(review: dict, blocked: set[str]) -> bool:
     """Whether a review is published and counts in the rating.
 
