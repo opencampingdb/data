@@ -1,4 +1,4 @@
-"""Check every place and review file in the repository.
+"""Check every place, review and fee file in the repository.
 
 Usage:
     python -m pipeline.validate --root .
@@ -6,7 +6,8 @@ Usage:
 Exits 0 when everything is valid. Otherwise prints one line per problem and
 exits 1. Checks:
 - every place file against schema/place.schema.json, every review line
-  against schema/review.schema.json (no key outside the schema is allowed)
+  against schema/review.schema.json and every fee line against
+  schema/fee.schema.json (no key outside the schema is allowed)
 - place files are in canonical form (sorted keys, 2-space indent, trailing
   newline) and sit at places/<last 2 characters of id, lower case>/<id>.json
 - kind is one of schema/kinds.json and group is that kind's group
@@ -20,11 +21,14 @@ exits 1. Checks:
 - no two records share an id or an OSM object (merged_osm included,
   tombstones left out)
 - a tombstone (status merged) has merged_into, naming a record that is not
-  itself merged, and has no reviews. No other record has merged_into
+  itself merged, and has no reviews or fees. No other record has merged_into
 - review lines are compact JSON with sorted keys, sorted by id
 - reviews belong to a place that exists, have unique ids, and the place's
   rating has the right count and the mean rounded to 1 decimal place, half up,
   counting only visible reviews (not hidden, not from a blocked contributor)
+- fee lines are compact JSON with sorted keys, sorted by id, with unique
+  ids, an amount with at most 2 decimal places, and belong to a place that
+  exists
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once
 - moderation/distinct_places.json matches its schema, each pair once with a
@@ -55,6 +59,7 @@ from .common import (
     blocked_path,
     distinct_path,
     is_visible,
+    iter_fee_files,
     iter_review_files,
     load_blocked,
     place_path,
@@ -403,6 +408,57 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
     return errors
 
 
+def check_fees(root: Path, places: dict[str, dict]) -> list[str]:
+    validator = load_validator("fee.schema.json")
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+
+    for path in sorted((root / "fees").rglob("*")):
+        if path.is_file() and path.suffix != ".ndjson" and path.name != ".gitkeep":
+            errors.append(f"{path.relative_to(root).as_posix()}: unexpected file in fees/")
+
+    for path in iter_fee_files(root):
+        where = f"fees/{path.name}"
+        place_id = path.stem
+        record = places.get(place_id)
+        if record is None:
+            errors.append(f"{where}: no such place {place_id}")
+        elif record.get("status") == "merged":
+            errors.append(f"{where}: {place_id} is merged, its fees belong to {record.get('merged_into')}")
+        raw = path.read_bytes()
+        if b"\r" in raw:
+            errors.append(f"{where}: use LF line endings")
+        if raw and not raw.endswith(b"\n"):
+            errors.append(f"{where}: missing trailing newline")
+        previous_id = None
+        for number, line in enumerate(raw.decode("utf-8", errors="replace").split("\n"), 1):
+            if not line.strip():
+                continue
+            here = f"{where} line {number}"
+            try:
+                fee = json.loads(line)
+            except json.JSONDecodeError as exc:
+                errors.append(f"{here}: not valid JSON: {exc}")
+                continue
+            line_errors = schema_errors(validator, fee, here)
+            errors += line_errors
+            if line_errors or not isinstance(fee, dict):
+                continue
+            if line != dump_line(fee):
+                errors.append(f"{here}: not in canonical form (compact JSON, sorted keys)")
+            if previous_id is not None and fee["id"] <= previous_id:
+                errors.append(f"{here}: lines must be sorted by id")
+            previous_id = fee["id"]
+            if fee["place"] != place_id:
+                errors.append(f"{here}: place {fee['place']} does not match file name")
+            if fee["id"] in seen_ids:
+                errors.append(f"{here}: fee id {fee['id']} used twice")
+            seen_ids.add(fee["id"])
+            if isinstance(fee["amount"], bool) or abs(round(fee["amount"] * 100) - fee["amount"] * 100) > 1e-6:
+                errors.append(f"{here}: amount {fee['amount']} has more than 2 decimal places")
+    return errors
+
+
 def validate_repo(root: Path, now: str | None = None) -> list[str]:
     """Every problem found in the repository, as readable lines. Empty means valid.
 
@@ -413,6 +469,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     errors += check_blocked(root)
     errors += check_distinct(root, places)
     errors += check_reviews(root, places)
+    errors += check_fees(root, places)
     return errors
 
 
@@ -427,7 +484,7 @@ def main(argv: list[str] | None = None) -> int:
     if errors:
         print(f"{len(errors)} problem(s) found", file=sys.stderr)
         return 1
-    print("All place and review files are valid", file=sys.stderr)
+    print("All place, review and fee files are valid", file=sys.stderr)
     return 0
 
 

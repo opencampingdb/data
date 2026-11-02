@@ -80,6 +80,11 @@ def review_path(root: Path, place_id: str) -> Path:
     return Path(root) / "reviews" / f"{place_id}.ndjson"
 
 
+def fee_path(root: Path, place_id: str) -> Path:
+    """Where the fees reported for one place live: fees/<place id>.ndjson."""
+    return Path(root) / "fees" / f"{place_id}.ndjson"
+
+
 def dump_record(record: dict) -> str:
     """Canonical text of a place record file.
 
@@ -90,7 +95,7 @@ def dump_record(record: dict) -> str:
 
 
 def dump_line(obj: dict) -> str:
-    """Canonical one-line JSON (review lines, NDJSON output), without the newline.
+    """Canonical one-line JSON (review and fee lines, NDJSON output), without the newline.
 
     Compact, sorted keys, UTF-8 characters as they are.
     """
@@ -118,6 +123,11 @@ def iter_place_files(root: Path):
 def iter_review_files(root: Path):
     """Every review file, in sorted path order."""
     return sorted((Path(root) / "reviews").glob("*.ndjson"))
+
+
+def iter_fee_files(root: Path):
+    """Every fee file, in sorted path order."""
+    return sorted((Path(root) / "fees").glob("*.ndjson"))
 
 
 def blocked_path(root: Path) -> Path:
