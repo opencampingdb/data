@@ -42,7 +42,7 @@ from .common import (
 # 5: reviews carry contributor and visited_nearby, and hidden reviews and
 # reviews from blocked contributors are left out.
 # 6: fees.ndjson.gz, what travellers paid per night in the last 24 months.
-FORMAT_VERSION = 6
+FORMAT_VERSION = 7
 # Fees paid more than this many months before the release are left out.
 FEE_MONTHS = 24
 DEFAULT_REPOSITORY = "opencampingdb/data"
