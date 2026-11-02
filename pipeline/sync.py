@@ -214,13 +214,16 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     """
     fresh = copy.deepcopy(record)
     old_sources = record.get("fact_sources", {})
-    fresh["kind"] = place["kind"]
-    fresh["group"] = KIND_GROUP[place["kind"]]
+    # A kind set by feedback, a contribution or the owner wins over OSM's.
+    if old_sources.get("kind", "osm") == "osm":
+        fresh["kind"] = place["kind"]
+        fresh["group"] = KIND_GROUP[place["kind"]]
     fresh["osm"] = refreshed_osm(record.get("osm"), place["osm"])
     fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"])
-    # Source entries for name, location and status are carried over as they
-    # were. name and location follow OSM unless their source is something
-    # else (feedback or contributed). status never comes from OSM.
+    # Source entries for name, location, kind and status are carried over as
+    # they were. name, location and kind follow OSM unless their source is
+    # something else (feedback, contributed or owner). status never comes
+    # from OSM.
     for key in EXTRA_SOURCE_KEYS:
         if key in old_sources:
             fresh["fact_sources"][key] = old_sources[key]

@@ -78,10 +78,10 @@ def test_unknown_key_in_place_is_refused(synced):
 
 def test_unknown_fact_is_refused(synced):
     path, rec = first_place(synced)
-    rec["facts"]["wifi"] = True
-    rec["fact_sources"]["wifi"] = "osm"
+    rec["facts"]["hot_tub"] = True
+    rec["fact_sources"]["hot_tub"] = "osm"
     write_place(path, rec)
-    assert any("wifi" in e for e in validate_repo(synced))
+    assert any("hot_tub" in e for e in validate_repo(synced))
 
 
 def test_fact_without_source_is_refused(synced):

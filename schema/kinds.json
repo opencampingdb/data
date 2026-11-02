@@ -166,6 +166,55 @@
       "group": "overnight",
       "origin": "ocdb",
       "note": "A station or farm stay: an OSM camp or caravan site named as one, or private land listed by its owner, who must be booked first. Open Camping DB extension."
+    },
+    {
+      "code": "backpacker_hostel",
+      "label": "Backpacker hostel",
+      "group": "overnight",
+      "origin": "ocdb",
+      "note": "A hostel with shared rooms or dorms (OSM tourism=hostel). Open Camping DB extension."
+    },
+    {
+      "code": "roofed_accommodation",
+      "label": "Roofed accommodation",
+      "group": "overnight",
+      "origin": "ocdb",
+      "note": "Cabins, motels and chalets that are not part of a campground (OSM tourism=motel or tourism=chalet). Hotels and guest houses are left out. Open Camping DB extension."
+    },
+    {
+      "code": "long_vehicle_parking",
+      "label": "Long vehicle parking",
+      "group": "utility",
+      "origin": "ocdb",
+      "note": "Parking marked for motorhomes, caravans or heavy vehicles (OSM amenity=parking with motorhome, caravan or hgv=designated). Open Camping DB extension."
+    },
+    {
+      "code": "food_and_drink",
+      "label": "Food and drink",
+      "group": "services",
+      "origin": "ocdb",
+      "note": "A pub (OSM amenity=pub), or a cafe, bakery or restaurant listed by travellers or its owner. OSM cafes and restaurants are left out: there are too many. Open Camping DB extension."
+    },
+    {
+      "code": "recreation_area",
+      "label": "Recreation area",
+      "group": "attraction",
+      "origin": "ocdb",
+      "note": "An outdoor area for day use only, with no overnight stays. Listed by travellers or its owner. Open Camping DB extension."
+    },
+    {
+      "code": "heritage",
+      "label": "Arts, history and culture",
+      "group": "attraction",
+      "origin": "ocdb",
+      "note": "A museum, gallery or heritage site (OSM tourism=museum or tourism=gallery). Open Camping DB extension."
+    },
+    {
+      "code": "experience",
+      "label": "Experience",
+      "group": "attraction",
+      "origin": "ocdb",
+      "note": "A paid tour, tasting or activity, listed by travellers or its owner. Open Camping DB extension."
     }
   ]
 }

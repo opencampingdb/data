@@ -109,7 +109,10 @@ toilet.
 | 1f | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
 | 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles. Not for a commercial park (see "Facts") |
 | 2b | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
+| 2c | `tourism=hostel` | `backpacker_hostel` | | Open Camping DB extension |
+| 2d | `tourism=motel` or `tourism=chalet` | `roofed_accommodation` | | Open Camping DB extension. `tourism=hotel` and `guest_house` are left out: there are too many, and a park's cabins are the `cabins` fact |
 | 3 | `highway=rest_area` | `rest_area` | exact | |
+| 3a | `amenity=parking` + `motorhome`, `caravan` or `hgv=designated` | `long_vehicle_parking` | | Open Camping DB extension. Other car parks are left out |
 | 4 | `amenity=sanitary_dump_station` | `dump_point` | exact | |
 | 5 | `amenity=water_point` or `amenity=drinking_water` | `drinking_water_point` | exact, narrower | Fact `water_type`: `tank_fill` for water_point, `fountain` for drinking_water |
 | 6 | `amenity=toilets` | `public_toilet` | exact | |
@@ -120,12 +123,14 @@ toilet.
 | 11 | `amenity=fuel` | `fuel` | exact | |
 | 12 | `shop=gas` | `lpg_refill_swap` | exact | |
 | 13 | `shop=car_repair` | `mechanic` | exact | |
+| 13a | `amenity=pub` | `food_and_drink` | | Open Camping DB extension. Cafes and restaurants are left out: there are too many |
 | 14 | `tourism=information` + `information=office` or `visitor_centre` | `information_centre` | exact, related | Other information values (boards, maps, guideposts) are left out |
 | 15 | `tourism=viewpoint` | `lookout` | exact | |
 | 16 | `leisure=swimming_area` or `leisure=bathing_place` | `swimming_spot` | narrower | |
 | 17 | `leisure=swimming_pool` + `access=yes` or `access=public` | `swimming_spot` | related | Public pools only. Pools without public access are left out |
 | 18 | `leisure=slipway` | `boat_ramp` | exact | An open way is placed at its middle vertex |
 | 19 | `tourism=picnic_site` | `picnic_site` | | Open Camping DB extension |
+| 19a | `tourism=museum` or `tourism=gallery` | `heritage` | | Open Camping DB extension |
 | 20 | `tourism=attraction` | `attraction` | exact | Last, because OTWD uses it only when no more specific type fits. An open way is placed at its middle vertex |
 
 OTWD mappings not used, and why:
@@ -175,7 +180,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 
 | OSM tag | Fact | Mapping |
 |---|---|---|
-| `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. Others, such as `donation`, are left out. `fee=no` on a commercial park is left out too (see below). |
+| `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. `donation` is `"donation"`. Others are left out. `fee=no` on a commercial park is left out too (see below). |
 | `power_supply` | `power` | `yes` is `true`, `no` is `false` |
 | `dog` | `pets` | `yes`, `leashed` or `no`, copied as is |
 | `tents` | `tents` | `yes` / `no` |
@@ -184,6 +189,21 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `shower` | `showers` | `yes`, `hot` or `cold` is `true`, `no` is `false` |
 | `drinking_water` | `drinking_water` | `yes` / `no` |
 | `sanitary_dump_station` | `dump_station` | `yes` / `no` |
+| `wheelchair` | `wheelchair` | `yes` / `no`. `limited` is left out |
+| `motorhome` | `motorhomes` | `yes` / `no` |
+| `washing_machine` | `laundry` | `yes` / `no` |
+| `kitchen` | `kitchen` | `yes` / `no` |
+| `bbq` | `bbq` | `yes` / `no` |
+| `picnic_table` | `picnic_tables` | `yes` / `no` |
+| `openfire` | `campfires` | `yes` / `no` |
+| `cabins` | `cabins` | `yes` / `no` |
+| `playground` | `playground` | `yes` / `no` |
+| `internet_access` | `wifi` | `wlan`, `wifi` or `yes` is `true`, `no` is `false` |
+| `nudism` | `nudist` | `yes`, `designated` or `customary` is `true`, `no` is `false` |
+| `min_age` | `over_50s` | `50`, `55` or `60` is `true`. No other value is written |
+| `brand` | `brand` | A park chain or club we list (BIG4 is `big4`, Discovery Parks is `discovery`, and so on: `BRANDS` in `pipeline/kinds.py`). Other brands are left out |
+| `email`, then `contact:email` | `email` | kept only if it looks like an email address |
+| `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` (then the bare keys) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://`. A bare handle is left out |
 | `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written. |
 | `opening_hours` | `opening_hours` | copied as is |
 | `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
@@ -195,7 +215,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
 name says holiday park, tourist park, caravan park, holiday village, caravan
 village or resort, or names a park chain (Discovery Parks, BIG4, NRMA Parks,
-Ingenia Holidays, G'day Parks), or whose website's domain does
+Ingenia Holidays, G'day Parks), or whose `brand` is a park chain, or whose website's domain does
 (`lighthousebeachholidayvillage.com.au`, `discoveryholidayparks.com.au`).
 `fee=no` on one is taken as a mapping slip and the `fee` fact is left out, so
 the place is not a `free_camp` (rules 1d and 2a). A name that says free
