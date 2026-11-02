@@ -108,15 +108,21 @@ def is_farm_stay(tags: dict) -> bool:
     return bool(FARM_STAY.search(name)) and not FARM_NOT_STAY.search(name)
 
 
-# A holiday park, tourist park, caravan park or resort names itself so, or
-# says so in its website's domain. fee=no on one is a mapping slip (Lane Cove
+# A holiday park, tourist park, caravan park or resort names itself so, or by
+# its chain (Discovery Parks, BIG4, NRMA Parks, Ingenia Holidays, G'day Parks),
+# or says so in its website's domain. fee=no on one is a mapping slip (Lane Cove
 # River Tourist Park, a paid park, carries it), unless its name says the place
 # is free ("Barbour Park Free Caravan Park"). Only the website's domain is
 # read: council pages file free camps under paths like /Caravan-Parks-and-Campgrounds/.
 COMMERCIAL_PARK = re.compile(
-    r"\b(holiday|tourist|caravan)[\s-]?(park|village)s?\b|\bresorts?\b", re.IGNORECASE
+    r"\b(holiday|tourist|caravan)[\s-]?(park|village)s?\b|\bresorts?\b|"
+    r"\bdiscovery parks?\b|\bbig ?4\b|\bnrma parks?\b|\bingenia holidays\b|\bg'?day parks?\b",
+    re.IGNORECASE,
 )
-COMMERCIAL_PARK_DOMAIN = re.compile(r"(holiday|tourist|caravan)(park|village)|resort", re.IGNORECASE)
+COMMERCIAL_PARK_DOMAIN = re.compile(
+    r"(holiday|tourist|caravan)(park|village)|resort|big4|nrmaparks|ingeniaholidays|gdayparks",
+    re.IGNORECASE,
+)
 FREE_IN_NAME = re.compile(r"\bfree", re.IGNORECASE)
 
 
