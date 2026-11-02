@@ -63,9 +63,12 @@ from .common import (
     write_text,
 )
 
-# Lists in the report are cut at this length so the PR body stays under
-# GitHub's 65,536 character limit.
+# Lists in the report are cut at this length. When four full lists would
+# still pass MAX_REPORT_CHARS (a sync that touches nearly every record),
+# render_report cuts them shorter, so the PR body stays under GitHub's 65,536
+# character limit.
 REPORT_LIST_LIMIT = 200
+MAX_REPORT_CHARS = 60000
 
 # The sync PR merges itself only below this change percentage (SPEC).
 AUTO_MERGE_BELOW_PERCENT = 2.0
@@ -313,20 +316,20 @@ def osm_link(osm: dict | None) -> str:
     return f"[{ref}](https://www.openstreetmap.org/{ref})"
 
 
-def table(records: list[dict]) -> list[str]:
+def table(records: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
     lines = ["| Record | Kind | Name | OSM object |", "|---|---|---|---|"]
-    for record in records[:REPORT_LIST_LIMIT]:
+    for record in records[:limit]:
         lines.append(
             f"| `{record['id']}` | {record['kind']} | {escape_cell(record['name'])} "
             f"| {osm_link(record.get('osm'))} |"
         )
-    if len(records) > REPORT_LIST_LIMIT:
+    if len(records) > limit:
         lines.append("")
-        lines.append(f"And {len(records) - REPORT_LIST_LIMIT} more, not listed here.")
+        lines.append(f"And {len(records) - limit} more, not listed here.")
     return lines
 
 
-def duplicates_table(pairs: list[dict]) -> list[str]:
+def duplicates_table(pairs: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
     lines = [
         "Pairs that are likely the same place. Nothing was merged. To merge, keep one "
         "and run `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR.",
@@ -334,20 +337,33 @@ def duplicates_table(pairs: list[dict]) -> list[str]:
         "| Record A | Name A | Kind A | Record B | Name B | Kind B | Distance |",
         "|---|---|---|---|---|---|---:|",
     ]
-    for pair in pairs[:REPORT_LIST_LIMIT]:
+    for pair in pairs[:limit]:
         a, b = pair["a"], pair["b"]
         lines.append(
             f"| `{a['id']}` | {escape_cell(a['name'])} | {a['kind']} "
             f"| `{b['id']}` | {escape_cell(b['name'])} | {b['kind']} | {pair['distance_m']:.0f} m |"
         )
-    if len(pairs) > REPORT_LIST_LIMIT:
+    if len(pairs) > limit:
         lines.append("")
-        lines.append(f"And {len(pairs) - REPORT_LIST_LIMIT} more, not listed here.")
+        lines.append(f"And {len(pairs) - limit} more, not listed here.")
     return lines
 
 
 def render_report(result: SyncResult, source: str | None = None) -> str:
-    """The sync report as Markdown, used as the PR body."""
+    """The sync report as Markdown, used as the PR body, at most MAX_REPORT_CHARS long.
+
+    Lists are cut at REPORT_LIST_LIMIT rows, and shorter when the report
+    would still be too long.
+    """
+    limit = REPORT_LIST_LIMIT
+    while True:
+        report = _render_report(result, source, limit)
+        if len(report) <= MAX_REPORT_CHARS or limit == 0:
+            return report
+        limit //= 2
+
+
+def _render_report(result: SyncResult, source: str | None, limit: int) -> str:
     auto = result.change_percent < AUTO_MERGE_BELOW_PERCENT
     lines = ["# OSM sync report", ""]
     if source:
@@ -379,16 +395,16 @@ def render_report(result: SyncResult, source: str | None = None) -> str:
             "These records are kept. A person decides for each one: set `status` to "
             "`closed`, fix it in OSM, or remove the file in a separate PR.",
             "",
-            *table(result.gone),
+            *table(result.gone, limit),
         ]
     else:
         lines.append("None.")
     lines += ["", "## Possible duplicates", ""]
-    lines += duplicates_table(result.duplicates) if result.duplicates else ["None."]
+    lines += duplicates_table(result.duplicates, limit) if result.duplicates else ["None."]
     lines += ["", "## New", ""]
-    lines += table(result.new) if result.new else ["None."]
+    lines += table(result.new, limit) if result.new else ["None."]
     lines += ["", "## Updated", ""]
-    lines += table(result.updated) if result.updated else ["None."]
+    lines += table(result.updated, limit) if result.updated else ["None."]
     return "\n".join(lines) + "\n"
 
 
