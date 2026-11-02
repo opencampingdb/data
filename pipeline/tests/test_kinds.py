@@ -65,6 +65,40 @@ CAMP = {"tourism": "camp_site"}
         ({**CAMP, "name": "Whaling Station"}, set(), "campground"),
         ({**CAMP, "name": "Watheroo Station Tavern", "fee": "no"}, set(), "free_camp"),
         ({**CAMP, "name": "Stationery Creek"}, set(), "campground"),
+        # fee=no on a holiday, tourist or caravan park or a resort is not trusted.
+        ({"tourism": "caravan_site", "name": "Lane Cove River Tourist Park", "fee": "no"}, set(), "caravan_park"),
+        ({"tourism": "caravan_site", "name": "Mallacoota Foreshore Holiday Park", "fee": "no"}, set(), "caravan_park"),
+        ({**CAMP, "name": "Three Springs Short Stay Caravan Park", "fee": "no"}, set(), "campground"),
+        ({**CAMP, "name": "Bay Views Resort", "fee": "no"}, set(), "campground"),
+        ({**CAMP, "name": "Seaside Tourist Park", "fee": "yes"}, set(), "paid_campground"),
+        (
+            {"tourism": "caravan_site", "name": "Lighthouse Beach", "fee": "no",
+             "website": "https://lighthousebeachholidayvillage.com.au"},
+            set(),
+            "caravan_park",
+        ),
+        # A park chain's name or domain says so too.
+        ({"tourism": "caravan_site", "name": "Discovery Parks - Lane Cove", "fee": "no"}, set(), "caravan_park"),
+        ({"tourism": "caravan_site", "name": "BIG4 Bright Holiday Park", "fee": "no"}, set(), "caravan_park"),
+        ({"tourism": "caravan_site", "name": "NRMA Parks Ocean Beach", "fee": "no"}, set(), "caravan_park"),
+        (
+            {"tourism": "caravan_site", "name": "Lane Cove", "fee": "no",
+             "website": "https://www.discoveryholidayparks.com.au/caravan-parks/new-south-wales/sydney/lane-cove"},
+            set(),
+            "caravan_park",
+        ),
+        ({"tourism": "caravan_site", "name": "Gday Rest Stop", "fee": "no"}, set(), "free_camp"),
+        # Unless the name says it is free, or only a website path mentions parks.
+        ({"tourism": "caravan_site", "name": "Barbour Park Free Caravan Park", "fee": "no"}, set(), "free_camp"),
+        ({"tourism": "caravan_site", "name": "free caravan park", "fee": "no"}, set(), "free_camp"),
+        (
+            {**CAMP, "name": "GSC - Off White Street", "fee": "no",
+             "website": "https://www.gwydir.nsw.gov.au/Venues/Caravan-Parks-and-Campgrounds/Campgrounds"},
+            set(),
+            "free_camp",
+        ),
+        ({**CAMP, "name": "Hebel Hotel Freecamp", "fee": "no"}, set(), "free_camp"),
+        ({**CAMP, "name": "Parkside Rest", "fee": "no"}, set(), "free_camp"),
     ],
 )
 def test_overnight_precedence(tags, inside, kind):

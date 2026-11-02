@@ -104,10 +104,10 @@ toilet.
 | 1a | `tourism=camp_site`, inside a park | `national_park_campsite` | broader | Park: see "Containers" |
 | 1b | `tourism=camp_site`, inside a state forest | `state_forest_campsite` | broader | |
 | 1c | `tourism=camp_site`, inside a showground | `showground` | related | |
-| 1d | `tourism=camp_site` + `fee=no` | `free_camp` | exact | |
+| 1d | `tourism=camp_site` + `fee=no` | `free_camp` | exact | Not for a commercial park (see "Facts") |
 | 1e | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
 | 1f | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
-| 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles |
+| 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles. Not for a commercial park (see "Facts") |
 | 2b | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
 | 3 | `highway=rest_area` | `rest_area` | exact | |
 | 4 | `amenity=sanitary_dump_station` | `dump_point` | exact | |
@@ -175,7 +175,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 
 | OSM tag | Fact | Mapping |
 |---|---|---|
-| `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. Others, such as `donation`, are left out. |
+| `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. Others, such as `donation`, are left out. `fee=no` on a commercial park is left out too (see below). |
 | `power_supply` | `power` | `yes` is `true`, `no` is `false` |
 | `dog` | `pets` | `yes`, `leashed` or `no`, copied as is |
 | `tents` | `tents` | `yes` / `no` |
@@ -191,6 +191,18 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`. Others, such as `destination`, are left out. |
+
+A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
+name says holiday park, tourist park, caravan park, holiday village, caravan
+village or resort, or names a park chain (Discovery Parks, BIG4, NRMA Parks,
+Ingenia Holidays, G'day Parks), or whose website's domain does
+(`lighthousebeachholidayvillage.com.au`, `discoveryholidayparks.com.au`).
+`fee=no` on one is taken as a mapping slip and the `fee` fact is left out, so
+the place is not a `free_camp` (rules 1d and 2a). A name that says free
+("Barbour Park Free Caravan Park") keeps `fee=no`. Only the website's domain
+is read, because council sites file free camps under paths such as
+`/Caravan-Parks-and-Campgrounds/`. Other objects, such as the toilets in a
+tourist park, keep `fee=no`.
 
 `access` (the fact) is about the road and the vehicle. `entry` is about who
 may stay, and comes from the OSM `access` tag.
