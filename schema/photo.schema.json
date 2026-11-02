@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/photo.schema.json",
+  "title": "Open Camping DB photo",
+  "description": "One line of photos/<place id>.ndjson: a traveller's photo of a place. The files are served as <id>/full.jpg and <id>/thumb.jpg. No names, emails or device IDs, and no key outside this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "place",
+    "contributor",
+    "created",
+    "app",
+    "licence",
+    "width",
+    "height",
+    "sha256"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^pho_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "place": {
+      "type": "string",
+      "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "contributor": {
+      "description": "Opaque id of the account that took the photo, as on reviews: ctr_ and 16 hex characters.",
+      "type": "string",
+      "pattern": "^ctr_[0-9a-f]{16}$"
+    },
+    "created": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?Z$"
+    },
+    "app": {
+      "description": "Short name of the app that sent the photo.",
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,39}$"
+    },
+    "licence": {
+      "description": "The photo is the contributor's own work, licensed under Creative Commons Attribution 4.0. It is not covered by the database licence.",
+      "const": "CC-BY-4.0"
+    },
+    "width": {
+      "description": "Pixel width of the full size file.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000
+    },
+    "height": {
+      "description": "Pixel height of the full size file.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000
+    },
+    "sha256": {
+      "description": "SHA-256 of the full size file, lower case hex.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "hidden": {
+      "description": "The photo is kept for the record but left out of the release and not served. reported: three contributors reported it and a person has not decided yet. moderator: a person hid it.",
+      "enum": [
+        "reported",
+        "moderator"
+      ]
+    }
+  }
+}
