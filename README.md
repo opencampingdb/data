@@ -58,15 +58,17 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 }
 ```
 
-The full contract is in [schema/place.schema.json](schema/place.schema.json)
-and [schema/review.schema.json](schema/review.schema.json). Contributors a
+The full contract is in [schema/place.schema.json](schema/place.schema.json),
+[schema/review.schema.json](schema/review.schema.json) and
+[schema/fee.schema.json](schema/fee.schema.json). Contributors a
 person has blocked are listed in
 [moderation/blocked_contributors.json](moderation/blocked_contributors.json)
 ([schema](schema/blocked_contributors.schema.json)). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
-each place is a file at `places/<last two characters of id, lower case>/<id>.json`, and the reviews
-of a place are at `reviews/<place id>.ndjson`.
+each place is a file at `places/<last two characters of id, lower case>/<id>.json`, the reviews
+of a place are at `reviews/<place id>.ndjson`, and the fees travellers paid there are at
+`fees/<place id>.ndjson`.
 
 ## Licence
 
@@ -102,7 +104,7 @@ Anything that shows this data must show:
    OSM. Records that have gone from OSM are never deleted: a person decides. The
    PR merges itself once CI passes if fewer than 2% of records changed, and
    waits for a person otherwise.
-2. **Feedback.** Apps send reports, reviews and checks to the intake run by the
+2. **Feedback.** Apps send reports, reviews, checks and fees to the intake run by the
    [feedback-engine](https://github.com/opencampingdb/feedback-engine). A
    workflow in the private `inbox` repository applies them every hour and
    keeps at most two pull requests open here: `feedback/auto` for changes the
