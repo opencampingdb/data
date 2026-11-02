@@ -325,8 +325,13 @@ Content-Type: application/json
   `location` (`{"lat": ..., "lon": ...}`) is required and `report.kind` is
   `new_place`.
 - `report.kind` is `closed`, `reopened`, `fact`, `wrong_location`,
-  `new_place` or `other`. A `fact` report also carries `fact` (a key from the
-  place schema) and `value`.
+  `new_place`, `other`, `name`, `description` or `kind`. A `fact` report also
+  carries `fact` (a key from the place schema, except `booking_url`) and
+  `value`. A `name` report carries the new name in `value` (1 to 300
+  characters), a `description` report the text in `value` (at most 500), and
+  a `kind` report a code from [schema/kinds.json](schema/kinds.json) in
+  `place_kind`. Names and descriptions must not hold an email address, phone
+  number or link.
 - `review` is `{"stars": 1-5, "text": "...", "visited": "YYYY-MM"}`, with
   `"visited_nearby": true` when the app saw the phone near the place in the
   last 60 days (never send the location itself). Review text is published,
@@ -393,8 +398,11 @@ apps with the next release.
 - Reopening a place that is already `closed` needs `reopened` reports from 2
   different devices within 90 days.
 - A `fact` report changes the fact once 2 different devices agree within 90
-  days. Changes to `website` and `phone` always go to a person.
-- `new_place`, `wrong_location` and `other` reports go to a person.
+  days. Changes to contacts (`website`, `phone`, `phone_2`, `email`,
+  `facebook`, `instagram`, `tiktok` and `x`) always go to a person.
+- `new_place`, `wrong_location`, `name`, `description`, `kind` and `other`
+  reports go to a person. An accepted kind, name or description is kept
+  through later OSM syncs.
 - A report that has not found agreement within 90 days expires.
 - Checks never change facts on their own.
 
