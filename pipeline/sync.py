@@ -23,7 +23,8 @@ Rules (SPEC, "OSM sync"):
   record: it is never made into a new record, and it does not change the
   record (which follows its own osm link).
 - After the merge into places/, likely duplicates are listed in the report
-  (pipeline.duplicates). Sync never merges them.
+  (pipeline.duplicates), leaving out pairs on the distinct list. Sync never
+  merges them.
 - kind is refreshed from the extract, and group follows kind. A kind change
   counts as an update.
 - Records still carrying a kind from before the OTWD vocabulary (camp_site,
@@ -55,6 +56,7 @@ from .common import (
     EXTRA_SOURCE_KEYS,
     KIND_GROUP,
     dump_record,
+    load_distinct,
     load_places,
     place_path,
     utc_now,
@@ -284,7 +286,7 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
     result.gone.sort(key=lambda r: osm_key(r["osm"]))
 
     result.records_after = result.records_before + len(result.new)
-    result.duplicates = find_duplicates(list(load_places(root).values()))
+    result.duplicates = find_duplicates(list(load_places(root).values()), load_distinct(root))
     return result
 
 
