@@ -39,12 +39,63 @@ FACT_KEYS = (
     "water_type",
     "booking_url",
     "booking_required",
+    "wheelchair",
+    "generators",
+    "motorhomes",
+    "camper_trailers",
+    "motorbikes",
+    "big_rigs",
+    "non_drinking_water",
+    "laundry",
+    "kitchen",
+    "bbq",
+    "drive_through",
+    "ensuite_sites",
+    "bins",
+    "picnic_tables",
+    "campfires",
+    "cabins",
+    "pub",
+    "swimming",
+    "fishing",
+    "walking_tracks",
+    "scenery",
+    "wildlife",
+    "playground",
+    "games_room",
+    "shade",
+    "cycling_tracks",
+    "offroad_tracks",
+    "boat_ramp_nearby",
+    "near_road",
+    "telstra_signal",
+    "mobile_signal",
+    "wifi",
+    "tv_reception",
+    "pet_sitting",
+    "fuel",
+    "lpg",
+    "car_wash",
+    "vehicle_storage",
+    "self_contained_only",
+    "crocodiles",
+    "seasonal_closure",
+    "dangerous_when_wet",
+    "over_50s",
+    "nudist",
+    "brand",
+    "email",
+    "phone_2",
+    "facebook",
+    "instagram",
+    "tiktok",
+    "x",
 )
 
-# Keys fact_sources may hold besides the facts. A missing name or location
-# entry means the value comes from OSM. status and description never come
-# from OSM, so their entries say who set them.
-EXTRA_SOURCE_KEYS = ("name", "location", "status", "description")
+# Keys fact_sources may hold besides the facts. A missing name, location or
+# kind entry means the value comes from OSM. status and description never
+# come from OSM, so their entries say who set them.
+EXTRA_SOURCE_KEYS = ("name", "location", "kind", "status", "description")
 
 # Where a value came from: OpenStreetMap, app feedback, a place or closure
 # contributed directly to Open Camping DB, or the place's verified owner.

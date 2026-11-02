@@ -23,6 +23,13 @@ PLACE_TAG_PAIRS = (
     ("tourism", "information"),
     ("tourism", "attraction"),
     ("tourism", "viewpoint"),
+    ("tourism", "hostel"),
+    ("tourism", "motel"),
+    ("tourism", "chalet"),
+    ("tourism", "museum"),
+    ("tourism", "gallery"),
+    ("amenity", "parking"),
+    ("amenity", "pub"),
     ("highway", "rest_area"),
     ("amenity", "sanitary_dump_station"),
     ("amenity", "water_point"),
@@ -77,16 +84,48 @@ def _is_yes(value: str | None) -> bool:
     return (value or "").strip().lower() == "yes"
 
 
-def parse_fee(value: str) -> bool | None:
+def parse_fee(value: str) -> bool | str | None:
     """fee=no is free. fee=yes or a price (any value with a digit or $) is paid.
+    fee=donation is "donation".
 
-    Anything else, such as donation, is None (not known).
+    Anything else is None (not known).
     """
     value = value.strip().lower()
     if value == "no":
         return False
+    if value == "donation":
+        return "donation"
     if value == "yes" or "$" in value or any(c.isdigit() for c in value):
         return True
+    return None
+
+
+# OSM brand=* values (and park chain names) -> the brand fact. Matched
+# without regard to case against the brand tag.
+BRANDS = (
+    (re.compile(r"\bbig ?4\b", re.IGNORECASE), "big4"),
+    (re.compile(r"\bdiscovery\b", re.IGNORECASE), "discovery"),
+    (re.compile(r"\bnrma\b", re.IGNORECASE), "nrma"),
+    (re.compile(r"\bingenia\b", re.IGNORECASE), "ingenia"),
+    (re.compile(r"\breflections\b", re.IGNORECASE), "reflections"),
+    (re.compile(r"\bg'?day\b", re.IGNORECASE), "gday"),
+    (re.compile(r"\bfamily parks\b", re.IGNORECASE), "family_parks"),
+    (re.compile(r"\baspen\b", re.IGNORECASE), "aspen"),
+    (re.compile(r"\bkui\b", re.IGNORECASE), "kui"),
+    (re.compile(r"\btawk\b", re.IGNORECASE), "tawk"),
+    (re.compile(r"\byha\b|youth hostels? association", re.IGNORECASE), "yha"),
+    (re.compile(r"\bacc\b|australian camping club", re.IGNORECASE), "acc"),
+)
+
+# Brands that are commercial park chains (see is_commercial_park).
+PARK_CHAIN_BRANDS = {"aspen", "big4", "discovery", "family_parks", "gday", "ingenia", "kui", "nrma", "reflections"}
+
+
+def parse_brand(value: str) -> str | None:
+    """The brand fact for an OSM brand=* value, or None for a brand we do not list."""
+    for pattern, brand in BRANDS:
+        if pattern.search(value or ""):
+            return brand
     return None
 
 
@@ -139,6 +178,8 @@ def is_commercial_park(tags: dict) -> bool:
     name = tags.get("name") or ""
     if FREE_IN_NAME.search(name):
         return False
+    if parse_brand(tags.get("brand", "")) in PARK_CHAIN_BRANDS:
+        return True
     return bool(COMMERCIAL_PARK.search(name) or COMMERCIAL_PARK_DOMAIN.search(_website_domain(tags)))
 
 
@@ -222,9 +263,20 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
             return "farm_stay"
         return "free_camp" if osm_fee(tags) is False else "caravan_park"
 
+    # 2c. Roofed places to stay. Hotels and guest houses are left out: there
+    # are too many, and a caravan park's cabins are the cabins fact.
+    if tourism == "hostel":
+        return "backpacker_hostel"
+    if tourism in ("motel", "chalet"):
+        return "roofed_accommodation"
+
     # 3. Utility.
     if tags.get("highway") == "rest_area":
         return "rest_area"
+    if amenity == "parking" and any(
+        tags.get(key, "").strip().lower() == "designated" for key in ("motorhome", "caravan", "hgv")
+    ):
+        return "long_vehicle_parking"
     if amenity == "sanitary_dump_station":
         return "dump_point"
     if amenity in ("water_point", "drinking_water"):
@@ -249,6 +301,9 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
         return "lpg_refill_swap"
     if shop == "car_repair":
         return "mechanic"
+    # Pubs only: cafes and restaurants would swamp the camping places.
+    if amenity == "pub":
+        return "food_and_drink"
     if tourism == "information" and tags.get("information") in ("office", "visitor_centre"):
         return "information_centre"
 
@@ -264,6 +319,8 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
         return "boat_ramp"
     if tourism == "picnic_site":
         return "picnic_site"
+    if tourism in ("museum", "gallery"):
+        return "heritage"
     if tourism == "attraction":
         return "attraction"
     return None

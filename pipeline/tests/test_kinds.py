@@ -14,7 +14,10 @@ def test_vocabulary_has_the_otwd_codes_and_our_extensions():
         "information_centre", "attraction", "lookout", "swimming_spot", "boat_ramp",
         "fuel", "lpg_refill_swap", "mechanic", "hospital_emergency", "ferry_terminal",
     ]
-    assert list(KINDS) == otwd + ["campground", "picnic_site", "farm_stay"]
+    assert list(KINDS) == otwd + [
+        "campground", "picnic_site", "farm_stay", "backpacker_hostel", "roofed_accommodation",
+        "long_vehicle_parking", "food_and_drink", "recreation_area", "heritage", "experience",
+    ]
     assert set(KIND_GROUP.values()) == set(GROUPS)
     assert KIND_GROUP["campground"] == "overnight"
     assert KIND_GROUP["picnic_site"] == "utility"
@@ -99,6 +102,16 @@ CAMP = {"tourism": "camp_site"}
         ),
         ({**CAMP, "name": "Hebel Hotel Freecamp", "fee": "no"}, set(), "free_camp"),
         ({**CAMP, "name": "Parkside Rest", "fee": "no"}, set(), "free_camp"),
+        # A park chain's brand tag counts too.
+        ({"tourism": "caravan_site", "name": "Lake Bend", "brand": "BIG4", "fee": "no"}, set(), "caravan_park"),
+        ({**CAMP, "name": "Lake Bend", "brand": "YHA", "fee": "no"}, set(), "free_camp"),
+        # fee=donation is not free and not paid.
+        ({**CAMP, "fee": "donation"}, set(), "campground"),
+        # Roofed places to stay.
+        ({"tourism": "hostel"}, set(), "backpacker_hostel"),
+        ({"tourism": "motel"}, set(), "roofed_accommodation"),
+        ({"tourism": "chalet"}, set(), "roofed_accommodation"),
+        ({"tourism": "hotel"}, set(), None),
     ],
 )
 def test_overnight_precedence(tags, inside, kind):
@@ -176,3 +189,23 @@ def test_other_kinds(tags, kind):
 )
 def test_container_types(tags, expected):
     assert container_type(tags) == expected
+
+
+@pytest.mark.parametrize(
+    "tags, kind",
+    [
+        ({"amenity": "parking", "motorhome": "designated"}, "long_vehicle_parking"),
+        ({"amenity": "parking", "caravan": "designated"}, "long_vehicle_parking"),
+        ({"amenity": "parking", "hgv": "designated"}, "long_vehicle_parking"),
+        ({"amenity": "parking", "motorhome": "yes"}, None),
+        ({"amenity": "parking"}, None),
+        ({"tourism": "museum"}, "heritage"),
+        ({"tourism": "gallery"}, "heritage"),
+        ({"tourism": "attraction", "historic": "monument"}, "attraction"),
+        ({"amenity": "pub"}, "food_and_drink"),
+        ({"amenity": "cafe"}, None),
+        ({"amenity": "restaurant"}, None),
+    ],
+)
+def test_new_kinds_from_osm(tags, kind):
+    assert classify(tags) == kind

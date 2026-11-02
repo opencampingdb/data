@@ -41,6 +41,7 @@ from .kinds import (
     classify,
     container_type,
     osm_fee,
+    parse_brand,
     water_type,
 )
 
@@ -52,7 +53,27 @@ YES_NO_TAGS = {
     "toilets": "toilets",
     "drinking_water": "drinking_water",
     "sanitary_dump_station": "dump_station",
+    "wheelchair": "wheelchair",
+    "motorhome": "motorhomes",
+    "washing_machine": "laundry",
+    "kitchen": "kitchen",
+    "bbq": "bbq",
+    "picnic_table": "picnic_tables",
+    "openfire": "campfires",
+    "cabins": "cabins",
+    "playground": "playground",
 }
+
+# Social pages: fact key -> OSM keys, the first with a value wins. Only
+# https links are kept.
+SOCIAL_TAGS = {
+    "facebook": ("contact:facebook", "facebook"),
+    "instagram": ("contact:instagram", "instagram"),
+    "tiktok": ("contact:tiktok", "tiktok"),
+    "x": ("contact:twitter", "contact:x", "twitter"),
+}
+
+EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
 # maxstay units we can read, and the short unit we write.
 MAXSTAY_UNITS = {
@@ -142,6 +163,40 @@ def facts_from_tags(tags: dict) -> dict:
         if key in tags and first_value(tags[key]):
             facts["phone"] = first_value(tags[key])
             break
+
+    for key in ("email", "contact:email"):
+        if key in tags:
+            email = first_value(tags[key])
+            if EMAIL_RE.match(email) and len(email) <= 254:
+                facts["email"] = email
+            break
+
+    for fact_key, osm_keys in SOCIAL_TAGS.items():
+        for key in osm_keys:
+            if key in tags:
+                url = first_value(tags[key])
+                if url.lower().startswith("https://") and len(url) <= 500:
+                    facts[fact_key] = url
+                break
+
+    internet = first_value(tags.get("internet_access", "")).lower()
+    if internet in ("wlan", "yes", "wifi"):
+        facts["wifi"] = True
+    elif internet == "no":
+        facts["wifi"] = False
+
+    nudism = first_value(tags.get("nudism", "")).lower()
+    if nudism in ("yes", "designated", "customary"):
+        facts["nudist"] = True
+    elif nudism == "no":
+        facts["nudist"] = False
+
+    if first_value(tags.get("min_age", "")) in ("50", "55", "60"):
+        facts["over_50s"] = True
+
+    brand = parse_brand(tags.get("brand", ""))
+    if brand:
+        facts["brand"] = brand
 
     four_wd = tags.get("4wd_only", "").strip().lower()
     if four_wd == "yes":
