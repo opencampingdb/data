@@ -27,7 +27,7 @@ Start with the manifest:
 https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```
 
-It names its release, a `data_version`, the `format_version` of the records, and for each of the four data files
+It names its release, a `data_version`, the `format_version` and `format_minor` of the records, and for each of the four data files
 an absolute `url`, its SHA-256, its size and its record count. Each `url`
 points at the file in that same release, for example:
 
