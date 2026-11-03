@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 9,
+  "format_version": 10,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -66,7 +66,9 @@ It adds 51 facts for site features and contacts (section 4), seven kinds
 `kind` entry in `fact_sources` for a kind set by feedback or the owner. An
 app that reads `fee` as a plain boolean must handle `"donation"`. Format 9
 drops `photos.ndjson.gz`, which format 8 had: Open Camping DB holds no photos.
-Everything else reads the same as in format 7.
+Everything else reads the same as in format 7. Format 10 adds `standing` to
+places travellers added (see section 4) and leaves out those that are `held`
+or `hidden`. Records without it read the same as in format 9.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -158,6 +160,17 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   contributors. Show recent fees with their month, since prices change.
 - `osm` is `null` for places that did not come from OpenStreetMap: places
   contributed directly to Open Camping DB, and new places from feedback.
+- `standing` is only on a place a traveller added in an app. `shown` means
+  nobody has checked it yet: show it with a "not checked yet" label and let
+  travellers leave such places out. `confirmed` means two travellers near it
+  have found it there. The release leaves out new places that are `held` for
+  a person or `hidden` after reports, and a place its adder withdrew is
+  deleted. A place without `standing` is from OpenStreetMap, contributed or
+  checked by a person. New places reach a release some time after they are added; to
+  show them sooner, read the recent places list (section 6).
+- `moderator` is only on a place a traveller added: a person's `restore` or
+  `hide`, with the time, which wins over the reports and checks before it.
+  Apps need not read it: `standing` already reflects it.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
   or `contributed` (given directly to Open Camping DB under the ODbL). It may
   also have `name`, `location`, `kind` and `status` entries. When `name`,
@@ -324,19 +337,28 @@ Content-Type: application/json
 }
 ```
 
-- `type` is `report`, `review`, `check`, `review_report` or `fee`, with a
-  matching `report`, `review`, `check`, `review_report` or `fee` object.
+- `type` is `report`, `review`, `check`, `review_report`, `fee` or
+  `withdraw`, with a matching `report`, `review`, `check`, `review_report` or
+  `fee` object (`withdraw` has none).
 - `place` is the record `id`, or `null` for a new place, in which case
   `location` (`{"lat": ..., "lon": ...}`) is required and `report.kind` is
   `new_place`.
 - `report.kind` is `closed`, `reopened`, `fact`, `wrong_location`,
-  `new_place`, `other`, `name`, `description` or `kind`. A `fact` report also
+  `new_place`, `other`, `name`, `description`, `kind` or `remove`. A `fact` report also
   carries `fact` (a key from the place schema, except `booking_url`) and
   `value`. A `name` report carries the new name in `value` (1 to 300
   characters), a `description` report the text in `value` (at most 500), and
   a `kind` report a code from [schema/kinds.json](schema/kinds.json) in
   `place_kind`. Names and descriptions must not hold an email address, phone
-  number or link.
+  number or link. A `new_place` report may carry `name` (1 to 300
+  characters, checked as a `name` report's value is), `place_kind` and
+  `contacts`, with any of `phone`, `website` and `email`, kept out of the
+  note. A `remove` report says a new place should come down, with `reason`
+  `not_there`, `fake`, `offensive`, `private_land` or `duplicate`.
+- A new place's id is known once its report is accepted: `ocdb_` and the
+  `fb_<ulid>` the intake answers with, without its `fb_`. A `withdraw` with
+  that id as `place`, from the same install, takes the place back within 24
+  hours. After 24 hours it counts as one more `remove` report.
 - `review` is `{"stars": 1-5, "text": "...", "visited": "YYYY-MM"}`, with
   `"visited_nearby": true` when the app saw the phone near the place in the
   last 60 days (never send the location itself). Review text is published,
@@ -360,7 +382,8 @@ Content-Type: application/json
   covers it, and the App Attest and Play Integrity headers an app key may
   require.
 - `check` is `{"visited": "YYYY-MM-DD", "still_there": true}`, a confirmation
-  that a place is as described.
+  that a place is as described, with `"nearby": true` when the app saw the
+  phone near the place (never send the location itself).
 - `device` is a random UUID your app creates once per install. Never send a
   hardware ID, advertising ID, account ID, name or email. The intake hashes
   `device` before storing it, and nothing that identifies a person is ever
@@ -377,6 +400,31 @@ Responses:
 | `400` | the body does not match the schema, or `consent` is not `true` |
 | `401` | missing or unknown app key |
 | `429` | rate limit reached (20 a day per device, and a limit per app key). Try again later. |
+
+### Recent places
+
+New places are served before they are in a release:
+
+```
+GET https://<intake host>/v1/places/recent?bbox=<west>,<south>,<east>,<north>
+```
+
+```json
+{"places": [{"id": "ocdb_01JC...", "name": "Gravel Pit Rest Area", "location": {"lat": -35.1, "lon": 149.2}, "kind": "free_camp",
+  "standing": "shown", "added": "2026-10-30T01:00:00Z", "contributor": "ctr_0123456789abcdef"}]}
+```
+
+- No app key. `bbox` is optional. Answers are cached for 30 seconds, so
+  there is no need to ask more often.
+- Only places that are `shown` or `confirmed` are listed. A place leaves the
+  list when it is hidden or withdrawn, and once it is in the data, so read
+  the release and this list together and join them by `id`, the release copy
+  winning.
+- `contributor` is the same opaque id as on reviews, so an app can hide
+  every place from a contributor a traveller has hidden. The list never
+  carries a note, contacts or a device id.
+- Kind codes are those of [schema/kinds.json](schema/kinds.json), which
+  gives each kind's group.
 
 ### What happens to feedback
 
@@ -405,9 +453,19 @@ apps with the next release.
 - A `fact` report changes the fact once 2 different devices agree within 90
   days. Changes to contacts (`website`, `phone`, `phone_2`, `email`,
   `facebook`, `instagram`, `tiktok` and `x`) always go to a person.
-- `new_place`, `wrong_location`, `name`, `description`, `kind` and `other`
-  reports go to a person. An accepted kind, name or description is kept
-  through later OSM syncs.
+- A `new_place` is written into the data at the next apply run, with
+  `standing` `shown`, when the install proved itself with App Attest or Play
+  Integrity, the report has a contributor and its note passes the text
+  checks, with the `name` it carries. Checks with `still_there: true` and
+  `nearby: true` from 2 other devices make it `confirmed`. `remove` reports, or checks with `still_there: false`, from
+  2 different devices hide it, or 3 once it is confirmed. A blocked
+  contributor's places are hidden. A new place within 150 m of a place in the
+  same group, one hidden before it was published and one that fails the
+  checks above go to a person as `held`. Contacts sent with a new place
+  always go to a person before they are published.
+- `wrong_location`, `name`, `description`, `kind` and `other` reports, and
+  `remove` reports on a place that is not new, go to a person. An accepted
+  kind, name or description is kept through later OSM syncs.
 - A report that has not found agreement within 90 days expires.
 - Checks never change facts on their own.
 

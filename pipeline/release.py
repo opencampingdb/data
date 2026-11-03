@@ -44,7 +44,10 @@ from .common import (
 # 6: fees.ndjson.gz, what travellers paid per night in the last 24 months.
 # 7: site features, more kinds, and fee may be "donation".
 # 8: photos.ndjson.gz. 9: photos.ndjson.gz gone again: Open Camping DB holds no photos.
-FORMAT_VERSION = 9
+# 10: places travellers added carry standing, and held and hidden ones are left out.
+FORMAT_VERSION = 10
+# New places with these standings wait for a person or were taken down.
+UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.
 FEE_MONTHS = 24
 DEFAULT_REPOSITORY = "opencampingdb/data"
@@ -68,12 +71,13 @@ def gzip_bytes(data: bytes) -> bytes:
 
 
 def places_ndjson(root: Path) -> tuple[bytes, int]:
-    """Every place record except merged ones (tombstones), one per line, sorted by id."""
+    """Every place record except merged ones (tombstones) and held or hidden new places, one per line, sorted by id."""
     places = load_places(root)
     lines = [
         dump_line(places[place_id]) + "\n"
         for place_id in sorted(places)
         if places[place_id].get("status") != "merged"
+        and places[place_id].get("standing") not in UNRELEASED_STANDINGS
     ]
     return "".join(lines).encode("utf-8"), len(lines)
 
