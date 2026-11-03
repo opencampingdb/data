@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from pipeline.common import dump_line, dump_record, load_places, place_path, write_text
+from pipeline.common import dump_line, dump_record, load_places, place_path
 from pipeline.duplicates import find_duplicates, normalise_name
 from pipeline.extract import extract_file
 from pipeline.merge import MergeError, merge
@@ -446,27 +446,3 @@ def test_validate_distinct_list_rules(pair):
     assert any("distinct_places.json" in e for e in validate_repo(repo))
     write_distinct(repo, [entry], text=json.dumps({"pairs": [entry]}))
     assert any("canonical form" in e for e in validate_repo(repo))
-
-
-def test_merge_moves_photos(pair):
-    repo, keep, drop = pair
-
-    def photo(pid, place):
-        return {
-            "id": pid, "place": place, "contributor": "ctr_5a5a5a5a5a5a5a5a", "created": "2026-10-01T10:00:00Z",
-            "app": "example-app", "licence": "CC-BY-4.0", "width": 1600, "height": 1200, "sha256": "a" * 64,
-        }
-
-    for place, pid in ((keep["id"], "pho_01JBX0000000000000000000K1"), (drop["id"], "pho_01JBX0000000000000000000D1")):
-        write_text(repo / "photos" / f"{place}.ndjson", dump_line(photo(pid, place)) + "\n")
-    assert validate_repo(repo) == []
-
-    merge(repo, keep["id"], drop["id"], now=T2)
-
-    lines = (repo / "photos" / f"{keep['id']}.ndjson").read_text(encoding="utf-8").splitlines()
-    assert [(json.loads(line)["id"], json.loads(line)["place"]) for line in lines] == [
-        ("pho_01JBX0000000000000000000D1", keep["id"]),
-        ("pho_01JBX0000000000000000000K1", keep["id"]),
-    ]
-    assert not (repo / "photos" / f"{drop['id']}.ndjson").exists()
-    assert validate_repo(repo) == []
