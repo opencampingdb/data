@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 8,
+  "format_version": 9,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -33,11 +33,6 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
     "file": "fees.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/fees.ndjson.gz",
     "sha256": "...", "bytes": 456, "count": 7
-  },
-  "photos": {
-    "file": "photos.ndjson.gz",
-    "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/photos.ndjson.gz",
-    "sha256": "...", "bytes": 300, "count": 2
   },
   "merged": {
     "file": "merged.ndjson.gz",
@@ -69,8 +64,8 @@ It adds 51 facts for site features and contacts (section 4), seven kinds
 (`backpacker_hostel`, `roofed_accommodation`, `long_vehicle_parking`,
 `food_and_drink`, `recreation_area`, `heritage` and `experience`) and a
 `kind` entry in `fact_sources` for a kind set by feedback or the owner. An
-app that reads `fee` as a plain boolean must handle `"donation"`. Format 8
-adds `photos.ndjson.gz`, travellers' photos of places (see section 4).
+app that reads `fee` as a plain boolean must handle `"donation"`. Format 9
+drops `photos.ndjson.gz`, which format 8 had: Open Camping DB holds no photos.
 Everything else reads the same as in format 7.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
@@ -161,18 +156,6 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   place per site type: a newer one replaces the older. The release holds
   fees paid in the 24 months before it was built, and none from blocked
   contributors. Show recent fees with their month, since prices change.
-- Each line of `photos.ndjson.gz` is a traveller's photo of a place: a
-  stable `id` (`pho_<ulid>`), the `place`, `contributor` (as on reviews),
-  `created`, the `app` that sent it, `licence` (`CC-BY-4.0`), the `width`
-  and `height` of the full size file in pixels and its `sha256`. Photos
-  hidden after reports and photos from blocked contributors are left out.
-  The files are not in the release. The photo server serves them at
-  `<photo server>/v1/photos/<id>/full.jpg` (about 1600 pixels on the long
-  side) and `/thumb.jpg` (about 400), to requests carrying a photo key in
-  `x-app-key`. Ask for a photo key with a daily read limit as you would for
-  an app key. Each photo is the traveller's own work under CC BY 4.0, so
-  credit it, for example "Photo: Open Camping DB traveller, CC BY 4.0".
-  Let travellers report a photo (see section 6).
 - `osm` is `null` for places that did not come from OpenStreetMap: places
   contributed directly to Open Camping DB, and new places from feedback.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
@@ -318,8 +301,9 @@ offered under the ODbL.
 Apps send what their users report to the Open Camping DB intake. The
 [feedback-engine](https://github.com/opencampingdb/feedback-engine)
 repository holds a client SDK for this and the intake itself. For an app
-key, the intake host, or help connecting your app, write to
-dev@example.org.
+key, the intake host, or help connecting your app, open an issue with the
+**App key** form in
+[feedback-engine](https://github.com/opencampingdb/feedback-engine/issues/new/choose).
 
 ```
 POST https://<intake host>/v1/feedback
@@ -338,10 +322,8 @@ Content-Type: application/json
 }
 ```
 
-- `type` is `report`, `review`, `check`, `review_report`, `fee`,
-  `photo_report` or `photo_erasure`, with a matching `report`, `review`,
-  `check`, `review_report`, `fee` or `photo_report` object. A
-  `photo_erasure` has no object and `place: null`.
+- `type` is `report`, `review`, `check`, `review_report` or `fee`, with a
+  matching `report`, `review`, `check`, `review_report` or `fee` object.
 - `place` is the record `id`, or `null` for a new place, in which case
   `location` (`{"lat": ..., "lon": ...}`) is required and `report.kind` is
   `new_place`.
@@ -362,18 +344,6 @@ Content-Type: application/json
   traveller's report of a published review. `reason` is `spam_ad`,
   `offensive`, `off_topic`, `fake` or `personal_details`. `place` is the
   review's place.
-- `photo_report` is `{"photo": "pho_<ulid>", "reason": "..."}`, a
-  traveller's report of a published photo. `reason` is `spam_ad`,
-  `offensive`, `off_topic`, `not_this_place`, `personal_details` or
-  `copyright`. Three reports from different contributors hide the photo
-  until a person decides.
-- `photo_erasure` asks for every photo from the `contributor` to be
-  removed, from the data and from storage. Send it before deleting the
-  traveller's account.
-- Photos themselves go to `POST /v1/photos`, with the files as the body. The
-  feedback engine's
-  [photo guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/photos.md)
-  covers the upload, the photo terms travellers agree to and the limits.
 - `fee` is `{"amount": 32.5, "site": "powered", "paid": "YYYY-MM"}`, what
   the traveller paid per night in Australian dollars (more than 0, at most
   1000, at most 2 decimal places), for an `unpowered` or `powered` site or a
@@ -381,8 +351,8 @@ Content-Type: application/json
   ago.
 - `contributor` is an opaque id for the traveller's account (a keyed hash,
   never a name or email), 16 to 128 characters of letters, digits, `_` and
-  `-`. Reviews, review reports, fees and photo reports need it, unless the app key proves the
-  install with App Attest instead. Photos and photo erasures always need it. The intake hashes it again before storing
+  `-`. Reviews, review reports and fees need it, unless the app key proves the
+  install with App Attest instead. The intake hashes it again before storing
   it. The feedback engine's
   [integration guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md)
   covers it, and the App Attest and Play Integrity headers an app key may

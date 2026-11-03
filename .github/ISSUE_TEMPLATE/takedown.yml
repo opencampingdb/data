@@ -1,0 +1,29 @@
+name: Takedown
+description: Ask for something in Open Camping DB to be removed, such as a review, a description or a place's details.
+title: "Takedown: "
+labels: ["takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: Leave personal details out of this public form. For anything that must stay private, use Report a vulnerability on this repository's Security tab instead.
+  - type: input
+    id: place
+    attributes:
+      label: Place id or link
+      description: The ocdb_ id, or a link to the place's record.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What should be removed
+      description: The review, field or text, as it appears.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: For example, you run the place and the details are wrong, the text is about you, or it copies your work.
+    validations:
+      required: true
