@@ -34,7 +34,7 @@ def make_review(place_id, **changes):
         "text": "Quiet spot by the creek, clean drop toilets.",
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
-        "app": "camporacle",
+        "app": "example-app",
         "contributor": "ctr_0123456789abcdef",
     }
     review.update(changes)
@@ -469,7 +469,7 @@ def make_fee(place_id, **changes):
         "site": "powered",
         "paid": "2026-09",
         "created": "2026-10-01T10:00:00Z",
-        "app": "camporacle",
+        "app": "example-app",
         "contributor": "ctr_0123456789abcdef",
     }
     fee.update(changes)

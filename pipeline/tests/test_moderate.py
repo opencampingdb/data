@@ -21,7 +21,7 @@ def review(n, place_id, stars, contributor):
         "text": "Quiet spot.",
         "visited": "2026-09",
         "created": "2026-10-01T10:00:00Z",
-        "app": "camporacle",
+        "app": "example-app",
         "contributor": contributor,
     }
 

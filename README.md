@@ -13,7 +13,7 @@ own. Each place can carry its site features (who can get in, what is there,
 what to do, phone and internet signal, warnings), its park chain and its
 contacts. It is built from OpenStreetMap every night
 and improved by feedback from the apps that use it. Any app may use the data
-and send feedback. CampOracle is the first.
+and send feedback.
 
 This repository holds the records, the pipeline that builds them and the
 workflows that publish them.
@@ -27,7 +27,7 @@ Start with the manifest:
 https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```
 
-It names its release, a `data_version`, the `format_version` of the records, and for each of the five data files
+It names its release, a `data_version`, the `format_version` of the records, and for each of the four data files
 an absolute `url`, its SHA-256, its size and its record count. Each `url`
 points at the file in that same release, for example:
 
@@ -82,13 +82,7 @@ their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, the reviews
 of a place are at `reviews/<place id>.ndjson`, and the fees travellers paid there are at
-`fees/<place id>.ndjson`, and travellers' photos of it are at `photos/<place id>.ndjson`.
-
-Photo records are part of the database. The photo files themselves are not in
-this repository: each one is the work of the traveller who took it, licensed
-under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and served
-by the Open Camping DB photo server to apps with a key (see
-[CONNECTING.md](CONNECTING.md) section 4).
+`fees/<place id>.ndjson`.
 
 ## Licence
 
@@ -171,10 +165,13 @@ the next nightly sync picks it up.
 
 ## Contact
 
-Data problems, takedown requests, security reports and abuse of the dataset
-or the feedback intake: abuse@camporacle.com.au.
+Data problems and corrections: open an issue in this repository. Takedown
+requests: the **Takedown** issue form, or **Report a vulnerability** on the
+Security tab for anything that must stay private. Security problems and abuse
+of the dataset or the feedback intake: **Report a vulnerability**.
 
-App keys and help connecting an app: dev@camporacle.com.au.
+App keys and help connecting an app: the **App key** issue form in
+[feedback-engine](https://github.com/opencampingdb/feedback-engine/issues/new/choose).
 
 ## Running it locally
 

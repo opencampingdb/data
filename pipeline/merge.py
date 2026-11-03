@@ -22,7 +22,6 @@ What it does:
   contributor).
 - The dropped record's fees move to the kept record. Where one contributor
   has a fee for the same site type at both, only the newer is kept.
-- The dropped record's photos move to the kept record.
 - The dropped record stays as a tombstone: status "merged" and merged_into
   set to the kept id, nothing else changed. Releases leave tombstones out of
   places.ndjson.gz and list them in merged.ndjson.gz, so apps that stored the
@@ -45,7 +44,6 @@ from .common import (
     is_visible,
     load_blocked,
     load_places,
-    photo_path,
     place_path,
     rating_mean,
     review_path,
@@ -74,10 +72,6 @@ def read_reviews(root: Path, place_id: str) -> list[dict]:
 
 def read_fees(root: Path, place_id: str) -> list[dict]:
     return read_lines(fee_path(root, place_id))
-
-
-def read_photos(root: Path, place_id: str) -> list[dict]:
-    return read_lines(photo_path(root, place_id))
 
 
 def osm_links(record: dict) -> set[tuple[str, int]]:
@@ -156,13 +150,6 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None, part: 
         fees = sorted(newest.values(), key=lambda f: f["id"])
         write_text(fee_path(root, keep_id), "".join(dump_line(f) + "\n" for f in fees))
         fee_path(root, drop_id).unlink()
-
-    # Photos.
-    moved_photos = [dict(p, place=keep_id) for p in read_photos(root, drop_id)]
-    if moved_photos:
-        photos = sorted(read_photos(root, keep_id) + moved_photos, key=lambda p: p["id"])
-        write_text(photo_path(root, keep_id), "".join(dump_line(p) + "\n" for p in photos))
-        photo_path(root, drop_id).unlink()
 
     kept["updated"] = now
     write_text(place_path(root, keep_id), dump_record(kept))

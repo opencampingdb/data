@@ -136,11 +136,6 @@ def fee_path(root: Path, place_id: str) -> Path:
     return Path(root) / "fees" / f"{place_id}.ndjson"
 
 
-def photo_path(root: Path, place_id: str) -> Path:
-    """Where the photos of one place live: photos/<place id>.ndjson."""
-    return Path(root) / "photos" / f"{place_id}.ndjson"
-
-
 def dump_record(record: dict) -> str:
     """Canonical text of a place record file.
 
@@ -184,25 +179,6 @@ def iter_review_files(root: Path):
 def iter_fee_files(root: Path):
     """Every fee file, in sorted path order."""
     return sorted((Path(root) / "fees").glob("*.ndjson"))
-
-
-def iter_photo_files(root: Path):
-    """Every photo file, in sorted path order."""
-    return sorted((Path(root) / "photos").glob("*.ndjson"))
-
-
-def removed_photos_path(root: Path) -> Path:
-    """Photos whose files are deleted: moderation/removed_photos.json."""
-    return Path(root) / "moderation" / "removed_photos.json"
-
-
-def load_removed_photos(root: Path) -> set[str]:
-    """Photo ids on the removed list. Empty when the file is missing."""
-    path = removed_photos_path(root)
-    if not path.exists():
-        return set()
-    entries = json.loads(path.read_text(encoding="utf-8")).get("photos", [])
-    return {entry["photo"] for entry in entries if isinstance(entry, dict) and "photo" in entry}
 
 
 def blocked_path(root: Path) -> Path:
