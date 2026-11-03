@@ -284,6 +284,19 @@
       "description": "Only on a place a traveller added through an app (osm null): where it stands. shown: published, not checked yet. confirmed: travellers near it have found it there. held: waiting for a person, for example a possible duplicate. hidden: taken down after reports or by a moderator. held and hidden places are left out of the release. Left out on every other record.",
       "enum": ["shown", "confirmed", "held", "hidden"]
     },
+    "moderator": {
+      "description": "Only on a place a traveller added (osm null): a person's decision on it, which wins over reports and checks made before it. restore puts it back, hide takes it down.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "at"],
+      "properties": {
+        "action": { "enum": ["restore", "hide"] },
+        "at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+        }
+      }
+    },
     "updated": {
       "description": "When the record's content last changed, UTC. Adding osm.timestamp to a record that had none, or a new last_confirmed, does not move it.",
       "type": "string",

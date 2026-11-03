@@ -168,6 +168,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   deleted. A place without `standing` is from OpenStreetMap, contributed or
   checked by a person. New places reach a release some time after they are added; to
   show them sooner, read the recent places list (section 6).
+- `moderator` is only on a place a traveller added: a person's `restore` or
+  `hide`, with the time, which wins over the reports and checks before it.
+  Apps need not read it: `standing` already reflects it.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
   or `contributed` (given directly to Open Camping DB under the ODbL). It may
   also have `name`, `location`, `kind` and `status` entries. When `name`,

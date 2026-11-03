@@ -605,6 +605,26 @@ def test_standing_must_be_a_known_value(synced):
     assert any("standing" in e for e in validate_repo(synced, now="2026-10-31T00:00:00Z"))
 
 
+@pytest.mark.parametrize("action", ["restore", "hide"])
+def test_a_new_place_carries_a_moderator_decision(synced, action):
+    rec = new_place(moderator={"action": action, "at": "2026-10-30T02:00:00Z"})
+    write_place(place_path(synced, rec["id"]), rec)
+    assert validate_repo(synced, now="2026-10-31T00:00:00Z") == []
+
+
+def test_a_moderator_decision_must_be_restore_or_hide(synced):
+    rec = new_place(moderator={"action": "delete", "at": "2026-10-30T02:00:00Z"})
+    write_place(place_path(synced, rec["id"]), rec)
+    assert any("moderator" in e or "delete" in e for e in validate_repo(synced, now="2026-10-31T00:00:00Z"))
+
+
+def test_only_a_place_a_traveller_added_has_a_moderator_decision(synced):
+    path, rec = first_place(synced)
+    rec["moderator"] = {"action": "hide", "at": "2026-10-30T02:00:00Z"}
+    write_place(path, rec)
+    assert any("moderator" in e for e in validate_repo(synced))
+
+
 def test_only_a_place_a_traveller_added_has_a_standing(synced):
     path, rec = first_place(synced)
     rec["standing"] = "shown"

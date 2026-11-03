@@ -18,7 +18,7 @@ exits 1. Checks:
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
   a confirmation does not move
-- standing is only on a place a traveller added (osm null)
+- standing and moderator are only on a place a traveller added (osm null)
 - no two records share an id or an OSM object (merged_osm included,
   tombstones left out)
 - a tombstone (status merged) has merged_into, naming a record that is not
@@ -170,6 +170,8 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
         errors.append(f"{where}: last_confirmed {record['last_confirmed']} is in the future")
     if "standing" in record and record["osm"] is not None:
         errors.append(f"{where}: standing is only for a place a traveller added, which has osm null")
+    if "moderator" in record and record["osm"] is not None:
+        errors.append(f"{where}: moderator is only for a place a traveller added, which has osm null")
     errors += owner_errors(record, where)
     return record, errors
 
