@@ -64,6 +64,23 @@ YES_NO_TAGS = {
     "playground": "playground",
 }
 
+# Fuels sold: OSM fuel:* key -> the name in the fuels fact, in the order written.
+FUEL_TAGS = {
+    "fuel:diesel": "diesel",
+    "fuel:octane_91": "unleaded_91",
+    "fuel:e10": "e10",
+    "fuel:octane_95": "unleaded_95",
+    "fuel:octane_98": "unleaded_98",
+    "fuel:e85": "e85",
+    "fuel:adblue": "adblue",
+    "fuel:lpg": "lpg",
+}
+
+# toilets:disposal -> toilet_type.
+TOILET_TYPES = {"flush": "flush", "pitlatrine": "pit", "chemical": "chemical", "dry_toilet": "dry", "bucket": "dry"}
+
+OPERATOR_MAX = 200
+
 # Social pages: fact key -> OSM keys, the first with a value wins. Only
 # https links are kept.
 SOCIAL_TAGS = {
@@ -191,6 +208,47 @@ def facts_from_tags(tags: dict) -> dict:
         facts["showers"] = True
     elif shower == "no":
         facts["showers"] = False
+
+    hot_water = yes_no(tags.get("hot_water"))
+    if shower == "hot":
+        hot_water = True
+    elif shower == "cold" and hot_water is None:
+        hot_water = False
+    if hot_water is not None:
+        facts["hot_water"] = hot_water
+
+    for osm_key, fact_key in (("bin", "bins"), ("compressed_air", "air")):
+        value = yes_no(tags.get(osm_key))
+        if value is not None:
+            facts[fact_key] = value
+
+    hgv = tags.get("hgv", "").strip().lower()
+    if hgv in ("yes", "designated"):
+        facts["big_rigs"] = True
+    elif hgv == "no":
+        facts["big_rigs"] = False
+
+    lpg = yes_no(tags.get("fuel:lpg"))
+    if lpg is not None:
+        facts["lpg"] = lpg
+
+    fuels = [name for osm_key, name in FUEL_TAGS.items() if yes_no(tags.get(osm_key))]
+    if fuels:
+        facts["fuels"] = fuels
+
+    reservation = first_value(tags.get("reservation", "")).lower()
+    if reservation == "required":
+        facts["booking_required"] = True
+    elif reservation == "no":
+        facts["booking_required"] = False
+
+    toilet_type = TOILET_TYPES.get(first_value(tags.get("toilets:disposal", "")).lower())
+    if toilet_type:
+        facts["toilet_type"] = toilet_type
+
+    operator = tags.get("operator", "").strip()
+    if operator and len(operator) <= OPERATOR_MAX:
+        facts["operator"] = operator
 
     dog = tags.get("dog", "").strip().lower()
     if dog in ("yes", "leashed", "no"):

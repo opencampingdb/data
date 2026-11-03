@@ -192,7 +192,10 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `pet_sitting`, `fuel`, `lpg`, `car_wash`, `vehicle_storage`) and warnings
   (`self_contained_only`, `crocodiles`, `seasonal_closure`,
   `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
-  club, `address` is the street address (an object with `unit`,
+  club, `operator` is who runs the place (a council, a parks agency, a
+  company), `fuels` lists the fuels sold, `air` is air for tyres,
+  `hot_water` is hot water in the showers or basins, `toilet_type` is
+  `flush`, `pit`, `chemical` or `dry`, `address` is the street address (an object with `unit`,
   `housenumber`, `street` or a rural `place`, `suburb`, `state` and
   `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
   `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)

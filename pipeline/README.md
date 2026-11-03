@@ -203,6 +203,15 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `nudism` | `nudist` | `yes`, `designated` or `customary` is `true`, `no` is `false` |
 | `min_age` | `over_50s` | `50`, `55` or `60` is `true`. No other value is written |
 | `brand` | `brand` | A park chain or club we list (BIG4 is `big4`, Discovery Parks is `discovery`, and so on: `BRANDS` in `pipeline/kinds.py`). Other brands are left out |
+| `fuel:diesel`, `fuel:octane_91`, `fuel:e10`, `fuel:octane_95`, `fuel:octane_98`, `fuel:e85`, `fuel:adblue`, `fuel:lpg` | `fuels` | the fuels tagged `yes`, as `diesel`, `unleaded_91`, `e10`, `unleaded_95`, `unleaded_98`, `e85`, `adblue`, `lpg` in that order. No fuel tagged `yes`, no fact |
+| `fuel:lpg` | `lpg` | `yes` / `no` |
+| `compressed_air` | `air` | `yes` / `no` |
+| `hgv` | `big_rigs` | `yes` or `designated` is `true`, `no` is `false`. Others, such as `destination`, are left out |
+| `bin` | `bins` | `yes` / `no` |
+| `hot_water`, `shower` | `hot_water` | `yes` / `no`. `shower=hot` is `true`; `shower=cold` is `false` unless `hot_water` says otherwise |
+| `toilets:disposal` | `toilet_type` | `flush`, `pitlatrine` is `pit`, `chemical`, `dry_toilet` or `bucket` is `dry`. Others are left out |
+| `reservation` | `booking_required` | `required` is `true`, `no` is `false`. `yes` and `recommended` are left out |
+| `operator` | `operator` | trimmed, up to 200 characters |
 | `addr:unit`, `addr:housenumber`, `addr:street`, `addr:place`, `addr:suburb` (then `addr:city`), `addr:state`, `addr:postcode` | `address` | an object with `unit`, `housenumber`, `street`, `place`, `suburb`, `state` and `postcode`. Written only with a street or a place. State becomes its abbreviation (`Victoria` is `VIC`); a state we can't read, a postcode that isn't four digits and values over 100 characters are left out |
 | `email`, then `contact:email` | `email` | kept only if it looks like an email address |
 | `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` (then the bare keys) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://`. A bare handle is left out |
