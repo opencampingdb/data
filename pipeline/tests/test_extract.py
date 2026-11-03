@@ -379,3 +379,23 @@ def test_brand_contacts_and_social_pages():
         "contact:twitter": "https://x.com/lakebend",
         "contact:tiktok": "http://tiktok.com/@lakebend",
     }) == {"facebook": "https://www.facebook.com/lakebend", "x": "https://x.com/lakebend"}
+
+
+def test_street_address():
+    assert facts_from_tags({
+        "addr:housenumber": "12",
+        "addr:street": "Lake Road",
+        "addr:city": "Lakeside",
+        "addr:state": "Victoria",
+        "addr:postcode": "3999",
+    }) == {"address": {"housenumber": "12", "street": "Lake Road", "suburb": "Lakeside", "state": "VIC", "postcode": "3999"}}
+    # addr:suburb wins over addr:city, and a rural address can name a place instead of a street.
+    assert facts_from_tags({"addr:place": "Lake Station", "addr:suburb": "Lakeside", "addr:city": "Shire Town"}) == {
+        "address": {"place": "Lake Station", "suburb": "Lakeside"}
+    }
+    # A state or postcode we can't read is left out.
+    assert facts_from_tags({"addr:street": "Lake Road", "addr:state": "Somewhere", "addr:postcode": "39"}) == {
+        "address": {"street": "Lake Road"}
+    }
+    # No street and no place, no address.
+    assert facts_from_tags({"addr:postcode": "3999", "addr:city": "Lakeside"}) == {}

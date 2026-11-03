@@ -75,6 +75,30 @@ SOCIAL_TAGS = {
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
+# Street address: address field -> OSM keys, the first with a value wins.
+# addr:city is the suburb or town in Australian OSM data.
+ADDRESS_TAGS = {
+    "unit": ("addr:unit",),
+    "housenumber": ("addr:housenumber",),
+    "street": ("addr:street",),
+    "place": ("addr:place",),
+    "suburb": ("addr:suburb", "addr:city"),
+    "state": ("addr:state",),
+    "postcode": ("addr:postcode",),
+}
+ADDRESS_MAX = 100
+POSTCODE_RE = re.compile(r"^\d{4}$")
+STATES = {
+    "nsw": "NSW", "new south wales": "NSW",
+    "vic": "VIC", "victoria": "VIC",
+    "qld": "QLD", "queensland": "QLD",
+    "sa": "SA", "south australia": "SA",
+    "wa": "WA", "western australia": "WA",
+    "tas": "TAS", "tasmania": "TAS",
+    "nt": "NT", "northern territory": "NT",
+    "act": "ACT", "australian capital territory": "ACT",
+}
+
 # maxstay units we can read, and the short unit we write.
 MAXSTAY_UNITS = {
     "h": "h", "hr": "h", "hrs": "h", "hour": "h", "hours": "h",
@@ -120,6 +144,33 @@ def parse_maxstay(value: str) -> str:
     if match and match.group(2) in MAXSTAY_UNITS:
         return match.group(1) + MAXSTAY_UNITS[match.group(2)]
     return value
+
+
+def parse_address(tags: dict) -> dict | None:
+    """The street address in addr:* tags, or None without a street or a place name.
+
+    State is written as its abbreviation and postcode only as four digits;
+    other values are kept as written, trimmed.
+    """
+    address = {}
+    for field, osm_keys in ADDRESS_TAGS.items():
+        for key in osm_keys:
+            value = tags.get(key, "").strip()
+            if value:
+                if len(value) <= ADDRESS_MAX:
+                    address[field] = value
+                break
+    if "state" in address:
+        state = STATES.get(address["state"].lower())
+        if state:
+            address["state"] = state
+        else:
+            del address["state"]
+    if "postcode" in address and not POSTCODE_RE.match(address["postcode"]):
+        del address["postcode"]
+    if "street" not in address and "place" not in address:
+        return None
+    return address
 
 
 def facts_from_tags(tags: dict) -> dict:
@@ -193,6 +244,10 @@ def facts_from_tags(tags: dict) -> dict:
 
     if first_value(tags.get("min_age", "")) in ("50", "55", "60"):
         facts["over_50s"] = True
+
+    address = parse_address(tags)
+    if address:
+        facts["address"] = address
 
     brand = parse_brand(tags.get("brand", ""))
     if brand:
