@@ -345,7 +345,8 @@ Content-Type: application/json
   characters), a `description` report the text in `value` (at most 500), and
   a `kind` report a code from [schema/kinds.json](schema/kinds.json) in
   `place_kind`. Names and descriptions must not hold an email address, phone
-  number or link. A `new_place` report may carry `place_kind` and
+  number or link. A `new_place` report may carry `name` (1 to 300
+  characters, checked as a `name` report's value is), `place_kind` and
   `contacts`, with any of `phone`, `website` and `email`, kept out of the
   note. A `remove` report says a new place should come down, with `reason`
   `not_there`, `fake`, `offensive`, `private_land` or `duplicate`.
@@ -376,7 +377,8 @@ Content-Type: application/json
   covers it, and the App Attest and Play Integrity headers an app key may
   require.
 - `check` is `{"visited": "YYYY-MM-DD", "still_there": true}`, a confirmation
-  that a place is as described.
+  that a place is as described, with `"nearby": true` when the app saw the
+  phone near the place (never send the location itself).
 - `device` is a random UUID your app creates once per install. Never send a
   hardware ID, advertising ID, account ID, name or email. The intake hashes
   `device` before storing it, and nothing that identifies a person is ever
@@ -403,7 +405,7 @@ GET https://<intake host>/v1/places/recent?bbox=<west>,<south>,<east>,<north>
 ```
 
 ```json
-{"places": [{"id": "ocdb_01JC...", "location": {"lat": -35.1, "lon": 149.2}, "kind": "free_camp",
+{"places": [{"id": "ocdb_01JC...", "name": "Gravel Pit Rest Area", "location": {"lat": -35.1, "lon": 149.2}, "kind": "free_camp",
   "standing": "shown", "added": "2026-10-30T01:00:00Z", "contributor": "ctr_0123456789abcdef"}]}
 ```
 
@@ -449,8 +451,8 @@ apps with the next release.
 - A `new_place` is written into the data at the next apply run, with
   `standing` `shown`, when the install proved itself with App Attest or Play
   Integrity, the report has a contributor and its note passes the text
-  checks. Checks with `still_there: true` from 2 other devices near it make
-  it `confirmed`. `remove` reports, or checks with `still_there: false`, from
+  checks, with the `name` it carries. Checks with `still_there: true` and
+  `nearby: true` from 2 other devices make it `confirmed`. `remove` reports, or checks with `still_there: false`, from
   2 different devices hide it, or 3 once it is confirmed. A blocked
   contributor's places are hidden. A new place within 150 m of a place in the
   same group, one hidden before it was published and one that fails the
