@@ -45,7 +45,13 @@ from .common import (
 # 7: site features, more kinds, and fee may be "donation".
 # 8: photos.ndjson.gz. 9: photos.ndjson.gz gone again: Open Camping DB holds no photos.
 # 10: places travellers added carry standing, and held and hidden ones are left out.
+# Raise FORMAT_VERSION only when a reader of the previous format would misread the
+# records: a field removed or renamed, a meaning changed, or a new value in an
+# existing field. Announce it in an issue first (CONNECTING.md section 1). An
+# additive change (a new optional field or file, records left out, a new kind)
+# raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 10
+FORMAT_MINOR = 0
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.
@@ -170,6 +176,7 @@ def build_release(
 
     manifest = {
         "format_version": FORMAT_VERSION,
+        "format_minor": FORMAT_MINOR,
         "data_version": data_version,
         "release": release,
         "generated": generated,

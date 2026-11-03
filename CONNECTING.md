@@ -16,6 +16,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 10,
+  "format_minor": 0,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -46,7 +47,24 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 If `format_version` is higher than the one your app understands, keep the
 data you have and stop: the record format has changed in a way your app
-cannot read.
+cannot read. Read any release whose `format_version` is the one your app
+knows or lower, whatever its `format_minor`.
+
+`format_version` rises only when a reader of the previous format would
+misread the records: a field removed or renamed, a field whose meaning
+changes, or a new value in an existing field (such as `fee` gaining
+`"donation"` in format 7). Each rise is announced in an issue labelled
+`format-change` on this repository at least 7 days before the first release
+that carries it, so apps can ship a reader first. Watch the repository's
+issues to hear about it.
+
+`format_minor` rises for a change a reader of the same `format_version` can
+read without updating: a new optional field, a new file in the manifest,
+records left out of a release, or a new kind (see section 4). It goes back to
+0 when `format_version` rises. To stay readable through these changes, ignore
+fields, facts and manifest entries your app does not know. The schemas in
+[schema/](schema/) reject unknown fields, which is right for checking this
+repository but wrong for reading a release.
 
 Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
 `dump_station`, `drinking_water`, `toilets`, `shower`, `picnic_site`) and no
@@ -68,7 +86,9 @@ app that reads `fee` as a plain boolean must handle `"donation"`. Format 9
 drops `photos.ndjson.gz`, which format 8 had: Open Camping DB holds no photos.
 Everything else reads the same as in format 7. Format 10 adds `standing` to
 places travellers added (see section 4) and leaves out those that are `held`
-or `hidden`. Records without it read the same as in format 9.
+or `hidden`. Records without it read the same as in format 9. Formats 3, 4, 6,
+9 and 10 were additive and would each be a `format_minor` rise under the rule
+above. `format_minor` starts at 0 in format 10.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
