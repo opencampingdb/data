@@ -4,7 +4,7 @@ import gzip
 import hashlib
 import json
 
-from pipeline.common import dump_line
+from pipeline.common import dump_line, dump_record, place_path
 from pipeline.extract import extract_file
 from pipeline.release import build_release
 from pipeline.sync import sync
@@ -72,7 +72,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     # 6: fees.ndjson.gz, what travellers paid per night.
-    assert manifest["format_version"] == 9
+    assert manifest["format_version"] == 10
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
@@ -176,3 +176,27 @@ def test_release_holds_fees_paid_in_the_last_24_months(repo, v1_osm, tmp_path):
         "bytes": len(fees_bytes),
         "count": 2,
     }
+
+
+def test_release_leaves_out_held_and_hidden_new_places(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    osm_count = len(list((repo / "places").rglob("*.json")))
+    for n, standing in enumerate(["shown", "confirmed", "held", "hidden"]):
+        place_id = f"ocdb_01JC000000000000000000000{n}"
+        rec = {
+            "id": place_id, "name": None, "kind": "free_camp", "group": "overnight",
+            "location": {"lat": -35.1, "lon": 149.2 + n}, "osm": None, "facts": {}, "status": "open",
+            "rating": None, "standing": standing, "fact_sources": {"location": "feedback"},
+            "fact_dates": {"location": "2026-10-30T01:00:00Z"}, "updated": "2026-10-30T01:00:00Z",
+        }
+        path = place_path(repo, place_id)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(dump_record(rec), encoding="utf-8", newline="\n")
+
+    manifest = build(repo, tmp_path / "dist")
+
+    lines = gzip.decompress((tmp_path / "dist" / "places.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
+    standings = sorted(json.loads(line)["standing"] for line in lines if "standing" in json.loads(line))
+    assert standings == ["confirmed", "shown"]
+    assert manifest["places"]["count"] == osm_count + 2
+    assert manifest["format_version"] == 10
