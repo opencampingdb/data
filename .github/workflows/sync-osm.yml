@@ -6,6 +6,11 @@ name: OSM sync
 # request from the osm-sync branch. Auto-merge is turned on only when
 # fewer than 2% of records changed.
 #
+# Report tasks need the evidence behind them, so the run checks out the
+# applied/ folder of the private inbox repository with a read-only token for
+# the same App. Nothing from the inbox is committed: only counts and dates
+# reach maproulette/, and the checkout is deleted before the PR step.
+#
 # The branch push, the PR and the merge use a token for the opencampingdb-bot
 # GitHub App, never GITHUB_TOKEN: events caused by GITHUB_TOKEN do not start
 # other workflows, so a PR opened with it would never get its Validate check.
@@ -66,8 +71,33 @@ jobs:
             --summary "$RUNNER_TEMP/sync-summary.json" \
             --source "Geofabrik australia-latest.osm.pbf, downloaded $(date -u +%Y-%m-%dT%H:%MZ)"
 
+      - name: Create a read-only inbox token
+        id: inbox-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.OCDB_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.OCDB_BOT_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: inbox
+          permission-contents: read
+
+      - name: Check out the inbox's applied feedback
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ github.repository_owner }}/inbox
+          token: ${{ steps.inbox-token.outputs.token }}
+          path: .inbox
+          sparse-checkout: applied
+          persist-credentials: false
+
       - name: Write the MapRoulette challenge files
-        run: python -m pipeline.maproulette "$RUNNER_TEMP/extract.ndjson" --root . --report "$RUNNER_TEMP/sync-report.md"
+        run: |
+          python -m pipeline.maproulette "$RUNNER_TEMP/extract.ndjson" --root . \
+            --inbox .inbox --report "$RUNNER_TEMP/sync-report.md"
+
+      - name: Remove the inbox checkout
+        if: always()
+        run: rm -rf .inbox
 
       - name: Validate
         run: python -m pipeline.validate --root .

@@ -14,7 +14,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
-| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --report sync-report.md` | the extract and `places/` | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. See [maproulette/README.md](../maproulette/README.md) |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 
 Tests: `python -m pytest`.
 
