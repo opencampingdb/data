@@ -1,6 +1,28 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_dates": {
+    "booking_required": "2026-10-01T00:00:00Z",
+    "drinking_water": "2026-10-01T00:00:00Z",
+    "dump_station": "2026-10-01T00:00:00Z",
+    "fee": "2026-10-01T00:00:00Z",
+    "max_stay": "2026-10-01T00:00:00Z",
+    "pets": "2026-10-01T00:00:00Z"
+  },
+  "fact_sources": {
+    "booking_required": "community_report",
+    "drinking_water": "community_report",
+    "dump_station": "community_report",
+    "fee": "community_report",
+    "max_stay": "community_report",
+    "pets": "community_report"
+  },
+  "facts": {
+    "booking_required": false,
+    "drinking_water": true,
+    "dump_station": true,
+    "fee": false,
+    "max_stay": "48h",
+    "pets": "yes"
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESFBSEDJ2SWWKZZQFRTPK",
   "kind": "caravan_park",
@@ -24,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:39:39Z"
+  "updated": "2026-11-04T07:12:34Z"
 }
