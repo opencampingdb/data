@@ -1,6 +1,25 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_dates": {
+    "bins": "2026-10-01T00:00:00Z",
+    "campfires": "2026-10-01T00:00:00Z",
+    "fee": "2026-10-01T00:00:00Z",
+    "pets": "2026-10-01T00:00:00Z",
+    "toilets": "2026-10-01T00:00:00Z"
+  },
+  "fact_sources": {
+    "bins": "community_report",
+    "campfires": "community_report",
+    "fee": "community_report",
+    "pets": "community_report",
+    "toilets": "community_report"
+  },
+  "facts": {
+    "bins": true,
+    "campfires": true,
+    "fee": false,
+    "pets": "yes",
+    "toilets": true
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESFWNB58V51834518F1DA",
   "kind": "state_forest_campsite",
@@ -23,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T08:02:34Z"
+  "updated": "2026-11-04T07:12:34Z"
 }

@@ -1,15 +1,26 @@
 {
+  "fact_dates": {
+    "bins": "2026-09-01T00:00:00Z",
+    "drinking_water": "2026-09-01T00:00:00Z",
+    "picnic_tables": "2026-09-01T00:00:00Z"
+  },
   "fact_sources": {
+    "bins": "community_report",
     "caravans": "osm",
+    "drinking_water": "community_report",
     "entry": "osm",
     "max_stay": "osm",
+    "picnic_tables": "community_report",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
     "caravans": true,
+    "drinking_water": true,
     "entry": "public",
     "max_stay": "72h",
+    "picnic_tables": true,
     "showers": false,
     "toilets": true
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T07:12:34Z"
 }
