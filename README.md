@@ -212,6 +212,9 @@ Open Camping DB uses two GitHub Apps. Only one of them is installed here.
   `OCDB_BOT_PRIVATE_KEY`. Its key lives only in Actions secrets.
   - The nightly OSM sync pushes the `osm-sync` branch, opens or updates its PR
     and turns on auto-merge with this App's token.
+  - The nightly OSM sync also makes a read-only token for `inbox` and checks
+    out its `applied/` folder, the evidence MapRoulette report tasks need (see
+    `maproulette/README.md`). Nothing from the inbox is committed.
   - The apply-feedback workflow in `inbox` uses it to push the two fixed
     branches here, `feedback/auto` (automatic changes only, merges itself once
     CI passes) and `feedback/review` (changes a person must check, labelled

@@ -6,6 +6,7 @@ MapRoulette challenge file.
 """
 
 import json
+from datetime import datetime, timezone
 
 import pytest
 
@@ -170,26 +171,45 @@ def test_sync_keeps_community_report_facts_and_their_source(repo, v1_osm, v2_osm
 
 # --------------------------------------------------------------- MapRoulette
 
+NOW = datetime(2026, 11, 5, tzinfo=timezone.utc)
 
-def test_community_report_facts_never_become_tasks(repo):
+
+def inbox_with(tmp_path, place, **facts):
+    """An inbox where two travellers reported each fact, more than enough evidence for a task."""
+    root = tmp_path / "inbox"
+    for n, (field, value) in enumerate(facts.items()):
+        for origin in ("o1", "o2"):
+            item = {
+                "id": f"fb_{n}{origin}", "received": "2026-11-04T00:00:00Z", "type": "report", "place": place,
+                "device": origin, "origin": origin, "report": {"kind": "fact", "fact": field, "value": value},
+                "outcome": {"result": "applied", "reason": "test", "run": "2026-11-04T01:00:00Z"},
+            }
+            path = root / "applied" / "2026-11-04" / f"{item['id']}.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(item), encoding="utf-8")
+    (root / "applied").mkdir(parents=True, exist_ok=True)
+    return root
+
+
+def test_community_report_facts_never_become_tasks(repo, tmp_path):
     write(repo, osm_record(A, 1, facts={"fee": False, "toilets": True},
                            fact_sources={"fee": "community_report", "toilets": "community_report"},
                            fact_dates={"fee": REPORTED, "toilets": REPORTED}))
-    write_challenges(repo, [osm_place(1)])
+    write_challenges(repo, [osm_place(1)], inbox=inbox_with(tmp_path, A, fee=False, toilets=True), now=NOW)
     assert (repo / "maproulette" / TRAVELLER_REPORTS).read_text(encoding="utf-8") == ""
 
 
-def test_feedback_still_goes_when_community_report_facts_sit_beside_it(repo):
+def test_feedback_still_goes_when_community_report_facts_sit_beside_it(repo, tmp_path):
     write(repo, osm_record(A, 1, facts={"fee": False, "toilets": True},
                            fact_sources={"fee": "feedback", "toilets": "community_report"},
                            fact_dates={"fee": T1, "toilets": REPORTED}))
-    write_challenges(repo, [osm_place(1)])
+    write_challenges(repo, [osm_place(1)], inbox=inbox_with(tmp_path, A, fee=False, toilets=True), now=NOW)
     text = (repo / "maproulette" / TRAVELLER_REPORTS).read_text(encoding="utf-8")
     assert "fee=no" in text
     assert "toilets" not in text
 
 
-def test_place_named_or_placed_by_community_reports_is_never_sent(repo):
+def test_place_named_or_placed_by_community_reports_is_never_sent(repo, tmp_path):
     # Even with an OSM link and feedback on it, a place whose name or
     # location came from community reports stays out of both challenges.
     write(repo, osm_record(A, 1, name="Reported Name", facts={"fee": False},
@@ -199,13 +219,16 @@ def test_place_named_or_placed_by_community_reports_is_never_sent(repo):
     write(repo, osm_record(B, 3, location={"lat": -35.1, "lon": 145.1}, facts={"fee": False},
                            fact_sources={"location": "community_report", "fee": "feedback"},
                            fact_dates={"location": REPORTED, "fee": T1}))
-    write_challenges(repo, [osm_place(1), osm_place(2), osm_place(3)])
+    box = inbox_with(tmp_path, A, fee=False)
+    for item in (box / "applied" / "2026-11-04").iterdir():  # the same reports for B
+        item.with_name(f"b{item.name}").write_text(item.read_text().replace(A, B), encoding="utf-8")
+    write_challenges(repo, [osm_place(1), osm_place(2), osm_place(3)], inbox=box, now=NOW)
     assert (repo / "maproulette" / TRAVELLER_REPORTS).read_text(encoding="utf-8") == ""
     assert (repo / "maproulette" / DOUBLE_MAPPING).read_text(encoding="utf-8") == ""
 
 
-def test_new_place_from_community_reports_is_never_sent(repo):
+def test_new_place_from_community_reports_is_never_sent(repo, tmp_path):
     write(repo, community_place())
-    write_challenges(repo, [osm_place(1)])
+    write_challenges(repo, [osm_place(1)], inbox=inbox_with(tmp_path, NEW_ID, toilets=True), now=NOW)
     assert (repo / "maproulette" / TRAVELLER_REPORTS).read_text(encoding="utf-8") == ""
     assert (repo / "maproulette" / DOUBLE_MAPPING).read_text(encoding="utf-8") == ""
