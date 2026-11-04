@@ -128,12 +128,21 @@ def allowed_licence(short_name: str) -> bool:
     return bool(LICENCE_RE.match(" ".join(short_name.lower().split())))
 
 
+IMAGE_HOSTS = ("https://upload.wikimedia.org/", "https://thumb.wikimedia.org/")
+
+
+def image_url(url: str) -> str:
+    """An image URL on a Wikimedia image host without its query (the API adds utm tracking), or "" when not."""
+    url = (url or "").split("?", 1)[0]
+    return url if url.startswith(IMAGE_HOSTS) else ""
+
+
 def full_url(info: dict) -> str:
     """The FULL_WIDTH standard thumbnail, or the original when it is no wider than that."""
-    thumb = info.get("thumburl", "")
+    thumb = image_url(info.get("thumburl", ""))
     if info.get("width", 0) > FULL_WIDTH and f"/{THUMB_WIDTH}px-" in thumb:
         return thumb.replace(f"/{THUMB_WIDTH}px-", f"/{FULL_WIDTH}px-")
-    return info.get("url", "")
+    return image_url(info.get("url", ""))
 
 
 def match_kind(name_words: set[str], text: str, distance_m: float) -> str | None:
@@ -177,14 +186,16 @@ def file_entry(page: dict, name_words: set[str]) -> dict | None:
     text = " ".join([title.removeprefix("File:").rsplit(".", 1)[0].replace("_", " "), plain_text(meta(info, "ObjectName")), categories])
     distance_m = float(coords[0].get("dist", SEARCH_RADIUS_M + 1))
     kind = match_kind(name_words, text, distance_m)
-    if not kind:
+    thumb = image_url(info.get("thumburl", "")) or image_url(info.get("url", ""))
+    full = full_url(info)
+    if not kind or not thumb or not full:
         return None
     entry = {
         "file": title.removeprefix("File:"),
         "width": width,
         "height": height,
-        "thumb": info.get("thumburl") or info.get("url", ""),
-        "full": full_url(info),
+        "thumb": thumb,
+        "full": full,
         "page": info.get("descriptionurl") or f"https://commons.wikimedia.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
         "licence": licence,
         "match": kind,
