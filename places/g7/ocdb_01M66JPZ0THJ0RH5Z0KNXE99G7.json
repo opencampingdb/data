@@ -1,21 +1,32 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "opening_hours": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "112",
+      "postcode": "4030",
+      "street": "Bowen Street",
+      "suburb": "Windsor"
+    },
+    "opening_hours": "Mo-Fr 07:30-16:30"
+  },
   "group": "services",
   "id": "ocdb_01M66JPZ0THJ0RH5Z0KNXE99G7",
   "kind": "mechanic",
   "location": {
-    "lat": -27.433841,
-    "lon": 153.038317
+    "lat": -27.433811,
+    "lon": 153.038329
   },
   "name": "Shipstone Accident Repair Specialists",
   "osm": {
     "id": 1289752546,
-    "timestamp": "2025-07-24T03:38:55Z",
+    "timestamp": "2026-11-03T06:23:59Z",
     "type": "way",
-    "version": 5
+    "version": 7
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T23:14:53Z"
 }

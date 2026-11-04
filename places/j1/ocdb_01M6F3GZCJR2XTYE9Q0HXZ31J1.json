@@ -1,25 +1,35 @@
 {
   "fact_sources": {
-    "website": "osm"
+    "address": "osm",
+    "website": "osm",
+    "wifi": "osm"
   },
   "facts": {
-    "website": "https://all.accor.com/"
+    "address": {
+      "housenumber": "1500",
+      "postcode": "3363",
+      "state": "VIC",
+      "street": "Midland Highway",
+      "suburb": "Creswick"
+    },
+    "website": "https://all.accor.com/",
+    "wifi": true
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZCJR2XTYE9Q0HXZ31J1",
   "kind": "roofed_accommodation",
   "location": {
-    "lat": -37.445108,
-    "lon": 143.888821
+    "lat": -37.445118,
+    "lon": 143.888817
   },
   "name": "Sebel Creswick Forest Resort",
   "osm": {
     "id": 757751728,
-    "timestamp": "2025-03-04T08:40:15Z",
+    "timestamp": "2026-11-02T06:21:12Z",
     "type": "way",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-04T23:14:53Z"
 }

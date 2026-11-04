@@ -4,6 +4,7 @@
     "kitchen": "2026-10-01T00:00:00Z"
   },
   "fact_sources": {
+    "address": "osm",
     "bbq": "community_report",
     "cabins": "osm",
     "drinking_water": "osm",
@@ -19,6 +20,10 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "street": "Truscott Crescent"
+    },
     "bbq": true,
     "cabins": false,
     "drinking_water": true,
@@ -49,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-04T23:14:53Z"
 }

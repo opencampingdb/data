@@ -3,6 +3,7 @@
     "kitchen": "2024-01-01T00:00:00Z"
   },
   "fact_sources": {
+    "address": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
@@ -17,6 +18,12 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "state": "NSW",
+      "street": "O'Connors Road",
+      "suburb": "Nulkaba"
+    },
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
@@ -46,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-04T23:14:53Z"
 }

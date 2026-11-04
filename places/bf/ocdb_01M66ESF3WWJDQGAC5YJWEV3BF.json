@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "address": "osm",
     "dump_station": "osm",
     "phone": "osm",
     "power": "osm",
@@ -7,6 +8,11 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "321",
+      "street": "Goodwood Road",
+      "suburb": "Thabeban"
+    },
     "dump_station": true,
     "phone": "+61 7 4153 1515",
     "power": true,
@@ -29,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-04T23:14:53Z"
 }
