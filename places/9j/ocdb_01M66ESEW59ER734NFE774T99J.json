@@ -1,19 +1,27 @@
 {
+  "fact_dates": {
+    "drinking_water": "2026-03-01T00:00:00Z",
+    "power": "2026-03-01T00:00:00Z"
+  },
   "fact_sources": {
+    "drinking_water": "community_report",
     "dump_station": "osm",
     "entry": "osm",
     "facebook": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "power": "community_report",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "drinking_water": true,
     "dump_station": true,
     "entry": "customers",
     "facebook": "https://www.facebook.com/penongpark/",
     "fee": true,
     "kitchen": true,
+    "power": true,
     "showers": true,
     "toilets": true
   },
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-04T07:12:34Z"
 }
