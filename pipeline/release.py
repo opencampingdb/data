@@ -1,5 +1,5 @@
 """Build the release files: places.ndjson.gz, reviews.ndjson.gz, fees.ndjson.gz,
-merged.ndjson.gz and manifest.json.
+merged.ndjson.gz and manifest.json, and the place index for feedback intakes.
 
 Usage:
     python -m pipeline.release --root . --out dist [--repository opencampingdb/data]
@@ -8,6 +8,12 @@ The data version and the generated time default to the current git commit
 (its commit time and short hash), so building the same commit twice gives
 byte-identical files. Both can be set by hand with --data-version and
 --generated.
+
+place-index.ndjson.gz is not a release file and the manifest leaves it out.
+It holds one line per released place, sorted by id: {"cell", "fact_dates",
+"fact_sources", "facts", "id"}, where cell is the whole-degree map cell
+[floor(lon), floor(lat)]. pipeline.place_index loads it into a feedback intake,
+which decides feedback against it at send time.
 
 The release tag is data-<commit time>, for example data-20261030T160000Z.
 The manifest names it, and gives each file an absolute URL in that release,
@@ -19,6 +25,7 @@ import gzip
 import hashlib
 import io
 import json
+import math
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -57,6 +64,7 @@ UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.
 FEE_MONTHS = 24
 DEFAULT_REPOSITORY = "opencampingdb/data"
+PLACE_INDEX_FILE = "place-index.ndjson.gz"
 
 
 def release_tag(data_version: str) -> str:
@@ -81,6 +89,29 @@ def places_ndjson(root: Path) -> tuple[bytes, int]:
     places = load_places(root)
     lines = [
         dump_line(places[place_id]) + "\n"
+        for place_id in sorted(places)
+        if places[place_id].get("status") != "merged"
+        and places[place_id].get("standing") not in UNRELEASED_STANDINGS
+    ]
+    return "".join(lines).encode("utf-8"), len(lines)
+
+
+def cell_of(location: dict) -> tuple[int, int]:
+    """The whole-degree map cell a location is in. 180 east and 90 north fall in the last cell."""
+    return min(math.floor(location["lon"]), 179), min(math.floor(location["lat"]), 89)
+
+
+def place_index_ndjson(root: Path) -> tuple[bytes, int]:
+    """One index line for each place places.ndjson.gz holds, sorted by id."""
+    places = load_places(root)
+    lines = [
+        dump_line({
+            "id": place_id,
+            "cell": list(cell_of(places[place_id]["location"])),
+            "facts": places[place_id].get("facts", {}),
+            "fact_sources": places[place_id].get("fact_sources", {}),
+            "fact_dates": places[place_id].get("fact_dates", {}),
+        }) + "\n"
         for place_id in sorted(places)
         if places[place_id].get("status") != "merged"
         and places[place_id].get("standing") not in UNRELEASED_STANDINGS
@@ -161,7 +192,7 @@ def build_release(
     release: str | None = None,
     repository: str = DEFAULT_REPOSITORY,
 ) -> dict:
-    """Write the four data files and manifest.json into out_dir and return the manifest.
+    """Write the four data files, manifest.json and the place index into out_dir and return the manifest.
 
     release defaults to data-<timestamp> taken from data_version.
     """
@@ -173,6 +204,8 @@ def build_release(
     reviews_raw, reviews_count = reviews_ndjson(root)
     fees_raw, fees_count = fees_ndjson(root, generated)
     merged_raw, merged_count = merged_ndjson(root)
+    index_raw, _ = place_index_ndjson(root)
+    (out_dir / PLACE_INDEX_FILE).write_bytes(gzip_bytes(index_raw))
 
     manifest = {
         "format_version": FORMAT_VERSION,
