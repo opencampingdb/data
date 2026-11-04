@@ -7,10 +7,20 @@ name: Release
 # therefore always serves the newest manifest, and the url fields in that
 # manifest point at the files in the same release. Only the newest 60 dated
 # releases are kept. Older ones are deleted together with their tags.
+#
+# After each release it loads the place index (dist/place-index.ndjson.gz, not
+# a release file) into a feedback intake, when the INTAKE_URL variable (or the
+# intake_url input of a manual run) and the INTAKE_PLACES_TOKEN secret, the
+# intake's PLACES_TOKEN, are set. Without them the step is skipped.
 on:
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
+    inputs:
+      intake_url:
+        description: "Intake base URL for the place index (default: the INTAKE_URL variable)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -32,6 +42,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
+      INTAKE_URL: ${{ inputs.intake_url || vars.INTAKE_URL }}
     steps:
       - name: Check out main
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -99,3 +110,15 @@ jobs:
                 echo "Deleting release and tag $old"
                 gh release delete "$old" --cleanup-tag --yes
               done
+
+      - name: Load the place index into the intake
+        if: steps.check.outputs.changed == 'true' && env.INTAKE_URL != ''
+        env:
+          INTAKE_PLACES_TOKEN: ${{ secrets.INTAKE_PLACES_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$INTAKE_PLACES_TOKEN" ]; then
+            echo "INTAKE_PLACES_TOKEN is not set. Skipping the place index."
+            exit 0
+          fi
+          python -m pipeline.place_index --file dist/place-index.ndjson.gz --url "$INTAKE_URL"

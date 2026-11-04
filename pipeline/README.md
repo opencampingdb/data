@@ -8,7 +8,8 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json` |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
+| Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
@@ -448,3 +449,20 @@ The manifest names its `release`, `data-<commit time>` (for example
 `data-20261030T160000Z`), and gives each file an absolute `url` in that
 release: `https://github.com/<repository>/releases/download/<release>/<file>`.
 `--repository` sets the owner and name, `opencampingdb/data` by default.
+
+`place-index.ndjson.gz` is for feedback intakes, not apps: it is not a release
+file and the manifest leaves it out. It holds one line for each place
+`places.ndjson.gz` holds, sorted by `id`: `{"cell", "fact_dates",
+"fact_sources", "facts", "id"}`, where `cell` is the whole-degree map cell
+`[floor(lon), floor(lat)]` and `fact_dates` is `{}` when the record has none.
+An intake decides feedback against it at send time.
+
+`python -m pipeline.place_index --url <intake>` loads it into an intake with
+the token in `INTAKE_PLACES_TOKEN` (the intake's `PLACES_TOKEN`). It asks the
+intake for the hash of each cell it holds, `GET /v1/place-index/cells`, and
+sends only the cells whose lines hash differently, or that no longer hold a
+place, with `PUT /v1/place-index`, about 500 kB of lines per call. A release that
+changes a few places sends only their cells, and a call that fails is sent
+again by the next release. The release workflow runs it after publishing when
+the `INTAKE_URL` variable and the `INTAKE_PLACES_TOKEN` secret are set, and
+skips it otherwise.
