@@ -198,11 +198,13 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `CC BY-SA 4.0` or `CC0`), `licence_url` when the licence has one, `credit`
   (the author, plain text; absent only for public domain and CC0 files),
   `match` and `distance_m` (from the place). `match` says how sure the match
-  is: `name` (the place's name and a camping word are in the file's title or
-  categories, within 2 km), `camping` (a camping word, within 250 m) or
-  `area` (the place's name without a camping word, within 500 m: often a view
-  of the surroundings rather than the place). Show `area` photos as the
-  surroundings, or not at all. Only licences that allow any use with credit
+  is, from the file's title: `name` (the place's name with a camping word, or
+  its whole name, within 2 km), `camping` (a camping word within 250 m, only
+  for a place with no distinctive name, such as "Campsite 10") or `area` (the
+  place's name without a camping word, within 500 m: often a view of the
+  surroundings rather than the place). Show `area` photos as the
+  surroundings, or not at all. Photos of plants and animals and historic
+  photos are left out. Only licences that allow any use with credit
   are kept (CC0, public domain, CC BY and CC BY-SA). Photos are matched again
   every 30 days, so a file deleted from Commons drops out. Show the credit
   beside each photo (section 5) and load only `thumb` and `full`, which

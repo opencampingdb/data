@@ -35,6 +35,10 @@ def test_distinctive_words_drop_generic_and_short_words():
     assert commons.distinctive_words("Campsite C10") == {"c10"}
     assert commons.distinctive_words("Campsite 10") == set()
     assert commons.distinctive_words(None) == set()
+    # Without a plural s, and without words in brackets.
+    assert commons.distinctive_words("Gilgunnia Goldfields Rest Area") == {"gilgunnia", "goldfield"}
+    assert commons.distinctive_words("Johanna (GOW)") == {"johanna"}
+    assert commons.distinctive_words("North Coast Holiday Parks Urunga Heads") == {"urunga"}
 
 
 def test_allowed_licences():
@@ -47,12 +51,32 @@ def test_allowed_licences():
 def test_match_kinds_in_order_of_trust():
     words = {"tidal"}
     assert commons.match_kind(words, "Tidal River campground", 1500) == "name"
-    assert commons.match_kind(words, "Caravans at the beach", 200) == "camping"
-    assert commons.match_kind(words, "Caravans at the beach", 400) is None
     assert commons.match_kind(words, "Tidal River at dusk", 400) == "area"
     assert commons.match_kind(words, "Tidal River at dusk", 900) is None
-    # No distinctive words: only a camping word can match.
+    # A named place never matches by a camping word alone: that is as often another park nearby.
+    assert commons.match_kind(words, "The Fossickers Rest Tourist Park", 100) is None
+    # A place with no distinctive name matches by a camping word close by.
+    assert commons.match_kind(set(), "Caravans at the beach", 200) == "camping"
+    assert commons.match_kind(set(), "Caravans at the beach", 400) is None
     assert commons.match_kind(set(), "Bridge at dusk", 10) is None
+
+
+def test_camp_alone_is_not_a_camping_word():
+    assert commons.match_kind({"wynyard"}, "Camp-Creek-weir-Wynyard-20070423-016", 100, "Wynyard Showgrounds") == "area"
+    assert commons.match_kind({"donald"}, "Donald Police Camp Lockup 001", 100, "Donald Town Park") == "area"
+
+
+def test_the_whole_name_counts_in_place_of_a_camping_word_from_two_words():
+    flaxton = commons.distinctive_words("Flaxton Walkers Camp")
+    assert commons.match_kind(flaxton, "Flaxton Walkers Camp, Queensland, 2023, 01", 100, "Flaxton Walkers Camp") == "name"
+    johanna = commons.distinctive_words("Johanna (GOW)")
+    assert commons.match_kind(johanna, "Greater Crested Terns on Johanna Beach", 100, "Johanna (GOW)") == "area"
+    assert commons.match_kind(johanna, "Compost toilet at Johanna Beach hiker's campsite", 100, "Johanna (GOW)") == "name"
+
+
+def test_plural_words_match():
+    words = commons.distinctive_words("Warburton Bridge Reserve")
+    assert commons.match_kind(words, "Warburtons Bridge camping ground", 300, "Warburton Bridge Reserve") == "name"
 
 
 def test_file_entry_keeps_credit_licence_and_urls():
@@ -89,9 +113,19 @@ def test_file_entry_leaves_out_what_cannot_be_shown():
     assert commons.file_entry(page("File:Bridge.jpg"), name) is None
 
 
-def test_categories_count_as_text():
-    entry = commons.file_entry(page("File:IMG 1234.jpg", categories=["Tidal River campground"]), {"tidal"})
-    assert entry["match"] == "name"
+def test_categories_do_not_count():
+    # A category such as a town's name, or "Campgrounds in Victoria", is shared by every photo there.
+    assert commons.file_entry(page("File:IMG 1234.jpg", categories=["Tidal River campground"]), {"tidal"}) is None
+
+
+def test_species_and_historic_photos_are_left_out():
+    name = {"mogo"}
+    bird = page("File:Eopsaltria australis - Mogo Campground.jpg", categories=["Eopsaltria australis", "Mogo Campground"])
+    assert commons.file_entry(bird, name) is None
+    # A title that only looks like a species name is kept.
+    assert commons.file_entry(page("File:Mogo campground at dusk.jpg", categories=["Yengo National Park"]), name)["match"] == "name"
+    assert commons.file_entry(page("File:Mogo campground, 1915.jpg"), name) is None
+    assert commons.file_entry(page("File:Portrait of campers at Mogo campground.jpg"), name) is None
 
 
 def test_rank_orders_by_trust_then_distance_and_caps():
@@ -122,10 +156,11 @@ def test_run_checks_due_places_and_keeps_the_rest(tmp_path):
     write_place(tmp_path, "ocdb_D", group="utility")
     matches = tmp_path / commons.MATCHES_FILE
     matches.parent.mkdir(parents=True)
+    rules = commons.RULES
     matches.write_text(
-        json.dumps({"place": "ocdb_B", "checked": "2026-11-01", "files": []}) + "\n"
-        + json.dumps({"place": "ocdb_C", "checked": "2026-09-01", "files": []}) + "\n"
-        + json.dumps({"place": "ocdb_gone", "checked": "2026-11-01", "files": []}) + "\n",
+        json.dumps({"place": "ocdb_B", "checked": "2026-11-01", "rules": rules, "files": []}) + "\n"
+        + json.dumps({"place": "ocdb_C", "checked": "2026-09-01", "rules": rules, "files": []}) + "\n"
+        + json.dumps({"place": "ocdb_gone", "checked": "2026-11-01", "rules": rules, "files": []}) + "\n",
         encoding="utf-8",
     )
     asked = []
@@ -138,10 +173,20 @@ def test_run_checks_due_places_and_keeps_the_rest(tmp_path):
     lines = [json.loads(line) for line in matches.read_text(encoding="utf-8").splitlines()]
     assert [line["place"] for line in lines] == ["ocdb_A", "ocdb_B", "ocdb_C"]
     assert lines[0]["checked"] == "2026-11-04" and lines[0]["files"][0]["match"] == "name"
-    assert lines[1] == {"place": "ocdb_B", "checked": "2026-11-01", "files": []}
+    assert lines[1] == {"place": "ocdb_B", "checked": "2026-11-01", "rules": commons.RULES, "files": []}
     assert lines[2]["checked"] == "2026-11-04"
     assert len(asked) == 2
     assert summary == {"checked": 2, "matched": 2, "places": 3, "with_photo": 2, "lines": 3}
+
+
+def test_lines_from_older_rules_are_checked_first():
+    candidates = {p: {} for p in ("ocdb_A", "ocdb_B", "ocdb_C", "ocdb_D")}
+    matches = {
+        "ocdb_A": {"place": "ocdb_A", "checked": "2026-11-04", "files": []},
+        "ocdb_B": {"place": "ocdb_B", "checked": "2026-09-01", "rules": commons.RULES, "files": []},
+        "ocdb_C": {"place": "ocdb_C", "checked": "2026-11-04", "rules": commons.RULES, "files": []},
+    }
+    assert commons.due(matches, candidates, date(2026, 11, 4), 30) == ["ocdb_A", "ocdb_D", "ocdb_B"]
 
 
 def test_run_respects_max_places(tmp_path):
