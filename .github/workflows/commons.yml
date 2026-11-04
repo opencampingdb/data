@@ -1,0 +1,107 @@
+name: Commons photos
+
+# Nightly at 18:00 UTC, after the OSM sync. Matches places to stay with freely
+# licensed photos on Wikimedia Commons (pipeline/commons.py): the places never
+# checked, then those checked more than 30 days ago, at most 2000 a night, so
+# the Commons API sees one request at a time for well under two hours. Opens or
+# updates one pull request from the commons-sync branch and turns on auto-merge:
+# the run changes nothing but commons/matches.ndjson, and the Validate check
+# still has to pass.
+#
+# The branch push, the PR and the merge use the opencampingdb-bot GitHub App
+# token for the same reason as the OSM sync (see sync-osm.yml).
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+    inputs:
+      max_places:
+        description: "Places to check this run (default 2000)"
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commons-sync
+  cancel-in-progress: false
+
+jobs:
+  commons:
+    name: Match Commons photos
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Match places with Commons photos
+        env:
+          MAX_PLACES: ${{ inputs.max_places || '2000' }}
+        run: python -m pipeline.commons --root . --max-places "$MAX_PLACES" | tee "$RUNNER_TEMP/commons.log"
+
+      - name: Validate
+        run: python -m pipeline.validate --root .
+
+      - name: Create an opencampingdb-bot token
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.OCDB_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.OCDB_BOT_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Open or update the Commons pull request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain -- commons)" ]; then
+            echo "commons/ did not change. Nothing to propose."
+            exit 0
+          fi
+
+          gh auth setup-git
+          bot_id="$(gh api '/users/opencampingdb-bot%5Bbot%5D' --jq .id)"
+          git config user.name "opencampingdb-bot[bot]"
+          git config user.email "${bot_id}+opencampingdb-bot[bot]@users.noreply.github.com"
+
+          other="$(gh pr list --head commons-sync --base main --state open \
+            --json number,isCrossRepository,author \
+            --jq '[.[] | select(.isCrossRepository == false and .author.login != "app/opencampingdb-bot" and .author.login != "opencampingdb-bot[bot]")][0].number // empty')"
+          if [ -n "$other" ]; then
+            echo "::error::PR #${other} uses the commons-sync branch but was not opened by the bot"
+            exit 1
+          fi
+
+          git switch -C commons-sync
+          git add -- commons
+          git commit -q -m "chore(commons): match Commons photos $(date -u +%Y-%m-%d)"
+          git push --force origin HEAD:commons-sync
+
+          summary="$(tail -n 1 "$RUNNER_TEMP/commons.log")"
+          body="$(printf 'Nightly Wikimedia Commons match (pipeline/commons.py).\n\n```json\n%s\n```\n' "$summary")"
+          title="Commons photos $(date -u +%Y-%m-%d)"
+          number="$(gh pr list --head commons-sync --base main --state open \
+            --json number,isCrossRepository,author \
+            --jq '[.[] | select(.isCrossRepository == false and (.author.login == "app/opencampingdb-bot" or .author.login == "opencampingdb-bot[bot]"))][0].number // empty')"
+          if [ -z "$number" ]; then
+            url="$(gh pr create --base main --head commons-sync --title "$title" --body "$body")"
+            number="${url##*/}"
+          else
+            gh pr edit "$number" --title "$title" --body "$body"
+          fi
+          gh pr merge "$number" --auto --squash

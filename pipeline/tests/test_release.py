@@ -60,6 +60,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     manifest = build(repo, out)
 
     assert sorted(p.name for p in out.iterdir()) == [
+        "commons.ndjson.gz",
         "fees.ndjson.gz",
         "manifest.json",
         "merged.ndjson.gz",
@@ -74,7 +75,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     # 6: fees.ndjson.gz, what travellers paid per night.
     assert manifest["format_version"] == 10
-    assert manifest["format_minor"] == 0
+    assert manifest["format_minor"] == 1
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
@@ -100,7 +101,7 @@ def test_release_is_byte_identical_on_rerun(repo, v1_osm, tmp_path):
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     build(repo, tmp_path / "a")
     build(repo, tmp_path / "b")
-    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "fees.ndjson.gz", "merged.ndjson.gz", "place-index.ndjson.gz"):
+    for name in ("manifest.json", "places.ndjson.gz", "reviews.ndjson.gz", "fees.ndjson.gz", "merged.ndjson.gz", "commons.ndjson.gz", "place-index.ndjson.gz"):
         assert (tmp_path / "a" / name).read_bytes() == (tmp_path / "b" / name).read_bytes()
 
 
@@ -202,3 +203,22 @@ def test_release_leaves_out_held_and_hidden_new_places(repo, v1_osm, tmp_path):
     assert standings == ["confirmed", "shown"]
     assert manifest["places"]["count"] == osm_count + 2
     assert manifest["format_version"] == 10
+
+
+def test_commons_lines_are_released_matches_only(tmp_path, v1_osm):
+    repo = tmp_path / "repo"
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    place_ids = sorted(p.stem for p in (repo / "places").rglob("*.json"))
+    files = [{"file": "A.jpg", "match": "name"}]
+    (repo / "commons").mkdir()
+    (repo / "commons" / "matches.ndjson").write_text(
+        json.dumps({"place": place_ids[1], "checked": "2026-11-04", "files": files}) + "\n"
+        + json.dumps({"place": place_ids[0], "checked": "2026-11-04", "files": []}) + "\n"
+        + json.dumps({"place": "ocdb_not_released", "checked": "2026-11-04", "files": files}) + "\n",
+        encoding="utf-8",
+    )
+    manifest = build(repo, tmp_path / "dist")
+    lines = gzip.decompress((tmp_path / "dist" / "commons.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
+    assert [json.loads(line) for line in lines] == [{"place": place_ids[1], "files": files}]
+    assert manifest["commons"]["count"] == 1
+    assert manifest["commons"]["url"].endswith("/commons.ndjson.gz")

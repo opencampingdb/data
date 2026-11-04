@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/commons.schema.json",
+  "title": "Wikimedia Commons photos matched to a place",
+  "description": "One line of commons/matches.ndjson, written by pipeline.commons. Each file keeps its own licence: show credit and licence beside the photo.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["place", "checked", "files"],
+  "properties": {
+    "place": {"type": "string", "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"},
+    "checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "files": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["file", "width", "height", "thumb", "full", "page", "licence", "match", "distance_m"],
+        "properties": {
+          "file": {"type": "string", "minLength": 1, "maxLength": 255},
+          "width": {"type": "integer", "minimum": 1},
+          "height": {"type": "integer", "minimum": 1},
+          "thumb": {"type": "string", "pattern": "^https://upload\\.wikimedia\\.org/"},
+          "full": {"type": "string", "pattern": "^https://upload\\.wikimedia\\.org/"},
+          "page": {"type": "string", "pattern": "^https://commons\\.wikimedia\\.org/"},
+          "licence": {"type": "string", "minLength": 1, "maxLength": 60},
+          "licence_url": {"type": "string", "pattern": "^https://"},
+          "credit": {"type": "string", "minLength": 1, "maxLength": 200},
+          "match": {"enum": ["name", "camping", "area"]},
+          "distance_m": {"type": "integer", "minimum": 0}
+        }
+      }
+    }
+  }
+}

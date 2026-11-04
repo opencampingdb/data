@@ -464,6 +464,45 @@ def check_fees(root: Path, places: dict[str, dict]) -> list[str]:
     return errors
 
 
+def check_commons(root: Path) -> list[str]:
+    """commons/matches.ndjson: each line valid, canonical and sorted by place.
+
+    A line may name a place merged since it was checked: pipeline.commons drops it
+    on its next run and the release leaves it out, so it is not an error here.
+    """
+    path = root / "commons" / "matches.ndjson"
+    if not path.exists():
+        return []
+    validator = load_validator("commons.schema.json")
+    where = "commons/matches.ndjson"
+    errors: list[str] = []
+    raw = path.read_bytes()
+    if b"\r" in raw:
+        errors.append(f"{where}: use LF line endings")
+    if raw and not raw.endswith(b"\n"):
+        errors.append(f"{where}: missing trailing newline")
+    previous = None
+    for number, line in enumerate(raw.decode("utf-8", errors="replace").split("\n"), 1):
+        if not line.strip():
+            continue
+        here = f"{where} line {number}"
+        try:
+            match = json.loads(line)
+        except json.JSONDecodeError as exc:
+            errors.append(f"{here}: not valid JSON: {exc}")
+            continue
+        line_errors = schema_errors(validator, match, here)
+        errors += line_errors
+        if line_errors:
+            continue
+        if line != dump_line(match):
+            errors.append(f"{here}: not in canonical form (compact JSON, sorted keys)")
+        if previous is not None and match["place"] <= previous:
+            errors.append(f"{here}: lines must be sorted by place, each place once")
+        previous = match["place"]
+    return errors
+
+
 def validate_repo(root: Path, now: str | None = None) -> list[str]:
     """Every problem found in the repository, as readable lines. Empty means valid.
 
@@ -475,6 +514,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     errors += check_distinct(root, places)
     errors += check_reviews(root, places)
     errors += check_fees(root, places)
+    errors += check_commons(root)
     return errors
 
 
