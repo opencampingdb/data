@@ -1,19 +1,33 @@
 {
+  "fact_dates": {
+    "bins": "2026-09-01T00:00:00Z",
+    "drinking_water": "2026-09-01T00:00:00Z",
+    "pets": "2026-09-01T00:00:00Z",
+    "playground": "2026-09-01T00:00:00Z"
+  },
   "fact_sources": {
+    "bins": "community_report",
     "caravans": "osm",
+    "drinking_water": "community_report",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "pets": "community_report",
+    "playground": "community_report",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
     "caravans": true,
+    "drinking_water": true,
     "entry": "customers",
     "fee": false,
     "max_stay": "2d",
+    "pets": "yes",
+    "playground": true,
     "power": false,
     "showers": true,
     "tents": true,
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T07:12:34Z"
 }

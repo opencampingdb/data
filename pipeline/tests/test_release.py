@@ -73,7 +73,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     # 6: fees.ndjson.gz, what travellers paid per night.
-    assert manifest["format_version"] == 10
+    assert manifest["format_version"] == 11
     assert manifest["format_minor"] == 0
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
@@ -201,4 +201,4 @@ def test_release_leaves_out_held_and_hidden_new_places(repo, v1_osm, tmp_path):
     standings = sorted(json.loads(line)["standing"] for line in lines if "standing" in json.loads(line))
     assert standings == ["confirmed", "shown"]
     assert manifest["places"]["count"] == osm_count + 2
-    assert manifest["format_version"] == 10
+    assert manifest["format_version"] == 11

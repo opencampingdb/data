@@ -86,9 +86,12 @@ app that reads `fee` as a plain boolean must handle `"donation"`. Format 9
 drops `photos.ndjson.gz`, which format 8 had: Open Camping DB holds no photos.
 Everything else reads the same as in format 7. Format 10 adds `standing` to
 places travellers added (see section 4) and leaves out those that are `held`
-or `hidden`. Records without it read the same as in format 9. Formats 3, 4, 6,
-9 and 10 were additive and would each be a `format_minor` rise under the rule
-above. `format_minor` starts at 0 in format 10.
+or `hidden`. Records without it read the same as in format 9. Format 11 adds
+the source `community_report` to `fact_sources` (see section 4): an app that
+expects only the sources of format 10 must handle it. Everything else reads
+the same as in format 10. Formats 3, 4, 6, 9 and 10 were additive and would
+each be a `format_minor` rise under the rule above. `format_minor` starts at 0
+in format 10, and is 0 again in format 11.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -191,16 +194,27 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
 - `moderator` is only on a place a traveller added: a person's `restore` or
   `hide`, with the time, which wins over the reports and checks before it.
   Apps need not read it: `standing` already reflects it.
-- `fact_sources` says where each fact came from: `osm`, `feedback` (from apps)
-  or `contributed` (given directly to Open Camping DB under the ODbL). It may
+- `fact_sources` says where each fact came from: `osm`, `feedback` (from apps),
+  `contributed` (given directly to Open Camping DB under the ODbL), `owner`
+  (the place's verified owner) or `community_report` (anonymous community
+  reports from public camping groups, imported by a person; see below). It may
   also have `name`, `location`, `kind` and `status` entries. When `name`,
   `location` or `kind` is missing, the name, position and kind come from OSM. A place with
-  `osm: null` and `contributed` name and location is a contributed place. A
-  `status` entry says who closed or reopened the place.
+  `osm: null` and `contributed` name and location is a contributed place, and
+  one with `community_report` name and location was found only in community
+  reports. A `status` entry says who closed or reopened the place.
+- `community_report` values come from what travellers wrote in public
+  camping groups, without their names. Only facts are kept. They are second
+  hand and may be old, so show their date: in `fact_dates` it is the first
+  day of the month the report was made (a report from "around March 2026"
+  is `2026-03-01T00:00:00Z`), not when it was imported. A place
+  found only in community reports is located at a specific mapped feature,
+  never a town centre. These values are never passed to OpenStreetMap.
 - How fresh a place's information is: `osm.timestamp` is when its OSM object
   was last edited by anyone, in UTC. `fact_dates` gives, for each value that
   did not come from OSM (each `fact_sources` entry that is `feedback`,
-  `contributed` or `owner`), when it was accepted. The newest of these is
+  `contributed`, `owner` or `community_report`), when it was accepted, or for
+  `community_report` when it was reported. The newest of these is
   when someone last said something about the place. `updated` is when the
   record's content last changed in Open Camping DB, which is not the same:
   it moves when OSM data is refreshed, whatever its age. Older records may
