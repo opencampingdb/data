@@ -98,8 +98,23 @@ FACT_KEYS = (
 EXTRA_SOURCE_KEYS = ("name", "location", "kind", "status", "description")
 
 # Where a value came from: OpenStreetMap, app feedback, a place or closure
-# contributed directly to Open Camping DB, or the place's verified owner.
-SOURCES = ("osm", "feedback", "contributed", "owner")
+# contributed directly to Open Camping DB, the place's verified owner, or
+# anonymous community reports from public camping groups, imported in bulk.
+SOURCES = ("osm", "feedback", "contributed", "owner", "community_report")
+
+# Sources whose values never go back to OSM, in any form: not as a
+# MapRoulette task, not as an OSM note.
+NOT_FOR_OSM = ("contributed", "community_report")
+
+# The source of values imported from anonymous community reports. A place
+# whose name or location has this source is never passed to OSM at all.
+COMMUNITY_REPORT = "community_report"
+
+
+def from_community_report(record: dict) -> bool:
+    """True for a place whose name or location came from community reports."""
+    sources = record.get("fact_sources", {})
+    return COMMUNITY_REPORT in (sources.get("name"), sources.get("location"))
 
 ATTRIBUTION = "© OpenStreetMap contributors, Open Camping DB"
 LICENCE = "ODbL-1.0"

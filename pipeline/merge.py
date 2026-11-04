@@ -52,7 +52,7 @@ from .common import (
 )
 
 # Sources whose facts move to the kept record.
-MOVABLE_SOURCES = ("feedback", "contributed")
+MOVABLE_SOURCES = ("feedback", "contributed", "community_report")
 
 
 class MergeError(Exception):

@@ -27,6 +27,10 @@ maproulette/traveller_reports.geojson
     booking details, nor a text value holding an email address, phone number
     or link (the contact facts aside).
 
+Values from community reports (source community_report) never reach either
+file, and neither does a place whose name or location came from them, even
+if it has an OSM link: those reports are kept out of OSM.
+
 Each feature carries "id" (the Open Camping DB id, which MapRoulette uses to
 match a task across rebuilds) and "@id" (the OSM object, such as node/123).
 Lines are sorted by id, so the same input always gives the same files.
@@ -38,7 +42,7 @@ import re
 import sys
 from pathlib import Path
 
-from .common import load_places, write_text
+from .common import from_community_report, load_places, write_text
 from .sync import load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
@@ -47,6 +51,8 @@ RS = "\x1e"
 DOUBLE_MAPPING = "double_mapping.geojson"
 TRAVELLER_REPORTS = "traveller_reports.geojson"
 
+# Only these sources are passed to OSM's mappers. Everything in NOT_FOR_OSM
+# (contributed values, community reports) stays in Open Camping DB.
 REPORT_SOURCES = ("feedback", "owner")
 NEVER_SENT = ("booking_url", "booking_required")
 CONTACT_FACTS = ("website", "phone", "phone_2", "email", "facebook", "instagram", "tiktok", "x")
@@ -212,6 +218,8 @@ def double_mapping_tasks(places: dict, extract: dict) -> list[dict]:
     for record in places.values():
         if record.get("status") == "merged" or not record.get("osm") or not record.get("merged_osm"):
             continue
+        if from_community_report(record):
+            continue
         own = osm_ref(record["osm"])
         refs = [own] + [osm_ref(m) for m in record["merged_osm"] if not m.get("part")]
         present = [ref for ref in refs if ref in extract]
@@ -256,7 +264,7 @@ def report_changes(record: dict, osm_place: dict) -> list[tuple[str, str]]:
 def traveller_report_tasks(places: dict, extract: dict) -> list[dict]:
     tasks = []
     for record in places.values():
-        if record.get("status") == "merged" or not record.get("osm"):
+        if record.get("status") == "merged" or not record.get("osm") or from_community_report(record):
             continue
         ref = osm_ref(record["osm"])
         if ref not in extract:

@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "bbq": "2026-10-01T00:00:00Z",
+    "kitchen": "2026-10-01T00:00:00Z"
+  },
   "fact_sources": {
+    "bbq": "community_report",
     "cabins": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "kitchen": "community_report",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,10 +19,12 @@
     "wifi": "osm"
   },
   "facts": {
+    "bbq": true,
     "cabins": false,
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "kitchen": true,
     "phone": "+61 8 9949 1101",
     "power": true,
     "showers": true,
@@ -41,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-04T07:12:34Z"
 }

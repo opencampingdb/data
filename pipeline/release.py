@@ -53,13 +53,14 @@ from .common import (
 # 7: site features, more kinds, and fee may be "donation".
 # 8: photos.ndjson.gz. 9: photos.ndjson.gz gone again: Open Camping DB holds no photos.
 # 10: places travellers added carry standing, and held and hidden ones are left out.
-# 10.1: commons.ndjson.gz, freely licensed Wikimedia Commons photos matched to places to stay.
+# 11: fact_sources may be community_report.
+# 11.1: commons.ndjson.gz, freely licensed Wikimedia Commons photos matched to places to stay.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
-FORMAT_VERSION = 10
+FORMAT_VERSION = 11
 FORMAT_MINOR = 1
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}

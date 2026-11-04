@@ -13,7 +13,8 @@ exits 1. Checks:
 - kind is one of schema/kinds.json and group is that kind's group
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
-  name, location and status entries
+  name, location and status entries. Sources are osm, feedback,
+  contributed, owner and community_report
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which

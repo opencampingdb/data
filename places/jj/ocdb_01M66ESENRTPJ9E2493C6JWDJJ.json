@@ -1,21 +1,32 @@
 {
+  "fact_dates": {
+    "bbq": "2025-10-01T00:00:00Z",
+    "drinking_water": "2025-10-01T00:00:00Z",
+    "wheelchair": "2025-10-01T00:00:00Z"
+  },
   "fact_sources": {
+    "bbq": "community_report",
     "caravans": "osm",
+    "drinking_water": "community_report",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
     "power": "osm",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "wheelchair": "community_report"
   },
   "facts": {
+    "bbq": true,
     "caravans": true,
+    "drinking_water": true,
     "dump_station": true,
     "entry": "public",
     "fee": false,
     "power": false,
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "wheelchair": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESENRTPJ9E2493C6JWDJJ",
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T07:12:34Z"
 }

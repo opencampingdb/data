@@ -1,6 +1,34 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_dates": {
+    "campfires": "2026-06-01T00:00:00Z",
+    "caravans": "2026-06-01T00:00:00Z",
+    "drinking_water": "2026-06-01T00:00:00Z",
+    "fee": "2026-06-01T00:00:00Z",
+    "pets": "2026-06-01T00:00:00Z",
+    "picnic_tables": "2026-06-01T00:00:00Z",
+    "power": "2026-06-01T00:00:00Z",
+    "toilets": "2026-06-01T00:00:00Z"
+  },
+  "fact_sources": {
+    "campfires": "community_report",
+    "caravans": "community_report",
+    "drinking_water": "community_report",
+    "fee": "community_report",
+    "pets": "community_report",
+    "picnic_tables": "community_report",
+    "power": "community_report",
+    "toilets": "community_report"
+  },
+  "facts": {
+    "campfires": true,
+    "caravans": true,
+    "drinking_water": false,
+    "fee": false,
+    "pets": "yes",
+    "picnic_tables": true,
+    "power": false,
+    "toilets": true
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES91BJX58DAK8HB6JZ4EV",
   "kind": "campground",
@@ -17,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T07:12:34Z"
 }
