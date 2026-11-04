@@ -9,6 +9,7 @@
   "properties": {
     "place": {"type": "string", "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"},
     "checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "rules": {"type": "integer", "minimum": 1, "description": "The pipeline.commons RULES the place was checked under; 1 when absent."},
     "files": {
       "type": "array",
       "maxItems": 5,

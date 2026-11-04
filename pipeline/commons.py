@@ -4,27 +4,43 @@ Usage:
     python -m pipeline.commons --root . [--max-places N] [--stale-days 30] [--today YYYY-MM-DD]
 
 Writes commons/matches.ndjson: one line per place in the overnight group,
-sorted by place id, {"place", "checked", "files"}. files lists up to
+sorted by place id, {"place", "checked", "rules", "files"}. files lists up to
 MAX_FILES Commons files that are likely to show the place, best first, each
 with the credit and licence a reader must show beside it. A place with no
 match has an empty list, so the next run knows it was checked.
 
-Each run checks the places never checked and those checked more than
---stale-days days ago, oldest first, at most --max-places of them, and keeps
-every other line as it was. A place that is no longer in the overnight group,
+Each run checks, at most --max-places of them: first the places checked under
+older rules (rules below RULES), then the places never checked, then those
+checked more than --stale-days days ago, oldest first. It keeps every other
+line as it was. A place that is no longer in the overnight group,
 or was merged, loses its line.
 
 One Commons API request per place: geotagged files within SEARCH_RADIUS_M of
 the place, with their licence, size, categories and distance. A file is kept
 only when its licence is on the allowlist, it is a photo of at least
-MIN_WIDTH by MIN_HEIGHT, it carries no personality rights warning, and it
-matches the place by one of these, in this order of trust:
+MIN_WIDTH by MIN_HEIGHT, it carries no personality rights warning, it is not
+a photo of a plant or animal (a title that starts with a species name that is
+also one of its categories), and it matches the place by one of these, in
+this order of trust:
 
-    name     the place's distinctive name words and a camping word appear in
-             the file's title or categories, within NAME_RADIUS_M
-    camping  a camping word appears, within CAMPING_RADIUS_M
-    area     the distinctive name words appear without a camping word, within
-             AREA_RADIUS_M: a view of the named place's surroundings
+    name     all the place's distinctive name words appear in the file's
+             title, with a camping word or the place's whole name (of two
+             words or more), within NAME_RADIUS_M
+    camping  a camping word appears in the title, within CAMPING_RADIUS_M, for
+             a place whose name has no distinctive words (such as "Campsite
+             10"); a named place matches by its name, never by a camping word
+             alone, which is as often another park nearby
+    area     the distinctive name words appear in the title without a camping
+             word, within AREA_RADIUS_M: a view of the named place's
+             surroundings
+
+Everything counts in the title only: a category such as a town's name, or
+"Campsites in Victoria", is shared by every photo there, birds on the beach
+included. Categories are read only to spot a species photo. Words are compared without a plural s, and words in
+brackets in a place's name, such as "(GOW)", are left out. "Camp" alone is not
+a camping word: Camp Creek, a police camp and a workers' camp are not places
+to stay. Historic photos (a year before 1960 in the title, or a portrait) are
+left out too: they show people and the past, not the place today.
 
 The requests follow the Wikimedia User-Agent policy and the API etiquette:
 one at a time, maxlag=5, a pause between requests, and a back-off when the
@@ -63,6 +79,9 @@ THUMB_WIDTH = 960
 FULL_WIDTH = 1920
 PAUSE_S = 0.25
 MATCH_ORDER = ("name", "camping", "area")
+# The matching rules each line was checked under. Raise it when the rules
+# change, and the next runs check every older line again first.
+RULES = 2
 
 # API errors that mean "try again shortly".
 RETRY_CODES = {"maxlag", "cirrussearch-too-busy-error", "ratelimited"}
@@ -77,9 +96,14 @@ LICENCE_RE = re.compile(
 )
 
 CAMPING_RE = re.compile(
-    r"\b(camp|camps|camping|campground|campgrounds|campsite|campsites|caravan|caravans|"
-    r"caravanning|tent|tents|holiday park|tourist park|rest area|camping ground|bush camp)\b"
+    r"\b(camping|campground|campgrounds|campsite|campsites|camp site|camp sites|camp ground|"
+    r"caravan|caravans|caravanning|holiday park|tourist park|rest area|camping ground)\b"
 )
+# A title that starts with a two-word species name, such as "Eopsaltria australis - ...".
+SPECIES_RE = re.compile(r"^([A-Z][a-z]+ [a-z]{3,})\b")
+# A historic photo: a year before 1960 in the title, or a portrait.
+HISTORIC_RE = re.compile(r"\b(1[0-8][0-9]{2}|19[0-5][0-9])\b|^portrait\b", re.IGNORECASE)
+BRACKETS_RE = re.compile(r"\([^)]*\)")
 
 # Words that say what kind of place it is or where, not which one. A name made
 # only of these has no distinctive words and matches only by camping words.
@@ -96,7 +120,7 @@ GENERIC_WORDS = {
     "point", "mount", "mt", "north", "south", "east", "west", "upper", "lower",
     "little", "big", "new", "old", "day", "use", "road", "track", "dam", "spring",
     "springs", "falls", "waterhole", "island", "head", "heads", "gorge", "valley",
-    "tent", "tents", "rv", "pet", "friendly", "pty", "ltd", "co",
+    "tent", "tents", "rv", "pet", "friendly", "pty", "ltd", "co", "flats", "coast",
 }
 
 TAG_RE = re.compile(r"<[^>]+>")
@@ -108,9 +132,18 @@ def words(text: str) -> list[str]:
     return WORD_RE.findall(text.lower())
 
 
+def singular(word: str) -> str:
+    """The word without a plural s, so Goldfields matches Goldfield."""
+    return word[:-1] if len(word) > 3 and word.endswith("s") and not word.endswith("ss") else word
+
+
 def distinctive_words(name: str | None) -> set[str]:
-    """The words of a place name that say which place it is."""
-    return {w for w in words(name or "") if len(w) >= 3 and not w.isdigit() and w not in GENERIC_WORDS}
+    """The words of a place name that say which place it is, without a plural s. Words in brackets are left out."""
+    return {
+        singular(w)
+        for w in words(BRACKETS_RE.sub(" ", name or ""))
+        if len(w) >= 3 and not w.isdigit() and w not in GENERIC_WORDS
+    }
 
 
 def plain_text(value: str | None, limit: int = 200) -> str:
@@ -145,21 +178,30 @@ def full_url(info: dict) -> str:
     return image_url(info.get("url", ""))
 
 
-def match_kind(name_words: set[str], text: str, distance_m: float) -> str | None:
-    """How a file matches a place: "name", "camping", "area", or None."""
-    file_words = set(words(text))
-    named = bool(name_words) and name_words <= file_words
-    camping = bool(CAMPING_RE.search(text.lower()))
-    if named and camping and distance_m <= NAME_RADIUS_M:
+def match_kind(name_words: set[str], title: str, distance_m: float, place_name: str | None = None) -> str | None:
+    """How a file matches a place, from its title: "name", "camping", "area", or None."""
+    title_words = words(title)
+    named = bool(name_words) and name_words <= {singular(w) for w in title_words}
+    camping = bool(CAMPING_RE.search(title.lower()))
+    whole_name = " ".join(words(BRACKETS_RE.sub(" ", place_name or "")))
+    # A one-word name such as "Johanna" is in every title about the beach, so the whole name counts from two words.
+    says_name = len(whole_name.split()) >= 2 and f" {whole_name} " in f" {' '.join(title_words)} "
+    if named and (camping or says_name) and distance_m <= NAME_RADIUS_M:
         return "name"
-    if camping and distance_m <= CAMPING_RADIUS_M:
+    if not name_words and camping and distance_m <= CAMPING_RADIUS_M:
         return "camping"
     if named and distance_m <= AREA_RADIUS_M:
         return "area"
     return None
 
 
-def file_entry(page: dict, name_words: set[str]) -> dict | None:
+def is_species_photo(title_text: str, categories: list[str]) -> bool:
+    """A photo of a plant or animal: its title starts with a species name that is also a category."""
+    m = SPECIES_RE.match(title_text)
+    return bool(m) and any(c == m.group(1) or c.startswith(m.group(1) + " (") for c in categories)
+
+
+def file_entry(page: dict, name_words: set[str], place_name: str | None = None) -> dict | None:
     """The matches.ndjson entry for one API page, or None when the file is not kept."""
     infos = page.get("imageinfo") or []
     coords = page.get("coordinates") or []
@@ -182,10 +224,12 @@ def file_entry(page: dict, name_words: set[str]) -> dict | None:
     title = page.get("title", "")
     if not title.startswith("File:"):
         return None
-    categories = " ".join(c.get("title", "").removeprefix("Category:") for c in page.get("categories") or [])
-    text = " ".join([title.removeprefix("File:").rsplit(".", 1)[0].replace("_", " "), plain_text(meta(info, "ObjectName")), categories])
+    category_list = [c.get("title", "").removeprefix("Category:") for c in page.get("categories") or []]
+    title_text = title.removeprefix("File:").rsplit(".", 1)[0].replace("_", " ")
+    if is_species_photo(title_text, category_list) or HISTORIC_RE.search(title_text):
+        return None
     distance_m = float(coords[0].get("dist", SEARCH_RADIUS_M + 1))
-    kind = match_kind(name_words, text, distance_m)
+    kind = match_kind(name_words, title_text, distance_m, place_name)
     thumb = image_url(info.get("thumburl", "")) or image_url(info.get("url", ""))
     full = full_url(info)
     if not kind or not thumb or not full:
@@ -229,7 +273,7 @@ def query_url(lat: float, lon: float) -> str:
         "prop": "imageinfo|categories|coordinates",
         "iiprop": "url|size|mime|extmetadata",
         "iiurlwidth": str(THUMB_WIDTH),
-        "iiextmetadatafilter": "LicenseShortName|LicenseUrl|Artist|Attribution|Restrictions|ObjectName",
+        "iiextmetadatafilter": "LicenseShortName|LicenseUrl|Artist|Attribution|Restrictions",
         "cllimit": "max",
         "clshow": "!hidden",
         "colimit": "max",
@@ -276,7 +320,7 @@ def match_place(place: dict, fetch=fetch_json) -> list[dict]:
     location = place["location"]
     body = fetch(query_url(location["lat"], location["lon"]))
     name_words = distinctive_words(place.get("name"))
-    entries = [e for e in (file_entry(p, name_words) for p in pages_for(body)) if e]
+    entries = [e for e in (file_entry(p, name_words, place.get("name")) for p in pages_for(body)) if e]
     return rank(entries)
 
 
@@ -304,11 +348,15 @@ def places_to_match(places: dict[str, dict]) -> dict[str, dict]:
 
 
 def due(matches: dict[str, dict], candidates: dict[str, dict], today: date, stale_days: int) -> list[str]:
-    """Place ids to check, never checked first, then the oldest checks."""
+    """Place ids to check: those checked under older rules, then never checked, then the oldest checks."""
     cutoff = (today - timedelta(days=stale_days)).isoformat()
+    checked = [p for p in candidates if p in matches]
+    older_rules = sorted((matches[p]["checked"], p) for p in checked if matches[p].get("rules", 1) < RULES)
     unchecked = sorted(p for p in candidates if p not in matches)
-    stale = sorted((matches[p]["checked"], p) for p in candidates if p in matches and matches[p]["checked"] <= cutoff)
-    return unchecked + [p for _, p in stale]
+    stale = sorted(
+        (matches[p]["checked"], p) for p in checked if matches[p].get("rules", 1) >= RULES and matches[p]["checked"] <= cutoff
+    )
+    return [p for _, p in older_rules] + unchecked + [p for _, p in stale]
 
 
 def write_matches(path: Path, matches: dict[str, dict]) -> None:
@@ -325,7 +373,7 @@ def run(root: Path, today: date, max_places: int | None, stale_days: int, fetch=
     checked = matched = 0
     for i, place_id in enumerate(todo):
         files = match_place(candidates[place_id], fetch)
-        matches[place_id] = {"place": place_id, "checked": today.isoformat(), "files": files}
+        matches[place_id] = {"place": place_id, "checked": today.isoformat(), "rules": RULES, "files": files}
         checked += 1
         matched += bool(files)
         # Saved as it goes, so a stopped run keeps what it found.
