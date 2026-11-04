@@ -134,6 +134,23 @@ def test_contributed_values_and_places_outside_osm_are_never_sent(repo):
     assert tasks(repo, TRAVELLER_REPORTS) == []
 
 
+def test_contributed_facts_stay_out_of_a_task_with_feedback(repo):
+    # A contributed dump point list adds dump_station and drinking_water to an OSM place,
+    # and a new dump point without an OSM link. Neither reaches MapRoulette.
+    rec = record(
+        A, 1,
+        facts={"dump_station": True, "drinking_water": True, "toilets": True},
+        fact_sources={"dump_station": "contributed", "drinking_water": "contributed", "toilets": "feedback"},
+    )
+    new = record(B, 2, osm=None, kind="dump_point", group="utility", facts={"fee": False},
+                 fact_sources={"name": "contributed", "location": "contributed", "fee": "contributed"})
+    write(repo, rec, new)
+    write_challenges(repo, [osm_place(1, drinking_water=False)])
+    (task,) = tasks(repo, TRAVELLER_REPORTS)
+    assert task["features"][0]["properties"]["changes"] == "- Travellers report there are toilets (toilets=yes)."
+    assert tasks(repo, DOUBLE_MAPPING) == []
+
+
 def test_untagged_facts_and_contact_details_are_left_out(repo):
     rec = record(
         A, 1, name="Call 0412 345 678",
