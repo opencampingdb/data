@@ -379,6 +379,16 @@ Content-Type: application/json
   `fb_<ulid>` the intake answers with, without its `fb_`. A `withdraw` with
   that id as `place`, from the same install, takes the place back within 24
   hours. After 24 hours it counts as one more `remove` report.
+  The id comes back only in the answer to the send that carried the report.
+  A report queued offline learns it when the queue sends it, so keep what
+  depends on the new place (edits, photos) until that answer arrives. With the
+  SDK, give the report a `ref` of your own and read the id from `onAnswered`.
+- Submissions are normalised before they are queued or sent: a location is
+  rounded to 6 decimals, and names and text lose the spaces at their ends.
+  An app that keeps its own copy of what it sent must compare against the
+  normalised values, never against what it passed in. The SDK exports the
+  rounding as `sdkCoordinate`, and `ref` with `onAnswered` connects an answer
+  to its submission without comparing content at all.
 - `review` is `{"stars": 1-5, "text": "...", "visited": "YYYY-MM"}`, with
   `"visited_nearby": true` when the app saw the phone near the place in the
   last 60 days (never send the location itself). Review text is published,
