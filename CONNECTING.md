@@ -40,6 +40,11 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/merged.ndjson.gz",
     "sha256": "...", "bytes": 20, "count": 0
   },
+  "commons": {
+    "file": "commons.ndjson.gz",
+    "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/commons.ndjson.gz",
+    "sha256": "...", "bytes": 3456, "count": 25
+  },
   "licence": "ODbL-1.0",
   "attribution": "© OpenStreetMap contributors, Open Camping DB"
 }
@@ -91,7 +96,9 @@ the source `community_report` to `fact_sources` (see section 4): an app that
 expects only the sources of format 10 must handle it. Everything else reads
 the same as in format 10. Formats 3, 4, 6, 9 and 10 were additive and would
 each be a `format_minor` rise under the rule above. `format_minor` starts at 0
-in format 10, and is 0 again in format 11.
+in format 10, and is 0 again in format 11. Format 11.1 adds
+`commons.ndjson.gz`, Wikimedia Commons photos matched to places to stay (see
+section 4). Everything else reads the same as in 11.0.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -181,6 +188,26 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   place per site type: a newer one replaces the older. The release holds
   fees paid in the 24 months before it was built, and none from blocked
   contributors. Show recent fees with their month, since prices change.
+- Each line of `commons.ndjson.gz` links one place to stay (group
+  `overnight`) with up to 5 photos on Wikimedia Commons, best first:
+  `{"place", "files"}`. Open Camping DB holds no photos: the files stay on
+  Commons, each under its own licence. Each file has `file` (its Commons name,
+  without `File:`), `width` and `height` of the original, `thumb` (a 960 px
+  wide standard thumbnail) and `full` (1920 px, or the original when it is
+  smaller), `page` (the file's Commons page), `licence` (for example
+  `CC BY-SA 4.0` or `CC0`), `licence_url` when the licence has one, `credit`
+  (the author, plain text; absent only for public domain and CC0 files),
+  `match` and `distance_m` (from the place). `match` says how sure the match
+  is: `name` (the place's name and a camping word are in the file's title or
+  categories, within 2 km), `camping` (a camping word, within 250 m) or
+  `area` (the place's name without a camping word, within 500 m: often a view
+  of the surroundings rather than the place). Show `area` photos as the
+  surroundings, or not at all. Only licences that allow any use with credit
+  are kept (CC0, public domain, CC BY and CC BY-SA). Photos are matched again
+  every 30 days, so a file deleted from Commons drops out. Show the credit
+  beside each photo (section 5) and load only `thumb` and `full`, which
+  Wikimedia's robot policy asks for. Set a descriptive `User-Agent` on the
+  requests, as the Wikimedia User-Agent policy asks.
 - `osm` is `null` for places that did not come from OpenStreetMap: places
   contributed directly to Open Camping DB, and new places from feedback.
 - `standing` is only on a place a traveller added in an app. `shown` means
@@ -344,6 +371,13 @@ The data is under the ODbL 1.0 with contents under the DbCL 1.0 (see
 [NOTICE](NOTICE)). If you publicly use or share a database adapted from this
 one, for example merged with your own places, that database must also be
 offered under the ODbL.
+
+A Commons photo from `commons.ndjson.gz` carries its own credit as well:
+show `credit` and `licence` beside or on the photo, link `licence_url` and
+`page`, and say if you changed the photo beyond resizing it, for example
+`Photo: Jane Doe, CC BY-SA 4.0, via Wikimedia Commons`. A CC BY-SA photo you
+crop or edit stays under CC BY-SA. Don't use Wikimedia's logos or suggest
+that Wikimedia endorses your app.
 
 ## 6. Send feedback
 

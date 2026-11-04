@@ -7,9 +7,10 @@ Run them from the repository root after `python -m pip install -r requirements.t
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
+| Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |

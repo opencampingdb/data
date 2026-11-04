@@ -1,5 +1,6 @@
 """Build the release files: places.ndjson.gz, reviews.ndjson.gz, fees.ndjson.gz,
-merged.ndjson.gz and manifest.json, and the place index for feedback intakes.
+merged.ndjson.gz, commons.ndjson.gz and manifest.json, and the place index for
+feedback intakes.
 
 Usage:
     python -m pipeline.release --root . --out dist [--repository opencampingdb/data]
@@ -53,13 +54,14 @@ from .common import (
 # 8: photos.ndjson.gz. 9: photos.ndjson.gz gone again: Open Camping DB holds no photos.
 # 10: places travellers added carry standing, and held and hidden ones are left out.
 # 11: fact_sources may be community_report.
+# 11.1: commons.ndjson.gz, freely licensed Wikimedia Commons photos matched to places to stay.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 11
-FORMAT_MINOR = 0
+FORMAT_MINOR = 1
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.
@@ -172,6 +174,33 @@ def fees_ndjson(root: Path, generated: str) -> tuple[bytes, int]:
     return "".join(lines).encode("utf-8"), len(lines)
 
 
+def commons_ndjson(root: Path, released: set[str]) -> tuple[bytes, int]:
+    """One {"place", "files"} line per released place with a Commons match, sorted by place id.
+
+    commons/matches.ndjson is written by pipeline.commons. Places checked with no
+    match, and places the release leaves out, are left out here too.
+    """
+    path = root / "commons" / "matches.ndjson"
+    lines = []
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    match = json.loads(line)
+                    if match["files"] and match["place"] in released:
+                        lines.append((match["place"], dump_line({"place": match["place"], "files": match["files"]}) + "\n"))
+    lines.sort()
+    return "".join(line for _, line in lines).encode("utf-8"), len(lines)
+
+
+def released_ids(root: Path) -> set[str]:
+    places = load_places(root)
+    return {
+        place_id for place_id, record in places.items()
+        if record.get("status") != "merged" and record.get("standing") not in UNRELEASED_STANDINGS
+    }
+
+
 def write_asset(out_dir: Path, name: str, raw: bytes, count: int, url: str) -> dict:
     """Gzip and write one data file, and return its manifest entry."""
     data = gzip_bytes(raw)
@@ -193,7 +222,7 @@ def build_release(
     release: str | None = None,
     repository: str = DEFAULT_REPOSITORY,
 ) -> dict:
-    """Write the four data files, manifest.json and the place index into out_dir and return the manifest.
+    """Write the five data files, manifest.json and the place index into out_dir and return the manifest.
 
     release defaults to data-<timestamp> taken from data_version.
     """
@@ -206,6 +235,7 @@ def build_release(
     fees_raw, fees_count = fees_ndjson(root, generated)
     merged_raw, merged_count = merged_ndjson(root)
     index_raw, _ = place_index_ndjson(root)
+    commons_raw, commons_count = commons_ndjson(root, released_ids(root))
     (out_dir / PLACE_INDEX_FILE).write_bytes(gzip_bytes(index_raw))
 
     manifest = {
@@ -229,6 +259,10 @@ def build_release(
         "merged": write_asset(
             out_dir, "merged.ndjson.gz", merged_raw, merged_count,
             asset_url(repository, release, "merged.ndjson.gz"),
+        ),
+        "commons": write_asset(
+            out_dir, "commons.ndjson.gz", commons_raw, commons_count,
+            asset_url(repository, release, "commons.ndjson.gz"),
         ),
         "licence": LICENCE,
         "attribution": ATTRIBUTION,
