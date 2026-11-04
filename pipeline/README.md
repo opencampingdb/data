@@ -12,7 +12,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
-| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --report sync-report.md` | the extract and `places/` | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). See [maproulette/README.md](../maproulette/README.md) |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --report sync-report.md` | the extract and `places/` | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. See [maproulette/README.md](../maproulette/README.md) |
 
 Tests: `python -m pytest`.
 
@@ -242,10 +242,13 @@ fact that depends on the kind.
   OSM-sourced facts are replaced with what OSM says now. A fact whose
   `fact_sources` entry is `feedback` or `contributed` is kept. An OSM-sourced
   fact whose tag has gone is removed. `status` and `rating` are never
-  touched, and a `status` entry in `fact_sources` is kept as it is. A kind
+  touched, and a `status` entry in `fact_sources` is kept as it is. A fact
+  whose source is `owner` or `community_report` is kept too, with its source:
+  sync never turns a community report value into an OSM value. A kind
   change counts as an update.
-- A record without an OSM link (`osm: null`: a contributed place, or a new
-  place from feedback) is never touched, flagged or deleted.
+- A record without an OSM link (`osm: null`: a contributed place, a new
+  place from feedback or one from community reports) is never touched,
+  flagged or deleted.
 - A record that still has one of the eight kinds used before the OTWD
   vocabulary keeps its id and moves to a new kind. A record matched to the
   extract takes the extract's kind. A record gone from OSM is moved by
@@ -270,9 +273,11 @@ fact that depends on the kind.
   not change.
 - `fact_dates` says when each value that is not from OSM was accepted: one
   entry, in the same UTC form as `updated`, for every `fact_sources` entry
-  that is `feedback`, `contributed` or `owner`. Whoever sets such a value
-  sets its date, the feedback engine for `feedback` and `owner` and the
-  person opening the PR for `contributed`. Sync keeps the dates of the
+  that is `feedback`, `contributed`, `owner` or `community_report`. Whoever
+  sets such a value sets its date, the feedback engine for `feedback` and
+  `owner` and the person opening the PR for `contributed`. A
+  `community_report` value is dated the first day of the month the report
+  was made. Sync keeps the dates of the
   values it keeps and never adds one. Values from OSM are as fresh as
   `osm.timestamp`.
 - `last_confirmed` is kept as it is. Only the feedback engine sets it, when
@@ -362,7 +367,7 @@ place. A person runs it and opens a PR with the result:
   draws the two as parts of one place on purpose, such as separate camping
   areas of one ground. The MapRoulette double mapping challenge leaves parts
   out. Part flags already on either record are kept.
-- Facts the dropped record got from `feedback` or `contributed` move to the
+- Facts the dropped record got from `feedback`, `contributed` or `community_report` move to the
   kept record where it has no value, with their `fact_dates`. OSM facts do
   not move.
 - The kept record takes the newer `last_confirmed` of the two.
@@ -403,7 +408,7 @@ not list. On top of the schemas it checks that `group` is the group of the
 record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
 other fact (plus optional `name`, `location` and `status`, each `osm`,
-`feedback` or `contributed`), that `fact_dates` has a date for exactly the
+`feedback`, `contributed`, `owner` or `community_report`), that `fact_dates` has a date for exactly the
 `fact_sources` entries that are not `osm` and none later than `updated`,
 that `last_confirmed` is not in the future (it may be later than `updated`),
 that no two records share an

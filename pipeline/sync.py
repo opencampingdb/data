@@ -8,8 +8,9 @@ Rules (SPEC, "OSM sync"):
 - A record is matched to an OSM object by osm.type + osm.id.
 - An OSM object with no record gets a new record and a new id, ocdb_<ULID>.
 - OSM-sourced facts, name and location are refreshed. Any of them whose
-  fact_sources entry is not "osm" (feedback, contributed or owner) is kept
-  as it is. Sync never overwrites a value whose source is owner. A record with no
+  fact_sources entry is not "osm" (feedback, contributed, owner or
+  community_report) is kept as it is, and keeps its source: a value from
+  community reports never becomes an OSM value. Sync never overwrites a value whose source is owner. A record with no
   fact_sources entry for name or location takes both from OSM.
 - A record whose OSM object has gone is never deleted. It is listed in the
   report as "gone from OSM" for a person to decide. Records a person has
@@ -225,7 +226,7 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"])
     # Source entries for name, location, kind and status are carried over as
     # they were. name, location and kind follow OSM unless their source is
-    # something else (feedback, contributed or owner). status never comes
+    # something else (feedback, contributed, owner or community_report). status never comes
     # from OSM.
     for key in EXTRA_SOURCE_KEYS:
         if key in old_sources:

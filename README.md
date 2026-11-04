@@ -137,7 +137,17 @@ Anything that shows this data must show:
    Every contributed value also gets the time it was accepted in
    `fact_dates`, as feedback and owner values do. The OSM sync never changes
    a place without an OSM link, and keeps a contributed status.
-4. **Owners.** A place's owner can claim it through the owner page at
+4. **Community reports.** Anonymous community reports from public camping
+   groups are imported by a person by pull request. Only facts are imported, never the reports' own words. Each value
+   has `"community_report"` in `fact_sources` and, in `fact_dates`, the first
+   day of the month the report was made. A report that matches one place
+   adds facts to it without replacing any value the place already has. A
+   report that matches none becomes a new place only where it could be
+   located at a specific feature, with `osm: null` and `"community_report"`
+   for its name and location. Community report values never go to OSM: the
+   MapRoulette challenges leave them out, and leave out places named or
+   located by them. The OSM sync keeps them as they are.
+5. **Owners.** A place's owner can claim it through the owner page at
    `https://opencampingdb.github.io/owners/`. A person approves every claim
    and every private property listing before anything is published. After
    that the owner's updates (facts, booking details, a short description, a
@@ -145,15 +155,15 @@ Anything that shows this data must show:
    sync never overwrites them. Private land appears only as a `farm_stay`
    listed by its owner, and apps show it as "Private property. Book with the
    owner first."
-5. **Duplicates.** After every OSM sync, likely duplicates (for example a
+6. **Duplicates.** After every OSM sync, likely duplicates (for example a
    campground mapped as both a node and a way) are listed in the PR body under
    "Possible duplicates". Nothing is merged automatically. A person merges a
    pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR:
    the dropped record stays as a tombstone that points at the kept one, and
    releases list it in `merged.ndjson.gz` so apps can redirect old ids.
-6. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
+7. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
    the tests, the schema and content checks, and a trial build of the release.
-7. **Release** (`.github/workflows/release.yml`) runs every hour and on
+8. **Release** (`.github/workflows/release.yml`) runs every hour and on
    demand. When `main` has changed since the newest release, it publishes the
    files described above as a new release and prunes the oldest.
 
