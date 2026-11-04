@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "dump_station": "2026-11-04T13:32:35Z",
+    "opening_hours": "2026-11-04T13:32:35Z"
+  },
   "fact_sources": {
+    "dump_station": "contributed",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "opening_hours": "contributed"
   },
   "facts": {
+    "dump_station": true,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "opening_hours": "sunrise-sunset"
   },
   "group": "utility",
   "id": "ocdb_01M66ESD5EGQGR77TVW1WHZ6CG",
@@ -23,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T13:32:35Z"
 }

@@ -1,13 +1,26 @@
 {
   "fact_dates": {
+    "drinking_water": "2026-11-04T13:32:35Z",
+    "dump_station": "2026-11-04T13:32:35Z",
+    "fee": "2026-11-04T13:32:35Z",
     "location": "2026-11-04T03:33:52Z",
-    "name": "2026-11-04T03:33:52Z"
+    "name": "2026-11-04T03:33:52Z",
+    "opening_hours": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "drinking_water": "contributed",
+    "dump_station": "contributed",
+    "fee": "contributed",
     "location": "feedback",
-    "name": "feedback"
+    "name": "feedback",
+    "opening_hours": "contributed"
   },
-  "facts": {},
+  "facts": {
+    "drinking_water": true,
+    "dump_station": true,
+    "fee": false,
+    "opening_hours": "24/7"
+  },
   "group": "utility",
   "id": "ocdb_01M6J9S9BT6NE19ACZH290W729",
   "kind": "dump_point",
@@ -20,5 +33,5 @@
   "rating": null,
   "standing": "shown",
   "status": "open",
-  "updated": "2026-11-04T03:33:52Z"
+  "updated": "2026-11-04T13:32:35Z"
 }
