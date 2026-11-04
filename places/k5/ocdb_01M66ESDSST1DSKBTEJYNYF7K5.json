@@ -1,9 +1,17 @@
 {
   "fact_sources": {
-    "water_type": "osm"
+    "entry": "osm",
+    "fee": "osm",
+    "pets": "osm",
+    "water_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
-    "water_type": "fountain"
+    "entry": "public",
+    "fee": false,
+    "pets": "yes",
+    "water_type": "fountain",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESDSST1DSKBTEJYNYF7K5",
@@ -15,11 +23,11 @@
   "name": null,
   "osm": {
     "id": 12152934778,
-    "timestamp": "2024-09-03T04:33:20Z",
+    "timestamp": "2026-11-03T05:35:29Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-04T23:14:53Z"
 }
