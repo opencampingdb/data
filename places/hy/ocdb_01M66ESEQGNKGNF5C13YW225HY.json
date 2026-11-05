@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "access": "2026-11-05T04:38:24Z",
+    "bbq": "2026-11-05T04:38:24Z",
+    "bins": "2026-11-05T04:38:24Z",
+    "cabins": "2026-11-05T04:38:24Z",
+    "camper_trailers": "2026-11-05T04:38:24Z",
+    "entry": "2026-11-05T04:38:24Z",
+    "kitchen": "2026-11-05T04:38:24Z",
+    "motorhomes": "2026-11-05T04:38:24Z",
+    "picnic_tables": "2026-11-05T04:38:24Z"
+  },
   "fact_sources": {
+    "access": "feedback",
     "address": "osm",
+    "bbq": "feedback",
+    "bins": "feedback",
     "brand": "osm",
+    "cabins": "feedback",
+    "camper_trailers": "feedback",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "entry": "feedback",
     "fee": "osm",
+    "kitchen": "feedback",
+    "motorhomes": "feedback",
+    "picnic_tables": "feedback",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,15 +33,24 @@
     "website": "osm"
   },
   "facts": {
+    "access": "2wd",
     "address": {
       "housenumber": "38",
       "street": "Lake Park Road"
     },
+    "bbq": true,
+    "bins": true,
     "brand": "big4",
+    "cabins": true,
+    "camper_trailers": true,
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "entry": "customers",
     "fee": true,
+    "kitchen": true,
+    "motorhomes": true,
+    "picnic_tables": true,
     "power": true,
     "showers": true,
     "tents": true,
@@ -44,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-05T04:38:24Z"
 }
