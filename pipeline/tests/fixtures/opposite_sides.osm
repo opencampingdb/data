@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Opposite sides of a road. Test data written for this repo. The places are invented,
+     modelled on three real kinds of case: two rest area pins either side of a
+     highway (case 1), a rest area pin that is a vertex of a car park inside the
+     rest area's outline (case 2), and a free pin inside a rest area outline on
+     the other side of a motorway (case 3). Cases 4 to 7 test the edge distance,
+     tertiary roads, the never-merge signals and minor roads. -->
+<osm version="0.6" generator="hand">
+  <node id="9001" version="1" lat="-35.0030000" lon="146.0000000"/>
+  <node id="9002" version="1" lat="-34.9970000" lon="146.0000000"/>
+  <node id="9003" version="1" lat="-35.0000000" lon="145.9997500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Ironbark Rest Area"/>
+  </node>
+  <node id="9004" version="1" lat="-35.0003000" lon="146.0002500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Ironbark Rest Area"/>
+  </node>
+  <node id="9005" version="1" lat="-35.0030000" lon="146.1000000"/>
+  <node id="9006" version="1" lat="-34.9970000" lon="146.1000000"/>
+  <node id="9007" version="1" lat="-35.0003000" lon="146.1003000"/>
+  <node id="9008" version="1" lat="-35.0003000" lon="146.1008000"/>
+  <node id="9009" version="1" lat="-34.9997000" lon="146.1008000"/>
+  <node id="9010" version="1" lat="-34.9997000" lon="146.1003000"/>
+  <node id="9011" version="1" lat="-35.0001000" lon="146.1004000"/>
+  <node id="9012" version="1" lat="-35.0001000" lon="146.1005000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Red Gum Rest Area"/>
+    <tag k="operator" v="Example Roads"/>
+  </node>
+  <node id="9013" version="1" lat="-35.0001000" lon="146.1006000"/>
+  <node id="9014" version="1" lat="-34.9999000" lon="146.1006000"/>
+  <node id="9015" version="1" lat="-34.9999000" lon="146.1004000"/>
+  <node id="9016" version="1" lat="-35.0003000" lon="146.0992000"/>
+  <node id="9017" version="1" lat="-35.0003000" lon="146.0997000"/>
+  <node id="9018" version="1" lat="-34.9997000" lon="146.0997000"/>
+  <node id="9019" version="1" lat="-34.9997000" lon="146.0992000"/>
+  <node id="9020" version="1" lat="-35.0000000" lon="146.0995000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Yellow Box Rest Area"/>
+    <tag k="operator" v="Example Roads"/>
+  </node>
+  <node id="9021" version="1" lat="-35.0003000" lon="146.2000000"/>
+  <node id="9022" version="1" lat="-35.0003000" lon="146.2005000"/>
+  <node id="9023" version="1" lat="-34.9997000" lon="146.2005000"/>
+  <node id="9024" version="1" lat="-34.9997000" lon="146.2000000"/>
+  <node id="9025" version="1" lat="-35.0000000" lon="146.2006100">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Box Flat Rest Area"/>
+  </node>
+  <node id="9026" version="1" lat="-35.0030000" lon="146.1999500"/>
+  <node id="9027" version="1" lat="-34.9970000" lon="146.1999500"/>
+  <node id="9028" version="1" lat="-35.0000000" lon="146.1998900">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Box Flat Rest Area"/>
+  </node>
+  <node id="9029" version="1" lat="-35.0030000" lon="146.3000000"/>
+  <node id="9030" version="1" lat="-34.9970000" lon="146.3000000"/>
+  <node id="9031" version="1" lat="-35.0000000" lon="146.2997500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Stringy Rest Area"/>
+  </node>
+  <node id="9032" version="1" lat="-35.0000000" lon="146.3002500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Stringy Rest Area"/>
+  </node>
+  <node id="9033" version="1" lat="-35.0030000" lon="146.4000000"/>
+  <node id="9034" version="1" lat="-34.9970000" lon="146.4000000"/>
+  <node id="9035" version="1" lat="-35.0000000" lon="146.3997500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Wattle Rest Area"/>
+  </node>
+  <node id="9036" version="1" lat="-35.0000000" lon="146.4002500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Wattle Rest Area"/>
+  </node>
+  <node id="9037" version="1" lat="-35.0000000" lon="146.5000000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Mallee Rest Area"/>
+    <tag k="description" v="Northbound"/>
+  </node>
+  <node id="9038" version="1" lat="-35.0003000" lon="146.5000000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Mallee Rest Area"/>
+    <tag k="description" v="Southbound"/>
+  </node>
+  <node id="9039" version="1" lat="-35.0000000" lon="146.6000000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Myall Rest Area"/>
+    <tag k="operator" v="Example Shire"/>
+  </node>
+  <node id="9040" version="1" lat="-35.0003000" lon="146.6000000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Myall Rest Area"/>
+    <tag k="operator" v="Example Roads"/>
+  </node>
+  <node id="9041" version="1" lat="-35.0000000" lon="146.7000000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Coolabah Rest Area"/>
+    <tag k="access" v="customers"/>
+  </node>
+  <node id="9042" version="1" lat="-35.0003000" lon="146.7000000">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Coolabah Rest Area"/>
+    <tag k="access" v="yes"/>
+  </node>
+  <node id="9043" version="1" lat="-35.0030000" lon="146.8000000"/>
+  <node id="9044" version="1" lat="-34.9970000" lon="146.8000000"/>
+  <node id="9045" version="1" lat="-35.0000000" lon="146.7997500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Yarran Rest Area"/>
+  </node>
+  <node id="9046" version="1" lat="-35.0000000" lon="146.8002500">
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Yarran Rest Area"/>
+  </node>
+  <way id="9101" version="1">
+    <nd ref="9001"/>
+    <nd ref="9002"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="name" v="Example Highway"/>
+    <tag k="ref" v="A99"/>
+  </way>
+  <way id="9102" version="1">
+    <nd ref="9005"/>
+    <nd ref="9006"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="name" v="Example Motorway"/>
+    <tag k="ref" v="M99"/>
+  </way>
+  <way id="9201" version="1">
+    <nd ref="9007"/>
+    <nd ref="9008"/>
+    <nd ref="9009"/>
+    <nd ref="9010"/>
+    <nd ref="9007"/>
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Red Gum Rest Area"/>
+  </way>
+  <way id="9202" version="1">
+    <nd ref="9011"/>
+    <nd ref="9012"/>
+    <nd ref="9013"/>
+    <nd ref="9014"/>
+    <nd ref="9015"/>
+    <nd ref="9011"/>
+    <tag k="amenity" v="parking"/>
+  </way>
+  <way id="9203" version="1">
+    <nd ref="9016"/>
+    <nd ref="9017"/>
+    <nd ref="9018"/>
+    <nd ref="9019"/>
+    <nd ref="9016"/>
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Upper Yellow Box Rest Area"/>
+  </way>
+  <way id="9204" version="1">
+    <nd ref="9021"/>
+    <nd ref="9022"/>
+    <nd ref="9023"/>
+    <nd ref="9024"/>
+    <nd ref="9021"/>
+    <tag k="highway" v="rest_area"/>
+    <tag k="name" v="Box Flat Rest Area"/>
+  </way>
+  <way id="9103" version="1">
+    <nd ref="9026"/>
+    <nd ref="9027"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="name" v="Example Road"/>
+  </way>
+  <way id="9104" version="1">
+    <nd ref="9029"/>
+    <nd ref="9030"/>
+    <tag k="highway" v="tertiary"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="name" v="Example Street"/>
+  </way>
+  <way id="9105" version="1">
+    <nd ref="9033"/>
+    <nd ref="9034"/>
+    <tag k="highway" v="tertiary"/>
+    <tag k="name" v="Example Lane"/>
+  </way>
+  <way id="9106" version="1">
+    <nd ref="9043"/>
+    <nd ref="9044"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Example Close"/>
+  </way>
+</osm>

@@ -32,7 +32,8 @@ exits 1. Checks:
   ids, an amount with at most 2 decimal places, and belong to a place that
   exists
 - moderation/blocked_contributors.json matches its schema, sorted by
-  contributor, each contributor once
+  contributor, each contributor once. moderation/ holds only that file,
+  distinct_places.json and opposite-side-splits.csv (from pipeline.split)
 - moderation/distinct_places.json matches its schema, each pair once with a
   before b, sorted, naming places that exist
 - values with the source owner need owner_verified true. A farm_stay has
@@ -286,7 +287,7 @@ def check_blocked(root: Path) -> list[str]:
     errors = [
         f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
         for p in sorted((root / "moderation").rglob("*"))
-        if p.is_file() and p not in (path, distinct_path(root))
+        if p.is_file() and p not in (path, distinct_path(root), root / "moderation" / "opposite-side-splits.csv")
     ]
     if not path.exists():
         return errors

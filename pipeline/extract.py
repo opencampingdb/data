@@ -35,6 +35,7 @@ import shapely
 from shapely import MultiPolygon, Polygon, STRtree
 
 from .common import dump_line, round_coord, write_text
+from .geometry import SidecarBuilder
 from .kinds import (
     CONTAINER_TAG_PAIRS,
     PLACE_TAG_PAIRS,
@@ -523,6 +524,16 @@ class FirstPass:
         return False
 
 
+class RoadCollector:
+    """Hands every way, with its node locations, to the sidecar's road check. Passes every object on."""
+
+    def __init__(self, sidecar: SidecarBuilder) -> None:
+        self.sidecar = sidecar
+
+    def way(self, way) -> None:
+        self.sidecar.road(way)
+
+
 class AreaWayCounter:
     """Counts the ways handed to the area builder. Passes every object on."""
 
@@ -533,7 +544,7 @@ class AreaWayCounter:
         self.stats["ways_to_area_builder"] += 1
 
 
-def read_objects(path: Path, stats: dict, sites: SiteRelations):
+def read_objects(path: Path, stats: dict, sites: SiteRelations, sidecar: SidecarBuilder | None = None):
     """Yield every OSM object or area that may be a place or a container.
 
     Fills sites with the site relations that are places and the positions of
@@ -547,7 +558,8 @@ def read_objects(path: Path, stats: dict, sites: SiteRelations):
        FirstPass keeps.
     2. Everything, with a node location cache. A way id filter sits in front
        of the area builder, so it never sees a way it does not need. Only
-       objects with an interesting tag come out at the end.
+       objects with an interesting tag come out at the end. With a sidecar,
+       every way passes the sidecar's road check first, before the filter.
 
     pyosmium's FileProcessor.with_areas() filters only the relations, and
     would assemble an area for every closed way in the file, so this chain
@@ -584,9 +596,11 @@ def read_objects(path: Path, stats: dict, sites: SiteRelations):
     locations = osmium.NodeLocationsForWays(location_store)
     locations.ignore_errors()
 
+    roads = [RoadCollector(sidecar)] if sidecar is not None else []
+
     with osmium.io.Reader(str(path)) as reader:
         objects = osmium.OsmFileIterator(
-            reader, locations, area_gate, site_ways, counter, second_pass, output_filter
+            reader, locations, *roads, area_gate, site_ways, counter, second_pass, output_filter
         )
         for obj in objects:
             yield obj
@@ -678,12 +692,20 @@ def containers_for(points: list[tuple[float, float]], containers: list[tuple]) -
     return found
 
 
-def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
+def place_outline(obj):
+    """The outline of a place that is an area (a closed way or multipolygon), or None."""
+    if obj.is_area() and obj.from_way():
+        return None
+    return container_geometry(obj)
+
+
+def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder | None = None) -> list[dict]:
     """Read an OSM file and return the place records found in it, sorted.
 
     If a dict is passed as stats it is filled with counts of what was kept
     and skipped, of the ways handed to the area builder and of the
-    containers found, for the log.
+    containers found, for the log. A SidecarBuilder passed as sidecar
+    collects the outlines, signals and major roads for pipeline.geometry.
     """
     stats = stats if stats is not None else {}
     stats.update(
@@ -695,7 +717,7 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
     containers: list[tuple] = []  # (shapely geometry, container type)
     sites = SiteRelations()
 
-    for obj in read_objects(path, stats, sites):
+    for obj in read_objects(path, stats, sites, sidecar):
         tags = tag_dict(obj)
 
         kind_of_container = container_type(tags)
@@ -718,6 +740,8 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
             "facts": facts_from_tags(tags),
         }
         places.append((record, tags))
+        if sidecar is not None:
+            sidecar.place(f"{osm_type}/{osm_id}", tags, place_outline(obj) if osm_type != "node" else None)
 
     stats["site_relations"] = 0
     for relation_id, site in sorted(sites.sites.items()):
@@ -734,6 +758,8 @@ def extract_file(path: Path, stats: dict | None = None) -> list[dict]:
         }
         places.append((record, tags))
         stats["site_relations"] += 1
+        if sidecar is not None:
+            sidecar.place(f"relation/{relation_id}", tags, None)
 
     # Only camp sites depend on the areas they lie in.
     camp_indexes = [i for i, (_, tags) in enumerate(places) if tags.get("tourism") == "camp_site"]
@@ -759,11 +785,16 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("input", type=Path, help=".osm.pbf or .osm file")
     parser.add_argument("--out", type=Path, default=Path("extract.ndjson"))
+    parser.add_argument("--geometry", type=Path, help="also write the outlines, signals and major roads (pipeline.geometry) here")
     args = parser.parse_args(argv)
 
     stats: dict = {}
-    records = extract_file(args.input, stats)
+    sidecar = SidecarBuilder() if args.geometry else None
+    records = extract_file(args.input, stats, sidecar)
     write_text(args.out, "".join(dump_line(r) + "\n" for r in records))
+    if sidecar is not None:
+        lines = sidecar.write(args.geometry, records)
+        print(f"Wrote {lines} geometry lines to {args.geometry} ({len(sidecar.roads)} major roads read)", file=sys.stderr)
 
     by_kind: dict[str, int] = {}
     for record in records:

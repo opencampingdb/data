@@ -61,7 +61,9 @@ jobs:
           ls -l australia-latest.osm.pbf
 
       - name: Extract camping places
-        run: python -m pipeline.extract "$RUNNER_TEMP/australia-latest.osm.pbf" --out "$RUNNER_TEMP/extract.ndjson"
+        run: |
+          python -m pipeline.extract "$RUNNER_TEMP/australia-latest.osm.pbf" --out "$RUNNER_TEMP/extract.ndjson" \
+            --geometry "$RUNNER_TEMP/geometry.ndjson"
 
       - name: Merge into places/
         run: |
@@ -69,6 +71,7 @@ jobs:
           python -m pipeline.sync "$RUNNER_TEMP/extract.ndjson" --root . \
             --report "$RUNNER_TEMP/sync-report.md" \
             --summary "$RUNNER_TEMP/sync-summary.json" \
+            --geometry "$RUNNER_TEMP/geometry.ndjson" \
             --source "Geofabrik australia-latest.osm.pbf, downloaded $(date -u +%Y-%m-%dT%H:%MZ)"
 
       - name: Create a read-only inbox token
@@ -93,6 +96,7 @@ jobs:
       - name: Write the MapRoulette challenge files
         run: |
           python -m pipeline.maproulette "$RUNNER_TEMP/extract.ndjson" --root . \
+            --geometry "$RUNNER_TEMP/geometry.ndjson" \
             --inbox .inbox --report "$RUNNER_TEMP/sync-report.md"
 
       - name: Remove the inbox checkout

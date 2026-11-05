@@ -28,6 +28,11 @@ What it does:
   old id can follow it.
 - Older tombstones that pointed at the dropped record now point at the kept
   one, so every redirect takes one step.
+
+A pair on moderation/distinct_places.json is refused: a person or
+pipeline.split found them to be separate places. With --part it is allowed,
+for two parts of one place that a road runs between, such as the two
+sections of a caravan park on either side of a street.
 """
 
 import argparse
@@ -43,6 +48,7 @@ from .common import (
     fee_path,
     is_visible,
     load_blocked,
+    load_distinct,
     load_places,
     place_path,
     rating_mean,
@@ -100,6 +106,12 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None, part: 
             raise MergeError(f"no such place {place_id}")
         if places[place_id].get("status") == "merged":
             raise MergeError(f"{place_id} is already merged into {places[place_id]['merged_into']}")
+
+    if not part and frozenset((keep_id, drop_id)) in load_distinct(root):
+        raise MergeError(
+            f"{keep_id} and {drop_id} are listed as separate places in moderation/distinct_places.json"
+            " (use --part for two parts of one place)"
+        )
 
     dropped = places[drop_id]
     kept = copy.deepcopy(places[keep_id])
