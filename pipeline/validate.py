@@ -61,6 +61,7 @@ from .common import (
     EXTRA_SOURCE_KEYS,
     KIND_GROUP,
     RULE,
+    pets_months_ok,
     dump_line,
     dump_record,
     iter_place_files,
@@ -181,8 +182,11 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
         )
 
     errors += fact_date_errors(record, where)
-    if "pets_months" in record["facts"] and record["facts"].get("pets") != "seasonal":
-        errors.append(f"{where}: pets_months is only for a place whose pets fact is seasonal")
+    if "pets_months" in record["facts"]:
+        if record["facts"].get("pets") != "seasonal":
+            errors.append(f"{where}: pets_months is only for a place whose pets fact is seasonal")
+        if not pets_months_ok(record["facts"]["pets_months"]):
+            errors.append(f"{where}: pets_months must be two different months, such as May-Sep")
     ruled = sorted(k for k, source in record["fact_sources"].items() if source == RULE)
     if ruled or "fact_rules" in record:
         errors.append(

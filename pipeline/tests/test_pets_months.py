@@ -15,8 +15,6 @@ NOW = "2026-11-01T00:00:00Z"
 @pytest.mark.parametrize("conditional,months", [
     ("yes @ (May-Sep)", "May-Sep"),
     ("yes @ (Dec-Feb)", "Dec-Feb"),
-    ("yes @ Jun", "Jun"),
-    ("yes @ (Apr-May,Sep-Oct)", "Apr-May,Sep-Oct"),
     ("yes @ (may-sep)", "May-Sep"),
 ])
 def test_dog_conditional_with_months_makes_a_seasonal_place(conditional, months):
@@ -36,6 +34,9 @@ def test_dog_conditional_without_a_dog_tag_counts_too():
     {"dog": "no", "dog:conditional": "yes @ (May-Sep); leashed @ (Oct)"},
     {"dog": "yes", "dog:conditional": "yes @ (May-Sep)"},
     {"dog": "no", "dog:conditional": "no @ (Dec-Feb)"},
+    {"dog": "no", "dog:conditional": "yes @ Jun"},
+    {"dog": "no", "dog:conditional": "yes @ (Apr-May,Sep-Oct)"},
+    {"dog": "no", "dog:conditional": "yes @ (May-May)"},
 ])
 def test_a_condition_that_is_not_plain_months_is_left_as_it_was(tags):
     facts = facts_from_tags(tags)
@@ -70,7 +71,7 @@ def test_pets_months_with_seasonal_pets_is_valid(repo):
     assert validate_repo(repo, now=NOW) == []
 
 
-@pytest.mark.parametrize("value", ["May to Sep", "may-sep", "Sept", "May-", "May-Sep;Dec", ""])
+@pytest.mark.parametrize("value", ["May to Sep", "may-sep", "Sept", "May-", "May-Sep;Dec", "", "Jun", "Apr-May,Sep-Oct", "May-May"])
 def test_pets_months_must_be_osm_months(repo, value):
     write(repo, record({"pets": "seasonal", "pets_months": value}, {"pets": "osm", "pets_months": "osm"}))
     assert any("pets_months" in e for e in validate_repo(repo, now=NOW))

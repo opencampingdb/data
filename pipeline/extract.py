@@ -34,7 +34,7 @@ import osmium
 import shapely
 from shapely import MultiPolygon, Polygon, STRtree
 
-from .common import PETS_MONTHS_PATTERN, dump_line, round_coord, write_text
+from .common import dump_line, pets_months_ok, round_coord, write_text
 from .geometry import SidecarBuilder
 from .kinds import (
     CONTAINER_TAG_PAIRS,
@@ -180,14 +180,15 @@ DOG_MONTHS_RE = re.compile(r"^yes\s*@\s*\(?\s*([^()]+?)\s*\)?$", re.IGNORECASE)
 def dog_months(conditional: str) -> str | None:
     """The months of dog:conditional=yes @ (May-Sep), as "May-Sep", or None.
 
-    Only a single yes condition made of whole months counts: times, weekdays,
-    other values and several conditions are left out.
+    Only a single yes condition of one range of two different months counts:
+    a single month, a list, times, weekdays, other values and several
+    conditions are left out.
     """
     match = DOG_MONTHS_RE.match(conditional.strip())
     if not match:
         return None
-    months = re.sub(r"\s*([,-])\s*", r"\1", match.group(1)).title()
-    return months if re.match(PETS_MONTHS_PATTERN, months) else None
+    months = re.sub(r"\s*-\s*", "-", match.group(1)).title()
+    return months if pets_months_ok(months) else None
 
 
 def heavy_vehicles_only(tags: dict) -> bool:

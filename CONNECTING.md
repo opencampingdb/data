@@ -307,8 +307,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   values may be added later, so treat an unknown value as a restriction you
   can't explain rather than ignoring it.
 - `pets_months` goes only with `pets: "seasonal"`: the months dogs are
-  allowed, in OpenStreetMap's month range syntax, such as `May-Sep`,
-  `Dec-Feb` (a range may wrap the year end) or `Apr-May,Sep-Oct`. It is OSM's
+  allowed, as one OpenStreetMap month range of two different months, such
+  as `May-Sep` or `Dec-Feb` (a range may wrap the year end). A single month
+  or a list of ranges is not used. It is OSM's
   `dog:conditional=yes @ (May-Sep)`. A seasonal place without it allows dogs
   in some months that nobody has given yet. A fact report may set it, with a
   value in the same form, or clear it.

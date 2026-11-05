@@ -188,7 +188,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. `donation` is `"donation"`. Others are left out. `fee=no` on a commercial park is left out too (see below). |
 | `power_supply` | `power` | `yes` is `true`, `no` is `false` |
 | `dog` | `pets` | `yes`, `leashed` or `no`, copied as is |
-| `dog:conditional` | `pets`, `pets_months` | `yes @ (May-Sep)`, with `dog=no` or no `dog` tag, makes `pets` `seasonal` and `pets_months` the months as written in OSM's month range syntax (`May-Sep`, `Dec-Feb`, `Apr-May,Sep-Oct`). Only whole months count: a condition with times, weekdays or a second rule is left out, and `pets` keeps the `dog` value. When a traveller or the owner has set `pets` to anything but `seasonal`, sync drops OSM's months |
+| `dog:conditional` | `pets`, `pets_months` | `yes @ (May-Sep)`, with `dog=no` or no `dog` tag, makes `pets` `seasonal` and `pets_months` the range: one OSM month range of two different months (`May-Sep`, or `Dec-Feb` across the year end). Anything else is left out: a single month, a list of ranges, times, weekdays or a second rule, and `pets` keeps the `dog` value. When a traveller or the owner has set `pets` to anything but `seasonal`, sync drops OSM's months |
 | `tents` | `tents` | `yes` / `no` |
 | `caravans` | `caravans` | `yes` / `no` |
 | `toilets` | `toilets` | `yes` / `no` |

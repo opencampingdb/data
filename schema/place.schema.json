@@ -109,9 +109,9 @@
           "enum": ["heavy_vehicles_only"]
         },
         "pets_months": {
-          "description": "Only with pets seasonal: the months dogs are allowed, in OSM's month range syntax, such as May-Sep, Dec-Feb (a range may wrap the year end) or Apr-May,Sep-Oct. From OSM dog:conditional=yes @ (May-Sep), which it converts to and from directly.",
+          "description": "Only with pets seasonal: the months dogs are allowed, one OSM month range of two different months, such as May-Sep or Dec-Feb (a range may wrap the year end). A single month or a list is not allowed. From OSM dog:conditional=yes @ (May-Sep), which it converts to and from directly.",
           "type": "string",
-          "pattern": "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec))?(,(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec))?)*$"
+          "pattern": "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)$"
         },
         "tents": {"type": "boolean"},
         "caravans": {
