@@ -81,6 +81,7 @@ SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
 MODERATION_FILES = (
     "opposite-side-splits.csv",  # pipeline.split
     "heavy-vehicle-candidates.csv",  # pipeline.vehicle_access
+    "automatic-merges.csv",  # pipeline.merge --auto
     "commons-do-not-match.json",  # read by pipeline.commons
 )
 

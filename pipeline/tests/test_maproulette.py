@@ -1,6 +1,8 @@
 """Tests for pipeline.maproulette (the MapRoulette challenge files) and merge --part."""
 
 import json
+
+import pytest
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -85,6 +87,13 @@ def test_merged_place_still_mapped_twice_is_a_task(repo):
 def test_task_goes_once_osm_keeps_one_object(repo):
     write(repo, record(A, 1, merged_osm=[{"type": "way", "id": 2}]))
     write_challenges(repo, [osm_place(1)])
+    assert tasks(repo, DOUBLE_MAPPING) == []
+
+
+@pytest.mark.parametrize("kind", ["roofed_accommodation", "backpacker_hostel"])
+def test_motels_and_hostels_mapped_twice_are_not_camp_site_tasks(repo, kind):
+    write(repo, record(A, 1, kind=kind, merged_osm=[{"type": "way", "id": 2}]))
+    write_challenges(repo, [osm_place(1), osm_place(2, osm_type="way", lat=-35.0001)])
     assert tasks(repo, DOUBLE_MAPPING) == []
 
 

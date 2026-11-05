@@ -37,12 +37,15 @@ sections of a caravan park on either side of a street.
 
 import argparse
 import copy
+import csv
+import io
 import json
 import sys
 from pathlib import Path
 
 from .common import (
     FACT_KEYS,
+    ROOFED_KINDS,
     dump_line,
     dump_record,
     fee_path,
@@ -56,6 +59,8 @@ from .common import (
     utc_now,
     write_text,
 )
+from .duplicates import automatic_merge, distance_m, find_duplicates
+from .geometry import Geometry, load_geometry
 
 # Sources whose facts move to the kept record.
 MOVABLE_SOURCES = ("feedback", "contributed", "community_report")
@@ -93,11 +98,17 @@ def part_links(record: dict) -> set[tuple[str, int]]:
     return {(m["type"], m["id"]) for m in record.get("merged_osm", []) if m.get("part")}
 
 
-def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None, part: bool = False) -> dict:
-    """Merge drop_id into keep_id. Returns the kept record."""
+def merge(
+    root: Path, keep_id: str, drop_id: str, now: str | None = None, part: bool = False, places: dict | None = None
+) -> dict:
+    """Merge drop_id into keep_id. Returns the kept record.
+
+    places, when given, is every record already loaded (load_places). It is
+    used instead of reading places/ again, and updated with what is written.
+    """
     root = Path(root)
     now = now or utc_now()
-    places = load_places(root)
+    places = places if places is not None else load_places(root)
 
     if keep_id == drop_id:
         raise MergeError("keep and drop are the same record")
@@ -169,20 +180,136 @@ def merge(root: Path, keep_id: str, drop_id: str, now: str | None = None, part: 
     tombstone = dict(dropped, status="merged", merged_into=keep_id)
     write_text(place_path(root, drop_id), dump_record(tombstone))
 
-    for record in places.values():
-        if record.get("merged_into") == drop_id:
-            write_text(place_path(root, record["id"]), dump_record(dict(record, merged_into=keep_id)))
+    retargeted = [dict(r, merged_into=keep_id) for r in places.values() if r.get("merged_into") == drop_id]
+    for record in retargeted:
+        write_text(place_path(root, record["id"]), dump_record(record))
 
+    places[keep_id], places[drop_id] = kept, tombstone
+    for record in retargeted:
+        places[record["id"]] = record
     return kept
+
+
+# ------------------------------------------------------- the automatic batch
+
+AUTO_MERGES_FILE = Path("moderation") / "automatic-merges.csv"
+AUTO_MERGES_COLUMNS = (
+    "merged", "kept_id", "dropped_id", "kept_name", "dropped_name",
+    "kept_kind", "dropped_kind", "kept_osm", "dropped_osm", "distance_m", "part",
+)
+
+
+def keep_order(record: dict) -> tuple:
+    """Sort key for the record a group keeps: first an OSM link, then a camp
+    site over a motel or hostel, then the most facts, then a kind that says
+    more than campground, then the oldest id."""
+    return (
+        record.get("osm") is None, record["kind"] in ROOFED_KINDS, -len(record.get("facts", {})),
+        record["kind"] == "campground", record["id"],
+    )
+
+
+def osm_label(record: dict) -> str:
+    osm = record.get("osm")
+    return f"{osm['type']}/{osm['id']}" if osm else ""
+
+
+def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = None, groups=("overnight",)) -> list[dict]:
+    """Merge every likely duplicate the automatic merge rule accepts, in the given groups.
+
+    Pairs come from pipeline.duplicates.find_duplicates and must pass
+    pipeline.duplicates.automatic_merge. Pairs that share a record form one
+    group of records, which is merged into the record keep_order puts first;
+    a record that does not pass the rule against that one is left alone. A
+    motel or hostel merged with a camp site (ROOFED_KINDS on one side only)
+    is merged as a part, so the double mapping challenge leaves it out.
+    Each merge is added to moderation/automatic-merges.csv for a person to
+    review. Returns the merges made, as {"kept", "dropped", "distance_m"}.
+    """
+    root = Path(root)
+    now = now or utc_now()
+    places = load_places(root)
+    distinct = load_distinct(root)
+    pairs = [
+        (pair["a"], pair["b"])
+        for pair in find_duplicates(list(places.values()), distinct, geometry)
+        if pair["a"]["group"] in groups and automatic_merge(pair["a"], pair["b"], geometry, distinct) is None
+    ]
+
+    # Groups of records joined by accepted pairs.
+    parent: dict[str, str] = {}
+
+    def root_of(place_id: str) -> str:
+        while parent.setdefault(place_id, place_id) != place_id:
+            place_id = parent[place_id]
+        return place_id
+
+    for a, b in pairs:
+        parent[root_of(a["id"])] = root_of(b["id"])
+    members: dict[str, list[str]] = {}
+    for place_id in parent:
+        members.setdefault(root_of(place_id), []).append(place_id)
+
+    merges = []
+    for ids in sorted(sorted(group) for group in members.values()):
+        ordered = sorted((places[i] for i in ids), key=keep_order)
+        keeper = ordered[0]
+        for other in sorted(ordered[1:], key=lambda r: r["id"]):
+            if automatic_merge(places[keeper["id"]], other, geometry, distinct) is not None:
+                continue
+            distance = round(distance_m(keeper, other))
+            # A motel or hostel and the caravan park it stands in are two
+            # features of one place in OSM, drawn apart on purpose.
+            part = (keeper["kind"] in ROOFED_KINDS) != (other["kind"] in ROOFED_KINDS)
+            row = {
+                "merged": now[:10],
+                "kept_id": keeper["id"], "dropped_id": other["id"],
+                "kept_name": keeper.get("name") or "", "dropped_name": other.get("name") or "",
+                "kept_kind": keeper["kind"], "dropped_kind": other["kind"],
+                "kept_osm": osm_label(keeper), "dropped_osm": osm_label(other),
+                "distance_m": distance, "part": "yes" if part else "no",
+            }
+            merge(root, keeper["id"], other["id"], now=now, part=part, places=places)
+            merges.append({"kept": keeper["id"], "dropped": other["id"], "distance_m": distance, "row": row})
+    if merges:
+        append_review(root, [m.pop("row") for m in merges])
+    return merges
+
+
+def append_review(root: Path, rows: list[dict]) -> None:
+    """Add rows to moderation/automatic-merges.csv, after the rows already there."""
+    path = Path(root) / AUTO_MERGES_FILE
+    existing = []
+    if path.exists():
+        with open(path, encoding="utf-8", newline="") as f:
+            existing = list(csv.DictReader(f))
+    out = io.StringIO()
+    writer = csv.DictWriter(out, fieldnames=AUTO_MERGES_COLUMNS, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(existing + rows)
+    write_text(path, out.getvalue())
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("keep_id")
-    parser.add_argument("drop_id")
+    parser.add_argument("keep_id", nargs="?")
+    parser.add_argument("drop_id", nargs="?")
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
     parser.add_argument("--part", action="store_true", help="the OSM objects are parts of one place, not double mapping")
+    parser.add_argument("--auto", action="store_true", help="merge every pair the automatic merge rule accepts")
+    parser.add_argument("--geometry", type=Path, help="with --auto: the sidecar pipeline.extract --geometry wrote (needed for the road test)")
+    parser.add_argument("--group", action="append", help="with --auto: a group to merge in (default overnight; repeat for more)")
     args = parser.parse_args(argv)
+    if args.auto:
+        if args.keep_id or args.part:
+            parser.error("--auto takes no ids and no --part")
+        if args.geometry is None:
+            parser.error("--auto needs --geometry: without roads the rule cannot tell opposite sides of a road apart")
+        merges = merge_batch(args.root, load_geometry(args.geometry), groups=tuple(args.group or ["overnight"]))
+        print(f"Merged {len(merges)} records; each is listed in {AUTO_MERGES_FILE.as_posix()}", file=sys.stderr)
+        return 0
+    if not args.keep_id or not args.drop_id:
+        parser.error("give keep_id and drop_id, or --auto")
     try:
         kept = merge(args.root, args.keep_id, args.drop_id, part=args.part)
     except MergeError as exc:

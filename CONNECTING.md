@@ -141,8 +141,9 @@ you with half a dataset.
 
 ### Redirect merged places
 
-Sometimes one place is recorded twice, and a person merges the two records
-into one. The record that is dropped leaves `places.ndjson.gz`, and its id is
+Sometimes one place is recorded twice, and the two records are merged into
+one, by a person or by a documented rule (the same name, under 50 m apart
+and no major road between) whose merges a person reviews. The record that is dropped leaves `places.ndjson.gz`, and its id is
 listed in `merged.ndjson.gz` (the `merged` entry in the manifest), one line
 per merged id:
 
@@ -577,7 +578,10 @@ apps with the next release.
   checks, with the `name` it carries. Checks with `still_there: true` and
   `nearby: true` from 2 other devices make it `confirmed`. `remove` reports, or checks with `still_there: false`, from
   2 different devices hide it, or 3 once it is confirmed. A blocked
-  contributor's places are hidden. A new place within 150 m of a place in the
+  contributor's places are hidden. A new place with the same name as a
+  place in the same group less than 50 m away, and no major road between,
+  is merged into that place (see "Redirect merged places"), and a person
+  can undo it. Any other new place within 150 m of a place in the
   same group, one hidden before it was published and one that fails the
   checks above go to a person as `held`. Contacts sent with a new place
   always go to a person before they are published.

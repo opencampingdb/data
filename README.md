@@ -160,8 +160,12 @@ Anything that shows this data must show:
    owner first."
 6. **Duplicates.** After every OSM sync, likely duplicates (for example a
    campground mapped as both a node and a way) are listed in the PR body under
-   "Possible duplicates". Nothing is merged automatically. A person merges a
-   pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR:
+   "Possible duplicates". Sync never merges them. A person merges a
+   pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR,
+   or merges in a batch every pair the automatic merge rule accepts (the
+   same name once tidied, the same group, under 50 m apart and no major road
+   between) with `python -m pipeline.merge --auto`, which lists each merge in
+   `moderation/automatic-merges.csv` for review. Either way
    the dropped record stays as a tombstone that points at the kept one, and
    releases list it in `merged.ndjson.gz` so apps can redirect old ids.
 7. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:

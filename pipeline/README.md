@@ -13,7 +13,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, `fees/`, with `--auto` the geometry sidecar | the kept record, a tombstone, moved reviews and fees; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with id, name and location (`lat,lon`), for a reviewer. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
@@ -324,7 +324,8 @@ from blocked contributors.
 
 `pipeline.duplicates` finds pairs of places that are likely the same place.
 Sync runs it after every merge into `places/` and lists the pairs in the
-report under "Possible duplicates". It only flags. A pair is likely when:
+report under "Possible duplicates". It only flags (merging is a separate
+step, see "Merge"). A pair is likely when:
 
 - both places are in the overnight group, whatever their kinds (a caravan
   park and a paid campground can be the same place), or both have the same
@@ -437,6 +438,38 @@ place. A person runs it and opens a PR with the result:
 
 It refuses to merge a record into itself, an unknown id, or a record that is
 already merged.
+
+### Automatic merges
+
+`pipeline.duplicates.automatic_merge(a, b, geometry, distinct)` is the
+automatic merge rule. It returns `None` when two records may be merged
+without anyone looking, and otherwise the reason they wait for a reviewer.
+All of these must hold:
+
+- neither is a tombstone or has a verified owner, and the pair is not on the
+  distinct list;
+- the same group, and outside the overnight group the same kind (as the
+  duplicate finder compares them);
+- the same name once tidied (`tidy_name`): lower case, punctuation
+  removed, `RA`, `Ck` and `Mt` written as rest area, creek and mount, then
+  `and` and the finder's generic words dropped, with something left;
+- less than 50 m apart (between the records' locations);
+- `pipeline.geometry.judge` does not find them separate: no major road
+  between them, and no different direction, operator or entry.
+
+`python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--group overnight]`
+runs it over the finder's pairs in the overnight group (or the groups
+given). Pairs that share a record make one group, merged into the record
+with an OSM link, then a camp site over a motel or hostel, then the most
+facts, then a kind more specific than `campground`, then the oldest id. A
+motel or hostel merged with a camp site is merged as a part (`--part`):
+OSM maps the two as separate features of one place on purpose. Each merge
+is added to `moderation/automatic-merges.csv` (merged date, both ids,
+names, kinds and OSM objects, the distance and whether it was a part) for
+the person who reviews the PR. The geometry sidecar is required, because
+without roads the rule cannot tell opposite sides of a highway apart. The
+feedback engine applies the same rule when a traveller adds a place next
+to an existing one, and merges the new place into it.
 
 ## Moderate
 

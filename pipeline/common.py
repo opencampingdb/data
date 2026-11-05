@@ -104,6 +104,11 @@ EXTRA_SOURCE_KEYS = ("name", "location", "kind", "status", "description")
 # anonymous community reports from public camping groups, imported in bulk.
 SOURCES = ("osm", "feedback", "contributed", "owner", "community_report")
 
+# Kinds that are buildings to stay in rather than camp sites. The double
+# mapping challenge leaves them out, and an automatic merge of one with a
+# camp site marks it as a part of that place.
+ROOFED_KINDS = ("roofed_accommodation", "backpacker_hostel")
+
 # Sources whose values never go back to OSM, in any form: not as a
 # MapRoulette task, not as an OSM note.
 NOT_FOR_OSM = ("contributed", "community_report", "rule")

@@ -4,7 +4,7 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 
 | File | Challenge | One task per |
 |---|---|---|
-| `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after a person merged its records, leaving out objects that are a separate place (see below) |
+| `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after its records were merged, leaving out objects that are a separate place (see below), and leaving out motels, cabins and hostels |
 | `traveller_reports.geojson` | What travellers report | place where a value that at least two travellers or the verified owner reported still differs from OSM |
 | `challenges.json` | | the MapRoulette project and challenge ids, used for the rebuild links |
 
@@ -24,7 +24,7 @@ Each line of a task says how many travellers reported the value and when the lat
 
 ## Approving changes
 
-1. **The sync PR.** Each night's OSM sync PR lists, under "MapRoulette", the tasks each file gains and loses. Merging the PR approves them. Small syncs merge on their own, which is fine: every task comes from a change already approved, a merge a person made or feedback the apply rules accepted.
+1. **The sync PR.** Each night's OSM sync PR lists, under "MapRoulette", the tasks each file gains and loses. Merging the PR approves them. Small syncs merge on their own, which is fine: every task comes from a change already approved, a merge a person made, a batch of automatic merges a person reviewed and merged (each listed in `moderation/automatic-merges.csv`), or feedback the apply rules accepted.
 2. **The rebuild issue.** When a merge changes the files on main, the MapRoulette workflow opens an issue called "Rebuild the MapRoulette challenges" with a link to each challenge. MapRoulette has no API for a workflow to rebuild, so a person presses the button.
 3. **Rebuild.** Sign in to MapRoulette with your OSM account, open the link, press **Rebuild Tasks**, tick **First remove incomplete tasks** and press **Proceed**. That removes the tasks nobody has finished and builds them again from the file, so a task that left the file goes. Finished tasks, "Not an Issue" among them, stay. Tick the box in the issue, and close it when every box is ticked.
 
@@ -41,6 +41,8 @@ Two OSM objects close together are not always one place mapped twice. Rest areas
 - Different names, directions (northbound and southbound), operators or access keep two objects apart too. These signals only ever keep places apart.
 
 A task leaves out any object the rules find to be a separate place, and goes when one object is left.
+
+The challenge is about camp sites. A record whose kind is `roofed_accommodation` or `backpacker_hostel` (motels, cabins, hostels) is never a task, and an automatic merge of a motel or hostel into the caravan park it stands in marks the motel as a part, since OSM maps the two as separate features on purpose.
 
 To keep a pair out of the double mapping challenge, merge it with `python -m pipeline.merge <keep> <drop> --part`, which marks the dropped object as a part drawn apart on purpose (`"part": true` in `merged_osm`). To keep two places from being merged at all, add them to `moderation/distinct_places.json`. `pipeline.merge` refuses a pair on that list unless `--part` says they are parts of one place, such as two sections of a caravan park on either side of a street.
 
