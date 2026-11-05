@@ -232,9 +232,10 @@ tourist park, keep `fee=no`.
 `access` (the fact) is about the road and the vehicle. `entry` is about who
 may stay, and comes from the OSM `access` tag.
 
-Facts are never inferred from the kind: a `caravan_park` does not get
-`caravans: true` unless the `caravans` tag says so. `water_type` is the one
-fact that depends on the kind.
+The extract never infers a fact from the kind: a `caravan_park` does not
+get `caravans: true` unless the `caravans` tag says so. `water_type` is the
+one fact the extract takes from the kind. The release adds a few facts by
+rule, never stored in `places/` (see "Rules" under "Release").
 
 ## Sync
 
@@ -460,7 +461,8 @@ not list. On top of the schemas it checks that `group` is the group of the
 record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
 other fact (plus optional `name`, `location` and `status`, each `osm`,
-`feedback`, `contributed`, `owner` or `community_report`), that `fact_dates` has a date for exactly the
+`feedback`, `contributed`, `owner` or `community_report`), that no file holds a
+`rule` source or `fact_rules` (only the release sets those), that `fact_dates` has a date for exactly the
 `fact_sources` entries that are not `osm` and none later than `updated`,
 that `last_confirmed` is not in the future (it may be later than `updated`),
 that no two records share an
@@ -506,11 +508,33 @@ The manifest names its `release`, `data-<commit time>` (for example
 release: `https://github.com/<repository>/releases/download/<release>/<file>`.
 `--repository` sets the owner and name, `opencampingdb/data` by default.
 
+### Rules
+
+[schema/fact_rules.json](../schema/fact_rules.json) lists facts the release
+sets from a place's kind, where no source gives a value:
+
+| Rule | Kind | Fact |
+|---|---|---|
+| `kind:public_toilet` | `public_toilet` | `toilets: true` |
+| `kind:drinking_water_point` | `drinking_water_point` | `drinking_water: true` |
+| `kind:public_shower` | `public_shower` | `showers: true` |
+| `kind:dump_point` | `dump_point` | `dump_station: true` |
+| `national_park` | `national_park_campsite` | `pets: "no"` |
+
+A value from OSM, feedback, a contributor, the owner or a community report
+always wins, including `false`. A rule fact has the source `rule` in
+`fact_sources`, the rule's name in `fact_rules` and no `fact_dates` entry.
+`pipeline.common.with_rule_facts` applies them to released records and to
+the place index only: files in `places/` never hold them (validation
+refuses one that does), so the OSM sync, merges and the MapRoulette
+challenges never see them, and nothing set by a rule reaches OSM.
+
 `place-index.ndjson.gz` is for feedback intakes, not apps: it is not a release
 file and the manifest leaves it out. It holds one line for each place
 `places.ndjson.gz` holds, sorted by `id`: `{"cell", "fact_dates",
 "fact_sources", "facts", "id"}`, where `cell` is the whole-degree map cell
 `[floor(lon), floor(lat)]` and `fact_dates` is `{}` when the record has none.
+Its facts and sources include the rule facts, as the released record does.
 An intake decides feedback against it at send time.
 
 `python -m pipeline.place_index --url <intake>` loads it into an intake with

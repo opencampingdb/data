@@ -8,7 +8,7 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 | `traveller_reports.geojson` | What travellers report | place where a value that at least two travellers or the verified owner reported still differs from OSM |
 | `challenges.json` | | the MapRoulette project and challenge ids, used for the rebuild links |
 
-`python -m pipeline.maproulette` writes both files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
+`python -m pipeline.maproulette` writes both files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
 
 ### What a report task needs
 

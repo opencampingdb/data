@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 10,
+  "format_version": 12,
   "format_minor": 0,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -98,7 +98,13 @@ the same as in format 10. Formats 3, 4, 6, 9 and 10 were additive and would
 each be a `format_minor` rise under the rule above. `format_minor` starts at 0
 in format 10, and is 0 again in format 11. Format 11.1 adds
 `commons.ndjson.gz`, Wikimedia Commons photos matched to places to stay (see
-section 4). Everything else reads the same as in 11.0.
+section 4). Everything else reads the same as in 11.0. Format 12 adds the
+source `rule` to `fact_sources`, with `fact_rules` naming the rule (see
+section 4): a fact a documented rule sets from the place's kind, such as
+`toilets: true` on a `public_toilet`, where no source says otherwise. An app
+that expects only the sources of format 11 must handle it, and should show a
+rule fact as what is usual, not as something anyone reported. Everything else
+reads the same as in 11.1.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -225,8 +231,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   Apps need not read it: `standing` already reflects it.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps),
   `contributed` (given directly to Open Camping DB under the ODbL), `owner`
-  (the place's verified owner) or `community_report` (anonymous community
-  reports from public camping groups, imported by a person; see below). It may
+  (the place's verified owner), `community_report` (anonymous community
+  reports from public camping groups, imported by a person; see below) or
+  `rule` (set by a documented rule, not reported by anyone; see below). It may
   also have `name`, `location`, `kind` and `status` entries. When `name`,
   `location` or `kind` is missing, the name, position and kind come from OSM. A place with
   `osm: null` and `contributed` name and location is a contributed place, and
@@ -239,6 +246,19 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   is `2026-03-01T00:00:00Z`), not when it was imported. A place
   found only in community reports is located at a specific mapped feature,
   never a town centre. These values are never passed to OpenStreetMap.
+- `rule` values are what a place of that kind usually has, set by the
+  release where no source gives a value. `fact_rules` names the rule for
+  each one, and [schema/fact_rules.json](schema/fact_rules.json) lists them:
+  `kind:public_toilet`, `kind:drinking_water_point`, `kind:public_shower` and
+  `kind:dump_point` set the place's own feature (`toilets`,
+  `drinking_water`, `showers` and `dump_station`, all `true`), and
+  `national_park` sets `pets: "no"` on a `national_park_campsite`, since
+  most Australian national parks allow no dogs. Any value from OSM, a
+  traveller, a contributor or the owner wins over a rule, `false` included,
+  so a single park that allows dogs says so. Present a rule fact as
+  "usually": for example "Usually no dogs (national park)", never as a firm
+  fact. A rule value has no `fact_dates` entry, and is never passed to
+  OpenStreetMap. A report that confirms or corrects it is welcome (section 6).
 - How fresh a place's information is: `osm.timestamp` is when its OSM object
   was last edited by anyone, in UTC. `fact_dates` gives, for each value that
   did not come from OSM (each `fact_sources` entry that is `feedback`,

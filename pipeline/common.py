@@ -104,7 +104,37 @@ SOURCES = ("osm", "feedback", "contributed", "owner", "community_report")
 
 # Sources whose values never go back to OSM, in any form: not as a
 # MapRoulette task, not as an OSM note.
-NOT_FOR_OSM = ("contributed", "community_report")
+NOT_FOR_OSM = ("contributed", "community_report", "rule")
+
+# The source of a fact the release sets by a documented rule
+# (schema/fact_rules.json). It is never stored in places/: only released
+# records and the place index carry it, with the rule's name in fact_rules.
+RULE = "rule"
+
+# The rules, in file order: {"rule", "kind", "fact", "value"}.
+FACT_RULES = tuple(json.loads((SCHEMA_DIR / "fact_rules.json").read_text(encoding="utf-8"))["rules"])
+RULE_NAMES = tuple(rule["rule"] for rule in FACT_RULES)
+
+
+def with_rule_facts(record: dict) -> dict:
+    """The record as released: each rule for its kind sets its fact where the record has no value.
+
+    Returns a new record with the fact, the source rule in fact_sources and the
+    rule's name in fact_rules. A value from any source wins over a rule, and a
+    rule fact has no fact_dates entry. The record passed in is not changed.
+    """
+    rules = [rule for rule in FACT_RULES if rule["kind"] == record.get("kind") and rule["fact"] not in record.get("facts", {})]
+    if not rules:
+        return record
+    released = dict(record)
+    released["facts"] = dict(record.get("facts", {}))
+    released["fact_sources"] = dict(record.get("fact_sources", {}))
+    released["fact_rules"] = dict(record.get("fact_rules", {}))
+    for rule in rules:
+        released["facts"][rule["fact"]] = rule["value"]
+        released["fact_sources"][rule["fact"]] = RULE
+        released["fact_rules"][rule["fact"]] = rule["rule"]
+    return released
 
 # The source of values imported from anonymous community reports. A place
 # whose name or location has this source is never passed to OSM at all.

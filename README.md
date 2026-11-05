@@ -65,7 +65,7 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 A place can carry many more facts than this one: site features such as
 `campfires`, `big_rigs`, `telstra_signal` and `crocodiles`, a park chain in
 `brand`, and contacts. [CONNECTING.md](CONNECTING.md) lists them, and section
-1 there says what changed in each record format (the current one is 7).
+1 there says what changed in each record format (the current one is 12).
 
 The full contract is in [schema/place.schema.json](schema/place.schema.json),
 [schema/review.schema.json](schema/review.schema.json) and

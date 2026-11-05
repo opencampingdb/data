@@ -14,7 +14,8 @@ exits 1. Checks:
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
   name, location and status entries. Sources are osm, feedback,
-  contributed, owner and community_report
+  contributed, owner and community_report. The source rule and fact_rules
+  appear only in released records (pipeline.release), never in places/
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
@@ -56,6 +57,7 @@ from jsonschema import Draft202012Validator
 from .common import (
     EXTRA_SOURCE_KEYS,
     KIND_GROUP,
+    RULE,
     dump_line,
     dump_record,
     iter_place_files,
@@ -168,6 +170,12 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
         )
 
     errors += fact_date_errors(record, where)
+    ruled = sorted(k for k, source in record["fact_sources"].items() if source == RULE)
+    if ruled or "fact_rules" in record:
+        errors.append(
+            f"{where}: rule facts and fact_rules are set by the release from schema/fact_rules.json, "
+            f"never stored in places/ (found {ruled or ['fact_rules']})"
+        )
     if record.get("last_confirmed", "") > now:
         errors.append(f"{where}: last_confirmed {record['last_confirmed']} is in the future")
     if "standing" in record and record["osm"] is not None:
@@ -181,7 +189,7 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
 def fact_date_errors(record: dict, where: str) -> list[str]:
     """fact_dates dates every value that did not come from OSM, and nothing else."""
     dates = record.get("fact_dates", {})
-    not_osm = {k for k, source in record["fact_sources"].items() if source != "osm"}
+    not_osm = {k for k, source in record["fact_sources"].items() if source not in ("osm", RULE)}
     errors = []
     if set(dates) != not_osm:
         differ = sorted(set(dates) ^ not_osm)
