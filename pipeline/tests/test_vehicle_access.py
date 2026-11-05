@@ -96,7 +96,7 @@ def test_the_candidates_file_lists_id_name_and_location(repo):
     with open(repo / CANDIDATES_FILE, encoding="utf-8", newline="") as f:
         rows = list(csv.reader(f))
     assert rows == [
-        ["id", "name", "location"],
+        ["place", "name", "location"],
         ["ocdb_01M66CKP2X55A8CVGR95ZFJ1A0", "Heavy Vehicle Rest Area", "-31.5,150.25"],
         ["ocdb_01M66CKP2X55A8CVGR95ZFJ1B0", "Big Ben Creek Truck Parking Bay", "-31.5,150.25"],
     ]

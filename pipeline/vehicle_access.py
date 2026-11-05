@@ -7,7 +7,8 @@ The fact vehicle_access is set only from OSM tags (pipeline.extract). Many
 truck bays say so only in their name ("Truck Parking Bay", "Heavy Vehicle
 Rest Area"), which is not enough to set the fact. This writes them to
 moderation/heavy-vehicle-candidates.csv for a reviewer to check, one row per
-place: id, name and location ("lat,lon"), sorted by id. A place is a
+place: place (its id), name and location ("lat,lon"), sorted by id, quoted
+as Python's csv module writes it. The feedback engine reads the place column. A place is a
 candidate when it is a rest_area or long_vehicle_parking, is not merged, has
 no vehicle_access fact, and its name says truck, heavy vehicle, HV or
 B-double.
@@ -43,7 +44,7 @@ def write_candidates(root: Path) -> int:
     candidates = name_candidates(load_places(root))
     out = io.StringIO()
     writer = csv.writer(out, lineterminator="\n")
-    writer.writerow(["id", "name", "location"])
+    writer.writerow(["place", "name", "location"])
     for record in candidates:
         location = f"{record['location']['lat']},{record['location']['lon']}"
         writer.writerow([record["id"], record["name"], location])
