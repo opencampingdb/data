@@ -35,7 +35,10 @@ maproulette/traveller_reports.geojson
     A value is sent only with enough evidence in the inbox's applied items:
     a feedback value needs at least 2 independent sources (distinct origin,
     else device) that reported that same value for the place in the last 90
-    days, and an owner value needs the verified owner's applied update. A
+    days, and those confirming sources must outnumber the sources that
+    doubted the fact in the same 90 days by at least 2. A doubt counts
+    whatever was decided about it, unless it was refused. An owner value
+    needs the verified owner's applied update, and doubts do not change it. A
     name that only describes the place ("Heavy Vehicle Rest Area") is never
     sent. Each line says how many travellers reported the value and when, or
     when the owner set it, and how a mapper can check it. Only counts and
@@ -181,6 +184,11 @@ LABELS = {
 # Evidence a value needs before it becomes a task.
 WINDOW_DAYS = 90
 MIN_TRAVELLERS = 2
+MIN_LEAD = 2  # confirming sources minus doubting sources
+
+# Marks a doubt in the evidence: a traveller said the fact is wrong without
+# giving a value.
+DOUBT = "doubt"
 
 # How a mapper can check a value, by fact. Facts not listed use CHECK_DEFAULT.
 CHECK_ROAD = "a survey, or street-level photos (Mapillary or Panoramax) of the access road"
@@ -327,10 +335,15 @@ def resolve_place(place_id, places: dict) -> str | None:
 
 
 def item_claims(item: dict) -> list[tuple[str, str, object]]:
-    """(source, key, value) for each value an applied inbox item stated. Key is a fact, "name" or "status"."""
+    """(source, key, value) for each value an applied inbox item stated. Key is a fact, "name" or "status".
+
+    A doubt gives (DOUBT, fact, None): it says the fact is wrong, with no value.
+    """
     kind = item.get("type")
     if kind == "report":
         report = item.get("report") or {}
+        if report.get("kind") == DOUBT and report.get("fact"):
+            return [(DOUBT, report["fact"], None)]
         if report.get("kind") == "fact" and report.get("fact"):
             return [("feedback", report["fact"], report.get("value"))]
         if report.get("kind") == "name":
@@ -351,7 +364,9 @@ def item_claims(item: dict) -> list[tuple[str, str, object]]:
 def load_evidence(inbox: Path, places: dict) -> dict[tuple[str, str], list[dict]]:
     """(place id, key) -> what each applied inbox item stated about it: source, value, who and when.
 
-    Only items whose outcome is "applied" count. "who" stays in memory to
+    Only items whose outcome is "applied" count, except doubts: a doubt
+    counts whatever its outcome, unless it was refused, because one held for
+    a reviewer still says the fact is in question. "who" stays in memory to
     count independent sources and is never written out.
     """
     applied = Path(inbox) / "applied"
@@ -364,7 +379,11 @@ def load_evidence(inbox: Path, places: dict) -> dict[tuple[str, str], list[dict]
         except (OSError, ValueError):
             print(f"skipping {path}: not valid JSON", file=sys.stderr)
             continue
-        if not isinstance(item, dict) or (item.get("outcome") or {}).get("result") != "applied":
+        if not isinstance(item, dict):
+            continue
+        result = (item.get("outcome") or {}).get("result")
+        doubt = item.get("type") == "report" and (item.get("report") or {}).get("kind") == DOUBT
+        if result != "applied" and not (doubt and result != "refused"):
             continue
         place = resolve_place(item.get("place"), places)
         received = parse_time(item.get("received"))
@@ -381,16 +400,24 @@ def load_evidence(inbox: Path, places: dict) -> dict[tuple[str, str], list[dict]
 def backing(record: dict, key: str, value, source: str, evidence: dict, now: datetime) -> tuple[int, datetime] | None:
     """(independent sources, latest date) behind a value, or None when the evidence is not enough.
 
-    An owner value counts as one source, dated when it was set.
+    An owner value counts as one source, dated when it was set, and doubts
+    do not change it. A feedback value needs MIN_TRAVELLERS confirming
+    sources, and at least MIN_LEAD more of them than sources that doubted
+    the fact, all within WINDOW_DAYS.
     """
     found = [e for e in evidence.get((record["id"], key), []) if e["source"] == source and e["value"] == value]
     if source == "owner":
         if not record.get("owner_verified") or not found:
             return None
         return 1, parse_time(record.get("fact_dates", {}).get(key)) or max(e["received"] for e in found)
-    recent = [e for e in found if now - timedelta(days=WINDOW_DAYS) <= e["received"] <= now and e["who"]]
+    since = now - timedelta(days=WINDOW_DAYS)
+    recent = [e for e in found if since <= e["received"] <= now and e["who"]]
     count = len({e["who"] for e in recent})
-    if count < MIN_TRAVELLERS:
+    doubts = len({
+        e["who"] for e in evidence.get((record["id"], key), [])
+        if e["source"] == DOUBT and since <= e["received"] <= now and e["who"]
+    })
+    if count < MIN_TRAVELLERS or count - doubts < MIN_LEAD:
         return None
     return count, max(e["received"] for e in recent)
 
