@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "drinking_water": "osm",
+    "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
     "showers": "osm",
@@ -9,6 +11,8 @@
   },
   "facts": {
     "caravans": true,
+    "drinking_water": false,
+    "dump_station": false,
     "entry": "public",
     "fee": false,
     "showers": false,
@@ -20,7 +24,7 @@
   "kind": "free_camp",
   "location": {
     "lat": -31.532139,
-    "lon": 146.350407
+    "lon": 146.350402
   },
   "merged_osm": [
     {
@@ -31,11 +35,11 @@
   "name": "Florida Rest Area",
   "osm": {
     "id": 8376583421,
-    "timestamp": "2025-04-20T13:35:12Z",
+    "timestamp": "2026-11-04T17:25:52Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:32:56Z"
+  "updated": "2026-11-05T21:42:45Z"
 }
