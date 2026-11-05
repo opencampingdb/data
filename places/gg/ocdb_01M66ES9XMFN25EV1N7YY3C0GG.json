@@ -3,26 +3,37 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "address": "osm",
     "cabins": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "contributed",
+    "entry": "osm",
     "fee": "osm",
+    "max_stay": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "street": "Forestry Road"
+    },
     "cabins": false,
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "entry": "customers",
     "fee": false,
+    "max_stay": "48h",
     "power": false,
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.townsville.qld.gov.au/facilities-and-recreation/parks-beaches-and-community-venues/popular-parks-and-playgrounds/parks/bluewater-park-and-urban-forest"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9XMFN25EV1N7YY3C0GG",
@@ -31,14 +42,14 @@
     "lat": -19.176388,
     "lon": 146.551171
   },
-  "name": "Bluewater Park",
+  "name": "Bluewater Park Camping Area",
   "osm": {
     "id": 1811162953,
-    "timestamp": "2026-11-02T05:25:27Z",
+    "timestamp": "2026-11-04T07:21:52Z",
     "type": "node",
-    "version": 11
+    "version": 12
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-05T21:42:45Z"
 }
