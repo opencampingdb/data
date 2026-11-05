@@ -469,7 +469,18 @@ names, kinds and OSM objects, the distance and whether it was a part) for
 the person who reviews the PR. The geometry sidecar is required, because
 without roads the rule cannot tell opposite sides of a highway apart. The
 feedback engine applies the same rule when a traveller adds a place next
-to an existing one, and merges the new place into it.
+to an existing one, and merges the new place into it. Its tombstone is the
+new place's own record (`osm: null`, its `standing`, its feedback
+`fact_sources` and `fact_dates`) with `status: "merged"` and `merged_into`,
+and the release lists it in `merged.ndjson.gz` like any other.
+
+A person reverses an automatic merge of a new place by setting its
+`status` back to `open`, removing `merged_into`, and adding the pair to
+`moderation/distinct_places.json` so neither the finder nor the rule
+pairs them again. A batch merge of two OSM records is reversed the same
+way, and the dropped object's link is taken out of the kept record's
+`merged_osm` (`pipeline.split` does both when a road or direction splits
+them).
 
 ## Moderate
 

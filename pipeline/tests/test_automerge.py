@@ -170,3 +170,20 @@ def test_the_caravan_park_is_kept_over_its_motel(repo):
     write(repo, place(B, "paid_campground", "Eromanga Motel and Caravan Park", 20, osm_id=2))
     [made] = merge_batch(repo, Geometry(), now=NOW)
     assert (made["kept"], made["dropped"]) == (B, A)
+
+
+def test_a_merged_new_place_keeps_its_draft_record_as_a_tombstone(repo, tmp_path):
+    import gzip
+
+    from pipeline.release import build_release
+
+    write(repo, place(A, "free_camp", "Moon Creek", osm_id=1))
+    write(repo, place(
+        B, "free_camp", "Moon Creek", 10, status="merged", merged_into=A, standing="held",
+        fact_sources={"name": "feedback", "location": "feedback"},
+        fact_dates={"name": "2026-10-01T00:00:00Z", "location": "2026-10-01T00:00:00Z"},
+    ))
+    assert validate_repo(repo, now=NOW) == []
+    build_release(repo, tmp_path / "dist", data_version="20261030T160000Z-abc1234", generated="2026-10-30T16:00:00Z")
+    merged = gzip.decompress((tmp_path / "dist" / "merged.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
+    assert [json.loads(line) for line in merged] == [{"id": B, "merged_into": A}]
