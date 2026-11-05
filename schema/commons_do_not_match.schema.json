@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/commons_do_not_match.schema.json",
+  "title": "Open Camping DB Commons do-not-match list",
+  "description": "moderation/commons-do-not-match.json. Place and Commons file pairs that are not of the place, from travellers' reports. pipeline.commons never matches a listed pair again, and the release leaves it out.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pairs"],
+  "properties": {
+    "pairs": {
+      "description": "Sorted by place, then file, each pair once.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["place", "file", "added"],
+        "properties": {
+          "place": {
+            "description": "The place id.",
+            "type": "string",
+            "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "file": {
+            "description": "The Commons file name, as in commons.ndjson.gz: without File:.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^(?![Ff]ile:)"
+          },
+          "added": {
+            "description": "Day the pair was added, YYYY-MM-DD.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          },
+          "note": {
+            "description": "Why, in a sentence, without travellers' words or names.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        }
+      }
+    }
+  }
+}

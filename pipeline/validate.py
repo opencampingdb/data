@@ -35,6 +35,8 @@ exits 1. Checks:
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once. moderation/ holds only that file,
   distinct_places.json and the files in MODERATION_FILES
+- moderation/commons-do-not-match.json matches its schema, sorted by place
+  then file, each pair once, naming places that exist
 - moderation/distinct_places.json matches its schema, each pair once with a
   before b, sorted, naming places that exist
 - pets_months only goes with pets seasonal
@@ -79,6 +81,7 @@ SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
 MODERATION_FILES = (
     "opposite-side-splits.csv",  # pipeline.split
     "heavy-vehicle-candidates.csv",  # pipeline.vehicle_access
+    "commons-do-not-match.json",  # read by pipeline.commons
 )
 
 # ISO dates (2026-10-30 or 2026-10, with an optional time after a T). They are
@@ -357,6 +360,34 @@ def check_distinct(root: Path, places: dict[str, dict]) -> list[str]:
     return errors
 
 
+def check_do_not_match(root: Path, places: dict[str, dict]) -> list[str]:
+    """Problems with moderation/commons-do-not-match.json. A missing file is fine."""
+    path = root / "moderation" / "commons-do-not-match.json"
+    where = "moderation/commons-do-not-match.json"
+    if not path.exists():
+        return []
+    try:
+        text = path.read_bytes().decode("utf-8")
+        listed = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return [f"{where}: not valid UTF-8 JSON: {exc}"]
+    schema = schema_errors(load_validator("commons_do_not_match.schema.json"), listed, where)
+    if schema:
+        return schema
+    errors = []
+    if text != dump_record(listed):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    pairs = [(entry["place"], entry["file"]) for entry in listed["pairs"]]
+    if pairs != sorted(pairs):
+        errors.append(f"{where}: pairs must be sorted by place, then file")
+    if len(pairs) != len(set(pairs)):
+        errors.append(f"{where}: a pair is listed twice")
+    for place_id in sorted({place for place, _ in pairs}):
+        if place_id not in places:
+            errors.append(f"{where}: {place_id} is not a place")
+    return errors
+
+
 def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
     validator = load_validator("review.schema.json")
     errors: list[str] = []
@@ -531,6 +562,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     places, errors = check_places(root, now or utc_now())
     errors += check_blocked(root)
     errors += check_distinct(root, places)
+    errors += check_do_not_match(root, places)
     errors += check_reviews(root, places)
     errors += check_fees(root, places)
     errors += check_commons(root)

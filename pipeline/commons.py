@@ -45,6 +45,11 @@ left out too: they show people and the past, not the place today.
 The requests follow the Wikimedia User-Agent policy and the API etiquette:
 one at a time, maxlag=5, a pause between requests, and a back-off when the
 API asks for one.
+
+A place and file pair on moderation/commons-do-not-match.json
+(schema/commons_do_not_match.schema.json), which travellers reported as not
+of the place, never matches: each run drops it from every line, checked
+today or not, and the release leaves it out too.
 """
 
 import argparse
@@ -64,6 +69,8 @@ from .common import dump_line, load_places, write_text
 API = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "OpenCampingDB-pipeline/1.0 (+https://github.com/opencampingdb/data)"
 MATCHES_FILE = Path("commons") / "matches.ndjson"
+# Place and file pairs travellers reported as not of the place. Never matched.
+DO_NOT_MATCH_FILE = Path("moderation") / "commons-do-not-match.json"
 GROUP = "overnight"
 
 MAX_FILES = 5
@@ -359,6 +366,19 @@ def due(matches: dict[str, dict], candidates: dict[str, dict], today: date, stal
     return [p for _, p in older_rules] + unchecked + [p for _, p in stale]
 
 
+def load_do_not_match(root: Path) -> set[tuple[str, str]]:
+    """(place, file) pairs on moderation/commons-do-not-match.json. Empty when the file is missing."""
+    path = Path(root) / DO_NOT_MATCH_FILE
+    if not path.exists():
+        return set()
+    return {(pair["place"], pair["file"]) for pair in json.loads(path.read_text(encoding="utf-8"))["pairs"]}
+
+
+def without_listed(place_id: str, files: list[dict], listed: set[tuple[str, str]]) -> list[dict]:
+    """files without those listed as not of the place."""
+    return [f for f in files if (place_id, f["file"]) not in listed]
+
+
 def write_matches(path: Path, matches: dict[str, dict]) -> None:
     write_text(path, "".join(dump_line(matches[p]) + "\n" for p in sorted(matches)))
 
@@ -366,13 +386,17 @@ def write_matches(path: Path, matches: dict[str, dict]) -> None:
 def run(root: Path, today: date, max_places: int | None, stale_days: int, fetch=fetch_json, pause: float = PAUSE_S, log=print) -> dict:
     path = root / MATCHES_FILE
     candidates = places_to_match(load_places(root))
-    matches = {p: m for p, m in load_matches(path).items() if p in candidates}
+    listed = load_do_not_match(root)
+    matches = {
+        p: dict(m, files=without_listed(p, m["files"], listed))
+        for p, m in load_matches(path).items() if p in candidates
+    }
     todo = due(matches, candidates, today, stale_days)
     if max_places is not None:
         todo = todo[:max_places]
     checked = matched = 0
     for i, place_id in enumerate(todo):
-        files = match_place(candidates[place_id], fetch)
+        files = without_listed(place_id, match_place(candidates[place_id], fetch), listed)
         matches[place_id] = {"place": place_id, "checked": today.isoformat(), "rules": RULES, "files": files}
         checked += 1
         matched += bool(files)

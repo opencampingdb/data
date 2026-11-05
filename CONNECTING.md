@@ -212,7 +212,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   place's name without a camping word, within 500 m: often a view of the
   surroundings rather than the place). Show `area` photos as the
   surroundings, or not at all. Photos of plants and animals and historic
-  photos are left out. Only licences that allow any use with credit
+  photos are left out. A photo travellers reported as not of the place is
+  listed in `moderation/commons-do-not-match.json` and never matched to it
+  again. Only licences that allow any use with credit
   are kept (CC0, public domain, CC BY and CC BY-SA). Photos are matched again
   every 30 days, so a file deleted from Commons drops out. Show the credit
   beside each photo (section 5) and load only `thumb` and `full`, which

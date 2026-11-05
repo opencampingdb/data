@@ -36,6 +36,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .commons import load_do_not_match, without_listed
 from .common import (
     ATTRIBUTION,
     LICENCE,
@@ -187,17 +188,20 @@ def commons_ndjson(root: Path, released: set[str]) -> tuple[bytes, int]:
     """One {"place", "files"} line per released place with a Commons match, sorted by place id.
 
     commons/matches.ndjson is written by pipeline.commons. Places checked with no
-    match, and places the release leaves out, are left out here too.
+    match, places the release leaves out and the place and file pairs on
+    moderation/commons-do-not-match.json are left out here too.
     """
     path = root / "commons" / "matches.ndjson"
+    listed = load_do_not_match(root)
     lines = []
     if path.exists():
         with open(path, encoding="utf-8") as f:
             for line in f:
                 if line.strip():
                     match = json.loads(line)
-                    if match["files"] and match["place"] in released:
-                        lines.append((match["place"], dump_line({"place": match["place"], "files": match["files"]}) + "\n"))
+                    files = without_listed(match["place"], match["files"], listed)
+                    if files and match["place"] in released:
+                        lines.append((match["place"], dump_line({"place": match["place"], "files": files}) + "\n"))
     lines.sort()
     return "".join(line for _, line in lines).encode("utf-8"), len(lines)
 

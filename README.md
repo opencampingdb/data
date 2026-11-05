@@ -75,7 +75,10 @@ person has blocked are listed in
 ([schema](schema/blocked_contributors.schema.json)). Pairs a person found to
 be separate places, which the duplicate finder skips, are listed in
 [moderation/distinct_places.json](moderation/distinct_places.json)
-([schema](schema/distinct_places.schema.json)). What OSM's mappers should
+([schema](schema/distinct_places.schema.json)). Commons photos travellers
+reported as not of their place are listed in
+[moderation/commons-do-not-match.json](moderation/commons-do-not-match.json)
+([schema](schema/commons_do_not_match.schema.json)) and never matched again. What OSM's mappers should
 check, such as places OSM maps twice, is passed to them as MapRoulette
 challenges built from [maproulette/](maproulette/README.md). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
