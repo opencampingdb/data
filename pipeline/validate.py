@@ -37,6 +37,7 @@ exits 1. Checks:
   distinct_places.json and opposite-side-splits.csv (from pipeline.split)
 - moderation/distinct_places.json matches its schema, each pair once with a
   before b, sorted, naming places that exist
+- pets_months only goes with pets seasonal
 - values with the source owner need owner_verified true. A farm_stay has
   osm null, entry private, booking_required true, and a booking_url or a
   phone. A description is checked like review text. reopens is a real date
@@ -170,6 +171,8 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
         )
 
     errors += fact_date_errors(record, where)
+    if "pets_months" in record["facts"] and record["facts"].get("pets") != "seasonal":
+        errors.append(f"{where}: pets_months is only for a place whose pets fact is seasonal")
     ruled = sorted(k for k, source in record["fact_sources"].items() if source == RULE)
     if ruled or "fact_rules" in record:
         errors.append(

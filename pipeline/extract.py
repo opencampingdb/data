@@ -34,7 +34,7 @@ import osmium
 import shapely
 from shapely import MultiPolygon, Polygon, STRtree
 
-from .common import dump_line, round_coord, write_text
+from .common import PETS_MONTHS_PATTERN, dump_line, round_coord, write_text
 from .geometry import SidecarBuilder
 from .kinds import (
     CONTAINER_TAG_PAIRS,
@@ -174,6 +174,22 @@ def parse_address(tags: dict) -> dict | None:
     return address
 
 
+DOG_MONTHS_RE = re.compile(r"^yes\s*@\s*\(?\s*([^()]+?)\s*\)?$", re.IGNORECASE)
+
+
+def dog_months(conditional: str) -> str | None:
+    """The months of dog:conditional=yes @ (May-Sep), as "May-Sep", or None.
+
+    Only a single yes condition made of whole months counts: times, weekdays,
+    other values and several conditions are left out.
+    """
+    match = DOG_MONTHS_RE.match(conditional.strip())
+    if not match:
+        return None
+    months = re.sub(r"\s*([,-])\s*", r"\1", match.group(1)).title()
+    return months if re.match(PETS_MONTHS_PATTERN, months) else None
+
+
 def facts_from_tags(tags: dict) -> dict:
     """Map OSM tags to the facts in a place record. Unknown values are left out."""
     facts = {}
@@ -196,6 +212,10 @@ def facts_from_tags(tags: dict) -> dict:
     dog = tags.get("dog", "").strip().lower()
     if dog in ("yes", "leashed", "no"):
         facts["pets"] = dog
+    months = dog_months(tags.get("dog:conditional", ""))
+    if months and dog in ("", "no"):
+        facts["pets"] = "seasonal"
+        facts["pets_months"] = months
 
     if tags.get("maxstay", "").strip():
         facts["max_stay"] = parse_maxstay(tags["maxstay"])

@@ -24,6 +24,7 @@ FACT_KEYS = (
     "fee",
     "power",
     "pets",
+    "pets_months",
     "tents",
     "caravans",
     "toilets",
@@ -145,6 +146,12 @@ def from_community_report(record: dict) -> bool:
     """True for a place whose name or location came from community reports."""
     sources = record.get("fact_sources", {})
     return COMMUNITY_REPORT in (sources.get("name"), sources.get("location"))
+
+# pets_months: the months dogs are allowed at a seasonal place, in OSM's month
+# range syntax, such as "May-Sep", "Dec-Feb" (wrapping the year end) or
+# "Apr-May,Sep-Oct". It converts to and from dog:conditional=yes @ (May-Sep).
+MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+PETS_MONTHS_PATTERN = r"^{m}(-{m})?(,{m}(-{m})?)*$".format(m="(" + "|".join(MONTHS) + ")")
 
 ATTRIBUTION = "© OpenStreetMap contributors, Open Camping DB"
 LICENCE = "ODbL-1.0"

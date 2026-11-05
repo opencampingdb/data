@@ -143,6 +143,10 @@ def merge_facts(record: dict, osm_facts: dict) -> tuple[dict, dict]:
         if key not in sources:
             facts[key] = value
             sources[key] = "osm"
+    # OSM's dog months belong to OSM's seasonal pets. When another source set
+    # pets to something else, the months no longer apply.
+    if facts.get("pets") != "seasonal" and sources.get("pets_months") == "osm":
+        del facts["pets_months"], sources["pets_months"]
     return facts, sources
 
 
