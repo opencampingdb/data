@@ -21,7 +21,11 @@ maproulette/double_mapping.geojson
     records with pipeline.merge, so the kept record's merged_osm lists the
     other objects. A task is written while the record's own object and at
     least one merged object are both still in OSM. Objects marked
-    "part": true (drawn apart on purpose) do not count.
+    "part": true (drawn apart on purpose) do not count, and neither do
+    objects the rules in pipeline.geometry find to be a separate place (a
+    major road between them, or different directions, operators or access).
+    With --geometry, the sidecar pipeline.extract wrote, roads and outlines
+    are tested too.
 
 maproulette/traveller_reports.geojson
     One task per place where a value from feedback or the owner still
@@ -62,6 +66,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .common import KIND_LABEL, from_community_report, load_places, write_text
+from .duplicates import MAX_DISTANCE_M
+from .geometry import Geometry, judge, load_geometry
 from .sync import load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
@@ -272,7 +278,8 @@ def feature(record: dict, ref: str, location: dict, properties: dict) -> dict:
     }
 
 
-def double_mapping_tasks(places: dict, extract: dict) -> list[dict]:
+def double_mapping_tasks(places: dict, extract: dict, geometry: Geometry | None = None) -> list[dict]:
+    geometry = geometry or Geometry()
     tasks = []
     for record in places.values():
         if record.get("status") == "merged" or not record.get("osm") or not record.get("merged_osm"):
@@ -282,7 +289,14 @@ def double_mapping_tasks(places: dict, extract: dict) -> list[dict]:
         own = osm_ref(record["osm"])
         refs = [own] + [osm_ref(m) for m in record["merged_osm"] if not m.get("part")]
         present = [ref for ref in refs if ref in extract]
-        if own not in present or len(present) < 2:
+        if own not in present:
+            continue
+        # Never a task for two places the rules find separate (pipeline.geometry).
+        present = [own] + [
+            ref for ref in present[1:]
+            if not judge(extract[own], extract[ref], geometry, MAX_DISTANCE_M).separate
+        ]
+        if len(present) < 2:
             continue
         objects = " and ".join(present)
         properties = {
@@ -509,7 +523,13 @@ def task_names(path: Path) -> dict[str, str]:
 NO_INBOX = "no --inbox given: report tasks need the inbox's evidence, so the file has no tasks"
 
 
-def write_challenges(root: Path, extract: list[dict], inbox: Path | None = None, now: datetime | None = None) -> dict[str, dict]:
+def write_challenges(
+    root: Path,
+    extract: list[dict],
+    inbox: Path | None = None,
+    now: datetime | None = None,
+    geometry: Geometry | None = None,
+) -> dict[str, dict]:
     """Write both challenge files. Returns, per file, the task count and the ids added and removed.
 
     Without an inbox the report file is written with no tasks, and its entry
@@ -521,7 +541,7 @@ def write_challenges(root: Path, extract: list[dict], inbox: Path | None = None,
     by_ref = {osm_ref(place["osm"]): place for place in extract}
     reports = traveller_report_tasks(places, by_ref, load_evidence(inbox, places), now) if inbox else []
     files = {
-        DOUBLE_MAPPING: double_mapping_tasks(places, by_ref),
+        DOUBLE_MAPPING: double_mapping_tasks(places, by_ref, geometry),
         TRAVELLER_REPORTS: reports,
     }
     result = {}
@@ -565,8 +585,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
     parser.add_argument("--report", type=Path, help="sync report to append the MapRoulette section to")
     parser.add_argument("--inbox", type=Path, help="checkout of the feedback inbox (its applied/ folder), the evidence for report tasks")
+    parser.add_argument("--geometry", type=Path, help="geometry sidecar written by pipeline.extract --geometry, for the double mapping rules")
     args = parser.parse_args(argv)
-    result = write_challenges(args.root, load_extract(args.extract), inbox=args.inbox)
+    result = write_challenges(args.root, load_extract(args.extract), inbox=args.inbox, geometry=load_geometry(args.geometry))
     for name, change in result.items():
         print(f"{name}: {change['count']} task(s), {len(change['added'])} new, {len(change['removed'])} gone", file=sys.stderr)
         if change.get("skipped"):

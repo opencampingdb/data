@@ -5,16 +5,17 @@ Run them from the repository root after `python -m pip install -r requirements.t
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
-| Extract | `python -m pipeline.extract FILE --out extract.ndjson` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id |
-| Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
+| Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, and with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road") |
+| Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it). See the module docstring |
-| Duplicates | `python -m pipeline.duplicates --root .` | `places/`, `moderation/distinct_places.json` | likely duplicate pairs, one JSON object per line (sync runs this too) |
+| Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
+| Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
-| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 
 Tests: `python -m pytest`.
 
@@ -334,15 +335,61 @@ Never paired: two utility places that both have no name, two overnight
 places that both have no name (often parts or pitches of one park), two
 places whose names differ only in their numbers unless the numbers are equal
 ("Site 20" and "Site 26" are separate pitches), tombstones, and pairs on the
-distinct list. Places are bucketed in a grid of 0.0025 by 0.004 degree
-cells (at least 200 m across everywhere in Australia), so only neighbouring
-cells are compared.
+distinct list, and pairs the rules below find to be separate places. Places
+are bucketed in a grid of 0.0025 by 0.004 degree cells (at least 200 m
+across everywhere in Australia), so only neighbouring cells are compared.
+
+### Opposite sides of a road
+
+Rest areas, truck bays and fuel stations often come in pairs, one for each
+direction of travel, a few tens of metres apart with the same name. They are
+two places. `pipeline.geometry` decides, for two OSM objects, whether they
+are one place or two:
+
+1. **Same place by area.** When one is an area (a closed way or a
+   multipolygon) of the other's group, and the other lies inside it, on its
+   edge, or within 20 m of its edge with no major road between, they are one
+   place. A rest area pin on the car park inside the rest area's outline is
+   one place with it. Rules 2 and 3 are not asked.
+2. **A major road between.** Two objects within 200 m are separate places
+   when the straight line between them (from the nearest point of an area's
+   outline) crosses a major road: `highway` motorway, trunk, primary or
+   secondary, or one of their `_link` roads, whatever its `oneway`, or a
+   tertiary road with `oneway=yes` or `oneway=-1`. Touching the road at an
+   end does not count.
+3. **Never-merge signals.** Different names (the finder's name test),
+   different directions (northbound, south bound and so on in the name,
+   `description` or `direction`), different operators (allowing for
+   spacing, a missing "the", a typo or a longer form) or different `access`
+   keep two objects apart. They never make two places one.
+
+The rules need the sidecar `pipeline.extract --geometry` writes beside the
+extract, from the same read of the OSM file: the simplified outline of every
+place that is an area, the operator and directions of every place that has
+them, and the pieces of every major road within about a kilometre of a
+place. Roads are bucketed into a grid of 0.01 degree cells when the sidecar
+is loaded, so a pair only tests the roads in the cells its line touches. The
+sidecar never goes into place records or a release. Without it, only names,
+the direction in a name and `entry` count.
+
+Sync uses the rules for "Possible duplicates", `pipeline.maproulette` to
+leave separate places out of the double mapping challenge, and
+`pipeline.split` to undo earlier merges. `pipeline.split` checks every
+record that holds more than one OSM object (parts aside) and splits off each
+object the rules find to be a separate place. The object's tombstone comes
+back to life with its old id (or, without one, it gets a new record), the
+pair goes on the distinct list with reason `direction` (a road or a
+direction) or `other`, and the split is added to
+`moderation/opposite-side-splits.csv` for a person to review: the old and
+new ids and names, the OSM objects each keeps, the distance and the road
+crossed. A person runs it and opens a PR with the result.
 
 ### Distinct list
 
 `moderation/distinct_places.json`
 ([schema](../schema/distinct_places.schema.json)) lists flagged pairs that a
-person checked and found to be separate places. The finder and sync leave
+person checked and found to be separate places, and the pairs
+`pipeline.split` split apart. The finder and sync leave
 them out from then on. Each entry has the two ids (`a` sorts before `b`), the
 day it was `added`, a `reason` and an optional `note`:
 
@@ -369,6 +416,9 @@ place. A person runs it and opens a PR with the result:
   draws the two as parts of one place on purpose, such as separate camping
   areas of one ground. The MapRoulette double mapping challenge leaves parts
   out. Part flags already on either record are kept.
+- A pair on the distinct list is refused, unless `--part` says they are
+  parts of one place, such as two sections of a caravan park on either side
+  of a street.
 - Facts the dropped record got from `feedback`, `contributed` or `community_report` move to the
   kept record where it has no value, with their `fact_dates`. OSM facts do
   not move.

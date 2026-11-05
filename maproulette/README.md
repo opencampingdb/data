@@ -4,7 +4,7 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 
 | File | Challenge | One task per |
 |---|---|---|
-| `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after a person merged its records |
+| `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after a person merged its records, leaving out objects that are a separate place (see below) |
 | `traveller_reports.geojson` | What travellers report | place where a value that at least two travellers or the verified owner reported still differs from OSM |
 | `challenges.json` | | the MapRoulette project and challenge ids, used for the rebuild links |
 
@@ -32,7 +32,17 @@ Each line of a task says how many travellers reported the value and when the lat
 
 Anyone who is an admin of the MapRoulette project can rebuild. Add people under the project's **Manage** page.
 
-To keep a pair out of the double mapping challenge, merge it with `python -m pipeline.merge <keep> <drop> --part`, which marks the dropped object as a part drawn apart on purpose (`"part": true` in `merged_osm`). To keep two places from being merged at all, add them to `moderation/distinct_places.json`.
+### Not double mapping
+
+Two OSM objects close together are not always one place mapped twice. Rest areas, truck bays and fuel stations often come in pairs, one for each direction of travel, with the same name either side of a highway. The rules in [pipeline/geometry.py](../pipeline/geometry.py) (described in [pipeline/README.md](../pipeline/README.md), "Opposite sides of a road") decide which:
+
+- An object inside an area of its place, on its edge, or within 20 m of the edge with no major road between, is the same place as the area. Those stay tasks.
+- Two objects within 200 m with a major road between them are separate places: motorway, trunk, primary or secondary roads and their links, and one way tertiary roads. They never become a task, and are never merged.
+- Different names, directions (northbound and southbound), operators or access keep two objects apart too. These signals only ever keep places apart.
+
+A task leaves out any object the rules find to be a separate place, and goes when one object is left.
+
+To keep a pair out of the double mapping challenge, merge it with `python -m pipeline.merge <keep> <drop> --part`, which marks the dropped object as a part drawn apart on purpose (`"part": true` in `merged_osm`). To keep two places from being merged at all, add them to `moderation/distinct_places.json`. `pipeline.merge` refuses a pair on that list unless `--part` says they are parts of one place, such as two sections of a caravan park on either side of a street.
 
 ## Setting up a challenge
 

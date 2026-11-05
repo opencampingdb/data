@@ -24,8 +24,9 @@ Rules (SPEC, "OSM sync"):
   record: it is never made into a new record, and it does not change the
   record (which follows its own osm link).
 - After the merge into places/, likely duplicates are listed in the report
-  (pipeline.duplicates), leaving out pairs on the distinct list. Sync never
-  merges them.
+  (pipeline.duplicates), leaving out pairs on the distinct list and pairs
+  the rules in pipeline.geometry find to be separate places (with
+  --geometry, the sidecar pipeline.extract wrote). Sync never merges them.
 - kind is refreshed from the extract, and group follows kind. A kind change
   counts as an update.
 - Records still carrying a kind from before the OTWD vocabulary (camp_site,
@@ -52,6 +53,7 @@ from pathlib import Path
 from ulid import ULID
 
 from .duplicates import find_duplicates
+from .geometry import Geometry, load_geometry
 
 from .common import (
     EXTRA_SOURCE_KEYS,
@@ -247,7 +249,9 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     return fresh
 
 
-def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_place_id) -> SyncResult:
+def sync(
+    root: Path, extract: list[dict], now: str | None = None, make_id=new_place_id, geometry: Geometry | None = None
+) -> SyncResult:
     """Merge extract records into root/places. Returns what changed."""
     now = now or utc_now()
     places = load_places(root)
@@ -293,7 +297,7 @@ def sync(root: Path, extract: list[dict], now: str | None = None, make_id=new_pl
     result.gone.sort(key=lambda r: osm_key(r["osm"]))
 
     result.records_after = result.records_before + len(result.new)
-    result.duplicates = find_duplicates(list(load_places(root).values()), load_distinct(root))
+    result.duplicates = find_duplicates(list(load_places(root).values()), load_distinct(root), geometry)
     return result
 
 
@@ -421,9 +425,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--report", type=Path, default=Path("sync-report.md"))
     parser.add_argument("--summary", type=Path, help="also write counts as JSON here")
     parser.add_argument("--source", help="describes the OSM file, shown in the report")
+    parser.add_argument("--geometry", type=Path, help="geometry sidecar written by pipeline.extract --geometry, for the duplicate rules")
     args = parser.parse_args(argv)
 
-    result = sync(args.root, load_extract(args.extract))
+    result = sync(args.root, load_extract(args.extract), geometry=load_geometry(args.geometry))
     write_text(args.report, render_report(result, args.source))
 
     summary = {

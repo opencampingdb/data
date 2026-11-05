@@ -22,7 +22,15 @@ Never paired:
   are equal ("Site 20" and "Site 26" are separate pitches);
 - merged records (tombstones);
 - pairs a person checked and listed in moderation/distinct_places.json as
-  separate places.
+  separate places;
+- pairs the rules in pipeline.geometry find to be separate places: a major
+  road between them, or different directions, operators or access.
+
+The distance is between the two records' locations, as before. The outlines
+in the geometry sidecar (--geometry, written by pipeline.extract) only keep
+together an object and the area it lies in, which no road can split.
+Without the sidecar there are no roads to test, and only names and the
+records' own facts count as signals.
 """
 
 import argparse
@@ -34,6 +42,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 from .common import load_distinct, load_places
+from .geometry import Geometry, judge, load_geometry
 
 MAX_DISTANCE_M = 200
 UNNAMED_MAX_DISTANCE_M = 50
@@ -95,11 +104,16 @@ def likely_duplicate(a: dict, b: dict, distance: float) -> bool:
     return SequenceMatcher(None, name_a, name_b).ratio() >= NAME_RATIO
 
 
-def find_duplicates(records: list[dict], distinct: set[frozenset[str]] = frozenset()) -> list[dict]:
+def find_duplicates(
+    records: list[dict], distinct: set[frozenset[str]] = frozenset(), geometry: Geometry | None = None
+) -> list[dict]:
     """Likely duplicate pairs, as {"a", "b", "distance_m"} with a's id before b's, sorted.
 
     distinct holds id pairs known to be separate places, which are left out.
+    geometry is the loaded sidecar. Without it there are no outlines or roads
+    to test, and only the record's own facts count as signals.
     """
+    geometry = geometry or Geometry()
     live = [r for r in records if r.get("status") != "merged"]
     grid: dict[tuple[int, int], list[dict]] = {}
     for record in live:
@@ -122,7 +136,7 @@ def find_duplicates(records: list[dict], distinct: set[frozenset[str]] = frozens
                 if a["id"] >= b["id"] or frozenset((a["id"], b["id"])) in distinct:
                     continue
                 distance = distance_m(a, b)
-                if likely_duplicate(a, b, distance):
+                if likely_duplicate(a, b, distance) and not judge(a, b, geometry, MAX_DISTANCE_M).separate:
                     pairs.append({"a": a, "b": b, "distance_m": distance})
     pairs.sort(key=lambda p: (p["a"]["id"], p["b"]["id"]))
     return pairs
@@ -131,10 +145,12 @@ def find_duplicates(records: list[dict], distinct: set[frozenset[str]] = frozens
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
+    parser.add_argument("--geometry", type=Path, help="geometry sidecar written by pipeline.extract --geometry")
     args = parser.parse_args(argv)
     # One JSON object per line, always UTF-8, whatever the console uses.
     sys.stdout.reconfigure(encoding="utf-8")
-    for pair in find_duplicates(list(load_places(args.root).values()), load_distinct(args.root)):
+    places = list(load_places(args.root).values())
+    for pair in find_duplicates(places, load_distinct(args.root), load_geometry(args.geometry)):
         a, b = pair["a"], pair["b"]
         print(json.dumps({
             "a": a["id"], "a_name": a["name"], "a_kind": a["kind"],
