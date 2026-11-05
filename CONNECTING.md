@@ -104,8 +104,9 @@ section 4): a fact a documented rule sets from the place's kind, such as
 `toilets: true` on a `public_toilet`, where no source says otherwise. An app
 that expects only the sources of format 11 must handle it, and should show a
 rule fact as what is usual, not as something anyone reported. Format 12
-also adds the fact `pets_months`, the months a seasonal place allows dogs
-(section 4). Everything else reads the same as in 11.1.
+also adds the facts `pets_months`, the months a seasonal place allows dogs,
+and `vehicle_access`, for places only heavy vehicles may use (section 4).
+Everything else reads the same as in 11.1.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -294,6 +295,14 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
   `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)
   describes each one.
+- `vehicle_access` says who may use a place when only some vehicles may:
+  `heavy_vehicles_only` means only heavy vehicles (trucks) may stop there,
+  and others can be fined. Show it plainly on the place, and consider
+  leaving such places out for travellers in cars, vans and caravans. It
+  comes from OSM tags (`hgv=designated` with `motorcar=no`, or `access=no`
+  with `hgv=yes`), or from a fact report a person or reviewer accepts. More
+  values may be added later, so treat an unknown value as a restriction you
+  can't explain rather than ignoring it.
 - `pets_months` goes only with `pets: "seasonal"`: the months dogs are
   allowed, in OpenStreetMap's month range syntax, such as `May-Sep`,
   `Dec-Feb` (a range may wrap the year end) or `Apr-May,Sep-Oct`. It is OSM's

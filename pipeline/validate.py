@@ -34,7 +34,7 @@ exits 1. Checks:
   exists
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once. moderation/ holds only that file,
-  distinct_places.json and opposite-side-splits.csv (from pipeline.split)
+  distinct_places.json and the files in MODERATION_FILES
 - moderation/distinct_places.json matches its schema, each pair once with a
   before b, sorted, naming places that exist
 - pets_months only goes with pets seasonal
@@ -74,6 +74,12 @@ from .common import (
 )
 
 SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
+
+# Files a pipeline step writes in moderation/ besides the two lists above.
+MODERATION_FILES = (
+    "opposite-side-splits.csv",  # pipeline.split
+    "heavy-vehicle-candidates.csv",  # pipeline.vehicle_access
+)
 
 # ISO dates (2026-10-30 or 2026-10, with an optional time after a T). They are
 # blanked out before the checks below, so that a date, or several dates in a
@@ -298,7 +304,7 @@ def check_blocked(root: Path) -> list[str]:
     errors = [
         f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
         for p in sorted((root / "moderation").rglob("*"))
-        if p.is_file() and p not in (path, distinct_path(root), root / "moderation" / "opposite-side-splits.csv")
+        if p.is_file() and p not in (path, distinct_path(root), *(root / "moderation" / name for name in MODERATION_FILES))
     ]
     if not path.exists():
         return errors

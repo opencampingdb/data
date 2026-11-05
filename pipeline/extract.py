@@ -190,6 +190,18 @@ def dog_months(conditional: str) -> str | None:
     return months if re.match(PETS_MONTHS_PATTERN, months) else None
 
 
+def heavy_vehicles_only(tags: dict) -> bool:
+    """True when OSM says only heavy vehicles may use the place.
+
+    hgv=designated with motorcar=no or motor_vehicle=no, or access=no with
+    hgv=yes or hgv=designated.
+    """
+    value = {key: first_value(tags.get(key, "")).lower() for key in ("hgv", "motorcar", "motor_vehicle", "access")}
+    if value["hgv"] == "designated" and "no" in (value["motorcar"], value["motor_vehicle"]):
+        return True
+    return value["access"] == "no" and value["hgv"] in ("yes", "designated")
+
+
 def facts_from_tags(tags: dict) -> dict:
     """Map OSM tags to the facts in a place record. Unknown values are left out."""
     facts = {}
@@ -282,10 +294,14 @@ def facts_from_tags(tags: dict) -> dict:
     elif four_wd == "no":
         facts["access"] = "2wd"
 
+    if heavy_vehicles_only(tags):
+        facts["vehicle_access"] = "heavy_vehicles_only"
+
     # access=* says who may enter. It maps to "entry", not to "access", which
-    # is about the road.
+    # is about the road. access=no for a heavy vehicle place says who may
+    # drive in, not that it is private.
     entry = ENTRY_VALUES.get(first_value(tags.get("access", "")).lower())
-    if entry:
+    if entry and not ("vehicle_access" in facts and entry == "private" and first_value(tags.get("access", "")).lower() == "no"):
         facts["entry"] = entry
 
     return facts

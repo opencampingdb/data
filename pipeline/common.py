@@ -91,6 +91,7 @@ FACT_KEYS = (
     "instagram",
     "tiktok",
     "x",
+    "vehicle_access",
 )
 
 # Keys fact_sources may hold besides the facts. A missing name, location or

@@ -14,6 +14,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
+| Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with id, name and location (`lat,lon`), for a reviewer. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 
@@ -216,7 +217,8 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `phone`, then `contact:phone` | `phone` | copied as is |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
-| `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`. Others, such as `destination`, are left out. |
+| `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`, except on a place for heavy vehicles only (next row), where it says who may drive in and is left out. Others, such as `destination`, are left out. |
+| `hgv`, `motorcar`, `motor_vehicle`, `access` | `vehicle_access` | `heavy_vehicles_only` for `hgv=designated` with `motorcar=no` or `motor_vehicle=no`, or `access=no` with `hgv=yes` or `designated`. Any kind of place. A name alone ("Truck Parking Bay") never sets it: `python -m pipeline.vehicle_access` lists those places for a reviewer |
 
 A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
 name says holiday park, tourist park, caravan park, holiday village, caravan
