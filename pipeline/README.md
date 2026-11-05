@@ -10,10 +10,11 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
-| Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it). See the module docstring |
+| Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]` | `places/`, `reviews/`, `fees/` | the kept record, a tombstone, moved reviews and fees. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, `fees/`, with `--auto` the geometry sidecar | the kept record, a tombstone, moved reviews and fees; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
+| Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for the reviewer. The feedback engine reads the `place` column. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 
@@ -187,6 +188,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. `donation` is `"donation"`. Others are left out. `fee=no` on a commercial park is left out too (see below). |
 | `power_supply` | `power` | `yes` is `true`, `no` is `false` |
 | `dog` | `pets` | `yes`, `leashed` or `no`, copied as is |
+| `dog:conditional` | `pets`, `pets_months` | `yes @ (May-Sep)`, with `dog=no` or no `dog` tag, makes `pets` `seasonal` and `pets_months` the range: one OSM month range of two different months (`May-Sep`, or `Dec-Feb` across the year end). Anything else is left out: a single month, a list of ranges, times, weekdays or a second rule, and `pets` keeps the `dog` value. When a traveller or the owner has set `pets` to anything but `seasonal`, sync drops OSM's months |
 | `tents` | `tents` | `yes` / `no` |
 | `caravans` | `caravans` | `yes` / `no` |
 | `toilets` | `toilets` | `yes` / `no` |
@@ -215,7 +217,8 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `phone`, then `contact:phone` | `phone` | copied as is |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
-| `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`. Others, such as `destination`, are left out. |
+| `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`, except on a place for heavy vehicles only (next row), where it says who may drive in and is left out. Others, such as `destination`, are left out. |
+| `hgv`, `motorcar`, `motor_vehicle`, `access` | `vehicle_access` | `heavy_vehicles_only` for `hgv=designated` with `motorcar=no` or `motor_vehicle=no`, or `access=no` with `hgv=yes` or `designated`. Any kind of place. A name alone ("Truck Parking Bay") never sets it: `python -m pipeline.vehicle_access` lists those places for a reviewer |
 
 A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
 name says holiday park, tourist park, caravan park, holiday village, caravan
@@ -232,9 +235,10 @@ tourist park, keep `fee=no`.
 `access` (the fact) is about the road and the vehicle. `entry` is about who
 may stay, and comes from the OSM `access` tag.
 
-Facts are never inferred from the kind: a `caravan_park` does not get
-`caravans: true` unless the `caravans` tag says so. `water_type` is the one
-fact that depends on the kind.
+The extract never infers a fact from the kind: a `caravan_park` does not
+get `caravans: true` unless the `caravans` tag says so. `water_type` is the
+one fact the extract takes from the kind. The release adds a few facts by
+rule, never stored in `places/` (see "Rules" under "Release").
 
 ## Sync
 
@@ -320,7 +324,8 @@ from blocked contributors.
 
 `pipeline.duplicates` finds pairs of places that are likely the same place.
 Sync runs it after every merge into `places/` and lists the pairs in the
-report under "Possible duplicates". It only flags. A pair is likely when:
+report under "Possible duplicates". It only flags (merging is a separate
+step, see "Merge"). A pair is likely when:
 
 - both places are in the overnight group, whatever their kinds (a caravan
   park and a paid campground can be the same place), or both have the same
@@ -434,6 +439,49 @@ place. A person runs it and opens a PR with the result:
 It refuses to merge a record into itself, an unknown id, or a record that is
 already merged.
 
+### Automatic merges
+
+`pipeline.duplicates.automatic_merge(a, b, geometry, distinct)` is the
+automatic merge rule. It returns `None` when two records may be merged
+without anyone looking, and otherwise the reason they wait for a reviewer.
+All of these must hold:
+
+- neither is a tombstone or has a verified owner, and the pair is not on the
+  distinct list;
+- the same group, and outside the overnight group the same kind (as the
+  duplicate finder compares them);
+- the same name once tidied (`tidy_name`): lower case, punctuation
+  removed, `RA`, `Ck` and `Mt` written as rest area, creek and mount, then
+  `and` and the finder's generic words dropped, with something left;
+- less than 50 m apart (between the records' locations);
+- `pipeline.geometry.judge` does not find them separate: no major road
+  between them, and no different direction, operator or entry.
+
+`python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--group overnight]`
+runs it over the finder's pairs in the overnight group (or the groups
+given). Pairs that share a record make one group, merged into the record
+with an OSM link, then a camp site over a motel or hostel, then the most
+facts, then a kind more specific than `campground`, then the oldest id. A
+motel or hostel merged with a camp site is merged as a part (`--part`):
+OSM maps the two as separate features of one place on purpose. Each merge
+is added to `moderation/automatic-merges.csv` (merged date, both ids,
+names, kinds and OSM objects, the distance and whether it was a part) for
+the person who reviews the PR. The geometry sidecar is required, because
+without roads the rule cannot tell opposite sides of a highway apart. The
+feedback engine applies the same rule when a traveller adds a place next
+to an existing one, and merges the new place into it. Its tombstone is the
+new place's own record (`osm: null`, its `standing`, its feedback
+`fact_sources` and `fact_dates`) with `status: "merged"` and `merged_into`,
+and the release lists it in `merged.ndjson.gz` like any other.
+
+A person reverses an automatic merge of a new place by setting its
+`status` back to `open`, removing `merged_into`, and adding the pair to
+`moderation/distinct_places.json` so neither the finder nor the rule
+pairs them again. A batch merge of two OSM records is reversed the same
+way, and the dropped object's link is taken out of the kept record's
+`merged_osm` (`pipeline.split` does both when a road or direction splits
+them).
+
 ## Moderate
 
 A person decides on reported reviews from the `feedback/review` PR, where
@@ -460,7 +508,8 @@ not list. On top of the schemas it checks that `group` is the group of the
 record's `kind`, the canonical form, the file path,
 6 decimal places, that `fact_sources` has an entry for every fact and no
 other fact (plus optional `name`, `location` and `status`, each `osm`,
-`feedback`, `contributed`, `owner` or `community_report`), that `fact_dates` has a date for exactly the
+`feedback`, `contributed`, `owner` or `community_report`), that no file holds a
+`rule` source or `fact_rules` (only the release sets those), that `fact_dates` has a date for exactly the
 `fact_sources` entries that are not `osm` and none later than `updated`,
 that `last_confirmed` is not in the future (it may be later than `updated`),
 that no two records share an
@@ -506,11 +555,33 @@ The manifest names its `release`, `data-<commit time>` (for example
 release: `https://github.com/<repository>/releases/download/<release>/<file>`.
 `--repository` sets the owner and name, `opencampingdb/data` by default.
 
+### Rules
+
+[schema/fact_rules.json](../schema/fact_rules.json) lists facts the release
+sets from a place's kind, where no source gives a value:
+
+| Rule | Kind | Fact |
+|---|---|---|
+| `kind:public_toilet` | `public_toilet` | `toilets: true` |
+| `kind:drinking_water_point` | `drinking_water_point` | `drinking_water: true` |
+| `kind:public_shower` | `public_shower` | `showers: true` |
+| `kind:dump_point` | `dump_point` | `dump_station: true` |
+| `national_park` | `national_park_campsite` | `pets: "no"` |
+
+A value from OSM, feedback, a contributor, the owner or a community report
+always wins, including `false`. A rule fact has the source `rule` in
+`fact_sources`, the rule's name in `fact_rules` and no `fact_dates` entry.
+`pipeline.common.with_rule_facts` applies them to released records and to
+the place index only: files in `places/` never hold them (validation
+refuses one that does), so the OSM sync, merges and the MapRoulette
+challenges never see them, and nothing set by a rule reaches OSM.
+
 `place-index.ndjson.gz` is for feedback intakes, not apps: it is not a release
 file and the manifest leaves it out. It holds one line for each place
 `places.ndjson.gz` holds, sorted by `id`: `{"cell", "fact_dates",
 "fact_sources", "facts", "id"}`, where `cell` is the whole-degree map cell
 `[floor(lon), floor(lat)]` and `fact_dates` is `{}` when the record has none.
+Its facts and sources include the rule facts, as the released record does.
 An intake decides feedback against it at send time.
 
 `python -m pipeline.place_index --url <intake>` loads it into an intake with

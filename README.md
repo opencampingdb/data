@@ -65,7 +65,7 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 A place can carry many more facts than this one: site features such as
 `campfires`, `big_rigs`, `telstra_signal` and `crocodiles`, a park chain in
 `brand`, and contacts. [CONNECTING.md](CONNECTING.md) lists them, and section
-1 there says what changed in each record format (the current one is 7).
+1 there says what changed in each record format (the current one is 12).
 
 The full contract is in [schema/place.schema.json](schema/place.schema.json),
 [schema/review.schema.json](schema/review.schema.json) and
@@ -75,7 +75,10 @@ person has blocked are listed in
 ([schema](schema/blocked_contributors.schema.json)). Pairs a person found to
 be separate places, which the duplicate finder skips, are listed in
 [moderation/distinct_places.json](moderation/distinct_places.json)
-([schema](schema/distinct_places.schema.json)). What OSM's mappers should
+([schema](schema/distinct_places.schema.json)). Commons photos travellers
+reported as not of their place are listed in
+[moderation/commons-do-not-match.json](moderation/commons-do-not-match.json)
+([schema](schema/commons_do_not_match.schema.json)) and never matched again. What OSM's mappers should
 check, such as places OSM maps twice, is passed to them as MapRoulette
 challenges built from [maproulette/](maproulette/README.md). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
@@ -157,8 +160,12 @@ Anything that shows this data must show:
    owner first."
 6. **Duplicates.** After every OSM sync, likely duplicates (for example a
    campground mapped as both a node and a way) are listed in the PR body under
-   "Possible duplicates". Nothing is merged automatically. A person merges a
-   pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR:
+   "Possible duplicates". Sync never merges them. A person merges a
+   pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate PR,
+   or merges in a batch every pair the automatic merge rule accepts (the
+   same name once tidied, the same group, under 50 m apart and no major road
+   between) with `python -m pipeline.merge --auto`, which lists each merge in
+   `moderation/automatic-merges.csv` for review. Either way
    the dropped record stays as a tombstone that points at the kept one, and
    releases list it in `merged.ndjson.gz` so apps can redirect old ids.
 7. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:

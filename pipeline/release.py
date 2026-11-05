@@ -10,10 +10,14 @@ The data version and the generated time default to the current git commit
 byte-identical files. Both can be set by hand with --data-version and
 --generated.
 
+Released records carry the facts set by the rules in schema/fact_rules.json,
+with the source rule and the rule's name in fact_rules, wherever no other
+source gives a value. Place files in places/ never hold them.
+
 place-index.ndjson.gz is not a release file and the manifest leaves it out.
 It holds one line per released place, sorted by id: {"cell", "fact_dates",
 "fact_sources", "facts", "id"}, where cell is the whole-degree map cell
-[floor(lon), floor(lat)]. pipeline.place_index loads it into a feedback intake,
+[floor(lon), floor(lat)]. Its facts include the rule facts. pipeline.place_index loads it into a feedback intake,
 which decides feedback against it at send time.
 
 The release tag is data-<commit time>, for example data-20261030T160000Z.
@@ -32,6 +36,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .commons import load_do_not_match, without_listed
 from .common import (
     ATTRIBUTION,
     LICENCE,
@@ -41,6 +46,7 @@ from .common import (
     iter_review_files,
     load_blocked,
     load_places,
+    with_rule_facts,
     write_text,
 )
 
@@ -55,13 +61,14 @@ from .common import (
 # 10: places travellers added carry standing, and held and hidden ones are left out.
 # 11: fact_sources may be community_report.
 # 11.1: commons.ndjson.gz, freely licensed Wikimedia Commons photos matched to places to stay.
+# 12: fact_sources may be rule, with the rule's name in fact_rules (schema/fact_rules.json).
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
-FORMAT_VERSION = 11
-FORMAT_MINOR = 1
+FORMAT_VERSION = 12
+FORMAT_MINOR = 0
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.
@@ -88,10 +95,13 @@ def gzip_bytes(data: bytes) -> bytes:
 
 
 def places_ndjson(root: Path) -> tuple[bytes, int]:
-    """Every place record except merged ones (tombstones) and held or hidden new places, one per line, sorted by id."""
+    """Every place record except merged ones (tombstones) and held or hidden new places, one per line, sorted by id.
+
+    Each record carries the facts its kind's rules set (pipeline.common.with_rule_facts).
+    """
     places = load_places(root)
     lines = [
-        dump_line(places[place_id]) + "\n"
+        dump_line(with_rule_facts(places[place_id])) + "\n"
         for place_id in sorted(places)
         if places[place_id].get("status") != "merged"
         and places[place_id].get("standing") not in UNRELEASED_STANDINGS
@@ -106,7 +116,7 @@ def cell_of(location: dict) -> tuple[int, int]:
 
 def place_index_ndjson(root: Path) -> tuple[bytes, int]:
     """One index line for each place places.ndjson.gz holds, sorted by id."""
-    places = load_places(root)
+    places = {place_id: with_rule_facts(record) for place_id, record in load_places(root).items()}
     lines = [
         dump_line({
             "id": place_id,
@@ -178,17 +188,20 @@ def commons_ndjson(root: Path, released: set[str]) -> tuple[bytes, int]:
     """One {"place", "files"} line per released place with a Commons match, sorted by place id.
 
     commons/matches.ndjson is written by pipeline.commons. Places checked with no
-    match, and places the release leaves out, are left out here too.
+    match, places the release leaves out and the place and file pairs on
+    moderation/commons-do-not-match.json are left out here too.
     """
     path = root / "commons" / "matches.ndjson"
+    listed = load_do_not_match(root)
     lines = []
     if path.exists():
         with open(path, encoding="utf-8") as f:
             for line in f:
                 if line.strip():
                     match = json.loads(line)
-                    if match["files"] and match["place"] in released:
-                        lines.append((match["place"], dump_line({"place": match["place"], "files": match["files"]}) + "\n"))
+                    files = without_listed(match["place"], match["files"], listed)
+                    if files and match["place"] in released:
+                        lines.append((match["place"], dump_line({"place": match["place"], "files": files}) + "\n"))
     lines.sort()
     return "".join(line for _, line in lines).encode("utf-8"), len(lines)
 

@@ -24,6 +24,8 @@ maproulette/double_mapping.geojson
     "part": true (drawn apart on purpose) do not count, and neither do
     objects the rules in pipeline.geometry find to be a separate place (a
     major road between them, or different directions, operators or access).
+    Motels, cabins and hostels (NOT_CAMP_SITES) are never tasks: the
+    challenge is about camp sites.
     With --geometry, the sidecar pipeline.extract wrote, roads and outlines
     are tested too.
 
@@ -65,7 +67,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from .common import KIND_LABEL, from_community_report, load_places, write_text
+from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places, write_text
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
 from .sync import load_extract
@@ -74,6 +76,9 @@ DATA_REPO_URL = "https://github.com/opencampingdb/data"
 RS = "\x1e"
 
 DOUBLE_MAPPING = "double_mapping.geojson"
+# The double mapping challenge is about camp sites and stops. Places that
+# are buildings to stay in are merged too, but never become its tasks.
+NOT_CAMP_SITES = ROOFED_KINDS
 TRAVELLER_REPORTS = "traveller_reports.geojson"
 
 # Only these sources are passed to OSM's mappers. Everything in NOT_FOR_OSM
@@ -284,7 +289,7 @@ def double_mapping_tasks(places: dict, extract: dict, geometry: Geometry | None 
     for record in places.values():
         if record.get("status") == "merged" or not record.get("osm") or not record.get("merged_osm"):
             continue
-        if from_community_report(record):
+        if record["kind"] in NOT_CAMP_SITES or from_community_report(record):
             continue
         own = osm_ref(record["osm"])
         refs = [own] + [osm_ref(m) for m in record["merged_osm"] if not m.get("part")]

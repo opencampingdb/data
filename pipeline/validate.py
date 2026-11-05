@@ -14,7 +14,8 @@ exits 1. Checks:
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
   name, location and status entries. Sources are osm, feedback,
-  contributed, owner and community_report
+  contributed, owner and community_report. The source rule and fact_rules
+  appear only in released records (pipeline.release), never in places/
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
@@ -33,9 +34,12 @@ exits 1. Checks:
   exists
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once. moderation/ holds only that file,
-  distinct_places.json and opposite-side-splits.csv (from pipeline.split)
+  distinct_places.json and the files in MODERATION_FILES
+- moderation/commons-do-not-match.json matches its schema, sorted by place
+  then file, each pair once, naming places that exist
 - moderation/distinct_places.json matches its schema, each pair once with a
   before b, sorted, naming places that exist
+- pets_months only goes with pets seasonal
 - values with the source owner need owner_verified true. A farm_stay has
   osm null, entry private, booking_required true, and a booking_url or a
   phone. A description is checked like review text. reopens is a real date
@@ -56,6 +60,8 @@ from jsonschema import Draft202012Validator
 from .common import (
     EXTRA_SOURCE_KEYS,
     KIND_GROUP,
+    RULE,
+    pets_months_ok,
     dump_line,
     dump_record,
     iter_place_files,
@@ -71,6 +77,14 @@ from .common import (
 )
 
 SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
+
+# Files a pipeline step writes in moderation/ besides the two lists above.
+MODERATION_FILES = (
+    "opposite-side-splits.csv",  # pipeline.split
+    "heavy-vehicle-candidates.csv",  # pipeline.vehicle_access
+    "automatic-merges.csv",  # pipeline.merge --auto
+    "commons-do-not-match.json",  # read by pipeline.commons
+)
 
 # ISO dates (2026-10-30 or 2026-10, with an optional time after a T). They are
 # blanked out before the checks below, so that a date, or several dates in a
@@ -168,6 +182,17 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
         )
 
     errors += fact_date_errors(record, where)
+    if "pets_months" in record["facts"]:
+        if record["facts"].get("pets") != "seasonal":
+            errors.append(f"{where}: pets_months is only for a place whose pets fact is seasonal")
+        if not pets_months_ok(record["facts"]["pets_months"]):
+            errors.append(f"{where}: pets_months must be two different months, such as May-Sep")
+    ruled = sorted(k for k, source in record["fact_sources"].items() if source == RULE)
+    if ruled or "fact_rules" in record:
+        errors.append(
+            f"{where}: rule facts and fact_rules are set by the release from schema/fact_rules.json, "
+            f"never stored in places/ (found {ruled or ['fact_rules']})"
+        )
     if record.get("last_confirmed", "") > now:
         errors.append(f"{where}: last_confirmed {record['last_confirmed']} is in the future")
     if "standing" in record and record["osm"] is not None:
@@ -181,7 +206,7 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
 def fact_date_errors(record: dict, where: str) -> list[str]:
     """fact_dates dates every value that did not come from OSM, and nothing else."""
     dates = record.get("fact_dates", {})
-    not_osm = {k for k, source in record["fact_sources"].items() if source != "osm"}
+    not_osm = {k for k, source in record["fact_sources"].items() if source not in ("osm", RULE)}
     errors = []
     if set(dates) != not_osm:
         differ = sorted(set(dates) ^ not_osm)
@@ -287,7 +312,7 @@ def check_blocked(root: Path) -> list[str]:
     errors = [
         f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
         for p in sorted((root / "moderation").rglob("*"))
-        if p.is_file() and p not in (path, distinct_path(root), root / "moderation" / "opposite-side-splits.csv")
+        if p.is_file() and p not in (path, distinct_path(root), *(root / "moderation" / name for name in MODERATION_FILES))
     ]
     if not path.exists():
         return errors
@@ -337,6 +362,34 @@ def check_distinct(root: Path, places: dict[str, dict]) -> list[str]:
         for place_id in (a, b):
             if place_id not in places:
                 errors.append(f"{where}: {place_id} is not a place")
+    return errors
+
+
+def check_do_not_match(root: Path, places: dict[str, dict]) -> list[str]:
+    """Problems with moderation/commons-do-not-match.json. A missing file is fine."""
+    path = root / "moderation" / "commons-do-not-match.json"
+    where = "moderation/commons-do-not-match.json"
+    if not path.exists():
+        return []
+    try:
+        text = path.read_bytes().decode("utf-8")
+        listed = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return [f"{where}: not valid UTF-8 JSON: {exc}"]
+    schema = schema_errors(load_validator("commons_do_not_match.schema.json"), listed, where)
+    if schema:
+        return schema
+    errors = []
+    if text != dump_record(listed):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    pairs = [(entry["place"], entry["file"]) for entry in listed["pairs"]]
+    if pairs != sorted(pairs):
+        errors.append(f"{where}: pairs must be sorted by place, then file")
+    if len(pairs) != len(set(pairs)):
+        errors.append(f"{where}: a pair is listed twice")
+    for place_id in sorted({place for place, _ in pairs}):
+        if place_id not in places:
+            errors.append(f"{where}: {place_id} is not a place")
     return errors
 
 
@@ -514,6 +567,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     places, errors = check_places(root, now or utc_now())
     errors += check_blocked(root)
     errors += check_distinct(root, places)
+    errors += check_do_not_match(root, places)
     errors += check_reviews(root, places)
     errors += check_fees(root, places)
     errors += check_commons(root)

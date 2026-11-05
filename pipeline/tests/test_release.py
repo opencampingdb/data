@@ -74,8 +74,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
 
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     # 6: fees.ndjson.gz, what travellers paid per night.
-    assert manifest["format_version"] == 11
-    assert manifest["format_minor"] == 1
+    assert manifest["format_version"] == 12
+    assert manifest["format_minor"] == 0
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"
@@ -202,7 +202,7 @@ def test_release_leaves_out_held_and_hidden_new_places(repo, v1_osm, tmp_path):
     standings = sorted(json.loads(line)["standing"] for line in lines if "standing" in json.loads(line))
     assert standings == ["confirmed", "shown"]
     assert manifest["places"]["count"] == osm_count + 2
-    assert manifest["format_version"] == 11
+    assert manifest["format_version"] == 12
 
 
 def test_commons_lines_are_released_matches_only(tmp_path, v1_osm):
@@ -222,3 +222,25 @@ def test_commons_lines_are_released_matches_only(tmp_path, v1_osm):
     assert [json.loads(line) for line in lines] == [{"place": place_ids[1], "files": files}]
     assert manifest["commons"]["count"] == 1
     assert manifest["commons"]["url"].endswith("/commons.ndjson.gz")
+
+
+def test_commons_pairs_on_the_do_not_match_list_are_left_out(tmp_path, v1_osm):
+    repo = tmp_path / "repo"
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    place_ids = sorted(p.stem for p in (repo / "places").rglob("*.json"))
+    (repo / "commons").mkdir()
+    (repo / "commons" / "matches.ndjson").write_text(
+        json.dumps({"place": place_ids[0], "checked": "2026-11-04", "files": [{"file": "Wrong.jpg"}, {"file": "Right.jpg"}]}) + "\n"
+        + json.dumps({"place": place_ids[1], "checked": "2026-11-04", "files": [{"file": "Wrong.jpg"}]}) + "\n",
+        encoding="utf-8",
+    )
+    (repo / "moderation").mkdir(exist_ok=True)
+    (repo / "moderation" / "commons-do-not-match.json").write_text(dump_record({"pairs": [
+        {"place": place_ids[0], "file": "Wrong.jpg", "added": "2026-11-05", "source": "reviewer"},
+    ]}), encoding="utf-8")
+    build(repo, tmp_path / "dist")
+    lines = gzip.decompress((tmp_path / "dist" / "commons.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
+    assert [json.loads(line) for line in lines] == [
+        {"place": place_ids[0], "files": [{"file": "Right.jpg"}]},
+        {"place": place_ids[1], "files": [{"file": "Wrong.jpg"}]},
+    ]

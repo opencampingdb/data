@@ -24,6 +24,7 @@ FACT_KEYS = (
     "fee",
     "power",
     "pets",
+    "pets_months",
     "tents",
     "caravans",
     "toilets",
@@ -90,6 +91,7 @@ FACT_KEYS = (
     "instagram",
     "tiktok",
     "x",
+    "vehicle_access",
 )
 
 # Keys fact_sources may hold besides the facts. A missing name, location or
@@ -102,9 +104,44 @@ EXTRA_SOURCE_KEYS = ("name", "location", "kind", "status", "description")
 # anonymous community reports from public camping groups, imported in bulk.
 SOURCES = ("osm", "feedback", "contributed", "owner", "community_report")
 
+# Kinds that are buildings to stay in rather than camp sites. The double
+# mapping challenge leaves them out, and an automatic merge of one with a
+# camp site marks it as a part of that place.
+ROOFED_KINDS = ("roofed_accommodation", "backpacker_hostel")
+
 # Sources whose values never go back to OSM, in any form: not as a
 # MapRoulette task, not as an OSM note.
-NOT_FOR_OSM = ("contributed", "community_report")
+NOT_FOR_OSM = ("contributed", "community_report", "rule")
+
+# The source of a fact the release sets by a documented rule
+# (schema/fact_rules.json). It is never stored in places/: only released
+# records and the place index carry it, with the rule's name in fact_rules.
+RULE = "rule"
+
+# The rules, in file order: {"rule", "kind", "fact", "value"}.
+FACT_RULES = tuple(json.loads((SCHEMA_DIR / "fact_rules.json").read_text(encoding="utf-8"))["rules"])
+RULE_NAMES = tuple(rule["rule"] for rule in FACT_RULES)
+
+
+def with_rule_facts(record: dict) -> dict:
+    """The record as released: each rule for its kind sets its fact where the record has no value.
+
+    Returns a new record with the fact, the source rule in fact_sources and the
+    rule's name in fact_rules. A value from any source wins over a rule, and a
+    rule fact has no fact_dates entry. The record passed in is not changed.
+    """
+    rules = [rule for rule in FACT_RULES if rule["kind"] == record.get("kind") and rule["fact"] not in record.get("facts", {})]
+    if not rules:
+        return record
+    released = dict(record)
+    released["facts"] = dict(record.get("facts", {}))
+    released["fact_sources"] = dict(record.get("fact_sources", {}))
+    released["fact_rules"] = dict(record.get("fact_rules", {}))
+    for rule in rules:
+        released["facts"][rule["fact"]] = rule["value"]
+        released["fact_sources"][rule["fact"]] = RULE
+        released["fact_rules"][rule["fact"]] = rule["rule"]
+    return released
 
 # The source of values imported from anonymous community reports. A place
 # whose name or location has this source is never passed to OSM at all.
@@ -115,6 +152,19 @@ def from_community_report(record: dict) -> bool:
     """True for a place whose name or location came from community reports."""
     sources = record.get("fact_sources", {})
     return COMMUNITY_REPORT in (sources.get("name"), sources.get("location"))
+
+# pets_months: the months dogs are allowed at a seasonal place, one OSM month
+# range of two different months, such as "May-Sep" or "Dec-Feb" (wrapping the
+# year end). It converts to and from dog:conditional=yes @ (May-Sep).
+MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+PETS_MONTHS_PATTERN = r"^{m}-{m}$".format(m="(" + "|".join(MONTHS) + ")")
+
+
+def pets_months_ok(value: str) -> bool:
+    """True for one month range of two different months, such as "May-Sep"."""
+    import re
+
+    return bool(re.match(PETS_MONTHS_PATTERN, value)) and value[:3] != value[4:]
 
 ATTRIBUTION = "© OpenStreetMap contributors, Open Camping DB"
 LICENCE = "ODbL-1.0"

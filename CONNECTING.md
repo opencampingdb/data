@@ -15,7 +15,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 10,
+  "format_version": 12,
   "format_minor": 0,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -98,7 +98,15 @@ the same as in format 10. Formats 3, 4, 6, 9 and 10 were additive and would
 each be a `format_minor` rise under the rule above. `format_minor` starts at 0
 in format 10, and is 0 again in format 11. Format 11.1 adds
 `commons.ndjson.gz`, Wikimedia Commons photos matched to places to stay (see
-section 4). Everything else reads the same as in 11.0.
+section 4). Everything else reads the same as in 11.0. Format 12 adds the
+source `rule` to `fact_sources`, with `fact_rules` naming the rule (see
+section 4): a fact a documented rule sets from the place's kind, such as
+`toilets: true` on a `public_toilet`, where no source says otherwise. An app
+that expects only the sources of format 11 must handle it, and should show a
+rule fact as what is usual, not as something anyone reported. Format 12
+also adds the facts `pets_months`, the months a seasonal place allows dogs,
+and `vehicle_access`, for places only heavy vehicles may use (section 4).
+Everything else reads the same as in 11.1.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -133,8 +141,9 @@ you with half a dataset.
 
 ### Redirect merged places
 
-Sometimes one place is recorded twice, and a person merges the two records
-into one. The record that is dropped leaves `places.ndjson.gz`, and its id is
+Sometimes one place is recorded twice, and the two records are merged into
+one, by a person or by a documented rule (the same name, under 50 m apart
+and no major road between) whose merges a person reviews. The record that is dropped leaves `places.ndjson.gz`, and its id is
 listed in `merged.ndjson.gz` (the `merged` entry in the manifest), one line
 per merged id:
 
@@ -204,7 +213,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   place's name without a camping word, within 500 m: often a view of the
   surroundings rather than the place). Show `area` photos as the
   surroundings, or not at all. Photos of plants and animals and historic
-  photos are left out. Only licences that allow any use with credit
+  photos are left out. A photo travellers reported as not of the place is
+  listed in `moderation/commons-do-not-match.json` and never matched to it
+  again. Only licences that allow any use with credit
   are kept (CC0, public domain, CC BY and CC BY-SA). Photos are matched again
   every 30 days, so a file deleted from Commons drops out. Show the credit
   beside each photo (section 5) and load only `thumb` and `full`, which
@@ -225,8 +236,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   Apps need not read it: `standing` already reflects it.
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps),
   `contributed` (given directly to Open Camping DB under the ODbL), `owner`
-  (the place's verified owner) or `community_report` (anonymous community
-  reports from public camping groups, imported by a person; see below). It may
+  (the place's verified owner), `community_report` (anonymous community
+  reports from public camping groups, imported by a person; see below) or
+  `rule` (set by a documented rule, not reported by anyone; see below). It may
   also have `name`, `location`, `kind` and `status` entries. When `name`,
   `location` or `kind` is missing, the name, position and kind come from OSM. A place with
   `osm: null` and `contributed` name and location is a contributed place, and
@@ -239,6 +251,19 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   is `2026-03-01T00:00:00Z`), not when it was imported. A place
   found only in community reports is located at a specific mapped feature,
   never a town centre. These values are never passed to OpenStreetMap.
+- `rule` values are what a place of that kind usually has, set by the
+  release where no source gives a value. `fact_rules` names the rule for
+  each one, and [schema/fact_rules.json](schema/fact_rules.json) lists them:
+  `kind:public_toilet`, `kind:drinking_water_point`, `kind:public_shower` and
+  `kind:dump_point` set the place's own feature (`toilets`,
+  `drinking_water`, `showers` and `dump_station`, all `true`), and
+  `national_park` sets `pets: "no"` on a `national_park_campsite`, since
+  most Australian national parks allow no dogs. Any value from OSM, a
+  traveller, a contributor or the owner wins over a rule, `false` included,
+  so a single park that allows dogs says so. Present a rule fact as
+  "usually": for example "Usually no dogs (national park)", never as a firm
+  fact. A rule value has no `fact_dates` entry, and is never passed to
+  OpenStreetMap. A report that confirms or corrects it is welcome (section 6).
 - How fresh a place's information is: `osm.timestamp` is when its OSM object
   was last edited by anyone, in UTC. `fact_dates` gives, for each value that
   did not come from OSM (each `fact_sources` entry that is `feedback`,
@@ -273,6 +298,21 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
   `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)
   describes each one.
+- `vehicle_access` says who may use a place when only some vehicles may:
+  `heavy_vehicles_only` means only heavy vehicles (trucks) may stop there,
+  and others can be fined. Show it plainly on the place, and consider
+  leaving such places out for travellers in cars, vans and caravans. It
+  comes from OSM tags (`hgv=designated` with `motorcar=no`, or `access=no`
+  with `hgv=yes`), or from a fact report a person or reviewer accepts. More
+  values may be added later, so treat an unknown value as a restriction you
+  can't explain rather than ignoring it.
+- `pets_months` goes only with `pets: "seasonal"`: the months dogs are
+  allowed, as one OpenStreetMap month range of two different months, such
+  as `May-Sep` or `Dec-Feb` (a range may wrap the year end). A single month
+  or a list of ranges is not used. It is OSM's
+  `dog:conditional=yes @ (May-Sep)`. A seasonal place without it allows dogs
+  in some months that nobody has given yet. A fact report may set it, with a
+  value in the same form, or clear it.
 - `access` is the vehicle needed on the road in (`2wd`, `awd`, `4wd`).
   `entry` is who may stay (`public`, `customers`, `permit`, `private`).
   Consider leaving `private` places out of what you show.
@@ -539,7 +579,10 @@ apps with the next release.
   checks, with the `name` it carries. Checks with `still_there: true` and
   `nearby: true` from 2 other devices make it `confirmed`. `remove` reports, or checks with `still_there: false`, from
   2 different devices hide it, or 3 once it is confirmed. A blocked
-  contributor's places are hidden. A new place within 150 m of a place in the
+  contributor's places are hidden. A new place with the same name as a
+  place in the same group less than 50 m away, and no major road between,
+  is merged into that place (see "Redirect merged places"), and a person
+  can undo it. Any other new place within 150 m of a place in the
   same group, one hidden before it was published and one that fails the
   checks above go to a person as `held`. Contacts sent with a new place
   always go to a person before they are published.
