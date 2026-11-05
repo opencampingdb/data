@@ -218,7 +218,7 @@ def write_do_not_match(root: Path, pairs):
 def test_a_listed_place_and_file_never_match(tmp_path):
     write_place(tmp_path, "ocdb_A")
     write_place(tmp_path, "ocdb_B")
-    write_do_not_match(tmp_path, [{"place": "ocdb_A", "file": "Tidal River campground.jpg", "added": "2026-11-05"}])
+    write_do_not_match(tmp_path, [{"place": "ocdb_A", "file": "Tidal River campground.jpg", "added": "2026-11-05", "source": "reports"}])
 
     def fetch(url):
         return {"query": {"pages": [page("File:Tidal River campground.jpg"), page("File:Tidal River camping 2.jpg")]}}
@@ -236,7 +236,7 @@ def test_a_listed_pair_leaves_a_line_that_is_not_due(tmp_path):
     kept = {"file": "Kept.jpg"}
     line = {"place": "ocdb_A", "checked": "2026-11-01", "rules": commons.RULES, "files": [{"file": "Wrong.jpg"}, kept]}
     matches.write_text(json.dumps(line) + "\n", encoding="utf-8")
-    write_do_not_match(tmp_path, [{"place": "ocdb_A", "file": "Wrong.jpg", "added": "2026-11-05"}])
+    write_do_not_match(tmp_path, [{"place": "ocdb_A", "file": "Wrong.jpg", "added": "2026-11-05", "source": "reports"}])
 
     commons.run(tmp_path, date(2026, 11, 4), None, 30, fetch=lambda url: {}, pause=0, log=lambda _: None)
     [written] = [json.loads(l) for l in matches.read_text(encoding="utf-8").splitlines()]
@@ -251,7 +251,7 @@ def test_validate_checks_the_do_not_match_list(tmp_path):
         (tmp_path / name).mkdir(exist_ok=True)
     place_id = "ocdb_01M66ESC6PTN65XY3VDH1Y283K"
     write_place(tmp_path, place_id)
-    entry = {"place": place_id, "file": "Tidal River campground.jpg", "added": "2026-11-05"}
+    entry = {"place": place_id, "file": "Tidal River campground.jpg", "added": "2026-11-05", "source": "reports"}
     write_do_not_match(tmp_path, [entry])
     assert validate_repo(tmp_path, now="2026-11-06T00:00:00Z") == []
 
@@ -259,5 +259,7 @@ def test_validate_checks_the_do_not_match_list(tmp_path):
     assert any("commons-do-not-match" in e for e in validate_repo(tmp_path, now="2026-11-06T00:00:00Z"))
     write_do_not_match(tmp_path, [dict(entry, place="ocdb_01M66ESC6PTN65XY3VDH1Y2830")])
     assert any("not a place" in e for e in validate_repo(tmp_path, now="2026-11-06T00:00:00Z"))
+    write_do_not_match(tmp_path, [dict(entry, source="traveller")])
+    assert any("commons-do-not-match" in e for e in validate_repo(tmp_path, now="2026-11-06T00:00:00Z"))
     write_do_not_match(tmp_path, [dict(entry, file="File:Tidal River campground.jpg")])
     assert any("commons-do-not-match" in e for e in validate_repo(tmp_path, now="2026-11-06T00:00:00Z"))

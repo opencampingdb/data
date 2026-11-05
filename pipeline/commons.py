@@ -47,7 +47,8 @@ one at a time, maxlag=5, a pause between requests, and a back-off when the
 API asks for one.
 
 A place and file pair on moderation/commons-do-not-match.json
-(schema/commons_do_not_match.schema.json), which travellers reported as not
+(schema/commons_do_not_match.schema.json: place, file as in matches.ndjson,
+added, and source "reports" or "reviewer"), which travellers reported as not
 of the place, never matches: each run drops it from every line, checked
 today or not, and the release leaves it out too.
 """

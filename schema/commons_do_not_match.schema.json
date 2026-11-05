@@ -5,7 +5,9 @@
   "description": "moderation/commons-do-not-match.json. Place and Commons file pairs that are not of the place, from travellers' reports. pipeline.commons never matches a listed pair again, and the release leaves it out.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["pairs"],
+  "required": [
+    "pairs"
+  ],
   "properties": {
     "pairs": {
       "description": "Sorted by place, then file, each pair once.",
@@ -13,7 +15,12 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["place", "file", "added"],
+        "required": [
+          "place",
+          "file",
+          "added",
+          "source"
+        ],
         "properties": {
           "place": {
             "description": "The place id.",
@@ -21,7 +28,7 @@
             "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
           },
           "file": {
-            "description": "The Commons file name, as in commons.ndjson.gz: without File:.",
+            "description": "The Commons file name, exactly as in commons/matches.ndjson: without File:.",
             "type": "string",
             "minLength": 1,
             "maxLength": 255,
@@ -32,11 +39,12 @@
             "type": "string",
             "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
           },
-          "note": {
-            "description": "Why, in a sentence, without travellers' words or names.",
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 300
+          "source": {
+            "description": "Who decided: reports (two independent travellers reported the photo) or reviewer (the reviewer confirmed a single report). A person can remove a pair.",
+            "enum": [
+              "reports",
+              "reviewer"
+            ]
           }
         }
       }

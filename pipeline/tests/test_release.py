@@ -236,7 +236,7 @@ def test_commons_pairs_on_the_do_not_match_list_are_left_out(tmp_path, v1_osm):
     )
     (repo / "moderation").mkdir(exist_ok=True)
     (repo / "moderation" / "commons-do-not-match.json").write_text(dump_record({"pairs": [
-        {"place": place_ids[0], "file": "Wrong.jpg", "added": "2026-11-05"},
+        {"place": place_ids[0], "file": "Wrong.jpg", "added": "2026-11-05", "source": "reviewer"},
     ]}), encoding="utf-8")
     build(repo, tmp_path / "dist")
     lines = gzip.decompress((tmp_path / "dist" / "commons.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
