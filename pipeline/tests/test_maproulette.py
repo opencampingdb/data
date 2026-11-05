@@ -279,6 +279,70 @@ def test_closure_from_two_travellers(repo, tmp_path):
     assert changes(repo).startswith("- 2 travellers reported it has closed for good")
 
 
+def doubt(place, field, source, received="2026-11-03T00:00:00Z", result="needs_review"):
+    """A doubt as the inbox stores it: the fact is wrong, with no value."""
+    item = fact(place, field, None, source=source, received=received, result=result)
+    item["report"] = {"kind": "doubt", "fact": field, "note": "secret words from a traveller"}
+    return item
+
+
+def confirmed(*sources):
+    return [fact(A, "access", "2wd", source=source) for source in sources]
+
+
+def access_task(repo, tmp_path, *items):
+    write(repo, record(A, 1, facts={"access": "2wd"}, fact_sources={"access": "feedback"}))
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    return tasks(repo, TRAVELLER_REPORTS)
+
+
+def test_confirmations_leading_doubts_by_two_make_a_task(repo, tmp_path):
+    (task,) = access_task(repo, tmp_path, *confirmed("o1", "o2", "o3"), doubt(A, "access", "o4"))
+    assert task["features"][0]["properties"]["changes"].startswith("- 3 travellers reported the road is fine for 2WD")
+
+
+def test_a_close_case_stays_out(repo, tmp_path):
+    assert access_task(repo, tmp_path, *confirmed("o1", "o2"), doubt(A, "access", "o3")) == []
+
+
+def test_a_doubt_counts_whatever_its_outcome_unless_refused(repo, tmp_path):
+    for result in ("needs_review", "applied"):
+        assert access_task(repo, tmp_path / result, *confirmed("o1", "o2", "o3"), doubt(A, "access", "o4", result=result),
+                           doubt(A, "access", "o5", result=result)) == []
+    refused = [doubt(A, "access", "o4", result="refused"), doubt(A, "access", "o5", result="refused")]
+    assert len(access_task(repo, tmp_path / "refused", *confirmed("o1", "o2", "o3"), *refused)) == 1
+
+
+def test_doubts_older_than_90_days_stop_counting(repo, tmp_path):
+    old = [doubt(A, "access", "o3", received="2026-07-01T00:00:00Z"), doubt(A, "access", "o4", received="2026-07-01T00:00:00Z")]
+    assert len(access_task(repo, tmp_path, *confirmed("o1", "o2"), *old)) == 1
+
+
+def test_one_source_doubting_twice_is_one_doubt(repo, tmp_path):
+    twice = [doubt(A, "access", "o4"), doubt(A, "access", "o4", received="2026-11-04T00:00:00Z")]
+    assert len(access_task(repo, tmp_path, *confirmed("o1", "o2", "o3"), *twice)) == 1
+
+
+def test_doubts_about_another_fact_or_place_do_not_count(repo, tmp_path):
+    others = [doubt(A, "fee", "o3"), doubt(B, "access", "o4")]
+    assert len(access_task(repo, tmp_path, *confirmed("o1", "o2"), *others)) == 1
+
+
+def test_doubts_never_hold_back_a_verified_owner(repo, tmp_path):
+    write(repo, record(A, 1, owner_verified=True, facts={"pets": "leashed"}, fact_sources={"pets": "owner"},
+                       fact_dates={"pets": "2026-11-03T02:00:00Z"}))
+    items = [owner_update(A, facts={"pets": "leashed"}), doubt(A, "pets", "o1"), doubt(A, "pets", "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert "The verified owner says" in changes(repo)
+
+
+def test_doubts_never_become_tasks_or_leak_a_note(repo, tmp_path):
+    items = [doubt(A, "access", source) for source in ("o1", "o2", "o3")]
+    assert access_task(repo, tmp_path, *items) == []
+    text = (repo / "maproulette" / TRAVELLER_REPORTS).read_text(encoding="utf-8")
+    assert "secret" not in text
+
+
 def test_no_inbox_writes_an_empty_report_file_and_says_why(repo, capsys):
     write(repo, record(A, 1, facts={"fee": False}, fact_sources={"fee": "feedback"}))
     extract = repo / "extract.ndjson"

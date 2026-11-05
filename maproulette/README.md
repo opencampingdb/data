@@ -15,7 +15,8 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 A value in Open Camping DB is not enough on its own, because the feedback engine can accept a single attested report. A report task is built only from the evidence in the feedback inbox's `applied/` folder, which the sync reads with `--inbox`:
 
 - A value from travellers (`feedback`) needs at least 2 independent sources (a distinct `origin`, or `device` when there is no origin) that reported that same value for the place in the last 90 days, in items the engine applied.
-- A value from the owner (`owner`) needs the verified owner's applied update. One is enough.
+- Those confirming sources must also outnumber the sources that doubted the fact (said it is wrong without giving a value) in the same 90 days by at least 2. Three confirmations and one doubt make a task, two and one do not. A doubt counts whether the engine applied it or held it for a reviewer, and stops counting if it was refused. Each source counts once on each side, and doubts never become tasks.
+- A value from the owner (`owner`) needs the verified owner's applied update. One is enough, and doubts do not change that.
 - A name that only describes the place is never sent: every word is a generic place word (rest area, heavy vehicle, truck, parking, camp, camping, caravan park, dump point, toilets, picnic area, reserve, lookout, free camp, roadside stop and similar), or the name is a kind's label. "Heavy Vehicle Rest Area" is one.
 - Without `--inbox` (a local run, a fork) the file is written with no tasks, and the log and sync report say why.
 
