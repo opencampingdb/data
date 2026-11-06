@@ -56,13 +56,13 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
       "file": "changeset-20261030T090000Z-0a1b2c3.bin.gz",
       "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/changeset-20261030T090000Z-0a1b2c3.bin.gz",
       "sha256": "...", "bytes": 10948,
-      "from": "20261030T090000Z-0a1b2c3"
+      "from": "20261030T090000Z-0a1b2c3", "to": "20261030T160000Z-abc1234", "day": false
     },
     {
       "file": "changeset-day-2026-10-29.bin.gz",
       "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/changeset-day-2026-10-29.bin.gz",
       "sha256": "...", "bytes": 104957,
-      "from": "20261029T231500Z-9f8e7d6"
+      "from": "20261029T231500Z-9f8e7d6", "to": "20261030T160000Z-abc1234", "day": true
     }
   ],
   "licence": "ODbL-1.0",
@@ -128,7 +128,8 @@ also adds the facts `pets_months`, the months a seasonal place allows dogs,
 and `vehicle_access`, for places only heavy vehicles may use (section 4).
 Everything else reads the same as in 11.1. Format 12.2 adds
 `ocdb.sqlite.gz`, the release as an SQLite database, the `changesets` that
-update an earlier release's database to it, and `layout_version` (section 3).
+update the databases of the last 50 releases to it, and `layout_version`
+(section 3).
 The other files read the same as in 12.1.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
@@ -273,25 +274,36 @@ triggers to the release tables.
 
 ### Changesets
 
-The `changesets` entry in the manifest lists the changesets that update an
-earlier release's database to this one, each with `file`, `url`, `sha256`,
-`bytes` and `from`, the `data_version` of the release it starts from. Each is
-a gzipped changeset in SQLite's standard session extension format, which
-`sqlite3changeset_apply` applies in any SQLite built with the session
-extension (`SQLITE_ENABLE_SESSION` and `SQLITE_ENABLE_PREUPDATE_HOOK`).
-Applied to the database of the `from` release, a changeset gives exactly
-this release's rows in every table. The release build applies each one and
-compares every table before publishing it.
+The `changesets` entry in the manifest lists every changeset into each of
+the newest 50 releases, ordered by `from`, so the newest manifest alone gives
+the path from any of those releases to the newest one. Each entry has:
 
-A release lists at most two:
+- `from` and `to`, the `data_version` of the release it starts from and of
+  the release it gives.
+- `file`, `url`, `sha256` and `bytes`. The `url` points at the release that
+  made the changeset (the one tagged for `to`), so it stays valid for as long
+  as that release is kept.
+- `day`, `true` for a daily changeset (below).
+
+Each file is a gzipped changeset in SQLite's standard session extension
+format, which `sqlite3changeset_apply` applies in any SQLite built with the
+session extension (`SQLITE_ENABLE_SESSION` and
+`SQLITE_ENABLE_PREUPDATE_HOOK`). Applied to the database of its `from`
+release, a changeset gives exactly the rows of its `to` release in every
+table. The release build applies each one and compares every table before
+publishing it.
+
+Each release makes at most two changesets into itself:
 
 - `changeset-<data_version>.bin.gz`, from the release just before.
-- `changeset-day-<YYYY-MM-DD>.bin.gz`, from the last release of the previous
-  UTC day (the date in the name is that day), when that is not the release
-  just before. A phone that was current yesterday catches up with one file.
+- `changeset-day-<YYYY-MM-DD>.bin.gz`, with `day: true`, from the last
+  release of the previous UTC day (the date in the name is that day), when
+  that is not the release just before. A phone that was current yesterday
+  catches up with one file.
 
-The list is empty when there is no earlier database to start from: the first
-release with a database, and the first release after a `layout_version` rise.
+The list starts again, empty, when there is no earlier database to start
+from: the first release with a database, and the first release after a
+`layout_version` rise.
 
 To update the database you have:
 
@@ -299,16 +311,14 @@ To update the database you have:
    manifest (section 1). If the data versions are equal, stop.
 2. If the manifest's `layout_version` is not the one your database has,
    download the whole database, if your app can read that layout.
-3. If a changeset's `from` is your `data_version`, download it, check its
-   `bytes` and `sha256`, decompress it and apply it in one transaction with
-   `sqlite3changeset_apply`, aborting on any conflict.
-4. Otherwise, step back: the release a changeset starts from is tagged
-   `data-` and the part of its `from` before the `-`, so its manifest is at
-   `https://github.com/opencampingdb/data/releases/download/data-<...>/manifest.json`.
-   Follow `from` back until you reach your `data_version`, then apply the
-   changesets in order, oldest first. Download the whole database instead
-   when the walk gets long, or a manifest is missing (only the newest 60
-   releases are kept).
+3. Find a path in `changesets` from your `data_version` to the manifest's:
+   start from the entries whose `from` is yours and follow `to` into `from`.
+   Prefer the path with the fewest files, which uses the daily changesets.
+   If there is none, because your release is older than the list, download
+   the whole database.
+4. Download each changeset on the path, check its `bytes` and `sha256`, and
+   apply them in order with `sqlite3changeset_apply`, aborting on any
+   conflict, in one transaction.
 
 A database updated by changesets holds the same rows as the newest
 `ocdb.sqlite.gz`, but not the same bytes, so check it by its `data_version`,

@@ -567,7 +567,12 @@ holds exactly what they hold, plus each place's state. Each `--previous`
 folder holds an earlier release's `manifest.json` and `ocdb.sqlite.gz`; for
 each one, it writes a changeset that turns that database into this one. The
 release workflow passes the release just before as `--previous` and the last
-release of the previous UTC day as `--day`. The layout, the changesets and the
+release of the previous UTC day as `--day`. The manifest's `changesets` list
+carries the list of the release just before forward, with this release's new
+changesets, trimmed to the changesets into the newest 50 releases
+(`CHAIN_RELEASES`), so an app finds its whole path from the newest manifest.
+Each entry's `url` stays on the release that made it, and the release
+workflow keeps 60 releases, so every listed file is still there. The layout, the changesets and the
 manifest entries are described in [CONNECTING.md](../CONNECTING.md), section 3.
 
 SQLite comes from apsw (in `requirements.txt`), whose wheels bundle SQLite
