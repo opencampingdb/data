@@ -16,7 +16,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 12,
-  "format_minor": 0,
+  "format_minor": 1,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -257,11 +257,13 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `kind:public_toilet`, `kind:drinking_water_point`, `kind:public_shower` and
   `kind:dump_point` set the place's own feature (`toilets`,
   `drinking_water`, `showers` and `dump_station`, all `true`), and
-  `national_park` sets `pets: "no"` on a `national_park_campsite`, since
-  most Australian national parks allow no dogs. Any value from OSM, a
+  `national_park` sets `pets: "no"` on a `national_park_campsite` and
+  `reserve` sets it on a `reserve_campsite`, since most Australian national
+  parks and conservation reserves allow no dogs. Any value from OSM, a
   traveller, a contributor or the owner wins over a rule, `false` included,
   so a single park that allows dogs says so. Present a rule fact as
-  "usually": for example "Usually no dogs (national park)", never as a firm
+  "usually": for example "Usually no dogs (national park)" or "Usually no
+  dogs (reserve)", never as a firm
   fact. A rule value has no `fact_dates` entry, and is never passed to
   OpenStreetMap. A report that confirms or corrects it is welcome (section 6).
 - How fresh a place's information is: `osm.timestamp` is when its OSM object
@@ -361,6 +363,7 @@ versions, so show an unknown kind under its group rather than dropping it.
 | `caravan_park` | Caravan park | overnight |
 | `national_park_campsite` | National park campsite | overnight |
 | `state_forest_campsite` | State forest campsite | overnight |
+| `reserve_campsite` | Reserve campsite (protected area, not a national park) | overnight |
 | `showground` | Showground | overnight |
 | `campground` | Campground (fee not known) | overnight |
 | `farm_stay` | Farm stay (private, book first) | overnight |

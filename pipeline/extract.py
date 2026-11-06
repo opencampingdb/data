@@ -748,7 +748,7 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
     stats.update(
         kept=0, open_ways=0, open_way_places=0, missing_locations=0, ways_to_area_builder=0
     )
-    container_counts = {"park": 0, "forest": 0, "showground": 0}
+    container_counts = {"park": 0, "reserve": 0, "forest": 0, "showground": 0}
 
     places: list[tuple[dict, dict]] = []  # (record without kind, tags)
     containers: list[tuple] = []  # (shapely geometry, container type)

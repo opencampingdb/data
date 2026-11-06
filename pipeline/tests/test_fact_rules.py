@@ -125,7 +125,7 @@ def test_a_released_record_with_rules_matches_the_schema(repo, tmp_path):
 def test_the_manifest_is_format_12(repo, tmp_path):
     out = tmp_path / "dist"
     manifest = build_release(repo, out, data_version=VERSION, generated=GENERATED)
-    assert (manifest["format_version"], manifest["format_minor"]) == (12, 0)
+    assert (manifest["format_version"], manifest["format_minor"]) == (12, 1)
 
 
 def test_a_rule_fact_in_a_repository_file_is_refused(repo):
@@ -145,6 +145,7 @@ def test_the_rules_file_lists_every_rule():
         ("kind:public_shower", "public_shower", "showers", "true"),
         ("kind:dump_point", "dump_point", "dump_station", "true"),
         ("national_park", "national_park_campsite", "pets", '"no"'),
+        ("reserve", "reserve_campsite", "pets", '"no"'),
     }
 
 

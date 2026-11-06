@@ -75,6 +75,7 @@ listed by its owner. Each kind belongs to a group, and every record carries its
 | `caravan_park` | Caravan park | overnight | OTWD |
 | `national_park_campsite` | National park campsite | overnight | OTWD |
 | `state_forest_campsite` | State forest campsite | overnight | OTWD |
+| `reserve_campsite` | Reserve campsite | overnight | Open Camping DB: a camp site in a conservation park, nature reserve, coastal reserve or similar protected area that is not a national park |
 | `showground` | Showground | overnight | OTWD |
 | `campground` | Campground | overnight | Open Camping DB: a camp site whose fee is not known |
 | `farm_stay` | Farm stay | overnight | Open Camping DB: a station or farm stay, named so in OSM or listed by its owner |
@@ -108,10 +109,11 @@ toilet.
 |---|---|---|---|---|
 | 1a | `tourism=camp_site`, inside a park | `national_park_campsite` | broader | Park: see "Containers" |
 | 1b | `tourism=camp_site`, inside a state forest | `state_forest_campsite` | broader | |
-| 1c | `tourism=camp_site`, inside a showground | `showground` | related | |
-| 1d | `tourism=camp_site` + `fee=no` | `free_camp` | exact | Not for a commercial park (see "Facts") |
-| 1e | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
-| 1f | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
+| 1c | `tourism=camp_site`, inside a reserve | `reserve_campsite` | | Open Camping DB extension. Reserve: see "Containers" |
+| 1d | `tourism=camp_site`, inside a showground | `showground` | related | |
+| 1e | `tourism=camp_site` + `fee=no` | `free_camp` | exact | Not for a commercial park (see "Facts") |
+| 1f | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
+| 1g | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
 | 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles. Not for a commercial park (see "Facts") |
 | 2b | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
 | 2c | `tourism=hostel` | `backpacker_hostel` | | Open Camping DB extension |
@@ -145,7 +147,7 @@ OTWD mappings not used, and why:
 | `tourism=camp_site` + `caravans=yes` as `caravan_park` | related | Most free camps and campgrounds that allow caravans carry this tag. It would turn them into caravan parks |
 | `tourism=camp_site` + `maxstay=*` as `rest_area` | related | Free camps and paid campgrounds often have a stay limit. `maxstay` is kept as the `max_stay` fact instead |
 | `highway=services` as `rest_area` | related | Service centres are fuel and food stops. Their fuel stations are mapped as `amenity=fuel` |
-| `landuse=recreation_ground` + `recreation_ground=showground` as a place | narrower | A showground is a place to stay only where it takes campers, and the tags do not say so. The ground is used as a container for camp sites inside it (rule 1c) |
+| `landuse=recreation_ground` + `recreation_ground=showground` as a place | narrower | A showground is a place to stay only where it takes campers, and the tags do not say so. The ground is used as a container for camp sites inside it (rule 1d) |
 | `natural=beach` as `swimming_spot` | related | Far too many beach polygons, most of them not swimming spots |
 | `amenity=fuel` + `fuel:lpg=yes` as `lpg_refill_swap` | related | Autogas for vehicles is not a bottle refill. These stay `fuel` |
 
@@ -162,7 +164,8 @@ one container type at most, checked in this order:
 | 1 | state forest | `landuse=forest` or `boundary=protected_area` whose `name`, `official_name` or `protection_title` contains "State Forest" |
 | 2 | state forest | `landuse=forest` with an `operator` that is a forestry agency or a government department (Forestry Corporation, VicForests, Forest Products Commission, Sustainable Timber Tasmania, or containing "department", "government" or "crown"). Private plantation companies do not count |
 | 3 | park | `boundary=national_park` |
-| 4 | park | `boundary=protected_area` with `protect_class` 1a, 1b or 1 to 6 (the IUCN categories), or with an `operator` that is a park agency (a national parks service, Parks Victoria, Parks Australia, Parks Tasmania, Parks SA, a parks and wildlife service, NPWS, QPWS or DBCA) |
+| 4 | park | `boundary=protected_area` with `protect_class` 1a, 1b or 1 to 6 (the IUCN categories), or with an `operator` that is a park agency (a national parks service, Parks Victoria, Parks Australia, Parks Tasmania, Parks SA, a parks and wildlife service, NPWS, QPWS or DBCA), whose `name`, `official_name` or `protection_title` contains "National Park" |
+| 4b | reserve | The same protected areas when none of those says "National Park": conservation parks, nature reserves, coastal reserves and the like. A park agency managing an area, or an IUCN class, does not make it a national park |
 | 5 | showground | `landuse=recreation_ground` + `recreation_ground=showground`, or `leisure=showground` |
 
 State forests are checked first because a state forest tagged as a protected
@@ -226,7 +229,7 @@ village or resort, or names a park chain (Discovery Parks, BIG4, NRMA Parks,
 Ingenia Holidays, G'day Parks), or whose `brand` is a park chain, or whose website's domain does
 (`lighthousebeachholidayvillage.com.au`, `discoveryholidayparks.com.au`).
 `fee=no` on one is taken as a mapping slip and the `fee` fact is left out, so
-the place is not a `free_camp` (rules 1d and 2a). A name that says free
+the place is not a `free_camp` (rules 1e and 2a). A name that says free
 ("Barbour Park Free Caravan Park") keeps `fee=no`. Only the website's domain
 is read, because council sites file free camps under paths such as
 `/Caravan-Parks-and-Campgrounds/`. Other objects, such as the toilets in a
@@ -567,6 +570,7 @@ sets from a place's kind, where no source gives a value:
 | `kind:public_shower` | `public_shower` | `showers: true` |
 | `kind:dump_point` | `dump_point` | `dump_station: true` |
 | `national_park` | `national_park_campsite` | `pets: "no"` |
+| `reserve` | `reserve_campsite` | `pets: "no"` |
 
 A value from OSM, feedback, a contributor, the owner or a community report
 always wins, including `false`. A rule fact has the source `rule` in

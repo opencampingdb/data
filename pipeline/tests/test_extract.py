@@ -176,9 +176,9 @@ def test_overnight_kinds_and_containment():
     kinds = kinds_by_id(FIXTURES / "overnight.osm")
     assert kinds == {
         101: "national_park_campsite",  # inside boundary=national_park, fee does not matter
-        102: "national_park_campsite",  # inside protected_area class 2
+        102: "reserve_campsite",  # inside a class 2 coastal reserve, not a national park
         103: "free_camp",  # inside protected_area class 7, which is not a park
-        104: "national_park_campsite",  # inside a protected area run by Parks Victoria
+        104: "national_park_campsite",  # inside a national park run by Parks Victoria
         105: "state_forest_campsite",  # inside landuse=forest run by Forestry Corporation
         106: "paid_campground",  # inside a private forest, which is not a state forest
         107: "state_forest_campsite",  # inside a relation titled State Forest
@@ -218,7 +218,7 @@ def test_overnight_area_builder_gets_containers_but_no_building():
     stats = {}
     extract_file(FIXTURES / "overnight.osm", stats)
     assert stats["ways_to_area_builder"] == 9
-    assert stats["containers"] == {"park": 3, "forest": 2, "showground": 3}
+    assert stats["containers"] == {"park": 2, "reserve": 1, "forest": 2, "showground": 3}
 
 
 def test_utility_kinds():

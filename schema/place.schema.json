@@ -19,13 +19,14 @@
       "maxLength": 300
     },
     "kind": {
-      "description": "What the place is. The codes of schema/kinds.json: the OTWD site_types vocabulary plus the Open Camping DB extensions campground, picnic_site, farm_stay, backpacker_hostel, roofed_accommodation, long_vehicle_parking, food_and_drink, recreation_area, heritage and experience.",
+      "description": "What the place is. The codes of schema/kinds.json: the OTWD site_types vocabulary plus the Open Camping DB extensions campground, picnic_site, farm_stay, backpacker_hostel, roofed_accommodation, reserve_campsite, long_vehicle_parking, food_and_drink, recreation_area, heritage and experience.",
       "enum": [
         "free_camp",
         "paid_campground",
         "caravan_park",
         "national_park_campsite",
         "state_forest_campsite",
+        "reserve_campsite",
         "showground",
         "rest_area",
         "dump_point",
@@ -306,7 +307,7 @@
       "minProperties": 1,
       "patternProperties": {
         "^(toilets|drinking_water|showers|dump_station|pets)$": {
-          "enum": ["kind:public_toilet", "kind:drinking_water_point", "kind:public_shower", "kind:dump_point", "national_park"]
+          "enum": ["kind:public_toilet", "kind:drinking_water_point", "kind:public_shower", "kind:dump_point", "national_park", "reserve"]
         }
       }
     },
