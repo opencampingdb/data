@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "entry": "osm",
+    "fee": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
-    "fee": false
+    "entry": "public",
+    "fee": false,
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESE6141PQ5CSCS07M1X0W",
@@ -15,11 +19,11 @@
   "name": null,
   "osm": {
     "id": 13159026387,
-    "timestamp": "2026-09-27T00:38:34Z",
+    "timestamp": "2026-11-04T10:41:25Z",
     "type": "node",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-05T21:42:45Z"
 }

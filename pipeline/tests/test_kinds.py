@@ -17,6 +17,7 @@ def test_vocabulary_has_the_otwd_codes_and_our_extensions():
     assert list(KINDS) == otwd + [
         "campground", "picnic_site", "farm_stay", "backpacker_hostel", "roofed_accommodation",
         "long_vehicle_parking", "food_and_drink", "recreation_area", "heritage", "experience",
+        "reserve_campsite",
     ]
     assert set(KIND_GROUP.values()) == set(GROUPS)
     assert KIND_GROUP["campground"] == "overnight"
@@ -31,7 +32,7 @@ CAMP = {"tourism": "camp_site"}
 @pytest.mark.parametrize(
     "tags, inside, kind",
     [
-        # Containment comes first, in the order park, forest, showground.
+        # Containment comes first, in the order park, forest, reserve, showground.
         (CAMP, {"park"}, "national_park_campsite"),
         ({**CAMP, "fee": "yes"}, {"park"}, "national_park_campsite"),
         (CAMP, {"forest"}, "state_forest_campsite"),
@@ -39,6 +40,11 @@ CAMP = {"tourism": "camp_site"}
         (CAMP, {"park", "showground"}, "national_park_campsite"),
         (CAMP, {"park", "forest"}, "national_park_campsite"),
         (CAMP, {"forest", "showground"}, "state_forest_campsite"),
+        (CAMP, {"reserve"}, "reserve_campsite"),
+        ({**CAMP, "fee": "yes"}, {"reserve"}, "reserve_campsite"),
+        (CAMP, {"park", "reserve"}, "national_park_campsite"),
+        (CAMP, {"forest", "reserve"}, "state_forest_campsite"),
+        (CAMP, {"reserve", "showground"}, "reserve_campsite"),
         # Then the fee.
         ({**CAMP, "fee": "no"}, set(), "free_camp"),
         ({**CAMP, "fee": "yes"}, set(), "paid_campground"),
@@ -167,13 +173,30 @@ def test_other_kinds(tags, kind):
     "tags, expected",
     [
         ({"boundary": "national_park"}, "park"),
-        ({"boundary": "protected_area", "protect_class": "2"}, "park"),
-        ({"boundary": "protected_area", "protect_class": "1b"}, "park"),
+        # A park class or agency makes a national park only when the area says so.
+        ({"boundary": "protected_area", "protect_class": "2", "name": "Cape Range National Park"}, "park"),
+        ({"boundary": "protected_area", "protect_class": "1b", "protection_title": "National Park"}, "park"),
+        ({"boundary": "protected_area", "protect_class": "2", "official_name": "Kakadu National Park"}, "park"),
         ({"boundary": "protected_area", "protect_class": "7"}, None),
         ({"boundary": "protected_area"}, None),
-        ({"boundary": "protected_area", "operator": "Parks Victoria"}, "park"),
-        ({"boundary": "protected_area", "operator": "NSW National Parks and Wildlife Service"}, "park"),
-        ({"boundary": "protected_area", "protect_class": "7", "operator": "QPWS"}, "park"),
+        ({"boundary": "protected_area", "operator": "Parks Victoria", "name": "Wilsons Promontory National Park"}, "park"),
+        ({"boundary": "protected_area", "operator": "NSW National Parks and Wildlife Service", "name": "Murramarang National Park"}, "park"),
+        ({"boundary": "protected_area", "protect_class": "7", "operator": "QPWS", "protection_title": "National Park"}, "park"),
+        # Everything else a park class or agency covers is a reserve.
+        ({"boundary": "protected_area", "protect_class": "2"}, "reserve"),
+        ({"boundary": "protected_area", "operator": "Parks Victoria", "name": "Lake Tyers Forest Park"}, "reserve"),
+        ({"boundary": "protected_area", "operator": "NSW National Parks and Wildlife Service"}, "reserve"),
+        ({"boundary": "protected_area", "protect_class": "7", "operator": "QPWS", "protection_title": "Conservation Park"}, "reserve"),
+        (
+            {
+                "boundary": "protected_area",
+                "protect_class": "2",
+                "operator": "Western Australian Department of Biodiversity, Conservation and Attractions",
+                "name": "Nyingguulu (Ningaloo) Coastal Reserve 5(1)(h) Reserve",
+                "protection_title": "5(1)(h) Reserve",
+            },
+            "reserve",
+        ),
         ({"landuse": "forest", "operator": "Forestry Corporation of NSW"}, "forest"),
         ({"landuse": "forest", "operator": "VicForests"}, "forest"),
         ({"landuse": "forest", "operator": "Acme Timber Pty Ltd"}, None),

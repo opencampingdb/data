@@ -1,13 +1,13 @@
 """Which kind of place an OSM object is, and which areas can contain a camp site.
 
-The kinds are the OTWD site_types vocabulary plus three Open Camping DB
+The kinds are the OTWD site_types vocabulary plus the Open Camping DB
 extensions (schema/kinds.json). A camp or caravan site whose name says it is
 a station or farm stay is a farm_stay (is_farm_stay); owners list the rest. The rules follow the OTWD OSM mappings. Every
 decision, and the order the rules are tried in, is listed in
 pipeline/README.md under "Kind".
 
 classify() looks only at an object's own tags, plus the set of container
-types it lies inside ("park", "forest", "showground"). Only camp sites use
+types it lies inside ("park", "reserve", "forest", "showground"). Only camp sites use
 the containers.
 """
 
@@ -78,6 +78,11 @@ FOREST_AGENCY = re.compile(
 )
 
 STATE_FOREST = re.compile(r"state forest", re.IGNORECASE)
+
+# A protected area that is a national park by its own name or title. Other
+# park-like protected areas (conservation parks, nature and coastal reserves)
+# are reserves.
+NATIONAL_PARK = re.compile(r"national park", re.IGNORECASE)
 
 
 def _is_yes(value: str | None) -> bool:
@@ -199,10 +204,13 @@ def osm_fee(tags: dict) -> bool | None:
 
 
 def container_type(tags: dict) -> str | None:
-    """'park', 'forest' or 'showground' for an area that can contain a camp site, else None.
+    """'park', 'reserve', 'forest' or 'showground' for an area that can contain a camp site, else None.
 
     A state forest is checked first, so a state forest tagged as a protected
-    area (which often carries protect_class 6) is a forest, not a park.
+    area (which often carries protect_class 6) is a forest, not a park. A
+    protected area that a park class or agency would make a park is a park
+    only when its name, official name or protection title says National
+    Park, and a reserve otherwise.
     """
     landuse = tags.get("landuse")
     boundary = tags.get("boundary")
@@ -217,10 +225,8 @@ def container_type(tags: dict) -> str | None:
     if boundary == "national_park":
         return "park"
     if boundary == "protected_area":
-        if PARK_PROTECT_CLASS.match(tags.get("protect_class", "").strip().lower()):
-            return "park"
-        if PARK_AGENCY.search(tags.get("operator", "")):
-            return "park"
+        if PARK_PROTECT_CLASS.match(tags.get("protect_class", "").strip().lower()) or PARK_AGENCY.search(tags.get("operator", "")):
+            return "park" if NATIONAL_PARK.search(titles) else "reserve"
 
     if landuse == "recreation_ground" and tags.get("recreation_ground") == "showground":
         return "showground"
@@ -246,6 +252,8 @@ def classify(tags: dict, inside: frozenset = frozenset()) -> str | None:
             return "national_park_campsite"
         if "forest" in inside:
             return "state_forest_campsite"
+        if "reserve" in inside:
+            return "reserve_campsite"
         if "showground" in inside:
             return "showground"
         if is_farm_stay(tags):
