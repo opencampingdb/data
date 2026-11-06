@@ -11,7 +11,9 @@ name: Release
 # After each release it loads the place index (dist/place-index.ndjson.gz, not
 # a release file) into a feedback intake, when the INTAKE_URL variable (or the
 # intake_url input of a manual run) and the INTAKE_PLACES_TOKEN secret, the
-# intake's PLACES_TOKEN, are set. Without them the step is skipped.
+# intake's PLACES_TOKEN, are set, and then tells the intake the new release's
+# data_version (POST /v1/release), so its recent list names the newest
+# release. Without them both steps are skipped.
 on:
   schedule:
     - cron: "17 * * * *"
@@ -122,3 +124,26 @@ jobs:
             exit 0
           fi
           python -m pipeline.place_index --file dist/place-index.ndjson.gz --url "$INTAKE_URL"
+
+      - name: Tell the intake the newest release
+        if: steps.check.outputs.changed == 'true' && env.INTAKE_URL != ''
+        env:
+          INTAKE_PLACES_TOKEN: ${{ secrets.INTAKE_PLACES_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$INTAKE_PLACES_TOKEN" ]; then
+            echo "INTAKE_PLACES_TOKEN is not set. Skipping the release announcement."
+            exit 0
+          fi
+          body="$(python -c 'import json; print(json.dumps({"data_version": json.load(open("dist/manifest.json"))["data_version"]}))')"
+          status="$(curl -sS -o response.json -w '%{http_code}' -X POST "${INTAKE_URL%/}/v1/release" \
+            -H "authorization: Bearer $INTAKE_PLACES_TOKEN" -H "content-type: application/json" --data "$body")"
+          if [ "$status" = "404" ]; then
+            echo "::notice::The intake has no POST /v1/release yet. Skipping the release announcement."
+            exit 0
+          fi
+          if [ "$status" != "200" ]; then
+            echo "::error::The intake answered $status to the release announcement: $(cat response.json)"
+            exit 1
+          fi
+          cat response.json
