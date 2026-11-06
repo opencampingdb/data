@@ -1,15 +1,21 @@
 {
   "fact_sources": {
+    "caravans": "osm",
+    "fee": "osm",
     "showers": "osm",
+    "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "caravans": true,
+    "fee": false,
     "showers": false,
-    "toilets": false
+    "tents": true,
+    "toilets": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA50CEGCG94CGMRBXMMY",
-  "kind": "campground",
+  "kind": "free_camp",
   "location": {
     "lat": -34.47778,
     "lon": 144.29694
@@ -17,11 +23,11 @@
   "name": "Yang Yang (Maude) Campspot",
   "osm": {
     "id": 1811205288,
-    "timestamp": "2021-02-06T06:37:03Z",
+    "timestamp": "2026-11-05T19:01:12Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-06T21:13:04Z"
 }

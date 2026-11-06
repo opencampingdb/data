@@ -1,21 +1,34 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "141",
+      "street": "Maudsland Road"
+    },
+    "opening_hours": "24/7",
+    "phone": "+61 7 5580 4758",
+    "toilets": true
+  },
   "group": "services",
   "id": "ocdb_01M66JP6T7A1QV43KF2KCX30T9",
   "kind": "fuel",
   "location": {
-    "lat": -27.913198,
-    "lon": 153.282949
+    "lat": -27.913046,
+    "lon": 153.283509
   },
-  "name": "Upper Coomera 7/11",
+  "name": "7-Eleven Maudsland",
   "osm": {
     "id": 3853182910,
-    "timestamp": "2026-11-02T06:47:17Z",
+    "timestamp": "2026-11-05T02:41:13Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-06T21:13:04Z"
 }
