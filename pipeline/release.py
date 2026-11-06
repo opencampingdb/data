@@ -62,7 +62,7 @@ from .common import (
 # 11: fact_sources may be community_report.
 # 11.1: commons.ndjson.gz, freely licensed Wikimedia Commons photos matched to places to stay.
 # 12: fact_sources may be rule, with the rule's name in fact_rules (schema/fact_rules.json).
-# 12.1: the kind reserve_campsite, and the rule reserve that gives it pets "no".
+# 12.1: the kind reserve_campsite.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An

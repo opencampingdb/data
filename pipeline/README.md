@@ -75,7 +75,7 @@ listed by its owner. Each kind belongs to a group, and every record carries its
 | `caravan_park` | Caravan park | overnight | OTWD |
 | `national_park_campsite` | National park campsite | overnight | OTWD |
 | `state_forest_campsite` | State forest campsite | overnight | OTWD |
-| `reserve_campsite` | Reserve campsite | overnight | Open Camping DB: a camp site in a conservation park, nature reserve, coastal reserve or similar protected area that is not a national park |
+| `reserve_campsite` | Reserve campsite | overnight | Open Camping DB: a camp site in a conservation park, nature reserve, regional park or other protected area that is not a national park. No dog rule: their rules on dogs differ too much |
 | `showground` | Showground | overnight | OTWD |
 | `campground` | Campground | overnight | Open Camping DB: a camp site whose fee is not known |
 | `farm_stay` | Farm stay | overnight | Open Camping DB: a station or farm stay, named so in OSM or listed by its owner |
@@ -570,7 +570,6 @@ sets from a place's kind, where no source gives a value:
 | `kind:public_shower` | `public_shower` | `showers: true` |
 | `kind:dump_point` | `dump_point` | `dump_station: true` |
 | `national_park` | `national_park_campsite` | `pets: "no"` |
-| `reserve` | `reserve_campsite` | `pets: "no"` |
 
 A value from OSM, feedback, a contributor, the owner or a community report
 always wins, including `false`. A rule fact has the source `rule` in

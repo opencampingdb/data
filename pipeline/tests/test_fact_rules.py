@@ -145,7 +145,6 @@ def test_the_rules_file_lists_every_rule():
         ("kind:public_shower", "public_shower", "showers", "true"),
         ("kind:dump_point", "dump_point", "dump_station", "true"),
         ("national_park", "national_park_campsite", "pets", '"no"'),
-        ("reserve", "reserve_campsite", "pets", '"no"'),
     }
 
 

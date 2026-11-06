@@ -257,13 +257,13 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `kind:public_toilet`, `kind:drinking_water_point`, `kind:public_shower` and
   `kind:dump_point` set the place's own feature (`toilets`,
   `drinking_water`, `showers` and `dump_station`, all `true`), and
-  `national_park` sets `pets: "no"` on a `national_park_campsite` and
-  `reserve` sets it on a `reserve_campsite`, since most Australian national
-  parks and conservation reserves allow no dogs. Any value from OSM, a
+  `national_park` sets `pets: "no"` on a `national_park_campsite`, since
+  most Australian national parks allow no dogs. A `reserve_campsite` has no
+  such rule: regional parks, game reserves and river reserves often allow
+  dogs. Any value from OSM, a
   traveller, a contributor or the owner wins over a rule, `false` included,
   so a single park that allows dogs says so. Present a rule fact as
-  "usually": for example "Usually no dogs (national park)" or "Usually no
-  dogs (reserve)", never as a firm
+  "usually": for example "Usually no dogs (national park)", never as a firm
   fact. A rule value has no `fact_dates` entry, and is never passed to
   OpenStreetMap. A report that confirms or corrects it is welcome (section 6).
 - How fresh a place's information is: `osm.timestamp` is when its OSM object

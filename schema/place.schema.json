@@ -307,7 +307,7 @@
       "minProperties": 1,
       "patternProperties": {
         "^(toilets|drinking_water|showers|dump_station|pets)$": {
-          "enum": ["kind:public_toilet", "kind:drinking_water_point", "kind:public_shower", "kind:dump_point", "national_park", "reserve"]
+          "enum": ["kind:public_toilet", "kind:drinking_water_point", "kind:public_shower", "kind:dump_point", "national_park"]
         }
       }
     },
