@@ -1,6 +1,14 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "cabins": "osm",
+    "caravans": "osm",
+    "tents": "osm"
+  },
+  "facts": {
+    "cabins": false,
+    "caravans": true,
+    "tents": true
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESA3KAJ1MMTYXH3NDWTPW",
   "kind": "campground",
@@ -11,11 +19,11 @@
   "name": "St Helens Camping Reserve",
   "osm": {
     "id": 1811196390,
-    "timestamp": "2012-07-03T12:14:53Z",
+    "timestamp": "2026-11-05T07:04:31Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-06T21:13:04Z"
 }

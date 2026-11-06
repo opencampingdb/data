@@ -1,6 +1,16 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "bbq": "osm",
+    "picnic_tables": "osm",
+    "playground": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "bbq": false,
+    "picnic_tables": true,
+    "playground": false,
+    "toilets": false
+  },
   "group": "utility",
   "id": "ocdb_01M66ESETTWPT1560P5EJ3N65D",
   "kind": "rest_area",
@@ -8,14 +18,14 @@
     "lat": -35.143291,
     "lon": 149.333847
   },
-  "name": "Rawdon Middleton VC Rest Area",
+  "name": "Rawdon Middleton VC Rest Area;Middleton VC Rest Area",
   "osm": {
     "id": 157863158,
-    "timestamp": "2020-10-13T09:12:09Z",
+    "timestamp": "2026-11-05T07:16:49Z",
     "type": "way",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-06T21:13:04Z"
 }
