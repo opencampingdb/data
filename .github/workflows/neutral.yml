@@ -1,6 +1,7 @@
 # Keeps this repository neutral: no app, company or person that uses Open
-# Camping DB is named in its files or commit messages. The terms live in the
-# organisation secret NEUTRAL_TERMS (an extended regular expression), not here,
+# Camping DB is named in its files or commit messages, apart from the app
+# field of reviews and fees, which records the app that sent them. The terms
+# live in the organisation secret NEUTRAL_TERMS (an extended regular expression), not here,
 # so the check itself names nobody. It prints file names and commit ids only.
 
 name: Neutral
@@ -34,11 +35,16 @@ jobs:
             exit 0
           fi
           found=0
-          files="$(git grep -l -i -I -E "$TERMS" -- . || true)"
-          if [ -n "$files" ]; then
-            echo "$files" | while read -r f; do echo "::error file=$f::names an app, company or person that uses Open Camping DB"; done
+          # Reviews and fees record the app that sent them in their "app"
+          # field, which may name it. Everything else in them is checked.
+          for f in $(git grep -l -i -I -E "$TERMS" -- . || true); do
+            case "$f" in
+              reviews/*.ndjson | fees/*.ndjson)
+                sed -E 's/"app": *"[^"]*"//g' "$f" | grep -q -i -E "$TERMS" || continue ;;
+            esac
+            echo "::error file=$f::names an app, company or person that uses Open Camping DB"
             found=1
-          fi
+          done
           if [ -n "$BASE" ] && git cat-file -e "$BASE^{commit}" 2>/dev/null; then
             for c in $(git rev-list "$BASE..HEAD"); do
               if git log -1 --format=%B "$c" | grep -q -i -E "$TERMS"; then
