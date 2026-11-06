@@ -6,9 +6,14 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 |---|---|---|
 | `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after its records were merged, leaving out objects that are a separate place (see below), and leaving out motels, cabins and hostels |
 | `traveller_reports.geojson` | What travellers report | place where a value that at least two travellers or the verified owner reported still differs from OSM |
+| `heavy_vehicles.geojson` | Heavy vehicle rest areas | rest area or long vehicle parking whose name says it is for trucks or heavy vehicles, while its OSM tags don't say who may use it |
 | `challenges.json` | | the MapRoulette project and challenge ids, used for the rebuild links |
 
-`python -m pipeline.maproulette` writes both files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
+`python -m pipeline.maproulette` writes the three files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value, and a heavy vehicle task once OSM's tags say who may use the place.
+
+### Heavy vehicle rest areas
+
+Open Camping DB never sets `vehicle_access` from a name alone. A rest area or long vehicle parking whose name says truck, heavy vehicle, HV or B-double (the rule in [pipeline/vehicle_access.py](../pipeline/vehicle_access.py), the same places as `moderation/heavy-vehicle-candidates.csv`) becomes a task while its OSM object has none of the tags that set the fact: `hgv=designated` with `motorcar=no` or `motor_vehicle=no`, or `access=no` with `hgv=yes` or `hgv=designated`. The task asks a mapper to check the signs before tagging anything. Many truck bays let cars and caravans stop too, and those are "Not an Issue".
 
 ### What a report task needs
 
@@ -48,12 +53,13 @@ To keep a pair out of the double mapping challenge, merge it with `python -m pip
 
 ## Setting up a challenge
 
-Both challenges live in the MapRoulette project "Open Camping DB". Each one is built from a remote GeoJSON URL on main:
+The challenges live in the MapRoulette project "Open Camping DB". Each one is built from a remote GeoJSON URL on main:
 
 - `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/double_mapping.geojson`
 - `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/traveller_reports.geojson`
+- `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/heavy_vehicles.geojson`
 
-Every feature carries `id` (the Open Camping DB id, which matches a task across rebuilds), `@id` (the OSM object, such as `node/123`), `name` and `record` (the place file). Double mapping tasks add `objects`, and report tasks add `changes` and `ocdb_id` (the Open Camping DB id again, for mappers to cite). Challenge instructions use them as `{{name}}` and so on.
+Every feature carries `id` (the Open Camping DB id, which matches a task across rebuilds), `@id` (the OSM object, such as `node/123`), `name` and `record` (the place file). Double mapping tasks add `objects`, report tasks add `changes` and `ocdb_id` (the Open Camping DB id again, for mappers to cite), and heavy vehicle tasks add `ocdb_id`. Challenge instructions use them as `{{name}}` and so on.
 
 **Camp sites mapped twice**, instructions:
 
@@ -75,4 +81,12 @@ Open Camping DB record {{ocdb_id}}: {{record}}
 Check each report with the method listed under it before you edit. If you cannot confirm a report, skip the task. If Open Camping DB is wrong, mark the task "Not an Issue". If you edit, you can mention Open Camping DB {{ocdb_id}} in your changeset comment, with your own check as the source. Open Camping DB does not edit OpenStreetMap itself.
 ```
 
-After creating a challenge, put its id in `challenges.json`, along with the project id. The project is "Open Camping DB" (66368). Its challenges are "Camp sites mapped twice" (57405) and "What travellers report" (57406). Both stay out of MapRoulette's listings until the project is made discoverable.
+**Heavy vehicle rest areas**, instructions:
+
+```text
+The name of {{name}} says it is for trucks or heavy vehicles, but its OpenStreetMap tags don't say who may use it. Open Camping DB, an open list of places to camp and stop in Australia, lists it from its name alone, which is not enough to go on: Open Camping DB record {{ocdb_id}}: {{record}}
+
+Check the signs at the entrance with a survey or street-level photos (Mapillary or Panoramax). If a sign says only heavy vehicles may use it, tag what the sign says, for example hgv=designated with motorcar=no. If cars and caravans may stop there too, or you cannot see the signs, mark the task "Not an Issue" or skip it. Open Camping DB does not edit OpenStreetMap itself.
+```
+
+After creating a challenge, put its id in `challenges.json`, along with the project id. The project is "Open Camping DB" (66368). Its challenges are "Camp sites mapped twice" (57405), "What travellers report" (57406) and "Heavy vehicle rest areas" (not created yet). A new challenge stays out of MapRoulette's listings until its OSM Australia forum discussion has had time for replies.
