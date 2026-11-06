@@ -23,6 +23,13 @@ Pass --day DIR (also a --previous) for the last release of the previous UTC
 day: its changeset is changeset-day-<that day, YYYY-MM-DD>.bin.gz, unless it
 is the release just before, which has one already.
 
+The manifest's "changesets" list carries this release's new changesets and
+every entry of the release just before's list, trimmed to the changesets into
+the CHAIN_RELEASES newest releases and ordered by "from", so an app finds its
+whole path from one manifest. Each entry's url points at the release that
+made it, so no changeset is uploaded twice. The list starts again when the
+release just before has no database of this layout.
+
     python -m pipeline.database --day-base <data_version>
 
 reads release tags on standard input and prints the newest tag from a UTC day
@@ -58,6 +65,8 @@ LAYOUT_VERSION = 1
 DATABASE_FILE = "ocdb.sqlite.gz"
 PAGE_SIZE = 4096
 DEFAULT_REPOSITORY = "opencampingdb/data"
+# The manifest lists the changesets into each of this many newest releases.
+CHAIN_RELEASES = 50
 
 SCHEMA = """
 CREATE TABLE release (
@@ -329,6 +338,24 @@ def day_base(tags: list[str], data_version: str) -> str | None:
     return max(earlier) if earlier else None
 
 
+def carried(directory: Path) -> list[dict]:
+    """The changesets the release just before listed, to carry into this release's list.
+
+    Only called once that release's database has checked out with this
+    layout, so every entry is of this layout. Entries without "to" (from
+    before the list carried forward) are left out.
+    """
+    manifest = json.loads((Path(directory) / "manifest.json").read_text(encoding="utf-8"))
+    return [entry for entry in manifest.get("changesets", []) if "to" in entry and "from" in entry]
+
+
+def trimmed(entries: list[dict]) -> list[dict]:
+    """The entries whose "to" is one of the CHAIN_RELEASES newest releases, one per (from, to), ordered by from."""
+    unique = {(entry["from"], entry["to"]): entry for entry in entries}
+    newest = set(sorted({to for _, to in unique}, reverse=True)[:CHAIN_RELEASES])
+    return [unique[key] for key in sorted(unique) if key[1] in newest]
+
+
 def build(
     release_dir: Path,
     previous: list[Path] = (),
@@ -363,12 +390,14 @@ def build(
 
         sources = [(path, False) for path in previous] + ([(day, True)] if day else [])
         done = {manifest["data_version"]}
-        for directory, is_day in sources:
+        for index, (directory, is_day) in enumerate(sources):
             found = previous_database(directory, work)
             if not found or found[0] in done:
                 continue
             from_version, old_db = found
             done.add(from_version)
+            if index == 0 and not is_day:
+                entries.extend(carried(directory))
             changeset = gzip_bytes(checked_changeset(old_db, database))
             name = f"changeset-day-{day_of(from_version)}.bin.gz" if is_day else f"changeset-{from_version}.bin.gz"
             (release_dir / name).write_bytes(changeset)
@@ -378,9 +407,11 @@ def build(
                 "sha256": hashlib.sha256(changeset).hexdigest(),
                 "bytes": len(changeset),
                 "from": from_version,
+                "to": manifest["data_version"],
+                "day": is_day,
             })
 
-    manifest["changesets"] = entries
+    manifest["changesets"] = trimmed(entries)
     write_text(manifest_path, json.dumps(manifest, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
     return manifest
 

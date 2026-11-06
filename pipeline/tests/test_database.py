@@ -125,6 +125,8 @@ def test_manifest_lists_the_database_and_changeset(releases):
         "sha256": hashlib.sha256(changeset).hexdigest(),
         "bytes": len(changeset),
         "from": FIRST,
+        "to": SECOND,
+        "day": False,
     }]
     # The release files pipeline.release listed are still there, unchanged.
     assert manifest["places"]["sha256"] == hashlib.sha256((second / "places.ndjson.gz").read_bytes()).hexdigest()
@@ -220,8 +222,12 @@ def test_day_changeset_from_the_last_release_of_the_previous_day(releases, repo,
     build_release(repo, third, data_version=THIRD, generated="2026-10-31T09:00:00Z")
     manifest = database.build(third, previous=[second], day=first)
 
-    assert [entry["from"] for entry in manifest["changesets"]] == [SECOND, FIRST]
-    assert [entry["file"] for entry in manifest["changesets"]] == [
+    made = [entry for entry in manifest["changesets"] if entry["to"] == THIRD]
+    assert [(entry["from"], entry["file"], entry["day"]) for entry in made] == [
+        (FIRST, "changeset-day-2026-10-30.bin.gz", True),
+        (SECOND, f"changeset-{SECOND}.bin.gz", False),
+    ]
+    assert sorted(p.name for p in third.glob("changeset-*")) == [
         f"changeset-{SECOND}.bin.gz",
         "changeset-day-2026-10-30.bin.gz",
     ]
@@ -250,3 +256,113 @@ def test_day_base_is_the_newest_tag_from_an_earlier_utc_day():
     assert database.day_base(tags, THIRD) == "data-20261030T235900Z"
     assert database.day_base(tags[2:], THIRD) is None
     assert database.day_base([], THIRD) is None
+
+
+def release_folder(repo, tmp_path, n):
+    """The nth release of the repo, an hour apart from 1 November, built by pipeline.release."""
+    version = f"202611{1 + n // 24:02d}T{n % 24:02d}0000Z-{n:07x}"
+    folder = tmp_path / f"r{n}"
+    build_release(repo, folder, data_version=version, generated=f"2026-11-{1 + n // 24:02d}T{n % 24:02d}:00:00Z")
+    return folder, version
+
+
+def chain(repo, tmp_path, count, add=None):
+    """Build count releases in turn, each from the one before, and return [(folder, version, manifest)]."""
+    built = []
+    for n in range(count):
+        if add:
+            add(n)
+        folder, version = release_folder(repo, tmp_path, n)
+        manifest = database.build(folder, previous=[built[-1][0]] if built else [])
+        built.append((folder, version, manifest))
+    return built
+
+
+def path_to(changesets, start, end):
+    """The changesets from start to end, found from one manifest's list (breadth first, fewest files)."""
+    paths = {start: []}
+    frontier = [start]
+    while frontier:
+        step = []
+        for version in frontier:
+            for entry in changesets:
+                if entry["from"] == version and entry["to"] not in paths:
+                    paths[entry["to"]] = paths[version] + [entry]
+                    step.append(entry["to"])
+        frontier = step
+    return paths.get(end)
+
+
+def test_the_list_carries_forward_and_keeps_the_newest_50_releases(repo, v1_osm, tmp_path, monkeypatch):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    monkeypatch.setattr(database, "CHAIN_RELEASES", 5)
+    built = chain(repo, tmp_path, 8)
+    versions = [version for _, version, _ in built]
+    changesets = built[-1][2]["changesets"]
+    # Releases 3 to 7 are the 5 newest with a changeset into them.
+    assert [(entry["from"], entry["to"]) for entry in changesets] == [
+        (versions[n - 1], versions[n]) for n in range(3, 8)
+    ]
+    assert changesets == sorted(changesets, key=lambda entry: entry["from"])
+    # Each entry points at the release that made it: nothing is uploaded again.
+    for entry in changesets:
+        tag = "data-" + entry["to"].split("-")[0]
+        assert entry["url"] == f"https://github.com/opencampingdb/data/releases/download/{tag}/{entry['file']}"
+    assert sorted(p.name for p in built[-1][0].glob("changeset-*")) == [f"changeset-{versions[6]}.bin.gz"]
+    assert database.CHAIN_RELEASES == 5
+    monkeypatch.undo()
+    assert database.CHAIN_RELEASES == 50
+
+
+def test_a_path_from_three_releases_back_is_found_from_one_manifest(repo, v1_osm, v2_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    ids = place_ids(repo)
+    changes = {
+        1: lambda: add_review(repo, ids[0], "rev_01JBX0000000000000000000AA"),
+        2: lambda: sync(repo, extract_file(v2_osm), now="2026-11-01T01:30:00Z"),
+        3: lambda: add_fee(repo, ids[0], "fee_01JBX0000000000000000000AA"),
+    }
+    built = chain(repo, tmp_path, 4, add=lambda n: changes.get(n, lambda: None)())
+    (first, start, _), (last, end, manifest) = built[0], built[-1]
+
+    path = path_to(manifest["changesets"], start, end)
+    assert [entry["from"] for entry in path] == [version for _, version, _ in built[:3]]
+    db = unpack(first, tmp_path, "phone.sqlite")
+    folders = {version: folder for folder, version, _ in built}
+    con = apsw.Connection(str(db))
+    for entry in path:
+        packed = (folders[entry["to"]] / entry["file"]).read_bytes()
+        assert len(packed) == entry["bytes"]
+        assert hashlib.sha256(packed).hexdigest() == entry["sha256"]
+        apsw.Changeset.apply(gzip.decompress(packed), con)
+    con.close()
+    assert rows(db) == rows(unpack(last, tmp_path, "last.sqlite"))
+
+
+def test_a_layout_change_resets_the_list(repo, v1_osm, tmp_path, monkeypatch):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    built = chain(repo, tmp_path, 3)
+    assert len(built[-1][2]["changesets"]) == 2
+    monkeypatch.setattr(database, "LAYOUT_VERSION", 2)
+    folder, version = release_folder(repo, tmp_path, 3)
+    assert database.build(folder, previous=[built[-1][0]])["changesets"] == []
+    folder2, version2 = release_folder(repo, tmp_path, 4)
+    assert [(e["from"], e["to"]) for e in database.build(folder2, previous=[folder])["changesets"]] == [(version, version2)]
+
+
+def test_day_changesets_stay_in_the_list_marked_day(releases, repo, tmp_path):
+    first, second = releases
+    database.build(first)
+    database.build(second, previous=[first])
+    third = tmp_path / "third"
+    build_release(repo, third, data_version=THIRD, generated="2026-10-31T09:00:00Z")
+    database.build(third, previous=[second], day=first)
+    fourth = tmp_path / "fourth"
+    build_release(repo, fourth, data_version="20261031T100000Z-1111111", generated="2026-10-31T10:00:00Z")
+    manifest = database.build(fourth, previous=[third])
+    assert [(e["from"], e["to"], e["day"]) for e in manifest["changesets"]] == [
+        (FIRST, SECOND, False),
+        (FIRST, THIRD, True),
+        (SECOND, THIRD, False),
+        (THIRD, "20261031T100000Z-1111111", False),
+    ]
