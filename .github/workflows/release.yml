@@ -14,8 +14,8 @@ name: Release
 # a release file) into a feedback intake, when the INTAKE_URL variable (or the
 # intake_url input of a manual run) and the INTAKE_PLACES_TOKEN secret, the
 # intake's PLACES_TOKEN, are set, and then tells the intake the new release's
-# data_version (POST /v1/release), so its recent list names the newest
-# release. Without them both steps are skipped.
+# data_version and layout_version (POST /v1/release), so its recent list
+# names the newest release. Without them both steps are skipped.
 on:
   push:
     branches: [main]
@@ -175,7 +175,7 @@ jobs:
             echo "INTAKE_PLACES_TOKEN is not set. Skipping the release announcement."
             exit 0
           fi
-          body="$(python -c 'import json; print(json.dumps({"data_version": json.load(open("dist/manifest.json"))["data_version"]}))')"
+          body="$(python -c 'import json; m = json.load(open("dist/manifest.json")); print(json.dumps({k: m[k] for k in ("data_version", "layout_version") if k in m}))')"
           status="$(curl -sS -o response.json -w '%{http_code}' -X POST "${INTAKE_URL%/}/v1/release" \
             -H "authorization: Bearer $INTAKE_PLACES_TOKEN" -H "content-type: application/json" --data "$body")"
           if [ "$status" = "404" ]; then
