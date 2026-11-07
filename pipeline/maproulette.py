@@ -11,7 +11,7 @@ tasks are built only from the evidence there. Without it (a local run, a
 fork), the report file is written with no tasks, so no claim goes out without
 the reports behind it.
 
-Writes two files in maproulette/, as line-by-line GeoJSON (RFC 7464: each
+Writes three files in maproulette/, as line-by-line GeoJSON (RFC 7464: each
 line is a record separator and one FeatureCollection, and each line becomes
 one task). MapRoulette builds and rebuilds the challenges from these files on
 main, so a task appears only after the change behind it was approved there.
@@ -50,7 +50,17 @@ maproulette/traveller_reports.geojson
     when the owner set it, and how a mapper can check it. Only counts and
     dates leave the inbox: never a device, an origin or a traveller's words.
 
-Values from community reports (source community_report) never reach either
+maproulette/heavy_vehicles.geojson
+    One task per rest area or long vehicle parking whose name alone says it
+    is for heavy vehicles ("Truck Parking Bay", "Heavy Vehicle Rest Area"),
+    by the rule pipeline.vehicle_access lists in
+    moderation/heavy-vehicle-candidates.csv, while its OSM object has no tags
+    saying so. A name alone never sets vehicle_access, so the task asks a
+    mapper to check the signs and tag the access only when they confirm it.
+    A task goes away by itself once OSM's tags give the place
+    vehicle_access.
+
+Values from community reports (source community_report) never reach any
 file, and neither does a place whose name or location came from them, even
 if it has an OSM link: those reports are kept out of OSM.
 
@@ -71,6 +81,7 @@ from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
 from .sync import load_extract
+from .vehicle_access import name_candidates
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
 RS = "\x1e"
@@ -80,6 +91,7 @@ DOUBLE_MAPPING = "double_mapping.geojson"
 # are buildings to stay in are merged too, but never become its tasks.
 NOT_CAMP_SITES = ROOFED_KINDS
 TRAVELLER_REPORTS = "traveller_reports.geojson"
+HEAVY_VEHICLES = "heavy_vehicles.geojson"
 
 # Only these sources are passed to OSM's mappers. Everything in NOT_FOR_OSM
 # (contributed values, community reports) stays in Open Camping DB.
@@ -316,6 +328,20 @@ def double_mapping_tasks(places: dict, extract: dict, geometry: Geometry | None 
     return tasks
 
 
+def heavy_vehicle_tasks(places: dict, extract: dict) -> list[dict]:
+    """One task per place whose name alone says heavy vehicles only, while its OSM object is still in the extract."""
+    tasks = []
+    for record in name_candidates(places):
+        if not record.get("osm") or from_community_report(record):
+            continue
+        ref = osm_ref(record["osm"])
+        if ref not in extract:
+            continue
+        properties = {"name": record["name"], "record": record_url(record), "ocdb_id": record["id"]}
+        tasks.append({"type": "FeatureCollection", "features": [feature(record, ref, extract[ref]["location"], properties)]})
+    return tasks
+
+
 def descriptive_name(name: str, kind: str | None = None) -> bool:
     """True for a name that only says what kind of place it is, such as "Heavy Vehicle Rest Area"."""
     plain = " ".join(WORD_RE.findall(name.lower()))
@@ -535,7 +561,7 @@ def write_challenges(
     now: datetime | None = None,
     geometry: Geometry | None = None,
 ) -> dict[str, dict]:
-    """Write both challenge files. Returns, per file, the task count and the ids added and removed.
+    """Write the challenge files. Returns, per file, the task count and the ids added and removed.
 
     Without an inbox the report file is written with no tasks, and its entry
     says why under "skipped".
@@ -548,6 +574,7 @@ def write_challenges(
     files = {
         DOUBLE_MAPPING: double_mapping_tasks(places, by_ref, geometry),
         TRAVELLER_REPORTS: reports,
+        HEAVY_VEHICLES: heavy_vehicle_tasks(places, by_ref),
     }
     result = {}
     for name, tasks in files.items():
@@ -565,7 +592,7 @@ def write_challenges(
     return result
 
 
-TITLES = {DOUBLE_MAPPING: "Double mapping", TRAVELLER_REPORTS: "Traveller reports"}
+TITLES = {DOUBLE_MAPPING: "Double mapping", TRAVELLER_REPORTS: "Traveller reports", HEAVY_VEHICLES: "Heavy vehicle rest areas"}
 
 
 def render_report(result: dict[str, dict]) -> str:

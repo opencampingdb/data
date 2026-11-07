@@ -9,6 +9,7 @@ from pathlib import Path
 from pipeline.common import dump_record, load_places, place_path
 from pipeline.maproulette import (
     DOUBLE_MAPPING,
+    HEAVY_VEHICLES,
     RS,
     TRAVELLER_REPORTS,
     descriptive_name,
@@ -68,6 +69,41 @@ def tasks(repo, name):
 
 A = "ocdb_01M66ES9DS1AQB245SJJXW0J18"
 B = "ocdb_01M66ES9WTB7KSKMPCWQGC6HXN"
+
+
+# ------------------------------------------------------- heavy vehicles
+
+
+def test_a_rest_area_named_for_trucks_is_a_heavy_vehicle_task(repo):
+    write(repo, record(A, 1, name="Canbelego Truck Parking Bay", kind="rest_area", group="utility"))
+    write_challenges(repo, [osm_place(1, name="Canbelego Truck Parking Bay")])
+    [task] = tasks(repo, HEAVY_VEHICLES)
+    [feature] = task["features"]
+    assert feature["properties"]["id"] == A
+    assert feature["properties"]["@id"] == "node/1"
+    assert feature["properties"]["name"] == "Canbelego Truck Parking Bay"
+    assert feature["properties"]["ocdb_id"] == A
+    assert feature["properties"]["record"].endswith(f"/places/{A[-2:].lower()}/{A}.json")
+
+
+def test_no_heavy_vehicle_task_once_osm_says_so_or_the_name_does_not(repo):
+    write(
+        repo,
+        record(A, 1, name="Truck Bay", kind="rest_area", group="utility", facts={"vehicle_access": "heavy_vehicles_only"}, fact_sources={"vehicle_access": "osm"}),
+        record(B, 2, name="Lake Rest Area", kind="rest_area", group="utility"),
+    )
+    write_challenges(repo, [osm_place(1, name="Truck Bay"), osm_place(2, name="Lake Rest Area")])
+    assert tasks(repo, HEAVY_VEHICLES) == []
+
+
+def test_no_heavy_vehicle_task_for_a_camp_site_or_an_object_gone_from_osm(repo):
+    write(
+        repo,
+        record(A, 1, name="Truckies Camp"),
+        record(B, 2, name="Truck Parking Bay", kind="rest_area", group="utility"),
+    )
+    write_challenges(repo, [osm_place(1, name="Truckies Camp")])
+    assert tasks(repo, HEAVY_VEHICLES) == []
 
 
 # ----------------------------------------------------------- double mapping
