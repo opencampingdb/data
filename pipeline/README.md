@@ -9,6 +9,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
+| Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>]` | `dist/`, `boundaries/au-states.geojson`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
@@ -557,6 +558,60 @@ The manifest names its `release`, `data-<commit time>` (for example
 `data-20261030T160000Z`), and gives each file an absolute `url` in that
 release: `https://github.com/<repository>/releases/download/<release>/<file>`.
 `--repository` sets the owner and name, `opencampingdb/data` by default.
+
+### Database and changesets
+
+`python -m pipeline.database --release-dir dist` builds `ocdb.sqlite.gz`, the
+release as an SQLite database, from the files `pipeline.release` wrote, so it
+holds exactly what they hold, plus each place's state. Each `--previous`
+folder holds an earlier release's `manifest.json` and `ocdb.sqlite.gz`; for
+each one, it writes a changeset that turns that database into this one. The
+release workflow passes the release just before as `--previous` and the last
+release of the previous UTC day as `--day`. The manifest's `changesets` list
+carries the list of the release just before forward, with this release's new
+changesets, trimmed to the changesets into the newest 50 releases
+(`CHAIN_RELEASES`), so an app finds its whole path from the newest manifest.
+Each entry's `url` stays on the release that made it, and the release
+workflow keeps 60 releases, so every listed file is still there. The layout, the changesets and the
+manifest entries are described in [CONNECTING.md](../CONNECTING.md), section 3.
+
+SQLite comes from apsw (in `requirements.txt`), whose wheels bundle SQLite
+built with the session extension. A changeset is what
+`sqlite3session_diff` gives for every table (apsw's `Session.diff`), in the
+standard changeset format any SQLite with the session extension applies.
+Before a changeset is written it is applied to a copy of the earlier
+database, with any conflict aborting, and every table is compared row by row
+with the new database. A difference fails the release.
+
+The build is deterministic: rows go in in key order, indexes are made after
+the rows, the page size is 4096 and the file is written with `VACUUM INTO`,
+and the SQLite version is the one apsw pins. The same release gives a
+byte-identical database, gzipped like the other files.
+
+`LAYOUT_VERSION` in `pipeline/database.py` is the version of the tables. Raise
+it by hand whenever a table, column or index changes, and say so in
+CONNECTING.md. No changeset is made from a database with another layout, so
+apps download the whole database once and can refuse a layout they cannot
+read.
+
+Each place's `state` comes from `pipeline.states`, over OpenStreetMap's
+`boundary=administrative`, `admin_level=4` relations in Australia (relation
+80500), in `boundaries/au-states.geojson`. Each code is the relation's `ref`
+tag. The three relations with no `ref` take the codes in `NO_REF_CODES`:
+`NF` for Norfolk Island (its `ISO3166-1` tag) and the FIPS 10-4 codes `CR` and
+`AT` for the Coral Sea Islands and Ashmore and Cartier Islands, which have no
+ISO code.
+
+OSM's outlines take in the coastal waters. On the release of
+2026-11-06T21:20Z, 23 of 96,364 places were outside every outline, all reef
+sites at least 1.4 km beyond it, so there is no snapping to the nearest
+state: a place outside every outline has no state. The outlines are not
+simplified, because the land borders follow rivers: simplified to 0.002
+degrees the file is 740 kB, but 88 places on the Murray and other river
+borders change state.
+
+`python -m pipeline.states --fetch` rebuilds the file from Overpass, and
+`--overpass <response.json>` from a saved response.
 
 ### Rules
 

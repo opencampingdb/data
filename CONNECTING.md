@@ -16,7 +16,8 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 12,
-  "format_minor": 1,
+  "format_minor": 2,
+  "layout_version": 1,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -45,6 +46,25 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/commons.ndjson.gz",
     "sha256": "...", "bytes": 3456, "count": 25
   },
+  "database": {
+    "file": "ocdb.sqlite.gz",
+    "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/ocdb.sqlite.gz",
+    "sha256": "...", "bytes": 12227557
+  },
+  "changesets": [
+    {
+      "file": "changeset-20261030T090000Z-0a1b2c3.bin.gz",
+      "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/changeset-20261030T090000Z-0a1b2c3.bin.gz",
+      "sha256": "...", "bytes": 10948,
+      "from": "20261030T090000Z-0a1b2c3", "to": "20261030T160000Z-abc1234", "day": false
+    },
+    {
+      "file": "changeset-day-2026-10-29.bin.gz",
+      "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/changeset-day-2026-10-29.bin.gz",
+      "sha256": "...", "bytes": 104957,
+      "from": "20261029T231500Z-9f8e7d6", "to": "20261030T160000Z-abc1234", "day": true
+    }
+  ],
   "licence": "ODbL-1.0",
   "attribution": "© OpenStreetMap contributors, Open Camping DB"
 }
@@ -106,7 +126,11 @@ that expects only the sources of format 11 must handle it, and should show a
 rule fact as what is usual, not as something anyone reported. Format 12
 also adds the facts `pets_months`, the months a seasonal place allows dogs,
 and `vehicle_access`, for places only heavy vehicles may use (section 4).
-Everything else reads the same as in 11.1.
+Everything else reads the same as in 11.1. Format 12.2 adds
+`ocdb.sqlite.gz`, the release as an SQLite database, the `changesets` that
+update the databases of the last 50 releases to it, and `layout_version`
+(section 3).
+The other files read the same as in 12.1.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -163,6 +187,163 @@ Checking once a day is plenty: the OSM sync runs once a night and a new
 release is published at most once an hour. Do not poll more often than once
 an hour. Only the newest 60 releases are kept, so do not store file URLs for
 later: always start again from the manifest.
+
+### The SQLite database
+
+Each release also comes as an SQLite database, `ocdb.sqlite.gz` (the
+`database` entry in the manifest), so an app can query the release directly
+instead of importing the NDJSON files. It holds the same release as those
+files, plus each place's state. Check its `bytes` and `sha256` as in section
+2, then decompress it with gzip to get an SQLite 3 database file (page size
+4096, rollback journal).
+
+Every table has a declared primary key, and each holds what one NDJSON file
+holds. A `record` column holds the line exactly as it is in the NDJSON file,
+so a field without a column of its own is still there to read.
+
+`release`, one row:
+
+| Column | Type | Value |
+|---|---|---|
+| `id` | INTEGER, primary key | always 1 |
+| `data_version` | TEXT | as in the manifest |
+| `release` | TEXT | the release tag, as in the manifest |
+| `generated` | TEXT | as in the manifest |
+| `format_version` | INTEGER | as in the manifest |
+| `format_minor` | INTEGER | as in the manifest |
+| `layout_version` | INTEGER | the version of these tables (below) |
+| `licence` | TEXT | as in the manifest |
+| `attribution` | TEXT | as in the manifest, to show as section 5 says |
+
+`places`, one row per line of `places.ndjson.gz`:
+
+| Column | Type | Value |
+|---|---|---|
+| `id` | TEXT, primary key | `id` |
+| `name` | TEXT | `name`, or NULL |
+| `kind` | TEXT | `kind` |
+| `group` | TEXT | `group` (quote the name in SQL: `"group"`) |
+| `lat` | REAL | `location.lat` |
+| `lon` | REAL | `location.lon` |
+| `status` | TEXT | `status` |
+| `state` | TEXT | the Australian state or territory the place is in, or NULL (below) |
+| `standing` | TEXT | `standing`, or NULL |
+| `rating_count` | INTEGER | `rating.count`, or NULL when `rating` is null |
+| `rating_mean` | REAL | `rating.mean`, or NULL when `rating` is null |
+| `updated` | TEXT | `updated` |
+| `record` | TEXT | the whole record as JSON |
+
+`state` is the state or territory the place is in, from OpenStreetMap's
+`boundary=administrative`, `admin_level=4` outlines in Australia, or NULL
+for a place outside all of them. The code is the outline's `ref` tag in OSM:
+
+| Code | State or territory |
+|---|---|
+| `NSW` | New South Wales (with Lord Howe Island) |
+| `VIC` | Victoria |
+| `QLD` | Queensland |
+| `SA` | South Australia |
+| `WA` | Western Australia |
+| `TAS` | Tasmania |
+| `NT` | Northern Territory |
+| `ACT` | Australian Capital Territory |
+| `JBT` | Jervis Bay Territory |
+| `CX` | Christmas Island |
+| `CC` | Cocos (Keeling) Islands |
+| `HIMI` | Heard Island and McDonald Islands |
+| `NF` | Norfolk Island (no `ref` in OSM: its `ISO3166-1` tag) |
+| `CR` | Coral Sea Islands (no `ref` or ISO code in OSM: its FIPS 10-4 code) |
+| `AT` | Ashmore and Cartier Islands (no `ref` or ISO code in OSM: its FIPS 10-4 code) |
+
+OSM's outlines take in the coastal waters, so places on beaches, jetties and
+near-shore islands have their state. A place out on a reef, such as a
+pontoon on the outer Great Barrier Reef, is outside every outline and has
+NULL.
+
+`merged`, one row per line of `merged.ndjson.gz`: `id` (TEXT, primary key)
+and `merged_into` (TEXT).
+
+`reviews`, one row per line of `reviews.ndjson.gz`: `id` (TEXT, primary key),
+`place` (TEXT), `stars` (INTEGER), `visited` (TEXT), `created` (TEXT) and
+`record` (TEXT, the whole review as JSON).
+
+`fees`, one row per line of `fees.ndjson.gz`: `id` (TEXT, primary key),
+`place` (TEXT), `amount` (REAL), `site` (TEXT), `paid` (TEXT) and `record`
+(TEXT, the whole fee as JSON).
+
+`commons`, one row per line of `commons.ndjson.gz`: `place` (TEXT, primary
+key) and `files` (TEXT, the `files` array as JSON).
+
+The indexes are `places_kind` on `places (kind)`, `places_group` on
+`places ("group")`, `places_state` on `places (state)`, `places_lat_lon` on
+`places (lat, lon)`, `reviews_place` on `reviews (place)` and `fees_place` on
+`fees (place)`. For a map area, filter on `lat BETWEEN ? AND ? AND lon BETWEEN
+? AND ?`. An app that needs an R*Tree can build one from `places` in a table
+of its own.
+
+`layout_version` (in the manifest, in the `release` table and as `PRAGMA
+user_version`) is the version of these tables, columns and indexes. It starts
+at 1 and rises whenever any of them changes. If the manifest's `layout_version` is one
+your app cannot read, keep the database you have.
+
+Treat the release tables as read only: a changeset (below) expects them to
+be exactly as the release left them. Keep your app's own data, such as places
+a traveller added or edits laid over released places, in tables of your own
+or in an attached database, and read both together through a view. Add no
+triggers to the release tables.
+
+### Changesets
+
+The `changesets` entry in the manifest lists every changeset into each of
+the newest 50 releases, ordered by `from`, so the newest manifest alone gives
+the path from any of those releases to the newest one. Each entry has:
+
+- `from` and `to`, the `data_version` of the release it starts from and of
+  the release it gives.
+- `file`, `url`, `sha256` and `bytes`. The `url` points at the release that
+  made the changeset (the one tagged for `to`), so it stays valid for as long
+  as that release is kept.
+- `day`, `true` for a daily changeset (below).
+
+Each file is a gzipped changeset in SQLite's standard session extension
+format, which `sqlite3changeset_apply` applies in any SQLite built with the
+session extension (`SQLITE_ENABLE_SESSION` and
+`SQLITE_ENABLE_PREUPDATE_HOOK`). Applied to the database of its `from`
+release, a changeset gives exactly the rows of its `to` release in every
+table. The release build applies each one and compares every table before
+publishing it.
+
+Each release makes at most two changesets into itself:
+
+- `changeset-<data_version>.bin.gz`, from the release just before.
+- `changeset-day-<YYYY-MM-DD>.bin.gz`, with `day: true`, from the last
+  release of the previous UTC day (the date in the name is that day), when
+  that is not the release just before. A phone that was current yesterday
+  catches up with one file.
+
+The list starts again, empty, when there is no earlier database to start
+from: the first release with a database, and the first release after a
+`layout_version` rise.
+
+To update the database you have:
+
+1. Read your `data_version` from the `release` table, and fetch the newest
+   manifest (section 1). If the data versions are equal, stop.
+2. If the manifest's `layout_version` is not the one your database has,
+   download the whole database, if your app can read that layout.
+3. Find a path in `changesets` from your `data_version` to the manifest's:
+   start from the entries whose `from` is yours and follow `to` into `from`.
+   Prefer the path with the fewest files, which uses the daily changesets.
+   If there is none, because your release is older than the list, download
+   the whole database.
+4. Download each changeset on the path, check its `bytes` and `sha256`, and
+   apply them in order with `sqlite3changeset_apply`, aborting on any
+   conflict, in one transaction.
+
+A database updated by changesets holds the same rows as the newest
+`ocdb.sqlite.gz`, but not the same bytes, so check it by its `data_version`,
+not by a file hash. If a download, a check or the apply fails, keep the
+database you had (the transaction leaves it unchanged) and try again later.
 
 ## 4. Use the records
 

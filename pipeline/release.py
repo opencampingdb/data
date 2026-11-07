@@ -63,13 +63,15 @@ from .common import (
 # 11.1: commons.ndjson.gz, freely licensed Wikimedia Commons photos matched to places to stay.
 # 12: fact_sources may be rule, with the rule's name in fact_rules (schema/fact_rules.json).
 # 12.1: the kind reserve_campsite.
+# 12.2: ocdb.sqlite.gz, the release as an SQLite database, and changesets to it
+# from earlier releases (pipeline.database), with layout_version.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 12
-FORMAT_MINOR = 1
+FORMAT_MINOR = 2
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.

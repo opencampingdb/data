@@ -88,10 +88,45 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: python -m pipeline.release --root . --out dist --repository "$GH_REPO"
 
+      # ocdb.sqlite.gz, the release as an SQLite database, and changesets to it
+      # from the databases of the release just before and of the last release
+      # of the previous UTC day (pipeline/database.py). A release without a
+      # database gives no changeset, and apps download the whole database.
+      - name: Build the database and changesets
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          earlier="$RUNNER_TEMP/earlier"
+          tags="$(gh release list --limit 100 --json tagName --jq '.[].tagName' | { grep '^data-' || true; } | sort -r)"
+          version="$(python -c 'import json; print(json.load(open("dist/manifest.json"))["data_version"])')"
+          fetch() {
+            mkdir -p "$earlier/$2"
+            assets="$(gh release view "$1" --json assets --jq '.assets[].name')"
+            if grep -qx 'ocdb.sqlite.gz' <<<"$assets"; then
+              gh release download "$1" --dir "$earlier/$2" --pattern manifest.json --pattern ocdb.sqlite.gz
+            else
+              echo "$1 has no database."
+            fi
+          }
+          args=()
+          previous="$(printf '%s\n' "$tags" | head -n 1)"
+          if [ -n "$previous" ]; then
+            fetch "$previous" previous
+            args+=(--previous "$earlier/previous")
+          fi
+          day="$(printf '%s\n' "$tags" | python -m pipeline.database --day-base "$version")"
+          if [ -n "$day" ] && [ "$day" != "$previous" ]; then
+            fetch "$day" day
+            args+=(--day "$earlier/day")
+          fi
+          python -m pipeline.database --release-dir dist --repository "$GH_REPO" "${args[@]}"
+
       - name: Publish
         if: steps.check.outputs.changed == 'true'
         run: |
           set -euo pipefail
+          shopt -s nullglob
+          changesets=(dist/changeset-*.bin.gz)
           tag="$(python -c 'import json; print(json.load(open("dist/manifest.json"))["release"])')"
           version="$(python -c 'import json; print(json.load(open("dist/manifest.json"))["data_version"])')"
           if gh release view "$tag" >/dev/null 2>&1; then
@@ -100,6 +135,7 @@ jobs:
           fi
           notes="Open Camping DB data version ${version}. Licence: ODbL 1.0 (database), DbCL 1.0 (contents). Attribution: © OpenStreetMap contributors, Open Camping DB."
           gh release create "$tag" dist/manifest.json dist/places.ndjson.gz dist/reviews.ndjson.gz dist/fees.ndjson.gz dist/merged.ndjson.gz dist/commons.ndjson.gz \
+            dist/ocdb.sqlite.gz "${changesets[@]}" \
             --target "$(git rev-parse HEAD)" --title "$tag" --notes "$notes" --latest
 
       - name: Keep only the newest dated releases

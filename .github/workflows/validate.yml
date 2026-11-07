@@ -38,7 +38,8 @@ jobs:
       - name: Validate place and review files
         run: python -m pipeline.validate --root .
 
-      - name: Build release files (not published)
+      - name: Build release files and the database (not published)
         run: |
           python -m pipeline.release --root . --out dist
+          python -m pipeline.database --release-dir dist
           ls -l dist
