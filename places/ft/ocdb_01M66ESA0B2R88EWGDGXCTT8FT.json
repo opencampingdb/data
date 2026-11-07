@@ -1,21 +1,31 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "caravans": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "caravans": true,
+    "entry": "public",
+    "fee": false,
+    "toilets": false
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESA0B2R88EWGDGXCTT8FT",
-  "kind": "campground",
+  "kind": "free_camp",
   "location": {
-    "lat": -34.4977,
-    "lon": 144.916863
+    "lat": -34.497953,
+    "lon": 144.917237
   },
   "name": "Illilawa Reserve",
   "osm": {
     "id": 1811179207,
-    "timestamp": "2016-12-09T00:54:30Z",
+    "timestamp": "2026-11-06T03:42:46Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-07T19:46:54Z"
 }
