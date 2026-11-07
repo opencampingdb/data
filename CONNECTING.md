@@ -233,12 +233,32 @@ so a field without a column of its own is still there to read.
 | `updated` | TEXT | `updated` |
 | `record` | TEXT | the whole record as JSON |
 
-`state` is `NSW`, `VIC`, `QLD`, `SA`, `WA`, `TAS`, `NT`, `ACT` or `OT` (the
-Other Territories: Jervis Bay Territory, Norfolk Island, Christmas Island and
-the Cocos (Keeling) Islands). It comes from Natural Earth's public domain
-state boundaries. Their coastline is generalised, so a place within three
-nautical miles of it (on a beach, a jetty or a small island) takes the
-nearest state. A place further out, such as a reef pontoon, has NULL.
+`state` is the state or territory the place is in, from OpenStreetMap's
+`boundary=administrative`, `admin_level=4` outlines in Australia, or NULL
+for a place outside all of them. The code is the outline's `ref` tag in OSM:
+
+| Code | State or territory |
+|---|---|
+| `NSW` | New South Wales (with Lord Howe Island) |
+| `VIC` | Victoria |
+| `QLD` | Queensland |
+| `SA` | South Australia |
+| `WA` | Western Australia |
+| `TAS` | Tasmania |
+| `NT` | Northern Territory |
+| `ACT` | Australian Capital Territory |
+| `JBT` | Jervis Bay Territory |
+| `CX` | Christmas Island |
+| `CC` | Cocos (Keeling) Islands |
+| `HIMI` | Heard Island and McDonald Islands |
+| `NF` | Norfolk Island (no `ref` in OSM: its `ISO3166-1` tag) |
+| `CR` | Coral Sea Islands (no `ref` or ISO code in OSM: its FIPS 10-4 code) |
+| `AT` | Ashmore and Cartier Islands (no `ref` or ISO code in OSM: its FIPS 10-4 code) |
+
+OSM's outlines take in the coastal waters, so places on beaches, jetties and
+near-shore islands have their state. A place out on a reef, such as a
+pontoon on the outer Great Barrier Reef, is outside every outline and has
+NULL.
 
 `merged`, one row per line of `merged.ndjson.gz`: `id` (TEXT, primary key)
 and `merged_into` (TEXT).

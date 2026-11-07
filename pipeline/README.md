@@ -594,15 +594,24 @@ CONNECTING.md. No changeset is made from a database with another layout, so
 apps download the whole database once and can refuse a layout they cannot
 read.
 
-Each place's `state` comes from `pipeline.states`, over the Australian
-features of Natural Earth's 1:10m Admin 1 layer, version 5.1.2, in
-`boundaries/au-states.geojson` (public domain). A place outside every outline
-takes the nearest state within three nautical miles, the breadth of a
-state's coastal waters, since the generalised coastline leaves places on
-beaches, jetties and small islands just outside it. A place further out has
-no state. To rebuild the file from a newer Natural Earth version, run
-`python -m pipeline.states --extract ne_10m_admin_1_states_provinces.geojson
---version <version>`.
+Each place's `state` comes from `pipeline.states`, over OpenStreetMap's
+`boundary=administrative`, `admin_level=4` relations in Australia (relation
+80500), in `boundaries/au-states.geojson`. Each code is the relation's `ref`
+tag. The three relations with no `ref` take the codes in `NO_REF_CODES`:
+`NF` for Norfolk Island (its `ISO3166-1` tag) and the FIPS 10-4 codes `CR` and
+`AT` for the Coral Sea Islands and Ashmore and Cartier Islands, which have no
+ISO code.
+
+OSM's outlines take in the coastal waters. On the release of
+2026-11-06T21:20Z, 23 of 96,364 places were outside every outline, all reef
+sites at least 1.4 km beyond it, so there is no snapping to the nearest
+state: a place outside every outline has no state. The outlines are not
+simplified, because the land borders follow rivers: simplified to 0.002
+degrees the file is 740 kB, but 88 places on the Murray and other river
+borders change state.
+
+`python -m pipeline.states --fetch` rebuilds the file from Overpass, and
+`--overpass <response.json>` from a saved response.
 
 ### Rules
 
