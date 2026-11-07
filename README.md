@@ -20,7 +20,7 @@ workflows that publish them.
 
 ## Download
 
-Every hour in which `main` has changed, a new GitHub Release is published.
+Each change to `main` is published as a new GitHub Release within minutes.
 Start with the manifest:
 
 ```
@@ -170,8 +170,8 @@ Anything that shows this data must show:
    releases list it in `merged.ndjson.gz` so apps can redirect old ids.
 7. **Validation** (`.github/workflows/validate.yml`) runs on every pull request:
    the tests, the schema and content checks, and a trial build of the release.
-8. **Release** (`.github/workflows/release.yml`) runs every hour and on
-   demand. When `main` has changed since the newest release, it publishes the
+8. **Release** (`.github/workflows/release.yml`) runs on every push to
+   `main`, every hour as a backstop, and on demand. When `main` has changed since the newest release, it publishes the
    files described above as a new release and prunes the oldest.
 
 The pipeline, its tag mapping and its rules are described in
