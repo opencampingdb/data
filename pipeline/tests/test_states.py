@@ -90,3 +90,9 @@ def test_from_overpass_builds_outlines_with_holes(tmp_path):
     lookup = StateLookup(path)
     assert lookup.state_of(3, 3) == "XX"
     assert lookup.state_of(1.5, 1.5) is None
+
+
+def test_states_of_matches_state_of(lookup):
+    points = [(151.2153, -33.8568), (150.7290, -35.1456), (145.808595, -16.005679), (149.1244, -35.3081)]
+    assert lookup.states_of(points) == [lookup.state_of(lon, lat) for lon, lat in points] == ["NSW", "JBT", None, "ACT"]
+    assert lookup.states_of([]) == []

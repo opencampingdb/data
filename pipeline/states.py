@@ -45,6 +45,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+import numpy as np
 import shapely
 from shapely.geometry import LineString, Point, mapping, shape
 from shapely.ops import polygonize, unary_union
@@ -153,6 +154,23 @@ class StateLookup:
         for geometry in self.shapes:
             shapely.prepare(geometry)
         self.tree = STRtree(self.shapes)
+
+    def states_of(self, points: list[tuple[float, float]]) -> list[str | None]:
+        """state_of for many (lon, lat) points at once, in one query of the tree."""
+        found: list[int | None] = [None] * len(points)
+        if not points:
+            return []
+        xs, ys = np.array([p[0] for p in points]), np.array([p[1] for p in points])
+        # The tree narrows each point to the outlines whose box holds it, and
+        # each outline then tests its points at once, against its prepared shape.
+        points_in, shapes_in = self.tree.query(shapely.points(xs, ys))
+        for i in sorted(set(shapes_in.tolist())):
+            candidates = points_in[shapes_in == i]
+            hits = candidates[shapely.intersects_xy(self.shapes[i], xs[candidates], ys[candidates])]
+            for point in hits.tolist():
+                if found[point] is None:
+                    found[point] = i
+        return [None if i is None else self.codes[i] for i in found]
 
     def state_of(self, lon: float, lat: float) -> str | None:
         """The state code of the outline that holds the point, or None outside every outline."""

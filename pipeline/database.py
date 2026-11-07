@@ -185,18 +185,19 @@ def build_database(release_dir: Path, out_path: Path, states: StateLookup | None
                 ),
             )
             places = sorted(read_lines(release_dir / manifest["places"]["file"]), key=lambda p: p[0]["id"])
+            place_states = states.states_of([(r["location"]["lon"], r["location"]["lat"]) for r, _ in places])
             con.executemany(
                 "INSERT INTO places VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 (
                     (
                         r["id"], r.get("name"), r["kind"], r["group"],
                         r["location"]["lat"], r["location"]["lon"], r["status"],
-                        states.state_of(r["location"]["lon"], r["location"]["lat"]),
+                        state,
                         r.get("standing"),
                         (r.get("rating") or {}).get("count"), (r.get("rating") or {}).get("mean"),
                         r["updated"], line,
                     )
-                    for r, line in places
+                    for (r, line), state in zip(places, place_states)
                 ),
             )
             merged = sorted(read_lines(release_dir / manifest["merged"]["file"]), key=lambda m: m[0]["id"])
