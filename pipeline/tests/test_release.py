@@ -75,7 +75,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     # 6: fees.ndjson.gz, what travellers paid per night.
     assert manifest["format_version"] == 12
-    assert manifest["format_minor"] == 2
+    assert manifest["format_minor"] == 3
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
     assert manifest["licence"] == "ODbL-1.0"

@@ -45,6 +45,7 @@ from .kinds import (
     parse_brand,
     water_type,
 )
+from .water import WATER_TAG_PAIRS, WaterFeatures, crocodile_hazard, open_line, water_kinds
 
 # Simple yes/no tags: OSM key -> fact key.
 YES_NO_TAGS = {
@@ -298,6 +299,9 @@ def facts_from_tags(tags: dict) -> dict:
     if heavy_vehicles_only(tags):
         facts["vehicle_access"] = "heavy_vehicles_only"
 
+    if crocodile_hazard(tags):
+        facts["crocodiles"] = True
+
     # access=* says who may enter. It maps to "entry", not to "access", which
     # is about the road. access=no for a heavy vehicle place says who may
     # drive in, not that it is private.
@@ -395,11 +399,11 @@ OPEN_WAY_KINDS = ("boat_ramp", "attraction")
 
 
 def interesting_tag_filter() -> "osmium.filter.TagFilter":
-    """A C++ filter that lets through objects that may be a place or a container.
+    """A C++ filter that lets through objects that may be a place, a container or a water feature.
 
     A filter object belongs to one handler chain, so each chain gets its own.
     """
-    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS)
+    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS)
 
 
 def tag_dict(obj) -> dict:
@@ -541,6 +545,9 @@ class FirstPass:
     def way(self, way) -> None:
         tags = tag_dict(way)
         kind = classify(tags)
+        if water_kinds(tags):
+            # Beaches drawn as open lines are kept too, as lines.
+            self.way_ids.add(way.id)
         if kind is None and container_type(tags) is None:
             return
         if way.is_closed() or kind in OPEN_WAY_KINDS:
@@ -553,7 +560,7 @@ class FirstPass:
         if tags.get("type") not in ("multipolygon", "boundary"):
             return True
         wanted = relation.id in self.sites.member_relations
-        if not wanted and classify(tags) is None and container_type(tags) is None:
+        if not wanted and classify(tags) is None and container_type(tags) is None and not water_kinds(tags):
             return True
         for member in relation.members:
             if member.type == "w":
@@ -729,6 +736,15 @@ def containers_for(points: list[tuple[float, float]], containers: list[tuple]) -
     return found
 
 
+def water_geometry(obj):
+    """A shapely geometry for a water feature: a point, an area or, for an open way, a line."""
+    if obj.is_node():
+        return shapely.Point(obj.location.lon, obj.location.lat) if obj.location.valid() else None
+    if obj.is_way() and not obj.is_closed():
+        return open_line(obj)
+    return container_geometry(obj)
+
+
 def place_outline(obj):
     """The outline of a place that is an area (a closed way or multipolygon), or None."""
     if obj.is_area() and obj.from_way():
@@ -753,9 +769,16 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
     places: list[tuple[dict, dict]] = []  # (record without kind, tags)
     containers: list[tuple] = []  # (shapely geometry, container type)
     sites = SiteRelations()
+    water = WaterFeatures()
 
     for obj in read_objects(path, stats, sites, sidecar):
         tags = tag_dict(obj)
+
+        kinds_of_water = water_kinds(tags)
+        if kinds_of_water:
+            geometry = water_geometry(obj)
+            if geometry is not None:
+                water.add(kinds_of_water, geometry, tags.get("name"))
 
         kind_of_container = container_type(tags)
         if kind_of_container is not None:
@@ -810,10 +833,12 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         record["kind"] = classify(tags, frozenset(inside_by_index.get(i, ())))
         if record["kind"] == "drinking_water_point":
             record["facts"]["water_type"] = water_type(tags)
+        water.set_facts(record)
         records.append(record)
 
     stats["kept"] = len(records)
     stats["containers"] = container_counts
+    stats["water"] = {kind: water.count(kind) for kind in ("beach", "crocodiles")}
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -848,6 +873,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Handed {stats['ways_to_area_builder']} ways to the area builder", file=sys.stderr)
     print(f"Containers: {stats['containers']}", file=sys.stderr)
     print(f"Site relations: {stats['site_relations']}", file=sys.stderr)
+    print(f"Water features: {stats['water']}", file=sys.stderr)
     return 0
 
 
