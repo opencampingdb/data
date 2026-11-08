@@ -223,6 +223,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`, except on a place for heavy vehicles only (next row), where it says who may drive in and is left out. Others, such as `destination`, are left out. |
 | `hgv`, `motorcar`, `motor_vehicle`, `access` | `vehicle_access` | `heavy_vehicles_only` for `hgv=designated` with `motorcar=no` or `motor_vehicle=no`, or `access=no` with `hgv=yes` or `designated`. Any kind of place. A name alone ("Truck Parking Bay") never sets it: `python -m pipeline.vehicle_access` lists those places for a reviewer |
+| `hazard`, `hazard:animal` | `crocodiles` | `crocodile` or `crocodiles`, alone or in a `;` list, is `true`, on the place itself or on a hazard within 1 km (see "Nearby features"). Never `false`: OSM has no tag in use that says there are none |
 
 A commercial park is a `tourism=camp_site` or `tourism=caravan_site` whose
 name says holiday park, tourist park, caravan park, holiday village, caravan
@@ -238,6 +239,29 @@ tourist park, keep `fee=no`.
 
 `access` (the fact) is about the road and the vehicle. `entry` is about who
 may stay, and comes from the OSM `access` tag.
+
+#### Nearby features
+
+Two facts come from other OSM objects near the place, collected in the
+same read (`pipeline/water.py`):
+
+- `nearest_beach`: the nearest `natural=beach` within 5 km, as an area, a
+  node or an open line, with `distance_m` from the place's location to the
+  nearest point of the beach (0 inside it) and the beach's `name` when it
+  has one of 100 characters or fewer. The distance is worked out on a flat
+  projection around the place, with longitude scaled by the cosine of the
+  latitude, and rounded to 10 m (half up) so that a small redraw of a beach
+  changes no record. Ties go to the beach read first.
+- `crocodiles: true` when an object within 1 km carries a crocodile hazard
+  (`hazard=crocodile` or `crocodiles`, or `hazard:animal=crocodile` or
+  `crocodiles`, as a whole value) and the place's own tags set no
+  `crocodiles`. OSM's `hazard` key is for hazards declared by a sign or a
+  government notice.
+
+Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
+of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag
+in use for sharks or dangerous jellyfish (`sharks`, `marine_stingers`), so
+those facts come only from fact reports.
 
 The extract never infers a fact from the kind: a `caravan_park` does not
 get `caravans: true` unless the `caravans` tag says so. `water_type` is the

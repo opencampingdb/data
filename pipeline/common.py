@@ -80,6 +80,8 @@ FACT_KEYS = (
     "vehicle_storage",
     "self_contained_only",
     "crocodiles",
+    "sharks",
+    "marine_stingers",
     "seasonal_closure",
     "dangerous_when_wet",
     "over_50s",
@@ -92,6 +94,7 @@ FACT_KEYS = (
     "tiktok",
     "x",
     "vehicle_access",
+    "nearest_beach",
 )
 
 # Keys fact_sources may hold besides the facts. A missing name, location or

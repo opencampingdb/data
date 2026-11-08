@@ -16,7 +16,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 12,
-  "format_minor": 2,
+  "format_minor": 3,
   "layout_version": 1,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -130,7 +130,8 @@ Everything else reads the same as in 11.1. Format 12.2 adds
 `ocdb.sqlite.gz`, the release as an SQLite database, the `changesets` that
 update the databases of the last 50 releases to it, and `layout_version`
 (section 3).
-The other files read the same as in 12.1.
+The other files read the same as in 12.1. Format 12.3 adds the facts
+`nearest_beach`, `sharks` and `marine_stingers` (section 4).
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -474,8 +475,8 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `cycling_tracks`, `offroad_tracks`, `boat_ramp_nearby`, `near_road`),
   services (`telstra_signal`, `mobile_signal`, `wifi`, `tv_reception`,
   `pet_sitting`, `fuel`, `lpg`, `car_wash`, `vehicle_storage`) and warnings
-  (`self_contained_only`, `crocodiles`, `seasonal_closure`,
-  `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
+  (`self_contained_only`, `crocodiles`, `sharks`, `marine_stingers`,
+  `seasonal_closure`, `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
   club, `address` is the street address (an object with `unit`,
   `housenumber`, `street` or a rural `place`, `suburb`, `state` and
   `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
@@ -489,6 +490,23 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   with `hgv=yes`), or from a fact report a person or reviewer accepts. More
   values may be added later, so treat an unknown value as a restriction you
   can't explain rather than ignoring it.
+- `nearest_beach` is the nearest OSM beach (`natural=beach`) within 5 km of
+  the place: `distance_m`, from the place's location to the nearest point of
+  the beach, 0 inside it and rounded to 10 m, and the beach's `name` when it
+  has one. It is worked out from OSM at each sync, so its source is always
+  `osm` and fact reports cannot set it. A place with no beach within 5 km
+  has none. Swimming holes and swimming areas in rivers, creeks and lakes are
+  places of their own (kind `swimming_spot`): find the ones near a place by
+  their location.
+- `crocodiles`, `sharks` and `marine_stingers` warn about dangerous animals
+  in the water nearby. `marine_stingers` covers box jellyfish, Irukandji and
+  other dangerous jellyfish, which come in season in tropical waters.
+  `crocodiles` also comes from OSM when the place itself, or a hazard sign
+  within 1 km, carries `hazard=crocodile` (or `crocodiles`) or
+  `hazard:animal=crocodile`. OSM has no tag in use for sharks or jellyfish,
+  so those two come only from fact reports. A missing warning does not mean
+  the water is safe: show these as what someone reported, never their
+  absence as an all clear.
 - `pets_months` goes only with `pets: "seasonal"`: the months dogs are
   allowed, as one OpenStreetMap month range of two different months, such
   as `May-Sep` or `Dec-Feb` (a range may wrap the year end). A single month

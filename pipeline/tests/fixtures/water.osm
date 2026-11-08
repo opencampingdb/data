@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Beaches, swim spots and crocodile signs near places, for pipeline.water.
+At latitude -16.5 one degree of latitude is 111,195 m and one degree of
+longitude about 106,620 m.
+-->
+<osm version="0.6" generator="fixture">
+  <!-- Place 1: a camp site at (-16.5, 145.4). -->
+  <node id="1" version="1" lat="-16.5" lon="145.4">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="fee" v="no"/>
+    <tag k="name" v="Fixture Beach Camp"/>
+  </node>
+  <!-- Place 2: a rest area 20 km south, with nothing near it. -->
+  <node id="2" version="1" lat="-16.68" lon="145.4">
+    <tag k="highway" v="rest_area"/>
+  </node>
+  <!-- Place 3: a camp site whose own tags say crocodiles. -->
+  <node id="3" version="1" lat="-16.9" lon="145.9">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="hazard" v="drowning;crocodiles"/>
+  </node>
+
+  <!-- A beach area whose west edge is 0.003 degrees (about 320 m) east of place 1. -->
+  <node id="101" version="1" lat="-16.49" lon="145.403"/>
+  <node id="102" version="1" lat="-16.51" lon="145.403"/>
+  <node id="103" version="1" lat="-16.51" lon="145.41"/>
+  <node id="104" version="1" lat="-16.49" lon="145.41"/>
+  <way id="201" version="1">
+    <nd ref="101"/><nd ref="102"/><nd ref="103"/><nd ref="104"/><nd ref="101"/>
+    <tag k="natural" v="beach"/>
+    <tag k="surface" v="sand"/>
+    <tag k="name" v="Fixture Main Beach"/>
+  </way>
+  <!-- An unnamed beach drawn as an open line 0.01 degrees (about 1,070 m) west of place 1. -->
+  <node id="111" version="1" lat="-16.49" lon="145.39"/>
+  <node id="112" version="1" lat="-16.51" lon="145.39"/>
+  <way id="202" version="1">
+    <nd ref="111"/><nd ref="112"/>
+    <tag k="natural" v="beach"/>
+  </way>
+  <!-- A swimming hole node 0.002 degrees (about 222 m) north of place 1. -->
+  <node id="121" version="1" lat="-16.498" lon="145.4">
+    <tag k="leisure" v="bathing_place"/>
+    <tag k="name" v="Fixture Rock Pool"/>
+  </node>
+  <!-- A swimming area 0.06 degrees (about 6.7 km) south of place 1: beyond the radius. -->
+  <node id="122" version="1" lat="-16.56" lon="145.4">
+    <tag k="leisure" v="swimming_area"/>
+  </node>
+  <!-- Crocodile signs: 0.005 degrees (about 556 m) north of place 1, and 0.0135 degrees (about 1,500 m) north of place 2. -->
+  <node id="131" version="1" lat="-16.495" lon="145.4">
+    <tag k="traffic_sign" v="warning"/>
+    <tag k="hazard" v="crocodile"/>
+  </node>
+  <node id="132" version="1" lat="-16.6665" lon="145.4">
+    <tag k="hazard:animal" v="crocodiles"/>
+  </node>
+</osm>
