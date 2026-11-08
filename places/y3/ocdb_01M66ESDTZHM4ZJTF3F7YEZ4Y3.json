@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "nearest_beach": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,6 +14,10 @@
       "suburb": "Coffs Harbour"
     },
     "dump_station": true,
+    "nearest_beach": {
+      "distance_m": 130,
+      "name": "Park Beach"
+    },
     "phone": "+61 2 6648 4888"
   },
   "group": "overnight",
@@ -31,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

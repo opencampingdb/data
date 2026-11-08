@@ -4,6 +4,7 @@
     "cabins": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_beach": "osm",
     "pets": "osm",
     "phone": "osm",
     "power": "osm",
@@ -19,6 +20,10 @@
     "cabins": true,
     "dump_station": true,
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 120,
+      "name": "North Beach"
+    },
     "pets": "leashed",
     "phone": "+61 8 8823 2531",
     "power": true,
@@ -42,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

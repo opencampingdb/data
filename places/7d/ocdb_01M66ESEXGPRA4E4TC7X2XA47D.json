@@ -4,12 +4,16 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "nearest_beach": "osm",
     "toilets": "osm",
     "website": "osm",
     "wifi": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 180
+    },
     "toilets": true,
     "website": "http://www.fowlerseco.com/",
     "wifi": false
@@ -30,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

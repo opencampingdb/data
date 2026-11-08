@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "nearest_beach": {
+      "distance_m": 100,
+      "name": "Waubs Beach"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPZMREEXQNKWF2RH464HE",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

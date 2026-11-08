@@ -1,13 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "street": "Paradise Parade"
     },
-    "fee": false
+    "fee": false,
+    "nearest_beach": {
+      "distance_m": 410
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESF61CQP73YEJ4YTMM4YX",
@@ -25,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

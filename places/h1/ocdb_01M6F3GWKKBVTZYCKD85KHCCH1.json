@@ -1,10 +1,14 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_beach": {
+      "distance_m": 1950
+    },
     "opening_hours": "Mo-Fr 09:45-16:00"
   },
   "group": "attraction",
@@ -23,5 +27,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

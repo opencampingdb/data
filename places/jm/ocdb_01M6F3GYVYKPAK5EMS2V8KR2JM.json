@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,10 @@
       "street": "Abbott Street",
       "suburb": "Cairns City"
     },
-    "fee": false
+    "fee": false,
+    "nearest_beach": {
+      "distance_m": 150
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYVYKPAK5EMS2V8KR2JM",
@@ -29,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

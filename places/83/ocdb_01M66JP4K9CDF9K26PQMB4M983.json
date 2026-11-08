@@ -1,12 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 340
+    },
     "opening_hours": "Fr-Sa 10:00-23:00; Su-Th 10:00-22:00",
     "phone": "+61 7 3844 3464",
     "website": "https://thewheelofbrisbane.com.au/"
@@ -27,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

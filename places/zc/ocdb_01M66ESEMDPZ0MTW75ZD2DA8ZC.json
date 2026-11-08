@@ -1,25 +1,34 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm",
+    "opening_hours": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
-    "opening_hours": "06:00-20:00"
+    "entry": "public",
+    "nearest_beach": {
+      "distance_m": 2850,
+      "name": "City Beach"
+    },
+    "opening_hours": "06:00-20:00",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESEMDPZ0MTW75ZD2DA8ZC",
   "kind": "public_toilet",
   "location": {
-    "lat": -31.941604,
-    "lon": 115.785257
+    "lat": -31.941566,
+    "lon": 115.785273
   },
   "name": null,
   "osm": {
     "id": 14170136567,
-    "timestamp": "2026-09-10T16:31:41Z",
+    "timestamp": "2026-11-07T02:54:05Z",
     "type": "node",
-    "version": 1
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -6,11 +6,15 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "osm",
+    "nearest_beach": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "nearest_beach": {
+      "distance_m": 270
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -29,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

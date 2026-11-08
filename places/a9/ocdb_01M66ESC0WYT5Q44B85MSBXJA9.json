@@ -1,6 +1,16 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fee": "osm",
+    "nearest_beach": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "fee": false,
+    "nearest_beach": {
+      "distance_m": 600
+    },
+    "wheelchair": true
+  },
   "group": "utility",
   "id": "ocdb_01M66ESC0WYT5Q44B85MSBXJA9",
   "kind": "public_toilet",
@@ -11,11 +21,11 @@
   "name": null,
   "osm": {
     "id": 6938329086,
-    "timestamp": "2019-11-01T21:49:26Z",
+    "timestamp": "2026-11-07T03:37:59Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

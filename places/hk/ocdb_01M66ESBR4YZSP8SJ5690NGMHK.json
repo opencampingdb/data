@@ -3,10 +3,15 @@
     "fee": "2024-01-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_beach": {
+      "distance_m": 3860,
+      "name": "Dry Creek"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBR4YZSP8SJ5690NGMHK",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

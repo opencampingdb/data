@@ -3,10 +3,16 @@
     "fee": "2026-04-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "cabins": "osm",
+    "caravans": "osm",
+    "fee": "community_report",
+    "tents": "osm"
   },
   "facts": {
-    "fee": false
+    "cabins": false,
+    "caravans": true,
+    "fee": false,
+    "tents": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9XT66D053CFHQ1W8BTA",
@@ -18,11 +24,11 @@
   "name": "Boyne River Rest Area",
   "osm": {
     "id": 1811163259,
-    "timestamp": "2014-06-06T11:54:41Z",
+    "timestamp": "2026-11-06T23:23:34Z",
     "type": "node",
-    "version": 2
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

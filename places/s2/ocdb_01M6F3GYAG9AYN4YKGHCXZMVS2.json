@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "East Street",
       "suburb": "Narrandera"
     },
-    "facebook": "https://www.facebook.com/CharlesSturtHotel/"
+    "facebook": "https://www.facebook.com/CharlesSturtHotel/",
+    "nearest_beach": {
+      "distance_m": 2110,
+      "name": "Koori Beach"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GYAG9AYN4YKGHCXZMVS2",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

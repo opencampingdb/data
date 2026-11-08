@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +11,10 @@
       "street": "Pitt Street",
       "suburb": "Sydney"
     },
-    "facebook": "https://www.facebook.com/vaulthotel"
+    "facebook": "https://www.facebook.com/vaulthotel",
+    "nearest_beach": {
+      "distance_m": 1300
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GVR6W7XZE4F3Q8ZH9MT1",
@@ -28,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

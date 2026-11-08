@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 20,
+      "name": "Greenwich Baths"
+    },
     "opening_hours": "Oct,Mar 07:00-18:00; Nov,Feb 07:00-19:00; Dec,Jan 07:00-20:00; Apr 07:00-17:00",
     "website": "https://www.greenwichbaths.com.au/"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

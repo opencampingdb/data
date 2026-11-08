@@ -1,12 +1,16 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_beach": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
+    "nearest_beach": {
+      "distance_m": 80
+    },
     "showers": false,
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/lime-bay-state-reserve/lime-bay-camping"
@@ -27,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "drinking_water": false,
-    "fee": false
+    "fee": false,
+    "nearest_beach": {
+      "distance_m": 4070,
+      "name": "North Beach"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESETER5EM8J1P17VJK0VF",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

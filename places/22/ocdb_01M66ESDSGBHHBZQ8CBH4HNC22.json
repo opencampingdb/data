@@ -4,6 +4,7 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_beach": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -17,6 +18,10 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 3100,
+      "name": "Emu Bay Beach"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -35,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

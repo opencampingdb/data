@@ -1,12 +1,17 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "637",
       "street": "Settlement Road",
       "suburb": "Cowes"
+    },
+    "nearest_beach": {
+      "distance_m": 180,
+      "name": "Saltwater Creek Beach"
     }
   },
   "group": "overnight",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

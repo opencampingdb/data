@@ -5,10 +5,15 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "nearest_beach": "osm",
     "pets": "community_report"
   },
   "facts": {
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 20,
+      "name": "Smalleys Beach"
+    },
     "pets": "no"
   },
   "group": "overnight",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

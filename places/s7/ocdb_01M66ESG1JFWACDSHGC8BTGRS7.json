@@ -1,11 +1,15 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_beach": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
+    "nearest_beach": {
+      "distance_m": 50
+    },
     "tents": true,
     "website": "https://exploreparks.dbca.wa.gov.au/site/yardie-creek-campground"
   },
@@ -25,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

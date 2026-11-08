@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "phone": "osm",
     "power": "osm",
     "tents": "osm",
@@ -8,6 +9,9 @@
   },
   "facts": {
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 1100
+    },
     "phone": "+61 3 5598 8119",
     "power": true,
     "tents": true,
@@ -29,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

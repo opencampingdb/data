@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +11,11 @@
       "street": "Fennell Street",
       "suburb": "Port Melbourne"
     },
-    "facebook": "https://www.facebook.com/pages/01-Automotive-Port-Melbourne/170856273115586"
+    "facebook": "https://www.facebook.com/pages/01-Automotive-Port-Melbourne/170856273115586",
+    "nearest_beach": {
+      "distance_m": 1420,
+      "name": "Port Melbourne Beach"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP6GXYGJMYZGQ7967WZ1K",
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

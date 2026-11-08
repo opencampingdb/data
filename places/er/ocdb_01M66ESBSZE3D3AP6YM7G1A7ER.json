@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_beach": {
+      "distance_m": 630
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBSZE3D3AP6YM7G1A7ER",
@@ -21,5 +25,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

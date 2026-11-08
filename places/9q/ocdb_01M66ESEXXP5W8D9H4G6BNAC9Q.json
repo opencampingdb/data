@@ -2,12 +2,17 @@
   "fact_sources": {
     "cabins": "osm",
     "dump_station": "osm",
+    "nearest_beach": "osm",
     "power": "osm",
     "tents": "osm"
   },
   "facts": {
     "cabins": true,
     "dump_station": true,
+    "nearest_beach": {
+      "distance_m": 60,
+      "name": "Casuarina Beach"
+    },
     "power": true,
     "tents": true
   },
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

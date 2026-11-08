@@ -4,7 +4,8 @@
   },
   "fact_sources": {
     "address": "osm",
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -13,7 +14,10 @@
       "street": "Messmate Way",
       "suburb": "Kununurra"
     },
-    "dump_station": true
+    "dump_station": true,
+    "nearest_beach": {
+      "distance_m": 4460
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPSTTV5Z088392W6HE876",
@@ -31,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "nearest_beach": {
+      "distance_m": 1100
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBVGDRWZV250G9PHV028",
@@ -21,5 +25,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-08T20:06:35Z"
 }
