@@ -308,12 +308,14 @@ def sync(
 def escape_cell(text: str | None) -> str:
     """Make OSM text safe to show in a Markdown table cell in a PR body.
 
-    Pipes would break the table, backticks the code span, and an @ could
-    notify a GitHub user, so all three are neutralised.
+    Pipes would break the table, backticks the code span, an @ could
+    notify a GitHub user and square brackets could make a link, so all four
+    are neutralised.
     """
     if text is None:
         return "(unnamed)"
     text = text.replace("\\", "\\\\").replace("|", "\\|").replace("`", "'")
+    text = text.replace("[", "\\[").replace("]", "\\]")
     text = text.replace("@", "(at)")
     return text.replace("\n", " ").replace("\r", " ")
 
