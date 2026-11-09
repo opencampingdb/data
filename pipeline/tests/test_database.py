@@ -366,3 +366,71 @@ def test_day_changesets_stay_in_the_list_marked_day(releases, repo, tmp_path):
         (SECOND, THIRD, False),
         (THIRD, "20261031T100000Z-1111111", False),
     ]
+
+
+# ---------------------------------------------------- audit run-2: OCDB-NV-02
+
+
+def tamper(folder, change):
+    """Rewrite only the changesets list of a built release's manifest; its database stays consistent."""
+    path = folder / "manifest.json"
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    manifest["changesets"] = change(manifest["changesets"])
+    path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def forged(entry, **changes):
+    return {**entry, **changes}
+
+
+def test_carried_entries_must_be_this_repositorys_release_assets(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    built = chain(repo, tmp_path, 3)
+    honest = built[-1][2]["changesets"]
+    far = "99991231T235959Z-0000000"
+    bad = [
+        # Foreign host.
+        forged(honest[0], url="https://example.invalid/dummy-changeset.bin.gz"),
+        # Far-future "to", so it would never age out.
+        forged(honest[0], to=far, url=f"https://github.com/opencampingdb/data/releases/download/data-{far.split('-')[0]}/{honest[0]['file']}"),
+        # Own repository, but a release other than the one named by "to".
+        forged(honest[1], url=honest[0]["url"].rsplit("/", 1)[0] + "/" + honest[1]["file"]),
+        # Another repository on GitHub.
+        forged(honest[1], url=honest[1]["url"].replace("opencampingdb/data", "someone/else")),
+    ]
+    tamper(built[-1][0], lambda entries: entries + bad)
+    folder, version = release_folder(repo, tmp_path, 3)
+    manifest = database.build(folder, previous=[built[-1][0]])
+    urls = [entry["url"] for entry in manifest["changesets"]]
+    assert not any("example.invalid" in url or "someone/else" in url for url in urls)
+    assert all(entry["to"] != far for entry in manifest["changesets"])
+    assert [(e["from"], e["to"]) for e in manifest["changesets"]] == [
+        (built[0][1], built[1][1]), (built[1][1], built[2][1]), (built[2][1], version),
+    ]
+    for entry in manifest["changesets"]:
+        tag = "data-" + entry["to"].split("-")[0]
+        assert entry["url"] == f"https://github.com/opencampingdb/data/releases/download/{tag}/{entry['file']}"
+
+
+def test_a_forged_entry_does_not_survive_later_releases(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    built = chain(repo, tmp_path, 2)
+    far = "99991231T235959Z-0000000"
+    tamper(built[-1][0], lambda entries: entries + [forged(entries[0], to=far, url="https://example.invalid/x.bin.gz")])
+    second = release_folder(repo, tmp_path, 2)[0]
+    database.build(second, previous=[built[-1][0]])
+    third = release_folder(repo, tmp_path, 3)[0]
+    manifest = database.build(third, previous=[second])
+    assert all("example.invalid" not in e["url"] and e["to"] != far for e in manifest["changesets"])
+
+
+def test_previous_base_skips_tags_not_earlier_than_this_release():
+    tags = [
+        "data-20261031T080000Z",
+        "data-20261031T090000Z",  # THIRD's own tag
+        "data-99991231T235959Z",  # a tag from the future
+        "v1.0",
+    ]
+    assert database.previous_base(tags, THIRD) == "data-20261031T080000Z"
+    assert database.previous_base(tags[1:], THIRD) is None
+    assert database.previous_base([], THIRD) is None

@@ -615,7 +615,17 @@ carries the list of the release just before forward, with this release's new
 changesets, trimmed to the changesets into the newest 50 releases
 (`CHAIN_RELEASES`), so an app finds its whole path from the newest manifest.
 Each entry's `url` stays on the release that made it, and the release
-workflow keeps 60 releases, so every listed file is still there. The layout, the changesets and the
+workflow keeps 60 releases, so every listed file is still there.
+
+An earlier release is a download, so its list is checked before it is
+carried: an entry stays only when its file is the name the module gives a
+changeset from its `from`, its `url` is this repository's download url for
+that file in the release its `to` names, and its `to` is not later than the
+release just before. Anything else is left out and logged. The release
+workflow also picks the earlier releases only from releases it published
+itself (author `github-actions[bot]`, not a draft), made before this one,
+whose tag is on `main`'s history, so a release or tag made another way is
+never read. The layout, the changesets and the
 manifest entries are described in [CONNECTING.md](../CONNECTING.md), section 3.
 
 SQLite comes from apsw (in `requirements.txt`), whose wheels bundle SQLite

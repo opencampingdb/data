@@ -30,10 +30,24 @@ whole path from one manifest. Each entry's url points at the release that
 made it, so no changeset is uploaded twice. The list starts again when the
 release just before has no database of this layout.
 
+The release just before is a downloaded GitHub release, so its list is not
+trusted as it stands. An entry is carried only when its file is the name
+this module gives a changeset from its "from", its url is this repository's
+download url for that file in the release named by its "to", and its "to"
+is not later than the release just before. Any other entry is left out and
+named in the log, so a forged entry can neither point apps at another host
+nor stay in the list for ever with a far-future "to".
+
     python -m pipeline.database --day-base <data_version>
 
 reads release tags on standard input and prints the newest tag from a UTC day
 before the one data_version was made on, or nothing.
+
+    python -m pipeline.database --previous-base <data_version>
+
+reads release tags on standard input and prints them newest first, keeping
+only data- tags made before data_version, one per line. The release workflow
+takes the first that it made from main as the release just before.
 
 SQLite comes from apsw, which bundles its own SQLite built with the session
 extension (https://rogerbinns.github.io/apsw/session.html), so the SQLite
@@ -57,7 +71,7 @@ from pathlib import Path
 import apsw
 
 from .common import write_text
-from .release import asset_url, gzip_bytes
+from .release import asset_url, gzip_bytes, release_tag
 from .states import StateLookup
 
 # 1: the first layout.
@@ -339,15 +353,64 @@ def day_base(tags: list[str], data_version: str) -> str | None:
     return max(earlier) if earlier else None
 
 
-def carried(directory: Path) -> list[dict]:
+def previous_base(tags: list[str], data_version: str) -> str | None:
+    """The newest data- tag made before data_version, or None. A tag from the future is never chosen."""
+    earlier = earlier_tags(tags, data_version)
+    return earlier[0] if earlier else None
+
+
+def earlier_tags(tags: list[str], data_version: str) -> list[str]:
+    """The data- tags made before data_version, newest first."""
+    this = release_tag(data_version)
+    return sorted((tag for tag in tags if tag.startswith("data-") and tag < this), reverse=True)
+
+
+def changeset_name(from_version: str, is_day: bool) -> str:
+    """The file name this module gives a changeset from from_version."""
+    return f"changeset-day-{day_of(from_version)}.bin.gz" if is_day else f"changeset-{from_version}.bin.gz"
+
+
+def carried_entry_problem(entry, repository: str, before: str) -> str | None:
+    """Why an entry of the previous release's list must not be carried, or None when it may."""
+    if not isinstance(entry, dict):
+        return "not an object"
+    from_version, to_version = entry.get("from"), entry.get("to")
+    if not isinstance(from_version, str) or not isinstance(to_version, str):
+        return "no from or to"
+    if not (from_version < to_version and release_tag(to_version) <= release_tag(before)):
+        return f"to {to_version} is not between from {from_version} and the release just before, {before}"
+    name = changeset_name(from_version, entry.get("day") is True)
+    if entry.get("file") != name:
+        return f"file {entry.get('file')!r} is not {name}"
+    if entry.get("url") != asset_url(repository, release_tag(to_version), name):
+        return f"url {entry.get('url')!r} is not this repository's release asset"
+    if not isinstance(entry.get("sha256"), str) or not isinstance(entry.get("bytes"), int):
+        return "no sha256 or bytes"
+    return None
+
+
+def carried(directory: Path, repository: str = DEFAULT_REPOSITORY) -> list[dict]:
     """The changesets the release just before listed, to carry into this release's list.
 
     Only called once that release's database has checked out with this
     layout, so every entry is of this layout. Entries without "to" (from
-    before the list carried forward) are left out.
+    before the list carried forward) are left out, and so is any entry
+    carried_entry_problem refuses: the list comes from a downloaded release.
     """
     manifest = json.loads((Path(directory) / "manifest.json").read_text(encoding="utf-8"))
-    return [entry for entry in manifest.get("changesets", []) if "to" in entry and "from" in entry]
+    before = manifest.get("data_version")
+    if not isinstance(before, str):
+        return []
+    kept = []
+    for entry in manifest.get("changesets", []):
+        if isinstance(entry, dict) and "to" not in entry:
+            continue
+        problem = carried_entry_problem(entry, repository, before)
+        if problem:
+            print(f"{directory}: not carrying a changeset entry: {problem}")
+            continue
+        kept.append(entry)
+    return kept
 
 
 def trimmed(entries: list[dict]) -> list[dict]:
@@ -398,9 +461,9 @@ def build(
             from_version, old_db = found
             done.add(from_version)
             if index == 0 and not is_day:
-                entries.extend(carried(directory))
+                entries.extend(carried(directory, repository))
             changeset = gzip_bytes(checked_changeset(old_db, database))
-            name = f"changeset-day-{day_of(from_version)}.bin.gz" if is_day else f"changeset-{from_version}.bin.gz"
+            name = changeset_name(from_version, is_day)
             (release_dir / name).write_bytes(changeset)
             entries.append({
                 "file": name,
@@ -427,8 +490,14 @@ def main(argv: list[str] | None = None) -> int:
                         help=f"owner/name used in the asset URLs (default {DEFAULT_REPOSITORY})")
     parser.add_argument("--day-base", metavar="DATA_VERSION",
                         help="print the newest tag on standard input from a UTC day before this one, and stop")
+    parser.add_argument("--previous-base", metavar="DATA_VERSION",
+                        help="print the data- tags on standard input made before this one, newest first, and stop")
     args = parser.parse_args(argv)
 
+    if args.previous_base:
+        for tag in earlier_tags(sys.stdin.read().split(), args.previous_base):
+            print(tag)
+        return 0
     if args.day_base:
         tag = day_base(sys.stdin.read().split(), args.day_base)
         if tag:
