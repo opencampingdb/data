@@ -36,7 +36,8 @@ maproulette/traveller_reports.geojson
     rules follow the feedback engine's OSM notes (docs/osm.md there):
     contributed values and places without an OSM link are never sent, nor
     booking details, nor a text value holding an email address, phone number
-    or link (the contact facts aside).
+    or link (the contact facts aside), nor travellers' opening hours with a
+    quoted comment (free text no person has read).
 
     A value is sent only with enough evidence in the inbox's applied items:
     a feedback value needs at least 2 independent sources (distinct origin,
@@ -70,7 +71,7 @@ from pathlib import Path
 from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places, write_text
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
-from .sync import load_extract
+from .sync import escape_cell, load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
 RS = "\x1e"
@@ -260,10 +261,17 @@ def describe(field: str, value) -> str:
     return f"the {LABELS.get(field, field.replace('_', ' '))} is {value}"
 
 
-def sendable(field: str, value) -> bool:
-    """False for a text value holding an email address, phone number or link."""
+def sendable(field: str, value, source: str | None = None) -> bool:
+    """False for a text value holding an email address, phone number or link.
+
+    Also False for an opening_hours value from feedback that carries a
+    quoted comment: that is free text no person has read, so it never goes
+    to OSM mappers. A verified owner's comment is sent.
+    """
     if not isinstance(value, str) or field in CONTACT_FACTS:
         return True
+    if field == "opening_hours" and source != "owner" and '"' in value:
+        return False
     return not any(pattern.search(value) for pattern in CONTACT_RES)
 
 
@@ -464,7 +472,7 @@ def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime)
         if field == "access" and value == "unknown":
             continue
         tag = osm_tag(field, value)
-        if not tag or not sendable(field, value):
+        if not tag or not sendable(field, value, source):
             continue
         backed = backing(record, field, value, source, evidence, now)
         if backed:
@@ -579,7 +587,7 @@ def render_report(result: dict[str, dict]) -> str:
             lines.append(f"  - Not built: {change['skipped']}.")
         for word, items in (("New", change["added"]), ("Gone", change["removed"])):
             for place_id, place_name in items:
-                lines.append(f"  - {word}: {place_name} ({place_id})")
+                lines.append(f"  - {word}: {escape_cell(place_name)} ({place_id})")
     lines += ["", "Merging this PR approves these tasks. Then rebuild the challenges in MapRoulette (see maproulette/README.md).", ""]
     return "\n".join(lines)
 

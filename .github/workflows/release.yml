@@ -96,13 +96,31 @@ jobs:
       # from the databases of the release just before and of the last release
       # of the previous UTC day (pipeline/database.py). A release without a
       # database gives no changeset, and apps download the whole database.
+      #
+      # The earlier releases are chosen only from releases this workflow
+      # published (author github-actions[bot], not a draft), made before this
+      # one, whose tag is on main's history. A release or tag made any other
+      # way is never read, so its manifest cannot pass changeset entries on.
       - name: Build the database and changesets
         if: steps.check.outputs.changed == 'true'
         run: |
           set -euo pipefail
           earlier="$RUNNER_TEMP/earlier"
-          tags="$(gh release list --limit 100 --json tagName --jq '.[].tagName' | { grep '^data-' || true; } | sort -r)"
+          head="$(git rev-parse HEAD)"
           version="$(python -c 'import json; print(json.load(open("dist/manifest.json"))["data_version"])')"
+          ours="$(gh api --paginate "repos/$GH_REPO/releases?per_page=100" \
+            --jq '.[] | select(.author.login == "github-actions[bot]" and (.draft | not)) | .tag_name' \
+            | python -m pipeline.database --previous-base "$version")"
+          tags=""
+          while read -r tag; do
+            [ -n "$tag" ] || continue
+            status="$(gh api "repos/$GH_REPO/compare/$tag...$head" --jq .status 2>/dev/null || true)"
+            if [ "$status" = "ahead" ] || [ "$status" = "identical" ]; then
+              tags+="$tag"$'\n'
+            else
+              echo "Skipping $tag: its tag is not on main's history (${status:-no comparison})."
+            fi
+          done <<<"$ours"
           fetch() {
             mkdir -p "$earlier/$2"
             assets="$(gh release view "$1" --json assets --jq '.assets[].name')"

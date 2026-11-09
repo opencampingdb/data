@@ -263,6 +263,20 @@ def load_blocked(root: Path) -> set[str]:
     return {entry["contributor"] for entry in entries if isinstance(entry, dict) and "contributor" in entry}
 
 
+def removed_path(root: Path) -> Path:
+    """Reviews a person removed, never to be added again: moderation/removed_reviews.json."""
+    return Path(root) / "moderation" / "removed_reviews.json"
+
+
+def load_removed(root: Path) -> set[str]:
+    """Review ids on the removed list. Empty when the file is missing."""
+    path = removed_path(root)
+    if not path.exists():
+        return set()
+    entries = json.loads(path.read_text(encoding="utf-8")).get("reviews", [])
+    return {entry["review"] for entry in entries if isinstance(entry, dict) and "review" in entry}
+
+
 def distinct_path(root: Path) -> Path:
     """Pairs a person checked and found to be separate places: moderation/distinct_places.json."""
     return Path(root) / "moderation" / "distinct_places.json"

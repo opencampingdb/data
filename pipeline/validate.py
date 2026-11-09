@@ -34,7 +34,11 @@ exits 1. Checks:
   exists
 - moderation/blocked_contributors.json matches its schema, sorted by
   contributor, each contributor once. moderation/ holds only that file,
-  distinct_places.json and the files in MODERATION_FILES
+  distinct_places.json, removed_reviews.json and the files in
+  MODERATION_FILES
+- moderation/removed_reviews.json matches its schema, sorted by review, each
+  review once, and no review line in reviews/ has a listed id: a review a
+  person removed is never added again
 - moderation/commons-do-not-match.json matches its schema, sorted by place
   then file, each pair once, naming places that exist
 - moderation/distinct_places.json matches its schema, each pair once with a
@@ -71,7 +75,9 @@ from .common import (
     iter_fee_files,
     iter_review_files,
     load_blocked,
+    load_removed,
     place_path,
+    removed_path,
     rating_mean,
     utc_now,
 )
@@ -312,7 +318,7 @@ def check_blocked(root: Path) -> list[str]:
     errors = [
         f"{p.relative_to(root).as_posix()}: unexpected file in moderation/"
         for p in sorted((root / "moderation").rglob("*"))
-        if p.is_file() and p not in (path, distinct_path(root), *(root / "moderation" / name for name in MODERATION_FILES))
+        if p.is_file() and p not in (path, distinct_path(root), removed_path(root), *(root / "moderation" / name for name in MODERATION_FILES))
     ]
     if not path.exists():
         return errors
@@ -331,6 +337,30 @@ def check_blocked(root: Path) -> list[str]:
         errors.append(f"{where}: contributors must be sorted by contributor")
     if len(ids) != len(set(ids)):
         errors.append(f"{where}: a contributor is listed twice")
+    return errors
+
+
+def check_removed(root: Path) -> list[str]:
+    """Problems with moderation/removed_reviews.json. A missing file is fine."""
+    path = removed_path(root)
+    where = "moderation/removed_reviews.json"
+    if not path.exists():
+        return []
+    try:
+        text = path.read_bytes().decode("utf-8")
+        removed = json.loads(text)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return [f"{where}: not valid UTF-8 JSON: {exc}"]
+    errors = schema_errors(load_validator("removed_reviews.schema.json"), removed, where)
+    if errors:
+        return errors
+    if text != dump_record(removed):
+        errors.append(f"{where}: not in canonical form (sorted keys, 2-space indent, one trailing newline)")
+    ids = [entry["review"] for entry in removed["reviews"]]
+    if ids != sorted(ids):
+        errors.append(f"{where}: reviews must be sorted by review")
+    if len(ids) != len(set(ids)):
+        errors.append(f"{where}: a review is listed twice")
     return errors
 
 
@@ -398,6 +428,7 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
     errors: list[str] = []
     seen_ids: set[str] = set()
     blocked = load_blocked(root) if not check_blocked(root) else set()
+    removed = load_removed(root) if not check_removed(root) else set()
     stars_by_place: dict[str, list[int]] = {}
 
     for path in sorted((root / "reviews").rglob("*")):
@@ -438,6 +469,8 @@ def check_reviews(root: Path, places: dict[str, dict]) -> list[str]:
             if review["id"] in seen_ids:
                 errors.append(f"{here}: review id {review['id']} used twice")
             seen_ids.add(review["id"])
+            if review["id"] in removed:
+                errors.append(f"{here}: review {review['id']} was removed (moderation/removed_reviews.json) and must not be added again")
             for reason in text_problems(review["text"]):
                 errors.append(f"{here}: text contains {reason}")
             if is_visible(review, blocked):
@@ -566,6 +599,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     root = Path(root)
     places, errors = check_places(root, now or utc_now())
     errors += check_blocked(root)
+    errors += check_removed(root)
     errors += check_distinct(root, places)
     errors += check_do_not_match(root, places)
     errors += check_reviews(root, places)

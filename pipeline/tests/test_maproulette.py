@@ -465,3 +465,45 @@ def test_report_names_new_and_gone_tasks(repo, tmp_path):
     second = write_challenges(repo, [osm_place(1, fee=False)], inbox=box, now=NOW)
     assert second[TRAVELLER_REPORTS] == {"count": 0, "added": [], "removed": [(A, "Lake Camp")]}
     assert f"  - Gone: Lake Camp ({A})" in render_report(second)
+
+
+# ------------------------------------------------- audit run-2: OCDB-06, OCDB-09
+
+NASTY = "Camp @example-org/example-team | `x` [verify](https://example.invalid/)"
+
+
+def test_report_escapes_osm_names_of_new_and_gone_tasks():
+    # An OSM editor chooses the name; the sync PR body must not mention, break out or link.
+    result = {TRAVELLER_REPORTS: {"count": 1, "added": [(A, NASTY)], "removed": [(B, NASTY)]}}
+    report = render_report(result)
+    for word, place in (("New", A), ("Gone", B)):
+        (line,) = [l for l in report.splitlines() if l.startswith(f"  - {word}:")]
+        assert line.endswith(f"({place})")
+        assert "@" not in line
+        assert "`" not in line
+        assert "[verify](" not in line
+        assert "example-org/example-team" in line
+
+
+def test_crowd_opening_hours_with_a_comment_is_never_a_task(repo, tmp_path):
+    value = 'Mo-Su 08:00-17:00 "click here: [verify listing](//evil.example/x)"'
+    write(repo, record(A, 1, facts={"opening_hours": value}, fact_sources={"opening_hours": "feedback"}))
+    items = [fact(A, "opening_hours", value, source=s) for s in ("o1", "o2", "o3")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_crowd_opening_hours_without_a_comment_is_still_sent(repo, tmp_path):
+    value = "Mo-Su 08:00-17:00"
+    write(repo, record(A, 1, facts={"opening_hours": value}, fact_sources={"opening_hours": "feedback"}))
+    items = [fact(A, "opening_hours", value, source=s) for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert "(opening_hours=Mo-Su 08:00-17:00)" in changes(repo)
+
+
+def test_verified_owner_opening_hours_comment_is_still_sent(repo, tmp_path):
+    value = 'Mo-Su 08:00-17:00 "office closes at noon on Sundays"'
+    write(repo, record(A, 1, owner_verified=True, facts={"opening_hours": value}, fact_sources={"opening_hours": "owner"}))
+    box = inbox(tmp_path, owner_update(A, facts={"opening_hours": value}))
+    write_challenges(repo, [osm_place(1)], inbox=box, now=NOW)
+    assert "office closes at noon on Sundays" in changes(repo)
