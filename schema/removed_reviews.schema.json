@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/removed_reviews.schema.json",
+  "title": "Open Camping DB removed reviews",
+  "description": "moderation/removed_reviews.json. Reviews a person removed from reviews/ for personal details or a takedown, written by python -m pipeline.moderate remove. Validation refuses a review line whose id is listed, so a removed review is never added again. Only the id, place, day and reason are kept, never the text.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reviews"
+  ],
+  "properties": {
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "review",
+          "place",
+          "removed",
+          "reason"
+        ],
+        "properties": {
+          "review": {
+            "type": "string",
+            "pattern": "^rev_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "place": {
+            "type": "string",
+            "pattern": "^ocdb_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "removed": {
+            "description": "Day the review was removed, YYYY-MM-DD.",
+            "type": "string",
+            "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          },
+          "reason": {
+            "enum": [
+              "spam_ad",
+              "offensive",
+              "off_topic",
+              "fake",
+              "personal_details",
+              "abuse"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

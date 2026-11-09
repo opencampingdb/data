@@ -1,8 +1,9 @@
-"""Hide or show a review, or block or unblock a contributor. Run by a person.
+"""Hide, show or remove a review, or block or unblock a contributor. Run by a person.
 
 Usage:
     python -m pipeline.moderate hide <review id> --root .
     python -m pipeline.moderate show <review id> --root .
+    python -m pipeline.moderate remove <review id> --reason <reason> --root .
     python -m pipeline.moderate block <contributor> --reason <reason> --root .
     python -m pipeline.moderate unblock <contributor> --root .
 
@@ -13,6 +14,16 @@ spam_ad, offensive, off_topic, fake, personal_details or abuse. Hidden
 reviews and reviews from blocked contributors stay in reviews/ but are left
 out of the release and the rating. Each command recalculates the rating of
 every place it touches and sets that place's updated, so validation passes.
+
+remove is for personal details and takedowns, where hiding is not enough
+because reviews/ is itself public. It deletes the review line (and the
+place's review file when it was the last one) and adds the review id, place,
+day and reason, never the text, to moderation/removed_reviews.json.
+Validation refuses a review line whose id is on that list, so the review is
+never added again. Removal cannot be undone with show. It does not reach git
+history or releases already published: the text stays in earlier commits
+and in the release assets kept until they are pruned, so purging those is a
+separate request to the repository owners (see pipeline/README.md).
 """
 
 import argparse
@@ -29,6 +40,7 @@ from .common import (
     load_blocked,
     place_path,
     rating_mean,
+    removed_path,
     utc_now,
     write_text,
 )
@@ -78,6 +90,33 @@ def set_hidden(root: Path, review_id: str, hidden: bool, now: str | None = None)
     raise ModerateError(f"no review {review_id}")
 
 
+def remove_review(root: Path, review_id: str, reason: str, now: str | None = None) -> str:
+    """Delete one review for personal details or a takedown, and list its id so it is never added again.
+
+    Returns its place id.
+    """
+    if reason not in REASONS:
+        raise ModerateError(f"reason must be one of {', '.join(REASONS)}")
+    now = now or utc_now()
+    for path in iter_review_files(root):
+        lines = read_lines(path)
+        kept = [r for r in lines if r["id"] != review_id]
+        if len(kept) == len(lines):
+            continue
+        listed = removed_path(root)
+        data = json.loads(listed.read_text(encoding="utf-8")) if listed.exists() else {"reviews": []}
+        entries = [e for e in data["reviews"] if e["review"] != review_id]
+        entries.append({"review": review_id, "place": path.stem, "removed": now[:10], "reason": reason})
+        write_text(listed, dump_record({"reviews": sorted(entries, key=lambda e: e["review"])}))
+        if kept:
+            write_text(path, "".join(dump_line(r) + "\n" for r in kept))
+        else:
+            path.unlink()
+        rerate(root, {path.stem}, now)
+        return path.stem
+    raise ModerateError(f"no review {review_id}")
+
+
 def set_blocked(root: Path, contributor: str, reason: str | None, now: str | None = None) -> set[str]:
     """Block (reason given) or unblock (reason None) a contributor. Returns the places re-rated."""
     now = now or utc_now()
@@ -100,15 +139,20 @@ def set_blocked(root: Path, contributor: str, reason: str | None, now: str | Non
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("command", choices=["hide", "show", "block", "unblock"])
-    parser.add_argument("target", help="review id (hide, show) or contributor (block, unblock)")
-    parser.add_argument("--reason", choices=REASONS, help="why the contributor is blocked")
+    parser.add_argument("command", choices=["hide", "show", "remove", "block", "unblock"])
+    parser.add_argument("target", help="review id (hide, show, remove) or contributor (block, unblock)")
+    parser.add_argument("--reason", choices=REASONS, help="why the review is removed or the contributor is blocked")
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
     args = parser.parse_args(argv)
     try:
         if args.command in ("hide", "show"):
             place_id = set_hidden(args.root, args.target, args.command == "hide")
             print(f"{args.command}: {args.target} on {place_id}", file=sys.stderr)
+        elif args.command == "remove":
+            if not args.reason:
+                raise ModerateError("remove needs --reason")
+            place_id = remove_review(args.root, args.target, args.reason)
+            print(f"remove: {args.target} on {place_id}, listed in moderation/removed_reviews.json", file=sys.stderr)
         else:
             if args.command == "block" and not args.reason:
                 raise ModerateError("block needs --reason")

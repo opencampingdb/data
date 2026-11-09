@@ -16,7 +16,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, `fees/`, with `--auto` the geometry sidecar | the kept record, a tombstone, moved reviews and fees; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for the reviewer. The feedback engine reads the `place` column. Run by a person |
-| Moderate | `python -m pipeline.moderate hide\|show <review id>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line or the blocked list, and the ratings it changes. Run by a person only |
+| Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 
 Tests: `python -m pytest`.
@@ -523,6 +523,23 @@ already hidden a review (`hidden: "reported"`) on the automatic branch.
   `spam_ad`, `offensive`, `off_topic`, `fake`, `personal_details` or
   `abuse`. The feedback engine then refuses everything they send, and their
   reviews are left out of the release and the rating. `unblock` removes them.
+- `remove <review id> --reason <reason>` is for personal details and
+  takedown requests. A hidden review still sits in `reviews/`, which anyone
+  can read, so `remove` deletes the line (and the place's review file when
+  it was the last) and adds the review id, place, day and reason, never the
+  text, to `moderation/removed_reviews.json`
+  ([schema](../schema/removed_reviews.schema.json)). Validation refuses a
+  review line whose id is on that list, so the review cannot come back
+  through a later feedback run or by hand. A removal is not undone with
+  `show`; to restore a review, a person takes it off the list and puts the
+  line back in the same PR.
+
+A removal reaches `main` and every release built after it. It does not reach
+git history or the releases already published: the text stays in earlier
+commits and in the release assets until the newest 60 releases have moved
+past it. When that is not enough (a court order, a person's safety), the
+repository owners rewrite history and delete the affected releases, and ask
+GitHub support to purge cached views; say so on the takedown request.
 
 Each command recalculates the rating of every place it touches and sets
 that place's `updated`, so validation passes. Commit the result on a branch
@@ -551,7 +568,9 @@ checked like review text; `reopens` is a real date and only goes with
 each review's place exists, that each `rating` has the exact count and
 rounded mean of its visible reviews (no `hidden`, no blocked `contributor`),
 that `moderation/blocked_contributors.json` matches its schema and is sorted
-by contributor with no repeats, that `moderation/distinct_places.json`
+by contributor with no repeats, that `moderation/removed_reviews.json`
+matches its schema, is sorted by review with no repeats, and that no review
+line has a removed id, that `moderation/distinct_places.json`
 matches its schema, is sorted, lists each pair once with `a` before `b` and
 names places that exist, and that review text has no email
 address, phone number, link, social media handle or obvious personal name.
