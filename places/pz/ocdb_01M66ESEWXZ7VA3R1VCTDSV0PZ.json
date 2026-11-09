@@ -1,11 +1,15 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "nearest_beach": "osm",
     "power": "osm",
     "wifi": "osm"
   },
   "facts": {
     "dump_station": false,
+    "nearest_beach": {
+      "distance_m": 3130
+    },
     "power": true,
     "wifi": false
   },
@@ -25,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

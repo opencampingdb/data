@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "toilets": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_beach": {
+      "distance_m": 3810,
+      "name": "South Melbourne Beach"
+    },
     "toilets": false,
     "wheelchair": false
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

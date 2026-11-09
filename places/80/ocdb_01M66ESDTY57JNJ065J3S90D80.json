@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_beach": {
+      "distance_m": 3270,
+      "name": "Sandridge Beach"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDTY57JNJ065J3S90D80",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

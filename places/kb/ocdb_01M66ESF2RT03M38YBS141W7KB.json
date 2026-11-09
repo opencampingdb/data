@@ -4,6 +4,7 @@
     "caravans": "osm",
     "dump_station": "osm",
     "kitchen": "osm",
+    "nearest_beach": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -12,6 +13,10 @@
     "caravans": true,
     "dump_station": true,
     "kitchen": true,
+    "nearest_beach": {
+      "distance_m": 130,
+      "name": "Tallow Beach"
+    },
     "tents": true,
     "toilets": true
   },
@@ -31,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

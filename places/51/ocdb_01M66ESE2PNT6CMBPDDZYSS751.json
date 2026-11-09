@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "nearest_beach": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "1382",
+      "street": "Albany Highway"
+    },
+    "nearest_beach": {
+      "distance_m": 1710
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESE2PNT6CMBPDDZYSS751",
   "kind": "public_toilet",
@@ -11,11 +22,11 @@
   "name": null,
   "osm": {
     "id": 12894344331,
-    "timestamp": "2025-10-14T02:37:02Z",
+    "timestamp": "2026-11-07T09:34:15Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

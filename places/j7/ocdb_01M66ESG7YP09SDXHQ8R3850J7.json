@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +11,11 @@
       "street": "Paperbark Court",
       "suburb": "Fern Bay"
     },
-    "entry": "public"
+    "entry": "public",
+    "nearest_beach": {
+      "distance_m": 1440,
+      "name": "Stockton Beach"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG7YP09SDXHQ8R3850J7",
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -1,8 +1,15 @@
 {
   "fact_sources": {
+    "nearest_beach": "osm",
+    "pets": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "nearest_beach": {
+      "distance_m": 60,
+      "name": "Anglesea"
+    },
+    "pets": "no",
     "water_type": "fountain"
   },
   "group": "utility",
@@ -15,11 +22,11 @@
   "name": null,
   "osm": {
     "id": 5312741543,
-    "timestamp": "2024-07-02T12:59:01Z",
+    "timestamp": "2026-11-07T14:49:16Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_beach": {
+      "distance_m": 20,
+      "name": "Flynns Beach"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEDKTQ0FZSV6E8817XMM",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-07T19:46:54Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

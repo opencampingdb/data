@@ -1,11 +1,15 @@
 {
   "fact_sources": {
     "campfires": "osm",
-    "drinking_water": "osm"
+    "drinking_water": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "campfires": false,
-    "drinking_water": false
+    "drinking_water": false,
+    "nearest_beach": {
+      "distance_m": 2430
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESFVC30KQ4DK7Z49YKNS7",
@@ -23,5 +27,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

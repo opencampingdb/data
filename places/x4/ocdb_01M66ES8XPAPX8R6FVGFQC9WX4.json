@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_beach": "osm",
     "phone": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -8,6 +9,10 @@
   },
   "facts": {
     "caravans": true,
+    "nearest_beach": {
+      "distance_m": 80,
+      "name": "Munglinup Beach"
+    },
     "phone": "+61 8 9083 1555",
     "tents": true,
     "toilets": true,
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

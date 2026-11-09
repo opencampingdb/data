@@ -1,14 +1,18 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "549",
       "street": "Old Cleveland Road"
     },
-    "fee": false
+    "fee": false,
+    "nearest_beach": {
+      "distance_m": 3460
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXQEQW1XMBF1Q750J4S1",
@@ -26,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

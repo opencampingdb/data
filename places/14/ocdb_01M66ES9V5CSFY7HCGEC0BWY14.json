@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +11,11 @@
       "street": "Beach Road",
       "suburb": "Batehaven"
     },
-    "fee": true
+    "fee": true,
+    "nearest_beach": {
+      "distance_m": 160,
+      "name": "Corrigans Beach"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9V5CSFY7HCGEC0BWY14",
@@ -35,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

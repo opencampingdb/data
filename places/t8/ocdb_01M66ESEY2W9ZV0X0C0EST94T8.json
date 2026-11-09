@@ -3,10 +3,15 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "dump_station": true
+    "dump_station": true,
+    "nearest_beach": {
+      "distance_m": 1360,
+      "name": "Grassy / Point George"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEY2W9ZV0X0C0EST94T8",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

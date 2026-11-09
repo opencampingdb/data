@@ -2,12 +2,17 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_beach": "osm",
     "showers": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "nearest_beach": {
+      "distance_m": 10,
+      "name": "Narrabeen Beach"
+    },
     "showers": true,
     "wheelchair": false
   },
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

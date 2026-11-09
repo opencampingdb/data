@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +10,9 @@
       "state": "WA",
       "street": "Repton Street",
       "suburb": "Dayton"
+    },
+    "nearest_beach": {
+      "distance_m": 4490
     }
   },
   "group": "services",
@@ -21,11 +25,11 @@
   "name": "Techron",
   "osm": {
     "id": 1417133168,
-    "timestamp": "2026-01-14T08:02:01Z",
+    "timestamp": "2026-11-07T11:26:00Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -1,11 +1,15 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_beach": {
+      "distance_m": 2600
+    },
     "opening_hours": "Th-Fr 10:00-16:00; Sa-Su 11:00-16:00",
     "website": "https://www.nationaltrust.org.au/places/old-government-house/"
   },
@@ -25,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

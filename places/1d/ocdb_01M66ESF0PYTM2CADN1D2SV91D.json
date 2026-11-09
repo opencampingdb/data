@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_beach": {
+      "distance_m": 240
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF0PYTM2CADN1D2SV91D",
@@ -27,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:36:02Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

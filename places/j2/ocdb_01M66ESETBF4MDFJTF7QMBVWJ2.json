@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "brand": "osm"
+    "brand": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Harrington Road",
       "suburb": "Harrington"
     },
-    "brand": "big4"
+    "brand": "big4",
+    "nearest_beach": {
+      "distance_m": 3090,
+      "name": "Old Bar Beach"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESETBF4MDFJTF7QMBVWJ2",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

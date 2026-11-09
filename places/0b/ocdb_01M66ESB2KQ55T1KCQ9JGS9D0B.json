@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_beach": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -8,6 +9,9 @@
   },
   "facts": {
     "caravans": true,
+    "nearest_beach": {
+      "distance_m": 2770
+    },
     "showers": true,
     "tents": false,
     "toilets": true,
@@ -29,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

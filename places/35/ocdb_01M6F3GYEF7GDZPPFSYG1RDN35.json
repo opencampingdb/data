@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_beach": "osm",
     "vehicle_access": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_beach": {
+      "distance_m": 4670,
+      "name": "Heros Beach"
+    },
     "vehicle_access": "heavy_vehicles_only"
   },
   "group": "utility",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T10:06:19Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

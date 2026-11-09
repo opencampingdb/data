@@ -3,10 +3,15 @@
     "fee": "2026-03-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "nearest_beach": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_beach": {
+      "distance_m": 80,
+      "name": "Belongil Beach"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9SER82KJGFBP8AWEAXS",
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

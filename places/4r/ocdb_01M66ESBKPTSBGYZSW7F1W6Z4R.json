@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "drinking_water": false,
-    "entry": "public"
+    "entry": "public",
+    "nearest_beach": {
+      "distance_m": 70,
+      "name": "Boat Harbour beach"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBKPTSBGYZSW7F1W6Z4R",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

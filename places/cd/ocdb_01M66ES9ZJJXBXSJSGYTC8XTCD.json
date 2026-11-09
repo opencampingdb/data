@@ -6,6 +6,7 @@
   "fact_sources": {
     "caravans": "osm",
     "motorhomes": "contributed",
+    "nearest_beach": "osm",
     "pets": "osm",
     "tents": "osm",
     "website": "contributed"
@@ -13,6 +14,10 @@
   "facts": {
     "caravans": true,
     "motorhomes": true,
+    "nearest_beach": {
+      "distance_m": 110,
+      "name": "Friendly Beaches"
+    },
     "pets": "no",
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/freycinet-national-park/friendly-beaches-camping-(isaacs-point)"
@@ -33,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

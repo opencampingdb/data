@@ -1,14 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
-    "brand": "osm"
+    "brand": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "42",
       "street": "Kingsway"
     },
-    "brand": "yha"
+    "brand": "yha",
+    "nearest_beach": {
+      "distance_m": 390,
+      "name": "North Cronulla Beach"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVBEZQ2Z08A5JX0HHV2Z",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

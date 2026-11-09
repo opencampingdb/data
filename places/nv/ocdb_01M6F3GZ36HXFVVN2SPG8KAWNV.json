@@ -1,12 +1,17 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "postcode": "4703",
       "street": "James Street",
       "suburb": "Yeppoon"
+    },
+    "nearest_beach": {
+      "distance_m": 350,
+      "name": "Main Beach"
     }
   },
   "group": "attraction",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }

@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_beach": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -11,6 +12,10 @@
       "street": "Esplanade",
       "suburb": "Coles Bay",
       "unit": "1"
+    },
+    "nearest_beach": {
+      "distance_m": 100,
+      "name": "Muirs Beach"
     },
     "toilets": true
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-08T20:06:35Z"
 }
