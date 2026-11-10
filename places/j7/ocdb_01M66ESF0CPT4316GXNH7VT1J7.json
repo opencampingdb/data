@@ -23,12 +23,17 @@
   },
   "fact_sources": {
     "access": "feedback",
+    "address": "osm",
+    "bbq": "osm",
     "big_rigs": "feedback",
     "bins": "feedback",
+    "cabins": "osm",
     "camper_trailers": "feedback",
     "caravans": "feedback",
     "drinking_water": "feedback",
     "drive_through": "feedback",
+    "dump_station": "osm",
+    "email": "osm",
     "entry": "feedback",
     "kitchen": "feedback",
     "laundry": "feedback",
@@ -37,21 +42,35 @@
     "nearest_beach": "osm",
     "non_drinking_water": "feedback",
     "pets": "feedback",
+    "phone": "osm",
     "picnic_tables": "feedback",
     "power": "feedback",
     "showers": "feedback",
     "tents": "feedback",
     "toilets": "feedback",
-    "wheelchair": "feedback"
+    "website": "osm",
+    "wheelchair": "feedback",
+    "wifi": "osm"
   },
   "facts": {
     "access": "2wd",
+    "address": {
+      "housenumber": "244",
+      "postcode": "5690",
+      "state": "SA",
+      "street": "Decres Bay Road",
+      "suburb": "Ceduna"
+    },
+    "bbq": true,
     "big_rigs": true,
     "bins": true,
+    "cabins": true,
     "camper_trailers": true,
     "caravans": true,
     "drinking_water": true,
     "drive_through": true,
+    "dump_station": true,
+    "email": "cedunashellybeach@summerstar.com.au",
     "entry": "public",
     "kitchen": true,
     "laundry": true,
@@ -62,16 +81,19 @@
     },
     "non_drinking_water": true,
     "pets": "yes",
+    "phone": "+61 8 8625 2012",
     "picnic_tables": true,
     "power": true,
     "showers": true,
     "tents": true,
     "toilets": true,
-    "wheelchair": true
+    "website": "https://summerstar.com.au/caravan-parks/ceduna-shelly-beach",
+    "wheelchair": true,
+    "wifi": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF0CPT4316GXNH7VT1J7",
-  "kind": "campground",
+  "kind": "caravan_park",
   "location": {
     "lat": -32.150111,
     "lon": 133.689692
@@ -79,11 +101,11 @@
   "name": "Ceduna Shelley Beach Caravan Park",
   "osm": {
     "id": 260693050,
-    "timestamp": "2014-02-09T01:27:30Z",
+    "timestamp": "2026-11-09T04:32:56Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-10T21:41:31Z"
 }

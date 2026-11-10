@@ -1,6 +1,14 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "cabins": "osm",
+    "caravans": "osm",
+    "tents": "osm"
+  },
+  "facts": {
+    "cabins": false,
+    "caravans": true,
+    "tents": true
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESA2RF7ZPGGJ58GBEY74C",
   "kind": "campground",
@@ -11,11 +19,11 @@
   "name": "Petrie Park",
   "osm": {
     "id": 1811191818,
-    "timestamp": "2026-08-06T10:09:19Z",
+    "timestamp": "2026-11-09T08:19:00Z",
     "type": "node",
-    "version": 4
+    "version": 7
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-10T21:41:31Z"
 }
