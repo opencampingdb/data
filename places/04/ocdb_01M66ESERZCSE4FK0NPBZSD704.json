@@ -1,11 +1,15 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fee": "osm",
+    "nearest_beach": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "fee": false,
     "nearest_beach": {
       "distance_m": 1510
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESERZCSE4FK0NPBZSD704",
@@ -17,11 +21,11 @@
   "name": null,
   "osm": {
     "id": 70966645,
-    "timestamp": "2019-01-19T18:39:16Z",
+    "timestamp": "2026-11-08T00:14:52Z",
     "type": "way",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-09T23:57:18Z"
 }

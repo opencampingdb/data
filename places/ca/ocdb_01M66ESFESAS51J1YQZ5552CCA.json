@@ -1,12 +1,22 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "address": "osm",
+    "dump_station": "osm",
+    "fee": "osm",
+    "nearest_beach": "osm",
+    "power": "osm"
   },
   "facts": {
+    "address": {
+      "street": "Gordon Young Drive"
+    },
+    "dump_station": true,
+    "fee": true,
     "nearest_beach": {
       "distance_m": 710,
       "name": "Back Beach"
-    }
+    },
+    "power": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFESAS51J1YQZ5552CCA",
@@ -15,14 +25,14 @@
     "lat": -30.889098,
     "lon": 153.03414
   },
-  "name": null,
+  "name": "Ingenia Holidays South West Rocks",
   "osm": {
     "id": 615647905,
-    "timestamp": "2024-08-07T06:31:02Z",
+    "timestamp": "2026-11-08T01:05:15Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-09T23:57:18Z"
 }
