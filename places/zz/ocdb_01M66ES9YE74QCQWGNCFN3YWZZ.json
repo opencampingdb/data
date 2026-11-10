@@ -1,9 +1,29 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "cabins": "osm",
+    "caravans": "osm",
+    "drinking_water": "osm",
+    "dump_station": "osm",
+    "fee": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "cabins": false,
+    "caravans": true,
+    "drinking_water": true,
+    "dump_station": true,
+    "fee": false,
+    "power": false,
+    "showers": false,
+    "tents": false,
+    "toilets": false
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9YE74QCQWGNCFN3YWZZ",
-  "kind": "campground",
+  "kind": "free_camp",
   "location": {
     "lat": -25.235,
     "lon": 152.27889
@@ -11,11 +31,11 @@
   "name": "Childers Rest Area",
   "osm": {
     "id": 1811164630,
-    "timestamp": "2026-08-06T10:09:19Z",
+    "timestamp": "2026-11-09T01:43:52Z",
     "type": "node",
-    "version": 3
+    "version": 12
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-10T21:41:31Z"
 }
