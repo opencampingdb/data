@@ -84,6 +84,44 @@ def test_merged_place_still_mapped_twice_is_a_task(repo):
     assert task["features"][0]["properties"]["record"].endswith(f"/places/18/{A}.json")
 
 
+def fix(repo):
+    (task,) = tasks(repo, DOUBLE_MAPPING)
+    return task["features"][0]["properties"]["fix"]
+
+
+def test_a_point_and_an_outline_go_into_the_outline(repo):
+    write(repo, record(A, 1, merged_osm=[{"type": "way", "id": 2}]))
+    write_challenges(repo, [osm_place(1), osm_place(2, osm_type="way", lat=-35.0001)])
+    assert fix(repo) == (
+        "Likely fix: keep the outline way/2, copy across any tags only node/1 has, then delete the point. "
+        "In iD, select them together and use Merge (C), which does both."
+    )
+
+
+def test_two_points_keep_one(repo):
+    write(repo, record(A, 1, merged_osm=[{"type": "node", "id": 2}]))
+    write_challenges(repo, [osm_place(1), osm_place(2, lat=-35.0001)])
+    assert fix(repo).startswith("Likely fix: keep one point, usually the one with the longer history")
+    assert "Merge Nodes (M)" in fix(repo)
+
+
+def test_two_outlines_keep_the_better_boundary(repo):
+    write(repo, record(A, 1, osm_type="way", merged_osm=[{"type": "relation", "id": 2}]))
+    write_challenges(repo, [osm_place(1, osm_type="way"), osm_place(2, osm_type="relation", lat=-35.0001)])
+    assert fix(repo).startswith("Likely fix: keep the outline that best follows the site's boundary")
+
+
+def test_disagreeing_kinds_and_tags_are_named(repo):
+    write(repo, record(A, 1, merged_osm=[{"type": "way", "id": 2}]))
+    caravan_park = {**osm_place(2, osm_type="way", lat=-35.0001, fee=True, toilets=True), "kind": "caravan_park"}
+    write_challenges(repo, [osm_place(1, fee=False, toilets=True, address={"street": "x"}), caravan_park])
+    conflicts = fix(repo).split("\n\n")[1]
+    assert conflicts == (
+        "They are tagged as different kinds of place: Free camp on node/1, Caravan park on way/2. "
+        "They disagree on fee=no on node/1, fee=yes on way/2. Check which is right before you keep one value."
+    )
+
+
 def test_task_goes_once_osm_keeps_one_object(repo):
     write(repo, record(A, 1, merged_osm=[{"type": "way", "id": 2}]))
     write_challenges(repo, [osm_place(1)])
@@ -199,7 +237,8 @@ def test_two_travellers_make_a_task_with_count_date_and_check(repo, tmp_path):
     properties = task["features"][0]["properties"]
     assert properties["changes"] == (
         "- 2 travellers reported the road is fine for 2WD (4wd_only=no), most recently on 4 November 2026.\n"
-        "  - Check it with a survey, or street-level photos (Mapillary or Panoramax) of the access road."
+        "  - Check it with a survey, or street-level photos (Mapillary or Panoramax) of the access road.\n"
+        "  - If it checks out, set 4wd_only=no. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:4wd_only"
     )
     assert properties["ocdb_id"] == A
     assert properties["record"].endswith(f"/places/18/{A}.json")
@@ -239,7 +278,8 @@ def test_verified_owner_is_enough(repo, tmp_path):
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, owner_update(A, facts={"pets": "leashed"})), now=NOW)
     assert changes(repo) == (
         "- The verified owner says dogs are allowed on a lead (dog=leashed), set on 3 November 2026.\n"
-        "  - Check it with a survey, or the operator's own sign or website."
+        "  - Check it with a survey, or the operator's own sign or website.\n"
+        "  - If it checks out, set dog=leashed. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:dog"
     )
 
 
@@ -274,7 +314,9 @@ def test_a_real_name_from_two_travellers_is_sent(repo, tmp_path):
     write_challenges(repo, [osm_place(1, name="Lake Camp")], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
         "- 2 travellers reported the name is Lake Bend Camp (name=Lake Bend Camp), most recently on 4 November 2026.\n"
-        "  - Check it with the signage at the place, or a survey."
+        "  - Check it with the signage at the place, or a survey.\n"
+        "  - If it checks out, set name=Lake Bend Camp. The name tag holds the name on the sign, never a description. "
+        "OSM wiki: https://wiki.openstreetmap.org/wiki/Key:name"
     )
 
 
@@ -286,6 +328,10 @@ def test_closure_from_two_travellers(repo, tmp_path):
     del gone["report"]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, closed, gone), now=NOW)
     assert changes(repo).startswith("- 2 travellers reported it has closed for good")
+    assert changes(repo).endswith(
+        "such as disused:tourism=camp_site. Once nothing is left on the ground, delete the object. "
+        "OSM wiki: https://wiki.openstreetmap.org/wiki/Lifecycle_prefix"
+    )
 
 
 def doubt(place, field, source, received="2026-11-03T00:00:00Z", result="needs_review"):
@@ -414,7 +460,8 @@ def test_contributed_facts_stay_out_of_a_task_with_feedback(repo, tmp_path):
     write_challenges(repo, [osm_place(1, drinking_water=False)], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
         "- 2 travellers reported there are toilets (toilets=yes), most recently on 4 November 2026.\n"
-        "  - Check it with a survey, street-level photos or recent imagery."
+        "  - Check it with a survey, street-level photos or recent imagery.\n"
+        "  - If it checks out, set toilets=yes. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:toilets"
     )
     assert tasks(repo, DOUBLE_MAPPING) == []
 
@@ -433,7 +480,7 @@ def test_untagged_facts_and_contact_details_are_left_out(repo, tmp_path):
     assert changes(repo).splitlines()[0] == (
         "- 2 travellers reported the website is https://lake.example (website=https://lake.example), most recently on 4 November 2026."
     )
-    assert len(changes(repo).splitlines()) == 2
+    assert len(changes(repo).splitlines()) == 3
 
 
 def test_osm_tags_follow_the_extract():

@@ -21,7 +21,7 @@ A value in Open Camping DB is not enough on its own, because the feedback engine
 - Opening hours from travellers that carry a quoted comment (`Mo-Su 08:00-17:00 "office closes at noon"`) are never sent: the comment is free text no person has read. The verified owner's opening hours are sent with their comment.
 - Without `--inbox` (a local run, a fork) the file is written with no tasks, and the log and sync report say why.
 
-Each line of a task says how many travellers reported the value and when the latest did, or when the owner set it, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers and dump points. Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
+Each line of a task says how many travellers reported the value and when the latest did, or when the owner set it, the tag to set once the check agrees with a link to its OSM wiki page, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers and dump points. A closure points to the wiki's lifecycle prefixes (`disused:tourism=camp_site` while the site is still on the ground, deleting the object once nothing is left). Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
 
 ## Approving changes
 
@@ -54,15 +54,21 @@ Both challenges live in the MapRoulette project "Open Camping DB". Each one is b
 - `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/double_mapping.geojson`
 - `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/traveller_reports.geojson`
 
-Every feature carries `id` (the Open Camping DB id, which matches a task across rebuilds), `@id` (the OSM object, such as `node/123`), `name` and `record` (the place file). Double mapping tasks add `objects`, and report tasks add `changes` and `ocdb_id` (the Open Camping DB id again, for mappers to cite). Challenge instructions use them as `{{name}}` and so on.
+Every feature carries `id` (the Open Camping DB id, which matches a task across rebuilds), `@id` (the OSM object, such as `node/123`), `name` and `record` (the place file). Double mapping tasks add `objects` and `fix`, and report tasks add `changes` and `ocdb_id` (the Open Camping DB id again, for mappers to cite). Challenge instructions use them as `{{name}}` and so on.
 
 **Camp sites mapped twice**, instructions:
 
 ```text
 {{name}} is mapped in OpenStreetMap more than once: {{objects}}. Open Camping DB merged these into one place: {{record}}
 
-Check the imagery and any survey you have. If they are the same place, merge them into one object and keep the tags from both. If they really are separate places, mark the task "Not an Issue".
+OpenStreetMap's good practice is one feature, one OSM element (https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element). A camp site drawn as an outline keeps its tags on the outline, not on a point inside it.
+
+{{fix}}
+
+Check the imagery and any survey you have before you edit. If they really are separate places, such as two camp grounds side by side, mark the task "Not an Issue".
 ```
+
+`fix` is the likely fix for the objects' shapes: a point and an outline go into the outline, two points become one, and two outlines keep the one that best follows the boundary. When the objects are tagged as different kinds of place, or disagree on a tag Open Camping DB reads (`fee=yes` on one, `fee=no` on the other), `fix` names each one and asks the mapper to check which is right.
 
 **What travellers report**, instructions:
 

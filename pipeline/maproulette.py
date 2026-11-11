@@ -25,7 +25,9 @@ maproulette/double_mapping.geojson
     objects the rules in pipeline.geometry find to be a separate place (a
     major road between them, or different directions, operators or access).
     Motels, cabins and hostels (NOT_CAMP_SITES) are never tasks: the
-    challenge is about camp sites.
+    challenge is about camp sites. Each task carries "fix": the likely fix
+    for its objects' shapes (a point inside an outline goes into the
+    outline), and any kind or tag the objects disagree on.
     With --geometry, the sidecar pipeline.extract wrote, roads and outlines
     are tested too.
 
@@ -48,7 +50,8 @@ maproulette/traveller_reports.geojson
     needs the verified owner's applied update, and doubts do not change it. A
     name that only describes the place ("Heavy Vehicle Rest Area") is never
     sent. Each line says how many travellers reported the value and when, or
-    when the owner set it, and how a mapper can check it. Only counts and
+    when the owner set it, how a mapper can check it, and the tag to set
+    once the check agrees, with its OSM wiki page. Only counts and
     dates leave the inbox: never a device, an origin or a traveller's words.
 
 Values from community reports (source community_report) never reach either
@@ -75,6 +78,9 @@ from .sync import escape_cell, load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
 RS = "\x1e"
+WIKI = "https://wiki.openstreetmap.org/wiki/"
+# Keys whose values each have their own wiki page, which says more than the key's page.
+VALUE_PAGES = ("amenity",)
 
 DOUBLE_MAPPING = "double_mapping.geojson"
 # The double mapping challenge is about camp sites and stops. Places that
@@ -291,6 +297,59 @@ def feature(record: dict, ref: str, location: dict, properties: dict) -> dict:
     }
 
 
+def wiki_page(tag: str) -> str:
+    """The OSM wiki page for a key=value tag: the value's own page for VALUE_PAGES keys, else the key's."""
+    key, _, value = tag.partition("=")
+    if key in VALUE_PAGES and value:
+        return f"{WIKI}Tag:{key}%3D{value}"
+    return f"{WIKI}Key:{key}"
+
+
+def disagreements(present: list[str], extract: dict) -> list[str]:
+    """A line for each thing the objects say differently: their kind, and each fact with an OSM tag."""
+    lines = []
+    kinds = {ref: extract[ref].get("kind") for ref in present}
+    if len(set(kinds.values())) > 1:
+        lines.append("They are tagged as different kinds of place: " + ", ".join(
+            f"{KIND_LABEL.get(kind, kind)} on {ref}" for ref, kind in kinds.items()
+        ) + ".")
+    fields = sorted({field for ref in present for field in extract[ref].get("facts", {})})
+    for field in fields:
+        values = {ref: extract[ref]["facts"][field] for ref in present if field in extract[ref].get("facts", {})}
+        tags = {ref: osm_tag(field, value) for ref, value in values.items()}
+        if len(values) < 2 or None in tags.values() or len(set(tags.values())) < 2:
+            continue
+        lines.append("They disagree on " + ", ".join(f"{tag} on {ref}" for ref, tag in tags.items()) + ".")
+    return lines
+
+
+def double_mapping_fix(present: list[str], extract: dict) -> str:
+    """The likely fix for one place mapped as several objects, by their shapes, and what to reconcile."""
+    points = [ref for ref in present if ref.startswith("node/")]
+    outlines = [ref for ref in present if not ref.startswith("node/")]
+    if len(outlines) == 1:
+        fix = (
+            f"Likely fix: keep the outline {outlines[0]}, copy across any tags only "
+            f"{' and '.join(points)} {'has' if len(points) == 1 else 'have'}, then delete "
+            f"{'the point' if len(points) == 1 else 'the points'}. In iD, select them together and use Merge (C), which does both."
+        )
+    elif outlines:
+        fix = (
+            "Likely fix: keep the outline that best follows the site's boundary on the imagery and copy the other "
+            "objects' tags onto it. Then delete the others, or take the camp site tags off any that also map "
+            "something else, such as a park."
+        )
+    else:
+        fix = (
+            "Likely fix: keep one point, usually the one with the longer history, copy across any tags only the "
+            "other has, then delete the other. In iD, select both and use Merge (C). In JOSM, use Merge Nodes (M)."
+        )
+    conflicts = disagreements(present, extract)
+    if conflicts:
+        fix += "\n\n" + " ".join(conflicts) + " Check which is right before you keep one value."
+    return fix
+
+
 def double_mapping_tasks(places: dict, extract: dict, geometry: Geometry | None = None) -> list[dict]:
     geometry = geometry or Geometry()
     tasks = []
@@ -315,6 +374,7 @@ def double_mapping_tasks(places: dict, extract: dict, geometry: Geometry | None 
         properties = {
             "name": record.get("name") or "Unnamed place",
             "objects": objects,
+            "fix": double_mapping_fix(present, extract),
             "record": record_url(record),
         }
         tasks.append({
@@ -449,14 +509,27 @@ def backing(record: dict, key: str, value, source: str, evidence: dict, now: dat
     return count, max(e["received"] for e in recent)
 
 
-def change_line(source: str, backed: tuple[int, datetime], text: str, how: str) -> str:
-    """The task's line for one value, with who stated it and when, then how to check it."""
+CLOSED_FIX = (
+    "If it checks out and the site is still there but no longer used, add the disused: prefix to its main tag, "
+    "such as disused:tourism=camp_site. Once nothing is left on the ground, delete the object. "
+    f"OSM wiki: {WIKI}Lifecycle_prefix"
+)
+NAME_RULE = "The name tag holds the name on the sign, never a description."
+
+
+def tag_fix(tag: str, rule: str = "") -> str:
+    """The sub-line saying which tag to set once the check agrees, and its wiki page."""
+    return f"If it checks out, set {tag}. {rule + ' ' if rule else ''}OSM wiki: {wiki_page(tag)}"
+
+
+def change_line(source: str, backed: tuple[int, datetime], text: str, how: str, fix: str) -> str:
+    """The task's line for one value, with who stated it and when, how to check it, then the likely fix."""
     count, when = backed
     if source == "owner":
         line = f"- The verified owner says {text}, set on {australian_date(when)}."
     else:
         line = f"- {count} travellers reported {text}, most recently on {australian_date(when)}."
-    return f"{line}\n  - Check it with {how}."
+    return f"{line}\n  - Check it with {how}.\n  - {fix}"
 
 
 def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime) -> list[str]:
@@ -476,7 +549,9 @@ def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime)
             continue
         backed = backing(record, field, value, source, evidence, now)
         if backed:
-            changes.append(change_line(source, backed, f"{describe(field, value)} ({tag})", HOW_TO_CHECK.get(field, CHECK_DEFAULT)))
+            changes.append(change_line(
+                source, backed, f"{describe(field, value)} ({tag})", HOW_TO_CHECK.get(field, CHECK_DEFAULT), tag_fix(tag)
+            ))
     name = record.get("name")
     source = sources.get("name")
     if (
@@ -485,13 +560,14 @@ def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime)
     ):
         backed = backing(record, "name", name, source, evidence, now)
         if backed:
-            changes.append(change_line(source, backed, f"the name is {name} (name={name})", HOW_TO_CHECK["name"]))
+            changes.append(change_line(
+                source, backed, f"the name is {name} (name={name})", HOW_TO_CHECK["name"], tag_fix(f"name={name}", NAME_RULE)
+            ))
     source = sources.get("status")
     if record.get("status") == "closed" and source in REPORT_SOURCES:
         backed = backing(record, "status", "closed", source, evidence, now)
         if backed:
-            text = "it has closed for good (no single tag says this, so edit as you see fit)"
-            changes.append(change_line(source, backed, text, HOW_TO_CHECK["status"]))
+            changes.append(change_line(source, backed, "it has closed for good", HOW_TO_CHECK["status"], CLOSED_FIX))
     return changes
 
 
