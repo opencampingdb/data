@@ -153,22 +153,8 @@ class SidecarBuilder:
         self.areas: dict[str, list] = {}
         self.signals: dict[str, dict] = {}
         # Every major road in the file: (id, highway, name, ref, [(lon, lat), ...]).
+        # pipeline.extract fills it from the read's pipeline.roads.MajorRoads.
         self.roads: list[tuple] = []
-
-    def road(self, way) -> None:
-        """A way handler: keeps major roads, with their node locations."""
-        tags = way.tags
-        if not is_major_road(tags):
-            return
-        coords = []
-        for node in way.nodes:
-            if not node.location.valid():
-                return
-            coords.append((round(node.location.lon, 7), round(node.location.lat, 7)))
-        if len(coords) >= 2:
-            self.roads.append((
-                way.id, tags.get("highway"), tags.get("name"), tags.get("ref"), coords,
-            ))
 
     def place(self, ref: str, tags, geometry) -> None:
         """Notes a place's outline (for an area) and its signals."""

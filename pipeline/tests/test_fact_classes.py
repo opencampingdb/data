@@ -67,9 +67,10 @@ def test_proposable_facts_are_the_agreed_list():
 
 def test_nearby_facts_are_mapped():
     spec = facts()
-    for name in ("nearest_beach", "nearest_boat_ramp", "pub", "fuel", "car_wash", "crocodiles"):
+    for name in ("nearest_beach", "nearest_boat_ramp", "nearest_major_road", "pub", "fuel", "car_wash", "crocodiles"):
         assert spec[name]["x-ocdb-class"] == "mapped", name
     assert "natural=beach" in spec["nearest_beach"]["x-osm"]
+    assert "highway=motorway" in spec["nearest_major_road"]["x-osm"]
     assert "leisure=slipway" in spec["nearest_boat_ramp"]["x-osm"]
 
 

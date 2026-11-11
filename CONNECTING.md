@@ -16,7 +16,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 12,
-  "format_minor": 4,
+  "format_minor": 5,
   "layout_version": 1,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -137,7 +137,9 @@ from OSM, and fills `bins` and `booking_required` from OSM too (section 4).
 It also fills `fishing`, `phone_2` and `booking_url` from OSM, and sets
 `dump_station` on a place to stay whose dump station is for guests only.
 It adds `nearest_boat_ramp`, and fills `pub`, `fuel` and `car_wash` from
-OSM objects inside a place (section 4).
+OSM objects inside a place (section 4). Format 12.5 adds the fact
+`nearest_major_road`, the distance to the nearest major OSM road within
+500 m (section 4). The traveller fact `near_road` reads the same as before.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -533,6 +535,15 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `boat_ramp`), and its own `nearest_boat_ramp` is the next ramp, never
   itself. Its source is always `osm` and fact reports cannot set it. The
   traveller fact `boat_ramp_nearby` is separate and unchanged.
+- `nearest_major_road` is the nearest major OSM road within 500 m of the
+  place: a `highway=motorway`, `trunk`, `primary` or `secondary` road, their
+  `_link` roads, or a one-way `tertiary` road (one carriageway of a divided
+  road). `distance_m` is to the nearest point of the road's line, rounded to
+  10 m, and `name` is the road's name, or its `ref` (such as `A1`) when it
+  has no name. A place with no major road within 500 m has none. Its source
+  is always `osm` and fact reports cannot set it. The traveller fact
+  `near_road`, that road noise carries, is separate and unchanged: a road
+  can be close and quiet, or further away and still heard.
 - `pub`, `fuel` and `car_wash` are also `true` from OSM when an
   `amenity=pub`, `amenity=fuel` or `amenity=car_wash` lies inside the
   place's area, such as a pub inside a caravan park. A place mapped as a

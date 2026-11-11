@@ -666,6 +666,7 @@ def test_a_second_phone_without_a_first_is_never_sent(repo, tmp_path):
 @pytest.mark.parametrize("field, value", [
     ("pub", True), ("fuel", True), ("car_wash", True), ("crocodiles", True),
     ("nearest_beach", {"distance_m": 300}), ("nearest_boat_ramp", {"distance_m": 900}),
+    ("nearest_major_road", {"distance_m": 200}),
 ])
 def test_a_nearby_fact_never_makes_a_task(repo, tmp_path, field, value):
     # These come from other OSM objects, so no tag on the place's own object would show them.

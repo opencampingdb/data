@@ -16,7 +16,8 @@ exits 1. Checks:
   name, location and status entries. Sources are osm, feedback,
   contributed, owner and community_report. The source rule and fact_rules
   appear only in released records (pipeline.release), never in places/
-- the nearby facts nearest_beach and nearest_boat_ramp have the source osm:
+- the nearby facts nearest_beach, nearest_boat_ramp and nearest_major_road
+  have the source osm:
   no fact report sets them
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated

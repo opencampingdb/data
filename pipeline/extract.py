@@ -46,6 +46,7 @@ from .kinds import (
     water_type,
 )
 from .nearby import NEARBY_TAG_PAIRS, InsideFeatures, inside_fact
+from .roads import MajorRoads
 from .water import WATER_TAG_PAIRS, WaterFeatures, crocodile_hazard, open_line, water_kinds
 
 # Simple yes/no tags: OSM key -> fact key.
@@ -640,16 +641,6 @@ class FirstPass:
         return False
 
 
-class RoadCollector:
-    """Hands every way, with its node locations, to the sidecar's road check. Passes every object on."""
-
-    def __init__(self, sidecar: SidecarBuilder) -> None:
-        self.sidecar = sidecar
-
-    def way(self, way) -> None:
-        self.sidecar.road(way)
-
-
 class AreaWayCounter:
     """Counts the ways handed to the area builder. Passes every object on."""
 
@@ -660,7 +651,7 @@ class AreaWayCounter:
         self.stats["ways_to_area_builder"] += 1
 
 
-def read_objects(path: Path, stats: dict, sites: SiteRelations, sidecar: SidecarBuilder | None = None):
+def read_objects(path: Path, stats: dict, sites: SiteRelations, roads: MajorRoads):
     """Yield every OSM object or area that may be a place or a container.
 
     Fills sites with the site relations that are places and the positions of
@@ -674,8 +665,8 @@ def read_objects(path: Path, stats: dict, sites: SiteRelations, sidecar: Sidecar
        FirstPass keeps.
     2. Everything, with a node location cache. A way id filter sits in front
        of the area builder, so it never sees a way it does not need. Only
-       objects with an interesting tag come out at the end. With a sidecar,
-       every way passes the sidecar's road check first, before the filter.
+       objects with an interesting tag come out at the end. Every way passes
+       the major road check (pipeline.roads) first, before the filter.
 
     pyosmium's FileProcessor.with_areas() filters only the relations, and
     would assemble an area for every closed way in the file, so this chain
@@ -712,11 +703,9 @@ def read_objects(path: Path, stats: dict, sites: SiteRelations, sidecar: Sidecar
     locations = osmium.NodeLocationsForWays(location_store)
     locations.ignore_errors()
 
-    roads = [RoadCollector(sidecar)] if sidecar is not None else []
-
     with osmium.io.Reader(str(path)) as reader:
         objects = osmium.OsmFileIterator(
-            reader, locations, *roads, area_gate, site_ways, counter, second_pass, output_filter
+            reader, locations, roads, area_gate, site_ways, counter, second_pass, output_filter
         )
         for obj in objects:
             yield obj
@@ -868,8 +857,12 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
     sites = SiteRelations()
     water = WaterFeatures()
     inside = InsideFeatures()
+    roads = MajorRoads()
+    if sidecar is not None:
+        # The sidecar writes its road lines from the same roads.
+        sidecar.roads = roads.roads
 
-    for obj in read_objects(path, stats, sites, sidecar):
+    for obj in read_objects(path, stats, sites, roads):
         tags = tag_dict(obj)
 
         kinds_of_water = water_kinds(tags)
@@ -947,12 +940,14 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         key = (record["osm"]["type"], record["osm"]["id"])
         water.set_facts(record, key)
         inside.set_facts(record, outlines.pop(i, None), key)
+        roads.set_facts(record)
         records.append(record)
 
     stats["kept"] = len(records)
     stats["containers"] = container_counts
     stats["water"] = {kind: water.count(kind) for kind in ("beach", "crocodiles", "boat_ramp")}
     stats["inside"] = {fact: inside.count(fact) for fact in ("pub", "fuel", "car_wash")}
+    stats["major_roads"] = roads.count()
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -989,6 +984,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Site relations: {stats['site_relations']}", file=sys.stderr)
     print(f"Water features: {stats['water']}", file=sys.stderr)
     print(f"Pubs, fuel and car washes: {stats['inside']}", file=sys.stderr)
+    print(f"Major roads: {stats['major_roads']}", file=sys.stderr)
     return 0
 
 

@@ -257,7 +257,8 @@ may stay, and comes from the OSM `access` tag.
 #### Nearby features
 
 These facts come from other OSM objects inside or near the place,
-collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
+collected in the same read (`pipeline/water.py`, `pipeline/nearby.py` and
+`pipeline/roads.py`):
 
 - `nearest_beach`: the nearest `natural=beach` within 5 km, as an area, a
   node or an open line, with `distance_m` from the place's location to the
@@ -276,6 +277,19 @@ collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
   the nearest point, rounded to 10 m half up, `name` only when 100
   characters or fewer, ties to the ramp read first). A slipway is also a
   place of kind `boat_ramp`, and never counts for itself.
+- `nearest_major_road`: the nearest major road within 500 m
+  (`pipeline/roads.py`), with `distance_m` from the place's location to the
+  nearest point of the road's line, worked out and rounded like
+  `nearest_beach`, and the road's `name`, or its `ref` when it has no name
+  (left out when it has neither, or when it is longer than 100 characters).
+  A major road is the set the geometry sidecar uses
+  (`pipeline.geometry.is_major_road`): `highway=motorway`, `trunk`,
+  `primary` or `secondary`, their `_link` roads, and a `tertiary` road with
+  `oneway=yes` or `-1`, one carriageway of a divided road. Every such way
+  counts as a line through its nodes, closed or not. The roads come from the
+  same read as the places, and the sidecar's road lines are written from
+  them. Ties go to the road read first. It is separate from `near_road`, a
+  traveller's report that road noise carries.
 - `pub`, `fuel` and `car_wash: true` when an `amenity=pub`, `amenity=fuel`
   or `amenity=car_wash` lies inside the place's area (a closed way or a
   multipolygon) or on its edge. A node counts at its position, a closed way
