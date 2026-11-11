@@ -511,3 +511,68 @@ def test_report_fits_a_pr_body_when_nearly_every_record_changes():
     assert len(report) <= MAX_REPORT_CHARS
     assert "| Updated | 25000 |" in report
     assert "more, not listed here." in report
+
+
+def camp_osm(tmp_path: Path, version: int, tags: dict) -> Path:
+    """A one-park OSM file: node 9001 at one spot, with a name and these tags."""
+    lines = "".join(f'    <tag k="{k}" v="{v}"/>\n' for k, v in tags.items())
+    out = tmp_path / f"camp-v{version}.osm"
+    out.write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<osm version="0.6" generator="hand">\n'
+        f'  <node id="9001" version="{version}" lat="-37.1000000" lon="142.1000000">\n'
+        '    <tag k="tourism" v="caravan_site"/>\n    <tag k="name" v="Sync Test Park"/>\n'
+        f"{lines}  </node>\n</osm>\n",
+        encoding="utf-8",
+    )
+    return out
+
+
+def set_fact(repo: Path, key: str, value, source: str) -> Path:
+    """Give the one record a value for key from source, and return its path."""
+    path = place_path(repo, load_all(repo)[("node", 9001)]["id"])
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    rec["facts"][key] = value
+    rec["fact_sources"][key] = source
+    rec["fact_dates"] = {key: T1}
+    rewrite(path, rec)
+    return path
+
+
+def test_owner_booking_url_survives_an_osm_booking_link(repo, tmp_path):
+    sync(repo, extract_file(camp_osm(tmp_path, 1, {})), now=T1)
+    path = set_fact(repo, "booking_url", "https://example.org/owner-book", "owner")
+
+    sync(repo, extract_file(camp_osm(tmp_path, 2, {"website:booking": "https://example.org/osm-book"})), now=T2)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert camp["facts"]["booking_url"] == "https://example.org/owner-book"
+    assert camp["fact_sources"]["booking_url"] == "owner"
+    assert camp["fact_dates"] == {"booking_url": T1}
+
+
+def test_osm_booking_link_fills_booking_url_with_source_osm(repo, tmp_path):
+    sync(repo, extract_file(camp_osm(tmp_path, 1, {"reservation:website": "https://example.org/osm-book"})), now=T1)
+    camp = load_all(repo)[("node", 9001)]
+    assert camp["facts"]["booking_url"] == "https://example.org/osm-book"
+    assert camp["fact_sources"]["booking_url"] == "osm"
+
+
+def test_feedback_bins_survive_osm_bin_no(repo, tmp_path):
+    sync(repo, extract_file(camp_osm(tmp_path, 1, {})), now=T1)
+    path = set_fact(repo, "bins", True, "feedback")
+
+    sync(repo, extract_file(camp_osm(tmp_path, 2, {"bin": "no"})), now=T2)
+    camp = json.loads(path.read_text(encoding="utf-8"))
+    assert camp["facts"]["bins"] is True
+    assert camp["fact_sources"]["bins"] == "feedback"
+
+
+def test_osm_fact_whose_tag_has_gone_is_removed(repo, tmp_path):
+    sync(repo, extract_file(camp_osm(tmp_path, 1, {"fishing": "yes", "bin": "yes"})), now=T1)
+    camp = load_all(repo)[("node", 9001)]
+    assert camp["facts"]["fishing"] is True and camp["fact_sources"]["fishing"] == "osm"
+
+    sync(repo, extract_file(camp_osm(tmp_path, 2, {"bin": "yes"})), now=T2)
+    camp = load_all(repo)[("node", 9001)]
+    assert "fishing" not in camp["facts"]
+    assert "fishing" not in camp["fact_sources"]
+    assert camp["facts"]["bins"] is True

@@ -134,6 +134,8 @@ The other files read the same as in 12.1. Format 12.3 adds the facts
 `nearest_beach`, `sharks` and `marine_stingers` (section 4). Format 12.4
 adds the facts `fuels`, `air`, `hot_water`, `toilet_type` and `operator`,
 from OSM, and fills `bins` and `booking_required` from OSM too (section 4).
+It also fills `fishing`, `phone_2` and `booking_url` from OSM, and sets
+`dump_station` on a place to stay whose dump station is for guests only.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -503,6 +505,10 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   with `hgv=yes`), or from a fact report a person or reviewer accepts. More
   values may be added later, so treat an unknown value as a restriction you
   can't explain rather than ignoring it.
+- `dump_station: true` on a place to stay can be a dump station for its
+  guests only (OSM `sanitary_dump_station=customers`). A dump point or any
+  other place whose dump station is for customers only has no
+  `dump_station` from OSM, since it is not open to everyone.
 - `fuels` lists the fuels a place sells, in this order: `diesel`,
   `unleaded_91`, `e10`, `unleaded_95`, `unleaded_98`, `e85`, `adblue` and
   `lpg`. Its `lpg` is LPG at the pump (OSM `fuel:lpg`). The `lpg` fact is
@@ -553,7 +559,9 @@ with the place's id.
 - `description` is plain text from the owner, at most 500 characters,
   moderated like reviews. Show it as the owner's words.
 - `booking_url` (always https) and `booking_required` say how and whether to
-  book.
+  book. Either can also come from OSM (`booking_url` from `website:booking`,
+  then `reservation:website`), with the source `osm`. An owner's value
+  always wins: sync never replaces a value whose source is `owner`.
 - `farm_stay` is private land that its owner has listed. Open Camping DB
   never lists private land unless its owner adds it. A farm stay always has
   `osm: null`, `entry: "private"`, `booking_required: true`, and a

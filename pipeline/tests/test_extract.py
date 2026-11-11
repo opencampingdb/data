@@ -115,7 +115,8 @@ def test_fact_value_parsing():
         "website": "http://example.org"
     }
     assert facts_from_tags({"phone": "+61 3 1111 1111;+61 3 2222 2222"}) == {
-        "phone": "+61 3 1111 1111"
+        "phone": "+61 3 1111 1111",
+        "phone_2": "+61 3 2222 2222",
     }
     assert facts_from_tags({"shower": "cold"}) == {"showers": True, "hot_water": False}
     assert facts_from_tags({"power_supply": "maybe"}) == {}
@@ -462,6 +463,73 @@ def test_operator():
     assert facts_from_tags({"operator": "x" * 200}) == {"operator": "x" * 200}
     assert facts_from_tags({"operator": "x" * 201}) == {}
     assert facts_from_tags({"operator": "  "}) == {}
+
+
+def test_fishing():
+    assert facts_from_tags({"fishing": "yes"}) == {"fishing": True}
+    assert facts_from_tags({"fishing": "no"}) == {"fishing": False}
+    # Other values say something about the fishing, not whether it is allowed.
+    assert facts_from_tags({"fishing": "permit"}) == {}
+    assert facts_from_tags({"fishing": "catch_and_release"}) == {}
+
+
+def test_booking_url_from_website_booking_then_reservation_website():
+    assert facts_from_tags({"website:booking": "https://example.org/book"}) == {
+        "booking_url": "https://example.org/book"
+    }
+    assert facts_from_tags({"reservation:website": "https://example.org/reserve"}) == {
+        "booking_url": "https://example.org/reserve"
+    }
+    # website:booking wins.
+    assert facts_from_tags({
+        "website:booking": "https://example.org/book",
+        "reservation:website": "https://example.org/reserve",
+    }) == {"booking_url": "https://example.org/book"}
+    # The first with a value wins, even when it is not https.
+    assert facts_from_tags({
+        "website:booking": "http://example.org/book",
+        "reservation:website": "https://example.org/reserve",
+    }) == {}
+    # An empty website:booking is no value, so reservation:website is read.
+    assert facts_from_tags({
+        "website:booking": " ",
+        "reservation:website": "https://example.org/reserve",
+    }) == {"booking_url": "https://example.org/reserve"}
+    assert facts_from_tags({"website:booking": "example.org/book"}) == {}
+    assert facts_from_tags({"website:booking": "https://example.org/" + "x" * 500}) == {}
+
+
+def test_phone_2_from_the_second_phone_value():
+    assert facts_from_tags({"phone": "+61 3 1111 1111; +61 3 2222 2222"}) == {
+        "phone": "+61 3 1111 1111",
+        "phone_2": "+61 3 2222 2222",
+    }
+    # Both numbers come from the same key: phone wins over contact:phone.
+    assert facts_from_tags({
+        "phone": "+61 3 1111 1111",
+        "contact:phone": "+61 3 3333 3333;+61 3 4444 4444",
+    }) == {"phone": "+61 3 1111 1111"}
+    assert facts_from_tags({"contact:phone": "+61 3 3333 3333;+61 3 4444 4444;+61 3 5555 5555"}) == {
+        "phone": "+61 3 3333 3333",
+        "phone_2": "+61 3 4444 4444",
+    }
+    assert facts_from_tags({"phone": "+61 3 1111 1111;"}) == {"phone": "+61 3 1111 1111"}
+    assert facts_from_tags({"phone": "+61 3 1111 1111;" + "1" * 101}) == {"phone": "+61 3 1111 1111"}
+
+
+def test_guest_only_dump_station_counts_on_a_place_to_stay_only():
+    records = by_osm(extract_file(FIXTURES / "dump_customers.osm"))
+    park = records[("node", 7001)]
+    assert park["kind"] == "caravan_park"
+    # Guests may use it, and a place to stay is for guests.
+    assert park["facts"] == {"dump_station": True}
+    # A dump point or fuel station for customers only is not open to everyone.
+    dump_point = records[("node", 7002)]
+    assert dump_point["kind"] == "dump_point"
+    assert "dump_station" not in dump_point["facts"]
+    fuel = records[("node", 7003)]
+    assert "dump_station" not in fuel["facts"]
+    assert records[("node", 7004)]["facts"]["dump_station"] is True
 
 
 def test_hgv_does_not_set_big_rigs():

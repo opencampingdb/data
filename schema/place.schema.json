@@ -122,7 +122,7 @@
         "toilets": {"type": "boolean"},
         "showers": {"type": "boolean"},
         "drinking_water": {"type": "boolean"},
-        "dump_station": {"type": "boolean"},
+        "dump_station": {"description": "A dump station on site (OSM sanitary_dump_station=yes/no). On a place to stay, sanitary_dump_station=customers is true too: guests may use it.", "type": "boolean"},
         "max_stay": {"type": "string", "minLength": 1, "maxLength": 100},
         "opening_hours": {"type": "string", "minLength": 1, "maxLength": 255},
         "website": {"type": "string", "pattern": "^https?://", "maxLength": 500},
@@ -153,7 +153,7 @@
         "cabins": {"description": "Cabins or other on-site accommodation (OSM cabins=yes/no).", "type": "boolean"},
         "pub": {"description": "A pub or hotel on site.", "type": "boolean"},
         "swimming": {"description": "Swimming at or next to the place.", "type": "boolean"},
-        "fishing": {"description": "Fishing at or next to the place.", "type": "boolean"},
+        "fishing": {"description": "Fishing at or next to the place (OSM fishing=yes/no).", "type": "boolean"},
         "walking_tracks": {"description": "Walking tracks start at or near the place.", "type": "boolean"},
         "scenery": {"description": "Good scenery.", "type": "boolean"},
         "wildlife": {"description": "Wildlife to see.", "type": "boolean"},
@@ -212,13 +212,13 @@
           }
         },
         "email": {"type": "string", "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$", "maxLength": 254},
-        "phone_2": {"description": "A second phone number.", "type": "string", "minLength": 1, "maxLength": 100},
+        "phone_2": {"description": "A second phone number (the second value of OSM phone, then contact:phone).", "type": "string", "minLength": 1, "maxLength": 100},
         "facebook": {"description": "The place's Facebook page, https only (OSM contact:facebook).", "type": "string", "pattern": "^https://", "maxLength": 500},
         "instagram": {"description": "The place's Instagram page, https only (OSM contact:instagram).", "type": "string", "pattern": "^https://", "maxLength": 500},
         "tiktok": {"description": "The place's TikTok page, https only (OSM contact:tiktok).", "type": "string", "pattern": "^https://", "maxLength": 500},
         "x": {"description": "The place's X (Twitter) page, https only (OSM contact:twitter).", "type": "string", "pattern": "^https://", "maxLength": 500},
         "booking_url": {
-          "description": "Where to book. https only.",
+          "description": "Where to book, https only: from the owner, or from OSM website:booking, then reservation:website. Sync never replaces an owner's value.",
           "type": "string",
           "pattern": "^https://",
           "maxLength": 500
