@@ -66,13 +66,14 @@ from .common import (
 # 12.2: ocdb.sqlite.gz, the release as an SQLite database, and changesets to it
 # from earlier releases (pipeline.database), with layout_version.
 # 12.3: the facts nearest_beach, sharks and marine_stingers.
+# 12.4: the facts fuels, air, hot_water, toilet_type, operator and nearest_boat_ramp.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 12
-FORMAT_MINOR = 3
+FORMAT_MINOR = 4
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 # Fees paid more than this many months before the release are left out.

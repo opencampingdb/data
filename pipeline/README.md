@@ -198,7 +198,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `toilets` | `toilets` | `yes` / `no` |
 | `shower` | `showers` | `yes`, `hot` or `cold` is `true`, `no` is `false` |
 | `drinking_water` | `drinking_water` | `yes` / `no` |
-| `sanitary_dump_station` | `dump_station` | `yes` / `no` |
+| `sanitary_dump_station` | `dump_station` | `yes` / `no`. `customers` is `true` on a place to stay (a kind in the overnight group), whose guests may use it, and left out on any other kind |
 | `wheelchair` | `wheelchair` | `yes` / `no`. `limited` is left out |
 | `motorhome` | `motorhomes` | `yes` / `no` |
 | `washing_machine` | `laundry` | `yes` / `no` |
@@ -212,13 +212,22 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `nudism` | `nudist` | `yes`, `designated` or `customary` is `true`, `no` is `false` |
 | `min_age` | `over_50s` | `50`, `55` or `60` is `true`. No other value is written |
 | `brand` | `brand` | A park chain or club we list (BIG4 is `big4`, Discovery Parks is `discovery`, and so on: `BRANDS` in `pipeline/kinds.py`). Other brands are left out |
+| `fuel:diesel`, `fuel:octane_91`, `fuel:e10`, `fuel:octane_95`, `fuel:octane_98`, `fuel:e85`, `fuel:adblue`, `fuel:lpg` | `fuels` | the fuels tagged `yes`, as `diesel`, `unleaded_91`, `e10`, `unleaded_95`, `unleaded_98`, `e85`, `adblue`, `lpg` in that order. No fuel tagged `yes`, no fact. `fuel:lpg` is LPG at the pump, so it never sets `lpg` (gas bottle refill or swap) |
+| `compressed_air` | `air` | `yes` / `no` |
+| `fishing` | `fishing` | `yes` / `no`. Other values, such as `permit`, are left out |
+| `bin` | `bins` | `yes` / `no` |
+| `hot_water`, `shower` | `hot_water` | `yes` / `no`. Without a `hot_water` value, `shower=hot` is `true` and `shower=cold` is `false` |
+| `toilets:disposal` | `toilet_type` | `flush`, `pitlatrine` is `pit`, `chemical`, `dry_toilet` or `bucket` is `dry`. Others are left out |
+| `reservation` | `booking_required` | `required` is `true`, `no` is `false`. `yes` and `recommended` are left out |
+| `operator` | `operator` | trimmed, up to 200 characters. Longer values are left out |
 | `addr:unit`, `addr:housenumber`, `addr:street`, `addr:place`, `addr:suburb` (then `addr:city`), `addr:state`, `addr:postcode` | `address` | an object with `unit`, `housenumber`, `street`, `place`, `suburb`, `state` and `postcode`. Written only with a street or a place. State becomes its abbreviation (`Victoria` is `VIC`); a state we can't read, a postcode that isn't four digits and values over 100 characters are left out |
 | `email`, then `contact:email` | `email` | kept only if it looks like an email address |
 | `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` (then the bare keys) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://`. A bare handle is left out |
 | `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written. |
 | `opening_hours` | `opening_hours` | copied as is |
 | `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
-| `phone`, then `contact:phone` | `phone` | copied as is |
+| `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is. The second, from the same key, is `phone_2`, up to 100 characters |
+| `website:booking`, then `reservation:website` | `booking_url` | the first with a value, kept only if it starts with `https://` and is up to 500 characters. An owner's `booking_url` is never replaced (see `pipeline/sync.py`) |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`, except on a place for heavy vehicles only (next row), where it says who may drive in and is left out. Others, such as `destination`, are left out. |
@@ -242,8 +251,8 @@ may stay, and comes from the OSM `access` tag.
 
 #### Nearby features
 
-Two facts come from other OSM objects near the place, collected in the
-same read (`pipeline/water.py`):
+These facts come from other OSM objects inside or near the place,
+collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
 
 - `nearest_beach`: the nearest `natural=beach` within 5 km, as an area, a
   node or an open line, with `distance_m` from the place's location to the
@@ -257,6 +266,18 @@ same read (`pipeline/water.py`):
   `crocodiles`, as a whole value) and the place's own tags set no
   `crocodiles`. OSM's `hazard` key is for hazards declared by a sign or a
   government notice.
+- `nearest_boat_ramp`: the nearest `leisure=slipway` within 5 km, as a node,
+  an area or an open line, by the same rules as `nearest_beach` (distance to
+  the nearest point, rounded to 10 m half up, `name` only when 100
+  characters or fewer, ties to the ramp read first). A slipway is also a
+  place of kind `boat_ramp`, and never counts for itself.
+- `pub`, `fuel` and `car_wash: true` when an `amenity=pub`, `amenity=fuel`
+  or `amenity=car_wash` lies inside the place's area (a closed way or a
+  multipolygon) or on its edge. A node counts at its position, a closed way
+  or multipolygon at the centroid of its area. A place drawn as a node has
+  no area and gets none of these, and an object never counts for itself, so
+  a fuel station drawn as an area does not get `fuel` from its own centroid.
+  A place whose own tags set the fact keeps its own value. Never `false`.
 
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag

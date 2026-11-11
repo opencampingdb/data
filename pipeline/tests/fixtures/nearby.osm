@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+A pub, a fuel station and a car wash inside places, and boat ramps near
+them, for pipeline.nearby. The places are invented. At latitude -33 one
+degree of latitude is 111,195 m.
+-->
+<osm version="0.6" generator="fixture">
+  <!-- Way 2001: a caravan park, a square 0.004 degrees across around (-33.0, 151.0). -->
+  <node id="1" version="1" lat="-32.998" lon="150.998"/>
+  <node id="2" version="1" lat="-32.998" lon="151.002"/>
+  <node id="3" version="1" lat="-33.002" lon="151.002"/>
+  <node id="4" version="1" lat="-33.002" lon="150.998"/>
+  <way id="2001" version="1">
+    <nd ref="1"/><nd ref="2"/><nd ref="3"/><nd ref="4"/><nd ref="1"/>
+    <tag k="tourism" v="caravan_site"/>
+    <tag k="name" v="Fixture Caravan Park"/>
+  </way>
+  <!-- Node 101: a pub inside the caravan park. It is a place of its own. -->
+  <node id="101" version="1" lat="-32.999" lon="150.999">
+    <tag k="amenity" v="pub"/>
+    <tag k="name" v="Fixture Hotel"/>
+  </node>
+  <!-- Way 2002: a fuel station inside the caravan park, its centroid at (-33.001, 151.001). -->
+  <node id="11" version="1" lat="-33.0005" lon="151.0005"/>
+  <node id="12" version="1" lat="-33.0005" lon="151.0015"/>
+  <node id="13" version="1" lat="-33.0015" lon="151.0015"/>
+  <node id="14" version="1" lat="-33.0015" lon="151.0005"/>
+  <way id="2002" version="1">
+    <nd ref="11"/><nd ref="12"/><nd ref="13"/><nd ref="14"/><nd ref="11"/>
+    <tag k="amenity" v="fuel"/>
+  </way>
+  <!-- Node 102: a car wash inside the caravan park. It is not a place. -->
+  <node id="102" version="1" lat="-32.999" lon="151.001">
+    <tag k="amenity" v="car_wash"/>
+  </node>
+  <!-- Node 103: a camp site inside the caravan park, drawn as a node only. -->
+  <node id="103" version="1" lat="-33.0" lon="151.001">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Node Camp"/>
+  </node>
+  <!-- Node 104: a pub 0.01 degrees (about 1.1 km) north, outside the caravan park. -->
+  <node id="104" version="1" lat="-32.99" lon="151.0">
+    <tag k="amenity" v="pub"/>
+  </node>
+
+  <!-- Way 2003: a camp site at (-34.0, 151.0), 110 km from any boat ramp. -->
+  <node id="21" version="1" lat="-33.998" lon="150.998"/>
+  <node id="22" version="1" lat="-33.998" lon="151.002"/>
+  <node id="23" version="1" lat="-34.002" lon="151.002"/>
+  <node id="24" version="1" lat="-34.002" lon="150.998"/>
+  <way id="2003" version="1">
+    <nd ref="21"/><nd ref="22"/><nd ref="23"/><nd ref="24"/><nd ref="21"/>
+    <tag k="tourism" v="camp_site"/>
+  </way>
+
+  <!-- Relation 4001: a multipolygon camp site at (-35.0, 151.0), holding a car wash drawn as a closed way. -->
+  <node id="31" version="1" lat="-34.998" lon="150.998"/>
+  <node id="32" version="1" lat="-34.998" lon="151.002"/>
+  <node id="33" version="1" lat="-35.002" lon="151.002"/>
+  <node id="34" version="1" lat="-35.002" lon="150.998"/>
+  <way id="2004" version="1">
+    <nd ref="31"/><nd ref="32"/><nd ref="33"/><nd ref="34"/><nd ref="31"/>
+  </way>
+  <relation id="4001" version="1">
+    <member type="way" ref="2004" role="outer"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="tourism" v="camp_site"/>
+  </relation>
+  <node id="41" version="1" lat="-34.9995" lon="150.9995"/>
+  <node id="42" version="1" lat="-34.9995" lon="151.0005"/>
+  <node id="43" version="1" lat="-35.0005" lon="151.0005"/>
+  <node id="44" version="1" lat="-35.0005" lon="150.9995"/>
+  <way id="2005" version="1">
+    <nd ref="41"/><nd ref="42"/><nd ref="43"/><nd ref="44"/><nd ref="41"/>
+    <tag k="amenity" v="car_wash"/>
+  </way>
+
+  <!-- Node 106: a boat ramp 0.027 degrees (about 3,002 m) south of the caravan park's centroid. -->
+  <node id="106" version="1" lat="-33.027" lon="151.0">
+    <tag k="leisure" v="slipway"/>
+    <tag k="name" v="Fixture Boat Ramp"/>
+  </node>
+  <!-- Way 2006: an unnamed boat ramp drawn as an open line 0.054 degrees (about 6,005 m) south. -->
+  <node id="51" version="1" lat="-33.054" lon="150.999"/>
+  <node id="52" version="1" lat="-33.054" lon="151.0"/>
+  <node id="53" version="1" lat="-33.054" lon="151.001"/>
+  <way id="2006" version="1">
+    <nd ref="51"/><nd ref="52"/><nd ref="53"/>
+    <tag k="leisure" v="slipway"/>
+  </way>
+</osm>

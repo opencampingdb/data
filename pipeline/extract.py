@@ -34,7 +34,7 @@ import osmium
 import shapely
 from shapely import MultiPolygon, Polygon, STRtree
 
-from .common import dump_line, pets_months_ok, round_coord, write_text
+from .common import KIND_GROUP, dump_line, pets_months_ok, round_coord, write_text
 from .geometry import SidecarBuilder
 from .kinds import (
     CONTAINER_TAG_PAIRS,
@@ -45,6 +45,7 @@ from .kinds import (
     parse_brand,
     water_type,
 )
+from .nearby import NEARBY_TAG_PAIRS, InsideFeatures, inside_fact
 from .water import WATER_TAG_PAIRS, WaterFeatures, crocodile_hazard, open_line, water_kinds
 
 # Simple yes/no tags: OSM key -> fact key.
@@ -64,7 +65,31 @@ YES_NO_TAGS = {
     "openfire": "campfires",
     "cabins": "cabins",
     "playground": "playground",
+    "bin": "bins",
+    "compressed_air": "air",
+    "fishing": "fishing",
 }
+
+# Fuels sold: OSM fuel:* key -> the name in the fuels fact, in the order written.
+# fuel:lpg is LPG at the pump, so it feeds fuels only, never the lpg fact
+# (gas bottle refill or swap).
+FUEL_TAGS = {
+    "fuel:diesel": "diesel",
+    "fuel:octane_91": "unleaded_91",
+    "fuel:e10": "e10",
+    "fuel:octane_95": "unleaded_95",
+    "fuel:octane_98": "unleaded_98",
+    "fuel:e85": "e85",
+    "fuel:adblue": "adblue",
+    "fuel:lpg": "lpg",
+}
+
+# toilets:disposal -> toilet_type.
+TOILET_TYPES = {"flush": "flush", "pitlatrine": "pit", "chemical": "chemical", "dry_toilet": "dry", "bucket": "dry"}
+
+OPERATOR_MAX = 200
+PHONE_MAX = 100
+URL_MAX = 500
 
 # Social pages: fact key -> OSM keys, the first with a value wins. Only
 # https links are kept.
@@ -223,6 +248,31 @@ def facts_from_tags(tags: dict) -> dict:
     elif shower == "no":
         facts["showers"] = False
 
+    # An explicit hot_water tag wins. shower=hot or cold only fills the gap.
+    hot_water = yes_no(tags.get("hot_water"))
+    if hot_water is None and shower in ("hot", "cold"):
+        hot_water = shower == "hot"
+    if hot_water is not None:
+        facts["hot_water"] = hot_water
+
+    fuels = [name for osm_key, name in FUEL_TAGS.items() if yes_no(tags.get(osm_key))]
+    if fuels:
+        facts["fuels"] = fuels
+
+    reservation = first_value(tags.get("reservation", "")).lower()
+    if reservation == "required":
+        facts["booking_required"] = True
+    elif reservation == "no":
+        facts["booking_required"] = False
+
+    toilet_type = TOILET_TYPES.get(first_value(tags.get("toilets:disposal", "")).lower())
+    if toilet_type:
+        facts["toilet_type"] = toilet_type
+
+    operator = tags.get("operator", "").strip()
+    if operator and len(operator) <= OPERATOR_MAX:
+        facts["operator"] = operator
+
     dog = tags.get("dog", "").strip().lower()
     if dog in ("yes", "leashed", "no"):
         facts["pets"] = dog
@@ -245,9 +295,22 @@ def facts_from_tags(tags: dict) -> dict:
                 facts["website"] = url
             break
 
+    # website:booking wins over reservation:website. Only https links are kept.
+    for key in ("website:booking", "reservation:website"):
+        url = first_value(tags.get(key, ""))
+        if url:
+            if url.lower().startswith("https://") and len(url) <= URL_MAX:
+                facts["booking_url"] = url
+            break
+
     for key in ("phone", "contact:phone"):
         if key in tags and first_value(tags[key]):
+            numbers = tags[key].split(";")
             facts["phone"] = first_value(tags[key])
+            # The second number, from the same key, is phone_2, unless it repeats the first.
+            second = numbers[1].strip() if len(numbers) > 1 else ""
+            if second and second != facts["phone"] and len(second) <= PHONE_MAX:
+                facts["phone_2"] = second
             break
 
     for key in ("email", "contact:email"):
@@ -399,11 +462,11 @@ OPEN_WAY_KINDS = ("boat_ramp", "attraction")
 
 
 def interesting_tag_filter() -> "osmium.filter.TagFilter":
-    """A C++ filter that lets through objects that may be a place, a container or a water feature.
+    """A C++ filter that lets through objects that may be a place, a container or a nearby feature.
 
     A filter object belongs to one handler chain, so each chain gets its own.
     """
-    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS)
+    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS)
 
 
 def tag_dict(obj) -> dict:
@@ -548,6 +611,9 @@ class FirstPass:
         if water_kinds(tags):
             # Beaches drawn as open lines are kept too, as lines.
             self.way_ids.add(way.id)
+        if inside_fact(tags) and way.is_closed():
+            # A car wash drawn as an area is placed at its centroid.
+            self.way_ids.add(way.id)
         if kind is None and container_type(tags) is None:
             return
         if way.is_closed() or kind in OPEN_WAY_KINDS:
@@ -560,7 +626,13 @@ class FirstPass:
         if tags.get("type") not in ("multipolygon", "boundary"):
             return True
         wanted = relation.id in self.sites.member_relations
-        if not wanted and classify(tags) is None and container_type(tags) is None and not water_kinds(tags):
+        if (
+            not wanted
+            and classify(tags) is None
+            and container_type(tags) is None
+            and not water_kinds(tags)
+            and inside_fact(tags) is None
+        ):
             return True
         for member in relation.members:
             if member.type == "w":
@@ -745,6 +817,30 @@ def water_geometry(obj):
     return container_geometry(obj)
 
 
+def feature_key(obj) -> tuple[str, int]:
+    """(osm type, osm id) of a node, way or multipolygon area, as a place record names it."""
+    if obj.is_node():
+        return "node", obj.id
+    if obj.is_area():
+        return ("way" if obj.from_way() else "relation"), obj.orig_id()
+    return "way", obj.id
+
+
+def feature_point(obj) -> tuple[float, float] | None:
+    """(lat, lon) of a node, or the centroid of a closed way or multipolygon area.
+
+    None for open ways, for areas built from ways (the way itself is used)
+    and when a node location is missing.
+    """
+    if obj.is_node():
+        return (obj.location.lat, obj.location.lon) if obj.location.valid() else None
+    if obj.is_area():
+        return None if obj.from_way() else relation_area_centroid(obj)
+    if obj.is_way() and obj.is_closed():
+        return way_centroid(obj)
+    return None
+
+
 def place_outline(obj):
     """The outline of a place that is an area (a closed way or multipolygon), or None."""
     if obj.is_area() and obj.from_way():
@@ -767,9 +863,11 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
     container_counts = {"park": 0, "reserve": 0, "forest": 0, "showground": 0}
 
     places: list[tuple[dict, dict]] = []  # (record without kind, tags)
+    outlines: dict[int, object] = {}  # index in places -> outline of a place that is an area
     containers: list[tuple] = []  # (shapely geometry, container type)
     sites = SiteRelations()
     water = WaterFeatures()
+    inside = InsideFeatures()
 
     for obj in read_objects(path, stats, sites, sidecar):
         tags = tag_dict(obj)
@@ -778,7 +876,13 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         if kinds_of_water:
             geometry = water_geometry(obj)
             if geometry is not None:
-                water.add(kinds_of_water, geometry, tags.get("name"))
+                water.add(kinds_of_water, geometry, tags.get("name"), feature_key(obj))
+
+        fact_inside = inside_fact(tags)
+        if fact_inside is not None:
+            point = feature_point(obj)
+            if point is not None:
+                inside.add(fact_inside, *point, feature_key(obj))
 
         kind_of_container = container_type(tags)
         if kind_of_container is not None:
@@ -799,9 +903,12 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
             "location": {"lat": round_coord(lat), "lon": round_coord(lon)},
             "facts": facts_from_tags(tags),
         }
+        outline = place_outline(obj) if osm_type != "node" else None
+        if outline is not None:
+            outlines[len(places)] = outline
         places.append((record, tags))
         if sidecar is not None:
-            sidecar.place(f"{osm_type}/{osm_id}", tags, place_outline(obj) if osm_type != "node" else None)
+            sidecar.place(f"{osm_type}/{osm_id}", tags, outline)
 
     stats["site_relations"] = 0
     for relation_id, site in sorted(sites.sites.items()):
@@ -833,12 +940,19 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         record["kind"] = classify(tags, frozenset(inside_by_index.get(i, ())))
         if record["kind"] == "drinking_water_point":
             record["facts"]["water_type"] = water_type(tags)
-        water.set_facts(record)
+        # A dump station for customers is one a guest may use, so it counts
+        # on a place to stay. On any other kind it is not open to everyone.
+        if KIND_GROUP.get(record["kind"]) == "overnight" and first_value(tags.get("sanitary_dump_station", "")).lower() == "customers":
+            record["facts"]["dump_station"] = True
+        key = (record["osm"]["type"], record["osm"]["id"])
+        water.set_facts(record, key)
+        inside.set_facts(record, outlines.pop(i, None), key)
         records.append(record)
 
     stats["kept"] = len(records)
     stats["containers"] = container_counts
-    stats["water"] = {kind: water.count(kind) for kind in ("beach", "crocodiles")}
+    stats["water"] = {kind: water.count(kind) for kind in ("beach", "crocodiles", "boat_ramp")}
+    stats["inside"] = {fact: inside.count(fact) for fact in ("pub", "fuel", "car_wash")}
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -874,6 +988,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Containers: {stats['containers']}", file=sys.stderr)
     print(f"Site relations: {stats['site_relations']}", file=sys.stderr)
     print(f"Water features: {stats['water']}", file=sys.stderr)
+    print(f"Pubs, fuel and car washes: {stats['inside']}", file=sys.stderr)
     return 0
 
 

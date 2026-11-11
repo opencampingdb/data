@@ -490,6 +490,12 @@ def test_osm_tags_follow_the_extract():
     assert osm_tag("pets", "seasonal") is None
     assert osm_tag("caravans", "offroad") is None
     assert osm_tag("access", "4wd") == "4wd_only=yes"
+    assert osm_tag("booking_required", True) == "reservation=required"
+    assert osm_tag("toilet_type", "flush") == "toilets:disposal=flush"
+    assert osm_tag("toilet_type", "chemical") == "toilets:disposal=chemical"
+    assert osm_tag("toilet_type", "dry") == "toilets:disposal=dry_toilet"
+    assert osm_tag("hot_water", True) == "hot_water=yes"
+    assert osm_tag("booking_url", "https://book.example") is None
 
 
 def test_files_are_stable(repo, tmp_path):
@@ -554,3 +560,116 @@ def test_verified_owner_opening_hours_comment_is_still_sent(repo, tmp_path):
     box = inbox(tmp_path, owner_update(A, facts={"opening_hours": value}))
     write_challenges(repo, [osm_place(1)], inbox=box, now=NOW)
     assert "office closes at noon on Sundays" in changes(repo)
+
+
+# ------------------------------------------------------- newly mapped facts
+
+
+def test_travellers_bins_differing_from_osm_make_a_task(repo, tmp_path):
+    write(repo, record(A, 1, facts={"bins": True}, fact_sources={"bins": "feedback"}))
+    items = [fact(A, "bins", True, source=s) for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1, bins=False)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo) == (
+        "- 2 travellers reported there are bins (bin=yes), most recently on 4 November 2026.\n"
+        "  - Check it with a survey, street-level photos or recent imagery.\n"
+        "  - If it checks out, set bin=yes. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:bin"
+    )
+
+
+def test_booking_required_is_sent_and_the_booking_link_never_is(repo, tmp_path):
+    facts = {"booking_required": False, "booking_url": "https://book.example/lake"}
+    write(repo, record(A, 1, facts=facts, fact_sources={field: "feedback" for field in facts}))
+    items = [fact(A, field, value, source=s) for field, value in facts.items() for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1, booking_required=True)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo) == (
+        "- 2 travellers reported no booking is needed (reservation=no), most recently on 4 November 2026.\n"
+        "  - Check it with the operator's own sign or website.\n"
+        "  - If it checks out, set reservation=no. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:reservation"
+    )
+
+
+def test_a_booking_link_alone_never_makes_a_task(repo, tmp_path):
+    write(repo, record(A, 1, facts={"booking_url": "https://book.example/lake"}, fact_sources={"booking_url": "owner"},
+                       owner_verified=True))
+    box = inbox(tmp_path, owner_update(A, facts={"booking_url": "https://book.example/lake"}))
+    write_challenges(repo, [osm_place(1)], inbox=box, now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_travellers_toilet_type_differing_from_osm_make_a_task(repo, tmp_path):
+    write(repo, record(A, 1, facts={"toilet_type": "pit"}, fact_sources={"toilet_type": "feedback"}))
+    items = [fact(A, "toilet_type", "pit", source=s) for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1, toilet_type="flush")], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo) == (
+        "- 2 travellers reported the toilets are pit toilets (toilets:disposal=pitlatrine), most recently on 4 November 2026.\n"
+        "  - Check it with a survey, or the operator's own sign or website.\n"
+        "  - If it checks out, set toilets:disposal=pitlatrine. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:toilets:disposal"
+    )
+
+
+def test_owner_fishing_and_hot_water_differing_from_osm_make_a_task(repo, tmp_path):
+    facts = {"fishing": True, "hot_water": False}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={field: "owner" for field in facts},
+                       fact_dates={field: "2026-11-03T02:10:00Z" for field in facts}))
+    box = inbox(tmp_path, owner_update(A, facts=facts))
+    write_challenges(repo, [osm_place(1, fishing=False, hot_water=True)], inbox=box, now=NOW)
+    lines = changes(repo).splitlines()
+    assert lines[0] == "- The verified owner says fishing is allowed (fishing=yes), set on 3 November 2026."
+    assert lines[2] == "  - If it checks out, set fishing=yes. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:fishing"
+    assert lines[3] == "- The verified owner says there is no hot water (hot_water=no), set on 3 November 2026."
+    assert lines[4] == "  - Check it with a survey, or the operator's own sign or website."
+    assert lines[5] == "  - If it checks out, set hot_water=no. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:hot_water"
+
+
+def test_owner_second_phone_joins_the_place_phone_tag(repo, tmp_path):
+    facts = {"phone": "+61 2 5550 0100", "phone_2": "+61 2 5550 0199"}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={field: "owner" for field in facts},
+                       fact_dates={field: "2026-11-03T02:10:00Z" for field in facts}))
+    box = inbox(tmp_path, owner_update(A, facts=facts))
+    write_challenges(repo, [osm_place(1, phone="+61 2 5550 0100")], inbox=box, now=NOW)
+    assert changes(repo) == (
+        "- The verified owner says the second phone number is +61 2 5550 0199 (phone=+61 2 5550 0100;+61 2 5550 0199),"
+        " set on 3 November 2026.\n"
+        "  - Check it with the operator's own sign or website.\n"
+        "  - If it checks out, set phone=+61 2 5550 0100;+61 2 5550 0199. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:phone"
+    )
+
+
+def test_a_second_phone_follows_the_osm_place_first_phone(repo, tmp_path):
+    # A traveller's first number may differ from OSM's, so the tag keeps OSM's own first number.
+    facts = {"phone": "+61 2 5550 0222", "phone_2": "+61 2 5550 0199"}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={field: "owner" for field in facts},
+                       fact_dates={field: "2026-11-03T02:10:00Z" for field in facts}))
+    box = inbox(tmp_path, owner_update(A, facts=facts))
+    write_challenges(repo, [osm_place(1, phone="+61 2 5550 0100")], inbox=box, now=NOW)
+    assert "(phone=+61 2 5550 0100;+61 2 5550 0199)" in changes(repo)
+    assert "0222;" not in changes(repo)
+
+
+def test_a_second_phone_is_never_sent_when_osm_has_no_first(repo, tmp_path):
+    facts = {"phone": "+61 2 5550 0222", "phone_2": "+61 2 5550 0199"}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={field: "owner" for field in facts},
+                       fact_dates={field: "2026-11-03T02:10:00Z" for field in facts}))
+    box = inbox(tmp_path, owner_update(A, facts=facts))
+    write_challenges(repo, [osm_place(1)], inbox=box, now=NOW)
+    assert "second phone" not in changes(repo)
+
+
+def test_a_second_phone_without_a_first_is_never_sent(repo, tmp_path):
+    facts = {"phone_2": "+61 2 5550 0199"}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={"phone_2": "owner"},
+                       fact_dates={"phone_2": "2026-11-03T02:10:00Z"}))
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, owner_update(A, facts=facts)), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+@pytest.mark.parametrize("field, value", [
+    ("pub", True), ("fuel", True), ("car_wash", True), ("crocodiles", True),
+    ("nearest_beach", {"distance_m": 300}), ("nearest_boat_ramp", {"distance_m": 900}),
+])
+def test_a_nearby_fact_never_makes_a_task(repo, tmp_path, field, value):
+    # These come from other OSM objects, so no tag on the place's own object would show them.
+    write(repo, record(A, 1, facts={field: value}, fact_sources={field: "feedback"}))
+    items = [fact(A, field, value, source=s) for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []

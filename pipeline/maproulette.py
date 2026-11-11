@@ -36,10 +36,14 @@ maproulette/traveller_reports.geojson
     differs from OSM: facts that have an OSM tag, the name, and a permanent
     closure. A task goes away by itself once OSM shows the same value. The
     rules follow the feedback engine's OSM notes (docs/osm.md there):
-    contributed values and places without an OSM link are never sent, nor
-    booking details, nor a text value holding an email address, phone number
-    or link (the contact facts aside), nor travellers' opening hours with a
-    quoted comment (free text no person has read).
+    contributed values and places without an OSM link are never sent, nor a
+    booking link (booking_required is sent, as reservation), nor a text value
+    holding an email address, phone number or link (the contact facts aside),
+    nor travellers' opening hours with a quoted comment (free text no person
+    has read). Nearby facts (nearest_beach, nearest_boat_ramp, crocodiles,
+    pub, fuel, car_wash) come from other OSM objects, so they have no tag
+    here and are never sent. phone_2 is sent as phone=<first>;<second>, and
+    only when the place has a first phone.
 
     A value is sent only with enough evidence in the inbox's applied items:
     a feedback value needs at least 2 independent sources (distinct origin,
@@ -91,7 +95,7 @@ TRAVELLER_REPORTS = "traveller_reports.geojson"
 # Only these sources are passed to OSM's mappers. Everything in NOT_FOR_OSM
 # (contributed values, community reports) stays in Open Camping DB.
 REPORT_SOURCES = ("feedback", "owner")
-NEVER_SENT = ("booking_url", "booking_required")
+NEVER_SENT = ("booking_url",)
 CONTACT_FACTS = ("website", "phone", "phone_2", "email", "facebook", "instagram", "tiktok", "x")
 CONTACT_RES = (
     re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"),
@@ -115,10 +119,19 @@ YES_NO_TAGS = {
     "kitchen": "kitchen",
     "bbq": "bbq",
     "picnic_tables": "picnic_table",
+    "bins": "bin",
     "campfires": "openfire",
     "cabins": "cabins",
+    "fishing": "fishing",
+    "hot_water": "hot_water",
     "playground": "playground",
     "nudist": "nudism",
+}
+# Fact -> (tag when true, tag when false), for yes/no facts whose OSM tag
+# takes other values.
+TRUE_FALSE_TAGS = {
+    "wifi": ("internet_access=wlan", "internet_access=no"),
+    "booking_required": ("reservation=required", "reservation=no"),
 }
 # Fact -> OSM key for facts copied from a tag as written.
 WRITTEN_TAGS = {
@@ -139,6 +152,12 @@ VALUE_TAGS = {
     "access": {"2wd": "4wd_only=no", "awd": "4wd_only=recommended", "4wd": "4wd_only=yes"},
     "entry": {"public": "access=yes", "customers": "access=customers", "permit": "access=permit", "private": "access=private"},
     "water_type": {"tank_fill": "amenity=water_point", "fountain": "amenity=drinking_water"},
+    "toilet_type": {
+        "flush": "toilets:disposal=flush",
+        "pit": "toilets:disposal=pitlatrine",
+        "chemical": "toilets:disposal=chemical",
+        "dry": "toilets:disposal=dry_toilet",
+    },
     "brand": {
         "big4": "brand=BIG4",
         "discovery": "brand=Discovery Parks",
@@ -167,10 +186,14 @@ YES_NO_WORDS = {
     "kitchen": ("there is a camp kitchen", "there is no camp kitchen"),
     "bbq": ("there are barbecues", "there are no barbecues"),
     "picnic_tables": ("there are tables", "there are no tables"),
+    "bins": ("there are bins", "there are no bins"),
     "campfires": ("campfires are allowed", "campfires are not allowed"),
     "cabins": ("there are cabins", "there are no cabins"),
+    "fishing": ("fishing is allowed", "fishing is not allowed"),
+    "hot_water": ("there is hot water", "there is no hot water"),
     "playground": ("there is a playground", "there is no playground"),
     "wifi": ("there is Wi-Fi", "there is no Wi-Fi"),
+    "booking_required": ("a booking is needed", "no booking is needed"),
     "nudist": ("it is a nudist place", "it is not a nudist place"),
 }
 VALUE_WORDS = {
@@ -184,12 +207,19 @@ VALUE_WORDS = {
         "private": "it is private, not open to the public",
     },
     "water_type": {"tank_fill": "it is a tap for filling tanks", "fountain": "it is a drinking fountain"},
+    "toilet_type": {
+        "flush": "the toilets are flush toilets",
+        "pit": "the toilets are pit toilets",
+        "chemical": "the toilets are chemical toilets",
+        "dry": "the toilets are dry toilets",
+    },
 }
 LABELS = {
     "max_stay": "maximum stay",
     "opening_hours": "opening hours",
     "website": "website",
     "phone": "phone number",
+    "phone_2": "second phone number",
     "email": "email address",
     "facebook": "Facebook page",
     "instagram": "Instagram page",
@@ -218,12 +248,14 @@ HOW_TO_CHECK = {
     "status": "a survey, recent street-level photos, or the operator's website",
     "fee": CHECK_SIGN,
     "opening_hours": CHECK_SIGN,
+    "booking_required": CHECK_SIGN,
     **{field: CHECK_SIGN for field in CONTACT_FACTS},
     "toilets": CHECK_SEEN,
     "drinking_water": CHECK_SEEN,
     "water_type": CHECK_SEEN,
     "showers": CHECK_SEEN,
     "dump_station": CHECK_SEEN,
+    "bins": CHECK_SEEN,
 }
 CHECK_DEFAULT = "a survey, or the operator's own sign or website"
 
@@ -243,8 +275,8 @@ WORD_RE = re.compile(r"[a-z0-9]+")
 
 def osm_tag(field: str, value) -> str | None:
     """key=value for a fact, or None when no OSM tag matches the value."""
-    if field == "wifi" and isinstance(value, bool):
-        return f"internet_access={'wlan' if value else 'no'}"
+    if field in TRUE_FALSE_TAGS and isinstance(value, bool):
+        return TRUE_FALSE_TAGS[field][0 if value else 1]
     if isinstance(value, bool):
         key = YES_NO_TAGS.get(field)
         return f"{key}={'yes' if value else 'no'}" if key else None
@@ -253,6 +285,19 @@ def osm_tag(field: str, value) -> str | None:
     if field in WRITTEN_TAGS:
         return f"{WRITTEN_TAGS[field]}={value}"
     return VALUE_TAGS.get(field, {}).get(value)
+
+
+def second_phone_tag(osm_facts: dict, value) -> str | None:
+    """phone=first;second for a place's second number, which OSM keeps in the same key as its first.
+
+    The first number is the OSM place's own, never one from feedback, so the
+    tag never changes the number OSM already has. None when OSM has no first
+    number to put it after.
+    """
+    first = osm_facts.get("phone")
+    if not isinstance(first, str) or not first.strip() or not isinstance(value, str) or not value.strip():
+        return None
+    return f"phone={first};{value}"
 
 
 def describe(field: str, value) -> str:
@@ -544,7 +589,7 @@ def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime)
             continue
         if field == "access" and value == "unknown":
             continue
-        tag = osm_tag(field, value)
+        tag = second_phone_tag(osm_facts, value) if field == "phone_2" else osm_tag(field, value)
         if not tag or not sendable(field, value, source):
             continue
         backed = backing(record, field, value, source, evidence, now)

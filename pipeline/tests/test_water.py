@@ -73,7 +73,7 @@ def test_water_feature_counts_include_the_open_beach_line():
     extract_file(WATER, stats)
     # Beaches: way 201 (an area) and way 202 (an open line). Crocodile
     # hazards: nodes 131 and 132, and place 3, whose own tags carry one.
-    assert stats["water"] == {"beach": 2, "crocodiles": 3}
+    assert stats["water"] == {"beach": 2, "crocodiles": 3, "boat_ramp": 0}
 
 
 def test_unnamed_feature_has_no_name():
