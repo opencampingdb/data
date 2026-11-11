@@ -1,0 +1,13 @@
+{
+  "name": "oh-check",
+  "private": true,
+  "description": "Checks OSM opening_hours values with opening_hours.js, the reference the OSM wiki names. Used by pipeline.maproulette.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "opening_hours": "3.15.0"
+  }
+}

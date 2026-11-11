@@ -11,7 +11,7 @@ tasks are built only from the evidence there. Without it (a local run, a
 fork), the report file is written with no tasks, so no claim goes out without
 the reports behind it.
 
-Writes two files in maproulette/, as line-by-line GeoJSON (RFC 7464: each
+Writes three files in maproulette/, as line-by-line GeoJSON (RFC 7464: each
 line is a record separator and one FeatureCollection, and each line becomes
 one task). MapRoulette builds and rebuilds the challenges from these files on
 main, so a task appears only after the change behind it was approved there.
@@ -58,7 +58,19 @@ maproulette/traveller_reports.geojson
     once the check agrees, with its OSM wiki page. Only counts and
     dates leave the inbox: never a device, an origin or a traveller's words.
 
-Values from community reports (source community_report) never reach either
+maproulette/out_of_spec.geojson
+    One task per place and tag where the value OSM has is out of spec: the
+    reference OSM names for the tag refuses it (pipeline.out_of_spec). Only
+    facts whose source is osm are checked, opening_hours with opening_hours.js
+    (through node) and phone and phone_2 against the international form, and
+    only while the OSM object still has that value. Style warnings, and
+    values that fail only for missing holiday data, are not out of spec. The
+    task id is the Open Camping DB id and the tag, such as
+    ocdb_...:opening_hours. Without node the file is left as it was and the
+    sync report says why. It has no live challenge until the forum has been
+    asked (maproulette/README.md).
+
+Values from community reports (source community_report) never reach any
 file, and neither does a place whose name or location came from them, even
 if it has an OSM link: those reports are kept out of OSM.
 
@@ -78,6 +90,7 @@ from pathlib import Path
 from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places, write_text
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
+from .out_of_spec import NO_NODE, OH_CHECK_DIR, check_opening_hours, checker_ready, phone_out_of_spec
 from .sync import escape_cell, load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
@@ -91,6 +104,7 @@ DOUBLE_MAPPING = "double_mapping.geojson"
 # are buildings to stay in are merged too, but never become its tasks.
 NOT_CAMP_SITES = ROOFED_KINDS
 TRAVELLER_REPORTS = "traveller_reports.geojson"
+OUT_OF_SPEC = "out_of_spec.geojson"
 
 # Only these sources are passed to OSM's mappers. Everything in NOT_FOR_OSM
 # (contributed values, community reports) stays in Open Camping DB.
@@ -637,6 +651,69 @@ def traveller_report_tasks(places: dict, extract: dict, evidence: dict, now: dat
     return tasks
 
 
+OPENING_HOURS_FIX = (
+    "opening_hours.js, the reference the OSM wiki names for this tag, cannot read it: {error}. "
+    "Check the hours with the operator's own sign or website, then fix the syntax so the tag says those hours "
+    "in the documented format. OSM wiki: " + WIKI + "Key:opening_hours. "
+    "The evaluation tool at https://openingh.openstreetmap.de/evaluation_tool/ shows what the reference reads."
+)
+PHONE_FIX = (
+    "The OSM wiki asks for the international form, \"+CC XXX XXX XXX\": in Australia +61, then the number "
+    "without its leading 0, such as +61 2 5550 0100, with only digits, spaces and hyphens, and ; between "
+    "several numbers. Check the number with the operator's own sign or website, then rewrite it in that form. "
+    "OSM wiki: " + WIKI + "Key:phone"
+)
+OUT_OF_SPEC_SKIP = "If you are not sure what the right value is, skip the task. If the value is right as it is, mark the task \"Not an Issue\"."
+
+
+def osm_values(record: dict, osm_place: dict, fields: tuple[str, ...]) -> list[str]:
+    """The record's values for fields, where the source is osm and the OSM object still has that value."""
+    sources = record.get("fact_sources", {})
+    facts = record.get("facts", {})
+    osm_facts = osm_place.get("facts", {})
+    return [
+        facts[field] for field in fields
+        if sources.get(field) == "osm" and isinstance(facts.get(field), str) and facts[field].strip()
+        and osm_facts.get(field) == facts[field]
+    ]
+
+
+def out_of_spec_tasks(places: dict, extract: dict) -> list[dict]:
+    """One task per place and tag whose OSM value the tag's reference refuses (pipeline.out_of_spec)."""
+    candidates = []
+    for record in places.values():
+        if record.get("status") == "merged" or not record.get("osm") or from_community_report(record):
+            continue
+        ref = osm_ref(record["osm"])
+        if ref in extract:
+            candidates.append((record, ref))
+    hours = check_opening_hours([
+        value for record, ref in candidates for value in osm_values(record, extract[ref], ("opening_hours",))
+    ])
+    tasks = []
+    for record, ref in candidates:
+        found = []
+        for value in osm_values(record, extract[ref], ("opening_hours",)):
+            if hours.get(value):
+                found.append(("opening_hours", value, OPENING_HOURS_FIX.format(error=hours[value].rstrip("."))))
+        numbers = osm_values(record, extract[ref], ("phone", "phone_2"))
+        if any(phone_out_of_spec(number) for number in numbers):
+            found.append(("phone", ";".join(numbers), PHONE_FIX))
+        for tag, value, fix in found:
+            properties = {
+                "name": record.get("name") or "Unnamed place",
+                "tag": tag,
+                "value": value,
+                "check": f"OpenStreetMap has {tag}={value} on {ref}. {fix}\n\n{OUT_OF_SPEC_SKIP}",
+                "ocdb_id": record["id"],
+                "record": record_url(record),
+            }
+            task = feature(record, ref, record["location"], properties)
+            task["properties"]["id"] = f"{record['id']}:{tag}"
+            tasks.append({"type": "FeatureCollection", "features": [task]})
+    return tasks
+
+
 def geojson_lines(tasks: list[dict]) -> str:
     tasks = sorted(tasks, key=lambda t: t["features"][0]["properties"]["id"])
     return "".join(RS + json.dumps(t, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n" for t in tasks)
@@ -664,10 +741,12 @@ def write_challenges(
     now: datetime | None = None,
     geometry: Geometry | None = None,
 ) -> dict[str, dict]:
-    """Write both challenge files. Returns, per file, the task count and the ids added and removed.
+    """Write the challenge files. Returns, per file, the task count and the ids added and removed.
 
     Without an inbox the report file is written with no tasks, and its entry
-    says why under "skipped".
+    says why under "skipped". Without node and opening_hours.js the out of
+    spec file is not written at all, so an old file never looks like a clean
+    result, and its entry says why under "skipped".
     """
     root = Path(root)
     now = now or datetime.now(timezone.utc)
@@ -678,6 +757,8 @@ def write_challenges(
         DOUBLE_MAPPING: double_mapping_tasks(places, by_ref, geometry),
         TRAVELLER_REPORTS: reports,
     }
+    if checker_ready():
+        files[OUT_OF_SPEC] = out_of_spec_tasks(places, by_ref)
     result = {}
     for name, tasks in files.items():
         path = root / "maproulette" / name
@@ -691,10 +772,13 @@ def write_challenges(
         }
     if not inbox:
         result[TRAVELLER_REPORTS]["skipped"] = NO_INBOX
+    if OUT_OF_SPEC not in files:
+        kept = task_names(root / "maproulette" / OUT_OF_SPEC)
+        result[OUT_OF_SPEC] = {"count": len(kept), "added": [], "removed": [], "skipped": NO_NODE}
     return result
 
 
-TITLES = {DOUBLE_MAPPING: "Double mapping", TRAVELLER_REPORTS: "Traveller reports"}
+TITLES = {DOUBLE_MAPPING: "Double mapping", TRAVELLER_REPORTS: "Traveller reports", OUT_OF_SPEC: "Out of spec"}
 
 
 def render_report(result: dict[str, dict]) -> str:

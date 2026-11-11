@@ -6,9 +6,10 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 |---|---|---|
 | `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after its records were merged, leaving out objects that are a separate place (see below), and leaving out motels, cabins and hostels |
 | `traveller_reports.geojson` | What travellers report | place where a value that at least two travellers or the verified owner reported still differs from OSM |
+| `out_of_spec.geojson` | none yet (see "Out of spec values") | place and tag whose OSM value the reference OSM names for that tag refuses |
 | `challenges.json` | | the MapRoulette project and challenge ids, used for the rebuild links |
 
-`python -m pipeline.maproulette` writes both files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
+`python -m pipeline.maproulette` writes the three files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
 
 ### What a report task needs
 
@@ -42,6 +43,21 @@ These are contact details for the place itself, never a traveller's own. `phone_
 Some facts are never sent. `booking_url` is a booking link, which stays in Open Camping DB. Nearby facts (`nearest_beach`, `nearest_boat_ramp`, `crocodiles`, and `pub`, `fuel` and `car_wash` inside a place) come from other OSM objects, so no tag on the place's own object would show them.
 
 Each line of a task says how many travellers reported the value and when the latest did, or when the owner set it, the tag to set once the check agrees with a link to its OSM wiki page, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, bookings, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers, dump points and bins; a survey or the operator's sign or website for anything else. A closure points to the wiki's lifecycle prefixes (`disused:tourism=camp_site` while the site is still on the ground, deleting the object once nothing is left). Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
+
+## Out of spec values
+
+`out_of_spec.geojson` holds one task per place and tag where the value OSM has is out of spec: the reference OSM names for the tag refuses it ([docs/adr/0002](../docs/adr/0002-follow-osm-formats-keep-extensions.md)). Open Camping DB keeps such values as OSM has them and never fixes them itself.
+
+- `opening_hours` is read by [opening_hours.js](https://github.com/opening-hours/opening_hours.js), the reference the [OSM wiki](https://wiki.openstreetmap.org/wiki/Key:opening_hours) names, as an Australian value. It runs through node from `tools/oh-check` (`npm ci --ignore-scripts` there first), once per run for every value. A value that only draws a style warning is not out of spec. Nor is one that fails only because the reference has no Australian school holiday data (`SH`): it is read again with holiday data from elsewhere, only to find any error behind the missing data.
+- `phone` is checked against the international form the [OSM wiki](https://wiki.openstreetmap.org/wiki/Key:phone) asks for, "+CC XXX XXX XXX": a `+`, the country code, then only digits, spaces and hyphens, with `;` between several numbers. `phone` and `phone_2` make one task for the `phone` tag. Domestic keys such as `phone:AU` are not checked.
+
+Only facts whose source is `osm` are checked, and only while the OSM object still has that value, so a task goes once OSM is fixed. Each task's `id` is the Open Camping DB id and the tag (`ocdb_...:opening_hours`), and it carries `@id`, `name`, `tag`, `value`, `check` (the text for the mapper), `ocdb_id` and `record`. `check` names the value, the reference with its OSM wiki page, asks the mapper to check the operator's sign or website and fix the syntax, and to skip the task if unsure. Without node or opening_hours.js the sync leaves the previous file as it was and its report says why, so a missing checker never looks like a clean result.
+
+The file has no live challenge, and is not in `challenges.json`. A new kind of task needs its own post on the OSM Australia forum, and a person's yes, before a challenge is created from it. Until then the file is written each night for anyone to read, and the rebuild issue does not list it. A challenge would be built from:
+
+- `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/out_of_spec.geojson`
+
+with the instructions `{{check}}`, followed by `Open Camping DB record {{ocdb_id}}: {{record}}`.
 
 ## Approving changes
 
