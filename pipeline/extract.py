@@ -64,7 +64,28 @@ YES_NO_TAGS = {
     "openfire": "campfires",
     "cabins": "cabins",
     "playground": "playground",
+    "bin": "bins",
+    "compressed_air": "air",
 }
+
+# Fuels sold: OSM fuel:* key -> the name in the fuels fact, in the order written.
+# fuel:lpg is LPG at the pump, so it feeds fuels only, never the lpg fact
+# (gas bottle refill or swap).
+FUEL_TAGS = {
+    "fuel:diesel": "diesel",
+    "fuel:octane_91": "unleaded_91",
+    "fuel:e10": "e10",
+    "fuel:octane_95": "unleaded_95",
+    "fuel:octane_98": "unleaded_98",
+    "fuel:e85": "e85",
+    "fuel:adblue": "adblue",
+    "fuel:lpg": "lpg",
+}
+
+# toilets:disposal -> toilet_type.
+TOILET_TYPES = {"flush": "flush", "pitlatrine": "pit", "chemical": "chemical", "dry_toilet": "dry", "bucket": "dry"}
+
+OPERATOR_MAX = 200
 
 # Social pages: fact key -> OSM keys, the first with a value wins. Only
 # https links are kept.
@@ -223,7 +244,33 @@ def facts_from_tags(tags: dict) -> dict:
     elif shower == "no":
         facts["showers"] = False
 
-    dog = tags.get("dog", "").strip().lower()
+    hot_water = yes_no(tags.get("hot_water"))
+    if shower == "hot":
+        hot_water = True
+    elif shower == "cold" and hot_water is None:
+        hot_water = False
+    if hot_water is not None:
+        facts["hot_water"] = hot_water
+
+    fuels = [name for osm_key, name in FUEL_TAGS.items() if yes_no(tags.get(osm_key))]
+    if fuels:
+        facts["fuels"] = fuels
+
+    reservation = first_value(tags.get("reservation", "")).lower()
+    if reservation == "required":
+        facts["booking_required"] = True
+    elif reservation == "no":
+        facts["booking_required"] = False
+
+    toilet_type = TOILET_TYPES.get(first_value(tags.get("toilets:disposal", "")).lower())
+    if toilet_type:
+        facts["toilet_type"] = toilet_type
+
+    operator = tags.get("operator", "").strip()
+    if operator and len(operator) <= OPERATOR_MAX:
+        facts["operator"] = operator
+
+    dog =tags.get("dog", "").strip().lower()
     if dog in ("yes", "leashed", "no"):
         facts["pets"] = dog
     months = dog_months(tags.get("dog:conditional", ""))

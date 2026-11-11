@@ -16,7 +16,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 12,
-  "format_minor": 3,
+  "format_minor": 4,
   "layout_version": 1,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -131,7 +131,9 @@ Everything else reads the same as in 11.1. Format 12.2 adds
 update the databases of the last 50 releases to it, and `layout_version`
 (section 3).
 The other files read the same as in 12.1. Format 12.3 adds the facts
-`nearest_beach`, `sharks` and `marine_stingers` (section 4).
+`nearest_beach`, `sharks` and `marine_stingers` (section 4). Format 12.4
+adds the facts `fuels`, `air`, `hot_water`, `toilet_type` and `operator`,
+from OSM, and fills `bins` and `booking_required` from OSM too (section 4).
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -485,7 +487,10 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `pet_sitting`, `fuel`, `lpg`, `car_wash`, `vehicle_storage`) and warnings
   (`self_contained_only`, `crocodiles`, `sharks`, `marine_stingers`,
   `seasonal_closure`, `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
-  club, `address` is the street address (an object with `unit`,
+  club, `operator` is who runs the place (a council, a parks agency, a
+  company), `fuels` lists the fuels sold, `air` is air for tyres,
+  `hot_water` is hot water in the showers or basins, `toilet_type` is
+  `flush`, `pit`, `chemical` or `dry`, `address` is the street address (an object with `unit`,
   `housenumber`, `street` or a rural `place`, `suburb`, `state` and
   `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
   `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)
@@ -498,6 +503,13 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   with `hgv=yes`), or from a fact report a person or reviewer accepts. More
   values may be added later, so treat an unknown value as a restriction you
   can't explain rather than ignoring it.
+- `fuels` lists the fuels a place sells, in this order: `diesel`,
+  `unleaded_91`, `e10`, `unleaded_95`, `unleaded_98`, `e85`, `adblue` and
+  `lpg`. Its `lpg` is LPG at the pump (OSM `fuel:lpg`). The `lpg` fact is
+  different: it says gas bottles are refilled or swapped there, and comes
+  only from travellers and owners. `big_rigs` also comes only from
+  travellers and owners: it means a rig 10 m or longer can get in and turn
+  around, which OSM's `hgv` access tag does not say.
 - `nearest_beach` is the nearest OSM beach (`natural=beach`) within 5 km of
   the place: `distance_m`, from the place's location to the nearest point of
   the beach, 0 inside it and rounded to 10 m, and the beach's `name` when it

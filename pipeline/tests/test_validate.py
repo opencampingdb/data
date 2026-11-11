@@ -248,6 +248,28 @@ def test_entry_fact_is_allowed(synced):
     assert any("entry" in e for e in validate_repo(synced))
 
 
+def test_osm_amenity_facts_are_allowed(synced):
+    path, rec = first_place(synced)
+    new = {
+        "fuels": ["diesel", "lpg"],
+        "air": True,
+        "hot_water": False,
+        "toilet_type": "pit",
+        "operator": "Lakeside Shire Council",
+    }
+    rec["facts"].update(new)
+    rec["fact_sources"].update({key: "osm" for key in new})
+    write_place(path, rec)
+    assert validate_repo(synced) == []
+    rec["facts"]["toilet_type"] = "outhouse"
+    write_place(path, rec)
+    assert any("toilet_type" in e for e in validate_repo(synced))
+    rec["facts"]["toilet_type"] = "pit"
+    rec["facts"]["fuels"] = ["kerosene"]
+    write_place(path, rec)
+    assert any("fuels" in e for e in validate_repo(synced))
+
+
 @pytest.mark.parametrize(
     "text",
     [
