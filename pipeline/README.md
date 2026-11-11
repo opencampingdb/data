@@ -187,6 +187,11 @@ A fact is only written when the tag has a value we can read. Any other value
 leaves the fact out, which means "not known". Values are compared without
 regard to case. Where OSM lists several values separated by `;`, the first is used.
 
+Each fact in `schema/place.schema.json` is marked `mapped`, `proposable` or
+`ocdb_only` (`x-ocdb-class`, with the OSM tag or suggested form in `x-osm`).
+The facts below and the nearby facts are mapped. The extensions are listed
+in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
+
 | OSM tag | Fact | Mapping |
 |---|---|---|
 | `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. `donation` is `"donation"`. Others are left out. `fee=no` on a commercial park is left out too (see below). |

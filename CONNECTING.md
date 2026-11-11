@@ -638,6 +638,67 @@ How each kind is derived from OpenStreetMap is described in
 the fact `water_type`: `tank_fill` for a tap suited to filling tanks, or
 `fountain` for a drinking fountain, which often is not.
 
+### Mapped facts and extensions
+
+Every fact in [schema/place.schema.json](schema/place.schema.json) carries
+`x-ocdb-class`, so your app can label it honestly:
+
+- `mapped`: the dataset can fill it from OpenStreetMap. `x-osm` names the
+  tag, or the OSM objects a nearby fact comes from (`nearest_beach` from
+  `natural=beach`, `pub` from an `amenity=pub` inside the place's area). A
+  mapped fact can still come from a traveller for one place: `fact_sources`
+  says where each value came from.
+- `proposable`: an extension a mapper could check true or false at the
+  place. OSM has no tag for it yet, so the value only comes from reports.
+  `x-osm` is the form a tag could take, a suggestion for whoever proposes
+  one, not a tag in use.
+- `ocdb_only`: an opinion or a personal account, which OSM can never hold.
+
+A value of a mapped fact that OSM has no value for is listed under
+`x-ocdb-extension-values` on that fact, with its own class. JSON Schema
+validators ignore all three keys.
+
+Proposable extensions, with the OSM form each could take:
+
+| Fact | OSM form |
+|---|---|
+| `generators` | `generators=yes/no` |
+| `camper_trailers` | `camper_trailer=yes/no` |
+| `motorbikes` | `motorcycle=yes/no` |
+| `big_rigs` | `big_rigs=yes/no` |
+| `non_drinking_water` | `non_drinking_water=yes/no` |
+| `drive_through` | `drive_through_sites=yes/no` |
+| `ensuite_sites` | `ensuite=yes/no` |
+| `swimming` | `swimming=yes/no` |
+| `walking_tracks` | `walking_tracks=yes/no` |
+| `games_room` | `games_room=yes/no` |
+| `shade` | `shade=yes/no` |
+| `cycling_tracks` | `cycling_tracks=yes/no` |
+| `offroad_tracks` | `4wd_tracks=yes/no` |
+| `boat_ramp_nearby` | `boat_ramp_nearby=yes/no` |
+| `telstra_signal` | `mobile_signal:telstra=yes/no` |
+| `mobile_signal` | `mobile_signal=yes/no` |
+| `tv_reception` | `tv_reception=yes/no` |
+| `pet_sitting` | `pet_sitting=yes/no` |
+| `lpg` | `lpg_bottles=yes/no` |
+| `vehicle_storage` | `vehicle_storage=yes/no` |
+| `self_contained_only` | `self_contained_vehicles=only` |
+| `sharks` | `hazard=shark` |
+| `marine_stingers` | `hazard=marine_stinger` |
+| `seasonal_closure` | `seasonal=yes/no` |
+| `dangerous_when_wet` | `dangerous_when_wet=yes/no` |
+| `caravans: "offroad"` (a value) | `caravans=offroad` |
+
+Open Camping DB only: `scenery`, `wildlife`, `rating` and reviews, and the
+`access` value `unknown`.
+
+`pets: "seasonal"` is the dataset's own value, but it is mapped: it is read
+from and written as `dog:conditional=yes @ (<pets_months>)`.
+
+No tag is proposed to OpenStreetMap by the pipeline. A person picks an
+extension, checks that no tag in use covers it, and decides whether to
+document or propose it.
+
 ## 5. Show the attribution
 
 Every screen that shows this data, including a map, a list or a place page,
