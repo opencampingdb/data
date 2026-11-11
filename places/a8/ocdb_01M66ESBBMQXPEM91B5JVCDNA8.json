@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "entry": "osm",
     "nearest_beach": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
     "address": {
@@ -11,10 +13,12 @@
       "street": "Brisbane Water Drive",
       "suburb": "Woy Woy"
     },
+    "entry": "public",
     "nearest_beach": {
       "distance_m": 400
     },
-    "website": "https://www.toiletmap.gov.au/13141"
+    "website": "https://www.toiletmap.gov.au/13141",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESBBMQXPEM91B5JVCDNA8",
@@ -26,11 +30,11 @@
   "name": "Public Toilet Woy Woy Train Station",
   "osm": {
     "id": 4881413451,
-    "timestamp": "2026-09-12T02:55:09Z",
+    "timestamp": "2026-11-10T03:18:46Z",
     "type": "node",
-    "version": 5
+    "version": 7
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-11T22:25:56Z"
 }
