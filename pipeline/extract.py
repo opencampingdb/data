@@ -34,7 +34,7 @@ import osmium
 import shapely
 from shapely import MultiPolygon, Polygon, STRtree
 
-from .common import dump_line, pets_months_ok, round_coord, write_text
+from .common import KIND_GROUP, dump_line, pets_months_ok, round_coord, write_text
 from .geometry import SidecarBuilder
 from .kinds import (
     CONTAINER_TAG_PAIRS,
@@ -67,6 +67,7 @@ YES_NO_TAGS = {
     "playground": "playground",
     "bin": "bins",
     "compressed_air": "air",
+    "fishing": "fishing",
 }
 
 # Fuels sold: OSM fuel:* key -> the name in the fuels fact, in the order written.
@@ -87,6 +88,8 @@ FUEL_TAGS = {
 TOILET_TYPES = {"flush": "flush", "pitlatrine": "pit", "chemical": "chemical", "dry_toilet": "dry", "bucket": "dry"}
 
 OPERATOR_MAX = 200
+PHONE_MAX = 100
+URL_MAX = 500
 
 # Social pages: fact key -> OSM keys, the first with a value wins. Only
 # https links are kept.
@@ -293,9 +296,22 @@ def facts_from_tags(tags: dict) -> dict:
                 facts["website"] = url
             break
 
+    # website:booking wins over reservation:website. Only https links are kept.
+    for key in ("website:booking", "reservation:website"):
+        url = first_value(tags.get(key, ""))
+        if url:
+            if url.lower().startswith("https://") and len(url) <= URL_MAX:
+                facts["booking_url"] = url
+            break
+
     for key in ("phone", "contact:phone"):
         if key in tags and first_value(tags[key]):
+            numbers = tags[key].split(";")
             facts["phone"] = first_value(tags[key])
+            # The second number, from the same key, is phone_2.
+            second = numbers[1].strip() if len(numbers) > 1 else ""
+            if second and len(second) <= PHONE_MAX:
+                facts["phone_2"] = second
             break
 
     for key in ("email", "contact:email"):
@@ -925,6 +941,10 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         record["kind"] = classify(tags, frozenset(inside_by_index.get(i, ())))
         if record["kind"] == "drinking_water_point":
             record["facts"]["water_type"] = water_type(tags)
+        # A dump station for customers is one a guest may use, so it counts
+        # on a place to stay. On any other kind it is not open to everyone.
+        if KIND_GROUP.get(record["kind"]) == "overnight" and first_value(tags.get("sanitary_dump_station", "")).lower() == "customers":
+            record["facts"]["dump_station"] = True
         key = (record["osm"]["type"], record["osm"]["id"])
         water.set_facts(record, key)
         inside.set_facts(record, outlines.pop(i, None), key)

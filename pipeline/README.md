@@ -198,7 +198,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `toilets` | `toilets` | `yes` / `no` |
 | `shower` | `showers` | `yes`, `hot` or `cold` is `true`, `no` is `false` |
 | `drinking_water` | `drinking_water` | `yes` / `no` |
-| `sanitary_dump_station` | `dump_station` | `yes` / `no` |
+| `sanitary_dump_station` | `dump_station` | `yes` / `no`. `customers` is `true` on a place to stay (a kind in the overnight group), whose guests may use it, and left out on any other kind |
 | `wheelchair` | `wheelchair` | `yes` / `no`. `limited` is left out |
 | `motorhome` | `motorhomes` | `yes` / `no` |
 | `washing_machine` | `laundry` | `yes` / `no` |
@@ -214,6 +214,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `brand` | `brand` | A park chain or club we list (BIG4 is `big4`, Discovery Parks is `discovery`, and so on: `BRANDS` in `pipeline/kinds.py`). Other brands are left out |
 | `fuel:diesel`, `fuel:octane_91`, `fuel:e10`, `fuel:octane_95`, `fuel:octane_98`, `fuel:e85`, `fuel:adblue`, `fuel:lpg` | `fuels` | the fuels tagged `yes`, as `diesel`, `unleaded_91`, `e10`, `unleaded_95`, `unleaded_98`, `e85`, `adblue`, `lpg` in that order. No fuel tagged `yes`, no fact. `fuel:lpg` is LPG at the pump, so it never sets `lpg` (gas bottle refill or swap) |
 | `compressed_air` | `air` | `yes` / `no` |
+| `fishing` | `fishing` | `yes` / `no`. Other values, such as `permit`, are left out |
 | `bin` | `bins` | `yes` / `no` |
 | `hot_water`, `shower` | `hot_water` | `yes` / `no`. `shower=hot` is `true`. `shower=cold` is `false` unless `hot_water` says otherwise |
 | `toilets:disposal` | `toilet_type` | `flush`, `pitlatrine` is `pit`, `chemical`, `dry_toilet` or `bucket` is `dry`. Others are left out |
@@ -225,7 +226,8 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written. |
 | `opening_hours` | `opening_hours` | copied as is |
 | `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
-| `phone`, then `contact:phone` | `phone` | copied as is |
+| `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is. The second, from the same key, is `phone_2`, up to 100 characters |
+| `website:booking`, then `reservation:website` | `booking_url` | the first with a value, kept only if it starts with `https://` and is up to 500 characters. An owner's `booking_url` is never replaced (see `pipeline/sync.py`) |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`, except on a place for heavy vehicles only (next row), where it says who may drive in and is left out. Others, such as `destination`, are left out. |
