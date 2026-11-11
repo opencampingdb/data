@@ -21,7 +21,27 @@ A value in Open Camping DB is not enough on its own, because the feedback engine
 - Opening hours from travellers that carry a quoted comment (`Mo-Su 08:00-17:00 "office closes at noon"`) are never sent: the comment is free text no person has read. The verified owner's opening hours are sent with their comment.
 - Without `--inbox` (a local run, a fork) the file is written with no tasks, and the log and sync report say why.
 
-Each line of a task says how many travellers reported the value and when the latest did, or when the owner set it, the tag to set once the check agrees with a link to its OSM wiki page, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers and dump points. A closure points to the wiki's lifecycle prefixes (`disused:tourism=camp_site` while the site is still on the ground, deleting the object once nothing is left). Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
+### Facts a report task covers
+
+A report task covers only facts with a tag on the place's own OSM object, plus the name and a permanent closure:
+
+| Facts | OSM tag |
+|---|---|
+| `fee`, `power`, `tents`, `caravans`, `motorhomes`, `cabins`, `wheelchair`, `nudist` | `fee`, `power_supply`, `tents`, `caravans`, `motorhome`, `cabins`, `wheelchair`, `nudism` (`fee=donation` too) |
+| `toilets`, `showers`, `hot_water`, `drinking_water`, `dump_station`, `laundry`, `kitchen`, `bbq`, `picnic_tables`, `bins`, `playground` | `toilets`, `shower`, `hot_water`, `drinking_water`, `sanitary_dump_station`, `washing_machine`, `kitchen`, `bbq`, `picnic_table`, `bin`, `playground` |
+| `campfires`, `fishing`, `pets` | `openfire`, `fishing`, `dog` |
+| `toilet_type` | `toilets:disposal`: `flush`, `pit` as `pitlatrine`, `chemical`, `dry` as `dry_toilet` |
+| `booking_required` | `reservation`: `true` as `required`, `false` as `no` |
+| `wifi` | `internet_access`: `wlan` or `no` |
+| `access`, `entry`, `water_type`, `brand` | `4wd_only`, `access`, `amenity`, `brand` |
+| `max_stay`, `opening_hours` | `maxstay`, `opening_hours` |
+| `website`, `phone`, `phone_2`, `email`, `facebook`, `instagram`, `tiktok`, `x` | `website`, `phone`, `email`, `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` |
+
+These are contact details for the place itself, never a traveller's own. `phone_2` is the place's second number, which OSM keeps after the first in one key (`phone=<first>;<second>`), so it is sent only when the place also has a first number.
+
+Some facts are never sent. `booking_url` is a booking link, which stays in Open Camping DB. Nearby facts (`nearest_beach`, `nearest_boat_ramp`, `crocodiles`, and `pub`, `fuel` and `car_wash` inside a place) come from other OSM objects, so no tag on the place's own object would show them.
+
+Each line of a task says how many travellers reported the value and when the latest did, or when the owner set it, the tag to set once the check agrees with a link to its OSM wiki page, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, bookings, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers, dump points and bins; a survey or the operator's sign or website for anything else. A closure points to the wiki's lifecycle prefixes (`disused:tourism=camp_site` while the site is still on the ground, deleting the object once nothing is left). Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
 
 ## Approving changes
 
