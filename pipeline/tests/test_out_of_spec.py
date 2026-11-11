@@ -71,6 +71,15 @@ def test_school_holidays_the_reference_has_no_australian_data_for_make_no_task(r
 
 
 @needs_node
+def test_public_holidays_are_read_with_australian_holiday_data_and_make_no_task(repo):
+    # opening_hours.js has Australian public holidays, so PH passes on the first, Australian read.
+    # A missing or wrong country code would refuse it, and that refusal must not be explained away.
+    value = "Mo-Fr 09:00-17:00; PH 10:00-12:00"
+    build(repo, (osm_record(A, 1, opening_hours=value), osm_place(1, opening_hours=value)))
+    assert tasks(repo, OUT_OF_SPEC) == []
+
+
+@needs_node
 def test_an_error_behind_school_holidays_still_makes_a_task(repo):
     value = "SH off; Mo-Fr 25:00-26:00"
     build(repo, (osm_record(A, 1, opening_hours=value), osm_place(1, opening_hours=value)))
@@ -104,6 +113,28 @@ def test_an_international_phone_makes_no_task(repo):
     facts = {"phone": "+61 2 5550 0100", "phone_2": "+61-400-555-010"}
     build(repo, (osm_record(A, 1, **facts), osm_place(1, **facts)))
     assert tasks(repo, OUT_OF_SPEC) == []
+
+
+@needs_node
+@pytest.mark.parametrize("phone", [
+    # The extension formats the OSM wiki's Key:phone page lists.
+    "+1-905-688-5550x3369",
+    "+1-905-688-5550 x3369",
+    "+1-978-750-1900 ext. 4309",
+    "+49 123 4567-1234",
+    "+61 2 5550 0100 ext. 12",
+    "+61 2 5550 0100 x12",
+])
+def test_an_international_phone_with_an_extension_makes_no_task(repo, phone):
+    build(repo, (osm_record(A, 1, phone=phone), osm_place(1, phone=phone)))
+    assert tasks(repo, OUT_OF_SPEC) == []
+
+
+@needs_node
+@pytest.mark.parametrize("phone", ["02 5550 0100 ext. 12", "02 5550 0100 x12", "+61 2 5550 0100 x", "+61 2 5550 0100 ext. "])
+def test_a_local_phone_or_an_empty_extension_still_makes_a_task(repo, phone):
+    build(repo, (osm_record(A, 1, phone=phone), osm_place(1, phone=phone)))
+    assert len(tasks(repo, OUT_OF_SPEC)) == 1
 
 
 @needs_node

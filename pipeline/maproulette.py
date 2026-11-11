@@ -674,8 +674,8 @@ OPENING_HOURS_FIX = (
 )
 PHONE_FIX = (
     "The OSM wiki asks for the international form, \"+CC XXX XXX XXX\": in Australia +61, then the number "
-    "without its leading 0, such as +61 2 5550 0100, with only digits, spaces and hyphens, and ; between "
-    "several numbers. Check the number with the operator's own sign or website, then rewrite it in that form. "
+    "without its leading 0, such as +61 2 5550 0100, with only digits, spaces and hyphens, any extension "
+    "after it as \" ext. 12\", and ; between several numbers. Check the number with the operator's own sign or website, then rewrite it in that form. "
     "OSM wiki: " + WIKI + "Key:phone"
 )
 OUT_OF_SPEC_SKIP = "If you are not sure what the right value is, skip the task. If the value is right as it is, mark the task \"Not an Issue\"."

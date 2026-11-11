@@ -11,8 +11,9 @@ opening_hours
 phone
     The reference is the E.164 international form the OSM wiki's Key:phone
     page asks for: "+", the country code, then the number, with only digits,
-    spaces and hyphens. Several numbers are separated by ";". Domestic-only
-    keys such as phone:AU are not read by the extract, so never checked.
+    spaces and hyphens. Several numbers are separated by ";". An extension
+    may follow in a form the page lists (see E164_RE). Domestic-only keys
+    such as phone:AU are not read by the extract, so never checked.
 """
 
 import json
@@ -32,7 +33,11 @@ NO_NODE = (
     "so the file was left as it was"
 )
 
-E164_RE = re.compile(r"\+[1-9][0-9 -]*[0-9]")
+# Key:phone, "Extensions": "E.123 format: +1-978-750-1900 ext. 4309", and the informal
+# "x3369" with or without a space before it. The DIN 5008 form ("-1234") is
+# already digits and hyphens. The ";ext=" form is not accepted: the page says no
+# software reads it, and ";" separates numbers.
+E164_RE = re.compile(r"\+[1-9][0-9 -]*[0-9](?:(?: ?x| ext\. )[0-9]+)?")
 
 
 def checker_ready() -> bool:
@@ -66,5 +71,8 @@ def check_opening_hours(values: list[str]) -> dict[str, str | None]:
 
 
 def phone_out_of_spec(number: str) -> bool:
-    """True for a number not in the international form: "+", country code, then digits, spaces and hyphens."""
+    """True for a number not in the international form: "+", country code, then digits, spaces and hyphens.
+
+    An extension the OSM wiki lists (" ext. 12", " x12" or "x12") may follow.
+    """
     return not E164_RE.fullmatch(number.strip())

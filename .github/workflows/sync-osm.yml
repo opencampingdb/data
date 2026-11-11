@@ -51,12 +51,15 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
+      # Soft fail on an npm outage: out_of_spec keeps the last file and the report says "Not built".
       - name: Set up Node for opening_hours.js
+        continue-on-error: true
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: tools/oh-check/.node-version
 
       - name: Install opening_hours.js
+        continue-on-error: true
         run: npm ci --ignore-scripts --prefix tools/oh-check
 
       - name: Download the Australia extract

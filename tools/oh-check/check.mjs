@@ -16,7 +16,7 @@ import opening_hours from "opening_hours";
 const AUSTRALIA = { address: { country_code: "au" } };
 // Only used to look past missing holiday data. Its holidays mean nothing here.
 const HOLIDAY_DATA = { lat: 52.52, lon: 13.4, address: { country_code: "de", state: "Berlin" } };
-const MISSING_HOLIDAYS = /no holidays \((SH|PH)\) defined|Country code missing/;
+const MISSING_HOLIDAYS = /no holidays \((SH|PH)\) defined/;
 
 // The library prints its own messages. stdout carries only the results.
 console.log = console.warn = console.error = console.info = () => {};
