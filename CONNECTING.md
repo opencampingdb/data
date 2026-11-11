@@ -346,6 +346,14 @@ A database updated by changesets holds the same rows as the newest
 not by a file hash. If a download, a check or the apply fails, keep the
 database you had (the transaction leaves it unchanged) and try again later.
 
+In JavaScript, TypeScript or React Native, the feedback SDK's
+`createReleaseUpdater` does these steps for you: it finds the path, checks
+every file, applies the chain in one transaction through four calls you write
+over your SQLite library, falls back to the whole database, and says why when
+an update fails. See
+[Keeping the data current](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md#10-keeping-the-data-current)
+in the integration guide.
+
 ## 4. Use the records
 
 The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
