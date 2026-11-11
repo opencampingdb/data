@@ -175,7 +175,7 @@ NOW = datetime(2026, 11, 5, tzinfo=timezone.utc)
 
 
 def inbox_with(tmp_path, place, **facts):
-    """An inbox where two travellers reported each fact, more than enough evidence for a task."""
+    """An inbox where two travellers reported each fact, one of them seen nearby: enough evidence for a task."""
     root = tmp_path / "inbox"
     for n, (field, value) in enumerate(facts.items()):
         for origin in ("o1", "o2"):
@@ -184,6 +184,8 @@ def inbox_with(tmp_path, place, **facts):
                 "device": origin, "origin": origin, "report": {"kind": "fact", "fact": field, "value": value},
                 "outcome": {"result": "applied", "reason": "test", "run": "2026-11-04T01:00:00Z"},
             }
+            if origin == "o1":
+                item["report"]["first_hand"] = "seen_nearby"
             path = root / "applied" / "2026-11-04" / f"{item['id']}.json"
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(item), encoding="utf-8")

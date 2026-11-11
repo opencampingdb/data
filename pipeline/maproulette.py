@@ -48,12 +48,18 @@ maproulette/traveller_reports.geojson
     A value is sent only with enough evidence in the inbox's applied items:
     a feedback value needs at least 2 independent sources (distinct origin,
     else device) that reported that same value for the place in the last 90
-    days, and those confirming sources must outnumber the sources that
-    doubted the fact in the same 90 days by at least 2. A doubt counts
-    whatever was decided about it, unless it was refused. An owner value
-    needs the verified owner's applied update, and doubts do not change it. A
-    name that only describes the place ("Heavy Vehicle Rest Area") is never
-    sent. Each line says how many travellers reported the value and when, or
+    days, those confirming sources must outnumber the sources that doubted
+    the fact in the same 90 days by at least 2, and at least one of them
+    must be first-hand (the applied report's first_hand is seen_nearby or
+    says_so: the traveller was at the place in the last month). Any other
+    first_hand value does not count, and a first-hand doubt is still just a
+    doubt. The feedback engine puts first_hand only on fact reports and
+    doubts, so names and closures from travellers wait until it marks those
+    too. A doubt counts whatever was decided about it, unless it was refused.
+    An owner value needs the verified owner's applied update, and doubts and
+    first-hand reports do not change it. A name that only describes the
+    place ("Heavy Vehicle Rest Area") is never sent. Each line says how many
+    travellers reported the value, how many of them first-hand and when, or
     when the owner set it, how a mapper can check it, and the tag to set
     once the check agrees, with its OSM wiki page. Only counts and
     dates leave the inbox: never a device, an origin or a traveller's words.
@@ -247,6 +253,12 @@ LABELS = {
 WINDOW_DAYS = 90
 MIN_TRAVELLERS = 2
 MIN_LEAD = 2  # confirming sources minus doubting sources
+MIN_FIRST_HAND = 1  # confirming sources that were at the place in the last month
+
+# The values the feedback engine writes on an applied report's first_hand: the
+# app saw the traveller nearby, or the traveller said they were there. Any
+# other value does not count.
+FIRST_HAND = ("seen_nearby", "says_so")
 
 # Marks a doubt in the evidence: a traveller said the fact is wrong without
 # giving a value.
@@ -536,26 +548,28 @@ def load_evidence(inbox: Path, places: dict) -> dict[tuple[str, str], list[dict]
         if place is None or received is None:
             continue
         who = item.get("origin") or item.get("device")
+        first_hand = item.get("type") == "report" and (item.get("report") or {}).get("first_hand") in FIRST_HAND
         for source, key, value in item_claims(item):
             evidence.setdefault((place, key), []).append(
-                {"source": source, "value": value, "who": who, "received": received}
+                {"source": source, "value": value, "who": who, "received": received, "first_hand": first_hand}
             )
     return evidence
 
 
-def backing(record: dict, key: str, value, source: str, evidence: dict, now: datetime) -> tuple[int, datetime] | None:
-    """(independent sources, latest date) behind a value, or None when the evidence is not enough.
+def backing(record: dict, key: str, value, source: str, evidence: dict, now: datetime) -> tuple[int, datetime, int] | None:
+    """(independent sources, latest date, first-hand sources) behind a value, or None when the evidence is not enough.
 
     An owner value counts as one source, dated when it was set, and doubts
     do not change it. A feedback value needs MIN_TRAVELLERS confirming
-    sources, and at least MIN_LEAD more of them than sources that doubted
-    the fact, all within WINDOW_DAYS.
+    sources, at least MIN_LEAD more of them than sources that doubted the
+    fact, and at least MIN_FIRST_HAND of them first-hand, all within
+    WINDOW_DAYS. A first-hand doubt is still one doubt: it never confirms.
     """
     found = [e for e in evidence.get((record["id"], key), []) if e["source"] == source and e["value"] == value]
     if source == "owner":
         if not record.get("owner_verified") or not found:
             return None
-        return 1, parse_time(record.get("fact_dates", {}).get(key)) or max(e["received"] for e in found)
+        return 1, parse_time(record.get("fact_dates", {}).get(key)) or max(e["received"] for e in found), 0
     since = now - timedelta(days=WINDOW_DAYS)
     recent = [e for e in found if since <= e["received"] <= now and e["who"]]
     count = len({e["who"] for e in recent})
@@ -563,9 +577,10 @@ def backing(record: dict, key: str, value, source: str, evidence: dict, now: dat
         e["who"] for e in evidence.get((record["id"], key), [])
         if e["source"] == DOUBT and since <= e["received"] <= now and e["who"]
     })
-    if count < MIN_TRAVELLERS or count - doubts < MIN_LEAD:
+    first_hand = len({e["who"] for e in recent if e["first_hand"]})
+    if count < MIN_TRAVELLERS or count - doubts < MIN_LEAD or first_hand < MIN_FIRST_HAND:
         return None
-    return count, max(e["received"] for e in recent)
+    return count, max(e["received"] for e in recent), first_hand
 
 
 CLOSED_FIX = (
@@ -581,13 +596,13 @@ def tag_fix(tag: str, rule: str = "") -> str:
     return f"If it checks out, set {tag}. {rule + ' ' if rule else ''}OSM wiki: {wiki_page(tag)}"
 
 
-def change_line(source: str, backed: tuple[int, datetime], text: str, how: str, fix: str) -> str:
+def change_line(source: str, backed: tuple[int, datetime, int], text: str, how: str, fix: str) -> str:
     """The task's line for one value, with who stated it and when, how to check it, then the likely fix."""
-    count, when = backed
+    count, when, first_hand = backed
     if source == "owner":
         line = f"- The verified owner says {text}, set on {australian_date(when)}."
     else:
-        line = f"- {count} travellers reported {text}, most recently on {australian_date(when)}."
+        line = f"- {count} travellers reported {text}, {first_hand} of them first-hand, most recently on {australian_date(when)}."
     return f"{line}\n  - Check it with {how}.\n  - {fix}"
 
 
