@@ -29,6 +29,27 @@ _Avoid_: derived fact
 **Rule fact**:
 A value set from a place's kind when no source gives one, such as toilets at a public toilet. Any reported value wins over it.
 
+**Extension**:
+A fact, kind or value the dataset holds that OpenStreetMap has no tag or value for. It is kept as the dataset's own, never dropped or forced into an OpenStreetMap tag.
+_Avoid_: custom field, extra data
+
+**Proposable extension**:
+An extension a mapper could check true or false at the place, and so a candidate for a new OpenStreetMap tag.
+
+**Open Camping DB only**:
+An extension that is an opinion or a personal account, such as scenery or a review, which OpenStreetMap can never hold.
+_Avoid_: private fact
+
+## Quality
+
+**Out of spec**:
+A value that the reference OpenStreetMap names for its tag refuses, such as opening hours its reference implementation can't read. A value that only draws a style warning is not out of spec.
+_Avoid_: invalid (for a warning), bad data
+
+**First-hand report**:
+A report from a traveller who was at the place in the last month: the app saw them nearby, or they said so.
+_Avoid_: verified report
+
 ## Cost
 
 **Fee**:
