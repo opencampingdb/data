@@ -16,6 +16,8 @@ exits 1. Checks:
   name, location and status entries. Sources are osm, feedback,
   contributed, owner and community_report. The source rule and fact_rules
   appear only in released records (pipeline.release), never in places/
+- the nearby facts nearest_beach and nearest_boat_ramp have the source osm:
+  no fact report sets them
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
@@ -64,6 +66,7 @@ from jsonschema import Draft202012Validator
 from .common import (
     EXTRA_SOURCE_KEYS,
     KIND_GROUP,
+    OSM_ONLY_FACTS,
     RULE,
     pets_months_ok,
     dump_line,
@@ -188,6 +191,11 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
         )
 
     errors += fact_date_errors(record, where)
+    reported = sorted(
+        k for k in OSM_ONLY_FACTS if k in record["fact_sources"] and record["fact_sources"][k] != "osm"
+    )
+    if reported:
+        errors.append(f"{where}: {reported} come from OSM only, so their source must be osm")
     if "pets_months" in record["facts"]:
         if record["facts"].get("pets") != "seasonal":
             errors.append(f"{where}: pets_months is only for a place whose pets fact is seasonal")

@@ -66,7 +66,7 @@ from .common import (
 # 12.2: ocdb.sqlite.gz, the release as an SQLite database, and changesets to it
 # from earlier releases (pipeline.database), with layout_version.
 # 12.3: the facts nearest_beach, sharks and marine_stingers.
-# 12.4: the facts fuels, air, hot_water, toilet_type and operator.
+# 12.4: the facts fuels, air, hot_water, toilet_type, operator and nearest_boat_ramp.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An

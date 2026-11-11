@@ -249,8 +249,8 @@ may stay, and comes from the OSM `access` tag.
 
 #### Nearby features
 
-Two facts come from other OSM objects near the place, collected in the
-same read (`pipeline/water.py`):
+These facts come from other OSM objects inside or near the place,
+collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
 
 - `nearest_beach`: the nearest `natural=beach` within 5 km, as an area, a
   node or an open line, with `distance_m` from the place's location to the
@@ -264,6 +264,18 @@ same read (`pipeline/water.py`):
   `crocodiles`, as a whole value) and the place's own tags set no
   `crocodiles`. OSM's `hazard` key is for hazards declared by a sign or a
   government notice.
+- `nearest_boat_ramp`: the nearest `leisure=slipway` within 5 km, as a node,
+  an area or an open line, by the same rules as `nearest_beach` (distance to
+  the nearest point, rounded to 10 m half up, `name` only when 100
+  characters or fewer, ties to the ramp read first). A slipway is also a
+  place of kind `boat_ramp`, and never counts for itself.
+- `pub`, `fuel` and `car_wash: true` when an `amenity=pub`, `amenity=fuel`
+  or `amenity=car_wash` lies inside the place's area (a closed way or a
+  multipolygon) or on its edge. A node counts at its position, a closed way
+  or multipolygon at the centroid of its area. A place drawn as a node has
+  no area and gets none of these, and an object never counts for itself, so
+  a fuel station drawn as an area does not get `fuel` from its own centroid.
+  A place whose own tags set the fact keeps its own value. Never `false`.
 
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag

@@ -134,6 +134,8 @@ The other files read the same as in 12.1. Format 12.3 adds the facts
 `nearest_beach`, `sharks` and `marine_stingers` (section 4). Format 12.4
 adds the facts `fuels`, `air`, `hot_water`, `toilet_type` and `operator`,
 from OSM, and fills `bins` and `booking_required` from OSM too (section 4).
+It also adds `nearest_boat_ramp`, and fills `pub`, `fuel` and `car_wash`
+from OSM objects inside a place (section 4).
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -518,6 +520,18 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   has none. Swimming holes and swimming areas in rivers, creeks and lakes are
   places of their own (kind `swimming_spot`): find the ones near a place by
   their location.
+- `nearest_boat_ramp` is the nearest OSM boat ramp (`leisure=slipway`)
+  within 5 km of the place, read and rounded the same way as
+  `nearest_beach`: `distance_m` to the nearest point of the ramp, and the
+  ramp's `name` when it has one. A boat ramp is a place too (kind
+  `boat_ramp`), and its own `nearest_boat_ramp` is the next ramp, never
+  itself. Its source is always `osm` and fact reports cannot set it. The
+  traveller fact `boat_ramp_nearby` is separate and unchanged.
+- `pub`, `fuel` and `car_wash` are also `true` from OSM when an
+  `amenity=pub`, `amenity=fuel` or `amenity=car_wash` lies inside the
+  place's area, such as a pub inside a caravan park. A place mapped as a
+  single point has no area, so it gets these only from fact reports. OSM
+  never sets them to `false`.
 - `crocodiles`, `sharks` and `marine_stingers` warn about dangerous animals
   in the water nearby. `marine_stingers` covers box jellyfish, Irukandji and
   other dangerous jellyfish, which come in season in tropical waters.

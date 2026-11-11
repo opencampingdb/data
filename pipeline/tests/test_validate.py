@@ -322,6 +322,35 @@ def test_water_type_fact(synced):
     assert any("water_type" in e for e in validate_repo(synced))
 
 
+def test_nearby_facts_from_osm_are_allowed(synced):
+    path, rec = first_place(synced)
+    new = {
+        "nearest_beach": {"distance_m": 320, "name": "Fixture Main Beach"},
+        "nearest_boat_ramp": {"distance_m": 3000},
+        "pub": True,
+        "fuel": True,
+        "car_wash": True,
+    }
+    rec["facts"].update(new)
+    rec["fact_sources"].update({key: "osm" for key in new})
+    write_place(path, rec)
+    assert validate_repo(synced) == []
+    rec["facts"]["nearest_boat_ramp"] = {"distance_m": 5010}
+    write_place(path, rec)
+    assert any("nearest_boat_ramp" in e for e in validate_repo(synced))
+
+
+@pytest.mark.parametrize("fact", ["nearest_beach", "nearest_boat_ramp"])
+def test_reported_nearby_fact_is_refused(synced, fact):
+    path, rec = first_place(synced)
+    rec["facts"][fact] = {"distance_m": 1200}
+    rec["fact_sources"][fact] = "feedback"
+    rec["fact_dates"] = {fact: rec["updated"]}
+    write_place(path, rec)
+    errors = validate_repo(synced)
+    assert any(fact in e and "osm" in e for e in errors), errors
+
+
 def test_contributed_place_without_osm_link_is_valid(synced):
     rec = {
         "id": "ocdb_01JBX0000000000000000000C1",

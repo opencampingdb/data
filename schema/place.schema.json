@@ -151,7 +151,7 @@
         "picnic_tables": {"description": "Tables (OSM picnic_table=yes/no).", "type": "boolean"},
         "campfires": {"description": "Open fires allowed in fire pits (OSM openfire=yes/no).", "type": "boolean"},
         "cabins": {"description": "Cabins or other on-site accommodation (OSM cabins=yes/no).", "type": "boolean"},
-        "pub": {"description": "A pub or hotel on site.", "type": "boolean"},
+        "pub": {"description": "A pub or hotel on site. From OSM true when an amenity=pub lies inside the place's area, never false.", "type": "boolean"},
         "swimming": {"description": "Swimming at or next to the place.", "type": "boolean"},
         "fishing": {"description": "Fishing at or next to the place.", "type": "boolean"},
         "walking_tracks": {"description": "Walking tracks start at or near the place.", "type": "boolean"},
@@ -169,7 +169,7 @@
         "wifi": {"description": "Wi-Fi (OSM internet_access=wlan/yes/no).", "type": "boolean"},
         "tv_reception": {"description": "Good TV reception.", "type": "boolean"},
         "pet_sitting": {"description": "Pet sitting offered.", "type": "boolean"},
-        "fuel": {"description": "Fuel sold on site.", "type": "boolean"},
+        "fuel": {"description": "Fuel sold on site. From OSM true when an amenity=fuel lies inside the place's area, never false.", "type": "boolean"},
         "lpg": {"description": "LPG gas bottle refill or swap on site. Not from OSM fuel:lpg, which is LPG at the pump (see fuels).", "type": "boolean"},
         "fuels": {
           "description": "Fuels sold (OSM fuel:*=yes), in this order: diesel, unleaded_91, e10, unleaded_95, unleaded_98, e85, adblue, lpg. lpg here is LPG at the pump.",
@@ -182,7 +182,7 @@
         "hot_water": {"description": "Hot water in the showers or basins (OSM hot_water=yes/no, or shower=hot/cold).", "type": "boolean"},
         "toilet_type": {"description": "How the toilets work (OSM toilets:disposal): flush, pit, chemical, or dry (composting or bucket).", "enum": ["flush", "pit", "chemical", "dry"]},
         "operator": {"description": "Who runs the place: a council, a parks agency, a company (OSM operator).", "type": "string", "minLength": 1, "maxLength": 200},
-        "car_wash": {"description": "Car or caravan wash.", "type": "boolean"},
+        "car_wash": {"description": "Car or caravan wash. From OSM true when an amenity=car_wash lies inside the place's area, never false.", "type": "boolean"},
         "vehicle_storage": {"description": "Vehicle or caravan storage.", "type": "boolean"},
         "self_contained_only": {"description": "Only self-contained vehicles may stay.", "type": "boolean"},
         "crocodiles": {"description": "Crocodiles in nearby water. From OSM when the place, or a hazard within 1 km, has hazard=crocodile(s) or hazard:animal=crocodile(s).", "type": "boolean"},
@@ -229,6 +229,16 @@
         },
         "nearest_beach": {
           "description": "The nearest OSM natural=beach within 5 km of the place's location, from the extract only. distance_m is to the nearest point of the beach (0 inside it), rounded to 10 m.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["distance_m"],
+          "properties": {
+            "distance_m": {"type": "integer", "minimum": 0, "maximum": 5000, "multipleOf": 10},
+            "name": {"type": "string", "minLength": 1, "maxLength": 100}
+          }
+        },
+        "nearest_boat_ramp": {
+          "description": "The nearest OSM leisure=slipway within 5 km of the place's location, other than the place itself, from the extract only. distance_m is to the nearest point of the boat ramp (0 inside it), rounded to 10 m.",
           "type": "object",
           "additionalProperties": false,
           "required": ["distance_m"],
@@ -306,7 +316,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|kind|name|location|status|description)$": {
+        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|nearest_boat_ramp|kind|name|location|status|description)$": {
           "enum": ["osm", "feedback", "contributed", "owner", "community_report", "rule"]
         }
       }
@@ -317,7 +327,7 @@
       "additionalProperties": false,
       "minProperties": 1,
       "patternProperties": {
-        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|kind|name|location|status|description)$": {
+        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|nearest_boat_ramp|kind|name|location|status|description)$": {
           "type": "string",
           "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
         }
