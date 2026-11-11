@@ -2,7 +2,10 @@
 
 from pathlib import Path
 
+import shapely
+
 from pipeline.extract import extract_file
+from pipeline.nearby import InsideFeatures
 
 NEARBY = Path(__file__).parent / "fixtures" / "nearby.osm"
 
@@ -40,6 +43,17 @@ def test_pub_outside_the_area_does_not_count():
     # Pub 104 lies 1.1 km north of the caravan park, so only the park has a pub.
     records = extract_file(NEARBY)
     assert [r["osm"]["id"] for r in records if r["facts"].get("pub") is True] == [2001]
+
+
+def test_a_place_keeps_its_own_pub_fuel_and_car_wash_values():
+    # No OSM tag on the place sets these, so the record carries them in from elsewhere.
+    inside = InsideFeatures()
+    inside.add("pub", -35.0005, 145.0005, ("node", 1))
+    inside.add("fuel", -35.0005, 145.0005, ("node", 2))
+    inside.add("car_wash", -35.0005, 145.0005, ("node", 3))
+    record = {"facts": {"pub": False, "fuel": False, "car_wash": False}}
+    inside.set_facts(record, shapely.box(145.0, -35.001, 145.001, -35.0), ("way", 9))
+    assert record["facts"] == {"pub": False, "fuel": False, "car_wash": False}
 
 
 def test_nearest_boat_ramp_within_five_kilometres():

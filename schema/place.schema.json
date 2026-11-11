@@ -179,7 +179,7 @@
           "items": {"enum": ["diesel", "unleaded_91", "e10", "unleaded_95", "unleaded_98", "e85", "adblue", "lpg"]}
         },
         "air": {"description": "Air for tyres (OSM compressed_air=yes/no).", "type": "boolean"},
-        "hot_water": {"description": "Hot water in the showers or basins (OSM hot_water=yes/no, or shower=hot/cold).", "type": "boolean"},
+        "hot_water": {"description": "Hot water in the showers or basins (OSM hot_water=yes/no, or shower=hot/cold when hot_water has no value).", "type": "boolean"},
         "toilet_type": {"description": "How the toilets work (OSM toilets:disposal): flush, pit, chemical, or dry (composting or bucket).", "enum": ["flush", "pit", "chemical", "dry"]},
         "operator": {"description": "Who runs the place: a council, a parks agency, a company (OSM operator).", "type": "string", "minLength": 1, "maxLength": 200},
         "car_wash": {"description": "Car or caravan wash. From OSM true when an amenity=car_wash lies inside the place's area, never false.", "type": "boolean"},

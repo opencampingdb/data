@@ -190,7 +190,7 @@ YES_NO_WORDS = {
     "campfires": ("campfires are allowed", "campfires are not allowed"),
     "cabins": ("there are cabins", "there are no cabins"),
     "fishing": ("fishing is allowed", "fishing is not allowed"),
-    "hot_water": ("the showers have hot water", "the showers have no hot water"),
+    "hot_water": ("there is hot water", "there is no hot water"),
     "playground": ("there is a playground", "there is no playground"),
     "wifi": ("there is Wi-Fi", "there is no Wi-Fi"),
     "booking_required": ("a booking is needed", "no booking is needed"),
@@ -287,12 +287,14 @@ def osm_tag(field: str, value) -> str | None:
     return VALUE_TAGS.get(field, {}).get(value)
 
 
-def second_phone_tag(record: dict, value) -> str | None:
+def second_phone_tag(osm_facts: dict, value) -> str | None:
     """phone=first;second for a place's second number, which OSM keeps in the same key as its first.
 
-    None when the place has no first number to put it after.
+    The first number is the OSM place's own, never one from feedback, so the
+    tag never changes the number OSM already has. None when OSM has no first
+    number to put it after.
     """
-    first = record.get("facts", {}).get("phone")
+    first = osm_facts.get("phone")
     if not isinstance(first, str) or not first.strip() or not isinstance(value, str) or not value.strip():
         return None
     return f"phone={first};{value}"
@@ -587,7 +589,7 @@ def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime)
             continue
         if field == "access" and value == "unknown":
             continue
-        tag = second_phone_tag(record, value) if field == "phone_2" else osm_tag(field, value)
+        tag = second_phone_tag(osm_facts, value) if field == "phone_2" else osm_tag(field, value)
         if not tag or not sendable(field, value, source):
             continue
         backed = backing(record, field, value, source, evidence, now)

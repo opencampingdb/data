@@ -616,7 +616,7 @@ def test_owner_fishing_and_hot_water_differing_from_osm_make_a_task(repo, tmp_pa
     lines = changes(repo).splitlines()
     assert lines[0] == "- The verified owner says fishing is allowed (fishing=yes), set on 3 November 2026."
     assert lines[2] == "  - If it checks out, set fishing=yes. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:fishing"
-    assert lines[3] == "- The verified owner says the showers have no hot water (hot_water=no), set on 3 November 2026."
+    assert lines[3] == "- The verified owner says there is no hot water (hot_water=no), set on 3 November 2026."
     assert lines[4] == "  - Check it with a survey, or the operator's own sign or website."
     assert lines[5] == "  - If it checks out, set hot_water=no. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:hot_water"
 
@@ -633,6 +633,26 @@ def test_owner_second_phone_joins_the_place_phone_tag(repo, tmp_path):
         "  - Check it with the operator's own sign or website.\n"
         "  - If it checks out, set phone=+61 2 5550 0100;+61 2 5550 0199. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:phone"
     )
+
+
+def test_a_second_phone_follows_the_osm_place_first_phone(repo, tmp_path):
+    # A traveller's first number may differ from OSM's, so the tag keeps OSM's own first number.
+    facts = {"phone": "+61 2 5550 0222", "phone_2": "+61 2 5550 0199"}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={field: "owner" for field in facts},
+                       fact_dates={field: "2026-11-03T02:10:00Z" for field in facts}))
+    box = inbox(tmp_path, owner_update(A, facts=facts))
+    write_challenges(repo, [osm_place(1, phone="+61 2 5550 0100")], inbox=box, now=NOW)
+    assert "(phone=+61 2 5550 0100;+61 2 5550 0199)" in changes(repo)
+    assert "0222;" not in changes(repo)
+
+
+def test_a_second_phone_is_never_sent_when_osm_has_no_first(repo, tmp_path):
+    facts = {"phone": "+61 2 5550 0222", "phone_2": "+61 2 5550 0199"}
+    write(repo, record(A, 1, owner_verified=True, facts=facts, fact_sources={field: "owner" for field in facts},
+                       fact_dates={field: "2026-11-03T02:10:00Z" for field in facts}))
+    box = inbox(tmp_path, owner_update(A, facts=facts))
+    write_challenges(repo, [osm_place(1)], inbox=box, now=NOW)
+    assert "second phone" not in changes(repo)
 
 
 def test_a_second_phone_without_a_first_is_never_sent(repo, tmp_path):

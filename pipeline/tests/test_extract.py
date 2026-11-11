@@ -423,6 +423,8 @@ def test_hot_water_from_hot_water_and_shower():
     assert facts_from_tags({"shower": "cold"}) == {"showers": True, "hot_water": False}
     # hot_water wins over a cold shower: the basins can have hot water.
     assert facts_from_tags({"shower": "cold", "hot_water": "yes"}) == {"showers": True, "hot_water": True}
+    # An explicit hot_water tag wins over a hot shower too.
+    assert facts_from_tags({"shower": "hot", "hot_water": "no"}) == {"showers": True, "hot_water": False}
     assert facts_from_tags({"shower": "yes"}) == {"showers": True}
 
 
@@ -514,6 +516,8 @@ def test_phone_2_from_the_second_phone_value():
         "phone_2": "+61 3 4444 4444",
     }
     assert facts_from_tags({"phone": "+61 3 1111 1111;"}) == {"phone": "+61 3 1111 1111"}
+    # The same number twice is one number.
+    assert facts_from_tags({"phone": " +61 3 1111 1111 ; +61 3 1111 1111 "}) == {"phone": "+61 3 1111 1111"}
     assert facts_from_tags({"phone": "+61 3 1111 1111;" + "1" * 101}) == {"phone": "+61 3 1111 1111"}
 
 

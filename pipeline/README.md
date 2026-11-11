@@ -216,7 +216,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `compressed_air` | `air` | `yes` / `no` |
 | `fishing` | `fishing` | `yes` / `no`. Other values, such as `permit`, are left out |
 | `bin` | `bins` | `yes` / `no` |
-| `hot_water`, `shower` | `hot_water` | `yes` / `no`. `shower=hot` is `true`. `shower=cold` is `false` unless `hot_water` says otherwise |
+| `hot_water`, `shower` | `hot_water` | `yes` / `no`. Without a `hot_water` value, `shower=hot` is `true` and `shower=cold` is `false` |
 | `toilets:disposal` | `toilet_type` | `flush`, `pitlatrine` is `pit`, `chemical`, `dry_toilet` or `bucket` is `dry`. Others are left out |
 | `reservation` | `booking_required` | `required` is `true`, `no` is `false`. `yes` and `recommended` are left out |
 | `operator` | `operator` | trimmed, up to 200 characters. Longer values are left out |

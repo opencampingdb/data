@@ -248,11 +248,10 @@ def facts_from_tags(tags: dict) -> dict:
     elif shower == "no":
         facts["showers"] = False
 
+    # An explicit hot_water tag wins. shower=hot or cold only fills the gap.
     hot_water = yes_no(tags.get("hot_water"))
-    if shower == "hot":
-        hot_water = True
-    elif shower == "cold" and hot_water is None:
-        hot_water = False
+    if hot_water is None and shower in ("hot", "cold"):
+        hot_water = shower == "hot"
     if hot_water is not None:
         facts["hot_water"] = hot_water
 
@@ -274,7 +273,7 @@ def facts_from_tags(tags: dict) -> dict:
     if operator and len(operator) <= OPERATOR_MAX:
         facts["operator"] = operator
 
-    dog =tags.get("dog", "").strip().lower()
+    dog = tags.get("dog", "").strip().lower()
     if dog in ("yes", "leashed", "no"):
         facts["pets"] = dog
     months = dog_months(tags.get("dog:conditional", ""))
@@ -308,9 +307,9 @@ def facts_from_tags(tags: dict) -> dict:
         if key in tags and first_value(tags[key]):
             numbers = tags[key].split(";")
             facts["phone"] = first_value(tags[key])
-            # The second number, from the same key, is phone_2.
+            # The second number, from the same key, is phone_2, unless it repeats the first.
             second = numbers[1].strip() if len(numbers) > 1 else ""
-            if second and len(second) <= PHONE_MAX:
+            if second and second != facts["phone"] and len(second) <= PHONE_MAX:
                 facts["phone_2"] = second
             break
 
