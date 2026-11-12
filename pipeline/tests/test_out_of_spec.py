@@ -166,3 +166,47 @@ def test_without_node_the_file_is_left_alone_and_the_report_says_why(repo, monke
     assert result[OUT_OF_SPEC]["count"] == 1
     assert "node" in result[OUT_OF_SPEC]["skipped"]
     assert "Not built:" in render_report(result)
+
+
+@pytest.mark.parametrize("value", [
+    "57 AUD/night", "15 AUD/person/night", "2.95 USD", "4 AUD / hour", "5 AUD/vehicle",
+    "0.25 AUD/kWh", "1 EUR/1.5 litre", "8 AUD/motorcar/day", "0 AUD", "57 AUD/nights",
+])
+def test_charges_in_the_wiki_syntax_pass(value):
+    from pipeline.out_of_spec import charge_ok
+    assert charge_ok(value)
+
+
+@pytest.mark.parametrize("value", [
+    "$14.50AUD", "Donation Box", "0", "$12", "$5/n", "4.09", "0.25 AU/kWh", "10 aud", "10AUD",
+    "57 AUD/night/person", "57 AUD/", " 57 AUD", "12.345 AUD", "57 AUD/person/vehicle/night", "",
+])
+def test_charges_out_of_the_wiki_syntax_fail(value):
+    from pipeline.out_of_spec import charge_ok
+    assert not charge_ok(value)
+
+
+def test_charge_conditional_syntax():
+    from pipeline.out_of_spec import charge_conditional_ok
+    for value in ("75 AUD/night @ (Dec-Jan)", "75 AUD/night @ Dec-Jan", "0 AUD @ (stay < 2 hours)",
+                  "75 AUD/night @ (Dec-Jan); 90 AUD/night @ (Dec 24-Dec 26; Dec 31)"):
+        assert charge_conditional_ok(value), value
+    for value in ("75 AUD/night", "$75 @ (Dec-Jan)", "75 AUD/night @", "75 AUD/night @ (Dec-Jan",
+                  "75 AUD/night @ Dec-Jan)", "75 AUD @ a @ b", "75 AUD/night @ ()", ""):
+        assert not charge_conditional_ok(value), value
+
+
+@needs_node
+def test_a_charge_out_of_the_wiki_syntax_makes_a_task(repo):
+    build(
+        repo,
+        (osm_record(A, 1, charge="$14.50AUD"), osm_place(1, charge="$14.50AUD")),
+        (osm_record(B, 2, charge="20 AUD/night", charge_conditional="25 AUD/night Dec-Jan"),
+         osm_place(2, charge="20 AUD/night", charge_conditional="25 AUD/night Dec-Jan")),
+    )
+    found = {t["features"][0]["properties"]["id"]: t["features"][0]["properties"] for t in tasks(repo, OUT_OF_SPEC)}
+    assert set(found) == {f"{A}:charge", f"{B}:charge:conditional"}
+    assert "charge=$14.50AUD" in found[f"{A}:charge"]["check"]
+    assert "Key:charge" in found[f"{A}:charge"]["check"]
+    assert "check_date:charge" in found[f"{A}:charge"]["check"]
+    assert "Conditional_restrictions" in found[f"{B}:charge:conditional"]["check"]
