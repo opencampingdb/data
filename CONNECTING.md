@@ -1,8 +1,17 @@
 # Connecting an app
 
-Any app may use Open Camping DB and send feedback to it. This page covers
-downloading the data, keeping it current, showing the attribution and
-sending feedback.
+Any app may use Open Camping DB and send feedback to it. In short:
+
+1. Fetch the manifest from the stable URL, and stop if its `format_version`
+   is higher than the one your app reads (section 1).
+2. Download each file from its `url` and check its `bytes` and `sha256`
+   (section 2).
+3. Compare `data_version` to stay current, and redirect merged ids, or keep
+   the SQLite database current with changesets (section 3).
+4. Read the records, treating every missing fact as not known (section 4).
+5. Show `© OpenStreetMap contributors, Open Camping DB` wherever the data
+   appears (section 5).
+6. Send what travellers report through the feedback intake (section 6).
 
 ## 1. Download
 
@@ -15,36 +24,36 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 
 ```json
 {
-  "format_version": 12,
-  "format_minor": 5,
-  "layout_version": 1,
+  "format_version": 13,
+  "format_minor": 0,
+  "layout_version": 2,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
   "places": {
     "file": "places.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/places.ndjson.gz",
-    "sha256": "...", "bytes": 1234567, "count": 54321
+    "sha256": "...", "bytes": 6176559, "count": 96538
   },
   "reviews": {
     "file": "reviews.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/reviews.ndjson.gz",
-    "sha256": "...", "bytes": 2345, "count": 12
+    "sha256": "...", "bytes": 407, "count": 2
   },
   "merged": {
     "file": "merged.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/merged.ndjson.gz",
-    "sha256": "...", "bytes": 20, "count": 0
+    "sha256": "...", "bytes": 7863, "count": 350
   },
   "commons": {
     "file": "commons.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/commons.ndjson.gz",
-    "sha256": "...", "bytes": 3456, "count": 25
+    "sha256": "...", "bytes": 310948, "count": 1497
   },
   "database": {
     "file": "ocdb.sqlite.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/ocdb.sqlite.gz",
-    "sha256": "...", "bytes": 12227557
+    "sha256": "...", "bytes": 14337061
   },
   "changesets": [
     {
@@ -65,6 +74,8 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 }
 ```
 
+### Format versions
+
 If `format_version` is higher than the one your app understands, keep the
 data you have and stop: the record format has changed in a way your app
 cannot read. Read any release whose `format_version` is the one your app
@@ -74,82 +85,74 @@ knows or lower, whatever its `format_minor`.
 misread the records: a field removed or renamed, a field whose meaning
 changes, or a new value in an existing field (such as `fee` gaining
 `"donation"` in format 7). Each rise is announced in an issue labelled
-`format-change` on this repository at least 7 days before the first release
-that carries it, so apps can ship a reader first. Watch the repository's
-issues to hear about it.
+[`format-change`](https://github.com/opencampingdb/data/issues?q=label%3Aformat-change)
+on this repository at least 7 days before the first release that carries it,
+so apps can ship a reader first. Watch the repository's issues to hear about
+it.
 
 `format_minor` rises for a change a reader of the same `format_version` can
-read without updating: a new optional field, a new file in the manifest,
-records left out of a release, or a new kind (see section 4). It goes back to
-0 when `format_version` rises. To stay readable through these changes, ignore
-fields, facts and manifest entries your app does not know. The schemas in
-[schema/](schema/) reject unknown fields, which is right for checking this
-repository but wrong for reading a release.
+read without updating: a new optional field or fact, a new file in the
+manifest, records left out of a release, or a new kind (see section 4). It
+goes back to 0 when `format_version` rises. To stay readable through these
+changes, ignore fields, facts and manifest entries your app does not know.
+The schemas in [schema/](schema/) reject unknown fields, which is right for
+checking this repository but wrong for reading a release.
 
-Format 1 had eight kinds (`camp_site`, `caravan_site`, `rest_area`,
-`dump_station`, `drinking_water`, `toilets`, `shower`, `picnic_site`) and no
-`group`. Format 2 uses the kinds listed in section 4 and adds `group`. Every
-place kept its `id` across the change. Format 3 adds `osm.timestamp` and
-`fact_dates` (see section 4). Records without them read the same as in
-format 2. Format 4 adds `last_confirmed` (see section 4). Records without it
-read the same as in format 3. Format 5 changes reviews: every line carries
-`contributor` and may carry `visited_nearby`, and reviews a person or three
-reports have hidden are left out (see section 4). Format 6 adds
-`fees.ndjson.gz`, what travellers paid per night (see section 4). Places and
-reviews read the same as in format 5. Format 7 widens three facts: `fee` may
-be `"donation"`, `caravans` may be `"offroad"` and `pets` may be `"seasonal"`.
-It adds 51 facts for site features and contacts (section 4), seven kinds
-(`backpacker_hostel`, `roofed_accommodation`, `long_vehicle_parking`,
-`food_and_drink`, `recreation_area`, `heritage` and `experience`) and a
-`kind` entry in `fact_sources` for a kind set by feedback or the owner. An
-app that reads `fee` as a plain boolean must handle `"donation"`. Format 9
-drops `photos.ndjson.gz`, which format 8 had: Open Camping DB holds no photos.
-Everything else reads the same as in format 7. Format 10 adds `standing` to
-places travellers added (see section 4) and leaves out those that are `held`
-or `hidden`. Records without it read the same as in format 9. Format 11 adds
-the source `community_report` to `fact_sources` (see section 4): an app that
-expects only the sources of format 10 must handle it. Everything else reads
-the same as in format 10. Formats 3, 4, 6, 9 and 10 were additive and would
-each be a `format_minor` rise under the rule above. `format_minor` starts at 0
-in format 10, and is 0 again in format 11. Format 11.1 adds
-`commons.ndjson.gz`, Wikimedia Commons photos matched to places to stay (see
-section 4). Everything else reads the same as in 11.0. Format 12 adds the
-source `rule` to `fact_sources`, with `fact_rules` naming the rule (see
-section 4): a fact a documented rule sets from the place's kind, such as
-`toilets: true` on a `public_toilet`, where no source says otherwise. An app
-that expects only the sources of format 11 must handle it, and should show a
-rule fact as what is usual, not as something anyone reported. Format 12
-also adds the facts `pets_months`, the months a seasonal place allows dogs,
-and `vehicle_access`, for places only heavy vehicles may use (section 4).
-Everything else reads the same as in 11.1. Format 12.2 adds
-`ocdb.sqlite.gz`, the release as an SQLite database, the `changesets` that
-update the databases of the last 50 releases to it, and `layout_version`
-(section 3).
-The other files read the same as in 12.1. Format 12.3 adds the facts
-`nearest_beach`, `sharks` and `marine_stingers` (section 4). Format 12.4
-adds the facts `fuels`, `air`, `hot_water`, `toilet_type` and `operator`,
-from OSM, and fills `bins` and `booking_required` from OSM too (section 4).
-It also fills `fishing`, `phone_2` and `booking_url` from OSM, and sets
-`dump_station` on a place to stay whose dump station is for guests only.
-It adds `nearest_boat_ramp`, and fills `pub`, `fuel` and `car_wash` from
-OSM objects inside a place (section 4). Format 12.5 adds the fact
-`nearest_major_road`, the distance to the nearest major OSM road within
-500 m (section 4). The traveller fact `near_road` reads the same as before.
-It also fills `motorbikes` from OSM, where it means motorbikes may enter;
-road condition is `access`. Values travellers gave before keep their source.
-It retires `seasonal_closure`: its existing values stay, and no new ones
-are taken (section 4). The release that stops emitting `seasonal_closure`,
-or turns its values into opening_hours months, removes a field: that needs
-the next FORMAT_VERSION after 13 and a format-change issue 7 days before it.
-Format 13 takes `fees.ndjson.gz`
-out of the release and the `fees` table out of `ocdb.sqlite.gz`
-(`layout_version` 2): what travellers paid is no longer collected. It adds
-the facts `charge`, `charge_conditional` and `charge_powered`, the price a
-place publishes, and `osm.check_dates`, when a mapper last checked a charge
-in OSM (section 4). Everything else reads the same as in 12.5.
+`layout_version` is the version of the SQLite tables (section 3), and rises
+separately.
 
-Then fetch each file from its `url` field. Each `url` points at the file in
-the release the manifest belongs to, and a release's files never change, so
+What each format changed, newest first:
+
+- **13.0** (`layout_version` 2): `fees.ndjson.gz` and the `fees` table of
+  `ocdb.sqlite.gz` are gone, because what travellers paid is no longer
+  collected. New facts `charge`, `charge_conditional` and `charge_powered`
+  hold the price a place publishes, and `osm.check_dates` says when a mapper
+  last checked a charge in OSM.
+- **12.5**: the fact `nearest_major_road`. `motorbikes` is filled from OSM
+  (`motorcycle`, then `motor_vehicle`), where it means motorbikes may enter.
+  `seasonal_closure` is retired: its values stay, and no new ones are taken.
+- **12.4**: the facts `fuels`, `air`, `hot_water`, `toilet_type`, `operator`
+  and `nearest_boat_ramp`. `bins`, `booking_required`, `fishing`, `phone_2`
+  and `booking_url` are filled from OSM, `dump_station` is set on a place to
+  stay whose dump station is for guests only, and `pub`, `fuel` and
+  `car_wash` are set from OSM objects inside a place.
+- **12.3**: the facts `nearest_beach`, `sharks` and `marine_stingers`.
+- **12.2**: `ocdb.sqlite.gz`, the `changesets` and `layout_version` (section
+  3).
+- **12.1**: the kind `reserve_campsite`.
+- **12.0**: the source `rule` in `fact_sources`, with `fact_rules` naming the
+  rule (section 4). An app that expects only the sources of format 11 must
+  handle it. Also the facts `pets_months` and `vehicle_access`.
+- **11.1**: `commons.ndjson.gz`, Wikimedia Commons photos matched to places
+  to stay.
+- **11.0**: the source `community_report` in `fact_sources`.
+- **10.0**: `standing` on places travellers added. Places that are `held` or
+  `hidden` are left out.
+- **9**: `photos.ndjson.gz` is gone. Open Camping DB holds no photos.
+- **8**: `photos.ndjson.gz`.
+- **7**: `fee` may be `"donation"`, `caravans` may be `"offroad"` and `pets`
+  may be `"seasonal"`. 51 facts for site features and contacts, seven kinds
+  (`backpacker_hostel`, `roofed_accommodation`, `long_vehicle_parking`,
+  `food_and_drink`, `recreation_area`, `heritage` and `experience`), and a
+  `kind` entry in `fact_sources`.
+- **6**: `fees.ndjson.gz`, what travellers paid (removed in 13).
+- **5**: every review carries `contributor` and may carry `visited_nearby`,
+  and hidden reviews are left out.
+- **4**: `last_confirmed`.
+- **3**: `osm.timestamp` and `fact_dates`.
+- **2**: the kinds of section 4 and `group`, replacing the eight kinds of
+  format 1 (`camp_site`, `caravan_site`, `rest_area`, `dump_station`,
+  `drinking_water`, `toilets`, `shower`, `picnic_site`). Every place kept its
+  `id`.
+
+`format_minor` was introduced in format 10. Formats 3, 4, 6, 9 and 10 would
+each have been a `format_minor` rise under today's rule.
+
+### Fetch the files
+
+Fetch each file from its `url` field. Each data file's `url` points at the
+file in the release the manifest belongs to (a changeset's points at the
+release that made it, section 3), and a release's files never change, so
 the files always match the manifest even if a newer release is published
 while you download. Do not build file URLs yourself from the stable
 `latest/download/` address.
@@ -161,14 +164,20 @@ SHA-256 of the downloaded (still compressed) bytes, as lowercase hex, equals
 `sha256`. If either differs, throw the download away, keep the data you
 already have and try again later. Because the files come from the `url`
 fields, a mismatch means a damaged download, not a newer release, so a
-mismatch that repeats should be reported (see section 6).
+mismatch that repeats should be reported in an issue on this repository.
 
 Then decompress with gzip and read one JSON object per line, as UTF-8.
 
 ```sh
 curl -fsSL -o manifest.json https://github.com/opencampingdb/data/releases/latest/download/manifest.json
-curl -fsSL -o places.ndjson.gz "$(python3 -c 'import json; print(json.load(open("manifest.json"))["places"]["url"])')"
-sha256sum places.ndjson.gz   # compare with places.sha256 in manifest.json
+python3 - <<'PY'
+import hashlib, json, urllib.request
+entry = json.load(open("manifest.json"))["places"]
+data = urllib.request.urlopen(entry["url"]).read()
+assert len(data) == entry["bytes"] and hashlib.sha256(data).hexdigest() == entry["sha256"], "damaged download"
+open(entry["file"], "wb").write(data)
+print("places.ndjson.gz checks out:", entry["count"], "places")
+PY
 ```
 
 ## 3. Stay current
@@ -179,12 +188,18 @@ and need nothing else. If they differ, download and check the files as above
 and swap them in only once both checks pass, so a failed update never leaves
 you with half a dataset.
 
+Treat `data_version` as an opaque string and compare it only for equality.
+Checking once a day is plenty: the OSM sync runs once a night, and a release
+follows each change to `main`, which can be several times an hour. Do not
+poll more often than once an hour. Only the newest 60 releases are kept, so
+do not store file URLs for later: always start again from the manifest.
+
 ### Redirect merged places
 
 Sometimes one place is recorded twice, and the two records are merged into
-one, by a person or by a documented rule (the same name, under 50 m apart
-and no major road between) whose merges a person reviews. The record that is dropped leaves `places.ndjson.gz`, and its id is
-listed in `merged.ndjson.gz` (the `merged` entry in the manifest), one line
+one, by a person or by a documented rule (the same name and group, under
+50 m apart and no major road between) whose merges a person reviews. The
+record that is dropped leaves `places.ndjson.gz`, and its id is listed in `merged.ndjson.gz` (the `merged` entry in the manifest), one line
 per merged id:
 
 ```json
@@ -198,12 +213,6 @@ never itself merged. The kept place also carries the merged place's reviews
 and rating. An id found in neither file has been removed, which only a
 person does, for example on a takedown request.
 
-Treat `data_version` as an opaque string and compare it only for equality.
-Checking once a day is plenty: the OSM sync runs once a night and a new
-release is published at most once an hour. Do not poll more often than once
-an hour. Only the newest 60 releases are kept, so do not store file URLs for
-later: always start again from the manifest.
-
 ### The SQLite database
 
 Each release also comes as an SQLite database, `ocdb.sqlite.gz` (the
@@ -211,7 +220,13 @@ Each release also comes as an SQLite database, `ocdb.sqlite.gz` (the
 instead of importing the NDJSON files. It holds the same release as those
 files, plus each place's state. Check its `bytes` and `sha256` as in section
 2, then decompress it with gzip to get an SQLite 3 database file (page size
-4096, rollback journal).
+4096, rollback journal):
+
+```sh
+gunzip -k ocdb.sqlite.gz
+sqlite3 ocdb.sqlite "SELECT data_version, format_version, layout_version FROM release"
+sqlite3 ocdb.sqlite "SELECT id, name, kind FROM places WHERE state = 'TAS' AND \"group\" = 'overnight' LIMIT 5"
+```
 
 Every table has a declared primary key, and each holds what one NDJSON file
 holds. A `record` column holds the line exactly as it is in the NDJSON file,
@@ -288,14 +303,15 @@ key) and `files` (TEXT, the `files` array as JSON).
 
 The indexes are `places_kind` on `places (kind)`, `places_group` on
 `places ("group")`, `places_state` on `places (state)`, `places_lat_lon` on
-`places (lat, lon)` and `reviews_place` on `reviews (place)`. For a map area, filter on `lat BETWEEN ? AND ? AND lon BETWEEN
-? AND ?`. An app that needs an R*Tree can build one from `places` in a table
-of its own.
+`places (lat, lon)` and `reviews_place` on `reviews (place)`. For a map
+area, filter on `lat BETWEEN ? AND ? AND lon BETWEEN ? AND ?`. An app that
+needs an R*Tree can build one from `places` in a table of its own.
 
 `layout_version` (in the manifest, in the `release` table and as `PRAGMA
-user_version`) is the version of these tables, columns and indexes. It starts
-at 1 and rises whenever any of them changes. If the manifest's `layout_version` is one
-your app cannot read, keep the database you have.
+user_version`) is the version of these tables, columns and indexes. It
+rises whenever any of them changes. Layout 1 came with format 12.2, and
+layout 2 (format 13) dropped the `fees` table. If the manifest's
+`layout_version` is one your app cannot read, keep the database you have.
 
 Treat the release tables as read only: a changeset (below) expects them to
 be exactly as the release left them. Keep your app's own data, such as places
@@ -373,9 +389,9 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
 - Every fact is optional. A missing fact means "not known", not "no".
 - `status` is `open`, `reported_closed` (at least one user said it has
   closed, not yet confirmed), `temporarily_closed` (set by the owner, often
-  with a `reopens` date, YYYY-MM-DD) or `closed`. (`merged` exists only in the
-  repository, on tombstones, and never appears in `places.ndjson.gz`.) Show `reported_closed` as a warning
-  rather than hiding the place.
+  with a `reopens` date, YYYY-MM-DD) or `closed`. Show `reported_closed` as
+  a warning rather than hiding the place. (`merged` exists only in the
+  repository, on tombstones, and never appears in `places.ndjson.gz`.)
 - `rating` is `null` until a place has accepted reviews. It counts only the
   reviews in `reviews.ndjson.gz`.
 - Each line of `reviews.ndjson.gz` has a stable `id` (`rev_<ulid>`), the
@@ -414,15 +430,17 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   Wikimedia's robot policy asks for. Set a descriptive `User-Agent` on the
   requests, as the Wikimedia User-Agent policy asks.
 - `osm` is `null` for places that did not come from OpenStreetMap: places
-  contributed directly to Open Camping DB, and new places from feedback.
+  contributed directly to Open Camping DB, new places from feedback, places
+  found only in community reports and farm stays their owners listed.
 - `standing` is only on a place a traveller added in an app. `shown` means
   nobody has checked it yet: show it with a "not checked yet" label and let
   travellers leave such places out. `confirmed` means two travellers near it
   have found it there. The release leaves out new places that are `held` for
   a person or `hidden` after reports, and a place its adder withdrew is
-  deleted. A place without `standing` is from OpenStreetMap, contributed or
-  checked by a person. New places reach a release some time after they are added; to
-  show them sooner, read the recent places list (section 6).
+  deleted. A place without `standing` is from OpenStreetMap, contributed,
+  from community reports or checked by a person. New places reach a release
+  some time after they are added. To show them sooner, read the recent
+  places list (section 6).
 - `moderator` is only on a place a traveller added: a person's `restore` or
   `hide`, with the time, which wins over the reports and checks before it.
   Apps need not read it: `standing` already reflects it.
@@ -431,11 +449,12 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   (the place's verified owner), `community_report` (anonymous community
   reports from public camping groups, imported by a person; see below) or
   `rule` (set by a documented rule, not reported by anyone; see below). It may
-  also have `name`, `location`, `kind` and `status` entries. When `name`,
-  `location` or `kind` is missing, the name, position and kind come from OSM. A place with
-  `osm: null` and `contributed` name and location is a contributed place, and
-  one with `community_report` name and location was found only in community
-  reports. A `status` entry says who closed or reopened the place.
+  also have `name`, `location`, `kind`, `status` and `description` entries.
+  When `name`, `location` or `kind` is missing, the name, position and kind
+  come from OSM. A place with `osm: null` and `contributed` name and location
+  is a contributed place, and one with `community_report` name and location
+  was found only in community reports. A `status` entry says who closed or
+  reopened the place.
 - `community_report` values come from what travellers wrote in public
   camping groups, without their names. Only facts are kept. They are second
   hand and may be old, so show their date: in `fact_dates` it is the first
@@ -490,29 +509,35 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   services (`telstra_signal`, `mobile_signal`, `wifi`, `tv_reception`,
   `pet_sitting`, `fuel`, `lpg`, `car_wash`, `vehicle_storage`) and warnings
   (`self_contained_only`, `crocodiles`, `sharks`, `marine_stingers`,
-  `seasonal_closure` (retired), `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
-  club, `operator` is who runs the place (a council, a parks agency, a
-  company), `fuels` lists the fuels sold, `air` is air for tyres,
-  `hot_water` is hot water in the showers or basins, `toilet_type` is
-  `flush`, `pit`, `chemical` or `dry`, `charge` is what a standard site
-  costs as the place publishes it, in OSM's `charge` syntax
-  (`<amount> <currency>[/<unit>][/<time unit>]`, such as `57 AUD/night`),
-  `charge_conditional` holds its exceptions in OSM's `charge:conditional`
-  syntax (`75 AUD/night @ (Dec-Jan)`), and `charge_powered` is what a
-  powered site costs, in the syntax of `charge` (an extension: OSM has no tag
-  for it). Charges from OSM are kept as OSM has them, so some are out of that
-  syntax (`$12`): the feedback SDK's `parseCharge` reads a value and returns
-  null for one it can't read, so show that one as written. `address` is the street address (an object with `unit`,
-  `housenumber`, `street` or a rural `place`, `suburb`, `state` and
-  `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
-  `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)
-  describes each one.
+  `seasonal_closure` (retired), `dangerous_when_wet`, `over_50s`, `nudist`).
+- Other facts hold a value. [schema/place.schema.json](schema/place.schema.json)
+  describes each one:
+
+  | Fact | Value |
+  |---|---|
+  | `brand` | the park chain or club, such as `big4` |
+  | `operator` | who runs the place (a council, a parks agency, a company) |
+  | `fuels` | the fuels sold (below) |
+  | `air` | air for tyres |
+  | `hot_water` | hot water in the showers or basins |
+  | `toilet_type` | `flush`, `pit`, `chemical` or `dry` |
+  | `charge` | what a standard site costs as the place publishes it, in OSM's `charge` syntax, `<amount> <currency>[/<unit>][/<time unit>]`, such as `57 AUD/night` |
+  | `charge_conditional` | the exceptions to `charge`, in OSM's `charge:conditional` syntax, such as `75 AUD/night @ (Dec-Jan)` |
+  | `charge_powered` | what a powered site costs, in the syntax of `charge` (an extension: OSM has no tag for it) |
+  | `address` | the street address: an object with `unit`, `housenumber`, `street` or a rural `place`, `suburb`, `state` and `postcode`, each there only when known |
+  | `email`, `phone_2` | contacts |
+  | `facebook`, `instagram`, `tiktok`, `x` | https links |
+
+- Charges from OSM are kept as OSM has them, so some are out of the `charge`
+  syntax (`$12`). The feedback SDK's `parseCharge` reads a value and returns
+  null for one it can't read: show that one as written.
 - `vehicle_access` says who may use a place when only some vehicles may:
   `heavy_vehicles_only` means only heavy vehicles (trucks) may stop there,
   and others can be fined. Show it plainly on the place, and consider
   leaving such places out for travellers in cars, vans and caravans. It
-  comes from OSM tags (`hgv=designated` with `motorcar=no`, or `access=no`
-  with `hgv=yes`), or from a fact report a person or reviewer accepts. More
+  comes from OSM tags (`hgv=designated` with `motorcar=no` or
+  `motor_vehicle=no`, or `access=no` with `hgv=yes` or `designated`), or
+  from a fact report. More
   values may be added later, so treat an unknown value as a restriction you
   can't explain rather than ignoring it.
 - `dump_station: true` on a place to stay can be a dump station for its
@@ -566,7 +591,7 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
 - `crocodiles`, `sharks` and `marine_stingers` warn about dangerous animals
   in the water nearby. `marine_stingers` covers box jellyfish, Irukandji and
   other dangerous jellyfish, which come in season in tropical waters.
-  `crocodiles` also comes from OSM when the place itself, or a hazard sign
+  `crocodiles` also comes from OSM when the place itself, or an OSM object
   within 1 km, carries `hazard=crocodile` (or `crocodiles`) or
   `hazard:animal=crocodile`. OSM has no tag in use for sharks or jellyfish,
   so those two come only from fact reports. A missing warning does not mean
@@ -601,12 +626,14 @@ with the place's id.
   book. Either can also come from OSM (`booking_url` from `website:booking`,
   then `reservation:website`), with the source `osm`. An owner's value
   always wins: sync never replaces a value whose source is `owner`.
-- `farm_stay` is private land that its owner has listed. Open Camping DB
-  never lists private land unless its owner adds it. A farm stay always has
-  `osm: null`, `entry: "private"`, `booking_required: true`, and a
-  `booking_url` or a `phone`. Show it as private property and tell people to
-  book first, in these words or close to them: "Private property. Book with
-  the owner first." Do not show a farm stay as a free camp or a public
+- `farm_stay` is a station or farm stay: an OSM camp or caravan site whose
+  name says so, or private land its owner has listed. Open Camping DB never
+  adds private land that OSM does not map unless its owner lists it. A farm
+  stay an owner listed always has `osm: null`, `entry: "private"`,
+  `booking_required: true`, and a `booking_url` or a `phone`. Show every
+  farm stay as private property and tell people to book first, in these
+  words or close to them: "Private property. Book with the owner first." Do
+  not show a farm stay as a free camp or a public
   place, and do not offer directions without the booking link or phone next
   to them.
 - Any place with `entry: "private"` is private property. Label it the same
@@ -616,10 +643,12 @@ with the place's id.
 
 `kind` says what a place is and `group` says which family it belongs to:
 `overnight`, `utility`, `services`, `attraction`, `emergency` or `transport`.
-Filter on `group` to show, for example, only places to stay. The kinds are the
-site types of the OTWD (Open Touring and Waypoint Database) vocabulary, plus
-the Open Camping DB extensions at the end of the table. [schema/kinds.json](schema/kinds.json) holds
-the same list in machine-readable form, and new kinds may be added in later
+Filter on `group` to show, for example, only places to stay. The kinds are
+the 22 site types of the OTWD (Open Touring and Waypoint Database)
+vocabulary, plus 11 Open Camping DB extensions.
+[schema/kinds.json](schema/kinds.json) holds the same list in
+machine-readable form, with each kind's `origin` (`otwd` or `ocdb`), and new
+kinds may be added in later
 versions, so show an unknown kind under its group rather than dropping it.
 
 | `kind` | Label | `group` |
@@ -665,16 +694,15 @@ the fact `water_type`: `tank_fill` for a tap suited to filling tanks, or
 
 ### Mapped facts and extensions
 
-Every fact in [schema/place.schema.json](schema/place.schema.json) carries
-`x-ocdb-class`, so your app can label it honestly:
+Every fact in [schema/place.schema.json](schema/place.schema.json) except
+`near_road` carries `x-ocdb-class`, so your app can label it honestly:
 
 - `mapped`: the dataset can fill it from OpenStreetMap. `x-osm` names the
   tag, or the OSM objects a nearby fact comes from (`nearest_beach` from
   `natural=beach`, `pub` from an `amenity=pub` inside the place's area). A
   mapped fact can still come from a traveller for one place: `fact_sources`
   says where each value came from.
-- `proposable`: an extension a mapper could check true or false at the
-  place. OSM has no tag for it yet, so the value only comes from reports.
+- `proposable`: an extension a mapper could check at the place. OSM has no tag for it yet, so the value only comes from reports.
   `x-osm` is the form a tag could take, a suggestion for whoever proposes
   one, not a tag in use.
 - `ocdb_only`: an opinion or a personal account, which OSM can never hold.
@@ -715,11 +743,12 @@ Proposable extensions, with the OSM form each could take:
 | `sharks` | `hazard=shark` on a warning sign or beach, read within 1 km |
 | `marine_stingers` | `hazard=jellyfish` on a warning sign or beach, read within 1 km |
 | `dangerous_when_wet` | `dangerous_when_wet=yes/no` |
-| `charge_powered` | `charge:powered_site=<amount> AUD/night` |
+| `charge_powered` | `charge:powered_site=*`, in the syntax of `charge` |
 | `caravans: "offroad"` (a value) | `caravans=offroad` |
 
 Open Camping DB only: `scenery`, `wildlife`, `rating` and reviews, and the
-`access` value `unknown`.
+`access` value `unknown`. `near_road`, a traveller's report that road noise
+carries, has no class yet.
 
 `pets: "seasonal"` is the dataset's own value, but it is mapped: it is read
 from and written as `dog:conditional=yes @ (<pets_months>)`.
@@ -759,10 +788,40 @@ that Wikimedia endorses your app.
 
 Apps send what their users report to the Open Camping DB intake. The
 [feedback-engine](https://github.com/opencampingdb/feedback-engine)
-repository holds a client SDK for this and the intake itself. For an app
-key, the intake host, or help connecting your app, open an issue with the
-**App key** form in
+repository holds the intake and a client SDK for JavaScript, TypeScript,
+React Native and the web (`@opencampingdb/feedback`, version 0.31.0). Its
+[integration guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md) is the full reference: what each submission
+holds, how the client queues and retries, App Attest and Play Integrity, and
+the release updater. For an app key, the intake host, or help connecting your
+app, open an issue with the **App key** form in
 [feedback-engine](https://github.com/opencampingdb/feedback-engine/issues/new/choose).
+
+### Install the SDK
+
+The SDK is not published to npm. Build it from the feedback-engine
+repository and install the package file it makes, as in
+[section 2 of the integration guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md#2-install):
+
+```sh
+git clone https://github.com/opencampingdb/feedback-engine.git
+cd feedback-engine
+npm ci
+npm run build -w packages/sdk
+npm pack -w packages/sdk   # writes opencampingdb-feedback-<version>.tgz
+```
+
+Then, in your app:
+
+```sh
+npm install /path/to/opencampingdb-feedback-<version>.tgz
+```
+
+Keep the `.tgz` where every build can reach it, so every build installs the
+same version.
+
+### The intake
+
+Without the SDK, send each submission as JSON:
 
 ```
 POST https://<intake host>/v1/feedback
@@ -777,69 +836,52 @@ Content-Type: application/json
   "device": "6f1c2c1e-6c4b-4f0e-9a39-2a1f5d6c2b7e",
   "app_version": "1.0.0",
   "consent": true,
-  "report": {"kind": "fact", "fact": "power", "value": true, "note": "Powered sites near the gate"}
+  "report": {"kind": "fact", "fact": "power", "value": true, "first_hand": "seen_nearby"}
 }
 ```
 
-- `type` is `report`, `review`, `check`, `review_report`, `fee` or
-  `withdraw`, with a matching `report`, `review`, `check`, `review_report` or
-  `fee` object (`withdraw` has none).
+- `type` is one of `report`, `review`, `check`, `review_report` and
+  `withdraw`, or a photo or erasure type that the integration guide
+  describes. Owners' claims, listings and updates have types of their own,
+  in the feedback-engine's
+  [owners guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/owners.md).
 - `place` is the record `id`, or `null` for a new place, in which case
   `location` (`{"lat": ..., "lon": ...}`) is required and `report.kind` is
   `new_place`.
-- `report.kind` is `closed`, `reopened`, `fact`, `wrong_location`,
-  `new_place`, `other`, `name`, `description`, `kind` or `remove`. A `fact` report also
-  carries `fact` (a key from the place schema, except `booking_url`) and
-  `value`. A `name` report carries the new name in `value` (1 to 300
-  characters), a `description` report the text in `value` (at most 500), and
-  a `kind` report a code from [schema/kinds.json](schema/kinds.json) in
-  `place_kind`. Names and descriptions must not hold an email address, phone
-  number or link. A `new_place` report may carry `name` (1 to 300
-  characters, checked as a `name` report's value is), `place_kind` and
-  `contacts`, with any of `phone`, `website` and `email`, kept out of the
-  note. A `remove` report says a new place should come down, with `reason`
-  `not_there`, `fake`, `offensive`, `private_land` or `duplicate`.
-- A new place's id is known once its report is accepted: `ocdb_` and the
-  `fb_<ulid>` the intake answers with, without its `fb_`. A `withdraw` with
-  that id as `place`, from the same install, takes the place back within 24
-  hours. After 24 hours it counts as one more `remove` report.
-  The id comes back only in the answer to the send that carried the report.
-  A report queued offline learns it when the queue sends it, so keep what
-  depends on the new place (edits, photos) until that answer arrives. With the
-  SDK, give the report a `ref` of your own and read the id from `onAnswered`.
-- Submissions are normalised before they are queued or sent: a location is
-  rounded to 6 decimals, and names and text lose the spaces at their ends.
-  An app that keeps its own copy of what it sent must compare against the
-  normalised values, never against what it passed in. The SDK exports the
-  rounding as `sdkCoordinate`, and `ref` with `onAnswered` connects an answer
-  to its submission without comparing content at all.
+- `report.kind` is `closed`, `reopened`, `fact`, `doubt`, `contact`,
+  `wrong_location`, `new_place`, `name`, `description`, `kind`, `remove`,
+  `commons_mismatch` or `other`. A `fact` report carries `fact` and `value`.
+  A charge is a `fact` report of `charge`, `charge_conditional` or
+  `charge_powered` in OSM's `charge` syntax. A `doubt` says a fact is wrong
+  without giving a value, and a `contact` report says a contact is `wrong`
+  or `spam`. A `commons_mismatch` report says a Commons photo is not of the
+  place.
+- A report of what a person at the place sees (`fact`, `doubt`, `name`,
+  `closed`, `reopened`, `kind` or `wrong_location`) may carry `first_hand`:
+  `seen_nearby` when the app saw the phone near the place in the last
+  month, or `says_so` when the traveller says they were there in the last
+  month. Never send the location itself. Only first-hand values reach OSM's
+  mappers (see [maproulette/README.md](maproulette/README.md)).
 - `review` is `{"stars": 1-5, "text": "...", "visited": "YYYY-MM"}`, with
   `"visited_nearby": true` when the app saw the phone near the place in the
-  last 60 days (never send the location itself). Review text is published,
-  so it must not hold names, email addresses, phone numbers, links or
-  advertising. Reviews that do are refused.
-- `review_report` is `{"review": "rev_<ulid>", "reason": "..."}`, a
-  traveller's report of a published review. `reason` is `spam_ad`,
-  `offensive`, `off_topic`, `fake` or `personal_details`. `place` is the
-  review's place.
-- `contributor` is an opaque id for the traveller's account (a keyed hash,
-  never a name or email), 16 to 128 characters of letters, digits, `_` and
-  `-`. Reviews and review reports need it, unless the app key proves the
-  install with App Attest instead. The intake hashes it again before storing
-  it. The feedback engine's
-  [integration guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md)
-  covers it, and the App Attest and Play Integrity headers an app key may
-  require.
-- `check` is `{"visited": "YYYY-MM-DD", "still_there": true}`, a confirmation
-  that a place is as described, with `"nearby": true` when the app saw the
-  phone near the place (never send the location itself).
+  last 60 days. Review text is published, so it must not hold names, email
+  addresses, phone numbers, links or advertising.
+- `review_report` is `{"review": "rev_<ulid>", "reason": "..."}` with
+  `reason` `spam_ad`, `offensive`, `off_topic`, `fake` or
+  `personal_details`.
+- `check` is `{"visited": "YYYY-MM-DD", "still_there": true}`, with
+  `"nearby": true` when the app saw the phone near the place.
 - `device` is a random UUID your app creates once per install. Never send a
   hardware ID, advertising ID, account ID, name or email. The intake hashes
-  `device` before storing it, and nothing that identifies a person is ever
-  written to this repository.
+  it before storing it.
+- `contributor` is an opaque id for the traveller's account (a keyed hash,
+  never a name or email), 16 to 128 letters, digits, `_` and `-`. Reviews
+  and review reports need it, unless the app key proves the install with
+  App Attest or Play Integrity instead.
 - `consent` must be `true`, and only after the user has agreed that their
-  contribution is licensed under the ODbL 1.0 and DbCL 1.0. Ask once, in plain
-  words, before the first submission.
+  contribution is licensed under the ODbL 1.0 and DbCL 1.0. The SDK exports
+  the wording as `CONSENT_TEXT`. Ask once, in plain words, before the first
+  submission.
 
 Responses:
 
@@ -847,79 +889,38 @@ Responses:
 |---|---|
 | `202 {"id": "fb_<ulid>"}` | received |
 | `400` | the body does not match the schema, or `consent` is not `true` |
-| `401` | missing or unknown app key |
-| `429` | rate limit reached (20 a day per device, and a limit per app key). Try again later. |
+| `401` | missing or unknown app key, or a missing or failed attestation the key requires |
+| `403` | the app key may not send this type, or the app version is older than the key allows |
+| `410 {"error": "fee_retired"}` | a `fee` submission: what travellers paid is no longer collected |
+| `429` | a daily limit reached (per device, network, contributor and app key). Try again later |
 
-### Recent places
+The integration guide lists every answer and its error codes.
 
-New places are served before they are in a release:
+A new place's id is `ocdb_` and the `fb_<ulid>` the intake answers with,
+without its `fb_`. A `withdraw` with that id as `place`, from the same
+install, takes the place back within 24 hours.
+
+### Recent places and changes
+
+New places and changes that went live are served before they reach a
+release, within about 30 seconds of their report:
 
 ```
 GET https://<intake host>/v1/places/recent?bbox=<west>,<south>,<east>,<north>
 ```
 
-```json
-{"places": [{"id": "ocdb_01JC...", "name": "Gravel Pit Rest Area", "location": {"lat": -35.1, "lon": 149.2}, "kind": "free_camp",
-  "standing": "shown", "added": "2026-10-30T01:00:00Z", "contributor": "ctr_0123456789abcdef"}]}
-```
-
-- No app key. `bbox` is optional. Answers are cached for 30 seconds, so
-  there is no need to ask more often.
-- Only places that are `shown` or `confirmed` are listed. A place leaves the
-  list when it is hidden or withdrawn, and once it is in the data, so read
-  the release and this list together and join them by `id`, the release copy
-  winning.
-- `contributor` is the same opaque id as on reviews, so an app can hide
-  every place from a contributor a traveller has hidden. The list never
-  carries a note, contacts or a device id.
-- Kind codes are those of [schema/kinds.json](schema/kinds.json), which
-  gives each kind's group.
+It needs no app key, and `bbox` is optional. Lay `places` and `changes` over
+your release, joined by `id`. The SDK's `withRecentChanges` does it for
+changes, and the integration guide says how long each entry stays and how
+to read its `standing`.
 
 ### What happens to feedback
 
-Feedback is applied by a scheduled job, usually within the hour, and reaches
-apps with the next release.
-
-- A review is published if it passes moderation, and the place's rating is
-  recalculated. A contributor's first review goes to a person; once one is
-  accepted, later ones are published straight away. A newer review from the
-  same contributor replaces their older one for that place.
-- A fee holds no free text, so it is published at the next apply run. A
-  newer fee from the same contributor for the same site type replaces their
-  older one for that place.
-- Every `review_report` goes to a person. Reports from 3 different
-  contributors hide the review until a person decides. A person can hide a
-  review or block a contributor (`moderation/blocked_contributors.json`).
-  Everything from a blocked contributor is refused, and their reviews are
-  left out of the release and out of the rating.
-- A `closed` report marks the place `reported_closed` at once. It becomes
-  `closed` after reports from 2 different devices within 90 days, or 1 report
-  and a person's approval. A `reopened` report or a check with
-  `still_there: true` clears it. A check with `still_there: false` counts as
-  a `closed` report.
-- Reopening a place that is already `closed` needs `reopened` reports from 2
-  different devices within 90 days.
-- A `fact` report changes the fact once 2 different devices agree within 90
-  days. Changes to contacts (`website`, `phone`, `phone_2`, `email`,
-  `facebook`, `instagram`, `tiktok` and `x`) always go to a person.
-- A `new_place` is written into the data at the next apply run, with
-  `standing` `shown`, when the install proved itself with App Attest or Play
-  Integrity, the report has a contributor and its note passes the text
-  checks, with the `name` it carries. Checks with `still_there: true` and
-  `nearby: true` from 2 other devices make it `confirmed`. `remove` reports, or checks with `still_there: false`, from
-  2 different devices hide it, or 3 once it is confirmed. A blocked
-  contributor's places are hidden. A new place with the same name as a
-  place in the same group less than 50 m away, and no major road between,
-  is merged into that place (see "Redirect merged places"), and a person
-  can undo it. Any other new place within 150 m of a place in the
-  same group, one hidden before it was published and one that fails the
-  checks above go to a person as `held`. Contacts sent with a new place
-  always go to a person before they are published.
-- `wrong_location`, `name`, `description`, `kind` and `other` reports, and
-  `remove` reports on a place that is not new, go to a person. An accepted
-  kind, name or description is kept through later OSM syncs.
-- A report that has not found agreement within 90 days expires.
-- Checks never change facts on their own.
+The apply run decides feedback every hour, and accepted changes reach apps
+with the next release. The rules (how many devices must agree, which reports
+go to a person, when a review is published, how closures and new places are
+decided) are in the feedback-engine README under
+[How the quality rules work](https://github.com/opencampingdb/feedback-engine#how-the-quality-rules-work).
 
 Corrections to names, positions and OSM tags are best made in OpenStreetMap
 itself, where every map benefits. The nightly sync picks them up.
