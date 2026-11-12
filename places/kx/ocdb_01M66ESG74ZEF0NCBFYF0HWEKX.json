@@ -1,11 +1,19 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 2370
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2560
+    },
+    "operator": "Mornington Peninsula Astronomical Society",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESG74ZEF0NCBFYF0HWEKX",
@@ -23,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

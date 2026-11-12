@@ -1,9 +1,19 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuel": "osm",
+    "fuels": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
+    "air": true,
+    "fuel": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "opening_hours": "Mo-Su 07:00-20:00",
     "phone": "+61 8 8956 2229"
   },
@@ -23,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,18 +1,34 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "140",
       "street": "Main South Road"
     },
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 4890
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main South Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "OTR"
   },
   "group": "services",
   "id": "ocdb_01M66JPWD8M0KF239AYMYYYHAN",
@@ -30,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

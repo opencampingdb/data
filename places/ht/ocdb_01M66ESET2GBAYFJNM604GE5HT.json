@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuel": "osm",
+    "nearest_boat_ramp": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "nearest_boat_ramp": {
+      "distance_m": 810,
+      "name": "Slipway"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESET2GBAYFJNM604GE5HT",
   "kind": "caravan_park",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

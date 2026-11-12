@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
@@ -12,7 +16,22 @@
       "street": "Anzac Avenue",
       "suburb": "Mango Hill"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2330
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Anzac Avenue"
+    },
     "opening_hours": "24/7",
+    "operator": "EG Australia",
     "phone": "+61 7 2104 3396",
     "toilets": true
   },
@@ -32,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

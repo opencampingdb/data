@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -11,6 +12,10 @@
       "street": "Bolton Street",
       "suburb": "Eltham",
       "unit": "7"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Bolton Street"
     },
     "opening_hours": "Mo-Fr 07:00-17:00; Sa 08:00-12:00"
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

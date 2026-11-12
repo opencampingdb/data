@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -13,6 +15,11 @@
     "dump_station": true,
     "entry": "public",
     "max_stay": "24h",
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Market Street"
+    },
+    "operator": "Balranald Shire Council",
     "showers": false,
     "tents": false,
     "toilets": true
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

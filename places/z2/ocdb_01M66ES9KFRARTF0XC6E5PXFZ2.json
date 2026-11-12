@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Henty Highway"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ES9KFRARTF0XC6E5PXFZ2",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

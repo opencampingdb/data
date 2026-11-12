@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,15 @@
       "street": "Dunne Street"
     },
     "email": "aonefuels@gmail.com",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Dunne Street"
+    },
     "opening_hours": "Mo-Fr 07:00-19:00; Sa 07:00-18:00; Su 08:00-18:00",
     "phone": "+61 3 7015 4658",
     "website": "https://locations.ampol.com.au/en/ampol-kingsbury"
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

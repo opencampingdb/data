@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Mahony Avenue"
+    },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "North West Coastal Highway"
     },
     "opening_hours": "Jan-Mar Mo-Su 10:00-14:00; Apr-Sep Mo-Su 09:00-16:00; Oct-Dec Mo-Su 10:00-14:00",
     "website": "https://www.carnarvonmuseum.org.au/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,11 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +14,16 @@
     "nearest_beach": {
       "distance_m": 4470,
       "name": "Anthony Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 210
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Davis Street"
+    },
+    "operator": "Smithton Counil",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBPH0BBEGDHTZQA0NP5B",
@@ -28,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

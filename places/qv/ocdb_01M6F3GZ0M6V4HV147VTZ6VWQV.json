@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/Bargohotel/"
+    "facebook": "https://www.facebook.com/Bargohotel/",
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Railside Avenue"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ0M6V4HV147VTZ6VWQV",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

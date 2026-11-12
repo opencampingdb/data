@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "toilets": "osm",
     "wheelchair": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "3",
       "street": "Waller Avenue"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "New England Highway"
     },
     "toilets": true,
     "wheelchair": true
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

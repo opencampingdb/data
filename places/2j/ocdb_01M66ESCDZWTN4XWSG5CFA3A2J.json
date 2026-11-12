@@ -4,16 +4,25 @@
     "opening_hours": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "bins": "osm",
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
-    "opening_hours": "contributed"
+    "nearest_major_road": "osm",
+    "opening_hours": "contributed",
+    "operator": "osm"
   },
   "facts": {
+    "bins": true,
     "dump_station": true,
     "entry": "public",
     "fee": false,
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Main Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "Balonne Shire Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCDZWTN4XWSG5CFA3A2J",
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Bathurst Road"
+    },
     "opening_hours": "Mo-Fr 05:00-22:00; Sa, Su 05:00-21:00",
     "wheelchair": true
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,12 +3,28 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "address": "osm",
     "dump_station": "contributed",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "164",
+      "street": "Hyden-Lake King Road"
+    },
     "dump_station": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Hyden-Lake King Road"
+    },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/lake-king/bp-opt-lake-king/6746"
   },
@@ -19,14 +35,14 @@
     "lat": -33.085774,
     "lon": 119.688645
   },
-  "name": "Great Southern Fuels",
+  "name": "BP Lake King OPT",
   "osm": {
     "id": 10629325822,
-    "timestamp": "2024-04-07T21:39:32Z",
+    "timestamp": "2026-11-11T10:15:59Z",
     "type": "node",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

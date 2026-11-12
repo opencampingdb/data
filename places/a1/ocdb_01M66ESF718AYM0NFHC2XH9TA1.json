@@ -1,13 +1,19 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
-    "showers": "osm"
+    "nearest_boat_ramp": "osm",
+    "showers": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 3430
     },
-    "showers": true
+    "nearest_boat_ramp": {
+      "distance_m": 720
+    },
+    "showers": true,
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF718AYM0NFHC2XH9TA1",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

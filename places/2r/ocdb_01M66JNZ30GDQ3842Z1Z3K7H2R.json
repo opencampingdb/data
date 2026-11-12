@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -12,6 +15,16 @@
       "state": "VIC",
       "street": "Mount Dandenong Road",
       "suburb": "Montrose"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Mount Dandenong Road"
     },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/montrose/bp-montrose/0085",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

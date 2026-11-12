@@ -1,8 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,10 +16,26 @@
       "street": "Kingsford Smith Drive",
       "suburb": "Eagle Farm"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1280
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 1520
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Kingsford Smith Drive"
+    },
+    "opening_hours": "24/7",
+    "operator": "Ampol"
   },
   "group": "services",
   "id": "ocdb_01M66JPYDFEJJ8Y9VDPNT6C43A",
@@ -32,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,6 +17,14 @@
       "suburb": "Berserker"
     },
     "email": "nbonner.hostel@ahl.gov.au",
+    "nearest_boat_ramp": {
+      "distance_m": 400
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Bridge Street"
+    },
+    "operator": "Aboriginal Hostels Limited",
     "phone": "+61 7 3151 8760",
     "website": "https://www.ahl.gov.au/hostels/neville-bonner-hostel"
   },
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

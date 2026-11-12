@@ -11,6 +11,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -25,6 +27,11 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Barkly Highway"
+    },
+    "operator": "Barkly Homestead",
     "phone": "+61 8 8964 4549",
     "showers": true,
     "tents": true,
@@ -47,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

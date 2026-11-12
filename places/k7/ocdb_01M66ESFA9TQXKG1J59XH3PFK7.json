@@ -5,11 +5,16 @@
   "fact_sources": {
     "dump_station": "contributed",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
     "dump_station": true,
     "max_stay": "24h",
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Eyre Highway"
+    },
     "toilets": true
   },
   "group": "utility",
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

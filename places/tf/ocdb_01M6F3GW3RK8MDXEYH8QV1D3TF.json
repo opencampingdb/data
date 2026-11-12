@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -16,6 +18,13 @@
     },
     "nearest_beach": {
       "distance_m": 820
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1070
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Maroondah Highway"
     },
     "opening_hours": "We-Sa 07:00-03:00; Su-Tu 07:00-01:00",
     "phone": "+61 3 9735 1619",
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +13,15 @@
       "street": "Old Tanjil Road",
       "suburb": "Willow Grove"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 230,
+      "name": "Boatramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 490,
+      "name": "Willow Grove Road"
+    },
+    "operator": "Southern Rural Water",
     "website": "https://www.srw.com.au/recreation/blue-rock-lake/"
   },
   "group": "utility",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

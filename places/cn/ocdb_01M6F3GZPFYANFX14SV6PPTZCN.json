@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
       "state": "WA",
       "street": "Chiswick Parade",
       "suburb": "Wellard"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4040
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Lambeth Circle"
     },
     "opening_hours": "Su-We 10:00-22:00; Th 10:00-23:00; Fr-Sa 10:00-23:00+",
     "website": "https://www.thewelltavern.com.au/"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

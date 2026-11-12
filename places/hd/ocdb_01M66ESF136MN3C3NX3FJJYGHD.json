@@ -1,10 +1,17 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "nearest_major_road": {
+      "distance_m": 380,
+      "name": "Knotts Siding Road"
+    },
+    "pub": true,
     "tents": true
   },
   "group": "overnight",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

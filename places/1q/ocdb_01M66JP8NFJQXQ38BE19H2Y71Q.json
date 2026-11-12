@@ -1,12 +1,25 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Great Northern Highway"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Great Northern Highway"
+    },
+    "operator": "Outback Travel Centre",
     "website": "https://map.bp.com/en-AU/AU/gas-station/newman/bp-newman-south/3097"
   },
   "group": "services",
@@ -25,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

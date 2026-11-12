@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,6 +13,11 @@
       "street": "Fox Street",
       "suburb": "Walgett"
     },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Fox Street"
+    },
+    "operator": "NSW Health",
     "website": "https://www.nsw.gov.au/departments-and-agencies/wnswlhd/service-directory/walgett-health-service"
   },
   "group": "emergency",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

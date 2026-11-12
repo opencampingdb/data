@@ -8,6 +8,7 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "tents": "osm",
@@ -28,6 +29,10 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Western Highway"
+    },
     "phone": "+61 3 5391 1683",
     "power": true,
     "tents": true,
@@ -49,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

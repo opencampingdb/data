@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,11 @@
     "address": {
       "street": "Pechey Street"
     },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "James Street"
+    },
+    "operator": "Queensland Health",
     "phone": "+61 7 4616 6000",
     "website": "https://www.health.qld.gov.au/services/darlingdowns/ddowns-toowoomba-hs"
   },
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

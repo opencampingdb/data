@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -13,9 +16,21 @@
       "street": "Risby Street",
       "suburb": "Ulverstone"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
     "nearest_beach": {
       "distance_m": 720,
       "name": "Buttons Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 710,
+      "name": "Leven Yacht Club Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Main Street"
     },
     "opening_hours": "06:00-19:00",
     "phone": "+61 3 6425 1824"
@@ -36,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

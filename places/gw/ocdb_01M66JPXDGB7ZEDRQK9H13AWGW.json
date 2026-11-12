@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -13,9 +16,23 @@
       "street": "Elizabeth Avenue",
       "suburb": "Clontarf"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1800,
       "name": "Bells Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2060
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Elizabeth Avenue"
     },
     "opening_hours": "Mo-Fr 05:00-22:00; Sa,Su 06:00-20:00",
     "phone": "+61 7 3048 5632"
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

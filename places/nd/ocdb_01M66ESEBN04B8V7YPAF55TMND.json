@@ -4,7 +4,11 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -17,7 +21,16 @@
     "nearest_beach": {
       "distance_m": 1680
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2090
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bulwer Street"
+    },
     "opening_hours": "05:00-21:30",
+    "operator": "BP",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -36,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

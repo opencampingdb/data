@@ -1,14 +1,23 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "fee": "osm",
+    "motorbikes": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "website": "osm"
   },
   "facts": {
+    "booking_required": true,
     "fee": true,
+    "motorbikes": true,
     "nearest_beach": {
       "distance_m": 380,
       "name": "Mystics"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1010,
+      "name": "Boat ramp"
     },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/killalea-campground"
   },
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

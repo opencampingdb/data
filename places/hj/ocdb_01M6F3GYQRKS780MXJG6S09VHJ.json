@@ -2,7 +2,10 @@
   "fact_sources": {
     "brand": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -12,7 +15,15 @@
     "nearest_beach": {
       "distance_m": 1150
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1010
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Parry Street"
+    },
     "opening_hours": "Mo-Su 09:00-21:00",
+    "operator": "YHA Australia",
     "phone": "+61 8 9433 4305",
     "website": "https://www.yha.com.au/hostels/wa/perth-surrounds/fremantle-backpackers-hostel/",
     "wifi": true
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

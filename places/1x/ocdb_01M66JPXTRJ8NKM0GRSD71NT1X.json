@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "state": "NSW",
       "street": "John Street",
       "suburb": "Coonabarabran"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "John Street"
     },
     "phone": "+61 2 5823 7806"
   },
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

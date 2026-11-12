@@ -4,6 +4,7 @@
     "cabins": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
     "website": "osm"
@@ -19,6 +20,10 @@
     "cabins": true,
     "dump_station": true,
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Oberon Street"
+    },
     "power": true,
     "tents": true,
     "website": "https://www.jenolanholidaypark.com.au/"
@@ -39,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -15,7 +17,12 @@
       "suburb": "Thirlmere"
     },
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Barbour Road"
+    },
     "opening_hours": "Mo-Fr 10:00-16:00; Sa-Su 09:00-17:00",
+    "operator": "Transport Heritage NSW",
     "phone": "+61 2 4683 6800",
     "website": "https://www.nswrailmuseum.com.au/",
     "wheelchair": true
@@ -36,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

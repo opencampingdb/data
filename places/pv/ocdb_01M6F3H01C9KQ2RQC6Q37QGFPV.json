@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Price Maurice Road",
       "suburb": "Pekina"
     },
-    "facebook": "https://www.facebook.com/pekinahotel/"
+    "facebook": "https://www.facebook.com/pekinahotel/",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Price Maurice Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3H01C9KQ2RQC6Q37QGFPV",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

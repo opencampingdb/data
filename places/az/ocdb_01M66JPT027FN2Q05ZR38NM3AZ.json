@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +13,14 @@
       "street": "Ward Street"
     },
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2780
+    },
+    "nearest_major_road": {
+      "distance_m": 310,
+      "name": "Penlington Street"
+    },
+    "operator": "Mater",
     "phone": "+61 7 4931 3313",
     "website": "https://www.mater.org.au/health/hospitals/mater-private-hospital-rockhampton"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

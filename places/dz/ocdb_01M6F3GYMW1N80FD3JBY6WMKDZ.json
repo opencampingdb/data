@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +10,12 @@
       "postcode": "3762",
       "street": "Union Lane",
       "suburb": "Bylands"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Northern Highway"
+    },
+    "operator": "Tramway Museum Society of Victoria Inc"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYMW1N80FD3JBY6WMKDZ",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

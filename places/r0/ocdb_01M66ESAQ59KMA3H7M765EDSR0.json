@@ -1,14 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "nearest_beach": {
       "distance_m": 4050,
       "name": "Cutlers Beach"
-    }
+    },
+    "operator": "Parks Victoria",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAQ59KMA3H7M765EDSR0",
@@ -26,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,17 +1,25 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "drinking_water": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "booking_required": true,
     "drinking_water": false,
     "fee": true,
     "nearest_beach": {
       "distance_m": 140,
       "name": "Stockton Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4500
+    },
+    "operator": "Worimi Conservation Lands",
     "website": "https://worimiconservationlands.com/camping/"
   },
   "group": "overnight",
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

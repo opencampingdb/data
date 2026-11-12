@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -8,6 +11,14 @@
       "distance_m": 20,
       "name": "The Spit Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 410
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Sea World Drive"
+    },
+    "operator": "City of Gold Coast",
     "water_type": "fountain"
   },
   "group": "utility",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

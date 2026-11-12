@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,7 +14,12 @@
       "street": "Bay Road",
       "suburb": "Mount Gambier"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bay Road"
+    },
     "opening_hours": "\"by appointment\"",
+    "operator": "National Trust",
     "phone": "+61 403 815 393",
     "website": "https://www.nationaltrust.org.au/places/mount-gambier-courthouse-museum/"
   },
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 190,
+      "name": "Calder Highway"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCHKG3SP9DQ47DQ82E3Z",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

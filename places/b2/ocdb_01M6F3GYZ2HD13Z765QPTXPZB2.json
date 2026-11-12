@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "toilets": "osm",
     "wheelchair": "osm"
   },
@@ -9,6 +10,10 @@
       "housenumber": "58",
       "state": "QLD",
       "street": "MacKenzie Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Scott Street"
     },
     "toilets": true,
     "wheelchair": true
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

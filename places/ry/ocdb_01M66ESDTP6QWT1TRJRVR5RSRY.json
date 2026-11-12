@@ -2,13 +2,22 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Fox Street"
+    },
     "opening_hours": "24/7",
+    "operator": "Walgett Shire Council",
     "wheelchair": true
   },
   "group": "utility",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

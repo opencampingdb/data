@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,15 @@
     "address": {
       "housenumber": "97-105",
       "street": "Willis Street"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Willis Street"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 5267 2293"
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

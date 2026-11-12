@@ -1,11 +1,24 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "air": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "air": true,
     "nearest_beach": {
       "distance_m": 1610
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3030
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Sheridan Street"
+    },
+    "operator": "Mobil"
   },
   "group": "services",
   "id": "ocdb_01M66JPGH24KWDGT5VQX6ZSH71",
@@ -23,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

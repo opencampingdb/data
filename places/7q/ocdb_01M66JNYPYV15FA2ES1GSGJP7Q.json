@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,6 +16,15 @@
       "suburb": "Yeoval"
     },
     "facebook": "https://www.facebook.com/profile.php?id=61563388779478",
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Forbes Street"
+    },
+    "operator": "Westoil",
     "phone": "+61 2 6846 4146"
   },
   "group": "services",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

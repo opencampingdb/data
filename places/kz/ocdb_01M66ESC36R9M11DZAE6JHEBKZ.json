@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Su 07:00-01:00"
+    "nearest_boat_ramp": {
+      "distance_m": 4890,
+      "name": "Goodna Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Garden Road"
+    },
+    "opening_hours": "Mo-Su 07:00-01:00",
+    "operator": "Convenience Centre"
   },
   "group": "utility",
   "id": "ocdb_01M66ESC36R9M11DZAE6JHEBKZ",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

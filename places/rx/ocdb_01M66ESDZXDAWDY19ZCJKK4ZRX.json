@@ -3,10 +3,13 @@
     "address": "osm",
     "cabins": "osm",
     "caravans": "osm",
+    "charge": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -22,10 +25,16 @@
     },
     "cabins": false,
     "caravans": true,
+    "charge": "See Colonial Motel",
     "drinking_water": true,
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Kings Highway"
+    },
+    "operator": "Queanbeyan-Palerang Regional Council",
     "power": true,
     "showers": true,
     "tents": true,
@@ -47,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,7 +14,15 @@
       "street": "Main North Road",
       "suburb": "Thorngate"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2510
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main North Road"
+    },
     "opening_hours": "24/7",
+    "operator": "On The Run",
     "website": "https://www.ontherun.com.au/locations/thorngate-20a-main-north-road/otr-thorngate/v"
   },
   "group": "services",
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

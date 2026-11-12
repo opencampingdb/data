@@ -3,10 +3,14 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
-    "dump_station": true
+    "dump_station": true,
+    "nearest_boat_ramp": {
+      "distance_m": 70
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9ZF71JGSD1H8J92K33W",
@@ -24,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

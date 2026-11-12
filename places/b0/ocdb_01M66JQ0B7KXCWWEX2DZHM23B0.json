@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -10,8 +13,21 @@
       "housenumber": "30-32",
       "street": "McKenzie Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
     "nearest_beach": {
       "distance_m": 2040
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 590
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "McKenzie Street"
     },
     "opening_hours": "Mo-Su 06:00-19:30",
     "website": "https://www.caltex.com/au/"
@@ -32,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

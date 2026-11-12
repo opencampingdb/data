@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "pub": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,8 +13,16 @@
       "housenumber": "1645",
       "street": "Burwood Highway"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4310
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Burwood Highway"
+    },
     "opening_hours": "Mo-Fr 12:00+; Sa, Su 11:30+",
     "phone": "+61 3 9754 2222",
+    "pub": true,
     "website": "https://www.belltavern.com.au"
   },
   "group": "services",
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "postcode": "4275",
       "street": "Kidston Street",
       "suburb": "Canungra"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Kidston Street"
     },
     "phone": "+61 7 5543 5156"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

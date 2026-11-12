@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "bins": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Diamantina Developmental Road"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFJ7CRVPED5WS4HW4FD6",
   "kind": "rest_area",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

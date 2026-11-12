@@ -1,12 +1,22 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1443",
       "street": "Camden Valley Way"
+    },
+    "fuels": [
+      "diesel",
+      "e10"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Camden Valley Way"
     },
     "website": "https://www.shell.com.au/fuel-finder.html"
   },
@@ -26,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

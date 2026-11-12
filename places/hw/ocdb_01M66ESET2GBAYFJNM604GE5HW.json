@@ -4,6 +4,7 @@
     "cabins": "osm",
     "caravans": "osm",
     "dump_station": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm"
@@ -16,6 +17,10 @@
     "cabins": true,
     "caravans": true,
     "dump_station": false,
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Dawson Highway"
+    },
     "phone": "+61 7 4997 1432",
     "power": true,
     "website": "https://mouraavcp.com.au/"
@@ -36,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

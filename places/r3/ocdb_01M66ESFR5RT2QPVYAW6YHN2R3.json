@@ -4,6 +4,7 @@
     "cabins": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "pets": "osm",
     "phone": "osm",
     "power": "osm",
@@ -17,6 +18,10 @@
     "cabins": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 250,
+      "name": "Burke Developmental Road"
+    },
     "pets": "leashed",
     "phone": "+61 7 4094 8203",
     "power": true,
@@ -39,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

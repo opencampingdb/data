@@ -4,8 +4,12 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -19,8 +23,15 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "hot_water": false,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Old Northern Road"
+    },
     "opening_hours": "24/7",
+    "operator": "The Village Glenorie",
     "showers": false,
+    "toilet_type": "flush",
     "toilets": true
   },
   "group": "utility",
@@ -39,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

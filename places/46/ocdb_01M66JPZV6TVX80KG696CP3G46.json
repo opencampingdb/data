@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,14 @@
       "state": "WA",
       "street": "Marshall Road",
       "suburb": "Malaga"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Guadalupe Drive"
     },
     "website": "https://www.mobil.com.au/en-au/find-station/mobil-malaga-wa-malaga-6173005"
   },
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

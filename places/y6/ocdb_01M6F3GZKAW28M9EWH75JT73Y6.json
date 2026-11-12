@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Su 10:00-14:00"
+    "nearest_major_road": {
+      "distance_m": 480,
+      "name": "Elizabeth Street"
+    },
+    "opening_hours": "Su 10:00-14:00",
+    "operator": "Kenilworth & District Historical Association Inc"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZKAW28M9EWH75JT73Y6",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

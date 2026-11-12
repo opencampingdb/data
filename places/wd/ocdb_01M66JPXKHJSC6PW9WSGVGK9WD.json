@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,17 @@
       "state": "QLD",
       "street": "Beerburrum Road",
       "suburb": "Caboolture"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "e85"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Beerburrum Road"
     },
     "opening_hours": "Mo-Fr 05:00-23:00; Sa,Su 05:00-22:00",
     "phone": "+61 7 3607 3703",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

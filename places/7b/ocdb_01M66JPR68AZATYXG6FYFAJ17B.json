@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -12,10 +16,19 @@
       "street": "Thomas Street",
       "suburb": "West Perth"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 1880
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 1620
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Thomas Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "OTR Group"
   },
   "group": "services",
   "id": "ocdb_01M66JPR68AZATYXG6FYFAJ17B",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

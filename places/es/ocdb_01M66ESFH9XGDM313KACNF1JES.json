@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,8 +14,14 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "$22 fixed site fee 12/2019",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Monaro Highway"
+    },
+    "operator": "Snowy Monaro Regional Council",
     "phone": "+61 436 806 817",
     "showers": true,
     "tents": true,
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,14 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -12,13 +16,22 @@
       "housenumber": "194",
       "street": "William Street"
     },
+    "charge": "0",
     "entry": "public",
     "fee": false,
     "nearest_beach": {
       "distance_m": 3850,
       "name": "Hartfield Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3870
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "William Street"
+    },
     "opening_hours": "Mo-Fr 06:00-21:00; Sa-Su 07:00-21:00",
+    "toilet_type": "flush",
     "wheelchair": false
   },
   "group": "utility",
@@ -37,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 670
+    },
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Webb Road"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ES9H4T5H5ZKR7KNG8Z2PG",
   "kind": "picnic_site",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

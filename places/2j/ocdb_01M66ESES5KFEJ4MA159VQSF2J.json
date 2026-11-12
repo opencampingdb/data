@@ -4,8 +4,11 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
+    "pub": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -15,8 +18,14 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Great Northern Highway"
+    },
     "phone": "+61 8 9191 5141",
     "power": true,
+    "pub": true,
     "toilets": true
   },
   "group": "overnight",
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

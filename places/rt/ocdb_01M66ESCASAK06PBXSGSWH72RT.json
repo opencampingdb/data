@@ -1,15 +1,24 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "charge": "Donation",
     "drinking_water": false,
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Gingie Road"
+    },
+    "operator": "Walgett Shire Council",
     "showers": false,
     "toilets": true
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuel": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "air": true,
+    "fuel": true,
     "nearest_beach": {
       "distance_m": 4430
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3890
+    },
+    "nearest_major_road": {
+      "distance_m": 100
     },
     "opening_hours": "PH,Mo-Su 00:00-12:00+",
     "toilets": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

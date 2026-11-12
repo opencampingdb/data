@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Barrier Highway"
+    },
     "opening_hours": "24/7",
     "water_type": "tank_fill"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

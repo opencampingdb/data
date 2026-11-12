@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,11 @@
       "housenumber": "101",
       "street": "Gisborne Road"
     },
+    "nearest_major_road": {
+      "distance_m": 60
+    },
     "opening_hours": "Mo-Su 06:00-00:00",
+    "operator": "EG Australia",
     "phone": "+61 3 7065 5747",
     "website": "https://eg-australia.com"
   },
@@ -30,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

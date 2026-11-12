@@ -4,6 +4,7 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -12,6 +13,9 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 540
+    },
     "tents": true,
     "website": "https://www.lakem.com.au/"
   },
@@ -31,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

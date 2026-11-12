@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Spring Creek Road"
+    },
     "phone": "+61 475 143 859",
     "tents": true,
     "website": "https://queenmaryfallscaravanpark.com.au/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,24 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "South Gippsland Highway"
+    },
     "opening_hours": "24/7",
     "phone": "+61 3 9702 8599",
     "toilets": true,
@@ -27,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,10 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -9,6 +13,15 @@
     "nearest_beach": {
       "distance_m": 2390
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1650
+    },
+    "nearest_major_road": {
+      "distance_m": 360,
+      "name": "Hayman Road"
+    },
+    "operator": "Curtin University",
+    "toilet_type": "flush",
     "wheelchair": false
   },
   "group": "utility",
@@ -27,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

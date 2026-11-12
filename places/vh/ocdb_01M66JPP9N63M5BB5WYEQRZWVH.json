@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "toilets": "osm",
     "website": "osm",
     "wheelchair": "osm",
@@ -16,7 +19,15 @@
     "nearest_beach": {
       "distance_m": 1120
     },
+    "nearest_boat_ramp": {
+      "distance_m": 880
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Wellington Street"
+    },
     "opening_hours": "Mo-Fr 07:00-18:30; Sa 07:00-18:00; Su 08:30-18:00",
+    "operator": "Transperth",
     "toilets": false,
     "website": "https://transperth.wa.gov.au",
     "wheelchair": true,
@@ -38,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

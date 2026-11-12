@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -16,6 +19,14 @@
       "distance_m": 2850,
       "name": "Dog Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1430
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Bowen Bridge Road"
+    },
+    "operator": "Queensland Health",
     "phone": "+61 7 3646 8111",
     "website": "https://www.health.qld.gov.au/rbwh/"
   },
@@ -35,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

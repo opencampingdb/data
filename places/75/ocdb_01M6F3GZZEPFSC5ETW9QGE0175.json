@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,13 @@
       "state": "NSW",
       "street": "Ballina Road",
       "suburb": "Girards Hill"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 870
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Ballina Road"
     },
     "website": "https://www.lismoregatewaymotel.com.au/"
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

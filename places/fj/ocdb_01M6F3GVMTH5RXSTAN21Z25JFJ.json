@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,11 @@
       "street": "Main Street",
       "suburb": "Minlaton"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
+    },
+    "operator": "National Trust",
     "phone": "+61 8 8853 2157",
     "website": "https://www.nationaltrust.org.au/places/minlaton-museum/"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

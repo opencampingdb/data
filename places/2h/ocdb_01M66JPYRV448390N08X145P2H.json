@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +13,14 @@
       "street": "Tantalum Street"
     },
     "email": "CSAU@tesla.com",
+    "nearest_boat_ramp": {
+      "distance_m": 4040
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Railway Street"
+    },
+    "operator": "Tesla",
     "website": "https://www.tesla.com/findus/location/store/canberra"
   },
   "group": "services",
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

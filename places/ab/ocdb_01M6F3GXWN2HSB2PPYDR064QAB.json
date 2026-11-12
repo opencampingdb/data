@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,13 @@
       "street": "Franklin Street"
     },
     "email": "info@thefranklinhotel.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 960
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Franklin Street"
+    },
     "phone": "+61 2 8410 0036"
   },
   "group": "services",
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

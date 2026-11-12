@@ -1,16 +1,25 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "charge": "Vistors centre or honesty box",
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Diamantina Developmental Road"
+    },
+    "operator": "Diamantina Shire Council",
     "power": true,
     "showers": true,
     "toilets": true
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

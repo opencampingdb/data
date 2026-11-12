@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -15,7 +17,12 @@
     "nearest_beach": {
       "distance_m": 1570
     },
-    "opening_hours": "Mo-Sa 07:00-18:30, Su 07:00-17:00"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Middleton Road"
+    },
+    "opening_hours": "Mo-Sa 07:00-18:30, Su 07:00-17:00",
+    "operator": "Whalley‘s"
   },
   "group": "services",
   "id": "ocdb_01M66JPT3VN0KYZ9XTHSEQ1DJV",
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

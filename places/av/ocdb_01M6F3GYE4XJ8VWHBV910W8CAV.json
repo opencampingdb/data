@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Kennedy Developmental Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Kennedy Developmental Road"
     },
     "opening_hours": "Mo-Su 09:00-18:00",
     "phone": "+61 429 806 140"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

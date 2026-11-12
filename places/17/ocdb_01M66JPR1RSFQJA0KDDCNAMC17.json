@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -13,7 +16,15 @@
       "street": "Stoker Way",
       "suburb": "Kallangur"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2550
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Gallipoli Way"
+    },
     "opening_hours": "Mo-Su 08:00-22:00",
+    "operator": "Queensland Health",
     "website": "https://www.qld.gov.au/health/services/satellite-hospitals/kallangur-satellite-hospital",
     "wheelchair": true
   },
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

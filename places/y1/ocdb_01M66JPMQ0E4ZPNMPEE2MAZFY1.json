@@ -1,16 +1,32 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "370-376",
       "street": "Ferrars Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1160,
       "name": "Middle Park Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 810
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Ferrars Street"
     }
   },
   "group": "services",
@@ -29,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

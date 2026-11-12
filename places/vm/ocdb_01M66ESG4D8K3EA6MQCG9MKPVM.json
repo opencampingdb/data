@@ -4,6 +4,9 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "wifi": "osm"
@@ -15,6 +18,14 @@
     "dump_station": true,
     "email": "secretary@morissetshowground.com.au",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 4030
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Freemans Drive"
+    },
+    "operator": "Morisset Showground Trust",
     "phone": "+61 2 4972 1657",
     "power": true,
     "wifi": false
@@ -35,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

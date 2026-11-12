@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "max_stay": "osm"
+    "max_stay": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
-    "max_stay": "72h"
+    "max_stay": "72h",
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "The Boulders Road"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES923EC6B3PX71FFC0C17",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

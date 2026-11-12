@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +15,12 @@
       "street": "Summer Street",
       "suburb": "Orange"
     },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Summer Street"
+    },
     "opening_hours": "We-Th 16:00-22:00; Fr-Sa 12:00-23:00; Su 14:00-20:00",
+    "operator": "Badlands Brewery",
     "phone": "+61 421 455 325",
     "website": "https://www.badlandsbrewery.com.au/"
   },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

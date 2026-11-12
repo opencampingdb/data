@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "307",
       "street": "Victoria Street"
     },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Sydney Road"
+    },
     "opening_hours": "We-Th, Su 10:00-16:00; Fr-Sa 10:00-17:00; Mo-Tu closed",
+    "operator": "Jon Beinart",
     "phone": "+61 3 9939 3681",
     "website": "https://beinart.org/"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 440,
+      "name": "Nameless Valley Drive"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF04KCEV3GA9W5XQ1ZH1",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +9,10 @@
     "address": {
       "housenumber": "298",
       "street": "Bathurst Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "BMD"
     },
     "phone": "+61 2 4782 4207",
     "website": "https://www.bohmanauto.com.au/"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -15,6 +18,15 @@
       "distance_m": 450,
       "name": "Boathaven Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 120,
+      "name": "Port of Airlie Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Shute Harbour Road"
+    },
+    "operator": "Cruise Whitsundays",
     "website": "https://cruisewhitsundays.com/"
   },
   "group": "transport",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

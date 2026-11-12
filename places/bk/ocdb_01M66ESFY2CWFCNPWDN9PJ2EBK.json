@@ -1,10 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 790
+    },
+    "operator": "Department of Biodiversity, Conservation and Attractions",
     "website": "https://exploreparks.dbca.wa.gov.au/site/winderabandi-campground"
   },
   "group": "overnight",
@@ -23,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

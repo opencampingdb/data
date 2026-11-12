@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -16,6 +19,14 @@
     "nearest_beach": {
       "distance_m": 290
     },
+    "nearest_boat_ramp": {
+      "distance_m": 790
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Great Ocean Road"
+    },
+    "operator": "YHA",
     "website": "https://www.yha.com.au/hostels/vic/great-ocean-road/apollo-bay/",
     "wifi": true
   },
@@ -35,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

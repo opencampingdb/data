@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,7 +17,16 @@
       "suburb": "North Ipswich"
     },
     "facebook": "https://www.facebook.com/DingleyDellGallery/",
+    "nearest_boat_ramp": {
+      "distance_m": 1050,
+      "name": "North Ipswich Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Pine Mountain Road"
+    },
     "opening_hours": "Tu-We 09:00-14:30; Th-Fr 10:00-14:30",
+    "operator": "ALARA QLD Limited",
     "website": "https://www.alaraqld.org.au/page.php?id=53"
   },
   "group": "attraction",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

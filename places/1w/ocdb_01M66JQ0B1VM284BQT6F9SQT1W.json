@@ -1,11 +1,21 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "164",
       "street": "Williams Street"
+    },
+    "fuels": [
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Williams Street"
     }
   },
   "group": "services",
@@ -24,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

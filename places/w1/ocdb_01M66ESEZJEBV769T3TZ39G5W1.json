@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuel": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "North Street"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESEZJEBV769T3TZ39G5W1",
   "kind": "caravan_park",
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:35:44Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

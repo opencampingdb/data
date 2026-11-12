@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "VIC",
       "street": "Wonga Road",
       "suburb": "Ringwood North"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Wonga Road"
+    },
+    "operator": "Maroondah City Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEV6PV7J0EW579VG33AB",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -12,9 +16,23 @@
       "housenumber": "248",
       "street": "Etiwanda Avenue"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 4320,
       "name": "Apex Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 920
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Seventh Street East"
     },
     "opening_hours": "Mo-Fr 06:00-19:00; Sa 07:00-17:00; Su 08:00-16:00",
     "phone": "+61 3 5022 9569",
@@ -37,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

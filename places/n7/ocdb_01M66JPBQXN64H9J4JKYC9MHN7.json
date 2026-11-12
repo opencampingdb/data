@@ -1,6 +1,18 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 490,
+      "name": "S.S. Ellen Park"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPBQXN64H9J4JKYC9MHN7",
   "kind": "fuel",
@@ -17,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,11 +2,24 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 400
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Suttor Developmental Road"
+    },
+    "operator": "Isaac Regional Council",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -25,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

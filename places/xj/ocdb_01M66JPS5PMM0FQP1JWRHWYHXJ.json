@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -8,6 +9,10 @@
     "address": {
       "housenumber": "9",
       "street": "Stuart Terrace"
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Telegraph Terrace"
     },
     "opening_hours": "Mo-Su 09:30-17:00; Dec 25 off; Jan 01 off",
     "phone": "+61 8 8952 8900"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

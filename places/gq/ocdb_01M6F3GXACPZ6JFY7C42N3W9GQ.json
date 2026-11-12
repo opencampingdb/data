@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +10,9 @@
       "state": "NSW",
       "street": "Bushland Drive",
       "suburb": "Taree"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2300
     }
   },
   "group": "services",
@@ -27,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

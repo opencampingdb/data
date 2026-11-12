@@ -36,6 +36,7 @@
     "fee": "osm",
     "motorbikes": "feedback",
     "motorhomes": "feedback",
+    "nearest_major_road": "osm",
     "pets": "feedback",
     "power": "feedback",
     "showers": "feedback",
@@ -60,6 +61,10 @@
     "fee": true,
     "motorbikes": true,
     "motorhomes": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Grampians Road"
+    },
     "pets": "yes",
     "power": true,
     "showers": true,
@@ -85,5 +90,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T05:09:26Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "1",
       "street": "Bay Road"
     },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Bay Road"
+    },
     "opening_hours": "Mo-Fr 10:00-16:00, Sa-Su 10:00-14:00",
+    "operator": "City of Mount Gambier",
     "phone": "+61 8 8721 2563",
     "website": "https://theriddoch.com.au/"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

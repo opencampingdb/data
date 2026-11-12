@@ -5,11 +5,16 @@
   },
   "fact_sources": {
     "fee": "community_report",
-    "kitchen": "community_report"
+    "kitchen": "community_report",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": true,
-    "kitchen": true
+    "kitchen": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2720,
+      "name": "Burpengary Boat Ramp"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESD7W87YWSAJ6THFXGVPG",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

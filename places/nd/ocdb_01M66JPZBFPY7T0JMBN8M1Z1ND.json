@@ -1,11 +1,18 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "street": "Heinemann Road"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "adblue"
+    ],
+    "operator": "Transwest Fuels"
   },
   "group": "services",
   "id": "ocdb_01M66JPZBFPY7T0JMBN8M1Z1ND",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

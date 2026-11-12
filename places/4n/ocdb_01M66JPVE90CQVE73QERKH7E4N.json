@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
       "state": "NSW",
       "street": "Pacific Highway",
       "suburb": "Tuggerah"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4130
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Pacific Highway"
     },
     "opening_hours": "Mo-Fr 08:00-17:00; Sa 08:00-14:00",
     "website": "https://www.eastcoasttyreandauto.com.au/"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

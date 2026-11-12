@@ -1,8 +1,15 @@
 {
   "fact_sources": {
+    "charge": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "charge": "no",
+    "nearest_major_road": {
+      "distance_m": 360,
+      "name": "Knox Road"
+    },
     "opening_hours": "Apr-Sep 08:00-17:00; Oct-Mar 08:00-19:00"
   },
   "group": "utility",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

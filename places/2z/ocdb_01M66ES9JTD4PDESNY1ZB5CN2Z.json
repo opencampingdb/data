@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_boat_ramp": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": false,
+    "nearest_boat_ramp": {
+      "distance_m": 970,
+      "name": "Cynthia Bay Boat Ramp"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

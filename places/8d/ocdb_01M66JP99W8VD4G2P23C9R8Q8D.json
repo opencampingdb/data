@@ -1,8 +1,17 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Slacksmith Street"
+    },
     "phone": "+61 2 6792 2665"
   },
   "group": "services",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

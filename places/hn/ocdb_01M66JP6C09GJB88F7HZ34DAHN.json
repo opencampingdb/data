@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +16,15 @@
       "suburb": "Denmark"
     },
     "email": "visitorcentre@denmarkchamber.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 790
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Ocean Beach Road"
+    },
     "opening_hours": "Mo-Sa 09:30-13:30",
+    "operator": "Shire of Denmark",
     "phone": "+61 8 9848 2648",
     "website": "https://denmark.com.au/"
   },
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

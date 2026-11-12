@@ -6,6 +6,7 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -26,6 +27,10 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "William Street"
+    },
     "phone": "+61 7 4625 0920",
     "power": true,
     "showers": true,
@@ -49,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

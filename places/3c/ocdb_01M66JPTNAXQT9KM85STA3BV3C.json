@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +14,21 @@
       "street": "The Parade",
       "suburb": "Norwood"
     },
-    "opening_hours": "24/7"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3270
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "The Parade"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPTNAXQT9KM85STA3BV3C",
@@ -28,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,20 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "hot_water": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
+    "hot_water": true,
     "nearest_beach": {
       "distance_m": 450,
       "name": "Gnarabup Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1190,
+      "name": "Gnarabup Boat ramp"
     }
   },
   "group": "utility",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

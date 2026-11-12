@@ -1,15 +1,25 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Ivanhoe Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 3580
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 910
     },
     "phone": "+61 8 9168 3177"
   },
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

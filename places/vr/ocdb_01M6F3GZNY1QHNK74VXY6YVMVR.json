@@ -1,10 +1,17 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "vehicle_access": "osm"
   },
   "facts": {
+    "bins": true,
     "max_stay": "20h",
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Mitchell Highway"
+    },
     "vehicle_access": "heavy_vehicles_only"
   },
   "group": "utility",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T10:06:19Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

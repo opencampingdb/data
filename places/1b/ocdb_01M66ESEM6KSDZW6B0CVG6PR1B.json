@@ -3,6 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -11,6 +14,15 @@
     "nearest_beach": {
       "distance_m": 460
     },
+    "nearest_boat_ramp": {
+      "distance_m": 760,
+      "name": "Palm Beach - Currumbin High School"
+    },
+    "nearest_major_road": {
+      "distance_m": 350,
+      "name": "Gold Coast Highway"
+    },
+    "operator": "City of Gold Coast",
     "water_type": "fountain"
   },
   "group": "utility",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

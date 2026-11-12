@@ -2,14 +2,21 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "public",
     "nearest_beach": {
       "distance_m": 4420
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Seabrook Road"
+    },
+    "toilet_type": "chemical"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAPFH97H62ABASZKG6HP",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "email": "osm",
     "facebook": "osm",
     "fee": "osm",
     "instagram": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -17,6 +21,7 @@
       "street": "Beach Road",
       "suburb": "Torquay"
     },
+    "charge": "12 AUD",
     "email": "ansm@surfcoast.vic.gov.au",
     "facebook": "https://www.facebook.com/ANSMTorquay/",
     "fee": true,
@@ -25,7 +30,16 @@
       "distance_m": 990,
       "name": "Fishermans Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1000,
+      "name": "Torquay Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Surf Coast Highway"
+    },
     "opening_hours": "Mo-Su 09:00-17:00,Dec 24 off",
+    "operator": "Surf Coast Shire Council",
     "phone": "+61 3 5261 4606",
     "website": "https://australiannationalsurfingmuseum.com.au"
   },
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

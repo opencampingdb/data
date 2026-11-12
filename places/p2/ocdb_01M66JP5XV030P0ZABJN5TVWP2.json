@@ -1,10 +1,26 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Pacific Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/heatherbrae/bp-heatherbrae/2143"
   },
   "group": "services",
@@ -23,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

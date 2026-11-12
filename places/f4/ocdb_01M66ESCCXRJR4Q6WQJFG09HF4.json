@@ -1,14 +1,25 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "charge": "Donation",
     "entry": "public",
     "fee": true,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Warrego Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "Maranoa Regional Council",
     "wheelchair": false
   },
   "group": "utility",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

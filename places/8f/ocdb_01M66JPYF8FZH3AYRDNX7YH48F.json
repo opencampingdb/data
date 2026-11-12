@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -12,7 +15,18 @@
       "street": "Morayfield Road",
       "suburb": "Caboolture South"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Market Drive"
+    },
     "opening_hours": "Mo-Fr 05:30-21:30; Sa 06:00-20:00; Su 07:00-19:00",
+    "operator": "EG Australia",
     "phone": "+61 7 3088 8766"
   },
   "group": "services",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,27 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "6145",
+      "postcode": "6356",
+      "state": "WA",
+      "street": "Newdegate Ravensthorpe Road",
+      "suburb": "Lake King"
+    },
+    "air": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Newdegate Ravensthorpe Road"
+    },
+    "opening_hours": "Mon-Fri: 6am - 2pm, Sat-Sun: Closed",
+    "phone": "+61 8 9874 4094"
+  },
   "group": "services",
   "id": "ocdb_01M66JPBQ353SFRM598V24DF28",
   "kind": "fuel",
@@ -8,14 +29,14 @@
     "lat": -33.087536,
     "lon": 119.675552
   },
-  "name": "Lake King Agencies",
+  "name": "Lake King Roadhouse & Agencies",
   "osm": {
     "id": 6503609129,
-    "timestamp": "2025-05-22T05:29:18Z",
+    "timestamp": "2026-11-11T05:55:53Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

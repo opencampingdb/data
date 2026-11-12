@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,7 +16,15 @@
     "nearest_beach": {
       "distance_m": 4130
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3500
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Euston Road"
+    },
     "opening_hours": "Mo-Fr 07:30-17:00",
+    "operator": "Motorserve",
     "phone": "+61 2 7904 1934"
   },
   "group": "services",
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

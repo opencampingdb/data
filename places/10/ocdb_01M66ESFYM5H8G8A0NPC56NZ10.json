@@ -6,9 +6,15 @@
   },
   "fact_sources": {
     "description": "feedback",
-    "name": "feedback"
+    "name": "feedback",
+    "nearest_major_road": "osm"
   },
-  "facts": {},
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Warrego Highway"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFYM5H8G8A0NPC56NZ10",
   "kind": "rest_area",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T03:42:15Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

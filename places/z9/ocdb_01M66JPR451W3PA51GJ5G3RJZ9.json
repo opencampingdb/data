@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +14,14 @@
       "street": "Troughton Road",
       "suburb": "Coopers Plains"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4900
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Kessels Road"
+    },
+    "operator": "Queensland Health",
     "phone": "+61 7 3182 6111",
     "website": "https://metrosouth.health.qld.gov.au/qeii-jubilee-hospital"
   },
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

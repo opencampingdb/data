@@ -1,10 +1,17 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Railway Parade"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

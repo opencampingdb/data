@@ -1,14 +1,26 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "nearest_beach": {
       "distance_m": 3270,
       "name": "Sandridge Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3640,
+      "name": "Williamstown Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Somerville Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDTY57JNJ065J3S90D80",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

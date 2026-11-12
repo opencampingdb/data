@@ -11,6 +11,7 @@
     "dump_station": "osm",
     "fee": "osm",
     "motorhomes": "contributed",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -24,6 +25,10 @@
     "dump_station": true,
     "fee": true,
     "motorhomes": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Wombeyan Caves Road"
+    },
     "power": true,
     "showers": true,
     "tents": true,
@@ -46,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

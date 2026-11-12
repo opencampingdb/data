@@ -6,12 +6,17 @@
     "cabins": "osm",
     "caravans": "osm",
     "fee": "community_report",
+    "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "cabins": false,
     "caravans": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Bruce Highway"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

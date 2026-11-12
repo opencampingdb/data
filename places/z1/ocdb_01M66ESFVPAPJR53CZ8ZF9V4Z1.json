@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +11,14 @@
       "distance_m": 2560,
       "name": "Forges Beach No. 1"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1130
+    },
+    "nearest_major_road": {
+      "distance_m": 390,
+      "name": "Murray Valley Highway"
+    },
+    "operator": "G'Day Parks",
     "website": "https://yarrawongariverlands.com.au/"
   },
   "group": "overnight",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

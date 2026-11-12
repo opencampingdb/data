@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Dickson Street",
       "suburb": "Jundah"
     },
-    "facebook": "https://www.facebook.com/Jundah-Roadhouse-110293660408492/"
+    "facebook": "https://www.facebook.com/Jundah-Roadhouse-110293660408492/",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Thomson Developmental Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPD4DZJV0HD9EQB5C6G7Q",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -14,8 +17,14 @@
       "street": "Hay Street",
       "suburb": "Booligal"
     },
+    "charge": "Hotel Patronage",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 330,
+      "name": "Cobb Highway"
+    },
+    "operator": "Booligal Hotel",
     "showers": true,
     "toilets": true
   },
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Wellington Road"
+    },
+    "operator": "EG Australia"
+  },
   "group": "services",
   "id": "ocdb_01M66JPVFYQ3S2NM75DA0DAGDP",
   "kind": "fuel",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +14,20 @@
       "state": "QLD",
       "street": "Progress Road",
       "suburb": "Burpengary"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3180
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Progress Road"
     },
     "opening_hours": "24/7",
     "phone": "+61 7 3888 1300"
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

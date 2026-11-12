@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,7 +17,20 @@
       "street": "Warrego Highway",
       "suburb": "Blacksoil"
     },
+    "air": true,
+    "fuels": [
+      "e10",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4610
+    },
+    "nearest_major_road": {
+      "distance_m": 70
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "phone": "+61 7 3201 8782",
     "website": "https://map.bp.com/en-AU/AU/gas-station/blacksoil/bp-warrego-highway/1666"
   },
@@ -32,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

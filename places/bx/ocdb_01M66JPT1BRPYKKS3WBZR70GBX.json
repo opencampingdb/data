@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +9,10 @@
       "postcode": "3717",
       "street": "Grevillia Street",
       "suburb": "Yea"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "North Street"
     }
   },
   "group": "services",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,20 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "charge": "$5",
     "entry": "customers",
-    "fee": true
+    "fee": true,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Putty Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCB68QJ2WMECRGHC03H2",
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

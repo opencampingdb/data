@@ -1,9 +1,33 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm"
   },
   "facts": {
-    "opening_hours": "07:00-22:00"
+    "address": {
+      "housenumber": "61660",
+      "postcode": "5690",
+      "state": "SA",
+      "street": "Eyre Highway",
+      "suburb": "Coorabie"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Eyre Highway"
+    },
+    "opening_hours": "07:00-22:00",
+    "phone": "+61 8 8625 6120",
+    "toilets": true
   },
   "group": "services",
   "id": "ocdb_01M66JNZVAV7BBN7AXH3WD724J",
@@ -12,14 +36,14 @@
     "lat": -31.792529,
     "lon": 132.225115
   },
-  "name": "Nundroo Roadhouse",
+  "name": "NUNDROO HOTEL MOTEL",
   "osm": {
     "id": 847409552,
-    "timestamp": "2026-11-10T03:38:59Z",
+    "timestamp": "2026-11-11T07:49:13Z",
     "type": "node",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

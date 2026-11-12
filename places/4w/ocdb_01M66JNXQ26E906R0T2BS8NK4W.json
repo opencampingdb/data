@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +13,18 @@
       "housenumber": "235",
       "street": "Flemington Road"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Abbotsford Street"
+    },
     "opening_hours": "24/7",
+    "operator": "Liberty",
     "phone": "+61 3 9326 8882"
   },
   "group": "services",
@@ -28,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

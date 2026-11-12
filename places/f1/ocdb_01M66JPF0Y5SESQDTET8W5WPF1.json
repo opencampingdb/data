@@ -1,11 +1,21 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/westmarroadhouse/",
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Moonie Highway"
+    },
     "opening_hours": "Mo-Sa 06:00-21:00; Su 07:00-20:00",
     "phone": "+61 7 4663 0751"
   },
@@ -25,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +12,13 @@
       "street": "Fullarton Road",
       "suburb": "Fullarton"
     },
-    "opening_hours": "24/7"
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Fullarton Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPTX5NCZB7888CSRX4S47",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,13 +3,18 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "caravans": true,
     "drinking_water": false,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Stuart Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES8ZXRN6VT3XQ245HVR02",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

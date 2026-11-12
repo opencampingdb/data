@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,11 @@
       "housenumber": "41-43",
       "street": "Court Street"
     },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "McCabe Street"
+    },
+    "operator": "NSW Health",
     "phone": "+61 3 5071 9800",
     "website": "https://www.healthdirect.gov.au/australian-health-services/20102154/balranald-multi-purpose-service/services/balranald-2715-court#d334a168-e54f-72e8-fe31-a845e6300c86"
   },
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

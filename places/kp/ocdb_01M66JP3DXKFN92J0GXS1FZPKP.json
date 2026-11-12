@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -9,6 +11,13 @@
       "housenumber": "473-475",
       "postcode": "3875",
       "street": "Princes Highway"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3440
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
     },
     "opening_hours": "Mo-Fr 08:00-17:30; Sa 08:00-12:00",
     "phone": "+61 3 5152 3431"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

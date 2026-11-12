@@ -1,12 +1,19 @@
 {
   "fact_sources": {
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
     "nearest_beach": {
       "distance_m": 4210
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Marion Road"
     },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/mitchell-park/bp-mitchell-park/5936"
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

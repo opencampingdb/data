@@ -5,14 +5,22 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "contributed",
-    "power": "osm"
+    "fuel": "osm",
+    "nearest_boat_ramp": "osm",
+    "power": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
       "street": "Lake Argyle Road"
     },
     "dump_station": true,
-    "power": true
+    "fuel": true,
+    "nearest_boat_ramp": {
+      "distance_m": 670
+    },
+    "power": true,
+    "pub": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG1K6YM6S9BF8V8DG34B",
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

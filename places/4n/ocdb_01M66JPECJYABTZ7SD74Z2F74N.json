@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,11 +17,24 @@
       "street": "Cleveland Redland Bay Road",
       "suburb": "Victoria Point"
     },
+    "fuels": [
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2250,
       "name": "Thompson's Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1560
+    },
+    "nearest_major_road": {
+      "distance_m": 30
+    },
     "opening_hours": "Mo-Fr 04:40-23:00; Sa 05:00-23:00; Su 06:00-22:00",
+    "operator": "EG Australia",
     "phone": "+61 7 4082 7488"
   },
   "group": "services",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

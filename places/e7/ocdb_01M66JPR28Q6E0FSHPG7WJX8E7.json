@@ -1,12 +1,21 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "185",
       "street": "Fox Valley Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3610
+    },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Fox Valley Road"
     },
     "phone": "+61 2 9487 9111"
   },
@@ -26,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

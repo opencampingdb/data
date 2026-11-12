@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "air": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Landsborough-Maleny Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPYHF9HD02Q4K1EC9K62J",
   "kind": "fuel",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

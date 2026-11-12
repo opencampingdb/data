@@ -1,13 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "email": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "nudist": "osm",
+    "operator": "osm",
     "pets": "osm",
     "phone": "osm",
     "power": "osm",
@@ -25,13 +28,18 @@
       "street": "Keepit Dam Road",
       "suburb": "Keepit"
     },
+    "booking_required": true,
     "caravans": false,
     "drinking_water": true,
     "dump_station": false,
     "email": "bookings@wilderluxe.com.au",
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 320
+    },
     "nudist": false,
+    "operator": "Reflections",
     "pets": "no",
     "phone": "+61 2 4062 7579",
     "power": true,
@@ -57,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

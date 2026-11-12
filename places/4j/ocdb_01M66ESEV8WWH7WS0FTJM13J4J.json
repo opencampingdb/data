@@ -3,10 +3,14 @@
     "fee": "2024-01-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 160
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEV8WWH7WS0FTJM13J4J",
@@ -24,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

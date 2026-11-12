@@ -1,8 +1,25 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3490
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Rochester Drive"
+    },
     "opening_hours": "PH,Mo-Su 07:00-23:00"
   },
   "group": "services",
@@ -21,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

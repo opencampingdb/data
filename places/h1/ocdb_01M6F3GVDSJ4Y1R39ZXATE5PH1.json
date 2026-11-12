@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/profile.php?id=209974369358958",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Warrego Highway"
+    },
     "phone": "+61 7 4692 2202"
   },
   "group": "services",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -15,6 +17,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 150
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1560
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Shields Street"
     }
   },
   "group": "attraction",
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

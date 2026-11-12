@@ -1,14 +1,18 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
       "state": "QLD",
       "street": "Picnic Creek Circuit"
     },
-    "entry": "public"
+    "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 4540
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES8XHYMHQASVGN9H9RQM2",
@@ -26,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

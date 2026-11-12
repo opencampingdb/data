@@ -1,14 +1,27 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1160,
       "name": "Miami Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1270
     },
     "opening_hours": "Mo-Fr 06:00-20:00; Sa 07:00-20:00; Su 07:00-19:00",
     "phone": "+61 7 2139 3806",
@@ -30,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -8,6 +10,13 @@
       "housenumber": "1A",
       "postcode": "3516",
       "street": "Park Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 120
+    },
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Arnold Road"
     },
     "phone": "+61 3 9998 4146"
   },
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

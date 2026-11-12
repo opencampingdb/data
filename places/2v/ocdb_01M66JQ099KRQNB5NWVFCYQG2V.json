@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,6 +17,11 @@
       "suburb": "Stanthorpe"
     },
     "email": "info@faveromotors.com.au",
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "High Street"
+    },
     "opening_hours": "Mo-Fr 07:30-17:00; Sa-Su off",
     "phone": "+61 7 4681 1194",
     "website": "https://www.faveromotors.com.au/"
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

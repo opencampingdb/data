@@ -1,16 +1,25 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm"
   },
   "facts": {
+    "charge": "Donation for hot shower.",
     "drinking_water": false,
     "entry": "public",
     "fee": true,
     "max_stay": "48h",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Carinda Road"
+    },
+    "operator": "Walgett Shire Council",
     "power": false
   },
   "group": "overnight",
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

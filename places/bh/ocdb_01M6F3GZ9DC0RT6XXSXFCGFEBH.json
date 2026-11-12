@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
     "phone": "osm",
+    "phone_2": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -9,7 +11,12 @@
       "housenumber": "106",
       "street": "Migga Road"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3880,
+      "name": "Boat Ramp"
+    },
     "phone": "+61 8 8583 7365",
+    "phone_2": "+61 408 899 058",
     "wifi": false
   },
   "group": "overnight",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

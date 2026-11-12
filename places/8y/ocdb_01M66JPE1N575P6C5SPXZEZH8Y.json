@@ -1,6 +1,21 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Cooper Developmental Road"
+    },
+    "operator": "IOR Petroleum"
+  },
   "group": "services",
   "id": "ocdb_01M66JPE1N575P6C5SPXZEZH8Y",
   "kind": "fuel",
@@ -17,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,7 +14,18 @@
       "street": "Great Eastern Highway",
       "suburb": "Bakers Hill"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Great Eastern Highway"
+    },
     "opening_hours": "sunrise-sunset",
+    "operator": "Private",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-route-94-bakers-hill"
   },
   "group": "services",
@@ -29,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

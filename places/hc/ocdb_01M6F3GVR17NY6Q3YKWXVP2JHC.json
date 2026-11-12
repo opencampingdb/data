@@ -1,12 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "354",
       "street": "Campbell Street"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1390
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Campbell Street"
+    },
+    "operator": "Golden Chain"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVR17NY6Q3YKWXVP2JHC",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

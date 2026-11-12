@@ -1,11 +1,16 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "271",
       "street": "Newton Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4000,
+      "name": "Boat Ramp"
     }
   },
   "group": "overnight",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

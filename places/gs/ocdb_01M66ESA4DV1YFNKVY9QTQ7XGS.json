@@ -8,6 +8,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -19,6 +21,11 @@
     "entry": "customers",
     "fee": true,
     "max_stay": "72h",
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "New England Highway"
+    },
+    "operator": "Liverpool Plains Shire Council",
     "power": false,
     "showers": true,
     "tents": true,
@@ -40,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

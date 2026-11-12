@@ -1,10 +1,31 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 890,
+      "name": "Rowing Club Pontoon (Main)"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Wilson Street"
+    },
     "opening_hours": "24/7",
     "phone": "+61 3 8388 3751",
     "wheelchair": true
@@ -25,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

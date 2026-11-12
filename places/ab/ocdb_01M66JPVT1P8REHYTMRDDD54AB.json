@@ -1,13 +1,20 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 4760
     },
-    "opening_hours": "Mo-Su 10:00-16:00; PH 10:00-16:00; easter -2 days off; Dec 25-26, Jan 1 off"
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Mona Vale Road"
+    },
+    "opening_hours": "Mo-Su 10:00-16:00; PH 10:00-16:00; easter -2 days off; Dec 25-26, Jan 1 off",
+    "operator": "Ku-ring-gai Council"
   },
   "group": "services",
   "id": "ocdb_01M66JPVT1P8REHYTMRDDD54AB",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Beaudesert Boonah Road"
+    },
+    "operator": "SEQ Water",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBNVQFKPNVWSAX0XTEMQ",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

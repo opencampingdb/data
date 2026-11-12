@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Su 06:00-19:00"
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Simpson Street"
+    },
+    "opening_hours": "Mo-Su 06:00-19:00",
+    "operator": "Shell"
   },
   "group": "services",
   "id": "ocdb_01M66JNYYSAVFYSCSH8EHHKEPX",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Federation Street"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M71BXFFEGM21XMKQM4REKPCB",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,6 +4,9 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -17,6 +20,14 @@
     "nearest_beach": {
       "distance_m": 560
     },
+    "nearest_boat_ramp": {
+      "distance_m": 930
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Canning Highway"
+    },
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -35,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

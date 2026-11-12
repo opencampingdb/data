@@ -6,12 +6,23 @@
   "fact_sources": {
     "dump_station": "contributed",
     "entry": "osm",
-    "fee": "contributed"
+    "fee": "contributed",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 190
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Carnarvon Highway"
+    },
+    "operator": "Maranoa Regional Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCDZWTN4XWSG5CFA3A2E",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

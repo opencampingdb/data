@@ -1,12 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1192",
       "street": "Paterson Street"
-    }
+    },
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Paterson Street"
+    },
+    "operator": "Mobil"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ0PS1GBY45SHAZF4DJY",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

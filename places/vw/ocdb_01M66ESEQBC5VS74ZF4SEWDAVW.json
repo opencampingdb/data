@@ -10,6 +10,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "pets": "community_report",
     "power": "osm",
     "showers": "osm",
@@ -23,6 +25,11 @@
     "entry": "public",
     "fee": false,
     "max_stay": "48h",
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Barton Avenue"
+    },
+    "operator": "Lithgow City Council",
     "pets": "yes",
     "power": false,
     "showers": true,
@@ -45,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -8,6 +8,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -27,6 +29,11 @@
     "entry": "customers",
     "fee": true,
     "max_stay": "3d",
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Dukes Highway"
+    },
+    "operator": "Tatiara Council",
     "power": false,
     "showers": false,
     "tents": true,
@@ -51,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,13 @@
       "street": "High Street"
     },
     "facebook": "https://facebook.com/campbellsautos",
+    "nearest_boat_ramp": {
+      "distance_m": 3180
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "High Street"
+    },
     "opening_hours": "Mo-Fr 08:00-17:00",
     "phone": "+61 2 6585 3017"
   },
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

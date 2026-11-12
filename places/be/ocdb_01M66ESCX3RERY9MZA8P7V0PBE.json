@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Peats Ridge Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCX3RERY9MZA8P7V0PBE",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,10 +17,22 @@
       "street": "Commercial Road",
       "suburb": "Newstead"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
     "nearest_beach": {
       "distance_m": 2500
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1240
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Commercial Road"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "phone": "+61 7 3252 4131",
     "website": "https://map.bp.com/en-AU/AU/gas-station/newstead/bp-newstead/1421"
   },
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

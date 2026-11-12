@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -17,7 +20,15 @@
       "distance_m": 810,
       "name": "Grange Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 910
+    },
+    "nearest_major_road": {
+      "distance_m": 460,
+      "name": "Grange Road"
+    },
     "opening_hours": "Su 10:00-04:00",
+    "operator": "City Of Charles Sturt",
     "phone": "+61 8 8356 8185",
     "website": "https://www.charlessturtmuseum.com.au/"
   },
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

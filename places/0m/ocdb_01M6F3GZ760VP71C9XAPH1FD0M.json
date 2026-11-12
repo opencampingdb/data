@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "107",
       "street": "Beardy Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Marsh Street"
     },
     "wheelchair": true
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

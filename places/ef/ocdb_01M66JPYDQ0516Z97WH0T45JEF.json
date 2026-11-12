@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -13,6 +16,16 @@
       "state": "QLD",
       "street": "Hutton Street",
       "suburb": "Injune"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Hutton Street"
     },
     "opening_hours": "Mo-Su 05:00-20:00",
     "phone": "+61 7 4626 1369",
@@ -35,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

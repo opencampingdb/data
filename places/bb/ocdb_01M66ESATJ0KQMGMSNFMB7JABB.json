@@ -1,11 +1,16 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "postcode": "6258",
       "street": "Perup Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Perup Road"
     }
   },
   "group": "utility",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

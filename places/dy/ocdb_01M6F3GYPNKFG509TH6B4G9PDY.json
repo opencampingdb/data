@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,15 @@
       "state": "NT",
       "street": "Paterson Street",
       "suburb": "Tennant Creek"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4270
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Paterson Street"
+    },
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GYPNKFG509TH6B4G9PDY",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

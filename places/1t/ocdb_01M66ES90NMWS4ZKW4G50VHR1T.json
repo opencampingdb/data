@@ -3,10 +3,15 @@
     "fee": "2026-02-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "High Street"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES90NMWS4ZKW4G50VHR1T",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

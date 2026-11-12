@@ -2,9 +2,12 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -19,9 +22,15 @@
       "suburb": "Pilliga"
     },
     "caravans": true,
+    "charge": "5.00 AUD/night",
     "entry": "customers",
     "fee": true,
     "max_stay": "4d",
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Pilliga Road"
+    },
+    "operator": "Narrabri Shire Council",
     "power": false,
     "showers": true,
     "tents": true,
@@ -43,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

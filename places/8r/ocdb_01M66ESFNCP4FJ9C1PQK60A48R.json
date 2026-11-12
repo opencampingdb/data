@@ -1,11 +1,20 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Pacific Motorway"
+    },
     "opening_hours": "24/7",
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": true
   },
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

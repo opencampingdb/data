@@ -3,10 +3,15 @@
     "fee": "2025-10-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "William Creek Road"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA34XQX4MF623PA2MVH3",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

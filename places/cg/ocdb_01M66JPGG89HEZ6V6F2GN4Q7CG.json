@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Barclay Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPGG89HEZ6V6F2GN4Q7CG",
   "kind": "fuel",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 3770
+    },
+    "nearest_major_road": {
+      "distance_m": 370,
+      "name": "Lyell Highway"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6VRSJEYYH01RCWYPKJ3WA26",
   "kind": "campground",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-07T19:46:54Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

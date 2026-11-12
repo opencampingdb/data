@@ -1,14 +1,29 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "473",
       "street": "Upper Heidelberg Road"
     },
-    "opening_hours": "Mo-Su 06:00-24:00"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Upper Heidelberg Road"
+    },
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "Dayef"
   },
   "group": "services",
   "id": "ocdb_01M66JPW6D8HVZ2PS5S74VSNM3",
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Plenty Road"
+    },
+    "operator": "Funfields"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPXTFBN992XEP7R0W03EQ",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

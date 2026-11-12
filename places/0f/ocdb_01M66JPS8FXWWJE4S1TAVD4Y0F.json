@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "wheelchair": "osm",
@@ -15,9 +17,14 @@
       "street": "Lewis Avenue",
       "suburb": "Seven Mile Beach"
     },
+    "air": false,
     "nearest_beach": {
       "distance_m": 90,
       "name": "Seven Mile Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3150,
+      "name": "Beach Launch"
     },
     "opening_hours": "Mo-Su 07:00-18:30",
     "phone": "+61 3 6248 6403",
@@ -40,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

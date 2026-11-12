@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -12,6 +14,13 @@
       "state": "QLD",
       "street": "Cambridge Street",
       "suburb": "Mitchell"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2720
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Cambridge Street"
     },
     "phone": "+61 7 3180 2170",
     "website": "https://www.cambridgemotel.com.au",
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

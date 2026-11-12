@@ -1,6 +1,31 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6359",
+      "state": "WA",
+      "street": "Marshall Street",
+      "suburb": "Hyden"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Marshall Street"
+    },
+    "opening_hours": "6:00am - 8:30pm",
+    "phone": "+61 8 9880 5068"
+  },
   "group": "services",
   "id": "ocdb_01M66JP3ZTEJ0SQZ6Y1XP05684",
   "kind": "fuel",
@@ -8,14 +33,14 @@
     "lat": -32.448325,
     "lon": 118.867498
   },
-  "name": "Liberty",
+  "name": "Hyden Travel Stop",
   "osm": {
     "id": 2305894979,
-    "timestamp": "2025-11-15T10:39:54Z",
+    "timestamp": "2026-11-11T06:17:04Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

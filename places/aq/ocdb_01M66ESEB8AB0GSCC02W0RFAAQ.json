@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +12,12 @@
     "nearest_beach": {
       "distance_m": 4290,
       "name": "90 Mile Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3370,
+      "name": "Metung Boat Ramp"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEB8AB0GSCC02W0RFAAQ",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

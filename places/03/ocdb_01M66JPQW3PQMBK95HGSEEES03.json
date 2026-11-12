@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "street": "Monkey Rock Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 350,
+      "name": "South Coast Highway"
     },
     "opening_hours": "24/7"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

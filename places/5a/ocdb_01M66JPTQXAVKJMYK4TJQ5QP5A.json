@@ -1,12 +1,23 @@
 {
   "fact_sources": {
+    "fuel": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuel": true,
     "nearest_beach": {
       "distance_m": 1240,
       "name": "Edward Street Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1980
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bay Road"
     },
     "website": "https://www.7eleven.com.au/"
   },
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

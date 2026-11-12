@@ -1,13 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "11",
       "postcode": "3047",
       "street": "Nicholas Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Pascoe Vale Road"
+    },
+    "operator": "Robert Petrovski"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW63R7F1MBFPVMQTFDGM",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

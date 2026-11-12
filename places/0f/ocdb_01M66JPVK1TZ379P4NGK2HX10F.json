@@ -1,11 +1,26 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "fuels": [
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1060
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 950
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Princes Highway"
+    },
+    "operator": "Shell"
   },
   "group": "services",
   "id": "ocdb_01M66JPVK1TZ379P4NGK2HX10F",
@@ -23,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

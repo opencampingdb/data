@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,12 @@
       "street": "Donna Buang Road"
     },
     "caravans": false,
-    "entry": "customers"
+    "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Donna Buang Road"
+    },
+    "operator": "Scouts Victoria"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG864G7M5S7TRY6XXZ3R",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

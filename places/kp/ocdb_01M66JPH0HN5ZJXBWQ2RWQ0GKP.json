@@ -1,11 +1,21 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Tanawha Tourist Drive"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Tanawha Tourist Drive"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/tanawha/bp-tanawha/7381"
   },
@@ -25,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

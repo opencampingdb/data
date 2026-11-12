@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "wifi": "osm"
   },
@@ -11,6 +13,14 @@
       "state": "QLD",
       "street": "Downs Street",
       "suburb": "North Ipswich"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 590,
+      "name": "North Ipswich Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Downs Street"
     },
     "phone": "+61 7 3281 4200",
     "wifi": true
@@ -37,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

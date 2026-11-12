@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +15,12 @@
       "street": "High Street",
       "suburb": "Reservoir"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "High Street"
+    },
     "opening_hours": "Mo-Fr 07:30-17:00; Sa 07:30-12:00; Su off",
+    "operator": "High Street Car Care",
     "phone": "+61 3 9460 3017",
     "website": "https://highstcarcare.business.site/"
   },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

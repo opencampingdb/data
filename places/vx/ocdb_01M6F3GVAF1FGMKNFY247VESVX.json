@@ -1,6 +1,18 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 2680,
+      "name": "Bass Landing Boat ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 190,
+      "name": "Bass Highway"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M6F3GVAF1FGMKNFY247VESVX",
   "kind": "food_and_drink",
@@ -17,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

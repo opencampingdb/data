@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "bins": "osm",
+    "booking_required": "osm",
     "cabins": "osm",
     "campfires": "osm",
     "caravans": "osm",
@@ -8,6 +10,7 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "nudist": "osm",
     "picnic_tables": "osm",
     "power": "osm",
@@ -21,6 +24,8 @@
     "address": {
       "street": "Carricks Road"
     },
+    "bins": false,
+    "booking_required": true,
     "cabins": false,
     "campfires": false,
     "caravans": true,
@@ -28,6 +33,10 @@
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 310,
+      "name": "Springbrook Road"
+    },
     "nudist": false,
     "picnic_tables": true,
     "power": false,
@@ -53,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/61573889572927/"
+    "facebook": "https://www.facebook.com/61573889572927/",
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Hume Freeway"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ1GG433T8ST3JN5T919",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -13,6 +15,13 @@
     },
     "nearest_beach": {
       "distance_m": 2710
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2650
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Cranbourne Road"
     },
     "opening_hours": "Mo-Tu 09:00-00:00; We-Th 09:00-01:00; Fr-Sa 09:00-02:00; Su 10:00-23:00",
     "phone": "+61 3 8792 4400",
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,7 +3,9 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -11,7 +13,11 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 80
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3180
+    },
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAS7501M2FD21XF4VX81",
@@ -29,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

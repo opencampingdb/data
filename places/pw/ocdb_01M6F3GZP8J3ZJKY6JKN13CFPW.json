@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 4480,
       "name": "Cutlers Beach"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "B460;92"
+    },
+    "operator": "Wonthaggi Workmens Club"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZP8J3ZJKY6JKN13CFPW",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

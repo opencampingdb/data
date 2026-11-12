@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,8 +14,20 @@
       "street": "Progress Drive",
       "suburb": "Nightcliff"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 560
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1420
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Progress Drive"
     }
   },
   "group": "services",
@@ -31,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

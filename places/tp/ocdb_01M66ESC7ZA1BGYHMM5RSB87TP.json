@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,13 @@
       "street": "Civic Avenue"
     },
     "email": "enquiries@cmca.net.au",
+    "nearest_boat_ramp": {
+      "distance_m": 1380
+    },
+    "nearest_major_road": {
+      "distance_m": 400,
+      "name": "Maryborough Street"
+    },
     "website": "http://www.CMCA.net.au"
   },
   "group": "overnight",
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

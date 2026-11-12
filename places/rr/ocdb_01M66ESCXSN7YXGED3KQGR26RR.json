@@ -7,7 +7,9 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "dump_station": true,
@@ -16,7 +18,12 @@
     "nearest_beach": {
       "distance_m": 4330
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bruce Highway"
+    },
+    "opening_hours": "24/7",
+    "operator": "Mackay Regional Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCXSN7YXGED3KQGR26RR",
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,11 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "website": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 830
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Dreamworld Parkway"
+    },
+    "operator": "City of Gold Coast",
+    "toilet_type": "flush",
     "website": "https://www.goldcoast.qld.gov.au/thegoldcoast/viney-park-27549.html"
   },
   "group": "utility",
@@ -25,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

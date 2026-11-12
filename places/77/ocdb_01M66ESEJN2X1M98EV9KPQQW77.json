@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "caravans": "osm"
+    "caravans": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
-    "caravans": true
+    "caravans": true,
+    "nearest_boat_ramp": {
+      "distance_m": 230
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEJN2X1M98EV9KPQQW77",
@@ -21,5 +25,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

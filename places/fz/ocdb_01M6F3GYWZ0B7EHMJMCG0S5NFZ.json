@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,13 @@
     "address": {
       "housenumber": "39",
       "street": "George Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1740
+    },
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Port Road"
     },
     "opening_hours": "Mo,We-Fr 15:00-22:00; Sa 08:00-23:00; Su 14:00-21:00; Mo-Fr 11:00-00:00; Sa 12:00-00:00, Su 12:00-21:00",
     "phone": "+61 8 8443 4546",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -15,6 +18,14 @@
     "nearest_beach": {
       "distance_m": 1720
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2240
+    },
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Pacific Highway"
+    },
+    "operator": "NSW Health, Northern Sydney Local Health District",
     "phone": "+61 2 9926 7111",
     "website": "https://www.nslhd.health.nsw.gov.au/RNSH/Pages/default.aspx",
     "wifi": true
@@ -35,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

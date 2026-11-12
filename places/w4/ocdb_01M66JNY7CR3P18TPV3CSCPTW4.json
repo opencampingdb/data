@@ -1,8 +1,13 @@
 {
   "fact_sources": {
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Main Street"
+    },
     "opening_hours": "Mo-Fr 09:00-17:00,Sa-Su 09:00-15:00,PH 09:00-15:00; Apr Su[1]-Oct Su[1] -1 day Mo-Fr 09:00-16:00,Sa-Su 09:00-13:00,PH 09:00-13:00"
   },
   "group": "services",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

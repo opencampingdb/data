@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,7 +15,15 @@
     "nearest_beach": {
       "distance_m": 4200
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4790
+    },
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Verran Terrace"
+    },
     "opening_hours": "We,Sa,Su 13:30-16:00; SH Mo-Su 13:30-16:00",
+    "operator": "National Trust",
     "website": "https://www.nationaltrust.org.au/places/moonta-miners-cottage-and-heritage-garden/"
   },
   "group": "attraction",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

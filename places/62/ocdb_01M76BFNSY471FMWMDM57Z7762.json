@@ -1,10 +1,21 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "hot_water": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 80
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 760
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Great Ocean Road"
     }
   },
   "group": "utility",
@@ -23,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

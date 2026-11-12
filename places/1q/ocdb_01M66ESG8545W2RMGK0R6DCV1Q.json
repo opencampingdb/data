@@ -10,9 +10,12 @@
     "access": "contributed",
     "camper_trailers": "contributed",
     "caravans": "osm",
+    "charge": "osm",
     "email": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "contributed",
     "tents": "osm",
     "website": "contributed"
@@ -21,9 +24,15 @@
     "access": "2wd",
     "camper_trailers": true,
     "caravans": true,
+    "charge": "6 AUD",
     "email": "srvc@environment.nsw.gov.au",
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 480,
+      "name": "Alpine Way"
+    },
+    "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 6450 5600",
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/thredbo-diggings-campground"
@@ -44,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

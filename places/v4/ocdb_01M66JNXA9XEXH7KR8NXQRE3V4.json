@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +12,14 @@
       "housenumber": "257",
       "street": "Yulara Drive"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "opening_hours": "Mo-Su 07:00-20:00",
+    "operator": "Shell",
     "phone": "+61 8 8956 2229"
   },
   "group": "services",
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

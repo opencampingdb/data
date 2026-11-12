@@ -1,12 +1,22 @@
 {
   "fact_sources": {
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "email": "enquiries@lakestclairlodge.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 490,
+      "name": "Cynthia Bay Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Lake St Clair Road"
+    },
     "phone": "+61 3 6289 1137",
     "website": "https://www.lakestclairpark.com.au/",
     "wheelchair": true
@@ -27,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

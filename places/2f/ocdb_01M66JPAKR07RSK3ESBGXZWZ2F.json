@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "email": "osm",
     "facebook": "osm",
+    "fuels": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "wheelchair": "osm"
@@ -13,8 +15,14 @@
       "street": "Beardy Street",
       "unit": "1"
     },
+    "air": true,
     "email": "beardystreetservo@gmail.com",
     "facebook": "https://www.facebook.com/people/The-Beardy-Street-Servo/100063717545435/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "opening_hours": "Mo-Fr 07:00-18:00; Sa,Su 07:00-13:00",
     "phone": "+61 2 6772 9355",
     "wheelchair": true
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

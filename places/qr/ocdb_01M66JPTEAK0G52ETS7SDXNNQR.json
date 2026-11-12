@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -11,6 +14,14 @@
       "street": "Punt Road",
       "suburb": "Barham"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4320
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Gonn Street"
+    },
+    "operator": "Services NSW",
     "phone": "+61 3 5453 1000",
     "website": "https://www.service.nsw.gov.au/nswgovdirectory/barham-koondrook-soldiers-memorial-hospital",
     "wheelchair": true
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

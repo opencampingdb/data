@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -9,6 +12,17 @@
     "address": {
       "housenumber": "89-93",
       "street": "Beardy Street"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Marsh Street"
     },
     "opening_hours": "Mo-Fr 06:00-20:00; Sa 07:00-20:00; Su 08:00-19:00",
     "website": "https://www.shell.com.au/",
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

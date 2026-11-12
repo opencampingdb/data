@@ -1,6 +1,22 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 4680,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "High Street"
+    },
+    "operator": "7-Eleven"
+  },
   "group": "services",
   "id": "ocdb_01M66JPY0Q7PBRN4GBP460BP9F",
   "kind": "fuel",
@@ -17,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,12 @@
       "street": "South Road",
       "suburb": "St Marys"
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "South Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPTFZ5HK8RG43H6VW9EMK",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

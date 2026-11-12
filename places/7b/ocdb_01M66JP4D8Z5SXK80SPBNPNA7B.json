@@ -1,9 +1,26 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "24/7"
+    "air": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Windsor Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JP4D8Z5SXK80SPBNPNA7B",
@@ -21,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

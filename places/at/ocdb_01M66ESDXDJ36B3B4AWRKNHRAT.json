@@ -2,7 +2,11 @@
   "fact_sources": {
     "entry": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,7 +15,16 @@
       "distance_m": 120,
       "name": "Golden Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1040
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Landsborough Parade"
+    },
     "opening_hours": "Su-Th 07:00-20:00; Fr-Sa 07:00-21:00",
+    "operator": "Ramada",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -30,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

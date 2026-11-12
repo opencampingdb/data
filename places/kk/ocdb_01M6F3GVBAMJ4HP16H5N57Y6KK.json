@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +10,12 @@
       "postcode": "2820",
       "state": "NSW",
       "street": "Lee Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Lee Street"
+    },
+    "operator": "TAB"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVBAMJ4HP16H5N57Y6KK",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

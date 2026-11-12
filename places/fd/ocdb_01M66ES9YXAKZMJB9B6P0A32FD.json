@@ -1,17 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Box",
     "drinking_water": false,
     "entry": "public",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2280
+    },
     "tents": true,
     "toilets": true
   },
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

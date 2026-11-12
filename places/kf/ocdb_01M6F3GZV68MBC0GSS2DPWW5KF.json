@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,13 @@
     "address": {
       "housenumber": "110-116",
       "street": "Murray Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1120
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Murray Street"
     },
     "phone": "+61 3 5231 5644",
     "website": "https://unioncolac.com.au"
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

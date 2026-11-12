@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -21,6 +23,11 @@
     "caravans": true,
     "entry": "customers",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "William Street"
+    },
+    "operator": "Hebel Hotel",
     "phone": "+61 7 4625 0920",
     "power": false,
     "showers": true,
@@ -43,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

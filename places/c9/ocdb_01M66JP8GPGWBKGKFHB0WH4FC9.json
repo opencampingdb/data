@@ -3,6 +3,7 @@
     "address": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -14,6 +15,10 @@
     "fee": true,
     "nearest_beach": {
       "distance_m": 1350
+    },
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Raglan Street"
     },
     "opening_hours": "Mo-Su 10:00-16:00",
     "website": "https://conventgallery.com.au/"
@@ -34,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,11 +2,22 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
+    "hot_water": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2300
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Leichhardt Highway"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -25,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

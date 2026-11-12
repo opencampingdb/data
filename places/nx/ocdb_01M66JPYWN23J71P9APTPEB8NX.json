@@ -2,6 +2,8 @@
   "fact_sources": {
     "facebook": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,13 @@
     "facebook": "https://facebook.com/geelongcollisioncare",
     "nearest_beach": {
       "distance_m": 1560
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1100
+    },
+    "nearest_major_road": {
+      "distance_m": 300,
+      "name": "Douro Street"
     },
     "phone": "+61 3 5272 1897",
     "website": "https://collisioncare.com.au/geelong-collision-care"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

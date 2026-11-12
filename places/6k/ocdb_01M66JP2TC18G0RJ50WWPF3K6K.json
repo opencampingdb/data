@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,11 @@
       "street": "Elder Terrace",
       "suburb": "Hawker"
     },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Flinders Ranges Way"
+    },
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/hawker/bp-hawker/6828"
   },
   "group": "services",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

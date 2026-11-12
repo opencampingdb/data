@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "SA",
       "street": "Railway Terrace",
       "suburb": "Quorn"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Sixth Street"
+    },
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GYT8N17213KNM3TQ7ZA6",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

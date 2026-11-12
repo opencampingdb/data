@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "street": "New Line Road"
     },
     "caravans": true,
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "New Line Road"
+    },
+    "operator": "Top Holiday Parks",
     "tents": true
   },
   "group": "overnight",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

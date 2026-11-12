@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Telford Avenue"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Telford Avenue"
     },
     "phone": "+61 438 380 100"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

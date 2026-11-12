@@ -3,6 +3,9 @@
     "address": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -19,6 +22,15 @@
     },
     "dump_station": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 190,
+      "name": "Owen Bridges Reserve Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Corowa Road"
+    },
+    "operator": "big4, nrma",
     "phone": "+61 3 5743 2888",
     "power": true,
     "website": "https://www.nrmaparksandresorts.com.au/yarrawonga-mulwala/",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

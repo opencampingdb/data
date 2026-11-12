@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -10,8 +13,22 @@
       "housenumber": "459-461",
       "street": "Pacific Highway"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2510
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2510,
+      "name": "Gosford City Park Dane Drv Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Mann Street"
     },
     "opening_hours": "Mo-Su 06:00-21:00",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-wyoming"
@@ -32,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

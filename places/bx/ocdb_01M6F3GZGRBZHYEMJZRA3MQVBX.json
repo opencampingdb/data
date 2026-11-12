@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +12,10 @@
       "state": "TAS",
       "street": "Main Street",
       "suburb": "Cressy"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
     },
     "opening_hours": "Mo-Fr 11:00-24:00,Su 12:00-21:00",
     "phone": "+61 3 6397 6282"
@@ -31,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

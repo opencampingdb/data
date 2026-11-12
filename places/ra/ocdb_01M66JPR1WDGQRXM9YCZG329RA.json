@@ -1,6 +1,13 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Old Bruce Highway"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPR1WDGQRXM9YCZG329RA",
   "kind": "fuel",
@@ -8,14 +15,14 @@
     "lat": -26.181562,
     "lon": 152.65207
   },
-  "name": "Mobil",
+  "name": "Atlas Fuel",
   "osm": {
     "id": 17616515,
-    "timestamp": "2024-05-20T23:52:49Z",
+    "timestamp": "2026-11-11T11:17:39Z",
     "type": "relation",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

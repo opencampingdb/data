@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "High Street",
       "suburb": "Wedderburn"
     },
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "High Street"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZM5MYJK0XAZPTTCEYSX",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

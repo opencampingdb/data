@@ -2,14 +2,25 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": false,
     "nearest_beach": {
       "distance_m": 280
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 550
+    },
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Hogbin Drive North"
+    },
+    "operator": "Big 4 Park Beach Holiday Park"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDANJV4Y6Q2M3VZM459Z",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

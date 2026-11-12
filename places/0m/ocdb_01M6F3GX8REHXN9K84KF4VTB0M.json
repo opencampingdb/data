@@ -1,13 +1,20 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "bins": false,
     "entry": "public",
     "nearest_beach": {
       "distance_m": 3250,
       "name": "Sandy Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Bruce Highway"
     }
   },
   "group": "utility",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,10 +15,18 @@
       "housenumber": "164",
       "street": "Main Street"
     },
+    "car_wash": true,
     "nearest_beach": {
       "distance_m": 1880
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3630
+    },
+    "nearest_major_road": {
+      "distance_m": 50
+    },
     "opening_hours": "Mo-Su 05:00-21:00",
+    "operator": "BP",
     "phone": "+61 7 4150 0963",
     "website": "https://map.bp.com/en-AU/AU/gas-station/pialba/bp-bay-city/9039"
   },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

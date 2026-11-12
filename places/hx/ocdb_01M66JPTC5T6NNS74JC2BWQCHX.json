@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "air": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,10 +15,19 @@
       "street": "Pittwater Road",
       "suburb": "Manly"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 140,
       "name": "North Steyne Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 830
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Pittwater Road"
+    },
+    "operator": "Caltex"
   },
   "group": "services",
   "id": "ocdb_01M66JPTC5T6NNS74JC2BWQCHX",
@@ -32,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

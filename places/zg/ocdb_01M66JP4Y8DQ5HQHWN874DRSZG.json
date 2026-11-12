@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "distance_m": 2820,
       "name": "Hartfield Beach"
     },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "McDowell Street"
+    },
+    "operator": "BP & Reliance",
     "website": "https://map.bp.com/en-AU/AU/gas-station/kewdale/bp-kewdale/2498"
   },
   "group": "services",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

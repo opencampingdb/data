@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "campfires": "osm",
+    "nearest_boat_ramp": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
     "campfires": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1220,
+      "name": "Scotts Peak Boat Ramp"
+    },
     "picnic_tables": true,
     "toilets": true
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

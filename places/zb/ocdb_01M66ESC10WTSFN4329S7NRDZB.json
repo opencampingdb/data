@@ -1,12 +1,18 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 3600,
       "name": "Picnic Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 40
+    },
+    "operator": "Public Toilet"
   },
   "group": "utility",
   "id": "ocdb_01M66ESC10WTSFN4329S7NRDZB",
@@ -24,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

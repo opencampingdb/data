@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,13 @@
       "state": "QLD",
       "street": "Mount Lindesay Highway",
       "suburb": "Tamrookum"
+    },
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mount Lindesay Highway"
     },
     "opening_hours": "Mo-Su 05:30-19:00",
     "phone": "+61 7 5544 2230"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

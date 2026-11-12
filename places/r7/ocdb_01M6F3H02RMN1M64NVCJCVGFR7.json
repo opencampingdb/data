@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "wifi": "osm"
   },
@@ -9,6 +12,14 @@
       "housenumber": "154",
       "street": "Anzac Highway"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4860
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Anzac Highway"
+    },
+    "operator": "ASL",
     "phone": "+61 439 858 332",
     "wifi": true
   },
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

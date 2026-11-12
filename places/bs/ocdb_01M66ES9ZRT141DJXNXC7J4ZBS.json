@@ -3,10 +3,15 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "dump_station": true
+    "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Eyre Developmental Road"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9ZRT141DJXNXC7J4ZBS",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

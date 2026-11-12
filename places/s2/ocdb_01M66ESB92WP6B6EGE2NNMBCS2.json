@@ -4,6 +4,7 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -14,6 +15,10 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Armidale Road"
+    },
     "tents": true,
     "toilets": false
   },
@@ -33,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +12,13 @@
       "state": "NSW",
       "street": "Fotherby Park",
       "suburb": "Wentworth"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 170
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Silver City Highway"
     },
     "phone": "+61 3 5027 5080",
     "website": "http://www.murrayriver.com.au/ps-ruby-wentworth-inc-1241/"
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

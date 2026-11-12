@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm"
   },
   "facts": {
     "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Youngman Street"
+    },
     "phone": "+61 7 4162 5037",
     "power": true,
     "website": "https://www.facebook.com/Kingaroy-Showgrounds-Caravan-Park-1653299151636250/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

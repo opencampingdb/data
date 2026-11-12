@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,12 @@
     "address": {
       "housenumber": "120-200",
       "street": "Rosamond Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1300
+    },
+    "nearest_major_road": {
+      "distance_m": 260
     },
     "opening_hours": "Su 10:00-17:00; Mo-We 09:00-17:30; Th-Fr 09:00-21:00; Sa 09:00-18:00",
     "phone": "+61 3 9318 1699",
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

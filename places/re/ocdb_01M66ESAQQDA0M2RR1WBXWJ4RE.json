@@ -2,7 +2,9 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -10,7 +12,11 @@
     "nearest_beach": {
       "distance_m": 40,
       "name": "Honeymoon Bay Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 140
+    },
+    "toilet_type": "dry"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAQQDA0M2RR1WBXWJ4RE",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,12 +2,21 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "opening_hours": "osm"
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "opening_hours": "24/7"
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Bell Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "South Burnett Regional Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESB1A1B02BZTXRDK54TVR",
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,17 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "nearest_boat_ramp": {
+      "distance_m": 2650
+    },
+    "nearest_major_road": {
+      "distance_m": 270
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66JPX0S028FYET23T661J11",
@@ -21,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

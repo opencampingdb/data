@@ -1,13 +1,18 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "fee": true,
     "nearest_beach": {
       "distance_m": 1340,
       "name": "Canoe Club Boat Launch Site"
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Peter Ross-Edwards Causeway"
     }
   },
   "group": "attraction",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

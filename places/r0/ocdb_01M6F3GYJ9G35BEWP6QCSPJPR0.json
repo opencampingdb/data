@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,9 +16,17 @@
       "street": "Upper Fort Street",
       "suburb": "Millers Point"
     },
+    "booking_required": true,
     "fee": true,
     "nearest_beach": {
       "distance_m": 1030
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 740
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Cahill Expressway"
     },
     "website": "https://powerhouse.com.au/visit/sydney-observatory"
   },
@@ -29,11 +40,11 @@
   "name": "Sydney Observatory",
   "osm": {
     "id": 55218511,
-    "timestamp": "2026-11-09T05:53:54Z",
+    "timestamp": "2026-11-11T00:38:45Z",
     "type": "way",
-    "version": 10
+    "version": 11
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

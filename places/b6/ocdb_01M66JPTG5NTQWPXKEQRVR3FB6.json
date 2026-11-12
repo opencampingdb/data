@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,9 +11,14 @@
       "housenumber": "103-107",
       "street": "McKenzie Street"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 4730,
       "name": "Baxters Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "McKenzie Street"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/wonthaggi/bp-wonthaggi/6980"
   },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

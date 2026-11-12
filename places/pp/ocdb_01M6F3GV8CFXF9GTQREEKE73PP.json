@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +9,10 @@
     "address": {
       "housenumber": "101",
       "street": "Commercial Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Commercial Road"
     },
     "phone": "+61 3 5565 8201",
     "website": "https://mickeybourkes.com.au/"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

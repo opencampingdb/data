@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,7 +12,17 @@
       "housenumber": "220-224",
       "street": "Kensington Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Kensington Road"
+    },
     "opening_hours": "Mo-Fr 06:00-23:00; Sa 07:00-23:00; Su 07:00-21:00",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/"
   },
   "group": "services",
@@ -28,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

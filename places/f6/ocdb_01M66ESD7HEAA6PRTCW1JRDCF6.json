@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -13,6 +15,11 @@
       "suburb": "Coolah"
     },
     "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Binnia Street"
+    },
+    "toilet_type": "flush",
     "wheelchair": false
   },
   "group": "utility",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

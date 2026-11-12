@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -15,6 +18,16 @@
       "suburb": "Stanthorpe"
     },
     "email": "info@faveromotors.com.au",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "High Street"
+    },
+    "operator": "Favero Motors",
     "phone": "+61 7 4681 1194",
     "toilets": true,
     "website": "https://map.bp.com/en-AU/AU/gas-station/stanthorpe/bp-favero-motors/0812"
@@ -35,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

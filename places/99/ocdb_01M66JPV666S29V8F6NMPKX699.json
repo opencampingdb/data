@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,6 +17,14 @@
     "nearest_beach": {
       "distance_m": 80
     },
+    "nearest_boat_ramp": {
+      "distance_m": 950
+    },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Sea World Drive"
+    },
+    "operator": "Village Roadshow Theme Parks",
     "website": "https://seaworld.com.au/adventures/cruises/summer-day-cruise.aspx"
   },
   "group": "transport",
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

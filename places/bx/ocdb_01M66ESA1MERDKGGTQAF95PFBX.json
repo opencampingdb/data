@@ -5,6 +5,9 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +19,14 @@
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 690
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Yang Yang Street"
+    },
+    "operator": "Post Office Hotel / Maude Pub",
     "power": true,
     "showers": true,
     "tents": true,
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

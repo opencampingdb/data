@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -14,6 +16,14 @@
     },
     "nearest_beach": {
       "distance_m": 270
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 230,
+      "name": "Batavia Coast"
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Foreshore Drive"
     },
     "opening_hours": "Mo-Su 09:30-15:00",
     "website": "https://www.museum.wa.gov.au/museums/geraldton"
@@ -34,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,8 +4,11 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -20,8 +23,14 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Great Western Highway"
+    },
     "opening_hours": "Mo-Su 07:00-17:00",
+    "operator": "Blue Mountains City Council",
     "showers": false,
+    "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/47251",
     "wheelchair": true
   },
@@ -41,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

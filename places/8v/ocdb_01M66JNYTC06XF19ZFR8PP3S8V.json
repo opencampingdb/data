@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -15,7 +17,12 @@
       "distance_m": 2920,
       "name": "Maslin Beach"
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Port Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JNYTC06XF19ZFR8PP3S8V",
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

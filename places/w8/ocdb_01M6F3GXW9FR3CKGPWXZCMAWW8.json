@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,8 +16,14 @@
       "street": "Friday Drive",
       "suburb": "Thredbo"
     },
+    "charge": "'Gold Coin'",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Alpine Way"
+    },
     "opening_hours": "Jul-Sep Tu-Su 13:00-17:00; Oct,Feb-Apr PH,Sa-Su 13:00-17:00; Dec 26-Jan 26 12:00-16:00",
+    "operator": "Thredbo Historical Society",
     "phone": "+61 2 9449 7610",
     "website": "https://www.thredboalpinemuseum.org.au/"
   },
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

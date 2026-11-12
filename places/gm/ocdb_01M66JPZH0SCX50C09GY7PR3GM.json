@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,16 @@
       "street": "Main Street",
       "suburb": "Pentland"
     },
-    "facebook": "https://www.facebook.com/p/The-Servo-Pentland-61557539597511/"
+    "facebook": "https://www.facebook.com/p/The-Servo-Pentland-61557539597511/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Main Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPZH0SCX50C09GY7PR3GM",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

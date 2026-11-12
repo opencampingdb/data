@@ -2,13 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3470
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Warrego Highway"
+    },
     "opening_hours": "24/7",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

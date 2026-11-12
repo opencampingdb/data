@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +13,14 @@
       "state": "TAS",
       "street": "High Street",
       "suburb": "Campbell Town"
+    },
+    "air": true,
+    "fuels": [
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "High Street"
     },
     "phone": "+61 3 6381 1066"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

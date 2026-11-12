@@ -1,9 +1,18 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "fuels": [
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Dukes Highway"
+    },
     "phone": "+61 8 8757 2098",
     "toilets": true
   },
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

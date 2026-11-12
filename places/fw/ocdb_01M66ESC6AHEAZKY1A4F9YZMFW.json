@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Maleny Kenilworth Road"
+    },
+    "wheelchair": true
+  },
   "group": "utility",
   "id": "ocdb_01M66ESC6AHEAZKY1A4F9YZMFW",
   "kind": "public_toilet",
@@ -11,11 +22,11 @@
   "name": null,
   "osm": {
     "id": 7774932215,
-    "timestamp": "2020-08-01T05:46:32Z",
+    "timestamp": "2026-11-10T23:10:36Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

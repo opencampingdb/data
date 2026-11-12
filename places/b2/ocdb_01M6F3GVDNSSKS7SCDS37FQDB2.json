@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,6 +16,13 @@
     "nearest_beach": {
       "distance_m": 240,
       "name": "Merimbula Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 490
+    },
+    "nearest_major_road": {
+      "distance_m": 430,
+      "name": "Market Street"
     },
     "website": "http://www.mermaidunits.com/"
   },
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

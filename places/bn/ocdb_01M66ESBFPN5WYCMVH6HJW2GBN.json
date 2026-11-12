@@ -1,13 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 60,
       "name": "Boomerang Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1780
     }
   },
   "group": "utility",
@@ -26,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

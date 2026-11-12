@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,15 @@
       "street": "Fernvale Road",
       "suburb": "Brassall"
     },
-    "opening_hours": "Mo-Su 10:00-24:30"
+    "nearest_boat_ramp": {
+      "distance_m": 1780
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Fernvale Road"
+    },
+    "opening_hours": "Mo-Su 10:00-24:30",
+    "operator": "Australian Venue Co."
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ1JBPEEK6H048X5X9R2",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

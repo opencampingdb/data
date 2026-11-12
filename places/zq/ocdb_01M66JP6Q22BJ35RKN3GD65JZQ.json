@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Henty Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JP6Q22BJ35RKN3GD65JZQ",
   "kind": "fuel",
@@ -8,14 +21,14 @@
     "lat": -37.583391,
     "lon": 141.407976
   },
-  "name": null,
+  "name": "Casterton Farm Supplies",
   "osm": {
     "id": 3790958315,
-    "timestamp": "2015-10-18T03:23:45Z",
+    "timestamp": "2026-11-11T19:49:22Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

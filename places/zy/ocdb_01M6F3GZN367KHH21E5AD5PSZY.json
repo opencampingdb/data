@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +10,10 @@
     "address": {
       "housenumber": "1",
       "street": "Nicklin Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Chevallum Road"
     },
     "opening_hours": "Tu,Su 15:00-20:00, We,Th 15:00-21:00, Fr 12:00-23:00, Sa 15:00-23:00",
     "phone": "+61 7 5445 9190",
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +13,20 @@
       "housenumber": "9",
       "street": "Perkins Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3680
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Mansfield - Woods Point Road"
+    },
     "opening_hours": "08:00-18:00",
+    "operator": "Jamieson River Automotives",
     "phone": "+61 3 5777 0622"
   },
   "group": "services",
@@ -28,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

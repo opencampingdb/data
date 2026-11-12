@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Flinders Highway"
+    },
     "showers": true,
     "toilets": true
   },
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

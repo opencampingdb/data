@@ -1,17 +1,25 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
     "caravans": true,
     "entry": "public",
     "fee": false,
     "max_stay": "14d",
+    "nearest_boat_ramp": {
+      "distance_m": 330
+    },
+    "operator": "Gondiwindi Regional Council",
     "tents": true,
     "toilets": false
   },
@@ -31,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

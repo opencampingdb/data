@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -10,6 +13,19 @@
     "address": {
       "housenumber": "10783",
       "street": "Warrego Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Warrego Highway"
     },
     "opening_hours": "24/7",
     "phone": "+61 7 4512 6933",
@@ -32,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

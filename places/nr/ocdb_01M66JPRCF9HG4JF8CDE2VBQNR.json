@@ -1,8 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,11 +18,25 @@
       "street": "Ormond Road",
       "suburb": "East Geelong"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1330,
       "name": "Eastern Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1890,
+      "name": "Limeburners Point"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Ormond Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Apco Service Stations Pty Ltd",
     "phone": "+61 3 5221 5508",
     "website": "http://www.apco.com.au/"
   },
@@ -37,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

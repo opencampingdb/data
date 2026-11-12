@@ -3,6 +3,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -11,6 +13,11 @@
     "caravans": true,
     "dump_station": true,
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Clermont Alpha Road"
+    },
+    "operator": "Barcaldine Regional Council",
     "showers": true,
     "tents": true,
     "toilets": true
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

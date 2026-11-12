@@ -1,15 +1,30 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "13-15",
       "street": "Searipple Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1740
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4630
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Searipple Road"
     }
   },
   "group": "services",
@@ -28,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -17,7 +20,15 @@
     "nearest_beach": {
       "distance_m": 2830
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3000
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Enmore Road"
+    },
     "opening_hours": "Mo-Su 12:00-19:00",
+    "operator": "Young Henry's",
     "phone": "+61 2 9519 0048",
     "website": "https://younghenrys.com/"
   },
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

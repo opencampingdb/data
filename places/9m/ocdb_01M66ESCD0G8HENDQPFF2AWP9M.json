@@ -7,13 +7,20 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
-    "opening_hours": "contributed"
+    "nearest_major_road": "osm",
+    "opening_hours": "contributed",
+    "operator": "osm"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
     "fee": false,
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 250,
+      "name": "Chinchilla-Tara Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "Western Downs Regional Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCD0G8HENDQPFF2AWP9M",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

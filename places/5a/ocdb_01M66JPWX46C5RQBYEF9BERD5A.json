@@ -1,11 +1,15 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 970
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPWX46C5RQBYEF9BERD5A",
@@ -23,5 +27,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

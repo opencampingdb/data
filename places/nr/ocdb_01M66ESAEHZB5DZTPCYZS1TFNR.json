@@ -3,7 +3,9 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -11,7 +13,12 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 4730
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Meeniyan - Promontory Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAEHZB5DZTPCYZS1TFNR",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

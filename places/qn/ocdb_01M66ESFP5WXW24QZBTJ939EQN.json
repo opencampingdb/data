@@ -1,13 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "street": "Waterfall Creek Road"
     },
-    "entry": "customers"
+    "entry": "customers",
+    "nearest_boat_ramp": {
+      "distance_m": 4890
+    },
+    "operator": "Mount Barney Wilderness Retreat"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFP5WXW24QZBTJ939EQN",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,20 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2720
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "King Street"
+    },
     "opening_hours": "Mo-Su 05:00-22:00",
     "website": "https://map.bp.com/en-AU/AU/gas-station/warners-bay/bp-warners-bay/9065"
   },
@@ -23,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

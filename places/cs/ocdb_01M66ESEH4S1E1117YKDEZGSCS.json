@@ -2,8 +2,11 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -15,8 +18,14 @@
       "suburb": "Aramac"
     },
     "caravans": true,
+    "charge": "$5/n",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 400,
+      "name": "Lodge Street"
+    },
+    "operator": "Aramac Hotel",
     "phone": "+61 7 4651 3378"
   },
   "group": "overnight",
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

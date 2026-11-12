@@ -3,6 +3,8 @@
     "address": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,6 +17,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 820
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1750
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Merri Street"
     },
     "opening_hours": "Mo-Fr 10:00-17:00; Sa-Su 10:00-15:00",
     "phone": "+61 3 5559 4949",
@@ -36,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

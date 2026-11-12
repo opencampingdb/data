@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "hot_water": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "hot_water": false,
+    "nearest_boat_ramp": {
+      "distance_m": 100
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Sturt Highway"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESCTD4B1B8GN63EXZYESK",
   "kind": "public_shower",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -14,9 +18,22 @@
       "street": "Lodge Road",
       "suburb": "Kalinga"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2610,
       "name": "Dog Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3040
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Airport Link"
     },
     "opening_hours": "Mo-Su 06:00-20:00",
     "phone": "+61 7 3857 5149",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

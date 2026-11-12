@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "showers": "osm"
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
-    "showers": true
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Binna Burra Road"
+    },
+    "showers": true,
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESE3NFJ456PXPMX1SMNG8",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

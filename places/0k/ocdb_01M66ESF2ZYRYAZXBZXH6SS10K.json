@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,11 @@
       "street": "Scout Road"
     },
     "entry": "private",
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 2120
+    },
+    "operator": "Scouts Australia Queensland Branch"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2ZYRYAZXBZXH6SS10K",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

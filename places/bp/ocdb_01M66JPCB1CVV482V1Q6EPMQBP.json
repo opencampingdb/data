@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -10,6 +12,13 @@
       "postcode": "3381",
       "street": "Pomonal Road",
       "suburb": "Pomonal"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4840
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Pomonal Road"
     },
     "opening_hours": "We-Su 10:00-17:00",
     "website": "https://pomonalestate.com.au/"
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

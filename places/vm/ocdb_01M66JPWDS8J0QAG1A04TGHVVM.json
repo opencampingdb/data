@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bruce Highway"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPWDS8J0QAG1A04TGHVVM",
   "kind": "fuel",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

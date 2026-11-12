@@ -1,13 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "postcode": "6753",
       "street": "Whaleback Drive",
       "suburb": "Newman"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Newman Drive"
+    },
+    "operator": "John Adams"
   },
   "group": "services",
   "id": "ocdb_01M66JP6997FPQF5MGN9B839PM",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,10 +17,22 @@
       "street": "Robinson Street",
       "suburb": "Carnarvon"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 880
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1790
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Robinson Street"
+    },
     "opening_hours": "Mo-Su 05:00-23:59",
+    "operator": "EG Australia",
     "phone": "+61 8 9941 4051",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

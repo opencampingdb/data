@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,15 @@
       "state": "QLD",
       "street": "Brolga Street",
       "suburb": "Quilpie"
-    }
+    },
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Brolga Street"
+    },
+    "operator": "IOR Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JPE3Y5N0XV9QW2HYTT3W9",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,14 +1,27 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4350
     },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Joondalup Drive"
+    },
     "opening_hours": "Mo,We-Fr 05:00-22:00; Tu 05:00-23:59; Sa,Su 07:00-21:00",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -27,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

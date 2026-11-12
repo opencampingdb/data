@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "93",
       "street": "Main Road"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPWQSCMBNR9B6H05KFY44",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

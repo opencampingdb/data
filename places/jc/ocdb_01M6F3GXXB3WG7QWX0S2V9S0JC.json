@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "VIC",
       "street": "Pearcedale Parade",
       "suburb": "Broadmeadows"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Pearcedale Parade"
+    },
+    "operator": "Broadmeadows Historical Society Inc."
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXXB3WG7QWX0S2V9S0JC",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

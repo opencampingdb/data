@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,6 +14,16 @@
       "street": "Leakes Road",
       "suburb": "Laverton North"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40
+    },
+    "operator": "United Petroleum Pty Ltd.",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-laverton-north"
   },
   "group": "services",
@@ -29,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

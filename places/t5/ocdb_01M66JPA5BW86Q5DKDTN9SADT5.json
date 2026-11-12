@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -11,6 +13,13 @@
       "street": "Main Street",
       "suburb": "Narangba",
       "unit": "2"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3660
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main Street"
     },
     "opening_hours": "24/7"
   },
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

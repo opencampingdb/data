@@ -1,16 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "air": "osm",
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "332",
       "street": "Hale Road"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 1460,
       "name": "Hartfield Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Hale Road"
     }
   },
   "group": "services",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

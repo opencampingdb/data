@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,8 +13,22 @@
       "postcode": "2756",
       "street": "Wilberforce Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 4940
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3320
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Wilberforce Road"
     },
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-wilberforce"
   },
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

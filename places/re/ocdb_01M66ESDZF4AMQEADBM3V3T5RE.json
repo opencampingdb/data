@@ -3,6 +3,9 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -12,6 +15,12 @@
     },
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Arrival Drive"
+    },
+    "operator": "Melbourne Tulamarine Airport",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

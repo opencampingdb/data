@@ -1,12 +1,23 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 910,
       "name": "Merimbula Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3560
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Arthur Kaine Drive"
+    },
+    "operator": "Best Western"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVFK0T24XE2X8M4GB6AY",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

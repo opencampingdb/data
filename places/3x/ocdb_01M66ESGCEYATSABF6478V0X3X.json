@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -12,6 +14,11 @@
     },
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Grampians Road"
+    },
+    "operator": "Parks Victoria",
     "tents": true,
     "website": "https://www.parks.vic.gov.au/places-to-see/sites/wannon-crossing-campground"
   },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

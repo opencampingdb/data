@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "wheelchair": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "51",
       "street": "Victoria Street"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Victoria Street"
+    },
     "opening_hours": "10:00-24:00",
+    "operator": "Shep's Hotel PTY LTD",
     "phone": "+61 7 5465 4109",
     "wheelchair": false
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

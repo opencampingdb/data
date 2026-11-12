@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +15,17 @@
       "street": "Broadway",
       "suburb": "Wycheproof"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Calder Highway"
+    },
+    "operator": "BP",
     "phone": "+61 3 5493 7211",
     "website": "https://map.bp.com/en-AU/AU/gas-station/wycheproof/bp-wycheproof/0408"
   },
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

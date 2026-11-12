@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +13,13 @@
       "street": "Fiveash Drive",
       "suburb": "Pasadena"
     },
-    "opening_hours": "24/7"
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Fiveash Drive"
+    },
+    "opening_hours": "24/7",
+    "operator": "24/7"
   },
   "group": "services",
   "id": "ocdb_01M66JPTNBM8GPN4XAGACYG7VK",
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

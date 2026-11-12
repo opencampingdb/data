@@ -1,6 +1,23 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3900
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bobbin Head Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPWBZ4ANBM1RSVHRMDJT7",
   "kind": "fuel",
@@ -17,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

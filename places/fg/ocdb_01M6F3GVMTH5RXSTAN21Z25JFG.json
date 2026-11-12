@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,7 +13,12 @@
       "postcode": "5554",
       "street": "Mines Road"
     },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Mines Road"
+    },
     "opening_hours": "Mo-Fr 09:00-17:00; Sa,Su,PH 10:00-15:30",
+    "operator": "National Trust",
     "phone": "+61 439 394 735",
     "website": "https://www.nationaltrust.org.au/places/the-farm-shed-museum/"
   },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

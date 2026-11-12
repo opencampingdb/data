@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,14 @@
       "state": "QLD",
       "street": "Sommerfield Road",
       "suburb": "Quilpie"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Brolga Street"
     },
     "opening_hours": "Mo-Fr 09:00-17:00",
     "phone": "+61 7 4656 1134"
@@ -31,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

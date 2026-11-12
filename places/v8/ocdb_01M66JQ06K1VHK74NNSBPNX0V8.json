@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,10 @@
       "housenumber": "2-8",
       "street": "Somers Street"
     },
+    "nearest_major_road": {
+      "distance_m": 70
+    },
+    "operator": "Penfold Motors",
     "website": "https://www.burwoodmazda.com.au/service"
   },
   "group": "services",
@@ -26,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

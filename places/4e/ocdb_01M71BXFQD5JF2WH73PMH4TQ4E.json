@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -12,9 +17,25 @@
       "housenumber": "251",
       "street": "The Horsley Drive"
     },
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3100,
       "name": "Eora Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3420
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Fairfield Street"
     },
     "opening_hours": "Mo-Su 05:00-24:00",
     "phone": "+61 2 9726 1177",
@@ -37,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

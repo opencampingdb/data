@@ -1,18 +1,31 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Cnr Warton Road & Matilda Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 4950
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Warton Road"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/huntingdale/bp-huntingdale/6117"
   },
   "group": "services",
@@ -31,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

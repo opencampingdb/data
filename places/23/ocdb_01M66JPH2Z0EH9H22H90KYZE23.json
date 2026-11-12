@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/profile.php?id=100057280246803"
+    "facebook": "https://www.facebook.com/profile.php?id=100057280246803",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Eyre Highway"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPH2Z0EH9H22H90KYZE23",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

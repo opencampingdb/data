@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
       "state": "VIC",
       "street": "Game Street",
       "suburb": "Merbein"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1970
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Commercial Street"
     },
     "opening_hours": "Su-Tu 17:30-20:00; We-Th 12:00-14:00, 17:30-20:00; Fr-Sa 12:00-14:00, 17:00-00:00",
     "website": "https://www.facebook.com/profile.php?id=100057464087217"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

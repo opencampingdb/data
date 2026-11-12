@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,12 @@
       "street": "Mount Samson Road",
       "suburb": "Mount Samson",
       "unit": "12"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Mount Samson Road"
+    },
+    "operator": "Samford Lakes Self Contained Accommodation"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX72Z459NC0CYDY6WBWZ",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

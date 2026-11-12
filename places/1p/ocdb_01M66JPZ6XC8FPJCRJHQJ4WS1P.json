@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,8 +12,16 @@
       "housenumber": "33-37",
       "street": "Carrington Road"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 1220
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3180
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Carrington Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/clovelly/bp-clovelly/9005"
   },
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

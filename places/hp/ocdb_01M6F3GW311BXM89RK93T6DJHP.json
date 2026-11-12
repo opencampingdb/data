@@ -1,13 +1,20 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "email": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "charge": "8 AUD",
     "email": "contact@mountvictoriamuseum.info",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Darling Causeway"
+    },
     "opening_hours": "Sa 12:00-15:00",
     "website": "https://mtvicmuseum.com.au"
   },
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

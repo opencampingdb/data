@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +10,14 @@
     "address": {
       "housenumber": "76",
       "street": "Peisley Street"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Peisley Street"
     },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/orange/bp-opt-orange-piesley-st/1913"
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

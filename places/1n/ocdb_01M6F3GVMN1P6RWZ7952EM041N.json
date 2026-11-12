@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -16,6 +18,13 @@
     "nearest_beach": {
       "distance_m": 680,
       "name": "Bellerive Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 140
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Clarence Street"
     },
     "opening_hours": "Mo-Th 09:00-01:00, Fr 09:00-02:00, Sa 10:00-02:00, Su 10:00-24:00",
     "wheelchair": true
@@ -36,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

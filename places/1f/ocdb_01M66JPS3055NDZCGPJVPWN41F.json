@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -11,9 +16,25 @@
       "housenumber": "3",
       "street": "Marconi Crescent"
     },
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3130,
       "name": "Ngadyung"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3270
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Marconi Crescent"
     },
     "opening_hours": "Mo-Su 05:00-24:00",
     "phone": "+61 2 6231 9062",
@@ -35,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

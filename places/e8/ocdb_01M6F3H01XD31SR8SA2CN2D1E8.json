@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
+    "pub": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,7 +17,16 @@
       "suburb": "Casino"
     },
     "email": "info@theroyalcasino.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 2320,
+      "name": "McDonald Park Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Canterbury Street"
+    },
     "phone": "+61 2 6662 1666",
+    "pub": true,
     "website": "https://theroyalcasino.com.au"
   },
   "group": "services",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

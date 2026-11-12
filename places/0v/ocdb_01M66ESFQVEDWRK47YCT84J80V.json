@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 180,
+      "name": "Boat Ramp"
+    },
+    "operator": "ParksVic"
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESFQVEDWRK47YCT84J80V",
   "kind": "reserve_campsite",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

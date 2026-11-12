@@ -1,10 +1,31 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 12",
+      "street": "Eyre Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "adblue",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Eyre Highway"
+    },
     "opening_hours": "24/7",
+    "phone": "+61 8 9039 3465",
+    "toilets": true,
     "website": "https://www.mundrabillaroadhouse.com.au/"
   },
   "group": "services",
@@ -17,11 +38,11 @@
   "name": "Mundrabilla Roadhouse",
   "osm": {
     "id": 2003851303,
-    "timestamp": "2025-12-30T15:41:30Z",
+    "timestamp": "2026-11-11T10:14:14Z",
     "type": "node",
-    "version": 5
+    "version": 7
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

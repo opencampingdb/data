@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -9,6 +11,11 @@
     "address": {
       "housenumber": "1514",
       "street": "Brisbane Valley Highway"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Brisbane Valley Highway"
     },
     "opening_hours": "Mo-Su 05:00-23:30",
     "phone": "+61 7 3184 5432",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

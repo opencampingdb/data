@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -13,7 +15,12 @@
       "street": "Rankine Street",
       "suburb": "Strathalbyn"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Rankine Street"
+    },
     "opening_hours": "Sa-Su 13:30-16:00",
+    "operator": "National Trust",
     "phone": "+61 8 8536 2656",
     "website": "https://www.nationaltrust.org.au/places/strathalbyn-police-station-and-courthouse-museum/",
     "wheelchair": true
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

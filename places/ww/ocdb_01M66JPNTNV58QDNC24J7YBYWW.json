@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -12,6 +14,13 @@
       "street": "Mary Street",
       "suburb": "Cygnet",
       "unit": "1"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1750
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Mary Street"
     },
     "opening_hours": "Mo-Th 07:30-17:00",
     "phone": "+61 3 6295 1275"
@@ -32,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,9 +13,21 @@
       "housenumber": "2-4",
       "street": "Langslow Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1240,
       "name": "Aspendale Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1630
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Langslow Road"
     },
     "phone": "+61 3 9587 5866",
     "website": "https://map.bp.com/en-AU/AU/gas-station/aspendale-gardens/bp-aspendale-gardens/7714"
@@ -33,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

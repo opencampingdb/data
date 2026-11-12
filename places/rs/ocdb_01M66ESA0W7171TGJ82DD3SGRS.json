@@ -2,9 +2,12 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm"
   },
   "facts": {
@@ -15,9 +18,15 @@
       "suburb": "Kumbia"
     },
     "caravans": true,
+    "charge": "Donation box, Coin showers and power",
     "entry": "public",
     "fee": true,
     "max_stay": "2d",
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Bell Street"
+    },
+    "operator": "South Burnett Regional Council",
     "power": true
   },
   "group": "overnight",
@@ -36,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

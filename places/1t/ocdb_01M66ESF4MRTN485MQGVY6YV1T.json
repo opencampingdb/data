@@ -6,6 +6,7 @@
     "dump_station": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -25,6 +26,10 @@
     "dump_station": true,
     "fee": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Narrabri Road"
+    },
     "power": true,
     "showers": true,
     "tents": true,
@@ -47,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

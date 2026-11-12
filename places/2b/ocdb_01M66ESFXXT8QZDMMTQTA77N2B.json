@@ -4,10 +4,13 @@
   },
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,10 +18,16 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "$15 Genstore or Pub",
     "dump_station": true,
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Hay Terrace"
+    },
+    "operator": "Wirrulla Progress Association Incorporated",
     "power": true,
     "showers": true,
     "tents": true,
@@ -40,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,20 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "cabins": "osm",
+    "caravans": "osm",
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "tents": "osm"
   },
   "facts": {
-    "fee": false
+    "cabins": false,
+    "caravans": true,
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Maleny Kenilworth Road"
+    },
+    "tents": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA1ANNX6YKK8BE6S1N80",
@@ -15,11 +26,11 @@
   "name": "Little Yabba Picnic Area",
   "osm": {
     "id": 1811183582,
-    "timestamp": "2020-08-01T05:47:44Z",
+    "timestamp": "2026-11-10T23:10:35Z",
     "type": "node",
-    "version": 2
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

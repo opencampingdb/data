@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -14,9 +17,21 @@
       "street": "Dynon Road",
       "suburb": "West Melbourne"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 4130,
       "name": "Sandridge Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Dynon Road"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 9372 2999",
@@ -38,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

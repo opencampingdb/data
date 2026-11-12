@@ -1,11 +1,23 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4690
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Sturt Highway"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/gumly-gumly/bp-gumly-gumly/4091"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

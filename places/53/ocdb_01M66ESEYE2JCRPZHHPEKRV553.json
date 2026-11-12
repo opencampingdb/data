@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "wifi": "osm"
   },
@@ -11,6 +12,10 @@
       "street": "Middleton Drive"
     },
     "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Middleton Drive"
+    },
     "power": true,
     "wifi": true
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

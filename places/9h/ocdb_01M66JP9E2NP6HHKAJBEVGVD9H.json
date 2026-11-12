@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -9,6 +11,15 @@
       "postcode": "5157",
       "street": "McLaren Flat Road",
       "suburb": "Kangarilla"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "McLaren Flat Road"
     },
     "opening_hours": "Mo-Su 07:30-20:30",
     "phone": "+61 8 8383 7025"
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,30 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 340,
       "name": "Merimbula Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 60
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Arthur Kaine Drive"
+    },
+    "operator": "Metco"
   },
   "group": "services",
   "id": "ocdb_01M66JNY05E3AQ4YAVPX2ZQE3S",
@@ -24,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

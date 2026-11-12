@@ -1,13 +1,20 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": false,
     "caravans": true,
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Copeton Dam Road"
+    },
     "tents": true,
     "toilets": false
   },
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

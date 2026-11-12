@@ -1,12 +1,21 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "charge": "$1 coinbox",
     "entry": "public",
     "fee": true,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Mount Lindesay Road"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

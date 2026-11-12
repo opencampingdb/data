@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +13,14 @@
       "street": "High Street",
       "suburb": "Wauchope"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1300
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "High Street"
+    },
+    "operator": "Hastings Coop",
     "website": "https://www.hastingscoop.com.au/business-units/fuel-supplies"
   },
   "group": "services",
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

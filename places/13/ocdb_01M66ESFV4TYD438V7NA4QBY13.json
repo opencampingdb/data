@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,11 @@
       "state": "QLD",
       "street": "Watsons Road",
       "suburb": "Mount Tarampa"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2400
+    },
+    "operator": "Scout Association QLD"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFV4TYD438V7NA4QBY13",
@@ -27,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

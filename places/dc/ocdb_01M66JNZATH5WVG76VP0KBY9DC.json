@@ -1,13 +1,30 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 3370
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Ferntree Gully Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "Reddy Express"
   },
   "group": "services",
   "id": "ocdb_01M66JNZATH5WVG76VP0KBY9DC",
@@ -25,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm"
   },
   "facts": {
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Eyre Highway"
+    },
     "power": true,
     "tents": true
   },
@@ -34,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

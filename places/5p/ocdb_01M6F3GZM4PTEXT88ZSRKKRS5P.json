@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,7 +14,12 @@
       "street": "Showground Road",
       "suburb": "Castle Hill"
     },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Showground Road"
+    },
     "opening_hours": "Sa-Su 10:00-16:00",
+    "operator": "Museum of Applied Arts and Sciences",
     "website": "https://www.maas.museum/museums-discovery-centre"
   },
   "group": "attraction",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,6 +15,20 @@
       "street": "Princes Highway",
       "suburb": "Cann River"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "e85",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Princes Highway"
+    },
+    "operator": "United",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-cann-river"
   },
   "group": "services",
@@ -29,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

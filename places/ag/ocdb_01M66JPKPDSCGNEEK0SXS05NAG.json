@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -14,9 +17,20 @@
       "street": "Macquarie Heads Road",
       "suburb": "Strahan"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
     "nearest_beach": {
       "distance_m": 1690,
       "name": "West Strahan Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2360
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Macquarie Heads Road"
     },
     "opening_hours": "24/7",
     "toilets": false,
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

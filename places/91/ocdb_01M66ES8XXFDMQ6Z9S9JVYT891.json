@@ -4,8 +4,13 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -20,8 +25,18 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "hot_water": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3960
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Rohini Street"
+    },
     "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "Ku-ring-gai Council",
     "showers": false,
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/8219",
     "wheelchair": true
@@ -42,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

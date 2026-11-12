@@ -4,7 +4,10 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,7 +18,13 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "hot_water": true,
     "max_stay": "48h",
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Gwydir Highway"
+    },
+    "operator": "Walgett Shire Council",
     "power": false,
     "showers": true,
     "tents": true,
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

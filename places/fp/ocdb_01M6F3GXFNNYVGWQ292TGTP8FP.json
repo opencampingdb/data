@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "street": "Mill Street",
       "suburb": "Clare"
     },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Horrocks Highway"
+    },
+    "operator": "Arts Collective Clare Valley",
     "website": "https://www.claregilbertvalleys.sa.gov.au/community-facilities/clare-and-gilbert-valleys-council-clare-art-house"
   },
   "group": "attraction",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

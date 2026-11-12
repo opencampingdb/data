@@ -3,6 +3,7 @@
     "caravans": "osm",
     "dump_station": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -11,6 +12,10 @@
     "caravans": true,
     "dump_station": true,
     "max_stay": "72h",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Johnston Street"
+    },
     "showers": true,
     "tents": false,
     "toilets": true
@@ -31,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

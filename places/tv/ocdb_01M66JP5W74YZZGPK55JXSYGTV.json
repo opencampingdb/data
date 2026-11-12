@@ -1,6 +1,25 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3460
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Ascot Vale Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JP5W74YZZGPK55JXSYGTV",
   "kind": "fuel",
@@ -17,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

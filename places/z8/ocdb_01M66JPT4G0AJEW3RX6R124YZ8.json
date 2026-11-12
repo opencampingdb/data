@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "58",
       "street": "Hammond Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Adams Street"
     },
     "website": "https://www.healthdirect.gov.au/australian-health-services/23008899/goodooga-health-service/services/goodooga-2838-49-hammond-street"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

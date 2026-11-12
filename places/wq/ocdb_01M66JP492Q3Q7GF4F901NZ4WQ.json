@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +13,15 @@
       "distance_m": 960,
       "name": "Bargang"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 940
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Emu Bank"
+    },
     "opening_hours": "Mo-Fr 08:00-17:30; Sa 08:00-16:00",
+    "operator": "Kmart",
     "phone": "+61 2 6129 8108",
     "website": "https://www.mycar.com.au/stores/act/belconnen"
   },
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -14,8 +17,21 @@
       "street": "Maroondah Highway",
       "suburb": "Chirnside Park"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4440
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4570
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Maroondah Highway"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 9727 1855",
@@ -37,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

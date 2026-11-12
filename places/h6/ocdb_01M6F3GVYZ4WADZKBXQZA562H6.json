@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Mitchell Highway"
+    },
     "opening_hours": "We-Fr 10:00-17:00",
     "phone": "+61 2 6889 7131",
     "website": "http://www.narromineaviationmuseum.org.au/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

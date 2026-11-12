@@ -6,6 +6,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "pets": "osm",
     "power": "osm",
     "showers": "osm",
@@ -19,6 +21,11 @@
     "entry": "public",
     "fee": false,
     "max_stay": "72h",
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Conway Street"
+    },
+    "operator": "Whitsunday Regional Council",
     "pets": "yes",
     "power": false,
     "showers": true,
@@ -41,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

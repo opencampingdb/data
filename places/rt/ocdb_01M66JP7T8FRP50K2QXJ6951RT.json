@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
@@ -9,6 +11,13 @@
     "nearest_beach": {
       "distance_m": 4090,
       "name": "Birdie Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2280
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Wallarah Road"
     },
     "opening_hours": "Mo-Su 10:00-16:00",
     "wheelchair": true,
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

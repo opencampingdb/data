@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -11,9 +16,25 @@
       "housenumber": "924",
       "street": "Hume Highway"
     },
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "e85"
+    ],
     "nearest_beach": {
       "distance_m": 2900,
       "name": "Dowling Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2730
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Hume Highway"
     },
     "opening_hours": "24/7",
     "toilets": true,
@@ -35,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

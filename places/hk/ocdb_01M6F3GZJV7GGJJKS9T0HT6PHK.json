@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "facebook": "osm",
     "instagram": "osm",
+    "nearest_major_road": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -11,8 +13,13 @@
       "housenumber": "56",
       "street": "Fitzroy Street"
     },
+    "booking_required": true,
     "facebook": "https://www.facebook.com/driscollonfitzroy",
     "instagram": "https://www.instagram.com/driscollonfitzroy",
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Marius Street"
+    },
     "website": "https://the-driscoll.com/",
     "wheelchair": false
   },
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

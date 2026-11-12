@@ -3,10 +3,15 @@
     "fee": "2026-06-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Wimmera Highway"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GYWQV43GB6E1DE0K03GA",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

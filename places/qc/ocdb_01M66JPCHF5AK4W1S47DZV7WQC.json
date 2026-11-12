@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "air": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,9 +15,19 @@
       "street": "Wynnum Road",
       "suburb": "Cannon Hill"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 2660
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 340,
+      "name": "Bulimba Creek Canoe Trail"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Wynnum Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPCHF5AK4W1S47DZV7WQC",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

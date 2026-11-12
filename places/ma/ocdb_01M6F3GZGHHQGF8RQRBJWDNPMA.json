@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,14 @@
     "address": {
       "housenumber": "8",
       "street": "Durlacher Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 270,
+      "name": "Slipway"
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Knight Terrace"
     },
     "phone": "+61 8 9948 1481",
     "website": "https://www.wildsightsvillas.com.au"
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

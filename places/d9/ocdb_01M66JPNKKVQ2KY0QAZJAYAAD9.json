@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,10 +18,26 @@
       "street": "North West Coastal Highway",
       "suburb": "Wonthella"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue"
+    ],
     "nearest_beach": {
       "distance_m": 930
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1370,
+      "name": "Batavia Coast"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North West Coastal Highway"
+    },
     "opening_hours": "Mo-Su 05:00-21:00",
+    "operator": "Atlas Fuel",
     "phone": "+61 8 9960 7019",
     "website": "https://atlasfuel.com.au/"
   },
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

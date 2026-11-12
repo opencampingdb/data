@@ -1,13 +1,25 @@
 {
   "fact_sources": {
     "email": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "fuel@elite-group.com.au",
+    "fuels": [
+      "diesel",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 430,
+      "name": "Gnowangerup Jerramungup Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Elite Group Companies",
     "phone": "+61 8 9827 1124",
     "website": "http://www.elite-group.com.au/fuel_and_oil_distribution.html"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

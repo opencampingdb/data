@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -10,6 +12,13 @@
       "postcode": "0832",
       "street": "Forrest Parade",
       "unit": "1102"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2180
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Forrest Parade"
     },
     "opening_hours": "Mo-Su 05:00-22:00",
     "phone": "+61 8 8932 5110"
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,14 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 40
+    },
     "website": "https://map.bp.com/en-AU/AU/gas-station/woodend/bp-woodend/0020"
   },
   "group": "services",
@@ -21,5 +27,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,10 +2,13 @@
   "fact_sources": {
     "cabins": "osm",
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "facebook": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "motorbikes": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -16,10 +19,16 @@
   "facts": {
     "cabins": true,
     "caravans": true,
+    "charge": "Pay at Pentland Hotel. Caretaker doesnt take payment",
     "entry": "customers",
     "facebook": "https://www.facebook.com/PentlandHotel/",
     "fee": true,
     "kitchen": true,
+    "motorbikes": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Main Street"
+    },
     "phone": "+61 7 4788 1148",
     "power": true,
     "showers": true,
@@ -43,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

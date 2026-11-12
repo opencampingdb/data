@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,10 +17,14 @@
       "street": "Burma Road",
       "suburb": "Tocumwal"
     },
+    "charge": "15 AUD",
     "fee": true,
     "nearest_beach": {
       "distance_m": 2730,
       "name": "Pebbly Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2690
     },
     "opening_hours": "Mo-Su 10:00-16:00",
     "phone": "+61 3 5895 0602",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

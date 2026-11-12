@@ -1,6 +1,22 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "car_wash": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Auburn Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPVRCTWZJR3M48X35GXWB",
   "kind": "fuel",
@@ -17,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,14 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,10 +16,19 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Box",
     "drinking_water": false,
     "dump_station": false,
     "entry": "public",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 130
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Dawson Highway"
+    },
+    "operator": "Banana Shire Council",
     "power": false,
     "showers": true,
     "tents": true,
@@ -37,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

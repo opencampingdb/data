@@ -1,10 +1,30 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm",
     "website": "osm"
   },
   "facts": {
-    "opening_hours": "06:00-22:00",
+    "address": {
+      "housenumber": "Lot 21",
+      "street": "Eyre Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Eyre Highway"
+    },
+    "opening_hours": "06:00-21:00",
+    "phone": "+61 8 9039 3453",
+    "toilets": false,
     "website": "https://map.bp.com/en-AU/AU/gas-station/balladonia/bp-balladonia/6304"
   },
   "group": "services",
@@ -14,14 +34,14 @@
     "lat": -32.352332,
     "lon": 123.61694
   },
-  "name": "BP Balladonia Roadhouse",
+  "name": "BP Balladonia",
   "osm": {
     "id": 2257597311,
-    "timestamp": "2024-04-07T21:39:32Z",
+    "timestamp": "2026-11-11T10:15:42Z",
     "type": "node",
-    "version": 6
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

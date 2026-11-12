@@ -1,11 +1,21 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "adblue"
+    ],
     "nearest_beach": {
       "distance_m": 4330,
       "name": "Canoe Club Boat Launch Site"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "New Dookie Road"
     }
   },
   "group": "services",
@@ -24,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

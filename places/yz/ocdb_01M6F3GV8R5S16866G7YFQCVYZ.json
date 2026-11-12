@@ -1,11 +1,18 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "charge": "20 AUD",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 480,
+      "name": "Fullarton Road"
+    },
     "opening_hours": "Jul off; Mo,Tu off; We-Su 10:00-16:30; PH 10:00-16:30; Dec 25 off",
     "website": "https://www.carrickhill.sa.gov.au/"
   },
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

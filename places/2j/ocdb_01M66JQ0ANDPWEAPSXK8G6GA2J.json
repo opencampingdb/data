@@ -1,11 +1,23 @@
 {
   "fact_sources": {
+    "fuel": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuel": true,
     "nearest_beach": {
       "distance_m": 990
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1930,
+      "name": "Deep Water Point"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Cranford Avenue"
     },
     "website": "https://www.mycar.com.au/stores/wa/brentwood?srsltid=AU7gw4WDvkSOuGHQ7aUIwFUfmzDJA98YxYWtVcA6NzjVRG8KbgRs8GtT"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

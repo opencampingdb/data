@@ -3,7 +3,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -11,7 +14,16 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 870
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 160,
+      "name": "Burgess Cove Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "Rocky Cape Road"
+    },
+    "toilet_type": "chemical"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAVVDBBJ31GAV11Z04VR",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

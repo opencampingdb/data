@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,6 +14,10 @@
       "suburb": "Kyabram"
     },
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "McEwen Road"
+    },
     "website": "https://www.westerngums.com.au/"
   },
   "group": "overnight",
@@ -31,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

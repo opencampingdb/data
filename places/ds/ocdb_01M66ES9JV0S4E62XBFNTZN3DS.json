@@ -2,12 +2,16 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "power": "osm",
     "wifi": "osm"
   },
   "facts": {
     "drinking_water": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 140
+    },
     "power": true,
     "wifi": true
   },
@@ -27,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

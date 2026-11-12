@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Cotter Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPHQ1A9TB3KCS3C2PKJYS",
   "kind": "fuel",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

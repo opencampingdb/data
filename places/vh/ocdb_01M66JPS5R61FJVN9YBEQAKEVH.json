@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "air": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,9 +14,18 @@
       "street": "Beaufort Street",
       "suburb": "Mount Lawley"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 2950
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3470
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Central Avenue"
+    },
+    "operator": "Caltex"
   },
   "group": "services",
   "id": "ocdb_01M66JPS5R61FJVN9YBEQAKEVH",
@@ -30,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

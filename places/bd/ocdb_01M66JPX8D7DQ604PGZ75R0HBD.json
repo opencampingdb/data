@@ -3,11 +3,18 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "air": "osm",
     "dump_station": "contributed",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "air": true,
     "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Port Wakefield Highway"
+    },
     "opening_hours": "24/7"
   },
   "group": "services",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

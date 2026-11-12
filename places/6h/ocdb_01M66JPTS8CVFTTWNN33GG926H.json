@@ -1,14 +1,26 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "adblue"
+    ],
     "nearest_beach": {
       "distance_m": 1870
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Young Road"
     },
     "opening_hours": "24/7",
     "phone": "+61 2 6342 3687",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

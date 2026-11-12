@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,8 +13,14 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Honesty Box",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Lachlan Street"
+    },
+    "operator": "Cobar Shire Council",
     "power": true,
     "showers": true,
     "tents": true,
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,7 +15,21 @@
       "street": "The Parade",
       "suburb": "Kensington"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4470
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "The Parade"
+    },
     "opening_hours": "24/7",
+    "operator": "On THe Run",
     "wheelchair": true
   },
   "group": "services",
@@ -30,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

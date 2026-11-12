@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,7 +14,16 @@
       "street": "Galston Road",
       "suburb": "Hornsby Heights"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4290,
+      "name": "Canoe entry point"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Galston Road"
+    },
     "opening_hours": "sunrise-sunset",
+    "operator": "NSW National Parks and Wildlife Service",
     "wheelchair": true
   },
   "group": "attraction",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

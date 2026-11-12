@@ -7,13 +7,24 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
-    "opening_hours": "contributed"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "contributed",
+    "operator": "osm"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
     "fee": false,
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 2160
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "The Boulevard"
+    },
+    "opening_hours": "24/7",
+    "operator": "Banana Shire"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCN6VC890GQ7WPV6XY2C",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

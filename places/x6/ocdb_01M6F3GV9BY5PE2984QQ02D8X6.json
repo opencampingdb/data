@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "22",
       "street": "Buchanan Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 490,
+      "name": "Ilford Road"
     },
     "website": "https://www.kandosmuseum.org.au"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

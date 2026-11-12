@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +10,13 @@
     "nearest_beach": {
       "distance_m": 2980,
       "name": "Horse Arena"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1030
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Wallen Road"
     },
     "opening_hours": "Sa[2],Sa[4] 11:00-17:00; PH Sa[2],Sa[4] 11:00-17:00; Dec Sa[4] off",
     "website": "https://www.hawthorntramdepot.org.au/"
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

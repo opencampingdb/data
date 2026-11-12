@@ -1,10 +1,19 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 3580
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Anzac Avenue"
+    },
     "opening_hours": "10:00-21:00; We,Th 10:00-22:00; Fr,Sa 10:00-22:00+",
     "phone": "+61 2 4359 7444",
     "website": "https://www.wyongrsl.com.au/"
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

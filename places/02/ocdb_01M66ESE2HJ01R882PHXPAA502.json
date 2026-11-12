@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,6 +12,11 @@
   "facts": {
     "caravans": true,
     "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Bell Street"
+    },
+    "operator": "Ryke Fuel",
     "power": true,
     "showers": true,
     "tents": true,
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

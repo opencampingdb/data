@@ -12,6 +12,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "pets": "community_report",
     "playground": "community_report",
     "power": "osm",
@@ -26,6 +28,11 @@
     "entry": "customers",
     "fee": false,
     "max_stay": "2d",
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Yass Street"
+    },
+    "operator": "Upper Lachlan Shire Council",
     "pets": "yes",
     "playground": true,
     "power": false,
@@ -49,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

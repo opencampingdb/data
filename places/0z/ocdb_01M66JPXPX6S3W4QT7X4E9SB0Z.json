@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "car_wash": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "car_wash": true,
+    "nearest_boat_ramp": {
+      "distance_m": 4400
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Portrush Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPXPX6S3W4QT7X4E9SB0Z",
   "kind": "fuel",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

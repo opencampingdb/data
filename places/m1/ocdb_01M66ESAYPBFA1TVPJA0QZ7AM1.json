@@ -1,12 +1,19 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "charge": "3.00 AUD",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "East Street"
+    },
     "opening_hours": "Mo-Fr 07:30-18:00, Sa-Su 10:00-16:00"
   },
   "group": "utility",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

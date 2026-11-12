@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +13,20 @@
       "state": "QLD",
       "street": "Cemetery Road",
       "suburb": "Goondiwindi"
+    },
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1280
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Cunningham Highway"
     },
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-goondiwindi"
   },
@@ -29,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

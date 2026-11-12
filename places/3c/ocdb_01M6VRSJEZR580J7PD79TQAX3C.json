@@ -8,8 +8,10 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "nudist": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "pets": "osm",
     "picnic_tables": "osm",
     "power": "osm",
@@ -31,8 +33,13 @@
     "entry": "public",
     "fee": false,
     "max_stay": "24h",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Esk Hampton Road"
+    },
     "nudist": false,
     "opening_hours": "24/7",
+    "operator": "Toowoomba City Council",
     "pets": "leashed",
     "picnic_tables": true,
     "power": false,
@@ -58,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

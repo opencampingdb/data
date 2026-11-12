@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -9,6 +11,13 @@
       "postcode": "4107",
       "street": "McCarthy Road",
       "suburb": "Salisbury"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3790
+    },
+    "nearest_major_road": {
+      "distance_m": 360,
+      "name": "Evans Road"
     },
     "wheelchair": true
   },
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

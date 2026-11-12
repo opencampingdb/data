@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,7 +13,12 @@
       "street": "Market Square",
       "suburb": "Burra"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Market Street"
+    },
     "opening_hours": "Sa-Su,PH 13:00-15:00",
+    "operator": "National Trust",
     "phone": "+61 8 8892 2154",
     "website": "https://www.nationaltrust.org.au/places/market-square-museum/"
   },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

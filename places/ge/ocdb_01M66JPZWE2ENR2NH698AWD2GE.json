@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -9,7 +11,12 @@
       "housenumber": "1",
       "street": "Sampson Street"
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Albany Highway"
+    },
     "opening_hours": "Mo-Su 05:00-23:00",
+    "operator": "OTR Group",
     "wheelchair": true
   },
   "group": "services",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

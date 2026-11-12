@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Prince Street"
+    },
     "opening_hours": "Mo-Fr 12:00-19:00; Sa-Su 10:30-18:00",
     "website": "https://www.wellington.vic.gov.au/swimming-pools/rosedale-swimming-pool"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

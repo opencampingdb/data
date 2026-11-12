@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,7 +14,24 @@
     "address": {
       "street": "Hume Freeway"
     },
+    "air": false,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4470,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Service Centre Offramp"
+    },
     "opening_hours": "24/7",
+    "operator": "Ampol",
     "phone": "+61 3 5792 2155",
     "website": "https://www.ampol.com.au"
   },
@@ -29,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

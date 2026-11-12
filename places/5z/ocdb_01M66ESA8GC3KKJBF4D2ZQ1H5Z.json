@@ -1,12 +1,25 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": false,
+    "bins": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2720
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Sturt Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "playground": false,
     "toilets": false
@@ -27,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,26 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 580,
+      "name": "McKay Street Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Cooper Street"
+    },
     "opening_hours": "Mo-Su 00:00-00:00"
   },
   "group": "services",
@@ -21,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

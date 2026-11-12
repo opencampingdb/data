@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "502",
       "street": "Sydney Road"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bell Street"
+    },
     "opening_hours": "Mo-Sa 10:00-04:00, Su 10:00-13:00",
+    "operator": "PubCo Group",
     "phone": "+61 3 9354 1177",
     "website": "https://www.brownscornerhotel.com.au/"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

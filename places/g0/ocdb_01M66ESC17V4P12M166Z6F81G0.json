@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -9,6 +11,13 @@
     "nearest_beach": {
       "distance_m": 3870,
       "name": "South Melbourne Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2990
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Collins Street"
     },
     "opening_hours": "Mo-Su 10:00-21:00",
     "website": "https://stcollinslane.com.au/find-us/",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

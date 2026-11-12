@@ -1,12 +1,26 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
+    "fuels": [
+      "unleaded_91"
+    ],
     "nearest_beach": {
       "distance_m": 3600
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 120,
+      "name": "Donnybrook Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Alice Street"
     },
     "opening_hours": "Mo 09:00-16:00; Tu 08:30-15:00; We 08:30-16:00; Th-Fr 08:30-17:00; Sa 08:00-17:00; Su 08:00-16:00",
     "phone": "+61 7 5498 8219"
@@ -27,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

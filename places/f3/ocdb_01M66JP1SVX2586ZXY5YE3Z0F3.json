@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "street": "Old Coast Road",
       "suburb": "Myalup",
       "unit": "Lot 14"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Forrest Highway"
+    },
+    "operator": "Caltex"
   },
   "group": "services",
   "id": "ocdb_01M66JP1SVX2586ZXY5YE3Z0F3",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

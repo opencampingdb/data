@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -10,6 +13,14 @@
       "state": "TAS",
       "street": "Risdon Road",
       "suburb": "New Town"
+    },
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2440
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Risdon Road"
     },
     "opening_hours": "PH,Mo-Su 06:00-22:00"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

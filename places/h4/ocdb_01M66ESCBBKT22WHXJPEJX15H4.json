@@ -5,6 +5,7 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -15,6 +16,10 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Barrier Highway"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -41,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T21:42:45Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

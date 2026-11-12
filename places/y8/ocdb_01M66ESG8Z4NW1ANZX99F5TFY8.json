@@ -1,14 +1,21 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "nearest_beach": {
       "distance_m": 3570,
       "name": "Queens Beach (central)"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 430,
+      "name": "paddlecraft launch point"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESG8Z4NW1ANZX99F5TFY8",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

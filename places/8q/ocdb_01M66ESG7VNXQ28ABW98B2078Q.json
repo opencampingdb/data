@@ -2,14 +2,25 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
     "nearest_beach": {
       "distance_m": 540
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1210
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Lilyfield Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESG7VNXQ28ABW98B2078Q",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

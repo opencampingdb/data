@@ -1,13 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "postcode": "3862",
       "street": "Strathfieldsaye Road",
       "suburb": "Perry Bridge"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4010
+    },
+    "operator": "Scouts Australia Victorian Branch"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF24ZAX7XNC8Q463HBWQ",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

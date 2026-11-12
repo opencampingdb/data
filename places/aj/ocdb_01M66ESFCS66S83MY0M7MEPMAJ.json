@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 100
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4890,
+      "name": "Town of 1770"
+    },
+    "nearest_major_road": {
+      "distance_m": 460,
+      "name": "Captain Cook Drive"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFCS66S83MY0M7MEPMAJ",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }
