@@ -230,6 +230,28 @@ def heavy_vehicles_only(tags: dict) -> bool:
     return value["access"] == "no" and value["hgv"] in ("yes", "designated")
 
 
+# Access values that let motorbikes in, and the one that keeps them out.
+MOTORBIKE_ALLOWED = {"yes": True, "designated": True, "permissive": True, "no": False}
+
+
+def motorbikes_allowed(tags: dict) -> bool | None:
+    """Whether motorbikes may enter: a permission, not whether the road suits one.
+
+    The OSM wiki's Key:motorcycle is "Access permission for motorcycles", and
+    the tourism=camp_site page's motor_vehicle row says "Whether motor vehicles
+    (motorcycles, cars, trucks, caravans) are allowed". motorcycle is read
+    first. Only when it is absent does motor_vehicle answer, so a walk-in site
+    tagged motor_vehicle=no gets False. Other values, such as private or
+    destination, are left out, and a motorcycle value left out is not
+    overridden by motor_vehicle.
+    """
+    for key in ("motorcycle", "motor_vehicle"):
+        value = first_value(tags.get(key, "")).lower()
+        if value:
+            return MOTORBIKE_ALLOWED.get(value)
+    return None
+
+
 def facts_from_tags(tags: dict) -> dict:
     """Map OSM tags to the facts in a place record. Unknown values are left out."""
     facts = {}
@@ -365,6 +387,10 @@ def facts_from_tags(tags: dict) -> dict:
 
     if crocodile_hazard(tags):
         facts["crocodiles"] = True
+
+    motorbikes = motorbikes_allowed(tags)
+    if motorbikes is not None:
+        facts["motorbikes"] = motorbikes
 
     # access=* says who may enter. It maps to "entry", not to "access", which
     # is about the road. access=no for a heavy vehicle place says who may

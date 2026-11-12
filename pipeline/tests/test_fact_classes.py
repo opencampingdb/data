@@ -2,9 +2,11 @@
 
 x-ocdb-class is mapped (the extract fills it from an OSM tag or a nearby OSM
 object), proposable (a mapper could check it, so it could become an OSM tag)
-or ocdb_only (an opinion OSM can never hold). x-osm names the tag a mapped
-fact comes from, or the form a proposable one would take. Extension values
-of an otherwise mapped fact are listed under x-ocdb-extension-values.
+ocdb_only (an opinion OSM can never hold) or retired (no new values are
+taken, and existing ones stay valid). x-osm names the tag a mapped fact comes
+from, the form a proposable one would take, or where a retired fact's
+information now lives. Extension values of an otherwise mapped fact are
+listed under x-ocdb-extension-values.
 """
 
 import json
@@ -13,7 +15,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 SCHEMA = Path(__file__).resolve().parents[2] / "schema" / "place.schema.json"
-CLASSES = {"mapped", "proposable", "ocdb_only"}
+CLASSES = {"mapped", "proposable", "ocdb_only", "retired"}
 
 # near_road is reported by travellers today and becomes a nearby fact worked
 # out from OSM's major roads; it gets its class with that change.
@@ -37,11 +39,11 @@ def test_every_fact_has_a_class():
     assert missing == []
 
 
-def test_mapped_and_proposable_facts_name_their_osm_form():
+def test_mapped_proposable_and_retired_facts_name_their_osm_form():
     missing = sorted(
         name
         for name, spec in facts().items()
-        if spec.get("x-ocdb-class") in {"mapped", "proposable"}
+        if spec.get("x-ocdb-class") in {"mapped", "proposable", "retired"}
         and not (isinstance(spec.get("x-osm"), str) and spec["x-osm"].strip())
     )
     assert missing == []
@@ -55,14 +57,53 @@ def test_ocdb_only_facts_are_scenery_and_wildlife():
 def test_proposable_facts_are_the_agreed_list():
     proposable = {n for n, s in facts().items() if s.get("x-ocdb-class") == "proposable"}
     assert proposable == {
-        "generators", "camper_trailers", "motorbikes", "big_rigs",
+        "generators", "camper_trailers", "big_rigs",
         "non_drinking_water", "drive_through", "ensuite_sites", "swimming",
         "walking_tracks", "games_room", "shade", "cycling_tracks",
         "offroad_tracks", "boat_ramp_nearby", "telstra_signal", "mobile_signal",
         "tv_reception", "pet_sitting", "lpg", "vehicle_storage",
-        "self_contained_only", "sharks", "marine_stingers", "seasonal_closure",
-        "dangerous_when_wet",
+        "self_contained_only", "sharks", "marine_stingers", "dangerous_when_wet",
     }
+
+
+def test_sharks_and_stingers_take_the_crocodiles_form():
+    spec = facts()
+    assert spec["sharks"]["x-osm"] == "hazard=shark on a warning sign or beach, read within 1 km"
+    assert spec["marine_stingers"]["x-osm"] == "hazard=jellyfish on a warning sign or beach, read within 1 km"
+
+
+def test_motorbikes_is_mapped_from_motorcycle_then_motor_vehicle():
+    spec = facts()["motorbikes"]
+    assert spec["x-ocdb-class"] == "mapped"
+    assert spec["x-osm"] == "motorcycle; motor_vehicle"
+    assert spec["description"].startswith("Motorbikes may enter")
+
+
+def test_seasonal_closure_is_the_one_retired_fact():
+    retired = {n: s for n, s in facts().items() if s.get("x-ocdb-class") == "retired"}
+    assert set(retired) == {"seasonal_closure"}
+    spec = retired["seasonal_closure"]
+    assert spec["x-osm"] == "opening_hours (month ranges)"
+    assert spec["deprecated"] is True
+    assert "retired" in spec["description"].lower()
+
+
+def test_a_retired_value_still_validates():
+    validator = Draft202012Validator(load_schema())
+    record = {
+        "id": "ocdb_01JBX00000000000000000000A",
+        "name": "Creek camp",
+        "kind": "free_camp",
+        "group": "overnight",
+        "location": {"lat": -30.5, "lon": 150.1},
+        "osm": None,
+        "facts": {"seasonal_closure": True},
+        "status": "open",
+        "rating": None,
+        "fact_sources": {"seasonal_closure": "feedback"},
+        "updated": "2026-10-01T00:00:00Z",
+    }
+    assert list(validator.iter_errors(record)) == []
 
 
 def test_nearby_facts_are_mapped():
