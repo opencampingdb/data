@@ -135,6 +135,12 @@ It adds `nearest_boat_ramp`, and fills `pub`, `fuel` and `car_wash` from
 OSM objects inside a place (section 4). Format 12.5 adds the fact
 `nearest_major_road`, the distance to the nearest major OSM road within
 500 m (section 4). The traveller fact `near_road` reads the same as before.
+It also fills `motorbikes` from OSM, where it means motorbikes may enter;
+road condition is `access`. Values travellers gave before keep their source.
+It retires `seasonal_closure`: its existing values stay, and no new ones
+are taken (section 4). The release that stops emitting `seasonal_closure`,
+or turns its values into opening_hours months, removes a field: that needs
+the next FORMAT_VERSION after 13 and a format-change issue 7 days before it.
 Format 13 takes `fees.ndjson.gz`
 out of the release and the `fees` table out of `ocdb.sqlite.gz`
 (`layout_version` 2): what travellers paid is no longer collected. It adds
@@ -484,7 +490,7 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   services (`telstra_signal`, `mobile_signal`, `wifi`, `tv_reception`,
   `pet_sitting`, `fuel`, `lpg`, `car_wash`, `vehicle_storage`) and warnings
   (`self_contained_only`, `crocodiles`, `sharks`, `marine_stingers`,
-  `seasonal_closure`, `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
+  `seasonal_closure` (retired), `dangerous_when_wet`, `over_50s`, `nudist`). `brand` is the park chain or
   club, `operator` is who runs the place (a council, a parks agency, a
   company), `fuels` lists the fuels sold, `air` is air for tyres,
   `hot_water` is hot water in the showers or basins, `toilet_type` is
@@ -520,6 +526,14 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   only from travellers and owners. `big_rigs` also comes only from
   travellers and owners: it means a rig 10 m or longer can get in and turn
   around, which OSM's `hgv` access tag does not say.
+- `motorbikes` says whether motorbikes may enter: a permission, not whether
+  the way in suits one. It comes from OSM `motorcycle` (`yes`, `designated`
+  or `permissive` is `true`, `no` is `false`), or from `motor_vehicle` the
+  same way when `motorcycle` is absent, so a walk-in site with
+  `motor_vehicle=no` has `false`.
+- `seasonal_closure` is retired: the open months in `opening_hours` replace
+  it. Values already in the data stay valid and can still be read, but no
+  new ones are taken. Read `opening_hours` for when a place is open.
 - `nearest_beach` is the nearest OSM beach (`natural=beach`) within 5 km of
   the place: `distance_m`, from the place's location to the nearest point of
   the beach, 0 inside it and rounded to 10 m, and the beach's `name` when it
@@ -664,6 +678,11 @@ Every fact in [schema/place.schema.json](schema/place.schema.json) carries
   `x-osm` is the form a tag could take, a suggestion for whoever proposes
   one, not a tag in use.
 - `ocdb_only`: an opinion or a personal account, which OSM can never hold.
+- `retired`: no new values are taken, and values already in the data stay
+  valid and readable. `x-osm` names where the information now lives, and
+  the fact also carries JSON Schema's `"deprecated": true`.
+  `seasonal_closure` is retired in favour of the open months in
+  `opening_hours`.
 
 A value of a mapped fact that OSM has no value for is listed under
 `x-ocdb-extension-values` on that fact, with its own class. JSON Schema
@@ -675,7 +694,6 @@ Proposable extensions, with the OSM form each could take:
 |---|---|
 | `generators` | `generators=yes/no` |
 | `camper_trailers` | `camper_trailer=yes/no` |
-| `motorbikes` | `motorcycle=yes/no` |
 | `big_rigs` | `big_rigs=yes/no` |
 | `non_drinking_water` | `non_drinking_water=yes/no` |
 | `drive_through` | `drive_through_sites=yes/no` |
@@ -694,9 +712,8 @@ Proposable extensions, with the OSM form each could take:
 | `lpg` | `lpg_bottles=yes/no` |
 | `vehicle_storage` | `vehicle_storage=yes/no` |
 | `self_contained_only` | `self_contained_vehicles=only` |
-| `sharks` | `hazard=shark` |
-| `marine_stingers` | `hazard=marine_stinger` |
-| `seasonal_closure` | `seasonal=yes/no` |
+| `sharks` | `hazard=shark` on a warning sign or beach, read within 1 km |
+| `marine_stingers` | `hazard=jellyfish` on a warning sign or beach, read within 1 km |
 | `dangerous_when_wet` | `dangerous_when_wet=yes/no` |
 | `charge_powered` | `charge:powered_site=<amount> AUD/night` |
 | `caravans: "offroad"` (a value) | `caravans=offroad` |

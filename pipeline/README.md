@@ -188,8 +188,9 @@ A fact is only written when the tag has a value we can read. Any other value
 leaves the fact out, which means "not known". Values are compared without
 regard to case. Where OSM lists several values separated by `;`, the first is used.
 
-Each fact in `schema/place.schema.json` is marked `mapped`, `proposable` or
-`ocdb_only` (`x-ocdb-class`, with the OSM tag or suggested form in `x-osm`).
+Each fact in `schema/place.schema.json` is marked `mapped`, `proposable`,
+`ocdb_only` or `retired` (`x-ocdb-class`, with the OSM tag, the suggested
+form, or for a retired fact where its information now lives, in `x-osm`).
 The facts below and the nearby facts are mapped. The extensions are listed
 in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
 
@@ -207,6 +208,7 @@ in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
 | `sanitary_dump_station` | `dump_station` | `yes` / `no`. `customers` is `true` on a place to stay (a kind in the overnight group), whose guests may use it, and left out on any other kind |
 | `wheelchair` | `wheelchair` | `yes` / `no`. `limited` is left out |
 | `motorhome` | `motorhomes` | `yes` / `no` |
+| `motorcycle`, then `motor_vehicle` | `motorbikes` | Motorbikes may enter (a permission, not whether the way in suits one). `yes`, `designated` or `permissive` is `true`, `no` is `false`, others are left out. `motor_vehicle` is read the same way only when there is no `motorcycle` tag, so `motor_vehicle=no` on a walk-in site is `false` |
 | `washing_machine` | `laundry` | `yes` / `no` |
 | `kitchen` | `kitchen` | `yes` / `no` |
 | `bbq` | `bbq` | `yes` / `no` |
@@ -303,8 +305,8 @@ collected in the same read (`pipeline/water.py`, `pipeline/nearby.py` and
 
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag
-in use for sharks or dangerous jellyfish (`sharks`, `marine_stingers`), so
-those facts come only from fact reports.
+in use for sharks or dangerous jellyfish (taginfo, 12 Nov 2026: 0 uses), so
+those facts (`sharks`, `marine_stingers`) come only from fact reports.
 
 The extract never infers a fact from the kind: a `caravan_park` does not
 get `caravans: true` unless the `caravans` tag says so. `water_type` is the

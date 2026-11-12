@@ -66,7 +66,7 @@ from .common import (
 # from earlier releases (pipeline.database), with layout_version.
 # 12.3: the facts nearest_beach, sharks and marine_stingers.
 # 12.4: the facts fuels, air, hot_water, toilet_type, operator and nearest_boat_ramp.
-# 12.5: the fact nearest_major_road.
+# 12.5: the fact nearest_major_road, motorbikes from OSM, and seasonal_closure retired.
 # 13: fees.ndjson.gz and the fees table of ocdb.sqlite.gz are gone: what travellers
 # paid is no longer collected. The facts charge, charge_conditional and charge_powered
 # hold what a place publishes, and osm.check_dates says when a mapper checked a charge.

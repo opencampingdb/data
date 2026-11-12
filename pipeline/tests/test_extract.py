@@ -543,6 +543,21 @@ def test_hgv_does_not_set_big_rigs():
     assert facts_from_tags({"hgv": "no"}) == {}
 
 
+def test_motorbikes_from_motorcycle_then_motor_vehicle():
+    for value, expected in (("yes", True), ("designated", True), ("permissive", True), ("no", False)):
+        assert facts_from_tags({"motorcycle": value}) == {"motorbikes": expected}
+        assert facts_from_tags({"motor_vehicle": value}) == {"motorbikes": expected}
+    # A walk-in site: no motor vehicles at all, so no motorbikes.
+    assert facts_from_tags({"motor_vehicle": "no", "tents": "yes"}) == {"motorbikes": False, "tents": True}
+    # motorcycle wins over motor_vehicle, even with a value that is left out.
+    assert facts_from_tags({"motorcycle": "yes", "motor_vehicle": "no"}) == {"motorbikes": True}
+    assert facts_from_tags({"motorcycle": "private", "motor_vehicle": "yes"}) == {}
+    for value in ("private", "destination", "customers", "agricultural"):
+        assert facts_from_tags({"motorcycle": value}) == {}
+        assert facts_from_tags({"motor_vehicle": value}) == {}
+    assert facts_from_tags({"motorcycle": "No"}) == {"motorbikes": False}
+
+
 def test_charges_are_copied_as_osm_has_them():
     facts = facts_from_tags({
         "tourism": "caravan_site",

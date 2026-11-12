@@ -726,10 +726,76 @@ def test_a_second_phone_without_a_first_is_never_sent(repo, tmp_path):
 ])
 def test_a_nearby_fact_never_makes_a_task(repo, tmp_path, field, value):
     # These come from other OSM objects, so no tag on the place's own object would show them.
+    # One source is first-hand, so the evidence is enough and only the fact holds the task back.
     write(repo, record(A, 1, facts={field: value}, fact_sources={field: "feedback"}))
-    items = [fact(A, field, value, source=s) for s in ("o1", "o2")]
+    items = [fact(A, field, value, source="o1", first_hand="seen_nearby"), fact(A, field, value, source="o2")]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+@pytest.mark.parametrize("value, words, tag", [
+    (True, "motorbikes may enter", "motorcycle=yes"),
+    (False, "motorbikes may not enter", "motorcycle=no"),
+])
+def test_travellers_motorbikes_differing_from_osm_make_a_task(repo, tmp_path, value, words, tag):
+    write(repo, record(A, 1, facts={"motorbikes": value}, fact_sources={"motorbikes": "feedback"}))
+    items = [fact(A, "motorbikes", value, source="o1", first_hand="seen_nearby"), fact(A, "motorbikes", value, source="o2")]
+    write_challenges(repo, [osm_place(1, motorbikes=not value)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo) == (
+        f"- 2 travellers reported {words} ({tag}), 1 of them first-hand, most recently on 4 November 2026.\n"
+        "  - Check it with a survey, or the operator's own sign or website.\n"
+        f"  - If it checks out, set {tag}. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:motorcycle"
+    )
+
+
+def test_travellers_motorbikes_without_a_first_hand_source_send_nothing(repo, tmp_path):
+    write(repo, record(A, 1, facts={"motorbikes": False}, fact_sources={"motorbikes": "feedback"}))
+    items = [fact(A, "motorbikes", False, source=s) for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_a_retired_seasonal_closure_never_makes_a_task(repo, tmp_path):
+    write(repo, record(A, 1, facts={"seasonal_closure": True}, fact_sources={"seasonal_closure": "feedback"}))
+    items = [
+        fact(A, "seasonal_closure", True, source="o1", first_hand="seen_nearby"),
+        fact(A, "seasonal_closure", True, source="o2"),
+    ]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+    assert osm_tag("seasonal_closure", True) is None
+
+
+def closed_report(place, source, first_hand=None):
+    item = fact(place, None, None, source=source)
+    item["report"] = {"kind": "closed"}
+    if first_hand is not None:
+        item["report"]["first_hand"] = first_hand
+    return item
+
+
+@pytest.mark.parametrize("first_hand, sent", [("seen_nearby", True), ("says_so", True), (None, False)])
+def test_closure_reports_count_when_one_carries_first_hand(repo, tmp_path, first_hand, sent):
+    write(repo, record(A, 1, status="closed", fact_sources={"status": "feedback"}))
+    items = [closed_report(A, "o1", first_hand), closed_report(A, "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    if sent:
+        assert changes(repo).startswith("- 2 travellers reported it has closed for good, 1 of them first-hand,")
+    else:
+        assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+@pytest.mark.parametrize("first_hand, sent", [("seen_nearby", True), ("says_so", True), (None, False)])
+def test_name_reports_count_when_one_carries_first_hand(repo, tmp_path, first_hand, sent):
+    write(repo, record(A, 1, name="Lake Bend Camp", fact_sources={"name": "feedback"}))
+    items = [name_report(A, "Lake Bend Camp", "o1", first_hand=first_hand), name_report(A, "Lake Bend Camp", "o2")]
+    write_challenges(repo, [osm_place(1, name="Lake Camp")], inbox=inbox(tmp_path, *items), now=NOW)
+    if sent:
+        assert changes(repo).startswith(
+            "- 2 travellers reported the name is Lake Bend Camp (name=Lake Bend Camp), 1 of them first-hand,"
+        )
+    else:
+        assert tasks(repo, TRAVELLER_REPORTS) == []
 
 
 def test_crowd_charges_are_sent_with_a_check_date(repo, tmp_path):

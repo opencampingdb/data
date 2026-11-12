@@ -36,6 +36,10 @@ _Avoid_: custom field, extra data
 **Proposable extension**:
 An extension a mapper could check true or false at the place, and so a candidate for a new OpenStreetMap tag.
 
+**Retired fact**:
+A fact that takes no new values because another fact now holds its information. Values already in the data stay valid.
+_Avoid_: deleted fact, removed fact
+
 **Open Camping DB only**:
 An extension that is an opinion or a personal account, such as scenery or a review, which OpenStreetMap can never hold.
 _Avoid_: private fact
