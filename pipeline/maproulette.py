@@ -42,7 +42,9 @@ maproulette/traveller_reports.geojson
     nor travellers' opening hours with a quoted comment (free text no person
     has read). Nearby facts (nearest_beach, nearest_boat_ramp, crocodiles,
     pub, fuel, car_wash) come from other OSM objects, so they have no tag
-    here and are never sent. phone_2 is sent as phone=<first>;<second>, and
+    here and are never sent. seasonal_closure is retired (the open months
+    in opening_hours replace it), has no tag here, and is never sent either.
+    motorbikes is sent as motorcycle=yes or no. phone_2 is sent as phone=<first>;<second>, and
     only when the place has a first phone.
 
     A value is sent only with enough evidence in the inbox's applied items:
@@ -53,9 +55,9 @@ maproulette/traveller_reports.geojson
     must be first-hand (the applied report's first_hand is seen_nearby or
     says_so: the traveller was at the place in the last month). Any other
     first_hand value does not count, and a first-hand doubt is still just a
-    doubt. The feedback engine puts first_hand only on fact reports and
-    doubts, so names and closures from travellers wait until it marks those
-    too. A doubt counts whatever was decided about it, unless it was refused.
+    doubt. Fact, name and closure reports count as first-hand when they
+    carry first_hand. A check that found the place gone has no first_hand,
+    so it confirms a closure but is never the first-hand source. A doubt counts whatever was decided about it, unless it was refused.
     An owner value needs the verified owner's applied update, and doubts and
     first-hand reports do not change it. A name that only describes the
     place ("Heavy Vehicle Rest Area") is never sent. Each line says how many
@@ -135,6 +137,9 @@ YES_NO_TAGS = {
     "dump_station": "sanitary_dump_station",
     "wheelchair": "wheelchair",
     "motorhomes": "motorhome",
+    # The extract also reads motor_vehicle when motorcycle is absent, but the
+    # tag a mapper sets for motorbikes alone is motorcycle.
+    "motorbikes": "motorcycle",
     "laundry": "washing_machine",
     "kitchen": "kitchen",
     "bbq": "bbq",
@@ -202,6 +207,7 @@ YES_NO_WORDS = {
     "dump_station": ("there is a dump point", "there is no dump point"),
     "wheelchair": ("it is wheelchair accessible", "it is not wheelchair accessible"),
     "motorhomes": ("motorhomes can get in", "motorhomes cannot get in"),
+    "motorbikes": ("motorbikes may enter", "motorbikes may not enter"),
     "laundry": ("there is a laundry", "there is no laundry"),
     "kitchen": ("there is a camp kitchen", "there is no camp kitchen"),
     "bbq": ("there are barbecues", "there are no barbecues"),
