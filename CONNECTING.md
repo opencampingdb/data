@@ -140,9 +140,12 @@ It adds `nearest_boat_ramp`, and fills `pub`, `fuel` and `car_wash` from
 OSM objects inside a place (section 4). Format 12.5 adds the fact
 `nearest_major_road`, the distance to the nearest major OSM road within
 500 m (section 4). The traveller fact `near_road` reads the same as before.
-It also fills `motorbikes` from OSM, where it means motorbikes may enter,
-and retires `seasonal_closure`: its existing values stay, and no new ones
-are taken (section 4).
+It also fills `motorbikes` from OSM, where it means motorbikes may enter;
+road condition is `access`. Values travellers gave before keep their source.
+It retires `seasonal_closure`: its existing values stay, and no new ones
+are taken (section 4). The release that stops emitting `seasonal_closure`,
+or turns its values into opening_hours months, removes a field: that needs
+FORMAT_VERSION 13 and a format-change issue 7 days before it.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
