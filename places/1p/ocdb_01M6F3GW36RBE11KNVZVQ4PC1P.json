@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "High Street"
+    },
     "opening_hours": "Mo-Fr 10:00-15:00; Sa,Su 10:00-13:00"
   },
   "group": "attraction",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

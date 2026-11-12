@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,6 +12,10 @@
     },
     "nearest_beach": {
       "distance_m": 3860
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Mona Vale Road"
     },
     "phone": "+61 2 8065 4952"
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

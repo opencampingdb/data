@@ -3,6 +3,10 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,6 +15,15 @@
     "nearest_beach": {
       "distance_m": 4400
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3180
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Alexander Street"
+    },
+    "operator": "Parramatta City Council",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -29,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

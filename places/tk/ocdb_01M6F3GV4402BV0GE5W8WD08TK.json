@@ -1,8 +1,18 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 1280,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Emily Street"
+    },
     "website": "https://www.royalhotelseymour.com.au/"
   },
   "group": "services",
@@ -21,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

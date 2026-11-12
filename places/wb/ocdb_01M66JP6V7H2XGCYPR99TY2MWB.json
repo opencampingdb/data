@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -12,8 +14,18 @@
       "street": "Sydney Street",
       "suburb": "Mogo"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4630
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Sydney Street"
     },
     "opening_hours": "Mo-Su 05:00-24:00"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

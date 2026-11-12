@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,7 +12,15 @@
     "nearest_beach": {
       "distance_m": 900
     },
+    "nearest_boat_ramp": {
+      "distance_m": 930
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Murray Street"
+    },
     "opening_hours": "Mo-Sa 10:00-16:00; PH off",
+    "operator": "Perth History Association",
     "phone": "+61 8 6186 6592",
     "website": "https://www.museumofperth.com.au/"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

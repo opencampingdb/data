@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "car_wash": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "car_wash": true,
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 330,
+      "name": "Sydney Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPS8MZB1HQ193D5CDTX7W",
   "kind": "fuel",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

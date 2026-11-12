@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "operator": "Lowes Petroleum Service"
+  },
   "group": "services",
   "id": "ocdb_01M66JPZGVQDNHTVB69K8B039E",
   "kind": "fuel",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

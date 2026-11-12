@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "state": "QLD",
       "street": "High Street",
       "suburb": "Stanthorpe"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "High Street"
     },
     "website": "https://www.stanthorpehistoricalsociety.org.au/"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

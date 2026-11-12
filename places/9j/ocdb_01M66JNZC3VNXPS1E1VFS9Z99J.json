@@ -1,13 +1,27 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "postcode": "4455",
       "street": "Bowen Street",
       "suburb": "Roma"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Bowen Street"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JNZC3VNXPS1E1VFS9Z99J",
@@ -25,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

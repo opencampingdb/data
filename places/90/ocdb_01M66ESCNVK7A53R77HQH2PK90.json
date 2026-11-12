@@ -1,18 +1,25 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation",
     "dump_station": true,
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Railway Terrace"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

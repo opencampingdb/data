@@ -1,12 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "showers": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 370
+    },
     "opening_hours": "Mo-Su 06:00-22:00",
     "showers": true,
     "website": "https://toiletmap.gov.au/Toilet/17946"
@@ -27,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

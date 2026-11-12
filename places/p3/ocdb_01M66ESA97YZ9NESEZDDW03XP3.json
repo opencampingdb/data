@@ -1,14 +1,27 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 30,
       "name": "Tallebudgera Creek"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 430
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Gold Coast Highway"
+    },
+    "operator": "City of Gold Coast",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESA97YZ9NESEZDDW03XP3",
@@ -26,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,30 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 3620
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3970,
+      "name": "Port Botany Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Gardeners Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPRQ7ADE8EHNFZ2RBRPP0",
@@ -23,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

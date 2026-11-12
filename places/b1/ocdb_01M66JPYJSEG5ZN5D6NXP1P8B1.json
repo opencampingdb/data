@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -12,7 +15,18 @@
       "housenumber": "53",
       "street": "Moore Street"
     },
+    "air": true,
     "facebook": "https://www.facebook.com/p/Truckstop-Goomeri-Qld-100063610300373/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Moore Street"
+    },
     "opening_hours": "Mo-Su 04:30-21:00",
     "phone": "+61 7 4168 4263",
     "toilets": true,
@@ -34,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

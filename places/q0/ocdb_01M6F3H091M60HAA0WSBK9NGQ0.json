@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
       "street": "Main Street"
     },
     "email": "admin@mainresidences.com",
+    "nearest_boat_ramp": {
+      "distance_m": 3300
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Milne Street"
+    },
     "phone": "+61 450 646 299",
     "website": "https://mainresidences.mydirectstay.com/"
   },
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

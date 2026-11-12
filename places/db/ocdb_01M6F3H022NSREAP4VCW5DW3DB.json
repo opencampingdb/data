@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,14 @@
     "address": {
       "housenumber": "4",
       "street": "Hardman Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2450,
+      "name": "Back Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Loch Street"
     },
     "phone": "+61 8 9102 2748",
     "website": "https://www.mudcrabmotel.com.au/"
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

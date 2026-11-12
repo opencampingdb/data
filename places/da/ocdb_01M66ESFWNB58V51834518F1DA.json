@@ -10,6 +10,8 @@
     "bins": "community_report",
     "campfires": "community_report",
     "fee": "community_report",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "pets": "community_report",
     "tents": "osm",
     "toilets": "community_report"
@@ -18,6 +20,11 @@
     "bins": true,
     "campfires": true,
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 40,
+      "name": "boat ramp"
+    },
+    "operator": "Manus State Forest",
     "pets": "yes",
     "tents": true,
     "toilets": true
@@ -44,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

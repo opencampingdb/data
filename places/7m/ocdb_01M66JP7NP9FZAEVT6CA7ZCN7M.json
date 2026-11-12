@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +15,12 @@
       "street": "Hume Highway",
       "suburb": "Sutton Forest"
     },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Hume Highway"
+    },
     "opening_hours": "Mo-Su 10:30-16:00",
+    "operator": "Eling Forest Estate",
     "phone": "+61 2 7253 8608",
     "website": "https://www.elingforest.com.au/"
   },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

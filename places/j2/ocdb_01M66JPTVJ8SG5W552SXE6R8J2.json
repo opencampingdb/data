@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Coolgardie-Esperance Highway"
+    },
+    "pub": true
+  },
   "group": "services",
   "id": "ocdb_01M66JPTVJ8SG5W552SXE6R8J2",
   "kind": "fuel",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

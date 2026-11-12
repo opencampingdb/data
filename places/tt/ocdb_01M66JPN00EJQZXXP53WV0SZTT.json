@@ -2,11 +2,18 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Belmore Street"
+    },
+    "operator": "Cabonne Council",
     "water_type": "tank_fill"
   },
   "group": "utility",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

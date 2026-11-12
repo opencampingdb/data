@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,6 +15,15 @@
       "suburb": "Bingara"
     },
     "facebook": "https://www.facebook.com/p/Liberty-Bingara-Cafe-61566840944446/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Maitland Street"
+    },
     "phone": "+61 2 6724 1520"
   },
   "group": "services",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

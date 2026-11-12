@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Fr 05:15-22:00; Sa-Su 05:15-22:50; PH 05:15-22:50"
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Darling Causeway"
+    },
+    "opening_hours": "Mo-Fr 05:15-22:00; Sa-Su 05:15-22:50; PH 05:15-22:50",
+    "operator": "Transport for NSW"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBZ66GJG6VR27QAWD4V6",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

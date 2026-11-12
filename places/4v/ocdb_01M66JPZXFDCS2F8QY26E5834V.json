@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -10,6 +13,16 @@
     "address": {
       "housenumber": "108",
       "street": "Commercial Street East"
+    },
+    "air": true,
+    "fuels": [
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Jubilee Highway East"
     },
     "opening_hours": "Mo-Fr 05:00-22:00; Sa-Su 06:00-21:00",
     "phone": "+61 8 8779 2676",
@@ -32,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "88",
       "postcode": "2590",
       "street": "Murray Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Parker Street"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPE4RK649J7Y4WFFGS29W",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

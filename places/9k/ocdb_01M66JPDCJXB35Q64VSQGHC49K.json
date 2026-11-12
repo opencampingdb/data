@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +13,15 @@
       "distance_m": 280,
       "name": "Stockton Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1880
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Fullerton Street"
+    },
     "opening_hours": "24/7",
+    "operator": "Newcastle City Council",
     "phone": "+61 2 4974 2000",
     "website": "https://www.rms.nsw.gov.au/maritime/using-waterways/boat-ramps-map/boat-ramps/index.html#/boatramp/1275"
   },
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

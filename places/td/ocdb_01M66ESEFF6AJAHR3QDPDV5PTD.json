@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "charge": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": true
+    "charge": "2",
+    "fee": true,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Herberton Petford Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEFF6AJAHR3QDPDV5PTD",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

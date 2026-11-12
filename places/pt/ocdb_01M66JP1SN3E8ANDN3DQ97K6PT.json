@@ -1,13 +1,32 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1820
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2080,
+      "name": "Kayak launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Raglan Parade"
+    },
+    "operator": "EG Australia",
     "phone": "+61 3 5561 1879",
     "toilets": false
   },
@@ -27,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "pets": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": false,
+    "nearest_boat_ramp": {
+      "distance_m": 50,
+      "name": "Tungatinah Lagoon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Lyell Highway"
+    },
+    "operator": "Hydro Tasmania",
     "pets": "leashed",
     "tents": true,
     "toilets": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

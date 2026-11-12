@@ -3,7 +3,11 @@
     "address": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -17,7 +21,14 @@
     },
     "drinking_water": false,
     "fee": false,
+    "hot_water": false,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Galston Road"
+    },
+    "operator": "Hornsby Shire Council",
     "showers": false,
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/62039"
   },
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

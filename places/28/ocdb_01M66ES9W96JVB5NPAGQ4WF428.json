@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,8 +12,13 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Box",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Cotter Street"
+    },
     "power": true,
     "showers": true,
     "tents": true,
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

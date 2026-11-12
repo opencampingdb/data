@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 850
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Main Street"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M6SBAKGYVVX4QG5JQ5DBZRE7",
   "kind": "public_toilet",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

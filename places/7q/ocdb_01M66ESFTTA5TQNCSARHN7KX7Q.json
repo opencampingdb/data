@@ -1,11 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "campfires": "osm",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -15,6 +17,7 @@
       "street": "Bournda Road",
       "suburb": "Bournda"
     },
+    "booking_required": true,
     "campfires": true,
     "caravans": true,
     "entry": "public",
@@ -23,6 +26,7 @@
       "distance_m": 310,
       "name": "Hobart Beach"
     },
+    "operator": "NPWS",
     "showers": true,
     "tents": true
   },
@@ -42,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

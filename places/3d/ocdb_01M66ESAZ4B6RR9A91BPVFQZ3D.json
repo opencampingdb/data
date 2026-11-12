@@ -1,14 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "156",
       "street": "Edith Road"
     },
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Edith Road"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAZ4B6RR9A91BPVFQZ3D",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "permit",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "80"
+    },
+    "operator": "Department of Transport and Main Roads (TMR)"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFSHSFJ23M9KT7VVH0GX",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

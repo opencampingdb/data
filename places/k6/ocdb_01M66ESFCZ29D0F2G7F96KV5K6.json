@@ -1,12 +1,20 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "drinking_water": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
     "drinking_water": true,
+    "nearest_major_road": {
+      "distance_m": 110
+    },
+    "operator": "Roads and Maritime Services",
     "picnic_tables": true,
     "tents": false,
     "toilets": true
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

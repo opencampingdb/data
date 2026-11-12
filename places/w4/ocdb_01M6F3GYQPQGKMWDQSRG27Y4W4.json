@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,13 @@
     "address": {
       "housenumber": "126",
       "street": "Port Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2360
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Port Road"
     },
     "opening_hours": "Mo-Tu off, We 12:00-20:00, Th 12:00-21:00, Fr 12:00+, Sa 12:00+",
     "phone": "+61 8 8340 4600",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T21:42:45Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,6 +13,10 @@
       "street": "Commercial Street West",
       "suburb": "Mount Gambier"
     },
+    "nearest_major_road": {
+      "distance_m": 420
+    },
+    "operator": "Matthews Petroleum",
     "website": "https://map.bp.com/en-AU/AU/gas-station/mount-gambier/bp-mt-gambier-west/7344"
   },
   "group": "services",
@@ -29,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

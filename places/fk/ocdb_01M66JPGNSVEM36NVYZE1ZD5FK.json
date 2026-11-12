@@ -1,12 +1,28 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 600,
       "name": "Back Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2310
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Brand Highway"
     },
     "opening_hours": "Mo-Su 05:00-23:30"
   },
@@ -26,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

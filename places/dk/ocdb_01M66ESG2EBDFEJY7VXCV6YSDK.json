@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "motorbikes": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -11,8 +14,14 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Booking Fee Only",
     "entry": "public",
     "fee": true,
+    "motorbikes": true,
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Abercrombie Road"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

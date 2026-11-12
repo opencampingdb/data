@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +12,10 @@
       "state": "NSW",
       "street": "Main Street",
       "suburb": "Grenfell"
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Forbes Street"
     },
     "opening_hours": "\"by appointment\"",
     "phone": "+61 427 926 246"
@@ -31,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

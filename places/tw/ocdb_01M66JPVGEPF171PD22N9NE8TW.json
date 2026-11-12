@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +16,18 @@
       "street": "Mitchell Street",
       "suburb": "Bendigo"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "C339"
+    },
     "opening_hours": "Mo-Fr 06:00-21:00; Sa-Su 07:00-21:00",
+    "operator": "EG Australia",
     "phone": "+61 3 9068 8504",
     "website": "https://www.eg-australia.com/"
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

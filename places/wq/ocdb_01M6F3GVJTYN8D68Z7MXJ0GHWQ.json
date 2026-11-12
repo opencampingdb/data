@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1",
       "street": "Plenty Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Plenty Road"
     },
     "website": "https://www.junctionhotel.net.au"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

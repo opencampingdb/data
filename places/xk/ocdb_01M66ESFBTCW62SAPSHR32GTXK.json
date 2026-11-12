@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -12,7 +14,11 @@
       "suburb": "Mount Cotton"
     },
     "entry": "permit",
-    "fee": true
+    "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 730
+    },
+    "operator": "Scouts Australia Queensland Branch"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFBTCW62SAPSHR32GTXK",
@@ -30,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

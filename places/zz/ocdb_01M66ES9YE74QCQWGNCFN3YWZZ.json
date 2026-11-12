@@ -5,6 +5,7 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +17,10 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Churchill Street"
+    },
     "power": false,
     "showers": false,
     "tents": false,
@@ -37,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

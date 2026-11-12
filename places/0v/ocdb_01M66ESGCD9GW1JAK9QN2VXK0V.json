@@ -1,11 +1,20 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 80
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3570
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Tweed Coast Road"
     },
     "website": "https://www.tweedholidayparks.com.au/location/hastings-point"
   },
@@ -25,11 +34,11 @@
   "name": "Hastings Point Holiday Park",
   "osm": {
     "id": 1569008563,
-    "timestamp": "2026-10-17T04:42:49Z",
+    "timestamp": "2026-11-11T08:50:56Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

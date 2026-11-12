@@ -1,10 +1,13 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,10 +15,16 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Box",
     "dump_station": true,
     "entry": "customers",
     "fee": true,
     "max_stay": "5d",
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Mid Western Highway"
+    },
+    "operator": "Blayney Shire Council",
     "power": false,
     "showers": false,
     "tents": true,
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -9,6 +12,16 @@
       "housenumber": "10797",
       "street": "Warrego Highway",
       "suburb": "Charlton"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Warrego Highway"
     },
     "opening_hours": "24/7",
     "website": "https://ior.com.au/"
@@ -29,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,14 @@
       "street": "Light Terrace",
       "unit": "1"
     },
-    "facebook": "https://www.facebook.com/www.competitionconversions.com.au"
+    "facebook": "https://www.facebook.com/www.competitionconversions.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 1690
+    },
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Port Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP61Y32EQYH3SJ03NG2KH",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

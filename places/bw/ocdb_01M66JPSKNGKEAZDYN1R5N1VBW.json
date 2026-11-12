@@ -1,9 +1,18 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 2170
+    },
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Arnhem Highway"
+    },
     "opening_hours": "08:00-17:30",
     "website": "https://nt.gov.au/leisure/parks-reserves/window-on-the-wetlands"
   },
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

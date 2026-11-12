@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Sybil Street"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDD2BF3S3Z1VHQBTJN0K",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

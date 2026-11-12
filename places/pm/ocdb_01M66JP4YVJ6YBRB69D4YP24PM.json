@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "postcode": "6337",
       "street": "South Coast Highway",
       "suburb": "Jerramungup"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "South Coast Highway"
     },
     "phone": "+61 8 9835 1159"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

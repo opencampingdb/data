@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
   },
@@ -8,6 +11,14 @@
     "nearest_beach": {
       "distance_m": 140
     },
+    "nearest_boat_ramp": {
+      "distance_m": 810
+    },
+    "nearest_major_road": {
+      "distance_m": 370,
+      "name": "Shafston Avenue"
+    },
+    "operator": "RiverCity Ferries",
     "wheelchair": true,
     "wifi": true
   },
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

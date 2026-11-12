@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,6 +12,10 @@
       "street": "Lynbrook Boulevard",
       "suburb": "Lynbrook",
       "unit": "14A"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Lynbrook Boulevard"
     },
     "phone": "+61 430 011 112"
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

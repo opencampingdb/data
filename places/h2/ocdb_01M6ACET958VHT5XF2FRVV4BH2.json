@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -14,6 +16,14 @@
     },
     "nearest_beach": {
       "distance_m": 220
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 530,
+      "name": "Cam River Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "East Cam Road"
     },
     "opening_hours": "24/7"
   },
@@ -33,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 4590,
+      "name": "Wallingat Boat Ramp"
+    },
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBPCDJEQXFKMJCV4N8NE",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

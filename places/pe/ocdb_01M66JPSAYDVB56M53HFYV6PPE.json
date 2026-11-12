@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,10 +13,20 @@
       "housenumber": "1244",
       "street": "Marmion Avenue"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2860
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Shenton Avenue"
+    },
     "opening_hours": "Mo,We-Fr 06:00-21:00; Tu 06:00-22:00; Sa,Su 07:00-20:00",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -32,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

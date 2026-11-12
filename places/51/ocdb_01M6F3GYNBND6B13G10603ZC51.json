@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "phone": "osm"
+    "nearest_major_road": "osm",
+    "phone": "osm",
+    "phone_2": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,12 @@
       "street": "Coulson Street",
       "suburb": "Blackbutt"
     },
-    "phone": "+61 7 4163 0500"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Coulson Street"
+    },
+    "phone": "+61 7 4163 0500",
+    "phone_2": "+61 407 671 203"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYNBND6B13G10603ZC51",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

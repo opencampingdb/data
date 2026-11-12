@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,10 +16,22 @@
       "street": "Windsor Road",
       "suburb": "Baulkham Hills"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3670
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Windsor Road"
+    },
     "opening_hours": "00:00-24:00",
+    "operator": "Shell",
     "website": "https://www.shell.com.au/"
   },
   "group": "services",
@@ -35,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

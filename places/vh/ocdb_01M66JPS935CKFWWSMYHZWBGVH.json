@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "housenumber": "475-477",
       "street": "Bell Street",
       "suburb": "Pascoe Vale South"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bell Street"
     },
     "opening_hours": "24/7"
   },
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +16,19 @@
       "street": "Warwick Road",
       "suburb": "Churchill"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "adblue"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4520
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Warwick Road"
+    },
+    "operator": "BP Churchill",
     "phone": "+61 7 3281 4502",
     "website": "https://map.bp.com/en-AU/AU/gas-station/churchill/temp-closed-bp-churchill/5420"
   },
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

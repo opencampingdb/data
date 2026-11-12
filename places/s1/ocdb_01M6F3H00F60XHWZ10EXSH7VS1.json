@@ -1,12 +1,17 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "4928",
       "postcode": "2800",
       "street": "Mitchell Highway"
+    },
+    "nearest_major_road": {
+      "distance_m": 420,
+      "name": "Mitchell Highway"
     }
   },
   "group": "overnight",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

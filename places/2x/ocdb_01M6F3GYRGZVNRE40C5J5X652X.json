@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +12,15 @@
       "state": "TAS",
       "street": "Albert Road",
       "suburb": "Moonah"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1970
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Main Road"
+    },
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GYRGZVNRE40C5J5X652X",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

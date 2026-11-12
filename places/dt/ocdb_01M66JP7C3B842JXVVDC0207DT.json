@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,6 +12,14 @@
       "postcode": "0838",
       "street": "Cox Peninsula Road"
     },
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Cox Peninsula Road"
+    },
+    "operator": "Caltex",
     "phone": "+61 8 8988 6010"
   },
   "group": "services",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

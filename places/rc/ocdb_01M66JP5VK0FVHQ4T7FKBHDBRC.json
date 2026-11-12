@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,8 +15,21 @@
       "street": "Schwinghammer Street",
       "suburb": "South Grafton"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 2170
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1470
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Schwinghammer Street"
     },
     "website": "https://locations.ampol.com.au/en/ampol-grafton-schwinghammer-st"
   },
@@ -33,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

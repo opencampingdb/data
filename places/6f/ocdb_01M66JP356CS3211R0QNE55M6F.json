@@ -1,10 +1,23 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Hume Freeway"
+    },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/glenrowan/bp-north-glenrowan/3295",
     "wheelchair": true
@@ -25,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "power": "osm",
     "showers": "osm",
@@ -14,6 +16,12 @@
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2650
+    },
+    "nearest_major_road": {
+      "distance_m": 90
+    },
     "opening_hours": "24/7",
     "power": false,
     "showers": false,
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

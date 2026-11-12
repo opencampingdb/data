@@ -1,13 +1,28 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1770,
       "name": "Canoe Club Boat Launch Site"
     },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "High Street"
+    },
+    "operator": "EG Australia",
     "website": "https://www.woolworthspetrol.com.au/"
   },
   "group": "services",
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -16,7 +18,12 @@
       "distance_m": 4340,
       "name": "Limeburners Lagoon Beach"
     },
-    "opening_hours": "We 11:00-16:00, Su 11:00-16:00"
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Canterbury Road West"
+    },
+    "opening_hours": "We 11:00-16:00, Su 11:00-16:00",
+    "operator": "Lara Historical Society"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYTNEKP7Z1FBX4EG8NQN",
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

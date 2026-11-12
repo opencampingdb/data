@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "NSW",
       "street": "Peel Street",
       "suburb": "Tamworth"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Scott Road"
+    },
+    "operator": "Australian Country Music Foundation"
   },
   "group": "attraction",
   "id": "ocdb_01M66JNYG09N6B4ZR8XJJ9S9N1",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

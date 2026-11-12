@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -8,6 +11,14 @@
       "housenumber": "127-129",
       "street": "Princess Street"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1460
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Woodhouse Street"
+    },
+    "operator": "NSW Health",
     "phone": "+61 2 6920 8106"
   },
   "group": "emergency",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

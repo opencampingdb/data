@@ -1,10 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -18,10 +20,15 @@
       "street": "Miles Street",
       "suburb": "Tenterfield"
     },
+    "booking_required": true,
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Rouse Street"
+    },
     "phone": "+61 499 885 386",
     "showers": true,
     "tents": true,
@@ -43,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

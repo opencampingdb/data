@@ -1,6 +1,32 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "6443",
+      "state": "WA",
+      "street": "Princep Street",
+      "suburb": "Norseman"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Coolgardie-Esperance Highway"
+    },
+    "opening_hours": "24Hr",
+    "phone": "+61 8 9039 1174"
+  },
   "group": "services",
   "id": "ocdb_01M66JPSX4CXAZW6E69FRSERYW",
   "kind": "fuel",
@@ -8,14 +34,14 @@
     "lat": -32.189684,
     "lon": 121.778374
   },
-  "name": "Ampol Norseman",
+  "name": "Ampol Foodary Norseman",
   "osm": {
     "id": 333715045,
-    "timestamp": "2022-12-04T23:58:15Z",
+    "timestamp": "2026-11-11T06:44:10Z",
     "type": "way",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,24 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "air": "osm",
+    "car_wash": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "air": true,
+    "car_wash": true,
     "nearest_beach": {
       "distance_m": 4810
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1440,
+      "name": "Canoe Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Epping Road"
     }
   },
   "group": "services",
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

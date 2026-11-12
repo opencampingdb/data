@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +15,13 @@
     "entry": "customers",
     "nearest_beach": {
       "distance_m": 460
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 770
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Gray Street"
     },
     "power": true,
     "showers": true,
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

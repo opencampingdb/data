@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "street": "Greg Norman Drive",
       "suburb": "Hillvue"
     },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Greg Norman Drive"
+    },
+    "operator": "Tamworth Regional Council",
     "website": "https://www.trecc.com.au/"
   },
   "group": "attraction",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

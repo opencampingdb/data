@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
       "state": "VIC",
       "street": "Barkly Street",
       "suburb": "Ararat"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4200
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Barkly Street"
     },
     "phone": "+61 3 5352 4444",
     "website": "https://www.araratcentralmotel.com"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

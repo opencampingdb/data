@@ -1,14 +1,21 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "nearest_beach": {
       "distance_m": 2390,
       "name": "Hartfield Beach"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Berkshire Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFN4A74NP909XWF2YW6P",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

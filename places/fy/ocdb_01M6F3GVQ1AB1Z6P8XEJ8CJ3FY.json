@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -8,6 +10,14 @@
   "facts": {
     "nearest_beach": {
       "distance_m": 2570
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4460,
+      "name": "Deep Water Point"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Benningfield Road"
     },
     "opening_hours": "Mo-Su 11:00-22:00",
     "phone": "+61 8 9332 4636",
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

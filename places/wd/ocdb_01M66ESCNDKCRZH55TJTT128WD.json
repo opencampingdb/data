@@ -8,13 +8,24 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "contributed",
-    "opening_hours": "contributed"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "contributed",
+    "operator": "osm"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
     "fee": false,
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 4080
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "High Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "Western Downs Regional Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCNDKCRZH55TJTT128WD",
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

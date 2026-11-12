@@ -1,26 +1,36 @@
 # Pipeline
 
-Four Python 3.12 commands turn OpenStreetMap data into the published dataset.
-Run them from the repository root after `python -m pip install -r requirements.txt`.
+These Python 3.12 commands turn OpenStreetMap data into the published
+dataset. Run them from the repository root after installing what they need:
+
+```sh
+python -m pip install -r requirements.txt
+npm ci --ignore-scripts --prefix tools/oh-check   # opening_hours.js, for the out of spec check
+```
+
+The nightly sync runs Extract, Sync and MapRoulette in that order, and the
+release workflow runs Validate, Release, Database and Place index.
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, and with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road") |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
+| Release | `python -m pipeline.release --root . --out dist [--repository opencampingdb/data] [--data-version V] [--generated T]` | `places/`, `reviews/`, `moderation/`, `commons/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/commons.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
 | Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>]` | `dist/`, `boundaries/au-states.geojson`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
-| Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
+| Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone, moved reviews and fees; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
-| Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for the reviewer. The feedback engine reads the `place` column. Run by a person |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
+| Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for a person to check and a mapper to tag in OSM. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
-| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
-| Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`). Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
+| Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`), `charge` and `charge_conditional` against the Key:charge syntax. Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
 
-Tests: `python -m pytest`.
+Tests: `python -m pytest`. The out of spec tests skip without
+`tools/oh-check` installed as above. CI installs it and sets `REQUIRE_NODE=1`
+so they cannot skip there.
 
 ## Extract
 
@@ -43,32 +53,32 @@ The centroid treats degrees as flat x and y, which is close enough over the
 size of a camp ground. A shape with no area falls back to the mean of its
 outer ring points.
 
-The file is read three times. A first, quick pass reads only relations and
-finds the site relations that are places, with their members. The next pass
-reads only ways and relations, without
-node locations. It notes the closed ways that are a place or a container (see
-"Containers" below), and the member ways of multipolygon and boundary
-relations that are a place or a container, and the member ways and member
-multipolygons of those site relations. Every other relation is dropped before
-the area builder sees it. The second pass reads everything with a node
-location cache, and a way id filter in front of the area builder lets through
-only the ways noted in the first pass. Buildings and other untagged closed
-ways are never assembled into areas. (pyosmium's `FileProcessor.with_areas()`
-filters only relations, so it would assemble an area for every closed way in
-Australia.) The log line "Handed N ways to the area builder" shows how many
-got through.
+The file is read three times:
+
+1. Relations only: the site relations that are places, with their members.
+2. Ways and relations, without node locations: the closed ways that are a
+   place or a container (see "Containers" below), the member ways of
+   multipolygon and boundary relations that are a place or a container, and
+   the member ways and member multipolygons of those site relations. Every
+   other relation is dropped before the area builder sees it.
+3. Everything, with a node location cache. A way id filter in front of the
+   area builder lets through only the ways noted in pass 2, so buildings and
+   other untagged closed ways are never assembled into areas. Every way is
+   also checked for a major road (see "Nearby features").
+
+The log line "Handed N ways to the area builder" shows how many ways got
+through.
 
 ### Kind
 
-`kind` is one of the codes in `schema/kinds.json`: the 22 site types of the
-OTWD (Open Touring and Waypoint Database) vocabulary, version 1.0.0, under
-Apache-2.0, plus three Open Camping DB extensions, `campground`,
-`picnic_site` and `farm_stay`. A `farm_stay` is a station or farm stay: an OSM
-camp or caravan site outside a park, forest or showground whose name says so
-("Mount Gipps Station", "Bonus Downs Farmstay", "Olive Hill Farm", but not a
-pump station, Farm Beach or a wind farm; `kinds.is_farm_stay`), or private land
-listed by its owner. Each kind belongs to a group, and every record carries its
-`group`.
+`kind` is one of the 33 codes in `schema/kinds.json`: the 22 site types of
+the OTWD (Open Touring and Waypoint Database) vocabulary, version 1.0.0,
+under Apache-2.0, plus 11 Open Camping DB extensions. A `farm_stay` is a
+station or farm stay: an OSM camp or caravan site outside a park, forest,
+reserve or showground whose name says so ("Mount Gipps Station", "Bonus
+Downs Farmstay", "Olive Hill Farm", but not a pump station, Farm Beach or a
+wind farm; `kinds.is_farm_stay`), or private land listed by its owner. Each
+kind belongs to a group, and every record carries its `group`.
 
 | Code | Label | Group | Origin |
 |---|---|---|---|
@@ -81,6 +91,8 @@ listed by its owner. Each kind belongs to a group, and every record carries its
 | `showground` | Showground | overnight | OTWD |
 | `campground` | Campground | overnight | Open Camping DB: a camp site whose fee is not known |
 | `farm_stay` | Farm stay | overnight | Open Camping DB: a station or farm stay, named so in OSM or listed by its owner |
+| `backpacker_hostel` | Backpacker hostel | overnight | Open Camping DB: `tourism=hostel` |
+| `roofed_accommodation` | Roofed accommodation | overnight | Open Camping DB: cabins, motels and chalets that are not part of a campground |
 | `rest_area` | Rest area | utility | OTWD |
 | `dump_point` | Dump point | utility | OTWD |
 | `drinking_water_point` | Drinking water point | utility | OTWD |
@@ -88,14 +100,19 @@ listed by its owner. Each kind belongs to a group, and every record carries its
 | `public_shower` | Public shower | utility | OTWD |
 | `laundromat` | Laundromat | utility | OTWD |
 | `picnic_site` | Picnic area | utility | Open Camping DB |
+| `long_vehicle_parking` | Long vehicle parking | utility | Open Camping DB: parking marked for motorhomes, caravans or heavy vehicles |
 | `information_centre` | Information centre | services | OTWD |
 | `fuel` | Fuel | services | OTWD |
 | `lpg_refill_swap` | LPG refill or swap | services | OTWD |
 | `mechanic` | Mechanic | services | OTWD |
+| `food_and_drink` | Food and drink | services | Open Camping DB: a pub from OSM, or a cafe, bakery or restaurant listed by travellers or its owner |
 | `attraction` | Attraction | attraction | OTWD |
 | `lookout` | Lookout | attraction | OTWD |
 | `swimming_spot` | Swimming spot | attraction | OTWD |
 | `boat_ramp` | Boat ramp | attraction | OTWD |
+| `recreation_area` | Recreation area | attraction | Open Camping DB: day use only, listed by travellers or its owner |
+| `heritage` | Arts, history and culture | attraction | Open Camping DB: a museum, gallery or heritage site |
+| `experience` | Experience | attraction | Open Camping DB: a paid tour, tasting or activity, listed by travellers or its owner |
 | `hospital_emergency` | Hospital (emergency) | emergency | OTWD |
 | `ferry_terminal` | Ferry terminal | transport | OTWD |
 
@@ -113,15 +130,17 @@ toilet.
 | 1b | `tourism=camp_site`, inside a state forest | `state_forest_campsite` | broader | |
 | 1c | `tourism=camp_site`, inside a reserve | `reserve_campsite` | | Open Camping DB extension. Reserve: see "Containers" |
 | 1d | `tourism=camp_site`, inside a showground | `showground` | related | |
-| 1e | `tourism=camp_site` + `fee=no` | `free_camp` | exact | Not for a commercial park (see "Facts") |
-| 1f | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
-| 1g | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
-| 2a | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles. Not for a commercial park (see "Facts") |
-| 2b | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
-| 2c | `tourism=hostel` | `backpacker_hostel` | | Open Camping DB extension |
-| 2d | `tourism=motel` or `tourism=chalet` | `roofed_accommodation` | | Open Camping DB extension. `tourism=hotel` and `guest_house` are left out: there are too many, and a park's cabins are the `cabins` fact |
+| 1e | `tourism=camp_site` whose name says station or farm stay | `farm_stay` | | Open Camping DB extension (`kinds.is_farm_stay`) |
+| 1f | `tourism=camp_site` + `fee=no` | `free_camp` | exact | Not for a commercial park (see "Facts") |
+| 1g | `tourism=camp_site` + `fee=yes` or a price | `paid_campground` | exact | A price is a value with a digit or `$` |
+| 1h | `tourism=camp_site`, any other fee or none | `campground` | | Open Camping DB extension. `fee=donation` lands here |
+| 2a | `tourism=caravan_site` whose name says station or farm stay | `farm_stay` | | Open Camping DB extension |
+| 2b | `tourism=caravan_site` + `fee=no` | `free_camp` | exact | OTWD: for areas that suit self-contained vehicles. Not for a commercial park (see "Facts") |
+| 2c | `tourism=caravan_site` | `caravan_park` | exact | Containers do not apply |
+| 2d | `tourism=hostel` | `backpacker_hostel` | | Open Camping DB extension |
+| 2e | `tourism=motel` or `tourism=chalet` | `roofed_accommodation` | | Open Camping DB extension. `tourism=hotel` and `guest_house` are left out: there are too many, and a park's cabins are the `cabins` fact |
 | 3 | `highway=rest_area` | `rest_area` | exact | |
-| 3a | `amenity=parking` + `motorhome`, `caravan` or `hgv=designated` | `long_vehicle_parking` | | Open Camping DB extension. Other car parks are left out |
+| 3a | `amenity=parking` + `motorhome=designated`, `caravan=designated` or `hgv=designated` | `long_vehicle_parking` | | Open Camping DB extension. Other car parks are left out |
 | 4 | `amenity=sanitary_dump_station` | `dump_point` | exact | |
 | 5 | `amenity=water_point` or `amenity=drinking_water` | `drinking_water_point` | exact, narrower | Fact `water_type`: `tank_fill` for water_point, `fountain` for drinking_water |
 | 6 | `amenity=toilets` | `public_toilet` | exact | |
@@ -186,11 +205,16 @@ reports the Unix epoch) gives no `timestamp`.
 
 A fact is only written when the tag has a value we can read. Any other value
 leaves the fact out, which means "not known". Values are compared without
-regard to case. Where OSM lists several values separated by `;`, the first is used.
+regard to case. For the contact keys, `reservation`,
+`toilets:disposal`, `internet_access`, `nudism`, `min_age`, `access`,
+`sanitary_dump_station` and the vehicle keys (`motorcycle`,
+`motor_vehicle`, `hgv`, `motorcar`), only the first of several `;` values is
+read. A plain `yes` / `no` key with several values is left out.
 
-Each fact in `schema/place.schema.json` is marked `mapped`, `proposable`,
-`ocdb_only` or `retired` (`x-ocdb-class`, with the OSM tag, the suggested
-form, or for a retired fact where its information now lives, in `x-osm`).
+Each fact in `schema/place.schema.json` except `near_road` is marked
+`mapped`, `proposable`, `ocdb_only` or `retired` (`x-ocdb-class`, with the
+OSM tag, the suggested form, or for a retired fact where its information now
+lives, in `x-osm`).
 The facts below and the nearby facts are mapped. The extensions are listed
 in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
 
@@ -229,14 +253,14 @@ in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
 | `reservation` | `booking_required` | `required` is `true`, `no` is `false`. `yes` and `recommended` are left out |
 | `operator` | `operator` | trimmed, up to 200 characters. Longer values are left out |
 | `addr:unit`, `addr:housenumber`, `addr:street`, `addr:place`, `addr:suburb` (then `addr:city`), `addr:state`, `addr:postcode` | `address` | an object with `unit`, `housenumber`, `street`, `place`, `suburb`, `state` and `postcode`. Written only with a street or a place. State becomes its abbreviation (`Victoria` is `VIC`); a state we can't read, a postcode that isn't four digits and values over 100 characters are left out |
-| `email`, then `contact:email` | `email` | kept only if it looks like an email address |
-| `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` (then the bare keys) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://`. A bare handle is left out |
+| `email`, then `contact:email` | `email` | kept only if it looks like an email address, up to 254 characters |
+| `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` then `contact:x` (then the bare keys `facebook`, `instagram`, `tiktok`, `twitter`) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://` and is up to 500 characters. A bare handle is left out |
 | `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written. |
 | `opening_hours` | `opening_hours` | copied as is |
-| `charge` | `charge` | copied as is, out-of-spec values too (ADR 0002); `check_date:charge` goes to `osm.check_dates.charge` |
-| `charge_conditional` | `charge:conditional` | copied as is; `check_date:charge:conditional` goes to `osm.check_dates.charge_conditional` |
+| `charge` | `charge` | copied as is, trimmed and cut at 255 characters, out of spec values too ([ADR 0002](../docs/adr/0002-follow-osm-formats-keep-extensions.md)). A `check_date:charge` in `YYYY-MM-DD` form goes to `osm.check_dates.charge` |
+| `charge:conditional` | `charge_conditional` | the same. `check_date:charge:conditional` goes to `osm.check_dates.charge_conditional` |
 | `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
-| `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is. The second, from the same key, is `phone_2`, up to 100 characters |
+| `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is. The second, from the same key, is `phone_2` when it differs from the first, up to 100 characters |
 | `website:booking`, then `reservation:website` | `booking_url` | the first with a value, kept only if it starts with `https://` and is up to 500 characters. An owner's `booking_url` is never replaced (see `pipeline/sync.py`) |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
@@ -250,7 +274,7 @@ village or resort, or names a park chain (Discovery Parks, BIG4, NRMA Parks,
 Ingenia Holidays, G'day Parks), or whose `brand` is a park chain, or whose website's domain does
 (`lighthousebeachholidayvillage.com.au`, `discoveryholidayparks.com.au`).
 `fee=no` on one is taken as a mapping slip and the `fee` fact is left out, so
-the place is not a `free_camp` (rules 1e and 2a). A name that says free
+the place is not a `free_camp` (rules 1f and 2b). A name that says free
 ("Barbour Park Free Caravan Park") keeps `fee=no`. Only the website's domain
 is read, because council sites file free camps under paths such as
 `/Caravan-Parks-and-Campgrounds/`. Other objects, such as the toilets in a
@@ -319,13 +343,12 @@ rule, never stored in `places/` (see "Rules" under "Release").
 - A new OSM object gets a new record with the id `ocdb_<ULID>`, `status: open`,
   `rating: null` and every fact sourced from `osm`.
 - For a matched record, `name`, `kind`, `group`, `location`, `osm` and the
-  OSM-sourced facts are replaced with what OSM says now. A fact whose
-  `fact_sources` entry is `feedback` or `contributed` is kept. An OSM-sourced
-  fact whose tag has gone is removed. `status` and `rating` are never
-  touched, and a `status` entry in `fact_sources` is kept as it is. A fact
-  whose source is `owner` or `community_report` is kept too, with its source:
-  sync never turns a community report value into an OSM value. A kind
-  change counts as an update.
+  OSM-sourced facts are replaced with what OSM says now. A fact whose source
+  is anything but `osm` (`feedback`, `contributed`, `owner` or
+  `community_report`) is kept, with its source: sync never turns a community
+  report value into an OSM value. An OSM-sourced fact whose tag has gone is
+  removed. `status` and `rating` are never touched. A kind change counts as
+  an update.
 - A record without an OSM link (`osm: null`: a contributed place, a new
   place from feedback or one from community reports) is never touched,
   flagged or deleted.
@@ -337,20 +360,18 @@ rule, never stored in `places/` (see "Rules" under "Release").
   is true and `campground` otherwise. `caravan_site` becomes `caravan_park`,
   `dump_station` becomes `dump_point`, `drinking_water` becomes
   `drinking_water_point`, `toilets` becomes `public_toilet`, `shower` becomes
-  `public_shower`, and `rest_area` and `picnic_site` stay as they are. The
-  first sync after this change updates every record, so its PR waits for a
-  person. A record without an OSM link that still has an old kind is left
-  for a person to fix: validation reports it.
-- `fact_sources` may also hold `name`, `location` and `status`. When `name`
-  or `location` is `feedback` or `contributed`, sync keeps the record's own
-  value. When it is missing or `osm`, the value comes from OSM. Sync never
-  adds these entries itself.
+  `public_shower`, and `rest_area` and `picnic_site` stay as they are. A
+  record without an OSM link that still has an old kind is left for a
+  person to fix: validation reports it.
+- `fact_sources` may also hold `name`, `location`, `kind`, `status` and
+  `description`. When `name`, `location` or `kind` has a source other than
+  `osm`, sync keeps the record's own value. When it is missing or `osm`, the
+  value comes from OSM. Sync never adds these entries itself.
 - `osm.timestamp` comes from the extract with the rest of `osm`. When the
   extract has no timestamp for an object, the record keeps its own as long
   as the version is the same. A record that gains a timestamp it did not
-  have (the first sync after timestamps were added) is written, and counts
-  as updated in the report, but its `updated` does not move: the place did
-  not change.
+  have is written, and counts as updated in the report, but its `updated`
+  does not move: the place did not change.
 - `fact_dates` says when each value that is not from OSM was accepted: one
   entry, in the same UTC form as `updated`, for every `fact_sources` entry
   that is `feedback`, `contributed`, `owner` or `community_report`. Whoever
@@ -368,7 +389,8 @@ rule, never stored in `places/` (see "Rules" under "Release").
   is listed under "Gone from OSM" in the report until a person sets its
   `status` to `closed` or removes it.
 - Change percentage is the number of records that are new, updated or gone
-  (each record counted once), divided by the number of records after the sync. The nightly PR merges itself only below 2%.
+  (each record counted once), divided by the number of records after the
+  sync. The nightly PR merges itself only below 2%.
 
 Place files are written in one canonical form: sorted keys, 2-space indent,
 UTF-8 characters as they are, LF line endings and one trailing newline. They
@@ -586,33 +608,47 @@ and open a PR.
 
 ## Validate
 
-Checks every place file against `schema/place.schema.json` and every review
-line against `schema/review.schema.json`. Neither schema allows a key it does
-not list. On top of the schemas it checks that `group` is the group of the
-record's `kind`, the canonical form, the file path,
-6 decimal places, that `fact_sources` has an entry for every fact and no
-other fact (plus optional `name`, `location` and `status`, each `osm`,
-`feedback`, `contributed`, `owner` or `community_report`), that no file holds a
-`rule` source or `fact_rules` (only the release sets those), that `fact_dates` has a date for exactly the
-`fact_sources` entries that are not `osm` and none later than `updated`,
-that `last_confirmed` is not in the future (it may be later than `updated`),
-that no two records share an
-id or an OSM object (counting `merged_osm`, leaving tombstones out), that a
-tombstone has a `merged_into` naming a record that is not itself merged and
-no reviews, the owner rules (a value with the source `owner` needs
-`owner_verified: true`; a `farm_stay` its owner lists (`osm: null`) has `entry: private`,
-`booking_required: true` and a `booking_url` or `phone`; a `description` is
-checked like review text; `reopens` is a real date and only goes with
-`status: temporarily_closed`), that review lines are canonical and sorted by id, that
-each review's place exists, that each `rating` has the exact count and
-rounded mean of its visible reviews (no `hidden`, no blocked `contributor`),
-that `moderation/blocked_contributors.json` matches its schema and is sorted
-by contributor with no repeats, that `moderation/removed_reviews.json`
-matches its schema, is sorted by review with no repeats, and that no review
-line has a removed id, that `moderation/distinct_places.json`
-matches its schema, is sorted, lists each pair once with `a` before `b` and
-names places that exist, and that review text has no email
-address, phone number, link, social media handle or obvious personal name.
+`python -m pipeline.validate --root .` prints one line per problem and exits
+1 if there are any. It checks:
+
+- every place file against `schema/place.schema.json` and every review line
+  against `schema/review.schema.json`. Neither schema allows a key it does
+  not list;
+- that each place file is in the canonical form (see "Sync") at its path,
+  that `group` is the group of the record's `kind`, and that coordinates
+  have at most 6 decimal places;
+- that `fact_sources` has an entry for every fact and no other fact, plus
+  optional `name`, `location`, `kind`, `status` and `description` entries,
+  each `osm`, `feedback`, `contributed`, `owner` or `community_report`. No
+  file holds a `rule` source or `fact_rules`: only the release sets those;
+- that the nearby facts `nearest_beach`, `nearest_boat_ramp` and
+  `nearest_major_road` have the source `osm`;
+- that `fact_dates` has a date for exactly the `fact_sources` entries that
+  are not `osm`, none later than `updated`, and that `last_confirmed` is not
+  in the future (it may be later than `updated`);
+- that `standing` and `moderator` appear only on a place a traveller added
+  (`osm: null`), and `pets_months` only with `pets: "seasonal"`;
+- that no two records share an id or an OSM object (counting `merged_osm`,
+  leaving tombstones out), and that a tombstone has a `merged_into` naming a
+  record that is not itself merged, and no reviews;
+- the owner rules: a value with the source `owner` needs
+  `owner_verified: true`; a `farm_stay` with `osm: null` has
+  `entry: private`, `booking_required: true` and a `booking_url` or `phone`;
+  a `description` is checked like review text; `reopens` is a real date and
+  only goes with `status: temporarily_closed`;
+- that review lines are canonical and sorted by id, that each review's place
+  exists, and that each `rating` has the exact count and rounded mean of its
+  visible reviews (no `hidden`, no blocked `contributor`);
+- that there is no `fees/` folder: what travellers paid is no longer
+  collected;
+- that each JSON file in `moderation/` matches its schema and is sorted
+  with no repeats, that the pairs in `distinct_places.json` and
+  `commons-do-not-match.json` name places that exist, that `moderation/`
+  holds nothing but those files and the CSV files the pipeline writes, and
+  that no review line has an id on `moderation/removed_reviews.json`;
+- that review text has no email address, phone number, link, social media
+  handle or obvious personal name.
+
 The name check catches phrases such as "my name is" and sign-offs such as
 "Cheers, Sam". It cannot catch every name, so the feedback moderation step
 stays the main safeguard. ISO dates (`2026-10-30`, `2026-10`) are blanked out
@@ -694,13 +730,11 @@ tag. The three relations with no `ref` take the codes in `NO_REF_CODES`:
 `AT` for the Coral Sea Islands and Ashmore and Cartier Islands, which have no
 ISO code.
 
-OSM's outlines take in the coastal waters. On the release of
-2026-11-06T21:20Z, 23 of 96,364 places were outside every outline, all reef
-sites at least 1.4 km beyond it, so there is no snapping to the nearest
-state: a place outside every outline has no state. The outlines are not
-simplified, because the land borders follow rivers: simplified to 0.002
-degrees the file is 740 kB, but 88 places on the Murray and other river
-borders change state.
+OSM's outlines take in the coastal waters, so only places well offshore,
+such as reef pontoons, fall outside them. There is no snapping to the
+nearest state: a place outside every outline has no state. The outlines are
+not simplified, because the land borders follow rivers and simplifying them
+moves places on the riverbanks into the other state.
 
 `python -m pipeline.states --fetch` rebuilds the file from Overpass, and
 `--overpass <response.json>` from a saved response.

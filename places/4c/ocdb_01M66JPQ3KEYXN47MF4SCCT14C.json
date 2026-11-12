@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +11,12 @@
       "street": "Veness Court",
       "unit": "6"
     },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Duckworth Street"
+    },
     "opening_hours": "Mo-Fr 07:30-16:30",
+    "operator": "dean dalgleish",
     "phone": "+61 7 4725 1592"
   },
   "group": "services",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

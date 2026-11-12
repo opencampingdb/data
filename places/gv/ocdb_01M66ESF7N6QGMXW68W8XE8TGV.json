@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,12 @@
       "street": "Cash Avenue"
     },
     "entry": "private",
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 400,
+      "name": "Samford Road"
+    },
+    "operator": "Scouts Australia Queensland Branch"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF7N6QGMXW68W8XE8TGV",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 270,
+      "name": "Morgan Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "High Street"
+    },
     "opening_hours": "Mo-Fr 10:00-16:00",
+    "operator": "Morgan Museum",
     "wheelchair": true
   },
   "group": "attraction",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

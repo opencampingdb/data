@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "bins": "osm",
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "entry": "public"
+    "bins": true,
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Mitchell Highway"
+    },
+    "operator": "Transport for NSW"
   },
   "group": "utility",
   "id": "ocdb_01M6MDG928GYF8B7FC7YSB95GD",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

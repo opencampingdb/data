@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Federation Street",
       "suburb": "Patchewollock"
     },
-    "facebook": "https://www.facebook.com/patchepub/"
+    "facebook": "https://www.facebook.com/patchepub/",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Federation Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GYY01AVB1EDX5VQ0A5BC",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 4570,
+      "name": "Kremur Street Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Brockley Street"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFHRGABDQFKBAPJYJ4E3",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

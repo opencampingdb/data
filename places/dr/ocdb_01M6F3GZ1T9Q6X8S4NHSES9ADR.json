@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 480
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Tibbereena Street"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1T9Q6X8S4NHSES9ADR",
   "kind": "roofed_accommodation",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

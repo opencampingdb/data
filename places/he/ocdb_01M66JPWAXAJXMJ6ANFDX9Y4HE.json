@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,6 +15,19 @@
       "street": "Mount Barker Road",
       "suburb": "Stirling"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Mount Barker Road"
+    },
+    "operator": "AM/PM",
     "wheelchair": true
   },
   "group": "services",
@@ -29,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,7 +3,10 @@
     "address": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -21,7 +24,15 @@
       "distance_m": 3300,
       "name": "South Melbourne Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2610
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Flinders Street"
+    },
     "opening_hours": "Mo-Su 10:00-17:00",
+    "operator": "Museum Victoria",
     "phone": "+61 3 9927 2709",
     "website": "https://museumsvictoria.com.au/immigrationmuseum/",
     "wheelchair": true
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,11 +16,20 @@
       "postcode": "6725",
       "street": "Frederick Street"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 2130,
       "name": "Town Beach - Guwarrigun"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1840
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Frederick Street"
+    },
     "opening_hours": "Mo-Su 06:00-21:00",
+    "operator": "EG Australia",
     "phone": "+61 8 9192 7909",
     "website": "https://woolworthspetrol.com.au/"
   },
@@ -36,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

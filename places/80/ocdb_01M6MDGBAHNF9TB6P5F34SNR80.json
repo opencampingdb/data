@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,6 +13,11 @@
       "street": "McKay Street",
       "suburb": "Pyramid Hill"
     },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Victoria Street"
+    },
+    "operator": "Pyramid Hill & District Historical Society",
     "website": "https://www.loddon.vic.gov.au/For-residents/Community-support/Community-Directory/Pyramid-Hill-Historical-Society"
   },
   "group": "attraction",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

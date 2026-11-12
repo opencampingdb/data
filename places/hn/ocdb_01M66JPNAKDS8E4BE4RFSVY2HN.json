@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Great Northern Highway"
+    },
     "opening_hours": "Tu-Fr 14:30-17:00;Sa-Su 09:00-12:00, 14:00-17:00"
   },
   "group": "attraction",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

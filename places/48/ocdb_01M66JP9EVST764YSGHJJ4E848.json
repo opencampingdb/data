@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -15,7 +18,19 @@
       "street": "North Lake Road",
       "suburb": "South Lake"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North Lake Road"
+    },
     "opening_hours": "24/7",
+    "operator": "The EG Group",
     "phone": "+61 8 6186 0285",
     "toilets": true,
     "website": "https://eg-australia.com",
@@ -38,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

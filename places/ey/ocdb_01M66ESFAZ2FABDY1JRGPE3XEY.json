@@ -6,12 +6,14 @@
     "power": "2026-10-01T00:00:00Z"
   },
   "fact_sources": {
+    "booking_required": "osm",
     "campfires": "community_report",
     "caravans": "osm",
     "drinking_water": "community_report",
     "dump_station": "community_report",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "power": "community_report",
     "showers": "osm",
     "tents": "osm",
@@ -19,12 +21,17 @@
     "website": "osm"
   },
   "facts": {
+    "booking_required": false,
     "campfires": true,
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
     "fee": false,
     "max_stay": "3d",
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Wollombi Street"
+    },
     "power": false,
     "showers": false,
     "tents": true,
@@ -47,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,6 +12,14 @@
     "nearest_beach": {
       "distance_m": 20,
       "name": "Blackmans Bay Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2130,
+      "name": "Kingston Beach Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 420,
+      "name": "Roslyn Avenue"
     }
   },
   "group": "utility",
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

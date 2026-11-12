@@ -3,12 +3,21 @@
     "brand": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "power": "osm"
   },
   "facts": {
     "brand": "big4",
     "drinking_water": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3590
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Des Chalmers Drive"
+    },
     "power": true
   },
   "group": "overnight",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,17 +3,24 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "charge": "osm",
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "charge": "$8 u/p pwrd unk Key and payt at hardware store or donation box",
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Coolamon Street"
+    },
     "power": true,
     "showers": true,
     "toilets": true
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

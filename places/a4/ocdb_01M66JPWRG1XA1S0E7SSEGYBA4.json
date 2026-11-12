@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "drinking_water": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -16,8 +20,19 @@
       "street": "Dawson Highway",
       "suburb": "Calliope"
     },
+    "air": true,
     "drinking_water": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Dawson Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "Chevron",
     "phone": "+61 7 4975 5249",
     "showers": true,
     "toilets": true,
@@ -39,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -10,6 +13,21 @@
       "state": "QLD",
       "street": "Stapylton Street",
       "suburb": "North Lakes"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 970
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Mason Street"
     },
     "opening_hours": "Mo-Su 04:00-22:00",
     "phone": "+61 7 3481 2493"
@@ -30,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -14,6 +16,14 @@
     "nearest_beach": {
       "distance_m": 620,
       "name": "Blackmans Bay Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1560,
+      "name": "Kingston Beach Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Algona Road"
     }
   },
   "group": "services",
@@ -32,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

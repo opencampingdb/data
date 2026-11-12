@@ -1,8 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,10 +19,28 @@
       "street": "Wallace Avenue",
       "suburb": "Point Cook"
     },
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "e85",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 3320
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2900
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Forsyth Road Offramp"
+    },
     "opening_hours": "24/7",
+    "operator": "United Petroleum",
     "phone": "+61 3 9931 1430",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-point-cook"
   },
@@ -37,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -7,6 +7,7 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -15,6 +16,10 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "High Street"
+    },
     "showers": false,
     "toilets": true
   },
@@ -34,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

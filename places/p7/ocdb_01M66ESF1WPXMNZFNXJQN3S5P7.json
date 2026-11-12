@@ -1,9 +1,18 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Hume Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": true
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

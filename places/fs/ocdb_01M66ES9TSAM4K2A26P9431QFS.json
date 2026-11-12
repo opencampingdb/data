@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -10,6 +12,10 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 280
+    },
+    "operator": "Parks Victoria",
     "tents": true,
     "toilets": false
   },
@@ -29,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

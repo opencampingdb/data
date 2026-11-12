@@ -1,12 +1,26 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "charge": "Permit at KK",
     "dump_station": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 800,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Goldring Street"
+    },
+    "operator": "Richmond Shire Council",
     "toilets": false
   },
   "group": "overnight",
@@ -25,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

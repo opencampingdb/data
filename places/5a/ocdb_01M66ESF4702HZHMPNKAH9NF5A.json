@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Goldfields Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF4702HZHMPNKAH9NF5A",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

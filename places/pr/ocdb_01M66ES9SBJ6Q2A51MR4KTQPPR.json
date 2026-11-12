@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -10,7 +12,12 @@
       "street": "St Johns Road"
     },
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Pacific Motorway"
+    },
     "opening_hours": "24/7",
+    "operator": "McDonald's Australia",
     "wheelchair": true
   },
   "group": "utility",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

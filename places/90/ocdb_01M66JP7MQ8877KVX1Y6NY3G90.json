@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "state": "NSW",
       "street": "Friday Drive",
       "suburb": "Thredbo"
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Alpine Way"
     },
     "opening_hours": "Mo-Su 09:00-17:00"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

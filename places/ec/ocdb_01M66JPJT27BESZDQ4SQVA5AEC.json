@@ -3,7 +3,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "water_type": "osm",
     "website": "osm"
   },
@@ -11,7 +14,15 @@
     "drinking_water": true,
     "entry": "public",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3600
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Samsonvale Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Unitywater",
     "water_type": "tank_fill",
     "website": "https://www.unitywater.com/residential/manage-your-water-usage/community-water-fill-stations"
   },
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,31 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 740,
       "name": "South Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 930
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Douro Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPXKTCX771PP9H6SVT5PW",
@@ -24,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "49",
       "street": "Great Eastern Highway",
       "suburb": "Merredin"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Great Eastern Highway"
     },
     "opening_hours": "Mo-Su 06:00-23:00",
     "phone": "+61 8 9041 1620",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +15,12 @@
       "street": "Bell Street",
       "suburb": "Preston"
     },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "St Georges Road"
+    },
+    "operator": "AA Holdings",
     "phone": "+61 3 9484 7045",
     "website": "https://www.bp.com/en_au/australia/"
   },
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

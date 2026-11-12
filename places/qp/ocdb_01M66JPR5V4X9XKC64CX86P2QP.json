@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -14,6 +16,13 @@
       "street": "Drummond Street North"
     },
     "email": "info.ballarat@sjog.org.au",
+    "nearest_boat_ramp": {
+      "distance_m": 820
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Mair Street"
+    },
     "phone": "+61 3 5320 2111",
     "website": "https://www.sjog.org.au/hospitals/ballarat.aspx",
     "wheelchair": true
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

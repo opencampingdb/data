@@ -1,13 +1,25 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 4530
     },
-    "opening_hours": "PH, Sa-Su"
+    "nearest_boat_ramp": {
+      "distance_m": 320,
+      "name": "Canoe Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Delhi Road"
+    },
+    "opening_hours": "PH, Sa-Su",
+    "operator": "NSW National Parks and Wildlife Service"
   },
   "group": "utility",
   "id": "ocdb_01M66ES8Z7E8F12CCNQ8SMP2FB",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

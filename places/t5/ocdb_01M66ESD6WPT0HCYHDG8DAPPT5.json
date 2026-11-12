@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "hot_water": false,
+    "nearest_major_road": {
+      "distance_m": 470,
+      "name": "Brockman Highway"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESD6WPT0HCYHDG8DAPPT5",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

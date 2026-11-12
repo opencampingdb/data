@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,15 @@
       "street": "Main Street",
       "suburb": "Huonville"
     },
-    "opening_hours": "Mo-Fr 10:00-16:00"
+    "nearest_boat_ramp": {
+      "distance_m": 490
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
+    },
+    "opening_hours": "Mo-Fr 10:00-16:00",
+    "operator": "Parks and Wildlife Service Tasmania"
   },
   "group": "services",
   "id": "ocdb_01M66JPVT1P8REHYTMRDDD54AA",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

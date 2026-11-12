@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -10,7 +12,12 @@
   "facts": {
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "New England Highway"
+    },
     "opening_hours": "We-Su",
+    "operator": "Red Lion Tavern",
     "phone": "+61 2 6733 3271",
     "showers": true,
     "toilets": true
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

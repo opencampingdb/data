@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,16 @@
       "state": "NT",
       "street": "Yarradena Drive",
       "suburb": "Alyangula"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 340,
+      "name": "Alyangula Public Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 420,
+      "name": "Rowell Highway"
+    },
+    "operator": "Al"
   },
   "group": "services",
   "id": "ocdb_01M66JPY8Y8WEW0DPFJ42AH8VG",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

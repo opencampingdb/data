@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,13 @@
     "address": {
       "housenumber": "50",
       "street": "Hertford Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1450
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Hertford Street"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 5335 6307"
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

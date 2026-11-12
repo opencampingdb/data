@@ -1,12 +1,23 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 3010,
       "name": "Mindalong Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4890
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Robertson Drive"
+    },
+    "operator": "Government of Western Australia"
   },
   "group": "emergency",
   "id": "ocdb_01M66JNX94GDKT4PB2PAXS6FDS",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

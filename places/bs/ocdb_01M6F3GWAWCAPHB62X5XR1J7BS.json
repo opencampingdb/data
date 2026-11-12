@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,13 @@
     "address": {
       "housenumber": "12",
       "street": "Peel Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 640
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Currie Street"
     },
     "opening_hours": "Tu 16:00-22:00; We, Th, Su 11:30-22:00; Fr, Sa 11:30-02:00",
     "phone": "+61 8 7221 1979",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

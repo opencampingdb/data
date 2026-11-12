@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "North West Coastal Highway"
+    },
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF8YNTF0KE2YJ3KFSGEP",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

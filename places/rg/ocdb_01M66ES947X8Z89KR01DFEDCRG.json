@@ -3,7 +3,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -12,7 +15,16 @@
     "nearest_beach": {
       "distance_m": 3100,
       "name": "Horse Arena"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2780,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Princes Street"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ES947X8Z89KR01DFEDCRG",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

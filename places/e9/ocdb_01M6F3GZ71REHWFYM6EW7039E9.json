@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -11,6 +12,9 @@
       "street": "Faulkner Street"
     },
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 200
+    },
     "opening_hours": "Mo,We-Su 11:00-14:00; Tu off",
     "wheelchair": false
   },
@@ -30,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -9,6 +12,20 @@
       "housenumber": "59-61",
       "postcode": "2077",
       "street": "Pacific Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1100
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Pacific Highway"
     },
     "opening_hours": "Mo-Su 06:00-00:00",
     "phone": "+61 2 9489 3640"
@@ -29,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

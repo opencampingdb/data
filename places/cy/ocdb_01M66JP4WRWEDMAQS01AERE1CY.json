@@ -4,10 +4,15 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
+    },
     "website": "https://map.bp.com/en-AU/AU/gas-station/foster/bp-foster/6987"
   },
   "group": "services",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

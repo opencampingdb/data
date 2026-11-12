@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -12,6 +14,14 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 1800
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1980,
+      "name": "Sayonara Slipway"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Cross City Tunnel"
     },
     "opening_hours": "PH,Mo-Su 10:00-17:00",
     "phone": "+61 2 9320 6000",
@@ -35,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

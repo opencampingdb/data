@@ -1,13 +1,31 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1650
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 570
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Scottsdale Drive"
     },
     "opening_hours": "Mo-Fr 05:00-22:30; Sa-Su 06:00-21:30",
     "phone": "+61 7 2111 7821",
@@ -29,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

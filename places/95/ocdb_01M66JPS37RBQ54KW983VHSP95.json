@@ -1,10 +1,31 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm",
     "website": "osm"
   },
   "facts": {
-    "opening_hours": "24/7",
+    "address": {
+      "housenumber": "Lot 3",
+      "street": "Eyre Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Eyre Highway"
+    },
+    "opening_hours": "5:00am - 8:00 PM",
+    "phone": "+61 8 9039 3459",
+    "toilets": true,
     "website": "https://map.bp.com/en-AU/AU/gas-station/caiguna/bp-caiguna-eyre-hwy/1878"
   },
   "group": "services",
@@ -14,14 +35,14 @@
     "lat": -32.270832,
     "lon": 125.487903
   },
-  "name": "BP Caiguna Roadhouse",
+  "name": "Golden Outback Caiguna",
   "osm": {
     "id": 216406627,
-    "timestamp": "2025-12-30T16:06:25Z",
+    "timestamp": "2026-11-11T10:15:04Z",
     "type": "way",
-    "version": 7
+    "version": 9
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

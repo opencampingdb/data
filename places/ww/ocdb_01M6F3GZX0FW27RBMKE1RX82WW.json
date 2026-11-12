@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "toilets": "osm",
     "wifi": "osm"
@@ -11,6 +13,13 @@
     "nearest_beach": {
       "distance_m": 570,
       "name": "Abbey Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 910
+    },
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "Caves Road"
     },
     "power": true,
     "toilets": true,
@@ -32,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

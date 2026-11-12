@@ -1,14 +1,26 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "nearest_beach": {
       "distance_m": 80,
       "name": "Jenny Dixon Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1010,
+      "name": "Norah Head Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Wilfred Barrett Drive"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFJECJ59G5KEPZZV792J",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

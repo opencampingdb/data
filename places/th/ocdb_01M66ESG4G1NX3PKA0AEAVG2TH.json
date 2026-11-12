@@ -1,10 +1,12 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_boat_ramp": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,10 +14,14 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Box",
     "dump_station": false,
     "entry": "public",
     "fee": true,
     "max_stay": "7d",
+    "nearest_boat_ramp": {
+      "distance_m": 160
+    },
     "power": false,
     "showers": true,
     "tents": true,
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

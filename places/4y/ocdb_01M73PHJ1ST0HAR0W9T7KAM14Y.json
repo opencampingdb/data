@@ -1,6 +1,18 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 810,
+      "name": "Jeparit Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Lower Roy Street"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M73PHJ1ST0HAR0W9T7KAM14Y",
   "kind": "dump_point",
@@ -17,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

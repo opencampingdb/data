@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "postcode": "3147",
       "street": "High Street",
       "suburb": "Ashburton"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "High Street"
     },
     "phone": "+61 3 9885 5606"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

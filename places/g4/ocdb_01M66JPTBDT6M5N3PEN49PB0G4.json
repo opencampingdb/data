@@ -1,12 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "309",
       "street": "Cheltenham Road"
+    },
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Cheltenham Road"
     },
     "website": "https://www.7-eleven.com.au"
   },
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

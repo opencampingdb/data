@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -19,6 +21,13 @@
     "fee": true,
     "nearest_beach": {
       "distance_m": 1370
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1350
+    },
+    "nearest_major_road": {
+      "distance_m": 480,
+      "name": "Clunies Ross Street"
     },
     "opening_hours": "08:30-17:00",
     "pets": "no",
@@ -41,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

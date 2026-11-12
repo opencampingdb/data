@@ -2,7 +2,11 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +14,16 @@
     "nearest_beach": {
       "distance_m": 160,
       "name": "Tennyson Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 360
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Military Road"
+    },
+    "operator": "City Of Charles Sturt",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF1FCDAMV0YKWHY9B3EC",
@@ -28,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

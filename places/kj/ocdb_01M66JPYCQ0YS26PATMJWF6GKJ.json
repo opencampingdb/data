@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +14,19 @@
       "state": "QLD",
       "street": "Dalganal Road",
       "suburb": "Gayndah"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1770
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Burnett Highway"
     },
     "phone": "+61 7 4161 1911"
   },
@@ -29,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

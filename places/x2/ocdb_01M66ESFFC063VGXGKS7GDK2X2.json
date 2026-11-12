@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "drinking_water": "osm",
+    "dump_station": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "tents": "osm",
@@ -16,7 +18,12 @@
       "street": "Kitchener Street"
     },
     "drinking_water": true,
+    "dump_station": true,
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Kitchener Street"
+    },
     "phone": "+61 7 4632 8735",
     "power": true,
     "tents": true,
@@ -38,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

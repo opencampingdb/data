@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
+    "pub": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,7 +11,12 @@
       "housenumber": "1",
       "street": "Plenty Road"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "High Street"
+    },
     "phone": "+61 3 9484 1009",
+    "pub": true,
     "website": "http://www.junctionhotel.net.au"
   },
   "group": "services",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

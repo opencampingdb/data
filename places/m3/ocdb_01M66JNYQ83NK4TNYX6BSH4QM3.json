@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -14,8 +17,21 @@
       "street": "North West Coastal Highway",
       "suburb": "Wonthella"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1110
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1140,
+      "name": "Batavia Coast"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North West Coastal Highway"
     },
     "opening_hours": "Mo-Sa 05:00-23:00; Su 06:00-23:00",
     "phone": "+61 8 6247 4356",
@@ -37,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

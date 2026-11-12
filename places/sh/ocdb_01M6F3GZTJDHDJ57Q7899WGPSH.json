@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +10,10 @@
       "state": "NSW",
       "street": "Crawford Street",
       "suburb": "Queanbeyan"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Crawford Street"
     }
   },
   "group": "overnight",
@@ -33,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

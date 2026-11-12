@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Brisbane Valley Highway",
       "suburb": "Toogoolawah"
     },
-    "facebook": "https://www.facebook.com/ToogoolawahMotelAU/"
+    "facebook": "https://www.facebook.com/ToogoolawahMotelAU/",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Brisbane Valley Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZV19TJMFVJ28SWV3XJD",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

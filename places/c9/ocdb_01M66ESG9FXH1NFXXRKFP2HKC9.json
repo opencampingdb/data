@@ -3,6 +3,8 @@
     "address": "osm",
     "dump_station": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm"
   },
@@ -17,6 +19,13 @@
     "dump_station": true,
     "nearest_beach": {
       "distance_m": 150
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 430
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Kent Beach Road"
     },
     "power": true,
     "tents": true
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

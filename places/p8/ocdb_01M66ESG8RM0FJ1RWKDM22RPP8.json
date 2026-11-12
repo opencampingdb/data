@@ -1,9 +1,12 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "booking_required": "osm",
     "campfires": "osm",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "operator": "osm",
     "pets": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,10 +14,13 @@
     "website": "osm"
   },
   "facts": {
+    "bins": false,
+    "booking_required": true,
     "campfires": true,
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "operator": "NSW National Parks and Wildlife Service",
     "pets": "no",
     "showers": false,
     "tents": true,
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

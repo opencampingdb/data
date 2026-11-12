@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "nearest_boat_ramp": {
+      "distance_m": 1620,
+      "name": "Millbrook Launching Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Montagu Crescent"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESE5R5P8G8DTARBW6DYKT",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "private",
     "nearest_beach": {
       "distance_m": 40
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3150,
+      "name": "Shoreham Boat Ramp"
     }
   },
   "group": "attraction",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

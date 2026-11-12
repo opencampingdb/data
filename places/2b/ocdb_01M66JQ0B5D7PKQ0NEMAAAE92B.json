@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,9 +11,18 @@
       "housenumber": "88",
       "street": "Champion Drive"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2100,
       "name": "Champion Lakes Swimming Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Champion Drive"
     },
     "website": "https://www.shell.com.au/"
   },
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

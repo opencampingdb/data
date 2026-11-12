@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +14,21 @@
       "street": "Toombul Road",
       "suburb": "Northgate"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4520
+    },
+    "nearest_major_road": {
+      "distance_m": 30
+    },
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/northgate/bp-northgate/1483"
   },
   "group": "services",
@@ -28,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

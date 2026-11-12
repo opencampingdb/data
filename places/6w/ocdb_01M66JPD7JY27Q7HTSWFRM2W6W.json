@@ -3,15 +3,34 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "air": "osm",
     "dump_station": "contributed",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
     "dump_station": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 3000
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 730
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Bruxner Highway"
     },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/west-ballina/bp-ballina-travel-centre/9072"
@@ -32,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

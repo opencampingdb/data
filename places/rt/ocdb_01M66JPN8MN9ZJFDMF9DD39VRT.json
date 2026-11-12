@@ -1,9 +1,23 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "24/7"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mannanarie Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "Hunts Fuels"
   },
   "group": "services",
   "id": "ocdb_01M66JPN8MN9ZJFDMF9DD39VRT",
@@ -21,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

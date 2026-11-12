@@ -2,15 +2,26 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "hot_water": true,
     "nearest_beach": {
       "distance_m": 70,
       "name": "Lorne Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1160
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mountjoy Parade"
     },
     "opening_hours": "24/7"
   },
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

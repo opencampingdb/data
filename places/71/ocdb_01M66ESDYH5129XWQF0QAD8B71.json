@@ -1,14 +1,25 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 170,
       "name": "The Spit Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 620
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Sea World Drive"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDYH5129XWQF0QAD8B71",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

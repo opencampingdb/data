@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "car_wash": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "car_wash": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2100,
+      "name": "Don Bayley Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Comur Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPZR21TC92R81T7TZMB05",
   "kind": "fuel",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

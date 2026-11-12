@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "housenumber": "122-140",
       "street": "King Street"
     },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Market Street"
+    },
+    "operator": "NSW Health",
     "website": "https://www.nsw.gov.au/departments-and-agencies/wnswlhd/service-directory/molong-health-service"
   },
   "group": "emergency",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

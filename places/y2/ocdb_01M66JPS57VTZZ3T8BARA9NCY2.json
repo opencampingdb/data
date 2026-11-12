@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -8,6 +10,17 @@
     "address": {
       "housenumber": "35",
       "street": "William Street"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Durham Street"
     },
     "toilets": false,
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-bathurst"
@@ -28,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,7 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm",
     "wifi": "osm"
@@ -9,6 +10,10 @@
   "facts": {
     "drinking_water": false,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North West Coastal Highway"
+    },
     "opening_hours": "24/7",
     "toilets": true,
     "wifi": false
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

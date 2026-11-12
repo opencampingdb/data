@@ -2,12 +2,21 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 730
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 650
+    },
+    "nearest_major_road": {
+      "distance_m": 260,
+      "name": "Henty Highway"
     },
     "website": "https://portlandcabletrams.com.au/"
   },
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

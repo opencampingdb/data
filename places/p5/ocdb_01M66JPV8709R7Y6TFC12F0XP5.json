@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -17,7 +20,16 @@
       "distance_m": 3620,
       "name": "Sandridge Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3280,
+      "name": "Williamstown Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Francis Street"
+    },
     "opening_hours": "06:00-21:00",
+    "operator": "United Petroleum",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-yarraville"
   },
   "group": "services",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

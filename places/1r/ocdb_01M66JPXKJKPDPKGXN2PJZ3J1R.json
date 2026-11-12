@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,18 @@
     "address": {
       "housenumber": "176-178",
       "street": "Peisley Street"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "e85"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Peisley Street"
     },
     "opening_hours": "Mo-Su 05:00-20:00",
     "phone": "+61 2 8089 1929",
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

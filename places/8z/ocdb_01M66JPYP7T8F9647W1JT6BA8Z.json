@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +15,14 @@
       "street": "Yilgarn Avenue",
       "suburb": "Malabaine"
     },
+    "fuels": [
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Great Eastern Highway"
+    },
+    "operator": "Fresh Trading Co. Northam",
     "phone": "+61 8 6146 1153",
     "website": "https://www.mobil.com.au/en-au/find-station/mobil-malabaine-wa-northam-6100122"
   },
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

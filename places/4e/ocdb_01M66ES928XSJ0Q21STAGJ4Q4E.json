@@ -1,10 +1,12 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "pets": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,10 +14,15 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "RFDS Donation Box",
     "drinking_water": false,
     "entry": "public",
     "fee": true,
     "max_stay": "overnight",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Kennedy Developmental Road"
+    },
     "pets": "leashed",
     "showers": true,
     "tents": true,
@@ -37,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

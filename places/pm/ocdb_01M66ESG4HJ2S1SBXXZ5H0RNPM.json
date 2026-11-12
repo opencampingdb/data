@@ -1,12 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "dump_station": "osm",
     "email": "osm",
     "facebook": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -20,6 +24,7 @@
       "street": "Caves Road",
       "suburb": "Abbey"
     },
+    "charge": "Starting at 35 AUD",
     "dump_station": true,
     "email": "reservations@racbusseltonholidaypark.com.au",
     "facebook": "https://www.facebook.com/RACbusselton/",
@@ -28,7 +33,15 @@
       "distance_m": 620,
       "name": "Abbey Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 970
+    },
+    "nearest_major_road": {
+      "distance_m": 330,
+      "name": "Caves Road"
+    },
     "opening_hours": "Mo-Su 08:00-18:00",
+    "operator": "RAC WA Parks and Resorts",
     "phone": "+61 8 9755 4241",
     "power": true,
     "website": "https://parksandresorts.rac.com.au/busselton",
@@ -50,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

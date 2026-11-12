@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "wifi": "osm"
   },
@@ -9,6 +11,13 @@
       "housenumber": "52",
       "postcode": "4700",
       "street": "Gladstone Road (Bruce Highway)"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1590
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Gladstone Road (Bruce Highway)"
     },
     "phone": "+61 422 400 464",
     "wifi": true
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "brand": "osm"
+    "brand": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Wellington Street",
       "suburb": "Baradine"
     },
-    "brand": "nrma"
+    "brand": "nrma",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Narren Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP3GPA8NNKM8N2CKXFCFM",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

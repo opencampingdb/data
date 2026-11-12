@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -9,6 +11,11 @@
   "facts": {
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Eyre Highway"
+    },
+    "operator": "Eucla Motel",
     "power": true,
     "showers": true,
     "toilets": true
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,11 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -12,9 +14,11 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "$10 p/v p/n - mail slot",
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "operator": "Weethalle Showground Trust",
     "phone": "+61 427 756 191",
     "power": true,
     "showers": true,
@@ -37,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

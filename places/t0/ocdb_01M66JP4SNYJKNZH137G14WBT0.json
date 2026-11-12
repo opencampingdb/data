@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -8,6 +9,10 @@
   "facts": {
     "address": {
       "street": "Great Northern Highway"
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Great Northern Highway"
     },
     "opening_hours": "Mo-Su 06:00-20:00",
     "phone": "+61 8 9191 4775",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

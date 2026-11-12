@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,19 @@
       "street": "O G Road",
       "suburb": "Klemzig"
     },
-    "opening_hours": "Mo-Su 05:00-24:00"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "O G Road"
+    },
+    "opening_hours": "Mo-Su 05:00-24:00",
+    "operator": "X Convenience"
   },
   "group": "services",
   "id": "ocdb_01M66JP5ZCN7SMYHAEV6GCQTMG",
@@ -29,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

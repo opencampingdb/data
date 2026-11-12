@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "cabins": "osm",
     "campfires": "osm",
     "caravans": "osm",
@@ -8,6 +9,7 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "nudist": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -24,6 +26,7 @@
     "address": {
       "street": "Mimosa Street"
     },
+    "booking_required": false,
     "cabins": false,
     "campfires": false,
     "caravans": true,
@@ -31,6 +34,9 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3230
+    },
     "nudist": false,
     "pets": "leashed",
     "phone": "+61 2 6977 1801",
@@ -59,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "05:00-19:00"
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Allan Street"
+    },
+    "opening_hours": "05:00-19:00",
+    "operator": "Campaspe Shire Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDJJYK70GHT9XC6F3FG4",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

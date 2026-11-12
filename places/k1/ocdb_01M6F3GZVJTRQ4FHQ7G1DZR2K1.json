@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "email": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
   },
   "facts": {
     "email": "thomassambar@gmail.com",
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Taverner Street"
+    },
     "phone": "+61 3 5395 1060",
     "website": "https://www.rainbowmotorlodge.com.au/",
     "wifi": true
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

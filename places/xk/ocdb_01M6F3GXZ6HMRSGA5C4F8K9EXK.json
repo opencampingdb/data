@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,14 @@
       "state": "VIC",
       "street": "High Street",
       "suburb": "Thornbury"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4800,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "High Street"
     },
     "website": "https://www.thornburytaphouse.com/"
   },
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

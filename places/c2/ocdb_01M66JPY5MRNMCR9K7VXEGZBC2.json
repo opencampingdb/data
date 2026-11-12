@@ -1,18 +1,35 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "3",
       "street": "Hawthorne Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10"
+    ],
     "nearest_beach": {
       "distance_m": 1440
     },
-    "opening_hours": "Mo-Su 06:00-19:00"
+    "nearest_boat_ramp": {
+      "distance_m": 1130
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Balmoral Street"
+    },
+    "opening_hours": "Mo-Su 06:00-19:00",
+    "operator": "Pacific Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JPY5MRNMCR9K7VXEGZBC2",
@@ -30,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

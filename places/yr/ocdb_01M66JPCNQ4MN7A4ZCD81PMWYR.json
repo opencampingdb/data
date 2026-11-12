@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Peachey Road"
+    },
+    "operator": "EG Australia"
+  },
   "group": "services",
   "id": "ocdb_01M66JPCNQ4MN7A4ZCD81PMWYR",
   "kind": "fuel",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

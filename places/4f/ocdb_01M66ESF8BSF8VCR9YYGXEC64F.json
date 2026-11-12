@@ -2,14 +2,25 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
     "nearest_beach": {
       "distance_m": 50
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 810
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Beach Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF8BSF8VCR9YYGXEC64F",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

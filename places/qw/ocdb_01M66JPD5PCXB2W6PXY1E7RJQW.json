@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,8 +16,22 @@
       "street": "Cardigan Road",
       "suburb": "Mooroolbark"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3570
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3530
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Cardigan Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/mooroolbark/bp-mooroolbark/3283"
   },
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

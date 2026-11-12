@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -9,6 +11,14 @@
       "housenumber": "38",
       "street": "Smith Street",
       "suburb": "Capalaba"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3440,
+      "name": "Chadwell Street Canoe Ramp RA6010"
+    },
+    "nearest_major_road": {
+      "distance_m": 350,
+      "name": "Redland Bay Road"
     },
     "opening_hours": "Mo-Fr 07:30-17:00",
     "website": "https://bhss.com.au/"
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,13 @@
       "suburb": "Palmwoods"
     },
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Margaret Street"
+    },
+    "operator": "Sunshine Coast Regional Council",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESB39RVN0RB4HZ03MS523",
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

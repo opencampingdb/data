@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -11,7 +15,21 @@
       "housenumber": "170-172",
       "street": "Baillie Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1520,
+      "name": "Rowing Club Pontoon (Main)"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Baillie Street"
+    },
     "opening_hours": "Mo-Th 07:00-21:00; Fr-Sa 07:00-20:00; Su 08:00-20:00",
+    "operator": "Coles Group",
     "phone": "+61 3 9075 1254",
     "website": "https://www.coles.com.au/stores/storeDetail/6746?brandId=1",
     "wheelchair": true
@@ -32,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

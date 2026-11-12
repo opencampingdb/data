@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "caravans": "osm"
+    "caravans": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "caravans": true
+    "caravans": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Champions Way"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBMHP40RCY01K2F5056J",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,20 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "street": "Mutze Street"
     },
-    "opening_hours": "Mo-Fr 10:00-16:00"
+    "nearest_major_road": {
+      "distance_m": 380,
+      "name": "Bridge Street"
+    },
+    "opening_hours": "Mo-Fr 10:00-16:00",
+    "operator": "Transport and Main Roads"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZD94AYWD8S02V3XT3GB",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

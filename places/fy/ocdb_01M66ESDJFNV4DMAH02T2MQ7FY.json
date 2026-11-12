@@ -1,14 +1,25 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
     "nearest_beach": {
       "distance_m": 280,
       "name": "Seven Mile Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 210
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Shoalhaven Heads Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDJFNV4DMAH02T2MQ7FY",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "24/7"
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "opening_hours": "24/7",
+    "operator": "Lowes"
   },
   "group": "services",
   "id": "ocdb_01M66JPJFZAR9541VK5YGT0G43",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -16,6 +19,14 @@
       "distance_m": 220,
       "name": "Austinmer Boatharbour"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 230
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Lawrence Hargrave Drive"
+    },
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/austinmer/bp-austinmer/7469"
   },
   "group": "services",
@@ -34,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

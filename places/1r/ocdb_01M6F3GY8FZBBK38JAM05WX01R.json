@@ -1,14 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "307",
       "street": "Albert Street"
     },
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Sydney Road"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GY8FZBBK38JAM05WX01R",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

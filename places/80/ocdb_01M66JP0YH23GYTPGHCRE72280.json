@@ -1,11 +1,22 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 4380
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 850
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Frenchman Bay Road"
+    },
+    "operator": "Shell"
   },
   "group": "services",
   "id": "ocdb_01M66JP0YH23GYTPGHCRE72280",
@@ -23,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

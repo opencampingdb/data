@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "street": "Cobden Street",
       "suburb": "Bright"
     },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Coronation Avenue"
+    },
+    "operator": "Alpine Health",
     "phone": "+61 3 5755 0100"
   },
   "group": "emergency",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

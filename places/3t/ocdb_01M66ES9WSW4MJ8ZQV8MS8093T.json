@@ -3,12 +3,19 @@
     "caravans": "osm",
     "entry": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "entry": "public",
     "max_stay": "28d",
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Princes Highway"
+    },
+    "operator": "Victoria State Forests",
     "tents": true
   },
   "group": "overnight",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

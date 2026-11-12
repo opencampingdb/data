@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -15,7 +17,12 @@
       "suburb": "Kalorama"
     },
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Mount Dandenong Tourist Road"
+    },
     "opening_hours": "Th-Sa 11:00-17:00",
+    "operator": "Heather Bradbury",
     "phone": "+61 3 9728 1594",
     "website": "https://www.kapiartspace.com/"
   },
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

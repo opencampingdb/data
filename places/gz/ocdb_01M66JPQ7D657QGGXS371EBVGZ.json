@@ -2,8 +2,11 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "phone_2": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,8 +17,16 @@
     "nearest_beach": {
       "distance_m": 1440
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1250
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Spence Street"
+    },
     "opening_hours": "Mo-Fr 08:00-05:00",
     "phone": "+61 415 690 566",
+    "phone_2": "+61 432 284 886",
     "website": "https://www.cairnsautoworks.com.au/service/mitsubishi-service-cairns"
   },
   "group": "services",
@@ -34,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

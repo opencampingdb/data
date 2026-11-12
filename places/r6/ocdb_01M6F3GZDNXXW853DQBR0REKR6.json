@@ -2,15 +2,22 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "motorbikes": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "vehicle_access": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "motorbikes": false,
     "nearest_beach": {
       "distance_m": 1070,
       "name": "Corindi Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Solitary Islands Way"
     },
     "vehicle_access": "heavy_vehicles_only"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

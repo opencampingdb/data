@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "bins": "osm",
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "entry": "public"
+    "bins": true,
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Mid Western Highway"
+    },
+    "operator": "Transport for NSW"
   },
   "group": "utility",
   "id": "ocdb_01M6VRSJEYYH01RCWYPKJ3WA23",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-07T19:46:54Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

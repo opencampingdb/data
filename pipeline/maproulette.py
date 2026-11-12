@@ -72,7 +72,8 @@ maproulette/out_of_spec.geojson
     One task per place and tag where the value OSM has is out of spec: the
     reference OSM names for the tag refuses it (pipeline.out_of_spec). Only
     facts whose source is osm are checked, opening_hours with opening_hours.js
-    (through node) and phone and phone_2 against the international form, and
+    (through node), phone and phone_2 against the international form, and
+    charge and charge_conditional against the wiki's charge syntax, and
     only while the OSM object still has that value. Style warnings, and
     values that fail only for missing holiday data, are not out of spec. The
     task id is the Open Camping DB id and the tag, such as
@@ -100,7 +101,7 @@ from pathlib import Path
 from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places, write_text
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
-from .out_of_spec import NO_NODE, OH_CHECK_DIR, check_opening_hours, checker_ready, phone_out_of_spec
+from .out_of_spec import NO_NODE, OH_CHECK_DIR, charge_conditional_ok, charge_ok, check_opening_hours, checker_ready, phone_out_of_spec
 from .sync import escape_cell, load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
@@ -699,6 +700,18 @@ PHONE_FIX = (
     "after it as \" ext. 12\", and ; between several numbers. Check the number with the operator's own sign or website, then rewrite it in that form. "
     "OSM wiki: " + WIKI + "Key:phone"
 )
+CHARGE_FIX = (
+    "The OSM wiki's syntax is \"<amount> <currency>[/<unit>][/<time unit>]\", such as 57 AUD/night or "
+    "15 AUD/person/night: the amount, a space, the ISO 4217 code, then optionally what it is for and the time, "
+    "written out in full. Check the price with the operator's own sign or website, then rewrite it in that form "
+    "and add check_date:charge with the day you checked it. A donation box is fee=donation, not a charge. "
+    "OSM wiki: " + WIKI + "Key:charge"
+)
+CHARGE_CONDITIONAL_FIX = (
+    "The OSM wiki's syntax is \"<charge> @ <condition>\", such as 75 AUD/night @ (Dec-Jan), with ; between "
+    "several. Check the prices with the operator's own sign or website, then rewrite them in that form. "
+    "OSM wiki: " + WIKI + "Conditional_restrictions"
+)
 OUT_OF_SPEC_SKIP = "If you are not sure what the right value is, skip the task. If the value is right as it is, mark the task \"Not an Issue\"."
 
 
@@ -735,6 +748,12 @@ def out_of_spec_tasks(places: dict, extract: dict) -> list[dict]:
         numbers = osm_values(record, extract[ref], ("phone", "phone_2"))
         if any(phone_out_of_spec(number) for number in numbers):
             found.append(("phone", ";".join(numbers), PHONE_FIX))
+        for value in osm_values(record, extract[ref], ("charge",)):
+            if not charge_ok(value):
+                found.append(("charge", value, CHARGE_FIX))
+        for value in osm_values(record, extract[ref], ("charge_conditional",)):
+            if not charge_conditional_ok(value):
+                found.append(("charge:conditional", value, CHARGE_CONDITIONAL_FIX))
         for tag, value, fix in found:
             properties = {
                 "name": record.get("name") or "Unnamed place",

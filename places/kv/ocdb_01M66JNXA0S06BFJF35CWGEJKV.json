@@ -1,14 +1,29 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "2",
       "street": "High Street"
     },
-    "opening_hours": "Mo-Su 06:00-22:00"
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bungendore Road"
+    },
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "Shell"
   },
   "group": "services",
   "id": "ocdb_01M66JNXA0S06BFJF35CWGEJKV",
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -14,6 +14,18 @@ phone
     spaces and hyphens. Several numbers are separated by ";". An extension
     may follow in a form the page lists (see E164_RE). Domestic-only keys
     such as phone:AU are not read by the extract, so never checked.
+
+charge and charge:conditional
+    The reference is the OSM wiki's Key:charge syntax,
+    "<amount> <currency>[/<unit>][/<time unit>]": an amount with at most 2
+    decimal places, a space, an ISO 4217 code (three capital letters), then
+    optionally what it is for (a word, or a quantity and a word, such as
+    person or 1.5 litre) and the time it covers, written out in full (minute,
+    hour, day, night, week, month or year). Spaces may stand around a slash.
+    charge:conditional is one or more "<charge> @ <condition>" pairs
+    separated by ";" (Conditional_restrictions), a condition holding ";" in
+    parentheses. The feedback SDK's parseCharge and chargeConditions read the
+    same grammar, so a value the SDK accepts is never out of spec here.
 """
 
 import json
@@ -76,3 +88,69 @@ def phone_out_of_spec(number: str) -> bool:
     An extension the OSM wiki lists (" ext. 12", " x12" or "x12") may follow.
     """
     return not E164_RE.fullmatch(number.strip())
+
+
+CHARGE_TIME_UNITS = frozenset({"minute", "hour", "day", "night", "week", "month", "year"})
+CHARGE_AMOUNT_RE = re.compile(r"(?:0|[1-9][0-9]{0,6})(?:\.[0-9]{1,2})?")
+CHARGE_CURRENCY_RE = re.compile(r"[A-Z]{3}")
+CHARGE_UNIT_RE = re.compile(r"(?:[0-9]+(?:\.[0-9]+)? )?[A-Za-z][A-Za-z0-9_]*")
+MAX_TAG_LENGTH = 255
+
+
+def charge_ok(text: str) -> bool:
+    """True for a charge in the wiki's syntax, as the SDK's parseCharge reads it."""
+    if not text or len(text) > MAX_TAG_LENGTH or text != text.strip():
+        return False
+    parts = re.split(r" ?/ ?", text)
+    if len(parts) > 3:
+        return False
+    head = parts[0].split(" ")
+    if len(head) != 2 or not CHARGE_AMOUNT_RE.fullmatch(head[0]) or not CHARGE_CURRENCY_RE.fullmatch(head[1]):
+        return False
+    rest = parts[1:]
+    if any(not part for part in rest):
+        return False
+    if rest and rest[-1] in CHARGE_TIME_UNITS:
+        rest = rest[:-1]
+    if len(rest) > 1:
+        return False
+    return not rest or (bool(CHARGE_UNIT_RE.fullmatch(rest[0])) and rest[0] not in CHARGE_TIME_UNITS)
+
+
+def _split_outside_parentheses(text: str) -> list[str] | None:
+    parts, depth, start = [], 0, 0
+    for i, c in enumerate(text):
+        if c == "(":
+            depth += 1
+        elif c == ")":
+            depth -= 1
+            if depth < 0:
+                return None
+        elif c == ";" and depth == 0:
+            parts.append(text[start:i])
+            start = i + 1
+    if depth != 0:
+        return None
+    parts.append(text[start:])
+    return parts
+
+
+def charge_conditional_ok(text: str) -> bool:
+    """True for "<charge> @ <condition>[; ...]", as the SDK's chargeConditions reads it."""
+    if not text or len(text) > MAX_TAG_LENGTH or text != text.strip():
+        return False
+    pairs = _split_outside_parentheses(text)
+    if pairs is None:
+        return False
+    for pair in pairs:
+        if pair.count("@") != 1:
+            return False
+        charge, condition = (side.strip() for side in pair.split("@"))
+        wrapped = condition.startswith("(") and condition.endswith(")") and _split_outside_parentheses(condition[1:-1]) is not None
+        if wrapped:
+            condition = condition[1:-1].strip()
+        elif "(" in condition or ")" in condition or ";" in condition:
+            return False
+        if not charge_ok(charge) or not condition:
+            return False
+    return True

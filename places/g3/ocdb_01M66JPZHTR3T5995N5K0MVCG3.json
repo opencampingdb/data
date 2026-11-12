@@ -1,12 +1,27 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1201",
       "street": "Logan Road"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3250
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Logan Road"
     },
     "website": "https://www.shell.com.au/fuel-finder.html"
   },
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

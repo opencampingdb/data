@@ -1,10 +1,19 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Lauderdale Road"
+    },
     "opening_hours": "Mo-Su 06:00-23:00",
+    "operator": "Coles Group",
     "website": "https://www.colesexpress.com.au/"
   },
   "group": "services",
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,7 +4,10 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -19,7 +22,16 @@
     "nearest_beach": {
       "distance_m": 0
     },
+    "nearest_boat_ramp": {
+      "distance_m": 10,
+      "name": "Deerubbin Reserve Boat Ramp - Lane 2"
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Old Pacific Highway Offramp"
+    },
     "opening_hours": "24/7",
+    "operator": "Central Coast Council",
     "website": "https://www.centralcoast.nsw.gov.au/recreation/leisure/boating"
   },
   "group": "attraction",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

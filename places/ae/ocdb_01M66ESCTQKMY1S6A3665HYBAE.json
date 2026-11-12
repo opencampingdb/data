@@ -7,11 +7,16 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "contributed",
+    "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "High Street"
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

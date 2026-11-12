@@ -3,7 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "public",
@@ -12,7 +14,11 @@
       "distance_m": 0,
       "name": "Shelly Beach"
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 20
+    },
+    "opening_hours": "24/7",
+    "operator": "Northern Beaches Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBWNSNN0WN299WY4SHZ8",
@@ -30,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

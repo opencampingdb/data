@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -12,6 +14,17 @@
       "state": "VIC",
       "street": "Rattray Road",
       "suburb": "Montmorency"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 350,
+      "name": "Mountain View Road"
     },
     "opening_hours": "Mo-Sa 06:00-21:00; Su 07:00-20:00",
     "website": "https://map.bp.com/en-AU/AU/gas-station/montmorency/bp-montmorency/7734",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

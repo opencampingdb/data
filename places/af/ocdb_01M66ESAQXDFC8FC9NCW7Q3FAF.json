@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Howard Street"
+    },
+    "operator": "Sunshine Coast Council",
+    "toilet_type": "flush"
+  },
   "group": "utility",
   "id": "ocdb_01M66ESAQXDFC8FC9NCW7Q3FAF",
   "kind": "public_toilet",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

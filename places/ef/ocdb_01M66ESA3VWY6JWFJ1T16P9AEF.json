@@ -6,6 +6,10 @@
     "email": "osm",
     "entry": "osm",
     "fee": "osm",
+    "motorbikes": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -25,6 +29,15 @@
     "email": "taroom@ozzyparks.com.au",
     "entry": "customers",
     "fee": true,
+    "motorbikes": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1670
+    },
+    "nearest_major_road": {
+      "distance_m": 490,
+      "name": "Leichhardt Highway"
+    },
+    "operator": "Ozzy Parks",
     "power": true,
     "showers": true,
     "tents": true,
@@ -47,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

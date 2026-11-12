@@ -1,10 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "street": "Piper Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1190,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Emily Street"
     }
   },
   "group": "services",
@@ -23,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

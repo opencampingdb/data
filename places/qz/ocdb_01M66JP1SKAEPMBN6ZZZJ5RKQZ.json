@@ -1,14 +1,33 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1720
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2210,
+      "name": "Kayak launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Jamieson Street"
+    },
+    "operator": "B.P.",
     "phone": "+61 3 5561 1853",
     "toilets": false,
     "website": "https://map.bp.com/en-AU/AU/gas-station/warrnambool/bp-warrnambool-634-raglan-pde/7483"
@@ -29,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

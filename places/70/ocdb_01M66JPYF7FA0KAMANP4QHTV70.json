@@ -1,10 +1,29 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4470,
+      "name": "Burpengary Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Bruce Highway"
+    },
     "opening_hours": "24/7",
     "phone": "+61 7 5433 0452",
     "website": "https://map.bp.com/en-AU/AU/gas-station/caboolture/bp-caboolture-southbound/1677"
@@ -25,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

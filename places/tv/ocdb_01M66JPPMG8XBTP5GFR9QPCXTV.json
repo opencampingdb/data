@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +16,21 @@
       "street": "Saleyards Road",
       "suburb": "Yamanto"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "e85",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Warwick Road"
+    },
     "opening_hours": "24/7",
+    "operator": "United Yamanto",
     "phone": "+61 7 2800 8430",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-yamanto"
   },
@@ -33,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

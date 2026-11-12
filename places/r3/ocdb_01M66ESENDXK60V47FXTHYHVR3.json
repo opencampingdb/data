@@ -8,6 +8,7 @@
     "address": "osm",
     "dump_station": "contributed",
     "fee": "contributed",
+    "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
@@ -16,6 +17,10 @@
     },
     "dump_station": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Axehead Road"
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -34,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

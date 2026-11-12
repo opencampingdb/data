@@ -2,11 +2,16 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3560,
+      "name": "Walnuts"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

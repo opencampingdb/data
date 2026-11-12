@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "128",
       "street": "Hume Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Hume Street"
     },
     "phone": "+61 2 4823 1000"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

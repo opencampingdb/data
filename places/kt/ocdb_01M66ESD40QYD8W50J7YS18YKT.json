@@ -2,12 +2,17 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "max_stay": "osm"
+    "max_stay": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "max_stay": "3d"
+    "max_stay": "3d",
+    "nearest_major_road": {
+      "distance_m": 310,
+      "name": "George Street"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESD40QYD8W50J7YS18YKT",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -14,10 +18,24 @@
       "housenumber": "342",
       "street": "Beaufort Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1690
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2080
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Beaufort Street"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "phone": "+61 8 9227 5753",
     "toilets": true,
     "website": "https://map.bp.com/en-AU/AU/gas-station/highgate/bp-highgate/9558",
@@ -40,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

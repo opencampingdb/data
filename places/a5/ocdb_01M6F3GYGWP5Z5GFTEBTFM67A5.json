@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,14 @@
       "state": "NSW",
       "street": "Johnston Street",
       "suburb": "Casino"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4180,
+      "name": "McDonald Park Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Johnston Street"
     },
     "website": "https://www.clydesdalemotel.com.au/"
   },
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

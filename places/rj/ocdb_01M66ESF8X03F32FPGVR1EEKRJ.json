@@ -6,6 +6,7 @@
     "caravans": "osm",
     "dump_station": "contributed",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -15,6 +16,10 @@
     "caravans": true,
     "dump_station": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Nanutarra Road"
+    },
     "opening_hours": "24/7",
     "tents": true,
     "toilets": true,
@@ -36,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -13,6 +15,13 @@
     },
     "nearest_beach": {
       "distance_m": 360
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 480
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Nepean Highway"
     },
     "opening_hours": "Su-Th 11:30-23:00; Fr-Sa 11:30-02:00",
     "phone": "+61 3 7002 2961",
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

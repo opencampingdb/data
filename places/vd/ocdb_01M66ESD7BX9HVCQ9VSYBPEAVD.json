@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 50,
+      "name": "Kauri Creek Boat Ramp"
+    },
+    "operator": "Council"
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESD7BX9HVCQ9VSYBPEAVD",
   "kind": "state_forest_campsite",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

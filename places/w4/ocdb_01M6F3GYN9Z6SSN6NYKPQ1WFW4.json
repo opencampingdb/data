@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "phone": "osm"
+    "nearest_major_road": "osm",
+    "phone": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,12 @@
       "street": "Freshwater Point Road",
       "suburb": "Legana"
     },
-    "phone": "+61 3 6330 2772"
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "West Tamar Highway"
+    },
+    "phone": "+61 3 6330 2772",
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GYN9Z6SSN6NYKPQ1WFW4",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

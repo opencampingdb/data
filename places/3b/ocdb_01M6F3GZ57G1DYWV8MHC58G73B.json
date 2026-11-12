@@ -1,9 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "email": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm",
@@ -17,11 +20,19 @@
       "street": "Channel Highway",
       "suburb": "Margate"
     },
+    "charge": "7.50 AUD",
     "email": "secretary@channelmuseum.org.au",
     "fee": true,
     "nearest_beach": {
       "distance_m": 3470,
       "name": "Snug Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1190
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Channel Highway"
     },
     "opening_hours": "Mo-Su 10:00-15:00",
     "phone": "+61 3 6267 2333",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

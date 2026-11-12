@@ -1,8 +1,17 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Cobb Highway"
+    },
+    "operator": "Transport for NSW",
     "toilets": false
   },
   "group": "utility",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:38:13Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

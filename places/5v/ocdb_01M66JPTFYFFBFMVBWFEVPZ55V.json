@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,12 @@
       "street": "North East Road",
       "suburb": "Modbury"
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North East Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "OTR"
   },
   "group": "services",
   "id": "ocdb_01M66JPTFYFFBFMVBWFEVPZ55V",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "2105",
       "street": "Fifteenth Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Fifteenth Street"
     },
     "opening_hours": "Mo-Su 11:30-14:30,17:30-20:30"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

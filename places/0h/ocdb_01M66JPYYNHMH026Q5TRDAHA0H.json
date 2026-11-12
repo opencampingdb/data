@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "fuel": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,8 +14,16 @@
       "street": "Avenue Road",
       "suburb": "Mosman"
     },
+    "fuel": true,
     "nearest_beach": {
       "distance_m": 820
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1020
+    },
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Rangers Avenue"
     }
   },
   "group": "services",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

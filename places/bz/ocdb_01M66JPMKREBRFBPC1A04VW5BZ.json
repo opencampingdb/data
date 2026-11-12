@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -13,6 +16,16 @@
       "state": "QLD",
       "street": "Winston Street",
       "suburb": "Thangool"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Ramsay Street"
     },
     "opening_hours": "Mo-Sa 07:00-20:00; Su 07:00-19:00",
     "phone": "+61 7 4995 8311",
@@ -35,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

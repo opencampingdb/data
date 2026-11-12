@@ -2,12 +2,21 @@
   "fact_sources": {
     "facebook": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/navyclubinc",
     "nearest_beach": {
       "distance_m": 400
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 510
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Market Street"
     },
     "opening_hours": "Fr-Su 12:00-00:00"
   },
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

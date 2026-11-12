@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "housenumber": "107",
       "street": "Market Street"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Market Street"
+    },
+    "operator": "Golden Chain",
     "website": "https://wanderlight.com.au"
   },
   "group": "overnight",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

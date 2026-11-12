@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -9,7 +12,15 @@
       "distance_m": 900,
       "name": "Balmoral Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1370
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Military Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Mosman Council",
     "wheelchair": false
   },
   "group": "utility",
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "drinking_water": "osm"
+    "drinking_water": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
-    "drinking_water": false
+    "drinking_water": false,
+    "nearest_boat_ramp": {
+      "distance_m": 4560
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESB4S1GXDN3YB3CJVE79S",
@@ -21,5 +25,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

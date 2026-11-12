@@ -1,9 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "email": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,11 +17,20 @@
       "street": "Konkerberry Drive",
       "suburb": "Kununurra"
     },
+    "charge": "27 AUD",
     "email": "kununurra@yha.com.au",
     "nearest_beach": {
       "distance_m": 4830
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1160
+    },
+    "nearest_major_road": {
+      "distance_m": 410,
+      "name": "Weaber Plain Road"
+    },
     "opening_hours": "Mo-Su 07:00-18:00",
+    "operator": "YHA",
     "website": "http://www.kimberleycroc.com.au"
   },
   "group": "overnight",
@@ -36,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

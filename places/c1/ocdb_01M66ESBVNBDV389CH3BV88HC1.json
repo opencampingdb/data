@@ -1,14 +1,26 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 60,
       "name": "Narrabeen Beach"
     },
-    "opening_hours": "Mo-Su 06:00-21:00"
+    "nearest_boat_ramp": {
+      "distance_m": 350,
+      "name": "Manly Warringah Kayak Club"
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Pittwater Road"
+    },
+    "opening_hours": "Mo-Su 06:00-21:00",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBVNBDV389CH3BV88HC1",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

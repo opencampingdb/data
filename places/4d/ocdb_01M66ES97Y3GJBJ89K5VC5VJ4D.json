@@ -3,7 +3,10 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
-    "showers": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -12,7 +15,15 @@
       "distance_m": 10,
       "name": "Fairlight Beach"
     },
-    "showers": true
+    "nearest_boat_ramp": {
+      "distance_m": 410
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "The Crescent"
+    },
+    "showers": true,
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ES97Y3GJBJ89K5VC5VJ4D",
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

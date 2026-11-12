@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +11,14 @@
       "distance_m": 80,
       "name": "Lorne Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1640
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Ocean Road"
+    },
+    "operator": "FORESHORE CARAVAN PARK",
     "website": "https://www.lornecaravanpark.com.au"
   },
   "group": "utility",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -12,6 +14,13 @@
       "postcode": "5000",
       "street": "Rundle Street",
       "suburb": "Adelaide"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1270
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Frome Street"
     },
     "opening_hours": "Mo-Su 12:00+",
     "phone": "+61 8 8310 0210",
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

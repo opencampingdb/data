@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +12,20 @@
       "state": "TAS",
       "street": "Burnett Street",
       "suburb": "New Norfolk"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1870,
+      "name": "Millbrook Launching Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Montagu Street"
     }
   },
   "group": "services",
@@ -27,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

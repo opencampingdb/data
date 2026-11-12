@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,14 @@
       "state": "SA",
       "street": "Hughes Street",
       "suburb": "Berri"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1950,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 370,
+      "name": "B201"
     },
     "opening_hours": "Mo-Fr 08:00-17:00",
     "phone": "+61 438 951 846",
@@ -33,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

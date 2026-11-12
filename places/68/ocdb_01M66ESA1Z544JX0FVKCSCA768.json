@@ -2,12 +2,19 @@
   "fact_sources": {
     "dump_station": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Malpas Street"
+    },
+    "operator": "Armidale Regional Council",
     "showers": false,
     "toilets": true
   },
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -9,6 +11,11 @@
   "facts": {
     "caravans": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Snowy Mountains Highway"
+    },
+    "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "tents": true,
     "toilets": true
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

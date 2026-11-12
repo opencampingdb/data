@@ -1,13 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "postcode": "3850",
       "street": "Guthridge Parade",
       "suburb": "Sale"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Guthridge Parade"
+    },
+    "operator": "Central Gippsland Health Service"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPRGHWM7CKHVT124E4S4J",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

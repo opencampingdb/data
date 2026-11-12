@@ -7,6 +7,7 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -19,6 +20,10 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Great Northern Highway"
+    },
     "phone": "+61 8 9661 1253"
   },
   "group": "overnight",
@@ -37,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

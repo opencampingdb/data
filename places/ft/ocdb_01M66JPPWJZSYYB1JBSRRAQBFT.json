@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,7 +13,12 @@
       "street": "Logan Road"
     },
     "email": "CSAU@tesla.com",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Logan Road"
+    },
     "opening_hours": "Mo-Fr 08:00-17:00",
+    "operator": "Tesla",
     "website": "https://www.tesla.com/findus/location/service/teslamountgravatt"
   },
   "group": "services",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +11,11 @@
       "state": "NSW",
       "street": "Bathurst Road",
       "suburb": "Orange"
+    },
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bathurst Road"
     }
   },
   "group": "services",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

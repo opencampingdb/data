@@ -2,9 +2,14 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -16,11 +21,20 @@
       "suburb": "Freemans Reach"
     },
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 210
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1260
+    },
+    "nearest_major_road": {
+      "distance_m": 240
+    },
     "opening_hours": "Mo-Su 06:00-20:00",
+    "operator": "Hawkesbury City Council",
     "showers": false,
+    "toilet_type": "flush",
     "toilets": true
   },
   "group": "utility",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

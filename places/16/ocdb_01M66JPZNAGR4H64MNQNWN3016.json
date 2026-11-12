@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Hindmarsh Drive"
+    },
+    "operator": "Metro petrolium"
+  },
   "group": "services",
   "id": "ocdb_01M66JPZNAGR4H64MNQNWN3016",
   "kind": "fuel",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

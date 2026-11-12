@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Calder Highway"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Railway Avenue"
     },
     "phone": "+61 3 5070 1252"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

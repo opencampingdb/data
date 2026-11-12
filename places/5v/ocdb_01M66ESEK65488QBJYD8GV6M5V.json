@@ -8,7 +8,9 @@
     "address": "osm",
     "dump_station": "contributed",
     "fee": "contributed",
-    "opening_hours": "contributed"
+    "nearest_major_road": "osm",
+    "opening_hours": "contributed",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -16,7 +18,12 @@
     },
     "dump_station": true,
     "fee": false,
-    "opening_hours": "07:00-19:00"
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Luritja Road"
+    },
+    "opening_hours": "07:00-19:00",
+    "operator": "Discovery"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEK65488QBJYD8GV6M5V",
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

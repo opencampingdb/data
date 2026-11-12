@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
@@ -14,7 +17,15 @@
     "nearest_beach": {
       "distance_m": 1410,
       "name": "Short Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1390
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Harrington Street"
+    },
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GZXMD4PRK7H60R8A5496",
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

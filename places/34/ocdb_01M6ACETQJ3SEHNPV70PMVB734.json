@@ -3,6 +3,7 @@
     "cabins": "osm",
     "caravans": "osm",
     "dump_station": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
   },
@@ -10,6 +11,10 @@
     "cabins": false,
     "caravans": true,
     "dump_station": false,
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Bruxner Highway"
+    },
     "wheelchair": true,
     "wifi": true
   },
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

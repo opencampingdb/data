@@ -4,8 +4,11 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -19,8 +22,14 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Princes Highway"
+    },
     "opening_hours": "\"Variable hours - Open only when sports clubs are using the fields\"",
+    "operator": "Sutherland Shire Council",
     "showers": false,
+    "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/9709",
     "wheelchair": false
   },
@@ -40,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

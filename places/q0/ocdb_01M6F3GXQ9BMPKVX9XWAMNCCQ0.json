@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1",
       "street": "Art Gallery Lane"
+    },
+    "nearest_major_road": {
+      "distance_m": 390,
+      "name": "Boardman Road"
     },
     "opening_hours": "Mo-Su 10:00-16:00"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

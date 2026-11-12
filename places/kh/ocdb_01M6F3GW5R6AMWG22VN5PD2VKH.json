@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +10,14 @@
     "address": {
       "housenumber": "19",
       "street": "Eastern Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3550,
+      "name": "Canoe Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 250,
+      "name": "M2 Hills Motorway"
     },
     "opening_hours": "Mo-Fr 10:00-17:00",
     "website": "https://www.mq.edu.au/about/facilities/museums-collections/macquarie-university-art-gallery"
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

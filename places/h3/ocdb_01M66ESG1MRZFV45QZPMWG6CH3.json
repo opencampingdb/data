@@ -3,6 +3,7 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -12,6 +13,10 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Stuart Highway"
+    },
     "power": false,
     "showers": false,
     "toilets": false,
@@ -33,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

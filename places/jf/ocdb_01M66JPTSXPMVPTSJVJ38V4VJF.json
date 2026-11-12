@@ -1,11 +1,32 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 2400
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1990
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Canberra Avenue"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/kingston/bp-kingston-act/2217"
   },
@@ -25,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

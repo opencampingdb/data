@@ -2,7 +2,11 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -15,7 +19,16 @@
       "suburb": "Cowan"
     },
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3820
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Pacific Motorway Onramp"
+    },
     "opening_hours": "24/7",
+    "operator": "Hornsby Shire Council",
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/43093",
     "wheelchair": true
@@ -36,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

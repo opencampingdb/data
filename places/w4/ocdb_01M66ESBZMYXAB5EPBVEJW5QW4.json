@@ -8,12 +8,17 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "contributed",
+    "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Eyre Highway"
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -32,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

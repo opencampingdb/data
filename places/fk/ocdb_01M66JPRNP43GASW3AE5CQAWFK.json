@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "phone_2": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,8 +12,13 @@
       "housenumber": "1",
       "street": "Kendall Avenue"
     },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Kendall Avenue"
+    },
     "opening_hours": "09:00-17:00",
     "phone": "+61 2 6332 1444",
+    "phone_2": "+61 2 6332 2333",
     "website": "http://www.visitbathurst.com.au/"
   },
   "group": "services",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

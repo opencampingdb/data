@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "12",
       "street": "Parsons Street"
     },
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "Wills Terrace"
+    },
     "opening_hours": "Mo-Sa 10:00-15:00; Su 10:00-14:00",
+    "operator": "Heritage Alice Springs",
     "phone": "+61 8 8953 6073",
     "website": "https://www.heritagealicesprings.com.au/"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

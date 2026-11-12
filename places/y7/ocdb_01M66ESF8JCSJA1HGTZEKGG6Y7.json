@@ -3,6 +3,8 @@
     "address": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -16,6 +18,13 @@
     },
     "dump_station": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 290
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Gympie Road"
+    },
     "phone": "+61 7 4121 4075",
     "power": true,
     "website": "https://www.huntsvillecaravanpark.com.au",
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

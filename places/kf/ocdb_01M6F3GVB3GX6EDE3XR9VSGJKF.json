@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -11,6 +12,10 @@
       "street": "Maleny Street"
     },
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Landsborough-Maleny Road"
+    },
     "opening_hours": "Tu-Sa 10:00-15:00; SH off",
     "website": "https://heritage.sunshinecoast.qld.gov.au/landsborough-museum"
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,7 +3,10 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -14,7 +17,13 @@
     },
     "entry": "customers",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North Lake Road"
+    },
     "opening_hours": "05:00-24:00",
+    "operator": "The EG Group",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

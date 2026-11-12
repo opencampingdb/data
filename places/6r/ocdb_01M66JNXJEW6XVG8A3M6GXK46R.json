@@ -1,12 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "North Street"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Ruthven Street"
+    },
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/toowoomba/bp-toowoomba-north-st/4211"
   },
   "group": "services",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

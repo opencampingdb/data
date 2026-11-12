@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "state": "QLD",
       "street": "Burt Street",
       "suburb": "Birdsville"
+    },
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Adelaide Street"
     },
     "website": "https://www.outbackqueensland.com.au/information_services/wirrarri-visitor-information-centre/"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

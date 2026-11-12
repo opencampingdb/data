@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "\"variable\""
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Chester Pass Road"
+    },
+    "opening_hours": "\"variable\"",
+    "operator": "David and Carol Caldwell"
   },
   "group": "services",
   "id": "ocdb_01M66JPTX0QPYGSMPJ51KYE1A0",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

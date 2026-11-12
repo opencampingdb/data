@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -8,6 +10,14 @@
   "facts": {
     "nearest_beach": {
       "distance_m": 3070
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3000,
+      "name": "Dragon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Chalmers Street"
     },
     "opening_hours": "Sa-Su 10:30-16:00",
     "phone": "+61 478 473 041",
@@ -29,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

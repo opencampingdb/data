@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,14 @@
       "street": "Victoria Street",
       "suburb": "St George"
     },
-    "facebook": "https://www.facebook.com/thecobbandco/"
+    "facebook": "https://www.facebook.com/thecobbandco/",
+    "nearest_boat_ramp": {
+      "distance_m": 790
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Victoria Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GVE175GCR50VQPG8N7Z6",
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

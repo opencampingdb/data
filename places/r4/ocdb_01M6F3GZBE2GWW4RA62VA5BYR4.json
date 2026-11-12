@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "NSW",
       "street": "Market Street",
       "suburb": "Balranald"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Market Street"
+    },
+    "operator": "Budget"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZBE2GWW4RA62VA5BYR4",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

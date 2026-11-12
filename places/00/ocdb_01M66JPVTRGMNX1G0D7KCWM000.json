@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +12,20 @@
     "address": {
       "housenumber": "487",
       "street": "Old Pacific Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2560
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Old Pacific Highway"
     },
     "opening_hours": "24/7",
     "website": "https://www.shell.com.au/fuel-finder.html"
@@ -28,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

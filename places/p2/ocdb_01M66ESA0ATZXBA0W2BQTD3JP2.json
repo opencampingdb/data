@@ -1,13 +1,19 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "customers",
     "nearest_beach": {
       "distance_m": 220
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 980
+    },
+    "operator": "Flinders Shire Council"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA0ATZXBA0W2BQTD3JP2",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,22 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 30,
       "name": "Queenscliff - Pier Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 790,
+      "name": "Queenscliff Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 0,
+      "name": "B110"
     },
     "website": "https://www.searoad.com.au/"
   },
@@ -26,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,26 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 480
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 300
+    },
+    "nearest_major_road": {
+      "distance_m": 0,
+      "name": "Bradfield Highway"
+    },
+    "operator": "Sydney Trains",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCY4H3ACRQEVRAV3SSYN",
@@ -25,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "e10",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40
+    },
+    "operator": "Evans Petrolem Mirboo North",
     "phone": "+61 3 5668 2377",
     "website": "https://map.bp.com/en-AU/AU/gas-station/mirboo-north/bp-mirboo-north/6983"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

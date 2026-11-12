@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Albury Street"
+    },
     "opening_hours": "Mo-Fr 10:00-16:00; Sa,Su 10:00-14:30",
     "website": "https://holbrooksubmarinemuseum.com.au/"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

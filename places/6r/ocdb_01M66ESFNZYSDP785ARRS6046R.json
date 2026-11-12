@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3730
+    },
+    "nearest_major_road": {
+      "distance_m": 380,
+      "name": "Main North Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESFNZYSDP785ARRS6046R",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

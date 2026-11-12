@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +13,13 @@
       "housenumber": "534-542",
       "street": "Mount Dandenong Road"
     },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Mount Dandenong Road"
+    },
     "opening_hours": "Mo-Su 05:00-23:00",
+    "operator": "EG Australia",
     "phone": "+61 3 5219 3634",
     "website": "https://www.eg-australia.com"
   },
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

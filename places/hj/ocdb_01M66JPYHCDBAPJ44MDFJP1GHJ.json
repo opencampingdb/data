@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -14,7 +17,18 @@
       "street": "Sherbourne Road",
       "suburb": "Montmorency"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Sherbourne Road"
+    },
     "opening_hours": "Mo-Sa 07:00-21:00; Su 07:00-19:00",
+    "operator": "Ampol",
     "phone": "+61 3 8406 5932",
     "website": "https://www.ampol.com.au/",
     "wheelchair": false
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

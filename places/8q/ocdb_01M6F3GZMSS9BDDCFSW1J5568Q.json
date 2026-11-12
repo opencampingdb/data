@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,8 +17,17 @@
       "street": "Jacaranda Avenue",
       "suburb": "Kingston"
     },
+    "charge": "2 AUD",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3300
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Jacaranda Avenue"
+    },
     "opening_hours": "Tu-Sa 10:00-15:00",
+    "operator": "Logan City Historical Museum Society Inc",
     "website": "https://logancitymuseumqld.org/"
   },
   "group": "attraction",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

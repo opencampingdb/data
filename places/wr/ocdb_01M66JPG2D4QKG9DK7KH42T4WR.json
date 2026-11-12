@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,11 +18,27 @@
       "street": "Nicklin Way",
       "suburb": "Currimundi"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1350,
       "name": "Dicky Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1130,
+      "name": "Westaway Parade"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Bellara Drive"
+    },
     "opening_hours": "Mo,Tu,We,Fr 08:00-21:30; Th 07:00-18:00; Sa,Su 06:00-19:00",
+    "operator": "EG Australia",
     "phone": "+61 7 3088 8753",
     "website": "https://www.ampol.com.au/find-a-service-station"
   },
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,6 +4,7 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +18,10 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Bolaro Street"
+    },
     "phone": "+61 448 992 372",
     "power": true,
     "showers": true,
@@ -38,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

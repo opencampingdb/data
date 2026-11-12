@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,9 +12,24 @@
       "housenumber": "1-3",
       "street": "Sydney Avenue"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 570,
       "name": "Ocean Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1690,
+      "name": "Ettalong Beach Dinghy Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Ocean Beach Road"
     },
     "website": "https://www.shell.com.au/"
   },
@@ -31,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

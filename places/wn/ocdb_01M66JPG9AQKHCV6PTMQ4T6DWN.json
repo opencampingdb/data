@@ -1,11 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "25",
       "street": "Main Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 240
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Smithtown Road"
     }
   },
   "group": "services",
@@ -24,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

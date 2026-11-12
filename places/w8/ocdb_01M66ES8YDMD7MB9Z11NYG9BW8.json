@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "distance_m": 3570,
       "name": "Canoe Club Boat Launch Site"
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "McLennan Street"
+    },
+    "toilet_type": "flush",
     "wheelchair": false
   },
   "group": "utility",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

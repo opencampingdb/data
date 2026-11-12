@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -17,7 +19,12 @@
       "suburb": "Eton"
     },
     "caravans": true,
+    "charge": "Custom",
     "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Peak Downs Highway"
+    },
     "phone": "+61 7 4954 1324",
     "showers": false,
     "tents": true,
@@ -39,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

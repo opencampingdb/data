@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "motorbikes": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -14,6 +16,11 @@
     "dump_station": true,
     "fee": true,
     "kitchen": true,
+    "motorbikes": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Willowie Road"
+    },
     "showers": true,
     "toilets": true
   },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

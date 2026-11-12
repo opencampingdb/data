@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -12,7 +14,12 @@
       "street": "Glencoe Road",
       "suburb": "Glencoe"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Glencoe Road"
+    },
     "opening_hours": "Mo-Sa,PH 09:00-17:00; Su 11:00-17:00",
+    "operator": "National Trust",
     "website": "https://www.nationaltrust.org.au/places/glencoe-woolshed/",
     "wheelchair": true
   },
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,12 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,9 +14,15 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Payment Box, Acct BSB sign at gate",
     "entry": "customers",
     "fee": true,
     "max_stay": "2d",
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Bylong Valley Way"
+    },
+    "operator": "Bylong Community",
     "power": false,
     "showers": true,
     "tents": true,
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

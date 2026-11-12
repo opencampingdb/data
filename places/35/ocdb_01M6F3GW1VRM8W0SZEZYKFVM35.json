@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Main Avenue"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Avenue"
     },
     "opening_hours": "Mo-Su 07:30-00:00",
     "phone": "+61 7 4658 2106"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

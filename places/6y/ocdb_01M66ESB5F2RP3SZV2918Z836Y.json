@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -10,6 +12,13 @@
     "entry": "customers",
     "fee": true,
     "max_stay": "72h",
+    "nearest_boat_ramp": {
+      "distance_m": 440
+    },
+    "nearest_major_road": {
+      "distance_m": 430,
+      "name": "Indian Ocean Drive"
+    },
     "showers": false,
     "toilets": true
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

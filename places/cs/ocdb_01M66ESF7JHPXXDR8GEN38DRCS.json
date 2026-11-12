@@ -3,7 +3,10 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
-    "showers": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -12,7 +15,15 @@
       "distance_m": 20,
       "name": "Caseys Beach"
     },
-    "showers": true
+    "nearest_boat_ramp": {
+      "distance_m": 2750
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Beach Road"
+    },
+    "showers": true,
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF7JHPXXDR8GEN38DRCS",
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

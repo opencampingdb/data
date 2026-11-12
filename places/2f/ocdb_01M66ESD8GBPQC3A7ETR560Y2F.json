@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Horrocks Highway"
+    },
+    "operator": "Zest Cafe",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESD8GBPQC3A7ETR560Y2F",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,6 +3,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -10,6 +12,13 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2930
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Sircom Street"
+    },
     "showers": true,
     "toilets": true
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

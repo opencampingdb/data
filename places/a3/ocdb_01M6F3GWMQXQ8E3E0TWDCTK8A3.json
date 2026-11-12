@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -12,6 +14,13 @@
     },
     "nearest_beach": {
       "distance_m": 570
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 550
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "South Terrace"
     },
     "opening_hours": "We-Th 15:00+; Fr-Su 11:00+",
     "website": "https://monsoshea.com.au/"
@@ -32,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "122",
       "street": "Main Street"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main Street"
+    },
     "opening_hours": "24/7",
+    "operator": "Perrys",
     "phone": "+61 8 8566 2111",
     "website": "https://www.mobil.com.au/en-au/find-station/mobil-kapunda-sa-kapunda-6100128"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

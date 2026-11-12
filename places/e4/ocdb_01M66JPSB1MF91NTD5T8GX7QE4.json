@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,9 +12,19 @@
       "housenumber": "57",
       "street": "Joondalup Drive"
     },
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4430,
       "name": "Whitfords/Mullaloo Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Joondalup Drive"
     },
     "website": "https://www.shell.com.au/"
   },
@@ -31,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

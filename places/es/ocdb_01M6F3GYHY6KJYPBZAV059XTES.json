@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm",
@@ -17,6 +19,13 @@
     },
     "nearest_beach": {
       "distance_m": 680
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 560
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "South Terrace"
     },
     "opening_hours": "Mo-We,Su 11:00-22:00; Th-Sa 11:00-24:00",
     "phone": "+61 8 9431 1666",
@@ -39,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

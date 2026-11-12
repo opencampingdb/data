@@ -1,12 +1,23 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "booking_required": false,
     "nearest_beach": {
       "distance_m": 3370,
       "name": "Horse Arena"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2970
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Exhibition Street"
     },
     "opening_hours": "24/7"
   },
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,18 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "12",
       "street": "Richmond Street"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1110
+    },
+    "operator": "NSW Health - Hunter New England Local Health District"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPXGF8KRV0D75K70KVMQ5",
@@ -24,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

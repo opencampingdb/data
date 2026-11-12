@@ -1,9 +1,22 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Fr 07:00-21:00; Sa,Su 07:00-20:00"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Wills Terrace"
+    },
+    "opening_hours": "Mo-Fr 07:00-21:00; Sa,Su 07:00-20:00",
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JNY0Y6J1DM7N7156QQD4G",
@@ -21,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

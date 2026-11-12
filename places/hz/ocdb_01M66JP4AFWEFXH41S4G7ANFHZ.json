@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +14,16 @@
       "street": "West Terrace",
       "suburb": "Adelaide"
     },
-    "opening_hours": "24/7"
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 960
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "West Terrace"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JP4AFWEFXH41S4G7ANFHZ",
@@ -28,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

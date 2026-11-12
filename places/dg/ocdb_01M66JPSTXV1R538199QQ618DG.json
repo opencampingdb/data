@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,10 +15,24 @@
       "street": "King Street",
       "suburb": "Port Lincoln"
     },
+    "fuels": [
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 160
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 380
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "London Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "On THe Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPSTXV1R538199QQ618DG",
@@ -32,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

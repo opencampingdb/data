@@ -1,20 +1,24 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "dump_station": "osm",
     "nearest_beach": "osm",
     "nudist": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "tents": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "booking_required": false,
     "dump_station": false,
     "nearest_beach": {
       "distance_m": 3010
     },
     "nudist": false,
     "opening_hours": "24/7",
+    "operator": "Tasmania Parks & Wildlife Service",
     "tents": true,
     "wheelchair": false,
     "wifi": false
@@ -35,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

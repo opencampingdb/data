@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -14,7 +16,12 @@
     "nearest_beach": {
       "distance_m": 3970
     },
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Nicolson Avenue"
+    },
     "opening_hours": "Mo-Fr 10:00-15:00, Su 13:00-16:00",
+    "operator": "National Trust",
     "phone": "+61 417 861 705"
   },
   "group": "attraction",
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

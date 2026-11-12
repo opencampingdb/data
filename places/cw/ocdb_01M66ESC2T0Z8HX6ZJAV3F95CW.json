@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "bins": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Nambour Connection Road"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESC2T0Z8HX6ZJAV3F95CW",
   "kind": "rest_area",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

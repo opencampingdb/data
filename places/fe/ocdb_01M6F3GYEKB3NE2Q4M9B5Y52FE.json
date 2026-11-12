@@ -2,6 +2,9 @@
   "fact_sources": {
     "email": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +13,14 @@
     "nearest_beach": {
       "distance_m": 1610
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3020
+    },
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "O'Connell Street"
+    },
+    "operator": "Parramatta Female Factory Action Group Inc.",
     "phone": "+61 451 332 823",
     "website": "https://www.parramattafemalefactoryfriends.com.au"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

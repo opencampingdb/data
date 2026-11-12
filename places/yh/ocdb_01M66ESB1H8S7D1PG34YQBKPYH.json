@@ -4,6 +4,7 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -14,6 +15,10 @@
     "drinking_water": false,
     "dump_station": false,
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Cudgery Street"
+    },
     "power": false,
     "showers": false,
     "tents": true,
@@ -35,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,18 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 880,
+      "name": "Rowing Club Launching Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Sturt Highway"
+    },
     "wheelchair": true
   },
   "group": "overnight",
@@ -27,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

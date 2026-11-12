@@ -1,12 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3270
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Grant Street"
+    },
     "opening_hours": "Mo-Su 09:30-17:20",
+    "operator": "Sovereign Hill Museums Association",
     "website": "https://sovereignhill.com.au"
   },
   "group": "attraction",
@@ -25,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

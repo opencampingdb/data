@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "bins": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Dog Leg Drive"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M6F3GZKSRRRMBCX97M2NRR7Y",
   "kind": "long_vehicle_parking",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

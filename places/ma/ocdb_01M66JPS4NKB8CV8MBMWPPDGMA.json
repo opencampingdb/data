@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "postcode": "2340",
       "street": "Jack Smyth Drive"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Goonoo Goonoo Road"
+    },
+    "operator": "Tamworth Regional Council"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPS4NKB8CV8MBMWPPDGMA",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

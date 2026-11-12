@@ -1,6 +1,10 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +13,22 @@
       "state": "NSW",
       "street": "Newell Highway",
       "suburb": "Narrabri"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3330
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Newell Highway"
+    },
+    "operator": "Shell"
   },
   "group": "services",
   "id": "ocdb_01M66JP0M1VFK4N3BC0ABSAQRP",
@@ -27,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

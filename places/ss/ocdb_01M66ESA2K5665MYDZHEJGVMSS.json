@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "pets": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,6 +15,11 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Tooma Road"
+    },
+    "operator": "Snowy Valleys Council",
     "pets": "leashed",
     "power": false,
     "showers": false,
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

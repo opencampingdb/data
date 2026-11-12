@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,11 @@
     "address": {
       "housenumber": "613-615",
       "street": "Gilbert Road"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Gilbert Road"
     },
     "opening_hours": "Mo-Fr 08:30-17:30; Sa 08:00-12:00",
     "phone": "+61 3 9470 4039",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

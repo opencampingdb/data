@@ -1,9 +1,25 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 160
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Holloway Street"
+    },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/boort/bp-boort/5451"
   },
@@ -23,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

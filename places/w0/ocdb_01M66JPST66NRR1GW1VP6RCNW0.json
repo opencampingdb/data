@@ -1,12 +1,23 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 850
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1230
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "New West Road"
+    },
+    "operator": "SA Health",
     "website": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+services/hospitals+and+health+services+-+country+south+australia/eyre+peninsula+western+hospitals+health+services/port+lincoln+hospital+and+health+service"
   },
   "group": "emergency",
@@ -25,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

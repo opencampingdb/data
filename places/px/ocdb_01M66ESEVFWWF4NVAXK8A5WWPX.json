@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +12,11 @@
       "street": "McQueen Road"
     },
     "caravans": true,
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Bussell Highway"
+    },
+    "operator": "RAC",
     "phone": "+61 8 9758 8227",
     "website": "https://parksandresorts.rac.com.au/margaret-river/"
   },
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

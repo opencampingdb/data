@@ -3,6 +3,7 @@
     "address": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "tents": "osm"
@@ -15,6 +16,10 @@
     "fee": true,
     "nearest_beach": {
       "distance_m": 150
+    },
+    "nearest_major_road": {
+      "distance_m": 500,
+      "name": "Captain Cook Drive"
     },
     "phone": "+61 7 4974 7279",
     "power": true,
@@ -36,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

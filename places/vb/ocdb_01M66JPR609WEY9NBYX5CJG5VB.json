@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,11 @@
       "housenumber": "22-36",
       "street": "Scott Street"
     },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Herries Street"
+    },
+    "operator": "St Vincents Health",
     "phone": "+61 7 4690 4000",
     "website": "https://www.svpht.org.au/"
   },
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

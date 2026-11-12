@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -11,8 +15,23 @@
       "housenumber": "111-121",
       "street": "Falcon Street"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1530
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1580
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Falcon Street"
     },
     "opening_hours": "24/7",
     "website": "https://locations.ampol.com.au/en/ampol-foodary-crows-nest",
@@ -34,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

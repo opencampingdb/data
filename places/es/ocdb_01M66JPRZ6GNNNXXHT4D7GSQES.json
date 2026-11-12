@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +12,20 @@
     "address": {
       "housenumber": "218",
       "street": "Main Street"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4130
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Royal Street"
     },
     "opening_hours": "24/7",
     "website": "https://map.bp.com/en-AU/AU/gas-station/osborne-park/bp-main-street/6213"
@@ -28,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

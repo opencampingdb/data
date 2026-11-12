@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -9,6 +11,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 960
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1500
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Mrs Macquaries Road"
     },
     "toilets": true,
     "website": "https://www.botanicgardens.org.au/venues-and-lawns/all-venues-and-lawns/garden-gallery/pin"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

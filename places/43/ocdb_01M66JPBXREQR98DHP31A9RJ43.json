@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "phone_2": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,8 +16,17 @@
       "street": "Coulson Street",
       "suburb": "Blackbutt"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Coulson Street"
+    },
     "opening_hours": "Mo-Fr 06:00-18:30, Sa-Su 07:00-18:00",
     "phone": "+61 7 4163 0533",
+    "phone_2": "+61 448 108 509",
     "website": "https://www.facebook.com/Blackbutt-Fuel-And-Tyre-177609419391304/"
   },
   "group": "services",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,26 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "2",
       "street": "Johnson Road",
       "suburb": "Tuggerah"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3650
+    },
+    "nearest_major_road": {
+      "distance_m": 110
     }
   },
   "group": "services",
@@ -25,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

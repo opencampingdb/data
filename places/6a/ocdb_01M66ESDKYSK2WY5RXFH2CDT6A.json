@@ -5,6 +5,7 @@
     "facebook": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -16,6 +17,10 @@
     "fee": true,
     "nearest_beach": {
       "distance_m": 3700
+    },
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Salisbury Street"
     },
     "power": true,
     "tents": true,
@@ -37,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

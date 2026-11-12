@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -14,6 +16,11 @@
     "caravans": true,
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Church Street"
+    },
+    "operator": "Mid-Western Regional Council",
     "tents": true
   },
   "group": "overnight",
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

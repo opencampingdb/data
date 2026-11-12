@@ -1,12 +1,21 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "car_wash": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "747",
       "street": "Springvale Road"
-    }
+    },
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Springvale Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPSPD7C82200CHRBJG5K0",
@@ -24,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

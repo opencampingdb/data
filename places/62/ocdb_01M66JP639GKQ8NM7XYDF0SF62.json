@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,9 +14,23 @@
       "housenumber": "115",
       "street": "Willsmere Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2730,
       "name": "Horse Arena"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2590,
+      "name": "Kayak/Canoe Launch point"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Earl Street"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 9853 7071",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

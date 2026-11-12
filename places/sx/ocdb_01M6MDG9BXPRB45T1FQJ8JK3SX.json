@@ -3,6 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
@@ -12,6 +15,15 @@
     "nearest_beach": {
       "distance_m": 10
     },
+    "nearest_boat_ramp": {
+      "distance_m": 110,
+      "name": "Paynesville Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Esplanade"
+    },
+    "operator": "East Gippsland Water",
     "water_type": "fountain",
     "wheelchair": true
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

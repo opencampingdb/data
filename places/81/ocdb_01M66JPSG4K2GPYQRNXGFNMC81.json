@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +9,10 @@
       "postcode": "5417",
       "street": "Commercial Street",
       "suburb": "Burra"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Commercial Street"
     }
   },
   "group": "emergency",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

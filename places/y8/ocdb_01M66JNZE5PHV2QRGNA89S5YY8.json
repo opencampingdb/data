@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +17,19 @@
       "street": "Toowoomba Connection Road",
       "suburb": "Withcott"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Toowoomba Connection Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Freedom Fuels",
     "phone": "+61 7 4637 4200",
     "website": "https://www.freedomfuels.com.au/withcott"
   },
@@ -33,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

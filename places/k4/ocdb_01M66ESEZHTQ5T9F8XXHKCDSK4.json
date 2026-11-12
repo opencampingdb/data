@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +12,16 @@
       "state": "TAS",
       "street": "Page Avenue",
       "suburb": "New Norfolk"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1600,
+      "name": "Millbrook Launching Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Montagu Crescent"
+    },
+    "operator": "Derwent Valley Council"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZHTQ5T9F8XXHKCDSK4",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

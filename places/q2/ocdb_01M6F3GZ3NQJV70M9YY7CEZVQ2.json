@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,13 @@
     "address": {
       "housenumber": "8-14",
       "street": "Murray Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1050
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Murray Street"
     },
     "phone": "+61 3 5231 5777",
     "website": "https://www.colaccentralmotel.com.au"
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

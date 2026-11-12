@@ -5,12 +5,19 @@
   "fact_sources": {
     "dump_station": "contributed",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Scallan Street"
+    },
+    "operator": "Northern Grampians Shire Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDKCZRGYP97A771X2ARV",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

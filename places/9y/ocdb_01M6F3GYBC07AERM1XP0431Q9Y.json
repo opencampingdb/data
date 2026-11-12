@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,13 @@
       "street": "Brisbane Street"
     },
     "facebook": "https://www.facebook.com/thewitchhotel/",
+    "nearest_boat_ramp": {
+      "distance_m": 1910
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Brisbane Street"
+    },
     "opening_hours": "Tu 15:00-18:00; We 11:00-22:00; Th-Sa 11:00-23:00; Su 12:00-18:00",
     "phone": "+61 7 3812 1113",
     "website": "https://www.witchhotel.com/"
@@ -32,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,6 +3,8 @@
     "email": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 1290
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1280
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "King Street"
     },
     "opening_hours": "Su[2] 13:00-16:00",
     "phone": "+61 2 4927 0202"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

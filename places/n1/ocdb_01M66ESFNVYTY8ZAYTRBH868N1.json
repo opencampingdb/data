@@ -6,6 +6,8 @@
     "facebook": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm"
   },
@@ -16,6 +18,13 @@
     "facebook": "https://www.facebook.com/www.suratcabinpark.com.au/",
     "fee": true,
     "kitchen": true,
+    "nearest_boat_ramp": {
+      "distance_m": 640
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Burrowes Street"
+    },
     "power": true,
     "tents": true
   },
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

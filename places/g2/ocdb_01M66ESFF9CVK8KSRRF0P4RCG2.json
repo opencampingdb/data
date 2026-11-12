@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 3540
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Beach Road"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESFF9CVK8KSRRF0P4RCG2",
   "kind": "caravan_park",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:39:47Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

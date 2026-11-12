@@ -1,14 +1,25 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
+    "phone_2": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 330
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1730
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Robinson Street"
+    },
     "phone": "+61 8 9948 5100",
+    "phone_2": "+61 8 9385 6655",
     "website": "http://www.ningalooclub.com/"
   },
   "group": "overnight",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,11 +4,16 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "dump_station": true,
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Herberton Petford Road"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA0DNQ7J1YEGY8ZAXM70",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "email": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "station@loopline.com.au",
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Burt Street"
+    },
     "opening_hours": "Mo-Su 09:00-16:00",
     "phone": "+61 8 9093 3055",
     "website": "http://www.loopline.com.au/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

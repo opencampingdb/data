@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": false,
+    "hot_water": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Huntingdale Road"
+    },
     "opening_hours": "24/7",
     "water_type": "fountain"
   },
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

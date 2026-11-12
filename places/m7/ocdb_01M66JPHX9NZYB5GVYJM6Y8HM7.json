@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Fulham Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPHX9NZYB5GVYJM6Y8HM7",
   "kind": "fuel",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,10 +17,25 @@
       "street": "Oaklands Road",
       "suburb": "Glengowrie"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1820
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4410
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Diagonal Road"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/glengowrie/bp-otr-glengowrie/7674"
   },
   "group": "services",
@@ -34,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

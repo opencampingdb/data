@@ -1,10 +1,17 @@
 {
   "fact_sources": {
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Main North Road"
+    },
     "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "Agostino Group",
     "phone": "+61 8 8419 4680"
   },
   "group": "services",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

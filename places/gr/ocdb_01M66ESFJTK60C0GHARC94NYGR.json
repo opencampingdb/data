@@ -3,7 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -12,7 +14,12 @@
       "distance_m": 3620,
       "name": "Boyds Beach"
     },
-    "opening_hours": "07:00-17:00"
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Great Western Highway"
+    },
+    "opening_hours": "07:00-17:00",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFJTK60C0GHARC94NYGR",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

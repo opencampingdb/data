@@ -4,6 +4,8 @@
     "brand": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "toilets": "osm",
@@ -17,6 +19,13 @@
     "brand": "big4",
     "dump_station": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3560
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Main Road"
+    },
     "phone": "+61 3 5332 7888",
     "power": true,
     "toilets": true,
@@ -38,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

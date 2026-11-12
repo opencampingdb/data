@@ -1,14 +1,21 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "8",
       "street": "Krummel Street"
     },
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Bay Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "Mount Gambier Central Caravan Park"
   },
   "group": "utility",
   "id": "ocdb_01M66JPPN3MFTV8JHGQJ7SPAPN",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

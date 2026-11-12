@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "car_wash": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "air": true,
+    "car_wash": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Vardys Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPWXEC3MWYTWM9P5JFY0X",
   "kind": "fuel",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

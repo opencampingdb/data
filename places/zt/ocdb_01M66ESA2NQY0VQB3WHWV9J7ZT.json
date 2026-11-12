@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -10,6 +12,11 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Bulloo Developmental Road"
+    },
+    "operator": "Paroo Shire Council",
     "tents": true,
     "toilets": false
   },
@@ -41,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:36:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

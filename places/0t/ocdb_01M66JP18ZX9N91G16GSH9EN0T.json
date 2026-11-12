@@ -1,13 +1,29 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "street": "Erin Street"
     },
-    "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-17:00; Su 08:00-18:00"
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Bridge Street"
+    },
+    "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-17:00; Su 08:00-18:00",
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JP18ZX9N91G16GSH9EN0T",
@@ -25,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

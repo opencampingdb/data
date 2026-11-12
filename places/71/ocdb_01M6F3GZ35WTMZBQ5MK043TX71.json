@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/PierHotelMilang/"
+    "facebook": "https://www.facebook.com/PierHotelMilang/",
+    "nearest_boat_ramp": {
+      "distance_m": 210
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Daranda Terrace"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ35WTMZBQ5MK043TX71",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

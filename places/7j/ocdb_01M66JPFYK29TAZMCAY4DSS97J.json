@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "13",
       "street": "Macintyre Lane"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Macintyre Lane"
+    },
+    "operator": "Skydive Australia"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPFYK29TAZMCAY4DSS97J",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

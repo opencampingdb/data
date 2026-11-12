@@ -1,9 +1,19 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Buntine Highway"
+    },
     "opening_hours": "Mo-Fr 09:00-17:00,Sa 09:00-12:00",
     "phone": "+61 8 8975 0788"
   },
@@ -23,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,14 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "30",
       "street": "Albert Street"
     },
-    "facebook": "https://www.facebook.com/GumerachaHotel/"
+    "facebook": "https://www.facebook.com/GumerachaHotel/",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "John Fisher Avenue"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GYY84GMZTSJD8S34D2N4",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

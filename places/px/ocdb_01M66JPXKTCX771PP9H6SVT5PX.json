@@ -1,12 +1,27 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 870,
       "name": "South Beach Dog Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1270
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Hampton Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/south-fremantle/bp-south-fremantle/9802"
   },
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

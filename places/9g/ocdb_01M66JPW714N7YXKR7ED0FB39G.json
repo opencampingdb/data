@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "8510",
       "street": "Brisbane Valley Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Brisbane Valley Highway"
     }
   },
   "group": "services",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "pets": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "St Georges Road"
+    },
     "opening_hours": "24/7",
     "pets": "yes",
     "water_type": "fountain"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

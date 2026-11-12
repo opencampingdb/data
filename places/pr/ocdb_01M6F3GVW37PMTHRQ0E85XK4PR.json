@@ -1,9 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "email": "osm",
     "facebook": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -16,10 +18,14 @@
       "street": "Esplanade",
       "suburb": "Urangan"
     },
+    "booking_required": true,
     "email": "book@herveybay.org",
     "facebook": "https://www.facebook.com/profile.php?id=61571315425500",
     "nearest_beach": {
       "distance_m": 260
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1900
     },
     "phone": "+61 409 555 820",
     "website": "https://herveybay.org",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,7 +17,16 @@
     "nearest_beach": {
       "distance_m": 2330
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1770,
+      "name": "Tunks Park Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Willoughby Road"
+    },
     "opening_hours": "We-Fr 11:00-17:00; Sa,Su 11:00-16:00",
+    "operator": "Willoughby City Council",
     "phone": "+61 2 9777 7972",
     "website": "https://www.willoughby.nsw.gov.au/Community/Arts-and-culture/Visual-Arts/Incinerator-Art-Space"
   },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -15,7 +17,12 @@
       "suburb": "Tea Tree Gully"
     },
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Perseverance Road"
+    },
     "opening_hours": "Su[3] 13:00-16:00",
+    "operator": "National Trust",
     "phone": "+61 8 8264 0309",
     "website": "https://www.nationaltrust.org.au/places/tea-tree-gully-heritage-museum/",
     "wheelchair": true
@@ -36,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,20 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "hot_water": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "hot_water": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2930
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Newcastle Inner City Bypass"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE2JFR67YJDSK03FFZAG",
@@ -21,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

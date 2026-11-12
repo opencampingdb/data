@@ -1,9 +1,17 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "opening_hours": "PH,Mo-Su 08:00-18:00",
     "wheelchair": true
   },
@@ -23,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

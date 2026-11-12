@@ -1,6 +1,10 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +13,16 @@
       "state": "NSW",
       "street": "North Street",
       "suburb": "Nowra"
-    }
+    },
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 840
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North Street"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPYTSYYH6X105JF15JY81",
@@ -27,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

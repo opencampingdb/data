@@ -1,11 +1,19 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 2220
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2750
+    },
+    "nearest_major_road": {
+      "distance_m": 360
     },
     "water_type": "fountain"
   },
@@ -19,11 +27,11 @@
   "name": null,
   "osm": {
     "id": 3889957371,
-    "timestamp": "2015-12-13T06:37:55Z",
+    "timestamp": "2026-11-10T23:54:03Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

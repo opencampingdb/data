@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -13,8 +16,20 @@
       "housenumber": "34",
       "street": "Sherriff Street"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "adblue"
+    ],
     "nearest_beach": {
       "distance_m": 510
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Camp Street"
     },
     "opening_hours": "Mo-Su 05:00-22:30",
     "phone": "+61 2 6852 1973",
@@ -38,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

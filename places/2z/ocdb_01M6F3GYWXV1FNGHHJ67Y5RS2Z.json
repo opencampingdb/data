@@ -2,7 +2,10 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -12,7 +15,15 @@
       "distance_m": 1260,
       "name": "Short Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 890
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Argyle Street"
+    },
     "opening_hours": "Mo-Su 10:00-17:00",
+    "operator": "Mawsons Hut Foundation",
     "website": "https://www.mawsons-huts.org.au/replica-museum/",
     "wheelchair": true
   },
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

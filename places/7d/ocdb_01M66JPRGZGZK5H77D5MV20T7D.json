@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
@@ -12,7 +16,20 @@
       "state": "VIC",
       "street": "Sturt Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 500
+    },
+    "nearest_major_road": {
+      "distance_m": 40
+    },
     "opening_hours": "Mo-Sa 05:00-00:00; Su 05:00-24:00",
+    "operator": "Shell",
     "phone": "+61 3 5333 5066",
     "toilets": true
   },
@@ -32,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

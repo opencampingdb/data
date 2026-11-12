@@ -1,6 +1,33 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "64-66",
+      "postcode": "6367",
+      "state": "WA",
+      "street": "Graham Street",
+      "suburb": "Kondinin"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Graham Street"
+    },
+    "opening_hours": "Mon-Fri: 6:30am - 7:30pm, Sat: 7:00am - 7:30PM, Sun: 8:00am - 7:30pm",
+    "phone": "+61 8 9889 1190",
+    "toilets": false
+  },
   "group": "services",
   "id": "ocdb_01M66JPHZWY9HMNAATMQYXDR7D",
   "kind": "fuel",
@@ -8,14 +35,14 @@
     "lat": -32.494936,
     "lon": 118.264943
   },
-  "name": null,
+  "name": "BP KONDININ",
   "osm": {
     "id": 10864295648,
-    "timestamp": "2023-05-03T08:11:39Z",
+    "timestamp": "2026-11-11T06:24:28Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

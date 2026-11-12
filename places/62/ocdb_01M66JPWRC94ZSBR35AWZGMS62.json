@@ -1,6 +1,23 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 320
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Kent Street"
+    },
+    "operator": "Fraser Coast Fuel"
+  },
   "group": "services",
   "id": "ocdb_01M66JPWRC94ZSBR35AWZGMS62",
   "kind": "fuel",
@@ -17,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

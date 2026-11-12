@@ -2,11 +2,16 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Bunya Highway"
+    },
     "tents": false
   },
   "group": "overnight",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

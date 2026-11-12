@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,17 @@
       "street": "Beryl Street",
       "suburb": "Broken Hill"
     },
-    "opening_hours": "Mo-Su 06:30-21:00"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 230,
+      "name": "Argent Street"
+    },
+    "opening_hours": "Mo-Su 06:30-21:00",
+    "operator": "Hill and Co."
   },
   "group": "services",
   "id": "ocdb_01M66JPWCTEGHVGM6Y9HF6ANWP",
@@ -29,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

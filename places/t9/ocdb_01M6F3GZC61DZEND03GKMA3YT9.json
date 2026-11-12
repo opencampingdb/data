@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "839",
       "street": "Ruthven Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Ruthven Street"
+    },
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GZC61DZEND03GKMA3YT9",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

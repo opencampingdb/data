@@ -1,6 +1,11 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +13,17 @@
       "postcode": "2077",
       "street": "George Street",
       "suburb": "Hornsby"
-    }
+    },
+    "air": true,
+    "car_wash": true,
+    "nearest_boat_ramp": {
+      "distance_m": 670
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "George Street"
+    },
+    "operator": "BP"
   },
   "group": "services",
   "id": "ocdb_01M66JPSTQM1FND5KYKSS141BD",
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

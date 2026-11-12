@@ -6,11 +6,16 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "nearest_major_road": "osm",
     "showers": "community_report",
     "toilets": "community_report"
   },
   "facts": {
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mackay Eungella Road"
+    },
     "showers": true,
     "toilets": true
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

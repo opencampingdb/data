@@ -2,12 +2,21 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Sydney Road"
+    },
+    "operator": "moreland city council",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF490ZNB94DXT60MPB8R",
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

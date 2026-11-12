@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "wheelchair": "osm"
   },
@@ -9,6 +10,10 @@
       "housenumber": "23",
       "street": "Peel Street",
       "unit": "1"
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Bridge Street"
     },
     "phone": "+61 414 993 179",
     "wheelchair": true
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

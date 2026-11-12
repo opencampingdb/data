@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Tusculum Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Great Western Highway"
     },
     "phone": "+61 2 4751 4638",
     "website": "http://infobluemountains.net.au/locodepot/index.shtml"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

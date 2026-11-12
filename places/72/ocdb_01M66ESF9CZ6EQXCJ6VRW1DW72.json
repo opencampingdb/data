@@ -1,7 +1,9 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -9,8 +11,10 @@
     "wifi": "osm"
   },
   "facts": {
+    "booking_required": true,
     "caravans": false,
     "fee": true,
+    "operator": "Private",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -33,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

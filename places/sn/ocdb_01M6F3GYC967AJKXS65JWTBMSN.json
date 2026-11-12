@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/p/Boggabri-Agricultural-Heritage-centre-100070254069601/"
+    "facebook": "https://www.facebook.com/p/Boggabri-Agricultural-Heritage-centre-100070254069601/",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Wee Waa Street"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYC967AJKXS65JWTBMSN",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

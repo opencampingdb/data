@@ -1,11 +1,18 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 970
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Kendal Street"
+    },
+    "operator": "Country Comfort"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVRJ4JFB73B5BPAR6QPN",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

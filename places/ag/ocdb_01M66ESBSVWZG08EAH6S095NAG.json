@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Eighth Avenue"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBSVWZG08EAH6S095NAG",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T21:42:45Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

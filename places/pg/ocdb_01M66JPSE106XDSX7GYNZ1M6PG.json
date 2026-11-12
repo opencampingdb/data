@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -8,6 +11,15 @@
       "housenumber": "150",
       "street": "Castlereagh Highway"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1600,
+      "name": "Warrana Weir"
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Castlereagh Highway"
+    },
+    "operator": "NSW Health",
     "phone": "+61 2 6827 1100"
   },
   "group": "emergency",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

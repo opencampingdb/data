@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_url": "osm",
     "email": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,10 +17,18 @@
       "street": "Pickering Street",
       "suburb": "Enoggera"
     },
+    "booking_url": "https://alderleyautomotive.com.au/book-now/",
     "email": "crew@alderleyautomotive.com.au",
     "nearest_beach": {
       "distance_m": 2950,
       "name": "Dog Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2500
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Pickering Street"
     },
     "phone": "+61 7 3355 4889",
     "website": "https://alderleyautomotive.com.au/"
@@ -38,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "462",
       "street": "Peats Ferry Road"
+    },
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1300
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Jersey Street North"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/asquith/bp-asquith/2221"
   },
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -14,6 +16,14 @@
     },
     "nearest_beach": {
       "distance_m": 1120
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2550,
+      "name": "Sunset Harbour Boatramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Karoonda Road"
     },
     "phone": "+61 7 5486 3223"
   },
@@ -33,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
@@ -9,6 +14,21 @@
       "housenumber": "1",
       "street": "Epsom Road"
     },
+    "air": true,
+    "fuels": [
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1790
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Maribyrnong Road"
+    },
+    "operator": "Caltex",
     "phone": "+61 3 9370 0099",
     "toilets": false
   },
@@ -28,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

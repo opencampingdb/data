@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "street": "High Street",
       "suburb": "Charlton"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "High Street"
+    },
+    "operator": "Budget Motels",
     "phone": "+61 3 5491 1911"
   },
   "group": "overnight",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

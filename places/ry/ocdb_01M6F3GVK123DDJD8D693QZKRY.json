@@ -1,12 +1,17 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "16",
       "postcode": "4721",
       "street": "Capella Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Capella Street"
     }
   },
   "group": "services",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

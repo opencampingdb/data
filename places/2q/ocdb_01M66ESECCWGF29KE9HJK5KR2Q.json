@@ -3,7 +3,11 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "address": {
@@ -14,7 +18,16 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 2930
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1060
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Oxford Street"
+    },
+    "operator": "North Metropolitan TAFE",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESECCWGF29KE9HJK5KR2Q",
@@ -32,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

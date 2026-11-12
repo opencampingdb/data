@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Anne Street",
       "suburb": "Mundubbera"
     },
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Strathdee Street"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF0BF91Z15R6101988XF",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

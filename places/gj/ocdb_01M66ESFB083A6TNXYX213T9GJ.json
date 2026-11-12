@@ -8,7 +8,9 @@
     "dump_station": "osm",
     "entry": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "nudist": "osm",
+    "operator": "osm",
     "pets": "osm",
     "picnic_tables": "osm",
     "power": "osm",
@@ -29,7 +31,12 @@
     "dump_station": true,
     "entry": "customers",
     "max_stay": "7d",
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Bruce Highway"
+    },
     "nudist": false,
+    "operator": "Campervan and Motorhome Club of Australia",
     "pets": "leashed",
     "picnic_tables": true,
     "power": false,
@@ -55,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

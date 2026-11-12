@@ -2,19 +2,29 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": false,
+    "hot_water": true,
     "nearest_beach": {
       "distance_m": 110
     },
+    "nearest_boat_ramp": {
+      "distance_m": 310
+    },
     "opening_hours": "24/7",
+    "operator": "Werribee South Caravan Park",
     "showers": true,
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -33,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

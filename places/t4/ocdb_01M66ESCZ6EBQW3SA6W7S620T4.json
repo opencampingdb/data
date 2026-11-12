@@ -8,12 +8,21 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "contributed",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 1250
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Baralaba Rannes Road"
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -32,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

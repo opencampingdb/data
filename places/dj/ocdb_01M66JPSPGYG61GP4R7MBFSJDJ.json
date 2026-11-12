@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +10,11 @@
       "postcode": "3911",
       "street": "Grant Road",
       "suburb": "Baxter"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Grant Road"
     }
   },
   "group": "services",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }
