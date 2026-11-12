@@ -4,14 +4,14 @@ Open Camping DB passes what OpenStreetMap (OSM) should hear about to OSM's mappe
 
 | File | Challenge | One task per |
 |---|---|---|
-| `double_mapping.geojson` | Camp sites mapped twice | place that OSM still maps as two or more objects, after its records were merged, leaving out objects that are a separate place (see below), and leaving out motels, cabins and hostels |
-| `traveller_reports.geojson` | What travellers report | place where a value that at least two travellers (one of them first-hand) or the verified owner reported still differs from OSM |
-| `out_of_spec.geojson` | none yet (see "Out of spec values") | place and tag whose OSM value the reference OSM names for that tag refuses |
-| `challenges.json` | | the MapRoulette project and challenge ids, used for the rebuild links |
+| `double_mapping.geojson` | [Camp sites mapped twice](https://maproulette.org/browse/challenges/57405) (57405) | place that OSM still maps as two or more objects, after its records were merged, leaving out objects that are a separate place (see "Not double mapping"), and leaving out motels, cabins and hostels |
+| `traveller_reports.geojson` | [What travellers report](https://maproulette.org/browse/challenges/57406) (57406) | place where a value that at least two travellers (one of them first-hand) or the verified owner reported still differs from OSM |
+| `out_of_spec.geojson` | none (see "Out of spec values") | place and tag whose OSM value the reference OSM names for that tag refuses |
+| `challenges.json` | | the MapRoulette project (66368) and challenge ids, used for the rebuild links |
 
-`python -m pipeline.maproulette` writes the three files during the nightly OSM sync. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
+`python -m pipeline.maproulette` writes the three GeoJSON files during the nightly OSM sync, one task per line. Community reports (`community_report` in `fact_sources`) never become tasks, and neither does a place whose name or location came from them. Facts the release sets by rule (`rule` in `fact_sources`, such as `toilets` on a public toilet) are never in `places/`, so they never become tasks either. [pipeline/maproulette.py](../pipeline/maproulette.py) has the rules. Tasks go away by themselves: a double mapping task once OSM keeps one object, a report task once OSM shows the reported value.
 
-### What a report task needs
+## What a report task needs
 
 A value in Open Camping DB is not enough on its own, because the feedback engine can accept a single attested report. A report task is built only from the evidence in the feedback inbox's `applied/` folder, which the sync reads with `--inbox`:
 
@@ -23,7 +23,7 @@ A value in Open Camping DB is not enough on its own, because the feedback engine
 - Opening hours from travellers that carry a quoted comment (`Mo-Su 08:00-17:00 "office closes at noon"`) are never sent: the comment is free text no person has read. The verified owner's opening hours are sent with their comment.
 - Without `--inbox` (a local run, a fork) the file is written with no tasks, and the log and sync report say why.
 
-### Facts a report task covers
+## Facts a report task covers
 
 A report task covers only facts with a tag on the place's own OSM object, plus the name and a permanent closure:
 
@@ -36,7 +36,8 @@ A report task covers only facts with a tag on the place's own OSM object, plus t
 | `toilet_type` | `toilets:disposal`: `flush`, `pit` as `pitlatrine`, `chemical`, `dry` as `dry_toilet` |
 | `booking_required` | `reservation`: `true` as `required`, `false` as `no` |
 | `wifi` | `internet_access`: `wlan` or `no` |
-| `access`, `entry`, `water_type`, `brand` | `4wd_only`, `access`, `amenity`, `brand` |
+| `access`, `entry`, `water_type` | `4wd_only`, `access`, `amenity` |
+| `brand` | `brand`, for the chains with an OSM name: BIG4, Discovery Parks, NRMA Parks, Ingenia Holidays, Reflections Holiday Parks, G'day Parks, Family Parks and YHA |
 | `max_stay`, `opening_hours` | `maxstay`, `opening_hours` |
 | `charge`, `charge_conditional` | `charge`, `charge:conditional`, with `check_date:charge` (or `check_date:charge:conditional`) for the day the mapper checked it |
 | `website`, `phone`, `phone_2`, `email`, `facebook`, `instagram`, `tiktok`, `x` | `website`, `phone`, `email`, `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` |
@@ -73,7 +74,7 @@ with the instructions `{{check}}`, followed by `Open Camping DB record {{ocdb_id
 
 Anyone who is an admin of the MapRoulette project can rebuild. Add people under the project's **Manage** page.
 
-### Not double mapping
+## Not double mapping
 
 Two OSM objects close together are not always one place mapped twice. Rest areas, truck bays and fuel stations often come in pairs, one for each direction of travel, with the same name either side of a highway. The rules in [pipeline/geometry.py](../pipeline/geometry.py) (described in [pipeline/README.md](../pipeline/README.md), "Opposite sides of a road") decide which:
 
@@ -89,7 +90,7 @@ To keep a pair out of the double mapping challenge, merge it with `python -m pip
 
 ## Setting up a challenge
 
-Both challenges live in the MapRoulette project "Open Camping DB". Each one is built from a remote GeoJSON URL on main:
+The two live challenges are in the MapRoulette project "Open Camping DB" (66368). Each one is built from a remote GeoJSON URL on main:
 
 - `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/double_mapping.geojson`
 - `https://raw.githubusercontent.com/opencampingdb/data/main/maproulette/traveller_reports.geojson`
@@ -122,4 +123,4 @@ Open Camping DB record {{ocdb_id}}: {{record}}
 Check each report with the method listed under it before you edit. If you cannot confirm a report, skip the task. If Open Camping DB is wrong, mark the task "Not an Issue". If you edit, you can mention Open Camping DB {{ocdb_id}} in your changeset comment, with your own check as the source. Open Camping DB does not edit OpenStreetMap itself.
 ```
 
-After creating a challenge, put its id in `challenges.json`, along with the project id. The project is "Open Camping DB" (66368). Its challenges are "Camp sites mapped twice" (57405) and "What travellers report" (57406). Both stay out of MapRoulette's listings until the project is made discoverable.
+After creating a challenge, put its id in `challenges.json`, along with the project id, so the rebuild issue links to it. Both challenges stay out of MapRoulette's listings until the project is made discoverable.

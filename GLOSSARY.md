@@ -34,7 +34,7 @@ A fact, kind or value the dataset holds that OpenStreetMap has no tag or value f
 _Avoid_: custom field, extra data
 
 **Proposable extension**:
-An extension a mapper could check true or false at the place, and so a candidate for a new OpenStreetMap tag.
+An extension a mapper could check at the place, and so a candidate for a new OpenStreetMap tag.
 
 **Retired fact**:
 A fact that takes no new values because another fact now holds its information. Values already in the data stay valid.
@@ -61,7 +61,7 @@ The fact that says whether staying costs money: free, fees apply or by donation.
 _Avoid_: price, cost category
 
 **Charge**:
-A price a place publishes, as OpenStreetMap records it.
+A price a place publishes, on its sign or website, written in OpenStreetMap's charge syntax (`57 AUD/night`).
 _Avoid_: fee, rate
 
 **Fee report**:
