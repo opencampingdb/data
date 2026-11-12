@@ -65,5 +65,9 @@ A price a place publishes, as OpenStreetMap records it.
 _Avoid_: fee, rate
 
 **Fee report**:
-What one traveller says they paid a night, for one kind of site, in one month.
+What one traveller said they paid a night, for one kind of site, in one month. No longer collected: a charge report replaces it.
 _Avoid_: fee, price report
+
+**Charge report**:
+A traveller's report of the price a place publishes, on its sign or website, as a charge fact.
+_Avoid_: fee report, price paid

@@ -45,7 +45,9 @@ maproulette/traveller_reports.geojson
     here and are never sent. seasonal_closure is retired (the open months
     in opening_hours replace it), has no tag here, and is never sent either.
     motorbikes is sent as motorcycle=yes or no. phone_2 is sent as phone=<first>;<second>, and
-    only when the place has a first phone.
+    only when the place has a first phone. charge and charge_conditional are
+    sent as charge and charge:conditional, asking the mapper to add
+    check_date:charge too. charge_powered has no OSM tag, so it is never sent.
 
     A value is sent only with enough evidence in the inbox's applied items:
     a feedback value needs at least 2 independent sources (distinct origin,
@@ -162,6 +164,8 @@ TRUE_FALSE_TAGS = {
 WRITTEN_TAGS = {
     "max_stay": "maxstay",
     "opening_hours": "opening_hours",
+    "charge": "charge",
+    "charge_conditional": "charge:conditional",
     "website": "website",
     "phone": "phone",
     "email": "email",
@@ -243,6 +247,8 @@ VALUE_WORDS = {
 LABELS = {
     "max_stay": "maximum stay",
     "opening_hours": "opening hours",
+    "charge": "charge for a site",
+    "charge_conditional": "charge at other times",
     "website": "website",
     "phone": "phone number",
     "phone_2": "second phone number",
@@ -280,6 +286,8 @@ HOW_TO_CHECK = {
     "status": "a survey, recent street-level photos, or the operator's website",
     "fee": CHECK_SIGN,
     "opening_hours": CHECK_SIGN,
+    "charge": CHECK_SIGN,
+    "charge_conditional": CHECK_SIGN,
     "booking_required": CHECK_SIGN,
     **{field: CHECK_SIGN for field in CONTACT_FACTS},
     "toilets": CHECK_SEEN,
@@ -379,6 +387,8 @@ def wiki_page(tag: str) -> str:
     key, _, value = tag.partition("=")
     if key in VALUE_PAGES and value:
         return f"{WIKI}Tag:{key}%3D{value}"
+    if key.endswith(":conditional"):
+        return f"{WIKI}Conditional_restrictions"
     return f"{WIKI}Key:{key}"
 
 
@@ -595,6 +605,11 @@ CLOSED_FIX = (
     f"OSM wiki: {WIKI}Lifecycle_prefix"
 )
 NAME_RULE = "The name tag holds the name on the sign, never a description."
+# Prices change, so a charge says when it was checked.
+CHARGE_RULES = {
+    "charge": "Add check_date:charge with the day you checked it.",
+    "charge_conditional": "Add check_date:charge:conditional with the day you checked it.",
+}
 
 
 def tag_fix(tag: str, rule: str = "") -> str:
@@ -630,7 +645,7 @@ def report_changes(record: dict, osm_place: dict, evidence: dict, now: datetime)
         backed = backing(record, field, value, source, evidence, now)
         if backed:
             changes.append(change_line(
-                source, backed, f"{describe(field, value)} ({tag})", HOW_TO_CHECK.get(field, CHECK_DEFAULT), tag_fix(tag)
+                source, backed, f"{describe(field, value)} ({tag})", HOW_TO_CHECK.get(field, CHECK_DEFAULT), tag_fix(tag, CHARGE_RULES.get(field, ""))
             ))
     name = record.get("name")
     source = sources.get("name")

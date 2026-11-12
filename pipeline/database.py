@@ -74,8 +74,8 @@ from .common import write_text
 from .release import asset_url, gzip_bytes, release_tag
 from .states import StateLookup
 
-# 1: the first layout.
-LAYOUT_VERSION = 1
+# 1: the first layout. 2: the fees table is gone (release format 13).
+LAYOUT_VERSION = 2
 DATABASE_FILE = "ocdb.sqlite.gz"
 PAGE_SIZE = 4096
 DEFAULT_REPOSITORY = "opencampingdb/data"
@@ -121,14 +121,6 @@ CREATE TABLE reviews (
     created TEXT NOT NULL,
     record TEXT NOT NULL
 );
-CREATE TABLE fees (
-    id TEXT PRIMARY KEY NOT NULL,
-    place TEXT NOT NULL,
-    amount REAL NOT NULL,
-    site TEXT NOT NULL,
-    paid TEXT NOT NULL,
-    record TEXT NOT NULL
-);
 CREATE TABLE commons (
     place TEXT PRIMARY KEY NOT NULL,
     files TEXT NOT NULL
@@ -141,7 +133,6 @@ CREATE INDEX places_group ON places ("group");
 CREATE INDEX places_state ON places (state);
 CREATE INDEX places_lat_lon ON places (lat, lon);
 CREATE INDEX reviews_place ON reviews (place);
-CREATE INDEX fees_place ON fees (place);
 """
 
 # Every table, with the column it is keyed and ordered by.
@@ -150,7 +141,6 @@ TABLES = {
     "places": "id",
     "merged": "id",
     "reviews": "id",
-    "fees": "id",
     "commons": "place",
 }
 
@@ -220,11 +210,6 @@ def build_database(release_dir: Path, out_path: Path, states: StateLookup | None
             con.executemany(
                 "INSERT INTO reviews VALUES (?, ?, ?, ?, ?, ?)",
                 ((r["id"], r["place"], r["stars"], r["visited"], r["created"], line) for r, line in reviews),
-            )
-            fees = sorted(read_lines(release_dir / manifest["fees"]["file"]), key=lambda m: m[0]["id"])
-            con.executemany(
-                "INSERT INTO fees VALUES (?, ?, ?, ?, ?, ?)",
-                ((r["id"], r["place"], r["amount"], r["site"], r["paid"], line) for r, line in fees),
             )
             commons = sorted(read_lines(release_dir / manifest["commons"]["file"]), key=lambda m: m[0]["place"])
             con.executemany(

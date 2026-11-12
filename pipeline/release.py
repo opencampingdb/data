@@ -1,4 +1,4 @@
-"""Build the release files: places.ndjson.gz, reviews.ndjson.gz, fees.ndjson.gz,
+"""Build the release files: places.ndjson.gz, reviews.ndjson.gz,
 merged.ndjson.gz, commons.ndjson.gz and manifest.json, and the place index for
 feedback intakes.
 
@@ -42,7 +42,6 @@ from .common import (
     LICENCE,
     dump_line,
     is_visible,
-    iter_fee_files,
     iter_review_files,
     load_blocked,
     load_places,
@@ -68,17 +67,18 @@ from .common import (
 # 12.3: the facts nearest_beach, sharks and marine_stingers.
 # 12.4: the facts fuels, air, hot_water, toilet_type, operator and nearest_boat_ramp.
 # 12.5: the fact nearest_major_road, motorbikes from OSM, and seasonal_closure retired.
+# 13: fees.ndjson.gz and the fees table of ocdb.sqlite.gz are gone: what travellers
+# paid is no longer collected. The facts charge, charge_conditional and charge_powered
+# hold what a place publishes, and osm.check_dates says when a mapper checked a charge.
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
-FORMAT_VERSION = 12
-FORMAT_MINOR = 5
+FORMAT_VERSION = 13
+FORMAT_MINOR = 0
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
-# Fees paid more than this many months before the release are left out.
-FEE_MONTHS = 24
 DEFAULT_REPOSITORY = "opencampingdb/data"
 PLACE_INDEX_FILE = "place-index.ndjson.gz"
 
@@ -166,30 +166,6 @@ def reviews_ndjson(root: Path) -> tuple[bytes, int]:
     return "".join(lines).encode("utf-8"), len(lines)
 
 
-def month_index(year_month: str) -> int:
-    """Months since year 0 of a YYYY-MM value (or the start of an ISO date)."""
-    return int(year_month[:4]) * 12 + int(year_month[5:7]) - 1
-
-
-def fees_ndjson(root: Path, generated: str) -> tuple[bytes, int]:
-    """Every fee paid within FEE_MONTHS months of the release time, grouped by
-    place in id order, each file's lines in their id order.
-
-    Fees from blocked contributors are left out.
-    """
-    blocked = load_blocked(root)
-    earliest = month_index(generated) - FEE_MONTHS
-    lines = []
-    for path in iter_fee_files(root):
-        with open(path, encoding="utf-8") as f:
-            for line in f:
-                if line.strip():
-                    fee = json.loads(line)
-                    if month_index(fee["paid"]) >= earliest and fee.get("contributor") not in blocked:
-                        lines.append(dump_line(fee) + "\n")
-    return "".join(lines).encode("utf-8"), len(lines)
-
-
 def commons_ndjson(root: Path, released: set[str]) -> tuple[bytes, int]:
     """One {"place", "files"} line per released place with a Commons match, sorted by place id.
 
@@ -251,7 +227,6 @@ def build_release(
 
     places_raw, places_count = places_ndjson(root)
     reviews_raw, reviews_count = reviews_ndjson(root)
-    fees_raw, fees_count = fees_ndjson(root, generated)
     merged_raw, merged_count = merged_ndjson(root)
     index_raw, _ = place_index_ndjson(root)
     commons_raw, commons_count = commons_ndjson(root, released_ids(root))
@@ -270,10 +245,6 @@ def build_release(
         "reviews": write_asset(
             out_dir, "reviews.ndjson.gz", reviews_raw, reviews_count,
             asset_url(repository, release, "reviews.ndjson.gz"),
-        ),
-        "fees": write_asset(
-            out_dir, "fees.ndjson.gz", fees_raw, fees_count,
-            asset_url(repository, release, "fees.ndjson.gz"),
         ),
         "merged": write_asset(
             out_dir, "merged.ndjson.gz", merged_raw, merged_count,

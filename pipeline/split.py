@@ -12,7 +12,7 @@ rule 3 (different names, directions, operators or access) split them.
 
 What a split does:
 - The record keeps its id, its own OSM object and every object that stays
-  with it. Its reviews, fees and the facts it took from feedback stay too.
+  with it. Its reviews and the facts it took from feedback stay too.
 - Each object that leaves becomes its own place again. When the merge left a
   tombstone for that object, the tombstone comes back to life with its old
   id (status "open", merged_into removed), so apps that stored that id find
