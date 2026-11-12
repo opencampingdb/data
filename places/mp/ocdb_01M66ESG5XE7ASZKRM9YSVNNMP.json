@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -13,6 +15,10 @@
       "suburb": "Lauriston"
     },
     "entry": "customers",
+    "nearest_boat_ramp": {
+      "distance_m": 1500
+    },
+    "operator": "Scouts Victoria",
     "tents": true
   },
   "group": "overnight",
@@ -31,11 +37,11 @@
   "name": "Noonameena Scout Camp",
   "osm": {
     "id": 1343335685,
-    "timestamp": "2024-12-18T04:51:53Z",
+    "timestamp": "2026-11-11T08:12:07Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,32 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "car_wash": "osm",
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3270
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4110
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Dobney Avenue"
+    },
+    "operator": "Pearl Energy"
   },
   "group": "services",
   "id": "ocdb_01M66JPY99HYN1JHQDXYV02CZN",
@@ -23,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

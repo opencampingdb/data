@@ -7,11 +7,15 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "contributed",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 1230
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -30,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,6 +14,11 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Millewa Road"
+    },
+    "operator": "Mildura Rural City",
     "power": false,
     "showers": true,
     "tents": true,
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

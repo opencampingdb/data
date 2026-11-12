@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "showers": "osm"
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
-    "showers": true
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Kennedy Highway"
+    },
+    "showers": true,
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCXGHJYNFP5H51GZA927",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

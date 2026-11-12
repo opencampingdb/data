@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
   },
@@ -9,6 +11,11 @@
       "housenumber": "86",
       "street": "Barney Street"
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Barney Street"
+    },
+    "operator": "Country Comfort",
     "wheelchair": false,
     "wifi": true
   },
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

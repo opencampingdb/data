@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -12,8 +15,18 @@
       "street": "Repton Street",
       "suburb": "Dayton"
     },
+    "air": true,
+    "fuels": [
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4490
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Isoodon Street"
     },
     "opening_hours": "Mo-Fr 05:00-22:00; Sa-Su 06:00-22:00"
   },
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

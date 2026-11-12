@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +12,18 @@
       "state": "QLD",
       "street": "Macadamia Drive",
       "suburb": "Maleny"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Macadamia Drive"
+    },
+    "operator": "Farm Barn"
   },
   "group": "services",
   "id": "ocdb_01M66JPX5MPNQZ6FAG3N0R3E1F",
@@ -27,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

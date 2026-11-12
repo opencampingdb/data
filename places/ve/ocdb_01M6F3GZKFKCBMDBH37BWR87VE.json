@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,15 @@
       "state": "NSW",
       "street": "Molesworth Street",
       "suburb": "Lismore"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 580
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Molesworth Street"
+    },
+    "operator": "Richmond River Historical Society"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZKFKCBMDBH37BWR87VE",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

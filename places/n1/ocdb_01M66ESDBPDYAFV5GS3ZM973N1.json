@@ -4,7 +4,11 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "website": "osm"
   },
   "facts": {
@@ -21,7 +25,16 @@
       "distance_m": 50,
       "name": "Ocean Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1450,
+      "name": "Ettalong Beach Dinghy Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 290
+    },
     "opening_hours": "sunrise-sunset",
+    "operator": "Central Coast Council",
+    "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/12072"
   },
   "group": "utility",
@@ -40,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

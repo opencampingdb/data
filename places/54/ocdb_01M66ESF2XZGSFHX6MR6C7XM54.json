@@ -1,15 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "cabins": "osm",
     "campfires": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "kitchen": "osm",
     "laundry": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "pets": "osm",
     "power": "osm",
     "showers": "osm",
@@ -26,17 +30,26 @@
       "street": "Collier Drive",
       "suburb": "Cudmirrah"
     },
+    "booking_required": true,
     "cabins": true,
     "campfires": true,
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "hot_water": true,
     "kitchen": true,
     "laundry": true,
     "nearest_beach": {
       "distance_m": 150,
       "name": "Cudmirrah Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 840
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Collier Drive"
     },
     "pets": "leashed",
     "power": true,
@@ -62,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

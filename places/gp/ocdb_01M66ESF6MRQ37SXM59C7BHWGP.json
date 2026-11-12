@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "place": "100 Roper Rd"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 20,
+      "name": "Long Island Marina Slipway"
     },
     "phone": "+61 8 8532 6900"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,20 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/profile.php?id=100063482742304",
+    "nearest_boat_ramp": {
+      "distance_m": 1140
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Deception Bay Road"
+    },
     "opening_hours": "Mo-Su 05:00-23:00",
     "phone": "+61 414 263 764"
   },
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

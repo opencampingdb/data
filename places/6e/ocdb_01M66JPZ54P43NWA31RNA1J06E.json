@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,18 @@
       "street": "Philip Highway"
     },
     "email": "5544@unitedpetroleumsite.com.au",
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Philip Highway"
+    },
     "phone": "+61 8 7286 9056",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-elizabeth-south-180"
   },
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

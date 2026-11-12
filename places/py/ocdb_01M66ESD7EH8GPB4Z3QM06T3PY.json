@@ -2,15 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 0
     },
+    "nearest_major_road": {
+      "distance_m": 460,
+      "name": "Lawrence Hargrave Drive"
+    },
+    "operator": "Wollongong City Council",
     "showers": true
   },
   "group": "utility",
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

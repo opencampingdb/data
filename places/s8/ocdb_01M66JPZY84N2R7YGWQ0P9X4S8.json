@@ -1,10 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 400,
+      "name": "Princes Highway"
+    },
+    "operator": "Gumbuya World",
     "website": "https://www.gumbuya.com.au/attraction/tnt"
   },
   "group": "attraction",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

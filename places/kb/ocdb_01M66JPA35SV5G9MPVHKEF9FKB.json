@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -13,6 +15,11 @@
       "distance_m": 30,
       "name": "Ettalong Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 700,
+      "name": "Ettalong Beach Dinghy Launch"
+    },
+    "operator": "Central Coast Council",
     "wheelchair": true
   },
   "group": "transport",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

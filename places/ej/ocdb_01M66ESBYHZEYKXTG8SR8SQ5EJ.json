@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,14 @@
       "state": "QLD",
       "street": "Hope Street",
       "suburb": "Cooktown"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2490,
+      "name": "Cooktown Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Mulligan Highway"
     },
     "phone": "+61 7 4069 5536",
     "website": "https://cooktowncaravanpark.com/"
@@ -31,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

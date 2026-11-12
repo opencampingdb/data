@@ -2,12 +2,22 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 510
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 530,
+      "name": "Deerubbin Reserve Boat Ramp - Lane 1"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Old Pacific Highway Offramp"
     },
     "wheelchair": true
   },
@@ -27,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

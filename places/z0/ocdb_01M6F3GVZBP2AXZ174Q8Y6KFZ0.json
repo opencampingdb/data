@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "98",
       "street": "Main Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
     },
     "website": "https://hahndorfhotel.com.au/"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

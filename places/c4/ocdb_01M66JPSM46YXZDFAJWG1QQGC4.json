@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
       "postcode": "3036",
       "street": "Old Calder Highway & Hunter Street",
       "suburb": "Keilor"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Old Calder Highway"
     },
     "phone": "+61 3 9336 7333"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

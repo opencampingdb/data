@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "6",
       "street": "Meriton Place"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Clayton Road"
+    },
+    "operator": "Private"
   },
   "group": "services",
   "id": "ocdb_01M66JPC4E30H0RWRHJVF2Z6DD",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/profile.php?id=100057194393655"
+    "facebook": "https://www.facebook.com/profile.php?id=100057194393655",
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Cameron Highway"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GXERGSJH9TQ3KG2S1XPF",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

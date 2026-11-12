@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/Koala-Roadhouse-113530493729877/"
+    "facebook": "https://www.facebook.com/Koala-Roadhouse-113530493729877/",
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Suttor Developmental Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPGG89HEZ6V6F2GN4Q7CH",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,6 +15,13 @@
     },
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2500
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Esk-Kilcoy Road"
+    },
     "phone": "+61 428 180 450",
     "website": "https://www.campingsomerset.com.au/accommodation/camping"
   },
@@ -32,11 +41,11 @@
   "name": "Somerset Park Campground",
   "osm": {
     "id": 669259327,
-    "timestamp": "2023-05-14T04:07:20Z",
+    "timestamp": "2026-11-11T08:08:49Z",
     "type": "way",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

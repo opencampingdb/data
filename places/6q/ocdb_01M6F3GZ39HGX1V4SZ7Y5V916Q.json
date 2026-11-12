@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,13 @@
       "postcode": "3585",
       "street": "Campbell Street",
       "suburb": "Swan Hill"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1130
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Curlewis Street"
     },
     "website": "https://www.janeeliza.com.au/"
   },
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

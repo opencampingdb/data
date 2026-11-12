@@ -1,12 +1,25 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "236",
       "street": "Kelly Street"
+    },
+    "air": false,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Kelly Street"
     },
     "opening_hours": "Mo-Fr 07:30-18:00; Sa 08:00-13:00; Su off"
   },
@@ -26,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

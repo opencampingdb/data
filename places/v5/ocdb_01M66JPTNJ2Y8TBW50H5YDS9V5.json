@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -9,6 +12,14 @@
       "postcode": "5034",
       "street": "Goodwood Road",
       "suburb": "Wayville"
+    },
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3130
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Goodwood Road"
     },
     "opening_hours": "24/7"
   },
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

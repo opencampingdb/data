@@ -1,9 +1,20 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "charge": "osm",
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": true
+    "charge": "$20/day $150/yr pay at caravan park",
+    "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 0
+    },
+    "nearest_major_road": {
+      "distance_m": 460,
+      "name": "Tallow Street"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPDTPJVZQTA87S0DCM875",
@@ -21,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

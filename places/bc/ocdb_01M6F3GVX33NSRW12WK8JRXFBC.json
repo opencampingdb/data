@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -10,6 +12,14 @@
       "housenumber": "313-315",
       "postcode": "3056",
       "street": "Sydney Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4920,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Sydney Road"
     },
     "opening_hours": "Mo off; Tu-Th 16:00-23:00; Fr 16:00-01:00; Sa 14:00-01:00; Su 14:00-22:00",
     "website": "https://www.thebrunswickgreen.com/",
@@ -31,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

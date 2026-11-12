@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "wheelchair": "osm"
   },
@@ -9,6 +11,13 @@
       "postcode": "3393",
       "street": "Dimboola Road",
       "suburb": "Warracknabeal"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1400
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Dimboola Road"
     },
     "phone": "+61 3 5396 1200",
     "wheelchair": true
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

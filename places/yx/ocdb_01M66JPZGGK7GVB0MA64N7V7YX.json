@@ -4,7 +4,8 @@
   },
   "fact_sources": {
     "address": "osm",
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -14,7 +15,11 @@
       "street": "Bathurst Road",
       "suburb": "Orange"
     },
-    "dump_station": true
+    "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bathurst Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPZGGK7GVB0MA64N7V7YX",
@@ -32,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

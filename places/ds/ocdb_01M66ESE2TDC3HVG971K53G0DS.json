@@ -1,15 +1,22 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "caravans": "osm",
     "entry": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": false,
     "caravans": true,
     "entry": "public",
     "max_stay": "20h",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Burnett Highway"
+    },
     "showers": false,
     "toilets": true
   },
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

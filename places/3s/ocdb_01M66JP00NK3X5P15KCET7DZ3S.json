@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm",
@@ -13,6 +17,20 @@
       "state": "QLD",
       "street": "River Hills Road",
       "suburb": "Eagleby"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1610
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "River Hills Road"
     },
     "opening_hours": "Mo-Fr 04:00-21:00; Sa-Su 06:00-20:00",
     "phone": "+61 482 186 803",
@@ -35,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

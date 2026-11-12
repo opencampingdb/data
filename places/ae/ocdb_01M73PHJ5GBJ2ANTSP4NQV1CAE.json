@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://facebook.com/p/Sheffield-Rsl-Club-100081682849045"
+    "facebook": "https://facebook.com/p/Sheffield-Rsl-Club-100081682849045",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M73PHJ5GBJ2ANTSP4NQV1CAE",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

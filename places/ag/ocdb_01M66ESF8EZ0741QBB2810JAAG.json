@@ -3,7 +3,11 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -17,7 +21,16 @@
     },
     "entry": "public",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 2170
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Redleaf Avenue"
+    },
     "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "Ku-ring-gai Council",
+    "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/8214",
     "wheelchair": true
   },
@@ -37,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

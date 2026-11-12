@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -9,6 +13,21 @@
     "address": {
       "housenumber": "888",
       "street": "Beaudesert Road"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4150
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Beaudesert Road"
     },
     "opening_hours": "Mo-Fr 05:00-22:00; Sa-Su 08:00-20:00",
     "phone": "+61 7 3255 6530",
@@ -30,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

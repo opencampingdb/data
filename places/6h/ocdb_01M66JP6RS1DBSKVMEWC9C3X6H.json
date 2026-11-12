@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,6 +12,18 @@
       "postcode": "0854",
       "street": "Robinson Road",
       "suburb": "Borroloola"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1050,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Robinson Road"
     },
     "phone": "+61 8 8975 8790"
   },
@@ -28,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,20 @@
 {
   "fact_sources": {
     "address": "osm",
-    "phone": "osm"
+    "nearest_major_road": "osm",
+    "phone": "osm",
+    "phone_2": "osm"
   },
   "facts": {
     "address": {
       "street": "Oxley Highway"
     },
-    "phone": "+61 2 6847 9119"
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Oxley Highway"
+    },
+    "phone": "+61 2 6847 9119",
+    "phone_2": "+61 2 6847 9250"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY5DT0FEFGV7CQH0V997",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

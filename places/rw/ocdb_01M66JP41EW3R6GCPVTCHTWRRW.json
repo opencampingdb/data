@@ -1,12 +1,25 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "28192",
       "street": "New England Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "New England Highway"
     },
     "opening_hours": "Mo-Fr 08:30-17:30; Sa 09:00-12:00"
   },
@@ -26,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

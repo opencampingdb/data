@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,16 @@
       "state": "TAS",
       "street": "Station Street",
       "suburb": "New Norfolk"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2430,
+      "name": "Millbrook Launching Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Rocks Road"
+    },
+    "operator": "Derwent ValleyRrailway Preservation Society"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP4K9CDF9K26PQMB4M984",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

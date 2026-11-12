@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -13,6 +16,14 @@
       "street": "Anderson Drive",
       "suburb": "Tarro"
     },
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95"
+    ],
     "opening_hours": "24/7",
     "website": "https://metropetroleum.com.au/",
     "wheelchair": true
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "69",
       "street": "Edmond Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Queen Street"
     },
     "opening_hours": "Tu 12:00-18:00; We,Th 11:30-21:00; Fr,Sa 11:00-24:00; Su 11:00-18:00"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

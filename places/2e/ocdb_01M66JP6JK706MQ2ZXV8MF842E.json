@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,7 +15,16 @@
       "street": "Stuart Highway",
       "suburb": "Adelaide River"
     },
+    "air": true,
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Stuart Highway"
+    },
     "opening_hours": "05:00-24:00",
+    "operator": "Kwixtep Sales P/L",
     "website": "http://adelaideriverinn.com.au"
   },
   "group": "services",
@@ -30,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

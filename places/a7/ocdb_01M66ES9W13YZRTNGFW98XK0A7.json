@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 1930
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Murray Valley Highway"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9W13YZRTNGFW98XK0A7",
   "kind": "reserve_campsite",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

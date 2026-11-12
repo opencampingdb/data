@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,17 @@
     "address": {
       "housenumber": "2",
       "street": "Princes Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Overland Drive"
     },
     "opening_hours": "Mo-Su 05:00-22:00",
     "phone": "+61 3 9796 6466",
@@ -30,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

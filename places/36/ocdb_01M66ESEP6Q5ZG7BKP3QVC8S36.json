@@ -1,21 +1,29 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "cabins": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "fishing": "osm",
+    "nearest_boat_ramp": "osm",
     "picnic_tables": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm"
   },
   "facts": {
+    "bins": true,
     "cabins": false,
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
     "fee": false,
+    "fishing": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1250
+    },
     "picnic_tables": true,
     "power": false,
     "showers": false,
@@ -31,11 +39,11 @@
   "name": "Clem Walter Park Camp site",
   "osm": {
     "id": 14278479818,
-    "timestamp": "2026-10-13T01:21:14Z",
+    "timestamp": "2026-11-11T11:38:57Z",
     "type": "node",
-    "version": 7
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

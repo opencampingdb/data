@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,8 +14,16 @@
       "street": "Underhill Avenue",
       "suburb": "Indooroopilly"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 2780
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2360
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Coonan Street"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/indooroopilly/bp-indooroopilly/1451"
   },
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

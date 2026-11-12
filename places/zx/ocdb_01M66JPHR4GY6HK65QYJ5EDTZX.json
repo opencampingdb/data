@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,7 +13,15 @@
       "street": "Heidke Street",
       "unit": "5"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3640
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Takalvan Street"
+    },
     "opening_hours": "05:00-21:00",
+    "operator": "Super Suds Laundry",
     "phone": "+61 7 4152 0950"
   },
   "group": "utility",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

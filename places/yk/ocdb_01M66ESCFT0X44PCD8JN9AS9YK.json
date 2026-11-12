@@ -1,14 +1,21 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "charge": "Honesty Box / Caretaker Max",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "Surat Developmental Road"
+    },
     "phone": "+61 7 4665 9261",
     "showers": true,
     "toilets": true
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

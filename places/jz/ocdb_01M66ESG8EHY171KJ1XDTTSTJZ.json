@@ -1,12 +1,24 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
+    "booking_required": true,
     "caravans": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1930,
+      "name": "Pontoon - House Ground Tank"
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Arumpo Road"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,14 +1,28 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "172",
       "street": "West Street"
     },
-    "opening_hours": "24/7"
+    "fuels": [
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "West Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "United Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JNXJR6FAA3SR1VW7WCCD1",
@@ -26,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,6 +13,14 @@
       "street": "Bathurst Street",
       "suburb": "Tuena",
       "unit": "Lot"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bathurst Street"
     },
     "phone": "+61 2 4834 5235"
   },
@@ -30,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

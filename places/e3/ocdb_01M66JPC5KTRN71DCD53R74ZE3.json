@@ -1,12 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Beverly Place"
     },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Lurline Street"
+    },
+    "operator": "Street Art Murals Australia",
     "website": "https://www.nsw.gov.au/visiting-and-exploring-nsw/locations-and-attractions/street-art-walk"
   },
   "group": "attraction",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

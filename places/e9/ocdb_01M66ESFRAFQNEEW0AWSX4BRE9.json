@@ -1,16 +1,22 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "charge": "Pay at Longreach Shire Isisford ofice M-F or Whitman's Cafe S-S",
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "operator": "Longreach Regional Council",
     "power": false,
     "showers": false,
     "toilets": false
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

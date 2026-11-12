@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +14,20 @@
       "state": "QLD",
       "street": "Deception Bay Road",
       "suburb": "Rothwell"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2140
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Deception Bay Road"
     },
     "opening_hours": "Mo-Su 05:00-22:00",
     "phone": "+61 7 3204 2925"
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Oondooroo Street",
       "suburb": "Winton"
     },
-    "facebook": "https://www.facebook.com/p/The-Winton-Club-Inc-100064517417114/"
+    "facebook": "https://www.facebook.com/p/The-Winton-Club-Inc-100064517417114/",
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Elderslie Street"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRQSSR49N12B7ZJDD472",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

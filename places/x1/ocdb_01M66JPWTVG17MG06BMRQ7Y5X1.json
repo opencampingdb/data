@@ -1,7 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -10,9 +16,26 @@
       "housenumber": "176-182",
       "street": "Leach Highway"
     },
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 2880
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4160
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Leach Highway"
+    },
+    "operator": "United",
     "toilets": true,
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-myaree"
   },
@@ -32,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

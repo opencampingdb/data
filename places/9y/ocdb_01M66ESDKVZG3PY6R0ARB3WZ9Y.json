@@ -2,7 +2,10 @@
   "fact_sources": {
     "entry": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +13,12 @@
       "distance_m": 3940,
       "name": "Wrinklers Beach"
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 2270
+    },
+    "opening_hours": "24/7",
+    "operator": "Tasmania Parks & Wildlife Service",
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDKVZG3PY6R0ARB3WZ9Y",
@@ -28,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

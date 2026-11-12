@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,11 @@
       "street": "Blyth Street",
       "suburb": "Burra"
     },
+    "nearest_major_road": {
+      "distance_m": 390,
+      "name": "Market Square"
+    },
+    "operator": "National Trust",
     "website": "https://www.nationaltrust.org.au/places/burra-miners-dugouts/"
   },
   "group": "attraction",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

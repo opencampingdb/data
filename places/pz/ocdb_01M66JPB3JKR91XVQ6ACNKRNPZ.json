@@ -1,12 +1,21 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1",
       "street": "Mullenger Road",
       "unit": "2"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3680
+    },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Duke Street"
     }
   },
   "group": "services",
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -14,11 +18,26 @@
       "street": "Eenie Creek Road",
       "suburb": "Noosaville"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3010,
       "name": "Pelican Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2510
+    },
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "6"
+    },
     "opening_hours": "Mo-Fr 05:30-21:00; Sa,Su 06:00-20:00",
+    "operator": "EG Australia",
     "phone": "+61 7 4082 7414",
     "website": "https://eg-australia.com/"
   },
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

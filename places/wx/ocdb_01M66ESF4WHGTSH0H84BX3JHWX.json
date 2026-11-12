@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Morilla Street"
+    },
+    "operator": "Wallangulla Hotel",
     "phone": "+61 2 6829 0542",
     "website": "https://crocodilecaravanpark.com.au/"
   },
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

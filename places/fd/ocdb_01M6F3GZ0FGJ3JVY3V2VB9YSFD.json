@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "fuel": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuel": true,
+    "nearest_boat_ramp": {
+      "distance_m": 110,
+      "name": "Strathgordon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Gordon River Road"
+    },
     "website": "https://www.pedderwildernesslodge.com.au/"
   },
   "group": "overnight",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

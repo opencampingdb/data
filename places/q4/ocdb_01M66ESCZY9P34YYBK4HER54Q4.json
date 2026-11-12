@@ -4,9 +4,14 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -21,12 +26,22 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 50,
       "name": "City Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 290
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Marine Drive"
+    },
     "opening_hours": "sunrise-sunset",
+    "operator": "Wollongong City Council",
     "showers": true,
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/46863"
   },
@@ -46,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

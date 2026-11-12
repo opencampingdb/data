@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "78",
       "street": "Ipswich Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Ipswich Street"
+    },
+    "operator": "Somerset Regional Council"
   },
   "group": "services",
   "id": "ocdb_01M66JNYSRZ9BMBV4ZS08N2SCE",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

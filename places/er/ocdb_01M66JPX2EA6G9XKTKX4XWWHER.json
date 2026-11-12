@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,8 +12,17 @@
       "street": "Hawkesbury Road",
       "suburb": "Westmead"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3270
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3250
     },
     "website": "https://speedway.com.au/locations/speedway-westmead-petrol-station/"
   },
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,14 +2,27 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
+      "housenumber": "16",
+      "postcode": "6450",
+      "state": "WA",
       "street": "Tubada Street",
       "suburb": "Munglinup"
     },
     "email": "munglinuproadhouse@westnet.com.au",
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "South Coast Highway"
+    },
     "phone": "+61 8 9075 1041"
   },
   "group": "services",
@@ -19,14 +32,14 @@
     "lat": -33.704897,
     "lon": 120.860773
   },
-  "name": "Munglinup Roadhouse",
+  "name": "Petro Fuels Munglinup",
   "osm": {
     "id": 2684272666,
-    "timestamp": "2026-11-08T03:07:57Z",
+    "timestamp": "2026-11-11T04:35:28Z",
     "type": "node",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

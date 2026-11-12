@@ -2,6 +2,9 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "wifi": "osm"
   },
@@ -11,6 +14,14 @@
       "distance_m": 140,
       "name": "Coogee Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2620
+    },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Cockburn Road"
+    },
+    "operator": "Discovery Parks",
     "power": true,
     "wifi": true
   },
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,24 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 2260
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 2470
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Albany Highway"
+    },
+    "opening_hours": "24/7",
+    "operator": "Viva Energy Group"
   },
   "group": "services",
   "id": "ocdb_01M66JPGTWMAW0P9C6Z1F3PD7E",
@@ -25,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

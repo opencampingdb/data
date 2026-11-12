@@ -7,6 +7,7 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "tents": "osm",
@@ -25,6 +26,10 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 410,
+      "name": "Glen Innes Road"
+    },
     "phone": "+61 2 6722 2261",
     "power": true,
     "tents": true,
@@ -46,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

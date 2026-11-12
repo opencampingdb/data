@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,9 +15,20 @@
       "street": "New England Highway",
       "suburb": "Rutherford"
     },
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3180
     },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "New England Highway"
+    },
+    "operator": "EG Australia",
     "phone": "+61 2 9157 9472",
     "website": "https://www.eg-australia.com/eg-store-locator/"
   },
@@ -34,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,14 @@
       "street": "Price Street",
       "suburb": "Wingham"
     },
-    "entry": "public"
+    "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 1430
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Price Street"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESAGPX73JWGVTQF7YTGN5",
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

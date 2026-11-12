@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,7 +14,20 @@
       "housenumber": "1",
       "street": "Standen Street"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 800
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Swanport Road"
+    },
     "opening_hours": "Mo-Fr 07:00-19:00; Sa,Su 08:00-19:00",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -28,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuel": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Elizabeth Drive"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPXC7MTKV2WD5835KCTS2",
   "kind": "fuel",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

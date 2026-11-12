@@ -1,9 +1,17 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "booking_required": "osm",
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "permit"
+    "booking_required": true,
+    "entry": "permit",
+    "nearest_major_road": {
+      "distance_m": 480
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCAJA556GXY7W4HWYM8S",
@@ -21,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

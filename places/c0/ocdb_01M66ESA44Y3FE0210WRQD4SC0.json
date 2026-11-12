@@ -1,9 +1,12 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -11,9 +14,15 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Online",
     "drinking_water": false,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Eidsvold-Theodore Road"
+    },
+    "operator": "Queensland Parks",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

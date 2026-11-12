@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,14 @@
       "street": "Gardiner Road",
       "suburb": "Waterford"
     },
-    "facebook": "https://www.facebook.com/p/Castle-Rumble-100057656979633/"
+    "facebook": "https://www.facebook.com/p/Castle-Rumble-100057656979633/",
+    "nearest_boat_ramp": {
+      "distance_m": 2990
+    },
+    "nearest_major_road": {
+      "distance_m": 490,
+      "name": "High Road"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPMEY7DQ0WPQN77EV6C4W",
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

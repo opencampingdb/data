@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,15 @@
       "street": "Industrial Road",
       "suburb": "Oak Flats"
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 1190
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Princes Highway"
+    },
+    "opening_hours": "24/7",
+    "operator": "O'Brien's Auto Glass"
   },
   "group": "services",
   "id": "ocdb_01M66JPYK7N2N3VBK3C6AXGB7K",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

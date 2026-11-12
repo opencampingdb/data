@@ -1,11 +1,22 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 3270
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3550
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Oak Street"
+    },
+    "operator": "BP"
   },
   "group": "services",
   "id": "ocdb_01M66JP2W7E7WX1RRH7RAQ9D5N",
@@ -23,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

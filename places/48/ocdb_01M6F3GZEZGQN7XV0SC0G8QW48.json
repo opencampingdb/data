@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -15,6 +17,13 @@
     "nearest_beach": {
       "distance_m": 3920,
       "name": "Coconuts"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 320
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Rankin Street"
     },
     "opening_hours": "Mo 08:00-15:00; Tu-We 08:00-20:00; Th 08:00-21:00; Fr 08:00-23:00; Sa 08:00-00:00; Su off"
   },
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

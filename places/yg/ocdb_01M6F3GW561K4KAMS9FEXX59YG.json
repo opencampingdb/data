@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "TAS",
       "street": "Gilbert Street",
       "suburb": "Latrobe"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Gilbert Street"
+    },
+    "operator": "Beverley Skurulis"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW561K4KAMS9FEXX59YG",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

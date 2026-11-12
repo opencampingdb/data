@@ -1,11 +1,21 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1490,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Kokoda Terrace"
+    },
     "opening_hours": "sunrise-sunset",
     "website": "https://www.caravancaravan.com.au/entity/loxton-motorhome-reserve/sa"
   },
@@ -25,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,17 +1,28 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "charge": "Donation Box & General Store",
     "entry": "customers",
     "fee": true,
     "nearest_beach": {
       "distance_m": 170,
       "name": "Bucks Bay Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 230
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Port Carpenter Road"
     },
     "showers": false,
     "toilets": true
@@ -32,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

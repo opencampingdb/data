@@ -2,13 +2,20 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 370,
+      "name": "Baker Street"
+    },
     "opening_hours": "Mo-Su 06:00-sunset",
+    "operator": "University of Southern Queensland",
     "website": "https://www.unisq.edu.au/about-unisq/locations/toowoomba/japanese-garden"
   },
   "group": "attraction",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

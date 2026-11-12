@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,7 +16,22 @@
       "street": "Pacific Motorway",
       "suburb": "Upper Coomera"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1910
+    },
+    "nearest_major_road": {
+      "distance_m": 100
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "phone": "+61 7 5502 8004",
     "website": "https://map.bp.com/en-AU/AU/gas-station/upper-coomera/bp-coomera/1933"
   },
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

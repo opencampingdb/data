@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -10,6 +12,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 2360
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 400
+    },
+    "nearest_major_road": {
+      "distance_m": 490,
+      "name": "Great Eastern Highway"
     },
     "opening_hours": "Mo-Su 09:30-16:30"
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

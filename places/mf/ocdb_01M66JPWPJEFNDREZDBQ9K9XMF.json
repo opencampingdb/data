@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,11 @@
       "street": "Fifth Avenue",
       "suburb": "Injune"
     },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Carnarvon Highway"
+    },
+    "operator": "Queensland Health",
     "phone": "+61 7 4626 1188",
     "website": "https://www.southwest.health.qld.gov.au/healthcare-facilities/multipurpose-health-services/injune-multipurpose-health-service/"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

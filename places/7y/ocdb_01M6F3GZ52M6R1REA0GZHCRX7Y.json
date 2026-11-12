@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
+    "phone_2": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -9,7 +13,16 @@
       "distance_m": 4200,
       "name": "Birdie Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2380
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Wallarah Road"
+    },
+    "operator": "Golden Chain",
     "phone": "+61 2 4392 3355",
+    "phone_2": "+61 413 649 955",
     "wifi": true
   },
   "group": "overnight",
@@ -28,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

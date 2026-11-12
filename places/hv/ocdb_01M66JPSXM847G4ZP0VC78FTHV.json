@@ -1,9 +1,23 @@
 {
   "fact_sources": {
+    "car_wash": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "car_wash": true,
+    "fuels": [
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Frankston-Flinders Road"
+    },
     "phone": "+61 3 5971 4032",
     "toilets": true
   },
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

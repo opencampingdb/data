@@ -1,13 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "postcode": "6410",
       "street": "George Street",
       "suburb": "Kellerberrin"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Moore Street"
+    },
+    "operator": "Chris Thill"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF1G0NQW9FZ2FD39GXFC",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

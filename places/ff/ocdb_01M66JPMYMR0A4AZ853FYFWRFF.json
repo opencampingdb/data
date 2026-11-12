@@ -1,10 +1,17 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "New England Highway"
+    },
+    "operator": "Glen Innes Severn Shire Council",
     "water_type": "tank_fill"
   },
   "group": "utility",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

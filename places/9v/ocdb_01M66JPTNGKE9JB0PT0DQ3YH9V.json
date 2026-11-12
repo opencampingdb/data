@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,7 +14,12 @@
       "street": "Main North Road",
       "suburb": "Smithfield"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main North Road"
+    },
     "opening_hours": "24/7",
+    "operator": "On The Run",
     "phone": "+61 8 8200 5576",
     "website": "https://www.otr.com.au/location/otr-smithfield/"
   },
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

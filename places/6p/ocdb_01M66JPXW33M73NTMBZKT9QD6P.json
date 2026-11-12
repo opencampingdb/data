@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -9,6 +13,21 @@
     "address": {
       "housenumber": "246",
       "street": "Princes Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2340
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Princes Highway"
     },
     "opening_hours": "24/7",
     "phone": "+61 2 4428 8500",
@@ -30,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

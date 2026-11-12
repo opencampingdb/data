@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Welsh Drive"
+    },
+    "operator": "Dunn Family"
+  },
   "group": "services",
   "id": "ocdb_01M66JNZBGE6XTYDSGW3MNEK3K",
   "kind": "fuel",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

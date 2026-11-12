@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -19,6 +21,11 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 300,
+      "name": "RM Williams Way"
+    },
+    "operator": "Bundaleer Progress Association",
     "phone": "+61 429 129 132",
     "tents": true,
     "toilets": true
@@ -39,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

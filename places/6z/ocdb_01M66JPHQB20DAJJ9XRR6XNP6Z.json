@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
       "street": "Bromley Road"
     },
     "email": "info@rdhs.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 730
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bromley Road"
+    },
     "phone": "+61 3 5026 1388",
     "website": "https://www.travelvictoria.com.au/robinvale/"
   },
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

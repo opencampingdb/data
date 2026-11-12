@@ -1,12 +1,34 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "e85",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 4580
     },
+    "nearest_boat_ramp": {
+      "distance_m": 450,
+      "name": "Muller Park Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "David Low Way"
+    },
+    "operator": "United Petrolum",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-bli-bli"
   },
   "group": "services",
@@ -25,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "215",
       "postcode": "4570",
       "street": "Brisbane Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Brisbane Road"
     }
   },
   "group": "attraction",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

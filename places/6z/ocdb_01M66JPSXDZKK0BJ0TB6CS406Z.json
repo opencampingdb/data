@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,8 +16,21 @@
       "street": "Maroondah Highway",
       "suburb": "Chirnside Park"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3780
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3940
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Maroondah Highway"
     },
     "phone": "+61 3 9726 0165",
     "website": "https://www.7eleven.com.au/"
@@ -35,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

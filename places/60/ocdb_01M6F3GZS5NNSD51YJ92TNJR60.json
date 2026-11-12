@@ -2,12 +2,21 @@
   "fact_sources": {
     "facebook": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/SouthernSherbrooke",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3270
+    },
+    "nearest_major_road": {
+      "distance_m": 430,
+      "name": "Belgrave - Hallam Road"
+    },
     "phone": "+61 3 5968 3762",
     "website": "https://southernsherbrooke.wordpress.com/"
   },
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

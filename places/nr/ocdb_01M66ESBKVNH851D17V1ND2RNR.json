@@ -1,12 +1,18 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 0
     },
+    "nearest_boat_ramp": {
+      "distance_m": 200
+    },
+    "operator": "Mosman Council",
     "water_type": "fountain"
   },
   "group": "utility",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

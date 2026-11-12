@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 4980
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Portrush Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESC459Q73YP3E0S3KMCWA",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -11,7 +15,19 @@
       "street": "Berrigan Drive",
       "suburb": "South Lake"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Berrigan Drive"
+    },
     "opening_hours": "Mo-Su 05:00-22:00",
+    "operator": "United",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-south-lake",
     "wifi": false
   },
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,16 +1,25 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Box",
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Sharpe Street"
+    },
+    "operator": "Bega Valley Shire Council",
     "showers": false,
     "tents": true,
     "toilets": true
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +13,13 @@
       "street": "Departure Drive"
     },
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "hot_water": true,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Arrival Drive"
+    },
+    "operator": "Melbourne Tulamarine Airport"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDZF4AMQEADBM3V3T5RF",
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

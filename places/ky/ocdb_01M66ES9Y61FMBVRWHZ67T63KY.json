@@ -8,6 +8,8 @@
     "bins": "community_report",
     "fee": "osm",
     "max_stay": "community_report",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "toilets": "community_report",
     "wifi": "osm"
   },
@@ -15,6 +17,11 @@
     "bins": true,
     "fee": false,
     "max_stay": "48h",
+    "nearest_major_road": {
+      "distance_m": 430,
+      "name": "Bruce Highway"
+    },
+    "operator": "Gladstone City Council",
     "toilets": true,
     "wifi": false
   },
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

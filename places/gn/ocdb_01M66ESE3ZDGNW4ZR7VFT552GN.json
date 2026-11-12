@@ -1,6 +1,18 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 960,
+      "name": "Downstream Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 290,
+      "name": "Oenpelli Road"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESE3ZDGNW4ZR7VFT552GN",
   "kind": "public_shower",
@@ -17,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "car_wash": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "car_wash": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Hub Drive"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JQ09GRR6XYWT0SZ5HQJC9",
   "kind": "fuel",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

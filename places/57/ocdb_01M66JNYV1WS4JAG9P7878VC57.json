@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm",
@@ -17,6 +20,15 @@
     "nearest_beach": {
       "distance_m": 410
     },
+    "nearest_boat_ramp": {
+      "distance_m": 120,
+      "name": "Raymond Island Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Esplanade"
+    },
+    "operator": "East Gippsland Shire Council",
     "phone": "+61 418 517 959",
     "website": "https://www.eastgippsland.vic.gov.au/community/raymond-island-ferry",
     "wheelchair": true,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

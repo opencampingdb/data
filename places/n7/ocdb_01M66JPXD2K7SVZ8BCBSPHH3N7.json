@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,10 +15,16 @@
       "street": "Cambridge Park Drive",
       "suburb": "Cambridge"
     },
+    "air": false,
     "nearest_beach": {
       "distance_m": 3650,
       "name": "Seven Mile Beach"
     },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Tasman Highway"
+    },
+    "operator": "Tas Petroleum",
     "website": "https://find.shell.com/au/fuel/10111142-shell-cambridge-unmanned/en_AU"
   },
   "group": "services",
@@ -34,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

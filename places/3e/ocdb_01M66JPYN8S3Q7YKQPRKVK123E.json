@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -12,10 +16,25 @@
       "street": "East-West Arterial Road",
       "suburb": "Hendra"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4080
     },
-    "opening_hours": "Mo-Su 04:00-22:00"
+    "nearest_boat_ramp": {
+      "distance_m": 3900
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "East-West Arterial Road"
+    },
+    "opening_hours": "Mo-Su 04:00-22:00",
+    "operator": "Ampol"
   },
   "group": "services",
   "id": "ocdb_01M66JPYN8S3Q7YKQPRKVK123E",
@@ -33,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,20 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 4970
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Barrabool Boulevard"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESG479J8F536VA8W6PE39",
@@ -21,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

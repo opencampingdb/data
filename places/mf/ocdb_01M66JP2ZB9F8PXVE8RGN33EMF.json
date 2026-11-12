@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -11,6 +13,11 @@
       "state": "QLD",
       "street": "Factory Street",
       "suburb": "Pomona"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Factory Street"
     },
     "opening_hours": "Mo-Fr 05:30-18:30; PH,Sa,Su 07:00-16:00",
     "website": "https://map.bp.com/en-AU/AU/gas-station/pomona/bp-pomona/1020"
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

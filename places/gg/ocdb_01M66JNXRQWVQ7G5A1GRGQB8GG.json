@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Princes Highway on-ramp"
+    },
+    "opening_hours": "24/7",
+    "operator": "Shell"
   },
   "group": "services",
   "id": "ocdb_01M66JNXRQWVQ7G5A1GRGQB8GG",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,23 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 2130,
       "name": "Dog Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1130
+    },
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Newmarket Road"
+    },
+    "operator": "Brisbane City Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESFHX4DCYDHFTS4G80QT1",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

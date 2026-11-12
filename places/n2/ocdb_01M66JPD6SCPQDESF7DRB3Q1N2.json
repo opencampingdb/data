@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Ayr Street",
       "suburb": "Jamestown"
     },
-    "facebook": "https://www.facebook.com/p/Jamestown-Meat-Service-100083984751843/"
+    "facebook": "https://www.facebook.com/p/Jamestown-Meat-Service-100083984751843/",
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Ayr Street"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPD6SCPQDESF7DRB3Q1N2",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

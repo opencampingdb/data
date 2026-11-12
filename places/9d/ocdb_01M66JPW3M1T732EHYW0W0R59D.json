@@ -1,13 +1,28 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel"
+    ],
     "nearest_beach": {
       "distance_m": 4280
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 3620
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Deakin Avenue"
+    },
+    "opening_hours": "24/7",
+    "operator": "APCO"
   },
   "group": "services",
   "id": "ocdb_01M66JPW3M1T732EHYW0W0R59D",
@@ -25,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

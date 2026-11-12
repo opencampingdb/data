@@ -1,6 +1,18 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 4420,
+      "name": "Serpentine Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 190,
+      "name": "Gordon River Road"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M71BXFFD4XAZX3X79W6G352Z",
   "kind": "lookout",
@@ -17,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,6 +17,11 @@
     "entry": "public",
     "fee": false,
     "max_stay": "2d",
+    "nearest_major_road": {
+      "distance_m": 320,
+      "name": "Leichhardt Highway"
+    },
+    "operator": "Western Downs Regional Council",
     "power": false,
     "showers": true,
     "tents": true,
@@ -37,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

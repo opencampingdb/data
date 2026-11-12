@@ -7,6 +7,8 @@
     "fee": "osm",
     "kitchen": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -26,6 +28,11 @@
     "fee": true,
     "kitchen": true,
     "max_stay": "50d",
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Coramba Street"
+    },
+    "operator": "Glenreagh Public Recreation Reserve Trust",
     "phone": "+61 428 582 314",
     "power": true,
     "showers": true,
@@ -48,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

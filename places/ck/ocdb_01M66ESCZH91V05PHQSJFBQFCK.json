@@ -1,11 +1,17 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "hot_water": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "customers",
-    "fee": false
+    "fee": false,
+    "hot_water": true,
+    "nearest_boat_ramp": {
+      "distance_m": 610
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCZH91V05PHQSJFBQFCK",
@@ -23,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

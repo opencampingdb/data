@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "distance_m": 430,
       "name": "Gibson Beach"
     },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Great Ocean Road"
+    },
+    "operator": "Parks Victoria",
     "wheelchair": true
   },
   "group": "utility",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

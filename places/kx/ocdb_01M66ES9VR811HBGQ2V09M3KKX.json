@@ -1,11 +1,17 @@
 {
   "fact_sources": {
     "caravans": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "caravans": true,
-    "entry": "public"
+    "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 180
+    },
+    "operator": "Parks Vicftoria"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9VR811HBGQ2V09M3KKX",
@@ -23,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,27 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "30",
       "street": "Katherine Terrace"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 640
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Katherine Terrace"
     },
     "website": "https://www.shell.com.au/"
   },
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

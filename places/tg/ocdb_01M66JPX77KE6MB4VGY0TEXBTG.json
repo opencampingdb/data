@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -10,8 +14,21 @@
       "housenumber": "7",
       "street": "Northwood Road"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 400
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1420
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Northwood Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/northwood/bp-northwood/2199",
     "wheelchair": true
@@ -32,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

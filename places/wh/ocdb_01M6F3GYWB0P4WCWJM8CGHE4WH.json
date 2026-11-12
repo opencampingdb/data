@@ -1,12 +1,19 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "High Street"
+    },
     "opening_hours": "Sa 10:00-16:00",
+    "operator": "Maldon Vintage Machinery Museum Inc.",
     "wheelchair": true
   },
   "group": "attraction",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

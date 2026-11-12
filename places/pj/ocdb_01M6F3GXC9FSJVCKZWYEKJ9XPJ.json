@@ -4,6 +4,8 @@
     "email": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -18,6 +20,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 50
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1810
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Redcliffe Parade"
     },
     "website": "https://www.zokki.com.au/"
   },
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

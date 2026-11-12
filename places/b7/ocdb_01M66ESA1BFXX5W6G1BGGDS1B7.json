@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "charge": "osm",
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "fee": true
+    "charge": "10 AUD",
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 480,
+      "name": "Landsborough Highway"
+    },
+    "operator": "Longreach Regional Council"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA1BFXX5W6G1BGGDS1B7",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

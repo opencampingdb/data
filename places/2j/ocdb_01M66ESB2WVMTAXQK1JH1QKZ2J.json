@@ -3,9 +3,14 @@
     "address": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -19,11 +24,21 @@
     },
     "drinking_water": false,
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 3200
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4910
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Hawkesbury Valley Way"
+    },
     "opening_hours": "24/7",
+    "operator": "Hawkesbury City Council",
     "showers": false,
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/2558"
   },
@@ -43,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

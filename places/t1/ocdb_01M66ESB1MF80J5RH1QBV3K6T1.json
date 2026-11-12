@@ -4,7 +4,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "showers": "osm",
     "website": "osm",
@@ -20,8 +23,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 730
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 640
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Cahill Expressway"
     },
     "opening_hours": "24/7",
     "showers": false,
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

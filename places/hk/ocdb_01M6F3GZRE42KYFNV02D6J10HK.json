@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Peel Street"
+    },
     "opening_hours": "We-Sa 09:00-13:00",
     "wheelchair": true
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

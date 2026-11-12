@@ -5,6 +5,9 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -15,6 +18,15 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_boat_ramp": {
+      "distance_m": 150,
+      "name": "Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Goldring Street"
+    },
+    "operator": "Kronosaurus Korner",
     "power": true,
     "showers": true,
     "toilets": true
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

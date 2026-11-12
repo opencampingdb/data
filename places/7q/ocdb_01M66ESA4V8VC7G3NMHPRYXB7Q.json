@@ -2,12 +2,17 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "caravans": true,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Barkly Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA4V8VC7G3NMHPRYXB7Q",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

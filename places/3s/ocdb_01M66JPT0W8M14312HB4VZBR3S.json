@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,7 +13,20 @@
       "housenumber": "38",
       "street": "Barolin Street"
     },
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1080
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Barolin Street"
+    },
     "opening_hours": "Mo-Sa 05:30-21:30; Su 06:30-20:30",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -28,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

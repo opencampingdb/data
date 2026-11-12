@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "wifi": "osm"
@@ -12,6 +15,21 @@
       "state": "QLD",
       "street": "Robinson Road East",
       "suburb": "Geebung"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4060
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Robinson Road East"
     },
     "opening_hours": "24/7",
     "phone": "+61 7 3254 6081",
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

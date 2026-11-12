@@ -1,10 +1,12 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "campfires": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "motorbikes": "osm",
     "nearest_beach": "osm",
     "pets": "osm",
     "power": "osm",
@@ -15,11 +17,13 @@
     "wifi": "osm"
   },
   "facts": {
+    "booking_required": true,
     "campfires": false,
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
     "fee": true,
+    "motorbikes": true,
     "nearest_beach": {
       "distance_m": 20
     },
@@ -47,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

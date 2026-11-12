@@ -1,9 +1,20 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 1870
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Old Princes Highway"
+    },
+    "operator": "Budget",
     "phone": "+61 8 8532 1090",
     "website": "https://www.murraybridgemotorinn.com.au/"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

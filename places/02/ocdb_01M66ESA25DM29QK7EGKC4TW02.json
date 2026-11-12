@@ -9,6 +9,7 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "community_report",
+    "nearest_major_road": "osm",
     "power": "community_report",
     "showers": "community_report",
     "toilets": "community_report"
@@ -16,6 +17,10 @@
   "facts": {
     "dump_station": true,
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 420,
+      "name": "Nalang Road"
+    },
     "power": true,
     "showers": true,
     "toilets": true
@@ -36,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

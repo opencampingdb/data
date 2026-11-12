@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +12,21 @@
     "address": {
       "housenumber": "133-143",
       "street": "Torquay Road"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3240
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Torquay Road"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 5261 6858",
@@ -30,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

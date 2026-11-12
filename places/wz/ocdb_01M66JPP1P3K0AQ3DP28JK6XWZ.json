@@ -1,14 +1,22 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
+      "housenumber": "29E",
       "postcode": "7277",
       "state": "TAS",
       "street": "Legana Park Drive",
       "suburb": "Legana"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "A7"
+    },
+    "operator": "Tas Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JPP1P3K0AQ3DP28JK6XWZ",
@@ -20,11 +28,11 @@
   "name": "Tas Petroleum",
   "osm": {
     "id": 13266298940,
-    "timestamp": "2025-11-20T05:19:15Z",
+    "timestamp": "2026-11-11T07:31:42Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

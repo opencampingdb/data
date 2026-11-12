@@ -8,6 +8,9 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "motorbikes": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -30,6 +33,12 @@
     "entry": "customers",
     "fee": true,
     "kitchen": false,
+    "motorbikes": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Wambo Street"
+    },
+    "operator": "Deborah Cummins",
     "phone": "+61 7 4627 7174",
     "power": true,
     "showers": true,
@@ -53,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

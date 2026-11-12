@@ -1,9 +1,18 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Monaro Highway"
+    },
     "opening_hours": "24/7",
     "phone": "+61 3 5667 2918"
   },
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,13 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "nearest_beach": {
       "distance_m": 1330
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1260
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Cowper Wharf Roadway"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESGC4MV3M59BRX6SXPR6G",
@@ -25,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

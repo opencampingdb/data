@@ -1,11 +1,24 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1230
+    },
     "opening_hours": "24/7",
+    "operator": "Endeavour Fuel",
     "phone": "+61 3 9781 7100",
     "website": "https://eefuels.au/store-locator/endeavour-horsham/"
   },
@@ -25,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-01T01:44:13Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

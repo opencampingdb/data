@@ -1,11 +1,21 @@
 {
   "fact_sources": {
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "enquiries@sharkbayhotelwa.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 80,
+      "name": "Slipway"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Knight Terrace"
+    },
     "phone": "+61 8 9948 1203",
     "website": "https://www.sharkbayhotelwa.com.au"
   },
@@ -25,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

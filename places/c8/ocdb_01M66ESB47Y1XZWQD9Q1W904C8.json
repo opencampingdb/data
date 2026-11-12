@@ -2,7 +2,10 @@
   "fact_sources": {
     "entry": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +13,16 @@
       "distance_m": 2680,
       "name": "Horse Arena"
     },
-    "opening_hours": "Mo-Su 09:00-17:00"
+    "nearest_boat_ramp": {
+      "distance_m": 2960,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Wellington Parade"
+    },
+    "opening_hours": "Mo-Su 09:00-17:00",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESB47Y1XZWQD9Q1W904C8",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,7 +14,12 @@
       "state": "NSW",
       "street": "Albatross Road"
     },
+    "nearest_major_road": {
+      "distance_m": 460,
+      "name": "Braidwood Road"
+    },
     "opening_hours": "Tu-Su 10:00-16:00",
+    "operator": "Royal Australian Navy",
     "phone": "+61 2 4424 1920",
     "website": "https://www.navy.gov.au/history/museums/fleet-air-arm-museum"
   },
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

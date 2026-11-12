@@ -5,11 +5,16 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
-    "fee": "contributed"
+    "fee": "contributed",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "dump_station": true,
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 260,
+      "name": "Theresa Creek Dam Boat Ramp"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCZ2JXJ91CSW6SRJRACE",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

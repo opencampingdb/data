@@ -4,13 +4,22 @@
   },
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
     "fee": "community_report",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": true,
+    "bins": true,
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Newell Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": false
   },
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

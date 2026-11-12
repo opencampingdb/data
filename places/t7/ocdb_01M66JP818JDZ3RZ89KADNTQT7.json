@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -12,7 +14,12 @@
       "street": "Midland Highway",
       "suburb": "Bagdad"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Midland Highway"
+    },
     "opening_hours": "Mo-Su 07:00-19:00",
+    "operator": "United Petroleum",
     "phone": "+61 3 6268 6422"
   },
   "group": "services",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

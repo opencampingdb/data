@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "car_wash": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +11,11 @@
       "state": "SA",
       "street": "North East Road",
       "suburb": "Windsor Gardens"
+    },
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North East Road"
     }
   },
   "group": "services",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

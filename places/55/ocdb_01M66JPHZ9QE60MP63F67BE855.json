@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -13,8 +15,15 @@
       "street": "Anton Road",
       "suburb": "Hemmant"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
     "nearest_beach": {
       "distance_m": 4370
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1090
     },
     "opening_hours": "24/7",
     "phone": "+61 7 3493 5404"
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

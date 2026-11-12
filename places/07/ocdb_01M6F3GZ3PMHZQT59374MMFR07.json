@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +10,12 @@
       "postcode": "3045",
       "street": "Annandale Road",
       "suburb": "Melbourne Airport"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "South Centre Road"
+    },
+    "operator": "Quest"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ3PMHZQT59374MMFR07",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

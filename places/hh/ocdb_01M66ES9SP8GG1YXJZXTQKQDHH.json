@@ -2,6 +2,7 @@
   "fact_sources": {
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -9,6 +10,10 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 4280
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Collier Pass"
     },
     "opening_hours": "\"station hours\"",
     "wheelchair": true
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

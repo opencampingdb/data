@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +12,19 @@
       "housenumber": "104",
       "street": "Princes Highway"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Princes Highway"
+    },
     "opening_hours": "Mo-Fr 05:00-22:00, Sa-Su 06:00-21:00",
+    "operator": "Caltex",
     "phone": "+61 3 5633 3131"
   },
   "group": "services",
@@ -28,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -10,6 +12,13 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 290
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Bridge Street"
+    },
     "tents": true,
     "website": "https://www.riversiderockhampton.com.au/"
   },
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:38:46Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

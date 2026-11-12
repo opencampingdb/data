@@ -2,6 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,7 +17,16 @@
     "nearest_beach": {
       "distance_m": 150
     },
-    "website": "https://www.daveys.com.au/"
+    "nearest_boat_ramp": {
+      "distance_m": 120
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Nepean Highway"
+    },
+    "opening_hours": "Su-We 11:30-22:00; Th-Sa 11:30-00:00",
+    "phone": "(03) 9783 7255",
+    "website": "https://jamessquire.com.au/brewhouses/the-cheeky-squire"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYWN4V5N656DKA2KZ6M9",
@@ -25,11 +38,11 @@
   "name": "The Cheeky Squire",
   "osm": {
     "id": 320766849,
-    "timestamp": "2026-07-28T05:44:26Z",
+    "timestamp": "2026-11-11T07:59:28Z",
     "type": "way",
-    "version": 8
+    "version": 9
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

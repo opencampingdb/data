@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "customers",
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 960,
+      "name": "Jeparit Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Dimboola - Rainbow Road"
+    },
+    "operator": "Wimmera Mallee Pioneer Museum"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF0ARCAFJQBSQ4V049CD",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "max_stay": "osm"
+    "max_stay": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "max_stay": "24h"
+    "max_stay": "24h",
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Coolgardie-Esperance Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA23BCE785V86Y5T3KYN",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

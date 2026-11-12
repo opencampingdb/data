@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Parramatta Road",
       "suburb": "Underwood"
     },
-    "entry": "private"
+    "entry": "private",
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Kingston Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPVM3ZSW0CD69YWFVX1Q3",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

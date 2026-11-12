@@ -4,6 +4,7 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -14,6 +15,10 @@
     "drinking_water": false,
     "entry": "public",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Rainbow Road"
+    },
     "power": false,
     "showers": false,
     "tents": true,
@@ -35,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

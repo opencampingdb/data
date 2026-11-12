@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "NSW",
       "street": "Binnia Street",
       "suburb": "Coolah"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Black Stump Way"
     },
     "opening_hours": "Mo-Fr 06:30-19:30; Sa 07:30-18:00; Su 07:30-18:30",
     "phone": "+61 2 6377 1188",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

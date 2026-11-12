@@ -5,10 +5,15 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "nearest_major_road": "osm",
     "power": "community_report"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Mareeba Dimbulah Road"
+    },
     "power": true
   },
   "group": "overnight",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

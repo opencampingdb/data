@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "bins": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "bins": false,
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Pacific Motorway"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M6F3GXAAVCE2CSDNCSTE2VHX",
   "kind": "long_vehicle_parking",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

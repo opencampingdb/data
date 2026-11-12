@@ -2,6 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
@@ -11,6 +14,15 @@
       "distance_m": 30,
       "name": "Miami Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2310,
+      "name": "AIS Canoeing Centre"
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Gold Coast Highway"
+    },
+    "operator": "City of Gold Coast",
     "water_type": "fountain",
     "wheelchair": true
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

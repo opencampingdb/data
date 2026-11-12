@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "562",
       "street": "Pile Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Pile Road"
     },
     "opening_hours": "We-Fr 11:00-16:00; Sa-Su 11:00-17:00"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

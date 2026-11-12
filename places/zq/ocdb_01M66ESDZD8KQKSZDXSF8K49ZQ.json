@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +12,11 @@
     "nearest_beach": {
       "distance_m": 50,
       "name": "Shark Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 280
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDZD8KQKSZDXSF8K49ZQ",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

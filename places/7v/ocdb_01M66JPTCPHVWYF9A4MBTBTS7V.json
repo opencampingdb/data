@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -12,8 +16,23 @@
       "street": "Cnr Nepean Hwy & Beach Street",
       "suburb": "Frankston"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 210
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 500
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Nepean Highway"
     },
     "phone": "+61 3 9783 1031",
     "toilets": false,
@@ -35,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

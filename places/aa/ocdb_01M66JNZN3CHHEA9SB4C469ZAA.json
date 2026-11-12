@@ -1,11 +1,20 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
     "nearest_beach": {
       "distance_m": 270,
       "name": "Eastwood beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 110
     }
   },
   "group": "services",
@@ -24,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

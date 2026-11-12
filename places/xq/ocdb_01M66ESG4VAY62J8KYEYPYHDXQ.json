@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Barrack Street"
+    },
+    "operator": "Merredin Cinema & Cafe",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESG4VAY62J8KYEYPYHDXQ",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

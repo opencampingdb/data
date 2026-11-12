@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -13,7 +15,12 @@
       "street": "Sturt Highway",
       "suburb": "Forest Hill"
     },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Sturt Highway"
+    },
     "opening_hours": "Sa-Th 10:00-16:00",
+    "operator": "Royal Australian Air Force",
     "phone": "+61 2 6937 5402",
     "website": "https://raafbasewagga.com.au/raaf-base-wagga-heritage-centre/",
     "wheelchair": true
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,10 +14,20 @@
       "postcode": "6701",
       "street": "Robinson Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4660
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Robinson Street"
+    },
     "opening_hours": "Mo-Fr 07:00-18:00; Sa 07:30-12:30",
+    "operator": "Dunning's",
     "phone": "+61 8 9941 8105"
   },
   "group": "services",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "bins": "osm",
+    "car_wash": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "bins": true,
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Clermont Alpha Road"
+    },
+    "operator": "Barcaldine Regional Council"
+  },
   "group": "utility",
   "id": "ocdb_01M6F3GZHGHDBE89RNB2DDB86T",
   "kind": "long_vehicle_parking",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

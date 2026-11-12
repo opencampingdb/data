@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Hope Street",
       "suburb": "Kilcoy"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mary Street"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/kilcoy/bp-kilcoy-hope-st/5568"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

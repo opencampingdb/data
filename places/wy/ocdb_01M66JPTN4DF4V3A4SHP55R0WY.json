@@ -1,7 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +16,22 @@
       "street": "Fullarton Road",
       "suburb": "Kent Town"
     },
-    "opening_hours": "24/7"
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2560
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Fullarton Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPTN4DF4V3A4SHP55R0WY",
@@ -29,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

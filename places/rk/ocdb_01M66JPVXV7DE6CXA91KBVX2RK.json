@@ -1,12 +1,21 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 210
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 310
+    },
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "A49"
     },
     "opening_hours": "Sa-Su 15:30-15:45",
     "website": "http://www.theentrance.org.au/explore/pelican-feeding"
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

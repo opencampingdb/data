@@ -1,6 +1,21 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "car_wash": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Camp Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JQ053VVBK7PMN7A2KFX7G",
   "kind": "fuel",
@@ -17,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

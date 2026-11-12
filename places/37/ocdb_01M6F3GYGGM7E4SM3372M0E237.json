@@ -3,7 +3,10 @@
     "address": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -13,7 +16,15 @@
     "nearest_beach": {
       "distance_m": 640
     },
-    "opening_hours": "Mo-Su 09:00-17:00"
+    "nearest_boat_ramp": {
+      "distance_m": 790
+    },
+    "nearest_major_road": {
+      "distance_m": 500,
+      "name": "Flynn Drive"
+    },
+    "opening_hours": "Mo-Su 09:00-17:00",
+    "operator": "Australian Government"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYGGM7E4SM3372M0E237",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

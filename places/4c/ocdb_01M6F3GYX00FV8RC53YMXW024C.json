@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -15,6 +17,13 @@
     },
     "nearest_beach": {
       "distance_m": 3430
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 850
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Oxley Road"
     },
     "opening_hours": "Mo 10:00-01:30; Tu 10:00-02:00; We-Sa 10:00-03:30; Su 10:00-01:30",
     "website": "https://www.westsidehq.org.au/"
@@ -35,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

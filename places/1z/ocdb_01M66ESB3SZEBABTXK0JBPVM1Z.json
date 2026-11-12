@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -15,6 +17,11 @@
     "entry": "public",
     "fee": "donation",
     "max_stay": "48h",
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Capricorn Highway"
+    },
+    "operator": "Central Highlands Regional Council",
     "showers": true,
     "tents": true,
     "toilets": true
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

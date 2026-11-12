@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -16,7 +19,15 @@
       "distance_m": 1090,
       "name": "Solomontown Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 500
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Ellen Street"
+    },
     "opening_hours": "Mo-Sa 10:00-16:00; Su 13:00-16:00",
+    "operator": "National Trust SA",
     "phone": "+61 8 8632 3435",
     "website": "https://www.nationaltrust.org.au/places/port-pirie-railway-station/"
   },
@@ -36,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

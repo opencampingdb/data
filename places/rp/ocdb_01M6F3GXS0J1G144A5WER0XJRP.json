@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -12,6 +13,10 @@
       "state": "VIC",
       "street": "Hargraves Street",
       "suburb": "Castlemaine"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "B180"
     },
     "opening_hours": "Su-Th 11:00-22:00; Fr-Sa 11:00-00:00",
     "toilets": true,
@@ -33,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

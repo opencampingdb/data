@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +14,18 @@
       "state": "NSW",
       "street": "Canada Street",
       "suburb": "Lake Cargelligo"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 700
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Canada Street"
     },
     "opening_hours": "24/7",
     "phone": "+61 2 6898 1322"
@@ -31,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,19 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 420,
+      "name": "Alexandrina Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Peregrine Corporation",
     "wheelchair": true
   },
   "group": "services",
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

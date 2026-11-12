@@ -1,6 +1,27 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "adblue"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4760
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Pacific Motorway Onramp"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JP72FBMWJ7K1AVDGKPKD6",
   "kind": "fuel",
@@ -17,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

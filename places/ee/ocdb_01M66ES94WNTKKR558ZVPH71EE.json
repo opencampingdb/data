@@ -2,12 +2,19 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": true,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Ipswich Street"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ES94WNTKKR558ZVPH71EE",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

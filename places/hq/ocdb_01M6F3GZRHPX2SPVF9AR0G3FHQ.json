@@ -3,12 +3,19 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
+    "bins": "osm",
     "dump_station": "contributed",
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "bins": true,
     "dump_station": true,
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Newdegate Ravensthorpe Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M6F3GZRHPX2SPVF9AR0G3FHQ",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

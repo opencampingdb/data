@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,6 +15,15 @@
       "suburb": "Attunga"
     },
     "facebook": "https://www.facebook.com/p/Attunga-General-Store-100078519500613/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Manilla Road"
+    },
     "phone": "+61 2 6769 5519"
   },
   "group": "services",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

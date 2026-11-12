@@ -4,7 +4,9 @@
   },
   "fact_sources": {
     "address": "osm",
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -14,7 +16,12 @@
       "street": "Ingham Road",
       "suburb": "Bohle"
     },
-    "dump_station": true
+    "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Ingham Road"
+    },
+    "operator": "Puma"
   },
   "group": "services",
   "id": "ocdb_01M66JPC5TKBN2WZ6FSGRG3Y2J",
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

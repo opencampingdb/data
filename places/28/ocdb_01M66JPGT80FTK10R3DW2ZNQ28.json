@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -12,7 +15,20 @@
       "housenumber": "157",
       "street": "Massingham Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "e85",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Great Eastern Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "United",
     "phone": "+61 8 6336 7773",
     "toilets": true,
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-kellerberrin",
@@ -34,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,7 +13,12 @@
       "street": "RM Williams Way",
       "suburb": "Jamestown"
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "R M Williams Way"
+    },
     "opening_hours": "Mo-Sa 09:30-14:30 \"open most days\"; Su off; easter -2 days off; Dec 25 off; Apr 25 off",
+    "operator": "National Trust",
     "phone": "+61 402 304 965",
     "website": "https://www.nationaltrust.org.au/places/jamestown-railway-station-museum/"
   },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,8 +14,21 @@
       "postcode": "2207",
       "street": "Bexley Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 4380
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3820
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bexley Road"
     },
     "phone": "+61 2 9150 7493",
     "website": "https://metropetroleum.com.au"
@@ -33,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

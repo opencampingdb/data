@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,13 @@
       "housenumber": "500",
       "postcode": "4701",
       "street": "Yaamba Road (Bruce Highway)"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3600
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Yaamba Road (Bruce Highway)"
     },
     "phone": "+61 7 4928 0455",
     "website": "https://www.glenmorehotelmotel.com.au/accommodation"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

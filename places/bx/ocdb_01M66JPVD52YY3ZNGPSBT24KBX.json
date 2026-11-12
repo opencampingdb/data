@@ -1,8 +1,15 @@
 {
   "fact_sources": {
+    "car_wash": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Philip Highway"
+    },
     "website": "https://map.bp.com/en-AU/AU/gas-station/elizabeth/bp-otr-elizabeth/4655"
   },
   "group": "services",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

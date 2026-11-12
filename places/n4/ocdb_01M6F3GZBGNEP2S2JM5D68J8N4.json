@@ -1,6 +1,14 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "pub": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 90
+    },
+    "pub": true
+  },
   "group": "services",
   "id": "ocdb_01M6F3GZBGNEP2S2JM5D68J8N4",
   "kind": "food_and_drink",
@@ -17,5 +25,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

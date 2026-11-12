@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "North West Coastal Highway"
+    },
     "phone": "+61 8 9941 8153",
     "power": true,
     "website": "http://www.capricornholidaypark.com.au/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

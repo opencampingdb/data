@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -12,6 +16,20 @@
       "state": "QLD",
       "street": "Brisbane Street",
       "suburb": "West Ipswich"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1910
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Brisbane Street"
     },
     "opening_hours": "Mo-Su 05:00-23:00",
     "phone": "+61 7 3447 6433",
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

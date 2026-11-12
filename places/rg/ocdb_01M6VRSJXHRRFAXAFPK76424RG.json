@@ -1,6 +1,18 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 2200,
+      "name": "Canoe Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "Lane Cove Road Offramp"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M6VRSJXHRRFAXAFPK76424RG",
   "kind": "public_toilet",
@@ -17,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-07T19:46:54Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

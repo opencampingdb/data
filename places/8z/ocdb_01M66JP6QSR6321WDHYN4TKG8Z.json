@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -16,7 +18,12 @@
       "street": "Spring Gully Road",
       "suburb": "Clare"
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Horrocks Highway"
+    },
     "opening_hours": "Mo-Th 09:00-17:00; Fr 09:00-19:00; Sa-Su 10:00-16:00",
+    "operator": "Clare Valley Wine, Food and Tourism Centre",
     "phone": "+61 8 8842 2131",
     "toilets": true,
     "website": "https://www.clarevalley.com.au/directory/clare-valley-wine-food-and-tourism-centre",
@@ -39,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

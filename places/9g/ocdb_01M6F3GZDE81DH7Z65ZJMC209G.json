@@ -1,8 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_url": "osm",
     "email": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -12,9 +14,14 @@
       "housenumber": "113",
       "street": "Bridge Street"
     },
+    "booking_url": "https://bookings247.com.au/booking2/booknow.php?property_id=3645",
     "email": "reception@altonamotel.com.au",
     "nearest_beach": {
       "distance_m": 2810
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Bridge Street"
     },
     "phone": "+61 449 829 019",
     "website": "https://www.altonamotel.com.au/",
@@ -36,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

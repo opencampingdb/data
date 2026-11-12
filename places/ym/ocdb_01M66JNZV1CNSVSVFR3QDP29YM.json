@@ -1,9 +1,27 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm"
   },
   "facts": {
-    "opening_hours": "24/7"
+    "address": {
+      "housenumber": "Lot 6",
+      "street": "Eyre Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Eyre Highway"
+    },
+    "opening_hours": "24/7",
+    "phone": "+61 8 9039 3468"
   },
   "group": "services",
   "id": "ocdb_01M66JNZV1CNSVSVFR3QDP29YM",
@@ -12,14 +30,14 @@
     "lat": -31.677049,
     "lon": 128.884246
   },
-  "name": "Eucla Motel",
+  "name": "Eucla Motor Hotel",
   "osm": {
     "id": 844464667,
-    "timestamp": "2023-02-21T21:14:51Z",
+    "timestamp": "2026-11-11T10:13:24Z",
     "type": "node",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

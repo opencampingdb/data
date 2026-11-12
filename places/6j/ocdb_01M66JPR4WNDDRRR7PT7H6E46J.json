@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +15,15 @@
       "street": "Roderick Street",
       "suburb": "Ipswich"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1790,
+      "name": "North Ipswich Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Pring Street"
+    },
+    "operator": "Ramsay Health Care",
     "phone": "+61 7 3816 9999",
     "website": "https://www.standrewsipswich.com.au/"
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

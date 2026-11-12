@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -10,6 +12,11 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Murray River Road"
+    },
+    "operator": "Parks Victoria",
     "tents": true,
     "toilets": false
   },
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

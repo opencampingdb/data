@@ -4,8 +4,12 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -19,8 +23,15 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "hot_water": false,
+    "nearest_major_road": {
+      "distance_m": 440,
+      "name": "Moss Vale Road"
+    },
     "opening_hours": "24/7",
+    "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
+    "toilet_type": "pit",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/2459"
   },
@@ -40,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

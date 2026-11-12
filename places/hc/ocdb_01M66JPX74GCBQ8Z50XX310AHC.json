@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +11,14 @@
     "address": {
       "housenumber": "73",
       "street": "Fletcher Street"
+    },
+    "car_wash": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2720
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Fletcher Street"
     },
     "opening_hours": "Mo-Fr 08:00-17:30; Sa 08:00-13:00; Su off",
     "website": "https://www.goodyearautocare.com.au/store-locator/goodyear-autocare-essendon/"
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

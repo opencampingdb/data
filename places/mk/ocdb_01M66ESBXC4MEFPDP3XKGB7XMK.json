@@ -2,11 +2,16 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 70,
+      "name": "Lock 6 Boat Ramp"
+    },
     "opening_hours": "24/7"
   },
   "group": "utility",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,21 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Maryland Street"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JP4KB5VQ7K3NKJ4MZJJXK",
   "kind": "fuel",
@@ -17,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

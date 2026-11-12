@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -10,9 +13,21 @@
       "housenumber": "9850",
       "street": "Forrest Highway"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3180,
       "name": "Koombana Bay Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3040
+    },
+    "nearest_major_road": {
+      "distance_m": 50
     },
     "opening_hours": "24/7",
     "website": "https://www.shell.com.au/"
@@ -33,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

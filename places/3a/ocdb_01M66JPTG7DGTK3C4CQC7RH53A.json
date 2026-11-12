@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,14 @@
       "postcode": "2447",
       "street": "Cooper Street",
       "suburb": "Macksville"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 870,
+      "name": "McKay Street Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Cooper Street"
     },
     "website": "https://www.goodyearautocare.com.au/store-locator/goodyear-autocare-macksville/"
   },
@@ -28,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

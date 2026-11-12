@@ -3,7 +3,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": true,
@@ -12,7 +15,15 @@
     "nearest_beach": {
       "distance_m": 330,
       "name": "South Kingscliff Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2020
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Casuarina Way"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESB31QS2A9ZQVFAK5Y9JE",
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

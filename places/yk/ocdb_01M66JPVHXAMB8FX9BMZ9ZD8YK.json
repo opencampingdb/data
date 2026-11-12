@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "caravans": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -11,7 +14,19 @@
       "housenumber": "6776",
       "street": "Cunningham Highway"
     },
+    "air": true,
     "caravans": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Cunningham Highway"
+    },
     "opening_hours": "24/7",
     "phone": "+61 7 3556 3973",
     "toilets": true
@@ -32,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

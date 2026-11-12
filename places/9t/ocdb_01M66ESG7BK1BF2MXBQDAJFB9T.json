@@ -5,6 +5,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -23,6 +25,11 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Railway Terrace"
+    },
+    "operator": "District Council of Elliston",
     "power": true,
     "showers": true,
     "tents": true,
@@ -45,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

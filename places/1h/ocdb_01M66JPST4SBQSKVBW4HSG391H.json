@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +12,15 @@
       "housenumber": "648",
       "street": "Pascoe Vale Road"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 4630
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Pascoe Vale Road"
+    },
     "opening_hours": "Mo-Su 09:00-17:00",
+    "operator": "Task in Topal",
     "phone": "+61 3 9379 9920"
   },
   "group": "services",
@@ -28,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -9,6 +12,15 @@
     "address": {
       "housenumber": "11-13",
       "street": "Dawson Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Dawson Highway"
     },
     "opening_hours": "Mo-Fr 05:00-20:00; Sa-Su 06:00-18:00",
     "toilets": true,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,17 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "charge": "5.00 AUD/adult",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 440,
+      "name": "Chevin Road"
+    },
     "website": "https://www.raeburnorchards.com/"
   },
   "group": "attraction",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

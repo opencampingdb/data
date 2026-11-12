@@ -1,6 +1,19 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "air": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Landsborough-Maleny Road"
+    },
+    "operator": "Pearl Energy"
+  },
   "group": "services",
   "id": "ocdb_01M66JPX411E2FYM1F97VR5W6W",
   "kind": "fuel",
@@ -17,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

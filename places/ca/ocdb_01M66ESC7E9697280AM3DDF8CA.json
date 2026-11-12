@@ -1,9 +1,11 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -12,10 +14,15 @@
     "website": "osm"
   },
   "facts": {
+    "booking_required": true,
     "caravans": true,
     "entry": "customers",
     "fee": true,
     "max_stay": "72h",
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Urana Road"
+    },
     "phone": "+61 427 299 065",
     "power": true,
     "showers": true,
@@ -39,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

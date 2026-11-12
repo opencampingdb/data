@@ -1,9 +1,20 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 1170
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Vickers Road"
+    },
+    "operator": "Strathbogie Shire"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPX3ZNWD4GB8CF8YNP0S4",
@@ -21,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -9,7 +12,12 @@
       "housenumber": "1",
       "street": "McLennan Street"
     },
+    "air": false,
+    "fuels": [
+      "diesel"
+    ],
     "opening_hours": "24/7",
+    "operator": "BP",
     "wheelchair": true
   },
   "group": "services",
@@ -28,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

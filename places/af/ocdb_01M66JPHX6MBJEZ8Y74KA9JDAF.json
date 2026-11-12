@@ -2,9 +2,12 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "fuels": "osm",
     "instagram": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -16,11 +19,21 @@
       "street": "Chapman Road"
     },
     "facebook": "https://www.facebook.com/refuelaus/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "instagram": "https://www.instagram.com/refuel_australia/",
     "nearest_beach": {
       "distance_m": 770
     },
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "North West Coastal Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "Ampol Australia",
     "phone": "+61 8 9938 3841",
     "toilets": true,
     "website": "https://ampolsunset.com.au/",
@@ -42,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

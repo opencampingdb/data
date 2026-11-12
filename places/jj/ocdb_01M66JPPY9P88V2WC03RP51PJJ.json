@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +11,11 @@
       "suburb": "Caboolture",
       "unit": "3"
     },
-    "facebook": "https://www.facebook.com/JezAutomotive/"
+    "facebook": "https://www.facebook.com/JezAutomotive/",
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Beerburrum Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPPY9P88V2WC03RP51PJJ",
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

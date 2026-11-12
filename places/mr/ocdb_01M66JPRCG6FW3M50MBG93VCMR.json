@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +15,12 @@
       "street": "Torquay Road",
       "suburb": "Latrobe"
     },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Bass Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "Department of Health, Tasmanian Government",
     "phone": "+61 3 6478 5500",
     "website": "https://www.dhhs.tas.gov.au/hospital/mersey-community-hospital"
   },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

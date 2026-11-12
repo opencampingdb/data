@@ -1,12 +1,26 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "car_wash": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "car_wash": true,
     "nearest_beach": {
       "distance_m": 4070,
       "name": "Sandridge Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4700,
+      "name": "Williamstown Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Napier Street"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/footscray/bp-whitehall/5891"
   },
@@ -26,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +10,11 @@
       "postcode": "2590",
       "street": "Parker Street"
     },
-    "facebook": "https://www.facebook.com/pages/Albion-Hotel/152917601407766"
+    "facebook": "https://www.facebook.com/pages/Albion-Hotel/152917601407766",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Parker Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GVNVBJKPDQ0SK7ZBA05D",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

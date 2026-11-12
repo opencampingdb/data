@@ -1,8 +1,21 @@
 {
   "fact_sources": {
+    "car_wash": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "car_wash": true,
+    "nearest_boat_ramp": {
+      "distance_m": 3570
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Stuart Drive"
+    },
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/idalia/bp-idalia/5707"
   },
   "group": "services",
@@ -21,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,14 +1,25 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "fee": false,
     "nearest_beach": {
       "distance_m": 770,
       "name": "Coniston Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2070
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Church Street"
+    },
+    "operator": "Wollongong City Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESB5C7X48HJA54K81WPD4",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,13 @@
       "state": "QLD",
       "street": "Riverhills Road",
       "suburb": "Riverhills"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3280
+    },
+    "nearest_major_road": {
+      "distance_m": 470,
+      "name": "Sumners Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/riverhills/bp-riverhills/7246"
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +14,14 @@
     },
     "nearest_beach": {
       "distance_m": 1800
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1810,
+      "name": "Dragon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "City Road"
     },
     "phone": "+61 2 8705 3762",
     "website": "https://www.madmonkey.com.au/locations/australia/sydney/mad-monkey-broadway"
@@ -32,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

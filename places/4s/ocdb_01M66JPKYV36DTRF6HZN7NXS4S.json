@@ -1,10 +1,25 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Pacific Motorway"
+    },
     "opening_hours": "24/7",
+    "operator": "Ampol",
     "phone": "+61 2 4352 3621"
   },
   "group": "services",
@@ -23,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

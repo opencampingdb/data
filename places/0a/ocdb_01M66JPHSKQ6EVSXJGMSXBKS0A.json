@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +16,19 @@
       "street": "Springvale Road",
       "suburb": "Vermont South"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Springvale Road"
+    },
     "opening_hours": "Mo-Fr 05:00-00:00; Sa 05:30-00:00; Su 06:00-23:30",
+    "operator": "BP",
     "phone": "+61 3 9886 1650",
     "website": "https://map.bp.com/en-AU/AU/gas-station/vermont-south/bp-vermont-south/7475"
   },
@@ -33,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

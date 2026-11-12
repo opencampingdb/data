@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +13,13 @@
       "street": "Golden Grove Road",
       "suburb": "Surrey Downs"
     },
-    "opening_hours": "24/7"
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Golden Grove Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPTNH3YBWTHF0NK6TQTFM",
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

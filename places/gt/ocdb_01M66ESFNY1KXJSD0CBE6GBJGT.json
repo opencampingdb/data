@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "brand": "osm"
+    "brand": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Nambour Connection Road",
       "suburb": "Yandina"
     },
-    "brand": "family_parks"
+    "brand": "family_parks",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Nambour North Connection Road"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFNY1KXJSD0CBE6GBJGT",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

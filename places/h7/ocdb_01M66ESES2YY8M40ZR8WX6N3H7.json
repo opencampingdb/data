@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm"
   },
   "facts": {
     "address": {
       "street": "Old Pimba Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Olympic Dam Highway"
     },
     "phone": "+61 8 8673 7700",
     "power": true
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

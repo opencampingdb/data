@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Great Eastern Highway"
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Great Eastern Highway"
     },
     "phone": "+61 8 9041 1133"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

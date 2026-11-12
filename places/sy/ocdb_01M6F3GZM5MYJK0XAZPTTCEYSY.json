@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -17,6 +19,13 @@
     "nearest_beach": {
       "distance_m": 1890,
       "name": "Horse Arena"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 160
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bridge Road"
     },
     "opening_hours": "Mo-Tu 16:00+; We-Su 12:00+",
     "phone": "+61 3 9429 3042",
@@ -38,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

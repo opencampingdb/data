@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,6 +12,10 @@
     },
     "nearest_beach": {
       "distance_m": 4130
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Pinjar Road"
     },
     "phone": "+61 8 6500 7342"
   },
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

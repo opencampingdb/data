@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Sutton Street"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESAF5QTWPGZQJ9GX0RE4C",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

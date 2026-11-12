@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,17 @@
       "state": "QLD",
       "street": "Morayfield Road",
       "suburb": "Morayfield"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Morayfield Road"
     },
     "opening_hours": "Mo-Su 04:00-23:00",
     "phone": "+61 7 5316 7860"
@@ -31,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

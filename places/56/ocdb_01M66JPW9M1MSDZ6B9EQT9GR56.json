@@ -1,9 +1,23 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Olivedale Street"
+    },
+    "operator": "Caltex",
     "phone": "+61 8 8568 5388",
     "toilets": false
   },
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,10 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 470,
+      "name": "Byra Road"
+    },
+    "operator": "Queensland Department of Environment and Science",
     "website": "https://parks.des.qld.gov.au/parks/culgoa-floodplain/camping/byra-lagoon"
   },
   "group": "overnight",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

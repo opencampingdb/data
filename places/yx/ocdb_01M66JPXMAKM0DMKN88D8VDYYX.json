@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,18 @@
     "address": {
       "housenumber": "12",
       "street": "Argyle Street"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Argyle Street"
     },
     "opening_hours": "24/7",
     "phone": "+61 2 4655 2410",
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

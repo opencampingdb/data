@@ -1,9 +1,13 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 420
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPZ5T1WQPE6BW714V9TKC",
@@ -21,5 +25,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

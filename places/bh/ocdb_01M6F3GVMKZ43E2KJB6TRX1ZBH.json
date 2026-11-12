@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,7 +12,12 @@
       "street": "Third Street",
       "suburb": "Cleve"
     },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Main Street"
+    },
     "opening_hours": "\"by appointment\"",
+    "operator": "National Trust",
     "website": "https://www.nationaltrust.org.au/places/cleve-old-council-chambers/"
   },
   "group": "attraction",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

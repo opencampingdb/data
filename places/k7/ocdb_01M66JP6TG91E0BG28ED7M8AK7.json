@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -9,6 +11,13 @@
       "housenumber": "1014",
       "postcode": "6701",
       "street": "North West Coastal Highway"
+    },
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "North West Coastal Highway"
     },
     "opening_hours": "24/7",
     "phone": "+61 8 9941 8140"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

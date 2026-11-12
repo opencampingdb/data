@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -14,8 +18,22 @@
       "street": "Bennetts Road",
       "suburb": "Norman Park"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2030
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1220
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bennetts Road"
     },
     "opening_hours": "Mo-Su 05:00-22:00",
     "phone": "+61 7 3899 8224",
@@ -37,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1",
       "street": "Musgrave Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 330,
+      "name": "McIlwraith Street"
+    },
+    "operator": "Queensland Health"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPWZMM0SQ4N791FEAMEKG",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

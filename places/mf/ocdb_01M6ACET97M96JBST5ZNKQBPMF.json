@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Wandering - Pingelly Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M6ACET97M96JBST5ZNKQBPMF",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-01T01:44:13Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

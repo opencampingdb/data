@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,11 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Stuart Highway"
+    },
     "phone": "+61 476 618 245",
     "power": true,
     "showers": true,
@@ -48,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

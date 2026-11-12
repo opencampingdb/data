@@ -1,11 +1,16 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "485-493",
       "street": "Burwood Highway"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Burwood Highway"
     }
   },
   "group": "services",
@@ -18,11 +23,11 @@
   "name": "Shell",
   "osm": {
     "id": 1553945188,
-    "timestamp": "2026-08-31T17:36:37Z",
+    "timestamp": "2026-11-11T16:53:41Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

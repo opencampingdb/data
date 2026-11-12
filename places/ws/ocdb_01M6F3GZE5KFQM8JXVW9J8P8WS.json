@@ -1,13 +1,20 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "281",
       "postcode": "2671",
       "street": "Neeld Street"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Neeld Street"
+    },
+    "operator": "Budget"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZE5KFQM8JXVW9J8P8WS",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

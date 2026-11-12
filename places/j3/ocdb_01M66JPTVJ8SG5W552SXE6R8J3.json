@@ -1,12 +1,28 @@
 {
   "fact_sources": {
+    "address": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "street": "HICK STREET"
+    },
     "facebook": "https://www.facebook.com/salmongumsroadhouse/",
-    "phone": "+61 8 9078 5053",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Coolgardie Esperance Highway"
+    },
+    "phone": "+61 404 435 104",
     "website": "https://map.bp.com/en-AU/AU/gas-station/salmon-gums/bp-salmon-gums-roadhouse/6074"
   },
   "group": "services",
@@ -16,14 +32,14 @@
     "lat": -32.980278,
     "lon": 121.643085
   },
-  "name": "BP",
+  "name": "BP SALMON GUMS ROADHOUSE",
   "osm": {
     "id": 465105286,
-    "timestamp": "2024-04-07T21:39:32Z",
+    "timestamp": "2026-11-11T10:21:00Z",
     "type": "way",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -14,10 +16,14 @@
       "postcode": "4854",
       "street": "Luff Street"
     },
+    "charge": "$17.50 p/v p/n 2017",
     "entry": "customers",
     "fee": true,
     "nearest_beach": {
       "distance_m": 3920
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4240
     },
     "showers": true,
     "toilets": true,
@@ -39,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

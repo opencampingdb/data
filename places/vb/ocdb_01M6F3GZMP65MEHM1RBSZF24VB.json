@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +14,13 @@
     },
     "nearest_beach": {
       "distance_m": 2160
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 190
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Greenwell Point Road"
     },
     "phone": "+61 2 4447 1722",
     "website": "https://www.anchorbaymotel.com.au/"
@@ -32,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

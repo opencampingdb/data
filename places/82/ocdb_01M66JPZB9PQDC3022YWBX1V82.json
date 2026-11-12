@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "57",
       "street": "Heinemann Road"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 350,
+      "name": "Toowoomba Cecil Plains Road"
+    },
+    "operator": "Pacific Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JPZB9PQDC3022YWBX1V82",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

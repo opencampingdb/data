@@ -3,12 +3,17 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Princes Highway"
+    },
     "toilets": false
   },
   "group": "overnight",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

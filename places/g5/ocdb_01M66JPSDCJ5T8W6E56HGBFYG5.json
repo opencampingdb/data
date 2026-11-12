@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -12,7 +14,12 @@
       "street": "Churchill Street",
       "suburb": "Childers"
     },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Churchill Street"
+    },
     "opening_hours": "Mo-Fr 06:00-21:00, Sa-Su 07:00-21:00",
+    "operator": "EG Australia",
     "phone": "+61 7 4126 2460"
   },
   "group": "services",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,13 @@
     "address": {
       "housenumber": "64",
       "street": "Mt Perry Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2160
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mt Perry Road"
     },
     "phone": "+61 7 4152 4693",
     "website": "https://map.bp.com/en-AU/AU/gas-station/bundaberg/bp-north-bundaberg/6960"
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

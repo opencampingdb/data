@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
     "drinking_water": false,
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Warburton Highway"
+    },
     "opening_hours": "24/7",
     "picnic_tables": true,
     "toilets": false
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

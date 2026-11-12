@@ -3,7 +3,9 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -16,7 +18,12 @@
     },
     "entry": "public",
     "fee": false,
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Old Hume Highway"
+    },
     "opening_hours": "open \"Variable hours\"",
+    "operator": "Wingecarribee Shire Council",
     "website": "https://www.toiletmap.gov.au/2444"
   },
   "group": "utility",
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -4,7 +4,10 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,7 +17,13 @@
     "nearest_beach": {
       "distance_m": 50
     },
+    "nearest_major_road": {
+      "distance_m": 400,
+      "name": "Lawrence Hargrave Drive"
+    },
     "opening_hours": "sunrise-sunset",
+    "operator": "Wollongong City Council",
+    "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/8655"
   },
   "group": "utility",
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

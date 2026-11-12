@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 20,
       "name": "Palm Beach Parklands"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 500,
+      "name": "Palm Beach - Currumbin High School"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Gold Coast Highway"
+    },
+    "operator": "City of Gold Coast"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBMJYRVFPP5ZC5NZRJDR",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

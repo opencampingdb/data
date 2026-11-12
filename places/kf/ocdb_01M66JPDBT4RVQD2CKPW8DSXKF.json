@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -12,7 +16,19 @@
       "street": "Railway Place",
       "suburb": "Mount Barker"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 420,
+      "name": "Hutchinson Street"
+    },
     "opening_hours": "24/7",
+    "operator": "Agostino Group",
     "phone": "+61 8 8419 4671"
   },
   "group": "services",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

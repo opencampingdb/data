@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -14,7 +18,18 @@
       "street": "Toowoomba Road",
       "suburb": "Crows Nest"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Toowoomba Road"
+    },
     "opening_hours": "Mo-Fr 05:00-20:00; Sa-Su 06:00-19:00",
+    "operator": "locally owned",
     "phone": "+61 7 4698 1472",
     "toilets": true,
     "website": "https://crowsnestfuelsupplies.business.site/"
@@ -35,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,14 +1,18 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "charge": "osm",
+    "fee": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "15",
       "street": "Millar Terrace"
     },
-    "fee": true
+    "charge": "5 AUD",
+    "fee": true,
+    "operator": "Lazy Lizard Tavern & Caravan Park"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3H032BMVB0MY81RWBWWCP",
@@ -26,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

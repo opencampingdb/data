@@ -7,6 +7,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "tents": "osm",
     "website": "osm"
@@ -25,6 +27,14 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "nearest_boat_ramp": {
+      "distance_m": 270,
+      "name": "Tintaldra Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Tintaldra Back Road"
+    },
     "phone": "+61 2 6077 9207",
     "tents": true,
     "website": "http://www.clearwatercaravan.com.au/index.html"
@@ -45,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "nearest_boat_ramp": "osm",
     "playground": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2400,
+      "name": "Evans Landing Boat Ramp"
+    },
     "playground": true,
     "toilets": true
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

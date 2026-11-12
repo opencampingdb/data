@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -19,6 +21,11 @@
     "dump_station": true,
     "email": "enquiries@mycowaccommodation.com.au",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Bruce Highway"
+    },
+    "operator": "Mycow Pty Ltd",
     "phone": "+61 7 4952 2806",
     "power": true,
     "website": "https://mycowaccommodation.com.au/",
@@ -40,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

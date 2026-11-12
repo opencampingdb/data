@@ -4,11 +4,16 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Stuart Highway"
+    },
     "phone": "+61 8 8983 1026",
     "website": "http://coolalingacaravanpark.com.au/"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

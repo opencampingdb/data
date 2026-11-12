@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_boat_ramp": {
+      "distance_m": 1910
+    },
+    "nearest_major_road": {
+      "distance_m": 0,
+      "name": "Pacific Motorway Onramp"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M6F3H08X4SWAYWYQ9D7MD15S",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

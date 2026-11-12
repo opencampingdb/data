@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Gilbert Road"
+    },
+    "operator": "GASnGO"
+  },
   "group": "services",
   "id": "ocdb_01M66JPQRZK7PJCMB7S9XH6PJ0",
   "kind": "lpg_refill_swap",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

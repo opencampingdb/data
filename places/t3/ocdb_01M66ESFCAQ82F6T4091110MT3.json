@@ -1,9 +1,13 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,9 +15,19 @@
   },
   "facts": {
     "caravans": true,
+    "charge": "Free/Donation at visitor centre",
     "entry": "public",
     "fee": true,
     "max_stay": "2d",
+    "nearest_boat_ramp": {
+      "distance_m": 250,
+      "name": "Chinchilla Wier Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 270,
+      "name": "Chinchilla - Tara Road"
+    },
+    "operator": "Western Downs Regional Council",
     "power": true,
     "showers": false,
     "tents": true,
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

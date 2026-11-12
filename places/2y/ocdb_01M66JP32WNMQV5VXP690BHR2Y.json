@@ -1,10 +1,24 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Chevallum Road"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/chevallum/bp-northbound-forest-glen/4528"
   },
   "group": "services",
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

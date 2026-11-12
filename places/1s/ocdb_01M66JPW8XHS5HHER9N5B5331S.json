@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,7 +14,12 @@
       "street": "Glynburn Road",
       "suburb": "Tranmere"
     },
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 20
+    },
     "opening_hours": "24/7",
+    "operator": "On The Run",
     "wheelchair": true
   },
   "group": "services",
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

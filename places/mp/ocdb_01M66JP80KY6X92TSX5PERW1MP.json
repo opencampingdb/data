@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +13,17 @@
       "state": "QLD",
       "street": "Ipswich Street",
       "suburb": "Esk"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Ipswich Street"
     },
     "phone": "+61 7 5424 1166"
   },
@@ -29,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

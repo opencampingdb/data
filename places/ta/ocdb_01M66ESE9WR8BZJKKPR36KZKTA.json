@@ -2,6 +2,7 @@
   "fact_sources": {
     "entry": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -9,6 +10,10 @@
     "nearest_beach": {
       "distance_m": 30,
       "name": "City Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Challenger Parade"
     },
     "water_type": "fountain"
   },
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

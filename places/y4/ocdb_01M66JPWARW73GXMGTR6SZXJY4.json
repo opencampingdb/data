@@ -1,12 +1,28 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "172-174",
       "street": "Princes Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1820
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Princes Highway"
     },
     "phone": "+61 2 4208 6010"
   },
@@ -26,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

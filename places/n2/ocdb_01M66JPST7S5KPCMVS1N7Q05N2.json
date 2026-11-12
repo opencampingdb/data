@@ -1,15 +1,28 @@
 {
   "fact_sources": {
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "air": true,
     "nearest_beach": {
       "distance_m": 1830
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1070
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Avenue of the Americas"
+    },
     "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:00-21:00; PH,Su 07:00-21:00",
+    "operator": "EG Australia",
     "website": "https://www.woolworthspetrol.com.au/",
     "wheelchair": true
   },
@@ -29,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

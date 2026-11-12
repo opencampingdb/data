@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,13 @@
       "housenumber": "74",
       "postcode": "2840",
       "street": "Mitchell Street"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4100
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Mitchell Street"
     },
     "phone": "+61 2 6872 2288",
     "website": "http://www.darlingrivermotel.com.au/"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

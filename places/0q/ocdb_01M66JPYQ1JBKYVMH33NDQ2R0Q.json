@@ -1,10 +1,26 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Adelaide Road"
+    },
     "opening_hours": "24/7",
+    "operator": "OTR",
     "wheelchair": true
   },
   "group": "services",
@@ -23,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

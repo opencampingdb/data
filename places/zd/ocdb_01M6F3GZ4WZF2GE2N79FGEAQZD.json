@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -16,6 +18,13 @@
     },
     "nearest_beach": {
       "distance_m": 1980
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 570
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Milton Road"
     },
     "opening_hours": "Tu 12:00-21:00; We-Th 12:00-22:00; Fr-Sa 12:00-24:00; Su 12:00-18:00",
     "phone": "+61 7 3368 1608",
@@ -37,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

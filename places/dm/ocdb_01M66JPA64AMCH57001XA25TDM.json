@@ -1,12 +1,25 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "7819",
       "street": "D'Aguilar Highway"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "D'Aguilar Highway"
     },
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-colinton"
   },
@@ -26,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

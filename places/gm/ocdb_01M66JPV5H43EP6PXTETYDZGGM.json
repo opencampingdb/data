@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "VIC",
       "street": "Sherbourne Road",
       "suburb": "Eltham"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Sherbourne Road"
     },
     "website": "https://www.7eleven.com.au/"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +14,13 @@
       "suburb": "Warners Bay"
     },
     "email": "reception@warnersatthebay.com.au",
+    "nearest_boat_ramp": {
+      "distance_m": 3100
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Hillsborough Road"
+    },
     "phone": "+61 2 4956 6066",
     "website": "https://warnersatthebay.com.au/motel/"
   },
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

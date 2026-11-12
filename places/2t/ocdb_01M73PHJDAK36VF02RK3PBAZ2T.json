@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Haly Street"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M73PHJDAK36VF02RK3PBAZ2T",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

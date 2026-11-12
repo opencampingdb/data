@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,10 +15,24 @@
       "street": "Pittwater Road",
       "suburb": "Brookvale"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2120,
       "name": "Curl Curl Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3010
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Pittwater Road"
+    },
+    "operator": "Ampol"
   },
   "group": "services",
   "id": "ocdb_01M66JPBXDNDDDQ59TJQXBCPZC",
@@ -32,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

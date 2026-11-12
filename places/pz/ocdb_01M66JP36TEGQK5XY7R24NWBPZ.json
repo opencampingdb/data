@@ -1,12 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Walter Street"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Yeates Avenue"
     },
     "phone": "+61 7 5463 1566",
     "website": "https://map.bp.com/en-AU/AU/gas-station/boonah/bp-boonah/4326"
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,13 +2,18 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
     "nearest_beach": {
       "distance_m": 880
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4220,
+      "name": "Phillips Camp Boat Ramp"
     }
   },
   "group": "attraction",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

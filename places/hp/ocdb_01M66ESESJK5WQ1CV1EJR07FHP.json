@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "brand": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,11 @@
       "street": "Robinson Street"
     },
     "brand": "big4",
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Robinson Street"
+    },
+    "operator": "Big4",
     "phone": "+61 8 9942 8100"
   },
   "group": "overnight",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

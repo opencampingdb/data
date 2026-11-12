@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "cabins": "osm",
     "campfires": "osm",
     "drinking_water": "osm",
@@ -8,6 +9,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "nudist": "osm",
     "picnic_tables": "osm",
     "power": "osm",
@@ -20,6 +23,7 @@
       "housenumber": "64A",
       "street": "Beverley Street"
     },
+    "booking_required": false,
     "cabins": false,
     "campfires": false,
     "drinking_water": false,
@@ -27,6 +31,13 @@
     "entry": "public",
     "fee": false,
     "max_stay": "24h",
+    "nearest_boat_ramp": {
+      "distance_m": 780
+    },
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Adams Street"
+    },
     "nudist": false,
     "picnic_tables": false,
     "power": false,
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

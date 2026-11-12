@@ -1,14 +1,23 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
     "drinking_water": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
     "bbq": false,
+    "bins": true,
     "drinking_water": false,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Hume Freeway"
+    },
+    "operator": "Transport Victoria",
     "picnic_tables": true,
     "toilets": true,
     "website": "https://transport.vic.gov.au/news-and-resources/projects-hub/hume/hume-freeway-rest-area-wandong"
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

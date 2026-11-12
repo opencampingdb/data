@@ -1,11 +1,22 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 340
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 410
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Quality Row"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBWM2BCW5J25BYTCSNB6",
@@ -23,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

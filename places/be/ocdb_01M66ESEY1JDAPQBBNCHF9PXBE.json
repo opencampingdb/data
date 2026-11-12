@@ -4,6 +4,7 @@
     "cabins": "osm",
     "dump_station": "osm",
     "kitchen": "osm",
+    "nearest_major_road": "osm",
     "power": "osm"
   },
   "facts": {
@@ -17,6 +18,10 @@
     "cabins": true,
     "dump_station": true,
     "kitchen": true,
+    "nearest_major_road": {
+      "distance_m": 500,
+      "name": "Kerang Road"
+    },
     "power": true
   },
   "group": "overnight",
@@ -35,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,11 +1,21 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 3640
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3080,
+      "name": "Clarendon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Milperra Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/revesby/bp-revesby-milperra-river-rds/2404"
   },
@@ -25,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

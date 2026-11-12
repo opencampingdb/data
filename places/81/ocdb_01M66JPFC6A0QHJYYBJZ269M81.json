@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +12,18 @@
       "state": "VIC",
       "street": "Whitehorse Road",
       "suburb": "Balwyn"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Whitehorse Road"
+    },
+    "operator": "Coles Group"
   },
   "group": "services",
   "id": "ocdb_01M66JPFC6A0QHJYYBJZ269M81",
@@ -27,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

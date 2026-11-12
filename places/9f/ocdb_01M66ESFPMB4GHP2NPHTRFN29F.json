@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "brand": "osm"
+    "brand": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "brand": "big4"
+    "brand": "big4",
+    "nearest_boat_ramp": {
+      "distance_m": 2250
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Bruce Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFPMB4GHP2NPHTRFN29F",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

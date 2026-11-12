@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Moore Street"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66JPNNWVWZK8AX5RE3425JF",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

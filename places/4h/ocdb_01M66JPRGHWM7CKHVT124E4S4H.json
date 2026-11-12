@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,7 +14,12 @@
       "street": "Wine Country Drive",
       "suburb": "Pokolbin"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Wine Country Drive"
+    },
     "opening_hours": "Mo-Sa 09:00-17:00; Su 09:00-16:00; PH 09:00-16:00; Dec 25 closed",
+    "operator": "Cessnock City Council",
     "phone": "+61 2 4993 6700",
     "website": "https://huntervalleyvisitorcentre.com.au/"
   },
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

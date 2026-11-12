@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "479",
       "street": "Crystal Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Argent Street"
     },
     "opening_hours": "We 07:00-21:00; Th 09:00-12:00; Su 09:00-12:00"
   },
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

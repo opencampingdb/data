@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +14,15 @@
       "street": "Chelmsford Avenue",
       "suburb": "Ipswich"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1970,
+      "name": "North Ipswich Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Chelmsford Avenue"
+    },
+    "operator": "Queensland Health",
     "phone": "+61 7 3810 1111",
     "website": "https://www.westmoreton.health.qld.gov.au/location/ipswich-health"
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

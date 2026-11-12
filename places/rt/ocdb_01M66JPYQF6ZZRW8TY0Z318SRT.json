@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,17 @@
       "state": "QLD",
       "street": "Brisbane Valley Highway",
       "suburb": "Toogoolawah"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Brisbane Valley Highway"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/toogoolawah/bp-toogoolawah-brisbane-valley-hwy/7467"
   },
@@ -29,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

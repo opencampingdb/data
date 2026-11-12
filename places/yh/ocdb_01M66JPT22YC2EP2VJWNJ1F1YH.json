@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -13,7 +16,17 @@
       "street": "Armidale Road",
       "suburb": "Coutts Crossing"
     },
+    "air": true,
     "facebook": "https://www.facebook.com/p/Coutts-Crossing-General-Store-100040104891899/",
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Armidale Road"
+    },
     "opening_hours": "Mo-Fr 06:00-18:30; Sa-Su 06:00-18:00",
     "phone": "+61 2 6649 3205"
   },
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

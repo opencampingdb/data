@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "booking_required": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "booking_required": false,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Sister Kenny Street"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPZQEW2E72A3ZY8V0NKWA",
   "kind": "attraction",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

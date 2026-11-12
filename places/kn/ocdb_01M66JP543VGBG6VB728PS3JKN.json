@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Cartwright Avenue"
+    },
+    "operator": "EG Australia"
+  },
   "group": "services",
   "id": "ocdb_01M66JP543VGBG6VB728PS3JKN",
   "kind": "fuel",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

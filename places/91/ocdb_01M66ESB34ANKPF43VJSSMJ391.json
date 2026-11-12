@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "dump_station": "osm"
+    "dump_station": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "dump_station": true
+    "dump_station": true,
+    "nearest_boat_ramp": {
+      "distance_m": 1050
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Macquarie Street"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESB34ANKPF43VJSSMJ391",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

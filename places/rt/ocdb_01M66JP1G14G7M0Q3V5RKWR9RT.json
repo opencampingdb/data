@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -9,7 +11,12 @@
       "housenumber": "6712",
       "street": "Cunningham Highway"
     },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Cunningham Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "Caltex",
     "toilets": true
   },
   "group": "services",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

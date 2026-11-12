@@ -1,17 +1,26 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm",
     "wifi": "osm"
   },
   "facts": {
     "caravans": true,
+    "charge": "Donation Slot",
     "entry": "public",
     "fee": true,
     "max_stay": "3d",
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Hill Street"
+    },
+    "operator": "Majors Creek Recreation Reserve Land Manager",
     "tents": true,
     "wifi": true
   },
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

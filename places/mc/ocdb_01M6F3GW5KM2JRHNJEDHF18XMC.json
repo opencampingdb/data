@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -11,7 +13,12 @@
       "housenumber": "36",
       "street": "Macdonnell Street"
     },
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Smith Street"
+    },
     "opening_hours": "Mo-Fr 09:00-17:00; Sa-Su,PH 10:00-16:00; Jun-Aug Mo-Su,PH 10:00-16:00; Dec 25 off; easter -2 days off",
+    "operator": "National Trust of South Australia",
     "phone": "+61 8 8762 1399",
     "website": "https://www.nationaltrust.org.au/places/the-sheeps-back-museum/",
     "wheelchair": true
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

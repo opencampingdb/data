@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "toilets": "osm",
     "website": "osm",
     "wheelchair": "osm",
@@ -17,7 +20,16 @@
       "distance_m": 3780,
       "name": "Horse Arena"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3640,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Swanston Street"
+    },
     "opening_hours": "Mo-We 09:00-16:45, Th-Fr 10:00-16:45",
+    "operator": "University of Melbourne",
     "toilets": true,
     "website": "https://students.unimelb.edu.au/student-support/advice-and-help/stop-1",
     "wheelchair": true,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

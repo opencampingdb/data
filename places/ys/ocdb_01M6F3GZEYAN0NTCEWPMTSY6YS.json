@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,7 +14,12 @@
       "street": "Bauple Drive",
       "suburb": "Bauple"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bauple Drive"
+    },
     "opening_hours": "Su,Mo,Tu,Fr,Sa 09:00-14:00",
+    "operator": "Mount Bauple & District Historical Society",
     "website": "http://www.bauplemuseum.com"
   },
   "group": "attraction",
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

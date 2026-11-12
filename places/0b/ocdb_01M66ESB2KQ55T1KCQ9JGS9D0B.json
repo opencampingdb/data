@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -11,6 +13,13 @@
     "caravans": true,
     "nearest_beach": {
       "distance_m": 2770
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4500
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Hawkesbury Valley Way"
     },
     "showers": true,
     "tents": false,
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -11,6 +13,13 @@
       "state": "NSW",
       "street": "Uriarra Road",
       "suburb": "Crestwood"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4520
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Uriarra Road"
     },
     "website": "https://www.countryplazamotel.com.au/",
     "wifi": true
@@ -41,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T09:42:25Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,19 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "nearest_boat_ramp": {
+      "distance_m": 2570,
+      "name": "McDonald Park Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "West Street"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG2PGY2PNEXC4N36Y5M7",
@@ -21,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

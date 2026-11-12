@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,6 +13,14 @@
       "postcode": "3056",
       "street": "Sydney Road",
       "suburb": "Brunswick"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4740,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Sydney Road"
     },
     "opening_hours": "Mo-Su 12:00-09:00+",
     "phone": "+61 3 9380 8383",
@@ -32,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

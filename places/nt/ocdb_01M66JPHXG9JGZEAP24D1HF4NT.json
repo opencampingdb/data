@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -12,6 +15,16 @@
       "state": "QLD",
       "street": "Sheppards Drive",
       "suburb": "Greenbank"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Middle Road"
     },
     "opening_hours": "Mo-Su 04:00-20:00",
     "phone": "+61 7 3445 3921",
@@ -33,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

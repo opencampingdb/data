@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +18,11 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Nyabing South Road"
+    },
+    "operator": "Shire of Kent",
     "power": true,
     "showers": true,
     "tents": false,
@@ -39,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

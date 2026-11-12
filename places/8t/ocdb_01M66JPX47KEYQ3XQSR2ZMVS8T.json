@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +13,19 @@
       "housenumber": "1A",
       "street": "Chelsea Lane"
     },
+    "fuels": [
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4830
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Redlynch Connection Road"
+    },
+    "operator": "Shell",
     "phone": "+61 7 4285 9568",
     "website": "https://www.shell.com.au/fuel-finder.html"
   },
@@ -28,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

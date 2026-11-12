@@ -1,11 +1,20 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "playground": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": false,
+    "bins": true,
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Goldfields Way"
+    },
+    "operator": "Transport for NSW",
     "playground": false,
     "toilets": false
   },
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

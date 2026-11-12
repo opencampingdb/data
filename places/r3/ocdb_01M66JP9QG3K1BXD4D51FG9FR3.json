@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,7 +14,15 @@
       "state": "WA",
       "street": "Flinders Street"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3660
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Flinders Street"
+    },
     "opening_hours": "Mo-Fr 08:00-16:00",
+    "operator": "DC Auto Centre",
     "website": "https://dcautocentre.com.au/"
   },
   "group": "services",
@@ -30,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

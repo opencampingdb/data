@@ -1,20 +1,27 @@
 {
   "fact_sources": {
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "pets": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "charge": "0",
     "drinking_water": true,
     "entry": "public",
     "fee": false,
     "nearest_beach": {
       "distance_m": 4690,
       "name": "C. Y. O'Connor Beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Coolbellup Avenue"
     },
     "pets": "yes",
     "water_type": "fountain",
@@ -36,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

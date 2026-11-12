@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "wifi": "osm"
@@ -8,6 +9,10 @@
   "facts": {
     "address": {
       "street": "Henty Highway"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Henty Highway"
     },
     "opening_hours": "Mo-Su 18:00-00:00",
     "phone": "+61 3 5578 2220",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

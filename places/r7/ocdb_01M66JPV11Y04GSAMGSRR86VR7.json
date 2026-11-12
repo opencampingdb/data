@@ -4,6 +4,7 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -18,6 +19,10 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 3440
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Robin Warren Drive"
     },
     "phone": "+61 8 6152 2222",
     "website": "https://www.fsh.health.wa.gov.au/"
@@ -38,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

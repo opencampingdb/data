@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -11,6 +13,11 @@
     "nearest_beach": {
       "distance_m": 320
     },
+    "nearest_boat_ramp": {
+      "distance_m": 90,
+      "name": "Boatramp"
+    },
+    "operator": "Parks and Wildlife",
     "showers": true,
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/tasman-national-park/fortescue-bay-camping"
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

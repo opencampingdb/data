@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -12,6 +15,14 @@
       "street": "York Street",
       "suburb": "Taree"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 890
+    },
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "8"
+    },
+    "operator": "Hunter New England Health",
     "phone": "+61 2 6592 9111",
     "website": "https://www.hnehealth.nsw.gov.au/facilities/hospitals/manning-hospital"
   },
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

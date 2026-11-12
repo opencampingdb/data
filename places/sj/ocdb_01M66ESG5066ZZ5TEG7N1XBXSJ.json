@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "dump_station": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
     "website": "osm",
@@ -13,7 +15,12 @@
       "state": "QLD",
       "street": "Elk Street"
     },
+    "dump_station": true,
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Henry Street"
+    },
     "power": true,
     "tents": true,
     "website": "http://www.nanangorvpark.com.au/",
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

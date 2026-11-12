@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Great Eastern Highway"
+    },
     "tents": false
   },
   "group": "overnight",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

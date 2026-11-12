@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +11,11 @@
       "street": "Hervey Street",
       "suburb": "Mingela"
     },
-    "facebook": "https://www.facebook.com/groups/291505987850420/user/61589843681910/"
+    "facebook": "https://www.facebook.com/groups/291505987850420/user/61589843681910/",
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Burdekin Falls Dam Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GV9DPQ8J9JBBVT32WXTY",
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

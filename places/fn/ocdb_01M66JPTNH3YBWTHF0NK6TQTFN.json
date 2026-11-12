@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,7 +13,12 @@
       "street": "Murray Street",
       "suburb": "Tanunda"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Murray Street"
+    },
     "opening_hours": "24/7",
+    "operator": "On The Run",
     "phone": "+61 8 8563 2677"
   },
   "group": "services",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

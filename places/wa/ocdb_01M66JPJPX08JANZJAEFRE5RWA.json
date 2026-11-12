@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -10,6 +12,13 @@
       "housenumber": "8",
       "postcode": "2480",
       "street": "Three Chain Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1090
+    },
+    "nearest_major_road": {
+      "distance_m": 190,
+      "name": "Three Chain Road"
     },
     "opening_hours": "Mo-Su 09:00-17:00",
     "phone": "+61 2 6622 2019",
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

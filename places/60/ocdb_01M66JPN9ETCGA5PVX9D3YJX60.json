@@ -1,10 +1,21 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 380
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Ku-Ring-Gai Chase Road"
+    },
     "opening_hours": "Mo-Su,PH 10:00-16:00",
+    "operator": "NSW National Parks and Wildlife Service",
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/visitor-centres/bobbin-head-visitor-centre"
   },
   "group": "services",
@@ -23,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

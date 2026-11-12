@@ -1,14 +1,32 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
-      "street": "Eyre Highway"
+      "housenumber": "66880",
+      "state": "SA",
+      "street": "Eyre Highway",
+      "suburb": "Yalata"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Eyre Highway"
     },
     "opening_hours": "24/7",
+    "operator": "Yalata Anangu Aboriginal Corporation",
+    "phone": "+61 419 930 029",
     "website": "https://yalata.com.au/roadhouse-caravan-park/"
   },
   "group": "services",
@@ -18,14 +36,14 @@
     "lat": -31.495748,
     "lon": 131.811997
   },
-  "name": "Yalata Roadhouse and Caravan Park",
+  "name": "Dunnings Yalata",
   "osm": {
     "id": 10227691573,
-    "timestamp": "2026-10-23T06:55:37Z",
+    "timestamp": "2026-11-11T07:44:58Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

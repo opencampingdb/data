@@ -1,12 +1,31 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "336-338",
       "street": "Belgrave - Gembrook Road"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 4260
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Belgrave - Gembrook Road"
     },
     "website": "https://www.shell.com.au/fuel-finder.html"
   },
@@ -26,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

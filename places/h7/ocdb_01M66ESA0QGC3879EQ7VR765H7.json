@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 1920
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Esk-Kilcoy Road"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESA0QGC3879EQ7VR765H7",
   "kind": "farm_stay",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-01T01:44:13Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

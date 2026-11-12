@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuel": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +11,11 @@
       "state": "NSW",
       "street": "Minmi Road",
       "suburb": "Wallsend"
+    },
+    "fuel": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Minmi Road"
     }
   },
   "group": "services",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

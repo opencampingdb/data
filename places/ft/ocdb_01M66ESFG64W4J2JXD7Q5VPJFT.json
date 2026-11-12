@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,13 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 480
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Calder Highway"
+    },
     "phone": "+61 3 5027 6210",
     "showers": true,
     "tents": true,
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

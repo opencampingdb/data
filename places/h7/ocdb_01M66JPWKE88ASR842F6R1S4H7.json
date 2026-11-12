@@ -1,6 +1,24 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuel": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Bli Bli Road"
+    },
+    "operator": "Ampol"
+  },
   "group": "services",
   "id": "ocdb_01M66JPWKE88ASR842F6R1S4H7",
   "kind": "fuel",
@@ -17,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,15 @@
       "street": "Burwood Highway",
       "suburb": "Ferntree Gully"
     },
-    "opening_hours": "Mo-Fr 08:30-18:00, Sa 09:00-17:00"
+    "nearest_boat_ramp": {
+      "distance_m": 4250
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Burwood Highway"
+    },
+    "opening_hours": "Mo-Fr 08:30-18:00, Sa 09:00-17:00",
+    "operator": "GasMak Pty Ltd"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ36JG3EXB13NM9A1CR7",
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

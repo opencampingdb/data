@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,7 +15,15 @@
       "street": "Sturt Street",
       "suburb": "Lake Wendouree"
     },
+    "booking_required": true,
     "facebook": "https://www.facebook.com/bishopspalaceballarat",
+    "nearest_boat_ramp": {
+      "distance_m": 280
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Sturt Street"
+    },
     "website": "https://bishopspalace.com.au"
   },
   "group": "overnight",
@@ -31,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

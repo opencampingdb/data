@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Boomerang Street",
       "suburb": "Rankins Springs"
     },
-    "facebook": "https://www.facebook.com/p/Conapaira-Hotel-Rankins-Springs-100076161160984/"
+    "facebook": "https://www.facebook.com/p/Conapaira-Hotel-Rankins-Springs-100076161160984/",
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Rankins Springs Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GX3M3MNY65ZXCP4E9N45",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

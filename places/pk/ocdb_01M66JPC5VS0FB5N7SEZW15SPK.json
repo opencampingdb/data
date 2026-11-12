@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "VIC",
       "street": "Harrien Court",
       "suburb": "Epsom"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Midland Highway"
+    },
+    "operator": "Puma"
   },
   "group": "services",
   "id": "ocdb_01M66JPC5VS0FB5N7SEZW15SPK",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

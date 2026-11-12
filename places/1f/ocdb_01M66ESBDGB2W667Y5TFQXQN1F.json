@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Bruce Highway"
+    },
+    "operator": "Gladstone City Council",
+    "toilet_type": "flush"
+  },
   "group": "utility",
   "id": "ocdb_01M66ESBDGB2W667Y5TFQXQN1F",
   "kind": "public_toilet",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,14 +1,25 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "private",
     "nearest_beach": {
       "distance_m": 80,
       "name": "Clovelly Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2840
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Clovelly Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESDRN157FNMP3KX29PTCQ",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

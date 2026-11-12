@@ -1,9 +1,31 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm"
   },
   "facts": {
-    "opening_hours": "24/7"
+    "address": {
+      "postcode": "5690",
+      "state": "SA",
+      "street": "Eyre Highway",
+      "suburb": "Penong"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Eyre Highway"
+    },
+    "opening_hours": "5:00am - 10:00pm",
+    "phone": "+61 8 8625 1012"
   },
   "group": "services",
   "id": "ocdb_01M66JNZBHGTVSCGG2RBQGA98R",
@@ -12,14 +34,14 @@
     "lat": -31.928448,
     "lon": 133.009803
   },
-  "name": "Ampol",
+  "name": "Ampol Foodary Penong",
   "osm": {
     "id": 634962180,
-    "timestamp": "2023-02-22T02:30:53Z",
+    "timestamp": "2026-11-11T07:54:07Z",
     "type": "node",
-    "version": 9
+    "version": 10
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

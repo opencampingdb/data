@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,18 @@
       "postcode": "2795",
       "street": "Sydney Road",
       "suburb": "Kelso"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Sydney Road"
+    },
+    "operator": "Ampol"
   },
   "group": "services",
   "id": "ocdb_01M66JPRHC385Y14YCEZJJ9ESJ",
@@ -26,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

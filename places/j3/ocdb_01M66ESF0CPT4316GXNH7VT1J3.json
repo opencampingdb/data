@@ -1,11 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "fuel": "osm",
+    "nearest_boat_ramp": "osm",
     "power": "osm",
     "tents": "osm"
   },
   "facts": {
     "fee": true,
+    "fuel": true,
+    "nearest_boat_ramp": {
+      "distance_m": 450
+    },
     "power": true,
     "tents": true
   },
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,8 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -14,11 +19,25 @@
       "street": "Breakfast Creek Road",
       "suburb": "Newstead"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 3180,
       "name": "Dog Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 510
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Breakfast Creek Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Shell",
     "phone": "+61 7 3852 2712",
     "toilets": true,
     "website": "https://www.shell.com.au/"
@@ -39,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

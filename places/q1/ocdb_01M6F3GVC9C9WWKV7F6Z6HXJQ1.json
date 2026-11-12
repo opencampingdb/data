@@ -1,11 +1,20 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 1510
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1620
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Clarence Street"
     },
     "opening_hours": "Mo-We 12:00-00:00; Th 12:00-01:00; Fr 12:00-02:00; Sa 13:00-02:00; Su 13:00-00:00"
   },
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

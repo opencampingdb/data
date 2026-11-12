@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,13 @@
     "nearest_beach": {
       "distance_m": 2450,
       "name": "Port Melbourne Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2390
+    },
+    "nearest_major_road": {
+      "distance_m": 220,
+      "name": "Wurundjeri Way"
     },
     "opening_hours": "Mo-Su 11:30-21:00; Fr,Sa 11:30-23:00",
     "website": "https://thegeneralassembly.com.au/",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

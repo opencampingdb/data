@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -12,6 +16,20 @@
       "state": "QLD",
       "street": "Anzac Avenue",
       "suburb": "Mango Hill"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2010
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Anzac Avenue"
     },
     "opening_hours": "24/7",
     "phone": "+61 7 3293 0570",
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

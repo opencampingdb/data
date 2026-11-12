@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Su 07:00-sunset"
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Murray Street"
+    },
+    "opening_hours": "Mo-Su 07:00-sunset",
+    "operator": "Town of Gawler"
   },
   "group": "utility",
   "id": "ocdb_01M66ES9N9Q3KGS1ECP0CXPYWG",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

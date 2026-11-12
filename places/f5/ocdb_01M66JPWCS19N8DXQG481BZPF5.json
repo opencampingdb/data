@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +10,10 @@
     "address": {
       "housenumber": "230",
       "street": "Blende Street"
+    },
+    "nearest_major_road": {
+      "distance_m": 300,
+      "name": "Crystal Street"
     },
     "opening_hours": "Mo-Su 10:00-15:00",
     "phone": "+61 8 8088 4660",
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

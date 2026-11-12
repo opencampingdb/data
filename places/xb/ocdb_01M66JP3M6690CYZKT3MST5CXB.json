@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +11,18 @@
       "housenumber": "770",
       "street": "Richmond Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Richmond Road"
+    },
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

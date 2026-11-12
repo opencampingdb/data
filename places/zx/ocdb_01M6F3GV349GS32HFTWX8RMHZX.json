@@ -1,12 +1,21 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 610,
       "name": "Newcastle Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 840
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Wharf Road"
     },
     "opening_hours": "11:30-21:00 \"Restaurant\"; Su-Th 10:30-22:00 \"Bar\"; Fr-Sa 10:30-02:00 \"Bar\""
   },
@@ -26,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

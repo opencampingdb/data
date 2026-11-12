@@ -5,8 +5,12 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -22,8 +26,17 @@
       "distance_m": 2240,
       "name": "North Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3100
+    },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Northfields Avenue"
+    },
     "opening_hours": "Mo-Fr 07:00-18:00, Sa-Su,PH 07:00-18:45 open \"AEDT\"; Apr Su[1]-Oct Su[1] -1 day 07:00-17:00 open \"AEST\"; Dec 25,easter -2 days off",
+    "operator": "Wollongong Botanic Garden",
     "showers": false,
+    "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/60214",
     "wheelchair": true
   },
@@ -43,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

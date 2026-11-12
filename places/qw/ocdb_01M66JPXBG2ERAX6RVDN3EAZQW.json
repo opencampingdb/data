@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "pets": "osm",
     "website": "osm"
   },
@@ -11,6 +13,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 30
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 360
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "New South Head Road"
     },
     "pets": "no",
     "website": "https://www.woollahra.nsw.gov.au/recreation/parks,_reserves_and_playgrounds/list_of_parks_and_playgrounds/parks_and_playgrounds/murray_rose_pool"
@@ -31,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

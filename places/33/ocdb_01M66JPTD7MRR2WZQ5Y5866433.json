@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,7 +15,16 @@
       "street": "Canarys Road",
       "suburb": "Roselands"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3920,
+      "name": "Clarendon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "King Georges Road"
+    },
     "opening_hours": "24/7",
+    "operator": "7-11",
     "website": "https://www.7eleven.com.au/"
   },
   "group": "services",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +13,14 @@
       "state": "QLD",
       "street": "Armstrong Road"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1230
+    },
+    "nearest_major_road": {
+      "distance_m": 200,
+      "name": "Loganlea Road"
+    },
+    "operator": "Queensland Health",
     "phone": "+61 7 3299 8899",
     "website": "https://metrosouth.health.qld.gov.au/logan-hospital"
   },
@@ -29,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

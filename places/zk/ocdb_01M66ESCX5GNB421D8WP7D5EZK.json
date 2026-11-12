@@ -3,6 +3,9 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -15,6 +18,14 @@
     },
     "entry": "customers",
     "fee": true,
+    "hot_water": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2790
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Cambridge Street"
+    },
     "phone": "+61 7 4623 1125"
   },
   "group": "utility",
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

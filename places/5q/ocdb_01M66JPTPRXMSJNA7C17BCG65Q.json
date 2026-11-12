@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm"
   },
@@ -11,8 +15,19 @@
       "housenumber": "41",
       "street": "North Terrace"
     },
+    "air": true,
     "facebook": "https://www.facebook.com/bordertowncaltex/",
+    "fuels": [
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "North Terrace"
+    },
     "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "NUV Energy",
     "phone": "+61 8 8752 1123",
     "toilets": true
   },
@@ -32,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

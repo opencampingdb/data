@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "housenumber": "333",
       "street": "Mount Keira Road"
     },
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Mount Keira Road"
+    },
+    "operator": "Girl Guides NSW, ACT & NT",
     "tents": true
   },
   "group": "overnight",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

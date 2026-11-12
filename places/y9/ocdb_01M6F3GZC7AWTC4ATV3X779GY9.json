@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,12 @@
       "state": "QLD",
       "street": "Elsie Nash Street",
       "suburb": "Pinnacle"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Mackay Eungella Road"
+    },
+    "operator": "PIONEER VALLEY ARTS INCORPORATED"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZC7AWTC4ATV3X779GY9",
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

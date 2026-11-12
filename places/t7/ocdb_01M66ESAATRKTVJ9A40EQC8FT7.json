@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "drinking_water": "osm"
+    "drinking_water": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "drinking_water": false
+    "drinking_water": false,
+    "nearest_boat_ramp": {
+      "distance_m": 160,
+      "name": "Ramornie Put In"
+    },
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAATRKTVJ9A40EQC8FT7",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "pub": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +12,15 @@
       "state": "QLD",
       "street": "Sir John Overall Drive",
       "suburb": "Helensvale"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4840
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Gold Coast Highway"
+    },
+    "pub": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GYYSD0WSFGG4W9T2CH2H",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

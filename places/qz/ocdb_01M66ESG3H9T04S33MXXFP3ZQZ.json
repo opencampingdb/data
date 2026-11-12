@@ -4,9 +4,14 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -20,11 +25,22 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 550
     },
+    "nearest_boat_ramp": {
+      "distance_m": 110,
+      "name": "Wisemans Ferry Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Old Northern Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Hornsby Shire Council",
     "showers": false,
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/63272"
   },
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

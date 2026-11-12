@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "brand": "osm",
-    "email": "osm"
+    "email": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -12,7 +14,12 @@
       "street": "Wagga Road"
     },
     "brand": "yha",
-    "email": "albury@yha.com.au"
+    "email": "albury@yha.com.au",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Wagga Road"
+    },
+    "operator": "YHA Australia"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ7BBQJN4B4978D5TR5X",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +12,20 @@
     "address": {
       "housenumber": "226",
       "street": "Bridge Road"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2140
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bridge Road"
     },
     "phone": "+61 8 7123 6323",
     "website": "https://www.solocorp.com.au/service-stations/"
@@ -28,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

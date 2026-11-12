@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,6 +13,13 @@
       "street": "Herrmanns Landing Road"
     },
     "facebook": "https://facebook.com/jerildoree/",
+    "nearest_boat_ramp": {
+      "distance_m": 2960
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Hunter Road"
+    },
     "phone": "+61 408 590 211"
   },
   "group": "overnight",
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

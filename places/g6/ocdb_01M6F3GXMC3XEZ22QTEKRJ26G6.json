@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -12,7 +14,12 @@
       "suburb": "Greenock"
     },
     "fee": true,
-    "opening_hours": "We-Su 10:00-16:00"
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Greenock Road"
+    },
+    "opening_hours": "We-Su 10:00-16:00",
+    "operator": "Lincoln"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXMC3XEZ22QTEKRJ26G6",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

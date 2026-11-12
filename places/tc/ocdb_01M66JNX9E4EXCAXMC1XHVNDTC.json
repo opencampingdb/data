@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,18 @@
     "address": {
       "housenumber": "90-92",
       "street": "Great Western Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Great Western Highway"
     },
     "phone": "+61 2 4788 1020",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-medlow-bath"
@@ -28,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

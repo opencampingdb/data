@@ -3,9 +3,13 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -19,12 +23,18 @@
     },
     "entry": "public",
     "fee": false,
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 10,
       "name": "Balmoral Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 620
+    },
     "opening_hours": "Mo-Su 06:00-21:00",
+    "operator": "Mosman Council",
     "showers": true,
+    "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/8879"
   },
@@ -44,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

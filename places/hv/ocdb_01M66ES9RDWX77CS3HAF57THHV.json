@@ -1,9 +1,19 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 3450,
+      "name": "Canoe Launch"
+    },
+    "nearest_major_road": {
+      "distance_m": 340,
+      "name": "Christie Road"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9RDWX77CS3HAF57THHV",
@@ -21,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

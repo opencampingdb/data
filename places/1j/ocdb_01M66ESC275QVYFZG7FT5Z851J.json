@@ -2,7 +2,10 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": true,
@@ -10,7 +13,16 @@
     "nearest_beach": {
       "distance_m": 490,
       "name": "Town Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 600,
+      "name": "Lake Fellmongery Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main Road"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESC275QVYFZG7FT5Z851J",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

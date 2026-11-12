@@ -4,10 +4,14 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "dump_station": true,
+    "nearest_major_road": {
+      "distance_m": 150
+    },
     "tents": true
   },
   "group": "overnight",
@@ -26,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,29 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Brisbane Valley Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "freedom",
     "phone": "+61 7 5426 7388",
     "toilets": true,
     "website": "https://www.freedomfuels.com.au/fernvale"
@@ -27,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

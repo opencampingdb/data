@@ -2,7 +2,10 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -17,7 +20,15 @@
       "distance_m": 3280,
       "name": "St Kilda Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 3300
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "High Street"
+    },
     "opening_hours": "24/7",
+    "operator": "BP",
     "phone": "+61 3 9510 5934",
     "website": "https://map.bp.com/en-AU/AU/gas-station/prahran/bp-east-prahran/0082"
   },
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

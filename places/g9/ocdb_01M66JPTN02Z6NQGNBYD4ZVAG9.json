@@ -1,8 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,10 +16,25 @@
       "street": "Tapleys Hill Road",
       "suburb": "West Beach"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 1380
     },
-    "opening_hours": "24/7"
+    "nearest_boat_ramp": {
+      "distance_m": 1590
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Tapleys Hill Road"
+    },
+    "opening_hours": "24/7",
+    "operator": "On The Run"
   },
   "group": "services",
   "id": "ocdb_01M66JPTN02Z6NQGNBYD4ZVAG9",
@@ -32,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

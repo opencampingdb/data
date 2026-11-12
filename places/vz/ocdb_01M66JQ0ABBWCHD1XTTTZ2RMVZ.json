@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,7 +12,16 @@
       "housenumber": "42",
       "street": "Miles Street"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_95"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Grace Street"
+    },
     "opening_hours": "Mo-Fr 05:30-20:30; Sa,Su 06:30-20:30",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

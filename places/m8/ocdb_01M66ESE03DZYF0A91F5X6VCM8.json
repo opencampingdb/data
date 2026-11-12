@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -15,6 +17,11 @@
     "entry": "public",
     "fee": false,
     "max_stay": "48h",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Countegany Road"
+    },
+    "operator": "Snowy Monaro Shire Council",
     "showers": false,
     "tents": false,
     "toilets": true
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

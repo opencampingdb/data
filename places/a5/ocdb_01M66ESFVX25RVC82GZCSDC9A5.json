@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "facebook": "https://www.facebook.com/nyahvillage.c.p/"
+    "facebook": "https://www.facebook.com/nyahvillage.c.p/",
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Murray Valley Highway"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVX25RVC82GZCSDC9A5",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

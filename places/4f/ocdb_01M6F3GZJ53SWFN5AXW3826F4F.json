@@ -1,9 +1,18 @@
 {
   "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 980
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Murray Street East"
+    },
     "phone": "+61 3 5231 3244",
     "website": "https://otwaygatemotel.com.au"
   },
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

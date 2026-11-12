@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm"
   },
   "facts": {
@@ -10,8 +13,14 @@
       "housenumber": "895",
       "street": "Litchfield Park Road"
     },
+    "charge": "$10/n",
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 140,
+      "name": "Litchfield Park Road"
+    },
+    "operator": "Zebra Rock Mine",
     "power": false
   },
   "group": "overnight",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,17 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "nearest_boat_ramp": {
+      "distance_m": 2570
+    },
+    "nearest_major_road": {
+      "distance_m": 190,
+      "name": "Great Northern Highway"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESG1Q53A1ZRDEVJE4H8BR",
   "kind": "caravan_park",
@@ -17,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,18 +1,27 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": true,
+    "charge": "$10/n at Foodland",
     "drinking_water": true,
     "entry": "customers",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "R M Williams Way"
+    },
+    "operator": "Northern Areas Council",
     "showers": false,
     "tents": false,
     "toilets": true
@@ -33,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

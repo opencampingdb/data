@@ -1,13 +1,19 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_boat_ramp": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 380
     },
-    "opening_hours": "sunrise-sunset"
+    "nearest_boat_ramp": {
+      "distance_m": 470
+    },
+    "opening_hours": "sunrise-sunset",
+    "operator": "Mosman Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEST9QWR24G30F53YHG5",
@@ -25,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

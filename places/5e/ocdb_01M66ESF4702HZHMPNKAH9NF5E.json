@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Cape Leveque Road"
+    },
+    "nearest_major_road": {
+      "distance_m": 250,
+      "name": "Kooljaman Access Road"
     },
     "phone": "+61 8 9192 4970",
     "website": "https://www.kooljaman.com.au/"
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-09T23:57:18Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +11,13 @@
       "state": "SA",
       "street": "Melbourne Street",
       "suburb": "North Adelaide"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1910
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Melbourne Street"
     }
   },
   "group": "services",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

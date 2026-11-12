@@ -1,9 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "email": "osm",
     "instagram": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -13,11 +17,20 @@
       "housenumber": "27",
       "street": "Marine Parade"
     },
+    "booking_required": true,
     "email": "magneticisland@staysummerhouse.com",
     "instagram": "https://www.instagram.com/summerhouse.magneticisland",
     "nearest_beach": {
       "distance_m": 70
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1400
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Marine Parade"
+    },
+    "operator": "Summer House",
     "phone": "+61 7 2147 8840",
     "website": "https://staysummerhouse.com/magnetic-island/",
     "wifi": true
@@ -38,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

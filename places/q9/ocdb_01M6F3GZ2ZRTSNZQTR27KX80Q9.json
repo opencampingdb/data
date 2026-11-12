@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,13 @@
     "address": {
       "housenumber": "150",
       "street": "Glen Osmond Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4260
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Glen Osmond Road"
     },
     "phone": "+61 8 8338 1100",
     "website": "https://www.arkabahotel.com.au/"
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

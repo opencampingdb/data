@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,13 @@
       "state": "QLD",
       "street": "Pritchard Road",
       "suburb": "Virginia"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4210
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Sandgate Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/virginia/bp-virginia/1462"
   },
@@ -29,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

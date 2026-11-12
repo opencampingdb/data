@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +12,11 @@
       "street": "Murchison Street",
       "suburb": "Marysville"
     },
-    "facebook": "https://www.facebook.com/theduckinnmarysvillepub/"
+    "facebook": "https://www.facebook.com/theduckinnmarysvillepub/",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Buxton - Marysville Road"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GZWZNJTJ8VJGS9QJKBKN",
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

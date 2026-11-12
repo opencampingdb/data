@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -10,8 +14,23 @@
       "housenumber": "227",
       "street": "Old Cleveland Road"
     },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 2580
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1340
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Old Cleveland Road"
     },
     "opening_hours": "24/7",
     "website": "https://www.shell.com.au/fuel-finder.html"
@@ -32,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

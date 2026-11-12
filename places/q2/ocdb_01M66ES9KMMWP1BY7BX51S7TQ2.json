@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 4580,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Normanby Avenue"
+    },
+    "operator": "Darebin City Council"
   },
   "group": "utility",
   "id": "ocdb_01M66ES9KMMWP1BY7BX51S7TQ2",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

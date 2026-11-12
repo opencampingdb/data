@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Morilla Street"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA16ZFVFDE9H4SG091PZ",
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:35:20Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

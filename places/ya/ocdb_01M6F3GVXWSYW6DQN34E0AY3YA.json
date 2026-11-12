@@ -1,13 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "28-34",
       "postcode": "4700",
       "street": "Albert Street"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1330
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Campbell Street"
+    },
+    "operator": "Best Western"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVXWSYW6DQN34E0AY3YA",
@@ -25,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

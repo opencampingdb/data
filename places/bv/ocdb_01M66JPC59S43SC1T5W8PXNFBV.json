@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +14,18 @@
       "street": "Bussell Highway",
       "suburb": "Margaret River"
     },
-    "opening_hours": "Mo-Su 06:00-22:00"
+    "fuels": [
+      "diesel",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Bussell Highway"
+    },
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "Better Choice"
   },
   "group": "services",
   "id": "ocdb_01M66JPC59S43SC1T5W8PXNFBV",
@@ -29,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "NSW",
       "street": "Lascelles Street",
       "suburb": "Braidwood"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Lascelles Street"
     },
     "phone": "+61 2 4842 2565"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

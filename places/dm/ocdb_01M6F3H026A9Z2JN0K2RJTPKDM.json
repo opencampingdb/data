@@ -1,9 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "email": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -13,9 +16,15 @@
       "housenumber": "296",
       "street": "Boundary Road"
     },
+    "charge": "6 AUD",
     "email": "rhv@rrc.qld.gov.au",
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Yaamba Road (Bruce Highway)"
+    },
     "opening_hours": "Mo-Su 09:00-15:00; PH off",
+    "operator": "Rockhampton Regional Council",
     "phone": "+61 7 4936 8680",
     "website": "https://heritagevillage.rockhamptonregion.qld.gov.au/",
     "wheelchair": true
@@ -36,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,7 +12,12 @@
       "housenumber": "1526",
       "street": "Thomas Road"
     },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Thomas Road"
+    },
     "opening_hours": "24/7",
+    "operator": "Burk",
     "phone": "+61 8 6205 9900",
     "website": "https://burkfuel.com.au"
   },
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

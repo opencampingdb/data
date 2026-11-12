@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "distance_m": 3220,
       "name": "Dudley Beach"
     },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Pacific Highway"
+    },
+    "operator": "Metro",
     "wheelchair": true
   },
   "group": "services",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

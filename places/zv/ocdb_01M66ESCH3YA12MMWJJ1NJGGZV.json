@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "South Western Highway"
+    },
+    "opening_hours": "24/7",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESCH3YA12MMWJJ1NJGGZV",
@@ -23,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

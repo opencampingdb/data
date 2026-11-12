@@ -6,11 +6,13 @@
   },
   "fact_sources": {
     "access": "contributed",
+    "booking_required": "osm",
     "camper_trailers": "contributed",
     "caravans": "osm",
     "fee": "osm",
     "motorhomes": "contributed",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -18,12 +20,16 @@
   },
   "facts": {
     "access": "2wd",
+    "booking_required": true,
     "camper_trailers": true,
     "caravans": true,
     "fee": true,
     "motorhomes": true,
     "nearest_beach": {
       "distance_m": 1780
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1880
     },
     "showers": true,
     "tents": true,
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

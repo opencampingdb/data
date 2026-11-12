@@ -2,13 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "hot_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "hot_water": false,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Lower Plenty Road"
+    },
     "opening_hours": "06:00-21:00; Apr Su[1]-Oct Su[1] -1 day 07:00-20:00",
+    "operator": "Banyule city council",
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -27,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

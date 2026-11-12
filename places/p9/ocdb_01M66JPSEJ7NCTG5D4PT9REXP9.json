@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,8 +11,19 @@
       "housenumber": "89",
       "street": "Main South Road"
     },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 3920
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main South Road"
     },
     "phone": "+61 456 799 759"
   },
@@ -30,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

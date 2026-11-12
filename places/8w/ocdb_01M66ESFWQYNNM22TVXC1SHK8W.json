@@ -2,7 +2,9 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,7 +13,12 @@
   "facts": {
     "caravans": true,
     "drinking_water": true,
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Lamb Street"
+    },
     "opening_hours": "24/7",
+    "operator": "South Burnett Council",
     "power": false,
     "showers": true,
     "tents": true,
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

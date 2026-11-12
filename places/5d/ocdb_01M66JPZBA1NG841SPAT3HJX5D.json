@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "57",
       "street": "Heinemann Road"
-    }
+    },
+    "fuels": [
+      "diesel",
+      "adblue"
+    ],
+    "nearest_major_road": {
+      "distance_m": 260,
+      "name": "Toowoomba Cecil Plains Road"
+    },
+    "operator": "United Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JPZBA1NG841SPAT3HJX5D",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

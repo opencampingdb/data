@@ -1,8 +1,27 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 3890
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Henry Hester Drive"
+    },
     "website": "https://map.bp.com/en-AU/AU/gas-station/stapylton/bp-stapylton/1937"
   },
   "group": "services",
@@ -21,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

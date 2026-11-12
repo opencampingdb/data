@@ -1,6 +1,23 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Condon Street"
+    },
+    "operator": "EG Australia"
+  },
   "group": "services",
   "id": "ocdb_01M66JPWRDKSA0S3B2AH0RV2M1",
   "kind": "fuel",
@@ -17,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

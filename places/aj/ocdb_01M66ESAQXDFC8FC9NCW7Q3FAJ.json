@@ -1,9 +1,18 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Nambour North Connection Road"
+    },
+    "operator": "Sunshine Coast Council",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAQXDFC8FC9NCW7Q3FAJ",
@@ -21,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

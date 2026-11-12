@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -11,7 +13,12 @@
       "street": "Petticoat Lane",
       "suburb": "Penola"
     },
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Julian Street"
+    },
     "opening_hours": "Th,Fr-Su 11:00-16:00 || \"by appointment\"",
+    "operator": "National Trust",
     "phone": "+61 438 112 000"
   },
   "group": "attraction",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -8,7 +11,15 @@
       "state": "NT",
       "street": "Yarradena Drive",
       "suburb": "Alyangula"
-    }
+    },
+    "fuels": [
+      "diesel"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 130,
+      "name": "Alyangula Public Boat Ramp"
+    },
+    "operator": "GEMCO"
   },
   "group": "services",
   "id": "ocdb_01M66JPY8ZHB6TCSGF2RCYRQFQ",
@@ -26,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

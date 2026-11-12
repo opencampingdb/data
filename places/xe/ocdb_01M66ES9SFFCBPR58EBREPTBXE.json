@@ -1,13 +1,24 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
     "nearest_beach": {
       "distance_m": 680
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4400
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Stirling Terrace"
     },
     "wheelchair": true
   },
@@ -21,11 +32,11 @@
   "name": null,
   "osm": {
     "id": 1682842703,
-    "timestamp": "2023-04-01T10:59:04Z",
+    "timestamp": "2026-11-11T09:17:23Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

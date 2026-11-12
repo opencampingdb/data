@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
+    "dump_station": "osm",
+    "nearest_boat_ramp": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,6 +17,10 @@
     },
     "caravans": true,
     "drinking_water": true,
+    "dump_station": true,
+    "nearest_boat_ramp": {
+      "distance_m": 150
+    },
     "power": true,
     "showers": true,
     "tents": true,
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

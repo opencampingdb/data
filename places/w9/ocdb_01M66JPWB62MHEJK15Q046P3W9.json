@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,7 +13,12 @@
       "street": "Eden Valley Road",
       "suburb": "Angaston"
     },
+    "nearest_major_road": {
+      "distance_m": 380,
+      "name": "Eden Valley Road"
+    },
     "opening_hours": "Sa-Su 10:00-17:00",
+    "operator": "Samual Smith & Son",
     "website": "https://www.yalumba.com/"
   },
   "group": "attraction",
@@ -30,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

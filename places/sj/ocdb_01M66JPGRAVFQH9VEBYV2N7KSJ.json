@@ -1,10 +1,15 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 340
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 120,
+      "name": "RSL Boat Ramp"
     }
   },
   "group": "services",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

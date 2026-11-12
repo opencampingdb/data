@@ -1,6 +1,23 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_98"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 2570
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Old Toowoomba Road"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPDRH3497QJVBW267WPR6",
   "kind": "fuel",
@@ -17,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

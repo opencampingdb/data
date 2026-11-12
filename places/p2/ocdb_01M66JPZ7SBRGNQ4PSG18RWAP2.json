@@ -2,6 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -16,6 +19,13 @@
       "distance_m": 1730,
       "name": "Horse Arena"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 430
+    },
+    "nearest_major_road": {
+      "distance_m": 30
+    },
+    "operator": "RM Autohaus Express",
     "phone": "+61 3 8456 2199"
   },
   "group": "services",
@@ -34,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

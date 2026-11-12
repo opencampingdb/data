@@ -2,13 +2,22 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Horrocks Highway"
+    },
     "opening_hours": "24/7",
+    "operator": "The District Council of Mount Remarkable",
+    "toilet_type": "flush",
     "wheelchair": false
   },
   "group": "utility",
@@ -27,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

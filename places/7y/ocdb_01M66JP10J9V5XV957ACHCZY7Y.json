@@ -1,13 +1,30 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10"
+    ],
     "nearest_beach": {
       "distance_m": 1300
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1990
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Bagot Road"
+    },
+    "operator": "United",
     "phone": "+61 8 8985 1062",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-ludmilla"
   },
@@ -27,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

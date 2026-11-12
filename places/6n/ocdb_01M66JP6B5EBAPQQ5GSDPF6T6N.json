@@ -1,14 +1,34 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "nearest_beach": {
       "distance_m": 1090
     },
+    "nearest_boat_ramp": {
+      "distance_m": 770
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Pacific Highway"
+    },
     "opening_hours": "Mo-Sa 05:00-23:00; Su 06:00-23:00",
+    "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
   "group": "services",
@@ -27,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,11 +2,16 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": true,
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Meander Valley Highway"
+    },
     "website": "https://www.facebook.com/hagleyrvfarmstay/"
   },
   "group": "overnight",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-01T01:44:13Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

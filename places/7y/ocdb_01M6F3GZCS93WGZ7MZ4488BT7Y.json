@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,13 @@
     "address": {
       "housenumber": "914-918",
       "street": "Mount Alexander Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2670
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Mount Alexander Road"
     },
     "opening_hours": "Tu-Th 16:00-23:00,Fr-Su 12:00+",
     "phone": "+61 3 8352 4235",
@@ -30,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

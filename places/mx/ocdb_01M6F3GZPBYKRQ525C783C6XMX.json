@@ -4,7 +4,10 @@
     "email": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -20,7 +23,16 @@
     "nearest_beach": {
       "distance_m": 1600
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1700,
+      "name": "Dragon Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Parramatta Road"
+    },
     "opening_hours": "Mo-Fr 10:00-17:00; Sa-Su 12:00-16:00; PH off",
+    "operator": "University of Sydney",
     "phone": "+61 2 9351 2812",
     "toilets": true,
     "website": "https://www.sydney.edu.au/museum/",
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

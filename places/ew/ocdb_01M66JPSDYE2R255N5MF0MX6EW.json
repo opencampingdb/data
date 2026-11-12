@@ -1,14 +1,29 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "fuels": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "2",
       "street": "Cohoe Street"
     },
-    "opening_hours": "24/7"
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_98",
+      "lpg"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Cohoe Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "United Petroleum"
   },
   "group": "services",
   "id": "ocdb_01M66JPSDYE2R255N5MF0MX6EW",
@@ -26,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

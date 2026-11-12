@@ -1,12 +1,19 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 2240,
       "name": "Bridgewater Bay Surf Beach"
-    }
+    },
+    "nearest_major_road": {
+      "distance_m": 380,
+      "name": "Bridgewater Road"
+    },
+    "operator": "Parks Victoria"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCV4ZEDKH1VTKRRN99KF",
@@ -24,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

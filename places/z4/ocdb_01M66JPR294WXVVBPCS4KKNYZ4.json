@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -13,6 +15,11 @@
       "street": "Davey Drive",
       "suburb": "Ringwood East"
     },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Mount Dandenong Road"
+    },
+    "operator": "Eastern Health",
     "phone": "+61 3 8804 9999",
     "website": "https://www.easternhealth.org.au/locations/maroondah-hospital",
     "wheelchair": true
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

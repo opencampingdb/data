@@ -1,7 +1,11 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,10 +14,20 @@
       "housenumber": "257",
       "street": "St Georges Road"
     },
+    "air": true,
     "nearest_beach": {
       "distance_m": 3100,
       "name": "Horse Arena"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 2500,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "St Georges Road"
+    },
+    "operator": "BP",
     "phone": "+61 3 9481 6185",
     "website": "http://www.bp.com.au/"
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

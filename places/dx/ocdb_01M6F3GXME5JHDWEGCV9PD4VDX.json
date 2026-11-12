@@ -1,12 +1,22 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 1500
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1050,
+      "name": "Sayonara Slipway"
+    },
+    "nearest_major_road": {
+      "distance_m": 180,
+      "name": "Cowper Wharf Roadway"
     },
     "opening_hours": "Tu-Th 10:00-15:00",
     "website": "https://www.socheritagecentre.org.au/"
@@ -27,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

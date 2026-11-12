@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -8,6 +11,19 @@
     "address": {
       "housenumber": "49",
       "street": "Murray Terrace"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 560,
+      "name": "Euston Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "A20"
     },
     "opening_hours": "Mo-Fr 07:00-19:00; Sa-Su 10:00-19:00",
     "phone": "+61 3 5026 3697"
@@ -28,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

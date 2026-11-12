@@ -1,11 +1,22 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "hot_water": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "hot_water": false,
     "nearest_beach": {
       "distance_m": 30,
       "name": "Lorne Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1710
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Ocean Road"
     }
   },
   "group": "utility",
@@ -24,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-10T21:41:31Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

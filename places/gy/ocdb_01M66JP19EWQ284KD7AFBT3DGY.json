@@ -1,12 +1,26 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "282",
       "street": "Ruthven Street"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Ruthven Street"
     },
     "opening_hours": "PH,Mo-Su 00:00-12:00+"
   },
@@ -26,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

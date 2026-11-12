@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,12 @@
       "street": "Lake Dobson Road",
       "suburb": "Mount Field"
     },
-    "opening_hours": "Mo-Su 09:00-17:00"
+    "nearest_major_road": {
+      "distance_m": 470,
+      "name": "Gordon River Road"
+    },
+    "opening_hours": "Mo-Su 09:00-17:00",
+    "operator": "Department of Primary Industries, Parks, Water and Environment"
   },
   "group": "services",
   "id": "ocdb_01M66JP0JSEDENE3K7JQGK4TVC",
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

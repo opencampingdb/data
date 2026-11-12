@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -13,7 +15,12 @@
       "street": "Main Street",
       "suburb": "Zeehan"
     },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Main Street"
+    },
     "opening_hours": "Sa-Th 09:30-16:00",
+    "operator": "West Coast Heritage Ltd",
     "phone": "+61 3 6471 6225",
     "website": "https://wchczeehan.com.au/"
   },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

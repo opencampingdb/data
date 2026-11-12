@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -8,6 +10,11 @@
       "housenumber": "105",
       "street": "Henty Highway"
     },
+    "nearest_major_road": {
+      "distance_m": 80,
+      "name": "Hopetoun Street"
+    },
+    "operator": "BP",
     "phone": "+61 3 5390 2363"
   },
   "group": "services",
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

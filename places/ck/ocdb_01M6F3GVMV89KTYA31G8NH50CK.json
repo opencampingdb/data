@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,7 +14,16 @@
       "street": "Twentyfirst Street",
       "suburb": "Renmark"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 1880,
+      "name": "Rowing Club Launching Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "Sturt Highway"
+    },
     "opening_hours": "Th-Mo 10:00-16:00; Tu-We \"by appointment\"",
+    "operator": "National Trust",
     "phone": "+61 8 8586 6175",
     "website": "https://www.nationaltrust.org.au/places/olivewood/"
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

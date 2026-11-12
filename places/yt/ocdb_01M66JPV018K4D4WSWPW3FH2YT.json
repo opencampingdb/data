@@ -1,9 +1,20 @@
 {
   "fact_sources": {
+    "air": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "air": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2750
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Buckley Street"
+    },
     "opening_hours": "24/7",
     "website": "https://www.7eleven.com.au/"
   },
@@ -17,11 +28,11 @@
   "name": "7-Eleven",
   "osm": {
     "id": 490219435,
-    "timestamp": "2023-01-26T03:10:31Z",
+    "timestamp": "2026-11-11T05:51:50Z",
     "type": "way",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "nearest_boat_ramp": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "nearest_boat_ramp": {
+      "distance_m": 260,
+      "name": "Canoe entry point"
+    },
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M6F3H09SKXE2DASNAB5ZDWVJ",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

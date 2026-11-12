@@ -1,12 +1,31 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "fuels": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
     "nearest_beach": {
       "distance_m": 3380,
       "name": "Number Sixteen Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 400
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Point Nepean Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPYCEH7BBY3130BDHDSHM",
@@ -24,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

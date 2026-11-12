@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "fuels": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +14,22 @@
       "state": "VIC",
       "street": "Raleigh Road",
       "suburb": "Maribyrnong"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98",
+      "e85",
+      "lpg"
+    ],
+    "nearest_boat_ramp": {
+      "distance_m": 1180
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Raleigh Road"
     },
     "phone": "+61 416 912 511",
     "website": "https://www.unitedpetroleum.com.au/store/united-maribyrnong-north/"
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

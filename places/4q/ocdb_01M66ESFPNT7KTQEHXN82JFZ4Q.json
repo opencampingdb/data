@@ -1,8 +1,12 @@
 {
   "fact_sources": {
     "address": "osm",
+    "booking_required": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -16,8 +20,17 @@
       "street": "Warwick Road",
       "suburb": "Ipswich"
     },
+    "booking_required": false,
     "dump_station": true,
     "fee": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2830,
+      "name": "North Ipswich Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 140
+    },
+    "operator": "Ipswich Show Society",
     "phone": "+61 7 3812 2011",
     "power": true,
     "website": "https://ipswichshow.com.au/caravan-park/",
@@ -39,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

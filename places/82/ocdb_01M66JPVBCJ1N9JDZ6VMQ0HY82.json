@@ -1,8 +1,15 @@
 {
   "fact_sources": {
+    "car_wash": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "car_wash": true,
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Curtis Road"
+    },
     "website": "https://map.bp.com/en-AU/AU/gas-station/munno-para/bp-otr-munno-para-west/7613"
   },
   "group": "services",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

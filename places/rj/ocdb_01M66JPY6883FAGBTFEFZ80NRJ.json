@@ -1,12 +1,19 @@
 {
   "fact_sources": {
     "address": "osm",
+    "air": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "12",
       "street": "Murray Street"
+    },
+    "air": true,
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Bridge Street South"
     },
     "phone": "+61 439 817 241"
   },
@@ -26,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

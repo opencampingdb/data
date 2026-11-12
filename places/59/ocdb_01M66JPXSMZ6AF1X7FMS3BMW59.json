@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -9,6 +11,13 @@
       "postcode": "4077",
       "street": "Rosemary Street",
       "suburb": "Inala"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2450
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Rosemary Street"
     },
     "opening_hours": "24/7"
   },
@@ -28,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -1,12 +1,21 @@
 {
   "fact_sources": {
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 700,
       "name": "Rose Bay Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1110
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Old South Head Road"
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/rose-bay/bp-rose-bay/0970"
   },
@@ -26,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

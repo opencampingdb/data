@@ -3,6 +3,8 @@
     "address": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -16,6 +18,13 @@
     "fee": false,
     "nearest_beach": {
       "distance_m": 3060
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1770
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Latrobe Terrace"
     },
     "opening_hours": "Sa 09:30-16:00",
     "wheelchair": false
@@ -36,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

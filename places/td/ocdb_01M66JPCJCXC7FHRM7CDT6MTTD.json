@@ -1,12 +1,22 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "130",
       "street": "Sydney Road"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4630,
+      "name": "Deep Rock Canoe Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Sydney Road"
     },
     "opening_hours": "Mo-Su 07:00-22:00"
   },
@@ -26,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

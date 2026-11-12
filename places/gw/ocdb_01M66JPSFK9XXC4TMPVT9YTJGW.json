@@ -2,12 +2,19 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Edwardes Street"
+    },
+    "opening_hours": "24/7",
+    "operator": "City of Darebin Council"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPSFK9XXC4TMPVT9YTJGW",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

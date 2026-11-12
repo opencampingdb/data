@@ -2,12 +2,21 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "opening_hours": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "opening_hours": "Mo-Su 07:00-22:00"
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Pinnacle Road"
+    },
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "operator": "Hobart City Council",
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESF2DXMT6MM8PDFW6J65R",
@@ -25,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

@@ -2,12 +2,20 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "showers": "osm"
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "showers": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "showers": true
+    "nearest_major_road": {
+      "distance_m": 180
+    },
+    "operator": "South Burnett Council",
+    "showers": true,
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESG6A183S8RH6G06X9S6Q",
@@ -25,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

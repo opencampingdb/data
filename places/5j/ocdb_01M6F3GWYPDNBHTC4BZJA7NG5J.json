@@ -1,13 +1,18 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "street": "Ogilvie Street"
     },
-    "facebook": "https://www.facebook.com/Royal-Hotel-Denman-NSW-1815149512122467/"
+    "facebook": "https://www.facebook.com/Royal-Hotel-Denman-NSW-1815149512122467/",
+    "nearest_major_road": {
+      "distance_m": 240,
+      "name": "Crinoline Street"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GWYPDNBHTC4BZJA7NG5J",
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

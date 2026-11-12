@@ -1,6 +1,15 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_major_road": "osm",
+    "pub": "osm"
+  },
+  "facts": {
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Landsborough Highway"
+    },
+    "pub": true
+  },
   "group": "services",
   "id": "ocdb_01M6F3GYX3H34HS7QEK61F79SR",
   "kind": "food_and_drink",
@@ -17,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

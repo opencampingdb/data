@@ -1,8 +1,15 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "booking_required": true,
+    "nearest_major_road": {
+      "distance_m": 490,
+      "name": "Yardie Creek Road"
+    },
     "website": "https://www.salsalis.com.au/"
   },
   "group": "overnight",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

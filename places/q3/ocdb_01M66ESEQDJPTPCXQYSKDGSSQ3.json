@@ -1,20 +1,24 @@
 {
   "fact_sources": {
+    "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
     "nearest_beach": "osm",
+    "operator": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "booking_required": true,
     "caravans": true,
     "fee": true,
     "nearest_beach": {
       "distance_m": 170,
       "name": "Plumbago Beach"
     },
+    "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -36,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

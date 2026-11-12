@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -17,6 +19,11 @@
     },
     "caravans": true,
     "entry": "customers",
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Ninti Street"
+    },
+    "operator": "Carathool Shire Council",
     "power": true,
     "showers": true,
     "tents": true,
@@ -38,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

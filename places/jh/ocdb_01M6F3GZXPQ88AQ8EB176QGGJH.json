@@ -1,10 +1,19 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/widebayhospitalmuseum/",
+    "nearest_boat_ramp": {
+      "distance_m": 2080
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Walker Street"
+    },
     "opening_hours": "Mo-Fr 09:00-12:00"
   },
   "group": "attraction",
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

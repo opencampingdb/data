@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -9,7 +11,12 @@
       "housenumber": "3030",
       "street": "Remembrance Driveway"
     },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Remembrance Driveway"
+    },
     "opening_hours": "24/7",
+    "operator": "Shell",
     "phone": "+61 2 4684 2441"
   },
   "group": "services",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

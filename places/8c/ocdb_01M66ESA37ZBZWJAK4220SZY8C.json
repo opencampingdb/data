@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -14,6 +16,11 @@
     "entry": "customers",
     "fee": true,
     "max_stay": "3d",
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Northern Road"
+    },
+    "operator": "Maranoa Regional Council",
     "power": true,
     "showers": true,
     "tents": true,
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

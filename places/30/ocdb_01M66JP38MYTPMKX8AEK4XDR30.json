@@ -1,11 +1,29 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "toilets": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Su 06:00-21:00",
-    "phone": "+61 8 9039 3464"
+    "address": {
+      "housenumber": "Lot 11",
+      "street": "Eyre Highway"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Eyre Highway"
+    },
+    "opening_hours": "24Hr",
+    "phone": "+61 8 9039 3464",
+    "toilets": true
   },
   "group": "services",
   "id": "ocdb_01M66JP38MYTPMKX8AEK4XDR30",
@@ -14,14 +32,14 @@
     "lat": -31.899706,
     "lon": 127.020671
   },
-  "name": "Shell",
+  "name": "Golden Outback Madura",
   "osm": {
     "id": 2003851720,
-    "timestamp": "2026-10-18T09:27:37Z",
+    "timestamp": "2026-11-11T10:14:40Z",
     "type": "node",
-    "version": 6
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

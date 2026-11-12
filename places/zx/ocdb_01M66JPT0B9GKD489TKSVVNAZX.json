@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "address": "osm",
+    "car_wash": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -10,8 +13,16 @@
     "address": {
       "street": "McClelland Drive"
     },
+    "car_wash": true,
     "nearest_beach": {
       "distance_m": 4870
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4710
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "McClelland Drive"
     },
     "opening_hours": "24/7",
     "phone": "+61 3 9020 9467",
@@ -33,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

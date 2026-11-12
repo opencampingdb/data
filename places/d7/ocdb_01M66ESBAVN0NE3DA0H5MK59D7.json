@@ -8,13 +8,20 @@
     "drinking_water": "osm",
     "dump_station": "contributed",
     "fee": "contributed",
-    "opening_hours": "contributed"
+    "nearest_major_road": "osm",
+    "opening_hours": "contributed",
+    "operator": "osm"
   },
   "facts": {
     "drinking_water": false,
     "dump_station": true,
     "fee": false,
-    "opening_hours": "24/7"
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Horrocks Highway"
+    },
+    "opening_hours": "24/7",
+    "operator": "The District Council of Mount Remarkable"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBAVN0NE3DA0H5MK59D7",
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

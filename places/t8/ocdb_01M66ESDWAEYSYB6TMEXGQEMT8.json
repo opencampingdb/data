@@ -1,10 +1,19 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": false,
+    "nearest_boat_ramp": {
+      "distance_m": 4090
+    },
+    "nearest_major_road": {
+      "distance_m": 330,
+      "name": "McManus Street"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -23,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

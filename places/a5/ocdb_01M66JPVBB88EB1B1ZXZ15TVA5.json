@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,7 +12,12 @@
     "nearest_beach": {
       "distance_m": 10,
       "name": "Basin Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2110,
+      "name": "Rowland Reserve Boat Ramp - Lane 2"
+    },
+    "operator": "Northern Beaches Council"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPVBB88EB1B1ZXZ15TVA5",
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-12T08:52:31Z"
 }

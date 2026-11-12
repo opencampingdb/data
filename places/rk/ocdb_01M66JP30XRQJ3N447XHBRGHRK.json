@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "air": "osm",
     "facebook": "osm",
+    "fuels": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
+    "air": true,
     "facebook": "https://www.facebook.com/p/Bulga-Servo-100063650871561/",
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Putty Road"
+    },
     "phone": "+61 2 6574 5126"
   },
   "group": "services",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-12T08:52:31Z"
 }
