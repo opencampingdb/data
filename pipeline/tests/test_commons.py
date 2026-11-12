@@ -247,7 +247,7 @@ def test_a_listed_pair_leaves_a_line_that_is_not_due(tmp_path):
 def test_validate_checks_the_do_not_match_list(tmp_path):
     from pipeline.validate import validate_repo
 
-    for name in ("places", "reviews", "fees"):
+    for name in ("places", "reviews"):
         (tmp_path / name).mkdir(exist_ok=True)
     place_id = "ocdb_01M66ESC6PTN65XY3VDH1Y283K"
     write_place(tmp_path, place_id)

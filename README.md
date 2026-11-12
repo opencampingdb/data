@@ -65,11 +65,10 @@ Apps should read [CONNECTING.md](CONNECTING.md) before they download anything.
 A place can carry many more facts than this one: site features such as
 `campfires`, `big_rigs`, `telstra_signal` and `crocodiles`, a park chain in
 `brand`, and contacts. [CONNECTING.md](CONNECTING.md) lists them, and section
-1 there says what changed in each record format (the current one is 12).
+1 there says what changed in each record format (the current one is 13).
 
 The full contract is in [schema/place.schema.json](schema/place.schema.json),
-[schema/review.schema.json](schema/review.schema.json) and
-[schema/fee.schema.json](schema/fee.schema.json). Contributors a
+and [schema/review.schema.json](schema/review.schema.json). Contributors a
 person has blocked are listed in
 [moderation/blocked_contributors.json](moderation/blocked_contributors.json)
 ([schema](schema/blocked_contributors.schema.json)). Pairs a person found to
@@ -84,8 +83,7 @@ challenges built from [maproulette/](maproulette/README.md). The kinds and
 their groups are listed in [schema/kinds.json](schema/kinds.json) and in
 [CONNECTING.md](CONNECTING.md). In the repository
 each place is a file at `places/<last two characters of id, lower case>/<id>.json`, the reviews
-of a place are at `reviews/<place id>.ndjson`, and the fees travellers paid there are at
-`fees/<place id>.ndjson`.
+of a place are at `reviews/<place id>.ndjson`.
 
 ## Licence
 
@@ -123,7 +121,7 @@ Anything that shows this data must show:
    waits for a person otherwise. A change to the tag mapping reaches the data
    only through this sync, so after one merges, run the sync (it can be
    started by hand) before expecting a release to carry it.
-2. **Feedback.** Apps send reports, reviews, checks and fees to the intake run by the
+2. **Feedback.** Apps send reports, reviews and checks to the intake run by the
    [feedback-engine](https://github.com/opencampingdb/feedback-engine). A
    workflow in the private `inbox` repository applies them every hour and
    keeps at most two pull requests open here: `feedback/auto` for changes the

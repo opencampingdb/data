@@ -7,14 +7,14 @@ Run them from the repository root after `python -m pip install -r requirements.t
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, and with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road") |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `fees/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `fees/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/fees.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
+| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Release | `python -m pipeline.release --root . --out dist` | `places/`, `reviews/`, `moderation/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
 | Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>]` | `dist/`, `boundaries/au-states.geojson`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake>` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, `fees/`, with `--auto` the geometry sidecar | the kept record, a tombstone, moved reviews and fees; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone, moved reviews and fees; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for the reviewer. The feedback engine reads the `place` column. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
@@ -231,6 +231,8 @@ in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
 | `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` (then the bare keys) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://`. A bare handle is left out |
 | `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written. |
 | `opening_hours` | `opening_hours` | copied as is |
+| `charge` | `charge` | copied as is, out-of-spec values too (ADR 0002); `check_date:charge` goes to `osm.check_dates.charge` |
+| `charge_conditional` | `charge:conditional` | copied as is; `check_date:charge:conditional` goes to `osm.check_dates.charge_conditional` |
 | `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
 | `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is. The second, from the same key, is `phone_2`, up to 100 characters |
 | `website:booking`, then `reservation:website` | `booking_url` | the first with a value, kept only if it starts with `https://` and is up to 500 characters. An owner's `booking_url` is never replaced (see `pipeline/sync.py`) |
@@ -385,10 +387,6 @@ Review lines are compact JSON with sorted keys, one per line, sorted by
 (4.25 becomes 4.3). Python's `round()` rounds half to even, so use
 `decimal.Decimal` with `ROUND_HALF_UP`, as `pipeline.common.rating_mean` does.
 
-Fee lines in `fees/<place id>.ndjson` take the same form. The release keeps
-the fees paid in the 24 months before the release time, leaving out fees
-from blocked contributors.
-
 ## Duplicates
 
 `pipeline.duplicates` finds pairs of places that are likely the same place.
@@ -499,8 +497,6 @@ place. A person runs it and opens a PR with the result:
 - The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
   rating is recalculated from its visible reviews.
-- The dropped record's fees move to the kept record. Where one contributor
-  has a fee for the same site type at both, only the newer is kept.
 - The dropped record stays as a tombstone: `status: "merged"` and
   `merged_into: <keep_id>`, nothing else changed. Older tombstones that
   pointed at the dropped record now point at the kept one.

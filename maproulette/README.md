@@ -37,13 +37,14 @@ A report task covers only facts with a tag on the place's own OSM object, plus t
 | `wifi` | `internet_access`: `wlan` or `no` |
 | `access`, `entry`, `water_type`, `brand` | `4wd_only`, `access`, `amenity`, `brand` |
 | `max_stay`, `opening_hours` | `maxstay`, `opening_hours` |
+| `charge`, `charge_conditional` | `charge`, `charge:conditional`, with `check_date:charge` (or `check_date:charge:conditional`) for the day the mapper checked it |
 | `website`, `phone`, `phone_2`, `email`, `facebook`, `instagram`, `tiktok`, `x` | `website`, `phone`, `email`, `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` |
 
 These are contact details for the place itself, never a traveller's own. `phone_2` is the place's second number, which OSM keeps after the first in one key (`phone=<first>;<second>`), so it is sent only when the place also has a first number.
 
-Some facts are never sent. `booking_url` is a booking link, which stays in Open Camping DB. Nearby facts (`nearest_beach`, `nearest_boat_ramp`, `crocodiles`, and `pub`, `fuel` and `car_wash` inside a place) come from other OSM objects, so no tag on the place's own object would show them.
+Some facts are never sent. `booking_url` is a booking link, which stays in Open Camping DB. `charge_powered`, the price of a powered site, has no OSM tag. Nearby facts (`nearest_beach`, `nearest_boat_ramp`, `crocodiles`, and `pub`, `fuel` and `car_wash` inside a place) come from other OSM objects, so no tag on the place's own object would show them.
 
-Each line of a task says how many travellers reported the value, how many of them first-hand and when the latest did, or when the owner set it, the tag to set once the check agrees with a link to its OSM wiki page, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, bookings, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers, dump points and bins; a survey or the operator's sign or website for anything else. A closure points to the wiki's lifecycle prefixes (`disused:tourism=camp_site` while the site is still on the ground, deleting the object once nothing is left). Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
+Each line of a task says how many travellers reported the value, how many of them first-hand and when the latest did, or when the owner set it, the tag to set once the check agrees with a link to its OSM wiki page, and how to check it: a survey or street-level photos (Mapillary, Panoramax) of the access road for road access; signage or a survey for a name; the operator's own sign or website for fees, charges, bookings, opening hours and contacts; a survey, street-level photos or recent imagery for toilets, water, showers, dump points and bins; a survey or the operator's sign or website for anything else. A closure points to the wiki's lifecycle prefixes (`disused:tourism=camp_site` while the site is still on the ground, deleting the object once nothing is left). Only counts and dates leave the inbox. Device ids, origins and travellers' words never reach a task.
 
 ## Out of spec values
 

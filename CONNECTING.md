@@ -31,11 +31,6 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/reviews.ndjson.gz",
     "sha256": "...", "bytes": 2345, "count": 12
   },
-  "fees": {
-    "file": "fees.ndjson.gz",
-    "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/fees.ndjson.gz",
-    "sha256": "...", "bytes": 456, "count": 7
-  },
   "merged": {
     "file": "merged.ndjson.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/merged.ndjson.gz",
@@ -140,6 +135,12 @@ It adds `nearest_boat_ramp`, and fills `pub`, `fuel` and `car_wash` from
 OSM objects inside a place (section 4). Format 12.5 adds the fact
 `nearest_major_road`, the distance to the nearest major OSM road within
 500 m (section 4). The traveller fact `near_road` reads the same as before.
+Format 13 takes `fees.ndjson.gz`
+out of the release and the `fees` table out of `ocdb.sqlite.gz`
+(`layout_version` 2): what travellers paid is no longer collected. It adds
+the facts `charge`, `charge_conditional` and `charge_powered`, the price a
+place publishes, and `osm.check_dates`, when a mapper last checked a charge
+in OSM (section 4). Everything else reads the same as in 12.5.
 
 Then fetch each file from its `url` field. Each `url` points at the file in
 the release the manifest belongs to, and a release's files never change, so
@@ -276,17 +277,12 @@ and `merged_into` (TEXT).
 `place` (TEXT), `stars` (INTEGER), `visited` (TEXT), `created` (TEXT) and
 `record` (TEXT, the whole review as JSON).
 
-`fees`, one row per line of `fees.ndjson.gz`: `id` (TEXT, primary key),
-`place` (TEXT), `amount` (REAL), `site` (TEXT), `paid` (TEXT) and `record`
-(TEXT, the whole fee as JSON).
-
 `commons`, one row per line of `commons.ndjson.gz`: `place` (TEXT, primary
 key) and `files` (TEXT, the `files` array as JSON).
 
 The indexes are `places_kind` on `places (kind)`, `places_group` on
 `places ("group")`, `places_state` on `places (state)`, `places_lat_lon` on
-`places (lat, lon)`, `reviews_place` on `reviews (place)` and `fees_place` on
-`fees (place)`. For a map area, filter on `lat BETWEEN ? AND ? AND lon BETWEEN
+`places (lat, lon)` and `reviews_place` on `reviews (place)`. For a map area, filter on `lat BETWEEN ? AND ? AND lon BETWEEN
 ? AND ?`. An app that needs an R*Tree can build one from `places` in a table
 of its own.
 
@@ -387,14 +383,6 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   review per place: a newer one replaces the older. Reviews hidden after
   reports and reviews from blocked contributors are left out of the release.
   Let travellers report a review (see section 6).
-- Each line of `fees.ndjson.gz` is what a traveller paid for one night: a
-  stable `id` (`fee_<ulid>`), the `place`, `amount` (Australian dollars per
-  night, at most 2 decimal places), `site` (`unpowered`, `powered` or
-  `cabin`), `paid` (the month, YYYY-MM), `created`, the `app` that sent it
-  and `contributor`, as on reviews. One contributor has at most one fee per
-  place per site type: a newer one replaces the older. The release holds
-  fees paid in the 24 months before it was built, and none from blocked
-  contributors. Show recent fees with their month, since prices change.
 - Each line of `commons.ndjson.gz` links one place to stay (group
   `overnight`) with up to 5 photos on Wikimedia Commons, best first:
   `{"place", "files"}`. Open Camping DB holds no photos: the files stay on
@@ -472,7 +460,11 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   when someone last said something about the place. `updated` is when the
   record's content last changed in Open Camping DB, which is not the same:
   it moves when OSM data is refreshed, whatever its age. Older records may
-  lack `osm.timestamp` until the next OSM sync.
+  lack `osm.timestamp` until the next OSM sync. Prices change, so show when
+  a charge was checked: `fact_dates` for a value from feedback, the owner or
+  a contributor, and for a value from OSM `osm.check_dates.charge` (or
+  `.charge_conditional`), from the object's `check_date:charge` tag, when
+  OSM has one, else `osm.timestamp`.
 - `last_confirmed` is when a traveller last checked the place in an app and
   found it there, in UTC. It is the time the check was accepted, usually
   within the hour after it was sent. One traveller's check is enough to set it, and it
@@ -496,7 +488,15 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   club, `operator` is who runs the place (a council, a parks agency, a
   company), `fuels` lists the fuels sold, `air` is air for tyres,
   `hot_water` is hot water in the showers or basins, `toilet_type` is
-  `flush`, `pit`, `chemical` or `dry`, `address` is the street address (an object with `unit`,
+  `flush`, `pit`, `chemical` or `dry`, `charge` is what a standard site
+  costs as the place publishes it, in OSM's `charge` syntax
+  (`<amount> <currency>[/<unit>][/<time unit>]`, such as `57 AUD/night`),
+  `charge_conditional` holds its exceptions in OSM's `charge:conditional`
+  syntax (`75 AUD/night @ (Dec-Jan)`), and `charge_powered` is what a
+  powered site costs, in the syntax of `charge` (an extension: OSM has no tag
+  for it). Charges from OSM are kept as OSM has them, so some are out of that
+  syntax (`$12`): the feedback SDK's `parseCharge` reads a value and returns
+  null for one it can't read, so show that one as written. `address` is the street address (an object with `unit`,
   `housenumber`, `street` or a rural `place`, `suburb`, `state` and
   `postcode`, each there only when known), `email` and `phone_2` are contacts, and `facebook`, `instagram`,
   `tiktok` and `x` are https links. [schema/place.schema.json](schema/place.schema.json)
@@ -698,6 +698,7 @@ Proposable extensions, with the OSM form each could take:
 | `marine_stingers` | `hazard=marine_stinger` |
 | `seasonal_closure` | `seasonal=yes/no` |
 | `dangerous_when_wet` | `dangerous_when_wet=yes/no` |
+| `charge_powered` | `charge:powered_site=<amount> AUD/night` |
 | `caravans: "offroad"` (a value) | `caravans=offroad` |
 
 Open Camping DB only: `scenery`, `wildlife`, `rating` and reviews, and the
@@ -804,14 +805,9 @@ Content-Type: application/json
   traveller's report of a published review. `reason` is `spam_ad`,
   `offensive`, `off_topic`, `fake` or `personal_details`. `place` is the
   review's place.
-- `fee` is `{"amount": 32.5, "site": "powered", "paid": "YYYY-MM"}`, what
-  the traveller paid per night in Australian dollars (more than 0, at most
-  1000, at most 2 decimal places), for an `unpowered` or `powered` site or a
-  `cabin`, in a month that is not in the future and not more than 24 months
-  ago.
 - `contributor` is an opaque id for the traveller's account (a keyed hash,
   never a name or email), 16 to 128 characters of letters, digits, `_` and
-  `-`. Reviews, review reports and fees need it, unless the app key proves the
+  `-`. Reviews and review reports need it, unless the app key proves the
   install with App Attest instead. The intake hashes it again before storing
   it. The feedback engine's
   [integration guide](https://github.com/opencampingdb/feedback-engine/blob/main/docs/integration.md)
@@ -877,8 +873,8 @@ apps with the next release.
 - Every `review_report` goes to a person. Reports from 3 different
   contributors hide the review until a person decides. A person can hide a
   review or block a contributor (`moderation/blocked_contributors.json`).
-  Everything from a blocked contributor is refused, and their reviews and
-  fees are left out of the release and their reviews out of the rating.
+  Everything from a blocked contributor is refused, and their reviews are
+  left out of the release and out of the rating.
 - A `closed` report marks the place `reported_closed` at once. It becomes
   `closed` after reports from 2 different devices within 90 days, or 1 report
   and a person's approval. A `reopened` report or a check with

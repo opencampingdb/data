@@ -13,7 +13,7 @@ from pipeline.common import dump_line
 from pipeline.extract import extract_file
 from pipeline.release import build_release
 from pipeline.sync import sync
-from pipeline.tests.test_release import add_fee, add_review
+from pipeline.tests.test_release import add_review
 
 FIRST = "20261030T160000Z-abc1234"
 SECOND = "20261031T020000Z-def5678"
@@ -48,7 +48,7 @@ def add_commons(repo, place_id):
 
 @pytest.fixture
 def releases(repo, v1_osm, v2_osm, tmp_path):
-    """Two release folders built by pipeline.release: the first from v1, the second from v2 with a review, a fee and a photo."""
+    """Two release folders built by pipeline.release: the first from v1, the second from v2 with a review and a photo."""
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     first = tmp_path / "first"
     build_release(repo, first, data_version=FIRST, generated="2026-10-30T16:00:00Z")
@@ -56,7 +56,6 @@ def releases(repo, v1_osm, v2_osm, tmp_path):
     sync(repo, extract_file(v2_osm), now="2026-10-31T01:00:00Z")
     ids = place_ids(repo)
     add_review(repo, ids[0], "rev_01JBX0000000000000000000AA")
-    add_fee(repo, ids[0], "fee_01JBX0000000000000000000AA")
     add_commons(repo, ids[0])
     second = tmp_path / "second"
     build_release(repo, second, data_version=SECOND, generated="2026-10-31T02:00:00Z")
@@ -99,7 +98,6 @@ def test_changeset_applied_to_the_first_database_gives_exactly_the_second(releas
     assert rows(old) == rows(new)
     assert rows(new)["release"][0][1] == SECOND
     assert len(rows(new)["reviews"]) == 1
-    assert len(rows(new)["fees"]) == 1
     assert len(rows(new)["commons"]) == 1
 
 
@@ -109,7 +107,7 @@ def test_manifest_lists_the_database_and_changeset(releases):
     manifest = database.build(second, previous=[first])
     assert manifest == json.loads((second / "manifest.json").read_text(encoding="utf-8"))
 
-    assert manifest["layout_version"] == database.LAYOUT_VERSION == 1
+    assert manifest["layout_version"] == database.LAYOUT_VERSION == 2
     packed = (second / "ocdb.sqlite.gz").read_bytes()
     assert manifest["database"] == {
         "file": "ocdb.sqlite.gz",
@@ -149,22 +147,22 @@ def test_database_tables_hold_the_release(releases, tmp_path):
     manifest = json.loads((second / "manifest.json").read_text(encoding="utf-8"))
     assert db["release"] == [(
         1, SECOND, "data-20261031T020000Z", "2026-10-31T02:00:00Z",
-        manifest["format_version"], manifest["format_minor"], 1,
+        manifest["format_version"], manifest["format_minor"], 2,
         "ODbL-1.0", "© OpenStreetMap contributors, Open Camping DB",
     )]
     con = apsw.Connection(str(tmp_path / "new.sqlite"))
-    assert con.execute("PRAGMA user_version").get == 1
+    assert con.execute("PRAGMA user_version").get == 2
     assert con.execute("PRAGMA page_size").get == 4096
     indexes = {row[0] for row in con.execute("SELECT name FROM sqlite_master WHERE type = 'index' AND sql IS NOT NULL")}
-    assert indexes == {"places_kind", "places_group", "places_state", "places_lat_lon", "reviews_place", "fees_place"}
+    assert indexes == {"places_kind", "places_group", "places_state", "places_lat_lon", "reviews_place"}
 
 
 def test_no_changeset_across_a_layout_change(releases, monkeypatch):
     first, second = releases
     database.build(first)
-    monkeypatch.setattr(database, "LAYOUT_VERSION", 2)
+    monkeypatch.setattr(database, "LAYOUT_VERSION", 3)
     manifest = database.build(second, previous=[first])
-    assert manifest["layout_version"] == 2
+    assert manifest["layout_version"] == 3
     assert manifest["changesets"] == []
     assert not list(second.glob("changeset-*"))
 
@@ -320,7 +318,7 @@ def test_a_path_from_three_releases_back_is_found_from_one_manifest(repo, v1_osm
     changes = {
         1: lambda: add_review(repo, ids[0], "rev_01JBX0000000000000000000AA"),
         2: lambda: sync(repo, extract_file(v2_osm), now="2026-11-01T01:30:00Z"),
-        3: lambda: add_fee(repo, ids[0], "fee_01JBX0000000000000000000AA"),
+        3: lambda: add_review(repo, ids[1], "rev_01JBX0000000000000000000AB"),
     }
     built = chain(repo, tmp_path, 4, add=lambda n: changes.get(n, lambda: None)())
     (first, start, _), (last, end, manifest) = built[0], built[-1]
@@ -343,7 +341,7 @@ def test_a_layout_change_resets_the_list(repo, v1_osm, tmp_path, monkeypatch):
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     built = chain(repo, tmp_path, 3)
     assert len(built[-1][2]["changesets"]) == 2
-    monkeypatch.setattr(database, "LAYOUT_VERSION", 2)
+    monkeypatch.setattr(database, "LAYOUT_VERSION", 3)
     folder, version = release_folder(repo, tmp_path, 3)
     assert database.build(folder, previous=[built[-1][0]])["changesets"] == []
     folder2, version2 = release_folder(repo, tmp_path, 4)

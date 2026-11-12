@@ -19,7 +19,8 @@ and tested with an STRtree (shapely).
 Each output line is one place:
     {"osm": {...}, "kind": "...", "name": ..., "location": {...}, "facts": {...}}
 osm holds type, id, version and, when the file carries it, the timestamp of
-that version.
+that version, and check_dates when the object has check_date:charge or
+check_date:charge:conditional.
 sorted by OSM type and then id, so the same input always gives the same file.
 The tag mappings are documented in pipeline/README.md.
 """
@@ -201,6 +202,10 @@ def parse_address(tags: dict) -> dict | None:
     return address
 
 
+# OSM charge tags, copied as written, and the facts they fill.
+CHARGE_TAGS = {"charge": "charge", "charge:conditional": "charge_conditional"}
+CHECK_DATE_RE = re.compile(r"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$")
+
 DOG_MONTHS_RE = re.compile(r"^yes\s*@\s*\(?\s*([^()]+?)\s*\)?$", re.IGNORECASE)
 
 
@@ -287,6 +292,12 @@ def facts_from_tags(tags: dict) -> dict:
 
     if tags.get("opening_hours", "").strip():
         facts["opening_hours"] = tags["opening_hours"].strip()
+
+    # Charges are kept as OSM has them, out-of-spec values too (ADR 0002).
+    for osm_key, fact_key in CHARGE_TAGS.items():
+        value = tags.get(osm_key, "").strip()
+        if value:
+            facts[fact_key] = value[:255]
 
     # website wins over contact:website. Only http and https links are kept.
     for key in ("website", "contact:website"):
@@ -486,11 +497,24 @@ def osm_timestamp(obj) -> str | None:
     return stamp.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def osm_link(osm_type: str, osm_id: int, version: int, timestamp: str | None) -> dict:
-    """The record's osm object. timestamp is left out when the file has none."""
+def check_dates(tags: dict) -> dict:
+    """check_date:<tag> for the charge facts, by fact, when the tag itself is set and the date is YYYY-MM-DD."""
+    dates = {}
+    for osm_key, fact_key in CHARGE_TAGS.items():
+        date = tags.get(f"check_date:{osm_key}", "").strip()
+        if tags.get(osm_key, "").strip() and CHECK_DATE_RE.match(date):
+            dates[fact_key] = date
+    return dates
+
+
+def osm_link(osm_type: str, osm_id: int, version: int, timestamp: str | None, tags: dict | None = None) -> dict:
+    """The record's osm object. timestamp is left out when the file has none, check_dates when no tag has one."""
     link = {"type": osm_type, "id": osm_id, "version": version}
     if timestamp is not None:
         link["timestamp"] = timestamp
+    dates = check_dates(tags or {})
+    if dates:
+        link["check_dates"] = dates
     return link
 
 
@@ -891,7 +915,7 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
             continue
         osm_type, osm_id, lat, lon = position
         record = {
-            "osm": osm_link(osm_type, osm_id, obj.version, osm_timestamp(obj)),
+            "osm": osm_link(osm_type, osm_id, obj.version, osm_timestamp(obj), tags),
             "name": tags.get("name", "").strip() or None,
             "location": {"lat": round_coord(lat), "lon": round_coord(lon)},
             "facts": facts_from_tags(tags),
@@ -911,7 +935,7 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
             continue
         tags = site["tags"]
         record = {
-            "osm": osm_link("relation", relation_id, site["version"], site["timestamp"]),
+            "osm": osm_link("relation", relation_id, site["version"], site["timestamp"], tags),
             "name": tags.get("name", "").strip() or None,
             "location": {"lat": round_coord(position[0]), "lon": round_coord(position[1])},
             "facts": facts_from_tags(tags),

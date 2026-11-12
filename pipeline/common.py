@@ -33,6 +33,9 @@ FACT_KEYS = (
     "dump_station",
     "max_stay",
     "opening_hours",
+    "charge",
+    "charge_conditional",
+    "charge_powered",
     "website",
     "phone",
     "access",
@@ -210,11 +213,6 @@ def review_path(root: Path, place_id: str) -> Path:
     return Path(root) / "reviews" / f"{place_id}.ndjson"
 
 
-def fee_path(root: Path, place_id: str) -> Path:
-    """Where the fees reported for one place live: fees/<place id>.ndjson."""
-    return Path(root) / "fees" / f"{place_id}.ndjson"
-
-
 def dump_record(record: dict) -> str:
     """Canonical text of a place record file.
 
@@ -255,9 +253,6 @@ def iter_review_files(root: Path):
     return sorted((Path(root) / "reviews").glob("*.ndjson"))
 
 
-def iter_fee_files(root: Path):
-    """Every fee file, in sorted path order."""
-    return sorted((Path(root) / "fees").glob("*.ndjson"))
 
 
 def blocked_path(root: Path) -> Path:

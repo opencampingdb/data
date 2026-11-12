@@ -24,5 +24,4 @@ def repo(tmp_path: Path) -> Path:
     """An empty data repository with the data folders in place."""
     (tmp_path / "places").mkdir()
     (tmp_path / "reviews").mkdir()
-    (tmp_path / "fees").mkdir()
     return tmp_path

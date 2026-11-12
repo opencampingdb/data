@@ -122,10 +122,10 @@ def test_a_released_record_with_rules_matches_the_schema(repo, tmp_path):
     assert list(Draft202012Validator(schema).iter_errors(record)) == []
 
 
-def test_the_manifest_is_format_12(repo, tmp_path):
+def test_the_manifest_is_format_13(repo, tmp_path):
     out = tmp_path / "dist"
     manifest = build_release(repo, out, data_version=VERSION, generated=GENERATED)
-    assert (manifest["format_version"], manifest["format_minor"]) == (12, 5)
+    assert (manifest["format_version"], manifest["format_minor"]) == (13, 0)
 
 
 def test_a_rule_fact_in_a_repository_file_is_refused(repo):

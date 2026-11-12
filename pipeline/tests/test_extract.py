@@ -541,3 +541,30 @@ def test_hgv_does_not_set_big_rigs():
     assert facts_from_tags({"hgv": "yes"}) == {}
     assert facts_from_tags({"hgv": "designated"}) == {}
     assert facts_from_tags({"hgv": "no"}) == {}
+
+
+def test_charges_are_copied_as_osm_has_them():
+    facts = facts_from_tags({
+        "tourism": "caravan_site",
+        "charge": " 57 AUD/night ",
+        "charge:conditional": "75 AUD/night @ (Dec-Jan)",
+    })
+    assert facts["charge"] == "57 AUD/night"
+    assert facts["charge_conditional"] == "75 AUD/night @ (Dec-Jan)"
+    # Out of the wiki's syntax, but kept as OSM has it (ADR 0002).
+    assert facts_from_tags({"charge": "$14.50AUD"})["charge"] == "$14.50AUD"
+    assert "charge" not in facts_from_tags({"charge": "  "})
+
+
+def test_check_dates_come_from_check_date_tags_of_charges_osm_has():
+    from pipeline.extract import osm_link
+
+    tags = {
+        "charge": "57 AUD/night",
+        "check_date:charge": "2026-11-03",
+        "check_date:charge:conditional": "2026-10-01",
+        "check_date:opening_hours": "2026-01-01",
+    }
+    assert osm_link("way", 7, 3, None, tags) == {"type": "way", "id": 7, "version": 3, "check_dates": {"charge": "2026-11-03"}}
+    assert "check_dates" not in osm_link("node", 1, 1, None, {"charge": "5 AUD", "check_date:charge": "Nov 2026"})
+    assert "check_dates" not in osm_link("node", 1, 1, None)
