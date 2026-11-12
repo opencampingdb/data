@@ -9,15 +9,21 @@ from pathlib import Path
 from pipeline.common import dump_record, load_places, place_path
 from pipeline.maproulette import (
     DOUBLE_MAPPING,
+    OUT_OF_SPEC,
+    PR_BODY_LIMIT,
+    PR_BODY_MARGIN,
     RS,
     TRAVELLER_REPORTS,
+    body_length,
     descriptive_name,
+    fit_report,
     main,
     osm_tag,
     render_report,
     write_challenges,
 )
 from pipeline.merge import merge
+from pipeline.sync import REPORT_LIST_LIMIT
 from pipeline.validate import validate_repo
 
 T1 = "2026-10-01T16:00:00Z"
@@ -827,3 +833,46 @@ def test_a_charge_with_no_first_hand_report_is_not_a_task(repo, tmp_path):
     items = [fact(A, "charge", "57 AUD/night", source=s) for s in ("o1", "o2", "o3")]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+# ------------------------------------------------- the sync PR body limit
+
+
+def test_report_lists_are_cut_at_the_sync_list_limit():
+    many = [(f"ocdb_{i:026d}", f"Camp {i}") for i in range(REPORT_LIST_LIMIT + 5)]
+    report = render_report({OUT_OF_SPEC: {"count": len(many), "added": many, "removed": []}})
+    assert sum(l.startswith("  - New:") for l in report.splitlines()) == REPORT_LIST_LIMIT
+    assert "  - And 5 more new, not listed here." in report
+
+
+def test_the_section_fits_the_room_left_by_the_sync_report(tmp_path):
+    # A long sync report (pipeline.sync cuts it to 60,000 characters) and a challenge
+    # whose every task is new: GitHub refused a body past 65,536 characters on 12 Nov 2026.
+    names = [(f"ocdb_{i:026d}", "Camp with a long descriptive name " * 3) for i in range(5000)]
+    result = {OUT_OF_SPEC: {"count": len(names), "added": names, "removed": []}}
+    sync_report = "x" * 60000
+    room = PR_BODY_LIMIT - PR_BODY_MARGIN - body_length(sync_report)
+    section = fit_report(result, room)
+    assert body_length(sync_report + section) <= PR_BODY_LIMIT - PR_BODY_MARGIN
+    assert "5000 task(s), 5000 new, 0 gone." in section
+    assert "not listed here." in section
+
+
+def test_body_length_counts_as_github_does():
+    assert body_length("abc") == 3
+    assert body_length("\U0001F3D5") == 2  # a camping emoji is two UTF-16 code units
+
+
+def test_main_appends_a_section_that_keeps_the_body_under_the_limit(tmp_path, monkeypatch):
+    import pipeline.maproulette as mr
+
+    names = [(f"ocdb_{i:026d}", "Camp " * 30) for i in range(3000)]
+    monkeypatch.setattr(mr, "write_challenges", lambda *a, **k: {OUT_OF_SPEC: {"count": 3000, "added": names, "removed": []}})
+    monkeypatch.setattr(mr, "load_extract", lambda path: [])
+    monkeypatch.setattr(mr, "load_geometry", lambda path: None)
+    report = tmp_path / "sync-report.md"
+    report.write_text("y" * 59000, encoding="utf-8")
+    assert mr.main([str(tmp_path / "extract.ndjson"), "--root", str(tmp_path), "--report", str(report)]) == 0
+    body = report.read_text(encoding="utf-8")
+    assert body.startswith("y" * 59000)
+    assert body_length(body) <= PR_BODY_LIMIT - PR_BODY_MARGIN
