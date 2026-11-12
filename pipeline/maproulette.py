@@ -102,7 +102,7 @@ from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
 from .out_of_spec import NO_NODE, OH_CHECK_DIR, charge_conditional_ok, charge_ok, check_opening_hours, checker_ready, phone_out_of_spec
-from .sync import escape_cell, load_extract
+from .sync import REPORT_LIST_LIMIT, escape_cell, load_extract
 
 DATA_REPO_URL = "https://github.com/opencampingdb/data"
 RS = "\x1e"
@@ -835,8 +835,37 @@ def write_challenges(
 
 TITLES = {DOUBLE_MAPPING: "Double mapping", TRAVELLER_REPORTS: "Traveller reports", OUT_OF_SPEC: "Out of spec"}
 
+# GitHub refuses a pull request body longer than 65,536 characters. This
+# section is appended to the sync report after pipeline.sync has cut that to
+# its own limit, so it fits itself into the room that is left, with a margin.
+# GitHub counts UTF-16 code units, so a name outside the Basic Multilingual
+# Plane (an emoji) counts twice.
+PR_BODY_LIMIT = 65536
+PR_BODY_MARGIN = 500
 
-def render_report(result: dict[str, dict]) -> str:
+
+def body_length(text: str) -> int:
+    """The length of a PR body as GitHub counts it, in UTF-16 code units."""
+    return len(text.encode("utf-16-le")) // 2
+
+
+def fit_report(result: dict[str, dict], room: int) -> str:
+    """The MapRoulette section, its New and Gone lists cut until it fits in room characters.
+
+    Starts at REPORT_LIST_LIMIT rows a list and halves that until the section
+    fits. At 0 rows only the counts remain, which always fit after the sync
+    report's own cut.
+    """
+    limit = REPORT_LIST_LIMIT
+    while True:
+        section = render_report(result, limit)
+        if body_length(section) <= room or limit == 0:
+            return section
+        limit //= 2
+
+
+def render_report(result: dict[str, dict], limit: int | None = REPORT_LIST_LIMIT) -> str:
+    """The MapRoulette section of the sync report, each New and Gone list at most limit rows."""
     lines = ["", "## MapRoulette", ""]
     for name, change in result.items():
         lines.append(
@@ -846,8 +875,11 @@ def render_report(result: dict[str, dict]) -> str:
         if change.get("skipped"):
             lines.append(f"  - Not built: {change['skipped']}.")
         for word, items in (("New", change["added"]), ("Gone", change["removed"])):
-            for place_id, place_name in items:
+            shown = items if limit is None else items[:limit]
+            for place_id, place_name in shown:
                 lines.append(f"  - {word}: {escape_cell(place_name)} ({place_id})")
+            if len(items) > len(shown):
+                lines.append(f"  - And {len(items) - len(shown)} more {word.lower()}, not listed here.")
     lines += ["", "Merging this PR approves these tasks. Then rebuild the challenges in MapRoulette (see maproulette/README.md).", ""]
     return "\n".join(lines)
 
@@ -866,8 +898,10 @@ def main(argv: list[str] | None = None) -> int:
         if change.get("skipped"):
             print(f"{name}: {change['skipped']}", file=sys.stderr)
     if args.report:
+        existing = args.report.read_text(encoding="utf-8") if args.report.exists() else ""
+        room = PR_BODY_LIMIT - PR_BODY_MARGIN - body_length(existing)
         with open(args.report, "a", encoding="utf-8", newline="\n") as f:
-            f.write(render_report(result))
+            f.write(fit_report(result, room))
     return 0
 
 
