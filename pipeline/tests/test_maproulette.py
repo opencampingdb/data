@@ -161,8 +161,8 @@ def test_part_flags_survive_a_later_merge(repo):
 _items = iter(range(10_000))
 
 
-def fact(place, field, value, source="o1", received="2026-11-04T00:50:54Z", result="applied", **extra):
-    """An applied fact report as the inbox stores it."""
+def fact(place, field, value, source="o1", received="2026-11-04T00:50:54Z", result="applied", first_hand=None, **extra):
+    """An applied fact report as the inbox stores it. first_hand goes on the report, and is absent when None."""
     item = {
         "id": f"fb_{next(_items):026d}",
         "received": received,
@@ -175,13 +175,17 @@ def fact(place, field, value, source="o1", received="2026-11-04T00:50:54Z", resu
         "report": {"kind": "fact", "fact": field, "value": value, "note": "secret words from a traveller"},
         "outcome": {"result": result, "reason": "test", "run": received},
     }
+    if first_hand is not None:
+        item["report"]["first_hand"] = first_hand
     item.update(extra)
     return item
 
 
-def name_report(place, name, source):
+def name_report(place, name, source, first_hand=None):
     item = fact(place, None, None, source=source)
     item["report"] = {"kind": "name", "value": name}
+    if first_hand is not None:
+        item["report"]["first_hand"] = first_hand
     return item
 
 
@@ -229,14 +233,14 @@ def test_one_source_on_two_devices_is_one_traveller(repo, tmp_path):
 def test_two_travellers_make_a_task_with_count_date_and_check(repo, tmp_path):
     write(repo, record(A, 1, facts={"access": "2wd"}, fact_sources={"access": "feedback"}))
     items = [
-        fact(A, "access", "2wd", source="o1", received="2026-10-20T03:00:00Z"),
+        fact(A, "access", "2wd", source="o1", received="2026-10-20T03:00:00Z", first_hand="seen_nearby"),
         fact(A, "access", "2wd", source="o2", received="2026-11-04T00:50:54Z"),
     ]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     (task,) = tasks(repo, TRAVELLER_REPORTS)
     properties = task["features"][0]["properties"]
     assert properties["changes"] == (
-        "- 2 travellers reported the road is fine for 2WD (4wd_only=no), most recently on 4 November 2026.\n"
+        "- 2 travellers reported the road is fine for 2WD (4wd_only=no), 1 of them first-hand, most recently on 4 November 2026.\n"
         "  - Check it with a survey, or street-level photos (Mapillary or Panoramax) of the access road.\n"
         "  - If it checks out, set 4wd_only=no. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:4wd_only"
     )
@@ -263,9 +267,9 @@ def test_reports_on_a_merged_record_count_for_the_kept_one(repo, tmp_path):
         record(A, 1, facts={"fee": False}, fact_sources={"fee": "feedback"}),
         record(B, 2, status="merged", merged_into=A),
     )
-    items = [fact(A, "fee", False, source="o1"), fact(B, "fee", False, source="o2")]
+    items = [fact(A, "fee", False, source="o1", first_hand="seen_nearby"), fact(B, "fee", False, source="o2")]
     write_challenges(repo, [osm_place(1, fee=True)], inbox=inbox(tmp_path, *items), now=NOW)
-    assert changes(repo).startswith("- 2 travellers reported there is no fee to stay (fee=no), most recently on 4 November 2026.")
+    assert changes(repo).startswith("- 2 travellers reported there is no fee to stay (fee=no), 1 of them first-hand, most recently on 4 November 2026.")
     assert "the operator's own sign or website" in changes(repo)
 
 
@@ -310,10 +314,10 @@ def test_descriptive_names():
 
 def test_a_real_name_from_two_travellers_is_sent(repo, tmp_path):
     write(repo, record(A, 1, name="Lake Bend Camp", fact_sources={"name": "feedback"}))
-    items = [name_report(A, "Lake Bend Camp", "o1"), name_report(A, "Lake Bend Camp", "o2")]
+    items = [name_report(A, "Lake Bend Camp", "o1", first_hand="seen_nearby"), name_report(A, "Lake Bend Camp", "o2")]
     write_challenges(repo, [osm_place(1, name="Lake Camp")], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
-        "- 2 travellers reported the name is Lake Bend Camp (name=Lake Bend Camp), most recently on 4 November 2026.\n"
+        "- 2 travellers reported the name is Lake Bend Camp (name=Lake Bend Camp), 1 of them first-hand, most recently on 4 November 2026.\n"
         "  - Check it with the signage at the place, or a survey.\n"
         "  - If it checks out, set name=Lake Bend Camp. The name tag holds the name on the sign, never a description. "
         "OSM wiki: https://wiki.openstreetmap.org/wiki/Key:name"
@@ -323,7 +327,7 @@ def test_a_real_name_from_two_travellers_is_sent(repo, tmp_path):
 def test_closure_from_two_travellers(repo, tmp_path):
     write(repo, record(A, 1, status="closed", fact_sources={"status": "feedback"}))
     closed = fact(A, None, None, source="o1")
-    closed["report"] = {"kind": "closed"}
+    closed["report"] = {"kind": "closed", "first_hand": "says_so"}
     gone = {**fact(A, None, None, source="o2"), "type": "check", "check": {"visited": "2026-11-03", "still_there": False}}
     del gone["report"]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, closed, gone), now=NOW)
@@ -334,6 +338,54 @@ def test_closure_from_two_travellers(repo, tmp_path):
     )
 
 
+# ------------------------------------------------------ first-hand evidence
+
+
+def test_two_travellers_with_none_first_hand_send_nothing(repo, tmp_path):
+    write(repo, record(A, 1, facts={"access": "2wd"}, fact_sources={"access": "feedback"}))
+    items = [fact(A, "access", "2wd", source="o1"), fact(A, "access", "2wd", source="o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_one_traveller_seen_nearby_makes_a_task_that_counts_them(repo, tmp_path):
+    write(repo, record(A, 1, facts={"access": "2wd"}, fact_sources={"access": "feedback"}))
+    items = [fact(A, "access", "2wd", source="o1", first_hand="seen_nearby"), fact(A, "access", "2wd", source="o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo).startswith(
+        "- 2 travellers reported the road is fine for 2WD (4wd_only=no), 1 of them first-hand, most recently on 4 November 2026.\n"
+    )
+
+
+def test_a_traveller_who_says_they_were_there_is_first_hand(repo, tmp_path):
+    write(repo, record(A, 1, facts={"access": "2wd"}, fact_sources={"access": "feedback"}))
+    items = [fact(A, "access", "2wd", source="o1", first_hand="says_so"), fact(A, "access", "2wd", source="o2", first_hand="says_so")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo).startswith("- 2 travellers reported the road is fine for 2WD (4wd_only=no), 2 of them first-hand,")
+
+
+@pytest.mark.parametrize("value", ["yes", True, "seen nearby", {"kind": "says_so"}])
+def test_any_other_first_hand_value_does_not_count(repo, tmp_path, value):
+    write(repo, record(A, 1, facts={"access": "2wd"}, fact_sources={"access": "feedback"}))
+    items = [fact(A, "access", "2wd", source="o1", first_hand=value), fact(A, "access", "2wd", source="o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_a_first_hand_doubt_never_confirms_a_value(repo, tmp_path):
+    first_hand_doubt = doubt(A, "access", "o4")
+    first_hand_doubt["report"]["first_hand"] = "seen_nearby"
+    confirming = [fact(A, "access", "2wd", source=s) for s in ("o1", "o2", "o3")]
+    assert access_task(repo, tmp_path, *confirming, first_hand_doubt) == []
+
+
+def test_a_verified_owner_needs_no_first_hand_source(repo, tmp_path):
+    write(repo, record(A, 1, owner_verified=True, facts={"pets": "leashed"}, fact_sources={"pets": "owner"},
+                       fact_dates={"pets": "2026-11-03T02:10:00Z"}))
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, owner_update(A, facts={"pets": "leashed"})), now=NOW)
+    assert changes(repo).startswith("- The verified owner says dogs are allowed on a lead (dog=leashed), set on 3 November 2026.\n")
+
+
 def doubt(place, field, source, received="2026-11-03T00:00:00Z", result="needs_review"):
     """A doubt as the inbox stores it: the fact is wrong, with no value."""
     item = fact(place, field, None, source=source, received=received, result=result)
@@ -342,7 +394,11 @@ def doubt(place, field, source, received="2026-11-03T00:00:00Z", result="needs_r
 
 
 def confirmed(*sources):
-    return [fact(A, "access", "2wd", source=source) for source in sources]
+    """The same value from each source, the first of them seen nearby."""
+    return [
+        fact(A, "access", "2wd", source=source, first_hand="seen_nearby" if i == 0 else None)
+        for i, source in enumerate(sources)
+    ]
 
 
 def access_task(repo, tmp_path, *items):
@@ -416,9 +472,9 @@ def test_nothing_personal_reaches_a_task(repo, tmp_path):
     )
     write(repo, rec)
     items = [
-        fact(A, "access", "2wd", source="origin-aaaa"), fact(A, "access", "2wd", source="origin-bbbb"),
-        fact(A, "toilets", True, source="origin-aaaa"), fact(A, "toilets", True, source="origin-bbbb"),
-        name_report(A, "Lake Bend Camp", "origin-aaaa"), name_report(A, "Lake Bend Camp", "origin-bbbb"),
+        fact(A, "access", "2wd", source="origin-aaaa", first_hand="seen_nearby"), fact(A, "access", "2wd", source="origin-bbbb"),
+        fact(A, "toilets", True, source="origin-aaaa", first_hand="says_so"), fact(A, "toilets", True, source="origin-bbbb"),
+        name_report(A, "Lake Bend Camp", "origin-aaaa", first_hand="seen_nearby"), name_report(A, "Lake Bend Camp", "origin-bbbb"),
     ]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     text = (repo / "maproulette" / TRAVELLER_REPORTS).read_text(encoding="utf-8")
@@ -429,7 +485,7 @@ def test_nothing_personal_reaches_a_task(repo, tmp_path):
 
 def test_task_goes_once_osm_agrees(repo, tmp_path):
     write(repo, record(A, 1, facts={"fee": False}, fact_sources={"fee": "feedback"}))
-    items = [fact(A, "fee", False, source="o1"), fact(A, "fee", False, source="o2")]
+    items = [fact(A, "fee", False, source="o1", first_hand="seen_nearby"), fact(A, "fee", False, source="o2")]
     write_challenges(repo, [osm_place(1, fee=False)], inbox=inbox(tmp_path, *items), now=NOW)
     assert tasks(repo, TRAVELLER_REPORTS) == []
 
@@ -456,10 +512,10 @@ def test_contributed_facts_stay_out_of_a_task_with_feedback(repo, tmp_path):
     new = record(B, 2, osm=None, kind="dump_point", group="utility", facts={"fee": False},
                  fact_sources={"name": "contributed", "location": "contributed", "fee": "contributed"})
     write(repo, rec, new)
-    items = [fact(A, f, True, source=s) for f in ("dump_station", "drinking_water", "toilets") for s in ("o1", "o2")]
+    items = [fact(A, f, True, source=s, first_hand="seen_nearby" if s == "o1" else None) for f in ("dump_station", "drinking_water", "toilets") for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1, drinking_water=False)], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
-        "- 2 travellers reported there are toilets (toilets=yes), most recently on 4 November 2026.\n"
+        "- 2 travellers reported there are toilets (toilets=yes), 1 of them first-hand, most recently on 4 November 2026.\n"
         "  - Check it with a survey, street-level photos or recent imagery.\n"
         "  - If it checks out, set toilets=yes. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:toilets"
     )
@@ -475,10 +531,10 @@ def test_untagged_facts_and_contact_details_are_left_out(repo, tmp_path):
     write(repo, rec)
     items = [name_report(A, "Call 0412 345 678", s) for s in ("o1", "o2")]
     for field, value in rec["facts"].items():
-        items += [fact(A, field, value, source=s) for s in ("o1", "o2")]
+        items += [fact(A, field, value, source=s, first_hand="seen_nearby" if s == "o1" else None) for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo).splitlines()[0] == (
-        "- 2 travellers reported the website is https://lake.example (website=https://lake.example), most recently on 4 November 2026."
+        "- 2 travellers reported the website is https://lake.example (website=https://lake.example), 1 of them first-hand, most recently on 4 November 2026."
     )
     assert len(changes(repo).splitlines()) == 3
 
@@ -500,7 +556,7 @@ def test_osm_tags_follow_the_extract():
 
 def test_files_are_stable(repo, tmp_path):
     write(repo, record(A, 1, facts={"fee": False}, fact_sources={"fee": "feedback"}))
-    box = inbox(tmp_path, fact(A, "fee", False, source="o1"), fact(A, "fee", False, source="o2"))
+    box = inbox(tmp_path, fact(A, "fee", False, source="o1", first_hand="seen_nearby"), fact(A, "fee", False, source="o2"))
     extract = [osm_place(1)]
     write_challenges(repo, extract, inbox=box, now=NOW)
     first = (repo / "maproulette" / TRAVELLER_REPORTS).read_bytes()
@@ -512,7 +568,7 @@ def test_files_are_stable(repo, tmp_path):
 
 def test_report_names_new_and_gone_tasks(repo, tmp_path):
     write(repo, record(A, 1, facts={"fee": False}, fact_sources={"fee": "feedback"}))
-    box = inbox(tmp_path, fact(A, "fee", False, source="o1"), fact(A, "fee", False, source="o2"))
+    box = inbox(tmp_path, fact(A, "fee", False, source="o1", first_hand="seen_nearby"), fact(A, "fee", False, source="o2"))
     first = write_challenges(repo, [osm_place(1)], inbox=box, now=NOW)
     assert first[TRAVELLER_REPORTS]["added"] == [(A, "Lake Camp")]
     second = write_challenges(repo, [osm_place(1, fee=False)], inbox=box, now=NOW)
@@ -549,7 +605,7 @@ def test_crowd_opening_hours_with_a_comment_is_never_a_task(repo, tmp_path):
 def test_crowd_opening_hours_without_a_comment_is_still_sent(repo, tmp_path):
     value = "Mo-Su 08:00-17:00"
     write(repo, record(A, 1, facts={"opening_hours": value}, fact_sources={"opening_hours": "feedback"}))
-    items = [fact(A, "opening_hours", value, source=s) for s in ("o1", "o2")]
+    items = [fact(A, "opening_hours", value, source=s, first_hand="seen_nearby" if s == "o1" else None) for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     assert "(opening_hours=Mo-Su 08:00-17:00)" in changes(repo)
 
@@ -567,10 +623,10 @@ def test_verified_owner_opening_hours_comment_is_still_sent(repo, tmp_path):
 
 def test_travellers_bins_differing_from_osm_make_a_task(repo, tmp_path):
     write(repo, record(A, 1, facts={"bins": True}, fact_sources={"bins": "feedback"}))
-    items = [fact(A, "bins", True, source=s) for s in ("o1", "o2")]
+    items = [fact(A, "bins", True, source=s, first_hand="seen_nearby" if s == "o1" else None) for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1, bins=False)], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
-        "- 2 travellers reported there are bins (bin=yes), most recently on 4 November 2026.\n"
+        "- 2 travellers reported there are bins (bin=yes), 1 of them first-hand, most recently on 4 November 2026.\n"
         "  - Check it with a survey, street-level photos or recent imagery.\n"
         "  - If it checks out, set bin=yes. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:bin"
     )
@@ -579,10 +635,10 @@ def test_travellers_bins_differing_from_osm_make_a_task(repo, tmp_path):
 def test_booking_required_is_sent_and_the_booking_link_never_is(repo, tmp_path):
     facts = {"booking_required": False, "booking_url": "https://book.example/lake"}
     write(repo, record(A, 1, facts=facts, fact_sources={field: "feedback" for field in facts}))
-    items = [fact(A, field, value, source=s) for field, value in facts.items() for s in ("o1", "o2")]
+    items = [fact(A, field, value, source=s, first_hand="seen_nearby" if s == "o1" else None) for field, value in facts.items() for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1, booking_required=True)], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
-        "- 2 travellers reported no booking is needed (reservation=no), most recently on 4 November 2026.\n"
+        "- 2 travellers reported no booking is needed (reservation=no), 1 of them first-hand, most recently on 4 November 2026.\n"
         "  - Check it with the operator's own sign or website.\n"
         "  - If it checks out, set reservation=no. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:reservation"
     )
@@ -598,10 +654,10 @@ def test_a_booking_link_alone_never_makes_a_task(repo, tmp_path):
 
 def test_travellers_toilet_type_differing_from_osm_make_a_task(repo, tmp_path):
     write(repo, record(A, 1, facts={"toilet_type": "pit"}, fact_sources={"toilet_type": "feedback"}))
-    items = [fact(A, "toilet_type", "pit", source=s) for s in ("o1", "o2")]
+    items = [fact(A, "toilet_type", "pit", source=s, first_hand="seen_nearby" if s == "o1" else None) for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1, toilet_type="flush")], inbox=inbox(tmp_path, *items), now=NOW)
     assert changes(repo) == (
-        "- 2 travellers reported the toilets are pit toilets (toilets:disposal=pitlatrine), most recently on 4 November 2026.\n"
+        "- 2 travellers reported the toilets are pit toilets (toilets:disposal=pitlatrine), 1 of them first-hand, most recently on 4 November 2026.\n"
         "  - Check it with a survey, or the operator's own sign or website.\n"
         "  - If it checks out, set toilets:disposal=pitlatrine. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:toilets:disposal"
     )
@@ -666,10 +722,77 @@ def test_a_second_phone_without_a_first_is_never_sent(repo, tmp_path):
 @pytest.mark.parametrize("field, value", [
     ("pub", True), ("fuel", True), ("car_wash", True), ("crocodiles", True),
     ("nearest_beach", {"distance_m": 300}), ("nearest_boat_ramp", {"distance_m": 900}),
+    ("nearest_major_road", {"distance_m": 200}),
 ])
 def test_a_nearby_fact_never_makes_a_task(repo, tmp_path, field, value):
     # These come from other OSM objects, so no tag on the place's own object would show them.
+    # One source is first-hand, so the evidence is enough and only the fact holds the task back.
     write(repo, record(A, 1, facts={field: value}, fact_sources={field: "feedback"}))
-    items = [fact(A, field, value, source=s) for s in ("o1", "o2")]
+    items = [fact(A, field, value, source="o1", first_hand="seen_nearby"), fact(A, field, value, source="o2")]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+@pytest.mark.parametrize("value, words, tag", [
+    (True, "motorbikes may enter", "motorcycle=yes"),
+    (False, "motorbikes may not enter", "motorcycle=no"),
+])
+def test_travellers_motorbikes_differing_from_osm_make_a_task(repo, tmp_path, value, words, tag):
+    write(repo, record(A, 1, facts={"motorbikes": value}, fact_sources={"motorbikes": "feedback"}))
+    items = [fact(A, "motorbikes", value, source="o1", first_hand="seen_nearby"), fact(A, "motorbikes", value, source="o2")]
+    write_challenges(repo, [osm_place(1, motorbikes=not value)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert changes(repo) == (
+        f"- 2 travellers reported {words} ({tag}), 1 of them first-hand, most recently on 4 November 2026.\n"
+        "  - Check it with a survey, or the operator's own sign or website.\n"
+        f"  - If it checks out, set {tag}. OSM wiki: https://wiki.openstreetmap.org/wiki/Key:motorcycle"
+    )
+
+
+def test_travellers_motorbikes_without_a_first_hand_source_send_nothing(repo, tmp_path):
+    write(repo, record(A, 1, facts={"motorbikes": False}, fact_sources={"motorbikes": "feedback"}))
+    items = [fact(A, "motorbikes", False, source=s) for s in ("o1", "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_a_retired_seasonal_closure_never_makes_a_task(repo, tmp_path):
+    write(repo, record(A, 1, facts={"seasonal_closure": True}, fact_sources={"seasonal_closure": "feedback"}))
+    items = [
+        fact(A, "seasonal_closure", True, source="o1", first_hand="seen_nearby"),
+        fact(A, "seasonal_closure", True, source="o2"),
+    ]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+    assert osm_tag("seasonal_closure", True) is None
+
+
+def closed_report(place, source, first_hand=None):
+    item = fact(place, None, None, source=source)
+    item["report"] = {"kind": "closed"}
+    if first_hand is not None:
+        item["report"]["first_hand"] = first_hand
+    return item
+
+
+@pytest.mark.parametrize("first_hand, sent", [("seen_nearby", True), ("says_so", True), (None, False)])
+def test_closure_reports_count_when_one_carries_first_hand(repo, tmp_path, first_hand, sent):
+    write(repo, record(A, 1, status="closed", fact_sources={"status": "feedback"}))
+    items = [closed_report(A, "o1", first_hand), closed_report(A, "o2")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
+    if sent:
+        assert changes(repo).startswith("- 2 travellers reported it has closed for good, 1 of them first-hand,")
+    else:
+        assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+@pytest.mark.parametrize("first_hand, sent", [("seen_nearby", True), ("says_so", True), (None, False)])
+def test_name_reports_count_when_one_carries_first_hand(repo, tmp_path, first_hand, sent):
+    write(repo, record(A, 1, name="Lake Bend Camp", fact_sources={"name": "feedback"}))
+    items = [name_report(A, "Lake Bend Camp", "o1", first_hand=first_hand), name_report(A, "Lake Bend Camp", "o2")]
+    write_challenges(repo, [osm_place(1, name="Lake Camp")], inbox=inbox(tmp_path, *items), now=NOW)
+    if sent:
+        assert changes(repo).startswith(
+            "- 2 travellers reported the name is Lake Bend Camp (name=Lake Bend Camp), 1 of them first-hand,"
+        )
+    else:
+        assert tasks(repo, TRAVELLER_REPORTS) == []

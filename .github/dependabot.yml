@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # opening_hours.js, the reference the out of spec check runs (tools/oh-check).
+  - package-ecosystem: npm
+    directory: /tools/oh-check
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 2

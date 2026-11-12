@@ -327,6 +327,7 @@ def test_nearby_facts_from_osm_are_allowed(synced):
     new = {
         "nearest_beach": {"distance_m": 320, "name": "Fixture Main Beach"},
         "nearest_boat_ramp": {"distance_m": 3000},
+        "nearest_major_road": {"distance_m": 140, "name": "Example Highway"},
         "pub": True,
         "fuel": True,
         "car_wash": True,
@@ -338,12 +339,16 @@ def test_nearby_facts_from_osm_are_allowed(synced):
     rec["facts"]["nearest_boat_ramp"] = {"distance_m": 5010}
     write_place(path, rec)
     assert any("nearest_boat_ramp" in e for e in validate_repo(synced))
+    rec["facts"]["nearest_boat_ramp"] = {"distance_m": 3000}
+    rec["facts"]["nearest_major_road"] = {"distance_m": 510}
+    write_place(path, rec)
+    assert any("nearest_major_road" in e for e in validate_repo(synced))
 
 
-@pytest.mark.parametrize("fact", ["nearest_beach", "nearest_boat_ramp"])
+@pytest.mark.parametrize("fact", ["nearest_beach", "nearest_boat_ramp", "nearest_major_road"])
 def test_reported_nearby_fact_is_refused(synced, fact):
     path, rec = first_place(synced)
-    rec["facts"][fact] = {"distance_m": 1200}
+    rec["facts"][fact] = {"distance_m": 200}
     rec["fact_sources"][fact] = "feedback"
     rec["fact_dates"] = {fact: rec["updated"]}
     write_place(path, rec)

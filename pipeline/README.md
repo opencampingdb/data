@@ -18,6 +18,7 @@ Run them from the repository root after `python -m pip install -r requirements.t
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for the reviewer. The feedback engine reads the `place` column. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, a section of the sync report (sync runs this too). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
+| Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`). Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
 
 Tests: `python -m pytest`.
 
@@ -187,6 +188,12 @@ A fact is only written when the tag has a value we can read. Any other value
 leaves the fact out, which means "not known". Values are compared without
 regard to case. Where OSM lists several values separated by `;`, the first is used.
 
+Each fact in `schema/place.schema.json` is marked `mapped`, `proposable`,
+`ocdb_only` or `retired` (`x-ocdb-class`, with the OSM tag, the suggested
+form, or for a retired fact where its information now lives, in `x-osm`).
+The facts below and the nearby facts are mapped. The extensions are listed
+in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
+
 | OSM tag | Fact | Mapping |
 |---|---|---|
 | `fee` | `fee` | `no` is `false`. `yes`, or any value with a digit or `$` (a price), is `true`. `donation` is `"donation"`. Others are left out. `fee=no` on a commercial park is left out too (see below). |
@@ -201,6 +208,7 @@ regard to case. Where OSM lists several values separated by `;`, the first is us
 | `sanitary_dump_station` | `dump_station` | `yes` / `no`. `customers` is `true` on a place to stay (a kind in the overnight group), whose guests may use it, and left out on any other kind |
 | `wheelchair` | `wheelchair` | `yes` / `no`. `limited` is left out |
 | `motorhome` | `motorhomes` | `yes` / `no` |
+| `motorcycle`, then `motor_vehicle` | `motorbikes` | Motorbikes may enter (a permission, not whether the way in suits one). `yes`, `designated` or `permissive` is `true`, `no` is `false`, others are left out. `motor_vehicle` is read the same way only when there is no `motorcycle` tag, so `motor_vehicle=no` on a walk-in site is `false` |
 | `washing_machine` | `laundry` | `yes` / `no` |
 | `kitchen` | `kitchen` | `yes` / `no` |
 | `bbq` | `bbq` | `yes` / `no` |
@@ -252,7 +260,8 @@ may stay, and comes from the OSM `access` tag.
 #### Nearby features
 
 These facts come from other OSM objects inside or near the place,
-collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
+collected in the same read (`pipeline/water.py`, `pipeline/nearby.py` and
+`pipeline/roads.py`):
 
 - `nearest_beach`: the nearest `natural=beach` within 5 km, as an area, a
   node or an open line, with `distance_m` from the place's location to the
@@ -271,6 +280,19 @@ collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
   the nearest point, rounded to 10 m half up, `name` only when 100
   characters or fewer, ties to the ramp read first). A slipway is also a
   place of kind `boat_ramp`, and never counts for itself.
+- `nearest_major_road`: the nearest major road within 500 m
+  (`pipeline/roads.py`), with `distance_m` from the place's location to the
+  nearest point of the road's line, worked out and rounded like
+  `nearest_beach`, and the road's `name`, or its `ref` when it has no name
+  (left out when it has neither, or when it is longer than 100 characters).
+  A major road is the set the geometry sidecar uses
+  (`pipeline.geometry.is_major_road`): `highway=motorway`, `trunk`,
+  `primary` or `secondary`, their `_link` roads, and a `tertiary` road with
+  `oneway=yes` or `-1`, one carriageway of a divided road. Every such way
+  counts as a line through its nodes, closed or not. The roads come from the
+  same read as the places, and the sidecar's road lines are written from
+  them. Ties go to the road read first. It is separate from `near_road`, a
+  traveller's report that road noise carries.
 - `pub`, `fuel` and `car_wash: true` when an `amenity=pub`, `amenity=fuel`
   or `amenity=car_wash` lies inside the place's area (a closed way or a
   multipolygon) or on its edge. A node counts at its position, a closed way
@@ -281,8 +303,8 @@ collected in the same read (`pipeline/water.py` and `pipeline/nearby.py`):
 
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag
-in use for sharks or dangerous jellyfish (`sharks`, `marine_stingers`), so
-those facts come only from fact reports.
+in use for sharks or dangerous jellyfish (taginfo, 12 Nov 2026: 0 uses), so
+those facts (`sharks`, `marine_stingers`) come only from fact reports.
 
 The extract never infers a fact from the kind: a `caravan_park` does not
 get `caravans: true` unless the `caravans` tag says so. `water_type` is the

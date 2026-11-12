@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Major roads near places, for pipeline.roads (nearest_major_road).
+At latitude -30 one degree of latitude is 111,195 m and one degree of
+longitude about 96,298 m (111,195 m times cos 30).
+-->
+<osm version="0.6" generator="fixture">
+  <!-- Place 1: a camp site at (-30.0, 150.0). -->
+  <node id="1" version="1" lat="-30.0" lon="150.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Highway Camp"/>
+  </node>
+  <!-- Place 2: a rest area at (-30.1, 150.0). -->
+  <node id="2" version="1" lat="-30.1" lon="150.0">
+    <tag k="highway" v="rest_area"/>
+  </node>
+  <!-- Place 3: a camp site at (-30.2, 150.0). -->
+  <node id="3" version="1" lat="-30.2" lon="150.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <!-- Place 4: a camp site at (-30.3, 150.0). -->
+  <node id="4" version="1" lat="-30.3" lon="150.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+
+  <!-- A named trunk road running north to south 0.002 degrees (about 193 m) east of place 1. -->
+  <node id="101" version="1" lat="-29.99" lon="150.002"/>
+  <node id="102" version="1" lat="-30.01" lon="150.002"/>
+  <way id="501" version="1">
+    <nd ref="101"/><nd ref="102"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="name" v="Fixture Highway"/>
+    <tag k="ref" v="A1"/>
+  </way>
+  <!-- A secondary road 0.005 degrees (about 481 m) west of place 1: further than the trunk. -->
+  <node id="103" version="1" lat="-29.99" lon="149.995"/>
+  <node id="104" version="1" lat="-30.01" lon="149.995"/>
+  <way id="502" version="1">
+    <nd ref="103"/><nd ref="104"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="name" v="Fixture Back Road"/>
+  </way>
+
+  <!-- A residential street 0.0005 degrees (about 56 m) south of place 2: not a major road. -->
+  <node id="111" version="1" lat="-30.1005" lon="149.99"/>
+  <node id="112" version="1" lat="-30.1005" lon="150.01"/>
+  <way id="511" version="1">
+    <nd ref="111"/><nd ref="112"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Fixture Street"/>
+  </way>
+  <!-- A primary road with only a ref, 0.003 degrees (about 334 m) south of place 2. -->
+  <node id="113" version="1" lat="-30.103" lon="149.99"/>
+  <node id="114" version="1" lat="-30.103" lon="150.01"/>
+  <way id="512" version="1">
+    <nd ref="113"/><nd ref="114"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="B52"/>
+  </way>
+
+  <!-- An unnamed two-way tertiary road 0.0002 degrees (about 22 m) north of place 3: not major. -->
+  <node id="121" version="1" lat="-30.1998" lon="149.99"/>
+  <node id="122" version="1" lat="-30.1998" lon="150.01"/>
+  <way id="521" version="1">
+    <nd ref="121"/><nd ref="122"/>
+    <tag k="highway" v="tertiary"/>
+  </way>
+  <!-- An unnamed one-way tertiary road (one carriageway of a divided road) 0.0009 degrees (about 100 m) south of place 3. -->
+  <node id="123" version="1" lat="-30.2009" lon="149.99"/>
+  <node id="124" version="1" lat="-30.2009" lon="150.01"/>
+  <way id="522" version="1">
+    <nd ref="123"/><nd ref="124"/>
+    <tag k="highway" v="tertiary"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+
+  <!-- A motorway 0.0046 degrees (about 512 m) north of place 4: beyond the radius. -->
+  <node id="131" version="1" lat="-30.2954" lon="149.99"/>
+  <node id="132" version="1" lat="-30.2954" lon="150.01"/>
+  <way id="531" version="1">
+    <nd ref="131"/><nd ref="132"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="name" v="Fixture Motorway"/>
+  </way>
+</osm>
