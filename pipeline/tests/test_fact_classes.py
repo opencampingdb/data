@@ -61,7 +61,7 @@ def test_proposable_facts_are_the_agreed_list():
         "offroad_tracks", "boat_ramp_nearby", "telstra_signal", "mobile_signal",
         "tv_reception", "pet_sitting", "lpg", "vehicle_storage",
         "self_contained_only", "sharks", "marine_stingers", "seasonal_closure",
-        "dangerous_when_wet",
+        "dangerous_when_wet", "charge_powered",
     }
 
 

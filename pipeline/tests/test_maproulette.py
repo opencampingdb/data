@@ -735,7 +735,7 @@ def test_a_nearby_fact_never_makes_a_task(repo, tmp_path, field, value):
 def test_crowd_charges_are_sent_with_a_check_date(repo, tmp_path):
     facts = {"charge": "57 AUD/night", "charge_conditional": "75 AUD/night @ (Dec-Jan)", "charge_powered": "68 AUD/night"}
     write(repo, record(A, 1, facts=facts, fact_sources={k: "feedback" for k in facts}))
-    items = [fact(A, k, v, source=s) for k, v in facts.items() for s in ("o1", "o2")]
+    items = [fact(A, k, v, source=s, first_hand="seen_nearby" if s == "o1" else None) for k, v in facts.items() for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     text = changes(repo)
     assert "(charge=57 AUD/night)" in text
@@ -751,6 +751,13 @@ def test_crowd_charges_are_sent_with_a_check_date(repo, tmp_path):
 
 def test_a_charge_osm_already_has_is_not_a_task(repo, tmp_path):
     write(repo, record(A, 1, facts={"charge": "57 AUD/night"}, fact_sources={"charge": "feedback"}))
-    items = [fact(A, "charge", "57 AUD/night", source=s) for s in ("o1", "o2")]
+    items = [fact(A, "charge", "57 AUD/night", source=s, first_hand="says_so") for s in ("o1", "o2")]
     write_challenges(repo, [osm_place(1, charge="57 AUD/night")], inbox=inbox(tmp_path, *items), now=NOW)
+    assert tasks(repo, TRAVELLER_REPORTS) == []
+
+
+def test_a_charge_with_no_first_hand_report_is_not_a_task(repo, tmp_path):
+    write(repo, record(A, 1, facts={"charge": "57 AUD/night"}, fact_sources={"charge": "feedback"}))
+    items = [fact(A, "charge", "57 AUD/night", source=s) for s in ("o1", "o2", "o3")]
+    write_challenges(repo, [osm_place(1)], inbox=inbox(tmp_path, *items), now=NOW)
     assert tasks(repo, TRAVELLER_REPORTS) == []
