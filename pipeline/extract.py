@@ -92,6 +92,7 @@ TOILET_TYPES = {"flush": "flush", "pitlatrine": "pit", "chemical": "chemical", "
 OPERATOR_MAX = 200
 PHONE_MAX = 100
 URL_MAX = 500
+MAX_STAY_MAX = 100
 
 # Social pages: fact key -> OSM keys, the first with a value wins. Only
 # https links are kept.
@@ -152,6 +153,11 @@ ENTRY_VALUES = {
 def first_value(value: str) -> str:
     """OSM allows several values separated by ';'. Keep the first."""
     return value.split(";")[0].strip()
+
+
+def kept_url(url: str, schemes: tuple[str, ...] = ("https://",)) -> bool:
+    """Whether a link starts with one of schemes and fits the place schema's URL_MAX."""
+    return url.startswith(schemes) and len(url) <= URL_MAX
 
 
 def yes_no(value: str | None) -> bool | None:
@@ -310,7 +316,9 @@ def facts_from_tags(tags: dict) -> dict:
         facts["pets_months"] = months
 
     if tags.get("maxstay", "").strip():
-        facts["max_stay"] = parse_maxstay(tags["maxstay"])
+        max_stay = parse_maxstay(tags["maxstay"])
+        if len(max_stay) <= MAX_STAY_MAX:
+            facts["max_stay"] = max_stay
 
     if tags.get("opening_hours", "").strip():
         facts["opening_hours"] = tags["opening_hours"].strip()
@@ -321,11 +329,12 @@ def facts_from_tags(tags: dict) -> dict:
         if value:
             facts[fact_key] = value[:255]
 
-    # website wins over contact:website. Only http and https links are kept.
+    # website wins over contact:website. Only http and https links are kept,
+    # with the scheme in lower case as the place schema writes it.
     for key in ("website", "contact:website"):
         if key in tags:
             url = first_value(tags[key])
-            if url.lower().startswith(("http://", "https://")):
+            if kept_url(url, ("http://", "https://")):
                 facts["website"] = url
             break
 
@@ -333,17 +342,20 @@ def facts_from_tags(tags: dict) -> dict:
     for key in ("website:booking", "reservation:website"):
         url = first_value(tags.get(key, ""))
         if url:
-            if url.lower().startswith("https://") and len(url) <= URL_MAX:
+            if kept_url(url):
                 facts["booking_url"] = url
             break
 
     for key in ("phone", "contact:phone"):
         if key in tags and first_value(tags[key]):
             numbers = tags[key].split(";")
-            facts["phone"] = first_value(tags[key])
+            first = first_value(tags[key])
+            if len(first) > PHONE_MAX:
+                break
+            facts["phone"] = first
             # The second number, from the same key, is phone_2, unless it repeats the first.
             second = numbers[1].strip() if len(numbers) > 1 else ""
-            if second and second != facts["phone"] and len(second) <= PHONE_MAX:
+            if second and second != first and len(second) <= PHONE_MAX:
                 facts["phone_2"] = second
             break
 
@@ -358,7 +370,7 @@ def facts_from_tags(tags: dict) -> dict:
         for key in osm_keys:
             if key in tags:
                 url = first_value(tags[key])
-                if url.lower().startswith("https://") and len(url) <= 500:
+                if kept_url(url):
                     facts[fact_key] = url
                 break
 

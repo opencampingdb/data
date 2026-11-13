@@ -576,3 +576,44 @@ def test_osm_fact_whose_tag_has_gone_is_removed(repo, tmp_path):
     assert "fishing" not in camp["facts"]
     assert "fishing" not in camp["fact_sources"]
     assert camp["facts"]["bins"] is True
+
+
+def test_record_the_place_schema_refuses_is_skipped_and_reported(repo, tmp_path):
+    from pipeline.sync import main
+    from pipeline.validate import validate_repo
+
+    good = extract_file(camp_osm(tmp_path, 1, {"maxstay": "48 hours"}))[0]
+    bad = json.loads(json.dumps(good))
+    bad["osm"]["id"] = 9002
+    bad["name"] = "Refused Camp"
+    bad["facts"]["max_stay"] = "x" * 150
+    extract = tmp_path / "extract.ndjson"
+    extract.write_text("".join(json.dumps(p) + "\n" for p in (good, bad)), encoding="utf-8")
+    report = tmp_path / "report.md"
+    summary = tmp_path / "summary.json"
+
+    assert main([str(extract), "--root", str(repo), "--report", str(report), "--summary", str(summary)]) == 0
+
+    assert sorted(load_all(repo)) == [("node", 9001)]
+    assert validate_repo(repo) == []
+    text = report.read_text(encoding="utf-8")
+    assert "## Skipped" in text
+    assert "Refused Camp" in text
+    assert "node/9002" in text
+    assert "facts/max_stay too long" in text
+    assert "xxxx" not in text
+    assert json.loads(summary.read_text(encoding="utf-8"))["skipped"] == 1
+
+
+def test_refresh_the_place_schema_refuses_leaves_the_record_as_it_was(repo, tmp_path):
+    sync(repo, extract_file(camp_osm(tmp_path, 1, {"maxstay": "48 hours"})), now=T1)
+    before = snapshot(repo)
+
+    place = extract_file(camp_osm(tmp_path, 2, {"maxstay": "48 hours"}))[0]
+    place["facts"]["phone"] = "9" * 150
+    result = sync(repo, [place], now=T2)
+
+    assert snapshot(repo) == before
+    assert result.updated == []
+    assert [s["record"]["osm"]["id"] for s in result.skipped] == [9001]
+    assert "Sync Test Park" in render_report(result)

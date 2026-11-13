@@ -348,6 +348,12 @@ Each release makes at most two changesets into itself:
   that is not the release just before. A phone that was current yesterday
   catches up with one file.
 
+Neither is made from a release whose database holds a review that has since
+left, unless its contributor replaced it with a newer review, because a
+changeset holds the old values of a row it deletes. The full rule is in
+[pipeline/README.md](pipeline/README.md#database-and-changesets). An app on
+that release finds no path and downloads the whole database (step 3 below).
+
 The list starts again, empty, when there is no earlier database to start
 from: the first release with a database, and the first release after a
 `layout_version` rise.
@@ -412,8 +418,10 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   without `File:`), `width` and `height` of the original, `thumb` (a 960 px
   wide standard thumbnail) and `full` (1920 px, or the original when it is
   smaller), `page` (the file's Commons page), `licence` (for example
-  `CC BY-SA 4.0` or `CC0`), `licence_url` when the licence has one, `credit`
-  (the author, plain text; absent only for public domain and CC0 files),
+  `CC BY-SA 4.0` or `CC0`), `licence_url` when the licence has one (always a
+  page on `creativecommons.org`, or Flickr's page for files with no known
+  copyright restrictions), `credit` (the author, plain text with no angle
+  brackets; absent only for public domain and CC0 files),
   `match` and `distance_m` (from the place). `match` says how sure the match
   is, from the file's title: `name` (the place's name with a camping word, or
   its whole name, within 2 km), `camping` (a camping word within 250 m, only

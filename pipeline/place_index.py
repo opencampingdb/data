@@ -7,6 +7,11 @@ It reads the token from the INTAKE_PLACES_TOKEN environment variable. It
 asks the intake for the hash of every cell it holds (GET /v1/place-index/cells)
 and sends only the cells whose hash differs (PUT /v1/place-index), a few cells
 per call, so a release that changes a few places writes only their cells.
+
+The URL must be https with a host and nothing else before the path. With
+--configured-url it must also have the host of that URL, so a release run
+sends the token only to its configured intake. A redirect is not followed.
+--check prints the checked base URL and sends nothing.
 """
 
 import argparse
@@ -16,6 +21,7 @@ import json
 import os
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from collections.abc import Callable
 from pathlib import Path
@@ -85,10 +91,39 @@ def changed_parts(cells: dict[Cell, list[str]], held: dict[Cell, str]) -> list[b
     return bodies
 
 
+def intake_base(url: str, configured: str | None = None) -> str:
+    """The intake base URL without a trailing slash, or ValueError if it is not plain https.
+
+    With `configured`, the URL must also have the host (and port) of that URL.
+    """
+    if any(ord(c) <= 0x20 or ord(c) == 0x7F for c in url):
+        raise ValueError("the intake URL holds a space or control character")
+    parts = urllib.parse.urlsplit(url)
+    if parts.scheme != "https" or not parts.hostname:
+        raise ValueError("the intake URL must be https with a host")
+    if parts.username is not None or parts.password is not None or parts.query or parts.fragment:
+        raise ValueError("the intake URL must not hold a user, query or fragment")
+    if configured is not None:
+        expected = urllib.parse.urlsplit(configured)
+        if expected.scheme != "https" or (expected.hostname, expected.port) != (parts.hostname, parts.port):
+            raise ValueError("the intake URL must have the host of the configured https intake URL")
+    return url.rstrip("/")
+
+
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Answers a redirect with its own status instead of following it."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_opener = urllib.request.build_opener(_NoRedirect)
+
+
 def urllib_send(method: str, url: str, headers: dict[str, str], body: bytes | None) -> tuple[int, bytes]:
     request = urllib.request.Request(url, data=body, method=method, headers=headers)
     try:
-        with urllib.request.urlopen(request, timeout=120) as response:
+        with _opener.open(request, timeout=120) as response:
             return response.status, response.read()
     except urllib.error.HTTPError as error:
         return error.code, error.read()
@@ -96,7 +131,7 @@ def urllib_send(method: str, url: str, headers: dict[str, str], body: bytes | No
 
 def upload(path: Path, url: str, token: str, send: Send = urllib_send, log=print) -> int:
     """Send the cells of the index file at `path` that the intake at `url` lacks. Returns the cells sent."""
-    base = url.rstrip("/")
+    base = intake_base(url)
     auth = {"authorization": f"Bearer {token}", "user-agent": "opencampingdb-release"}
     status, body = send("GET", f"{base}/v1/place-index/cells", auth, None)
     if status != 200:
@@ -122,14 +157,25 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--file", type=Path, default=Path("dist") / PLACE_INDEX_FILE)
     parser.add_argument("--url", required=True, help="the intake's base URL")
+    parser.add_argument("--configured-url", help="the configured intake URL, whose host --url must have")
+    parser.add_argument("--check", action="store_true", help="print the checked base URL and send nothing")
     args = parser.parse_args(argv)
+
+    try:
+        base = intake_base(args.url, args.configured_url)
+    except ValueError as error:
+        print(error, file=sys.stderr)
+        return 1
+    if args.check:
+        print(base)
+        return 0
 
     token = os.environ.get(TOKEN_ENV, "")
     if not token:
         print(f"{TOKEN_ENV} is not set.", file=sys.stderr)
         return 2
     try:
-        upload(args.file, args.url, token)
+        upload(args.file, base, token)
     except (RuntimeError, ValueError, OSError) as error:
         print(error, file=sys.stderr)
         return 1

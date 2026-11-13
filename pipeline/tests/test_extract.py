@@ -583,3 +583,68 @@ def test_check_dates_come_from_check_date_tags_of_charges_osm_has():
     assert osm_link("way", 7, 3, None, tags) == {"type": "way", "id": 7, "version": 3, "check_dates": {"charge": "2026-11-03"}}
     assert "check_dates" not in osm_link("node", 1, 1, None, {"charge": "5 AUD", "check_date:charge": "Nov 2026"})
     assert "check_dates" not in osm_link("node", 1, 1, None)
+
+
+def facts_validator():
+    import json
+
+    from jsonschema import Draft202012Validator
+
+    schema = json.loads((Path(__file__).parents[2] / "schema" / "place.schema.json").read_text(encoding="utf-8"))
+    return Draft202012Validator(schema["properties"]["facts"])
+
+
+# OSM values hold up to 255 characters.
+LONG = "x" * 255
+DIGITS = "9" * 255
+
+
+def test_extracted_facts_always_pass_the_place_schema():
+    validator = facts_validator()
+    tag_sets = [
+        {"maxstay": LONG},
+        {"phone": DIGITS},
+        {"contact:phone": DIGITS + ";+61 2 5550 0100"},
+        {"website": "HTTP://example.invalid/"},
+        {"contact:website": "Https://example.invalid/"},
+        {"website": "https://example.invalid/" + "a" * 600},
+        {"website:booking": "HTTPS://example.invalid/"},
+        {"reservation:website": "HTTPS://example.invalid/"},
+        {"contact:facebook": "HTTPS://example.invalid/p"},
+        {"contact:instagram": "HTTPS://example.invalid/p"},
+        {"tiktok": "HTTPS://example.invalid/p"},
+        {"contact:x": "HTTPS://example.invalid/p"},
+        {"opening_hours": LONG},
+        {"operator": LONG},
+        {"charge": LONG, "charge:conditional": LONG, "charge:electricity": LONG},
+        {"email": "a@" + "b" * 250 + ".au"},
+    ]
+    for tags in tag_sets:
+        facts = facts_from_tags({"tourism": "camp_site", **tags})
+        errors = [e.message for e in validator.iter_errors(facts)]
+        assert errors == [], (tags, errors)
+
+
+def test_values_the_place_schema_refuses_are_left_out():
+    assert "max_stay" not in facts_from_tags({"maxstay": LONG})
+    assert "phone" not in facts_from_tags({"phone": DIGITS})
+    assert facts_from_tags({"contact:phone": DIGITS + ";+61 2 5550 0100"}) == {}
+    assert "website" not in facts_from_tags({"website": "HTTP://example.invalid/"})
+    assert "website" not in facts_from_tags({"website": "https://example.invalid/" + "a" * 600})
+    assert "booking_url" not in facts_from_tags({"website:booking": "HTTPS://example.invalid/"})
+    assert "facebook" not in facts_from_tags({"contact:facebook": "HTTPS://example.invalid/p"})
+
+
+def test_values_the_place_schema_accepts_are_kept():
+    facts = facts_from_tags({
+        "maxstay": "48 hours",
+        "phone": "+61 2 5550 0100",
+        "website": "http://example.invalid/",
+        "website:booking": "https://example.invalid/book",
+        "contact:facebook": "https://example.invalid/p",
+    })
+    assert facts["max_stay"] == "48h"
+    assert facts["phone"] == "+61 2 5550 0100"
+    assert facts["website"] == "http://example.invalid/"
+    assert facts["booking_url"] == "https://example.invalid/book"
+    assert facts["facebook"] == "https://example.invalid/p"

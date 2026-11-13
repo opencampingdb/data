@@ -6,7 +6,9 @@ Usage:
 Writes commons/matches.ndjson: one line per place in the overnight group,
 sorted by place id, {"place", "checked", "rules", "files"}. files lists up to
 MAX_FILES Commons files that are likely to show the place, best first, each
-with the credit and licence a reader must show beside it. A place with no
+with the credit and licence a reader must show beside it. The credit is
+plain text with no angle brackets, and a licence link is kept only when it
+is on a licence page in LICENCE_URL_PREFIXES. A place with no
 match has an empty list, so the next run knows it was checked.
 
 Each run checks, at most --max-places of them: first the places checked under
@@ -155,8 +157,9 @@ def distinctive_words(name: str | None) -> set[str]:
 
 
 def plain_text(value: str | None, limit: int = 200) -> str:
-    """Text of an extmetadata HTML value, tags removed and spaces collapsed."""
-    text = html.unescape(TAG_RE.sub(" ", value or ""))
+    """Text of an extmetadata HTML value: entities decoded, then tags and any angle bracket left removed, spaces collapsed."""
+    text = TAG_RE.sub(" ", html.unescape(value or ""))
+    text = text.replace("<", " ").replace(">", " ")
     text = " ".join(text.split())
     return text[:limit].rstrip()
 
@@ -170,6 +173,17 @@ def allowed_licence(short_name: str) -> bool:
 
 
 IMAGE_HOSTS = ("https://upload.wikimedia.org/", "https://thumb.wikimedia.org/")
+
+# Where a licence on the allowlist has its own page. schema/commons.schema.json repeats these.
+LICENCE_URL_PREFIXES = ("https://creativecommons.org/", "https://www.flickr.com/commons/usage/")
+LICENCE_URL_RE = re.compile(r"^[^\s\"<>\\]*$")
+
+
+def licence_url(url: str) -> str:
+    """The licence link as https when it is on a licence page in LICENCE_URL_PREFIXES, or "" when not."""
+    if url.startswith("http://"):
+        url = "https://" + url.removeprefix("http://")
+    return url if url.startswith(LICENCE_URL_PREFIXES) and LICENCE_URL_RE.match(url) else ""
 
 
 def image_url(url: str) -> str:
@@ -253,9 +267,9 @@ def file_entry(page: dict, name_words: set[str], place_name: str | None = None) 
         "match": kind,
         "distance_m": round(distance_m),
     }
-    licence_url = meta(info, "LicenseUrl")
-    if licence_url.startswith("https://") or licence_url.startswith("http://"):
-        entry["licence_url"] = licence_url.replace("http://", "https://", 1)
+    link = licence_url(meta(info, "LicenseUrl"))
+    if link:
+        entry["licence_url"] = link
     if credit:
         entry["credit"] = credit
     return entry

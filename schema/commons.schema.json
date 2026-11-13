@@ -25,8 +25,8 @@
           "full": {"type": "string", "pattern": "^https://(upload|thumb)\\.wikimedia\\.org/[^?]*$"},
           "page": {"type": "string", "pattern": "^https://commons\\.wikimedia\\.org/"},
           "licence": {"type": "string", "minLength": 1, "maxLength": 60},
-          "licence_url": {"type": "string", "pattern": "^https://"},
-          "credit": {"type": "string", "minLength": 1, "maxLength": 200},
+          "licence_url": {"type": "string", "pattern": "^https://(creativecommons\\.org/|www\\.flickr\\.com/commons/usage/)[^\\s\"<>\\\\]*$", "description": "The licence's own page: creativecommons.org, or Flickr's page for files with no known copyright restrictions."},
+          "credit": {"type": "string", "minLength": 1, "maxLength": 200, "pattern": "^[^<>]*$", "description": "The author in plain text, with no angle brackets."},
           "match": {"enum": ["name", "camping", "area"]},
           "distance_m": {"type": "integer", "minimum": 0}
         }
