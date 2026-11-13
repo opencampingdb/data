@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "access": "2026-11-13T09:17:43Z",
+    "camper_trailers": "2026-11-13T09:17:43Z",
+    "caravans": "2026-11-13T09:17:43Z",
+    "motorbikes": "2026-11-13T09:17:43Z",
+    "pets": "2026-11-13T09:17:43Z",
+    "tents": "2026-11-13T09:17:43Z"
+  },
   "fact_sources": {
-    "nearest_major_road": "osm"
+    "access": "feedback",
+    "camper_trailers": "feedback",
+    "caravans": "feedback",
+    "motorbikes": "feedback",
+    "nearest_major_road": "osm",
+    "pets": "feedback",
+    "tents": "feedback"
   },
   "facts": {
+    "access": "4wd",
+    "camper_trailers": true,
+    "caravans": "offroad",
+    "motorbikes": true,
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Birdsville Developmental Road"
-    }
+    },
+    "pets": "yes",
+    "tents": true
   },
   "group": "attraction",
   "id": "ocdb_01M66JP279S28MQTHKH3VNQSC0",
@@ -24,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-13T09:17:43Z"
 }
