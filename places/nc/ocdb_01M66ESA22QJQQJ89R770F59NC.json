@@ -1,28 +1,42 @@
 {
   "fact_sources": {
-    "nearest_major_road": "osm"
+    "caravans": "osm",
+    "dump_station": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
   },
   "facts": {
+    "caravans": true,
+    "dump_station": true,
+    "entry": "customers",
+    "fee": true,
     "nearest_major_road": {
-      "distance_m": 10,
+      "distance_m": 250,
       "name": "Pick Avenue"
-    }
+    },
+    "showers": true,
+    "tents": true,
+    "toilets": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA22QJQQJ89R770F59NC",
-  "kind": "campground",
+  "kind": "paid_campground",
   "location": {
-    "lat": -37.83787,
-    "lon": 140.797622
+    "lat": -37.839103,
+    "lon": 140.799817
   },
   "name": "Mt Gambier Showgrounds",
   "osm": {
     "id": 1811187675,
-    "timestamp": "2014-11-02T22:29:42Z",
+    "timestamp": "2026-11-12T05:30:39Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-13T21:48:42Z"
 }
