@@ -1,21 +1,35 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "caravans": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "caravans": true,
+    "entry": "public",
+    "fee": true,
+    "showers": false,
+    "tents": true,
+    "toilets": true
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESER8TSSTM1X936KS5SWV",
   "kind": "reserve_campsite",
   "location": {
-    "lat": -37.925715,
-    "lon": 141.283827
+    "lat": -37.925613,
+    "lon": 141.284034
   },
   "name": "Dartmoor - Fort O'Hare Tourist Camping Reserve",
   "osm": {
     "id": 47012159,
-    "timestamp": "2024-03-16T23:50:30Z",
+    "timestamp": "2026-11-12T03:34:54Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-13T21:48:42Z"
 }

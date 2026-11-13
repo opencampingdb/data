@@ -1,0 +1,35 @@
+{
+  "fact_sources": {
+    "fuel": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "nearest_boat_ramp": {
+      "distance_m": 2150,
+      "name": "McDonald Park Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Centre Street"
+    }
+  },
+  "group": "services",
+  "id": "ocdb_01M7BE4XVQ798F98JC7E912XNB",
+  "kind": "fuel",
+  "location": {
+    "lat": -28.866272,
+    "lon": 153.044877
+  },
+  "name": null,
+  "osm": {
+    "id": 1370239835,
+    "timestamp": "2026-11-12T02:40:43Z",
+    "type": "way",
+    "version": 2
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-13T21:48:42Z"
+}

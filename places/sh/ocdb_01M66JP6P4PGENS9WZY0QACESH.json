@@ -1,12 +1,16 @@
 {
   "fact_sources": {
-    "nearest_major_road": "osm"
+    "air": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm"
   },
   "facts": {
+    "air": true,
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Main Western Road"
-    }
+    },
+    "opening_hours": "24/7"
   },
   "group": "services",
   "id": "ocdb_01M66JP6P4PGENS9WZY0QACESH",
@@ -18,11 +22,11 @@
   "name": "Mobil",
   "osm": {
     "id": 3779379892,
-    "timestamp": "2024-04-13T06:45:24Z",
+    "timestamp": "2026-11-12T08:40:23Z",
     "type": "node",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-13T21:48:42Z"
 }
