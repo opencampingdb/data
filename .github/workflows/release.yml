@@ -15,7 +15,10 @@ name: Release
 # intake_url input of a manual run) and the INTAKE_PLACES_TOKEN secret, the
 # intake's PLACES_TOKEN, are set, and then tells the intake the new release's
 # data_version and layout_version (POST /v1/release), so its recent list
-# names the newest release. Without them both steps are skipped.
+# names the newest release. Without them both steps are skipped. The intake
+# address must be https and have the host of the INTAKE_URL variable, so the
+# token goes only to the configured intake, and neither step follows a
+# redirect. The write token (GH_TOKEN) is given only to the steps that call gh.
 on:
   push:
     branches: [main]
@@ -24,7 +27,7 @@ on:
   workflow_dispatch:
     inputs:
       intake_url:
-        description: "Intake base URL for the place index (default: the INTAKE_URL variable)"
+        description: "Intake base URL for the place index, https on the INTAKE_URL variable's host (default: the INTAKE_URL variable)"
         required: false
         default: ""
 
@@ -46,9 +49,9 @@ jobs:
     permissions:
       contents: write
     env:
-      GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
       INTAKE_URL: ${{ inputs.intake_url || vars.INTAKE_URL }}
+      CONFIGURED_INTAKE_URL: ${{ vars.INTAKE_URL }}
     steps:
       - name: Check out main
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -58,6 +61,8 @@ jobs:
 
       - name: Check whether main changed since the newest release
         id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           head="$(git rev-parse HEAD)"
@@ -103,6 +108,8 @@ jobs:
       # way is never read, so its manifest cannot pass changeset entries on.
       - name: Build the database and changesets
         if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           earlier="$RUNNER_TEMP/earlier"
@@ -141,10 +148,12 @@ jobs:
             fetch "$day" day
             args+=(--day "$earlier/day")
           fi
-          python -m pipeline.database --release-dir dist --repository "$GH_REPO" "${args[@]}"
+          python -m pipeline.database --release-dir dist --root . --repository "$GH_REPO" "${args[@]}"
 
       - name: Publish
         if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           shopt -s nullglob
@@ -162,6 +171,8 @@ jobs:
 
       - name: Keep only the newest dated releases
         if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           gh release list --limit 1000 --json tagName --jq '.[].tagName' \
@@ -171,22 +182,34 @@ jobs:
                 gh release delete "$old" --cleanup-tag --yes
               done
 
-      - name: Load the place index into the intake
+      # Refuses an address that is not https on the INTAKE_URL variable's host,
+      # before any step holds the token.
+      - name: Check the intake address
+        id: intake
         if: steps.check.outputs.changed == 'true' && env.INTAKE_URL != ''
+        run: |
+          set -euo pipefail
+          base="$(python -m pipeline.place_index --check --url "$INTAKE_URL" --configured-url "$CONFIGURED_INTAKE_URL")"
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+
+      - name: Load the place index into the intake
+        if: steps.check.outputs.changed == 'true' && steps.intake.outputs.base != ''
         env:
           INTAKE_PLACES_TOKEN: ${{ secrets.INTAKE_PLACES_TOKEN }}
+          INTAKE_BASE: ${{ steps.intake.outputs.base }}
         run: |
           set -euo pipefail
           if [ -z "$INTAKE_PLACES_TOKEN" ]; then
             echo "INTAKE_PLACES_TOKEN is not set. Skipping the place index."
             exit 0
           fi
-          python -m pipeline.place_index --file dist/place-index.ndjson.gz --url "$INTAKE_URL"
+          python -m pipeline.place_index --file dist/place-index.ndjson.gz --url "$INTAKE_BASE" --configured-url "$CONFIGURED_INTAKE_URL"
 
       - name: Tell the intake the newest release
-        if: steps.check.outputs.changed == 'true' && env.INTAKE_URL != ''
+        if: steps.check.outputs.changed == 'true' && steps.intake.outputs.base != ''
         env:
           INTAKE_PLACES_TOKEN: ${{ secrets.INTAKE_PLACES_TOKEN }}
+          INTAKE_BASE: ${{ steps.intake.outputs.base }}
         run: |
           set -euo pipefail
           if [ -z "$INTAKE_PLACES_TOKEN" ]; then
@@ -194,14 +217,24 @@ jobs:
             exit 0
           fi
           body="$(python -c 'import json; m = json.load(open("dist/manifest.json")); print(json.dumps({k: m[k] for k in ("data_version", "layout_version") if k in m}))')"
-          status="$(curl -sS -o response.json -w '%{http_code}' -X POST "${INTAKE_URL%/}/v1/release" \
+          # The intake's answer is printed between stop-commands markers, so a line
+          # in it cannot act as a workflow command.
+          show_answer() {
+            marker="$(python -c 'import secrets; print(secrets.token_hex(16))')"
+            echo "::stop-commands::$marker"
+            cat response.json
+            echo
+            echo "::$marker::"
+          }
+          status="$(curl -sS --proto =https --max-redirs 0 -o response.json -w '%{http_code}' -X POST "$INTAKE_BASE/v1/release" \
             -H "authorization: Bearer $INTAKE_PLACES_TOKEN" -H "content-type: application/json" --data "$body")"
           if [ "$status" = "404" ]; then
             echo "::notice::The intake has no POST /v1/release yet. Skipping the release announcement."
             exit 0
           fi
           if [ "$status" != "200" ]; then
-            echo "::error::The intake answered $status to the release announcement: $(cat response.json)"
+            echo "::error::The intake answered $status to the release announcement."
+            show_answer
             exit 1
           fi
-          cat response.json
+          show_answer

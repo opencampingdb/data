@@ -18,6 +18,13 @@ changeset that does not give exactly this release never ships. An earlier
 release without a database, with another layout or with this release's own
 data version is skipped.
 
+A changeset holds the old values of every row it deletes, a review's text
+among them. So no changeset is written from a database holding a review that
+left this release, unless its contributor replaced it with a newer one and
+its id is not on moderation/removed_reviews.json (--root, the data
+repository, default .). pipeline/README.md, "Database and changesets", has
+the full rule. Apps on that release download the whole database.
+
 The changeset from the release just before is changeset-<its data_version>.bin.gz.
 Pass --day DIR (also a --previous) for the last release of the previous UTC
 day: its changeset is changeset-day-<that day, YYYY-MM-DD>.bin.gz, unless it
@@ -66,11 +73,12 @@ import json
 import shutil
 import sys
 import tempfile
+from datetime import datetime
 from pathlib import Path
 
 import apsw
 
-from .common import write_text
+from .common import load_removed, write_text
 from .release import asset_url, gzip_bytes, release_tag
 from .states import StateLookup
 
@@ -299,6 +307,50 @@ def checked_changeset(old_db: Path, new_db: Path) -> bytes:
     return changeset
 
 
+def review_rows(db_path: Path) -> list[tuple[str, str, str | None, datetime]]:
+    """(id, place, contributor, created) of every row of a database's reviews table."""
+    con = apsw.Connection(str(db_path), flags=apsw.SQLITE_OPEN_READONLY)
+    try:
+        found = con.execute("SELECT id, place, record, created FROM reviews ORDER BY id").fetchall()
+    finally:
+        con.close()
+    rows = []
+    for review_id, place, record, created in found:
+        contributor = json.loads(record).get("contributor")
+        when = datetime.fromisoformat(created.replace("Z", "+00:00"))
+        rows.append((review_id, place, contributor if isinstance(contributor, str) else None, when))
+    return rows
+
+
+def blocking_review_id(old_db: Path, new_db: Path, removed: set[str] = frozenset()) -> str | None:
+    """The id of a review of old_db that stops a changeset to new_db, or None.
+
+    A changeset holds every old column of a row it deletes, the review's
+    text among them, so a review that left new_db stops the changeset unless
+    its contributor replaced it with a newer review and its id is not in
+    removed. pipeline/README.md, "Database and changesets", has the full
+    rule.
+    """
+    old = review_rows(old_db)
+    before = {review_id for review_id, _, _, _ in old}
+    new = review_rows(new_db)
+    kept = {review_id for review_id, _, _, _ in new}
+    latest: dict[tuple[str, str], datetime] = {}
+    for review_id, place, contributor, created in new:
+        if contributor and review_id not in before:
+            key = (place, contributor)
+            latest[key] = max(latest.get(key, created), created)
+    for review_id, place, contributor, created in old:
+        if review_id in removed:
+            return review_id
+        if review_id in kept:
+            continue
+        replacement = latest.get((place, contributor)) if contributor else None
+        if replacement is None or replacement <= created:
+            return review_id
+    return None
+
+
 def previous_database(directory: Path, work: Path) -> tuple[str, Path] | None:
     """(data_version, unpacked database) of an earlier release, or None when it has none this release can use."""
     directory = Path(directory)
@@ -411,11 +463,14 @@ def build(
     day: Path | None = None,
     repository: str = DEFAULT_REPOSITORY,
     states: StateLookup | None = None,
+    removed: set[str] = frozenset(),
 ) -> dict:
     """Write ocdb.sqlite.gz and the changesets into release_dir, add them to manifest.json and return it.
 
     previous lists earlier release directories, the release just before
     first; day is the last release of the previous UTC day, if any.
+    removed holds the ids on moderation/removed_reviews.json: no changeset
+    is made from a database that holds one of them.
     """
     release_dir = Path(release_dir)
     manifest_path = release_dir / "manifest.json"
@@ -447,8 +502,15 @@ def build(
             done.add(from_version)
             if index == 0 and not is_day:
                 entries.extend(carried(directory, repository))
-            changeset = gzip_bytes(checked_changeset(old_db, database))
             name = changeset_name(from_version, is_day)
+            blocking = blocking_review_id(old_db, database, removed)
+            if blocking in removed:
+                print(f"{directory}: review {blocking} of {from_version} is on the removed list, no {name}")
+                continue
+            if blocking:
+                print(f"{directory}: review {blocking} of {from_version} left with no newer review by its contributor, no {name}")
+                continue
+            changeset = gzip_bytes(checked_changeset(old_db, database))
             (release_dir / name).write_bytes(changeset)
             entries.append({
                 "file": name,
@@ -471,6 +533,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--previous", type=Path, action="append", default=[],
                         help="an earlier release's folder with manifest.json and ocdb.sqlite.gz, the newest first")
     parser.add_argument("--day", type=Path, help="the last release of the previous UTC day, as for --previous")
+    parser.add_argument("--root", type=Path, default=Path("."),
+                        help="the data repository, for moderation/removed_reviews.json (default: .)")
     parser.add_argument("--repository", default=DEFAULT_REPOSITORY,
                         help=f"owner/name used in the asset URLs (default {DEFAULT_REPOSITORY})")
     parser.add_argument("--day-base", metavar="DATA_VERSION",
@@ -490,7 +554,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if not args.release_dir:
         parser.error("--release-dir is required")
-    manifest = build(args.release_dir, args.previous, args.day, args.repository)
+    manifest = build(args.release_dir, args.previous, args.day, args.repository, removed=load_removed(args.root))
     print(json.dumps({key: manifest[key] for key in ("layout_version", "database", "changesets")}, indent=2))
     return 0
 
