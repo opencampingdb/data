@@ -252,3 +252,20 @@ def test_check_accepts_only_the_host_of_the_configured_intake(capsys, monkeypatc
     else:
         assert code == 0
         assert out == printed
+
+
+def test_the_index_leaves_out_town_and_council_area(repo, tmp_path):
+    town = {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 2000}
+    shire = {"name": "Example Shire", "osm_id": 202}
+    place = add_place(
+        repo, 1, -32.4, 117.0,
+        facts={"toilets": True, "locality": town, "lga": shire},
+        fact_sources={"toilets": "osm", "locality": "osm", "lga": "osm"},
+    )
+    path = build(repo, tmp_path / "dist")
+    assert index_lines(path) == [
+        {"id": place, "cell": [117, -33], "facts": {"toilets": True}, "fact_sources": {"toilets": "osm"}, "fact_dates": {}},
+    ]
+    # The released record keeps both.
+    released = json.loads(gzip.decompress((tmp_path / "dist" / "places.ndjson.gz").read_bytes()).decode("utf-8").splitlines()[0])
+    assert released["facts"]["locality"] == town and released["facts"]["lga"] == shire
