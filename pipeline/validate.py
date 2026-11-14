@@ -15,9 +15,8 @@ exits 1. Checks:
   name, location and status entries. Sources are osm, feedback,
   contributed, owner and community_report. The source rule and fact_rules
   appear only in released records (pipeline.release), never in places/
-- the nearby facts nearest_beach, nearest_boat_ramp and nearest_major_road
-  have the source osm:
-  no fact report sets them
+- the nearby facts nearest_beach, nearest_boat_ramp, nearest_major_road,
+  locality and lga have the source osm: no fact report sets them
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
@@ -42,6 +41,8 @@ exits 1. Checks:
   person removed is never added again
 - moderation/commons-do-not-match.json matches its schema, sorted by place
   then file, each pair once, naming places that exist
+- localities/localities.ndjson matches its schema, canonical and sorted by
+  osm_id, each locality once
 - moderation/distinct_places.json matches its schema, each pair once with a
   before b, sorted, naming places that exist
 - pets_months only goes with pets seasonal
@@ -82,6 +83,7 @@ from .common import (
     rating_mean,
     utc_now,
 )
+from .localities import LOCALITIES_FILE
 
 SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schema"
 
@@ -553,6 +555,41 @@ def check_commons(root: Path) -> list[str]:
     return errors
 
 
+def check_localities(root: Path) -> list[str]:
+    """localities/localities.ndjson: each line valid, canonical and sorted by osm_id. A missing file is fine."""
+    path = root / LOCALITIES_FILE
+    if not path.exists():
+        return []
+    validator = load_validator("locality.schema.json")
+    where = str(LOCALITIES_FILE)
+    errors: list[str] = []
+    raw = path.read_bytes()
+    if b"\r" in raw:
+        errors.append(f"{where}: use LF line endings")
+    if raw and not raw.endswith(b"\n"):
+        errors.append(f"{where}: missing trailing newline")
+    previous = None
+    for number, line in enumerate(raw.decode("utf-8", errors="replace").split("\n"), 1):
+        if not line.strip():
+            continue
+        here = f"{where} line {number}"
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as exc:
+            errors.append(f"{here}: not valid JSON: {exc}")
+            continue
+        line_errors = schema_errors(validator, row, here)
+        errors += line_errors
+        if line_errors:
+            continue
+        if line != dump_line(row):
+            errors.append(f"{here}: not in canonical form (compact JSON, sorted keys)")
+        if previous is not None and row["osm_id"] <= previous:
+            errors.append(f"{here}: lines must be sorted by osm_id, each locality once")
+        previous = row["osm_id"]
+    return errors
+
+
 def validate_repo(root: Path, now: str | None = None) -> list[str]:
     """Every problem found in the repository, as readable lines. Empty means valid.
 
@@ -567,6 +604,7 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
     errors += check_reviews(root, places)
     errors += check_no_fees(root)
     errors += check_commons(root)
+    errors += check_localities(root)
     return errors
 
 

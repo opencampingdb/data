@@ -13,11 +13,11 @@ release workflow runs Validate, Release, Database and Place index.
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
-| Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, and with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road") |
+| Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson] [--localities localities/localities.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road"), and with `--localities` every town and its council area (see "Towns and council areas") |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist [--repository opencampingdb/data] [--data-version V] [--generated T]` | `places/`, `reviews/`, `moderation/`, `commons/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/commons.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
-| Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
+| Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `localities/localities.ndjson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
@@ -327,6 +327,33 @@ collected in the same read (`pipeline/water.py`, `pipeline/nearby.py` and
   a fuel station drawn as an area does not get `fuel` from its own centroid.
   A place whose own tags set the fact keeps its own value. Never `false`.
 
+#### Towns and council areas
+
+`locality` and `lga` come from towns and council boundaries collected in
+the same read (`pipeline/localities.py`):
+
+- `locality`: the nearest node tagged `place=city`, `place=town` or
+  `place=village` with a `name` of 100 characters or fewer, within 50 km of
+  the place's location, as `name`, `osm_id` (the node), `type` (the `place`
+  value) and `distance_m`. The distance is on the sphere (haversine, mean
+  radius 6,371,008.8 m), to the node, rounded to 10 m (half up). Ties go to
+  the lower node id. Hamlets, localities and suburbs do not count: there are
+  too many, and a town is what a traveller names a place by.
+- `lga`: the `boundary=administrative`, `admin_level=6` relation the place's
+  location lies in (in Australia, a local government area: a council,
+  shire, city or municipality, or an unincorporated area OSM maps at that
+  level), as `name` and `osm_id` (the relation). A point inside more than
+  one, where outlines overlap, takes the lower relation id.
+
+Both always have the source `osm`, and a place with no town within 50 km or
+outside every council area has none. With `--localities`, the extract also
+writes every town it read to `localities/localities.ndjson`
+([schema](../schema/locality.schema.json)), one line per town sorted by
+node id: `osm_id`, `name`, `type`, `lat`, `lon`, `population` when the
+node's `population` tag is a whole number (thousands separators allowed),
+and the town's own `lga`. The nightly sync commits the file with
+`places/`, and `pipeline.database` turns it into the `localities` table.
+
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag
 in use for sharks or dangerous jellyfish (taginfo, 12 Nov 2026: 0 uses), so
@@ -629,8 +656,10 @@ and open a PR.
   optional `name`, `location`, `kind`, `status` and `description` entries,
   each `osm`, `feedback`, `contributed`, `owner` or `community_report`. No
   file holds a `rule` source or `fact_rules`: only the release sets those;
-- that the nearby facts `nearest_beach`, `nearest_boat_ramp` and
-  `nearest_major_road` have the source `osm`;
+- that the nearby facts `nearest_beach`, `nearest_boat_ramp`,
+  `nearest_major_road`, `locality` and `lga` have the source `osm`;
+- that `localities/localities.ndjson`, when present, matches its schema, in
+  canonical form and sorted by `osm_id`, each town once;
 - that `fact_dates` has a date for exactly the `fact_sources` entries that
   are not `osm`, none later than `updated`, and that `last_confirmed` is not
   in the future (it may be later than `updated`);
@@ -689,7 +718,9 @@ release: `https://github.com/<repository>/releases/download/<release>/<file>`.
 
 `python -m pipeline.database --release-dir dist` builds `ocdb.sqlite.gz`, the
 release as an SQLite database, from the files `pipeline.release` wrote, so it
-holds exactly what they hold, plus each place's state. Each `--previous`
+holds exactly what they hold, plus each place's state and the `localities`
+table, read from `localities/localities.ndjson` in `--root` with each town's
+state worked out the same way. Each `--previous`
 folder holds an earlier release's `manifest.json` and `ocdb.sqlite.gz`; for
 each one, it writes a changeset that turns that database into this one. The
 release workflow passes the release just before as `--previous` and the last

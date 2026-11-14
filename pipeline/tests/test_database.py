@@ -11,6 +11,7 @@ import pytest
 from pipeline import database, moderate
 from pipeline.common import dump_line
 from pipeline.extract import extract_file
+from pipeline.localities import LOCALITIES_FILE, write_localities
 from pipeline.release import build_release
 from pipeline.sync import sync
 from pipeline.tests.test_release import add_review
@@ -107,7 +108,7 @@ def test_manifest_lists_the_database_and_changeset(releases):
     manifest = database.build(second, previous=[first])
     assert manifest == json.loads((second / "manifest.json").read_text(encoding="utf-8"))
 
-    assert manifest["layout_version"] == database.LAYOUT_VERSION == 2
+    assert manifest["layout_version"] == database.LAYOUT_VERSION == 3
     packed = (second / "ocdb.sqlite.gz").read_bytes()
     assert manifest["database"] == {
         "file": "ocdb.sqlite.gz",
@@ -147,22 +148,53 @@ def test_database_tables_hold_the_release(releases, tmp_path):
     manifest = json.loads((second / "manifest.json").read_text(encoding="utf-8"))
     assert db["release"] == [(
         1, SECOND, "data-20261031T020000Z", "2026-10-31T02:00:00Z",
-        manifest["format_version"], manifest["format_minor"], 2,
+        manifest["format_version"], manifest["format_minor"], 3,
         "ODbL-1.0", "© OpenStreetMap contributors, Open Camping DB",
     )]
     con = apsw.Connection(str(tmp_path / "new.sqlite"))
-    assert con.execute("PRAGMA user_version").get == 2
+    assert con.execute("PRAGMA user_version").get == 3
     assert con.execute("PRAGMA page_size").get == 4096
     indexes = {row[0] for row in con.execute("SELECT name FROM sqlite_master WHERE type = 'index' AND sql IS NOT NULL")}
-    assert indexes == {"places_kind", "places_group", "places_state", "places_lat_lon", "reviews_place"}
+    assert indexes == {
+        "places_kind", "places_group", "places_state", "places_lat_lon", "reviews_place",
+        "localities_state", "localities_lga",
+    }
+    # No localities file in the repository: the table is there and empty.
+    assert db["localities"] == []
+
+
+def test_localities_table_holds_the_localities_file(releases, tmp_path):
+    _, second = releases
+    towns = [
+        {"osm_id": 30, "name": "Example Town", "type": "town", "lat": -37.15, "lon": 142.52, "population": 1200,
+         "lga": {"name": "Example Shire", "osm_id": 900}},
+        {"osm_id": 7, "name": "Example Village", "type": "village", "lat": -37.3, "lon": 142.6},
+        {"osm_id": 12, "name": "Offshore Village", "type": "village", "lat": -50.0, "lon": 100.0},
+    ]
+    out = tmp_path / "with-localities.sqlite"
+    database.build_database(second, out, localities=towns)
+    assert rows(out)["localities"] == [
+        (7, "Example Village", "village", "VIC", None, -37.3, 142.6, None),
+        # Outside every state outline, so no state.
+        (12, "Offshore Village", "village", None, None, -50.0, 100.0, None),
+        (30, "Example Town", "town", "VIC", "Example Shire", -37.15, 142.52, 1200),
+    ]
+
+
+def test_build_reads_the_localities_file_from_the_root(repo, releases, tmp_path):
+    _, second = releases
+    write_localities(repo / LOCALITIES_FILE, [{"osm_id": 5, "name": "Example Town", "type": "town", "lat": -37.15, "lon": 142.52}])
+    assert database.main(["--release-dir", str(second), "--root", str(repo)]) == 0
+    db = rows(unpack(second, tmp_path, "rooted.sqlite"))
+    assert db["localities"] == [(5, "Example Town", "town", "VIC", None, -37.15, 142.52, None)]
 
 
 def test_no_changeset_across_a_layout_change(releases, monkeypatch):
     first, second = releases
     database.build(first)
-    monkeypatch.setattr(database, "LAYOUT_VERSION", 3)
+    monkeypatch.setattr(database, "LAYOUT_VERSION", 4)
     manifest = database.build(second, previous=[first])
-    assert manifest["layout_version"] == 3
+    assert manifest["layout_version"] == 4
     assert manifest["changesets"] == []
     assert not list(second.glob("changeset-*"))
 
@@ -341,7 +373,7 @@ def test_a_layout_change_resets_the_list(repo, v1_osm, tmp_path, monkeypatch):
     sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
     built = chain(repo, tmp_path, 3)
     assert len(built[-1][2]["changesets"]) == 2
-    monkeypatch.setattr(database, "LAYOUT_VERSION", 3)
+    monkeypatch.setattr(database, "LAYOUT_VERSION", 4)
     folder, version = release_folder(repo, tmp_path, 3)
     assert database.build(folder, previous=[built[-1][0]])["changesets"] == []
     folder2, version2 = release_folder(repo, tmp_path, 4)
