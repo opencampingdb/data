@@ -41,6 +41,10 @@ Rules (SPEC, "OSM sync"):
 - last_confirmed is kept as it is. Only the feedback engine sets it.
 - "updated" moves only when the record's content changes, so running the
   same extract twice changes nothing.
+- A new or refreshed record that schema/place.schema.json refuses is not
+  written. A new one gets no file, and a refreshed one keeps its file as it
+  was. The report lists it under "Skipped" with the reasons, so one OSM value
+  costs one record and the rest of the sync goes ahead.
 """
 
 import argparse
@@ -52,9 +56,6 @@ from pathlib import Path
 
 from ulid import ULID
 
-from .duplicates import find_duplicates
-from .geometry import Geometry, load_geometry
-
 from .common import (
     EXTRA_SOURCE_KEYS,
     KIND_GROUP,
@@ -65,6 +66,9 @@ from .common import (
     utc_now,
     write_text,
 )
+from .duplicates import find_duplicates
+from .geometry import Geometry, load_geometry
+from .validate import load_validator
 
 # Lists in the report are cut at this length. When four full lists would
 # still pass MAX_REPORT_CHARS (a sync that touches nearly every record),
@@ -98,6 +102,8 @@ class SyncResult:
     updated: list[dict] = field(default_factory=list)
     gone: list[dict] = field(default_factory=list)
     duplicates: list[dict] = field(default_factory=list)
+    # Records the place schema refuses, each {"record": ..., "errors": [...]}.
+    skipped: list[dict] = field(default_factory=list)
     unchanged: int = 0
     records_before: int = 0
     records_after: int = 0
@@ -253,6 +259,28 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
     return fresh
 
 
+# Words for the schema rules a refused record breaks. The report names the
+# field and the rule, never the value, since the value is OSM text.
+SCHEMA_RULE_WORDS = {
+    "maxLength": "too long",
+    "minLength": "too short",
+    "pattern": "not in the form the schema allows",
+    "enum": "not one of the allowed values",
+    "type": "of the wrong type",
+    "additionalProperties": "has a field the schema does not allow",
+    "required": "is missing a required field",
+}
+
+
+def schema_reasons(validator, record: dict) -> list[str]:
+    """Why the place schema refuses record, one line per error, empty when it passes."""
+    reasons = set()
+    for error in validator.iter_errors(record):
+        path = "/".join(str(p) for p in error.absolute_path) or "(top level)"
+        reasons.add(f"{path} {SCHEMA_RULE_WORDS.get(error.validator, 'refused by the schema')}")
+    return sorted(reasons)
+
+
 def sync(
     root: Path, extract: list[dict], now: str | None = None, make_id=new_place_id, geometry: Geometry | None = None
 ) -> SyncResult:
@@ -260,6 +288,7 @@ def sync(
     now = now or utc_now()
     places = load_places(root)
     result = SyncResult(records_before=len(places))
+    validator = load_validator("place.schema.json")
 
     live = [r for r in places.values() if r.get("status") != "merged"]
     by_osm = {osm_key(r["osm"]): r for r in live if r.get("osm")}
@@ -276,13 +305,16 @@ def sync(
         existing = by_osm.get(key)
         if existing is None:
             record = new_record(place, now, make_id)
-            result.new.append(record)
         else:
             record = refreshed_record(existing, place, now)
             if record == existing:
                 result.unchanged += 1
                 continue
-            result.updated.append(record)
+        errors = schema_reasons(validator, record)
+        if errors:
+            result.skipped.append({"record": record, "errors": errors})
+            continue
+        (result.new if existing is None else result.updated).append(record)
         write_text(place_path(root, record["id"]), dump_record(record))
 
     # Records gone from OSM keep everything except an old kind, which moves
@@ -340,6 +372,27 @@ def table(records: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
     return lines
 
 
+def skipped_table(skipped: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
+    lines = [
+        "The place schema refuses these OSM objects as extracted, so their records "
+        "were not written. A record that already existed is left as it was. Fix the "
+        "value in OSM or the extract.",
+        "",
+        "| OSM object | Name | Reasons |",
+        "|---|---|---|",
+    ]
+    for item in skipped[:limit]:
+        record = item["record"]
+        reasons = "; ".join(item["errors"])
+        if len(reasons) > 300:
+            reasons = reasons[:300] + "..."
+        lines.append(f"| {osm_link(record.get('osm'))} | {escape_cell(record['name'])} | {escape_cell(reasons)} |")
+    if len(skipped) > limit:
+        lines.append("")
+        lines.append(f"And {len(skipped) - limit} more, not listed here.")
+    return lines
+
+
 def duplicates_table(pairs: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
     lines = [
         "Pairs that are likely the same place. Nothing was merged. To merge, keep one "
@@ -387,6 +440,7 @@ def _render_report(result: SyncResult, source: str | None, limit: int) -> str:
         f"| Updated | {len(result.updated)} |",
         f"| Unchanged | {result.unchanged} |",
         f"| Gone from OSM | {len(result.gone)} |",
+        f"| Skipped | {len(result.skipped)} |",
         f"| After | {result.records_after} |",
         "",
         f"Change: {result.change_percent:.2f}% of records "
@@ -410,6 +464,8 @@ def _render_report(result: SyncResult, source: str | None, limit: int) -> str:
         ]
     else:
         lines.append("None.")
+    lines += ["", "## Skipped", ""]
+    lines += skipped_table(result.skipped, limit) if result.skipped else ["None."]
     lines += ["", "## Possible duplicates", ""]
     lines += duplicates_table(result.duplicates, limit) if result.duplicates else ["None."]
     lines += ["", "## New", ""]
@@ -441,6 +497,7 @@ def main(argv: list[str] | None = None) -> int:
         "new": len(result.new),
         "updated": len(result.updated),
         "gone": len(result.gone),
+        "skipped": len(result.skipped),
         "unchanged": result.unchanged,
         "records_before": result.records_before,
         "records_after": result.records_after,

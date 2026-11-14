@@ -7,7 +7,8 @@ from pipeline.common import dump_record
 
 
 def page(title, *, dist=50.0, licence="CC BY-SA 4.0", artist="<a href='x'>Jane Doe</a>", width=4000, height=3000,
-         mime="image/jpeg", categories=(), restrictions="", object_name=""):
+         mime="image/jpeg", categories=(), restrictions="", object_name="",
+         licence_url="https://creativecommons.org/licenses/by-sa/4.0"):
     return {
         "title": title,
         "coordinates": [{"dist": dist}],
@@ -21,7 +22,7 @@ def page(title, *, dist=50.0, licence="CC BY-SA 4.0", artist="<a href='x'>Jane D
             "descriptionurl": f"https://commons.wikimedia.org/wiki/{title.replace(' ', '_')}",
             "extmetadata": {
                 "LicenseShortName": {"value": licence},
-                "LicenseUrl": {"value": "https://creativecommons.org/licenses/by-sa/4.0"},
+                "LicenseUrl": {"value": licence_url},
                 "Artist": {"value": artist},
                 "Restrictions": {"value": restrictions},
                 "ObjectName": {"value": object_name},
@@ -94,6 +95,32 @@ def test_file_entry_keeps_credit_licence_and_urls():
         "match": "name",
         "distance_m": 120,
     }
+
+
+def test_credit_holds_no_markup_characters():
+    artist = "<span>Jane &lt;b onmouseover=x&gt;Doe&lt;/b&gt;</span> &amp; Sam &gt; 3"
+    entry = commons.file_entry(page("File:Tidal River campground.jpg", artist=artist), {"tidal"})
+    assert entry["credit"] == "Jane Doe & Sam 3"
+
+
+def test_a_credit_of_markup_alone_counts_as_no_credit():
+    entry = commons.file_entry(page("File:Tidal River campground.jpg", artist="&lt;&gt;"), {"tidal"})
+    assert entry is None
+
+
+def test_licence_url_is_kept_only_on_a_licence_host():
+    def licence_url(url):
+        entry = commons.file_entry(page("File:Tidal River campground.jpg", licence_url=url), {"tidal"})
+        return entry.get("licence_url")
+
+    assert licence_url("https://creativecommons.org/licenses/by/4.0") == "https://creativecommons.org/licenses/by/4.0"
+    assert licence_url("http://creativecommons.org/publicdomain/zero/1.0/") == "https://creativecommons.org/publicdomain/zero/1.0/"
+    assert licence_url("https://www.flickr.com/commons/usage/") == "https://www.flickr.com/commons/usage/"
+    assert licence_url("https://example.invalid/licence") is None
+    assert licence_url("https://creativecommons.org.example.invalid/licenses/by/4.0") is None
+    assert licence_url("https://creativecommons.org@example.invalid/licenses/by/4.0") is None
+    assert licence_url("https://www.flickr.com/photos/someone/") is None
+    assert licence_url("javascript:alert(1)") is None
 
 
 def test_file_entry_uses_the_original_when_it_is_small():
@@ -207,6 +234,22 @@ def test_validate_checks_the_matches_file(tmp_path):
     assert check_commons(tmp_path) == []
     path.write_text(json.dumps(good, indent=1) + "\n" + '{"place": "x"}\n', encoding="utf-8")
     assert check_commons(tmp_path)
+
+
+def test_validate_refuses_markup_in_credit_and_a_licence_link_off_a_licence_host(tmp_path):
+    from pipeline.validate import check_commons
+
+    path = tmp_path / commons.MATCHES_FILE
+    path.parent.mkdir(parents=True)
+    entry = commons.file_entry(page("File:Tidal River campground.jpg"), {"tidal"})
+    line = {"place": "ocdb_01M66ESC6PTN65XY3VDH1Y283K", "checked": "2026-11-04", "files": [entry]}
+    commons.write_matches(path, {line["place"]: line})
+    assert check_commons(tmp_path) == []
+    for field, value in (("credit", "Jane <b>Doe</b>"), ("licence_url", "https://example.invalid/licence"),
+                         ("licence_url", "https://www.flickr.com/photos/someone/")):
+        changed = {**line, "files": [{**entry, field: value}]}
+        commons.write_matches(path, {line["place"]: changed})
+        assert check_commons(tmp_path), (field, value)
 
 
 def write_do_not_match(root: Path, pairs):

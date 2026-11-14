@@ -328,6 +328,8 @@ def test_nearby_facts_from_osm_are_allowed(synced):
         "nearest_beach": {"distance_m": 320, "name": "Fixture Main Beach"},
         "nearest_boat_ramp": {"distance_m": 3000},
         "nearest_major_road": {"distance_m": 140, "name": "Example Highway"},
+        "locality": {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 12340},
+        "lga": {"name": "Example Shire", "osm_id": 202},
         "pub": True,
         "fuel": True,
         "car_wash": True,
@@ -343,12 +345,22 @@ def test_nearby_facts_from_osm_are_allowed(synced):
     rec["facts"]["nearest_major_road"] = {"distance_m": 510}
     write_place(path, rec)
     assert any("nearest_major_road" in e for e in validate_repo(synced))
+    rec["facts"]["nearest_major_road"] = {"distance_m": 140}
+    rec["facts"]["locality"] = {"name": "Example Town", "osm_id": 101, "type": "suburb", "distance_m": 12340}
+    write_place(path, rec)
+    assert any("locality" in e for e in validate_repo(synced))
 
 
-@pytest.mark.parametrize("fact", ["nearest_beach", "nearest_boat_ramp", "nearest_major_road"])
-def test_reported_nearby_fact_is_refused(synced, fact):
+@pytest.mark.parametrize("fact, value", [
+    ("nearest_beach", {"distance_m": 200}),
+    ("nearest_boat_ramp", {"distance_m": 200}),
+    ("nearest_major_road", {"distance_m": 200}),
+    ("locality", {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 200}),
+    ("lga", {"name": "Example Shire", "osm_id": 202}),
+])
+def test_reported_nearby_fact_is_refused(synced, fact, value):
     path, rec = first_place(synced)
-    rec["facts"][fact] = {"distance_m": 200}
+    rec["facts"][fact] = value
     rec["fact_sources"][fact] = "feedback"
     rec["fact_dates"] = {fact: rec["updated"]}
     write_place(path, rec)

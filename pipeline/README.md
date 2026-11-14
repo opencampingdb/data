@@ -13,11 +13,11 @@ release workflow runs Validate, Release, Database and Place index.
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
-| Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, and with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road") |
+| Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson] [--localities localities/localities.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road"), and with `--localities` every town and its council area (see "Towns and council areas") |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist [--repository opencampingdb/data] [--data-version V] [--generated T]` | `places/`, `reviews/`, `moderation/`, `commons/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/commons.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
-| Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>]` | `dist/`, `boundaries/au-states.geojson`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
+| Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `localities/localities.ndjson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
@@ -254,14 +254,14 @@ in "Mapped facts and extensions" in [CONNECTING.md](../CONNECTING.md).
 | `operator` | `operator` | trimmed, up to 200 characters. Longer values are left out |
 | `addr:unit`, `addr:housenumber`, `addr:street`, `addr:place`, `addr:suburb` (then `addr:city`), `addr:state`, `addr:postcode` | `address` | an object with `unit`, `housenumber`, `street`, `place`, `suburb`, `state` and `postcode`. Written only with a street or a place. State becomes its abbreviation (`Victoria` is `VIC`); a state we can't read, a postcode that isn't four digits and values over 100 characters are left out |
 | `email`, then `contact:email` | `email` | kept only if it looks like an email address, up to 254 characters |
-| `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` then `contact:x` (then the bare keys `facebook`, `instagram`, `tiktok`, `twitter`) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://` and is up to 500 characters. A bare handle is left out |
-| `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written. |
+| `contact:facebook`, `contact:instagram`, `contact:tiktok`, `contact:twitter` then `contact:x` (then the bare keys `facebook`, `instagram`, `tiktok`, `twitter`) | `facebook`, `instagram`, `tiktok`, `x` | kept only if it starts with `https://`, in lower case, and is up to 500 characters. A bare handle is left out |
+| `maxstay` | `max_stay` | A number and a unit is shortened: hours to `h`, days or nights to `d`, weeks to `w`, months to `mo` (`48 hours` becomes `48h`). Anything else is kept as written, when it is up to 100 characters. A longer value is left out. |
 | `opening_hours` | `opening_hours` | copied as is |
 | `charge` | `charge` | copied as is, trimmed and cut at 255 characters, out of spec values too ([ADR 0002](../docs/adr/0002-follow-osm-formats-keep-extensions.md)). A `check_date:charge` in `YYYY-MM-DD` form goes to `osm.check_dates.charge` |
 | `charge:conditional` | `charge_conditional` | the same. `check_date:charge:conditional` goes to `osm.check_dates.charge_conditional` |
-| `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://` |
-| `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is. The second, from the same key, is `phone_2` when it differs from the first, up to 100 characters |
-| `website:booking`, then `reservation:website` | `booking_url` | the first with a value, kept only if it starts with `https://` and is up to 500 characters. An owner's `booking_url` is never replaced (see `pipeline/sync.py`) |
+| `website`, then `contact:website` | `website` | kept only if it starts with `http://` or `https://`, in lower case, and is up to 500 characters |
+| `phone`, then `contact:phone` | `phone`, `phone_2` | the first `;` value is `phone`, copied as is when it is up to 100 characters. A longer first value leaves out both numbers. The second, from the same key, is `phone_2` when it differs from the first, up to 100 characters |
+| `website:booking`, then `reservation:website` | `booking_url` | the first with a value, kept only if it starts with `https://`, in lower case, and is up to 500 characters. An owner's `booking_url` is never replaced (see `pipeline/sync.py`) |
 | `4wd_only` | `access` | `yes` is `4wd`, `recommended` is `awd`, `no` is `2wd`. No tag, no fact. `unknown` is never written by the extract. |
 | `amenity` | `water_type` | For a `drinking_water_point` only: `water_point` is `tank_fill`, `drinking_water` is `fountain` |
 | `access` | `entry` | `yes`, `permissive` or `public` is `public`. `customers`, `permit` and `private` are copied. `no` is `private`, except on a place for heavy vehicles only (next row), where it says who may drive in and is left out. Others, such as `destination`, are left out. |
@@ -327,6 +327,33 @@ collected in the same read (`pipeline/water.py`, `pipeline/nearby.py` and
   a fuel station drawn as an area does not get `fuel` from its own centroid.
   A place whose own tags set the fact keeps its own value. Never `false`.
 
+#### Towns and council areas
+
+`locality` and `lga` come from towns and council boundaries collected in
+the same read (`pipeline/localities.py`):
+
+- `locality`: the nearest node tagged `place=city`, `place=town` or
+  `place=village` with a `name` of 100 characters or fewer, within 50 km of
+  the place's location, as `name`, `osm_id` (the node), `type` (the `place`
+  value) and `distance_m`. The distance is on the sphere (haversine, mean
+  radius 6,371,008.8 m), to the node, rounded to 10 m (half up). Ties go to
+  the lower node id. Hamlets, localities and suburbs do not count: there are
+  too many, and a town is what a traveller names a place by.
+- `lga`: the `boundary=administrative`, `admin_level=6` relation the place's
+  location lies in (in Australia, a local government area: a council,
+  shire, city or municipality, or an unincorporated area OSM maps at that
+  level), as `name` and `osm_id` (the relation). A point inside more than
+  one, where outlines overlap, takes the lower relation id.
+
+Both always have the source `osm`, and a place with no town within 50 km or
+outside every council area has none. With `--localities`, the extract also
+writes every town it read to `localities/localities.ndjson`
+([schema](../schema/locality.schema.json)), one line per town sorted by
+node id: `osm_id`, `name`, `type`, `lat`, `lon`, `population` when the
+node's `population` tag is a whole number (thousands separators allowed),
+and the town's own `lga`. The nightly sync commits the file with
+`places/`, and `pipeline.database` turns it into the `localities` table.
+
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag
 in use for sharks or dangerous jellyfish (taginfo, 12 Nov 2026: 0 uses), so
@@ -388,6 +415,11 @@ rule, never stored in `places/` (see "Rules" under "Release").
 - A record whose OSM object is no longer in the extract is never deleted. It
   is listed under "Gone from OSM" in the report until a person sets its
   `status` to `closed` or removes it.
+- A new or refreshed record that `schema/place.schema.json` refuses is not
+  written: a new one gets no file and an existing one keeps its file as it
+  was. The report lists it under "Skipped" with the field and the rule it
+  breaks, and the summary counts it as `skipped`. The rest of the sync goes
+  ahead.
 - Change percentage is the number of records that are new, updated or gone
   (each record counted once), divided by the number of records after the
   sync. The nightly PR merges itself only below 2%.
@@ -595,10 +627,13 @@ already hidden a review (`hidden: "reported"`) on the automatic branch.
   `show`; to restore a review, a person takes it off the list and puts the
   line back in the same PR.
 
-A removal reaches `main` and every release built after it. It does not reach
-git history or the releases already published: the text stays in earlier
-commits and in the release assets until the newest 60 releases have moved
-past it. When that is not enough (a court order, a person's safety), the
+A removal reaches `main` and every release built after it. No file of a
+later release holds the text: `pipeline.database` makes no changeset from a
+database that holds the removed review (see Database and changesets), so
+the next release and that UTC day's later ones ship none from it. It does not
+reach git history or the releases already published: the text stays in
+earlier commits and in the release assets until the newest 60 releases have
+moved past it. When that is not enough (a court order, a person's safety), the
 repository owners rewrite history and delete the affected releases, and ask
 GitHub support to purge cached views; say so on the takedown request.
 
@@ -621,8 +656,10 @@ and open a PR.
   optional `name`, `location`, `kind`, `status` and `description` entries,
   each `osm`, `feedback`, `contributed`, `owner` or `community_report`. No
   file holds a `rule` source or `fact_rules`: only the release sets those;
-- that the nearby facts `nearest_beach`, `nearest_boat_ramp` and
-  `nearest_major_road` have the source `osm`;
+- that the nearby facts `nearest_beach`, `nearest_boat_ramp`,
+  `nearest_major_road`, `locality` and `lga` have the source `osm`;
+- that `localities/localities.ndjson`, when present, matches its schema, in
+  canonical form and sorted by `osm_id`, each town once;
 - that `fact_dates` has a date for exactly the `fact_sources` entries that
   are not `osm`, none later than `updated`, and that `last_confirmed` is not
   in the future (it may be later than `updated`);
@@ -681,7 +718,9 @@ release: `https://github.com/<repository>/releases/download/<release>/<file>`.
 
 `python -m pipeline.database --release-dir dist` builds `ocdb.sqlite.gz`, the
 release as an SQLite database, from the files `pipeline.release` wrote, so it
-holds exactly what they hold, plus each place's state. Each `--previous`
+holds exactly what they hold, plus each place's state and the `localities`
+table, read from `localities/localities.ndjson` in `--root` with each town's
+state worked out the same way. Each `--previous`
 folder holds an earlier release's `manifest.json` and `ocdb.sqlite.gz`; for
 each one, it writes a changeset that turns that database into this one. The
 release workflow passes the release just before as `--previous` and the last
@@ -710,6 +749,21 @@ standard changeset format any SQLite with the session extension applies.
 Before a changeset is written it is applied to a copy of the earlier
 database, with any conflict aborting, and every table is compared row by row
 with the new database. A difference fails the release.
+
+A changeset holds the old values of every row it deletes, a review's text
+among them, so a changeset from an earlier database is written only when
+every review of it can go out again. A review still in this release (as it
+was, or edited) can. A review this release dropped can only when the same
+contributor replaced it: its id is not on `moderation/removed_reviews.json`
+under `--root` (the data repository, `.` by default), and this release holds
+a review by that contributor of that place that the earlier database does
+not, made after the one that left. Any other review that left stops the
+changeset: one removed with `remove`, hidden by a person or by reports, from
+a blocked contributor, or erased, and one whose contributor's other review
+of the place is older or was already there. A review on the removed list
+stops it even when the contributor wrote a new one. Apps on that release find
+no path in the list and download the whole database. The release still has
+changesets from any other earlier database passed in.
 
 The build is deterministic: rows go in in key order, indexes are made after
 the rows, the page size is 4096 and the file is written with `VACUUM INTO`,
@@ -777,3 +831,11 @@ changes a few places sends only their cells, and a call that fails is sent
 again by the next release. The release workflow runs it after publishing when
 the `INTAKE_URL` variable and the `INTAKE_PLACES_TOKEN` secret are set, and
 skips it otherwise.
+
+The URL must be https with a host, and no user, query or fragment. It refuses
+any other URL before sending anything, and it does not follow a redirect, so
+the token reaches only the URL given. `--configured-url <url>` also requires
+the host of that URL, and `--check` prints the checked base URL and sends
+nothing. The release workflow checks the address this way before any step holds
+the token: a manual run's `intake_url` input must be https on the host of the
+`INTAKE_URL` variable.

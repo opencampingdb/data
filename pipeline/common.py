@@ -105,11 +105,13 @@ FACT_KEYS = (
     "nearest_beach",
     "nearest_boat_ramp",
     "nearest_major_road",
+    "locality",
+    "lga",
 )
 
 # Nearby facts the extract works out from other OSM objects at each sync.
 # Their source is always osm: no fact report, contributor or owner sets them.
-OSM_ONLY_FACTS = ("nearest_beach", "nearest_boat_ramp", "nearest_major_road")
+OSM_ONLY_FACTS = ("nearest_beach", "nearest_boat_ramp", "nearest_major_road", "locality", "lga")
 
 # Keys fact_sources may hold besides the facts. A missing name, location or
 # kind entry means the value comes from OSM. status and description never

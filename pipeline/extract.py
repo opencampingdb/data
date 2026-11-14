@@ -46,6 +46,7 @@ from .kinds import (
     parse_brand,
     water_type,
 )
+from .localities import LOCALITY_TAG_PAIRS, Localities, is_lga, locality_type, write_localities
 from .nearby import NEARBY_TAG_PAIRS, InsideFeatures, inside_fact
 from .roads import MajorRoads
 from .water import WATER_TAG_PAIRS, WaterFeatures, crocodile_hazard, open_line, water_kinds
@@ -92,6 +93,7 @@ TOILET_TYPES = {"flush": "flush", "pitlatrine": "pit", "chemical": "chemical", "
 OPERATOR_MAX = 200
 PHONE_MAX = 100
 URL_MAX = 500
+MAX_STAY_MAX = 100
 
 # Social pages: fact key -> OSM keys, the first with a value wins. Only
 # https links are kept.
@@ -152,6 +154,11 @@ ENTRY_VALUES = {
 def first_value(value: str) -> str:
     """OSM allows several values separated by ';'. Keep the first."""
     return value.split(";")[0].strip()
+
+
+def kept_url(url: str, schemes: tuple[str, ...] = ("https://",)) -> bool:
+    """Whether a link starts with one of schemes and fits the place schema's URL_MAX."""
+    return url.startswith(schemes) and len(url) <= URL_MAX
 
 
 def yes_no(value: str | None) -> bool | None:
@@ -310,7 +317,9 @@ def facts_from_tags(tags: dict) -> dict:
         facts["pets_months"] = months
 
     if tags.get("maxstay", "").strip():
-        facts["max_stay"] = parse_maxstay(tags["maxstay"])
+        max_stay = parse_maxstay(tags["maxstay"])
+        if len(max_stay) <= MAX_STAY_MAX:
+            facts["max_stay"] = max_stay
 
     if tags.get("opening_hours", "").strip():
         facts["opening_hours"] = tags["opening_hours"].strip()
@@ -321,11 +330,12 @@ def facts_from_tags(tags: dict) -> dict:
         if value:
             facts[fact_key] = value[:255]
 
-    # website wins over contact:website. Only http and https links are kept.
+    # website wins over contact:website. Only http and https links are kept,
+    # with the scheme in lower case as the place schema writes it.
     for key in ("website", "contact:website"):
         if key in tags:
             url = first_value(tags[key])
-            if url.lower().startswith(("http://", "https://")):
+            if kept_url(url, ("http://", "https://")):
                 facts["website"] = url
             break
 
@@ -333,17 +343,20 @@ def facts_from_tags(tags: dict) -> dict:
     for key in ("website:booking", "reservation:website"):
         url = first_value(tags.get(key, ""))
         if url:
-            if url.lower().startswith("https://") and len(url) <= URL_MAX:
+            if kept_url(url):
                 facts["booking_url"] = url
             break
 
     for key in ("phone", "contact:phone"):
         if key in tags and first_value(tags[key]):
             numbers = tags[key].split(";")
-            facts["phone"] = first_value(tags[key])
+            first = first_value(tags[key])
+            if len(first) > PHONE_MAX:
+                break
+            facts["phone"] = first
             # The second number, from the same key, is phone_2, unless it repeats the first.
             second = numbers[1].strip() if len(numbers) > 1 else ""
-            if second and second != facts["phone"] and len(second) <= PHONE_MAX:
+            if second and second != first and len(second) <= PHONE_MAX:
                 facts["phone_2"] = second
             break
 
@@ -358,7 +371,7 @@ def facts_from_tags(tags: dict) -> dict:
         for key in osm_keys:
             if key in tags:
                 url = first_value(tags[key])
-                if url.lower().startswith("https://") and len(url) <= 500:
+                if kept_url(url):
                     facts[fact_key] = url
                 break
 
@@ -504,7 +517,9 @@ def interesting_tag_filter() -> "osmium.filter.TagFilter":
 
     A filter object belongs to one handler chain, so each chain gets its own.
     """
-    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS)
+    return osmium.filter.TagFilter(
+        *PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS, *LOCALITY_TAG_PAIRS
+    )
 
 
 def tag_dict(obj) -> dict:
@@ -683,6 +698,7 @@ class FirstPass:
             and container_type(tags) is None
             and not water_kinds(tags)
             and inside_fact(tags) is None
+            and not is_lga(tags)
         ):
             return True
         for member in relation.members:
@@ -887,13 +903,20 @@ def place_outline(obj):
     return container_geometry(obj)
 
 
-def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder | None = None) -> list[dict]:
+def extract_file(
+    path: Path,
+    stats: dict | None = None,
+    sidecar: SidecarBuilder | None = None,
+    localities: Localities | None = None,
+) -> list[dict]:
     """Read an OSM file and return the place records found in it, sorted.
 
     If a dict is passed as stats it is filled with counts of what was kept
     and skipped, of the ways handed to the area builder and of the
     containers found, for the log. A SidecarBuilder passed as sidecar
     collects the outlines, signals and major roads for pipeline.geometry.
+    A Localities passed as localities keeps the towns and council areas read,
+    for the localities file (pipeline.localities).
     """
     stats = stats if stats is not None else {}
     stats.update(
@@ -908,6 +931,7 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
     water = WaterFeatures()
     inside = InsideFeatures()
     roads = MajorRoads()
+    localities = localities if localities is not None else Localities()
     if sidecar is not None:
         # The sidecar writes its road lines from the same roads.
         sidecar.roads = roads.roads
@@ -926,6 +950,11 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
             point = feature_point(obj)
             if point is not None:
                 inside.add(fact_inside, *point, feature_key(obj))
+
+        if obj.is_node() and locality_type(tags) and obj.location.valid():
+            localities.add_town(obj.id, tags, obj.location.lat, obj.location.lon)
+        if obj.is_area() and not obj.from_way() and is_lga(tags):
+            localities.add_lga(obj.orig_id(), tags, container_geometry(obj))
 
         kind_of_container = container_type(tags)
         if kind_of_container is not None:
@@ -992,12 +1021,14 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         inside.set_facts(record, outlines.pop(i, None), key)
         roads.set_facts(record)
         records.append(record)
+    localities.set_facts(records)
 
     stats["kept"] = len(records)
     stats["containers"] = container_counts
     stats["water"] = {kind: water.count(kind) for kind in ("beach", "crocodiles", "boat_ramp")}
     stats["inside"] = {fact: inside.count(fact) for fact in ("pub", "fuel", "car_wash")}
     stats["major_roads"] = roads.count()
+    stats["localities"] = localities.counts()
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -1007,12 +1038,16 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("input", type=Path, help=".osm.pbf or .osm file")
     parser.add_argument("--out", type=Path, default=Path("extract.ndjson"))
     parser.add_argument("--geometry", type=Path, help="also write the outlines, signals and major roads (pipeline.geometry) here")
+    parser.add_argument("--localities", type=Path, help="also write every town and its council area (pipeline.localities) here")
     args = parser.parse_args(argv)
 
     stats: dict = {}
     sidecar = SidecarBuilder() if args.geometry else None
-    records = extract_file(args.input, stats, sidecar)
+    localities = Localities()
+    records = extract_file(args.input, stats, sidecar, localities)
     write_text(args.out, "".join(dump_line(r) + "\n" for r in records))
+    if args.localities:
+        write_localities(args.localities, localities.rows())
     if sidecar is not None:
         lines = sidecar.write(args.geometry, records)
         print(f"Wrote {lines} geometry lines to {args.geometry} ({len(sidecar.roads)} major roads read)", file=sys.stderr)
@@ -1035,6 +1070,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Water features: {stats['water']}", file=sys.stderr)
     print(f"Pubs, fuel and car washes: {stats['inside']}", file=sys.stderr)
     print(f"Major roads: {stats['major_roads']}", file=sys.stderr)
+    print(f"Localities and council areas: {stats['localities']}", file=sys.stderr)
     return 0
 
 

@@ -265,7 +265,7 @@ this repository, so they use the default `GITHUB_TOKEN`.
 |---|---|---|
 | `OCDB_BOT_CLIENT_ID` | variable | OSM sync, Commons photos: the `opencampingdb-bot` client ID |
 | `OCDB_BOT_PRIVATE_KEY` | secret | OSM sync, Commons photos: the `opencampingdb-bot` private key |
-| `INTAKE_URL` | variable | Release: the intake to load the place index into. Without it the step is skipped |
+| `INTAKE_URL` | variable | Release: the intake to load the place index into, an https URL. A manual run's `intake_url` input must have the same host. Without it the step is skipped |
 | `INTAKE_PLACES_TOKEN` | secret | Release: the intake's `PLACES_TOKEN`. Without it the step is skipped |
 | `NEUTRAL_TERMS` | organisation secret | Neutral: the names to look for, as an extended regular expression. Without it the check warns and passes |
 

@@ -2,11 +2,13 @@
 
 import gzip
 import json
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 import pytest
 
 from pipeline.common import dump_record, place_path
-from pipeline.place_index import changed_parts, lines_by_cell, upload
+from pipeline.place_index import TOKEN_ENV, changed_parts, lines_by_cell, main, upload, urllib_send
 from pipeline.release import build_release
 
 VERSION = "20261030T160000Z-abc1234"
@@ -153,3 +155,100 @@ def test_upload_stops_at_a_refused_call(repo, tmp_path):
 
     with pytest.raises(RuntimeError, match="call 1 of 1: PUT /v1/place-index answered 500"):
         upload(path, "https://intake.example", TOKEN, send=failing, log=lambda _: None)
+
+
+@pytest.fixture
+def origins():
+    """Loopback HTTP servers that record each request and its authorization header."""
+    seen, servers = [], []
+
+    def start(name, redirect_to=None):
+        class Handler(BaseHTTPRequestHandler):
+            def answer(self, status, body=b"", location=None):
+                self.send_response(status)
+                if location:
+                    self.send_header("location", location)
+                self.send_header("content-length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
+            def do_GET(self):
+                seen.append((name, "GET", self.headers.get("authorization")))
+                if redirect_to:
+                    self.answer(302, location=redirect_to() + self.path)
+                else:
+                    self.answer(200, b'{"cells": []}')
+
+            def do_PUT(self):
+                self.rfile.read(int(self.headers.get("content-length", "0")))
+                seen.append((name, "PUT", self.headers.get("authorization")))
+                self.answer(200, b'{"cells": 1}')
+
+            def log_message(self, *args):
+                pass
+
+        server = HTTPServer(("127.0.0.1", 0), Handler)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        servers.append(server)
+        return f"http://127.0.0.1:{server.server_port}"
+
+    yield start, seen
+    for server in servers:
+        server.shutdown()
+        server.server_close()
+
+
+@pytest.mark.parametrize("url", ["http://{origin}/", "ftp://127.0.0.1/x", "not-a-url", "https://user:pw@intake.example"])
+def test_main_refuses_an_address_that_is_not_plain_https(repo, tmp_path, origins, monkeypatch, url):
+    start, seen = origins
+    add_place(repo, 1, -32.4, 117.0)
+    path = build(repo, tmp_path / "dist")
+    origin = start("intake").removeprefix("http://")
+    monkeypatch.setenv(TOKEN_ENV, TOKEN)
+
+    assert main(["--file", str(path), "--url", url.format(origin=origin)]) == 1
+    assert seen == []
+
+
+def test_upload_sends_nothing_to_an_http_address(repo, tmp_path):
+    add_place(repo, 1, -32.4, 117.0)
+    path = build(repo, tmp_path / "dist")
+    intake = FakeIntake()
+    with pytest.raises(ValueError, match="https"):
+        upload(path, "http://intake.example", TOKEN, send=intake.send, log=lambda _: None)
+    assert intake.calls == []
+
+
+def test_a_redirect_is_not_followed(origins):
+    start, seen = origins
+    second = start("second")
+    first = start("first", redirect_to=lambda: second)
+
+    status, _ = urllib_send("GET", f"{first}/v1/place-index/cells", {"authorization": f"Bearer {TOKEN}"}, None)
+
+    assert status == 302
+    assert seen == [("first", "GET", f"Bearer {TOKEN}")]
+
+
+@pytest.mark.parametrize(
+    ("url", "configured", "printed"),
+    [
+        ("https://intake.example/", "https://intake.example", "https://intake.example\n"),
+        ("https://intake.example/base", "https://intake.example/", "https://intake.example/base\n"),
+        ("https://other.example", "https://intake.example", None),
+        ("https://intake.example:8443", "https://intake.example", None),
+        ("http://intake.example", "http://intake.example", None),
+        ("https://intake.example", "", None),
+        ("https://intake.example\n::warning::x", "https://intake.example", None),
+    ],
+)
+def test_check_accepts_only_the_host_of_the_configured_intake(capsys, monkeypatch, url, configured, printed):
+    monkeypatch.delenv(TOKEN_ENV, raising=False)
+    code = main(["--check", "--url", url, "--configured-url", configured])
+    out = capsys.readouterr().out
+    if printed is None:
+        assert code == 1
+        assert out == ""
+    else:
+        assert code == 0
+        assert out == printed
