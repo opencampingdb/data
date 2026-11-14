@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -13,6 +15,16 @@
       "suburb": "Nimbin"
     },
     "email": "nimbintouristpark@commander.net.au",
+    "lga": {
+      "name": "Lismore City Council",
+      "osm_id": 6168485
+    },
+    "locality": {
+      "distance_m": 280,
+      "name": "Nimbin",
+      "osm_id": 245506728,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Cullen Street"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

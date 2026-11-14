@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Wentworth Shire Council",
+      "osm_id": 5884892
+    },
+    "locality": {
+      "distance_m": 47330,
+      "name": "Paringa",
+      "osm_id": 2074381065,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESABFPV1K73R46X2Z713S",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

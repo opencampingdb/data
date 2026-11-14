@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
     "hot_water": true,
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 1240,
+      "name": "Jericho",
+      "osm_id": 247809820,
+      "type": "town"
+    },
     "operator": "Barcaldine Regional Council",
     "wheelchair": false
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

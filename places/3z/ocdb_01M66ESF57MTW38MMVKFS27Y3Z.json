@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "toilets": "osm",
@@ -17,6 +19,16 @@
     "drinking_water": true,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 2680,
+      "name": "Ballan",
+      "osm_id": 174755062,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 230
     },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

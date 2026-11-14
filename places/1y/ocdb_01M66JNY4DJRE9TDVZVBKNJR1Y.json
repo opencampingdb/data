@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 4280,
+      "name": "Cambroon",
+      "osm_id": 324609419,
+      "type": "village"
+    },
     "water_type": "tank_fill"
   },
   "group": "utility",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

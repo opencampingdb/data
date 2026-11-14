@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -14,6 +16,16 @@
     "caravans": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Bellingen Shire Council",
+      "osm_id": 6165980
+    },
+    "locality": {
+      "distance_m": 2570,
+      "name": "Urunga",
+      "osm_id": 25976211,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 330
     },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

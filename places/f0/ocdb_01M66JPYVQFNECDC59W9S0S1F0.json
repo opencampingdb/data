@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Merredin",
+      "osm_id": 11689039
+    },
+    "locality": {
+      "distance_m": 17770,
+      "name": "Merredin",
+      "osm_id": 31065028,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPYVQFNECDC59W9S0S1F0",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

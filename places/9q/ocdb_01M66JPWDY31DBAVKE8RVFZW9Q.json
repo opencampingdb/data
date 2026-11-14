@@ -1,13 +1,25 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_91",
       "lpg"
-    ]
+    ],
+    "lga": {
+      "name": "Doomadgee Aboriginal Shire",
+      "osm_id": 10921477
+    },
+    "locality": {
+      "distance_m": 670,
+      "name": "Doomadgee",
+      "osm_id": 1863502756,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPWDY31DBAVKE8RVFZW9Q",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

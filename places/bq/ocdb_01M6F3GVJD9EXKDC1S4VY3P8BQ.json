@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "postcode": "4490",
       "street": "Railway Street"
+    },
+    "lga": {
+      "name": "Paroo Shire",
+      "osm_id": 11674869
+    },
+    "locality": {
+      "distance_m": 1260,
+      "name": "Cunnamulla",
+      "osm_id": 246087334,
+      "type": "town"
     },
     "website": "https://sites.google.com/site/oxfordhotelmotel/"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

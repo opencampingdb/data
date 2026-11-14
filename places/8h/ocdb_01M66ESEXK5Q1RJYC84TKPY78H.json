@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 7840,
+      "name": "Cooran",
+      "osm_id": 243645434,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEXK5Q1RJYC84TKPY78H",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

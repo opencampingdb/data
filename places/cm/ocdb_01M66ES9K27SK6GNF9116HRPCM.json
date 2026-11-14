@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -13,6 +15,16 @@
     "charge": "Donation Box $10 p/v p/n",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Dubbo Regional Council",
+      "osm_id": 6268489
+    },
+    "locality": {
+      "distance_m": 21090,
+      "name": "Wongarbon",
+      "osm_id": 888576099,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

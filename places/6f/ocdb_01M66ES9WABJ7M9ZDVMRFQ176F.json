@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Rural City of Mildura",
+      "osm_id": 3345519
+    },
+    "locality": {
+      "distance_m": 13890,
+      "name": "Wentworth",
+      "osm_id": 72773523,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 700
     }
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

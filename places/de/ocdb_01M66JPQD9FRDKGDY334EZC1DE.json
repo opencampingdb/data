@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,17 @@
       "street": "Sheppards Street",
       "suburb": "Gordonvale"
     },
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Cairns Regional",
+      "osm_id": 11677109
+    },
+    "locality": {
+      "distance_m": 1070,
+      "name": "Gordonvale",
+      "osm_id": 169526059,
+      "type": "town"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPQD9FRDKGDY334EZC1DE",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

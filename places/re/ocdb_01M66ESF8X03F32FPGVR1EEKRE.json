@@ -5,11 +5,16 @@
   "fact_sources": {
     "ensuite_sites": "community_report",
     "fee": "osm",
+    "lga": "osm",
     "toilets": "osm"
   },
   "facts": {
     "ensuite_sites": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
     "toilets": true
   },
   "group": "overnight",
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

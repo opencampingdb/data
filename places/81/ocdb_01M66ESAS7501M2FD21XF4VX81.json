@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 3000,
+      "name": "Broadwater",
+      "osm_id": 114651254,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 80
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "112",
       "street": "Court Street"
+    },
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 990,
+      "name": "Manilla",
+      "osm_id": 105561709,
+      "type": "town"
     },
     "operator": "NSW Health",
     "phone": "+61 2 6785 4000",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

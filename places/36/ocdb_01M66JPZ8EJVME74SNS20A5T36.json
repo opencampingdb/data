@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fuel": true,
+    "lga": {
+      "name": "Coomalie Shire",
+      "osm_id": 9045376
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Batchelor",
+      "osm_id": 31432758,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Rum Jungle Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

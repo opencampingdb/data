@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
@@ -15,6 +17,16 @@
       "suburb": "Risdon Park"
     },
     "air": true,
+    "lga": {
+      "name": "Port Pirie Regional Council",
+      "osm_id": 9108160
+    },
+    "locality": {
+      "distance_m": 2290,
+      "name": "Port Pirie",
+      "osm_id": 445177480,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2660,
       "name": "Solomontown Beach"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

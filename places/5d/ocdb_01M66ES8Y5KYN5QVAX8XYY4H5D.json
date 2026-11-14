@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "NSW",
       "street": "Woodstock Avenue",
       "suburb": "Rooty Hill"
+    },
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 14610,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
     },
     "operator": "Blacktown City Council"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

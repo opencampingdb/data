@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "City of Stirling",
+      "osm_id": 11689256
+    },
+    "locality": {
+      "distance_m": 9670,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Chesterfield Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "142",
       "street": "Dome Road"
+    },
+    "lga": {
+      "name": "Bellingen Shire Council",
+      "osm_id": 6165980
+    },
+    "locality": {
+      "distance_m": 3100,
+      "name": "Dorrigo",
+      "osm_id": 59834611,
+      "type": "town"
     },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/visitor-centres/dorrigo-rainforest-centre"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 15150,
+      "name": "Ravensthorpe",
+      "osm_id": 1940218406,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Newdegate Ravensthorpe Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

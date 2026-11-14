@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -14,6 +16,16 @@
       "suburb": "Tennant Creek"
     },
     "email": "reservations@bluestonemotorinn.com.au",
+    "lga": {
+      "name": "Barkly Region",
+      "osm_id": 8878329
+    },
+    "locality": {
+      "distance_m": 770,
+      "name": "Tennant Creek",
+      "osm_id": 1852930060,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Paterson Street"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

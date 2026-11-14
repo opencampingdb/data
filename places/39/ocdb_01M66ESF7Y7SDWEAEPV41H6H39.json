@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "toilets": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "FICHERA ROAD"
     },
     "fee": true,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 5640,
+      "name": "Mareeba",
+      "osm_id": 245382244,
+      "type": "town"
+    },
     "pets": "yes",
     "toilets": true
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

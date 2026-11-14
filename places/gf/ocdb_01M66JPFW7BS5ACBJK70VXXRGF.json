@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "The Regional Council of Goyder",
+      "osm_id": 9107816
+    },
+    "locality": {
+      "distance_m": 280,
+      "name": "Eudunda",
+      "osm_id": 1886648892,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Bruce Street"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

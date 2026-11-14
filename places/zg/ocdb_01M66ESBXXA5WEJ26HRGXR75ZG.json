@@ -4,10 +4,17 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": true,
+    "locality": {
+      "distance_m": 41470,
+      "name": "Batchelor",
+      "osm_id": 31432758,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 340,
       "name": "Litchfield Park Road"
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

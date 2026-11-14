@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Dumbleyung",
+      "osm_id": 11688916
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Dumbleyung",
+      "osm_id": 243367640,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Collie Lake King"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

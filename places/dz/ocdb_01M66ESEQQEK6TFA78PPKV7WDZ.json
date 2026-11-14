@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Mount Alexander",
+      "osm_id": 3339104
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Maldon",
+      "osm_id": 36422054,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "High Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

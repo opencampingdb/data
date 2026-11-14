@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "water_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Greater Geelong",
+      "osm_id": 2646730
+    },
+    "locality": {
+      "distance_m": 1080,
+      "name": "Portarlington",
+      "osm_id": 143243427,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 20
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

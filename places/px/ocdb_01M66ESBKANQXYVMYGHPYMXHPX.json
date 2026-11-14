@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "City of Devonport",
+      "osm_id": 10586315
+    },
+    "locality": {
+      "distance_m": 1950,
+      "name": "Devonport",
+      "osm_id": 27120185,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 50,
       "name": "Bluff Beach"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

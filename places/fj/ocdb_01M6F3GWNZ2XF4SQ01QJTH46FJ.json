@@ -1,10 +1,31 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "9",
+      "postcode": "2750",
+      "state": "NSW",
+      "street": "Station Street",
+      "suburb": "Penrith"
+    },
+    "lga": {
+      "name": "Penrith City Council",
+      "osm_id": 6282698
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Penrith",
+      "osm_id": 117056836,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1880
     },
@@ -14,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Belmore Street"
-    }
+    },
+    "opening_hours": "• Monday – Wednesday: 10:00 AM – 2:00 AM • Thursday – Saturday: 10:00 AM – 4:00 AM • Sunday: 10:00 AM – 10:00pm"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWNZ2XF4SQ01QJTH46FJ",
@@ -26,11 +48,11 @@
   "name": "Red Cow Inn",
   "osm": {
     "id": 7176946441,
-    "timestamp": "2022-03-27T05:45:10Z",
+    "timestamp": "2026-11-13T03:24:14Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

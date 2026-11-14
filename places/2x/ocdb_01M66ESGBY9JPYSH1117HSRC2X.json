@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "pets": "osm",
     "tents": "osm",
@@ -20,6 +22,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 1630,
+      "name": "Crystal Waters",
+      "osm_id": 7335085819,
+      "type": "village"
+    },
     "operator": "Hipcamp",
     "pets": "leashed",
     "tents": true,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

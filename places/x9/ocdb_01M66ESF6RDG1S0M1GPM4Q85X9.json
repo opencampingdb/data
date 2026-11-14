@@ -6,6 +6,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -20,6 +22,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Shire of Beverley",
+      "osm_id": 11689465
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Beverley",
+      "osm_id": 283015208,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Hunt Road"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

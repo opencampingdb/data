@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Unincorporated Area Riverland",
+      "osm_id": 6799963
+    },
+    "locality": {
+      "distance_m": 20060,
+      "name": "Paringa",
+      "osm_id": 2074381065,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3130,
       "name": "Lock 6 Boat Ramp"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

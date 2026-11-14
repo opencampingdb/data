@@ -8,6 +8,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "osm",
     "nearest_major_road": "osm",
     "pets": "community_report",
@@ -25,6 +27,16 @@
     "caravans": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Cairns Regional",
+      "osm_id": 11677109
+    },
+    "locality": {
+      "distance_m": 8090,
+      "name": "Cairns",
+      "osm_id": 29405229,
+      "type": "city"
+    },
     "motorhomes": true,
     "nearest_major_road": {
       "distance_m": 150,
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

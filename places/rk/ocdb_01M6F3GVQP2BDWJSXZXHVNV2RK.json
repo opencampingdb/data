@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "369",
       "street": "Cedar Ridge Road"
+    },
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 8820,
+      "name": "Kurmond",
+      "osm_id": 117051118,
+      "type": "village"
     },
     "website": "https://www.sunsetcottages.com.au/"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

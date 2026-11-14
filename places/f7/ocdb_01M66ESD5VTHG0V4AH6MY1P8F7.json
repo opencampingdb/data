@@ -2,6 +2,8 @@
   "fact_sources": {
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Wagin",
+      "osm_id": 11688953
+    },
+    "locality": {
+      "distance_m": 990,
+      "name": "Wagin",
+      "osm_id": 1855661341,
+      "type": "town"
+    },
     "max_stay": "72h",
     "nearest_major_road": {
       "distance_m": 160,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

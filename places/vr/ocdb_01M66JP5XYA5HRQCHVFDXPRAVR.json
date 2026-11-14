@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Plantagenet",
+      "osm_id": 11690400
+    },
+    "locality": {
+      "distance_m": 21810,
+      "name": "Narrikup",
+      "osm_id": 1940197471,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP5XYA5HRQCHVFDXPRAVR",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

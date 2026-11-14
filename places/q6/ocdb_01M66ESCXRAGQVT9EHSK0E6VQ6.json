@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
+    "locality": {
+      "distance_m": 3940,
+      "name": "Broome",
+      "osm_id": 53919243,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 570
     },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

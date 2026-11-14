@@ -6,6 +6,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -19,6 +21,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": false,
+    "lga": {
+      "name": "City of Lake Macquarie",
+      "osm_id": 6191221
+    },
+    "locality": {
+      "distance_m": 15230,
+      "name": "Morisset",
+      "osm_id": 25939676,
+      "type": "town"
+    },
     "power": false,
     "showers": false,
     "tents": true,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

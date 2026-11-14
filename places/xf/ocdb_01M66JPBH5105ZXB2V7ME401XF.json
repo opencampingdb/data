@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Lake Macquarie",
+      "osm_id": 6191221
+    },
+    "locality": {
+      "distance_m": 6060,
+      "name": "Mulbring",
+      "osm_id": 114176604,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPBH5105ZXB2V7ME401XF",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

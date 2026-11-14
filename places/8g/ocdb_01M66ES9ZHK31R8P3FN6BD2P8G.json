@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
@@ -8,6 +9,10 @@
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Shire of Dundas",
+      "osm_id": 11690221
+    },
     "max_stay": "24h",
     "nearest_major_road": {
       "distance_m": 120,
@@ -32,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

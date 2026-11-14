@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Great Northern Highway"
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

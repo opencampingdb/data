@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 13020,
+      "name": "Jenolan Caves",
+      "osm_id": 113707646,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": false,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

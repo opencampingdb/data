@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "website": "osm",
@@ -13,6 +15,16 @@
       "state": "SA",
       "street": "Duthie Court",
       "suburb": "Paringa"
+    },
+    "lga": {
+      "name": "Renmark Paringa Council",
+      "osm_id": 6704735
+    },
+    "locality": {
+      "distance_m": 750,
+      "name": "Paringa",
+      "osm_id": 2074381065,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 1160
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

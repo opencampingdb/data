@@ -7,6 +7,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -29,6 +31,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Warrumbungle Shire Council",
+      "osm_id": 6268496
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Baradine",
+      "osm_id": 113726764,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 470,
       "name": "Worrigal Street"
@@ -57,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

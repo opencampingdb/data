@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "28-34",
       "postcode": "4700",
       "street": "Albert Street"
+    },
+    "lga": {
+      "name": "Rockhampton Regional",
+      "osm_id": 11676441
+    },
+    "locality": {
+      "distance_m": 1160,
+      "name": "Rockhampton",
+      "osm_id": 2014326094,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 1330
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

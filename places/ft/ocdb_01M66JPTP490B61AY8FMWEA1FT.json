@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -17,6 +19,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 12020,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Sunnyholt Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

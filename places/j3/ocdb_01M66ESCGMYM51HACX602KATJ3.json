@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Lockhart Shire Council",
+      "osm_id": 6322050
+    },
+    "locality": {
+      "distance_m": 840,
+      "name": "Yerong Creek",
+      "osm_id": 113685468,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCGMYM51HACX602KATJ3",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

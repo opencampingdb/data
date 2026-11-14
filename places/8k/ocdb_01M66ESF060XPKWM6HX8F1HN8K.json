@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -17,6 +19,16 @@
       "suburb": "Stanthorpe"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 1720,
+      "name": "Stanthorpe",
+      "osm_id": 92410551,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "High Street"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "71",
       "street": "Springs Road"
+    },
+    "lga": {
+      "name": "Gladstone Regional",
+      "osm_id": 11676351
+    },
+    "locality": {
+      "distance_m": 760,
+      "name": "Agnes Water",
+      "osm_id": 316896038,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 330
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

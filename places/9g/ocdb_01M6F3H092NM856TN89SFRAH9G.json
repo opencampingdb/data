@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
@@ -11,6 +12,12 @@
       "state": "ACT",
       "street": "Northbourne Avenue",
       "suburb": "Downer"
+    },
+    "locality": {
+      "distance_m": 2200,
+      "name": "North Canberra",
+      "osm_id": 4583652167,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4800
@@ -36,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

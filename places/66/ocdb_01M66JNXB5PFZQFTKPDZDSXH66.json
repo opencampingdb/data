@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "street": "Mona Vale Road",
       "suburb": "St Ives"
+    },
+    "lga": {
+      "name": "Ku-ring-gai Council",
+      "osm_id": 6228261
+    },
+    "locality": {
+      "distance_m": 6070,
+      "name": "Hornsby",
+      "osm_id": 26391679,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3690
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

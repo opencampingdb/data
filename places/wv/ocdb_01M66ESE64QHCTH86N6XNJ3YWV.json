@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "drinking_water": false,
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Lachlan Shire Council",
+      "osm_id": 6106054
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Tullibigeal",
+      "osm_id": 2477090995,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE64QHCTH86N6XNJ3YWV",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

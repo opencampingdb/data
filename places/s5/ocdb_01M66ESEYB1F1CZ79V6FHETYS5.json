@@ -3,6 +3,8 @@
     "bbq": "osm",
     "bins": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "bbq": false,
     "bins": true,
     "drinking_water": false,
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 4310,
+      "name": "Springhurst",
+      "osm_id": 795544351,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Hume Freeway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

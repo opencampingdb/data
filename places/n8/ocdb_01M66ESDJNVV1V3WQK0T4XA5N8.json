@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Shire of Hindmarsh",
+      "osm_id": 3345532
+    },
+    "locality": {
+      "distance_m": 2120,
+      "name": "Rainbow",
+      "osm_id": 513051409,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Rainbow Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

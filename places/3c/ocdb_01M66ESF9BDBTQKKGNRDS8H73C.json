@@ -5,6 +5,8 @@
     "caravans": "osm",
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "operator": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
     "caravans": true,
     "charge": "$6",
     "fee": true,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 17060,
+      "name": "Jenolan Caves",
+      "osm_id": 113707646,
+      "type": "village"
+    },
     "motorbikes": true,
     "operator": "National Parks and Wildlife Service",
     "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/boyd-river-campground/Visitor-Info#Accessibility"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

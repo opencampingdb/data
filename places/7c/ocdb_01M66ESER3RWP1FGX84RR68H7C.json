@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -15,6 +17,16 @@
       "postcode": "6701",
       "street": "Robinson Street",
       "suburb": "Carnarvon"
+    },
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 670,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
     },
     "nearest_beach": {
       "distance_m": 1030
@@ -47,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

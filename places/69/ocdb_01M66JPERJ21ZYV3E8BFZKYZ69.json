@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "7",
       "street": "Onslow Court"
+    },
+    "lga": {
+      "name": "Shire of Mornington Peninsula",
+      "osm_id": 3333281
+    },
+    "locality": {
+      "distance_m": 1990,
+      "name": "Hastings",
+      "osm_id": 31617240,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 2520
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

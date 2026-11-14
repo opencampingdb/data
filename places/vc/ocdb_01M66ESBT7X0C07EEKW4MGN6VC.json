@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
     "address": {
       "housenumber": "8",
       "street": "Barrilgie Road"
+    },
+    "lga": {
+      "name": "Hinchinbrook Shire",
+      "osm_id": 11676894
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Mutarnee",
+      "osm_id": 4074283389,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 4470,
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

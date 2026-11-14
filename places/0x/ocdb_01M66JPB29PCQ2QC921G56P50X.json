@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "44",
       "street": "Eldridge Street"
+    },
+    "lga": {
+      "name": "Shire of Gnowangerup",
+      "osm_id": 11690325
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "Ongerup",
+      "osm_id": 1775453680,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 370,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

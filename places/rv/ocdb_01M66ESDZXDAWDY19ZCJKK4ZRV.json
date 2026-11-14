@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 8960,
+      "name": "Mona Vale",
+      "osm_id": 117078564,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Mona Vale Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

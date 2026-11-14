@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "unleaded_95",
       "adblue"
     ],
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Roma",
+      "osm_id": 1895756363,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bowen Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

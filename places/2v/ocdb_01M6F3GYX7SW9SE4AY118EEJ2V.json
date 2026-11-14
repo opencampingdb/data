@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "VIC",
       "street": "Great Alpine Road",
       "suburb": "Ovens"
+    },
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Ovens",
+      "osm_id": 958059787,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

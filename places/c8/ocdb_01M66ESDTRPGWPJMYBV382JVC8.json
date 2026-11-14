@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Merri-bek",
+      "osm_id": 3327767
+    },
+    "locality": {
+      "distance_m": 11890,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

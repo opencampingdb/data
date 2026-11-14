@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Cassowary Coast Regional",
+      "osm_id": 11676958
+    },
+    "locality": {
+      "distance_m": 7260,
+      "name": "South Johnstone",
+      "osm_id": 2300367350,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Innisfail Japoon Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

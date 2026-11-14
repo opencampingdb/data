@@ -2,12 +2,17 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Unincorporated Far West Area",
+      "osm_id": 7032873
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "toilet_type": "flush"
   },
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

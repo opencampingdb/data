@@ -2,11 +2,23 @@
   "fact_sources": {
     "car_wash": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "car_wash": true,
     "fuel": true,
+    "lga": {
+      "name": "City of Onkaparinga",
+      "osm_id": 7262204
+    },
+    "locality": {
+      "distance_m": 5020,
+      "name": "Clarendon",
+      "osm_id": 5674778781,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Hub Drive"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

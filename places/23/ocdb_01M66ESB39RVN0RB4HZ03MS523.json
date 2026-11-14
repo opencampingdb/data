@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm"
@@ -15,6 +17,16 @@
     },
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 10,
+      "name": "Palmwoods",
+      "osm_id": 194064294,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Margaret Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

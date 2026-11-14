@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3620",
       "street": "Allan Street",
       "suburb": "Kyabram"
+    },
+    "lga": {
+      "name": "Shire of Campaspe",
+      "osm_id": 3347273
+    },
+    "locality": {
+      "distance_m": 100,
+      "name": "Kyabram",
+      "osm_id": 252999906,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

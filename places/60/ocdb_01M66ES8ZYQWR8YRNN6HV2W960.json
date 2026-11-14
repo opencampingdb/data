@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 34840,
+      "name": "Hermannsburg",
+      "osm_id": 2365278670,
+      "type": "village"
+    },
     "operator": "NT Parks",
     "website": "https://nt.gov.au/parks/find-a-park/tjoritja-west-macdonnell-national-park/ormiston-gorge"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

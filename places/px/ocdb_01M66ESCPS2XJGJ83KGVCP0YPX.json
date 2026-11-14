@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "postcode": "4413",
       "street": "Braithwaite Street"
+    },
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 800,
+      "name": "Chinchilla",
+      "osm_id": 291767248,
+      "type": "town"
     },
     "phone": "+61 457 007 050",
     "website": "https://clover-hill-accommodation-camping.business.site/"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

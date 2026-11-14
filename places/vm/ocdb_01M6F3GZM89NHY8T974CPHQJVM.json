@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "43",
       "street": "Megalong Place",
       "suburb": "Kanimbla"
+    },
+    "lga": {
+      "name": "Lithgow City Council",
+      "osm_id": 6299566
+    },
+    "locality": {
+      "distance_m": 10280,
+      "name": "Blackheath",
+      "osm_id": 117040742,
+      "type": "town"
     },
     "operator": "Logan Brae Retreats",
     "website": "https://loganbraeretreats.com.au/accommodation/the-homestead/"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

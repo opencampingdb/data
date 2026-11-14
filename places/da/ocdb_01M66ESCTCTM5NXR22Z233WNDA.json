@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Tathra",
+      "osm_id": 59608764,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30,
       "name": "Tathra Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

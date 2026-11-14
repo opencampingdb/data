@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Cobar Shire Council",
+      "osm_id": 6083910
+    },
+    "locality": {
+      "distance_m": 1380,
+      "name": "Euabalong",
+      "osm_id": 113468356,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Tipping Way"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

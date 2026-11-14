@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "City of Albany",
+      "osm_id": 11690341
+    },
+    "locality": {
+      "distance_m": 11510,
+      "name": "Manypeaks",
+      "osm_id": 2680325209,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 70,
       "name": "Bettys Beach"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

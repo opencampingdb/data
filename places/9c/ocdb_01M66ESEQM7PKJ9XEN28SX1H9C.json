@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -22,6 +24,16 @@
     "dump_station": true,
     "email": "stay@snugpark.com.au",
     "fee": true,
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Snug",
+      "osm_id": 1446236187,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 90,
       "name": "Snug Beach"
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

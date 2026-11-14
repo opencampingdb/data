@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +10,16 @@
       "state": "QLD",
       "street": "Perry Drive",
       "suburb": "Glenden"
+    },
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 1900,
+      "name": "Glenden",
+      "osm_id": 317932087,
+      "type": "town"
     }
   },
   "group": "attraction",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

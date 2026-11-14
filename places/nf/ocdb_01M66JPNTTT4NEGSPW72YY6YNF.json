@@ -1,12 +1,17 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_91"
-    ]
+    ],
+    "lga": {
+      "name": "Unincorporated Far West Area",
+      "osm_id": 7032873
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPNTTT4NEGSPW72YY6YNF",
@@ -24,5 +29,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

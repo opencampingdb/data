@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "email": "enquiries@lakestclairlodge.com.au",
+    "lga": {
+      "name": "Central Highlands",
+      "osm_id": 10622305
+    },
+    "locality": {
+      "distance_m": 46180,
+      "name": "Miena",
+      "osm_id": 321958019,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 490,
       "name": "Cynthia Bay Boat Ramp"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

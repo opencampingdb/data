@@ -2,6 +2,7 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +10,10 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Unincorporated Far West Area",
+      "osm_id": 7032873
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Silver City Highway"
@@ -32,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

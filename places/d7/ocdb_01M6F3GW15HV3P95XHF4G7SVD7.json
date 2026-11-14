@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "Lot 7724",
       "postcode": "6260",
       "street": "Pump Hill Road"
+    },
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 1700,
+      "name": "Pemberton",
+      "osm_id": 82359265,
+      "type": "town"
     },
     "phone": "+61 438 561 664",
     "website": "https://www.rainbowtrailchalets.com.au/"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

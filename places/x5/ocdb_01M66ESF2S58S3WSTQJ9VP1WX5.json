@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -18,6 +20,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Tenterfield Shire Council",
+      "osm_id": 6163155
+    },
+    "locality": {
+      "distance_m": 21310,
+      "name": "Jubullum Village",
+      "osm_id": 11221818201,
+      "type": "village"
+    },
     "max_stay": "72h",
     "nearest_major_road": {
       "distance_m": 350,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

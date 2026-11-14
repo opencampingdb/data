@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 16240,
+      "name": "Numeralla",
+      "osm_id": 1887102624,
+      "type": "village"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/cascades-campground"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

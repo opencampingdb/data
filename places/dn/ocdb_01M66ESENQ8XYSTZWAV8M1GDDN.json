@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -23,6 +25,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Balonne Shire",
+      "osm_id": 11674851
+    },
+    "locality": {
+      "distance_m": 36770,
+      "name": "Goodooga",
+      "osm_id": 113764295,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "William Street"
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

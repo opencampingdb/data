@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel"
-    ]
+    ],
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 30560,
+      "name": "Hermannsburg",
+      "osm_id": 2365278670,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JNY1W3N98R07FVVHKTFX6",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

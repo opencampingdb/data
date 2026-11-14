@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -11,6 +13,16 @@
     "address": {
       "housenumber": "15",
       "street": "Great Western Highway"
+    },
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 1350,
+      "name": "Glenbrook",
+      "osm_id": 20968400,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 1250,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

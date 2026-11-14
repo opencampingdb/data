@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Southern Grampians",
+      "osm_id": 3349959
+    },
+    "locality": {
+      "distance_m": 2670,
+      "name": "Dunkeld",
+      "osm_id": 291548996,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP1N0M652NBT9ASZFB2GW",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-05T21:42:45Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

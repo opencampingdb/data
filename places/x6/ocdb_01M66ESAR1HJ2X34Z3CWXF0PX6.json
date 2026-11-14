@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 3160,
+      "name": "Blackwood",
+      "osm_id": 2140871545,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESAR1HJ2X34Z3CWXF0PX6",
   "kind": "national_park_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-01T01:44:13Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm"
   },
@@ -13,6 +15,16 @@
     },
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Cook Shire",
+      "osm_id": 11677441
+    },
+    "locality": {
+      "distance_m": 6820,
+      "name": "Rossville",
+      "osm_id": 848380949,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Shiptons Flat Road"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -7,6 +7,8 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -16,6 +18,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Naracoorte Lucindale Council",
+      "osm_id": 6711653
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Frances",
+      "osm_id": 1746170643,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "High Street"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

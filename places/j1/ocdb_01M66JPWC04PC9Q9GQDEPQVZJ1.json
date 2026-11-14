@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "unleaded_95",
       "lpg"
     ],
+    "lga": {
+      "name": "Cessnock City Council",
+      "osm_id": 6191219
+    },
+    "locality": {
+      "distance_m": 1360,
+      "name": "Kurri Kurri",
+      "osm_id": 40764819,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mulbring Street"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

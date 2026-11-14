@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "postcode": "4732",
       "street": "Nev Bullen Drive"
+    },
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 1100,
+      "name": "Muttaburra",
+      "osm_id": 3608314156,
+      "type": "village"
     }
   },
   "group": "attraction",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

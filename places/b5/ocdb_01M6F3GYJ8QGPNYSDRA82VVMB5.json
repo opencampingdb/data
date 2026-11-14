@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "QLD",
       "street": "Wembley Road",
       "suburb": "Logan Central"
+    },
+    "lga": {
+      "name": "Logan City",
+      "osm_id": 11675411
+    },
+    "locality": {
+      "distance_m": 13980,
+      "name": "Logan Village",
+      "osm_id": 206242925,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 80,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

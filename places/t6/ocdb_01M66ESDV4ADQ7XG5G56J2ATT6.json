@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Inverell Shire Council",
+      "osm_id": 6195194
+    },
+    "locality": {
+      "distance_m": 15900,
+      "name": "Inverell",
+      "osm_id": 1837347699,
+      "type": "town"
+    },
     "toilet_type": "flush",
     "wheelchair": false
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
   "facts": {
     "caravans": true,
     "drinking_water": false,
+    "lga": {
+      "name": "Rural City of Horsham",
+      "osm_id": 3359337
+    },
+    "locality": {
+      "distance_m": 8620,
+      "name": "Natimuk",
+      "osm_id": 426740324,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "power": false,
     "showers": false,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

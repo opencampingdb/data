@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Southern Midlands",
+      "osm_id": 10624828
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Campania",
+      "osm_id": 244593770,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Reeve Street"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

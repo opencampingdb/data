@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Shire of Wickepin",
+      "osm_id": 11688936
+    },
+    "locality": {
+      "distance_m": 19300,
+      "name": "Harrismith",
+      "osm_id": 3045934818,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Wickepin-Harrismith Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

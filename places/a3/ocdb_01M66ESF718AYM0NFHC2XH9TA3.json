@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "street": "Yalwal Road"
     },
     "fee": false,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 990,
+      "name": "Yalwal",
+      "osm_id": 113136033,
+      "type": "village"
+    },
     "phone": "+61 2 4429 3111"
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
     "mean": 5.0
   },
   "status": "open",
-  "updated": "2026-11-08T01:32:32Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

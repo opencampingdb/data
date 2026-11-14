@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "95",
       "street": "Tooradin Station Road",
       "unit": "6"
+    },
+    "lga": {
+      "name": "City of Casey",
+      "osm_id": 3333276
+    },
+    "locality": {
+      "distance_m": 1070,
+      "name": "Tooradin",
+      "osm_id": 2608593115,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 1260
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

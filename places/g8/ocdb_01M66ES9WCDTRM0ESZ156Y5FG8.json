@@ -6,6 +6,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -20,6 +22,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 48510,
+      "name": "Buchan",
+      "osm_id": 2018197599,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Snowy River Road"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

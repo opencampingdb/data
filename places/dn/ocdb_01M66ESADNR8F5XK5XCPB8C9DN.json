@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Central Coast",
+      "osm_id": 10590161
+    },
+    "locality": {
+      "distance_m": 10040,
+      "name": "Penguin",
+      "osm_id": 32741288,
+      "type": "town"
+    },
     "operator": "Penguin to Cradle Trail",
     "showers": false,
     "tents": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "6528",
       "street": "Company Road",
       "suburb": "South Greenough"
+    },
+    "lga": {
+      "name": "City of Greater Geraldton",
+      "osm_id": 11689919
+    },
+    "locality": {
+      "distance_m": 18740,
+      "name": "Cape Burney",
+      "osm_id": 3390094295,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 260,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

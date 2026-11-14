@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Broken Hill City Council",
+      "osm_id": 5892296
+    },
+    "locality": {
+      "distance_m": 2020,
+      "name": "Broken Hill",
+      "osm_id": 113763535,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Iodide Street"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

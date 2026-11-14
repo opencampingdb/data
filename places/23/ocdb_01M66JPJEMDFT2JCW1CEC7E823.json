@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "11563",
       "street": "New England Highway"
+    },
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 10290,
+      "name": "Armidale",
+      "osm_id": 59851594,
+      "type": "city"
     },
     "wheelchair": true
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,13 +1,25 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_91",
       "unleaded_98"
-    ]
+    ],
+    "lga": {
+      "name": "Lockyer Valley Regional",
+      "osm_id": 11675710
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Tenthill",
+      "osm_id": 4947868190,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPBFJWN3Q0G1FFXE93TD2",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

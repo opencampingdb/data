@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Chittering",
+      "osm_id": 11689602
+    },
+    "locality": {
+      "distance_m": 13850,
+      "name": "Mogumber",
+      "osm_id": 316904086,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Bindoon Moora Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

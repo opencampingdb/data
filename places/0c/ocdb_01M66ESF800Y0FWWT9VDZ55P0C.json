@@ -8,6 +8,8 @@
     "fee": "osm",
     "kitchen": "osm",
     "laundry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -32,6 +34,16 @@
     "fee": true,
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 8450,
+      "name": "Rathdowney",
+      "osm_id": 238661895,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Boonah - Rathdowney Road"
@@ -61,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

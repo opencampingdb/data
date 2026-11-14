@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Denmark",
+      "osm_id": 11690414
+    },
+    "locality": {
+      "distance_m": 13740,
+      "name": "Denmark",
+      "osm_id": 201357070,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2880,
       "name": "Mazzoletti Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

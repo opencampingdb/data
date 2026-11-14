@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Greenmount"
     },
     "facebook": "https://www.facebook.com/getchoppedpubgreenmount/",
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Greenmount",
+      "osm_id": 21517026,
+      "type": "village"
+    },
     "phone": "+61 7 4697 2142"
   },
   "group": "services",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

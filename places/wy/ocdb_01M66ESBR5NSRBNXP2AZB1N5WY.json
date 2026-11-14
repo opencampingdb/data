@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "82943",
       "postcode": "4741",
       "street": "Bruce Highway"
+    },
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 9210,
+      "name": "Flaggy Rock",
+      "osm_id": 2260907269,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3870,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

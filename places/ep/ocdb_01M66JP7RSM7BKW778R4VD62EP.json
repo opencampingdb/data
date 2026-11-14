@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "air": false,
+    "lga": {
+      "name": "Break O'Day",
+      "osm_id": 10577618
+    },
+    "locality": {
+      "distance_m": 560,
+      "name": "Scamander",
+      "osm_id": 251572405,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 310,
       "name": "Wrinklers Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

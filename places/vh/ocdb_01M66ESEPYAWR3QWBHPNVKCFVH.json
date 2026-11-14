@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/pages/Thorneside%20Mobile%20Home%20Park/114204702499538/",
+    "lga": {
+      "name": "Redland City",
+      "osm_id": 11677885
+    },
+    "locality": {
+      "distance_m": 7820,
+      "name": "Cleveland",
+      "osm_id": 80868537,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 780
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

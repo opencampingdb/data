@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Gwydir Shire Council",
+      "osm_id": 6260771
+    },
+    "locality": {
+      "distance_m": 23330,
+      "name": "North Star",
+      "osm_id": 114384400,
+      "type": "village"
+    },
     "website": "http://www.croppacreekstore.com/"
   },
   "group": "services",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

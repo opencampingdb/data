@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Whitsunday Regional",
+      "osm_id": 11676670
+    },
+    "locality": {
+      "distance_m": 20510,
+      "name": "Scottville",
+      "osm_id": 247643636,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESF01AKQAWJBD4D2KVH83",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

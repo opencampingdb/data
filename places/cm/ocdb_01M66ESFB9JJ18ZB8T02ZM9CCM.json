@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 5680,
+      "name": "Peechelba",
+      "osm_id": 1720085954,
+      "type": "village"
+    },
     "operator": "Parks Victioria",
     "toilet_type": "pit",
     "wheelchair": false
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

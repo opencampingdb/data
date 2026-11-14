@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Home Hill"
     },
     "facebook": "https://www.facebook.com/p/170Arts-on-The-Avenue-61573960406452/",
+    "lga": {
+      "name": "Burdekin Shire",
+      "osm_id": 11677016
+    },
+    "locality": {
+      "distance_m": 720,
+      "name": "Home Hill",
+      "osm_id": 2138810432,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Seventh Avenue"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

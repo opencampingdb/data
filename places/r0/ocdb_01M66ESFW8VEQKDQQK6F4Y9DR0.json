@@ -9,6 +9,8 @@
     "bins": "community_report",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -22,6 +24,16 @@
     "bins": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 7180,
+      "name": "Greenhill",
+      "osm_id": 2247794835,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 180,
       "name": "Notch Point Beach"
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

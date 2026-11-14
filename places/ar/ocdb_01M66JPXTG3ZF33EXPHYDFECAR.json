@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -12,6 +14,16 @@
       "street": "Henderson Road",
       "suburb": "Rowville",
       "unit": "1"
+    },
+    "lga": {
+      "name": "City of Knox",
+      "osm_id": 3333971
+    },
+    "locality": {
+      "distance_m": 7480,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 4080
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

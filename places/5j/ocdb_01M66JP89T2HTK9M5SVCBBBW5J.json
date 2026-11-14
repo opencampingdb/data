@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
+    "locality": {
+      "distance_m": 33300,
+      "name": "Esperance",
+      "osm_id": 1918583620,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 620,
       "name": "Thistle Cove Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "drinking_water": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Burrumbuttock",
+      "osm_id": 113637869,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Urana Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

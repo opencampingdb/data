@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 5300,
+      "name": "Lyndoch",
+      "osm_id": 193757707,
+      "type": "village"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

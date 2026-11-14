@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "West Arnhem Region",
+      "osm_id": 11716450
+    },
+    "locality": {
+      "distance_m": 31930,
+      "name": "Djirrbiyak",
+      "osm_id": 4429629174,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M6F3GY71TA94WV1CPM4PRQWJ",
   "kind": "heritage",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

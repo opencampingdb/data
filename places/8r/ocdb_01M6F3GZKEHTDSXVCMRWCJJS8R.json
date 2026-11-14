@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The Rural City of Murray Bridge",
+      "osm_id": 7071420
+    },
+    "locality": {
+      "distance_m": 10540,
+      "name": "Callington",
+      "osm_id": 206236593,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M6F3GZKEHTDSXVCMRWCJJS8R",
   "kind": "heritage",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

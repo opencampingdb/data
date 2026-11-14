@@ -3,6 +3,8 @@
     "campfires": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "picnic_tables": "osm",
     "power": "osm",
@@ -15,6 +17,16 @@
     "campfires": true,
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Mansfield",
+      "osm_id": 3350291
+    },
+    "locality": {
+      "distance_m": 14750,
+      "name": "Tolmie",
+      "osm_id": 106783005,
+      "type": "village"
+    },
     "motorbikes": false,
     "picnic_tables": true,
     "power": false,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

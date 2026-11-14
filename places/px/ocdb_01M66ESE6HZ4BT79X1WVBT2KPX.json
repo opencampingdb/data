@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
+    "locality": {
+      "distance_m": 1580,
+      "name": "Huonville",
+      "osm_id": 253882844,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2120
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

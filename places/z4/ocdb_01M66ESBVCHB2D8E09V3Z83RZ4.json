@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +12,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 10240,
+      "name": "Mount Cole",
+      "osm_id": 1707835886,
+      "type": "village"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "toilets": "osm"
@@ -12,6 +14,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Mitcham",
+      "osm_id": 9102859
+    },
+    "locality": {
+      "distance_m": 7710,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "South Road"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

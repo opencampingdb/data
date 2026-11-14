@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "3339",
       "street": "Harmony Way"
+    },
+    "lga": {
+      "name": "Shire of Mount Alexander",
+      "osm_id": 3339104
+    },
+    "locality": {
+      "distance_m": 2260,
+      "name": "Harcourt",
+      "osm_id": 271886065,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 440,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

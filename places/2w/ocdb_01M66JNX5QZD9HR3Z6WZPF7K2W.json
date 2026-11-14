@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Shire of Upper Gascoyne",
+      "osm_id": 11690051
+    },
+    "locality": {
+      "distance_m": 38160,
+      "name": "Burringurrah",
+      "osm_id": 2054194511,
+      "type": "village"
+    },
     "opening_hours": "Mo-Su 08:30-12:00,13:00-16:30"
   },
   "group": "services",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "booking_required": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
   "facts": {
     "booking_required": true,
     "caravans": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 5130,
+      "name": "Taggerty",
+      "osm_id": 899897667,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "tents": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

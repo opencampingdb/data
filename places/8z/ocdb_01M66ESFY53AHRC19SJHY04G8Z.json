@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "street": "Bush Bay Road"
     },
     "fee": true,
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 33090,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
+    },
     "website": "https://www.carnarvon.org.au/accommodation/new-beach-bush-bay-campground"
   },
   "group": "overnight",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

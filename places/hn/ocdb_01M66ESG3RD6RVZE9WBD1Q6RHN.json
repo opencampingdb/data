@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -25,6 +27,16 @@
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
+    "locality": {
+      "distance_m": 660,
+      "name": "Southport",
+      "osm_id": 2092082609,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1260
     },
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

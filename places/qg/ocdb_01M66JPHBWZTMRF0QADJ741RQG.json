@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Beverley",
+      "osm_id": 11689465
+    },
+    "locality": {
+      "distance_m": 1950,
+      "name": "Beverley",
+      "osm_id": 283015208,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPHBWZTMRF0QADJ741RQG",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

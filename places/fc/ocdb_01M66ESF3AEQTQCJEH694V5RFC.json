@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Rockhampton Regional",
+      "osm_id": 11676441
+    },
+    "locality": {
+      "distance_m": 1880,
+      "name": "Gracemere",
+      "osm_id": 2302780086,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESF3AEQTQCJEH694V5RFC",
   "kind": "caravan_park",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

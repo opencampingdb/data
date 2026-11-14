@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "hot_water": false,
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 27650,
+      "name": "Gordon Brook",
+      "osm_id": 114203415,
+      "type": "village"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

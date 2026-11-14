@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "charge": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "charge": "10 AUD",
-    "fee": true
+    "fee": true,
+    "lga": {
+      "name": "Tasman",
+      "osm_id": 10625162
+    },
+    "locality": {
+      "distance_m": 7800,
+      "name": "Port Arthur",
+      "osm_id": 2003164307,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBTA3JRMVPBMG597SBQP",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

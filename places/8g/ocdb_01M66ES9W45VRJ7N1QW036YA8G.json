@@ -7,6 +7,8 @@
   "fact_sources": {
     "campfires": "community_report",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilets": "community_report"
@@ -14,6 +16,16 @@
   "facts": {
     "campfires": true,
     "fee": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 2770,
+      "name": "Thornton",
+      "osm_id": 65640166,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3010,
       "name": "Thornton"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
@@ -13,6 +15,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Coffs Harbour City Council",
+      "osm_id": 6165983
+    },
+    "locality": {
+      "distance_m": 470,
+      "name": "Woolgoolga",
+      "osm_id": 25980115,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 430,
       "name": "Woolgoolga Beach"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

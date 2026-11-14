@@ -6,6 +6,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -21,6 +23,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Wollomombi",
+      "osm_id": 333283803,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Grafton Road"
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

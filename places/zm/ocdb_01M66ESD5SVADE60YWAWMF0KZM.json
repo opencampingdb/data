@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Dumbleyung",
+      "osm_id": 11688916
+    },
+    "locality": {
+      "distance_m": 10530,
+      "name": "Dumbleyung",
+      "osm_id": 243367640,
+      "type": "town"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "lga": {
+      "name": "Shire of Buloke",
+      "osm_id": 3345547
+    },
+    "locality": {
+      "distance_m": 10150,
+      "name": "Sea Lake",
+      "osm_id": 287497593,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Birchip - Sea Lake Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

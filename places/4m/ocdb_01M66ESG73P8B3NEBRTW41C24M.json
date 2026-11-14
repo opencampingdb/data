@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "picnic_tables": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 8170,
+      "name": "Lal Lal",
+      "osm_id": 2041339836,
+      "type": "village"
+    },
     "picnic_tables": true,
     "power": false,
     "showers": false,
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Moree Plains Shire Council",
+      "osm_id": 6088821
+    },
+    "locality": {
+      "distance_m": 34720,
+      "name": "North Star",
+      "osm_id": 114384400,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Newell Highway"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

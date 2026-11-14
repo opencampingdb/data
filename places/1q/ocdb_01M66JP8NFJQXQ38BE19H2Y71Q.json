@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "unleaded_91",
       "lpg"
     ],
+    "lga": {
+      "name": "Shire of Meekatharra",
+      "osm_id": 11690204
+    },
+    "locality": {
+      "distance_m": 12640,
+      "name": "Newman",
+      "osm_id": 306328028,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Great Northern Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

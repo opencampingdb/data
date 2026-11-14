@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Flinders Shire",
+      "osm_id": 11676765
+    },
+    "locality": {
+      "distance_m": 20780,
+      "name": "Torrens Creek",
+      "osm_id": 2214202433,
+      "type": "town"
+    },
     "website": "https://parks.des.qld.gov.au/parks/white-mountains/camping/canns-camp-creek"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

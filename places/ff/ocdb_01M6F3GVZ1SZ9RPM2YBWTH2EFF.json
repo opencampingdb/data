@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "SA",
       "street": "Mawson Road",
       "suburb": "Meadows"
+    },
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 700,
+      "name": "Meadows",
+      "osm_id": 270883715,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

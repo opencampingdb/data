@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -14,6 +16,16 @@
       "adblue",
       "lpg"
     ],
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 5720,
+      "name": "Mooloolah",
+      "osm_id": 194066850,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1390
     },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

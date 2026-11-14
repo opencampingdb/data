@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Joondalup",
+      "osm_id": 11689618
+    },
+    "locality": {
+      "distance_m": 3440,
+      "name": "Joondalup",
+      "osm_id": 5705053184,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1770,
       "name": "Whitfords/Mullaloo Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

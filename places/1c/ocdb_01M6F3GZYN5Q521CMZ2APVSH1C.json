@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
@@ -12,6 +14,16 @@
       "state": "VIC",
       "street": "River Drive",
       "suburb": "Tarwin Lower"
+    },
+    "lga": {
+      "name": "Shire of South Gippsland",
+      "osm_id": 3335917
+    },
+    "locality": {
+      "distance_m": 470,
+      "name": "Tarwin Lower",
+      "osm_id": 2879532291,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 4290
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

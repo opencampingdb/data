@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "2720",
       "street": "River Road"
+    },
+    "lga": {
+      "name": "The Hills Shire Council",
+      "osm_id": 6219220
+    },
+    "locality": {
+      "distance_m": 2810,
+      "name": "Wisemans Ferry",
+      "osm_id": 117076654,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3440
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

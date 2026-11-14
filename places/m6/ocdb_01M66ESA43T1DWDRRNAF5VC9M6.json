@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Victoria Daly Region",
+      "osm_id": 5514633
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Timber Creek",
+      "osm_id": 1842599418,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Victoria Highway"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

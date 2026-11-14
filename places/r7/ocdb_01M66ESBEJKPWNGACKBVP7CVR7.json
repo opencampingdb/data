@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "drinking_water": "osm"
+    "drinking_water": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "drinking_water": false
+    "drinking_water": false,
+    "locality": {
+      "distance_m": 15660,
+      "name": "Tharwa",
+      "osm_id": 186947418,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBEJKPWNGACKBVP7CVR7",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

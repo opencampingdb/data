@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Port Augusta"
     },
     "facebook": "https://www.facebook.com/HotelComm/",
+    "lga": {
+      "name": "Port Augusta City Council",
+      "osm_id": 6805282
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Port Augusta",
+      "osm_id": 29386608,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 340
     },
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

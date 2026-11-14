@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -13,6 +15,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
+    "locality": {
+      "distance_m": 3130,
+      "name": "Broome",
+      "osm_id": 53919243,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 80,
       "name": "Cable Beach"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

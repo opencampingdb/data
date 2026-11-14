@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -11,6 +13,16 @@
     "address": {
       "housenumber": "397",
       "street": "Princes Highway"
+    },
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 14550,
+      "name": "Nar Nar Goon",
+      "osm_id": 1103013920,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 4170
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

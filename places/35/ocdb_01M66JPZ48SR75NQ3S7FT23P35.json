@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "2-16",
       "street": "McIlwraith Street"
+    },
+    "lga": {
+      "name": "Hinchinbrook Shire",
+      "osm_id": 11676894
+    },
+    "locality": {
+      "distance_m": 650,
+      "name": "Ingham",
+      "osm_id": 1777842534,
+      "type": "town"
     },
     "operator": "Queensland Health",
     "phone": "+61 7 4720 3000"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

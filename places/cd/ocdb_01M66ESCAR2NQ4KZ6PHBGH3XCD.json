@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 18040,
+      "name": "Thredbo",
+      "osm_id": 113373977,
+      "type": "village"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

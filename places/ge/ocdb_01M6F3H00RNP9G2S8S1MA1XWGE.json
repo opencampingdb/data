@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Clare and Gilbert Valleys Council",
+      "osm_id": 9108116
+    },
+    "locality": {
+      "distance_m": 1760,
+      "name": "Watervale",
+      "osm_id": 1923683754,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3H00RNP9G2S8S1MA1XWGE",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

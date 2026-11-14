@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -15,6 +17,16 @@
     },
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Strathbogie",
+      "osm_id": 3345839
+    },
+    "locality": {
+      "distance_m": 5560,
+      "name": "Murchison",
+      "osm_id": 246992759,
+      "type": "town"
+    },
     "opening_hours": "Su 10:00-15:00",
     "website": "https://noorilimestate.com.au/"
   },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

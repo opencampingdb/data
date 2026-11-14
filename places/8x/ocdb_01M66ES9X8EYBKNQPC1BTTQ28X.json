@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
     "charge": "$15 pay at Barrington General Store (2/2020)",
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 1320,
+      "name": "Barrington",
+      "osm_id": 39093056,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Thunderbolts Way"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

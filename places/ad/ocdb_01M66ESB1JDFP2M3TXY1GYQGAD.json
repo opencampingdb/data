@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Pinchgut Island",
+      "osm_id": 18183662
+    },
+    "locality": {
+      "distance_m": 2270,
+      "name": "Sydney",
+      "osm_id": 13766899,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 950
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

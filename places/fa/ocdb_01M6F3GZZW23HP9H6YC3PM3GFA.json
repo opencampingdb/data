@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "private",
+    "lga": {
+      "name": "Maitland City Council",
+      "osm_id": 6189782
+    },
+    "locality": {
+      "distance_m": 1680,
+      "name": "Maitland",
+      "osm_id": 115097893,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1700
     },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

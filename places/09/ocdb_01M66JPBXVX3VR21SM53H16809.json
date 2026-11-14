@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Townsville City",
+      "osm_id": 11676862
+    },
+    "locality": {
+      "distance_m": 10610,
+      "name": "Townsville",
+      "osm_id": 31446304,
+      "type": "city"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPBXVX3VR21SM53H16809",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

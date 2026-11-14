@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Tweed Shire Council",
+      "osm_id": 6170302
+    },
+    "locality": {
+      "distance_m": 920,
+      "name": "Stokers Siding",
+      "osm_id": 114632958,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESGAG84QX77GE3PSA1XSD",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

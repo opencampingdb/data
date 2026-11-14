@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "85",
       "street": "Lewis Street"
+    },
+    "lga": {
+      "name": "Shire of South Gippsland",
+      "osm_id": 3335917
+    },
+    "locality": {
+      "distance_m": 50,
+      "name": "Port Welshpool",
+      "osm_id": 2041482079,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3080
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

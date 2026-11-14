@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "QLD",
       "street": "Forest Home Road",
       "suburb": "Rathdowney"
+    },
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 9600,
+      "name": "Rathdowney",
+      "osm_id": 238661895,
+      "type": "village"
     },
     "phone": "+61 7 5463 6263",
     "website": "https://www.tuckeroocottages.com.au/index.php"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

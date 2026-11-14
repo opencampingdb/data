@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "wifi": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "356",
       "street": "Taylor Road"
+    },
+    "lga": {
+      "name": "City of Swan",
+      "osm_id": 11689336
+    },
+    "locality": {
+      "distance_m": 6070,
+      "name": "Bullsbrook",
+      "osm_id": 1468350410,
+      "type": "town"
     },
     "phone": "+61 412 954 900",
     "wifi": true
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

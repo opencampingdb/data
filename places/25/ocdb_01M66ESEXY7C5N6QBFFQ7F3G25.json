@@ -1,12 +1,27 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Yarra",
+      "osm_id": 2404491
+    },
+    "locality": {
+      "distance_m": 5720,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 3400,
       "name": "Horse Arena"
@@ -17,7 +32,8 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "CityLink"
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESEXY7C5N6QBFFQ7F3G25",
@@ -29,11 +45,11 @@
   "name": null,
   "osm": {
     "id": 222110697,
-    "timestamp": "2026-09-24T02:19:14Z",
+    "timestamp": "2026-11-13T05:48:08Z",
     "type": "way",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

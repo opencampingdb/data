@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 5420,
+      "name": "Glenmorgan",
+      "osm_id": 380459445,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCMRK99EY3X8HFDG1N4J",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -18,6 +20,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 4390,
+      "name": "Queanbeyan",
+      "osm_id": 40817809,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Limestone Drive"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

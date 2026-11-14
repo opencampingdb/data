@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "150",
       "street": "Mona Road"
+    },
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 650,
+      "name": "Bowral",
+      "osm_id": 113235258,
+      "type": "town"
     },
     "website": "https://www.swslhd.nsw.gov.au/bowral/"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

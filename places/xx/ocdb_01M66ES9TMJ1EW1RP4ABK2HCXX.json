@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -12,6 +14,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Rural City of Mildura",
+      "osm_id": 3345519
+    },
+    "locality": {
+      "distance_m": 2110,
+      "name": "Merbein",
+      "osm_id": 251229850,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 330
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

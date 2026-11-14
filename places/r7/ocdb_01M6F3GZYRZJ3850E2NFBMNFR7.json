@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "contactus@apollomotel.com.au",
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Biloela",
+      "osm_id": 247805969,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Gladstone Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

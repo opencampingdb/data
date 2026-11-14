@@ -2,6 +2,8 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "charge": "Payment sign/box at entry",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Tumby Bay",
+      "osm_id": 9108371
+    },
+    "locality": {
+      "distance_m": 17040,
+      "name": "Cummins",
+      "osm_id": 1157173123,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Bratten Way"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

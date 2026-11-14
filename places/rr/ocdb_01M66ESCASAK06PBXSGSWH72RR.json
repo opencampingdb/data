@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -12,6 +14,16 @@
     "charge": "20.00 AUD /person/night",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Tenterfield Shire Council",
+      "osm_id": 6163155
+    },
+    "locality": {
+      "distance_m": 21480,
+      "name": "Jubullum Village",
+      "osm_id": 11221818201,
+      "type": "village"
+    },
     "operator": "Tenterfield Endurance Riding Club Inc",
     "showers": true,
     "toilets": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

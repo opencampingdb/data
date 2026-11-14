@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -7,6 +9,16 @@
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Canada Bay Council",
+      "osm_id": 6217271
+    },
+    "locality": {
+      "distance_m": 7970,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 680
     },
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

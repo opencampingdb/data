@@ -7,11 +7,23 @@
   "fact_sources": {
     "caravans": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "website": "contributed"
   },
   "facts": {
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 7760,
+      "name": "Briagolong",
+      "osm_id": 11384987822,
+      "type": "village"
+    },
     "website": "https://www.exploreoutdoors.vic.gov.au/activities/camping/blue-pool-campground"
   },
   "group": "overnight",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -18,6 +20,16 @@
       "e10",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Dubbo Regional Council",
+      "osm_id": 6268489
+    },
+    "locality": {
+      "distance_m": 2840,
+      "name": "Dubbo",
+      "osm_id": 114370819,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 3780
     },
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

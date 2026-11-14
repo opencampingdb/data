@@ -10,6 +10,8 @@
     "email": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "nudist": "osm",
     "operator": "osm",
@@ -36,6 +38,16 @@
     "email": "hahndorf@discoveryparks.com.au",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 1150,
+      "name": "Hahndorf",
+      "osm_id": 210096602,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Mount Barker Road"
@@ -67,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 4110,
+      "name": "Myrniong",
+      "osm_id": 671817503,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 130
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

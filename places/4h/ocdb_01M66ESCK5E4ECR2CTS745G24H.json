@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 750,
+      "name": "Nairne",
+      "osm_id": 285936401,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Old Princes Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

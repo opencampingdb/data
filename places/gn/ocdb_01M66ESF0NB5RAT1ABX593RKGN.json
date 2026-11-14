@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Yorke Peninsula Council",
+      "osm_id": 6673799
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Minlaton",
+      "osm_id": 1104609657,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Maitland Road"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

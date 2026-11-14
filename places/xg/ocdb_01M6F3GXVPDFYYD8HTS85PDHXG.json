@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": false,
     "entry": "public",
+    "lga": {
+      "name": "Livingstone Shire",
+      "osm_id": 11677520
+    },
+    "locality": {
+      "distance_m": 20020,
+      "name": "Yaamba",
+      "osm_id": 204492164,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bruce Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

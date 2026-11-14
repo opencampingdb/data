@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
@@ -12,6 +14,16 @@
       "street": "Graham Street"
     },
     "email": "villapatrizia209@gmail.com",
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 600,
+      "name": "Wonthaggi",
+      "osm_id": 59631939,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3820,
       "name": "Baxters Beach"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

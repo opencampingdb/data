@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -20,6 +22,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 1310,
+      "name": "Toowoomba",
+      "osm_id": 19949789,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Kitchener Street"
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

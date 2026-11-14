@@ -3,10 +3,22 @@
     "fee": "2026-04-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "The Regional Council of Goyder",
+      "osm_id": 9107816
+    },
+    "locality": {
+      "distance_m": 19230,
+      "name": "Robertstown",
+      "osm_id": 438033587,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAMG6GW287D35S6BH8HR",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

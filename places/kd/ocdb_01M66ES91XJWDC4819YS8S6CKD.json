@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -12,6 +14,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "The Corporation of the City of Whyalla",
+      "osm_id": 9108326
+    },
+    "locality": {
+      "distance_m": 10420,
+      "name": "Point Lowly",
+      "osm_id": 1282460644,
+      "type": "village"
+    },
     "operator": "Whyalla City Council",
     "tents": true,
     "toilets": false,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

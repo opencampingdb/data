@@ -6,6 +6,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "power": "osm",
     "showers": "osm",
@@ -20,6 +22,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Linville",
+      "osm_id": 1720322987,
+      "type": "village"
+    },
     "opening_hours": "24/7",
     "power": false,
     "showers": true,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

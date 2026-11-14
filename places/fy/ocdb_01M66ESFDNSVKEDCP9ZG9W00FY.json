@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "Esk",
+      "osm_id": 298422911,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Ipswich Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

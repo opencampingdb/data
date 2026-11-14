@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "2",
       "postcode": "3217",
       "street": "McCanns Road"
+    },
+    "lga": {
+      "name": "Surf Coast Shire",
+      "osm_id": 3290432
+    },
+    "locality": {
+      "distance_m": 7190,
+      "name": "Torquay",
+      "osm_id": 2615845781,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 10,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

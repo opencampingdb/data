@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Unincorporated Lord Howe Island",
+      "osm_id": 18183904
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Lord Howe Island",
+      "osm_id": 114653216,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 40,
       "name": "Neds Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

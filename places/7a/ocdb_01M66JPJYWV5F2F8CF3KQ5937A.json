@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Shire of Hepburn",
+      "osm_id": 3327844
+    },
+    "locality": {
+      "distance_m": 4030,
+      "name": "Rutherford Park",
+      "osm_id": 413303193,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Midland Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

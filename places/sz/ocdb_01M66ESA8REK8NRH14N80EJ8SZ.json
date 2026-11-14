@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Cassowary Coast Regional",
+      "osm_id": 11676958
+    },
+    "locality": {
+      "distance_m": 25960,
+      "name": "Cardwell",
+      "osm_id": 2552260501,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESA8REK8NRH14N80EJ8SZ",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

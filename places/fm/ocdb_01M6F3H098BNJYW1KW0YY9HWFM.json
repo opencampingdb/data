@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "52",
       "street": "Dowell Avenue"
+    },
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 1240,
+      "name": "Tamworth",
+      "osm_id": 114638747,
+      "type": "city"
     }
   },
   "group": "overnight",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

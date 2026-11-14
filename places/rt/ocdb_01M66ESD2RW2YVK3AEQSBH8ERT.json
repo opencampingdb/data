@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -12,6 +14,16 @@
     "charge": "$15/n",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Yilgarn",
+      "osm_id": 11690085
+    },
+    "locality": {
+      "distance_m": 670,
+      "name": "Bullfinch",
+      "osm_id": 429576297,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Bullfinch Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 7520,
+      "name": "Kingsthorpe",
+      "osm_id": 287257612,
+      "type": "village"
+    },
     "motorbikes": true,
     "nearest_major_road": {
       "distance_m": 10,
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

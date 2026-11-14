@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "lga": {
+      "name": "Cootamundra-Gundagai Regional Council",
+      "osm_id": 6247073
+    },
+    "locality": {
+      "distance_m": 650,
+      "name": "Cootamundra",
+      "osm_id": 93282062,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG76V0PQM80NM4QEGJY5",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -5,6 +5,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "power": "community_report",
     "showers": "osm",
@@ -15,6 +17,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Harvey",
+      "osm_id": 11690516
+    },
+    "locality": {
+      "distance_m": 7640,
+      "name": "Cookernup",
+      "osm_id": 220779589,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 210
     },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

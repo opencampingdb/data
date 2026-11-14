@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 14430,
+      "name": "Tintaldra",
+      "osm_id": 686358262,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Tooma Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

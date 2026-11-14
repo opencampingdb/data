@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 840,
+      "name": "Golden Beach",
+      "osm_id": 2339147238,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 100,
       "name": "Golden Beach"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

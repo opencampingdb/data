@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "2800",
       "street": "Byng Street",
       "suburb": "Orange"
+    },
+    "lga": {
+      "name": "Orange City Council",
+      "osm_id": 6427044
+    },
+    "locality": {
+      "distance_m": 590,
+      "name": "Orange",
+      "osm_id": 113708138,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

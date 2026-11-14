@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -17,6 +19,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 10770,
+      "name": "Batlow",
+      "osm_id": 113711904,
+      "type": "town"
+    },
     "max_stay": "overnight",
     "nearest_major_road": {
       "distance_m": 110,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

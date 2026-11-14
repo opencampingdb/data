@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Redland City",
+      "osm_id": 11677885
+    },
+    "locality": {
+      "distance_m": 9170,
+      "name": "Cleveland",
+      "osm_id": 80868537,
+      "type": "town"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPXHAC7GQ4PG4BDH7GKBV",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

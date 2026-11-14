@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "QLD",
       "street": "Olsens Caves Road",
       "suburb": "The Caves"
+    },
+    "lga": {
+      "name": "Livingstone Shire",
+      "osm_id": 11677520
+    },
+    "locality": {
+      "distance_m": 13040,
+      "name": "Yaamba",
+      "osm_id": 204492164,
+      "type": "village"
     },
     "phone": "+61 7 4934 2883",
     "website": "https://capricorncaves.com.au"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

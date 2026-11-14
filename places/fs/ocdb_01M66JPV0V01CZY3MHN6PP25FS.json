@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -14,6 +16,16 @@
       "street": "Jarrah Drive",
       "suburb": "Braeside",
       "unit": "3"
+    },
+    "lga": {
+      "name": "City of Kingston",
+      "osm_id": 3333046
+    },
+    "locality": {
+      "distance_m": 23090,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 2160,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

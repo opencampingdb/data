@@ -1,10 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "fee": false,
+    "locality": {
+      "distance_m": 640,
+      "name": "Crab Claw Island",
+      "osm_id": 4681048957,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 40
     }
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

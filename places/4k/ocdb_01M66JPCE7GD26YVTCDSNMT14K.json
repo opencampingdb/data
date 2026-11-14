@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -12,6 +14,16 @@
       "suburb": "Marananga"
     },
     "fee": true,
+    "lga": {
+      "name": "Light Regional Council",
+      "osm_id": 9108117
+    },
+    "locality": {
+      "distance_m": 1240,
+      "name": "Gnadenfrei",
+      "osm_id": 14106654113,
+      "type": "village"
+    },
     "opening_hours": "Mo-Su 10:00-17:00",
     "website": "https://torbreck.com/"
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

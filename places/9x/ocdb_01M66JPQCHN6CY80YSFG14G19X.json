@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 9210,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPQCHN6CY80YSFG14G19X",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

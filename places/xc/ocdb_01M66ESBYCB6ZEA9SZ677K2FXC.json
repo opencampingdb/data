@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "The Berri Barmera Council",
+      "osm_id": 6802509
+    },
+    "locality": {
+      "distance_m": 930,
+      "name": "Lyrup",
+      "osm_id": 2079501285,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 670,
       "name": "S.S. Ellen Park"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

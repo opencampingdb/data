@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Unincorporated Far West Area",
+      "osm_id": 7032873
+    },
+    "locality": {
+      "distance_m": 28320,
+      "name": "Broken Hill",
+      "osm_id": 113763535,
+      "type": "city"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG8JP3S4B35GHGJHZZYR",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

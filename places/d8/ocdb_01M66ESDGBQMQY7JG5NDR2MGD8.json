@@ -2,12 +2,24 @@
   "fact_sources": {
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "info@woodleighstation.com.au",
     "fee": true,
+    "lga": {
+      "name": "Tablelands Regional",
+      "osm_id": 11677293
+    },
+    "locality": {
+      "distance_m": 3400,
+      "name": "Silver Valley",
+      "osm_id": 5046615237,
+      "type": "village"
+    },
     "phone": "+61 7 4097 0204",
     "website": "https://www.woodleighstation.com.au/"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

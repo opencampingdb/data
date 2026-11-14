@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Ballina Shire Council",
+      "osm_id": 6168644
+    },
+    "locality": {
+      "distance_m": 1930,
+      "name": "Patchs Beach",
+      "osm_id": 2736214028,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1060
     },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

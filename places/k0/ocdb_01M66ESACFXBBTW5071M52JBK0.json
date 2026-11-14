@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 5160,
+      "name": "Kings Canyon Resort",
+      "osm_id": 77988056,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESACFXBBTW5071M52JBK0",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

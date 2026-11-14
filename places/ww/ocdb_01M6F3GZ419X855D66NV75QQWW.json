@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Gwydir Shire Council",
+      "osm_id": 6260771
+    },
+    "locality": {
+      "distance_m": 3080,
+      "name": "Bingara",
+      "osm_id": 105417096,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Allan Cunningham Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

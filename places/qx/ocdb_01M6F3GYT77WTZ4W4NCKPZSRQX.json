@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/Gibson-soak-hotel-142798435744490/",
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
+    "locality": {
+      "distance_m": 24070,
+      "name": "Esperance",
+      "osm_id": 1918583620,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Coolgardie Esperance Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

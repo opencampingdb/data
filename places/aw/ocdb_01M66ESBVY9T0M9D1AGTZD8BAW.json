@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "playground": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": true,
+    "lga": {
+      "name": "Cook Shire",
+      "osm_id": 11677441
+    },
+    "locality": {
+      "distance_m": 4320,
+      "name": "Weipa",
+      "osm_id": 2157032995,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2400,
       "name": "Evans Landing Boat Ramp"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

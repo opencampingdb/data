@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": false,
     "entry": "public",
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 41030,
+      "name": "Aramac",
+      "osm_id": 2300004638,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Muttaburra Aramac Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

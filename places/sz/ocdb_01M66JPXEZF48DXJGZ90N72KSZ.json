@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -20,6 +22,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 5360,
+      "name": "Bendigo",
+      "osm_id": 30917754,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Peg Leg Road"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -28,6 +28,8 @@
     "entry": "feedback",
     "fee": "osm",
     "games_room": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "feedback",
     "motorhomes": "feedback",
     "near_road": "feedback",
@@ -56,6 +58,16 @@
     "entry": "public",
     "fee": true,
     "games_room": true,
+    "lga": {
+      "name": "District Council of Robe",
+      "osm_id": 6738647
+    },
+    "locality": {
+      "distance_m": 1940,
+      "name": "Robe",
+      "osm_id": 427927382,
+      "type": "town"
+    },
     "motorbikes": true,
     "motorhomes": true,
     "near_road": true,
@@ -97,5 +109,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

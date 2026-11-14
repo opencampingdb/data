@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Eurobodalla Shire Council",
+      "osm_id": 6239661
+    },
+    "locality": {
+      "distance_m": 1630,
+      "name": "Potato Point",
+      "osm_id": 97363933,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 350,
       "name": "Piccaninny Beach"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

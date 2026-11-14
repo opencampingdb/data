@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "West Arnhem Region",
+      "osm_id": 11716450
+    },
+    "locality": {
+      "distance_m": 15440,
+      "name": "Gunbalanya",
+      "osm_id": 1889003274,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 960,
       "name": "Downstream Boat Ramp"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

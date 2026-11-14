@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fuel": true,
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 16450,
+      "name": "Gordon Brook",
+      "osm_id": 114203415,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Gwydir Highway"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

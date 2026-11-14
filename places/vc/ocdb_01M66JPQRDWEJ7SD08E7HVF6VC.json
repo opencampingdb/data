@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -18,6 +20,16 @@
       "unleaded_98",
       "adblue"
     ],
+    "lga": {
+      "name": "Paroo Shire",
+      "osm_id": 11674869
+    },
+    "locality": {
+      "distance_m": 1330,
+      "name": "Cunnamulla",
+      "osm_id": 246087334,
+      "type": "town"
+    },
     "opening_hours": "24/7"
   },
   "group": "services",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Weddin Shire Council",
+      "osm_id": 6257772
+    },
+    "locality": {
+      "distance_m": 18940,
+      "name": "Quandialla",
+      "osm_id": 113728580,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESG864G7M5S7TRY6XXZ3Q",
   "kind": "national_park_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

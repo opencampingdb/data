@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 5500,
+      "name": "Budgewoi",
+      "osm_id": 116972346,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 470,
       "name": "Birdie Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

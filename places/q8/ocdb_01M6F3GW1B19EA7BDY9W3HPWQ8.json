@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3892",
       "street": "Buckland Road",
       "suburb": "Mallacoota"
+    },
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 10510,
+      "name": "Mallacoota",
+      "osm_id": 2410630288,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 1990
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

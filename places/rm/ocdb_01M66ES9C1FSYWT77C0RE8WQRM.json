@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Bunya Mountains",
+      "osm_id": 5791131320,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9C1FSYWT77C0RE8WQRM",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

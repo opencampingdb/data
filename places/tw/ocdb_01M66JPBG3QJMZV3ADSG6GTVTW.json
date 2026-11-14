@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm"
   },
@@ -10,6 +12,16 @@
       "street": "Batten Road"
     },
     "email": "kabservo@gmail.com",
+    "lga": {
+      "name": "Roper Gulf Region",
+      "osm_id": 11716437
+    },
+    "locality": {
+      "distance_m": 23180,
+      "name": "Borroloola",
+      "osm_id": 3824830161,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 330
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

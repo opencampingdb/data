@@ -1,14 +1,26 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "state": "QLD",
       "street": "Gulf Developmental Road"
     },
-    "entry": "private"
+    "entry": "private",
+    "lga": {
+      "name": "Etheridge Shire",
+      "osm_id": 11676973
+    },
+    "locality": {
+      "distance_m": 32510,
+      "name": "Mount Surprise",
+      "osm_id": 2300195306,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESC3ST6SZ6FB1PTNRHK88",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

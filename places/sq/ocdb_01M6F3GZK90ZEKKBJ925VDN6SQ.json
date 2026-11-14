@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +10,16 @@
       "state": "QLD",
       "street": "Winchu Street",
       "suburb": "Quilpie"
+    },
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 370,
+      "name": "Quilpie",
+      "osm_id": 246024896,
+      "type": "town"
     }
   },
   "group": "attraction",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

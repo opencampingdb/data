@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Roper Gulf Region",
+      "osm_id": 11716437
+    },
+    "locality": {
+      "distance_m": 9170,
+      "name": "Ngukurr",
+      "osm_id": 4526115161,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESCGPPS5PZ0A7X8Z55J59",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

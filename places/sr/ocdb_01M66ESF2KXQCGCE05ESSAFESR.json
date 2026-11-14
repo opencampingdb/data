@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "The District Council of Lower Eyre Peninsula",
+      "osm_id": 9110112
+    },
+    "locality": {
+      "distance_m": 10270,
+      "name": "Port Lincoln",
+      "osm_id": 253012105,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 190
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

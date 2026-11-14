@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Mosman Municipal Council",
+      "osm_id": 6276645
+    },
+    "locality": {
+      "distance_m": 3610,
+      "name": "Manly",
+      "osm_id": 18375400,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 350,
       "name": "Cobblers Beach"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

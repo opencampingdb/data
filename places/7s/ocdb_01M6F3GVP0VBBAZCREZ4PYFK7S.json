@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "53",
       "street": "Emily Street"
+    },
+    "lga": {
+      "name": "Shire of Mitchell",
+      "osm_id": 3327815
+    },
+    "locality": {
+      "distance_m": 740,
+      "name": "Seymour",
+      "osm_id": 25632235,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 1370,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

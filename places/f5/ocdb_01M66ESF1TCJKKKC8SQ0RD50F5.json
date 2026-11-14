@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
     "booking_required": true,
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 10890,
+      "name": "Kurmond",
+      "osm_id": 117051118,
+      "type": "village"
+    },
     "showers": false,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/wheeny-creek-campground"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

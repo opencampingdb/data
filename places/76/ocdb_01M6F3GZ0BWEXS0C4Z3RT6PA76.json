@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "14",
       "street": "Lovel Street"
+    },
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Katoomba",
+      "osm_id": 20968413,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4950,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Uralla Shire Council",
+      "osm_id": 6260188
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Kentucky",
+      "osm_id": 114658057,
+      "type": "village"
+    },
     "opening_hours": "24/7",
     "operator": "Uralla Shire Council"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

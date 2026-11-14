@@ -10,6 +10,8 @@
     "bins": "community_report",
     "caravans": "community_report",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "community_report",
     "toilets": "community_report"
   },
@@ -17,6 +19,16 @@
     "bins": true,
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 9380,
+      "name": "Goomeri",
+      "osm_id": 1884215396,
+      "type": "town"
+    },
     "tents": true,
     "toilets": true
   },
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

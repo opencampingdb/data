@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Meander Valley",
+      "osm_id": 10598717
+    },
+    "locality": {
+      "distance_m": 44710,
+      "name": "Tullah",
+      "osm_id": 422512548,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:36:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

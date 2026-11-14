@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Melville",
+      "osm_id": 11689377
+    },
+    "locality": {
+      "distance_m": 5050,
+      "name": "Fremantle",
+      "osm_id": 32519002,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 270
     },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

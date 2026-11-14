@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Roper Gulf Region",
+      "osm_id": 11716437
+    },
+    "locality": {
+      "distance_m": 4500,
+      "name": "Ngukurr",
+      "osm_id": 4526115161,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 190,
       "name": "Munbililla Boat Ramp"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

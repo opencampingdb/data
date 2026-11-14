@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Surf Coast Shire",
+      "osm_id": 3290432
+    },
+    "locality": {
+      "distance_m": 4800,
+      "name": "Lorne",
+      "osm_id": 36698974,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 4640,
       "name": "Lorne Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

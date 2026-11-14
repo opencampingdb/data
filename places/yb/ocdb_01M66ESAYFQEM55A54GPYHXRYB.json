@@ -3,6 +3,8 @@
     "caravans": "osm",
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,6 +14,16 @@
     "caravans": false,
     "charge": "100 AUD",
     "fee": true,
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 7390,
+      "name": "St Albans",
+      "osm_id": 60565885,
+      "type": "village"
+    },
     "operator": "national parks widlife service nsw",
     "showers": false,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

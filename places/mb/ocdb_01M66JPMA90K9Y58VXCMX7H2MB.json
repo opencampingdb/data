@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/CKJ4X4/",
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 6880,
+      "name": "Gawler",
+      "osm_id": 180957547,
+      "type": "city"
+    },
     "website": "https://www.ckj4x4.com.au/"
   },
   "group": "services",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

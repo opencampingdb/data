@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "VIC",
       "street": "Conness Street",
       "suburb": "Chiltern"
+    },
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Chiltern",
+      "osm_id": 10232864536,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

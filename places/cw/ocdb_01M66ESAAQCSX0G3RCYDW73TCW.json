@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 20840,
+      "name": "Jimna",
+      "osm_id": 1884404091,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESAAQCSX0G3RCYDW73TCW",
   "kind": "reserve_campsite",
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

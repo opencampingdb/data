@@ -2,12 +2,24 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": true,
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Dundas",
+      "osm_id": 11690221
+    },
+    "locality": {
+      "distance_m": 1440,
+      "name": "Norseman",
+      "osm_id": 5432456986,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Eyre Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

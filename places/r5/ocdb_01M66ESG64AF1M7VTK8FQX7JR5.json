@@ -4,6 +4,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "tents": "osm"
   },
@@ -14,6 +16,16 @@
     "booking_required": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 13740,
+      "name": "Bemboka",
+      "osm_id": 260347881,
+      "type": "village"
+    },
     "phone": "+61 2 6458 4080",
     "tents": true
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

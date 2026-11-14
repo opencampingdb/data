@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Molesworth Street",
       "suburb": "Lismore"
+    },
+    "lga": {
+      "name": "Lismore City Council",
+      "osm_id": 6168485
+    },
+    "locality": {
+      "distance_m": 820,
+      "name": "Lismore",
+      "osm_id": 114651471,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 310
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

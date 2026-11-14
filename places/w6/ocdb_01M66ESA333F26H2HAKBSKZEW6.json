@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -17,6 +19,16 @@
     "caravans": true,
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Ravensthorpe",
+      "osm_id": 1940218406,
+      "type": "town"
+    },
     "max_stay": "48h",
     "nearest_major_road": {
       "distance_m": 30,
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

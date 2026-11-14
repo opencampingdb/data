@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
     "tents": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "fee": true,
     "fuel": true,
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 21120,
+      "name": "Bonshaw",
+      "osm_id": 115055521,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 450
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -6,6 +6,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -20,6 +22,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Bathurst Regional Council",
+      "osm_id": 6330866
+    },
+    "locality": {
+      "distance_m": 480,
+      "name": "Hill End",
+      "osm_id": 113746221,
+      "type": "village"
+    },
     "operator": "NSW National Parks",
     "power": true,
     "showers": true,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

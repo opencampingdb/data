@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Whitsunday Regional",
+      "osm_id": 11676670
+    },
+    "locality": {
+      "distance_m": 10860,
+      "name": "Hamilton Island",
+      "osm_id": 14156838236,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 70,
       "name": "Palm Beach"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

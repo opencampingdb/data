@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
@@ -10,6 +12,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Shire of Mundaring",
+      "osm_id": 11689676
+    },
+    "locality": {
+      "distance_m": 15810,
+      "name": "Mount Helena",
+      "osm_id": 1493309476,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4790
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -16,6 +18,16 @@
     },
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Armadale",
+      "osm_id": 11689426
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "Armadale",
+      "osm_id": 32566856,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 4710,
       "name": "Champion Lakes Swimming Beach"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

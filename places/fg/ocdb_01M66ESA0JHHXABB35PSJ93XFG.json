@@ -3,6 +3,8 @@
     "cabins": "osm",
     "caravans": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
     "cabins": true,
     "caravans": true,
     "kitchen": true,
+    "lga": {
+      "name": "McKinlay Shire",
+      "osm_id": 11677391
+    },
+    "locality": {
+      "distance_m": 490,
+      "name": "Julia Creek",
+      "osm_id": 278222419,
+      "type": "town"
+    },
     "power": true,
     "showers": true,
     "tents": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

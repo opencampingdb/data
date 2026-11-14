@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel"
-    ]
+    ],
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
+    "locality": {
+      "distance_m": 3260,
+      "name": "Kartajirri Village",
+      "osm_id": 7474777963,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPWW28C16V0ERDJDBNABY",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

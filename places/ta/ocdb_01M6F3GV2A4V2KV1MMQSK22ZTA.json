@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -12,6 +14,16 @@
       "state": "VIC",
       "street": "Lyons Street",
       "suburb": "Newstead"
+    },
+    "lga": {
+      "name": "Shire of Mount Alexander",
+      "osm_id": 3339104
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Newstead",
+      "osm_id": 273870295,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

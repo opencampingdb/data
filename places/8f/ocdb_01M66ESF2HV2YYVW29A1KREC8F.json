@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
     "nearest_beach": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
     "nearest_beach": {
       "distance_m": 4250,
       "name": "Shoal Cape Beach"
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

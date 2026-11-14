@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -21,6 +23,16 @@
       "unleaded_98",
       "adblue"
     ],
+    "lga": {
+      "name": "Pastoral Unincorporated Area",
+      "osm_id": 6804541
+    },
+    "locality": {
+      "distance_m": 29580,
+      "name": "Fowlers Bay",
+      "osm_id": 1782120597,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Eyre Highway"
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

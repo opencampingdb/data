@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -15,6 +17,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Goondiwindi Regional",
+      "osm_id": 11674848
+    },
+    "locality": {
+      "distance_m": 4070,
+      "name": "Toomelah",
+      "osm_id": 1745434735,
+      "type": "village"
+    },
     "max_stay": "14d",
     "nearest_boat_ramp": {
       "distance_m": 330
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

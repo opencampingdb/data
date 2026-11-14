@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 3230,
+      "name": "Armidale",
+      "osm_id": 59851594,
+      "type": "city"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCYA5H3JBSACE987QP9W",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

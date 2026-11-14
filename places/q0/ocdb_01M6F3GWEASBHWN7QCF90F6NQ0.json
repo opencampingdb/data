@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "45",
       "postcode": "6336",
       "street": "Jaekel Street"
+    },
+    "lga": {
+      "name": "Shire of Gnowangerup",
+      "osm_id": 11690325
+    },
+    "locality": {
+      "distance_m": 120,
+      "name": "Ongerup",
+      "osm_id": 1775453680,
+      "type": "town"
     },
     "opening_hours": "Mo-Su 15:00-22:00"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "West Tamar",
+      "osm_id": 10585650
+    },
+    "locality": {
+      "distance_m": 6960,
+      "name": "Exeter",
+      "osm_id": 320475815,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCDY9Y4ESEPJ8VNYDXK2",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

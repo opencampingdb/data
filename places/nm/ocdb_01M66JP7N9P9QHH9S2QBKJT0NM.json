@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The District Council of Loxton Waikerie",
+      "osm_id": 6704840
+    },
+    "locality": {
+      "distance_m": 9830,
+      "name": "Ramco",
+      "osm_id": 2006361328,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP7N9P9QHH9S2QBKJT0NM",
   "kind": "boat_ramp",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

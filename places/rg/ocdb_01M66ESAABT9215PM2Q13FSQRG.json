@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 12060,
+      "name": "Gembrook",
+      "osm_id": 616579495,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESAABT9215PM2Q13FSQRG",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

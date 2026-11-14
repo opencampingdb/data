@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Balranald Shire Council",
+      "osm_id": 5897433
+    },
+    "locality": {
+      "distance_m": 16230,
+      "name": "Robinvale",
+      "osm_id": 94421814,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Sturt Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

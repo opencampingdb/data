@@ -7,6 +7,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -18,6 +20,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
+    "locality": {
+      "distance_m": 45470,
+      "name": "Packsaddle Village",
+      "osm_id": 5705053187,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Karijini Drive"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

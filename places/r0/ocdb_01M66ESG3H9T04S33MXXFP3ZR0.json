@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Warrumbungle Shire Council",
+      "osm_id": 6268496
+    },
+    "locality": {
+      "distance_m": 430,
+      "name": "Dunedoo",
+      "osm_id": 113727668,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bolaro Street"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

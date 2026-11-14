@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 16310,
+      "name": "Woodenbong",
+      "osm_id": 21385974,
+      "type": "town"
+    },
     "operator": "Queensland Parks and Wildlife Service",
     "website": "http://www.nprsr.qld.gov.au/parks/mount-barney/camping.html"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Philip Street"
     },
     "facebook": "https://www.facebook.com/kenilworthaccommodation.com.au/",
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 120,
+      "name": "Kenilworth",
+      "osm_id": 137104451,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Elizabeth Street"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

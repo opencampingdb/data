@@ -3,6 +3,8 @@
     "cabins": "osm",
     "caravans": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
@@ -11,6 +13,16 @@
     "cabins": false,
     "caravans": true,
     "dump_station": false,
+    "lga": {
+      "name": "Ballina Shire Council",
+      "osm_id": 6168644
+    },
+    "locality": {
+      "distance_m": 2230,
+      "name": "Alstonville",
+      "osm_id": 113745328,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Bruxner Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

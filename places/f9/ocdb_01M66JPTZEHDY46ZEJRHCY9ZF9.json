@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
@@ -12,6 +14,16 @@
       "state": "SA",
       "street": "Adelaide Road",
       "suburb": "Millicent"
+    },
+    "lga": {
+      "name": "Wattle Range Council",
+      "osm_id": 3795329
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Millicent",
+      "osm_id": 177925374,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 1140
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

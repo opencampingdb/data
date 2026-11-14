@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -9,7 +11,17 @@
       "street": "Mulhollands Road",
       "suburb": "Thirlmere"
     },
-    "facebook": "https://www.facebook.com/CedarCreekOrchard/"
+    "facebook": "https://www.facebook.com/CedarCreekOrchard/",
+    "lga": {
+      "name": "Wollondilly Shire Council",
+      "osm_id": 6287823
+    },
+    "locality": {
+      "distance_m": 2870,
+      "name": "Thirlmere",
+      "osm_id": 120558074,
+      "type": "village"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPVM7RNXN3BT7N94KE3ZX",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

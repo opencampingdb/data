@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -12,6 +14,16 @@
       "state": "QLD",
       "street": "Rymera Road",
       "suburb": "Sarabah"
+    },
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 9240,
+      "name": "Canungra",
+      "osm_id": 589409513,
+      "type": "town"
     },
     "phone": "+61 7 5543 4021",
     "website": "https://greenleecottages.com.au",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

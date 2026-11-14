@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "cabins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm"
   },
   "facts": {
     "cabins": true,
+    "lga": {
+      "name": "Shire of Quairading",
+      "osm_id": 11689474
+    },
+    "locality": {
+      "distance_m": 710,
+      "name": "Quairading",
+      "osm_id": 31064938,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "York Merredin"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

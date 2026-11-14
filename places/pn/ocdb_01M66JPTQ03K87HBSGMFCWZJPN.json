@@ -3,6 +3,8 @@
     "address": "osm",
     "air": "osm",
     "car_wash": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -14,6 +16,16 @@
     },
     "air": true,
     "car_wash": true,
+    "lga": {
+      "name": "City of Monash",
+      "osm_id": 2905535
+    },
+    "locality": {
+      "distance_m": 14160,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Princes Highway"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

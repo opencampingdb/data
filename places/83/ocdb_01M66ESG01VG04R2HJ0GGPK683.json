@@ -7,6 +7,8 @@
     "drinking_water": "contributed",
     "dump_station": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "wifi": "osm"
   },
@@ -14,6 +16,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": "donation",
+    "lga": {
+      "name": "City of Latrobe",
+      "osm_id": 3355071
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Yinnar",
+      "osm_id": 3440750988,
+      "type": "village"
+    },
     "power": false,
     "wifi": false
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

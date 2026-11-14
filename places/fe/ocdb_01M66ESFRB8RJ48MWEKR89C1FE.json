@@ -7,6 +7,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "phone": "osm",
     "power": "osm",
@@ -28,6 +30,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 5030,
+      "name": "Quilpie",
+      "osm_id": 246024896,
+      "type": "town"
+    },
     "motorbikes": true,
     "phone": "+61 418 947 955",
     "power": true,
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

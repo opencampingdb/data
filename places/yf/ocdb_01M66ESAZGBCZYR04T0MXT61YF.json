@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Break O'Day",
+      "osm_id": 10577618
+    },
+    "locality": {
+      "distance_m": 4880,
+      "name": "Binalong Bay",
+      "osm_id": 4290201304,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 550,
       "name": "Taylors Beach"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

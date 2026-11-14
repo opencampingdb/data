@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "17",
       "street": "Drew Street"
+    },
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 2020,
+      "name": "Armidale",
+      "osm_id": 59851594,
+      "type": "city"
     },
     "opening_hours": "Mo-Th 08:30-17:00; Fr 08:30-14:00",
     "wheelchair": true
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

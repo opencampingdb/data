@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "4380",
       "street": "Maryland Street",
       "suburb": "Stanthorpe"
+    },
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 320,
+      "name": "Stanthorpe",
+      "osm_id": 92410551,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

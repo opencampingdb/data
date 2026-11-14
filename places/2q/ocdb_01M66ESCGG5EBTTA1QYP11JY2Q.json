@@ -8,6 +8,8 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed",
     "operator": "osm"
@@ -17,6 +19,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Longreach Regional",
+      "osm_id": 11676693
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Isisford",
+      "osm_id": 2214209529,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Saint Mary Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

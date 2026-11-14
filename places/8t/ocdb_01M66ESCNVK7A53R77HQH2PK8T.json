@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Gwydir Shire Council",
+      "osm_id": 6260771
+    },
+    "locality": {
+      "distance_m": 1010,
+      "name": "Warialda",
+      "osm_id": 114384970,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Dog Leg Drive"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

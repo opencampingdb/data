@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
       "street": "Powerhouse Road"
+    },
+    "lga": {
+      "name": "Shire of Collie",
+      "osm_id": 11688837
+    },
+    "locality": {
+      "distance_m": 3450,
+      "name": "Cardiff",
+      "osm_id": 369923298,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 3550
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

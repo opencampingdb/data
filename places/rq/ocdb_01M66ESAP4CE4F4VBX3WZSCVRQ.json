@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Waratah-Wynyard",
+      "osm_id": 10593034
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Wynyard",
+      "osm_id": 331653907,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 800
     },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

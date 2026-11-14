@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Rural City of Benalla",
+      "osm_id": 3351593
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Swanpool",
+      "osm_id": 1728909993,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Midland Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

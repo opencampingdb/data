@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "4",
       "street": "Olive Grove",
       "unit": "2"
+    },
+    "lga": {
+      "name": "City of Maroondah",
+      "osm_id": 3333992
+    },
+    "locality": {
+      "distance_m": 12060,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

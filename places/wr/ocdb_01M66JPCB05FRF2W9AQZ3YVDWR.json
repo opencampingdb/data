@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "25",
       "street": "Wilde Lane"
+    },
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 1640,
+      "name": "Moyston",
+      "osm_id": 324500887,
+      "type": "village"
     },
     "opening_hours": "Mo-Sa 10:00-17:00; Su 11:00-16:00",
     "website": "https://clayfieldwines.com/"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

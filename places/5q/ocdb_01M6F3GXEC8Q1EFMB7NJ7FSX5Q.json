@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Grass Patch",
+      "osm_id": 4741794391,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Coolgardie Esperance Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

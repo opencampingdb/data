@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
@@ -16,6 +18,16 @@
       "unleaded_91",
       "adblue"
     ],
+    "lga": {
+      "name": "Shire of Colac Otway",
+      "osm_id": 3291847
+    },
+    "locality": {
+      "distance_m": 3840,
+      "name": "Colac",
+      "osm_id": 123453118,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3030
     },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

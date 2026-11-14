@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Meander Valley",
+      "osm_id": 10598717
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "Hagley",
+      "osm_id": 426752884,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Meander Valley Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

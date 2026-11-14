@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 5210,
+      "name": "Roma",
+      "osm_id": 1895756363,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M6F3GZH42061RBZVNTMR3ZG6",
   "kind": "long_vehicle_parking",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

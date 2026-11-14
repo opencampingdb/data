@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -16,6 +18,16 @@
     "charge": "Donation Box",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Lachlan Shire Council",
+      "osm_id": 6106054
+    },
+    "locality": {
+      "distance_m": 4770,
+      "name": "Condobolin",
+      "osm_id": 113668705,
+      "type": "town"
+    },
     "max_stay": "14d",
     "nearest_boat_ramp": {
       "distance_m": 390
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

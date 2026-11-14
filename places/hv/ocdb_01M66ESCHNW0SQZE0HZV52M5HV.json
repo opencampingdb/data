@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
+    "locality": {
+      "distance_m": 50,
+      "name": "Paraburdoo",
+      "osm_id": 3624769901,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Rocklea Road"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

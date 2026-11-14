@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 11120,
+      "name": "Yarramalong",
+      "osm_id": 10561401757,
+      "type": "village"
+    },
     "operator": "Crown Lands (Great North Walk)",
     "showers": false,
     "tents": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

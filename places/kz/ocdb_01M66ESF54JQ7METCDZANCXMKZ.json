@@ -10,6 +10,8 @@
     "access": "contributed",
     "camper_trailers": "contributed",
     "caravans": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "contributed",
     "status": "contributed",
@@ -19,6 +21,16 @@
     "access": "2wd",
     "camper_trailers": true,
     "caravans": true,
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 7750,
+      "name": "Tathra",
+      "osm_id": 59608764,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 60,
       "name": "Gillard's Beach"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "temporarily_closed",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "power": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Federation Council",
+      "osm_id": 6232188
+    },
+    "locality": {
+      "distance_m": 5160,
+      "name": "Mulwala",
+      "osm_id": 2329238686,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 250
     },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

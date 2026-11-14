@@ -5,11 +5,23 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Irvinebank",
+      "osm_id": 1402185166,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Herberton Petford Road"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

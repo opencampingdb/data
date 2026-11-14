@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
     "booking_required": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Bourke Shire Council",
+      "osm_id": 5892186
+    },
+    "locality": {
+      "distance_m": 42700,
+      "name": "Bourke",
+      "osm_id": 113460906,
+      "type": "town"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "tents": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

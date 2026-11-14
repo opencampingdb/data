@@ -2,12 +2,24 @@
   "fact_sources": {
     "bbq": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "bbq": false,
     "drinking_water": false,
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 2530,
+      "name": "Burrum Heads",
+      "osm_id": 3699735127,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1970
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "charge": "$20",
     "fee": true,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 9810,
+      "name": "Yea",
+      "osm_id": 65641576,
+      "type": "town"
+    },
     "opening_hours": "We 13:00-17:00",
     "website": "https://www.facebook.com/people/TLM-Moto-Guzzi-Australia/100047441268649/"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

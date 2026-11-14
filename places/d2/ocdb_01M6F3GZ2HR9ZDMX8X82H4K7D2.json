@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 550,
+      "name": "Morven",
+      "osm_id": 1255169729,
+      "type": "village"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M6F3GZ2HR9ZDMX8X82H4K7D2",
   "kind": "food_and_drink",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

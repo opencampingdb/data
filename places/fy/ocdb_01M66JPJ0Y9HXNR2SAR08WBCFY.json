@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 26680,
+      "name": "Midge Point",
+      "osm_id": 2508333835,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPJ0Y9HXNR2SAR08WBCFY",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

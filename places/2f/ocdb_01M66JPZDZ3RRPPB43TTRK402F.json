@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 2980,
+      "name": "Kingston",
+      "osm_id": 60716267,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 430,
       "name": "Blackmans Bay Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

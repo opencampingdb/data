@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Gladstone Regional",
+      "osm_id": 11676351
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Bororen",
+      "osm_id": 1835106440,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bruce Highway"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

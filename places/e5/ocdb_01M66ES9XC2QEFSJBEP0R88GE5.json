@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Wolstenholme Avenue"
     },
     "caravans": true,
+    "lga": {
+      "name": "Liverpool City Council",
+      "osm_id": 6212442
+    },
+    "locality": {
+      "distance_m": 4150,
+      "name": "Silverdale",
+      "osm_id": 6042481211,
+      "type": "village"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/bents-basin-campground"
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

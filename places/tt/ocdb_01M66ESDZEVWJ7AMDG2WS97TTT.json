@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "water_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "City of Burnside",
+      "osm_id": 9105810
+    },
+    "locality": {
+      "distance_m": 4810,
+      "name": "Norton Summit",
+      "osm_id": 1905432827,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Penfold Road"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

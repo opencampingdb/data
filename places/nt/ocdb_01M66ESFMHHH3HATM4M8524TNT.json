@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The Flinders Ranges Council",
+      "osm_id": 6805430
+    },
+    "locality": {
+      "distance_m": 14840,
+      "name": "Hawker",
+      "osm_id": 2300348834,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFMHHH3HATM4M8524TNT",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

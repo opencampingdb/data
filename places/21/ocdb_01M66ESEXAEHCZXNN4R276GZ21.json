@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Light Regional Council",
+      "osm_id": 9108117
+    },
+    "locality": {
+      "distance_m": 5290,
+      "name": "Roseworthy",
+      "osm_id": 1883709621,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Mudla Wirra Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

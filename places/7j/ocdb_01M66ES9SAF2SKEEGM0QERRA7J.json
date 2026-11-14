@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Rural City of Mildura",
+      "osm_id": 3345519
+    },
+    "locality": {
+      "distance_m": 1920,
+      "name": "Merbein",
+      "osm_id": 251229850,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 110
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

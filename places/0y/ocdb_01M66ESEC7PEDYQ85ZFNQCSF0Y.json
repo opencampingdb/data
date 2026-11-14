@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -10,6 +12,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Coolamon Shire Council",
+      "osm_id": 6321566
+    },
+    "locality": {
+      "distance_m": 6740,
+      "name": "Ardlethan",
+      "osm_id": 113580036,
+      "type": "town"
+    },
     "showers": false,
     "toilets": true
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "power": "osm",
     "showers": "osm",
@@ -18,6 +20,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Shire of Denmark",
+      "osm_id": 11690414
+    },
+    "locality": {
+      "distance_m": 16380,
+      "name": "Peaceful Bay",
+      "osm_id": 201372054,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 3070
     },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

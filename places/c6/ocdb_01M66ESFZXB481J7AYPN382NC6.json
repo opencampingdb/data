@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Fraser Coast Regional",
+      "osm_id": 11676269
+    },
+    "locality": {
+      "distance_m": 2730,
+      "name": "Orchid Beach",
+      "osm_id": 821519250,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 120,
       "name": "Orchid Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

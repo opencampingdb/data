@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "street": "Proof Range Road"
+    },
+    "lga": {
+      "name": "Wakefield Regional Council",
+      "osm_id": 9108133
+    },
+    "locality": {
+      "distance_m": 6790,
+      "name": "Port Wakefield",
+      "osm_id": 1784630439,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 2880
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

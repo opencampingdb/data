@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "The District Council of Peterborough",
+      "osm_id": 6808228
+    },
+    "locality": {
+      "distance_m": 33130,
+      "name": "Yunta",
+      "osm_id": 250991450,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Barrier Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -6,6 +6,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "pets": "community_report",
     "power": "osm",
@@ -18,6 +20,16 @@
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 8370,
+      "name": "Imbil",
+      "osm_id": 137097709,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2590
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

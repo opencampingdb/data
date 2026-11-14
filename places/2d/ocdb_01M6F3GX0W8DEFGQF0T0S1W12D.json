@@ -1,10 +1,22 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "street": "Quindanning-darkan Road"
+    },
+    "lga": {
+      "name": "Shire of West Arthur",
+      "osm_id": 11688868
+    },
+    "locality": {
+      "distance_m": 8880,
+      "name": "Darkan",
+      "osm_id": 164435140,
+      "type": "town"
     }
   },
   "group": "attraction",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

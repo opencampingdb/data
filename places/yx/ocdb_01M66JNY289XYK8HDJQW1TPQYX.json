@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "57017",
       "street": "Bruce Highway"
+    },
+    "lga": {
+      "name": "Gladstone Regional",
+      "osm_id": 11676351
+    },
+    "locality": {
+      "distance_m": 1060,
+      "name": "Mount Larcom",
+      "osm_id": 1789411244,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 50,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

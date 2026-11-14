@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
@@ -10,6 +12,16 @@
     "booking_required": true,
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 10090,
+      "name": "Pomonal",
+      "osm_id": 324521624,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "tents": true
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

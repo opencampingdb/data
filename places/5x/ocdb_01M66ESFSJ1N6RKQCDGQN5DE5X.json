@@ -2,6 +2,8 @@
   "fact_sources": {
     "cabins": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "power": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "cabins": true,
     "caravans": true,
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 19520,
+      "name": "Miles",
+      "osm_id": 1771100598,
+      "type": "town"
+    },
     "motorbikes": true,
     "power": true,
     "showers": true,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

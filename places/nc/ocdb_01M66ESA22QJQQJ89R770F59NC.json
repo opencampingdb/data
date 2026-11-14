@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -14,6 +16,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "City of Mount Gambier",
+      "osm_id": 3395909
+    },
+    "locality": {
+      "distance_m": 1690,
+      "name": "Mount Gambier",
+      "osm_id": 59609477,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Pick Avenue"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

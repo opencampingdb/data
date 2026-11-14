@@ -2,11 +2,23 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "charge": "$6 p/v p/n Horse camp?",
     "fee": true,
+    "lga": {
+      "name": "Noosa Shire",
+      "osm_id": 11676212
+    },
+    "locality": {
+      "distance_m": 120,
+      "name": "Kin Kin",
+      "osm_id": 1894400045,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Main Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

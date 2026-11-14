@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Gold Coast City",
+      "osm_id": 11675459
+    },
+    "locality": {
+      "distance_m": 9040,
+      "name": "Crystal Creek",
+      "osm_id": 114632435,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP7J797BSEEYM6AKBWVB9",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Shire of Nannup",
+      "osm_id": 11688780
+    },
+    "locality": {
+      "distance_m": 11070,
+      "name": "Donnelly River",
+      "osm_id": 260193221,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brockman Highway"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

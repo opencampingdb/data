@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Buckland"
     },
     "fuel": true,
+    "lga": {
+      "name": "Glamorgan-Spring Bay",
+      "osm_id": 10621831
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Buckland",
+      "osm_id": 2181017903,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Tasman Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

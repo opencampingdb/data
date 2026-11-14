@@ -8,6 +8,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -26,6 +28,16 @@
     "entry": "public",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Junee Shire Council",
+      "osm_id": 6252194
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Bethungra",
+      "osm_id": 113664248,
+      "type": "village"
+    },
     "max_stay": "14d",
     "nearest_major_road": {
       "distance_m": 30,
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

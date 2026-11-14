@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Mount Barker"
     },
     "air": true,
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 2240,
+      "name": "Mount Barker",
+      "osm_id": 141109870,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Flaxley Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

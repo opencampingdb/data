@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "brand": "big4",
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 480,
+      "name": "Taggerty",
+      "osm_id": 899897667,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Maroondah Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

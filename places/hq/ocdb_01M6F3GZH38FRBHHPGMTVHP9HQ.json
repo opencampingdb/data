@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "Denholms Road",
       "suburb": "Cambridge"
+    },
+    "lga": {
+      "name": "City of Clarence",
+      "osm_id": 10625764
+    },
+    "locality": {
+      "distance_m": 3390,
+      "name": "Cambridge",
+      "osm_id": 1969434709,
+      "type": "village"
     },
     "operator": "University of Tasmania",
     "website": "https://www.utas.edu.au/groterebermuseum"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

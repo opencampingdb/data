@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -21,6 +23,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 3900,
+      "name": "Wingello",
+      "osm_id": 3979389809,
+      "type": "village"
+    },
     "max_stay": "4w",
     "opening_hours": "24/7",
     "operator": "Forestry Corporation of NSW",
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

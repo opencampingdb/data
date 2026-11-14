@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "1239",
       "street": "Milbrodale Road",
       "suburb": "Broke"
+    },
+    "lga": {
+      "name": "Singleton Council",
+      "osm_id": 6191883
+    },
+    "locality": {
+      "distance_m": 830,
+      "name": "Broke",
+      "osm_id": 115096395,
+      "type": "town"
     },
     "website": "https://www.nightingalewines.com.au/"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

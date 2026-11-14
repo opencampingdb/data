@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Rural City of Swan Hill",
+      "osm_id": 3345551
+    },
+    "locality": {
+      "distance_m": 4650,
+      "name": "Swan Hill",
+      "osm_id": 135631910,
+      "type": "town"
+    },
     "operator": "Swan Hill Council",
     "toilet_type": "flush"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

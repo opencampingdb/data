@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Groote Archipelago Region",
+      "osm_id": 18962228
+    },
+    "locality": {
+      "distance_m": 3540,
+      "name": "Umbakumba",
+      "osm_id": 4559832310,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESF8DNM9DA49E9HVACM2H",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

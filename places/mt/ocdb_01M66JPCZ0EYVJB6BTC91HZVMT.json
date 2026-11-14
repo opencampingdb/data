@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "David Low Way",
       "suburb": "Peregian Beach"
+    },
+    "lga": {
+      "name": "Noosa Shire",
+      "osm_id": 11676212
+    },
+    "locality": {
+      "distance_m": 980,
+      "name": "Peregian Beach",
+      "osm_id": 2968379124,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 330
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

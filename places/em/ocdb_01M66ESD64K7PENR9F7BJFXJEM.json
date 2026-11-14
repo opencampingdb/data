@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "permit",
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 1080,
+      "name": "Hahndorf",
+      "osm_id": 210096602,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Mount Barker Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "picnic_tables": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Shire of West Wimmera",
+      "osm_id": 3345520
+    },
+    "locality": {
+      "distance_m": 6240,
+      "name": "Wolseley",
+      "osm_id": 1800147536,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Western Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

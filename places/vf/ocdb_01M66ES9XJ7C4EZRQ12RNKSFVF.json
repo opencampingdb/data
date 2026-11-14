@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -15,6 +17,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 13690,
+      "name": "Mount David",
+      "osm_id": 113708299,
+      "type": "village"
+    },
     "max_stay": "4w",
     "nearest_major_road": {
       "distance_m": 60,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

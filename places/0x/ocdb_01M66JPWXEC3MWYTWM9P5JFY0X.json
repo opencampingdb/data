@@ -3,12 +3,24 @@
     "air": "osm",
     "car_wash": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "air": true,
     "car_wash": true,
     "fuel": true,
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 11890,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Vardys Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "bbq": "osm",
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "bbq": false,
     "bins": true,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 6450,
+      "name": "Kentucky",
+      "osm_id": 114658057,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "New England Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

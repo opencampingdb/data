@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Ilbilbie",
+      "osm_id": 2250079863,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Bruce Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

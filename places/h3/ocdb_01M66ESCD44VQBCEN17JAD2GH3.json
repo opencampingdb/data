@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Murray River Council",
+      "osm_id": 6134295
+    },
+    "locality": {
+      "distance_m": 3930,
+      "name": "Bearii",
+      "osm_id": 1543893296,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 0,
       "name": "Top End Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

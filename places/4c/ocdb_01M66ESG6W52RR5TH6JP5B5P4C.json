@@ -4,6 +4,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -19,6 +21,16 @@
     "caravans": true,
     "drinking_water": true,
     "dump_station": false,
+    "lga": {
+      "name": "Shire of Murray",
+      "osm_id": 11690485
+    },
+    "locality": {
+      "distance_m": 1200,
+      "name": "Dwellingup",
+      "osm_id": 83353490,
+      "type": "town"
+    },
     "phone": "+61 8 9538 1157",
     "power": true,
     "showers": true,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

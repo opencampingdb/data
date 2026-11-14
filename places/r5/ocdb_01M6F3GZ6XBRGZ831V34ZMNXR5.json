@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pub": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Old Hume Highway",
       "suburb": "Berrima"
+    },
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "Berrima",
+      "osm_id": 97299576,
+      "type": "town"
     },
     "pub": true,
     "website": "https://surveyorgeneralinn.com.au/"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

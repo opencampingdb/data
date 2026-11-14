@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Croydon Shire",
+      "osm_id": 11676976
+    },
+    "locality": {
+      "distance_m": 3130,
+      "name": "Croydon",
+      "osm_id": 247814528,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 80
     }
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

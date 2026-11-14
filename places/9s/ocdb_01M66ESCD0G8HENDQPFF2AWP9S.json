@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "hot_water": false,
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Toompine",
+      "osm_id": 5217407101,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Quilpie Thargomindah Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

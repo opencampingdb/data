@@ -6,6 +6,8 @@
   "fact_sources": {
     "email": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "community_report",
     "website": "osm"
@@ -13,6 +15,16 @@
   "facts": {
     "email": "mgc@maffragolf.com.au",
     "fee": true,
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 2620,
+      "name": "Maffra",
+      "osm_id": 79917279,
+      "type": "town"
+    },
     "phone": "+61 3 5147 1884",
     "power": true,
     "website": "https://www.maffragolf.com.au/visitors/"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

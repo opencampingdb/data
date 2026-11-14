@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Yorke Peninsula Council",
+      "osm_id": 6673799
+    },
+    "locality": {
+      "distance_m": 6470,
+      "name": "Hardwicke Bay",
+      "osm_id": 1775578466,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDMB39MR7N36N8YCHVVB",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

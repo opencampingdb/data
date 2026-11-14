@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -19,6 +21,16 @@
       "unleaded_98",
       "adblue"
     ],
+    "lga": {
+      "name": "Penrith City Council",
+      "osm_id": 6282698
+    },
+    "locality": {
+      "distance_m": 8670,
+      "name": "Bringelly",
+      "osm_id": 72163505,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Elizabeth Drive"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

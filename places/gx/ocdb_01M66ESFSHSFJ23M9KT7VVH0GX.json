@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "permit",
     "fee": false,
+    "lga": {
+      "name": "Lockyer Valley Regional",
+      "osm_id": 11675710
+    },
+    "locality": {
+      "distance_m": 3720,
+      "name": "Gatton",
+      "osm_id": 286924257,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "80"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

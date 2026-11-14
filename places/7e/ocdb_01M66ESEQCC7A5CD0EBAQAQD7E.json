@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm",
     "wheelchair": "osm",
@@ -14,6 +16,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 4950,
+      "name": "Buxton",
+      "osm_id": 289619307,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "website": "https://parkweb.vic.gov.au/explore/parks/cathedral-range-state-park/things-to-do/the-farmyard",
     "wheelchair": false,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Douglas Shire",
+      "osm_id": 11677495
+    },
+    "locality": {
+      "distance_m": 4640,
+      "name": "Mossman",
+      "osm_id": 169580856,
+      "type": "town"
+    },
     "motorbikes": false,
     "wheelchair": false
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

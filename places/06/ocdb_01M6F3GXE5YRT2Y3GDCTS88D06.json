@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "VIC",
       "street": "Patrick Northeast Drive",
       "suburb": "Narre Warren"
+    },
+    "lga": {
+      "name": "City of Casey",
+      "osm_id": 3333276
+    },
+    "locality": {
+      "distance_m": 15060,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

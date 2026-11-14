@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "160",
       "street": "Tarrango Road",
       "suburb": "Yarra Junction"
+    },
+    "lga": {
+      "name": "Shire of Yarra Ranges",
+      "osm_id": 3333996
+    },
+    "locality": {
+      "distance_m": 3190,
+      "name": "Yarra Junction",
+      "osm_id": 192816449,
+      "type": "town"
     }
   },
   "group": "overnight",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

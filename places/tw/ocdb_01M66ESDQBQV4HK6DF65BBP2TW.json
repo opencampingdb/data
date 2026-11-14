@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "water_type": "osm"
   },
   "facts": {
     "drinking_water": true,
+    "lga": {
+      "name": "City of Kingston",
+      "osm_id": 3333046
+    },
+    "locality": {
+      "distance_m": 20900,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 2000,
       "name": "Parkdale Beach"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

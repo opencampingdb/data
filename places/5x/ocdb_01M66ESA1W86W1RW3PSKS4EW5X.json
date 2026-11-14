@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Kyogle Council",
+      "osm_id": 6163138
+    },
+    "locality": {
+      "distance_m": 720,
+      "name": "Old Grevillia",
+      "osm_id": 114644424,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESA1W86W1RW3PSKS4EW5X",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

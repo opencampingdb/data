@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -20,6 +22,16 @@
       "unleaded_98",
       "adblue"
     ],
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Toogoolawah",
+      "osm_id": 60831315,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Brisbane Valley Highway"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

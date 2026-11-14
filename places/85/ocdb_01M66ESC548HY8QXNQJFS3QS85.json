@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "campfires": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "campfires": false,
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 11730,
+      "name": "Woods Point",
+      "osm_id": 1615434719,
+      "type": "village"
+    },
     "operator": "Thomson Valley Reserve"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

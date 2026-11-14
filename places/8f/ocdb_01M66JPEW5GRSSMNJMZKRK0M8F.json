@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Noosa Shire",
+      "osm_id": 11676212
+    },
+    "locality": {
+      "distance_m": 11040,
+      "name": "Boreen Point",
+      "osm_id": 249530579,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 60,
       "name": "Public Jetty - Harry's Hut"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

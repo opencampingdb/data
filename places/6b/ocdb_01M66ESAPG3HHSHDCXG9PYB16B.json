@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Break O'Day",
+      "osm_id": 10577618
+    },
+    "locality": {
+      "distance_m": 17290,
+      "name": "Mathinna",
+      "osm_id": 2620633328,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESAPG3HHSHDCXG9PYB16B",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

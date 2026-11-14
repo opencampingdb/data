@@ -7,11 +7,23 @@
   "fact_sources": {
     "campfires": "community_report",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "community_report"
   },
   "facts": {
     "campfires": true,
     "fee": true,
+    "lga": {
+      "name": "Burdekin Shire",
+      "osm_id": 11677016
+    },
+    "locality": {
+      "distance_m": 9480,
+      "name": "Groper Creek",
+      "osm_id": 10561394148,
+      "type": "village"
+    },
     "pets": "yes"
   },
   "group": "overnight",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

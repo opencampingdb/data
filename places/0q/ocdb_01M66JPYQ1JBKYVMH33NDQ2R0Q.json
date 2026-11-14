@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -15,6 +17,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 350,
+      "name": "Mount Barker",
+      "osm_id": 141109870,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Adelaide Road"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

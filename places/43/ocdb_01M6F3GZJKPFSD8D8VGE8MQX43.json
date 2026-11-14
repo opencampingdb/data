@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "6",
       "street": "Cardinia Street",
       "unit": "Gate 6"
+    },
+    "lga": {
+      "name": "City of Casey",
+      "osm_id": 3333276
+    },
+    "locality": {
+      "distance_m": 17150,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 300,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

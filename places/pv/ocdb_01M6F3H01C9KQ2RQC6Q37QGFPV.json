@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Pekina"
     },
     "facebook": "https://www.facebook.com/pekinahotel/",
+    "lga": {
+      "name": "The District Council of Orroroo Carrieton",
+      "osm_id": 6808108
+    },
+    "locality": {
+      "distance_m": 12830,
+      "name": "Orroroo",
+      "osm_id": 2291997995,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Price Maurice Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

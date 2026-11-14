@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "tents": "osm"
@@ -11,6 +13,16 @@
     "booking_required": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 22070,
+      "name": "Pomonal",
+      "osm_id": 324521624,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Grampians Tourist Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

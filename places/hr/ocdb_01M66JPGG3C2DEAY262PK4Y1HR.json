@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "postcode": "3984",
       "street": "Gurdies-St Helier Road",
       "suburb": "The Gurdies"
+    },
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 1540,
+      "name": "The Gurdies",
+      "osm_id": 309587668,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 3110
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

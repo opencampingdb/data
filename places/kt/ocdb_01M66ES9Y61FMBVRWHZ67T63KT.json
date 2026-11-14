@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "charge": "Pay at Cadoux Traders. Key for rec ctr amenities",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Wongan-Ballidu",
+      "osm_id": 11689780
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Cadoux",
+      "osm_id": 3329196480,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Dowerin Kalannie Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

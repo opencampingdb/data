@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -14,6 +16,16 @@
       "state": "VIC",
       "street": "Macrina Street",
       "suburb": "Oakleigh East"
+    },
+    "lga": {
+      "name": "City of Monash",
+      "osm_id": 2905535
+    },
+    "locality": {
+      "distance_m": 16290,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

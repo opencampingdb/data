@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Bulloo Shire",
+      "osm_id": 11676708
+    },
+    "locality": {
+      "distance_m": 35960,
+      "name": "Innamincka",
+      "osm_id": 1956101841,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP3A62ZFCH1DA4R4KAW1Y",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

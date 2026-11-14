@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fuels": [
       "diesel"
     ],
+    "lga": {
+      "name": "Cootamundra-Gundagai Regional Council",
+      "osm_id": 6247073
+    },
+    "locality": {
+      "distance_m": 16210,
+      "name": "Wantabadgery",
+      "osm_id": 113664553,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kimo Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

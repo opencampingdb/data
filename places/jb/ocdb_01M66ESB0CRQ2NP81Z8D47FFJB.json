@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Darebin",
+      "osm_id": 2404379
+    },
+    "locality": {
+      "distance_m": 12980,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "operator": "Glenn College",
     "toilet_type": "flush",
     "wheelchair": false
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": true,
+    "lga": {
+      "name": "Central Highlands",
+      "osm_id": 10622305
+    },
+    "locality": {
+      "distance_m": 5950,
+      "name": "Ouse",
+      "osm_id": 2406700831,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4000
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 15520,
+      "name": "Adventure Bay",
+      "osm_id": 2397996122,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 2190
     }
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

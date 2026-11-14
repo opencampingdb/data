@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The Flinders Ranges Council",
+      "osm_id": 6805430
+    },
+    "locality": {
+      "distance_m": 14320,
+      "name": "Quorn",
+      "osm_id": 32691509,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JNZZC9S6CG0Z5YJ58NPFZ",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
@@ -13,6 +15,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "City of Wyndham",
+      "osm_id": 2432416
+    },
+    "locality": {
+      "distance_m": 1870,
+      "name": "Wyndham Harbour",
+      "osm_id": 14161705187,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 80
     },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

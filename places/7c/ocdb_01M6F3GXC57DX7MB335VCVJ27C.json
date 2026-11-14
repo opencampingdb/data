@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Gordon Street",
       "suburb": "Gordonvale"
+    },
+    "lga": {
+      "name": "Cairns Regional",
+      "osm_id": 11677109
+    },
+    "locality": {
+      "distance_m": 1500,
+      "name": "Gordonvale",
+      "osm_id": 169526059,
+      "type": "town"
     },
     "website": "https://www.theparkviewhotel.com.au/"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "private"
+    "entry": "private",
+    "lga": {
+      "name": "Northern Midlands",
+      "osm_id": 10604255
+    },
+    "locality": {
+      "distance_m": 5630,
+      "name": "Campbell Town",
+      "osm_id": 244810301,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESF2YC7DN9KAQHG6H6XBA",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

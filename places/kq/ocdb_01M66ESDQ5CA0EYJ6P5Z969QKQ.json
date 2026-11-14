@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 9480,
+      "name": "Wowan",
+      "osm_id": 1795421614,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Burnett Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

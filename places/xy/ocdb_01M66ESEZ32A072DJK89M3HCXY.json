@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "postcode": "3959",
       "street": "Freycinet Street",
       "suburb": "Waratah Bay"
+    },
+    "lga": {
+      "name": "Shire of South Gippsland",
+      "osm_id": 3335917
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Waratah Bay",
+      "osm_id": 1227855788,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 110,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 1370,
+      "name": "Wandoan",
+      "osm_id": 204267567,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCN4883GRWTACW1GYRXZ",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "16",
       "street": "Hyde Street"
+    },
+    "lga": {
+      "name": "Bellingen Shire Council",
+      "osm_id": 6165980
+    },
+    "locality": {
+      "distance_m": 350,
+      "name": "Bellingen",
+      "osm_id": 59834908,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

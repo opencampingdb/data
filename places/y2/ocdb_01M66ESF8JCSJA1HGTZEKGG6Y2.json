@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "West Arnhem Region",
+      "osm_id": 11716450
+    },
+    "locality": {
+      "distance_m": 31350,
+      "name": "Gunbalanya",
+      "osm_id": 1889003274,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESF8JCSJA1HGTZEKGG6Y2",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

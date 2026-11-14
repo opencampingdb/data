@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -14,6 +16,16 @@
       "street": "Hay Street"
     },
     "email": "workat@questacasa.com",
+    "lga": {
+      "name": "City of Kalgoorlie-Boulder",
+      "osm_id": 11690214
+    },
+    "locality": {
+      "distance_m": 690,
+      "name": "Kalgoorlie",
+      "osm_id": 30772411,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Hannan Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

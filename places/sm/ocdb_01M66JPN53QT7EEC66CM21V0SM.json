@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "VIC",
       "street": "Beek Street",
       "suburb": "Katamatite"
+    },
+    "lga": {
+      "name": "Shire of Moira",
+      "osm_id": 3365119
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Katamatite",
+      "osm_id": 642902605,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

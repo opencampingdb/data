@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Town of Alice Springs",
+      "osm_id": 9045378
+    },
+    "locality": {
+      "distance_m": 3600,
+      "name": "Nyewente",
+      "osm_id": 4529107343,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESABXN0BWJFGZN8N1SJWP",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

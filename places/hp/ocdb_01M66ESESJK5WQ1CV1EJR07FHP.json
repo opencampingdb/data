@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm"
@@ -12,6 +14,16 @@
       "street": "Robinson Street"
     },
     "brand": "big4",
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 5030,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Robinson Street"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

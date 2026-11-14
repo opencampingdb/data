@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Cockburn",
+      "osm_id": 11689175
+    },
+    "locality": {
+      "distance_m": 860,
+      "name": "Rottnest Island",
+      "osm_id": 14161483464,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 650
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

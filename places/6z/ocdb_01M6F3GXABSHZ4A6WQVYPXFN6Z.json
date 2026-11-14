@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "vehicle_access": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 4400,
+      "name": "Bundabah",
+      "osm_id": 114993668,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4160,
       "name": "Boat Ramp"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

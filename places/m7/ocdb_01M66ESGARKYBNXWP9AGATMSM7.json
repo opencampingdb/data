@@ -2,6 +2,8 @@
   "fact_sources": {
     "booking_required": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "booking_required": true,
     "entry": "permit",
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 10040,
+      "name": "Dunkeld",
+      "osm_id": 291548996,
+      "type": "town"
+    },
     "operator": "Parks Victoria",
     "power": false,
     "showers": false,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

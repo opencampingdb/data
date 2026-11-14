@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -11,6 +13,16 @@
     "address": {
       "housenumber": "238",
       "street": "Beaufort Street"
+    },
+    "lga": {
+      "name": "City of Vincent",
+      "osm_id": 11689220
+    },
+    "locality": {
+      "distance_m": 1210,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
     },
     "nearest_beach": {
       "distance_m": 1670
@@ -35,11 +47,11 @@
   "name": "Emu Backpackers",
   "osm": {
     "id": 11393875621,
-    "timestamp": "2023-12-04T21:08:35Z",
+    "timestamp": "2026-11-13T09:22:48Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

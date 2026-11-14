@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "36",
       "street": "Cemetery Road"
+    },
+    "lga": {
+      "name": "Shire of Northern Grampians",
+      "osm_id": 3348880
+    },
+    "locality": {
+      "distance_m": 990,
+      "name": "Great Western",
+      "osm_id": 811357369,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 440,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

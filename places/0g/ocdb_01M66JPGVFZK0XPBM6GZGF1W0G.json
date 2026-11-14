@@ -2,11 +2,16 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Exmouth",
+      "osm_id": 11689997
+    },
     "nearest_boat_ramp": {
       "distance_m": 2430
     }
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

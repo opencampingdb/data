@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Diamantina Developmental Road"
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

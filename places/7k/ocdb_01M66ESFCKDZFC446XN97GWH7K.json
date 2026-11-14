@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 7280,
+      "name": "Allendale East",
+      "osm_id": 1937621841,
+      "type": "village"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -16,14 +28,14 @@
     "lat": -37.94105,
     "lon": 140.730321
   },
-  "name": null,
+  "name": "Mount Shank",
   "osm": {
     "id": 546728797,
-    "timestamp": "2020-01-07T10:43:25Z",
+    "timestamp": "2026-11-13T10:27:17Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

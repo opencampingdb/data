@@ -3,10 +3,22 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "dump_station": true
+    "dump_station": true,
+    "lga": {
+      "name": "Dubbo Regional Council",
+      "osm_id": 6268489
+    },
+    "locality": {
+      "distance_m": 7600,
+      "name": "Geurie",
+      "osm_id": 113727773,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES90GTNZ3G99F6JN70CAM",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

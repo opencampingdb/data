@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,6 +17,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Walcha Council",
+      "osm_id": 6180603
+    },
+    "locality": {
+      "distance_m": 120,
+      "name": "Woolbrook",
+      "osm_id": 1947370543,
+      "type": "village"
+    },
     "operator": "Tamworth Regional Council",
     "showers": false,
     "tents": true,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

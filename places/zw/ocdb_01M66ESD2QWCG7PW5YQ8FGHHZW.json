@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Coolgardie",
+      "osm_id": 11690099
+    },
+    "locality": {
+      "distance_m": 260,
+      "name": "Kambalda West",
+      "osm_id": 2058747465,
+      "type": "town"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

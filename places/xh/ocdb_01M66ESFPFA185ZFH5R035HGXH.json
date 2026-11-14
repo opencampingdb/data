@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Campaspe",
+      "osm_id": 3347273
+    },
+    "locality": {
+      "distance_m": 4550,
+      "name": "Gunbower",
+      "osm_id": 1887612114,
+      "type": "town"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

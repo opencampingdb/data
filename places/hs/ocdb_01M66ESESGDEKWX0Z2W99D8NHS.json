@@ -7,6 +7,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
@@ -25,6 +27,16 @@
     "booking_required": false,
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 5340,
+      "name": "Kangaroo Valley",
+      "osm_id": 35081448,
+      "type": "town"
+    },
     "max_stay": "50d",
     "nearest_beach": {
       "distance_m": 270,
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

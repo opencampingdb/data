@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "City of Launceston",
+      "osm_id": 10581631
+    },
+    "locality": {
+      "distance_m": 2660,
+      "name": "Launceston",
+      "osm_id": 244646675,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 4960,
       "name": "Waverley Lake Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

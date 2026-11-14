@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -10,6 +12,16 @@
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 610,
+      "name": "Hopetoun",
+      "osm_id": 2569264057,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 820,
       "name": "12 Mile Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

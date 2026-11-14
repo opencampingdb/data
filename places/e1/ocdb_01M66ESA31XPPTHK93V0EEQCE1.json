@@ -2,6 +2,7 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
     "operator": "osm",
     "tents": "osm",
     "website": "osm"
@@ -9,6 +10,10 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
     "operator": "NT Parks",
     "tents": true,
     "website": "https://nt.gov.au/parks/find-a-park/rainbow-valley-conservation-reserve"
@@ -29,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

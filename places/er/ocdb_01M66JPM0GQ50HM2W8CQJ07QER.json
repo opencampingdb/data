@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Central Highlands Regional",
+      "osm_id": 11676571
+    },
+    "locality": {
+      "distance_m": 1450,
+      "name": "Emerald",
+      "osm_id": 1825242871,
+      "type": "town"
+    },
     "operator": "Central Highlands Regional Council",
     "water_type": "tank_fill"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

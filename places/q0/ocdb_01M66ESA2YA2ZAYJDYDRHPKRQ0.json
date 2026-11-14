@@ -6,6 +6,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
     "showers": "osm",
@@ -25,6 +27,16 @@
     "caravans": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Adelaide Plains Council",
+      "osm_id": 9108122
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Parham",
+      "osm_id": 2487920290,
+      "type": "village"
+    },
     "operator": "Adelaide Plains Council",
     "picnic_tables": true,
     "showers": true,
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

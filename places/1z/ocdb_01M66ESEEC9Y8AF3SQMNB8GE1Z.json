@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
     "nearest_beach": {
       "distance_m": 1640,
       "name": "Balmoral Beach"
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

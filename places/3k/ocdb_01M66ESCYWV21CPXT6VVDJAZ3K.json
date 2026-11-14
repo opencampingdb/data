@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 41350,
+      "name": "Coppabella",
+      "osm_id": 2323122588,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCYWV21CPXT6VVDJAZ3K",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

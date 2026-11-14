@@ -10,6 +10,8 @@
     "email": "osm",
     "fee": "osm",
     "kitchen": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -31,6 +33,16 @@
     "email": "reservations@winecountrytouristpark.com.au",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Cessnock City Council",
+      "osm_id": 6191219
+    },
+    "locality": {
+      "distance_m": 1340,
+      "name": "Nulkaba",
+      "osm_id": 114176546,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Wine Country Drive"
@@ -58,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The City of Norwood Payneham and St Peters",
+      "osm_id": 9107444
+    },
+    "locality": {
+      "distance_m": 6410,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESCM5Z459AB3KTNQN2CFE",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

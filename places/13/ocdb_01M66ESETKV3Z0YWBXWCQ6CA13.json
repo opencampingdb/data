@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "brand": "discovery",
+    "lga": {
+      "name": "City of Wodonga",
+      "osm_id": 3365492
+    },
+    "locality": {
+      "distance_m": 6510,
+      "name": "Bellbridge",
+      "osm_id": 2655270525,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 580
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

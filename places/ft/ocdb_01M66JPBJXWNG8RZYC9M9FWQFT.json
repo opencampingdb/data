@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Wollondilly Shire Council",
+      "osm_id": 6287823
+    },
+    "locality": {
+      "distance_m": 4000,
+      "name": "Theresa Park",
+      "osm_id": 3245959223,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPBJXWNG8RZYC9M9FWQFT",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "2258",
       "street": "Ourimbah Creek Road",
       "suburb": "Ourimbah"
+    },
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 8420,
+      "name": "Gosford",
+      "osm_id": 116961349,
+      "type": "city"
     },
     "website": "https://www.forestoftranquility.com/"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "1157",
       "street": "Elsegood Road"
+    },
+    "lga": {
+      "name": "Kangaroo Island Council",
+      "osm_id": 6671370
+    },
+    "locality": {
+      "distance_m": 19240,
+      "name": "American River",
+      "osm_id": 10012096358,
+      "type": "village"
     },
     "opening_hours": "Mo-Su 09:00-17:00",
     "phone": "+61 8 8553 8295",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

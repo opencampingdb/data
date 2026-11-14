@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "website": "osm"
@@ -14,6 +16,16 @@
       "suburb": "Maroon"
     },
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 16890,
+      "name": "Mount Alford",
+      "osm_id": 1651180881,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1820
     },
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

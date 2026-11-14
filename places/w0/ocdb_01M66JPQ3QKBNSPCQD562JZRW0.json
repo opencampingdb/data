@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "19",
       "street": "Mighall Place",
       "unit": "3"
+    },
+    "lga": {
+      "name": "Litchfield Municipality",
+      "osm_id": 9045375
+    },
+    "locality": {
+      "distance_m": 640,
+      "name": "Holtze",
+      "osm_id": 4075589701,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 4040
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

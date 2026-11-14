@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of East Pilbara",
+      "osm_id": 11690247
+    },
+    "locality": {
+      "distance_m": 4050,
+      "name": "Newman",
+      "osm_id": 306328028,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPGMHG2Q3YB0RXEKGC1A3",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

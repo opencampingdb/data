@@ -3,10 +3,22 @@
     "fee": "2025-10-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "City of Greater Geraldton",
+      "osm_id": 11689919
+    },
+    "locality": {
+      "distance_m": 31770,
+      "name": "Cape Burney",
+      "osm_id": 3390094295,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Z77JPE72Q1VSYFYH4J",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

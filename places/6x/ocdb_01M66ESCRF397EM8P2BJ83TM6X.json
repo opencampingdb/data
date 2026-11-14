@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Forbes Shire Council",
+      "osm_id": 6413174
+    },
+    "locality": {
+      "distance_m": 21750,
+      "name": "Forbes",
+      "osm_id": 230571223,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Lachlan Valley Way"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

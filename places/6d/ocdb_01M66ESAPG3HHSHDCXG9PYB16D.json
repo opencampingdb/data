@@ -3,10 +3,22 @@
     "dump_station": "2026-11-04T13:32:35Z"
   },
   "fact_sources": {
-    "dump_station": "contributed"
+    "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "dump_station": true
+    "dump_station": true,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 920,
+      "name": "Clifton",
+      "osm_id": 1952410833,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAPG3HHSHDCXG9PYB16D",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
       "postcode": "2390",
       "street": "Cooma Road",
       "suburb": "Narrabri"
+    },
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 1950,
+      "name": "Narrabri",
+      "osm_id": 1966226491,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 2080
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

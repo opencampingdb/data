@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Dorset",
+      "osm_id": 10578020
+    },
+    "locality": {
+      "distance_m": 14830,
+      "name": "Bridport",
+      "osm_id": 253653457,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBG0KNGRP8VK26APZP3C",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

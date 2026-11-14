@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Lockyer Valley Regional",
+      "osm_id": 11675710
+    },
+    "locality": {
+      "distance_m": 10460,
+      "name": "Thornton",
+      "osm_id": 2340527966,
+      "type": "village"
+    },
     "operator": "Queensland National Parks",
     "tents": true,
     "website": "https://parks.desi.qld.gov.au/parks/scenic-rim-trail/camping/scenic-rim-trail-walkers-camps"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,18 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "locality": {
+      "distance_m": 35810,
+      "name": "Batchelor",
+      "osm_id": 31432758,
+      "type": "town"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -25,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

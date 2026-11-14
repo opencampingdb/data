@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Cootamundra-Gundagai Regional Council",
+      "osm_id": 6247073
+    },
+    "locality": {
+      "distance_m": 690,
+      "name": "Stockinbingal",
+      "osm_id": 5705013944,
+      "type": "town"
+    },
     "power": true
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

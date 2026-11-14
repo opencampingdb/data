@@ -8,12 +8,24 @@
   "fact_sources": {
     "camper_trailers": "contributed",
     "caravans": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "contributed",
     "website": "contributed"
   },
   "facts": {
     "camper_trailers": true,
     "caravans": true,
+    "lga": {
+      "name": "Shire of Hepburn",
+      "osm_id": 3327844
+    },
+    "locality": {
+      "distance_m": 8530,
+      "name": "Daylesford",
+      "osm_id": 60303319,
+      "type": "town"
+    },
     "motorhomes": true,
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/hepburn-regional-park/where-to-stay/mount-franklin-lalgambuk-camping-area"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,16 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
     "hot_water": true,
+    "lga": {
+      "name": "Pastoral Unincorporated Area",
+      "osm_id": 6804541
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Eyre Highway"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

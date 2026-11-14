@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "257",
       "street": "Bourbong Street"
+    },
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 1330,
+      "name": "Bundaberg",
+      "osm_id": 245122449,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 910
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

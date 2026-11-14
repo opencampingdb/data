@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Shire of Mount Magnet",
+      "osm_id": 11690060
+    },
+    "locality": {
+      "distance_m": 430,
+      "name": "Mount Magnet",
+      "osm_id": 303581637,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Hepburn Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

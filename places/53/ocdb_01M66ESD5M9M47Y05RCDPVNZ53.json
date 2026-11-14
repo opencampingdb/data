@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Narrogin",
+      "osm_id": 11688948
+    },
+    "locality": {
+      "distance_m": 350,
+      "name": "Narrogin",
+      "osm_id": 306058835,
+      "type": "town"
+    },
     "max_stay": "72h",
     "nearest_major_road": {
       "distance_m": 100,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

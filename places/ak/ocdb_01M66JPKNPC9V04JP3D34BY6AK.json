@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -12,6 +14,16 @@
       "postcode": "0832",
       "street": "Forrest Parade",
       "unit": "1102"
+    },
+    "lga": {
+      "name": "City of Palmerston",
+      "osm_id": 9045374
+    },
+    "locality": {
+      "distance_m": 3270,
+      "name": "Palmerston",
+      "osm_id": 2371452004,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 2180
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

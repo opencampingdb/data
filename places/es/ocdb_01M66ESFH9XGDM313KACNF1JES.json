@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -17,6 +19,16 @@
     "charge": "$22 fixed site fee 12/2019",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Nimmitabel",
+      "osm_id": 252392757,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Monaro Highway"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

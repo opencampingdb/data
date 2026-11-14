@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "The Flinders Ranges Council",
+      "osm_id": 6805430
+    },
+    "locality": {
+      "distance_m": 7780,
+      "name": "Quorn",
+      "osm_id": 32691509,
+      "type": "town"
+    },
     "operator": "DEW",
     "website": "https://southaustralia.com/products/flinders-ranges/accommodation/the-dutchmans-stern-homestead"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

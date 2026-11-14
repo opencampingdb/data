@@ -2,9 +2,12 @@
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm"
   },
   "facts": {
     "address": {
@@ -14,6 +17,16 @@
       "suburb": "Windsor"
     },
     "air": true,
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 4860,
+      "name": "Brisbane",
+      "osm_id": 1546628274,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 850,
       "name": "Dog Beach"
@@ -24,7 +37,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lutwyche Road"
-    }
+    },
+    "opening_hours": "24/7"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ7668ESK6DHYD84NJ6F",
@@ -33,14 +47,14 @@
     "lat": -27.425953,
     "lon": 153.032093
   },
-  "name": "Ampol",
+  "name": "U-Go",
   "osm": {
     "id": 1326534493,
-    "timestamp": "2025-12-20T04:08:17Z",
+    "timestamp": "2026-11-13T05:35:17Z",
     "type": "way",
-    "version": 7
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

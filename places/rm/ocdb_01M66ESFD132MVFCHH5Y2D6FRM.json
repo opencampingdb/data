@@ -3,6 +3,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm",
     "wifi": "osm"
@@ -11,6 +13,16 @@
     "caravans": false,
     "dump_station": false,
     "fee": false,
+    "lga": {
+      "name": "Break O'Day",
+      "osm_id": 10577618
+    },
+    "locality": {
+      "distance_m": 3930,
+      "name": "Mathinna",
+      "osm_id": 2620633328,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Upper Esk Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

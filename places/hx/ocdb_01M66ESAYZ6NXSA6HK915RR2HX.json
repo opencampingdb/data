@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Kent",
+      "osm_id": 9045367
+    },
+    "locality": {
+      "distance_m": 430,
+      "name": "Nyabing",
+      "osm_id": 1939473380,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Nyabing South Road"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

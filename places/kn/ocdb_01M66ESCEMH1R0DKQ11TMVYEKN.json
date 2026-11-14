@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilets": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 930,
+      "name": "Miles",
+      "osm_id": 1771100598,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4400
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

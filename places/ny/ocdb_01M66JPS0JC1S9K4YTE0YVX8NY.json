@@ -2,12 +2,19 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "locality": {
+      "distance_m": 4250,
+      "name": "North Sydney",
+      "osm_id": 18370040,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30,
       "name": "Balmoral Beach"
@@ -32,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

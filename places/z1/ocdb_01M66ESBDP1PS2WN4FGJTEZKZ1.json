@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Derby-West Kimberley",
+      "osm_id": 11690291
+    },
+    "locality": {
+      "distance_m": 48480,
+      "name": "Imintji",
+      "osm_id": 2036586545,
+      "type": "village"
+    },
     "operator": "Charnley River Station",
     "toilet_type": "flush"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

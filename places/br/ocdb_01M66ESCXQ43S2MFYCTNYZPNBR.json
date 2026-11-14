@@ -6,12 +6,24 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "Town of Alice Springs",
+      "osm_id": 9045378
+    },
+    "locality": {
+      "distance_m": 2260,
+      "name": "Mpwetyerre",
+      "osm_id": 4409423420,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Stuart Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
       "street": "Nymbool Road"
     },
     "fee": true,
+    "lga": {
+      "name": "Tablelands Regional",
+      "osm_id": 11677293
+    },
+    "locality": {
+      "distance_m": 1080,
+      "name": "Mount Garnet",
+      "osm_id": 1402185162,
+      "type": "town"
+    },
     "phone": "+61 7 4097 9335",
     "power": true,
     "tents": true,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

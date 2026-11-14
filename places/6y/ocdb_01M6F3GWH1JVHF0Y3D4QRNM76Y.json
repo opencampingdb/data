@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "WA",
       "street": "Silver Road",
       "suburb": "Scotsdale"
+    },
+    "lga": {
+      "name": "Shire of Denmark",
+      "osm_id": 11690414
+    },
+    "locality": {
+      "distance_m": 8560,
+      "name": "Denmark",
+      "osm_id": 201357070,
+      "type": "town"
     },
     "operator": "John and Rhonda Burgess",
     "phone": "+61 8 9840 9993",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "charge": "Donation Box",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Flinders Shire",
+      "osm_id": 11676765
+    },
+    "locality": {
+      "distance_m": 41650,
+      "name": "Hughenden",
+      "osm_id": 278232907,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Savage Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

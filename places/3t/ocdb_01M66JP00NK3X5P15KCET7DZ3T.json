@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 17810,
+      "name": "Wee Waa",
+      "osm_id": 97262591,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP00NK3X5P15KCET7DZ3T",
   "kind": "boat_ramp",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "5172",
       "street": "High Street",
       "suburb": "Willunga"
+    },
+    "lga": {
+      "name": "City of Onkaparinga",
+      "osm_id": 7262204
+    },
+    "locality": {
+      "distance_m": 680,
+      "name": "Willunga",
+      "osm_id": 291559783,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

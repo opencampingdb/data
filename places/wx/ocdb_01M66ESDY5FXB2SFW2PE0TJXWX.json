@@ -3,12 +3,24 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Goulburn Mulwaree Council",
+      "osm_id": 6310493
+    },
+    "locality": {
+      "distance_m": 10650,
+      "name": "Marulan",
+      "osm_id": 251724227,
+      "type": "town"
+    },
     "operator": "NSW National Parks and Wildlife Service"
   },
   "group": "utility",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

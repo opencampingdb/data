@@ -3,12 +3,24 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Gwydir Shire Council",
+      "osm_id": 6260771
+    },
+    "locality": {
+      "distance_m": 23040,
+      "name": "North Star",
+      "osm_id": 114384400,
+      "type": "village"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

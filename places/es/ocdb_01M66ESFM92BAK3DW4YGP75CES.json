@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Eurobodalla Shire Council",
+      "osm_id": 6239661
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Mossy Point",
+      "osm_id": 512095731,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 190,
       "name": "Tomakin Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

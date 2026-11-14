@@ -7,12 +7,24 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "Diamantina Shire",
+      "osm_id": 11676755
+    },
+    "locality": {
+      "distance_m": 830,
+      "name": "Bedourie",
+      "osm_id": 1971645627,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Diamantina Developmental Road"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

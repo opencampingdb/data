@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "drinking_water": false,
+    "lga": {
+      "name": "Wollongong City Council",
+      "osm_id": 6303077
+    },
+    "locality": {
+      "distance_m": 8780,
+      "name": "Corrimal",
+      "osm_id": 113322963,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1430,
       "name": "Little Austinmer Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

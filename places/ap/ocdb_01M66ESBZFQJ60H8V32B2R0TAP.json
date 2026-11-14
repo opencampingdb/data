@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "10/n",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Streaky Bay",
+      "osm_id": 7109329
+    },
+    "locality": {
+      "distance_m": 29430,
+      "name": "Venus Bay",
+      "osm_id": 267101780,
+      "type": "village"
+    },
     "showers": false,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

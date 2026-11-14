@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "postcode": "6258",
       "street": "Andrew Road"
+    },
+    "lga": {
+      "name": "Shire of Nannup",
+      "osm_id": 11688780
+    },
+    "locality": {
+      "distance_m": 10,
+      "name": "Donnelly River",
+      "osm_id": 260193221,
+      "type": "village"
     },
     "opening_hours": "Mo-Su 08:30-17:00",
     "phone": "+61 8 9772 1244",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Upper Lachlan Shire Council",
+      "osm_id": 6257920
+    },
+    "locality": {
+      "distance_m": 640,
+      "name": "Taralga",
+      "osm_id": 1919601053,
+      "type": "town"
+    },
     "operator": "Taralga Co-Op",
     "power": true,
     "showers": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

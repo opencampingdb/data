@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Douglas Shire",
+      "osm_id": 11677495
+    },
+    "locality": {
+      "distance_m": 15590,
+      "name": "Kowrowa",
+      "osm_id": 6624481347,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 760,
       "name": "Wangetti Beach"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

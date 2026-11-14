@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -13,6 +15,16 @@
       "state": "QLD",
       "street": "Bauple Drive",
       "suburb": "Bauple"
+    },
+    "lga": {
+      "name": "Fraser Coast Regional",
+      "osm_id": 11676269
+    },
+    "locality": {
+      "distance_m": 10170,
+      "name": "Tiaro",
+      "osm_id": 213505402,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

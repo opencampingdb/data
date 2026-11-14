@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 15400,
+      "name": "Jenolan Caves",
+      "osm_id": 113707646,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP7WW9R2TJH1Y24HAD96M",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Rose Creek Road",
       "suburb": "Crackenback"
+    },
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 5860,
+      "name": "Perisher Valley",
+      "osm_id": 113373467,
+      "type": "village"
     },
     "website": "https://www.alpineescapes.com.au/listings/468148",
     "wifi": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

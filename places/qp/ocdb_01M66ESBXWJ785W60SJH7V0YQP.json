@@ -1,12 +1,19 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "locality": {
+      "distance_m": 26950,
+      "name": "Batchelor",
+      "osm_id": 31432758,
+      "type": "town"
+    },
     "opening_hours": "24/7",
     "operator": "Litchfield National Park",
     "toilet_type": "flush"
@@ -27,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Moree Plains Shire Council",
+      "osm_id": 6088821
+    },
+    "locality": {
+      "distance_m": 15170,
+      "name": "Gurley",
+      "osm_id": 93702883,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Newell Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

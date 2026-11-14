@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "3764",
       "street": "Rutledge Street",
       "suburb": "Kilmore"
+    },
+    "lga": {
+      "name": "Shire of Mitchell",
+      "osm_id": 3327815
+    },
+    "locality": {
+      "distance_m": 1260,
+      "name": "Kilmore",
+      "osm_id": 25646380,
+      "type": "town"
     },
     "phone": "+61 3 5734 2000",
     "website": "https://www.kilmoredistricthospital.org.au/"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

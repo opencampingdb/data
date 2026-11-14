@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Serpentine-Jarrahdale",
+      "osm_id": 11689420
+    },
+    "locality": {
+      "distance_m": 7640,
+      "name": "Mundijong",
+      "osm_id": 1793989745,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4510
     },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

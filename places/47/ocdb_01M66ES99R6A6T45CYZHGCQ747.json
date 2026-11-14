@@ -3,6 +3,8 @@
     "campfires": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
     "campfires": false,
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 14630,
+      "name": "Woodenbong",
+      "osm_id": 21385974,
+      "type": "town"
+    },
     "operator": "Queensland Parks and Wildlife Service",
     "toilets": false,
     "website": "https://parks.des.qld.gov.au/parks/mount-barney/camping/forestry"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

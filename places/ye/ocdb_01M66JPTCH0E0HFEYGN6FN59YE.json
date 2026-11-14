@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilets": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "air": true,
+    "lga": {
+      "name": "Golden Plains Shire",
+      "osm_id": 3290692
+    },
+    "locality": {
+      "distance_m": 2180,
+      "name": "Bannockburn",
+      "osm_id": 244037887,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Midland Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

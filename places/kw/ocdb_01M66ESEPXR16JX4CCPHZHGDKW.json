@@ -8,6 +8,8 @@
     "dump_station": "osm",
     "email": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -24,6 +26,16 @@
     "dump_station": true,
     "email": "crescenthead@macleayvalleycoastholidayparks.com.au",
     "fee": true,
+    "lga": {
+      "name": "Kempsey Shire Council",
+      "osm_id": 6178731
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "Crescent Head",
+      "osm_id": 115070355,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 50,
       "name": "Killick Beach"
@@ -59,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

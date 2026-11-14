@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Longreach Regional",
+      "osm_id": 11676693
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Longreach",
+      "osm_id": 90130799,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Hudson Fysh Drive"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

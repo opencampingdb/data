@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Exmouth",
+      "osm_id": 11689997
+    },
+    "locality": {
+      "distance_m": 48330,
+      "name": "Coral Bay",
+      "osm_id": 1139924440,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESD873SE2F5PX78Q1S398",
   "kind": "national_park_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

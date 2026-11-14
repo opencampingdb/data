@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Balranald Shire Council",
+      "osm_id": 5897433
+    },
+    "locality": {
+      "distance_m": 5020,
+      "name": "Balranald",
+      "osm_id": 113393311,
+      "type": "town"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "toilets": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

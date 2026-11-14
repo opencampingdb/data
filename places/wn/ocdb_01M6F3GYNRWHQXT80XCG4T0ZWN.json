@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "wifi": "osm"
@@ -13,6 +15,16 @@
       "street": "Bogong High Plains Road",
       "suburb": "Falls Creek",
       "unit": "RMB"
+    },
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 3560,
+      "name": "Falls Creek",
+      "osm_id": 243920369,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 200,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "290",
       "street": "Malton Road"
+    },
+    "lga": {
+      "name": "The Council of the Shire of Hornsby",
+      "osm_id": 6218957
+    },
+    "locality": {
+      "distance_m": 6140,
+      "name": "Hornsby",
+      "osm_id": 26391679,
+      "type": "town"
     },
     "phone": "+61 2 9876 5383"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

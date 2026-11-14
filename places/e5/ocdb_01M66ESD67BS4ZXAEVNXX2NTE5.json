@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Gnowangerup",
+      "osm_id": 11690325
+    },
+    "locality": {
+      "distance_m": 3220,
+      "name": "Amelup",
+      "osm_id": 5705053186,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Chester Pass Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "4313",
       "street": "Kondinin-Hyden Road"
+    },
+    "lga": {
+      "name": "Shire of Kondinin",
+      "osm_id": 11690139
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Karlgarin",
+      "osm_id": 1939460583,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

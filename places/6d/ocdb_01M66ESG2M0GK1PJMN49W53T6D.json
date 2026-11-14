@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -14,6 +16,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Campaspe",
+      "osm_id": 3347273
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Lockington",
+      "osm_id": 555851277,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Lockington Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "brand": "big4",
+    "lga": {
+      "name": "The Flinders Ranges Council",
+      "osm_id": 6805430
+    },
+    "locality": {
+      "distance_m": 350,
+      "name": "Hawker",
+      "osm_id": 2300348834,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Wilpena Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

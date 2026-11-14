@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Wiluna",
+      "osm_id": 11690170
+    },
+    "locality": {
+      "distance_m": 49480,
+      "name": "Jigalong",
+      "osm_id": 2026286169,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESCJZ8B9EA9WA8K0GTEQJ",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

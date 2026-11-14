@@ -1,11 +1,23 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Salisbury",
+      "osm_id": 9108068
+    },
+    "locality": {
+      "distance_m": 4660,
+      "name": "Salisbury",
+      "osm_id": 1905706910,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Port Wakefield Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

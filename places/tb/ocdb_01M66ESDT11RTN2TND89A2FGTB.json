@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Murweh Shire",
+      "osm_id": 11674879
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Augathella",
+      "osm_id": 2284179400,
+      "type": "town"
+    },
     "operator": "Murweh Shire Council"
   },
   "group": "utility",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

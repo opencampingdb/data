@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm"
@@ -16,6 +18,16 @@
     "charge": "$10/n",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Coomalie Shire",
+      "osm_id": 9045376
+    },
+    "locality": {
+      "distance_m": 10190,
+      "name": "Batchelor",
+      "osm_id": 31432758,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Litchfield Park Road"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

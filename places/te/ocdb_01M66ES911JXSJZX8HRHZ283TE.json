@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Shire of Collie",
+      "osm_id": 11688837
+    },
+    "locality": {
+      "distance_m": 14110,
+      "name": "Burekup",
+      "osm_id": 1792665646,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4360
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

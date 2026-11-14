@@ -2,6 +2,7 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +10,12 @@
   "facts": {
     "entry": "customers",
     "fee": false,
+    "locality": {
+      "distance_m": 2400,
+      "name": "Tharwa",
+      "osm_id": 186947418,
+      "type": "village"
+    },
     "operator": "Namadgi National Park Visitor Centre",
     "toilet_type": "flush",
     "wheelchair": true
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

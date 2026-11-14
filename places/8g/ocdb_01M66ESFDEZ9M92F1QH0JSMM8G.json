@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "campfires": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "campfires": false,
+    "lga": {
+      "name": "Shire of Corangamite",
+      "osm_id": 3291894
+    },
+    "locality": {
+      "distance_m": 13310,
+      "name": "Lavers Hill",
+      "osm_id": 131111452,
+      "type": "village"
+    },
     "max_stay": "1d",
     "nearest_beach": {
       "distance_m": 250
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

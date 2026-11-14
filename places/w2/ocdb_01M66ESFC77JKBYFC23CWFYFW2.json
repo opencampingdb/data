@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": false,
     "entry": "private",
+    "lga": {
+      "name": "Meander Valley",
+      "osm_id": 10598717
+    },
+    "locality": {
+      "distance_m": 30170,
+      "name": "Mole Creek",
+      "osm_id": 600652942,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:39:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

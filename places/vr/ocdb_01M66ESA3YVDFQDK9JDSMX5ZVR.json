@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Balonne Shire",
+      "osm_id": 11674851
+    },
+    "locality": {
+      "distance_m": 220,
+      "name": "Thallon",
+      "osm_id": 1851269561,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Noondoo-Thallon Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

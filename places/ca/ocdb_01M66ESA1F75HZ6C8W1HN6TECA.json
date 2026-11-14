@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -15,6 +17,16 @@
     "charge": "Donation Slot",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 550,
+      "name": "Majors Creek",
+      "osm_id": 5283292201,
+      "type": "village"
+    },
     "max_stay": "3d",
     "nearest_major_road": {
       "distance_m": 170,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

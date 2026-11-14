@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -20,6 +22,16 @@
       "adblue",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Salisbury",
+      "osm_id": 9108068
+    },
+    "locality": {
+      "distance_m": 780,
+      "name": "Salisbury",
+      "osm_id": 1905706910,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Commercial Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

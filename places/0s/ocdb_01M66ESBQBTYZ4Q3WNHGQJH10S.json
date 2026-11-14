@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Townsville City",
+      "osm_id": 11676862
+    },
+    "locality": {
+      "distance_m": 9980,
+      "name": "Black River",
+      "osm_id": 14156663463,
+      "type": "village"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

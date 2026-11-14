@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
@@ -16,6 +18,16 @@
       "suburb": "Campbelltown"
     },
     "email": "res@maclinlodgemotel.com.au",
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 6290704
+    },
+    "locality": {
+      "distance_m": 450,
+      "name": "Campbelltown",
+      "osm_id": 81330490,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Queen Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

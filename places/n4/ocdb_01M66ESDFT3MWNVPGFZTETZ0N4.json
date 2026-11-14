@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 6170,
+      "name": "Strathpine",
+      "osm_id": 273208196,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Albany Creek Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 15500,
+      "name": "Narrabri",
+      "osm_id": 1966226491,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Newell Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

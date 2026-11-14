@@ -3,6 +3,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "dump_station": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
+    "locality": {
+      "distance_m": 10190,
+      "name": "Tom Price",
+      "osm_id": 30499095,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Karijini Drive"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

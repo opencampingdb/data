@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Bathurst Regional Council",
+      "osm_id": 6330866
+    },
+    "locality": {
+      "distance_m": 3770,
+      "name": "Perthville",
+      "osm_id": 110719247,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFXCJDSVKQY0JVBYWPRE",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

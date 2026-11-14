@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -8,6 +10,16 @@
     "fuels": [
       "lpg"
     ],
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 10260,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Third Avenue"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

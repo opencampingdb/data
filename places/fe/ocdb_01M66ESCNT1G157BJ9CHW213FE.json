@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "Donation Box",
     "fee": true,
+    "lga": {
+      "name": "Wudinna District Council",
+      "osm_id": 7122479
+    },
+    "locality": {
+      "distance_m": 4240,
+      "name": "Minnipa",
+      "osm_id": 2142718641,
+      "type": "town"
+    },
     "showers": false,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

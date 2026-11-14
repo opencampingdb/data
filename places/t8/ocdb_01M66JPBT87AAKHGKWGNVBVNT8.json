@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "9",
       "postcode": "5605",
       "street": "Johns Street"
+    },
+    "lga": {
+      "name": "The District Council of Tumby Bay",
+      "osm_id": 9108371
+    },
+    "locality": {
+      "distance_m": 1070,
+      "name": "Tumby Bay",
+      "osm_id": 252990288,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 1080
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

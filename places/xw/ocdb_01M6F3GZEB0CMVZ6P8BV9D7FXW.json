@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "WA",
       "street": "McCormick Street",
       "suburb": "Seabird"
+    },
+    "lga": {
+      "name": "Shire of Gingin",
+      "osm_id": 11689578
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Seabird",
+      "osm_id": 53691260,
+      "type": "village"
     },
     "opening_hours": "Fr-We 11:00-23:59",
     "phone": "+61 8 9577 1010"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

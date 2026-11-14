@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "charge": "Donation at PO",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Lower Eyre Peninsula",
+      "osm_id": 9110112
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "Coulta",
+      "osm_id": 2715730736,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Flinders Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

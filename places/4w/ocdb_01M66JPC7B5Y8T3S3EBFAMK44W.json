@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "SA",
       "street": "Railway Terrace",
       "suburb": "Mount Pleasant"
+    },
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 1120,
+      "name": "Mount Pleasant",
+      "osm_id": 1876064040,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 120,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

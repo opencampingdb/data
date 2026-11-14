@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -12,6 +14,16 @@
     "charge": "Donation Box",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Banana",
+      "osm_id": 1791514845,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Dawson Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 220,
+      "name": "Laanecoorie",
+      "osm_id": 286446611,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 40
     }
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

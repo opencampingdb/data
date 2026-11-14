@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Toogoolawah",
+      "osm_id": 60831315,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Cressbrook Street"
@@ -17,14 +29,14 @@
     "lat": -27.087893,
     "lon": 152.378071
   },
-  "name": "Toogoolawah and District HistoryMuseum",
+  "name": "Toogoolawah and District History Museum",
   "osm": {
     "id": 453248690,
-    "timestamp": "2026-10-05T11:10:44Z",
+    "timestamp": "2026-11-13T07:23:07Z",
     "type": "way",
-    "version": 7
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

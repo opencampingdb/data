@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "charge": "$10 p/p p/n unpowered. Power available more. Cash at pub or EFT online",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Hilltops Council",
+      "osm_id": 6256597
+    },
+    "locality": {
+      "distance_m": 710,
+      "name": "Wombat",
+      "osm_id": 113641368,
+      "type": "village"
+    },
     "operator": "Wombat Progress Association",
     "power": true,
     "showers": true,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

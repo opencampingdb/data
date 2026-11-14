@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -17,6 +19,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 950,
+      "name": "Maclean",
+      "osm_id": 1123085163,
+      "type": "town"
+    },
     "max_stay": "3d",
     "nearest_boat_ramp": {
       "distance_m": 790
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Vinoca Road"
+    },
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 6460,
+      "name": "Avoca",
+      "osm_id": 190049723,
+      "type": "town"
     },
     "opening_hours": "Mo-Su 11:00-17:00",
     "website": "https://www.bluepyrenees.com.au/"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

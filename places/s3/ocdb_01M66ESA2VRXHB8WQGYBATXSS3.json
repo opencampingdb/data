@@ -8,6 +8,8 @@
   "fact_sources": {
     "email": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "contributed",
     "website": "contributed"
@@ -15,6 +17,16 @@
   "facts": {
     "email": "npws.hastingsmacleay@environment.nsw.gov.au",
     "fee": true,
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 11740,
+      "name": "North Shore",
+      "osm_id": 6042482828,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 40
     },
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

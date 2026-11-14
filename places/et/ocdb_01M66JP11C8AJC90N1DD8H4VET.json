@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
+    "locality": {
+      "distance_m": 8140,
+      "name": "Huonville",
+      "osm_id": 253882844,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP11C8AJC90N1DD8H4VET",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

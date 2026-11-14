@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
@@ -10,6 +12,16 @@
     "caravans": false,
     "entry": "private",
     "fee": false,
+    "lga": {
+      "name": "Shire of Wandering",
+      "osm_id": 11689070
+    },
+    "locality": {
+      "distance_m": 16720,
+      "name": "Jarrahdale",
+      "osm_id": 179844169,
+      "type": "village"
+    },
     "operator": "WA Parks and Wildlife",
     "tents": true
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

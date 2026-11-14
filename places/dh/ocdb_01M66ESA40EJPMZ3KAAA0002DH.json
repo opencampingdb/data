@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 22260,
+      "name": "Cecil Plains",
+      "osm_id": 298323293,
+      "type": "town"
+    },
     "operator": "Western Downs Regional Council",
     "power": false,
     "showers": true,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

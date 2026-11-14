@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 23220,
+      "name": "Quinninup",
+      "osm_id": 6052071711,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "South Western Highway"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

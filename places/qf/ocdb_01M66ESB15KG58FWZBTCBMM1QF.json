@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Nannup",
+      "osm_id": 11688780
+    },
+    "locality": {
+      "distance_m": 9100,
+      "name": "Donnelly River",
+      "osm_id": 260193221,
+      "type": "village"
+    },
     "operator": "Department of Parks & Wildlife",
     "phone": "+61 8 9771 7948",
     "showers": false,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

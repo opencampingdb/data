@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -11,6 +13,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Kempsey Shire Council",
+      "osm_id": 6178731
+    },
+    "locality": {
+      "distance_m": 540,
+      "name": "Kempsey",
+      "osm_id": 97625513,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 930
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

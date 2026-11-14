@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 9107457
+    },
+    "locality": {
+      "distance_m": 5730,
+      "name": "Norton Summit",
+      "osm_id": 1905432827,
+      "type": "village"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

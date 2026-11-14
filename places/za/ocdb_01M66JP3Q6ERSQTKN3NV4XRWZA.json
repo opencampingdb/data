@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "air": true,
+    "lga": {
+      "name": "City of Melton",
+      "osm_id": 3327545
+    },
+    "locality": {
+      "distance_m": 10570,
+      "name": "Melton",
+      "osm_id": 78094548,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Service Centre Offramp"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

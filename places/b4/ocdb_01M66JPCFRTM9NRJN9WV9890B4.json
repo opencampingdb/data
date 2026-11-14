@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "William Street",
       "suburb": "Devonport"
+    },
+    "lga": {
+      "name": "City of Devonport",
+      "osm_id": 10586315
+    },
+    "locality": {
+      "distance_m": 1610,
+      "name": "Devonport",
+      "osm_id": 27120185,
+      "type": "city"
     },
     "nearest_beach": {
       "distance_m": 460,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

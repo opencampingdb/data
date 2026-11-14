@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 10020,
+      "name": "Stroud Road",
+      "osm_id": 114995534,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESCAYHH8VNFWHMSQ0D9R5",
   "kind": "dump_point",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

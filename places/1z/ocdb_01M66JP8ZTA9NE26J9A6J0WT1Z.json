@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "Lot 4",
       "street": "River Side Drive",
       "suburb": "Jugiong"
+    },
+    "lga": {
+      "name": "Hilltops Council",
+      "osm_id": 6256597
+    },
+    "locality": {
+      "distance_m": 1630,
+      "name": "Jugiong",
+      "osm_id": 113641093,
+      "type": "village"
     },
     "operator": "BP"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

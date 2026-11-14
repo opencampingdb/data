@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -18,6 +20,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "City of Karratha",
+      "osm_id": 11690037
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Point Samson",
+      "osm_id": 308714872,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 150
     },
@@ -47,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "charge": "5.00 AUD",
     "fee": true,
+    "lga": {
+      "name": "Town of Alice Springs",
+      "osm_id": 9045378
+    },
+    "locality": {
+      "distance_m": 420,
+      "name": "Alice Springs",
+      "osm_id": 29341070,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Stott Terrace"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

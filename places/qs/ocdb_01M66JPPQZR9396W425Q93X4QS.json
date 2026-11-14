@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 3630,
+      "name": "Ripley",
+      "osm_id": 313669645,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Warwick Road"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -37,6 +37,8 @@
     "entry": "feedback",
     "kitchen": "feedback",
     "laundry": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "feedback",
     "motorhomes": "feedback",
     "nearest_beach": "osm",
@@ -76,6 +78,16 @@
     "entry": "public",
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "The District Council of Ceduna",
+      "osm_id": 7106028
+    },
+    "locality": {
+      "distance_m": 3020,
+      "name": "Ceduna",
+      "osm_id": 32024642,
+      "type": "town"
+    },
     "motorbikes": true,
     "motorhomes": true,
     "nearest_beach": {
@@ -113,5 +125,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

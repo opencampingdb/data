@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm",
     "wifi": "osm"
@@ -12,6 +14,16 @@
       "state": "QLD",
       "street": "King Street",
       "suburb": "Charleville"
+    },
+    "lga": {
+      "name": "Murweh Shire",
+      "osm_id": 11674879
+    },
+    "locality": {
+      "distance_m": 1370,
+      "name": "Charleville",
+      "osm_id": 246024073,
+      "type": "town"
     },
     "phone": "+61 7 4654 1744",
     "power": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

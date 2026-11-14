@@ -11,6 +11,8 @@
     "caravans": "osm",
     "email": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "contributed",
@@ -25,6 +27,16 @@
     "caravans": true,
     "email": "npws.mudgee@environment.nsw.gov.au",
     "fee": true,
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 21820,
+      "name": "Kandos",
+      "osm_id": 114608215,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 150,
       "name": "Kookaburra Beach"
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

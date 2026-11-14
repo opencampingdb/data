@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Cessnock City Council",
+      "osm_id": 6191219
+    },
+    "locality": {
+      "distance_m": 9550,
+      "name": "Mount Vincent",
+      "osm_id": 114176529,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": false
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

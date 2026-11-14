@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "pub": "osm"
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 3330,
+      "name": "Hopetoun",
+      "osm_id": 2569264057,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3030,
       "name": "12 Mile Beach"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

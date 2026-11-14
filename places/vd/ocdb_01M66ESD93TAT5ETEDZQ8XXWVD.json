@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
     "pets": "osm",
@@ -16,6 +18,16 @@
     "drinking_water": true,
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Yankalilla",
+      "osm_id": 7250425
+    },
+    "locality": {
+      "distance_m": 13320,
+      "name": "Second Valley",
+      "osm_id": 2286688211,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 2460,
       "name": "Boat Harbor Beach"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

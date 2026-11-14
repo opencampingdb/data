@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Lachlan Shire Council",
+      "osm_id": 6106054
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Tullibigeal",
+      "osm_id": 2477090995,
+      "type": "village"
+    },
     "operator": "Lauchlan Shire Council",
     "power": true,
     "showers": true,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

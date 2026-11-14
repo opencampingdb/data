@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "drinking_water": false,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 47410,
+      "name": "Ilparpa",
+      "osm_id": 2288340792,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Stuart Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

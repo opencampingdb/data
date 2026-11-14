@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel"
-    ]
+    ],
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 600,
+      "name": "Booleroo Centre",
+      "osm_id": 1585601025,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPN7PY4E9KZHQCPKMJ91X",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

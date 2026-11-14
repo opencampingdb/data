@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "WA",
       "street": "Rudds Gully Road",
       "suburb": "Narngulu"
+    },
+    "lga": {
+      "name": "City of Greater Geraldton",
+      "osm_id": 11689919
+    },
+    "locality": {
+      "distance_m": 5660,
+      "name": "Cape Burney",
+      "osm_id": 3390094295,
+      "type": "village"
     },
     "opening_hours": "Mo-Fr 07:00-17:00; PH off",
     "phone": "+61 418 931 177"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

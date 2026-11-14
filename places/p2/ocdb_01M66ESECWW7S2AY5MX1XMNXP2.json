@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -18,6 +20,16 @@
     },
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "City of Subiaco",
+      "osm_id": 11349414
+    },
+    "locality": {
+      "distance_m": 3690,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 2940
     },
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

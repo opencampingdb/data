@@ -2,12 +2,24 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "bins": false,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Kyogle Council",
+      "osm_id": 6163138
+    },
+    "locality": {
+      "distance_m": 9620,
+      "name": "Mount Lion",
+      "osm_id": 114644296,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES92VPZZ5YFW0XJYD04PW",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

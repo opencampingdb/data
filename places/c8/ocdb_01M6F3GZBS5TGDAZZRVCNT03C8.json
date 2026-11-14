@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Daintree Street",
       "suburb": "Einasleigh"
+    },
+    "lga": {
+      "name": "Etheridge Shire",
+      "osm_id": 11676973
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Einasleigh",
+      "osm_id": 10560884261,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 140,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "pets": "osm",
@@ -26,6 +28,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Town of Alice Springs",
+      "osm_id": 9045378
+    },
+    "locality": {
+      "distance_m": 1870,
+      "name": "Mpwetyerre",
+      "osm_id": 4409423420,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 360,
       "name": "8"
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

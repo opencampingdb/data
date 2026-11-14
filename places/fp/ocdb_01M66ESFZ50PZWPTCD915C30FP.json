@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 31340,
+      "name": "Upper Horton",
+      "osm_id": 111352220,
+      "type": "town"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": true,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

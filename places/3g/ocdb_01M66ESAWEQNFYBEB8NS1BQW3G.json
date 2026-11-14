@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Wollondilly Shire Council",
+      "osm_id": 6287823
+    },
+    "locality": {
+      "distance_m": 3880,
+      "name": "Appin",
+      "osm_id": 113235104,
+      "type": "town"
+    },
     "operator": "Cataract Scout Camp",
     "toilet_type": "pit"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

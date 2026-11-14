@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Narrandera Shire Council",
+      "osm_id": 6322034
+    },
+    "locality": {
+      "distance_m": 4300,
+      "name": "Narrandera",
+      "osm_id": 113697951,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1910
     },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

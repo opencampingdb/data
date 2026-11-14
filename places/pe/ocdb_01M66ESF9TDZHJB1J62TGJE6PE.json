@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Adelaide Hills Council",
+      "osm_id": 9105845
+    },
+    "locality": {
+      "distance_m": 880,
+      "name": "Birdwood",
+      "osm_id": 1798281872,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Shannon Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

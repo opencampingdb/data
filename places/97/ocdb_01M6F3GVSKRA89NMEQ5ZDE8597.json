@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "The District Council of Loxton Waikerie",
+      "osm_id": 6704840
+    },
+    "locality": {
+      "distance_m": 1010,
+      "name": "Loxton",
+      "osm_id": 149480559,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1590,
       "name": "Boat Ramp"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

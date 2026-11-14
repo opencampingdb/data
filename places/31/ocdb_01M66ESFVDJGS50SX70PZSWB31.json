@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,17 @@
       "street": "Scout Loop Track"
     },
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 6590,
+      "name": "Gembrook",
+      "osm_id": 616579495,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVDJGS50SX70PZSWB31",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

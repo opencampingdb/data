@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "email": "secretary@morissetshowground.com.au",
     "fee": true,
+    "lga": {
+      "name": "City of Lake Macquarie",
+      "osm_id": 6191221
+    },
+    "locality": {
+      "distance_m": 830,
+      "name": "Morisset",
+      "osm_id": 25939676,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4030
     },
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Launceston",
+      "osm_id": 10581631
+    },
+    "locality": {
+      "distance_m": 1970,
+      "name": "Launceston",
+      "osm_id": 244646675,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1210
     }
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -43,6 +43,8 @@
     "fishing": "feedback",
     "kitchen": "feedback",
     "laundry": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "feedback",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
@@ -75,6 +77,16 @@
     "fishing": true,
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "Gladstone Regional",
+      "osm_id": 11676351
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "Seventeen Seventy",
+      "osm_id": 316896039,
+      "type": "village"
+    },
     "motorhomes": true,
     "nearest_beach": {
       "distance_m": 590
@@ -119,5 +131,5 @@
     "mean": 4.0
   },
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

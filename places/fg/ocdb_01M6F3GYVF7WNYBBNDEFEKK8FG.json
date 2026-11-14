@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "Wedge Court",
       "suburb": "Binalong Bay"
+    },
+    "lga": {
+      "name": "Break O'Day",
+      "osm_id": 10577618
+    },
+    "locality": {
+      "distance_m": 900,
+      "name": "Binalong Bay",
+      "osm_id": 4290201304,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 160
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

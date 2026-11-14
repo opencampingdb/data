@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
       "postcode": "4891",
       "street": "Col Kitching Drive"
+    },
+    "lga": {
+      "name": "Carpentaria Shire",
+      "osm_id": 11677417
+    },
+    "locality": {
+      "distance_m": 3690,
+      "name": "Karumba",
+      "osm_id": 247814380,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 1440
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

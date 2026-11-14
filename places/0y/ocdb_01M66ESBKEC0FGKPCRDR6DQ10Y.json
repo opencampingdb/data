@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 31390,
+      "name": "Bremer Bay",
+      "osm_id": 2569235180,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 70
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

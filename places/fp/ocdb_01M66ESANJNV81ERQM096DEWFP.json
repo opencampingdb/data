@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Victor Harbor",
+      "osm_id": 7246311
+    },
+    "locality": {
+      "distance_m": 9250,
+      "name": "Victor Harbor",
+      "osm_id": 249072879,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2810,
       "name": "Kings Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

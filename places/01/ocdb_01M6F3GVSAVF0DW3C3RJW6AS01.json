@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "email": "baudinskingisland@bigpond.com",
+    "lga": {
+      "name": "King Island Council",
+      "osm_id": 10565120
+    },
+    "locality": {
+      "distance_m": 15620,
+      "name": "Grassy",
+      "osm_id": 2371403954,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 90
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

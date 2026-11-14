@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "hot_water": false,
+    "lga": {
+      "name": "Eurobodalla Shire Council",
+      "osm_id": 6239661
+    },
+    "locality": {
+      "distance_m": 2180,
+      "name": "Mossy Point",
+      "osm_id": 512095731,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 70,
       "name": "Bengello Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -8,6 +8,8 @@
     "caravans": "contributed",
     "email": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "contributed",
@@ -18,6 +20,16 @@
     "caravans": true,
     "email": "info@brightoncaravanpark.com.au",
     "fee": true,
+    "lga": {
+      "name": "City of Holdfast Bay",
+      "osm_id": 9102763
+    },
+    "locality": {
+      "distance_m": 13010,
+      "name": "Clarendon",
+      "osm_id": 5674778781,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 60
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

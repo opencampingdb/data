@@ -3,6 +3,8 @@
     "address": "osm",
     "air": "osm",
     "car_wash": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -11,6 +13,16 @@
     },
     "air": true,
     "car_wash": true,
+    "lga": {
+      "name": "City of Whittlesea",
+      "osm_id": 3327768
+    },
+    "locality": {
+      "distance_m": 14770,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Settlement Road"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

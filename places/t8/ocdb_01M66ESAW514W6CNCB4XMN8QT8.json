@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "151",
       "postcode": "2786",
       "street": "Mount York Road"
+    },
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 7970,
+      "name": "Bell",
+      "osm_id": 117040729,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

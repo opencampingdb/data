@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "664",
       "street": "Glamorgan Vale Road",
       "suburb": "Glamorgan Vale"
+    },
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 30,
+      "name": "Glamorgan Vale",
+      "osm_id": 300016200,
+      "type": "village"
     },
     "website": "https://www.facebook.com/bottletreepub/"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

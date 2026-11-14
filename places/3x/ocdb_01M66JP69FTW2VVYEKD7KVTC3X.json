@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "6285",
       "street": "Auger Way East",
       "suburb": "Margaret River"
+    },
+    "lga": {
+      "name": "Shire of Augusta Margaret River",
+      "osm_id": 11688657
+    },
+    "locality": {
+      "distance_m": 1420,
+      "name": "Margaret River",
+      "osm_id": 251285017,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4850
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

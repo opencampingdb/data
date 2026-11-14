@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "street": "Turner Street"
+    },
+    "lga": {
+      "name": "Muswellbrook Shire Council",
+      "osm_id": 6343182
+    },
+    "locality": {
+      "distance_m": 670,
+      "name": "Denman",
+      "osm_id": 114607591,
+      "type": "village"
     },
     "opening_hours": "Tu,Th 08:30-14:30; Sa 09:00-14:00"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

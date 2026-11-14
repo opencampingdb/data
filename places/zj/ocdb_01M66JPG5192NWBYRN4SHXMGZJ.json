@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -11,6 +13,16 @@
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 40,
+      "name": "Rosewood",
+      "osm_id": 286923487,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "School Street"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

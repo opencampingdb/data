@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "157",
       "street": "Nannup Balingup Road"
+    },
+    "lga": {
+      "name": "Shire of Donnybrook-Balingup",
+      "osm_id": 11688751
+    },
+    "locality": {
+      "distance_m": 1880,
+      "name": "Balingup",
+      "osm_id": 82362316,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

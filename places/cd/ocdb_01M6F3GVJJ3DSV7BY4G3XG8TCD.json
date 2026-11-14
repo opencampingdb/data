@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/theallyearroundtavern",
+    "lga": {
+      "name": "City of Launceston",
+      "osm_id": 10581631
+    },
+    "locality": {
+      "distance_m": 2130,
+      "name": "Launceston",
+      "osm_id": 244646675,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 4430,
       "name": "Waverley Lake Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

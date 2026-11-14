@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "8",
       "postcode": "6073",
       "street": "Morilla Road"
+    },
+    "lga": {
+      "name": "Shire of Mundaring",
+      "osm_id": 11689676
+    },
+    "locality": {
+      "distance_m": 4180,
+      "name": "Mount Helena",
+      "osm_id": 1493309476,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 180,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

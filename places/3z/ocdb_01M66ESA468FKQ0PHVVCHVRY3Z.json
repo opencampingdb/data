@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Tenterfield Shire Council",
+      "osm_id": 6163155
+    },
+    "locality": {
+      "distance_m": 4880,
+      "name": "Urbenville",
+      "osm_id": 354827502,
+      "type": "town"
+    },
     "operator": "National Caravan Parks Service",
     "power": false,
     "showers": false,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

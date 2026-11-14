@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Shark Bay",
+      "osm_id": 11689946
+    },
+    "locality": {
+      "distance_m": 280,
+      "name": "Monkey Mia",
+      "osm_id": 5374618869,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Monkey Mia Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

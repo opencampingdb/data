@@ -3,6 +3,8 @@
     "bbq": "osm",
     "bins": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "bbq": false,
     "bins": false,
     "drinking_water": false,
+    "lga": {
+      "name": "Shire of Northern Grampians",
+      "osm_id": 3348880
+    },
+    "locality": {
+      "distance_m": 8300,
+      "name": "Stawell",
+      "osm_id": 283287126,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Western Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

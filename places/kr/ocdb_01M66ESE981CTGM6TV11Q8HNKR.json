@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Mansfield",
+      "osm_id": 3350291
+    },
+    "locality": {
+      "distance_m": 8480,
+      "name": "Goughs Bay",
+      "osm_id": 559877687,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESE981CTGM6TV11Q8HNKR",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

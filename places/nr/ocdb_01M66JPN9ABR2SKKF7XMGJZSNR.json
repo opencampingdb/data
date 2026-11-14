@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Onkaparinga",
+      "osm_id": 7262204
+    },
+    "locality": {
+      "distance_m": 6100,
+      "name": "McLaren Vale",
+      "osm_id": 291555293,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2190,
       "name": "Maslin Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Victoria Daly Region",
+      "osm_id": 5514633
+    },
+    "locality": {
+      "distance_m": 1800,
+      "name": "Pine Creek",
+      "osm_id": 31562954,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Kakadu Highway"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

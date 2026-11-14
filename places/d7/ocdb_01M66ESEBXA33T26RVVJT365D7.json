@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Ballarat",
+      "osm_id": 3291925
+    },
+    "locality": {
+      "distance_m": 7030,
+      "name": "Creswick",
+      "osm_id": 301983645,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESEBXA33T26RVVJT365D7",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

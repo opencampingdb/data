@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Town of Cambridge",
+      "osm_id": 11689232
+    },
+    "locality": {
+      "distance_m": 9980,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 100,
       "name": "City Beach"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

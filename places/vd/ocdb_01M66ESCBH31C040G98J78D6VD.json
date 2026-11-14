@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilet_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Lockhart Shire Council",
+      "osm_id": 6322050
+    },
+    "locality": {
+      "distance_m": 440,
+      "name": "Pleasant Hills",
+      "osm_id": 113685339,
+      "type": "village"
+    },
     "showers": true,
     "toilet_type": "flush"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

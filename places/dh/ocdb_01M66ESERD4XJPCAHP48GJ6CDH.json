@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 560,
+      "name": "Bendalong",
+      "osm_id": 113133746,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 90,
       "name": "Boat Harbour Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }
