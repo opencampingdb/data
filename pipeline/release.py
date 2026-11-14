@@ -17,8 +17,9 @@ source gives a value. Place files in places/ never hold them.
 place-index.ndjson.gz is not a release file and the manifest leaves it out.
 It holds one line per released place, sorted by id: {"cell", "fact_dates",
 "fact_sources", "facts", "id"}, where cell is the whole-degree map cell
-[floor(lon), floor(lat)]. Its facts include the rule facts. pipeline.place_index loads it into a feedback intake,
-which decides feedback against it at send time.
+[floor(lon), floor(lat)]. Its facts include the rule facts, and leave out INDEX_LEFT_OUT: the
+facts no feedback can set, whose bulk would only push a busy map cell past one intake call.
+pipeline.place_index loads it into a feedback intake, which decides feedback against it at send time.
 
 The release tag is data-<commit time>, for example data-20261030T160000Z.
 The manifest names it, and gives each file an absolute URL in that release,
@@ -121,6 +122,16 @@ def cell_of(location: dict) -> tuple[int, int]:
     return min(math.floor(location["lon"]), 179), min(math.floor(location["lat"]), 89)
 
 
+# Facts the place index leaves out: only the extract sets them (OSM_ONLY_FACTS), so no
+# feedback is ever decided against them, and they would double the size of a city's map cell.
+INDEX_LEFT_OUT = ("locality", "lga")
+
+
+def index_part(values: dict) -> dict:
+    """A facts, fact_sources or fact_dates object without the INDEX_LEFT_OUT keys."""
+    return {key: value for key, value in values.items() if key not in INDEX_LEFT_OUT}
+
+
 def place_index_ndjson(root: Path) -> tuple[bytes, int]:
     """One index line for each place places.ndjson.gz holds, sorted by id."""
     places = {place_id: with_rule_facts(record) for place_id, record in load_places(root).items()}
@@ -128,9 +139,9 @@ def place_index_ndjson(root: Path) -> tuple[bytes, int]:
         dump_line({
             "id": place_id,
             "cell": list(cell_of(places[place_id]["location"])),
-            "facts": places[place_id].get("facts", {}),
-            "fact_sources": places[place_id].get("fact_sources", {}),
-            "fact_dates": places[place_id].get("fact_dates", {}),
+            "facts": index_part(places[place_id].get("facts", {})),
+            "fact_sources": index_part(places[place_id].get("fact_sources", {})),
+            "fact_dates": index_part(places[place_id].get("fact_dates", {})),
         }) + "\n"
         for place_id in sorted(places)
         if places[place_id].get("status") != "merged"
