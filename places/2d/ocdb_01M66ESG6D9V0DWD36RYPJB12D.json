@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_beach": "osm",
     "pets": "osm",
@@ -21,6 +23,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 15600,
+      "name": "Rainbow Beach",
+      "osm_id": 68561227,
+      "type": "town"
+    },
     "motorbikes": true,
     "nearest_beach": {
       "distance_m": 30
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

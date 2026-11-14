@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 5640,
+      "name": "Bli Bli",
+      "osm_id": 1951627817,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 460
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "bbq": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "bbq": true,
     "caravans": false,
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 16240,
+      "name": "Uriarra Village",
+      "osm_id": 2813049267,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

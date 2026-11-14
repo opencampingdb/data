@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 19700,
+      "name": "Quinninup",
+      "osm_id": 6052071711,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GZCYXEG2NFS6P6PH4ST5",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

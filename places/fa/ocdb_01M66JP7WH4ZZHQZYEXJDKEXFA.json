@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 1370,
+      "name": "Majors Creek",
+      "osm_id": 5283292201,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP7WH4ZZHQZYEXJDKEXFA",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -13,6 +15,16 @@
     "caravans": true,
     "dump_station": true,
     "kitchen": true,
+    "lga": {
+      "name": "Byron Shire Council",
+      "osm_id": 6170304
+    },
+    "locality": {
+      "distance_m": 490,
+      "name": "Suffolk Park",
+      "osm_id": 124601932,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 130,
       "name": "Tallow Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

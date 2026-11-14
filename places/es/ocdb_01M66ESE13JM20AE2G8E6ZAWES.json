@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The Regional Council of Goyder",
+      "osm_id": 9107816
+    },
+    "locality": {
+      "distance_m": 390,
+      "name": "Booborowie",
+      "osm_id": 2303712178,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESE13JM20AE2G8E6ZAWES",
   "kind": "rest_area",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "The District Council of Ceduna",
+      "osm_id": 7106028
+    },
+    "locality": {
+      "distance_m": 10620,
+      "name": "Ceduna",
+      "osm_id": 32024642,
+      "type": "town"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

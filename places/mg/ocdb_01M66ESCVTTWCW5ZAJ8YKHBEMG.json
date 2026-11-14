@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 480,
+      "name": "Port Germein",
+      "osm_id": 697240406,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESCVTTWCW5ZAJ8YKHBEMG",
   "kind": "dump_point",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

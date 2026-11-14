@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "power": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Wagga Wagga City Council",
+      "osm_id": 6247060
+    },
+    "locality": {
+      "distance_m": 15760,
+      "name": "Wagga Wagga",
+      "osm_id": 113724008,
+      "type": "city"
+    },
     "max_stay": "24d",
     "nearest_beach": {
       "distance_m": 80
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "bbq": "osm",
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "bbq": false,
     "bins": true,
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 4130,
+      "name": "Binalong",
+      "osm_id": 113731301,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Burley Griffin Way"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

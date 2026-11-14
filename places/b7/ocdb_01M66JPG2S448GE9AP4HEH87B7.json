@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 4310,
+      "name": "Amamoor",
+      "osm_id": 213500096,
+      "type": "town"
+    },
     "water_type": "tank_fill"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "bins": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "bins": false,
     "caravans": false,
+    "lga": {
+      "name": "Shire of Murray",
+      "osm_id": 11690485
+    },
+    "locality": {
+      "distance_m": 4200,
+      "name": "North Dandalup",
+      "osm_id": 306280247,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

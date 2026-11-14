@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Paroo Shire",
+      "osm_id": 11674869
+    },
+    "locality": {
+      "distance_m": 1280,
+      "name": "Eulo",
+      "osm_id": 1916662627,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCGVXN2WJAMX2KMQA9FG",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

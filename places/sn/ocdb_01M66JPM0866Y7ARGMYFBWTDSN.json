@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 5200,
+      "name": "Alpha",
+      "osm_id": 247809854,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Capricorn Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

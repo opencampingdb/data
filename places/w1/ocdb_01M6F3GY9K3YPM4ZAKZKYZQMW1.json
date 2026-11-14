@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Cootamundra-Gundagai Regional Council",
+      "osm_id": 6247073
+    },
+    "locality": {
+      "distance_m": 830,
+      "name": "Cootamundra",
+      "osm_id": 93282062,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M6F3GY9K3YPM4ZAKZKYZQMW1",
   "kind": "food_and_drink",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

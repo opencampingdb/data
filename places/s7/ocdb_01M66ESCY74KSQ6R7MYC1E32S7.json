@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Flinders Shire",
+      "osm_id": 11676765
+    },
+    "locality": {
+      "distance_m": 720,
+      "name": "Hughenden",
+      "osm_id": 278232907,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 300
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

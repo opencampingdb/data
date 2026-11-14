@@ -2,11 +2,23 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "customers",
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 440,
+      "name": "Meandarra",
+      "osm_id": 380455084,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 240
     }
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

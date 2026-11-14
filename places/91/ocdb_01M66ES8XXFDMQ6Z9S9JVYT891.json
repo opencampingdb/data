@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -26,6 +28,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "Ku-ring-gai Council",
+      "osm_id": 6228261
+    },
+    "locality": {
+      "distance_m": 4060,
+      "name": "Hornsby",
+      "osm_id": 26391679,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3960
     },
@@ -57,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "dump_station": true,
     "entry": "public",
+    "lga": {
+      "name": "Mount Isa City",
+      "osm_id": 11677400
+    },
+    "locality": {
+      "distance_m": 46180,
+      "name": "Mount Isa",
+      "osm_id": 247812099,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Barkly Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

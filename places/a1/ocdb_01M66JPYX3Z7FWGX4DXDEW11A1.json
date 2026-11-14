@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "TAS",
       "street": "Gardiners Creek Road",
       "suburb": "St Marys"
+    },
+    "lga": {
+      "name": "Break O'Day",
+      "osm_id": 10577618
+    },
+    "locality": {
+      "distance_m": 600,
+      "name": "St Marys",
+      "osm_id": 413288752,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 460,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

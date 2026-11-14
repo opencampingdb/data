@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "power": "osm",
@@ -21,6 +23,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 1040,
+      "name": "Telegraph Point",
+      "osm_id": 13668136569,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 440
     },
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

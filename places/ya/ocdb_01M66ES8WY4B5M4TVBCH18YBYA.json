@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "North Sydney Council",
+      "osm_id": 6275976
+    },
+    "locality": {
+      "distance_m": 1790,
+      "name": "North Sydney",
+      "osm_id": 18370040,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 70
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

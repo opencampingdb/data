@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -10,6 +12,16 @@
     "entry": "customers",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 3430,
+      "name": "Morisset Park",
+      "osm_id": 25940292,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 920
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

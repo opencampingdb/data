@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of South Gippsland",
+      "osm_id": 3335917
+    },
+    "locality": {
+      "distance_m": 24070,
+      "name": "Yanakie",
+      "osm_id": 1218301284,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 610,
       "name": "Picnic Bay"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

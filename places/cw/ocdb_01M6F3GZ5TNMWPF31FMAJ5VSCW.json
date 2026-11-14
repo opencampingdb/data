@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "9-11",
       "street": "Eighteenth Street"
+    },
+    "lga": {
+      "name": "Wollondilly Shire Council",
+      "osm_id": 6287823
+    },
+    "locality": {
+      "distance_m": 180,
+      "name": "Warragamba",
+      "osm_id": 2299079187,
+      "type": "village"
     }
   },
   "group": "services",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

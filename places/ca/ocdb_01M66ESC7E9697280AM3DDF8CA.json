@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -18,6 +20,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Walbundrie",
+      "osm_id": 2212413002,
+      "type": "village"
+    },
     "max_stay": "72h",
     "nearest_major_road": {
       "distance_m": 110,
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

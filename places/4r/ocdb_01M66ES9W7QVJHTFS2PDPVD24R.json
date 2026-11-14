@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": true,
     "drinking_water": false,
+    "lga": {
+      "name": "Shire of Southern Grampians",
+      "osm_id": 3349959
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Tarrington",
+      "osm_id": 595594052,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Hamilton Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

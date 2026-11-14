@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Pentland"
     },
     "bins": true,
+    "lga": {
+      "name": "Charters Towers Regional",
+      "osm_id": 11676769
+    },
+    "locality": {
+      "distance_m": 15440,
+      "name": "Homestead",
+      "osm_id": 10560895321,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Flinders Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "SA",
       "street": "High Street",
       "suburb": "Morgan"
+    },
+    "lga": {
+      "name": "Mid Murray Council",
+      "osm_id": 6811114
+    },
+    "locality": {
+      "distance_m": 650,
+      "name": "Morgan",
+      "osm_id": 249339798,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 50,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

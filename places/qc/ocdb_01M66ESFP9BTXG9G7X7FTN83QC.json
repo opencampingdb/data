@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 24480,
+      "name": "Moonan Flat",
+      "osm_id": 1003754272,
+      "type": "village"
+    },
     "operator": "Forestry Corporation of NSW",
     "website": "https://www.forestrycorporation.com.au/visit/forests/barrington-tops"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

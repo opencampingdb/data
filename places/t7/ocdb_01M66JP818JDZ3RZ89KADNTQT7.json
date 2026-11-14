@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -13,6 +15,16 @@
       "state": "TAS",
       "street": "Midland Highway",
       "suburb": "Bagdad"
+    },
+    "lga": {
+      "name": "Southern Midlands",
+      "osm_id": 10624828
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "Bagdad",
+      "osm_id": 603290061,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

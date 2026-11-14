@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "176",
       "street": "Canterbury Road",
       "unit": "4"
+    },
+    "lga": {
+      "name": "City of Maroondah",
+      "osm_id": 3333992
+    },
+    "locality": {
+      "distance_m": 7820,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 180,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

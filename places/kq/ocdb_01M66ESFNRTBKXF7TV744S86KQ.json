@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "pets": "osm",
     "website": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 5310,
+      "name": "Mandurang South",
+      "osm_id": 321896626,
+      "type": "village"
+    },
     "operator": "City of Greater Bendigo",
     "pets": "no",
     "website": "https://www.bendigo.vic.gov.au/Things-to-Do/Natural-Reserves/Crusoe-Reservoir-and-No-7-Park",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

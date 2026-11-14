@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -22,6 +24,16 @@
       "e10",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 2210,
+      "name": "Sandstone Point",
+      "osm_id": 348200145,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1180
     },
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

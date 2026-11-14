@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 1050,
+      "name": "Mount Molloy",
+      "osm_id": 1330393601,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mulligan Highway"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

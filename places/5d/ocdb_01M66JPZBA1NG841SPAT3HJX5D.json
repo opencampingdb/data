@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -14,6 +16,16 @@
       "diesel",
       "adblue"
     ],
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 6460,
+      "name": "Westbrook",
+      "osm_id": 2015773311,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Toowoomba Cecil Plains Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

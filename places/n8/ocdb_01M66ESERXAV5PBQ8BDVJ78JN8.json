@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
       "state": "VIC",
       "street": "Bass Highway",
       "suburb": "Kilcunda"
+    },
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 220,
+      "name": "Kilcunda",
+      "osm_id": 254514190,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 100,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

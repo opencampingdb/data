@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -15,6 +17,16 @@
       "street": "Andy Poole Drive"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 870,
+      "name": "Tathra",
+      "osm_id": 59608764,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 70,
       "name": "Tathra Beach"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

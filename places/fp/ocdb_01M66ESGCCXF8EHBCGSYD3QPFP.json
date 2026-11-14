@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
@@ -14,6 +16,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Narbethong",
+      "osm_id": 289620071,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Maroondah Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

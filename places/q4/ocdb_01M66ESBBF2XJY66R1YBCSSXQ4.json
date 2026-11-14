@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Temora Shire Council",
+      "osm_id": 6252224
+    },
+    "locality": {
+      "distance_m": 4200,
+      "name": "Temora",
+      "osm_id": 5705013950,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 340
     },
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

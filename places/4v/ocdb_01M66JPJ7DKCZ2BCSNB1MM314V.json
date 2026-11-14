@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "NSW",
       "street": "Hermitage Road",
       "suburb": "Pokolbin"
+    },
+    "lga": {
+      "name": "Singleton Council",
+      "osm_id": 6191883
+    },
+    "locality": {
+      "distance_m": 10380,
+      "name": "Branxton",
+      "osm_id": 114176185,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 190,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -7,6 +7,8 @@
     "fee": "osm",
     "fuel": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -24,6 +26,16 @@
     "fee": true,
     "fuel": true,
     "kitchen": true,
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 44140,
+      "name": "St Lawrence",
+      "osm_id": 2214191252,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Marlborough Sarina Road"
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

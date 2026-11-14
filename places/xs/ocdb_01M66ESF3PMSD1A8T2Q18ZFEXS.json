@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "Tarnagulla",
+      "osm_id": 563709805,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Commercial Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

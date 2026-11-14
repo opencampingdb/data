@@ -3,6 +3,8 @@
     "address": "osm",
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -18,6 +20,16 @@
     },
     "charge": "'Gold Coin'",
     "fee": true,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "Thredbo",
+      "osm_id": 113373977,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Alpine Way"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

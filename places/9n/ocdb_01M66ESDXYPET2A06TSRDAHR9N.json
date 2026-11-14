@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Mornington Peninsula",
+      "osm_id": 3333281
+    },
+    "locality": {
+      "distance_m": 16370,
+      "name": "Hastings",
+      "osm_id": 31617240,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1280,
       "name": "Ranelagh Beach"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

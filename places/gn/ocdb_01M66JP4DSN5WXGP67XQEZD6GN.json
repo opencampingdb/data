@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 17300,
+      "name": "Nayook",
+      "osm_id": 12769425141,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP4DSN5WXGP67XQEZD6GN",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 460,
+      "name": "San Remo",
+      "osm_id": 251587231,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 650,
       "name": "San Remo Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -15,6 +17,16 @@
     },
     "dump_station": false,
     "fee": false,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 370,
+      "name": "Cooyar",
+      "osm_id": 302764679,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 360
     }
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

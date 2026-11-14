@@ -7,6 +7,8 @@
     "booking_required": "osm",
     "camper_trailers": "contributed",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "contributed",
@@ -19,6 +21,16 @@
     "booking_required": true,
     "camper_trailers": false,
     "caravans": false,
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 5840,
+      "name": "Woy Woy",
+      "osm_id": 116962459,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 90,
       "name": "Tallow Beach"
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

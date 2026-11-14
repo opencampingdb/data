@@ -6,11 +6,23 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 18410,
+      "name": "Clermont",
+      "osm_id": 289648322,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 260,
       "name": "Theresa Creek Dam Boat Ramp"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

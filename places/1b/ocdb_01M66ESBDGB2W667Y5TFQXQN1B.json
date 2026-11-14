@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +10,16 @@
       "postcode": "3675",
       "street": "Old Hume Highway",
       "suburb": "Glenrowan"
+    },
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 1390,
+      "name": "Glenrowan",
+      "osm_id": 60796165,
+      "type": "town"
     }
   },
   "group": "overnight",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

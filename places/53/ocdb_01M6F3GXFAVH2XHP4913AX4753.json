@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "480",
       "street": "Commercial Road"
+    },
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 1480,
+      "name": "Yarram",
+      "osm_id": 2827225970,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

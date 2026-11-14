@@ -3,6 +3,8 @@
     "address": "osm",
     "kitchen": "osm",
     "laundry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -18,6 +20,16 @@
     },
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 220,
+      "name": "Hermannsburg",
+      "osm_id": 2365278670,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Larapinta Drive"
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

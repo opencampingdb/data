@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "7",
       "street": "Keighran Street"
+    },
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 320,
+      "name": "Henty",
+      "osm_id": 113637598,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 170
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

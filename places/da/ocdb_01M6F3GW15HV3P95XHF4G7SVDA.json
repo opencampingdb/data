@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "129",
       "postcode": "6260",
       "street": "Pump Hill Road"
+    },
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 1570,
+      "name": "Pemberton",
+      "osm_id": 82359265,
+      "type": "town"
     },
     "phone": "+61 8 9776 1379",
     "website": "https://www.pumphill.com.au/",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

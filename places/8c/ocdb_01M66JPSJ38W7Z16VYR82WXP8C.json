@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3212",
       "street": "Hicks Street",
       "suburb": "Lara"
+    },
+    "lga": {
+      "name": "City of Greater Geelong",
+      "osm_id": 2646730
+    },
+    "locality": {
+      "distance_m": 600,
+      "name": "Lara",
+      "osm_id": 2577778018,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 160,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

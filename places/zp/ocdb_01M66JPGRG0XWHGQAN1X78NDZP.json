@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "6109",
       "street": "Carole Road",
       "unit": "2"
+    },
+    "lga": {
+      "name": "City of Gosnells",
+      "osm_id": 11689370
+    },
+    "locality": {
+      "distance_m": 8440,
+      "name": "Kelmscott",
+      "osm_id": 181304750,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 390,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

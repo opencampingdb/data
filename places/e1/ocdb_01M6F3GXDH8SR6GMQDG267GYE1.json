@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Victoria Plains",
+      "osm_id": 11689712
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "New Norcia",
+      "osm_id": 5432378577,
+      "type": "village"
+    },
     "opening_hours": "Mo-Su 09:30-16:30",
     "website": "https://www.newnorcia.wa.edu.au/"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

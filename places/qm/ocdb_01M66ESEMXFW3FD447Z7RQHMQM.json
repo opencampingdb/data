@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "address": {
       "street": "Woolshed Drive"
+    },
+    "lga": {
+      "name": "Central Darling Shire Council",
+      "osm_id": 5885448
+    },
+    "locality": {
+      "distance_m": 11340,
+      "name": "Menindee",
+      "osm_id": 113465381,
+      "type": "town"
     },
     "opening_hours": "24/7"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

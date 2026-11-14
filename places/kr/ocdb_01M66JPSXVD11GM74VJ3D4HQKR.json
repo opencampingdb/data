@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 8440,
+      "name": "King Creek",
+      "osm_id": 114383808,
+      "type": "village"
+    },
     "opening_hours": "Mo-Su 09:00-17:00",
     "operator": "Bago Winery",
     "website": "https://www.bago.com.au/maze"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

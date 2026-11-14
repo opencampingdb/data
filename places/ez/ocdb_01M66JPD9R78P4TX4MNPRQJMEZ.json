@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Mitchell",
+      "osm_id": 3327815
+    },
+    "locality": {
+      "distance_m": 7520,
+      "name": "Tooborac",
+      "osm_id": 325650371,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPD9R78P4TX4MNPRQJMEZ",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

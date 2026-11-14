@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "1874",
       "state": "VIC",
       "street": "Maintongoon Road"
+    },
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 10950,
+      "name": "Bonnie Doon",
+      "osm_id": 65642379,
+      "type": "village"
     }
   },
   "group": "overnight",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

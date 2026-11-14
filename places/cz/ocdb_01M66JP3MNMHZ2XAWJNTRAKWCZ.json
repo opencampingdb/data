@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "air": false,
+    "lga": {
+      "name": "City of Launceston",
+      "osm_id": 10581631
+    },
+    "locality": {
+      "distance_m": 7630,
+      "name": "Exeter",
+      "osm_id": 320475815,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "East Tamar Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

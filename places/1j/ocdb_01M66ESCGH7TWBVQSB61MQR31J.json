@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Blackall Tambo Regional",
+      "osm_id": 11674900
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Blackall",
+      "osm_id": 891103821,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Coronation Drive"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

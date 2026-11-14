@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "114",
       "street": "Old Princes Highway"
+    },
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 17600,
+      "name": "Nar Nar Goon",
+      "osm_id": 1103013920,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

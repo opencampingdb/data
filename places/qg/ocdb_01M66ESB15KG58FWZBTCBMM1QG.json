@@ -15,6 +15,8 @@
     "entry": "osm",
     "fee": "osm",
     "generators": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "community_report",
     "power": "osm",
     "showers": "osm",
@@ -31,6 +33,16 @@
     "entry": "customers",
     "fee": true,
     "generators": true,
+    "lga": {
+      "name": "Dubbo Regional Council",
+      "osm_id": 6268489
+    },
+    "locality": {
+      "distance_m": 560,
+      "name": "Eumungerie",
+      "osm_id": 114370990,
+      "type": "village"
+    },
     "pets": "yes",
     "power": true,
     "showers": true,
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

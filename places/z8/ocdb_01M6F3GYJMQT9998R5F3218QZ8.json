@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -15,6 +17,16 @@
       "state": "VIC",
       "street": "Stuart Avenue",
       "suburb": "Jan Juc"
+    },
+    "lga": {
+      "name": "Surf Coast Shire",
+      "osm_id": 3290432
+    },
+    "locality": {
+      "distance_m": 2840,
+      "name": "Torquay",
+      "osm_id": 2615845781,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 220,
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

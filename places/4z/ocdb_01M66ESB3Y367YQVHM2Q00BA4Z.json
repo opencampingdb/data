@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
@@ -16,6 +18,16 @@
     "charge": "$20/n",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "North Burnett Regional",
+      "osm_id": 11676093
+    },
+    "locality": {
+      "distance_m": 480,
+      "name": "Eidsvold",
+      "osm_id": 1140788311,
+      "type": "town"
+    },
     "motorbikes": true,
     "nearest_major_road": {
       "distance_m": 160,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

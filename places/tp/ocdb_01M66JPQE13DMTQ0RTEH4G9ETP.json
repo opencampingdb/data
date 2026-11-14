@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "street": "Broad Street"
     },
     "email": "admin@mastermech.com.au",
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Sarina",
+      "osm_id": 2256232757,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Broad Street"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,17 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "North West Coastal Highway"
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

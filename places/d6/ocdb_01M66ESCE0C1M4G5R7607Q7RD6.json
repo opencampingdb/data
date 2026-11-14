@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Rural City of Horsham",
+      "osm_id": 3359337
+    },
+    "locality": {
+      "distance_m": 10240,
+      "name": "Pimpinio",
+      "osm_id": 421412263,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCE0C1M4G5R7607Q7RD6",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

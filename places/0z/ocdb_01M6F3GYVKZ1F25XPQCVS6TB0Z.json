@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "2036",
       "street": "D'Aguilar Highway"
+    },
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 100,
+      "name": "D'Aguilar",
+      "osm_id": 298692725,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 50,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Cairns Regional",
+      "osm_id": 11677109
+    },
+    "locality": {
+      "distance_m": 9360,
+      "name": "Mirriwinni",
+      "osm_id": 945930097,
+      "type": "village"
+    },
     "operator": "Queensland Parks and Wildlife Service"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

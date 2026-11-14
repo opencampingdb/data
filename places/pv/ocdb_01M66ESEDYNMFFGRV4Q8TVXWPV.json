@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Cobar Shire Council",
+      "osm_id": 6083910
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Kidman Way"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

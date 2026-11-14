@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
       "street": "Port Wakefield Highway"
     },
     "air": true,
+    "lga": {
+      "name": "Wakefield Regional Council",
+      "osm_id": 9108133
+    },
+    "locality": {
+      "distance_m": 390,
+      "name": "Port Wakefield",
+      "osm_id": 1784630439,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 950
     },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

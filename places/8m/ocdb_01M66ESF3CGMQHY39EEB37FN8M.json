@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
       "state": "VIC",
       "street": "Old Tanjil Road",
       "suburb": "Willow Grove"
+    },
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Willow Grove",
+      "osm_id": 2390147132,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 230,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

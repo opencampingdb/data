@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
@@ -12,6 +14,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 3520,
+      "name": "Woodford",
+      "osm_id": 298692557,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Kilcoy Beerwah Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

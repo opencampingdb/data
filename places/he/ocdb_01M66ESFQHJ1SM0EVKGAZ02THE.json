@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -14,6 +16,16 @@
       "state": "SA",
       "street": "Marine Parade",
       "suburb": "Kingston SE"
+    },
+    "lga": {
+      "name": "Kingston District Council",
+      "osm_id": 6738739
+    },
+    "locality": {
+      "distance_m": 240,
+      "name": "Kingston SE",
+      "osm_id": 319480549,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 250
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

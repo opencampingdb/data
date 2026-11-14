@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Tyalgum"
     },
     "facebook": "https://facebook.com/tyalgumhotel",
+    "lga": {
+      "name": "Tweed Shire Council",
+      "osm_id": 6170302
+    },
+    "locality": {
+      "distance_m": 290,
+      "name": "Tyalgum",
+      "osm_id": 1573432792,
+      "type": "village"
+    },
     "phone": "+61 2 6679 3229"
   },
   "group": "services",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -10,21 +12,28 @@
   "facts": {
     "address": {
       "housenumber": "64-66",
-      "postcode": "6367",
-      "state": "WA",
-      "street": "Graham Street",
-      "suburb": "Kondinin"
+      "street": "Graham Street"
     },
     "fuels": [
       "diesel",
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Shire of Kondinin",
+      "osm_id": 11690139
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "Kondinin",
+      "osm_id": 310388346,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Graham Street"
     },
-    "opening_hours": "Mon-Fri: 6:30am - 7:30pm, Sat: 7:00am - 7:30PM, Sun: 8:00am - 7:30pm",
+    "opening_hours": "Mo-Fr 06:30-19:30, Sa 07:00-19:30, Su 08:00-19:30",
     "phone": "+61 8 9889 1190",
     "toilets": false
   },
@@ -38,11 +47,11 @@
   "name": "BP KONDININ",
   "osm": {
     "id": 10864295648,
-    "timestamp": "2026-11-11T06:24:28Z",
+    "timestamp": "2026-11-13T03:25:30Z",
     "type": "node",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

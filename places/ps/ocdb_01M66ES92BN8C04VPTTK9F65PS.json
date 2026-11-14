@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +18,16 @@
     "drinking_water": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 12850,
+      "name": "Mount Lion",
+      "osm_id": 114644296,
+      "type": "village"
+    },
     "phone": "+61 7 5544 1281",
     "showers": false,
     "tents": true,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

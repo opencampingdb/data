@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 10900,
+      "name": "Tyalgum",
+      "osm_id": 1573432792,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP1PXQ77QGCJ73ZH59YQX",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

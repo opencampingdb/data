@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "TAS",
       "street": "Lune River Road",
       "suburb": "Ida Bay"
+    },
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
+    "locality": {
+      "distance_m": 6290,
+      "name": "Southport",
+      "osm_id": 2092082609,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 4810
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

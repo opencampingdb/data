@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Bruce Rock",
+      "osm_id": 11689046
+    },
+    "locality": {
+      "distance_m": 540,
+      "name": "Bruce Rock",
+      "osm_id": 1242389206,
+      "type": "town"
+    },
     "max_stay": "48h",
     "nearest_major_road": {
       "distance_m": 270,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

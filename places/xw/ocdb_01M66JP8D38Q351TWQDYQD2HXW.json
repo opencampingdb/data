@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "337",
       "postcode": "3305",
       "street": "Gorae Road"
+    },
+    "lga": {
+      "name": "Shire of Glenelg",
+      "osm_id": 3357380
+    },
+    "locality": {
+      "distance_m": 4210,
+      "name": "Allestree",
+      "osm_id": 600217120,
+      "type": "village"
     }
   },
   "group": "attraction",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

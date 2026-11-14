@@ -3,6 +3,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "dump_station": true,
     "entry": "public",
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 1410,
+      "name": "Glenden",
+      "osm_id": 317932087,
+      "type": "town"
+    },
     "max_stay": "72h",
     "showers": false,
     "toilets": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "charge": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
     "charge": "Permit at KK",
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Richmond Shire",
+      "osm_id": 11676981
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "Richmond",
+      "osm_id": 278222420,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 800,
       "name": "Boat Ramp"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

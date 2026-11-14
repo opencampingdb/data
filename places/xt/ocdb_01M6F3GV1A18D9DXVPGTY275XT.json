@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
     "email": "res@glenhelen.com.au",
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 30560,
+      "name": "Hermannsburg",
+      "osm_id": 2365278670,
+      "type": "village"
+    },
     "phone": "+61 8 8956 7489"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Bogan Shire Council",
+      "osm_id": 6086047
+    },
+    "locality": {
+      "distance_m": 11650,
+      "name": "Nyngan",
+      "osm_id": 113764901,
+      "type": "town"
+    },
     "opening_hours": "Oct Su[1]-Apr Su[1] -1 day 07:00-19:00 open || 08:00-17:00 open"
   },
   "group": "attraction",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "NSW",
       "street": "Commercial Avenue",
       "suburb": "Dubbo"
+    },
+    "lga": {
+      "name": "Dubbo Regional Council",
+      "osm_id": 6268489
+    },
+    "locality": {
+      "distance_m": 4990,
+      "name": "Dubbo",
+      "osm_id": 114370819,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

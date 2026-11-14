@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Sutherland Shire Council",
+      "osm_id": 6206752
+    },
+    "locality": {
+      "distance_m": 5390,
+      "name": "Helensburgh",
+      "osm_id": 113323267,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESETTWPT1560P5EJ3N659",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

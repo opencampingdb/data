@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -21,6 +23,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 14590,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "opening_hours": "Apr-Sep 08:00-17:00; Oct-Mar 08:00-19:00",
     "operator": "Blacktown City Council",
     "showers": false,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

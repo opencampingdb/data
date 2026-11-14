@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
   "facts": {
     "caravans": true,
     "drinking_water": false,
+    "lga": {
+      "name": "The District Council of Lower Eyre Peninsula",
+      "osm_id": 9110112
+    },
+    "locality": {
+      "distance_m": 12610,
+      "name": "Port Lincoln",
+      "osm_id": 253012105,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 70,
       "name": "September Beach"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

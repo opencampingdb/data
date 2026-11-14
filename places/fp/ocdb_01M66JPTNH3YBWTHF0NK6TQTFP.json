@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm"
@@ -10,6 +12,16 @@
       "postcode": "5501",
       "street": "Old Port Wakefield Road",
       "suburb": "Two Wells"
+    },
+    "lga": {
+      "name": "Adelaide Plains Council",
+      "osm_id": 9108122
+    },
+    "locality": {
+      "distance_m": 1850,
+      "name": "Two Wells",
+      "osm_id": 4410734899,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 50,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

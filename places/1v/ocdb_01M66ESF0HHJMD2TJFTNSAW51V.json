@@ -2,6 +2,8 @@
   "fact_sources": {
     "bbq": "osm",
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "bbq": false,
     "bins": true,
+    "lga": {
+      "name": "Shire of Strathbogie",
+      "osm_id": 3345839
+    },
+    "locality": {
+      "distance_m": 7350,
+      "name": "Euroa",
+      "osm_id": 60287166,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Hume Freeway"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

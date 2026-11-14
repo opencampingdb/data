@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
       "e10",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Greater Geraldton",
+      "osm_id": 11689919
+    },
+    "locality": {
+      "distance_m": 18780,
+      "name": "Cape Burney",
+      "osm_id": 3390094295,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Brand Highway"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -14,6 +16,16 @@
     },
     "entry": "private",
     "fee": false,
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 5400,
+      "name": "Hoffnungsthal",
+      "osm_id": 14106629025,
+      "type": "village"
+    },
     "operator": "Christadelphians"
   },
   "group": "overnight",
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

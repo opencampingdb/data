@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Central Highlands Regional",
+      "osm_id": 11676571
+    },
+    "locality": {
+      "distance_m": 16690,
+      "name": "Duaringa",
+      "osm_id": 247808655,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Capricorn Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

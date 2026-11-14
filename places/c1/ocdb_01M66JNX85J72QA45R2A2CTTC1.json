@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "585",
       "postcode": "2870",
       "street": "Telescope Road"
+    },
+    "lga": {
+      "name": "Parkes Shire Council",
+      "osm_id": 6271674
+    },
+    "locality": {
+      "distance_m": 7610,
+      "name": "Alectown",
+      "osm_id": 113704487,
+      "type": "village"
     },
     "opening_hours": "Mo-Su 08:30-16:15",
     "operator": "CSIRO",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

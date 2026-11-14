@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "postcode": "4416",
       "street": "Redmarley Road"
+    },
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 13600,
+      "name": "Condamine",
+      "osm_id": 1768250619,
+      "type": "village"
     }
   },
   "group": "attraction",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

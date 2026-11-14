@@ -3,12 +3,24 @@
     "drinking_water": "osm",
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "customers",
     "hot_water": true,
+    "lga": {
+      "name": "Carpentaria Shire",
+      "osm_id": 11677417
+    },
+    "locality": {
+      "distance_m": 20750,
+      "name": "Normanton",
+      "osm_id": 247813265,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Normanton Croydon Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -9,6 +10,12 @@
     "address": {
       "housenumber": "25",
       "street": "Rosenberg Street"
+    },
+    "locality": {
+      "distance_m": 3900,
+      "name": "Gungahlin",
+      "osm_id": 231608984,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3400
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

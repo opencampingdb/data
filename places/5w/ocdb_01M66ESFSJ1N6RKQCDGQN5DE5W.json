@@ -8,6 +8,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -33,6 +35,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": false,
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Condamine",
+      "osm_id": 1768250619,
+      "type": "village"
+    },
     "motorbikes": true,
     "nearest_major_road": {
       "distance_m": 80,
@@ -62,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

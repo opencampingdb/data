@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel"
-    ]
+    ],
+    "lga": {
+      "name": "Broken Hill City Council",
+      "osm_id": 5892296
+    },
+    "locality": {
+      "distance_m": 2770,
+      "name": "Broken Hill",
+      "osm_id": 113763535,
+      "type": "city"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPNRV9HTP2CW3RYP5G3DD",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

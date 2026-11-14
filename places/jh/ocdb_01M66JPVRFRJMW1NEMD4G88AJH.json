@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Church Road",
       "suburb": "The Summit"
+    },
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 2050,
+      "name": "The Summit",
+      "osm_id": 443265468,
+      "type": "village"
     },
     "website": "https://trufflediscoverycentre.com.au"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

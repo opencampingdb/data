@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Wandering",
+      "osm_id": 11689070
+    },
+    "locality": {
+      "distance_m": 22080,
+      "name": "Jarrahdale",
+      "osm_id": 179844169,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFB083A6TNXYX213T9GQ",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

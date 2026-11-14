@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Bruce Highway",
       "suburb": "Bloomsbury"
+    },
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 14290,
+      "name": "Midge Point",
+      "osm_id": 2508333835,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

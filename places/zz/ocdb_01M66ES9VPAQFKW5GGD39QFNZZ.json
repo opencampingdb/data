@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 22040,
+      "name": "Benambra",
+      "osm_id": 163564024,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Benambra-Corryong Road"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3377",
       "street": "Mortlake - Ararat Road",
       "suburb": "Maroona"
+    },
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Maroona",
+      "osm_id": 1244297136,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

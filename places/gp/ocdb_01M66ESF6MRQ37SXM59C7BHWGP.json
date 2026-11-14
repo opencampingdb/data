@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "place": "100 Roper Rd"
+    },
+    "lga": {
+      "name": "The Rural City of Murray Bridge",
+      "osm_id": 7071420
+    },
+    "locality": {
+      "distance_m": 3340,
+      "name": "Murray Bridge",
+      "osm_id": 210212520,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 20,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Richmond",
+      "osm_id": 81328631,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "East Market Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

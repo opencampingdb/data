@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Clare and Gilbert Valleys Council",
+      "osm_id": 9108116
+    },
+    "locality": {
+      "distance_m": 3720,
+      "name": "Sevenhill",
+      "osm_id": 1923683744,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP3SQ7T17XTBCRZA31FXG",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

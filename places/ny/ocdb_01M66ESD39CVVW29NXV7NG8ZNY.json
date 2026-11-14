@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Victoria Daly Region",
+      "osm_id": 5514633
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Victoria Highway"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -12,6 +14,16 @@
       "suburb": "Northam"
     },
     "entry": "public",
+    "lga": {
+      "name": "Shire of Northam",
+      "osm_id": 11689451
+    },
+    "locality": {
+      "distance_m": 1500,
+      "name": "Northam",
+      "osm_id": 2553978905,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Newcastle Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

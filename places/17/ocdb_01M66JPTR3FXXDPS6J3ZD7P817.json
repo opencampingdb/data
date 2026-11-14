@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "air": false,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Kulgera",
+      "osm_id": 1295002654,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Stuart Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

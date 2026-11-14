@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm"
@@ -18,6 +20,16 @@
       "diesel",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Flinders Council",
+      "osm_id": 10565253
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Whitemark",
+      "osm_id": 4290197653,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 170
     },
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

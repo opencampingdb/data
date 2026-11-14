@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 8700,
+      "name": "Porepunkah",
+      "osm_id": 1680935969,
+      "type": "village"
+    },
     "operator": "Parks Victoria"
   },
   "group": "attraction",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

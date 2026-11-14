@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Northampton",
+      "osm_id": 11689854
+    },
+    "locality": {
+      "distance_m": 760,
+      "name": "Gregory",
+      "osm_id": 2451288340,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 930
     },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

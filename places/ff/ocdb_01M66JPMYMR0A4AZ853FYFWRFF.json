@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 950,
+      "name": "Deepwater",
+      "osm_id": 2022643013,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "New England Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Madeley Drive"
     },
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Yarra Ranges",
+      "osm_id": 3333996
+    },
+    "locality": {
+      "distance_m": 3110,
+      "name": "Yarra Junction",
+      "osm_id": 192816449,
+      "type": "town"
+    },
     "phone": "+61 3 5967 2599",
     "website": "https://www.wesburncamp.com.au/"
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

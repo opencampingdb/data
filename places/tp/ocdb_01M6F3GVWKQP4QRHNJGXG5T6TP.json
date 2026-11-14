@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "info@timbercreekhotel.com.au",
+    "lga": {
+      "name": "Victoria Daly Region",
+      "osm_id": 5514633
+    },
+    "locality": {
+      "distance_m": 680,
+      "name": "Timber Creek",
+      "osm_id": 1842599418,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Victoria Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

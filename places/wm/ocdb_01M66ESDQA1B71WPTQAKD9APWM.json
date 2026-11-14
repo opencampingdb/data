@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "wheelchair": "osm"
   },
@@ -12,6 +14,16 @@
     "entry": "public",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Central Highlands Regional",
+      "osm_id": 11676571
+    },
+    "locality": {
+      "distance_m": 23470,
+      "name": "Blackwater",
+      "osm_id": 2875983029,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 170,
       "name": "Bedford Weir Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Southern Grampians",
+      "osm_id": 3349959
+    },
+    "locality": {
+      "distance_m": 16720,
+      "name": "Chetwynd",
+      "osm_id": 2694248057,
+      "type": "village"
+    },
     "operator": "southern grampians shire council",
     "wheelchair": false
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

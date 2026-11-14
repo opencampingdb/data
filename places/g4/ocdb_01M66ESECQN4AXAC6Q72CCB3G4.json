@@ -3,6 +3,8 @@
     "caravans": "osm",
     "charge": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "charge": "$10/n at Bowling Club or General Store",
     "entry": "customers",
+    "lga": {
+      "name": "Gwydir Shire Council",
+      "osm_id": 6260771
+    },
+    "locality": {
+      "distance_m": 23020,
+      "name": "North Star",
+      "osm_id": 114384400,
+      "type": "village"
+    },
     "showers": true,
     "tents": true,
     "toilets": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

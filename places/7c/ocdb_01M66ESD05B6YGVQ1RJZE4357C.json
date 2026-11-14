@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -12,6 +14,16 @@
       "suburb": "Guanaba"
     },
     "entry": "private",
+    "lga": {
+      "name": "Gold Coast City",
+      "osm_id": 11675459
+    },
+    "locality": {
+      "distance_m": 4970,
+      "name": "Mount Tamborine",
+      "osm_id": 207089354,
+      "type": "village"
+    },
     "operator": "Scouts Australia Queensland Branch - Gold Coast Region"
   },
   "group": "overnight",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

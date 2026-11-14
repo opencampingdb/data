@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Parkes Shire Council",
+      "osm_id": 6271674
+    },
+    "locality": {
+      "distance_m": 9310,
+      "name": "Parkes",
+      "osm_id": 113708225,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Newell Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "2",
       "postcode": "2795",
       "street": "Budden Street"
+    },
+    "lga": {
+      "name": "Bathurst Regional Council",
+      "osm_id": 6330866
+    },
+    "locality": {
+      "distance_m": 40,
+      "name": "Rockley",
+      "osm_id": 113746622,
+      "type": "village"
     },
     "operator": "Matt Moran",
     "phone": "+61 2 6337 9415",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

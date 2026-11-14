@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "SA",
       "street": "Payneham Road",
       "suburb": "Glynde"
+    },
+    "lga": {
+      "name": "The City of Norwood Payneham and St Peters",
+      "osm_id": 9107444
+    },
+    "locality": {
+      "distance_m": 6680,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 20
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

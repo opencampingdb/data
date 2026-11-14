@@ -4,6 +4,8 @@
     "cabins": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -21,6 +23,16 @@
     "cabins": true,
     "email": "reception@mittagongholidaypark.com.au",
     "fee": true,
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 1060,
+      "name": "Mittagong",
+      "osm_id": 113238085,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Old Hume Highway"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Upper Hunter Shire Council",
+      "osm_id": 6186848
+    },
+    "locality": {
+      "distance_m": 390,
+      "name": "Cassilis",
+      "osm_id": 115096530,
+      "type": "village"
+    },
     "toilet_type": "flush",
     "wheelchair": false
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

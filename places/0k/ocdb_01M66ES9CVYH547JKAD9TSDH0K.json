@@ -8,6 +8,8 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "community_report",
     "nearest_major_road": "osm",
     "pets": "community_report"
@@ -15,6 +17,16 @@
   "facts": {
     "dump_station": true,
     "fee": "donation",
+    "lga": {
+      "name": "Golden Plains Shire",
+      "osm_id": 3290692
+    },
+    "locality": {
+      "distance_m": 590,
+      "name": "Smythesdale",
+      "osm_id": 364650996,
+      "type": "village"
+    },
     "max_stay": "3d",
     "nearest_major_road": {
       "distance_m": 350,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

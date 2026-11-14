@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Shire of Perenjori",
+      "osm_id": 11689822
+    },
+    "locality": {
+      "distance_m": 260,
+      "name": "Latham",
+      "osm_id": 3923007724,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Mullewa - Wubin Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Murray",
+      "osm_id": 11690485
+    },
+    "locality": {
+      "distance_m": 3890,
+      "name": "Dwellingup",
+      "osm_id": 83353490,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GZTSJH3ZZ6BH7X5J4YAH",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "26",
       "street": "Olympic Way"
+    },
+    "lga": {
+      "name": "Municipal Council of Roxby Downs",
+      "osm_id": 6799906
+    },
+    "locality": {
+      "distance_m": 1290,
+      "name": "Roxby Downs",
+      "osm_id": 2286747935,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 190,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

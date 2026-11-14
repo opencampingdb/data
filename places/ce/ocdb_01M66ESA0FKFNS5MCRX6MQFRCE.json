@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +18,16 @@
     "drinking_water": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 800,
+      "name": "Jericho",
+      "osm_id": 247809820,
+      "type": "town"
+    },
     "operator": "Barcaldine Regional Council",
     "showers": true,
     "tents": true,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

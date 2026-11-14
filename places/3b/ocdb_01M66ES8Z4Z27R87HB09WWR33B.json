@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Uralla Shire Council",
+      "osm_id": 6260188
+    },
+    "locality": {
+      "distance_m": 2730,
+      "name": "Bundarra",
+      "osm_id": 114658041,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Thunderbolts Way"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

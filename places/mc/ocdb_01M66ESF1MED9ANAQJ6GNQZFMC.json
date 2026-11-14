@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Boulia Shire",
+      "osm_id": 11676721
+    },
+    "locality": {
+      "distance_m": 840,
+      "name": "Boulia",
+      "osm_id": 1973651767,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Diamantina Developmental Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,14 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESC0B4PN3SRFYB1DAZ3GH",
@@ -21,5 +26,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

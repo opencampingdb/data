@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Tatiara District Council",
+      "osm_id": 6706440
+    },
+    "locality": {
+      "distance_m": 430,
+      "name": "Mundulla",
+      "osm_id": 1797873824,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Nalang Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

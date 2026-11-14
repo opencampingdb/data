@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "locality": {
+      "distance_m": 1620,
+      "name": "Woden",
+      "osm_id": 26764260,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Eggleston Crescent"
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -9,6 +11,16 @@
   "facts": {
     "address": {
       "street": "Penguin Parade Boardwalk"
+    },
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 4930,
+      "name": "Ventnor",
+      "osm_id": 309779601,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 0,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

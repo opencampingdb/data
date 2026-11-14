@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Shire of Shark Bay",
+      "osm_id": 11689946
+    },
     "tents": true,
     "website": "https://www.hamelinstationstay.com.au/"
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 1280,
+      "name": "Clermont",
+      "osm_id": 289648322,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JP47PY2JNBK4HCTA1AZH6",
   "kind": "fuel",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Nannup",
+      "osm_id": 11688780
+    },
+    "locality": {
+      "distance_m": 27650,
+      "name": "Pemberton",
+      "osm_id": 82359265,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GW5SX901XA4M26V79CW4",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,6 +16,16 @@
     },
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 10090,
+      "name": "Hazeldene",
+      "osm_id": 2347391045,
+      "type": "village"
+    },
     "website": "https://bloomintoyou.com.au"
   },
   "group": "attraction",
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

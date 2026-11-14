@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Warrumbungle Shire Council",
+      "osm_id": 6268496
+    },
+    "locality": {
+      "distance_m": 25790,
+      "name": "Coonabarabran",
+      "osm_id": 113727413,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPEARV1RJXTZ05T50R5G7",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

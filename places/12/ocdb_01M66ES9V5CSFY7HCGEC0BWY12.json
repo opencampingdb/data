@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Hinchinbrook Shire",
+      "osm_id": 11676894
+    },
+    "locality": {
+      "distance_m": 16680,
+      "name": "Abergowrie",
+      "osm_id": 4072794517,
+      "type": "village"
+    },
     "tents": true,
     "website": "https://parks.des.qld.gov.au/parks/girringun-wallaman/camping/wallaman-falls"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

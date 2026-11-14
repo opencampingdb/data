@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "21",
       "street": "Tunstall Square"
+    },
+    "lga": {
+      "name": "City of Manningham",
+      "osm_id": 2405038
+    },
+    "locality": {
+      "distance_m": 17480,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 140,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

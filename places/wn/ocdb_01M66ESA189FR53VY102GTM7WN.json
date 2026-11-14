@@ -3,10 +3,22 @@
     "fee": "2026-07-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Carpentaria Shire",
+      "osm_id": 11677417
+    },
+    "locality": {
+      "distance_m": 34570,
+      "name": "Normanton",
+      "osm_id": 247813265,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA189FR53VY102GTM7WN",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Parkes Shire Council",
+      "osm_id": 6271674
+    },
+    "locality": {
+      "distance_m": 6020,
+      "name": "Peak Hill",
+      "osm_id": 113708577,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Peak Hill-Tullamore Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

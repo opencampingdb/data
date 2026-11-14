@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Pormpuraaw Aboriginal Shire",
+      "osm_id": 11677422
+    },
+    "locality": {
+      "distance_m": 1860,
+      "name": "Pormpuraaw",
+      "osm_id": 3243293313,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 110,
       "name": "Pormpuraaw"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

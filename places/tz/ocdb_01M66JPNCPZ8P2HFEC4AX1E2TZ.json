@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -8,6 +10,16 @@
     "fuels": [
       "diesel"
     ],
+    "lga": {
+      "name": "Shire of Halls Creek",
+      "osm_id": 11690294
+    },
+    "locality": {
+      "distance_m": 420,
+      "name": "Halls Creek",
+      "osm_id": 331329919,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Duncan Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

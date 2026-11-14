@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Yorke Peninsula Council",
+      "osm_id": 6673799
+    },
+    "locality": {
+      "distance_m": 8750,
+      "name": "Arthurton",
+      "osm_id": 812746063,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M6F3GVMJ4KFG6HCSDX99EA35",
   "kind": "heritage",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

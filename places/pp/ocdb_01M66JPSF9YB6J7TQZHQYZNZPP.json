@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Light Regional Council",
+      "osm_id": 9108117
+    },
+    "locality": {
+      "distance_m": 970,
+      "name": "Kapunda",
+      "osm_id": 180957537,
+      "type": "town"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPSF9YB6J7TQZHQYZNZPP",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

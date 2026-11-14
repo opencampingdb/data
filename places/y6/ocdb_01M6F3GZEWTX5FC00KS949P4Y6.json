@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "SA",
       "street": "Caves District Road",
       "suburb": "Joanna"
+    },
+    "lga": {
+      "name": "Naracoorte Lucindale Council",
+      "osm_id": 6711653
+    },
+    "locality": {
+      "distance_m": 11820,
+      "name": "Naracoorte",
+      "osm_id": 634962919,
+      "type": "town"
     },
     "website": "http://www.caveparknaracoorte.com/"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

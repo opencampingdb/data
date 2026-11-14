@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Shire of Wickepin",
+      "osm_id": 11688936
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Wickepin",
+      "osm_id": 2526067018,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wogolin Road"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

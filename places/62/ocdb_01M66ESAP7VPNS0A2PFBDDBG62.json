@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "City of Clarence",
+      "osm_id": 10625764
+    },
+    "locality": {
+      "distance_m": 5620,
+      "name": "Cambridge",
+      "osm_id": 1969434709,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 60,
       "name": "Seven Mile Beach"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

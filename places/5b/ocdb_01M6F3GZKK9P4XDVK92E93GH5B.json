@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Blackbutt",
+      "osm_id": 367130333,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Hart Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

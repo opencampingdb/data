@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
     "entry": "customers",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Upper Lachlan Shire Council",
+      "osm_id": 6257920
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "Tuena",
+      "osm_id": 2571375037,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Bathurst Street"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

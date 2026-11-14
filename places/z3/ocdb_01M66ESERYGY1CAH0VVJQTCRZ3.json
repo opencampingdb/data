@@ -3,6 +3,7 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -14,6 +15,10 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Dundas",
+      "osm_id": 11690221
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Eyre Highway"
@@ -40,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "80",
       "street": "Virginia Street"
+    },
+    "lga": {
+      "name": "City of Greater Dandenong",
+      "osm_id": 3333235
+    },
+    "locality": {
+      "distance_m": 16240,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     }
   },
   "group": "services",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

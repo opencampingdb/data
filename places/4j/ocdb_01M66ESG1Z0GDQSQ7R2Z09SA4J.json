@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Shire of Upper Gascoyne",
+      "osm_id": 11690051
+    },
+    "locality": {
+      "distance_m": 38190,
+      "name": "Burringurrah",
+      "osm_id": 2054194511,
+      "type": "village"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

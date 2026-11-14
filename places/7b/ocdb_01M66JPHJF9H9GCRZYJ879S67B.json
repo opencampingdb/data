@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "603",
       "street": "Henry Lawson Drive"
+    },
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 7860,
+      "name": "Mudgee",
+      "osm_id": 114608650,
+      "type": "town"
     },
     "opening_hours": "Mo-Su 10:00-16:00",
     "website": "https://www.bunnamagoowines.com.au/"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

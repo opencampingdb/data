@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -22,6 +24,16 @@
     "dump_station": true,
     "email": "admin@glenwoodtouristpark.com.au",
     "fee": true,
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 2920,
+      "name": "Grafton",
+      "osm_id": 3834031650,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 2420
     },
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

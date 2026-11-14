@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Augusta Margaret River",
+      "osm_id": 11688657
+    },
+    "locality": {
+      "distance_m": 16850,
+      "name": "Cowaramup",
+      "osm_id": 1857977959,
+      "type": "town"
+    },
     "showers": false,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

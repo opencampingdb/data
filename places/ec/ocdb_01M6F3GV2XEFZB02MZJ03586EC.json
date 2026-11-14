@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
       "postcode": "4178",
       "street": "Berrima Street",
       "suburb": "Wynnum"
+    },
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 13340,
+      "name": "Cleveland",
+      "osm_id": 80868537,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 550
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

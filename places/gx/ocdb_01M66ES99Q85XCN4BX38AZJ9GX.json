@@ -34,6 +34,8 @@
     "dump_station": "feedback",
     "entry": "feedback",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "feedback",
     "motorhomes": "feedback",
     "nearest_major_road": "osm",
@@ -59,6 +61,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Shire of Northern Grampians",
+      "osm_id": 3348880
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Halls Gap",
+      "osm_id": 324529175,
+      "type": "village"
+    },
     "motorbikes": true,
     "motorhomes": true,
     "nearest_major_road": {
@@ -90,5 +102,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

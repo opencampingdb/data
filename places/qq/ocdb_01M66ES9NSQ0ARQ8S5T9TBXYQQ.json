@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Fraser Coast Regional",
+      "osm_id": 11676269
+    },
+    "locality": {
+      "distance_m": 6320,
+      "name": "Thinoomba",
+      "osm_id": 1435405332,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9NSQ0ARQ8S5T9TBXYQQ",
   "kind": "state_forest_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

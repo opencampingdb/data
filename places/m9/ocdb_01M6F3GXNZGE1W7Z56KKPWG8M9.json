@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "email": "history@adelaideshowground.com.au",
+    "lga": {
+      "name": "City of Unley",
+      "osm_id": 9106078
+    },
+    "locality": {
+      "distance_m": 2390,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3160
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

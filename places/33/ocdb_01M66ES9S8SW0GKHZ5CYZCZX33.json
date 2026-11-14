@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "drinking_water": true,
+    "lga": {
+      "name": "Central Desert Region",
+      "osm_id": 8878328
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Stuart Highway"
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

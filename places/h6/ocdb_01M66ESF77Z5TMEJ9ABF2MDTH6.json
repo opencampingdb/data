@@ -9,6 +9,8 @@
     "caravans": "contributed",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "contributed",
     "operator": "osm",
     "tents": "osm",
@@ -20,6 +22,16 @@
     "caravans": true,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 6680,
+      "name": "Buxton",
+      "osm_id": 289619307,
+      "type": "village"
+    },
     "motorhomes": true,
     "operator": "Parks Victoria",
     "tents": true,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

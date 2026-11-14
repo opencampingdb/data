@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "The Regional Council of Goyder",
+      "osm_id": 9107816
+    },
+    "locality": {
+      "distance_m": 1070,
+      "name": "Burra",
+      "osm_id": 249338858,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Goyder Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

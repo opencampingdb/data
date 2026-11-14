@@ -4,10 +4,22 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Wentworth Shire Council",
+      "osm_id": 5884892
+    },
+    "locality": {
+      "distance_m": 17210,
+      "name": "Wentworth",
+      "osm_id": 72773523,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 70
     }
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

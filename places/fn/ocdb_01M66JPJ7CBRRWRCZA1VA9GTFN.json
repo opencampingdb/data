@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Pokolbin"
     },
     "email": "wine@lakesfolly.com.au",
+    "lga": {
+      "name": "Cessnock City Council",
+      "osm_id": 6191219
+    },
+    "locality": {
+      "distance_m": 2910,
+      "name": "Nulkaba",
+      "osm_id": 114176546,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Broke Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

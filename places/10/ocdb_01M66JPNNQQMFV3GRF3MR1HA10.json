@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "QLD",
       "street": "Newman Road",
       "suburb": "Geebung"
+    },
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 9470,
+      "name": "Strathpine",
+      "osm_id": 273208196,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

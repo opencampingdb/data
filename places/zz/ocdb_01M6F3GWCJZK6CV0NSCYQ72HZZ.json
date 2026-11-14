@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "582",
       "street": "Quin Road"
+    },
+    "lga": {
+      "name": "Shire of Gingin",
+      "osm_id": 11689578
+    },
+    "locality": {
+      "distance_m": 15370,
+      "name": "Seatrees Estate",
+      "osm_id": 1447839842,
+      "type": "village"
     }
   },
   "group": "overnight",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

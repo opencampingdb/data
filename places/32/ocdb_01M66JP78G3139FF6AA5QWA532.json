@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 9430,
+      "name": "Rosedale",
+      "osm_id": 2531690389,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP78G3139FF6AA5QWA532",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

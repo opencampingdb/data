@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "43",
       "street": "Murrays Road"
+    },
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 5920,
+      "name": "Alexandra",
+      "osm_id": 65640980,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 3490
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

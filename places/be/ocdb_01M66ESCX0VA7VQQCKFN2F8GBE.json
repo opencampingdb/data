@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Bourke Shire Council",
+      "osm_id": 5892186
+    },
+    "locality": {
+      "distance_m": 610,
+      "name": "North Bourke",
+      "osm_id": 113465161,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 330
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

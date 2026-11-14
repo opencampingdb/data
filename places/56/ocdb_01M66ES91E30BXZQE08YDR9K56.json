@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 10740,
+      "name": "Wangaratta",
+      "osm_id": 662026831,
+      "type": "town"
+    },
     "toilets": true
   },
   "group": "overnight",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

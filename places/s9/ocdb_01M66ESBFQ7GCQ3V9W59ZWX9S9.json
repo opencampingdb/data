@@ -3,6 +3,8 @@
     "campfires": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -16,6 +18,16 @@
     "campfires": false,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Glamorgan-Spring Bay",
+      "osm_id": 10621831
+    },
+    "locality": {
+      "distance_m": 780,
+      "name": "Swansea",
+      "osm_id": 251558976,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 520,
       "name": "Jubilee Beach"
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

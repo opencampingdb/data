@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 6040,
+      "name": "Erica",
+      "osm_id": 171095775,
+      "type": "village"
+    },
     "pets": "no",
     "toilets": true,
     "website": "https://www.parks.vic.gov.au/"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

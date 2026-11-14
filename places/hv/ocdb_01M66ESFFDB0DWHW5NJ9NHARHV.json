@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -14,6 +16,16 @@
   "facts": {
     "caravans": false,
     "entry": "private",
+    "lga": {
+      "name": "Sutherland Shire Council",
+      "osm_id": 6206752
+    },
+    "locality": {
+      "distance_m": 15130,
+      "name": "Helensburgh",
+      "osm_id": 113323267,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1110
     },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

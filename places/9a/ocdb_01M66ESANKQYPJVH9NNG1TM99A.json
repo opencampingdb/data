@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
+    "locality": {
+      "distance_m": 39380,
+      "name": "Geeveston",
+      "osm_id": 251550834,
+      "type": "town"
+    },
     "showers": false,
     "tents": true
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

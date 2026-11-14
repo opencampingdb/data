@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Naracoorte Lucindale Council",
+      "osm_id": 6711653
+    },
+    "locality": {
+      "distance_m": 780,
+      "name": "Naracoorte",
+      "osm_id": 634962919,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9H21RKJKE4WGEC5FBVE",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

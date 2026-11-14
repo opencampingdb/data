@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "drinking_water": true,
+    "lga": {
+      "name": "Shire of Derby-West Kimberley",
+      "osm_id": 11690291
+    },
+    "locality": {
+      "distance_m": 2100,
+      "name": "Derby",
+      "osm_id": 316203762,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4430,
       "name": "Back Boat Ramp"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Coonamble Shire Council",
+      "osm_id": 7145506
+    },
+    "locality": {
+      "distance_m": 19920,
+      "name": "Tooraweenah",
+      "osm_id": 2997428966,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCW3JAS5AGGDZC7YNKCE",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

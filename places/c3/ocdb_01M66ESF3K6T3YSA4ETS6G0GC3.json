@@ -12,6 +12,8 @@
     "caravans": "osm",
     "email": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "contributed",
     "nearest_beach": "osm",
     "operator": "osm",
@@ -26,6 +28,16 @@
     "caravans": true,
     "email": "npws.richmondriver@environment.nsw.gov.au",
     "fee": true,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 14850,
+      "name": "Woombah",
+      "osm_id": 1137149640,
+      "type": "village"
+    },
     "motorhomes": true,
     "nearest_beach": {
       "distance_m": 140
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

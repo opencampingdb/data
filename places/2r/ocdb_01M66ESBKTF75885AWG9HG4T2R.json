@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Lake Mountain Alpine Resort",
+      "osm_id": 14135958
+    },
+    "locality": {
+      "distance_m": 11470,
+      "name": "Marysville",
+      "osm_id": 99490721,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Lake Mountain Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "water_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 890,
+      "name": "Alexandra",
+      "osm_id": 65640980,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3120
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

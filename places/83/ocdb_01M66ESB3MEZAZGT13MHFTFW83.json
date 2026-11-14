@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -12,6 +14,16 @@
       "street": "Sunnyside Road"
     },
     "email": "info@juneetouristpark.com.au",
+    "lga": {
+      "name": "Junee Shire Council",
+      "osm_id": 6252194
+    },
+    "locality": {
+      "distance_m": 1220,
+      "name": "Junee",
+      "osm_id": 113664359,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Kanalay Square"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

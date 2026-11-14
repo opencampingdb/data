@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm"
@@ -11,6 +13,16 @@
     "booking_required": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Goulburn Mulwaree Council",
+      "osm_id": 6310493
+    },
+    "locality": {
+      "distance_m": 10620,
+      "name": "Marulan",
+      "osm_id": 251724227,
+      "type": "town"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": true,
     "tents": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

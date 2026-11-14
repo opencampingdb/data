@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 7050,
+      "name": "Greenhill",
+      "osm_id": 2247794835,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 370,
       "name": "Notch Point Beach"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

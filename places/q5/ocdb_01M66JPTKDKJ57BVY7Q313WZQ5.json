@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "20-22",
       "street": "Dawe Avenue"
+    },
+    "lga": {
+      "name": "Berrigan Shire Council",
+      "osm_id": 6230406
+    },
+    "locality": {
+      "distance_m": 960,
+      "name": "Finley",
+      "osm_id": 113751328,
+      "type": "town"
     },
     "operator": "NSW Health"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

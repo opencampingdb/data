@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Litchfield Municipality",
+      "osm_id": 9045375
+    },
+    "locality": {
+      "distance_m": 5870,
+      "name": "Southport",
+      "osm_id": 3786827513,
+      "type": "village"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

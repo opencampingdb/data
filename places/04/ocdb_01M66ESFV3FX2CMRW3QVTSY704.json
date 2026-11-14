@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Port Phillip",
+      "osm_id": 2404889
+    },
+    "locality": {
+      "distance_m": 6080,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 320,
       "name": "St Kilda Beach"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

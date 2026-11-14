@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Freemans Reach"
     },
     "entry": "public",
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 4460,
+      "name": "Richmond",
+      "osm_id": 81328631,
+      "type": "town"
+    },
     "website": "https://www.toiletmap.gov.au/2549"
   },
   "group": "utility",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

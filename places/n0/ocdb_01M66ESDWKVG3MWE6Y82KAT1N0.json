@@ -2,6 +2,8 @@
   "fact_sources": {
     "bbq": "osm",
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "bbq": true,
     "bins": true,
+    "lga": {
+      "name": "Bourke Shire Council",
+      "osm_id": 5892186
+    },
+    "locality": {
+      "distance_m": 20440,
+      "name": "Bourke",
+      "osm_id": 113460906,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Mitchell Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

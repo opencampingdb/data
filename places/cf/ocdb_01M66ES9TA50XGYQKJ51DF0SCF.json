@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Golden Plains Shire",
+      "osm_id": 3290692
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Meredith",
+      "osm_id": 482791855,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Midland Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

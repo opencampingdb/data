@@ -9,6 +9,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "phone": "osm",
     "phone_2": "osm",
@@ -30,6 +32,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 9770,
+      "name": "Rathdowney",
+      "osm_id": 238661895,
+      "type": "village"
+    },
     "pets": "yes",
     "phone": "+61 7 5544 3128",
     "phone_2": "+61 456 999 241",
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

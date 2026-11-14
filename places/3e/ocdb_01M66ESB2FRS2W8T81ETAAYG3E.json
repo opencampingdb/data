@@ -4,6 +4,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -14,6 +16,16 @@
     "booking_required": true,
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 3620,
+      "name": "Lapstone",
+      "osm_id": 20968399,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 2050
     },
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

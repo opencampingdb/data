@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Circular Head",
+      "osm_id": 10593534
+    },
+    "locality": {
+      "distance_m": 5930,
+      "name": "Forest",
+      "osm_id": 2064034908,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 400,
       "name": "Peggs Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "crocodiles": "osm",
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "crocodiles": true,
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Shire of Wyndham-East Kimberley",
+      "osm_id": 11690289
+    },
+    "locality": {
+      "distance_m": 17690,
+      "name": "Kununurra",
+      "osm_id": 30480122,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCYCHE2VDHD5CJ1FK8F7",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

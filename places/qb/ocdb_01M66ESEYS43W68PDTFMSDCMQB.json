@@ -2,11 +2,23 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "drinking_water": true,
     "fee": false,
+    "lga": {
+      "name": "Glamorgan-Spring Bay",
+      "osm_id": 10621831
+    },
+    "locality": {
+      "distance_m": 14960,
+      "name": "Triabunna",
+      "osm_id": 329965854,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30
     }
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

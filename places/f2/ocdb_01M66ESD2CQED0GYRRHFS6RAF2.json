@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 680,
+      "name": "Hawks Nest",
+      "osm_id": 25955809,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 40,
       "name": "Bennetts Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

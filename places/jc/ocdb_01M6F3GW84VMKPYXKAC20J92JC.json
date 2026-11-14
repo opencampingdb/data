@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "VIC",
       "street": "Morses Creek Road",
       "suburb": "Wandiligong"
+    },
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 920,
+      "name": "Wandiligong",
+      "osm_id": 734785478,
+      "type": "village"
     },
     "phone": "+61 418 866 633",
     "website": "https://wandipub.com.au/"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

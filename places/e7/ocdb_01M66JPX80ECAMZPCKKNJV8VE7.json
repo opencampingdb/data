@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
@@ -20,6 +22,16 @@
       "e10",
       "lpg"
     ],
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 840,
+      "name": "Yass",
+      "osm_id": 100842493,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2280,
       "name": "Don Bayley Ramp"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

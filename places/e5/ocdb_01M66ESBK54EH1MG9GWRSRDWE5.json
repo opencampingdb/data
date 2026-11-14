@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +18,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Moyne",
+      "osm_id": 3347615
+    },
+    "locality": {
+      "distance_m": 880,
+      "name": "Macarthur",
+      "osm_id": 596090099,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Hamilton-Port Fairy Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "address": "osm",
     "cabins": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     },
     "cabins": true,
     "fee": true,
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 620,
+      "name": "Quilpie",
+      "osm_id": 246024896,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 340,
       "name": "Brolga Street"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

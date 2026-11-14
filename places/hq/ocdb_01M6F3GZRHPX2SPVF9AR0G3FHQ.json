@@ -6,12 +6,24 @@
     "bins": "osm",
     "dump_station": "contributed",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "dump_station": true,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Lake Grace",
+      "osm_id": 11688971
+    },
+    "locality": {
+      "distance_m": 260,
+      "name": "Newdegate",
+      "osm_id": 243365130,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Newdegate Ravensthorpe Road"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

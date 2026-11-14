@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -18,6 +20,16 @@
       "street": "Jubilee Park Road"
     },
     "dump_station": true,
+    "lga": {
+      "name": "City of Warrnambool",
+      "osm_id": 3347796
+    },
+    "locality": {
+      "distance_m": 3080,
+      "name": "Allansford",
+      "osm_id": 1215715175,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2970
     },
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

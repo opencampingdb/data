@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "District Council of Elliston",
+      "osm_id": 7125331
+    },
+    "locality": {
+      "distance_m": 14030,
+      "name": "Venus Bay",
+      "osm_id": 267101780,
+      "type": "village"
+    },
     "operator": "District Council of Elliston",
     "toilets": false
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 17600,
+      "name": "Ravensthorpe",
+      "osm_id": 1940218406,
+      "type": "town"
+    },
     "showers": false,
     "toilets": true
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

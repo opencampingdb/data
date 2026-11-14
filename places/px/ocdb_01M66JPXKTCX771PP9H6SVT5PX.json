@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Fremantle",
+      "osm_id": 11346296
+    },
+    "locality": {
+      "distance_m": 2620,
+      "name": "Fremantle",
+      "osm_id": 32519002,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 870,
       "name": "South Beach Dog Beach"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

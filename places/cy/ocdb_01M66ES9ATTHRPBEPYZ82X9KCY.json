@@ -4,10 +4,22 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "Moyhu",
+      "osm_id": 1684487480,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Byrne Street"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

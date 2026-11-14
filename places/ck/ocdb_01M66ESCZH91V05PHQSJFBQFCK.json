@@ -3,12 +3,24 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 6630,
+      "name": "Coominya",
+      "osm_id": 300021976,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 610
     }
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

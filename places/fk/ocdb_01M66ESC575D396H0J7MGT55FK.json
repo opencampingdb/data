@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "hot_water": false
+    "hot_water": false,
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 6210,
+      "name": "Peak Crossing",
+      "osm_id": 1653846284,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESC575D396H0J7MGT55FK",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

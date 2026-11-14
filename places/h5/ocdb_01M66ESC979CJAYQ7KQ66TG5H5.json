@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "power": "osm",
     "showers": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": false,
     "drinking_water": false,
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 9870,
+      "name": "Corowa",
+      "osm_id": 3118349777,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 900
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

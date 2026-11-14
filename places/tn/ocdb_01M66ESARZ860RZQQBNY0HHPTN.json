@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "toilet_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Exmouth",
+      "osm_id": 11689997
+    },
+    "locality": {
+      "distance_m": 21140,
+      "name": "Exmouth",
+      "osm_id": 302954813,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3240,
       "name": "South T-Bone Bay"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

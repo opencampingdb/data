@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "35",
       "postcode": "3803",
       "street": "Westpool Drive"
+    },
+    "lga": {
+      "name": "City of Casey",
+      "osm_id": 3333276
+    },
+    "locality": {
+      "distance_m": 15060,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "website": "https://fourbyfitouts.com.au/"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

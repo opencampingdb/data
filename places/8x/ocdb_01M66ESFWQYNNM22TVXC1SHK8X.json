@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -13,6 +15,16 @@
       "suburb": "Beaconsfield Upper"
     },
     "entry": "private",
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 13320,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
+    },
     "operator": "Scouts Victorian",
     "website": "https://www.dbpark.com.au/"
   },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 14210,
+      "name": "Columboola",
+      "osm_id": 5246890365,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9YK75N36R04D60XWJXB",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

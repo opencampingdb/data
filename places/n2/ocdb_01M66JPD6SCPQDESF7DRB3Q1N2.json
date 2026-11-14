@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Jamestown"
     },
     "facebook": "https://www.facebook.com/p/Jamestown-Meat-Service-100083984751843/",
+    "lga": {
+      "name": "Northern Areas Council",
+      "osm_id": 9108167
+    },
+    "locality": {
+      "distance_m": 70,
+      "name": "Jamestown",
+      "osm_id": 2124751978,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Ayr Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

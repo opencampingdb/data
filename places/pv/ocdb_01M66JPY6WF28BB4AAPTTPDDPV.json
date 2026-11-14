@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "VIC",
       "street": "Wood Street",
       "suburb": "California Gully"
+    },
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 3610,
+      "name": "Bendigo",
+      "osm_id": 30917754,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 200,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

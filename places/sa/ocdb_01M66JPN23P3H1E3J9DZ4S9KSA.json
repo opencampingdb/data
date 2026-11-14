@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 600,
+      "name": "Bowning",
+      "osm_id": 99621023,
+      "type": "village"
+    },
     "phone": "+61 2 6227 6103"
   },
   "group": "services",
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

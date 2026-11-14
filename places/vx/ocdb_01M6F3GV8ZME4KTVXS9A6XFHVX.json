@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "postcode": "2820",
       "street": "Lee Street",
       "suburb": "Wellington"
+    },
+    "lga": {
+      "name": "Dubbo Regional Council",
+      "osm_id": 6268489
+    },
+    "locality": {
+      "distance_m": 660,
+      "name": "Montefiores",
+      "osm_id": 2660957086,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

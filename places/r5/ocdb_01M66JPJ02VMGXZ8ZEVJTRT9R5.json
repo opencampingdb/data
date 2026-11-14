@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Moree Plains Shire Council",
+      "osm_id": 6088821
+    },
+    "locality": {
+      "distance_m": 460,
+      "name": "Gurley",
+      "osm_id": 93702883,
+      "type": "village"
+    },
     "opening_hours": "24/7",
     "water_type": "tank_fill"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

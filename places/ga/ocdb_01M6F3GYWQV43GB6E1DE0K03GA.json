@@ -4,10 +4,22 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of West Wimmera",
+      "osm_id": 3345520
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Apsley",
+      "osm_id": 1746178869,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Wimmera Highway"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

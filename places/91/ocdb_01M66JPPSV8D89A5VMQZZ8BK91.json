@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_91"
-    ]
+    ],
+    "lga": {
+      "name": "Cowra Shire Council",
+      "osm_id": 6257796
+    },
+    "locality": {
+      "distance_m": 690,
+      "name": "Wyangala Village",
+      "osm_id": 2841692073,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPPSV8D89A5VMQZZ8BK91",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

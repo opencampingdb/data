@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 10250,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 740,
       "name": "Miaboolya Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Bathurst Regional Council",
+      "osm_id": 6330866
+    },
+    "locality": {
+      "distance_m": 5830,
+      "name": "Vittoria",
+      "osm_id": 113749879,
+      "type": "village"
+    },
     "operator": "Forestry Corporation of NSW",
     "toilets": true,
     "website": "https://www.forestrycorporation.com.au/visit/forests/vittoria-state-forest"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

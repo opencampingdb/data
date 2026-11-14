@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "QLD",
       "street": "Coolberry Court",
       "suburb": "Rainbow Beach"
+    },
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 930,
+      "name": "Rainbow Beach",
+      "osm_id": 68561227,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 1310
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

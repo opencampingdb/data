@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 6720,
+      "name": "Yanderra",
+      "osm_id": 3053673728,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESF1ZNGN1Y6KBX9KR9Y6N",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

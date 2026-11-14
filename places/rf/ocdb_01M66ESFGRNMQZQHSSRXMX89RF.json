@@ -3,6 +3,8 @@
     "bbq": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -12,6 +14,16 @@
     "bbq": true,
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 18630,
+      "name": "Kurmond",
+      "osm_id": 117051118,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

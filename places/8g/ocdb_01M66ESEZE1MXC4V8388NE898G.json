@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "WA",
       "street": "Hopkins Street",
       "suburb": "Lancelin"
+    },
+    "lga": {
+      "name": "Shire of Gingin",
+      "osm_id": 11689578
+    },
+    "locality": {
+      "distance_m": 370,
+      "name": "Lancelin",
+      "osm_id": 53690494,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 130
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

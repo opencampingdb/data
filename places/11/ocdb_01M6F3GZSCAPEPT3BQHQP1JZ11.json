@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "2880",
       "street": "Rakow Street",
       "suburb": "Broken Hill"
+    },
+    "lga": {
+      "name": "Broken Hill City Council",
+      "osm_id": 5892296
+    },
+    "locality": {
+      "distance_m": 1270,
+      "name": "Broken Hill",
+      "osm_id": 113763535,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

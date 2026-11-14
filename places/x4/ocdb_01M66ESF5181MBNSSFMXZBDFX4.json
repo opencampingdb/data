@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -14,6 +16,16 @@
     },
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Clare and Gilbert Valleys Council",
+      "osm_id": 9108116
+    },
+    "locality": {
+      "distance_m": 2920,
+      "name": "Sevenhill",
+      "osm_id": 1923683744,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Horrocks Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

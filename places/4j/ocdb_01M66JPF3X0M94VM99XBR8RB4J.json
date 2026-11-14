@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -17,6 +19,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Armadale",
+      "osm_id": 11689426
+    },
+    "locality": {
+      "distance_m": 6310,
+      "name": "Kelmscott",
+      "osm_id": 181304750,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brookton Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

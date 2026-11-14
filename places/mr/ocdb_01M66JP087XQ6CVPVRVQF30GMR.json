@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Brooms Head",
+      "osm_id": 114202725,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 220,
       "name": "Main Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

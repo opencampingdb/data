@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "street": "Boranup Drive"
     },
     "fee": true,
+    "lga": {
+      "name": "Shire of Augusta Margaret River",
+      "osm_id": 11688657
+    },
+    "locality": {
+      "distance_m": 3910,
+      "name": "Karridale",
+      "osm_id": 187130200,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 3050,
       "name": "Boranup Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

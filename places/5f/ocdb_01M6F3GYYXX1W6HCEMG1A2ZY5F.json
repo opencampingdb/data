@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "207",
       "street": "Vlamingh Way"
+    },
+    "lga": {
+      "name": "City of Cockburn",
+      "osm_id": 11689175
+    },
+    "locality": {
+      "distance_m": 3140,
+      "name": "Rottnest Island",
+      "osm_id": 14161483464,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 20
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

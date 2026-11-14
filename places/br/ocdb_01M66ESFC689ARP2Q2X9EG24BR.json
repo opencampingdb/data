@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Rural City of Mildura",
+      "osm_id": 3345519
+    },
+    "locality": {
+      "distance_m": 5540,
+      "name": "Cardross",
+      "osm_id": 5319734801,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFC689ARP2Q2X9EG24BR",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

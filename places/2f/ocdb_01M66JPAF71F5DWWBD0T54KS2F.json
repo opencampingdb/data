@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
+    "locality": {
+      "distance_m": 1070,
+      "name": "Broome",
+      "osm_id": 53919243,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 1310,
       "name": "Cable Beach"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 180,
+      "name": "Port MacDonnell",
+      "osm_id": 1114962053,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2660,
       "name": "Shelly Beach"
@@ -16,7 +28,7 @@
       "name": "Port MacDonnell Boat Ramp"
     },
     "nearest_major_road": {
-      "distance_m": 230,
+      "distance_m": 240,
       "name": "Standish Street"
     }
   },
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

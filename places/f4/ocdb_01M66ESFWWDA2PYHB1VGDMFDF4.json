@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Cockburn",
+      "osm_id": 11689175
+    },
+    "locality": {
+      "distance_m": 9290,
+      "name": "Fremantle",
+      "osm_id": 32519002,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 40,
       "name": "Dogs Beach"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

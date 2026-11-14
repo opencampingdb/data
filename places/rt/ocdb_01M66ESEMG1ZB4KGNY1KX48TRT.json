@@ -3,6 +3,8 @@
     "campfires": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,6 +14,16 @@
     "campfires": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 5490,
+      "name": "Leeville",
+      "osm_id": 114611362,
+      "type": "village"
+    },
     "pets": "leashed",
     "showers": true,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

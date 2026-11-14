@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Ballina Shire Council",
+      "osm_id": 6168644
+    },
+    "locality": {
+      "distance_m": 1530,
+      "name": "Ballina",
+      "osm_id": 25989580,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 390
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

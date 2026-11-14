@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "5-7",
       "street": "Smith Street"
+    },
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Warragul",
+      "osm_id": 55199092,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

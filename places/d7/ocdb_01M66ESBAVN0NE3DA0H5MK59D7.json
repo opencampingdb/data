@@ -8,6 +8,8 @@
     "drinking_water": "osm",
     "dump_station": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed",
     "operator": "osm"
@@ -16,6 +18,16 @@
     "drinking_water": false,
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 410,
+      "name": "Wilmington",
+      "osm_id": 2576451052,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Horrocks Highway"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

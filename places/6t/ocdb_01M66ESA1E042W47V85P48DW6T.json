@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
     "caravans": true,
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Longreach Regional",
+      "osm_id": 11676693
+    },
+    "locality": {
+      "distance_m": 22380,
+      "name": "Longreach",
+      "osm_id": 90130799,
+      "type": "town"
+    },
     "max_stay": "20h",
     "nearest_major_road": {
       "distance_m": 150,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

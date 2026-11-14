@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Wollondilly Shire Council",
+      "osm_id": 6287823
+    },
+    "locality": {
+      "distance_m": 5500,
+      "name": "Appin",
+      "osm_id": 113235104,
+      "type": "town"
+    },
     "operator": "Cataract Scout Camp",
     "showers": true,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

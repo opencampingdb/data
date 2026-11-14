@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -9,6 +11,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Shire of Murchison",
+      "osm_id": 11690199
+    },
+    "locality": {
+      "distance_m": 180,
+      "name": "Murchison",
+      "osm_id": 316908273,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Carnarvon Mullewa Road"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

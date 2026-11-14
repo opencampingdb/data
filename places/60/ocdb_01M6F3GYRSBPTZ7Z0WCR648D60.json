@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
     "website": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "email": "maria.island@parks.tas.gov.au",
+    "lga": {
+      "name": "Glamorgan-Spring Bay",
+      "osm_id": 10621831
+    },
+    "locality": {
+      "distance_m": 15200,
+      "name": "Triabunna",
+      "osm_id": 329965854,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 260
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

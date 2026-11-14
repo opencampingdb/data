@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "hot_water": true,
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 14210,
+      "name": "Deepwater",
+      "osm_id": 2022643013,
+      "type": "village"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

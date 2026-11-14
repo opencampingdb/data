@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "33",
       "street": "Woodiwiss Avenue"
+    },
+    "lga": {
+      "name": "Cobar Shire Council",
+      "osm_id": 6083910
+    },
+    "locality": {
+      "distance_m": 1320,
+      "name": "Cobar",
+      "osm_id": 113468291,
+      "type": "town"
     },
     "operator": "NSW Health",
     "website": "https://www.nsw.gov.au/departments-and-agencies/wnswlhd/service-directory/cobar-health-service"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

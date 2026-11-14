@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "NSW",
       "street": "James Street",
       "suburb": "Mogo"
+    },
+    "lga": {
+      "name": "Eurobodalla Shire Council",
+      "osm_id": 6239661
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Mogo",
+      "osm_id": 159081004,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 4450
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

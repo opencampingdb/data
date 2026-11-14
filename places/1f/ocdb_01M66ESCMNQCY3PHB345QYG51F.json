@@ -4,6 +4,8 @@
     "email": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -18,6 +20,16 @@
     "email": "coburnhotel@coburnhotel.com",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Pastoral Unincorporated Area",
+      "osm_id": 6804541
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Cockburn",
+      "osm_id": 1550038625,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Waite Terrace"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "street": "Barossa Valley Way",
       "suburb": "Tanunda"
+    },
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 1280,
+      "name": "Tanunda",
+      "osm_id": 193757622,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 150,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

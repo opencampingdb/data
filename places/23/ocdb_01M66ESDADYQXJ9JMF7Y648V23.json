@@ -3,6 +3,8 @@
     "address": "osm",
     "booking_required": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "tents": "osm"
   },
@@ -13,6 +15,16 @@
     },
     "booking_required": false,
     "caravans": true,
+    "lga": {
+      "name": "Cook Shire",
+      "osm_id": 11677441
+    },
+    "locality": {
+      "distance_m": 15870,
+      "name": "Cooktown",
+      "osm_id": 248103256,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 170
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

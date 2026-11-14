@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Torres Shire",
+      "osm_id": 11677474
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Thursday Island",
+      "osm_id": 4064455693,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3290
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

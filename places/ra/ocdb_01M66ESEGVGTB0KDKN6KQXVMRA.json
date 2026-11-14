@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "drinking_water": true,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Douglas Shire",
+      "osm_id": 11677495
+    },
+    "locality": {
+      "distance_m": 180,
+      "name": "Daintree Village",
+      "osm_id": 286457390,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 480
     },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

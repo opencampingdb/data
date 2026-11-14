@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Central Coast",
+      "osm_id": 10590161
+    },
+    "locality": {
+      "distance_m": 9650,
+      "name": "Sprent",
+      "osm_id": 2823811661,
+      "type": "village"
+    },
     "operator": "Wings Wildlife Park",
     "power": false,
     "website": "https://www.wingswildlifepark.com.au/camping-and-powered-sites"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

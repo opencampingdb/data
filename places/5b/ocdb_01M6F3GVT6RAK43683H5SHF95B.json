@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": false,
     "entry": "public",
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 33110,
+      "name": "Septimus",
+      "osm_id": 1665764062,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Peak Downs Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

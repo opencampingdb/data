@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 34870,
+      "name": "Gordon Brook",
+      "osm_id": 114203415,
+      "type": "village"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "tents": true,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

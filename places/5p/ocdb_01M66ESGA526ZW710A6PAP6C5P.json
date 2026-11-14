@@ -4,6 +4,8 @@
     "cabins": "osm",
     "dump_station": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "cabins": true,
     "dump_station": true,
     "email": "stay@mgccp.com.au",
+    "lga": {
+      "name": "City of Mount Gambier",
+      "osm_id": 3395909
+    },
+    "locality": {
+      "distance_m": 100,
+      "name": "Mount Gambier",
+      "osm_id": 59609477,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Bay Road"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "O'Callaghan Street",
       "suburb": "Irvinebank"
+    },
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Irvinebank",
+      "osm_id": 1402185166,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 110,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

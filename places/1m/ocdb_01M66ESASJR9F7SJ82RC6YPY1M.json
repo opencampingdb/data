@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 16220,
+      "name": "Rylstone",
+      "osm_id": 3337380133,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2890,
       "name": "Main Launch - available with 25%"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

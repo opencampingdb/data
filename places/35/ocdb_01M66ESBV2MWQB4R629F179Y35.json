@@ -2,6 +2,7 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm"
@@ -9,6 +10,12 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "locality": {
+      "distance_m": 610,
+      "name": "Bermagui",
+      "osm_id": 40919257,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 80,
       "name": "Python Cove"
@@ -34,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

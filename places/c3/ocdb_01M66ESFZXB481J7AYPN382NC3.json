@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Shire of Murray",
+      "osm_id": 11690485
+    },
+    "locality": {
+      "distance_m": 3890,
+      "name": "Dwellingup",
+      "osm_id": 83353490,
+      "type": "town"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://bookings.visitmandurah.com/marrinup-townsite-camping-grounds"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

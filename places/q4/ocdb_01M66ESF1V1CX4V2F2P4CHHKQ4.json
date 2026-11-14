@@ -5,12 +5,24 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "pets": "community_report"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 2130,
+      "name": "Ball Bay",
+      "osm_id": 2454846885,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 20,
       "name": "Smalleys Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "osm"
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Dean Street",
       "suburb": "North Tamworth"
+    },
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 1910,
+      "name": "Tamworth",
+      "osm_id": 114638747,
+      "type": "city"
     },
     "opening_hours": "24/7",
     "operator": "NSW Health",
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

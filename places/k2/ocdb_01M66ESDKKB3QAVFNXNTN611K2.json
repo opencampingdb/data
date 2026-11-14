@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
     "nearest_beach": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
     "nearest_beach": {
       "distance_m": 2460
     },
@@ -27,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

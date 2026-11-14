@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -17,6 +19,16 @@
       "suburb": "Onslow"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
+    "locality": {
+      "distance_m": 1730,
+      "name": "Onslow",
+      "osm_id": 1983393436,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 350,
       "name": "Sunrise Beach"
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

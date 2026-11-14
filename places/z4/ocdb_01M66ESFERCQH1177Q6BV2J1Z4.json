@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 24270,
+      "name": "Kookaburra",
+      "osm_id": 115070927,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFERCQH1177Q6BV2J1Z4",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

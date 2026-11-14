@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -12,6 +14,16 @@
       "postcode": "2428",
       "street": "Boomerang Drive",
       "suburb": "Blueys Beach"
+    },
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 440,
+      "name": "Blueys Beach",
+      "osm_id": 114993489,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 260,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

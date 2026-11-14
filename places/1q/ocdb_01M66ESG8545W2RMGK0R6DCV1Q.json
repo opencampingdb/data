@@ -14,6 +14,8 @@
     "email": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "contributed",
@@ -28,6 +30,16 @@
     "email": "srvc@environment.nsw.gov.au",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 4740,
+      "name": "Perisher Valley",
+      "osm_id": 113373467,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Alpine Way"
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

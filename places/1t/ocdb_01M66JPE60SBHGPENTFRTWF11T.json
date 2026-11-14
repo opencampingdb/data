@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Moira",
+      "osm_id": 3365119
+    },
+    "locality": {
+      "distance_m": 950,
+      "name": "Bundalong",
+      "osm_id": 1684545501,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 430
     }
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

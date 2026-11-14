@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "hot_water": true,
+    "lga": {
+      "name": "Goondiwindi Regional",
+      "osm_id": 11674848
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Talwood",
+      "osm_id": 1966525701,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 440,
       "name": "Talwood Boonanga Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

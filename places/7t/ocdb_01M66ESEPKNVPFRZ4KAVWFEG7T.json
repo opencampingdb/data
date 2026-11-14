@@ -7,6 +7,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nudist": "osm",
     "power": "osm",
@@ -23,6 +25,16 @@
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Towong",
+      "osm_id": 3361220
+    },
+    "locality": {
+      "distance_m": 450,
+      "name": "Bethanga",
+      "osm_id": 1718694928,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4260
     },
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

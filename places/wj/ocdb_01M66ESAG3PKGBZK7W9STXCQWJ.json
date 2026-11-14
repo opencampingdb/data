@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "dump_station": false,
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 16780,
+      "name": "Lindenow",
+      "osm_id": 2174282817,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "wheelchair": false
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

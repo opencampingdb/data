@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Dowerin",
+      "osm_id": 11689797
+    },
+    "locality": {
+      "distance_m": 15950,
+      "name": "Dowerin",
+      "osm_id": 2428936154,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESA1T4XCZXTRM2S6X6J28",
   "kind": "rest_area",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

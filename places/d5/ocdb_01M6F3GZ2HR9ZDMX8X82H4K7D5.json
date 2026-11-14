@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "15-17",
       "street": "Main Street"
+    },
+    "lga": {
+      "name": "Kempsey Shire Council",
+      "osm_id": 6178731
+    },
+    "locality": {
+      "distance_m": 16880,
+      "name": "Bellbrook",
+      "osm_id": 115070062,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

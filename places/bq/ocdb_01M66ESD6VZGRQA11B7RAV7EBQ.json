@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Livingstone Shire",
+      "osm_id": 11677520
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Marlborough",
+      "osm_id": 3095346050,
+      "type": "town"
+    },
     "showers": true,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

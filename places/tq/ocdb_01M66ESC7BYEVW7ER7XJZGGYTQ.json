@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": true,
     "entry": "public",
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 6100,
+      "name": "Pechey",
+      "osm_id": 1824107708,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Esk Hampton Road"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

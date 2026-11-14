@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "postcode": "2875",
       "street": "Mulgutherie Road",
       "suburb": "Ootha"
+    },
+    "lga": {
+      "name": "Forbes Shire Council",
+      "osm_id": 6413174
+    },
+    "locality": {
+      "distance_m": 3310,
+      "name": "Ootha",
+      "osm_id": 1959944177,
+      "type": "village"
     },
     "website": "http://www.utesinthepaddock.com.au"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

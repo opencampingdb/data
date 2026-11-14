@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Serpentine-Jarrahdale",
+      "osm_id": 11689420
+    },
+    "locality": {
+      "distance_m": 830,
+      "name": "Jarrahdale",
+      "osm_id": 179844169,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Jarrahdale Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

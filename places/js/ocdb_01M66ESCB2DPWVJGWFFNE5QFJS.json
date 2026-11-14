@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 13230,
+      "name": "Tumbarumba",
+      "osm_id": 161087101,
+      "type": "town"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

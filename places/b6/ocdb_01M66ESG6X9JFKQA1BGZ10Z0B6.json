@@ -3,6 +3,8 @@
     "bins": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,6 +17,16 @@
     "bins": false,
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Denmark",
+      "osm_id": 11690414
+    },
+    "locality": {
+      "distance_m": 10510,
+      "name": "Denmark",
+      "osm_id": 201357070,
+      "type": "town"
+    },
     "operator": "DPAW",
     "showers": false,
     "tents": true,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

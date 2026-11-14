@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "124",
       "postcode": "4310",
       "street": "Boonah - Rathdowney Road"
+    },
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 860,
+      "name": "Boonah",
+      "osm_id": 222499640,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

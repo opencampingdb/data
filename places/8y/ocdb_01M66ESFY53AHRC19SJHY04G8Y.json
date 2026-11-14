@@ -29,6 +29,8 @@
     "fee": "osm",
     "fishing": "feedback",
     "generators": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "feedback",
     "nearest_boat_ramp": "osm",
     "offroad_tracks": "feedback",
@@ -52,6 +54,16 @@
     "fee": true,
     "fishing": true,
     "generators": true,
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 20020,
+      "name": "Coral Bay",
+      "osm_id": 1139924440,
+      "type": "town"
+    },
     "max_stay": "28d",
     "nearest_boat_ramp": {
       "distance_m": 440
@@ -83,5 +95,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

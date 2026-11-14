@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "4",
       "street": "Glenwood Boulevard"
+    },
+    "lga": {
+      "name": "City of Wodonga",
+      "osm_id": 3365492
+    },
+    "locality": {
+      "distance_m": 1080,
+      "name": "Baranduda",
+      "osm_id": 247128968,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 40
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

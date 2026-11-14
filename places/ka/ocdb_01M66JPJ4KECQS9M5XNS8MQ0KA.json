@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Mundaring",
+      "osm_id": 11689676
+    },
+    "locality": {
+      "distance_m": 14550,
+      "name": "Mount Helena",
+      "osm_id": 1493309476,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPJ4KECQS9M5XNS8MQ0KA",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

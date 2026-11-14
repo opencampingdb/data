@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "The District Council of Lower Eyre Peninsula",
+      "osm_id": 9110112
+    },
+    "locality": {
+      "distance_m": 4570,
+      "name": "Wangary",
+      "osm_id": 2716036885,
+      "type": "village"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

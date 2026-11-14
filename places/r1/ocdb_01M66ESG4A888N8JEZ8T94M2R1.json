@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Cunderdin",
+      "osm_id": 11689533
+    },
+    "locality": {
+      "distance_m": 3580,
+      "name": "Cunderdin",
+      "osm_id": 709424004,
+      "type": "town"
+    },
     "operator": "Gliding Club of Western Australia",
     "tents": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "campfires": "osm",
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -14,6 +16,16 @@
     "campfires": false,
     "charge": "$20/night/vehicle",
     "fee": true,
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 620,
+      "name": "Elmhurst",
+      "osm_id": 2469854292,
+      "type": "village"
+    },
     "power": true,
     "showers": true,
     "toilets": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

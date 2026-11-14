@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 2300,
+      "name": "Peregian Beach",
+      "osm_id": 2968379124,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 810
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm",
     "toilet_type": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Surf Coast Shire",
+      "osm_id": 3290432
+    },
+    "locality": {
+      "distance_m": 10160,
+      "name": "Aireys Inlet",
+      "osm_id": 177799376,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "tents": true,
     "toilet_type": "pit",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

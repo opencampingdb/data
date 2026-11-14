@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "7-11",
       "street": "Alfred Terrace"
+    },
+    "lga": {
+      "name": "The District Council of Streaky Bay",
+      "osm_id": 7109329
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Streaky Bay",
+      "osm_id": 847533335,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 890
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

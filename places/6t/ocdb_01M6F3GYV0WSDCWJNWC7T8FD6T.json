@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Coorong District Council",
+      "osm_id": 7062764
+    },
+    "locality": {
+      "distance_m": 2650,
+      "name": "Narrung",
+      "osm_id": 2665856833,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M6F3GYV0WSDCWJNWC7T8FD6T",
   "kind": "heritage",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

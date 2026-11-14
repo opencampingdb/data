@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm"
@@ -13,6 +15,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "Rural City of Horsham",
+      "osm_id": 3359337
+    },
+    "locality": {
+      "distance_m": 6950,
+      "name": "Dadswells Bridge",
+      "osm_id": 595501874,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Western Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

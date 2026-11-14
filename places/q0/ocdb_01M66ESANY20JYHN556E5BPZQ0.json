@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "private",
+    "lga": {
+      "name": "Central Highlands Regional",
+      "osm_id": 11676571
+    },
+    "locality": {
+      "distance_m": 23580,
+      "name": "Blackwater",
+      "osm_id": 2875983029,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 60
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

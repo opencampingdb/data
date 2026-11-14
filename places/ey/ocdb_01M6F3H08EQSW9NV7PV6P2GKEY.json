@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "booking_required": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "booking_required": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 7140,
+      "name": "Springbrook",
+      "osm_id": 4316622215,
+      "type": "village"
+    },
     "phone": "+61 7 5533 3622",
     "website": "https://www.binnaburralodge.com.au/accommodation/tiny-wild-houses/",
     "wheelchair": false,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

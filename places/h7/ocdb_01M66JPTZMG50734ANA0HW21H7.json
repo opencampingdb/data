@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -12,6 +14,16 @@
       "e10",
       "lpg"
     ],
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 11610,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Old Windsor Road"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

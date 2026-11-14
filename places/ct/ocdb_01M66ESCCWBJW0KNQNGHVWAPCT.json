@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -19,6 +21,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 1000,
+      "name": "Cecil Plains",
+      "osm_id": 298323293,
+      "type": "town"
+    },
     "max_stay": "72h",
     "nearest_major_road": {
       "distance_m": 80,
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

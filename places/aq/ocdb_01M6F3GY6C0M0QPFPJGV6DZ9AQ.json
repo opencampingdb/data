@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "NSW",
       "street": "Market Street",
       "suburb": "Mudgee"
+    },
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 1030,
+      "name": "Mudgee",
+      "osm_id": 114608650,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

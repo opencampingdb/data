@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "6256",
       "street": "Press Road",
       "suburb": "Glenlynn"
+    },
+    "lga": {
+      "name": "Shire of Bridgetown-Greenbushes",
+      "osm_id": 11688847
+    },
+    "locality": {
+      "distance_m": 4930,
+      "name": "Bridgetown",
+      "osm_id": 141769111,
+      "type": "town"
     },
     "phone": "+61 8 9761 2246",
     "website": "https://www.glenlynncottages.com.au/"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

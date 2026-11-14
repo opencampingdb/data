@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Mingenew",
+      "osm_id": 11689744
+    },
+    "locality": {
+      "distance_m": 28130,
+      "name": "Mingenew",
+      "osm_id": 316616405,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFYM5H8G8A0NPC56NZ0Y",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

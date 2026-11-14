@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "18",
       "street": "Piggot drive"
+    },
+    "lga": {
+      "name": "Shire of Harvey",
+      "osm_id": 11690516
+    },
+    "locality": {
+      "distance_m": 7170,
+      "name": "Burekup",
+      "osm_id": 1792665646,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 3020
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

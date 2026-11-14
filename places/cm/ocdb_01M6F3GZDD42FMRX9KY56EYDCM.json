@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
@@ -16,6 +18,16 @@
       "suburb": "Glen Innes"
     },
     "facebook": "https://www.facebook.com/newenglandmotorlodge/",
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Glen Innes",
+      "osm_id": 59848698,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Ferguson Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

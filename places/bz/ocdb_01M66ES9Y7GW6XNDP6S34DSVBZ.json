@@ -10,6 +10,8 @@
     "drinking_water": "community_report",
     "fee": "osm",
     "kitchen": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "community_report",
     "power": "community_report",
     "showers": "community_report",
@@ -19,6 +21,16 @@
     "drinking_water": false,
     "fee": false,
     "kitchen": false,
+    "lga": {
+      "name": "Mount Isa City",
+      "osm_id": 11677400
+    },
+    "locality": {
+      "distance_m": 860,
+      "name": "Camooweal",
+      "osm_id": 310203338,
+      "type": "village"
+    },
     "pets": "yes",
     "power": false,
     "showers": false,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

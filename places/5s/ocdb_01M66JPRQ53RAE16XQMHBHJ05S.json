@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "415",
       "street": "Harman's Mill Road",
       "suburb": "Metricup"
+    },
+    "lga": {
+      "name": "City of Busselton",
+      "osm_id": 11688682
+    },
+    "locality": {
+      "distance_m": 6190,
+      "name": "Cowaramup",
+      "osm_id": 1857977959,
+      "type": "town"
     },
     "phone": "+61 8 9755 6555",
     "website": "https://chocolatefactory.com.au/"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

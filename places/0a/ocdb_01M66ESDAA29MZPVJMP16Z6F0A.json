@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "street": "Gibbons Lane"
     },
     "caravans": true,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 8640,
+      "name": "Mareeba",
+      "osm_id": 245382244,
+      "type": "town"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

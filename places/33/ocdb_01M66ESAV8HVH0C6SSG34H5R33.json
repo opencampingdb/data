@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "City of Port Adelaide Enfield",
+      "osm_id": 9108064
+    },
+    "locality": {
+      "distance_m": 8730,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Sir Ross Smith Boulevard"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

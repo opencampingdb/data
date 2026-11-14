@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "showers": "osm",
@@ -14,6 +16,16 @@
       "suburb": "Wog Wog"
     },
     "fee": false,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 17600,
+      "name": "Nerriga",
+      "osm_id": 113708385,
+      "type": "village"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 4423 2170",
     "showers": false,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

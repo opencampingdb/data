@@ -1,11 +1,23 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 4810,
+      "name": "Redcliffe",
+      "osm_id": 268549131,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 10,
       "name": "Clontarf Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Walcha Council",
+      "osm_id": 6180603
+    },
+    "locality": {
+      "distance_m": 42140,
+      "name": "Walcha",
+      "osm_id": 113723969,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESD16WBE5QMGSG7D302ZD",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

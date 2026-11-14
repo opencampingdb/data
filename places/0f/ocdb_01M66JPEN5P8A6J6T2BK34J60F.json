@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "air": true,
+    "lga": {
+      "name": "City of Swan",
+      "osm_id": 11689336
+    },
+    "locality": {
+      "distance_m": 12060,
+      "name": "Bullsbrook",
+      "osm_id": 1468350410,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "The Broadway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "1",
       "street": "Gabyon-Tardie Road"
+    },
+    "lga": {
+      "name": "Shire of Yalgoo",
+      "osm_id": 11690064
+    },
+    "locality": {
+      "distance_m": 34990,
+      "name": "Yalgoo",
+      "osm_id": 304964737,
+      "type": "village"
     },
     "phone": "+61 8 9963 7993",
     "website": "http://www.gabyon.com.au/"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

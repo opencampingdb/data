@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -11,6 +13,16 @@
     },
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Melbourne",
+      "osm_id": 2404870
+    },
+    "locality": {
+      "distance_m": 3680,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

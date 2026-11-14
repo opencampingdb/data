@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Murrumbidgee Council",
+      "osm_id": 6231900
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Jerilderie",
+      "osm_id": 113664189,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9XFA9K5G2DMC6TEPBW5",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

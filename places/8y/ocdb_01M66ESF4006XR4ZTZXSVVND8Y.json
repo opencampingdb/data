@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "3",
       "street": "Loop Road"
+    },
+    "lga": {
+      "name": "Shire of South Gippsland",
+      "osm_id": 3335917
+    },
+    "locality": {
+      "distance_m": 1000,
+      "name": "Walkerville",
+      "osm_id": 1281426391,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 40,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

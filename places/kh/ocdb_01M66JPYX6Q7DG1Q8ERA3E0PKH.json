@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "1369",
       "street": "Wanneroo Road"
+    },
+    "lga": {
+      "name": "City of Wanneroo",
+      "osm_id": 11689642
+    },
+    "locality": {
+      "distance_m": 2810,
+      "name": "Joondalup",
+      "osm_id": 5705053184,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

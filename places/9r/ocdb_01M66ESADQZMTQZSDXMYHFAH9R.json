@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 11110,
+      "name": "Bundanoon",
+      "osm_id": 113237603,
+      "type": "town"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

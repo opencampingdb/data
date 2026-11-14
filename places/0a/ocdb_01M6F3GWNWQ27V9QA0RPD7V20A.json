@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Peach Tree Road"
+    },
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 3610,
+      "name": "Medlow Bath",
+      "osm_id": 117041024,
+      "type": "village"
     },
     "website": "https://www.visitnsw.com/destinations/blue-mountains/katoomba-area/megalong-valley/accommodation/megalong-valley-holiday-cabins"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

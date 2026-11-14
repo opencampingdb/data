@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "City of Albany",
+      "osm_id": 11690341
+    },
+    "locality": {
+      "distance_m": 16040,
+      "name": "Manypeaks",
+      "osm_id": 2680325209,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "website": "https://exploreparks.dbca.wa.gov.au/site/waychinicup-inlet-camping-area"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

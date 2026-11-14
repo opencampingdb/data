@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "info@esperancestonehenge.com.au",
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
+    "locality": {
+      "distance_m": 14830,
+      "name": "Esperance",
+      "osm_id": 1918583620,
+      "type": "town"
+    },
     "website": "https://esperancestonehenge.com.au/"
   },
   "group": "attraction",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

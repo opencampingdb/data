@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm"
@@ -15,6 +17,16 @@
     "fuels": [
       "diesel"
     ],
+    "lga": {
+      "name": "Litchfield Municipality",
+      "osm_id": 9045375
+    },
+    "locality": {
+      "distance_m": 7310,
+      "name": "Livingstone",
+      "osm_id": 3785008493,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Cox Peninsula Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

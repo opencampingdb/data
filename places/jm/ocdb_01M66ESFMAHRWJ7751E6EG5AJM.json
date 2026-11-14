@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "osm",
     "power": "osm",
@@ -14,6 +16,16 @@
       "street": "Princes Highway"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 620,
+      "name": "Tabourie Lake",
+      "osm_id": 113135446,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 220,
       "name": "Wairo Beach"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

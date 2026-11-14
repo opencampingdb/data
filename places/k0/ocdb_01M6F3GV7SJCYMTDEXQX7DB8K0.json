@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm"
   },
   "facts": {
     "address": {
@@ -8,6 +9,10 @@
       "state": "NSW",
       "street": "Nowendoc Road",
       "suburb": "Nowendoc"
+    },
+    "lga": {
+      "name": "Walcha Council",
+      "osm_id": 6180603
     }
   },
   "group": "overnight",
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

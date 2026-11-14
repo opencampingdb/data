@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
     "drinking_water": false,
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 20210,
+      "name": "Rylstone",
+      "osm_id": 3337380133,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Bylong Valley Way"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

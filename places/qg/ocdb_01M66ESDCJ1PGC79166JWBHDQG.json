@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
@@ -10,6 +12,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 400,
+      "name": "Goomeri",
+      "osm_id": 1884215396,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Moore Street"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

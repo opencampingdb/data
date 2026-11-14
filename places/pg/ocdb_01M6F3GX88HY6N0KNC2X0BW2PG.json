@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Naracoorte Lucindale Council",
+      "osm_id": 6711653
+    },
+    "locality": {
+      "distance_m": 10810,
+      "name": "Naracoorte",
+      "osm_id": 634962919,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GX88HY6N0KNC2X0BW2PG",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

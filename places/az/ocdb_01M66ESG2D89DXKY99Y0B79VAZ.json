@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -22,6 +24,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Dungog Shire Council",
+      "osm_id": 6185449
+    },
+    "locality": {
+      "distance_m": 1630,
+      "name": "East Gresford",
+      "osm_id": 114370884,
+      "type": "village"
+    },
     "phone": "+61 407 389 420",
     "power": true,
     "showers": true,
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

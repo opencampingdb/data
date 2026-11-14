@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "adblue"
     ],
+    "lga": {
+      "name": "Balonne Shire",
+      "osm_id": 11674851
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Dirranbandi",
+      "osm_id": 1766040437,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Castlereagh Highway"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

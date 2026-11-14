@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 24290,
+      "name": "Upper Horton",
+      "osm_id": 111352220,
+      "type": "town"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,7 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +10,10 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Paroo Shire",
+      "osm_id": 11674869
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Balonne Highway"
@@ -32,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

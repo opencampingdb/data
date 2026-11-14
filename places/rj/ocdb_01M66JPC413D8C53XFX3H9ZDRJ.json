@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Charters Towers Regional",
+      "osm_id": 11676769
+    },
+    "locality": {
+      "distance_m": 28700,
+      "name": "Charters Towers",
+      "osm_id": 1974780324,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPC413D8C53XFX3H9ZDRJ",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

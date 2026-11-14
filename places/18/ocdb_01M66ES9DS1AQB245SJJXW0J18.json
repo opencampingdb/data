@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Yarra Ranges",
+      "osm_id": 3333996
+    },
+    "locality": {
+      "distance_m": 20050,
+      "name": "Warburton",
+      "osm_id": 30863907,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9DS1AQB245SJJXW0J18",
   "kind": "campground",
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T21:13:04Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

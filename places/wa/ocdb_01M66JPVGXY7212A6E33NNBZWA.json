@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fuel": true,
+    "lga": {
+      "name": "Town of Port Hedland",
+      "osm_id": 11690043
+    },
+    "locality": {
+      "distance_m": 2880,
+      "name": "Port Hedland",
+      "osm_id": 44776448,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 460
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "North Burnett Regional",
+      "osm_id": 11676093
+    },
+    "locality": {
+      "distance_m": 1150,
+      "name": "Gayndah",
+      "osm_id": 246283163,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1780
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

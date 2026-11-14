@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
       "postcode": "3685",
       "street": "Murray Valley Highway",
       "suburb": "Brimin"
+    },
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 10590,
+      "name": "Bundalong",
+      "osm_id": 1684545501,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

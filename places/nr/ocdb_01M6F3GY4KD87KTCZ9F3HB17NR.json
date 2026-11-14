@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Commercial Street",
       "suburb": "Walla Walla"
+    },
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 420,
+      "name": "Walla Walla",
+      "osm_id": 2120573397,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Myrtleford",
+      "osm_id": 2884764953,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Myrtle Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

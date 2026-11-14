@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -13,6 +15,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 6120,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "North West Coastal Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

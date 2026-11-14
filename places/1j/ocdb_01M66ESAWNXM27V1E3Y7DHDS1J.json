@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 240,
+      "name": "Childers",
+      "osm_id": 244870327,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Churchill Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -15,6 +17,16 @@
     "fuels": [
       "diesel"
     ],
+    "lga": {
+      "name": "Wattle Range Council",
+      "osm_id": 3795329
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Glencoe",
+      "osm_id": 2716428341,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Glencoe Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

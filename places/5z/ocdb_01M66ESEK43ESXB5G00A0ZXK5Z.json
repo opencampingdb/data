@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Hope Vale Aboriginal Shire",
+      "osm_id": 11677364
+    },
+    "locality": {
+      "distance_m": 33570,
+      "name": "Lizard Island Research Station",
+      "osm_id": 10795310874,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 3780,
       "name": "Elim (W)"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

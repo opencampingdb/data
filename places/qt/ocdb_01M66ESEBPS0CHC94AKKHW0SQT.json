@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +12,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "City of Whitehorse",
+      "osm_id": 2406273
+    },
+    "locality": {
+      "distance_m": 16180,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

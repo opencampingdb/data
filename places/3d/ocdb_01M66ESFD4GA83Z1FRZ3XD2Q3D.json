@@ -6,6 +6,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "power": "osm",
     "showers": "osm",
@@ -19,6 +21,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Tweed Shire Council",
+      "osm_id": 6170302
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Tyalgum",
+      "osm_id": 1573432792,
+      "type": "village"
+    },
     "motorbikes": true,
     "power": true,
     "showers": true,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

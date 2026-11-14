@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Old Coast Road",
       "suburb": "Myalup",
       "unit": "Lot 14"
+    },
+    "lga": {
+      "name": "Shire of Harvey",
+      "osm_id": 11690516
+    },
+    "locality": {
+      "distance_m": 8400,
+      "name": "Myalup",
+      "osm_id": 42126759,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

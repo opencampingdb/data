@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -11,6 +13,16 @@
       "postcode": "4816",
       "street": "Allendale Drive",
       "suburb": "Alligator Creek"
+    },
+    "lga": {
+      "name": "Townsville City",
+      "osm_id": 11676862
+    },
+    "locality": {
+      "distance_m": 17790,
+      "name": "Townsville",
+      "osm_id": 31446304,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

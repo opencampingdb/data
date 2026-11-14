@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3685",
       "street": "Murray Valley Highway",
       "suburb": "Rutherglen"
+    },
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 8610,
+      "name": "Howlong",
+      "osm_id": 3017407073,
+      "type": "village"
     },
     "website": "https://www.olivehills.com.au/"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

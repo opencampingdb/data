@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -15,6 +17,16 @@
     "charge": "Shop Patronage",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 22250,
+      "name": "Rappville",
+      "osm_id": 114611435,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Summerland Way"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -16,6 +18,16 @@
     "charge": "Donation box",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Cowra Shire Council",
+      "osm_id": 6257796
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Gooloogong",
+      "osm_id": 2290330495,
+      "type": "village"
+    },
     "max_stay": "3d",
     "nearest_major_road": {
       "distance_m": 70,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

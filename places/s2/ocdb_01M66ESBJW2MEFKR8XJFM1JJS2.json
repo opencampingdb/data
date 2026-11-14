@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "permit",
+    "lga": {
+      "name": "Redland City",
+      "osm_id": 11677885
+    },
+    "locality": {
+      "distance_m": 4590,
+      "name": "Mount Cotton",
+      "osm_id": 6036336569,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 300
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

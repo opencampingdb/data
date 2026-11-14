@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Dalby",
+      "osm_id": 21292397,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Drayton Street"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

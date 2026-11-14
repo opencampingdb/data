@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "51",
       "street": "Collingwood Street"
+    },
+    "lga": {
+      "name": "Coffs Harbour City Council",
+      "osm_id": 6165983
+    },
+    "locality": {
+      "distance_m": 2390,
+      "name": "Coffs Harbour",
+      "osm_id": 25976250,
+      "type": "city"
     },
     "nearest_beach": {
       "distance_m": 300,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

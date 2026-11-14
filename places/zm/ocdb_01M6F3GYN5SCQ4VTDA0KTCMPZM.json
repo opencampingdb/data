@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "13",
       "street": "The Avenue"
+    },
+    "lga": {
+      "name": "Mount Buller Alpine Resort",
+      "osm_id": 16918862
+    },
+    "locality": {
+      "distance_m": 9240,
+      "name": "Sawmill Settlement",
+      "osm_id": 910283354,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 130,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

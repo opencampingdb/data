@@ -8,6 +8,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nudist": "osm",
@@ -31,6 +33,16 @@
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 2070,
+      "name": "Smiths Lake",
+      "osm_id": 114994527,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 770,
       "name": "Sandbar Beach"
@@ -63,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

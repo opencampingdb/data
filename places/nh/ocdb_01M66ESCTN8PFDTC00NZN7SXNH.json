@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Northern Areas Council",
+      "osm_id": 9108167
+    },
+    "locality": {
+      "distance_m": 290,
+      "name": "Spalding",
+      "osm_id": 1847925488,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "RM Williams Way"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

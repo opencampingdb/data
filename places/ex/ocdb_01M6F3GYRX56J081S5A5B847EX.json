@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -15,6 +17,16 @@
       "street": "Don Street"
     },
     "email": "bookings@castlemotorlodge.com.au",
+    "lga": {
+      "name": "Whitsunday Regional",
+      "osm_id": 11676670
+    },
+    "locality": {
+      "distance_m": 1250,
+      "name": "Bowen",
+      "osm_id": 1875557671,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1600,
       "name": "Quay St"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

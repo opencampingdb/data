@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "private",
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 4640,
+      "name": "Mona Vale",
+      "osm_id": 117078564,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1090
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

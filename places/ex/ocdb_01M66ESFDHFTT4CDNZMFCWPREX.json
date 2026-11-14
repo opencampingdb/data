@@ -5,6 +5,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "street": "Spring Creek Road"
     },
     "fee": true,
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 7440,
+      "name": "Killarney",
+      "osm_id": 21386961,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Spring Creek Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

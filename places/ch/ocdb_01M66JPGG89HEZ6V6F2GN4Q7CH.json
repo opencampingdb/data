@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/Koala-Roadhouse-113530493729877/",
+    "lga": {
+      "name": "Whitsunday Regional",
+      "osm_id": 11676670
+    },
+    "locality": {
+      "distance_m": 70,
+      "name": "Mount Coolon",
+      "osm_id": 2307045979,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Suttor Developmental Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

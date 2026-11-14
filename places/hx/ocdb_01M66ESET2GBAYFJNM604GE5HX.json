@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "motorbikes": "osm",
     "nearest_boat_ramp": "osm",
@@ -22,6 +24,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 850,
+      "name": "Theodore",
+      "osm_id": 1789817510,
+      "type": "village"
+    },
     "max_stay": "7d",
     "motorbikes": true,
     "nearest_boat_ramp": {
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

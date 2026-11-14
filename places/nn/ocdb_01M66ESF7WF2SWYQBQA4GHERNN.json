@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 7640,
+      "name": "Springbrook",
+      "osm_id": 4316622215,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Binna Burra Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

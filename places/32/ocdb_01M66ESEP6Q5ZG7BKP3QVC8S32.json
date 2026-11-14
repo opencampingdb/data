@@ -6,6 +6,8 @@
     "dump_station": "osm",
     "fee": "osm",
     "fishing": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
     "showers": "osm",
@@ -19,6 +21,16 @@
     "dump_station": false,
     "fee": false,
     "fishing": true,
+    "lga": {
+      "name": "Cloncurry Shire",
+      "osm_id": 11677395
+    },
+    "locality": {
+      "distance_m": 30830,
+      "name": "Mount Isa",
+      "osm_id": 247812099,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 110
     },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

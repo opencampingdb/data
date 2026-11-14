@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Karratha",
+      "osm_id": 11690037
+    },
+    "locality": {
+      "distance_m": 1170,
+      "name": "Karratha",
+      "osm_id": 3887250742,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2850
     }
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

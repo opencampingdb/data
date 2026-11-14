@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -17,6 +19,16 @@
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Shire of Hepburn",
+      "osm_id": 3327844
+    },
+    "locality": {
+      "distance_m": 120,
+      "name": "Clunes",
+      "osm_id": 301990792,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bailey Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "VIC",
       "street": "Stephenson Road",
       "suburb": "Nicholson"
+    },
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 10080,
+      "name": "Bruthen",
+      "osm_id": 1955941091,
+      "type": "village"
     },
     "power": true,
     "website": "https://lakesbushland.com.au/"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

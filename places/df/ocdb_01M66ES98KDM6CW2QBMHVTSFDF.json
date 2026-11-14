@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Shire of Southern Grampians",
+      "osm_id": 3349959
+    },
+    "locality": {
+      "distance_m": 27110,
+      "name": "Cavendish",
+      "osm_id": 124407460,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "tents": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -6,6 +6,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "power": "osm",
@@ -20,6 +22,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Shire of West Wimmera",
+      "osm_id": 3345520
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Harrow",
+      "osm_id": 671083534,
+      "type": "village"
+    },
     "operator": "Johnny Mullagh Committee",
     "phone": "+61 455 881 210",
     "power": true,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

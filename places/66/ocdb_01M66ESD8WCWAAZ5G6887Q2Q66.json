@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "state": "NSW",
       "street": "The Anchorage"
+    },
+    "lga": {
+      "name": "Eurobodalla Shire Council",
+      "osm_id": 6239661
+    },
+    "locality": {
+      "distance_m": 1180,
+      "name": "Moruya Heads",
+      "osm_id": 6042482229,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 2280,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

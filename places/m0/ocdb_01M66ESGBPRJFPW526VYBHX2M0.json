@@ -4,10 +4,22 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Shire of Gannawarra",
+      "osm_id": 3363585
+    },
+    "locality": {
+      "distance_m": 390,
+      "name": "Murrabit",
+      "osm_id": 1781016992,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 370,
       "name": "Gonn Avenue"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

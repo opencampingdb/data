@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 6170,
+      "name": "Pampas",
+      "osm_id": 5591681780,
+      "type": "village"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPZHJRV71B2R95NCTMJZW",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Maranup"
     },
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Bridgetown-Greenbushes",
+      "osm_id": 11688847
+    },
+    "locality": {
+      "distance_m": 10260,
+      "name": "Greenbushes",
+      "osm_id": 1195032483,
+      "type": "town"
+    },
     "phone": "+61 448 600 190",
     "toilets": true,
     "website": "https://www.maranupford.com.au/"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -20,6 +22,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Rural City of Horsham",
+      "osm_id": 3359337
+    },
+    "locality": {
+      "distance_m": 450,
+      "name": "Horsham",
+      "osm_id": 124415146,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1520,
       "name": "Rowing Club Pontoon (Main)"
@@ -44,11 +56,11 @@
   "name": "Shell",
   "osm": {
     "id": 409618183,
-    "timestamp": "2026-10-31T01:20:28Z",
+    "timestamp": "2026-11-12T22:21:19Z",
     "type": "way",
-    "version": 10
+    "version": 11
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

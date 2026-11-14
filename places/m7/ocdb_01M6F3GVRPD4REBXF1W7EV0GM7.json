@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "Main Street",
       "suburb": "Waratah"
+    },
+    "lga": {
+      "name": "Waratah-Wynyard",
+      "osm_id": 10593034
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Waratah",
+      "osm_id": 418727256,
+      "type": "town"
     },
     "website": "https://www.bischoffhotel.com.au/",
     "wifi": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

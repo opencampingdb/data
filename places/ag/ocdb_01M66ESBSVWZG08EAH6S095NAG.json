@@ -2,11 +2,23 @@
   "fact_sources": {
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Burdekin Shire",
+      "osm_id": 11677016
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Home Hill",
+      "osm_id": 2138810432,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Eighth Avenue"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

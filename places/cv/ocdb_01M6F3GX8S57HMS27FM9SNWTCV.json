@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Burdekin Shire",
+      "osm_id": 11677016
+    },
+    "locality": {
+      "distance_m": 940,
+      "name": "Ayr",
+      "osm_id": 2137434822,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Queen Street"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

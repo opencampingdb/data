@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
   },
@@ -13,6 +15,16 @@
     },
     "entry": "private",
     "fee": false,
+    "lga": {
+      "name": "City of Manningham",
+      "osm_id": 2405038
+    },
+    "locality": {
+      "distance_m": 10710,
+      "name": "Yarra Glen",
+      "osm_id": 263675075,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 480,
       "name": "Wittons Reserve Canoe Launch"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

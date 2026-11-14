@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "hot_water": false
+    "hot_water": false,
+    "lga": {
+      "name": "Gwydir Shire Council",
+      "osm_id": 6260771
+    },
+    "locality": {
+      "distance_m": 7070,
+      "name": "Warialda",
+      "osm_id": 114384970,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCHECANWC3FZHB4E5JZ6",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

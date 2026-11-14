@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Coonamble Shire Council",
+      "osm_id": 7145506
+    },
+    "locality": {
+      "distance_m": 20070,
+      "name": "Tooraweenah",
+      "osm_id": 2997428966,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEG2P77BZY2FPKNVZ0E2",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

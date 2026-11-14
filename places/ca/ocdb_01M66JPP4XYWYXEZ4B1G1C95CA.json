@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "King Street",
       "suburb": "Bungendore"
+    },
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 940,
+      "name": "Bungendore",
+      "osm_id": 32270619,
+      "type": "town"
     },
     "opening_hours": "Mo-Fr 08:00-17:00",
     "phone": "+61 2 6238 0056"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

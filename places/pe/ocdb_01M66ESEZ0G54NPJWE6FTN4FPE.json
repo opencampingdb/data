@@ -5,11 +5,23 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Chapman Valley",
+      "osm_id": 11689924
+    },
+    "locality": {
+      "distance_m": 23050,
+      "name": "Horrocks",
+      "osm_id": 3402767808,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 50
     }
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

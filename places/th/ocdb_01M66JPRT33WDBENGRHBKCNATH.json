@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -22,6 +24,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "Surf Coast Shire",
+      "osm_id": 3290432
+    },
+    "locality": {
+      "distance_m": 560,
+      "name": "Torquay",
+      "osm_id": 2615845781,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 860,
       "name": "Front Beach"
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

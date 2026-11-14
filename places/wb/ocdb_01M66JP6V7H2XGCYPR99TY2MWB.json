@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
@@ -20,6 +22,16 @@
       "e10",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Eurobodalla Shire Council",
+      "osm_id": 6239661
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Mogo",
+      "osm_id": 159081004,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4630
     },
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

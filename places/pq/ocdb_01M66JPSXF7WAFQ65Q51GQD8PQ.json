@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "1098",
       "postcode": "6503",
       "street": "Military Road"
+    },
+    "lga": {
+      "name": "Shire of Gingin",
+      "osm_id": 11689578
+    },
+    "locality": {
+      "distance_m": 14080,
+      "name": "Seatrees Estate",
+      "osm_id": 1447839842,
+      "type": "village"
     },
     "opening_hours": "Tu-Th 10:00-16:00; Fr-Su 10:00-19:30"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

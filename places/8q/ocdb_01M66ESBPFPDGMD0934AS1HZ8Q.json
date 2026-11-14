@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Kumari Avenue"
+    },
+    "lga": {
+      "name": "City of Darebin",
+      "osm_id": 2404379
+    },
+    "locality": {
+      "distance_m": 10560,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "opening_hours": "Mo-Su 08:00-15:30",
     "website": "https://www.darebin.vic.gov.au/Darebin-Living/RubbishRecyclingandCleaning/Resource-Recovery-Centre-Tip"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

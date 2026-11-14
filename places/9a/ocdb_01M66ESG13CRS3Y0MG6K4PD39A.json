@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
     "operator": "osm",
     "wifi": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
     "operator": "DPAW",
     "wifi": false
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

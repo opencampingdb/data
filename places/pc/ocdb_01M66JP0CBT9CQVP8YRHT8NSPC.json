@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 2350,
+      "name": "Casino",
+      "osm_id": 114611174,
+      "type": "town"
+    },
     "opening_hours": "24/7"
   },
   "group": "attraction",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

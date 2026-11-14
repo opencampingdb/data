@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Temora Shire Council",
+      "osm_id": 6252224
+    },
+    "locality": {
+      "distance_m": 14000,
+      "name": "Temora",
+      "osm_id": 5705013950,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Goldfields Way"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

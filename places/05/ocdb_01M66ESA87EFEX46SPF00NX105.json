@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 2590,
+      "name": "Warwick",
+      "osm_id": 1817489924,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Bracker Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

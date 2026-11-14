@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -19,6 +21,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 17500,
+      "name": "Nymboida",
+      "osm_id": 129243089,
+      "type": "village"
+    },
     "operator": "Clarence Valley Council",
     "showers": false,
     "toilets": true,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

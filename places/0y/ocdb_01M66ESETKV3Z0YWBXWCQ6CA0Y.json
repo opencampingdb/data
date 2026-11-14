@@ -4,6 +4,8 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -11,6 +13,16 @@
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 1140,
+      "name": "Mount Beauty",
+      "osm_id": 2385074315,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 930,
       "name": "Pebble Beach"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

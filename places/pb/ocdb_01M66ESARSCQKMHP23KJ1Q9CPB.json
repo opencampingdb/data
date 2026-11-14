@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +12,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 38500,
+      "name": "Gordon Brook",
+      "osm_id": 114203415,
+      "type": "village"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

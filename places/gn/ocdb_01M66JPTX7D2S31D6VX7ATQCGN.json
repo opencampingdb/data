@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "51-53",
       "street": "Ogilvie Street"
+    },
+    "lga": {
+      "name": "Muswellbrook Shire Council",
+      "osm_id": 6343182
+    },
+    "locality": {
+      "distance_m": 330,
+      "name": "Denman",
+      "osm_id": 114607591,
+      "type": "village"
     },
     "operator": "NSW Health",
     "phone": "+61 2 6547 3999"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

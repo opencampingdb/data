@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
       "postcode": "5276",
       "street": "Smillie Street",
       "suburb": "Robe"
+    },
+    "lga": {
+      "name": "District Council of Robe",
+      "osm_id": 6738647
+    },
+    "locality": {
+      "distance_m": 660,
+      "name": "Robe",
+      "osm_id": 427927382,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 210,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 11420,
+      "name": "Donovans",
+      "osm_id": 598512905,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Eight Mile Creek Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

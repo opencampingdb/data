@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
     "booking_required": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Tenterfield Shire Council",
+      "osm_id": 6163155
+    },
+    "locality": {
+      "distance_m": 22900,
+      "name": "Liston",
+      "osm_id": 114632737,
+      "type": "village"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "tents": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

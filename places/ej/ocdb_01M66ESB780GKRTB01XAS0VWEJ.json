@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 7150,
+      "name": "Wyong",
+      "osm_id": 116980985,
+      "type": "town"
+    },
     "showers": false,
     "tents": true,
     "toilets": false
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

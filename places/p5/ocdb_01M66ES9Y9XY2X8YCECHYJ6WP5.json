@@ -11,6 +11,8 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "nudist": "osm",
     "phone": "osm",
@@ -33,6 +35,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 760,
+      "name": "Canungra",
+      "osm_id": 589409513,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Lamington National Park Road"
@@ -62,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

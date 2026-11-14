@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Barkly Region",
+      "osm_id": 8878329
+    },
+    "locality": {
+      "distance_m": 26090,
+      "name": "Mungkarta",
+      "osm_id": 3273370101,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Stuart Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

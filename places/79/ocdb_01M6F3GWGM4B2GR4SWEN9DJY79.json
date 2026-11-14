@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Bublacowie Road"
     },
     "email": "bublacowie@aussiebb.com.au",
+    "lga": {
+      "name": "Yorke Peninsula Council",
+      "osm_id": 6673799
+    },
+    "locality": {
+      "distance_m": 10820,
+      "name": "Yorketown",
+      "osm_id": 1096005648,
+      "type": "town"
+    },
     "operator": "Chris Soar",
     "phone": "+61 419 853 294"
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -13,6 +15,16 @@
       "suburb": "Gelantipy"
     },
     "fuel": true,
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 31830,
+      "name": "Buchan",
+      "osm_id": 2018197599,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Gelantipy Road"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 12110,
+      "name": "Licola",
+      "osm_id": 151064574,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESADSDAQWWP4936X90E2S",
   "kind": "reserve_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

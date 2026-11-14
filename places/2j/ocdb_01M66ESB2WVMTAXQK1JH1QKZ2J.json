@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -25,6 +27,16 @@
     "drinking_water": false,
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 2890,
+      "name": "Richmond",
+      "osm_id": 81328631,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3200
     },
@@ -58,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

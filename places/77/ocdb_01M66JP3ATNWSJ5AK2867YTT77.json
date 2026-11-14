@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "101",
       "postcode": "4870",
       "street": "Brinsmead Road"
+    },
+    "lga": {
+      "name": "Cairns Regional",
+      "osm_id": 11677109
+    },
+    "locality": {
+      "distance_m": 6740,
+      "name": "Cairns",
+      "osm_id": 29405229,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 4920
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

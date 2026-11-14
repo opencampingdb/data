@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 620,
+      "name": "Bonny Hills",
+      "osm_id": 17025194,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 120
     },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

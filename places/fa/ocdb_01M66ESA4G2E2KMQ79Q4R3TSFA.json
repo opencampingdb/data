@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "laundry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": true,
     "laundry": true,
+    "lga": {
+      "name": "Waratah-Wynyard",
+      "osm_id": 10593034
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Waratah",
+      "osm_id": 418727256,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "William Street"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -8,6 +8,8 @@
     "caravans": "osm",
     "dump_station": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -21,6 +23,16 @@
     "caravans": false,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "City of Albany",
+      "osm_id": 11690341
+    },
+    "locality": {
+      "distance_m": 2060,
+      "name": "Kronkup",
+      "osm_id": 10560765726,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 590,
       "name": "Cosy Corner (West)"
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

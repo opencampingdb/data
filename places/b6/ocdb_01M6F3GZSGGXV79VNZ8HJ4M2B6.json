@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "2",
       "postcode": "6112",
       "street": "South Western Highway"
+    },
+    "lga": {
+      "name": "City of Armadale",
+      "osm_id": 11689426
+    },
+    "locality": {
+      "distance_m": 760,
+      "name": "Armadale",
+      "osm_id": 32566856,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 80,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm"
@@ -21,6 +23,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Port Adelaide Enfield",
+      "osm_id": 9108064
+    },
+    "locality": {
+      "distance_m": 6350,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "O G Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

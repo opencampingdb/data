@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -15,6 +17,16 @@
       "suburb": "Margaret River"
     },
     "entry": "public",
+    "lga": {
+      "name": "Shire of Augusta Margaret River",
+      "osm_id": 11688657
+    },
+    "locality": {
+      "distance_m": 550,
+      "name": "Margaret River",
+      "osm_id": 251285017,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Wallcliffe Road"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Lithgow City Council",
+      "osm_id": 6299566
+    },
+    "locality": {
+      "distance_m": 11980,
+      "name": "Medlow Bath",
+      "osm_id": 117041024,
+      "type": "village"
+    },
     "website": "https://sixfoottrackecolodge.com/",
     "wheelchair": false,
     "wifi": false
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 33170,
+      "name": "Adaminaby",
+      "osm_id": 113372218,
+      "type": "village"
+    },
     "operator": "NSW National Parks",
     "tents": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

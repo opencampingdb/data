@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "259",
       "street": "Princes Drive"
+    },
+    "lga": {
+      "name": "City of Latrobe",
+      "osm_id": 3355071
+    },
+    "locality": {
+      "distance_m": 550,
+      "name": "Morwell",
+      "osm_id": 55196068,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "City of Frankston",
+      "osm_id": 3333252
+    },
+    "locality": {
+      "distance_m": 15210,
+      "name": "Hastings",
+      "osm_id": 31617240,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3010
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

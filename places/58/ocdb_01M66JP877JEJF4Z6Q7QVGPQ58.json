@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "TAS",
       "street": "Valley Road",
       "suburb": "Sidmouth"
+    },
+    "lga": {
+      "name": "West Tamar",
+      "osm_id": 10585650
+    },
+    "locality": {
+      "distance_m": 5700,
+      "name": "Beaconsfield",
+      "osm_id": 2325088918,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 2320
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

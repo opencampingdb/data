@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
@@ -12,6 +14,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 1900,
+      "name": "Holbrook",
+      "osm_id": 113637646,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Hume Freeway Offramp"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

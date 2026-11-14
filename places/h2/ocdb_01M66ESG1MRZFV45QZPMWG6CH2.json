@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
     "tents": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Victoria Daly Region",
+      "osm_id": 5514633
+    },
+    "locality": {
+      "distance_m": 10160,
+      "name": "Daly River",
+      "osm_id": 3745334332,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2250,
       "name": "Daly River Boat Ramp"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

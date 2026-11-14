@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "hot_water": true,
+    "lga": {
+      "name": "Murweh Shire",
+      "osm_id": 11674879
+    },
+    "locality": {
+      "distance_m": 740,
+      "name": "Augathella",
+      "osm_id": 2284179400,
+      "type": "town"
+    },
     "opening_hours": "24/7",
     "wheelchair": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

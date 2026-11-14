@@ -7,6 +7,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -28,6 +30,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Inverell Shire Council",
+      "osm_id": 6195194
+    },
+    "locality": {
+      "distance_m": 670,
+      "name": "Inverell",
+      "osm_id": 1837347699,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Glen Innes Road"
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

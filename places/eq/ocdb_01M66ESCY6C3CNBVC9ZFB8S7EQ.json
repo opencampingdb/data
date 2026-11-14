@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fee": false,
-    "hot_water": false
+    "hot_water": false,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 6830,
+      "name": "Kuranda",
+      "osm_id": 2060753757,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESCY6C3CNBVC9ZFB8S7EQ",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

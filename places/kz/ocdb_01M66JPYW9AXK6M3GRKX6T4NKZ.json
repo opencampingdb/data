@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "85",
       "street": "Somerset Road",
       "unit": "2"
+    },
+    "lga": {
+      "name": "City of Hume",
+      "osm_id": 3327634
+    },
+    "locality": {
+      "distance_m": 15010,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "phone": "+61 3 9359 4515"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

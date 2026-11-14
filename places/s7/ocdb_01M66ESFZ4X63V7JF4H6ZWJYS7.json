@@ -6,6 +6,8 @@
   "fact_sources": {
     "caravans": "community_report",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -13,6 +15,16 @@
   "facts": {
     "caravans": "offroad",
     "fee": false,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 18980,
+      "name": "Termeil",
+      "osm_id": 113135793,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "website": "https://www.forestrycorporation.com.au/visit/forests/yadboro"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

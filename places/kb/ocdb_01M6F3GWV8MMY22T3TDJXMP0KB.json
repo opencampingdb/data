@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "660",
       "street": "Coragulac-Beeac Road"
+    },
+    "lga": {
+      "name": "Shire of Colac Otway",
+      "osm_id": 3291847
+    },
+    "locality": {
+      "distance_m": 5670,
+      "name": "Alvie",
+      "osm_id": 2151491931,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 10,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

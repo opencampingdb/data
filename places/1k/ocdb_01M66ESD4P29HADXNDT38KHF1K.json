@@ -7,12 +7,24 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
+    "locality": {
+      "distance_m": 21740,
+      "name": "Bidyadanga",
+      "osm_id": 1982778767,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Great Northern Highway"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

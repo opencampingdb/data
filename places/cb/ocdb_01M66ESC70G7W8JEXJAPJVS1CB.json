@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Northampton",
+      "osm_id": 11689854
+    },
+    "locality": {
+      "distance_m": 31750,
+      "name": "Kalbarri",
+      "osm_id": 292557802,
+      "type": "town"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

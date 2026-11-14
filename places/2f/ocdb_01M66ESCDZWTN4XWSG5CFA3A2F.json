@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -16,6 +18,16 @@
     },
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Tablelands Regional",
+      "osm_id": 11677293
+    },
+    "locality": {
+      "distance_m": 47380,
+      "name": "Mount Garnet",
+      "osm_id": 1402185162,
+      "type": "town"
+    },
     "phone": "+61 401 627 315",
     "power": true,
     "showers": true,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

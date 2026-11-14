@@ -2,12 +2,24 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm"
   },
   "facts": {
     "drinking_water": true,
     "fee": true,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 14550,
+      "name": "Adaminaby",
+      "osm_id": 113372218,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Snowy Mountains Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

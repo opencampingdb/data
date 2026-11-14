@@ -5,11 +5,23 @@
   },
   "fact_sources": {
     "campfires": "community_report",
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "campfires": true,
-    "fee": true
+    "fee": true,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 9300,
+      "name": "Mareeba",
+      "osm_id": 245382244,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9ZX1QJ1HVGB4E56CWJ3",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

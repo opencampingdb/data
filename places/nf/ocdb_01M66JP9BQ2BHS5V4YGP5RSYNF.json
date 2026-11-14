@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "City of Hume",
+      "osm_id": 3327634
+    },
+    "locality": {
+      "distance_m": 18670,
+      "name": "Wallan",
+      "osm_id": 25646189,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Grand Boulevard"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

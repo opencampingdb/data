@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 900,
+      "name": "Appila",
+      "osm_id": 1585601038,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE111SXKH0SNNNXKYKKR",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

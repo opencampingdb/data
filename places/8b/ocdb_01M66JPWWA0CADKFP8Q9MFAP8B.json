@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "street": "Mortimer Street",
       "suburb": "Kurralta Park",
       "unit": "41"
+    },
+    "lga": {
+      "name": "City of West Torrens",
+      "osm_id": 9106092
+    },
+    "locality": {
+      "distance_m": 4570,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 150
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

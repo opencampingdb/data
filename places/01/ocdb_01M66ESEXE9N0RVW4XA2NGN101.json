@@ -5,6 +5,7 @@
     "entry": "osm",
     "fee": "osm",
     "fuel": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -20,6 +21,10 @@
     "entry": "customers",
     "fee": true,
     "fuel": true,
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Stuart Highway"
@@ -55,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

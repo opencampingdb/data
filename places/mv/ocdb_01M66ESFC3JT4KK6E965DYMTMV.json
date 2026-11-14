@@ -5,12 +5,24 @@
   "fact_sources": {
     "fee": "community_report",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
     "fuel": true,
+    "lga": {
+      "name": "Rural City of Swan Hill",
+      "osm_id": 3345551
+    },
+    "locality": {
+      "distance_m": 400,
+      "name": "Boundary Bend",
+      "osm_id": 1615025574,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 220
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

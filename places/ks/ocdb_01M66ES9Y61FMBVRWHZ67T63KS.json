@@ -6,6 +6,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "phone_2": "osm",
@@ -24,6 +26,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Mid Murray Council",
+      "osm_id": 6811114
+    },
+    "locality": {
+      "distance_m": 8220,
+      "name": "Morgan",
+      "osm_id": 249339798,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1050
     },
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

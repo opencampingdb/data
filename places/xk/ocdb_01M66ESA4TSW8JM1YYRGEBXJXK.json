@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Central Coast",
+      "osm_id": 10590161
+    },
+    "locality": {
+      "distance_m": 9410,
+      "name": "Sprent",
+      "osm_id": 2823811661,
+      "type": "village"
+    },
     "operator": "Wings Wildlife Park",
     "power": true,
     "showers": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 6210,
+      "name": "Pampas",
+      "osm_id": 5591681780,
+      "type": "village"
+    },
     "max_stay": "72h",
     "nearest_boat_ramp": {
       "distance_m": 60
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

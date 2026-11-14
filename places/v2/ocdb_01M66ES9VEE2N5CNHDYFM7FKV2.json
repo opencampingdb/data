@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Mornington Peninsula",
+      "osm_id": 3333281
+    },
+    "locality": {
+      "distance_m": 3100,
+      "name": "Merricks",
+      "osm_id": 9304234290,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 220
     }
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

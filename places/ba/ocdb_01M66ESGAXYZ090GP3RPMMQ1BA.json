@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
     "booking_required": true,
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 24270,
+      "name": "Upper Horton",
+      "osm_id": 111352220,
+      "type": "town"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "tents": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

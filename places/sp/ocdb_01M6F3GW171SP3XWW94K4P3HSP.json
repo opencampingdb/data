@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -15,6 +17,16 @@
       "suburb": "Yeagarup"
     },
     "email": "discover@foragers.com.au",
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 4670,
+      "name": "Pemberton",
+      "osm_id": 82359265,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Pemberton-Northcliffe Road"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

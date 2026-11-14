@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
     "hot_water": true,
+    "lga": {
+      "name": "Moree Plains Shire Council",
+      "osm_id": 6088821
+    },
+    "locality": {
+      "distance_m": 460,
+      "name": "Gurley",
+      "osm_id": 93702883,
+      "type": "village"
+    },
     "toilet_type": "flush",
     "wheelchair": false
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

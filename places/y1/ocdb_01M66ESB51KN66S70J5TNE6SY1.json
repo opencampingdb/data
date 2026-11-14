@@ -4,6 +4,7 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
@@ -12,6 +13,10 @@
     "dump_station": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Ashburton",
+      "osm_id": 11690012
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Dales Road"
@@ -34,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

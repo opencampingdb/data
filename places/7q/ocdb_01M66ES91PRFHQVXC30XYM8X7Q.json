@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Kingston District Council",
+      "osm_id": 6738739
+    },
+    "locality": {
+      "distance_m": 18690,
+      "name": "Salt Creek",
+      "osm_id": 268437845,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1390
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

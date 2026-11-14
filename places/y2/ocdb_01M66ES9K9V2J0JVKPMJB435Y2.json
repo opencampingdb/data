@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Logan City",
+      "osm_id": 11675411
+    },
+    "locality": {
+      "distance_m": 12590,
+      "name": "North Maclean",
+      "osm_id": 150533298,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4350
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

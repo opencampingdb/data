@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3467",
       "street": "Redpath Road",
       "suburb": "Avoca"
+    },
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 2820,
+      "name": "Avoca",
+      "osm_id": 190049723,
+      "type": "town"
     },
     "website": "https://www.forestgateestatewinery.com.au/"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

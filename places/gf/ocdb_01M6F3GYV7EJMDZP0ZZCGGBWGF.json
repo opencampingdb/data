@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "3741",
       "street": "Great Alpine Road",
       "suburb": "Bright"
+    },
+    "lga": {
+      "name": "Alpine Shire",
+      "osm_id": 3361217
+    },
+    "locality": {
+      "distance_m": 1020,
+      "name": "Bright",
+      "osm_id": 34114869,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

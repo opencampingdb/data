@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Renmark Paringa Council",
+      "osm_id": 6704735
+    },
+    "locality": {
+      "distance_m": 6910,
+      "name": "Renmark",
+      "osm_id": 2074381068,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3690,
       "name": "Plush's Bend Boat Ramp"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

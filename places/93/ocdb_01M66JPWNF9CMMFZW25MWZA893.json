@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "3763",
       "street": "Glenburn - Eucalyptus Road",
       "suburb": "Kinglake"
+    },
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Kinglake",
+      "osm_id": 60568232,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 50,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

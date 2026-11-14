@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Northern Areas Council",
+      "osm_id": 9108167
+    },
+    "locality": {
+      "distance_m": 8720,
+      "name": "Jamestown",
+      "osm_id": 2124751978,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESABA20CE5K6STGQ8K3TA",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

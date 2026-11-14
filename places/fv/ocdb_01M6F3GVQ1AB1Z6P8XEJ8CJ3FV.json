@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
@@ -12,6 +14,16 @@
       "postcode": "2627",
       "street": "Wollondibby Road",
       "suburb": "Crackenback"
+    },
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 9380,
+      "name": "Jindabyne",
+      "osm_id": 321954666,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 170,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

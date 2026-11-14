@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "VIC",
       "street": "St. Huberts Road",
       "suburb": "Coldstream"
+    },
+    "lga": {
+      "name": "Shire of Yarra Ranges",
+      "osm_id": 3333996
+    },
+    "locality": {
+      "distance_m": 5110,
+      "name": "Yarra Glen",
+      "osm_id": 263675075,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 450,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

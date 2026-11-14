@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "182",
       "street": "Bathurst Road"
+    },
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Katoomba",
+      "osm_id": 20968413,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 80,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

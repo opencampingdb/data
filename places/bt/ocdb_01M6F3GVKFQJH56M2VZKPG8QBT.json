@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "16",
       "street": "Matthew Terrace",
       "suburb": "Caboolture"
+    },
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "Caboolture",
+      "osm_id": 2506724881,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

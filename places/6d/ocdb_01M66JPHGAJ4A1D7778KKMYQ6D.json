@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Dumbleyung",
+      "osm_id": 11688916
+    },
+    "locality": {
+      "distance_m": 10010,
+      "name": "Dumbleyung",
+      "osm_id": 243367640,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPHGAJ4A1D7778KKMYQ6D",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

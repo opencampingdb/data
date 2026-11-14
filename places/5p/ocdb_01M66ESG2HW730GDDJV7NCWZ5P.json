@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Macedon Ranges",
+      "osm_id": 3327683
+    },
+    "locality": {
+      "distance_m": 4460,
+      "name": "Macedon",
+      "osm_id": 1102900708,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Mount Macedon Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

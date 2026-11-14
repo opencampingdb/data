@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "entry": "customers",
     "hot_water": true,
+    "lga": {
+      "name": "Leeton Shire Council",
+      "osm_id": 6411154
+    },
+    "locality": {
+      "distance_m": 11190,
+      "name": "Stanbridge",
+      "osm_id": 3818172416,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1820
     }
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

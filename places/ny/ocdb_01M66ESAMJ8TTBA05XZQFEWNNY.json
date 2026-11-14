@@ -2,6 +2,8 @@
   "fact_sources": {
     "bbq": "osm",
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "bbq": false,
     "bins": false,
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 15010,
+      "name": "Rylstone",
+      "osm_id": 3337380133,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1930,
       "name": "Main Launch - available with 25%"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Uralla Shire Council",
+      "osm_id": 6260188
+    },
+    "locality": {
+      "distance_m": 23660,
+      "name": "Kingstown",
+      "osm_id": 114658066,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Thunderbolts Way"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

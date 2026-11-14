@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 2160,
+      "name": "Melrose",
+      "osm_id": 2272268803,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 440,
       "name": "Horrocks Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

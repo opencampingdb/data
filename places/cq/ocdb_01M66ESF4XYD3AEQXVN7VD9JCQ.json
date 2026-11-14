@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -25,6 +27,16 @@
     "dump_station": true,
     "email": "info@glenmack.com.au",
     "fee": true,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Kangaroo Valley",
+      "osm_id": 35081448,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Moss Vale Road"
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

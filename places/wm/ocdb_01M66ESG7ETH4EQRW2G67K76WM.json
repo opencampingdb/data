@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Hilltops Council",
+      "osm_id": 6256597
+    },
+    "locality": {
+      "distance_m": 410,
+      "name": "Jugiong",
+      "osm_id": 113641093,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Jugiong Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

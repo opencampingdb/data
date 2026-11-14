@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 4540,
+      "name": "Ulladulla",
+      "osm_id": 25863607,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 120,
       "name": "Burrill Beach"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

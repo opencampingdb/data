@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Cootamundra-Gundagai Regional Council",
+      "osm_id": 6247073
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Gundagai",
+      "osm_id": 30674102,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Nangus Road"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

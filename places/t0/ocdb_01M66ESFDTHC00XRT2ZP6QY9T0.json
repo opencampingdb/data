@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Lockyer Valley Regional",
+      "osm_id": 11675710
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Grantham",
+      "osm_id": 1602131510,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Gatton Helidon Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

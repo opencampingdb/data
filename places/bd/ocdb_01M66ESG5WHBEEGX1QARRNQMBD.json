@@ -4,6 +4,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "operator": "osm",
     "power": "osm",
@@ -16,6 +18,16 @@
     "caravans": true,
     "drinking_water": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Merredin",
+      "osm_id": 11689039
+    },
+    "locality": {
+      "distance_m": 1430,
+      "name": "Merredin",
+      "osm_id": 31065028,
+      "type": "town"
+    },
     "max_stay": "24h",
     "operator": "Shire of Merredin",
     "power": false,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

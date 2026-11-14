@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Camden Council",
+      "osm_id": 6290069
+    },
+    "locality": {
+      "distance_m": 960,
+      "name": "Camden",
+      "osm_id": 255468063,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Macarthur Road"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

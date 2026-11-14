@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -16,6 +18,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Booleroo Centre",
+      "osm_id": 1585601025,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Arthur Street"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

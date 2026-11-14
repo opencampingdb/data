@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -9,6 +10,12 @@
   "facts": {
     "address": {
       "street": "Granite Island Road"
+    },
+    "locality": {
+      "distance_m": 660,
+      "name": "Victor Harbor",
+      "osm_id": 249072879,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 210
@@ -35,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

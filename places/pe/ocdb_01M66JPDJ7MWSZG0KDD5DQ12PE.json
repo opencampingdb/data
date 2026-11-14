@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Inverell Shire Council",
+      "osm_id": 6195194
+    },
+    "locality": {
+      "distance_m": 17150,
+      "name": "Ashford",
+      "osm_id": 115055373,
+      "type": "town"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPDJ7MWSZG0KDD5DQ12PE",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

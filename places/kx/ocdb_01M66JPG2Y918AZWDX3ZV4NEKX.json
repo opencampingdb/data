@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -17,6 +19,16 @@
       "unleaded_91",
       "adblue"
     ],
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 260,
+      "name": "Booleroo Centre",
+      "osm_id": 1585601025,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Arthur Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

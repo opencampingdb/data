@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "80",
       "street": "Winchu Street"
+    },
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 610,
+      "name": "Quilpie",
+      "osm_id": 246024896,
+      "type": "town"
     },
     "opening_hours": "Mo-Fr 08:30-17:00; Sa 09:00-12:00",
     "phone": "+61 7 4656 2050"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

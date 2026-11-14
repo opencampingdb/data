@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "suburb": "Shepherds Flat"
     },
     "fee": true,
+    "lga": {
+      "name": "Shire of Hepburn",
+      "osm_id": 3327844
+    },
+    "locality": {
+      "distance_m": 8230,
+      "name": "Daylesford",
+      "osm_id": 60303319,
+      "type": "town"
+    },
     "website": "https://www.lavandula.com.au/"
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

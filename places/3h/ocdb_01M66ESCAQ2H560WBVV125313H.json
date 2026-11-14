@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Ellenborough",
+      "osm_id": 114382663,
+      "type": "village"
+    },
     "opening_hours": "24/7",
     "operator": "Port Macquarie Hastings Council"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

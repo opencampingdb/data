@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "state": "WA",
       "street": "Nanga Road"
+    },
+    "lga": {
+      "name": "Shire of Waroona",
+      "osm_id": 11690511
+    },
+    "locality": {
+      "distance_m": 10740,
+      "name": "Dwellingup",
+      "osm_id": 83353490,
+      "type": "town"
     },
     "operator": "Treetops Adventure",
     "website": "https://treetopsadventure.com.au/location/dwellingup/"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

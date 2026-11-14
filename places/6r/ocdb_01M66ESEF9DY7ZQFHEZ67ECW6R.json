@@ -7,11 +7,23 @@
   "fact_sources": {
     "caravans": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "website": "contributed"
   },
   "facts": {
     "caravans": "offroad",
     "fee": false,
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 7230,
+      "name": "Blackwood",
+      "osm_id": 2140871545,
+      "type": "village"
+    },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/wombat-lerderderg-national-park/where-to-stay/camping-in-wombat-lerderderg-national-park"
   },
   "group": "overnight",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

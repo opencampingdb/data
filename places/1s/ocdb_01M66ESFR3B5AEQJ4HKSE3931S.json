@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -14,6 +16,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Town of Katherine",
+      "osm_id": 9045373
+    },
+    "locality": {
+      "distance_m": 1200,
+      "name": "Rockhole",
+      "osm_id": 8881126036,
+      "type": "village"
+    },
     "tents": true,
     "website": "https://manbulloohomesteadcaravanpark.com.au/"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

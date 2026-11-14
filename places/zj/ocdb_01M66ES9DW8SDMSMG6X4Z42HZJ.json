@@ -7,6 +7,8 @@
     "charge": "osm",
     "drinking_water": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -15,6 +17,16 @@
     "charge": "20 AUD",
     "drinking_water": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Wyndham-East Kimberley",
+      "osm_id": 11690289
+    },
+    "locality": {
+      "distance_m": 40810,
+      "name": "Wyndham",
+      "osm_id": 30480029,
+      "type": "village"
+    },
     "showers": true,
     "tents": true
   },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

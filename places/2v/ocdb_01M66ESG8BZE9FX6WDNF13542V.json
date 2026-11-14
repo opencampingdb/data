@@ -4,6 +4,8 @@
     "campfires": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "osm",
     "nearest_boat_ramp": "osm",
     "pets": "osm",
@@ -16,6 +18,16 @@
     "campfires": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Cook Shire",
+      "osm_id": 11677441
+    },
+    "locality": {
+      "distance_m": 5630,
+      "name": "Marton",
+      "osm_id": 848386364,
+      "type": "village"
+    },
     "motorhomes": true,
     "nearest_boat_ramp": {
       "distance_m": 300
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Busselton",
+      "osm_id": 11688682
+    },
+    "locality": {
+      "distance_m": 9210,
+      "name": "Busselton",
+      "osm_id": 82448311,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 120,
       "name": "Abbey Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

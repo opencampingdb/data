@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "state": "NSW",
       "street": "Speewa Ferry Road",
       "suburb": "Speewa"
+    },
+    "lga": {
+      "name": "Murray River Council",
+      "osm_id": 6134295
+    },
+    "locality": {
+      "distance_m": 11420,
+      "name": "Koraleigh",
+      "osm_id": 3895987753,
+      "type": "village"
     },
     "operator": "Transport for NSW"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

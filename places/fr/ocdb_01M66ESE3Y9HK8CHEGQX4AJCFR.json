@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "drinking_water": false,
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 4260,
+      "name": "Eungella",
+      "osm_id": 1817627474,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE3Y9HK8CHEGQX4AJCFR",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

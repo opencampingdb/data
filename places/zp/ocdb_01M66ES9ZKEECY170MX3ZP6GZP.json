@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of East Pilbara",
+      "osm_id": 11690247
+    },
+    "locality": {
+      "distance_m": 2650,
+      "name": "Irrungadji",
+      "osm_id": 2031102658,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9ZKEECY170MX3ZP6GZP",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

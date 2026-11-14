@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "e10",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Bland Shire Council",
+      "osm_id": 6257747
+    },
+    "locality": {
+      "distance_m": 950,
+      "name": "Wyalong",
+      "osm_id": 2016091967,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Newell Highway"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

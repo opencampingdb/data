@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "895",
       "street": "Phillip Island Tourist Road"
+    },
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 1120,
+      "name": "Newhaven",
+      "osm_id": 251587230,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 560
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

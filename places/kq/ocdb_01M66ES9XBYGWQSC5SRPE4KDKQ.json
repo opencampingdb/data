@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -13,6 +15,16 @@
     "charge": "Caretaker visits",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Upper Hunter Shire Council",
+      "osm_id": 6186848
+    },
+    "locality": {
+      "distance_m": 160,
+      "name": "Moonan Flat",
+      "osm_id": 1003754272,
+      "type": "village"
+    },
     "showers": true,
     "tents": true,
     "toilets": true
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

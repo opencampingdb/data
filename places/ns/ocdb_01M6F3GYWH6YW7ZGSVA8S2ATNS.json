@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wifi": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "Lyell Highway",
       "suburb": "Ouse"
+    },
+    "lga": {
+      "name": "Central Highlands",
+      "osm_id": 10622305
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Ouse",
+      "osm_id": 2406700831,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Logan City",
+      "osm_id": 11675411
+    },
+    "locality": {
+      "distance_m": 10320,
+      "name": "Logan Village",
+      "osm_id": 206242925,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1270
     }
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

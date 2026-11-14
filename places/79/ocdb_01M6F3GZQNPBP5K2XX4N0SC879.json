@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Mid Murray Council",
+      "osm_id": 6811114
+    },
+    "locality": {
+      "distance_m": 8940,
+      "name": "Blanchetown",
+      "osm_id": 1982001612,
+      "type": "town"
+    },
     "phone": "+61 422 550 558",
     "wifi": true
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

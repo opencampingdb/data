@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 620,
+      "name": "Cordalba",
+      "osm_id": 2509392077,
+      "type": "village"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M6F3GYY01AVB1EDX5VQ0A5BE",
   "kind": "food_and_drink",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

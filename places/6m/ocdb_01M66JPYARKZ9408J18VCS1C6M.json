@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "64A",
       "street": "Cams Boulevard"
+    },
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 2740,
+      "name": "Sunshine",
+      "osm_id": 25940290,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 2660
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

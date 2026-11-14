@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -16,6 +18,16 @@
       "suburb": "Bracken Ridge"
     },
     "air": true,
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 5610,
+      "name": "Strathpine",
+      "osm_id": 273208196,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3350
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

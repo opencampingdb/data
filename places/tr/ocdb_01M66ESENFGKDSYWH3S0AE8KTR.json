@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Latrobe",
+      "osm_id": 3355071
+    },
+    "locality": {
+      "distance_m": 3250,
+      "name": "Churchill",
+      "osm_id": 59658742,
+      "type": "town"
+    },
     "website": "https://www.forestsandreserves.vic.gov.au/land-management/managing-crown-land/camping-on-licensed-crown-water-frontages/Billys-Creek-Churchill-Camping-Area-1"
   },
   "group": "overnight",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

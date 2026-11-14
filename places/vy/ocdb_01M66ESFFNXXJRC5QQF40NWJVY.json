@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "showers": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "private",
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 4540,
+      "name": "Redcliffe",
+      "osm_id": 268549131,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 4010
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

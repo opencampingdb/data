@@ -3,6 +3,8 @@
     "bins": "osm",
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "bins": true,
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 6900,
+      "name": "Yass",
+      "osm_id": 100842493,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hume Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

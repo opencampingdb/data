@@ -4,6 +4,8 @@
     "booking_required": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -23,6 +25,16 @@
     "booking_required": false,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 1310,
+      "name": "Ipswich",
+      "osm_id": 21477953,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2830,
       "name": "North Ipswich Boat Ramp"
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

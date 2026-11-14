@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Nambucca Valley Council",
+      "osm_id": 6165979
+    },
+    "locality": {
+      "distance_m": 8760,
+      "name": "Tamban",
+      "osm_id": 114655993,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP7WCEGWN0JJNCK0KY74A",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -14,6 +16,16 @@
     "entry": "public",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 20320,
+      "name": "Amby",
+      "osm_id": 902327108,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Warrego Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

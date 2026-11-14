@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Gladstone Regional",
+      "osm_id": 11676351
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Mount Larcom",
+      "osm_id": 1789411244,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30
     },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

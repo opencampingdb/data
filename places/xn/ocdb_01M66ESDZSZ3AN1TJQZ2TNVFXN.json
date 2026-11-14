@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "dump_station": false,
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Bowning",
+      "osm_id": 99621023,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Hume Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

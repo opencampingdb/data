@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "water_type": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": true,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 330,
+      "name": "Gwabegar",
+      "osm_id": 113697571,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Cypress Way"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

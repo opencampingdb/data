@@ -6,6 +6,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -20,6 +22,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "The District Council of Cleve",
+      "osm_id": 9108362
+    },
+    "locality": {
+      "distance_m": 430,
+      "name": "Cleve",
+      "osm_id": 2142639912,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Rudall Road"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

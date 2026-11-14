@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Dandaragan",
+      "osm_id": 11689595
+    },
+    "locality": {
+      "distance_m": 8500,
+      "name": "Grey",
+      "osm_id": 222635897,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESAPP9M51SMQCFS26695M",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

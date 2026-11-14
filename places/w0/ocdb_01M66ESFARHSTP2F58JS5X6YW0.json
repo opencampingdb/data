@@ -2,6 +2,8 @@
   "fact_sources": {
     "booking_required": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "booking_required": true,
     "fee": true,
+    "lga": {
+      "name": "Warrumbungle Shire Council",
+      "osm_id": 6268496
+    },
+    "locality": {
+      "distance_m": 29570,
+      "name": "Cassilis",
+      "osm_id": 115096530,
+      "type": "village"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
     "toilets": true,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

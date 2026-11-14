@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "street": "Ogilvie Street"
     },
     "facebook": "https://www.facebook.com/Royal-Hotel-Denman-NSW-1815149512122467/",
+    "lga": {
+      "name": "Muswellbrook Shire Council",
+      "osm_id": 6343182
+    },
+    "locality": {
+      "distance_m": 40,
+      "name": "Denman",
+      "osm_id": 114607591,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Crinoline Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

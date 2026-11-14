@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -16,6 +18,16 @@
       "state": "QLD",
       "street": "Davidson Street",
       "suburb": "Port Douglas"
+    },
+    "lga": {
+      "name": "Douglas Shire",
+      "osm_id": 11677495
+    },
+    "locality": {
+      "distance_m": 1240,
+      "name": "Port Douglas",
+      "osm_id": 1657106211,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 430,
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

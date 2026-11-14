@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Shire of West Arthur",
+      "osm_id": 11688868
+    },
+    "locality": {
+      "distance_m": 27370,
+      "name": "Darkan",
+      "osm_id": 164435140,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Albany Highway"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

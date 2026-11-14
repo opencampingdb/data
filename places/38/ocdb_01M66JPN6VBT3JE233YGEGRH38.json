@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "SA",
       "street": "Fourth Street",
       "suburb": "Morgan"
+    },
+    "lga": {
+      "name": "Mid Murray Council",
+      "osm_id": 6811114
+    },
+    "locality": {
+      "distance_m": 100,
+      "name": "Morgan",
+      "osm_id": 249339798,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 700,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

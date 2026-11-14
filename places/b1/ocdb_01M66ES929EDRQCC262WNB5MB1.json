@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -12,6 +14,16 @@
       "suburb": "Crows Nest"
     },
     "fee": true,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 5340,
+      "name": "Crows Nest",
+      "osm_id": 246272711,
+      "type": "town"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

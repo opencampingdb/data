@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 730,
+      "name": "Injune",
+      "osm_id": 423605433,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Carnarvon Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

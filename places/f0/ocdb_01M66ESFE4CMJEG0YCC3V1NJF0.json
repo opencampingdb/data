@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 8350,
+      "name": "Perisher Valley",
+      "osm_id": 113373467,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESFE4CMJEG0YCC3V1NJF0",
   "kind": "national_park_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

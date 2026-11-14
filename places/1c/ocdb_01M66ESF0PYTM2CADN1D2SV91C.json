@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "power": "osm",
@@ -10,6 +12,16 @@
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Yorke Peninsula Council",
+      "osm_id": 6673799
+    },
+    "locality": {
+      "distance_m": 17340,
+      "name": "Maitland",
+      "osm_id": 893482581,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 180,
       "name": "Balgowan Boat Ramp"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

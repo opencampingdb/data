@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "QLD",
       "street": "Tanawha Tourist Drive",
       "suburb": "Tanawha"
+    },
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 7630,
+      "name": "Eudlo",
+      "osm_id": 194066513,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

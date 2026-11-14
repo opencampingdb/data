@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Leeton Shire Council",
+      "osm_id": 6411154
+    },
+    "locality": {
+      "distance_m": 11910,
+      "name": "Stanbridge",
+      "osm_id": 3818172416,
+      "type": "village"
+    },
     "opening_hours": "sunrise-sunset",
     "toilet_type": "flush",
     "wheelchair": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

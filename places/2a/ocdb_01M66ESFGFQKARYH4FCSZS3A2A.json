@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "City of Launceston",
+      "osm_id": 10581631
+    },
+    "locality": {
+      "distance_m": 10410,
+      "name": "Nunamara",
+      "osm_id": 1480760534,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Tasman Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

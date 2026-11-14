@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "toilet_type": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 6250,
+      "name": "Pampas",
+      "osm_id": 5591681780,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 180
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "City of Playford",
+      "osm_id": 9108093
+    },
+    "locality": {
+      "distance_m": 5560,
+      "name": "Williamstown",
+      "osm_id": 1871448586,
+      "type": "town"
+    },
     "operator": "National Parks South Australia"
   },
   "group": "overnight",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

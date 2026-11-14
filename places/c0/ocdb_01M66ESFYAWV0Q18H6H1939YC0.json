@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Camden Council",
+      "osm_id": 6290069
+    },
+    "locality": {
+      "distance_m": 5740,
+      "name": "Menangle",
+      "osm_id": 33839944,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESFYAWV0Q18H6H1939YC0",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

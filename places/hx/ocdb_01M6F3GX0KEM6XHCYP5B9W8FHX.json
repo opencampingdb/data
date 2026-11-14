@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "21",
       "street": "Walker Street"
+    },
+    "lga": {
+      "name": "Shire of Mount Alexander",
+      "osm_id": 3339104
+    },
+    "locality": {
+      "distance_m": 1390,
+      "name": "Castlemaine",
+      "osm_id": 97564451,
+      "type": "town"
     },
     "phone": "+61 3 4406 6730",
     "website": "https://thebridgehotelcastlemaine.com/"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

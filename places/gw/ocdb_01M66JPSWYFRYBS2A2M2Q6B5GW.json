@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -12,6 +14,16 @@
       "unleaded_98",
       "adblue"
     ],
+    "lga": {
+      "name": "Winton Shire",
+      "osm_id": 11676713
+    },
+    "locality": {
+      "distance_m": 1200,
+      "name": "Winton",
+      "osm_id": 247811870,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Landsborough Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

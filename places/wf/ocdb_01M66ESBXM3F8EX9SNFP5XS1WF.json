@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Whitsunday Regional",
+      "osm_id": 11676670
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Elliot River",
+      "osm_id": 10561395735,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESBXM3F8EX9SNFP5XS1WF",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

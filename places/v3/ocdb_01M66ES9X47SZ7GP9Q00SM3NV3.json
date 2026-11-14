@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Barkly Region",
+      "osm_id": 8878329
+    },
+    "locality": {
+      "distance_m": 680,
+      "name": "Avon Downs",
+      "osm_id": 4385186055,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Barkly Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

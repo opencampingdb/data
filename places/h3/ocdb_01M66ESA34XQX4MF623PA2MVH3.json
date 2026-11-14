@@ -4,10 +4,22 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "The District Council of Coober Pedy",
+      "osm_id": 6799901
+    },
+    "locality": {
+      "distance_m": 5480,
+      "name": "Coober Pedy",
+      "osm_id": 29383350,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "William Creek Road"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

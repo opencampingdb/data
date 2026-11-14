@@ -4,6 +4,8 @@
     "cabins": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "phone": "osm",
@@ -18,6 +20,16 @@
     "cabins": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 26660,
+      "name": "Chillagoe",
+      "osm_id": 4074574918,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Burke Developmental Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

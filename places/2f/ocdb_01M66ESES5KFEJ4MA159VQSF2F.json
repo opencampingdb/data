@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -21,6 +23,16 @@
     "drinking_water": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
+    "locality": {
+      "distance_m": 3380,
+      "name": "Broome",
+      "osm_id": 53919243,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 620
     },
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

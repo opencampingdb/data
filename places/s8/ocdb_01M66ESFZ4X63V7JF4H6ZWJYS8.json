@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Devonport",
+      "osm_id": 10586315
+    },
+    "locality": {
+      "distance_m": 3330,
+      "name": "Spreyton",
+      "osm_id": 2125923935,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESFZ4X63V7JF4H6ZWJYS8",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

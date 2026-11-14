@@ -3,6 +3,7 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +11,10 @@
     "entry": "customers",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Charters Towers Regional",
+      "osm_id": 11676769
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Gregory Developmental Road"
@@ -32,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

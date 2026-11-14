@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
@@ -12,6 +14,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "lga": {
+      "name": "Shire of Nillumbik",
+      "osm_id": 3331023
+    },
+    "locality": {
+      "distance_m": 16940,
+      "name": "St Andrews",
+      "osm_id": 75040965,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Main Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

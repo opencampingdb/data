@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Logan City",
+      "osm_id": 11675411
+    },
+    "locality": {
+      "distance_m": 13630,
+      "name": "Logan Village",
+      "osm_id": 206242925,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Browns Plains Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "2",
       "postcode": "3380",
       "street": "Burgh Street"
+    },
+    "lga": {
+      "name": "Shire of Northern Grampians",
+      "osm_id": 3348880
+    },
+    "locality": {
+      "distance_m": 1290,
+      "name": "Stawell",
+      "osm_id": 283287126,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 110,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

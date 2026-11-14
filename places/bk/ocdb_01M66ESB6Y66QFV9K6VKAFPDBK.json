@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "65",
       "postcode": "6603",
       "street": "Wongan Road"
+    },
+    "lga": {
+      "name": "Shire of Wongan-Ballidu",
+      "osm_id": 11689780
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Wongan Hills",
+      "osm_id": 1977544955,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 80,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

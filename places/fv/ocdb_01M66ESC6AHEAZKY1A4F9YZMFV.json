@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "street": "Hartley Lane"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 6480,
+      "name": "Roma",
+      "osm_id": 1895756363,
+      "type": "town"
+    },
     "power": true
   },
   "group": "overnight",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
     "address": {
       "housenumber": "90",
       "street": "Lava Street"
+    },
+    "lga": {
+      "name": "City of Warrnambool",
+      "osm_id": 3347796
+    },
+    "locality": {
+      "distance_m": 400,
+      "name": "Warrnambool",
+      "osm_id": 2321683713,
+      "type": "city"
     },
     "nearest_beach": {
       "distance_m": 1310
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

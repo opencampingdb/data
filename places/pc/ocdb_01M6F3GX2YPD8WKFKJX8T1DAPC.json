@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "booking_required": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -16,6 +18,16 @@
       "street": "Centre Road"
     },
     "booking_required": true,
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 4730,
+      "name": "Paynesville",
+      "osm_id": 1912364980,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 4880
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

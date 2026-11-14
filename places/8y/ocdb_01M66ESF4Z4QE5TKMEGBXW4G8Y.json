@@ -8,6 +8,8 @@
     "address": "contributed",
     "brand": "osm",
     "caravans": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -24,6 +26,16 @@
     },
     "brand": "big4",
     "caravans": true,
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 1830,
+      "name": "Merimbula",
+      "osm_id": 70503381,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 210,
       "name": "Middle Beach"
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

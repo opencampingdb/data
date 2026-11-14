@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "City of Albany",
+      "osm_id": 11690341
+    },
+    "locality": {
+      "distance_m": 10000,
+      "name": "Little Grove",
+      "osm_id": 6052072554,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 280,
       "name": "Misery Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

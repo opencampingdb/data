@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "TAS",
       "street": "Sisters Beach Road",
       "suburb": "Boat Harbour"
+    },
+    "lga": {
+      "name": "Waratah-Wynyard",
+      "osm_id": 10593034
+    },
+    "locality": {
+      "distance_m": 4150,
+      "name": "Sisters Beach",
+      "osm_id": 2079631185,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 2060,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

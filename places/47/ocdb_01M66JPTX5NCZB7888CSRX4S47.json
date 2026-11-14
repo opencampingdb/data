@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm"
@@ -13,6 +15,16 @@
       "suburb": "Fullarton"
     },
     "air": true,
+    "lga": {
+      "name": "City of Unley",
+      "osm_id": 9106078
+    },
+    "locality": {
+      "distance_m": 3960,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Fullarton Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

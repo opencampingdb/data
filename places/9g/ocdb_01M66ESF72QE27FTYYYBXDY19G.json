@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "tents": "osm"
   },
@@ -14,6 +16,16 @@
     },
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 20580,
+      "name": "Araluen",
+      "osm_id": 113704510,
+      "type": "village"
+    },
     "phone": "+61 2 4476 2888",
     "tents": true
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,6 +12,16 @@
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 560,
+      "name": "Manly",
+      "osm_id": 18375400,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30,
       "name": "East Manly Cove Beach"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

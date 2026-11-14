@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "state": "VIC",
       "street": "Princes Highway",
       "suburb": "Trafalgar"
+    },
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Trafalgar",
+      "osm_id": 55199038,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

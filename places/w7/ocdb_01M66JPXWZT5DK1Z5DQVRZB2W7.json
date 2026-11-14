@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "address": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,6 +11,12 @@
     "address": {
       "housenumber": "29",
       "street": "Mildura Street"
+    },
+    "locality": {
+      "distance_m": 2670,
+      "name": "South Canberra",
+      "osm_id": 4583652168,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 2590
@@ -39,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

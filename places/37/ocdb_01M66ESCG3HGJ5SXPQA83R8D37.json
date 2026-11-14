@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 42990,
+      "name": "Baan Baa",
+      "osm_id": 113696530,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Newell Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

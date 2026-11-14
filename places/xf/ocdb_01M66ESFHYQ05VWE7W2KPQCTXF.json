@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,6 +14,16 @@
     "caravans": true,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Kyogle Council",
+      "osm_id": 6163138
+    },
+    "locality": {
+      "distance_m": 1010,
+      "name": "Lynchs Creek",
+      "osm_id": 114644355,
+      "type": "village"
+    },
     "operator": "Lynchs Creek Reserve Trust",
     "showers": false,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

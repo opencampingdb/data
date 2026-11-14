@@ -34,6 +34,8 @@
     "caravans": "feedback",
     "fee": "feedback",
     "kitchen": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "mobile_signal": "feedback",
     "motorhomes": "feedback",
     "name": "feedback",
@@ -59,6 +61,16 @@
     "caravans": true,
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 290,
+      "name": "Coolongolook",
+      "osm_id": 114993815,
+      "type": "village"
+    },
     "mobile_signal": true,
     "motorhomes": true,
     "nearest_major_road": {
@@ -91,5 +103,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -9,6 +11,16 @@
       "state": "NSW",
       "street": "Boronia Street",
       "suburb": "Bowral"
+    },
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 1560,
+      "name": "Bowral",
+      "osm_id": 113235258,
+      "type": "town"
     }
   },
   "group": "overnight",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

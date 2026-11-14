@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm"
   },
@@ -12,6 +14,16 @@
     "charge": "$6",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Lithgow City Council",
+      "osm_id": 6299566
+    },
+    "locality": {
+      "distance_m": 6510,
+      "name": "Capertee",
+      "osm_id": 116990408,
+      "type": "village"
+    },
     "operator": "National Parks and Wildlife Service",
     "tents": true
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "42",
       "postcode": "3777",
       "street": "Harker Street"
+    },
+    "lga": {
+      "name": "Shire of Yarra Ranges",
+      "osm_id": 3333996
+    },
+    "locality": {
+      "distance_m": 570,
+      "name": "Healesville",
+      "osm_id": 60570255,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

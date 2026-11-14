@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Central Coast",
+      "osm_id": 10590161
+    },
+    "locality": {
+      "distance_m": 12080,
+      "name": "Wilmot",
+      "osm_id": 2634782123,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA16ZFVFDE9H4SG091PX",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

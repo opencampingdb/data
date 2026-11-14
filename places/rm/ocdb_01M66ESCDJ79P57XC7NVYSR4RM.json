@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Walcha Council",
+      "osm_id": 6180603
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Woolbrook",
+      "osm_id": 1947370543,
+      "type": "village"
+    },
     "operator": "Tamworth Regional Council"
   },
   "group": "utility",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

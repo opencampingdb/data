@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -12,6 +14,16 @@
       "street": "Heinz Street"
     },
     "brand": "big4",
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 4610,
+      "name": "Bendigo",
+      "osm_id": 30917754,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Heinz Street"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Gunnedah Shire Council",
+      "osm_id": 6389934
+    },
+    "locality": {
+      "distance_m": 15540,
+      "name": "Werris Creek",
+      "osm_id": 190751211,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Kamilaroi Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

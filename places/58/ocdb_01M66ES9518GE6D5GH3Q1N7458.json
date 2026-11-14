@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Dardanup",
+      "osm_id": 11688826
+    },
+    "locality": {
+      "distance_m": 6460,
+      "name": "Boyanup",
+      "osm_id": 82310985,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ES9518GE6D5GH3Q1N7458",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

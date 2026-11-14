@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Coonamble Shire Council",
+      "osm_id": 7145506
+    },
+    "locality": {
+      "distance_m": 940,
+      "name": "Coonamble",
+      "osm_id": 113580956,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Baradine Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

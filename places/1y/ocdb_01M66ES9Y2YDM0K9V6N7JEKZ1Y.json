@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "$20 Conservation Fee on Park Entry",
     "fee": true,
+    "lga": {
+      "name": "Bulloo Shire",
+      "osm_id": 11676708
+    },
+    "locality": {
+      "distance_m": 35810,
+      "name": "Innamincka",
+      "osm_id": 1956101841,
+      "type": "village"
+    },
     "showers": false,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

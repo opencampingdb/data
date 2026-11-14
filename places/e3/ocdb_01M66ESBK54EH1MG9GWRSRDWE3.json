@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Cabonne Council",
+      "osm_id": 6268804
+    },
+    "locality": {
+      "distance_m": 1370,
+      "name": "Canowindra",
+      "osm_id": 113763726,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Rodd Street"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

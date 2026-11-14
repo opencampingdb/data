@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "Pay at Isisford shiire office",
     "fee": true,
+    "lga": {
+      "name": "Longreach Regional",
+      "osm_id": 11676693
+    },
+    "locality": {
+      "distance_m": 12200,
+      "name": "Isisford",
+      "osm_id": 2214209529,
+      "type": "village"
+    },
     "operator": "Longreach Regional Council",
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

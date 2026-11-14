@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "4211",
       "street": "Beaudesert - Nerang Road",
       "suburb": "Nerang"
+    },
+    "lga": {
+      "name": "Gold Coast City",
+      "osm_id": 11675459
+    },
+    "locality": {
+      "distance_m": 11870,
+      "name": "Canungra",
+      "osm_id": 589409513,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Golden Plains Shire",
+      "osm_id": 3290692
+    },
+    "locality": {
+      "distance_m": 11540,
+      "name": "Elaine",
+      "osm_id": 482791864,
+      "type": "village"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

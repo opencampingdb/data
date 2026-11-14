@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 1360,
+      "name": "Armidale",
+      "osm_id": 59851594,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Donnelly Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Dundas",
+      "osm_id": 11690221
+    },
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Eyre Highway"
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

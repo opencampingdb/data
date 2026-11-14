@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "Donation box at ablutions",
     "fee": true,
+    "lga": {
+      "name": "Pastoral Unincorporated Area",
+      "osm_id": 6804541
+    },
+    "locality": {
+      "distance_m": 850,
+      "name": "Innamincka",
+      "osm_id": 1956101841,
+      "type": "village"
+    },
     "showers": true,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

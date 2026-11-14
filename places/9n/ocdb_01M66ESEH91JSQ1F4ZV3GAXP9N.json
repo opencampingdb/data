@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "hot_water": true,
+    "lga": {
+      "name": "Flinders Shire",
+      "osm_id": 11676765
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Stamford",
+      "osm_id": 1873002706,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Kennedy Developmental Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

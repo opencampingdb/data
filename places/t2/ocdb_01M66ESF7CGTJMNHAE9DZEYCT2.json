@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "street": "Hidden Valley Road"
     },
     "email": "hiddenvalley@freespiritresorts.com.au",
+    "lga": {
+      "name": "City of Darwin",
+      "osm_id": 5515884
+    },
+    "locality": {
+      "distance_m": 7780,
+      "name": "Holtze",
+      "osm_id": 4075589701,
+      "type": "village"
+    },
     "website": "https://www.hiddenvalleyholidaypark.com.au/"
   },
   "group": "overnight",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Fraser Coast Regional",
+      "osm_id": 11676269
+    },
+    "locality": {
+      "distance_m": 14380,
+      "name": "Happy Valley",
+      "osm_id": 2989435471,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 430,
       "name": "Seventy Five Mile Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

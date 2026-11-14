@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "address": {
       "postcode": "3034",
       "street": "Browning Crescent"
+    },
+    "lga": {
+      "name": "City of Moonee Valley",
+      "osm_id": 3329056
+    },
+    "locality": {
+      "distance_m": 10150,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 1460
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

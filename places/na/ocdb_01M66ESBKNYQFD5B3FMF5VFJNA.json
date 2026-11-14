@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "The Council of the Municipality of Kiama",
+      "osm_id": 6311642
+    },
+    "locality": {
+      "distance_m": 6500,
+      "name": "Jamberoo",
+      "osm_id": 2190657718,
+      "type": "village"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

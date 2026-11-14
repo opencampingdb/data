@@ -3,12 +3,24 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "booking_required": false,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 43400,
+      "name": "Gascoyne Junction",
+      "osm_id": 73908729,
+      "type": "town"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

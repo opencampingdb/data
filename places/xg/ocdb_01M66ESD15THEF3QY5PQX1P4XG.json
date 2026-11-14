@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
+    },
+    "locality": {
+      "distance_m": 32680,
+      "name": "Ellenborough",
+      "osm_id": 114382663,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Oxley Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

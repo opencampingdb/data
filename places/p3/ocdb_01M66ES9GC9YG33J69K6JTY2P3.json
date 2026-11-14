@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "The Council of the Shire of Hornsby",
+      "osm_id": 6218957
+    },
+    "locality": {
+      "distance_m": 8920,
+      "name": "Hornsby",
+      "osm_id": 26391679,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Arcadia Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

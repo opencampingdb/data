@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -16,6 +18,16 @@
     "drinking_water": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Bathurst Regional Council",
+      "osm_id": 6330866
+    },
+    "locality": {
+      "distance_m": 4330,
+      "name": "Wattle Flat",
+      "osm_id": 113750262,
+      "type": "village"
+    },
     "operator": "Bathurst Regional Council",
     "showers": false,
     "tents": true,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

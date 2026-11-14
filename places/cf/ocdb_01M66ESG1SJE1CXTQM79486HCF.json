@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "City of Swan",
+      "osm_id": 11689336
+    },
+    "locality": {
+      "distance_m": 15630,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG1SJE1CXTQM79486HCF",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Bass Coast Shire",
+      "osm_id": 3335921
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Cape Paterson",
+      "osm_id": 380041693,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 100,
       "name": "The Bay"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

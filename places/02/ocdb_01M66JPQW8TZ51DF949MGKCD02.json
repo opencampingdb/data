@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Lachlan Shire Council",
+      "osm_id": 6106054
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Tullibigeal",
+      "osm_id": 2477090995,
+      "type": "village"
+    },
     "opening_hours": "24/7"
   },
   "group": "services",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

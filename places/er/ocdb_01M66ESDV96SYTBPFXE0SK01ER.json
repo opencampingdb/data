@@ -5,6 +5,8 @@
     "entry": "osm",
     "facebook": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "tents": "osm"
@@ -21,6 +23,16 @@
     "entry": "customers",
     "facebook": "https://www.facebook.com/rnrfarmstay/",
     "fee": true,
+    "lga": {
+      "name": "Kyogle Council",
+      "osm_id": 6163138
+    },
+    "locality": {
+      "distance_m": 2550,
+      "name": "Culmaran Creek",
+      "osm_id": 114643831,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Clarence Way"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

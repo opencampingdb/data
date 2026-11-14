@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": false,
     "fee": false,
+    "lga": {
+      "name": "The Council of the Shire of Hornsby",
+      "osm_id": 6218957
+    },
+    "locality": {
+      "distance_m": 3690,
+      "name": "Brooklyn",
+      "osm_id": 117103245,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2410
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

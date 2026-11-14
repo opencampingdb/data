@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "drinking_water": false,
     "fee": true,
+    "lga": {
+      "name": "Shire of Shark Bay",
+      "osm_id": 11689946
+    },
+    "locality": {
+      "distance_m": 35840,
+      "name": "Monkey Mia",
+      "osm_id": 5374618869,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 100
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

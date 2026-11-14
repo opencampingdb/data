@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -16,6 +18,16 @@
       "suburb": "Cargo"
     },
     "email": "welcome@cargoinn.com.au",
+    "lga": {
+      "name": "Cabonne Council",
+      "osm_id": 6268804
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Cargo",
+      "osm_id": 82445161,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Belmore Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

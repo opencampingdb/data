@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Murray River Council",
+      "osm_id": 6134295
+    },
+    "locality": {
+      "distance_m": 17780,
+      "name": "Bearii",
+      "osm_id": 1543893296,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESCD57VQGCZDH1VD7RXDE",
   "kind": "national_park_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

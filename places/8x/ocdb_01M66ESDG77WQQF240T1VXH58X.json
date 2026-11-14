@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Tablelands Regional",
+      "osm_id": 11677293
+    },
+    "locality": {
+      "distance_m": 4870,
+      "name": "Tarzali",
+      "osm_id": 2470986459,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Millaa Millaa Malanda Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }
