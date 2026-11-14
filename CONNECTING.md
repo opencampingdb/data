@@ -25,8 +25,8 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 13,
-  "format_minor": 0,
-  "layout_version": 2,
+  "format_minor": 1,
+  "layout_version": 3,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
   "generated": "2026-10-30T16:00:00Z",
@@ -103,6 +103,9 @@ separately.
 
 What each format changed, newest first:
 
+- **13.1** (`layout_version` 3): the facts `locality`, the nearest town, and
+  `lga`, the council area a place is in (section 4), and the `localities`
+  table of `ocdb.sqlite.gz` (section 3).
 - **13.0** (`layout_version` 2): `fees.ndjson.gz` and the `fees` table of
   `ocdb.sqlite.gz` are gone, because what travellers paid is no longer
   collected. New facts `charge`, `charge_conditional` and `charge_powered`
@@ -218,7 +221,7 @@ person does, for example on a takedown request.
 Each release also comes as an SQLite database, `ocdb.sqlite.gz` (the
 `database` entry in the manifest), so an app can query the release directly
 instead of importing the NDJSON files. It holds the same release as those
-files, plus each place's state. Check its `bytes` and `sha256` as in section
+files, plus each place's state and a table of towns. Check its `bytes` and `sha256` as in section
 2, then decompress it with gzip to get an SQLite 3 database file (page size
 4096, rollback journal):
 
@@ -301,16 +304,43 @@ and `merged_into` (TEXT).
 `commons`, one row per line of `commons.ndjson.gz`: `place` (TEXT, primary
 key) and `files` (TEXT, the `files` array as JSON).
 
+`localities`, one row per OpenStreetMap node tagged `place=city`,
+`place=town` or `place=village` with a name, in Australia:
+
+| Column | Type | Value |
+|---|---|---|
+| `osm_id` | INTEGER, primary key | the OSM node id, as in a place's `locality.osm_id` |
+| `name` | TEXT | the node's `name` |
+| `type` | TEXT | `city`, `town` or `village` |
+| `state` | TEXT | the state or territory the town is in, or NULL, worked out as for `places` |
+| `lga` | TEXT | the name of the council area the town is in (as a place's `lga.name`), or NULL |
+| `lat` | REAL | the node's latitude |
+| `lon` | REAL | the node's longitude |
+| `population` | INTEGER | the node's `population` tag when it is a whole number, or NULL |
+
+The table comes from the OSM data of the nightly sync behind the release.
+To list the places near a town, match `json_extract(record,
+'$.facts.locality.osm_id')` on `places` to its `osm_id`, or search by `lat`
+and `lon`:
+
+```sh
+sqlite3 ocdb.sqlite "SELECT osm_id, name, lga FROM localities WHERE state = 'QLD' AND type = 'town' ORDER BY name LIMIT 5"
+sqlite3 ocdb.sqlite "SELECT id, name FROM places WHERE json_extract(record, '$.facts.locality.osm_id') = 247811870"
+```
+
 The indexes are `places_kind` on `places (kind)`, `places_group` on
 `places ("group")`, `places_state` on `places (state)`, `places_lat_lon` on
-`places (lat, lon)` and `reviews_place` on `reviews (place)`. For a map
+`places (lat, lon)`, `reviews_place` on `reviews (place)`,
+`localities_state` on `localities (state)` and `localities_lga` on
+`localities (lga)`. For a map
 area, filter on `lat BETWEEN ? AND ? AND lon BETWEEN ? AND ?`. An app that
 needs an R*Tree can build one from `places` in a table of its own.
 
 `layout_version` (in the manifest, in the `release` table and as `PRAGMA
 user_version`) is the version of these tables, columns and indexes. It
 rises whenever any of them changes. Layout 1 came with format 12.2, and
-layout 2 (format 13) dropped the `fees` table. If the manifest's
+layout 2 (format 13) dropped the `fees` table, and layout 3 (format 13.1)
+added the `localities` table. If the manifest's
 `layout_version` is one your app cannot read, keep the database you have.
 
 Treat the release tables as read only: a changeset (below) expects them to
@@ -591,6 +621,19 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   is always `osm` and fact reports cannot set it. The traveller fact
   `near_road`, that road noise carries, is separate and unchanged: a road
   can be close and quiet, or further away and still heard.
+- `locality` is the nearest OSM town to the place: a node tagged
+  `place=city`, `place=town` or `place=village` with a name, within 50 km,
+  as `{"name": "Winton", "osm_id": 247811870, "type": "town", "distance_m":
+  4120}`. `distance_m` is the straight-line distance to the town's node,
+  rounded to 10 m, and `osm_id` matches the `localities` table (section 3).
+  Hamlets and suburbs do not count. A place with no town within 50 km has
+  none. Its source is always `osm` and fact reports cannot set it.
+- `lga` is the council area the place lies in: the OSM
+  `boundary=administrative`, `admin_level=6` relation around it (a council,
+  shire, city or municipality, or an unincorporated area), as `{"name":
+  "Winton Shire", "osm_id": 11676713}`. A place outside all of them, such as
+  one offshore, has none. Its source is always `osm` and fact reports cannot
+  set it.
 - `pub`, `fuel` and `car_wash` are also `true` from OSM when an
   `amenity=pub`, `amenity=fuel` or `amenity=car_wash` lies inside the
   place's area, such as a pub inside a caravan park. A place mapped as a

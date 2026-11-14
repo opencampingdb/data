@@ -74,7 +74,7 @@ jobs:
       - name: Extract camping places
         run: |
           python -m pipeline.extract "$RUNNER_TEMP/australia-latest.osm.pbf" --out "$RUNNER_TEMP/extract.ndjson" \
-            --geometry "$RUNNER_TEMP/geometry.ndjson"
+            --geometry "$RUNNER_TEMP/geometry.ndjson" --localities localities/localities.ndjson
 
       - name: Merge into places/
         run: |
@@ -132,8 +132,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [ -z "$(git status --porcelain -- places maproulette)" ]; then
-            echo "No record or challenge file changed. Nothing to propose."
+          if [ -z "$(git status --porcelain -- places maproulette localities)" ]; then
+            echo "No record, challenge or localities file changed. Nothing to propose."
             exit 0
           fi
 
@@ -156,7 +156,7 @@ jobs:
           fi
 
           git switch -C osm-sync
-          git add -- places maproulette
+          git add -- places maproulette localities
           git commit -q -m "chore(osm): sync places from OpenStreetMap $(date -u +%Y-%m-%d)"
           git push --force origin HEAD:osm-sync
 

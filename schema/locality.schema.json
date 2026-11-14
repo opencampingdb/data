@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/opencampingdb/data/schema/locality.schema.json",
+  "title": "A town from OpenStreetMap",
+  "description": "One line of localities/localities.ndjson, written by pipeline.extract --localities at each sync: an OSM node tagged place=city, town or village, with its name, and the local government area (boundary=administrative, admin_level=6) it lies in. pipeline.database turns the file into the localities table.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["osm_id", "name", "type", "lat", "lon"],
+  "properties": {
+    "osm_id": {"type": "integer", "minimum": 1, "description": "The OSM node id."},
+    "name": {"type": "string", "minLength": 1, "maxLength": 100},
+    "type": {"enum": ["city", "town", "village"]},
+    "lat": {"type": "number", "minimum": -90, "maximum": 90},
+    "lon": {"type": "number", "minimum": -180, "maximum": 180},
+    "population": {"type": "integer", "minimum": 0, "description": "The node's population tag, when it is a whole number."},
+    "lga": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "osm_id"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 100},
+        "osm_id": {"type": "integer", "minimum": 1, "description": "The OSM relation id."}
+      }
+    }
+  }
+}

@@ -46,6 +46,7 @@ from .kinds import (
     parse_brand,
     water_type,
 )
+from .localities import LOCALITY_TAG_PAIRS, Localities, is_lga, locality_type, write_localities
 from .nearby import NEARBY_TAG_PAIRS, InsideFeatures, inside_fact
 from .roads import MajorRoads
 from .water import WATER_TAG_PAIRS, WaterFeatures, crocodile_hazard, open_line, water_kinds
@@ -516,7 +517,9 @@ def interesting_tag_filter() -> "osmium.filter.TagFilter":
 
     A filter object belongs to one handler chain, so each chain gets its own.
     """
-    return osmium.filter.TagFilter(*PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS)
+    return osmium.filter.TagFilter(
+        *PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS, *LOCALITY_TAG_PAIRS
+    )
 
 
 def tag_dict(obj) -> dict:
@@ -695,6 +698,7 @@ class FirstPass:
             and container_type(tags) is None
             and not water_kinds(tags)
             and inside_fact(tags) is None
+            and not is_lga(tags)
         ):
             return True
         for member in relation.members:
@@ -899,13 +903,20 @@ def place_outline(obj):
     return container_geometry(obj)
 
 
-def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder | None = None) -> list[dict]:
+def extract_file(
+    path: Path,
+    stats: dict | None = None,
+    sidecar: SidecarBuilder | None = None,
+    localities: Localities | None = None,
+) -> list[dict]:
     """Read an OSM file and return the place records found in it, sorted.
 
     If a dict is passed as stats it is filled with counts of what was kept
     and skipped, of the ways handed to the area builder and of the
     containers found, for the log. A SidecarBuilder passed as sidecar
     collects the outlines, signals and major roads for pipeline.geometry.
+    A Localities passed as localities keeps the towns and council areas read,
+    for the localities file (pipeline.localities).
     """
     stats = stats if stats is not None else {}
     stats.update(
@@ -920,6 +931,7 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
     water = WaterFeatures()
     inside = InsideFeatures()
     roads = MajorRoads()
+    localities = localities if localities is not None else Localities()
     if sidecar is not None:
         # The sidecar writes its road lines from the same roads.
         sidecar.roads = roads.roads
@@ -938,6 +950,11 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
             point = feature_point(obj)
             if point is not None:
                 inside.add(fact_inside, *point, feature_key(obj))
+
+        if obj.is_node() and locality_type(tags) and obj.location.valid():
+            localities.add_town(obj.id, tags, obj.location.lat, obj.location.lon)
+        if obj.is_area() and not obj.from_way() and is_lga(tags):
+            localities.add_lga(obj.orig_id(), tags, container_geometry(obj))
 
         kind_of_container = container_type(tags)
         if kind_of_container is not None:
@@ -1004,12 +1021,14 @@ def extract_file(path: Path, stats: dict | None = None, sidecar: SidecarBuilder 
         inside.set_facts(record, outlines.pop(i, None), key)
         roads.set_facts(record)
         records.append(record)
+    localities.set_facts(records)
 
     stats["kept"] = len(records)
     stats["containers"] = container_counts
     stats["water"] = {kind: water.count(kind) for kind in ("beach", "crocodiles", "boat_ramp")}
     stats["inside"] = {fact: inside.count(fact) for fact in ("pub", "fuel", "car_wash")}
     stats["major_roads"] = roads.count()
+    stats["localities"] = localities.counts()
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -1019,12 +1038,16 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("input", type=Path, help=".osm.pbf or .osm file")
     parser.add_argument("--out", type=Path, default=Path("extract.ndjson"))
     parser.add_argument("--geometry", type=Path, help="also write the outlines, signals and major roads (pipeline.geometry) here")
+    parser.add_argument("--localities", type=Path, help="also write every town and its council area (pipeline.localities) here")
     args = parser.parse_args(argv)
 
     stats: dict = {}
     sidecar = SidecarBuilder() if args.geometry else None
-    records = extract_file(args.input, stats, sidecar)
+    localities = Localities()
+    records = extract_file(args.input, stats, sidecar, localities)
     write_text(args.out, "".join(dump_line(r) + "\n" for r in records))
+    if args.localities:
+        write_localities(args.localities, localities.rows())
     if sidecar is not None:
         lines = sidecar.write(args.geometry, records)
         print(f"Wrote {lines} geometry lines to {args.geometry} ({len(sidecar.roads)} major roads read)", file=sys.stderr)
@@ -1047,6 +1070,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Water features: {stats['water']}", file=sys.stderr)
     print(f"Pubs, fuel and car washes: {stats['inside']}", file=sys.stderr)
     print(f"Major roads: {stats['major_roads']}", file=sys.stderr)
+    print(f"Localities and council areas: {stats['localities']}", file=sys.stderr)
     return 0
 
 

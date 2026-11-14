@@ -57,7 +57,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest == json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     # 13: fees.ndjson.gz is gone, and the charge facts arrive.
     assert manifest["format_version"] == 13
-    assert manifest["format_minor"] == 0
+    # 13.1: the facts locality and lga.
+    assert manifest["format_minor"] == 1
     assert "fees" not in manifest
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED

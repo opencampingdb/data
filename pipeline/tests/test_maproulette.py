@@ -729,6 +729,8 @@ def test_a_second_phone_without_a_first_is_never_sent(repo, tmp_path):
     ("pub", True), ("fuel", True), ("car_wash", True), ("crocodiles", True),
     ("nearest_beach", {"distance_m": 300}), ("nearest_boat_ramp", {"distance_m": 900}),
     ("nearest_major_road", {"distance_m": 200}),
+    ("locality", {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 2000}),
+    ("lga", {"name": "Example Shire", "osm_id": 202}),
 ])
 def test_a_nearby_fact_never_makes_a_task(repo, tmp_path, field, value):
     # These come from other OSM objects, so no tag on the place's own object would show them.

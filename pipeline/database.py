@@ -6,7 +6,9 @@ Usage:
 
 --release-dir holds the files pipeline.release wrote: manifest.json and the
 data files. The database is built from those files alone, so it holds
-exactly what the release holds, plus each place's state (pipeline.states).
+exactly what the release holds, plus each place's state (pipeline.states),
+and the localities table from localities/localities.ndjson in --root, the
+data repository (pipeline.localities), with each locality's state.
 
 Each --previous DIR holds an earlier release's manifest.json and
 ocdb.sqlite.gz, downloaded from its GitHub release. For each one whose
@@ -79,11 +81,13 @@ from pathlib import Path
 import apsw
 
 from .common import load_removed, write_text
+from .localities import load_localities
 from .release import asset_url, gzip_bytes, release_tag
 from .states import StateLookup
 
 # 1: the first layout. 2: the fees table is gone (release format 13).
-LAYOUT_VERSION = 2
+# 3: the localities table (release format 13.1).
+LAYOUT_VERSION = 3
 DATABASE_FILE = "ocdb.sqlite.gz"
 PAGE_SIZE = 4096
 DEFAULT_REPOSITORY = "opencampingdb/data"
@@ -133,6 +137,16 @@ CREATE TABLE commons (
     place TEXT PRIMARY KEY NOT NULL,
     files TEXT NOT NULL
 );
+CREATE TABLE localities (
+    osm_id INTEGER PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    state TEXT,
+    lga TEXT,
+    lat REAL NOT NULL,
+    lon REAL NOT NULL,
+    population INTEGER
+);
 """
 
 INDEXES = """
@@ -141,6 +155,8 @@ CREATE INDEX places_group ON places ("group");
 CREATE INDEX places_state ON places (state);
 CREATE INDEX places_lat_lon ON places (lat, lon);
 CREATE INDEX reviews_place ON reviews (place);
+CREATE INDEX localities_state ON localities (state);
+CREATE INDEX localities_lga ON localities (lga);
 """
 
 # Every table, with the column it is keyed and ordered by.
@@ -150,6 +166,7 @@ TABLES = {
     "merged": "id",
     "reviews": "id",
     "commons": "place",
+    "localities": "osm_id",
 }
 
 
@@ -171,8 +188,12 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def build_database(release_dir: Path, out_path: Path, states: StateLookup | None = None) -> None:
+def build_database(
+    release_dir: Path, out_path: Path, states: StateLookup | None = None, localities: list[dict] = ()
+) -> None:
     """Write the release in release_dir as an SQLite database at out_path.
+
+    localities holds the rows of the localities file (pipeline.localities).
 
     Rows go in in key order, indexes are made after the rows, and the file is
     written by VACUUM INTO with a fixed page size, so the same release gives
@@ -224,6 +245,18 @@ def build_database(release_dir: Path, out_path: Path, states: StateLookup | None
                 "INSERT INTO commons VALUES (?, ?)",
                 ((r["place"], json.dumps(r["files"], sort_keys=True, separators=(",", ":"), ensure_ascii=False))
                  for r, _ in commons),
+            )
+            towns = sorted(localities, key=lambda row: row["osm_id"])
+            town_states = states.states_of([(row["lon"], row["lat"]) for row in towns])
+            con.executemany(
+                "INSERT INTO localities VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                (
+                    (
+                        row["osm_id"], row["name"], row["type"], state, (row.get("lga") or {}).get("name"),
+                        row["lat"], row["lon"], row.get("population"),
+                    )
+                    for row, state in zip(towns, town_states)
+                ),
             )
             con.execute(INDEXES)
             con.execute(f"PRAGMA user_version = {LAYOUT_VERSION}")
@@ -464,6 +497,7 @@ def build(
     repository: str = DEFAULT_REPOSITORY,
     states: StateLookup | None = None,
     removed: set[str] = frozenset(),
+    localities: list[dict] = (),
 ) -> dict:
     """Write ocdb.sqlite.gz and the changesets into release_dir, add them to manifest.json and return it.
 
@@ -481,7 +515,7 @@ def build(
     with tempfile.TemporaryDirectory() as work:
         work = Path(work)
         database = work / "ocdb.sqlite"
-        build_database(release_dir, database, states)
+        build_database(release_dir, database, states, localities)
         packed = gzip_bytes(database.read_bytes())
         (release_dir / DATABASE_FILE).write_bytes(packed)
         manifest["layout_version"] = LAYOUT_VERSION
@@ -534,7 +568,7 @@ def main(argv: list[str] | None = None) -> int:
                         help="an earlier release's folder with manifest.json and ocdb.sqlite.gz, the newest first")
     parser.add_argument("--day", type=Path, help="the last release of the previous UTC day, as for --previous")
     parser.add_argument("--root", type=Path, default=Path("."),
-                        help="the data repository, for moderation/removed_reviews.json (default: .)")
+                        help="the data repository, for moderation/removed_reviews.json and localities/localities.ndjson (default: .)")
     parser.add_argument("--repository", default=DEFAULT_REPOSITORY,
                         help=f"owner/name used in the asset URLs (default {DEFAULT_REPOSITORY})")
     parser.add_argument("--day-base", metavar="DATA_VERSION",
@@ -554,7 +588,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if not args.release_dir:
         parser.error("--release-dir is required")
-    manifest = build(args.release_dir, args.previous, args.day, args.repository, removed=load_removed(args.root))
+    manifest = build(
+        args.release_dir, args.previous, args.day, args.repository,
+        removed=load_removed(args.root), localities=load_localities(args.root),
+    )
     print(json.dumps({key: manifest[key] for key in ("layout_version", "database", "changesets")}, indent=2))
     return 0
 

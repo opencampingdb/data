@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Towns and a council area near places, for pipeline.localities (locality and lga).
+At latitude -30 one degree of latitude is 111,195 m and one degree of
+longitude about 96,298 m (111,195 m times cos 30).
+-->
+<osm version="0.6" generator="fixture">
+  <!-- Place 1: a camp site inside the shire, about 7.4 km from Example Town. -->
+  <node id="1" version="1" lat="-30.25" lon="150.25">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Shire Camp"/>
+  </node>
+  <!-- Place 2: a rest area outside the shire, more than 50 km from every town. -->
+  <node id="2" version="1" lat="-30.8" lon="150.2">
+    <tag k="highway" v="rest_area"/>
+  </node>
+  <!-- Place 3: a camp site halfway between Example Town and Example Village. -->
+  <node id="3" version="1" lat="-30.2" lon="150.325">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+
+  <!-- Towns. -->
+  <node id="101" version="1" lat="-30.2" lon="150.2">
+    <tag k="place" v="town"/>
+    <tag k="name" v="Example Town"/>
+    <tag k="population" v="1,234"/>
+  </node>
+  <node id="102" version="1" lat="-30.2" lon="150.45">
+    <tag k="place" v="village"/>
+    <tag k="name" v="Example Village"/>
+    <tag k="population" v="about 300"/>
+  </node>
+  <!-- A hamlet and an unnamed town do not count. -->
+  <node id="103" version="1" lat="-30.25" lon="150.251">
+    <tag k="place" v="hamlet"/>
+    <tag k="name" v="Example Hamlet"/>
+  </node>
+  <node id="104" version="1" lat="-30.251" lon="150.25">
+    <tag k="place" v="town"/>
+  </node>
+  <!-- A city outside the shire. -->
+  <node id="105" version="1" lat="-31.5" lon="151.0">
+    <tag k="place" v="city"/>
+    <tag k="name" v="Far City"/>
+  </node>
+
+  <!-- Example Shire: admin_level 6, a square from 150.0 to 150.5 and -30.0 to -30.5. -->
+  <node id="201" version="1" lat="-30.0" lon="150.0"/>
+  <node id="202" version="1" lat="-30.0" lon="150.5"/>
+  <node id="203" version="1" lat="-30.5" lon="150.5"/>
+  <node id="204" version="1" lat="-30.5" lon="150.0"/>
+  <way id="700" version="1">
+    <nd ref="201"/><nd ref="202"/><nd ref="203"/><nd ref="204"/><nd ref="201"/>
+  </way>
+  <relation id="900" version="1">
+    <member type="way" ref="700" role="outer"/>
+    <tag k="type" v="boundary"/>
+    <tag k="boundary" v="administrative"/>
+    <tag k="admin_level" v="6"/>
+    <tag k="name" v="Example Shire"/>
+  </relation>
+
+  <!-- Example Ward: admin_level 7, with a lower id, over part of the shire. It does not count. -->
+  <node id="205" version="1" lat="-30.1" lon="150.1"/>
+  <node id="206" version="1" lat="-30.1" lon="150.4"/>
+  <node id="207" version="1" lat="-30.4" lon="150.4"/>
+  <node id="208" version="1" lat="-30.4" lon="150.1"/>
+  <way id="701" version="1">
+    <nd ref="205"/><nd ref="206"/><nd ref="207"/><nd ref="208"/><nd ref="205"/>
+  </way>
+  <relation id="899" version="1">
+    <member type="way" ref="701" role="outer"/>
+    <tag k="type" v="boundary"/>
+    <tag k="boundary" v="administrative"/>
+    <tag k="admin_level" v="7"/>
+    <tag k="name" v="Example Ward"/>
+  </relation>
+</osm>

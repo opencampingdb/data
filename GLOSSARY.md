@@ -8,6 +8,14 @@ An open dataset of places to camp and stop, built from OpenStreetMap and from wh
 A place of one of the overnight kinds, where travellers can spend the night.
 _Avoid_: campsite, accommodation (for the whole group)
 
+**Town**:
+A city, town or village as OpenStreetMap names it. A place's nearest town within 50 km is its locality.
+_Avoid_: suburb, hamlet (these do not count)
+
+**Council area**:
+The local government area a place lies in: a council, shire, city or municipality, or an unincorporated area, as OpenStreetMap's admin level 6 boundaries draw it. Held as the fact lga.
+_Avoid_: region, district
+
 ## Facts and where they come from
 
 **Fact**:
