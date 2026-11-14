@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/ArdathHotel/",
+    "lga": {
+      "name": "Shire of Bruce Rock",
+      "osm_id": 11689046
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Ardath",
+      "osm_id": 1857150344,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Main Street"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

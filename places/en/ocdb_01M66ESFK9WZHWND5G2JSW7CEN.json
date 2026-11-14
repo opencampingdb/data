@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilets": "osm",
     "wifi": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Donald Road"
     },
     "fee": true,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 1580,
+      "name": "Queanbeyan",
+      "osm_id": 40817809,
+      "type": "city"
+    },
     "toilets": true,
     "wifi": true
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

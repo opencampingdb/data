@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": false,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Trayning",
+      "osm_id": 11689515
+    },
+    "locality": {
+      "distance_m": 330,
+      "name": "Trayning",
+      "osm_id": 3935683949,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Nungarin-Wyalkatchem Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

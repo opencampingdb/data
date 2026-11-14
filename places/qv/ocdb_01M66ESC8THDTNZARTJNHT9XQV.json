@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "hot_water": true,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 7530,
+      "name": "Eildon",
+      "osm_id": 65639903,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 80,
       "name": "Lakeside Boat Ramp"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

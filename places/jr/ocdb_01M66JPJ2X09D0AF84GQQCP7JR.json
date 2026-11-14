@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Glamorgan-Spring Bay",
+      "osm_id": 10621831
+    },
+    "locality": {
+      "distance_m": 14760,
+      "name": "Swansea",
+      "osm_id": 251558976,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 260,
       "name": "Mayfield Beach"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

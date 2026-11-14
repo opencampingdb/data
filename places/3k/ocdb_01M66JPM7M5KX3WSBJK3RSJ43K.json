@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -12,6 +14,16 @@
       "street": "Grange Road",
       "suburb": "Eastern Heights",
       "unit": "1"
+    },
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 2120,
+      "name": "Ipswich",
+      "osm_id": 21477953,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 2870,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

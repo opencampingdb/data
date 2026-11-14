@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -11,6 +13,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Shire of Kulin",
+      "osm_id": 11688974
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Kulin",
+      "osm_id": 243358592,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Johnston Street"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

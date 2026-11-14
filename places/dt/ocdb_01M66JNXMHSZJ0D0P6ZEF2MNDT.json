@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "The Council of the Municipality of Kiama",
+      "osm_id": 6311642
+    },
+    "locality": {
+      "distance_m": 6800,
+      "name": "Jamberoo",
+      "osm_id": 2190657718,
+      "type": "village"
+    },
     "opening_hours": "Mo-Su 09:00-17:00",
     "website": "https://www.illawarrafly.com/"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

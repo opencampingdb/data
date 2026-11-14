@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -16,6 +18,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Armadale",
+      "osm_id": 11689426
+    },
+    "locality": {
+      "distance_m": 2140,
+      "name": "Kelmscott",
+      "osm_id": 181304750,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2100,
       "name": "Champion Lakes Swimming Beach"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

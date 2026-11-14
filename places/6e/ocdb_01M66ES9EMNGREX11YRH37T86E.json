@@ -2,6 +2,7 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
     "operator": "osm",
     "tents": "osm",
     "website": "osm"
@@ -9,6 +10,10 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Central Desert Region",
+      "osm_id": 8878328
+    },
     "operator": "NT Parks",
     "tents": true,
     "website": "https://nt.gov.au/parks/find-a-park/trephina-gorge-nature-park"
@@ -17,17 +22,17 @@
   "id": "ocdb_01M66ES9EMNGREX11YRH37T86E",
   "kind": "reserve_campsite",
   "location": {
-    "lat": -23.521617,
-    "lon": 134.396056
+    "lat": -23.52162,
+    "lon": 134.396325
   },
   "name": "Trephina Gorge Campground",
   "osm": {
     "id": 879948792,
-    "timestamp": "2023-07-29T00:38:43Z",
+    "timestamp": "2026-11-13T11:22:07Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

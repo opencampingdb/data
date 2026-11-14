@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "NSW",
       "street": "Bushland Drive",
       "suburb": "Taree"
+    },
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 2470,
+      "name": "Taree",
+      "osm_id": 17150221,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 2300
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

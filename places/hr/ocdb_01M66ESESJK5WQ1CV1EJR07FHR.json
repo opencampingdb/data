@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "West Tamar",
+      "osm_id": 10585650
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Legana",
+      "osm_id": 324560966,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "West Tamar Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

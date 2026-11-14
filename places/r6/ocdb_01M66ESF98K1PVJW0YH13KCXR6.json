@@ -2,11 +2,23 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "City of Greater Geelong",
+      "osm_id": 2646730
+    },
+    "locality": {
+      "distance_m": 10550,
+      "name": "Anakie",
+      "osm_id": 341864205,
+      "type": "village"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

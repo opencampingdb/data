@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm"
@@ -9,21 +11,28 @@
   "facts": {
     "address": {
       "housenumber": "2",
-      "postcode": "6359",
-      "state": "WA",
-      "street": "Marshall Street",
-      "suburb": "Hyden"
+      "street": "Marshall Street"
     },
     "fuels": [
       "diesel",
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Shire of Kondinin",
+      "osm_id": 11690139
+    },
+    "locality": {
+      "distance_m": 330,
+      "name": "Hyden",
+      "osm_id": 300782507,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Marshall Street"
     },
-    "opening_hours": "6:00am - 8:30pm",
+    "opening_hours": "06:00-20:30",
     "phone": "+61 8 9880 5068"
   },
   "group": "services",
@@ -36,11 +45,11 @@
   "name": "Hyden Travel Stop",
   "osm": {
     "id": 2305894979,
-    "timestamp": "2026-11-11T06:17:04Z",
+    "timestamp": "2026-11-13T03:24:04Z",
     "type": "node",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

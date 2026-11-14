@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Kangaroo Island Council",
+      "osm_id": 6671370
+    },
+    "locality": {
+      "distance_m": 18950,
+      "name": "Parndana",
+      "osm_id": 10076572637,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 80
     },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

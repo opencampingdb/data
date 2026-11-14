@@ -2,12 +2,24 @@
   "fact_sources": {
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Shoalhaven City Council",
+      "osm_id": 6311648
+    },
+    "locality": {
+      "distance_m": 1870,
+      "name": "Durras North",
+      "osm_id": 113134636,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 200,
       "name": "Depot Beach"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

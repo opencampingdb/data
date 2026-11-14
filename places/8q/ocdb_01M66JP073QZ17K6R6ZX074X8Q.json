@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -10,6 +12,16 @@
       "unleaded_91",
       "e10"
     ],
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 1340,
+      "name": "Queanbeyan",
+      "osm_id": 40817809,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Canberra Avenue"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "website": "osm",
     "wifi": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Tenterfield Shire Council",
+      "osm_id": 6163155
+    },
+    "locality": {
+      "distance_m": 1170,
+      "name": "Tenterfield",
+      "osm_id": 91294880,
+      "type": "town"
+    },
     "power": true,
     "website": "https://www.tenterfieldlodgecaravanpark.com.au/",
     "wifi": true
@@ -24,14 +36,14 @@
       "type": "node"
     }
   ],
-  "name": "Tenterfield Lodge & Caravan Park",
+  "name": "Tenterfield Lodge Caravan Park",
   "osm": {
     "id": 647962917,
-    "timestamp": "2024-06-06T14:35:48Z",
+    "timestamp": "2026-11-13T10:10:15Z",
     "type": "way",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

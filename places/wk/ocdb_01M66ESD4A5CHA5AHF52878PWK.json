@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Shire of Mount Marshall",
+      "osm_id": 11690070
+    },
+    "locality": {
+      "distance_m": 1570,
+      "name": "Bencubbin",
+      "osm_id": 3914268963,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESD4A5CHA5AHF52878PWK",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Allendale East",
+      "osm_id": 1937621841,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Port MacDonnell Road"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

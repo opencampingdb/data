@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Waratah-Wynyard",
+      "osm_id": 10593034
+    },
+    "locality": {
+      "distance_m": 4840,
+      "name": "Sisters Beach",
+      "osm_id": 2079631185,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 10,
       "name": "Boat Harbour Beach"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

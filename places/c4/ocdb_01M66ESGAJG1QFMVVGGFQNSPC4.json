@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm"
@@ -11,6 +13,16 @@
     "booking_required": true,
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 24890,
+      "name": "Glenthompson",
+      "osm_id": 598180686,
+      "type": "village"
+    },
     "operator": "Parks Victoria",
     "showers": false,
     "tents": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

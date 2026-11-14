@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -14,6 +16,16 @@
     "charge": "Payment Box",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 3520,
+      "name": "Lake Bolac",
+      "osm_id": 598180807,
+      "type": "town"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

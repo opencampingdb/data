@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 4350,
+      "name": "Cherbourg",
+      "osm_id": 1843647920,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 200
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

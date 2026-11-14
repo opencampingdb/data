@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 8380,
+      "name": "Penrith",
+      "osm_id": 117056836,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4970
     },
@@ -24,17 +36,17 @@
   "id": "ocdb_01M66ESCXXFCV47R32RH8TGWFR",
   "kind": "public_toilet",
   "location": {
-    "lat": -33.732418,
-    "lon": 150.78187
+    "lat": -33.732423,
+    "lon": 150.781909
   },
   "name": null,
   "osm": {
     "id": 9876050379,
-    "timestamp": "2023-08-25T01:11:54Z",
+    "timestamp": "2026-11-12T23:56:59Z",
     "type": "node",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

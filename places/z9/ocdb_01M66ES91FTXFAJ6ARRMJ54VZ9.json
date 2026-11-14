@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "3518",
       "street": "Hospital Street",
       "suburb": "Wedderburn"
+    },
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 830,
+      "name": "Wedderburn",
+      "osm_id": 2008004226,
+      "type": "town"
     },
     "phone": "+61 3 5494 3301",
     "website": "https://www.pioneercaravanpark.com.au/"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

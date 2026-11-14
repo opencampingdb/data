@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Moree Plains Shire Council",
+      "osm_id": 6088821
+    },
+    "locality": {
+      "distance_m": 31890,
+      "name": "Ashley",
+      "osm_id": 113689153,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Railway Parade"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

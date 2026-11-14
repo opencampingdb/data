@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -12,6 +14,16 @@
       "postcode": "5082",
       "street": "Prospect Road",
       "suburb": "Prospect"
+    },
+    "lga": {
+      "name": "City of Prospect",
+      "osm_id": 9108032
+    },
+    "locality": {
+      "distance_m": 4190,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 3090
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

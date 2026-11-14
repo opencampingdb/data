@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Warren Shire Council",
+      "osm_id": 6100934
+    },
+    "locality": {
+      "distance_m": 1640,
+      "name": "Warren",
+      "osm_id": 2039721972,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPSW42N5H75X1GV9PS4E8",
   "kind": "boat_ramp",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

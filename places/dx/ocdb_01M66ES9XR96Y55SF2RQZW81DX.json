@@ -7,6 +7,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -28,6 +30,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Tatiara District Council",
+      "osm_id": 6706440
+    },
+    "locality": {
+      "distance_m": 690,
+      "name": "Bordertown",
+      "osm_id": 264036963,
+      "type": "town"
+    },
     "max_stay": "3d",
     "nearest_major_road": {
       "distance_m": 230,
@@ -58,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

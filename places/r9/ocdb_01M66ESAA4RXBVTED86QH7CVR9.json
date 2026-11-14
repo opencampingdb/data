@@ -3,10 +3,22 @@
     "fee": "2026-08-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": true
+    "fee": true,
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 13630,
+      "name": "Wilmington",
+      "osm_id": 2576451052,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAA4RXBVTED86QH7CVR9",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

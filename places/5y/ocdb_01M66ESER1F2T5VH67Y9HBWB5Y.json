@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "tents": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 670,
+      "name": "Rosewood",
+      "osm_id": 286923487,
+      "type": "town"
+    },
     "power": true,
     "tents": true,
     "wheelchair": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -11,6 +11,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
@@ -38,6 +40,16 @@
     "dump_station": true,
     "email": "reception@kwr.net.au",
     "fee": true,
+    "lga": {
+      "name": "City of Stirling",
+      "osm_id": 11689256
+    },
+    "locality": {
+      "distance_m": 12130,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
+    },
     "max_stay": "89d",
     "nearest_beach": {
       "distance_m": 3850,
@@ -74,5 +86,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

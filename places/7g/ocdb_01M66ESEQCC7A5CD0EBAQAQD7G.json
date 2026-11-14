@@ -3,6 +3,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -16,6 +18,16 @@
     "booking_required": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Kempsey Shire Council",
+      "osm_id": 6178731
+    },
+    "locality": {
+      "distance_m": 3950,
+      "name": "Jerseyville",
+      "osm_id": 115070881,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 220,
       "name": "South Smoky Beach"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

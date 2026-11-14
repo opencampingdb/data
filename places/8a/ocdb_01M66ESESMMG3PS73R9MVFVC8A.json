@@ -10,6 +10,8 @@
     "address": "contributed",
     "caravans": "contributed",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "contributed",
     "website": "contributed"
@@ -23,6 +25,16 @@
     },
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "West Arnhem Region",
+      "osm_id": 11716450
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Jabiru",
+      "osm_id": 324836496,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Jabiru Road"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

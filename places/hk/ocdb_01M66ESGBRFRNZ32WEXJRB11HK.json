@@ -4,11 +4,23 @@
   },
   "fact_sources": {
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "pets": "community_report"
   },
   "facts": {
     "brand": "discovery",
+    "lga": {
+      "name": "Coffs Harbour City Council",
+      "osm_id": 6165983
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Emerald Beach",
+      "osm_id": 25977551,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 210,
       "name": "Emerald Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

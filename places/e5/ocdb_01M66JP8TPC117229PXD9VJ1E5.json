@@ -1,9 +1,28 @@
 {
   "fact_sources": {
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "opening_hours": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 810,
+      "name": "Port MacDonnell",
+      "osm_id": 1114962053,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2140,
       "name": "Shelly Beach"
@@ -11,7 +30,8 @@
     "nearest_boat_ramp": {
       "distance_m": 130,
       "name": "Port MacDonnell Boat Ramp"
-    }
+    },
+    "opening_hours": "24/7"
   },
   "group": "services",
   "id": "ocdb_01M66JP8TPC117229PXD9VJ1E5",
@@ -20,14 +40,14 @@
     "lat": -38.057465,
     "lon": 140.694383
   },
-  "name": "Caltex 24hr Self Serve Fuel",
+  "name": "K&S Fuels",
   "osm": {
     "id": 4763447326,
-    "timestamp": "2026-03-05T07:17:14Z",
+    "timestamp": "2026-11-13T19:28:47Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

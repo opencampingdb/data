@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "86A",
       "postcode": "3911",
       "street": "Baxter-Tooradin Road"
+    },
+    "lga": {
+      "name": "Shire of Mornington Peninsula",
+      "osm_id": 3333281
+    },
+    "locality": {
+      "distance_m": 12820,
+      "name": "Hastings",
+      "osm_id": 31617240,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

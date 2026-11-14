@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -19,6 +21,16 @@
     },
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 2180,
+      "name": "Jindabyne",
+      "osm_id": 321954666,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3160
     },
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

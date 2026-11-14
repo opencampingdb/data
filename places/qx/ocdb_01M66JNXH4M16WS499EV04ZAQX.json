@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Coorong District Council",
+      "osm_id": 7062764
+    },
+    "locality": {
+      "distance_m": 1460,
+      "name": "Salt Creek",
+      "osm_id": 268437845,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 3460
     }
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

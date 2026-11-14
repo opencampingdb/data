@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "480",
       "postcode": "6071",
       "street": "Richardson Road"
+    },
+    "lga": {
+      "name": "Shire of Mundaring",
+      "osm_id": 11689676
+    },
+    "locality": {
+      "distance_m": 8510,
+      "name": "Mount Helena",
+      "osm_id": 1493309476,
+      "type": "village"
     },
     "phone": "+61 8 9295 4346",
     "website": "https://sunseekersnudistclub.org.au/"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "brand": "big4",
+    "lga": {
+      "name": "Central Coast",
+      "osm_id": 10590161
+    },
+    "locality": {
+      "distance_m": 1030,
+      "name": "Ulverstone",
+      "osm_id": 32011608,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 120,
       "name": "Buttons Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

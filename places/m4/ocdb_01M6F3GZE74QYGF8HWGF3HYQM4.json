@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Adidi Street",
       "suburb": "Bamaga"
+    },
+    "lga": {
+      "name": "Northern Peninsula Area Regional",
+      "osm_id": 11677448
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Bamaga",
+      "osm_id": 244301764,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4140
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

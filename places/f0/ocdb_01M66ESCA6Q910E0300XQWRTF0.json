@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
     "hot_water": true,
+    "lga": {
+      "name": "Shire of Plantagenet",
+      "osm_id": 11690400
+    },
+    "locality": {
+      "distance_m": 1040,
+      "name": "Kendenup",
+      "osm_id": 1862729666,
+      "type": "town"
+    },
     "opening_hours": "24/7",
     "wheelchair": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

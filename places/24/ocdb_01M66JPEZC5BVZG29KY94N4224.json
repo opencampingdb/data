@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Gladstone Regional",
+      "osm_id": 11676351
+    },
+    "locality": {
+      "distance_m": 11280,
+      "name": "Yarwun",
+      "osm_id": 6035838576,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2920,
       "name": "Graham Creek Boatramp"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

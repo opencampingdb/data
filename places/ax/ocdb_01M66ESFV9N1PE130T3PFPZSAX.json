@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -17,6 +19,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Brewarrina Shire Council",
+      "osm_id": 6076330
+    },
+    "locality": {
+      "distance_m": 6180,
+      "name": "Brewarrina",
+      "osm_id": 3406571490,
+      "type": "town"
+    },
     "motorbikes": true,
     "nearest_boat_ramp": {
       "distance_m": 370
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

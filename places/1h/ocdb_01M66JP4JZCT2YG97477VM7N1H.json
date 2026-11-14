@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -15,6 +17,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 450,
+      "name": "Grafton",
+      "osm_id": 3834031650,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 740
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

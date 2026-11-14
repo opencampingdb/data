@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Richmond Shire",
+      "osm_id": 11676981
+    },
+    "locality": {
+      "distance_m": 240,
+      "name": "Maxwelton",
+      "osm_id": 1789411241,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Flinders Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

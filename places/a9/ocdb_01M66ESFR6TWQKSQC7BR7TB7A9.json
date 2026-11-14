@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -16,6 +18,16 @@
     "caravans": true,
     "drinking_water": true,
     "fee": false,
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 330,
+      "name": "Wondai",
+      "osm_id": 1657033935,
+      "type": "town"
+    },
     "max_stay": "48h",
     "nearest_major_road": {
       "distance_m": 330,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

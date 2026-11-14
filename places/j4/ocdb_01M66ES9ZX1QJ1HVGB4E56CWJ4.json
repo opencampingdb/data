@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 21210,
+      "name": "Pemberton",
+      "osm_id": 82359265,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3560,
       "name": "Donnelly Boat Landing"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

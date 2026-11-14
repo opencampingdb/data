@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Shire of Gannawarra",
+      "osm_id": 3363585
+    },
+    "locality": {
+      "distance_m": 710,
+      "name": "Quambatook",
+      "osm_id": 2329183869,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Quambatook - Swan Hill Road"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

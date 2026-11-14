@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
@@ -14,6 +16,16 @@
     },
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 2790,
+      "name": "Araluen",
+      "osm_id": 113704510,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Araluen Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

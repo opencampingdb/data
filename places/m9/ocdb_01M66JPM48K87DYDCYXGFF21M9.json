@@ -2,12 +2,24 @@
   "fact_sources": {
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "water_type": "osm"
   },
   "facts": {
     "drinking_water": true,
     "fee": true,
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 460,
+      "name": "Nanango",
+      "osm_id": 246281203,
+      "type": "town"
+    },
     "opening_hours": "24/7",
     "water_type": "tank_fill"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

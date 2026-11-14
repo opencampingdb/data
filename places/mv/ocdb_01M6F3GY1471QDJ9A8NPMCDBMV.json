@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Rural City of Swan Hill",
+      "osm_id": 3345551
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Nyah West",
+      "osm_id": 2059381201,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GY1471QDJ9A8NPMCDBMV",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

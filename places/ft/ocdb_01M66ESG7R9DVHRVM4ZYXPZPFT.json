@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -17,6 +19,16 @@
     "caravans": true,
     "entry": "private",
     "fee": true,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 2190,
+      "name": "Alexandra",
+      "osm_id": 65640980,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4640
     },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

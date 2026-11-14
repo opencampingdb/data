@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -17,6 +19,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Bathurst Regional Council",
+      "osm_id": 6330866
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Wattle Flat",
+      "osm_id": 113750262,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Sofala Road"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

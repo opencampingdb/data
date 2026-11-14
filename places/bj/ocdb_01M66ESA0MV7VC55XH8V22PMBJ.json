@@ -7,6 +7,8 @@
     "cabins": "osm",
     "caravans": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "wifi": "osm"
   },
@@ -15,6 +17,16 @@
     "cabins": false,
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Kandanga",
+      "osm_id": 213499050,
+      "type": "village"
+    },
     "tents": false,
     "wifi": false
   },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

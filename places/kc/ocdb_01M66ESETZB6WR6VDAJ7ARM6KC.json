@@ -3,6 +3,8 @@
     "caravans": "osm",
     "facebook": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "tents": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "facebook": "https://www.facebook.com/LakeDyer/",
     "fee": true,
+    "lga": {
+      "name": "Lockyer Valley Regional",
+      "osm_id": 11675710
+    },
+    "locality": {
+      "distance_m": 1650,
+      "name": "Laidley",
+      "osm_id": 286923839,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 110
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -11,6 +13,16 @@
       "postcode": "2097",
       "street": "Pittwater Road",
       "suburb": "Collaroy"
+    },
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 6080,
+      "name": "Mona Vale",
+      "osm_id": 117078564,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 30,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,28 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 320,
+      "name": "Port MacDonnell",
+      "osm_id": 1114962053,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2660,
       "name": "Shelly Beach"
@@ -16,9 +32,11 @@
       "name": "Port MacDonnell Boat Ramp"
     },
     "nearest_major_road": {
-      "distance_m": 280,
+      "distance_m": 290,
       "name": "Standish Street"
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESASJR9F7SJ82RC6YPY1S",
@@ -27,14 +45,14 @@
     "lat": -38.054703,
     "lon": 140.699911
   },
-  "name": null,
+  "name": "Sea Parade",
   "osm": {
     "id": 3536164783,
-    "timestamp": "2025-02-27T03:47:59Z",
+    "timestamp": "2026-11-13T19:28:47Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

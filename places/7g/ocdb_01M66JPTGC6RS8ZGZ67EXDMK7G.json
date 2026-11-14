@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -13,16 +15,23 @@
   "facts": {
     "address": {
       "housenumber": "25",
-      "postcode": "6450",
-      "state": "WA",
-      "street": "Andrew St",
-      "suburb": "Esperance"
+      "street": "Andrew Street"
     },
     "fuels": [
       "diesel",
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
+    "locality": {
+      "distance_m": 390,
+      "name": "Esperance",
+      "osm_id": 1918583620,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 350,
       "name": "Bow Park"
@@ -34,7 +43,7 @@
       "distance_m": 30,
       "name": "Andrew Street"
     },
-    "opening_hours": "Mon-Fri: 5am - 9pm, Sat-Sun: 6am - 9pm",
+    "opening_hours": "Mo-Fr 05:00-21:00, Sa-Su 06:00-21:00",
     "phone": "+61 8 6002 8869",
     "toilets": true,
     "website": "https://find.shell.com/au/fuel/10111240-shell-reddy-express-esperance/en_AU"
@@ -49,11 +58,11 @@
   "name": "SHELL REDDY EXPRESS ESPERANCE",
   "osm": {
     "id": 411375546,
-    "timestamp": "2026-11-11T05:40:44Z",
+    "timestamp": "2026-11-13T03:30:35Z",
     "type": "way",
-    "version": 8
+    "version": 10
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

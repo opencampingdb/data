@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -21,6 +23,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "The City of Norwood Payneham and St Peters",
+      "osm_id": 9107444
+    },
+    "locality": {
+      "distance_m": 4040,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4470
     },
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

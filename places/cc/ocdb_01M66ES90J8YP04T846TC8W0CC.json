@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Dorset",
+      "osm_id": 10578020
+    },
+    "locality": {
+      "distance_m": 14540,
+      "name": "Tomahawk",
+      "osm_id": 4290202350,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 2630,
       "name": "Waterhouse Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "caravans": "osm"
+    "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "caravans": false
+    "caravans": false,
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 18190,
+      "name": "Katoomba",
+      "osm_id": 20968413,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB0BECV7E91HH08ZDVZC",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

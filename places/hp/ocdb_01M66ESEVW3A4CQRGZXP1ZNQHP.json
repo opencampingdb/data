@@ -6,6 +6,8 @@
     "brand": "osm",
     "fee": "community_report",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
@@ -14,6 +16,16 @@
     "brand": "big4",
     "fee": true,
     "fuel": true,
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 2130,
+      "name": "Wooli",
+      "osm_id": 243948938,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1500,
       "name": "Wooli Beach"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

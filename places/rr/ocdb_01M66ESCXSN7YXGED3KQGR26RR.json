@@ -6,6 +6,8 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -15,6 +17,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 4260,
+      "name": "Mackay",
+      "osm_id": 1875557678,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 4330
     },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

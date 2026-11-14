@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
@@ -8,7 +10,17 @@
       "unleaded_91",
       "e10",
       "unleaded_98"
-    ]
+    ],
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 6290704
+    },
+    "locality": {
+      "distance_m": 3830,
+      "name": "Campbelltown",
+      "osm_id": 81330490,
+      "type": "town"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPWC78AA9YFEGQ1GQ4RGV",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

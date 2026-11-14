@@ -3,12 +3,24 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 3830,
+      "name": "Marysville",
+      "osm_id": 99490721,
+      "type": "village"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

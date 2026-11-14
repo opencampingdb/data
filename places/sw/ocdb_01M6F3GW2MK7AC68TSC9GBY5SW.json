@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -15,6 +17,16 @@
       "suburb": "York"
     },
     "fee": true,
+    "lga": {
+      "name": "Shire of York",
+      "osm_id": 11689681
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "York",
+      "osm_id": 277660085,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Avon Terrace"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

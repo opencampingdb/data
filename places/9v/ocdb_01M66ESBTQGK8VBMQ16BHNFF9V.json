@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
     "operator": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Huon Valley",
+      "osm_id": 10627315
+    },
     "operator": "Par Avion",
     "tents": true
   },
@@ -25,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

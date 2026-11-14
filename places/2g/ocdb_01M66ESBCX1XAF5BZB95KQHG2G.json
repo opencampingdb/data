@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Latrobe",
+      "osm_id": 3355071
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Traralgon",
+      "osm_id": 2324019453,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Franklin Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

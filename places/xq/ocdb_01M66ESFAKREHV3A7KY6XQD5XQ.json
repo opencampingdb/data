@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Port Pirie Regional Council",
+      "osm_id": 9108160
+    },
+    "locality": {
+      "distance_m": 5310,
+      "name": "Merriton",
+      "osm_id": 2573894302,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Augusta Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

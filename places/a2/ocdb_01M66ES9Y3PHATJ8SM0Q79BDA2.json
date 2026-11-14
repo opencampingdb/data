@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Boulia Shire",
+      "osm_id": 11676721
+    },
+    "locality": {
+      "distance_m": 3670,
+      "name": "Boulia",
+      "osm_id": 1973651767,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9Y3PHATJ8SM0Q79BDA2",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

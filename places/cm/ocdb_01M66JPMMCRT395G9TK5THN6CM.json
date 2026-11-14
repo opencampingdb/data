@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
@@ -14,6 +16,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "Albury City Council",
+      "osm_id": 3487773
+    },
+    "locality": {
+      "distance_m": 2730,
+      "name": "Albury",
+      "osm_id": 2293318943,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 4410,
       "name": "Finns Beach"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

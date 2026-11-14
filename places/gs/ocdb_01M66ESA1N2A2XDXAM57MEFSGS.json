@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Glamorgan-Spring Bay",
+      "osm_id": 10621831
+    },
+    "locality": {
+      "distance_m": 13730,
+      "name": "Swansea",
+      "osm_id": 251558976,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 50,
       "name": "Mayfield Beach"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

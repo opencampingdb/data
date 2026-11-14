@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -7,6 +9,16 @@
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Hobart",
+      "osm_id": 10625466
+    },
+    "locality": {
+      "distance_m": 1000,
+      "name": "Hobart",
+      "osm_id": 59149739,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 1800,
       "name": "Short Beach"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

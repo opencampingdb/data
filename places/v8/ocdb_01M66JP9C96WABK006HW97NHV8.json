@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "170",
       "postcode": "3557",
       "street": "Englishs Road"
+    },
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 2050,
+      "name": "Goornong",
+      "osm_id": 710369841,
+      "type": "village"
     }
   },
   "group": "attraction",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

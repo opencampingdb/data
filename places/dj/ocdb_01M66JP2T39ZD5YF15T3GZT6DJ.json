@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Shire of Nannup",
+      "osm_id": 11688780
+    },
+    "locality": {
+      "distance_m": 400,
+      "name": "Nannup",
+      "osm_id": 82341962,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Warren Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

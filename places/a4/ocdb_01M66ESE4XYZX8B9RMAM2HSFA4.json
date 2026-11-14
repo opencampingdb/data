@@ -2,11 +2,16 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Balranald Shire Council",
+      "osm_id": 5897433
+    },
     "nearest_boat_ramp": {
       "distance_m": 530,
       "name": "Pontoon - House Ground Tank"
@@ -28,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

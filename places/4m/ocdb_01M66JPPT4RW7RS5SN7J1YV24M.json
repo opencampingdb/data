@@ -2,12 +2,24 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
     "drinking_water": false,
     "entry": "customers",
+    "lga": {
+      "name": "Blayney Shire Council",
+      "osm_id": 6423630
+    },
+    "locality": {
+      "distance_m": 840,
+      "name": "Neville",
+      "osm_id": 113755394,
+      "type": "village"
+    },
     "operator": "Blayney Shire Council",
     "water_type": "tank_fill"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Shire of Cunderdin",
+      "osm_id": 11689533
+    },
+    "locality": {
+      "distance_m": 8250,
+      "name": "Cunderdin",
+      "osm_id": 709424004,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Great Eastern Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

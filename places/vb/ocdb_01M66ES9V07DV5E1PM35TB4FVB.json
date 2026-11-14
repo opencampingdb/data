@@ -4,10 +4,22 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 32730,
+      "name": "Hopetoun",
+      "osm_id": 2569264057,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 60
     }
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Karratha",
+      "osm_id": 11690037
+    },
+    "locality": {
+      "distance_m": 4140,
+      "name": "Karratha",
+      "osm_id": 3887250742,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Bathgate Road"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": false,
     "entry": "public",
+    "lga": {
+      "name": "Junee Shire Council",
+      "osm_id": 6252194
+    },
+    "locality": {
+      "distance_m": 2420,
+      "name": "Wantabadgery",
+      "osm_id": 113664553,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 100
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

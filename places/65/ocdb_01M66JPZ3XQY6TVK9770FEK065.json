@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "Lot 89",
       "street": "Hospital Road",
       "suburb": "Coober Pedy"
+    },
+    "lga": {
+      "name": "The District Council of Coober Pedy",
+      "osm_id": 6799901
+    },
+    "locality": {
+      "distance_m": 1260,
+      "name": "Coober Pedy",
+      "osm_id": 29383350,
+      "type": "town"
     },
     "operator": "SA Health"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

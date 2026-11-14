@@ -10,6 +10,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "power": "osm",
     "showers": "osm",
@@ -25,6 +27,16 @@
     "caravans": true,
     "drinking_water": false,
     "fee": true,
+    "lga": {
+      "name": "Shire of South Gippsland",
+      "osm_id": 3335917
+    },
+    "locality": {
+      "distance_m": 4830,
+      "name": "Walkerville",
+      "osm_id": 1281426391,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 2200,
       "name": "Diggers Island South Beach"
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

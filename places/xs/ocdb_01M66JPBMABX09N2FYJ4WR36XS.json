@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Gingin",
+      "osm_id": 11689578
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Ledge Point",
+      "osm_id": 53691434,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPBMABX09N2FYJ4WR36XS",
   "kind": "fuel",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-11T22:25:56Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

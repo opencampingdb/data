@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "dump_station": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "dump_station": true,
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Diamantina Shire",
+      "osm_id": 11676755
+    },
+    "locality": {
+      "distance_m": 1010,
+      "name": "Birdsville",
+      "osm_id": 1971543681,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESB34ANKPF43VJSSMJ38V",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

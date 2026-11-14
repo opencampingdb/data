@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "air": true,
+    "lga": {
+      "name": "Shire of Augusta Margaret River",
+      "osm_id": 11688657
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Karridale",
+      "osm_id": 187130200,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bussell Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

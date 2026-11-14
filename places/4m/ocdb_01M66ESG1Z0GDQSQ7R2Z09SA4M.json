@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "City of Greater Geraldton",
+      "osm_id": 11689919
+    },
+    "locality": {
+      "distance_m": 10460,
+      "name": "Geraldton",
+      "osm_id": 35469724,
+      "type": "city"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG1Z0GDQSQ7R2Z09SA4M",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

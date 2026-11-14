@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -13,6 +15,16 @@
       "state": "NSW",
       "street": "Hume Highway",
       "suburb": "Liverpool"
+    },
+    "lga": {
+      "name": "Liverpool City Council",
+      "osm_id": 6212442
+    },
+    "locality": {
+      "distance_m": 1750,
+      "name": "Liverpool",
+      "osm_id": 26795879,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4850,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

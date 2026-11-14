@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -14,6 +16,16 @@
     },
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 10990,
+      "name": "Mount Cole",
+      "osm_id": 1707835886,
+      "type": "village"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

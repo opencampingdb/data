@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Merredin",
+      "osm_id": 11689039
+    },
+    "locality": {
+      "distance_m": 37320,
+      "name": "Narembeen",
+      "osm_id": 1855431791,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M6F3GZ029S5TN4PED3M942HN",
   "kind": "food_and_drink",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

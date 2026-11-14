@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
       "housenumber": "50",
       "postcode": "5554",
       "street": "Mines Road"
+    },
+    "lga": {
+      "name": "Copper Coast Council",
+      "osm_id": 9108139
+    },
+    "locality": {
+      "distance_m": 1290,
+      "name": "Kadina",
+      "osm_id": 33119329,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 140,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

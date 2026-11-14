@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -12,6 +14,16 @@
       "postcode": "5277",
       "street": "Petticoat Lane",
       "suburb": "Penola"
+    },
+    "lga": {
+      "name": "Wattle Range Council",
+      "osm_id": 3795329
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Penola",
+      "osm_id": 1941193781,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 240,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "street": "Avoca Creek Road"
     },
     "entry": "customers",
+    "lga": {
+      "name": "Somerset Regional",
+      "osm_id": 11677661
+    },
+    "locality": {
+      "distance_m": 11010,
+      "name": "Linville",
+      "osm_id": 1720322987,
+      "type": "village"
+    },
     "operator": "Lions",
     "phone": "+61 7 5424 8122",
     "website": "https://campduckadang.com.au/"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

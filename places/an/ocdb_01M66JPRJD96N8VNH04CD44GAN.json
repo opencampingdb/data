@@ -2,6 +2,8 @@
   "fact_sources": {
     "fuel": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "Shire of Cardinia",
+      "osm_id": 3335652
+    },
+    "locality": {
+      "distance_m": 3200,
+      "name": "Lang Lang",
+      "osm_id": 556088786,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "South Gippsland Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

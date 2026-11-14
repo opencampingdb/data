@@ -2,11 +2,23 @@
   "fact_sources": {
     "bins": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
     "entry": "public",
+    "lga": {
+      "name": "Goondiwindi Regional",
+      "osm_id": 11674848
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Yelarbon",
+      "osm_id": 246012248,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Taloom Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

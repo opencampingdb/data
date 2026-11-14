@@ -4,6 +4,8 @@
     "cabins": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
@@ -18,6 +20,16 @@
     "cabins": true,
     "drinking_water": true,
     "fee": true,
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 7790,
+      "name": "Bendigo",
+      "osm_id": 30917754,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Midland Highway"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

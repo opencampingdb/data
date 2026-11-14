@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
@@ -12,6 +14,16 @@
     "entry": "customers",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Northern Areas Council",
+      "osm_id": 9108167
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Gulnare",
+      "osm_id": 2178291068,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Goyder Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

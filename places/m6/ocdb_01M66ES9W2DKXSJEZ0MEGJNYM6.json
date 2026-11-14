@@ -3,10 +3,22 @@
     "fee": "2026-02-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 1870,
+      "name": "Everton",
+      "osm_id": 669944036,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9W2DKXSJEZ0MEGJNYM6",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

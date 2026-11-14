@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -23,6 +25,16 @@
       "e85",
       "adblue"
     ],
+    "lga": {
+      "name": "Shire of Kellerberrin",
+      "osm_id": 11689523
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Kellerberrin",
+      "osm_id": 31064971,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Great Eastern Highway"
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Central Highlands",
+      "osm_id": 10622305
+    },
+    "locality": {
+      "distance_m": 25590,
+      "name": "Miena",
+      "osm_id": 321958019,
+      "type": "village"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPWQ1KGE0HB5S012904N6",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

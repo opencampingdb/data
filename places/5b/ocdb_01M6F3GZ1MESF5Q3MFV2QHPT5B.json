@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Burma Road"
     },
     "email": "jorgete@ettamogahmotel.com.au",
+    "lga": {
+      "name": "Albury City Council",
+      "osm_id": 3487773
+    },
+    "locality": {
+      "distance_m": 310,
+      "name": "Table Top",
+      "osm_id": 1249790999,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Hume Highway"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

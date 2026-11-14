@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "hot_water": false
+    "hot_water": false,
+    "lga": {
+      "name": "Shire of Northern Grampians",
+      "osm_id": 3348880
+    },
+    "locality": {
+      "distance_m": 9180,
+      "name": "Halls Gap",
+      "osm_id": 324529175,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDKA5BDKQ348Y3FV6N14",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

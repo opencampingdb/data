@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "5-9",
       "street": "Macquarie Street"
+    },
+    "lga": {
+      "name": "Warrumbungle Shire Council",
+      "osm_id": 6268496
+    },
+    "locality": {
+      "distance_m": 320,
+      "name": "Baradine",
+      "osm_id": 113726764,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 210,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "City of Whittlesea",
+      "osm_id": 3327768
+    },
+    "locality": {
+      "distance_m": 1080,
+      "name": "Whittlesea",
+      "osm_id": 267458656,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Plenty Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

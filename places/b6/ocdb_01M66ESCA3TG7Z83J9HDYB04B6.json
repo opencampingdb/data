@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "Donation",
     "fee": true,
+    "lga": {
+      "name": "Shire of Morawa",
+      "osm_id": 11689827
+    },
+    "locality": {
+      "distance_m": 37610,
+      "name": "Morawa",
+      "osm_id": 1858185780,
+      "type": "town"
+    },
     "showers": true,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Northern Midlands",
+      "osm_id": 10604255
+    },
+    "locality": {
+      "distance_m": 25250,
+      "name": "Ross",
+      "osm_id": 323376168,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 80
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "public",
     "hot_water": true,
+    "lga": {
+      "name": "Balonne Shire",
+      "osm_id": 11674851
+    },
+    "locality": {
+      "distance_m": 660,
+      "name": "Dirranbandi",
+      "osm_id": 1766040437,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Castlereagh Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

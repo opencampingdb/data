@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -15,7 +17,17 @@
       "diesel",
       "unleaded_95",
       "unleaded_98"
-    ]
+    ],
+    "lga": {
+      "name": "City of Armadale",
+      "osm_id": 11689426
+    },
+    "locality": {
+      "distance_m": 5160,
+      "name": "Kelmscott",
+      "osm_id": 181304750,
+      "type": "town"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP88WAMKP42MFBADQ25M1",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

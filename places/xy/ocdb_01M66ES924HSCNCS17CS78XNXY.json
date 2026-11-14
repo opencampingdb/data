@@ -4,11 +4,23 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 5440,
+      "name": "Carmila",
+      "osm_id": 2249392708,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 0,
       "name": "3 Mile Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

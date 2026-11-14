@@ -3,6 +3,8 @@
     "bbq": "osm",
     "bins": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -13,6 +15,16 @@
     "bbq": false,
     "bins": true,
     "caravans": true,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 38580,
+      "name": "Baradine",
+      "osm_id": 113726764,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Newell Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

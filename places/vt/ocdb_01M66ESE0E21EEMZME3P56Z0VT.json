@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "customers",
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Federation Council",
+      "osm_id": 6232188
+    },
+    "locality": {
+      "distance_m": 20310,
+      "name": "Coreen",
+      "osm_id": 113581169,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE0E21EEMZME3P56Z0VT",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

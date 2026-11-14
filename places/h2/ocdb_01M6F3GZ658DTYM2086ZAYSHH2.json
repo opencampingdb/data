@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Seymour Street",
       "suburb": "Majors Creek"
+    },
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 20,
+      "name": "Majors Creek",
+      "osm_id": 5283292201,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 350,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

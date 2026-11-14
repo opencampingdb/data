@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "toilet_type": "osm",
@@ -12,6 +14,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Cloncurry Shire",
+      "osm_id": 11677395
+    },
+    "locality": {
+      "distance_m": 49720,
+      "name": "Cloncurry",
+      "osm_id": 247813239,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1070
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

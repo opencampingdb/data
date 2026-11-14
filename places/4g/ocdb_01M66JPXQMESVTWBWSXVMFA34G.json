@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "street": "Cheviot Road"
     },
     "email": "gpmechanical@hotmail.com.au",
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 2080,
+      "name": "Palmwoods",
+      "osm_id": 194064294,
+      "type": "town"
+    },
     "phone": "+61 421 495 265"
   },
   "group": "services",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

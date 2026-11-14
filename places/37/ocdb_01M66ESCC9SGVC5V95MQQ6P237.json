@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Narrandera Shire Council",
+      "osm_id": 6322034
+    },
+    "locality": {
+      "distance_m": 11500,
+      "name": "Ardlethan",
+      "osm_id": 113580036,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Train Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

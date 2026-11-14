@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "tents": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Noosa Shire",
+      "osm_id": 11676212
+    },
+    "locality": {
+      "distance_m": 15700,
+      "name": "Boreen Point",
+      "osm_id": 249530579,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 30
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

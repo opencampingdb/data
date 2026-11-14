@@ -2,6 +2,7 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
@@ -9,6 +10,10 @@
   "facts": {
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Charters Towers Regional",
+      "osm_id": 11676769
+    },
     "nearest_boat_ramp": {
       "distance_m": 1790,
       "name": "Burdekin Dam Boat Ramp"
@@ -35,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

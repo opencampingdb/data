@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Murrumbidgee Council",
+      "osm_id": 6231900
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Coleambally",
+      "osm_id": 113692584,
+      "type": "village"
+    },
     "operator": "Murrumbidgee Council"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

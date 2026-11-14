@@ -9,6 +9,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nudist": "osm",
     "pets": "osm",
@@ -34,6 +36,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Temora Shire Council",
+      "osm_id": 6252224
+    },
+    "locality": {
+      "distance_m": 1370,
+      "name": "Temora",
+      "osm_id": 5705013950,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3230
     },
@@ -65,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

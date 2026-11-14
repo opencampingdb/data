@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -15,6 +17,16 @@
     "fuels": [
       "diesel"
     ],
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 17730,
+      "name": "Gympie",
+      "osm_id": 1882969315,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Tin Can Bay Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

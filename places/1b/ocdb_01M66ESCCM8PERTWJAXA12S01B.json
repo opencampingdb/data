@@ -5,6 +5,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -19,6 +21,16 @@
     "charge": "Singles and family rate",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 22260,
+      "name": "Allies Creek",
+      "osm_id": 4183789749,
+      "type": "village"
+    },
     "motorbikes": true,
     "nearest_major_road": {
       "distance_m": 230,
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

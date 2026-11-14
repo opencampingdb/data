@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -19,11 +20,15 @@
       "unleaded_98",
       "adblue"
     ],
+    "lga": {
+      "name": "Shire of Dundas",
+      "osm_id": 11690221
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Eyre Highway"
     },
-    "opening_hours": "5:00am - 8:00 PM",
+    "opening_hours": "05:00-20:00",
     "phone": "+61 8 9039 3459",
     "toilets": true,
     "website": "https://map.bp.com/en-AU/AU/gas-station/caiguna/bp-caiguna-eyre-hwy/1878"
@@ -38,11 +43,11 @@
   "name": "Golden Outback Caiguna",
   "osm": {
     "id": 216406627,
-    "timestamp": "2026-11-11T10:15:04Z",
+    "timestamp": "2026-11-12T22:00:26Z",
     "type": "way",
-    "version": 9
+    "version": 10
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

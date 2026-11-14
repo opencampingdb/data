@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Fraser Coast Regional",
+      "osm_id": 11676269
+    },
+    "locality": {
+      "distance_m": 8310,
+      "name": "Kingfisher Bay",
+      "osm_id": 827070405,
+      "type": "village"
+    }
+  },
   "group": "transport",
   "id": "ocdb_01M66JP5JB4RV6EXN201E8X9V9",
   "kind": "ferry_terminal",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

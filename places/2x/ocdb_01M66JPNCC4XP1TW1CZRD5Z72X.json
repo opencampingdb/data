@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "TAS",
       "street": "Leighlands Road",
       "suburb": "Evandale"
+    },
+    "lga": {
+      "name": "Northern Midlands",
+      "osm_id": 10604255
+    },
+    "locality": {
+      "distance_m": 2590,
+      "name": "Evandale",
+      "osm_id": 348012925,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

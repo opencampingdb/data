@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -15,6 +17,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Shire of Mount Marshall",
+      "osm_id": 11690070
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Beacon",
+      "osm_id": 971631944,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Lucas Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

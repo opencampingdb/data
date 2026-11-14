@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "postcode": "6753",
       "street": "Pardoo Street",
       "suburb": "Newman"
+    },
+    "lga": {
+      "name": "Shire of East Pilbara",
+      "osm_id": 11690247
+    },
+    "locality": {
+      "distance_m": 1550,
+      "name": "Newman",
+      "osm_id": 306328028,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

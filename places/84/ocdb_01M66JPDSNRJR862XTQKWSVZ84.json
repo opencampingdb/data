@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -16,6 +18,16 @@
       "suburb": "Ringwood"
     },
     "email": "hello@ringwoodautohaus.com.au",
+    "lga": {
+      "name": "City of Maroondah",
+      "osm_id": 3333992
+    },
+    "locality": {
+      "distance_m": 11890,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Oban Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

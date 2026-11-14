@@ -4,6 +4,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm"
   },
@@ -12,6 +14,16 @@
     "entry": "public",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Goovigen",
+      "osm_id": 1821324177,
+      "type": "village"
+    },
     "opening_hours": "24/7",
     "operator": "Banana Shire"
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

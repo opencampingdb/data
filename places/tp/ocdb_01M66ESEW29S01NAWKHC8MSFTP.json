@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -22,6 +24,16 @@
     "dump_station": true,
     "email": "grcp@wn.com.au",
     "fee": true,
+    "lga": {
+      "name": "City of Greater Geraldton",
+      "osm_id": 11689919
+    },
+    "locality": {
+      "distance_m": 680,
+      "name": "Cape Burney",
+      "osm_id": 3390094295,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 480,
       "name": "Double Beach"
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

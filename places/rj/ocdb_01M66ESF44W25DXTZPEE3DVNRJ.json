@@ -23,6 +23,8 @@
     "drinking_water": "feedback",
     "fishing": "feedback",
     "laundry": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -51,6 +53,16 @@
     "drinking_water": true,
     "fishing": true,
     "laundry": true,
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Elliott Heads",
+      "osm_id": 1474977837,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 110
     },
@@ -93,5 +105,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

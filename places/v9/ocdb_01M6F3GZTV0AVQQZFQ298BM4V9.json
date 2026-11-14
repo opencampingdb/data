@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "state": "VIC",
       "street": "Links Road",
       "suburb": "Darley"
+    },
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 4030,
+      "name": "Bacchus Marsh",
+      "osm_id": 705557765,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3890
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

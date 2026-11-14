@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Livingstone Shire",
+      "osm_id": 11677520
+    },
+    "locality": {
+      "distance_m": 10600,
+      "name": "Yaamba",
+      "osm_id": 204492164,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ES9CM2CETHZ237MGVYQNM",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm"
   },
   "facts": {
     "dump_station": true,
+    "lga": {
+      "name": "Winton Shire",
+      "osm_id": 11676713
+    },
+    "locality": {
+      "distance_m": 1400,
+      "name": "Winton",
+      "osm_id": 247811870,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 360,
       "name": "Manifold Street"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

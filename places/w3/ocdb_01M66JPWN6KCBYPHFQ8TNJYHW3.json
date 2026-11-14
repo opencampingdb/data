@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -21,6 +23,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Hume",
+      "osm_id": 3327634
+    },
+    "locality": {
+      "distance_m": 21250,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 60
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

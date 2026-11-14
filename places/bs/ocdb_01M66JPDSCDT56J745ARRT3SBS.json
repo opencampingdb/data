@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_91"
-    ]
+    ],
+    "lga": {
+      "name": "Murrumbidgee Council",
+      "osm_id": 6231900
+    },
+    "locality": {
+      "distance_m": 790,
+      "name": "Coleambally",
+      "osm_id": 113692584,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPDSCDT56J745ARRT3SBS",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

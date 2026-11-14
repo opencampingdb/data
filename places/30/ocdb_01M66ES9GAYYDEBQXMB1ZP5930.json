@@ -1,8 +1,22 @@
 {
   "fact_sources": {
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "fee": false,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 5530,
+      "name": "Aratula",
+      "osm_id": 1651171335,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1220
     }
@@ -17,11 +31,11 @@
   "name": null,
   "osm": {
     "id": 1055594109,
-    "timestamp": "2022-09-22T23:29:24Z",
+    "timestamp": "2026-11-13T05:24:33Z",
     "type": "node",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

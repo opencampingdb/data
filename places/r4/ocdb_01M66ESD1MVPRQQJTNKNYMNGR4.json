@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "facebook": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/people/Glenhope-Camping/100070747877635/",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Cobar Shire Council",
+      "osm_id": 6083910
+    },
+    "locality": {
+      "distance_m": 7290,
+      "name": "Cobar",
+      "osm_id": 113468291,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESD1MVPRQQJTNKNYMNGR4",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

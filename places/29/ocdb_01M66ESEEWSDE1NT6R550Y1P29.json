@@ -5,11 +5,23 @@
   },
   "fact_sources": {
     "dump_station": "contributed",
-    "fee": "contributed"
+    "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "dump_station": true,
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 440,
+      "name": "Boggabri",
+      "osm_id": 93632356,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEEWSDE1NT6R550Y1P29",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T13:32:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

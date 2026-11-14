@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "4518",
       "street": "Steve Irwin Way",
       "suburb": "Glass House Mountains"
+    },
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 1100,
+      "name": "Glass House Mountains",
+      "osm_id": 4518441888,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

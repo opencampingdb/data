@@ -4,6 +4,8 @@
     "charge": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -19,6 +21,16 @@
     "charge": "6 AUD",
     "email": "rhv@rrc.qld.gov.au",
     "fee": true,
+    "lga": {
+      "name": "Rockhampton Regional",
+      "osm_id": 11676441
+    },
+    "locality": {
+      "distance_m": 7780,
+      "name": "Rockhampton",
+      "osm_id": 2014326094,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Yaamba Road (Bruce Highway)"
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

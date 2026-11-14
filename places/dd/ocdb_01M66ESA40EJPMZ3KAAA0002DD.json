@@ -4,6 +4,8 @@
     "entry": "osm",
     "facebook": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
@@ -12,6 +14,16 @@
     "entry": "private",
     "facebook": "https://www.facebook.com/happyapplecaravanpark/",
     "fee": true,
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 2790,
+      "name": "The Summit",
+      "osm_id": 443265468,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "New England Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

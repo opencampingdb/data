@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Upper Lachlan Shire Council",
+      "osm_id": 6257920
+    },
+    "locality": {
+      "distance_m": 720,
+      "name": "Taralga",
+      "osm_id": 1919601053,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Orchard Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

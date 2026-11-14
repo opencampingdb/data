@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Flinders Council",
+      "osm_id": 10565253
+    },
+    "locality": {
+      "distance_m": 21460,
+      "name": "Whitemark",
+      "osm_id": 4290197653,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESER3RWP1FGX84RR68H7G",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

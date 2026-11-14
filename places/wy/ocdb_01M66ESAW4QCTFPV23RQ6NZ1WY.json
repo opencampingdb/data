@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Victoria Plains",
+      "osm_id": 11689712
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "New Norcia",
+      "osm_id": 5432378577,
+      "type": "village"
+    },
     "operator": "New Norcia Benedictine Community",
     "power": true,
     "showers": true,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Mid Murray Council",
+      "osm_id": 6811114
+    },
+    "locality": {
+      "distance_m": 4440,
+      "name": "Wongulla",
+      "osm_id": 1990572593,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP13NF1BCW9CVQZXGBNFJ",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

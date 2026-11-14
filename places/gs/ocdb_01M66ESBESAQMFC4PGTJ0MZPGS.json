@@ -6,6 +6,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "self_contained_only": "community_report",
@@ -16,6 +18,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Rockhampton Regional",
+      "osm_id": 11676441
+    },
+    "locality": {
+      "distance_m": 2310,
+      "name": "Rockhampton",
+      "osm_id": 2014326094,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1820
     },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

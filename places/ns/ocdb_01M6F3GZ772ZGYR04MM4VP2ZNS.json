@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "251",
       "street": "Rusden Street"
+    },
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 1340,
+      "name": "Armidale",
+      "osm_id": 59851594,
+      "type": "city"
     },
     "opening_hours": "Mo-Sa 11:00+; Su 12:00+; PH 12:00+",
     "wheelchair": false
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

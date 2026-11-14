@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Cook Shire",
+      "osm_id": 11677441
+    },
+    "locality": {
+      "distance_m": 15230,
+      "name": "Lockhart River",
+      "osm_id": 4096467817,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Portland Road"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

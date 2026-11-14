@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "street": "Officer Lane"
+    },
+    "lga": {
+      "name": "Shire of Macedon Ranges",
+      "osm_id": 3327683
+    },
+    "locality": {
+      "distance_m": 5030,
+      "name": "Macedon",
+      "osm_id": 1102900708,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

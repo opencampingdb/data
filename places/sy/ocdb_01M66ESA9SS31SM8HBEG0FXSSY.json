@@ -9,7 +9,9 @@
     "access": "contributed",
     "address": "contributed",
     "caravans": "contributed",
-    "fee": "contributed"
+    "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "access": "4wd",
@@ -20,7 +22,17 @@
       "suburb": "Injinoo"
     },
     "caravans": "offroad",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Northern Peninsula Area Regional",
+      "osm_id": 11677448
+    },
+    "locality": {
+      "distance_m": 8140,
+      "name": "Injinoo",
+      "osm_id": 519654324,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA9SS31SM8HBEG0FXSSY",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

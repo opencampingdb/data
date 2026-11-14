@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Penrith City Council",
+      "osm_id": 6282698
+    },
+    "locality": {
+      "distance_m": 540,
+      "name": "Penrith",
+      "osm_id": 117056836,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1410
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

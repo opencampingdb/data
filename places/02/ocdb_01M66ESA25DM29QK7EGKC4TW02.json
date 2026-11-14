@@ -9,6 +9,8 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "community_report",
     "showers": "community_report",
@@ -17,6 +19,16 @@
   "facts": {
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Tatiara District Council",
+      "osm_id": 6706440
+    },
+    "locality": {
+      "distance_m": 490,
+      "name": "Mundulla",
+      "osm_id": 1797873824,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Nalang Road"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

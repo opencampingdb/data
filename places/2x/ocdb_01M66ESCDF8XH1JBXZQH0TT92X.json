@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Dungog Shire Council",
+      "osm_id": 6185449
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "East Gresford",
+      "osm_id": 114370884,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Park Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

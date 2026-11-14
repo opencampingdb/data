@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Whitsunday Regional",
+      "osm_id": 11676670
+    },
+    "locality": {
+      "distance_m": 27590,
+      "name": "Scottville",
+      "osm_id": 247643636,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M6F3GVG78T0BKDPJSJD4DC6S",
   "kind": "food_and_drink",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

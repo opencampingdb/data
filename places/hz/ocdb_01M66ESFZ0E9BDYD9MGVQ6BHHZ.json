@@ -4,11 +4,23 @@
   },
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "pets": "community_report"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Shire of Augusta Margaret River",
+      "osm_id": 11688657
+    },
+    "locality": {
+      "distance_m": 9310,
+      "name": "Karridale",
+      "osm_id": 187130200,
+      "type": "village"
+    },
     "operator": "DBCA",
     "pets": "no"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

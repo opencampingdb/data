@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "wifi": "osm"
   },
@@ -12,6 +14,16 @@
       "street": "Sunset Drive"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Mount Isa City",
+      "osm_id": 11677400
+    },
+    "locality": {
+      "distance_m": 2370,
+      "name": "Mount Isa",
+      "osm_id": 247812099,
+      "type": "town"
+    },
     "power": true,
     "wifi": true
   },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

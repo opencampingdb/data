@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Mukinbudin",
+      "osm_id": 11690148
+    },
+    "locality": {
+      "distance_m": 48380,
+      "name": "Mukinbudin",
+      "osm_id": 264132115,
+      "type": "town"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -14,6 +16,16 @@
       "postcode": "5267",
       "street": "Emu Flat Road",
       "suburb": "Keith"
+    },
+    "lga": {
+      "name": "Tatiara District Council",
+      "osm_id": 6706440
+    },
+    "locality": {
+      "distance_m": 1050,
+      "name": "Keith",
+      "osm_id": 250971953,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 380
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -6,6 +6,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_beach": "osm",
     "pets": "osm",
@@ -23,6 +25,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 19630,
+      "name": "Cooloola Cove",
+      "osm_id": 422509553,
+      "type": "village"
+    },
     "motorbikes": true,
     "nearest_beach": {
       "distance_m": 10
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

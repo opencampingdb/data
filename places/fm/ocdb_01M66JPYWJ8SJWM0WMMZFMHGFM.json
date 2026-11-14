@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -13,6 +15,16 @@
       "street": "Merrindale Drive",
       "suburb": "Kilsyth",
       "unit": "15"
+    },
+    "lga": {
+      "name": "City of Maroondah",
+      "osm_id": 3333992
+    },
+    "locality": {
+      "distance_m": 8340,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "opening_hours": "Mo-Fr 08:00-17:30",
     "phone": "+61 3 9431 1663",
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

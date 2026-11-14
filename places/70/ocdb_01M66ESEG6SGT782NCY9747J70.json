@@ -2,12 +2,24 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
-    "hot_water": true
+    "hot_water": true,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 30840,
+      "name": "Turrawan",
+      "osm_id": 1686474719,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEG6SGT782NCY9747J70",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

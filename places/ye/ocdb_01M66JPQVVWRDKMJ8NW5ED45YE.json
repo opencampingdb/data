@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Tea Tree Gully",
+      "osm_id": 9107506
+    },
+    "locality": {
+      "distance_m": 5820,
+      "name": "Salisbury",
+      "osm_id": 1905706910,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "The Grove Way"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

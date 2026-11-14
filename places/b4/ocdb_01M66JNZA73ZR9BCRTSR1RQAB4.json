@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm"
@@ -12,6 +14,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Mudgee",
+      "osm_id": 114608650,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "A"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

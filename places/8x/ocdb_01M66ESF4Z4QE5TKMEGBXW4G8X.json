@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -17,6 +19,16 @@
       "suburb": "Rochedale"
     },
     "dump_station": true,
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 14840,
+      "name": "Mount Cotton",
+      "osm_id": 6036336569,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Pacific Motorway"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

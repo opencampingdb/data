@@ -7,6 +7,8 @@
     "email": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "showers": "osm",
@@ -25,6 +27,16 @@
     "email": "office@wedderburn.org.au",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 6290704
+    },
+    "locality": {
+      "distance_m": 5800,
+      "name": "Appin",
+      "osm_id": 113235104,
+      "type": "town"
+    },
     "operator": "Wedderburn Christian Campsite",
     "phone": "+61 2 4634 1265",
     "showers": true,
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

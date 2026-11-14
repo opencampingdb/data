@@ -11,6 +11,8 @@
     "hot_water": "osm",
     "kitchen": "osm",
     "laundry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -40,6 +42,16 @@
     "hot_water": true,
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Crows Nest",
+      "osm_id": 246272711,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "New England Highway"
@@ -70,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

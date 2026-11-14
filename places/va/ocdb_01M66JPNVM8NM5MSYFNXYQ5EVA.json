@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "SA",
       "street": "North East Road",
       "suburb": "Gilles Plains"
+    },
+    "lga": {
+      "name": "City of Port Adelaide Enfield",
+      "osm_id": 9108064
+    },
+    "locality": {
+      "distance_m": 8220,
+      "name": "Montacute",
+      "osm_id": 4954631631,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 10,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "email": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "website": "osm",
@@ -8,6 +9,12 @@
   },
   "facts": {
     "email": "pwpermits.nreta@nt.gov.au",
+    "locality": {
+      "distance_m": 1350,
+      "name": "Channel Point Community",
+      "osm_id": 4063525248,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 360
     },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

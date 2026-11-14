@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Wahgunyah"
     },
     "entry": "public",
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 4200,
+      "name": "Corowa",
+      "osm_id": 3118349777,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1600
     },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

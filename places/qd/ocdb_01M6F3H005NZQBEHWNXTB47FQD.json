@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Hepburn",
+      "osm_id": 3327844
+    },
+    "locality": {
+      "distance_m": 9510,
+      "name": "Smeaton",
+      "osm_id": 301978336,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3H005NZQBEHWNXTB47FQD",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

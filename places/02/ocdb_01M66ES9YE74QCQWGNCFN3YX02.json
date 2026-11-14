@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "tents": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "Mount Barker District Council",
+      "osm_id": 7294250
+    },
+    "locality": {
+      "distance_m": 2590,
+      "name": "Prospect Hill",
+      "osm_id": 3946915277,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Brookman Road"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

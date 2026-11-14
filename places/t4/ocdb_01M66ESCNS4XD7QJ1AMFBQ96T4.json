@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 6290704
+    },
+    "locality": {
+      "distance_m": 8470,
+      "name": "Campbelltown",
+      "osm_id": 81330490,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 4320,
       "name": "Simmos Beach"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

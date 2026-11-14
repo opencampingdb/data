@@ -4,6 +4,8 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -11,6 +13,16 @@
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Pastoral Unincorporated Area",
+      "osm_id": 6804541
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Fowlers Bay",
+      "osm_id": 1782120597,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 180
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

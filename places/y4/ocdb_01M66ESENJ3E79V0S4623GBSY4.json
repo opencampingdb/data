@@ -6,6 +6,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
@@ -21,6 +23,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "City of Devonport",
+      "osm_id": 10586315
+    },
+    "locality": {
+      "distance_m": 1720,
+      "name": "Devonport",
+      "osm_id": 27120185,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 1590
     },
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

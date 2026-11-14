@@ -3,6 +3,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "power": "osm",
@@ -13,6 +15,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Murweh Shire",
+      "osm_id": 11674879
+    },
+    "locality": {
+      "distance_m": 2710,
+      "name": "Charleville",
+      "osm_id": 246024073,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Adavale Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

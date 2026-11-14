@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "196",
       "street": "Cotton Tree Avenue",
       "suburb": "Kununurra"
+    },
+    "lga": {
+      "name": "Shire of Wyndham-East Kimberley",
+      "osm_id": 11690289
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Kununurra",
+      "osm_id": 30480122,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4760
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

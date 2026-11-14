@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Rockingham",
+      "osm_id": 11689408
+    },
+    "locality": {
+      "distance_m": 5290,
+      "name": "Rockingham",
+      "osm_id": 32566857,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30
     },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

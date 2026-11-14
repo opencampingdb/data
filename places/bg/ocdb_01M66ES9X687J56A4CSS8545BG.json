@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Westonia",
+      "osm_id": 11690078
+    },
+    "locality": {
+      "distance_m": 22270,
+      "name": "Bullfinch",
+      "osm_id": 429576297,
+      "type": "village"
+    },
     "operator": "Shire of Westonia",
     "showers": false,
     "toilets": true
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

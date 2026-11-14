@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 17530,
+      "name": "Jenolan Caves",
+      "osm_id": 113707646,
+      "type": "village"
+    },
     "website": "http://org.wildwalks.com/camping-in-nsw-parks/near-sydney-campsites/dingo-dell-camping-ground.html"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

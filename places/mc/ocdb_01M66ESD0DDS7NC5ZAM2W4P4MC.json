@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Parkes Shire Council",
+      "osm_id": 6271674
+    },
+    "locality": {
+      "distance_m": 1380,
+      "name": "Parkes",
+      "osm_id": 113708225,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Condobolin Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

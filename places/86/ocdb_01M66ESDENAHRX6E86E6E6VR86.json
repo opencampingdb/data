@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "charge": "Donation Box",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Mid-Western Regional Council",
+      "osm_id": 6268502
+    },
+    "locality": {
+      "distance_m": 15680,
+      "name": "Kandos",
+      "osm_id": 114608215,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Castlereagh Highway"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

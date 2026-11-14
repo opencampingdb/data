@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "3788",
       "street": "Chalet Road",
       "suburb": "Olinda"
+    },
+    "lga": {
+      "name": "Shire of Yarra Ranges",
+      "osm_id": 3333996
+    },
+    "locality": {
+      "distance_m": 5550,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
     },
     "website": "https://visitdandenongranges.com.au",
     "wheelchair": true
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

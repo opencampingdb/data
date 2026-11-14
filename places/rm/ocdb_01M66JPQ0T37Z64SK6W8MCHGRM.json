@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Burnside",
+      "osm_id": 9105810
+    },
+    "locality": {
+      "distance_m": 5150,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPQ0T37Z64SK6W8MCHGRM",
   "kind": "mechanic",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

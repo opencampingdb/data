@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "Gilbert Street",
       "suburb": "Latrobe"
+    },
+    "lga": {
+      "name": "Latrobe",
+      "osm_id": 10586170
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Latrobe",
+      "osm_id": 599536863,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 10,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "WA",
       "street": "Cutting Road",
       "suburb": "Upper Warren"
+    },
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 8860,
+      "name": "Quinninup",
+      "osm_id": 6052071711,
+      "type": "village"
     },
     "phone": "+61 8 9773 1268",
     "website": "https://www.waholidayguide.com.au/kin-kin-retreat"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

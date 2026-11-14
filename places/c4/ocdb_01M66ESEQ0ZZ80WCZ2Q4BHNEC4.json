@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Port Stephens Council",
+      "osm_id": 6185732
+    },
+    "locality": {
+      "distance_m": 4000,
+      "name": "Bundabah",
+      "osm_id": 114993668,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 180
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

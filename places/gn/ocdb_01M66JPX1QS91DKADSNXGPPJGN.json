@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "air": true,
+    "lga": {
+      "name": "Rural City of Benalla",
+      "osm_id": 3351593
+    },
+    "locality": {
+      "distance_m": 1220,
+      "name": "Benalla",
+      "osm_id": 25635340,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bridge Street West"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

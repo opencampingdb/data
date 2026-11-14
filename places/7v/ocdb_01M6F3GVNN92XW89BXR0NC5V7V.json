@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "55",
       "street": "Morris Street"
+    },
+    "lga": {
+      "name": "Shire of Buloke",
+      "osm_id": 3345547
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Berriwillock",
+      "osm_id": 312681507,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 150,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

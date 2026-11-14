@@ -1,11 +1,16 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm"
   },
   "facts": {
     "entry": "customers",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Central Highlands Regional",
+      "osm_id": 11676571
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDAB5P8PMAP00SBAT8ND",
@@ -23,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

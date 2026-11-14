@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Wentworth Shire Council",
+      "osm_id": 5884892
+    },
+    "locality": {
+      "distance_m": 44100,
+      "name": "Paringa",
+      "osm_id": 2074381065,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 2250
     },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "0847",
       "street": "Railway Terrace",
       "suburb": "Pine Creek"
+    },
+    "lga": {
+      "name": "Victoria Daly Region",
+      "osm_id": 5514633
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Pine Creek",
+      "osm_id": 31562954,
+      "type": "town"
     },
     "phone": "+61 8 8976 1001",
     "website": "https://www.pinecreekrailwayresort.com.au/"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -7,7 +7,9 @@
   "fact_sources": {
     "address": "contributed",
     "caravans": "contributed",
-    "email": "contributed"
+    "email": "contributed",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -18,7 +20,17 @@
       "suburb": "Blackwood"
     },
     "caravans": true,
-    "email": "info@blackwoodcaravanpark.com.au"
+    "email": "info@blackwoodcaravanpark.com.au",
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 570,
+      "name": "Blackwood",
+      "osm_id": 2140871545,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES91HDNH10GKKMMEPCBXS",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

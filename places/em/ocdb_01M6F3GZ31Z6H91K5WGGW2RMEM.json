@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -12,6 +14,16 @@
       "state": "SA",
       "street": "Hancock Road",
       "suburb": "Fairview Park"
+    },
+    "lga": {
+      "name": "City of Tea Tree Gully",
+      "osm_id": 9107506
+    },
+    "locality": {
+      "distance_m": 4150,
+      "name": "Upper Hermitage",
+      "osm_id": 1908191323,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

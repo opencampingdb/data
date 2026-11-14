@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 3380,
+      "name": "Nundle",
+      "osm_id": 114638711,
+      "type": "town"
+    },
     "max_stay": "21 days in 12 months",
     "operator": "Tamworth Regional Council",
     "showers": false,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

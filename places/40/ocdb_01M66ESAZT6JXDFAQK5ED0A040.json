@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,6 +14,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Towong",
+      "osm_id": 3361220
+    },
+    "locality": {
+      "distance_m": 24170,
+      "name": "Bogong",
+      "osm_id": 9884866304,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Omeo Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

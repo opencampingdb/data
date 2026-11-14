@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +12,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Shire of Nillumbik",
+      "osm_id": 3331023
+    },
+    "locality": {
+      "distance_m": 4270,
+      "name": "Yarra Glen",
+      "osm_id": 263675075,
+      "type": "town"
+    },
     "toilet_type": "pit",
     "wheelchair": false
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

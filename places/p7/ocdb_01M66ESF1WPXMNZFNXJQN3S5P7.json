@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Greater Hume Shire Council",
+      "osm_id": 3487850
+    },
+    "locality": {
+      "distance_m": 21600,
+      "name": "Holbrook",
+      "osm_id": 113637646,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Hume Highway"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

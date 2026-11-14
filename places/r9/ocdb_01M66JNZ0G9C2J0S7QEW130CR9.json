@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Flinders Council",
+      "osm_id": 10565253
+    },
+    "locality": {
+      "distance_m": 4900,
+      "name": "Lady Barron",
+      "osm_id": 575874446,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JNZ0G9C2J0S7QEW130CR9",
   "kind": "boat_ramp",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "West Tamar",
+      "osm_id": 10585650
+    },
+    "locality": {
+      "distance_m": 6940,
+      "name": "Exeter",
+      "osm_id": 320475815,
+      "type": "town"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESARP4YBAAKNMJZKQYJYC",
   "kind": "picnic_site",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Lake Macquarie",
+      "osm_id": 6191221
+    },
+    "locality": {
+      "distance_m": 4160,
+      "name": "Belmont",
+      "osm_id": 116956158,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 220
     },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

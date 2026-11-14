@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -7,6 +8,12 @@
     "wheelchair": "osm"
   },
   "facts": {
+    "locality": {
+      "distance_m": 180,
+      "name": "Wyndham Harbour",
+      "osm_id": 14161705187,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 230,
       "name": "Northern Beach"
@@ -37,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

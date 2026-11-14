@@ -7,12 +7,24 @@
   "fact_sources": {
     "dump_station": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
   "facts": {
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Wirrabara",
+      "osm_id": 2293202745,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "High Street"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -17,6 +19,16 @@
       "e10",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Albury City Council",
+      "osm_id": 3487773
+    },
+    "locality": {
+      "distance_m": 6430,
+      "name": "Albury",
+      "osm_id": 2293318943,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Wagga Road"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

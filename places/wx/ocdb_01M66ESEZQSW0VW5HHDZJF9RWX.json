@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Mansfield",
+      "osm_id": 3350291
+    },
+    "locality": {
+      "distance_m": 11280,
+      "name": "Jamieson",
+      "osm_id": 1701813096,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESEZQSW0VW5HHDZJF9RWX",
   "kind": "reserve_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

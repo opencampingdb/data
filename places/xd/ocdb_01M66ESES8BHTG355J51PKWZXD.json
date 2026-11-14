@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "3224",
       "street": "Alexander Avenue",
       "suburb": "Leopold"
+    },
+    "lga": {
+      "name": "City of Greater Geelong",
+      "osm_id": 2646730
+    },
+    "locality": {
+      "distance_m": 2820,
+      "name": "Leopold",
+      "osm_id": 2613069224,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 510,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

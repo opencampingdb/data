@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Kentish",
+      "osm_id": 10597614
+    },
+    "locality": {
+      "distance_m": 26610,
+      "name": "Tullah",
+      "osm_id": 422512548,
+      "type": "village"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Port Adelaide Enfield",
+      "osm_id": 9108064
+    },
+    "locality": {
+      "distance_m": 11370,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 2500
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

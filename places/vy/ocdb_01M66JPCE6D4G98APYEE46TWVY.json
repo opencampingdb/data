@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "postcode": "5352",
       "street": "Bethany Road",
       "suburb": "Tanunda"
+    },
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 1040,
+      "name": "Tanunda",
+      "osm_id": 193757622,
+      "type": "town"
     },
     "opening_hours": "Mo-Su 11:00-17:00",
     "website": "https://www.turkeyflat.com.au/"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

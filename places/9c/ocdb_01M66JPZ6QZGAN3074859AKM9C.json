@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Mount Gambier",
+      "osm_id": 3395909
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Mount Gambier",
+      "osm_id": 59609477,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bay Road"
@@ -15,14 +27,14 @@
     "lat": -37.832401,
     "lon": 140.778258
   },
-  "name": "Ampol",
+  "name": "BP",
   "osm": {
     "id": 1321568797,
-    "timestamp": "2024-10-06T08:51:18Z",
+    "timestamp": "2026-11-13T10:27:17Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "website": "osm",
@@ -16,6 +18,16 @@
       "suburb": "Karawatha"
     },
     "fee": false,
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 15740,
+      "name": "Mount Cotton",
+      "osm_id": 6036336569,
+      "type": "village"
+    },
     "opening_hours": "Tu-Su 09:00-16:00",
     "operator": "Brisbane City Council",
     "website": "https://www.brisbane.qld.gov.au/clean-and-green/natural-environment-and-water/environment-centres/karawatha-forest-discovery-centre",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

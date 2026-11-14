@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "147",
       "street": "High Street"
+    },
+    "lga": {
+      "name": "Carrathool Shire Council",
+      "osm_id": 6095007
+    },
+    "locality": {
+      "distance_m": 350,
+      "name": "Hillston",
+      "osm_id": 114176439,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 2210,
+      "name": "Hanging Rock",
+      "osm_id": 114638497,
+      "type": "village"
+    },
     "operator": "Tamworth Regional Council",
     "showers": false,
     "tents": true,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

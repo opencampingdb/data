@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nudist": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": true,
     "dump_station": false,
+    "lga": {
+      "name": "Lachlan Shire Council",
+      "osm_id": 6106054
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Burcher",
+      "osm_id": 113668649,
+      "type": "village"
+    },
     "nudist": false,
     "showers": true,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Rural City of Horsham",
+      "osm_id": 3359337
+    },
+    "locality": {
+      "distance_m": 2810,
+      "name": "Horsham",
+      "osm_id": 124415146,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1800,
       "name": "Rowing Club Pontoon (Main)"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

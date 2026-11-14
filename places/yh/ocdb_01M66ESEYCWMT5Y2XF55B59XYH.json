@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm"
   },
@@ -16,6 +18,16 @@
     "drinking_water": true,
     "dump_station": false,
     "fee": true,
+    "lga": {
+      "name": "The District Council of Peterborough",
+      "osm_id": 6808228
+    },
+    "locality": {
+      "distance_m": 790,
+      "name": "Peterborough",
+      "osm_id": 1973981236,
+      "type": "town"
+    },
     "phone": "+61 8 8651 2545",
     "power": true
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

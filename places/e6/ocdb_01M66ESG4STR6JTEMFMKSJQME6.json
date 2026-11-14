@@ -6,6 +6,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -21,6 +23,16 @@
     "dump_station": false,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 7350,
+      "name": "Moura",
+      "osm_id": 1832972322,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 130
     },
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

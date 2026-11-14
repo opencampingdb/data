@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Wanneroo",
+      "osm_id": 11689642
+    },
+    "locality": {
+      "distance_m": 4420,
+      "name": "Yanchep",
+      "osm_id": 51186351,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPRRSXVX6R2R0NQMW7VQ2",
   "kind": "information_centre",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

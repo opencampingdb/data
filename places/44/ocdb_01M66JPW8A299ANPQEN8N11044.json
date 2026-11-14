@@ -2,12 +2,19 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
     "charge": "10.00 AUD",
     "fee": true,
+    "locality": {
+      "distance_m": 2710,
+      "name": "Second Valley",
+      "osm_id": 2286688211,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 550
     },
@@ -31,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

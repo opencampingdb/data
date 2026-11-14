@@ -3,6 +3,8 @@
     "bbq": "osm",
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -12,6 +14,16 @@
     "bbq": true,
     "charge": "$6 AUD",
     "fee": true,
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 10740,
+      "name": "Uriarra Village",
+      "osm_id": 2813049267,
+      "type": "village"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

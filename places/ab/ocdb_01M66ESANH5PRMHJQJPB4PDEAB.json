@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "$10 u/p",
     "fee": true,
+    "lga": {
+      "name": "Lismore City Council",
+      "osm_id": 6168485
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "The Channon",
+      "osm_id": 2014962027,
+      "type": "village"
+    },
     "showers": true,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

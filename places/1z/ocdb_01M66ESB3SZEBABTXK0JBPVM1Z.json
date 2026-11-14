@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -16,6 +18,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": "donation",
+    "lga": {
+      "name": "Central Highlands Regional",
+      "osm_id": 11676571
+    },
+    "locality": {
+      "distance_m": 370,
+      "name": "Duaringa",
+      "osm_id": 247808655,
+      "type": "town"
+    },
     "max_stay": "48h",
     "nearest_major_road": {
       "distance_m": 90,
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

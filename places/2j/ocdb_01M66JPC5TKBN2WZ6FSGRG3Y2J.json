@@ -5,6 +5,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -17,6 +19,16 @@
       "suburb": "Bohle"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Townsville City",
+      "osm_id": 11676862
+    },
+    "locality": {
+      "distance_m": 9720,
+      "name": "Black River",
+      "osm_id": 14156663463,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Ingham Road"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

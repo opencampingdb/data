@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
@@ -10,6 +12,16 @@
     "drinking_water": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Wingecarribee Shire Council",
+      "osm_id": 6304530
+    },
+    "locality": {
+      "distance_m": 3710,
+      "name": "Yanderra",
+      "osm_id": 3053673728,
+      "type": "village"
+    },
     "operator": "NPWS",
     "toilet_type": "flush"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

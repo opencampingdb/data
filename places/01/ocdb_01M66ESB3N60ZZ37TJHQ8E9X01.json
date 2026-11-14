@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Coolgardie",
+      "osm_id": 11690099
+    },
+    "locality": {
+      "distance_m": 49570,
+      "name": "Sandy Ridge Village",
+      "osm_id": 13766839478,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESB3N60ZZ37TJHQ8E9X01",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

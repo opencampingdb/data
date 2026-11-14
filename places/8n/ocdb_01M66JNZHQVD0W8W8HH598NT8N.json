@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "postcode": "5417",
       "street": "Market Street",
       "suburb": "Burra"
+    },
+    "lga": {
+      "name": "The Regional Council of Goyder",
+      "osm_id": 9107816
+    },
+    "locality": {
+      "distance_m": 610,
+      "name": "Burra",
+      "osm_id": 249338858,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

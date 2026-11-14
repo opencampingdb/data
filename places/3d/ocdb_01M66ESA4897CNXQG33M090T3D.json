@@ -13,6 +13,8 @@
     "caravans": "contributed",
     "dump_station": "contributed",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "website": "osm"
@@ -30,6 +32,16 @@
     "caravans": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Kempsey Shire Council",
+      "osm_id": 6178731
+    },
+    "locality": {
+      "distance_m": 940,
+      "name": "Arakoon",
+      "osm_id": 115069933,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 140,
       "name": "Front Beach"
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

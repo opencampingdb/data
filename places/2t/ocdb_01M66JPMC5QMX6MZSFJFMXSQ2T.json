@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "21",
       "street": "Beech Street"
+    },
+    "lga": {
+      "name": "City of Whittlesea",
+      "osm_id": 3327768
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Whittlesea",
+      "osm_id": 267458656,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

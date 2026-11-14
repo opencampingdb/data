@@ -4,6 +4,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "power": "osm",
     "showers": "osm",
@@ -18,6 +20,16 @@
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "lga": {
+      "name": "Tablelands Regional",
+      "osm_id": 11677293
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Tinaburra",
+      "osm_id": 12350564486,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 150
     },
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

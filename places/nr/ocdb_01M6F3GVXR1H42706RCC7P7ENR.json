@@ -1,10 +1,15 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Shire of Yalgoo",
+      "osm_id": 11690064
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Great Northern Highway"
@@ -26,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

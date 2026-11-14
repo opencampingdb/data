@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "31",
       "postcode": "6623",
       "street": "Solomon Street"
+    },
+    "lga": {
+      "name": "Shire of Morawa",
+      "osm_id": 11689827
+    },
+    "locality": {
+      "distance_m": 50,
+      "name": "Morawa",
+      "osm_id": 1858185780,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 130,
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

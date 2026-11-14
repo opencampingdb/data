@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "air": false,
+    "lga": {
+      "name": "West Arnhem Region",
+      "osm_id": 11716450
+    },
+    "locality": {
+      "distance_m": 32800,
+      "name": "Djirrbiyak",
+      "osm_id": 4429629174,
+      "type": "village"
+    },
     "opening_hours": "PH,Mo-Su 00:00-24:00"
   },
   "group": "services",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

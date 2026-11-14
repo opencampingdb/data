@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "455",
       "street": "Woodberry Road"
+    },
+    "lga": {
+      "name": "Maitland City Council",
+      "osm_id": 6189782
+    },
+    "locality": {
+      "distance_m": 4600,
+      "name": "Hexham",
+      "osm_id": 117007327,
+      "type": "town"
     },
     "phone": "+61 2 4966 3595"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

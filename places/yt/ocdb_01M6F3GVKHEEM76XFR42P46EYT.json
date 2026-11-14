@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -14,6 +16,16 @@
       "suburb": "Nevertire"
     },
     "facebook": "https://www.facebook.com/nevertirepub/",
+    "lga": {
+      "name": "Warren Shire Council",
+      "osm_id": 6100934
+    },
+    "locality": {
+      "distance_m": 19000,
+      "name": "Warren",
+      "osm_id": 2039721972,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Trangie Street"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

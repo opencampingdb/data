@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "NSW",
       "street": "Yarramalong Road",
       "suburb": "Mardi"
+    },
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 2510,
+      "name": "Wyong",
+      "osm_id": 116980985,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 440,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Wollongong City Council",
+      "osm_id": 6303077
+    },
+    "locality": {
+      "distance_m": 3930,
+      "name": "Helensburgh",
+      "osm_id": 113323267,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 50,
       "name": "Bulgo Beach"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

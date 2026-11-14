@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -19,6 +21,16 @@
     "drinking_water": true,
     "dump_station": false,
     "entry": "public",
+    "lga": {
+      "name": "South Burnett Regional",
+      "osm_id": 11675024
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "Benarkin",
+      "osm_id": 1634843647,
+      "type": "village"
+    },
     "max_stay": "24h",
     "nearest_major_road": {
       "distance_m": 180,
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

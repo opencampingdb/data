@@ -3,6 +3,8 @@
     "address": "osm",
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -18,6 +20,16 @@
     "fuels": [
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Northern Midlands",
+      "osm_id": 10604255
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Campbell Town",
+      "osm_id": 244810301,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "High Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -16,6 +18,16 @@
     "caravans": true,
     "drinking_water": false,
     "entry": "permit",
+    "lga": {
+      "name": "Northern Midlands",
+      "osm_id": 10604255
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Evandale",
+      "osm_id": 348012925,
+      "type": "town"
+    },
     "max_stay": "48h",
     "nearest_major_road": {
       "distance_m": 70,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "brand": "osm"
+    "brand": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "brand": "big4"
+    "brand": "big4",
+    "lga": {
+      "name": "Coorong District Council",
+      "osm_id": 7062764
+    },
+    "locality": {
+      "distance_m": 7060,
+      "name": "Tailem Bend",
+      "osm_id": 1890289527,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG0D4XDBFFPS14DNWGKW",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

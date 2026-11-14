@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "2",
       "postcode": "5605",
       "street": "Bratten Road"
+    },
+    "lga": {
+      "name": "The District Council of Tumby Bay",
+      "osm_id": 9108371
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Tumby Bay",
+      "osm_id": 252990288,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 550
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

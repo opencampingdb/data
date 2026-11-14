@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fuel": true,
+    "lga": {
+      "name": "Shire of Halls Creek",
+      "osm_id": 11690294
+    },
+    "locality": {
+      "distance_m": 1520,
+      "name": "Warmun",
+      "osm_id": 1963381155,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Great Northern Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

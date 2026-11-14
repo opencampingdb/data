@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "street": "Stuart Highway"
+    },
+    "lga": {
+      "name": "Coomalie Shire",
+      "osm_id": 9045376
+    },
+    "locality": {
+      "distance_m": 8670,
+      "name": "Batchelor",
+      "osm_id": 31432758,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 230,
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

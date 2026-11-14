@@ -2,6 +2,8 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "water_type": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "drinking_water": true,
     "entry": "customers",
+    "lga": {
+      "name": "Coolamon Shire Council",
+      "osm_id": 6321566
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Ardlethan",
+      "osm_id": 113580036,
+      "type": "town"
+    },
     "operator": "Ardlethan Bulk Water Filling Station",
     "water_type": "tank_fill",
     "website": "https://www.gwcc.nsw.gov.au/Community/In-the-community/Bulk-water-refill-stations"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

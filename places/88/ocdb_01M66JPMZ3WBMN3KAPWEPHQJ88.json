@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -14,7 +16,17 @@
     "facebook": "https://www.facebook.com/photo.php?fbid=1340832760596619&id=100040097241974&set=a.377080310305207",
     "fuels": [
       "diesel"
-    ]
+    ],
+    "lga": {
+      "name": "Liverpool Plains Shire Council",
+      "osm_id": 6364998
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Premer",
+      "osm_id": 322735741,
+      "type": "village"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPMZ3WBMN3KAPWEPHQJ88",
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

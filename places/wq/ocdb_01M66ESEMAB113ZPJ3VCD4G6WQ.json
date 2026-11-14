@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "hot_water": false,
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 1690,
+      "name": "Kingston",
+      "osm_id": 60716267,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 0,
       "name": "Kingston Beach"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

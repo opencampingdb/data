@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 1260,
+      "name": "Howden",
+      "osm_id": 3534520275,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4080,
       "name": "Snug Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

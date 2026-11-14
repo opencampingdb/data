@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Singleton Council",
+      "osm_id": 6191883
+    },
+    "locality": {
+      "distance_m": 3310,
+      "name": "Singleton",
+      "osm_id": 128565480,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP7XRYQ855QR41A45459Z",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Hilltops Council",
+      "osm_id": 6256597
+    },
+    "locality": {
+      "distance_m": 2470,
+      "name": "Wombat",
+      "osm_id": 113641368,
+      "type": "village"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPMNCB1W2R8VEC4FJZX1A",
   "kind": "information_centre",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

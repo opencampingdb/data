@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm",
     "website": "osm"
   },
@@ -14,6 +16,16 @@
       "suburb": "Doonside"
     },
     "fee": false,
+    "lga": {
+      "name": "Blacktown City Council",
+      "osm_id": 6217858
+    },
+    "locality": {
+      "distance_m": 14680,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "toilet_type": "flush",
     "website": "https://www.toiletmap.gov.au/6938"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

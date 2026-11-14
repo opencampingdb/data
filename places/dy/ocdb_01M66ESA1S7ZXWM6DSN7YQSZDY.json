@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Lithgow City Council",
+      "osm_id": 6299566
+    },
+    "locality": {
+      "distance_m": 16200,
+      "name": "Jenolan Caves",
+      "osm_id": 113707646,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Duckmaloi Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,31 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "95",
+      "postcode": "2750",
+      "state": "NSW",
+      "street": "Station Street",
+      "suburb": "Penrith"
+    },
+    "lga": {
+      "name": "Penrith City Council",
+      "osm_id": 6282698
+    },
+    "locality": {
+      "distance_m": 250,
+      "name": "Penrith",
+      "osm_id": 117056836,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1690
     },
@@ -14,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "High Street"
-    }
+    },
+    "opening_hours": "• Monday & Sunday: 10:00 AM – 10:00 PM • Tuesday, Wednesday & Thursday: 10:00 AM – 12:00 AM (Midnight) • Friday & Saturday: 10:00 AM – 2:30 AM"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWNZ2XF4SQ01QJTH46FK",
@@ -26,11 +48,11 @@
   "name": "Tattersalls Hotel",
   "osm": {
     "id": 7178732245,
-    "timestamp": "2020-02-02T10:26:04Z",
+    "timestamp": "2026-11-13T06:24:30Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

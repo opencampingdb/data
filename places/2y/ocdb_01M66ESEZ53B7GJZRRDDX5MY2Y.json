@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -14,6 +16,16 @@
     "drinking_water": false,
     "dump_station": true,
     "fee": false,
+    "lga": {
+      "name": "Shire of Carnarvon",
+      "osm_id": 11689991
+    },
+    "locality": {
+      "distance_m": 29010,
+      "name": "Carnarvon",
+      "osm_id": 75377868,
+      "type": "city"
+    },
     "opening_hours": "24/7",
     "tents": true,
     "toilets": false,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

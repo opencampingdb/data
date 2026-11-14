@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Paroo Shire",
+      "osm_id": 11674869
+    },
+    "locality": {
+      "distance_m": 930,
+      "name": "Cunnamulla",
+      "osm_id": 246087334,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M6F3GVKPCRFNZ7301W5TCGGG",
   "kind": "roofed_accommodation",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

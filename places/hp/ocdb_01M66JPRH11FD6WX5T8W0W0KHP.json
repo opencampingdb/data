@@ -2,6 +2,8 @@
   "fact_sources": {
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "phone": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "email": "info@cowragarden.com.au",
     "fee": true,
+    "lga": {
+      "name": "Cowra Shire Council",
+      "osm_id": 6257796
+    },
+    "locality": {
+      "distance_m": 1020,
+      "name": "Cowra",
+      "osm_id": 113581295,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30
     },
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

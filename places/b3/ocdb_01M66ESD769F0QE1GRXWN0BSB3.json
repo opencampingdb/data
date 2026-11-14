@@ -3,12 +3,24 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
     "hot_water": true,
+    "lga": {
+      "name": "The District Council of Loxton Waikerie",
+      "osm_id": 6704840
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Paruna",
+      "osm_id": 253893547,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Cameron Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

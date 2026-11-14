@@ -3,6 +3,8 @@
     "bins": "osm",
     "booking_required": "osm",
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
@@ -12,6 +14,16 @@
     "bins": true,
     "booking_required": false,
     "caravans": true,
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Kilkivan",
+      "osm_id": 253861289,
+      "type": "town"
+    },
     "motorhomes": true,
     "nearest_major_road": {
       "distance_m": 60,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

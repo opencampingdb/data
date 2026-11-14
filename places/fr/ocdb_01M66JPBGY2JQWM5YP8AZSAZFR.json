@@ -1,10 +1,17 @@
 {
   "fact_sources": {
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
   },
   "facts": {
+    "locality": {
+      "distance_m": 850,
+      "name": "Port Arthur",
+      "osm_id": 2003164307,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1030
     },
@@ -29,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

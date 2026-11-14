@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "street": "Acacia Road"
+    },
+    "lga": {
+      "name": "Pastoral Unincorporated Area",
+      "osm_id": 6804541
+    },
+    "locality": {
+      "distance_m": 730,
+      "name": "Leigh Creek",
+      "osm_id": 3442199307,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 210,
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

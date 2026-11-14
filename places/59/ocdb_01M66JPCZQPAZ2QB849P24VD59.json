@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Ballarat",
+      "osm_id": 3291925
+    },
+    "locality": {
+      "distance_m": 4970,
+      "name": "Ballarat",
+      "osm_id": 189820294,
+      "type": "city"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPCZQPAZ2QB849P24VD59",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

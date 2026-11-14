@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "street": "Dundee Avenue"
     },
     "facebook": "https://www.facebook.com/gbautocare/",
+    "lga": {
+      "name": "City of Port Adelaide Enfield",
+      "osm_id": 9108064
+    },
+    "locality": {
+      "distance_m": 8060,
+      "name": "Montacute",
+      "osm_id": 4954631631,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "North East Road"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

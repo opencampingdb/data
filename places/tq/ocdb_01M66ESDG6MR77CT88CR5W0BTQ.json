@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Dungog Shire Council",
+      "osm_id": 6185449
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Clarence Town",
+      "osm_id": 114370764,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1060
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

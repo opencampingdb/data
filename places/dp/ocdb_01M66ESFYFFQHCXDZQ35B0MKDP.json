@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "dump_station": false,
     "email": "reception@portgermeincaravanpark.com.au",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Mount Remarkable",
+      "osm_id": 9108168
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "Port Germein",
+      "osm_id": 697240406,
+      "type": "village"
+    },
     "phone": "+61 8 8634 5266",
     "power": true,
     "showers": true,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

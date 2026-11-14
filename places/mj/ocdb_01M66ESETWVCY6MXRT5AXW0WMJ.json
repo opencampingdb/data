@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Mount Isa City",
+      "osm_id": 11677400
+    },
+    "locality": {
+      "distance_m": 17700,
+      "name": "Mount Isa",
+      "osm_id": 247812099,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 120,
       "name": "Transport Bay Boat Ramp"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

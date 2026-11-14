@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Buloke",
+      "osm_id": 3345547
+    },
+    "locality": {
+      "distance_m": 5790,
+      "name": "Charlton",
+      "osm_id": 266597469,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP0HAGWJD702F619F80VB",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

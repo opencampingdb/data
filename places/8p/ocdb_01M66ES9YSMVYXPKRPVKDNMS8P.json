@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Etheridge Shire",
+      "osm_id": 11676973
+    },
+    "locality": {
+      "distance_m": 20840,
+      "name": "Georgetown",
+      "osm_id": 3768315714,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Gulf Developmental Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

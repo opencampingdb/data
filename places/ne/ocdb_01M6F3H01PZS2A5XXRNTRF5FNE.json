@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -14,6 +16,16 @@
       "suburb": "Meringur"
     },
     "fee": true,
+    "lga": {
+      "name": "Rural City of Mildura",
+      "osm_id": 3345519
+    },
+    "locality": {
+      "distance_m": 45230,
+      "name": "Taplan",
+      "osm_id": 253893538,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Millewa Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

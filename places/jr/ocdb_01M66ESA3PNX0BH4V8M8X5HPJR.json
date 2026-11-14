@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Forbes Shire Council",
+      "osm_id": 6413174
+    },
+    "locality": {
+      "distance_m": 32590,
+      "name": "Bogan Gate",
+      "osm_id": 113704877,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Lachlan Valley Way"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

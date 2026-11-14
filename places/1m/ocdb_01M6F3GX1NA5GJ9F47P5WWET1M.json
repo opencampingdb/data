@@ -2,12 +2,24 @@
   "fact_sources": {
     "email": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "email": "quilpiehotel6@outlook.com",
     "facebook": "https://www.facebook.com/p/Quilpie-Pub-100042937455291/",
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Quilpie",
+      "osm_id": 246024896,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Brolga Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

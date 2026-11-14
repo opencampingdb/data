@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Paroo Shire",
+      "osm_id": 11674869
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Wyandra",
+      "osm_id": 2376913687,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1070,
       "name": "The Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

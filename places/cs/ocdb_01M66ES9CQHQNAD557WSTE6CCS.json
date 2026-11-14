@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "North Burnett Regional",
+      "osm_id": 11676093
+    },
+    "locality": {
+      "distance_m": 21690,
+      "name": "Monto",
+      "osm_id": 247796333,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9CQHQNAD557WSTE6CCS",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

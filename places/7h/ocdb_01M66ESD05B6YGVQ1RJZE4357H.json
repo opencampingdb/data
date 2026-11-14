@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "166",
       "street": "North Shore Road"
+    },
+    "lga": {
+      "name": "City of Latrobe",
+      "osm_id": 3355071
+    },
+    "locality": {
+      "distance_m": 2360,
+      "name": "Yallourn North",
+      "osm_id": 1604746406,
+      "type": "town"
     },
     "operator": "Victorian Department of Education and Training"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

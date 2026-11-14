@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "facebook": "osm"
+    "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,17 @@
       "street": "Railway Street",
       "suburb": "Bribbaree"
     },
-    "facebook": "https://www.facebook.com/profile.php?id=100067467783050&mibextid=wwXIfr&rdid=0vhwX7LGEOjoUNyS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17jFGFEmSj%2F%3Fmibextid%3DwwXIfr#"
+    "facebook": "https://www.facebook.com/profile.php?id=100067467783050&mibextid=wwXIfr&rdid=0vhwX7LGEOjoUNyS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17jFGFEmSj%2F%3Fmibextid%3DwwXIfr#",
+    "lga": {
+      "name": "Hilltops Council",
+      "osm_id": 6256597
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Bribbaree",
+      "osm_id": 113727054,
+      "type": "town"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GYDY9G3BNNJXPK5CD3Q5",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

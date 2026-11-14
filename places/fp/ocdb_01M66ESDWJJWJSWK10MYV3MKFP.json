@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Casey",
+      "osm_id": 3333276
+    },
+    "locality": {
+      "distance_m": 7980,
+      "name": "Cannons Creek",
+      "osm_id": 2608684125,
+      "type": "village"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ESDWJJWJSWK10MYV3MKFP",
   "kind": "public_toilet",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

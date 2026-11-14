@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "phone": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Cabonne Council",
+      "osm_id": 6268804
+    },
+    "locality": {
+      "distance_m": 800,
+      "name": "Manildra",
+      "osm_id": 113764845,
+      "type": "town"
+    },
     "pets": "leashed",
     "phone": "+61 458 673 647",
     "power": true,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

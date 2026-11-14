@@ -4,6 +4,8 @@
     "caravans": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -21,6 +23,16 @@
     "caravans": true,
     "email": "info@alicespringstouristpark.com.au",
     "fee": true,
+    "lga": {
+      "name": "Town of Alice Springs",
+      "osm_id": 9045378
+    },
+    "locality": {
+      "distance_m": 1270,
+      "name": "Nyewente",
+      "osm_id": 4529107343,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Larapinta Drive"
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -7,6 +7,8 @@
     "dump_station": "contributed",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "contributed"
   },
@@ -14,6 +16,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 430,
+      "name": "Injune",
+      "osm_id": 423605433,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Carnarvon Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

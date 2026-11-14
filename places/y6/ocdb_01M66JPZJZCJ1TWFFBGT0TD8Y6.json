@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Burt Street",
       "suburb": "Birdsville"
+    },
+    "lga": {
+      "name": "Diamantina Shire",
+      "osm_id": 11676755
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Birdsville",
+      "osm_id": 1971543681,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 320,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

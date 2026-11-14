@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -13,6 +15,16 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Cobar Shire Council",
+      "osm_id": 6083910
+    },
+    "locality": {
+      "distance_m": 47330,
+      "name": "Nymagee",
+      "osm_id": 113468558,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Kidman Way"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

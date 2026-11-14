@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Canada Bay Council",
+      "osm_id": 6217271
+    },
+    "locality": {
+      "distance_m": 4800,
+      "name": "Sydney",
+      "osm_id": 13766899,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 420
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

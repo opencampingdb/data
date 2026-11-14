@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "212",
       "street": "Mossman Gorge Road"
+    },
+    "lga": {
+      "name": "Douglas Shire",
+      "osm_id": 11677495
+    },
+    "locality": {
+      "distance_m": 2960,
+      "name": "Mossman",
+      "osm_id": 169580856,
+      "type": "town"
     },
     "website": "https://www.mossmangorge.com.au/centre/facilities"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

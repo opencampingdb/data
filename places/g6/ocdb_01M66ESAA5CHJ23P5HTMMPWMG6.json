@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "tents": "osm",
     "website": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "dump_station": false,
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 16340,
+      "name": "Thredbo",
+      "osm_id": 113373977,
+      "type": "village"
+    },
     "motorbikes": true,
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tom-groggin-campground",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

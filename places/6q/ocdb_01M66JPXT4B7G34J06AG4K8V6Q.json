@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
@@ -14,6 +16,16 @@
       "unleaded_95",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 15250,
+      "name": "Brisbane",
+      "osm_id": 1546628274,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Logan Road"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

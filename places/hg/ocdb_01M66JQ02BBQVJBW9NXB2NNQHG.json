@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -12,21 +14,28 @@
   "facts": {
     "address": {
       "housenumber": "47",
-      "postcode": "6346",
-      "state": "WA",
-      "street": "Morgans Street",
-      "suburb": "Ravensthorpe"
+      "street": "Morgans Street"
     },
     "fuels": [
       "diesel",
       "unleaded_91",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Ravensthorpe",
+      "osm_id": 1940218406,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Morgans Street"
     },
-    "opening_hours": "6am - 6pm",
+    "opening_hours": "06:00-18:00",
     "phone": "+61 8 9582 0170",
     "toilets": true,
     "website": "https://map.bp.com/en-AU/AU/gas-station/ravensthorpe/bp-ravensthorpe/6114",
@@ -42,11 +51,11 @@
   "name": "BP Ravensthorpe",
   "osm": {
     "id": 1527745440,
-    "timestamp": "2026-11-11T05:47:07Z",
+    "timestamp": "2026-11-13T03:31:40Z",
     "type": "way",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -12,6 +14,16 @@
       "state": "VIC",
       "street": "Great Ocean Road",
       "suburb": "Apollo Bay"
+    },
+    "lga": {
+      "name": "Shire of Colac Otway",
+      "osm_id": 3291847
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Apollo Bay",
+      "osm_id": 5704950543,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 110
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

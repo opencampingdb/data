@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": true,
     "dump_station": false,
+    "lga": {
+      "name": "Bundaberg Region",
+      "osm_id": 5656285
+    },
+    "locality": {
+      "distance_m": 4580,
+      "name": "South Bingera",
+      "osm_id": 3686385042,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Childers Road"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

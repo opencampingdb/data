@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 17600,
+      "name": "Wonboyn Lake",
+      "osm_id": 113255592,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 90
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

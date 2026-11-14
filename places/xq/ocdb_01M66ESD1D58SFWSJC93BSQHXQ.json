@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 600,
+      "name": "Bellata",
+      "osm_id": 93699732,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Railway Parade"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

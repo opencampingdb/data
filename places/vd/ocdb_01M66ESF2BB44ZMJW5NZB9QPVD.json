@@ -8,6 +8,8 @@
     "address": "contributed",
     "caravans": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
@@ -23,6 +25,16 @@
     },
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Broome",
+      "osm_id": 11690277
+    },
+    "locality": {
+      "distance_m": 1940,
+      "name": "Broome",
+      "osm_id": 53919243,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 110,
       "name": "Town Beach - Guwarrigun"
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

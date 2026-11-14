@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "car_wash": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
   "facts": {
     "car_wash": true,
+    "lga": {
+      "name": "City of Playford",
+      "osm_id": 9108093
+    },
+    "locality": {
+      "distance_m": 3990,
+      "name": "Salisbury",
+      "osm_id": 1905706910,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Main North Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

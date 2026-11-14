@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -12,6 +14,16 @@
       "suburb": "Yetman"
     },
     "facebook": "https://www.facebook.com/profile.php?id=61566528341340",
+    "lga": {
+      "name": "Inverell Shire Council",
+      "osm_id": 6195194
+    },
+    "locality": {
+      "distance_m": 740,
+      "name": "Yetman",
+      "osm_id": 1190781303,
+      "type": "village"
+    },
     "phone": "+61 7 4675 3100"
   },
   "group": "services",
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

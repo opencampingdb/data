@@ -1,13 +1,25 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_91",
       "unleaded_95"
-    ]
+    ],
+    "lga": {
+      "name": "Coffs Harbour City Council",
+      "osm_id": 6165983
+    },
+    "locality": {
+      "distance_m": 4380,
+      "name": "Boambee East",
+      "osm_id": 58737020,
+      "type": "town"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JNY22QX8163C3910N421Y",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

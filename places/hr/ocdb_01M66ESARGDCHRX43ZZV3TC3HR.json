@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Plantagenet",
+      "osm_id": 11690400
+    },
+    "locality": {
+      "distance_m": 19000,
+      "name": "Narrikup",
+      "osm_id": 1940197471,
+      "type": "village"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

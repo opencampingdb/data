@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Mornington Peninsula",
+      "osm_id": 3333281
+    },
+    "locality": {
+      "distance_m": 6920,
+      "name": "Red Hill",
+      "osm_id": 110851535,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 1330,
       "name": "Tassells Cove Dog Beach"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

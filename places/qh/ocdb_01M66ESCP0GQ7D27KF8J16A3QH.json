@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Inverell Shire Council",
+      "osm_id": 6195194
+    },
+    "locality": {
+      "distance_m": 9230,
+      "name": "Tingha",
+      "osm_id": 90136563,
+      "type": "town"
+    },
     "motorbikes": true,
     "showers": true,
     "toilets": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

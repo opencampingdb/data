@@ -3,6 +3,8 @@
     "address": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -16,6 +18,16 @@
     },
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 9000,
+      "name": "Glass House Mountains",
+      "osm_id": 4518441888,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4240
     },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "booking_required": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "booking_required": true,
-    "fee": true
+    "fee": true,
+    "lga": {
+      "name": "Bega Valley Shire Council",
+      "osm_id": 6239664
+    },
+    "locality": {
+      "distance_m": 14970,
+      "name": "Cathcart",
+      "osm_id": 10923047162,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDXN47THJBNCKSQEY5YR",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

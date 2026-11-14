@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "fuel": true,
+    "lga": {
+      "name": "Byron Shire Council",
+      "osm_id": 6170304
+    },
+    "locality": {
+      "distance_m": 410,
+      "name": "Suffolk Park",
+      "osm_id": 124601932,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 610,
       "name": "Tallow Beach"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

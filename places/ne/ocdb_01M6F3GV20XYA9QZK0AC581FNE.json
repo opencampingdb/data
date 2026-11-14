@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -14,6 +16,16 @@
       "state": "TAS",
       "street": "Charles Street",
       "suburb": "Launceston"
+    },
+    "lga": {
+      "name": "City of Launceston",
+      "osm_id": 10581631
+    },
+    "locality": {
+      "distance_m": 370,
+      "name": "Launceston",
+      "osm_id": 244646675,
+      "type": "city"
     },
     "nearest_beach": {
       "distance_m": 4340,
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -17,6 +19,16 @@
       "unleaded_91",
       "lpg"
     ],
+    "lga": {
+      "name": "Balranald Shire Council",
+      "osm_id": 5897433
+    },
+    "locality": {
+      "distance_m": 90,
+      "name": "Euston",
+      "osm_id": 113393316,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 560,
       "name": "Euston Boat Ramp"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

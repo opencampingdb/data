@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -22,6 +24,16 @@
       "unleaded_98",
       "e85"
     ],
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 7220,
+      "name": "Mona Vale",
+      "osm_id": 117078564,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3930
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

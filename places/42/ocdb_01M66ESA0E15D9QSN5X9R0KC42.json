@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +15,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Roper Gulf Region",
+      "osm_id": 11716437
+    },
+    "locality": {
+      "distance_m": 16490,
+      "name": "Mataranka",
+      "osm_id": 32620998,
+      "type": "village"
+    },
     "operator": "Elsey National Park",
     "showers": true,
     "tents": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

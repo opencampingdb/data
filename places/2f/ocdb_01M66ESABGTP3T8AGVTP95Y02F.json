@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "phone_2": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Wentworth Shire Council",
+      "osm_id": 5884892
+    },
+    "locality": {
+      "distance_m": 31210,
+      "name": "Paringa",
+      "osm_id": 2074381065,
+      "type": "village"
+    },
     "phone": "+61 3 5027 8188",
     "phone_2": "+61 408 522 193"
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

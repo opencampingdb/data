@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 30670,
+      "name": "Taroom",
+      "osm_id": 1558893171,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JP1M15PRGNS7HB46YGP9Y",
   "kind": "boat_ramp",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

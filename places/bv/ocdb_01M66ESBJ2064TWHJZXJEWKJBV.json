@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "entry": "customers",
+    "lga": {
+      "name": "Canterbury-Bankstown Council",
+      "osm_id": 2162244
+    },
+    "locality": {
+      "distance_m": 10700,
+      "name": "Sydney",
+      "osm_id": 13766899,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4780
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

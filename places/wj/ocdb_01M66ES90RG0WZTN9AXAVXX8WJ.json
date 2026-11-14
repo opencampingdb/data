@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 7380,
+      "name": "Alonnah",
+      "osm_id": 4293044871,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 90,
       "name": "Neck Beach"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

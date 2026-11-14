@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "NSW",
       "street": "Bowning Road",
       "suburb": "Bowning"
+    },
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Bowning",
+      "osm_id": 99621023,
+      "type": "village"
     },
     "phone": "+61 2 6227 6103"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

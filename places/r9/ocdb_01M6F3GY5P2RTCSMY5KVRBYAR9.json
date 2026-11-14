@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "QLD",
       "street": "Glenlyon Drive",
       "suburb": "Stanthorpe"
+    },
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 3190,
+      "name": "Stanthorpe",
+      "osm_id": 92410551,
+      "type": "town"
     },
     "website": "https://granitebeltretreat.com.au/brewery/"
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

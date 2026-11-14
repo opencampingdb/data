@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -12,6 +14,16 @@
       "state": "NSW",
       "street": "Therry Road",
       "suburb": "Campbelltown"
+    },
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 6290704
+    },
+    "locality": {
+      "distance_m": 2080,
+      "name": "Campbelltown",
+      "osm_id": 81330490,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 210,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "46",
       "street": "Apex Drive",
       "unit": "1"
+    },
+    "lga": {
+      "name": "City of Wyndham",
+      "osm_id": 2432416
+    },
+    "locality": {
+      "distance_m": 14710,
+      "name": "Wyndham Harbour",
+      "osm_id": 14161705187,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 350
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

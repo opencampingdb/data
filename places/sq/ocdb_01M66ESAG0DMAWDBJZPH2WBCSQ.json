@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
+    "lga": {
+      "name": "West Coast",
+      "osm_id": 10594916
+    },
+    "locality": {
+      "distance_m": 36460,
+      "name": "Queenstown",
+      "osm_id": 252839015,
+      "type": "town"
+    },
     "operator": "Parks and Wildlife",
     "showers": false,
     "tents": true
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

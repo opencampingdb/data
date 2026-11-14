@@ -2,6 +2,8 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "charge": "Donation",
     "fee": true,
+    "lga": {
+      "name": "North Burnett Regional",
+      "osm_id": 11676093
+    },
+    "locality": {
+      "distance_m": 14370,
+      "name": "Eidsvold",
+      "osm_id": 1140788311,
+      "type": "town"
+    },
     "operator": "Loakes Family",
     "power": true,
     "showers": true,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

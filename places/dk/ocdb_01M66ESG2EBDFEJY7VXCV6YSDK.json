@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "charge": "Booking Fee Only",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 23940,
+      "name": "Taralga",
+      "osm_id": 1919601053,
+      "type": "town"
+    },
     "motorbikes": true,
     "nearest_major_road": {
       "distance_m": 200,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

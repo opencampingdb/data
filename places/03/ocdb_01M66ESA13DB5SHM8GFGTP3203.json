@@ -3,10 +3,22 @@
     "fee": "2026-10-01T00:00:00Z"
   },
   "fact_sources": {
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Shire of Cranbrook",
+      "osm_id": 11690470
+    },
+    "locality": {
+      "distance_m": 23430,
+      "name": "Rocky Gully",
+      "osm_id": 2586470827,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA13DB5SHM8GFGTP3203",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

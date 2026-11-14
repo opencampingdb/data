@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Albany",
+      "osm_id": 11690341
+    },
+    "locality": {
+      "distance_m": 10060,
+      "name": "Manypeaks",
+      "osm_id": 2680325209,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 290,
       "name": "Normans Beach"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -14,6 +16,16 @@
       "suburb": "Hermidale"
     },
     "facebook": "https://www.facebook.com/thehermidalehotel/",
+    "lga": {
+      "name": "Bogan Shire Council",
+      "osm_id": 6086047
+    },
+    "locality": {
+      "distance_m": 410,
+      "name": "Hermidale",
+      "osm_id": 114660283,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Youngee Street"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

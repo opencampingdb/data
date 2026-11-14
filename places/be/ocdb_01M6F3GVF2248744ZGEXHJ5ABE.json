@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
     "address": {
       "housenumber": "2",
       "street": "Lord Street"
+    },
+    "lga": {
+      "name": "Shire of Corangamite",
+      "osm_id": 3291894
+    },
+    "locality": {
+      "distance_m": 290,
+      "name": "Port Campbell",
+      "osm_id": 267123862,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 80
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

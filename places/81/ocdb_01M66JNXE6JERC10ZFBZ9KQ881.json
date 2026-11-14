@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "239",
       "street": "Milawa-Bobinawarrah Road",
       "suburb": "Milawa"
+    },
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Milawa",
+      "osm_id": 251144815,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 480,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

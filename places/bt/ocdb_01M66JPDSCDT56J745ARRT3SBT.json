@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -8,6 +10,16 @@
     "fuels": [
       "diesel"
     ],
+    "lga": {
+      "name": "Murrumbidgee Council",
+      "osm_id": 6231900
+    },
+    "locality": {
+      "distance_m": 1040,
+      "name": "Coleambally",
+      "osm_id": 113692584,
+      "type": "village"
+    },
     "operator": "BP",
     "website": "https://map.bp.com/en-AU/AU/gas-station/coleambally/bp-opt-coleambally/5758"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

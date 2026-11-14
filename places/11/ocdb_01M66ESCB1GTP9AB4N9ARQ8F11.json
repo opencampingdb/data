@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "wheelchair": "osm"
@@ -11,6 +13,16 @@
     "entry": "public",
     "fee": false,
     "hot_water": true,
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Binalong",
+      "osm_id": 113731301,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Stephens Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

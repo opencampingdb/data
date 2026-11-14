@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -14,6 +16,16 @@
       "unleaded_95",
       "lpg"
     ],
+    "lga": {
+      "name": "Shire of Corangamite",
+      "osm_id": 3291894
+    },
+    "locality": {
+      "distance_m": 940,
+      "name": "Camperdown",
+      "osm_id": 123474233,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Princes Highway"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

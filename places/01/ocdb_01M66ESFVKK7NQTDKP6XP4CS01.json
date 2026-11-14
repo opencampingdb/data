@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "charge": "Box",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Franklin Harbour",
+      "osm_id": 9108354
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Cowell",
+      "osm_id": 253011300,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1200
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

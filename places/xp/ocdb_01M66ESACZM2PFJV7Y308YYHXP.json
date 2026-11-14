@@ -6,6 +6,8 @@
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "phone": "contributed",
     "power": "osm",
@@ -15,6 +17,16 @@
     "booking_required": true,
     "caravans": false,
     "fee": true,
+    "lga": {
+      "name": "Sutherland Shire Council",
+      "osm_id": 6206752
+    },
+    "locality": {
+      "distance_m": 10510,
+      "name": "Helensburgh",
+      "osm_id": 113323267,
+      "type": "town"
+    },
     "motorbikes": false,
     "phone": "+61 2 9542 0648",
     "power": false,
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "VIC",
       "street": "Horne Street",
       "suburb": "Sunbury"
+    },
+    "lga": {
+      "name": "City of Hume",
+      "osm_id": 3327634
+    },
+    "locality": {
+      "distance_m": 14500,
+      "name": "Riddells Creek",
+      "osm_id": 536417243,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

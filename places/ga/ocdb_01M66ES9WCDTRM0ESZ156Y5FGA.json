@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Shire of Buloke",
+      "osm_id": 3345547
+    },
+    "locality": {
+      "distance_m": 1090,
+      "name": "Wycheproof",
+      "osm_id": 312681738,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Calder Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

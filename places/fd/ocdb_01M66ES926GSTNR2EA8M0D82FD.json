@@ -5,6 +5,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "drinking_water": false,
     "dump_station": false,
     "fee": false,
+    "lga": {
+      "name": "Tablelands Regional",
+      "osm_id": 11677293
+    },
+    "locality": {
+      "distance_m": 790,
+      "name": "Rocky Creek",
+      "osm_id": 6684423107,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Kennedy Highway"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

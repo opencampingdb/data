@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "vehicle_access": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Liverpool Plains Shire Council",
+      "osm_id": 6364998
+    },
+    "locality": {
+      "distance_m": 5190,
+      "name": "Murrurundi",
+      "osm_id": 1831953132,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "New England Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "private",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Lithgow City Council",
+      "osm_id": 6299566
+    },
+    "locality": {
+      "distance_m": 15280,
+      "name": "Oberon",
+      "osm_id": 33547125,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCTYYZZ2VBYNBFKPE8P6",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

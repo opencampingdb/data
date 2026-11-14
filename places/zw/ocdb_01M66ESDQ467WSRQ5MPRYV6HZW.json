@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "tents": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 10140,
+      "name": "Goovigen",
+      "osm_id": 1821324177,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Burnett Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

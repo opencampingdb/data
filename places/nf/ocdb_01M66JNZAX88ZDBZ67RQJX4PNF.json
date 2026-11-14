@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "website": "osm"
@@ -17,6 +19,16 @@
       "e10",
       "unleaded_98"
     ],
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 14500,
+      "name": "Corindi Beach",
+      "osm_id": 116950480,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Pacific Highway"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

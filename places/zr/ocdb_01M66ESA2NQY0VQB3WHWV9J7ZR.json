@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Southern Mallee District Council",
+      "osm_id": 6706319
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Parilla",
+      "osm_id": 2111363699,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mallee Highway"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "booking_required": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
@@ -8,6 +9,12 @@
   },
   "facts": {
     "booking_required": true,
+    "locality": {
+      "distance_m": 2510,
+      "name": "Canberra",
+      "osm_id": 21674637,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 1680
     },
@@ -33,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "District Council of Elliston",
+      "osm_id": 7125331
+    },
+    "locality": {
+      "distance_m": 31440,
+      "name": "Yeelanna",
+      "osm_id": 1158002952,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Tod Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

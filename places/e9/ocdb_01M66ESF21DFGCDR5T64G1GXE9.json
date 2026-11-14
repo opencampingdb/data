@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Livingstone Shire",
+      "osm_id": 11677520
+    },
+    "locality": {
+      "distance_m": 1380,
+      "name": "Marlborough",
+      "osm_id": 3095346050,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Kunwarara Road"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -8,6 +8,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -30,6 +32,16 @@
     "dump_station": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 2250,
+      "name": "Braidwood",
+      "osm_id": 5845670688,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Kings Highway"
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

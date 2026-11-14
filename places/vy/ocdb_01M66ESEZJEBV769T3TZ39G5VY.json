@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -16,6 +18,16 @@
       "street": "Bruce Highway"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Hinchinbrook Shire",
+      "osm_id": 11676894
+    },
+    "locality": {
+      "distance_m": 3380,
+      "name": "Ingham",
+      "osm_id": 1777842534,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Bruce Highway"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

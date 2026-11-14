@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
@@ -17,6 +19,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Kingston District Council",
+      "osm_id": 6738739
+    },
+    "locality": {
+      "distance_m": 1430,
+      "name": "Kingston SE",
+      "osm_id": 319480549,
+      "type": "town"
+    },
     "max_stay": "48h",
     "nearest_beach": {
       "distance_m": 340
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

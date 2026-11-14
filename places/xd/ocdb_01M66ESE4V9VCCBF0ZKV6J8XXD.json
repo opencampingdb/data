@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Georges River Council",
+      "osm_id": 6205809
+    },
+    "locality": {
+      "distance_m": 17170,
+      "name": "Liverpool",
+      "osm_id": 26795879,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 760
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

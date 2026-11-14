@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "phone": "osm",
     "wifi": "osm"
@@ -12,6 +14,16 @@
       "state": "NSW",
       "street": "Bigga Road",
       "suburb": "Crooked Corner"
+    },
+    "lga": {
+      "name": "Upper Lachlan Shire Council",
+      "osm_id": 6257920
+    },
+    "locality": {
+      "distance_m": 11500,
+      "name": "Binda",
+      "osm_id": 113716340,
+      "type": "village"
     },
     "operator": "Peter Fulton",
     "phone": "+61 405 369 066",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

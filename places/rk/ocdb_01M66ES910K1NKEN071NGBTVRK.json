@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Donnybrook-Balingup",
+      "osm_id": 11688751
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Balingup",
+      "osm_id": 82362316,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "South Western Highway"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

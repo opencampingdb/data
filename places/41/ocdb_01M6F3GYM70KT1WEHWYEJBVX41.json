@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "40",
       "street": "Barr Street",
       "suburb": "Tungamah"
+    },
+    "lga": {
+      "name": "Shire of Moira",
+      "osm_id": 3365119
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "Tungamah",
+      "osm_id": 644290984,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

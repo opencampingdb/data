@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -13,6 +15,16 @@
       "state": "NSW",
       "street": "Pandanus Parade",
       "suburb": "Cabarita Beach"
+    },
+    "lga": {
+      "name": "Tweed Shire Council",
+      "osm_id": 6170302
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Bogangar",
+      "osm_id": 114632149,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 70,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

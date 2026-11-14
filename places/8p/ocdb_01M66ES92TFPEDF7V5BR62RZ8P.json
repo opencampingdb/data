@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Latrobe",
+      "osm_id": 10586170
+    },
+    "locality": {
+      "distance_m": 5920,
+      "name": "Sassafras",
+      "osm_id": 599538913,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Bass Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

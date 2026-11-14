@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 730,
+      "name": "Tumut",
+      "osm_id": 113713214,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1820
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

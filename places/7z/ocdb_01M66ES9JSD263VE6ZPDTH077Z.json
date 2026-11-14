@@ -3,12 +3,24 @@
     "booking_required": "osm",
     "caravans": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm"
   },
   "facts": {
     "booking_required": false,
     "caravans": true,
     "dump_station": false,
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 3830,
+      "name": "Marysville",
+      "osm_id": 99490721,
+      "type": "village"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

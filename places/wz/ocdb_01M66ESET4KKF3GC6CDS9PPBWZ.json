@@ -40,6 +40,8 @@
     "fee": "feedback",
     "kitchen": "feedback",
     "laundry": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "feedback",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
@@ -69,6 +71,16 @@
     "fee": true,
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "City of Victor Harbor",
+      "osm_id": 7246311
+    },
+    "locality": {
+      "distance_m": 1190,
+      "name": "Victor Harbor",
+      "osm_id": 249072879,
+      "type": "town"
+    },
     "motorhomes": true,
     "nearest_beach": {
       "distance_m": 220
@@ -106,5 +118,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

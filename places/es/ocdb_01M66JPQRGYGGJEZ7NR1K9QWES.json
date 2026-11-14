@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -12,6 +14,16 @@
       "street": "Carrington Street",
       "suburb": "Queanbeyan East",
       "unit": "2"
+    },
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 1560,
+      "name": "Queanbeyan",
+      "osm_id": 40817809,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 130,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

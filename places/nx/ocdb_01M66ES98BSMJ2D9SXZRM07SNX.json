@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Golden Plains Shire",
+      "osm_id": 3290692
+    },
+    "locality": {
+      "distance_m": 8010,
+      "name": "Anakie",
+      "osm_id": 341864205,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4140,
       "name": "Disability beach"
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -8,12 +8,24 @@
   "fact_sources": {
     "caravans": "contributed",
     "fee": "contributed",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "contributed",
     "website": "contributed"
   },
   "facts": {
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Shire of Glenelg",
+      "osm_id": 3357380
+    },
+    "locality": {
+      "distance_m": 2890,
+      "name": "Narrawong",
+      "osm_id": 600217286,
+      "type": "village"
+    },
     "motorhomes": true,
     "website": "https://www.exploreoutdoors.vic.gov.au/activities/camping/sawpit"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T22:12:38Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

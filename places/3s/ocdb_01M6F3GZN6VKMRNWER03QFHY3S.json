@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "312",
       "street": "Port Phillip Trail"
+    },
+    "lga": {
+      "name": "Snowy Monaro Regional Council",
+      "osm_id": 6239422
+    },
+    "locality": {
+      "distance_m": 30880,
+      "name": "Adaminaby",
+      "osm_id": 113372218,
+      "type": "village"
     },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/the-pines-cottage",
     "wifi": false
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

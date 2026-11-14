@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
@@ -12,6 +14,16 @@
       "state": "WA",
       "street": "Morrison Road",
       "suburb": "Swan View"
+    },
+    "lga": {
+      "name": "City of Swan",
+      "osm_id": 11689336
+    },
+    "locality": {
+      "distance_m": 15930,
+      "name": "Mount Helena",
+      "osm_id": 1493309476,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 4670
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

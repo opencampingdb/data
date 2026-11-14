@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "71A",
       "street": "Sydney Road"
+    },
+    "lga": {
+      "name": "City of Merri-bek",
+      "osm_id": 3327767
+    },
+    "locality": {
+      "distance_m": 6770,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

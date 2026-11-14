@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 5390,
+      "name": "Glenmorgan",
+      "osm_id": 380459445,
+      "type": "village"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M6F3GX1Y4W1E0M1G2E0F99GB",
   "kind": "heritage",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "VIC",
       "street": "Somerset Road",
       "suburb": "Campbellfield"
+    },
+    "lga": {
+      "name": "City of Hume",
+      "osm_id": 3327634
+    },
+    "locality": {
+      "distance_m": 15020,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "opening_hours": "Mo-Sa 08:30-17:00",
     "phone": "+61 403 473 799"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

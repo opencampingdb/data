@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Isaac Regional",
+      "osm_id": 11676584
+    },
+    "locality": {
+      "distance_m": 30080,
+      "name": "Netherdale",
+      "osm_id": 1665767630,
+      "type": "town"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

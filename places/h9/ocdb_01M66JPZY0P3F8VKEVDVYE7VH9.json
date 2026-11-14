@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Burdekin Shire",
+      "osm_id": 11677016
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Home Hill",
+      "osm_id": 2138810432,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Eighth Avenue"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

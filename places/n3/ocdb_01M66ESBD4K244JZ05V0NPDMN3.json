@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -9,6 +11,16 @@
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 9720,
+      "name": "Barrington",
+      "osm_id": 39093056,
+      "type": "village"
+    },
     "operator": "Barrington Outdoor Adventure Centre, Gloucester",
     "showers": true,
     "tents": true,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

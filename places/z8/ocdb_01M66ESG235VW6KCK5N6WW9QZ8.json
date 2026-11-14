@@ -1,14 +1,26 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "state": "QLD",
       "street": "Lake Callide Drive"
     },
-    "entry": "customers"
+    "entry": "customers",
+    "lga": {
+      "name": "Banana Shire",
+      "osm_id": 11674950
+    },
+    "locality": {
+      "distance_m": 10380,
+      "name": "Biloela",
+      "osm_id": 247805969,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG235VW6KCK5N6WW9QZ8",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

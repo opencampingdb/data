@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "190",
       "postcode": "2756",
       "street": "Hall Street"
+    },
+    "lga": {
+      "name": "Hawkesbury City Council",
+      "osm_id": 6222206
+    },
+    "locality": {
+      "distance_m": 6550,
+      "name": "Windsor",
+      "osm_id": 117051750,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3230
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

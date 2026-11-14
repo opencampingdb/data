@@ -2,12 +2,24 @@
   "fact_sources": {
     "bins": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bins": true,
     "drinking_water": false,
+    "lga": {
+      "name": "Hilltops Council",
+      "osm_id": 6256597
+    },
+    "locality": {
+      "distance_m": 13600,
+      "name": "Jugiong",
+      "osm_id": 113641093,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Hume Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

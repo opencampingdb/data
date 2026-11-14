@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm"
@@ -14,6 +16,16 @@
       "suburb": "Point Vernon"
     },
     "email": "pvhp@bigpond.com",
+    "lga": {
+      "name": "Fraser Coast Regional",
+      "osm_id": 11676269
+    },
+    "locality": {
+      "distance_m": 5820,
+      "name": "Hervey Bay",
+      "osm_id": 68558311,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 850,
       "name": "Point Vernon"
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

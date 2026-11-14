@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -13,6 +15,16 @@
     "drinking_water": false,
     "entry": "customers",
     "fee": false,
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 930,
+      "name": "Muttaburra",
+      "osm_id": 3608314156,
+      "type": "village"
+    },
     "operator": "Barcaldine Regional Council",
     "tents": true,
     "toilets": false
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

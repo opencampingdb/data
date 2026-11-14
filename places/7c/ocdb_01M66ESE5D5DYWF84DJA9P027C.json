@@ -4,6 +4,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -14,6 +16,16 @@
     "caravans": true,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Goondiwindi Regional",
+      "osm_id": 11674848
+    },
+    "locality": {
+      "distance_m": 5170,
+      "name": "Toomelah",
+      "osm_id": 1745434735,
+      "type": "village"
+    },
     "max_stay": "14d",
     "operator": "Gondiwindi Regional Council",
     "tents": true,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

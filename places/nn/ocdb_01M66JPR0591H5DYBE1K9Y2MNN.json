@@ -2,12 +2,24 @@
   "fact_sources": {
     "car_wash": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "car_wash": true,
     "fuel": true,
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 610,
+      "name": "Wangaratta",
+      "osm_id": 662026831,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1040
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

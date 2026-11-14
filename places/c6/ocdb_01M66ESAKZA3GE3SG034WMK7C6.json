@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Barcaldine"
     },
     "entry": "customers",
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 29470,
+      "name": "Barcaldine",
+      "osm_id": 1837486209,
+      "type": "town"
+    },
     "showers": true,
     "toilets": true,
     "website": "https://www.larawetlands.com.au/"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

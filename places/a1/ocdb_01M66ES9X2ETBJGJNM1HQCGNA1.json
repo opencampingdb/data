@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "caravans": "osm"
+    "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "caravans": true
+    "caravans": true,
+    "lga": {
+      "name": "The Flinders Ranges Council",
+      "osm_id": 6805430
+    },
+    "locality": {
+      "distance_m": 23140,
+      "name": "Quorn",
+      "osm_id": 32691509,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9X2ETBJGJNM1HQCGNA1",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

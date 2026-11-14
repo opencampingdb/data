@@ -5,10 +5,22 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "community_report"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Kentish",
+      "osm_id": 10597614
+    },
+    "locality": {
+      "distance_m": 14370,
+      "name": "Wilmot",
+      "osm_id": 2634782123,
+      "type": "village"
+    },
     "pets": "yes"
   },
   "group": "overnight",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

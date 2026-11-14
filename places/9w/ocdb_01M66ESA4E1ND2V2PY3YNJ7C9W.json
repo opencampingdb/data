@@ -3,6 +3,8 @@
     "charge": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
     "charge": "Donation",
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Maranoa Regional",
+      "osm_id": 11674862
+    },
+    "locality": {
+      "distance_m": 790,
+      "name": "Wallumbilla",
+      "osm_id": 327748949,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Warrego Highway"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

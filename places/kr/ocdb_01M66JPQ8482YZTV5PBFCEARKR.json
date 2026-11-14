@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "96",
       "street": "Randell Street",
       "unit": "b"
+    },
+    "lga": {
+      "name": "Mid Murray Council",
+      "osm_id": 6811114
+    },
+    "locality": {
+      "distance_m": 70,
+      "name": "Mannum",
+      "osm_id": 1890301948,
+      "type": "town"
     },
     "nearest_boat_ramp": {
       "distance_m": 90
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

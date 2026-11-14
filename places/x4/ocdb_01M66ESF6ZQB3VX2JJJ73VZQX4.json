@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "brand": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "brand": "big4",
+    "lga": {
+      "name": "Hay Shire Council",
+      "osm_id": 6092948
+    },
+    "locality": {
+      "distance_m": 1100,
+      "name": "Hay",
+      "osm_id": 1887069258,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2580
     },
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

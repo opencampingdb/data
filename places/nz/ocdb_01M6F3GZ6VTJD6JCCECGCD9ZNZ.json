@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -12,6 +14,16 @@
       "state": "TAS",
       "street": "Channel Highway",
       "suburb": "Snug"
+    },
+    "lga": {
+      "name": "Kingborough",
+      "osm_id": 10627577
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Snug",
+      "osm_id": 1446236187,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 750,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

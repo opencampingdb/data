@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Cuballing",
+      "osm_id": 11689079
+    },
+    "locality": {
+      "distance_m": 4430,
+      "name": "Popanyinning",
+      "osm_id": 1855656588,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Great Southern Highway"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

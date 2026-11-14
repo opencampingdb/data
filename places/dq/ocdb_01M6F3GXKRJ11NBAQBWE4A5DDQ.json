@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Carinda"
     },
     "facebook": "https://www.facebook.com/carindahotel/",
+    "lga": {
+      "name": "Walgett Shire Council",
+      "osm_id": 6079201
+    },
+    "locality": {
+      "distance_m": 80,
+      "name": "Carinda",
+      "osm_id": 113365021,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Colin Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

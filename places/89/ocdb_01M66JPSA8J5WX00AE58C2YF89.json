@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Campaspe",
+      "osm_id": 3347273
+    },
+    "locality": {
+      "distance_m": 7650,
+      "name": "Rushworth",
+      "osm_id": 246992762,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JPSA8J5WX00AE58C2YF89",
   "kind": "attraction",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

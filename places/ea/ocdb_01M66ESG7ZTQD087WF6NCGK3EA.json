@@ -3,6 +3,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 2860,
+      "name": "Biboohra",
+      "osm_id": 3877283827,
+      "type": "village"
+    },
     "showers": true,
     "toilets": true,
     "website": "https://www.kydobicountrypark.com.au"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

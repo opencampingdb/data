@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "caravans": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Wandering",
+      "osm_id": 11689070
+    },
+    "locality": {
+      "distance_m": 16270,
+      "name": "Jarrahdale",
+      "osm_id": 179844169,
+      "type": "village"
+    },
     "operator": "Department of Parks & Wildlife",
     "showers": false,
     "tents": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

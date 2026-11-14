@@ -1,13 +1,25 @@
 {
   "fact_sources": {
-    "fuels": "osm"
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "fuels": [
       "diesel",
       "unleaded_95",
       "unleaded_98"
-    ]
+    ],
+    "lga": {
+      "name": "Shire of Coolgardie",
+      "osm_id": 11690099
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Kambalda West",
+      "osm_id": 2058747465,
+      "type": "town"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPNWKBXDCBQ343A361D1X",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

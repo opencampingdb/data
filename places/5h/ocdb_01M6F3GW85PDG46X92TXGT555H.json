@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "wifi": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "24",
       "street": "Wayeela Street"
+    },
+    "lga": {
+      "name": "City of Griffith",
+      "osm_id": 6149251
+    },
+    "locality": {
+      "distance_m": 1490,
+      "name": "Griffith",
+      "osm_id": 1831538106,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

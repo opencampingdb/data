@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -12,6 +14,16 @@
       "street": "Four Bull Trail",
       "suburb": "Forest Land",
       "unit": "461"
+    },
+    "lga": {
+      "name": "Tenterfield Shire Council",
+      "osm_id": 6163155
+    },
+    "locality": {
+      "distance_m": 28030,
+      "name": "Tenterfield",
+      "osm_id": 91294880,
+      "type": "town"
     },
     "operator": "NSW NPWS",
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/four-bull-hut",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

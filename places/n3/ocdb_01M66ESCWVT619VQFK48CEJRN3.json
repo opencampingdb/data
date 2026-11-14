@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 780,
+      "name": "Tarnagulla",
+      "osm_id": 563709805,
+      "type": "village"
+    },
     "showers": true,
     "toilets": true,
     "website": "https://www.loddon.vic.gov.au/For-residents/Business-Directory/Tarnagulla-Recreation-Reserve-Camping"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

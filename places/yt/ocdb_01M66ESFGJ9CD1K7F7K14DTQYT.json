@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorbikes": "osm",
     "pets": "osm",
     "showers": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "caravans": true,
     "fee": false,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 17260,
+      "name": "Salisbury",
+      "osm_id": 114371357,
+      "type": "village"
+    },
     "motorbikes": false,
     "pets": "yes",
     "showers": false,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

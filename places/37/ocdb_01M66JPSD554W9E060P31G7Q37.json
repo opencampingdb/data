@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -12,6 +14,16 @@
       "suburb": "Katanning"
     },
     "fuel": true,
+    "lga": {
+      "name": "Shire of Katanning",
+      "osm_id": 11688904
+    },
+    "locality": {
+      "distance_m": 460,
+      "name": "Katanning",
+      "osm_id": 243369155,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Clive Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

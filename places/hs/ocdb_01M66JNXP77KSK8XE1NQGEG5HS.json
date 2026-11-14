@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Pingelly",
+      "osm_id": 11689064
+    },
+    "locality": {
+      "distance_m": 16400,
+      "name": "Brookton",
+      "osm_id": 243393710,
+      "type": "town"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JNXP77KSK8XE1NQGEG5HS",
   "kind": "lookout",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

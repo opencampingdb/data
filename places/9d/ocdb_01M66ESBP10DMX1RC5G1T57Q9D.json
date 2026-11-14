@@ -1,9 +1,16 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "entry": "customers"
+    "entry": "customers",
+    "locality": {
+      "distance_m": 320,
+      "name": "Yulara",
+      "osm_id": 51186044,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBP10DMX1RC5G1T57Q9D",
@@ -21,5 +28,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

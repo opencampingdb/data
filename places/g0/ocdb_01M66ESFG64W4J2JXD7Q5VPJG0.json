@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -10,11 +12,21 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 5830,
+      "name": "Brisbane",
+      "osm_id": 1546628274,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 4150
     },
     "nearest_boat_ramp": {
-      "distance_m": 380
+      "distance_m": 370
     },
     "nearest_major_road": {
       "distance_m": 220,
@@ -26,17 +38,17 @@
   "id": "ocdb_01M66ESFG64W4J2JXD7Q5VPJG0",
   "kind": "public_toilet",
   "location": {
-    "lat": -27.518939,
-    "lon": 153.041511
+    "lat": -27.518936,
+    "lon": 153.041526
   },
   "name": null,
   "osm": {
     "id": 666648514,
-    "timestamp": "2026-11-12T02:08:31Z",
+    "timestamp": "2026-11-12T23:07:38Z",
     "type": "way",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

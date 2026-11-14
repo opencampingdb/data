@@ -3,6 +3,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "wheelchair": "osm"
   },
@@ -10,6 +12,16 @@
     "caravans": true,
     "dump_station": false,
     "entry": "public",
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 5250,
+      "name": "Barrington",
+      "osm_id": 39093056,
+      "type": "village"
+    },
     "tents": true,
     "wheelchair": false
   },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

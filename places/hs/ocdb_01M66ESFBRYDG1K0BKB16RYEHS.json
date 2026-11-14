@@ -1,12 +1,17 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Coolgardie",
+      "osm_id": 11690099
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Great Eastern Highway"
@@ -30,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

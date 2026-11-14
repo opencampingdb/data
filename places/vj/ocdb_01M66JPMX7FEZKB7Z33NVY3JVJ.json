@@ -2,7 +2,9 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -10,7 +12,17 @@
       "street": "Warrah Ridge Road"
     },
     "email": "connamara@bigpond.com",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Liverpool Plains Shire Council",
+      "osm_id": 6364998
+    },
+    "locality": {
+      "distance_m": 9660,
+      "name": "Quirindi",
+      "osm_id": 190751504,
+      "type": "town"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPMX7FEZKB7Z33NVY3JVJ",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

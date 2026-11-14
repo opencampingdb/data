@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
@@ -13,6 +15,16 @@
       "street": "Dollis Street",
       "suburb": "Rocklea",
       "unit": "9"
+    },
+    "lga": {
+      "name": "City of Brisbane",
+      "osm_id": 11677792
+    },
+    "locality": {
+      "distance_m": 9850,
+      "name": "Brisbane",
+      "osm_id": 1546628274,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 3940
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

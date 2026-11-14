@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -13,6 +15,16 @@
       "state": "SA",
       "street": "Seacombe Road",
       "suburb": "Seaview Downs"
+    },
+    "lga": {
+      "name": "City of Marion",
+      "osm_id": 9102764
+    },
+    "locality": {
+      "distance_m": 12100,
+      "name": "Clarendon",
+      "osm_id": 5674778781,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 1920
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

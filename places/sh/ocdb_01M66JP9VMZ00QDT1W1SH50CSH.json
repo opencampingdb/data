@@ -1,12 +1,24 @@
 {
   "fact_sources": {
-    "address": "osm"
+    "address": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "100",
       "postcode": "6125",
       "street": "Falls Road"
+    },
+    "lga": {
+      "name": "Shire of Serpentine-Jarrahdale",
+      "osm_id": 11689420
+    },
+    "locality": {
+      "distance_m": 2950,
+      "name": "Serpentine",
+      "osm_id": 1793989748,
+      "type": "town"
     }
   },
   "group": "attraction",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

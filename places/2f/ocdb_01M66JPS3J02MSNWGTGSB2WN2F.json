@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "22",
       "street": "Hospital Road"
+    },
+    "lga": {
+      "name": "Dungog Shire Council",
+      "osm_id": 6185449
+    },
+    "locality": {
+      "distance_m": 950,
+      "name": "Dungog",
+      "osm_id": 114370856,
+      "type": "town"
     },
     "operator": "NSW Health"
   },
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

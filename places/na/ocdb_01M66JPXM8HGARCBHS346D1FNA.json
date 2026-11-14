@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
@@ -9,6 +11,16 @@
     "address": {
       "housenumber": "7",
       "street": "Honeybee Parade"
+    },
+    "lga": {
+      "name": "City of Wanneroo",
+      "osm_id": 11689642
+    },
+    "locality": {
+      "distance_m": 5090,
+      "name": "Joondalup",
+      "osm_id": 5705053184,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4130
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

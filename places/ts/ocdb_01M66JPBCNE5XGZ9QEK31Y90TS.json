@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "website": "osm"
   },
@@ -9,6 +11,16 @@
       "housenumber": "1326",
       "postcode": "3685",
       "street": "Gooramadda Road"
+    },
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 3700,
+      "name": "Howlong",
+      "osm_id": 3017407073,
+      "type": "village"
     },
     "nearest_boat_ramp": {
       "distance_m": 2940
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

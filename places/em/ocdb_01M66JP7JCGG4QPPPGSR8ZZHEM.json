@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Byron Shire Council",
+      "osm_id": 6170304
+    },
+    "locality": {
+      "distance_m": 2050,
+      "name": "Suffolk Park",
+      "osm_id": 124601932,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 10,
       "name": "Broken Head Beach"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

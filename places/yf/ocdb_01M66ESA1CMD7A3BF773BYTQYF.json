@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "The District Council of Lower Eyre Peninsula",
+      "osm_id": 9110112
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Louth Bay",
+      "osm_id": 2697269754,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 3300,
       "name": "Shell Beach"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

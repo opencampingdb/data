@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Anangu Pitjantjatjara Yankunytjatjara",
+      "osm_id": 6792088
+    },
+    "locality": {
+      "distance_m": 26700,
+      "name": "Iwantja",
+      "osm_id": 1499667582,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Stuart Highway"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

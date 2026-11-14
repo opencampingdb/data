@@ -2,12 +2,24 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "tents": "osm"
   },
   "facts": {
     "caravans": false,
     "drinking_water": true,
+    "lga": {
+      "name": "Central Coast Council",
+      "osm_id": 6195207
+    },
+    "locality": {
+      "distance_m": 10960,
+      "name": "Yarramalong",
+      "osm_id": 10561401757,
+      "type": "village"
+    },
     "showers": false,
     "tents": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

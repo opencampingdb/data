@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Murweh Shire",
+      "osm_id": 11674879
+    },
+    "locality": {
+      "distance_m": 36280,
+      "name": "Augathella",
+      "osm_id": 2284179400,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Landsborough Highway"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

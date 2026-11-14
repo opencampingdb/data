@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Shire of Hindmarsh",
+      "osm_id": 3345532
+    },
+    "locality": {
+      "distance_m": 5820,
+      "name": "Dimboola",
+      "osm_id": 10772645882,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Western Highway"
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

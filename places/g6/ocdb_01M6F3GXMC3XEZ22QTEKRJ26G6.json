@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm"
@@ -14,6 +16,16 @@
       "suburb": "Greenock"
     },
     "fee": true,
+    "lga": {
+      "name": "Light Regional Council",
+      "osm_id": 9108117
+    },
+    "locality": {
+      "distance_m": 2080,
+      "name": "Greenock",
+      "osm_id": 180957524,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Greenock Road"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

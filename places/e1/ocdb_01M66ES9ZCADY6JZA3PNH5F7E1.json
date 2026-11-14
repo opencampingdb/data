@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "operator": "osm",
     "power": "osm",
@@ -16,6 +18,16 @@
     "drinking_water": false,
     "dump_station": true,
     "entry": "customers",
+    "lga": {
+      "name": "Shire of Chapman Valley",
+      "osm_id": 11689924
+    },
+    "locality": {
+      "distance_m": 15770,
+      "name": "Geraldton",
+      "osm_id": 35469724,
+      "type": "city"
+    },
     "max_stay": "24h",
     "operator": "Shire of Chapman Valley",
     "power": false,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

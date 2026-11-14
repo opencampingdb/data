@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "City of Onkaparinga",
+      "osm_id": 7262204
+    },
+    "locality": {
+      "distance_m": 9360,
+      "name": "Myponga",
+      "osm_id": 2286688208,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 30
     },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
@@ -10,6 +12,16 @@
     "address": {
       "housenumber": "45",
       "street": "Barrack Street"
+    },
+    "lga": {
+      "name": "Shire of Merredin",
+      "osm_id": 11689039
+    },
+    "locality": {
+      "distance_m": 190,
+      "name": "Merredin",
+      "osm_id": 31065028,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

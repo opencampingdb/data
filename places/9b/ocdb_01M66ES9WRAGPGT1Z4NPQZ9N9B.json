@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
@@ -15,6 +17,16 @@
       "street": "Maffra-Sale Road"
     },
     "dump_station": true,
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 1870,
+      "name": "Sale",
+      "osm_id": 1751005346,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Maffra-Sale Road"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

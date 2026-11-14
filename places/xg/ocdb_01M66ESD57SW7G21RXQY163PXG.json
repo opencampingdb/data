@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "hot_water": "osm"
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "public",
-    "hot_water": false
+    "hot_water": false,
+    "lga": {
+      "name": "Shire of Dowerin",
+      "osm_id": 11689797
+    },
+    "locality": {
+      "distance_m": 15990,
+      "name": "Dowerin",
+      "osm_id": 2428936154,
+      "type": "town"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESD57SW7G21RXQY163PXG",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

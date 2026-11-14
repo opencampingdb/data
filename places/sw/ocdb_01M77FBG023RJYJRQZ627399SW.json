@@ -3,6 +3,8 @@
     "address": "osm",
     "email": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -14,16 +16,23 @@
   "facts": {
     "address": {
       "housenumber": "15",
-      "postcode": "6450",
-      "state": "WA",
-      "street": "Hill Street",
-      "suburb": "Chadwick"
+      "street": "Hill Street"
     },
     "email": "admin@perrys.com.au",
     "fuels": [
       "diesel",
       "adblue"
     ],
+    "lga": {
+      "name": "Shire of Esperance",
+      "osm_id": 11689020
+    },
+    "locality": {
+      "distance_m": 2650,
+      "name": "Esperance",
+      "osm_id": 1918583620,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1560
     },
@@ -34,7 +43,7 @@
       "distance_m": 140,
       "name": "Harbour Road"
     },
-    "opening_hours": "24Hr",
+    "opening_hours": "24/7",
     "phone": "+61 8 8636 2274",
     "toilets": false,
     "website": "https://perrys.com.au/store-locator/"
@@ -49,11 +58,11 @@
   "name": "Perrys Esperance - Unmanned",
   "osm": {
     "id": 14366211716,
-    "timestamp": "2026-11-11T05:40:44Z",
+    "timestamp": "2026-11-13T03:26:24Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

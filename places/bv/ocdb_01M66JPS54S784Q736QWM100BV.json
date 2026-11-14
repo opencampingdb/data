@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "website": "osm"
@@ -10,6 +12,16 @@
       "housenumber": "97",
       "postcode": "5355",
       "street": "Sturt Highway"
+    },
+    "lga": {
+      "name": "The Barossa Council",
+      "osm_id": 9105938
+    },
+    "locality": {
+      "distance_m": 1980,
+      "name": "Stockwell",
+      "osm_id": 2027818357,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 230,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

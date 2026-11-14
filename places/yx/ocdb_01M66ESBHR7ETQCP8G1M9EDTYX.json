@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Shire of Waroona",
+      "osm_id": 11690511
+    },
+    "locality": {
+      "distance_m": 8520,
+      "name": "Dwellingup",
+      "osm_id": 83353490,
+      "type": "town"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://exploreparks.dbca.wa.gov.au/site/charlies-flat-campground"
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,11 +2,23 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Adelaide Hills Council",
+      "osm_id": 9105845
+    },
+    "locality": {
+      "distance_m": 3720,
+      "name": "Lenswood",
+      "osm_id": 1908289705,
+      "type": "village"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

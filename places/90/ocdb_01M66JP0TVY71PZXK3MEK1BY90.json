@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "housenumber": "3894",
       "postcode": "3453",
       "street": "Harmony Way"
+    },
+    "lga": {
+      "name": "Shire of Mount Alexander",
+      "osm_id": 3339104
+    },
+    "locality": {
+      "distance_m": 2980,
+      "name": "Harcourt",
+      "osm_id": 271886065,
+      "type": "village"
     },
     "opening_hours": "Fr-Su 11:00-17:00"
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

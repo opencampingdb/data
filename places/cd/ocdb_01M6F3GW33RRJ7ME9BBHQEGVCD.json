@@ -2,6 +2,8 @@
   "fact_sources": {
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
   "facts": {
     "email": "info@brislington.net",
     "fee": true,
+    "lga": {
+      "name": "City of Parramatta Council",
+      "osm_id": 6217262
+    },
+    "locality": {
+      "distance_m": 130,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 2560
     },
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

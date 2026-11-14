@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -10,6 +12,16 @@
       "postcode": "3551",
       "street": "Hermitage Road",
       "suburb": "Maiden Gully"
+    },
+    "lga": {
+      "name": "City of Greater Bendigo",
+      "osm_id": 3343791
+    },
+    "locality": {
+      "distance_m": 5130,
+      "name": "Marong",
+      "osm_id": 290614051,
+      "type": "village"
     },
     "opening_hours": "12:00-17:00",
     "website": "https://www.balgownieestatebendigo.com/"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

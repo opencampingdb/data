@@ -2,6 +2,8 @@
   "fact_sources": {
     "air": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -17,6 +19,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Wyndham",
+      "osm_id": 2432416
+    },
+    "locality": {
+      "distance_m": 6680,
+      "name": "Wyndham Harbour",
+      "osm_id": 14161705187,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4120
     },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

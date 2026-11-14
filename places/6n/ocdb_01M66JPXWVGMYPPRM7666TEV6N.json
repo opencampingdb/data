@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
@@ -10,6 +12,16 @@
       "state": "VIC",
       "street": "Molesworth Court",
       "suburb": "West Footscray"
+    },
+    "lga": {
+      "name": "City of Maribyrnong",
+      "osm_id": 3330965
+    },
+    "locality": {
+      "distance_m": 8110,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 3890
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

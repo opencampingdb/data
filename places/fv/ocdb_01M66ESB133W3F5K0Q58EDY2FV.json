@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Ipswich City",
+      "osm_id": 11675604
+    },
+    "locality": {
+      "distance_m": 10800,
+      "name": "Ipswich",
+      "osm_id": 21477953,
+      "type": "city"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3170,
       "name": "Goodna Boat Ramp"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

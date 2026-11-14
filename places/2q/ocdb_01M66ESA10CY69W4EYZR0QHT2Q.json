@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -13,6 +15,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Shire of Lake Grace",
+      "osm_id": 11688971
+    },
+    "locality": {
+      "distance_m": 370,
+      "name": "Lake King",
+      "osm_id": 243400871,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Hyden-Lake King Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

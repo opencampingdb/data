@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "unleaded_91",
       "unleaded_95"
     ],
+    "lga": {
+      "name": "Coorong District Council",
+      "osm_id": 7062764
+    },
+    "locality": {
+      "distance_m": 1890,
+      "name": "Tailem Bend",
+      "osm_id": 1890289527,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Princes Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

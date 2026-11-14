@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "entry": "private",
+    "lga": {
+      "name": "Shire of Menzies",
+      "osm_id": 11690211
+    },
+    "locality": {
+      "distance_m": 35850,
+      "name": "Leonora",
+      "osm_id": 109556735,
+      "type": "town"
+    },
     "operator": "Genesis Minerals Limited"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

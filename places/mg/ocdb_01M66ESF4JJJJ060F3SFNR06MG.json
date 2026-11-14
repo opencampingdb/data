@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
@@ -11,7 +13,17 @@
       "street": "Bogan Street",
       "suburb": "Peak Hill"
     },
-    "fee": true
+    "fee": true,
+    "lga": {
+      "name": "Parkes Shire Council",
+      "osm_id": 6271674
+    },
+    "locality": {
+      "distance_m": 620,
+      "name": "Peak Hill",
+      "osm_id": 113708577,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF4JJJJ060F3SFNR06MG",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

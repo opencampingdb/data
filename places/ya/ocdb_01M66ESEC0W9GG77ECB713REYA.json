@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "state": "WA",
       "street": "Taylor Street",
       "suburb": "Port Hedland"
+    },
+    "lga": {
+      "name": "Town of Port Hedland",
+      "osm_id": 11690043
+    },
+    "locality": {
+      "distance_m": 6130,
+      "name": "Port Hedland",
+      "osm_id": 44776448,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 200
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

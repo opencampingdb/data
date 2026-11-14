@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Strathbogie",
+      "osm_id": 3345839
+    },
+    "locality": {
+      "distance_m": 9490,
+      "name": "Strathbogie",
+      "osm_id": 1787039672,
+      "type": "village"
+    },
     "operator": "DELWP Benalla"
   },
   "group": "overnight",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

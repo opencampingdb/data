@@ -2,12 +2,24 @@
   "fact_sources": {
     "drinking_water": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "drinking_water": true,
     "entry": "public",
+    "lga": {
+      "name": "Mareeba Shire",
+      "osm_id": 11677337
+    },
+    "locality": {
+      "distance_m": 140,
+      "name": "Dimbulah",
+      "osm_id": 4074614616,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Stephens Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

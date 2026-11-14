@@ -3,6 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "toilet_type": "osm",
@@ -18,6 +20,16 @@
     },
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "City of Darebin",
+      "osm_id": 2404379
+    },
+    "locality": {
+      "distance_m": 11500,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Edwardes Street"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

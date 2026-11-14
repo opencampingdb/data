@@ -1,9 +1,21 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Moira",
+      "osm_id": 3365119
+    },
+    "locality": {
+      "distance_m": 19700,
+      "name": "Mathoura",
+      "osm_id": 113692981,
+      "type": "town"
+    },
     "operator": "Parks Victoria",
     "toilets": false
   },
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

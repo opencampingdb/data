@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "VIC",
       "street": "High Street",
       "suburb": "Yea"
+    },
+    "lga": {
+      "name": "Shire of Murrindindi",
+      "osm_id": 3332647
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Yea",
+      "osm_id": 65641576,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

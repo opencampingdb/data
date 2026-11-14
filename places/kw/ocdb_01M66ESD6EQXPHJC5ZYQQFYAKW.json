@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "wheelchair": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "entry": "public",
     "hot_water": false,
+    "lga": {
+      "name": "Shire of Ravensthorpe",
+      "osm_id": 11688994
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Hopetoun",
+      "osm_id": 2569264057,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 110
     },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Cumberland City Council",
+      "osm_id": 6210859
+    },
+    "locality": {
+      "distance_m": 6620,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 2160
     },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

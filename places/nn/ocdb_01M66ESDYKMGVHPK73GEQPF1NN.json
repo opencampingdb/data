@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "power": "osm",
     "tents": "osm",
@@ -8,6 +10,16 @@
   },
   "facts": {
     "caravans": true,
+    "lga": {
+      "name": "Southern Downs Regional",
+      "osm_id": 11677975
+    },
+    "locality": {
+      "distance_m": 23070,
+      "name": "Yangan",
+      "osm_id": 1277936430,
+      "type": "village"
+    },
     "operator": "Janowen Hills",
     "power": false,
     "tents": true,
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -13,6 +15,16 @@
       "postcode": "3341",
       "street": "Garrards Lane",
       "suburb": "Myrniong"
+    },
+    "lga": {
+      "name": "Shire of Moorabool",
+      "osm_id": 3291957
+    },
+    "locality": {
+      "distance_m": 3040,
+      "name": "Myrniong",
+      "osm_id": 671817503,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 4330,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -16,6 +18,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Darebin",
+      "osm_id": 2404379
+    },
+    "locality": {
+      "distance_m": 7770,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Plenty Road"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

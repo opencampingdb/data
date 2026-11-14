@@ -7,6 +7,8 @@
     "entry": "osm",
     "fee": "osm",
     "kitchen": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "phone": "osm",
     "power": "osm",
@@ -29,6 +31,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Armidale Regional Council",
+      "osm_id": 6165969
+    },
+    "locality": {
+      "distance_m": 1410,
+      "name": "Black Mountain",
+      "osm_id": 206204684,
+      "type": "village"
+    },
     "pets": "yes",
     "phone": "+61 427 750 182",
     "power": true,
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

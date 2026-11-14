@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Exmouth",
+      "osm_id": 11689997
+    },
+    "locality": {
+      "distance_m": 12580,
+      "name": "Exmouth",
+      "osm_id": 302954813,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 4800,
       "name": "Tandabiddi Boat Ramp"
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

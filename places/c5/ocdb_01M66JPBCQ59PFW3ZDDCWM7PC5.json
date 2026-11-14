@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "3685",
       "street": "Jacks Road",
       "suburb": "Rutherglen"
+    },
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 2990,
+      "name": "Rutherglen",
+      "osm_id": 330691574,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 4600
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

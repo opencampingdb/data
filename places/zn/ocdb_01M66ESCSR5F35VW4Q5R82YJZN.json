@@ -3,6 +3,7 @@
     "entry": "osm",
     "fee": "osm",
     "hot_water": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm"
@@ -11,6 +12,12 @@
     "entry": "public",
     "fee": false,
     "hot_water": false,
+    "locality": {
+      "distance_m": 1850,
+      "name": "Belconnen",
+      "osm_id": 246935939,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 0
     },
@@ -38,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T21:48:42Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

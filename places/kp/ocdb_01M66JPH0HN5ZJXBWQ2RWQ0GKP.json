@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -13,6 +15,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 7890,
+      "name": "Maroochydore",
+      "osm_id": 1983415496,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Tanawha Tourist Drive"
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -5,6 +5,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "pets": "osm",
     "showers": "osm",
@@ -17,6 +19,16 @@
     "charge": "35 AUD",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 4670,
+      "name": "Westbrook",
+      "osm_id": 2015773311,
+      "type": "town"
+    },
     "operator": "Royal Agricultural Society of Queensland",
     "pets": "yes",
     "showers": true,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

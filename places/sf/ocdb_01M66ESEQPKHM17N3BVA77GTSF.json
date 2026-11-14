@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm",
     "tents": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
     "caravans": true,
     "entry": "permit",
     "fee": true,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 4330,
+      "name": "Cambroon",
+      "osm_id": 324609419,
+      "type": "village"
+    },
     "operator": "Queensland Government Deptmartment of Environment, Science and Innovation",
     "tents": true,
     "website": "https://parks.desi.qld.gov.au/parks/imbil/camping/charlie-moreland"
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

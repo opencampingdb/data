@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "toilet_type": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "entry": "public",
     "hot_water": false,
+    "lga": {
+      "name": "Mid-Coast Council",
+      "osm_id": 6249291
+    },
+    "locality": {
+      "distance_m": 9890,
+      "name": "Nerong",
+      "osm_id": 114994349,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 120,
       "name": "Mungo Beach"
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

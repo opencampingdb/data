@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -11,6 +13,16 @@
       "housenumber": "1387",
       "street": "Koppio Road",
       "suburb": "Koppio"
+    },
+    "lga": {
+      "name": "The District Council of Tumby Bay",
+      "osm_id": 9108371
+    },
+    "locality": {
+      "distance_m": 12830,
+      "name": "Edillilie",
+      "osm_id": 4330459182,
+      "type": "village"
     },
     "opening_hours": "Tu-Su 10:00-16:00",
     "operator": "National Trust",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

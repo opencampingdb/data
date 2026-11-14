@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Central Highlands",
+      "osm_id": 10622305
+    },
+    "locality": {
+      "distance_m": 16400,
+      "name": "Poatina",
+      "osm_id": 321958446,
+      "type": "village"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES90P0RZ4PMM8AVRNEP9D",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

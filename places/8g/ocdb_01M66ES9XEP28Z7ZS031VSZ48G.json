@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "charge": "Donation Box",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Shire of Beverley",
+      "osm_id": 11689465
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Beverley",
+      "osm_id": 283015208,
+      "type": "town"
+    },
     "max_stay": "48h",
     "operator": "Shire of Beverely",
     "showers": false,
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

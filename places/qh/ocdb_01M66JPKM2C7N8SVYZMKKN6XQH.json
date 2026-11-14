@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -16,6 +18,16 @@
       "e85",
       "lpg"
     ],
+    "lga": {
+      "name": "Shire of Nillumbik",
+      "osm_id": 3331023
+    },
+    "locality": {
+      "distance_m": 16310,
+      "name": "St Andrews",
+      "osm_id": 75040965,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Main Road"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

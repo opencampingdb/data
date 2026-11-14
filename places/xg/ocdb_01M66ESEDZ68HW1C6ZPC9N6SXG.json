@@ -1,14 +1,26 @@
 {
   "fact_sources": {
     "address": "osm",
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "address": {
       "state": "VIC",
       "street": "Old Nowa Nowa Road"
     },
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Shire of East Gippsland",
+      "osm_id": 3359756
+    },
+    "locality": {
+      "distance_m": 6060,
+      "name": "Nowa Nowa",
+      "osm_id": 55184586,
+      "type": "village"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEDZ68HW1C6ZPC9N6SXG",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

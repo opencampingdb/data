@@ -24,6 +24,8 @@
     "entry": "feedback",
     "fee": "osm",
     "kitchen": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "feedback",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
@@ -53,6 +55,16 @@
     "entry": "customers",
     "fee": true,
     "kitchen": true,
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 2650,
+      "name": "Mona Vale",
+      "osm_id": 117078564,
+      "type": "town"
+    },
     "motorhomes": true,
     "nearest_beach": {
       "distance_m": 210
@@ -88,5 +100,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

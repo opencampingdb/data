@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "4515",
       "street": "Wangaratta-Whitfield Roa"
+    },
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 3930,
+      "name": "Whitfield",
+      "osm_id": 106945273,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

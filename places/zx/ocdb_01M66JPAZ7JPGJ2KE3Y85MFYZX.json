@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 1850,
+      "name": "Manjimup",
+      "osm_id": 82404635,
+      "type": "town"
+    }
+  },
   "group": "services",
   "id": "ocdb_01M66JPAZ7JPGJ2KE3Y85MFYZX",
   "kind": "mechanic",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

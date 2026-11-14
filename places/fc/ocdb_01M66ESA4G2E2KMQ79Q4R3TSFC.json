@@ -2,12 +2,24 @@
   "fact_sources": {
     "bins": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bins": true,
     "fee": false,
+    "lga": {
+      "name": "Murweh Shire",
+      "osm_id": 11674879
+    },
+    "locality": {
+      "distance_m": 17110,
+      "name": "Charleville",
+      "osm_id": 246024073,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 140
     },
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

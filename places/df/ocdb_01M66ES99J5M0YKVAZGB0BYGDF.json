@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Blue Mountains City Council",
+      "osm_id": 6299568
+    },
+    "locality": {
+      "distance_m": 5030,
+      "name": "Mulgoa",
+      "osm_id": 36244444,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4750
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -14,6 +16,16 @@
       "suburb": "Glenoran"
     },
     "email": "annashome@outlook.com",
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 13110,
+      "name": "Donnelly River",
+      "osm_id": 260193221,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Graphite Road"
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

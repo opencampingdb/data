@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -8,6 +10,16 @@
       "diesel",
       "unleaded_91"
     ],
+    "lga": {
+      "name": "Town of Katherine",
+      "osm_id": 9045373
+    },
+    "locality": {
+      "distance_m": 150,
+      "name": "Tindal",
+      "osm_id": 6051889752,
+      "type": "village"
+    },
     "operator": "AAFCANS"
   },
   "group": "services",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

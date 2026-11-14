@@ -3,6 +3,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -11,6 +13,16 @@
     "charge": "$10",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Cloncurry Shire",
+      "osm_id": 11677395
+    },
+    "locality": {
+      "distance_m": 45650,
+      "name": "The Monument",
+      "osm_id": 2406646803,
+      "type": "village"
+    },
     "power": true,
     "showers": true,
     "toilets": true
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

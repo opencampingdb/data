@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -8,6 +9,12 @@
   },
   "facts": {
     "fee": false,
+    "locality": {
+      "distance_m": 1490,
+      "name": "North Canberra",
+      "osm_id": 4583652167,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 1230
     },
@@ -36,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

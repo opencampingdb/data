@@ -14,6 +14,8 @@
     "caravans": "community_report",
     "drinking_water": "community_report",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "community_report",
     "picnic_tables": "community_report",
     "power": "community_report",
@@ -24,6 +26,16 @@
     "caravans": true,
     "drinking_water": false,
     "fee": false,
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 5870,
+      "name": "Noojee",
+      "osm_id": 5704950553,
+      "type": "village"
+    },
     "pets": "yes",
     "picnic_tables": true,
     "power": false,
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

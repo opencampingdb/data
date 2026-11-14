@@ -4,12 +4,24 @@
   },
   "fact_sources": {
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "fee": true,
+    "lga": {
+      "name": "Litchfield Municipality",
+      "osm_id": 9045375
+    },
+    "locality": {
+      "distance_m": 260,
+      "name": "Coolalinga",
+      "osm_id": 3743959901,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Stuart Highway"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

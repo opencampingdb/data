@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Shire of Central Goldfields",
+      "osm_id": 3351397
+    },
+    "locality": {
+      "distance_m": 5770,
+      "name": "Maryborough",
+      "osm_id": 276650497,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ES9W02NNJB6TG4PBDVEA0",
   "kind": "national_park_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

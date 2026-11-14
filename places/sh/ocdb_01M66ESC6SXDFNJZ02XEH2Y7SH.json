@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Redland City",
+      "osm_id": 11677885
+    },
+    "locality": {
+      "distance_m": 1030,
+      "name": "Point Lookout",
+      "osm_id": 181952788,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 270,
       "name": "Frenchmans Beach"
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

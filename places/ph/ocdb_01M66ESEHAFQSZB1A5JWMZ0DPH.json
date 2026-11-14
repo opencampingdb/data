@@ -30,6 +30,8 @@
     "dump_station": "feedback",
     "entry": "feedback",
     "fee": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "feedback",
     "motorhomes": "feedback",
     "nearest_major_road": "osm",
@@ -52,6 +54,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": "donation",
+    "lga": {
+      "name": "Quilpie Shire",
+      "osm_id": 11676703
+    },
+    "locality": {
+      "distance_m": 500,
+      "name": "Eromanga",
+      "osm_id": 2038044556,
+      "type": "town"
+    },
     "max_stay": "24h",
     "motorhomes": true,
     "nearest_major_road": {
@@ -83,5 +95,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-13T09:08:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

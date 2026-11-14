@@ -5,6 +5,8 @@
   "fact_sources": {
     "address": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -16,6 +18,16 @@
       "street": "Riddoch Highway"
     },
     "fee": false,
+    "lga": {
+      "name": "The District Council of Grant",
+      "osm_id": 3395908
+    },
+    "locality": {
+      "distance_m": 8470,
+      "name": "Allendale East",
+      "osm_id": 1937621841,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Riddoch Highway"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

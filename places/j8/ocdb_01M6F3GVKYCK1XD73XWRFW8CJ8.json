@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "address": {
       "street": "William Keeling Crescent"
+    },
+    "lga": {
+      "name": "Shire of Cocos (Keeling) Islands",
+      "osm_id": 11716757
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "Pulau Panjang / West Island",
+      "osm_id": 1927498780,
+      "type": "village"
     },
     "nearest_beach": {
       "distance_m": 3690,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

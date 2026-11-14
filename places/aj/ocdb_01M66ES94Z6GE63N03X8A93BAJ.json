@@ -1,8 +1,20 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Orange City Council",
+      "osm_id": 6427044
+    },
+    "locality": {
+      "distance_m": 8160,
+      "name": "Spring Terrace",
+      "osm_id": 3835229325,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 4960
     }
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

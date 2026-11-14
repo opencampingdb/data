@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -11,6 +13,16 @@
       "state": "TAS",
       "street": "Mole Creek Road",
       "suburb": "Mole Creek"
+    },
+    "lga": {
+      "name": "Meander Valley",
+      "osm_id": 10598717
+    },
+    "locality": {
+      "distance_m": 3870,
+      "name": "Mole Creek",
+      "osm_id": 600652942,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 50,
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,18 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "customers",
+    "locality": {
+      "distance_m": 450,
+      "name": "San Remo",
+      "osm_id": 251587231,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 30,
       "name": "Back Beach"
@@ -28,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

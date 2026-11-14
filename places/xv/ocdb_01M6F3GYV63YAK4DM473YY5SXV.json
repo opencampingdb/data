@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -13,6 +15,16 @@
       "state": "VIC",
       "street": "Plenty Road",
       "suburb": "Bundoora"
+    },
+    "lga": {
+      "name": "City of Whittlesea",
+      "osm_id": 3327768
+    },
+    "locality": {
+      "distance_m": 15630,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "nearest_major_road": {
       "distance_m": 80,
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

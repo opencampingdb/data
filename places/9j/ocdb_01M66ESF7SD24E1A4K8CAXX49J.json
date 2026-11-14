@@ -4,6 +4,8 @@
     "caravans": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -21,6 +23,16 @@
     "caravans": true,
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Snowy Valleys Council",
+      "osm_id": 6239423
+    },
+    "locality": {
+      "distance_m": 490,
+      "name": "Tumbarumba",
+      "osm_id": 161087101,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "The Parade"
@@ -47,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

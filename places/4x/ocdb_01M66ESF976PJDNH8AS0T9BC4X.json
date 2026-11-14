@@ -1,11 +1,27 @@
 {
   "fact_sources": {
-    "nearest_boat_ramp": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "fee": false,
+    "lga": {
+      "name": "Scenic Rim Regional",
+      "osm_id": 11675525
+    },
+    "locality": {
+      "distance_m": 5590,
+      "name": "Aratula",
+      "osm_id": 1651171335,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 1240
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESF976PJDNH8AS0T9BC4X",
@@ -17,11 +33,11 @@
   "name": null,
   "osm": {
     "id": 464440276,
-    "timestamp": "2017-01-07T22:22:43Z",
+    "timestamp": "2026-11-13T05:24:34Z",
     "type": "way",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

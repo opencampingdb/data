@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Livingstone Shire",
+      "osm_id": 11677520
+    },
+    "locality": {
+      "distance_m": 29890,
+      "name": "Yeppoon",
+      "osm_id": 326110624,
+      "type": "town"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESEQ91HS1DDGDR20EFWKY",
   "kind": "state_forest_campsite",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

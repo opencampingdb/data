@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "entry": "private",
+    "lga": {
+      "name": "Junee Shire Council",
+      "osm_id": 6252194
+    },
+    "locality": {
+      "distance_m": 1470,
+      "name": "Junee",
+      "osm_id": 113664359,
+      "type": "town"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

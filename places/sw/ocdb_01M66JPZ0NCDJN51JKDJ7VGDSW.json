@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -13,6 +15,16 @@
       "street": "Newlands Road",
       "suburb": "Coburg North",
       "unit": "3"
+    },
+    "lga": {
+      "name": "City of Merri-bek",
+      "osm_id": 3327767
+    },
+    "locality": {
+      "distance_m": 10190,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
     },
     "opening_hours": "Mo-Fr 08:00-17:00",
     "phone": "+61 3 9354 0493",
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

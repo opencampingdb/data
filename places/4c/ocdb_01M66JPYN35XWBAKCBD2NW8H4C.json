@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -20,6 +22,16 @@
       "unleaded_98",
       "lpg"
     ],
+    "lga": {
+      "name": "City of Moreton Bay",
+      "osm_id": 11677711
+    },
+    "locality": {
+      "distance_m": 20,
+      "name": "Samford Village",
+      "osm_id": 1668528257,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mount Glorious Road"
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "charge": "Donation Box",
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Rural City of Mildura",
+      "osm_id": 3345519
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Underbool",
+      "osm_id": 6001944126,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Cotter Street"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

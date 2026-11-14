@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "water_type": "osm"
@@ -11,6 +13,16 @@
     "drinking_water": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 730,
+      "name": "Manilla",
+      "osm_id": 105561709,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "River Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

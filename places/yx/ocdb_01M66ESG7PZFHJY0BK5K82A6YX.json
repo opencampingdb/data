@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bins": false,
+    "lga": {
+      "name": "Western Downs Regional",
+      "osm_id": 11674821
+    },
+    "locality": {
+      "distance_m": 6710,
+      "name": "Bell",
+      "osm_id": 298321880,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bunya Highway"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

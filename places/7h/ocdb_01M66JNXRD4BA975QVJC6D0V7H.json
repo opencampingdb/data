@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -21,6 +23,16 @@
       "unleaded_91",
       "e10"
     ],
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 14280,
+      "name": "Midge Point",
+      "osm_id": 2508333835,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bruce Highway"
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

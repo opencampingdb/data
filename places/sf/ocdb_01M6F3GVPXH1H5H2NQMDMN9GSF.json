@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -8,6 +10,16 @@
     "address": {
       "housenumber": "12",
       "street": "Taverner Street"
+    },
+    "lga": {
+      "name": "Shire of Yarriambiack",
+      "osm_id": 3345545
+    },
+    "locality": {
+      "distance_m": 350,
+      "name": "Beulah",
+      "osm_id": 1282559959,
+      "type": "village"
     },
     "nearest_major_road": {
       "distance_m": 100,
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

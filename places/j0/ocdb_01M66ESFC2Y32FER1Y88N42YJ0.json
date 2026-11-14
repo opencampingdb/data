@@ -3,6 +3,8 @@
     "address": "osm",
     "email": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -18,6 +20,16 @@
     },
     "email": "enquiries@mycowaccommodation.com.au",
     "fee": true,
+    "lga": {
+      "name": "Mackay Regional",
+      "osm_id": 11677563
+    },
+    "locality": {
+      "distance_m": 530,
+      "name": "Bakers Creek",
+      "osm_id": 1823918044,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Bruce Highway"
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

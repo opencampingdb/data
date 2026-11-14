@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
@@ -11,6 +13,16 @@
     "address": {
       "housenumber": "126",
       "street": "Port Road"
+    },
+    "lga": {
+      "name": "City of Charles Sturt",
+      "osm_id": 9108013
+    },
+    "locality": {
+      "distance_m": 3420,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
     },
     "nearest_boat_ramp": {
       "distance_m": 2360
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -4,6 +4,8 @@
     "caravans": "osm",
     "email": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -19,6 +21,16 @@
     "caravans": true,
     "email": "general@threesprings.wa.gov.au",
     "entry": "public",
+    "lga": {
+      "name": "Shire of Three Springs",
+      "osm_id": 11689752
+    },
+    "locality": {
+      "distance_m": 520,
+      "name": "Three Springs",
+      "osm_id": 316901746,
+      "type": "town"
+    },
     "max_stay": "2d",
     "nearest_major_road": {
       "distance_m": 330,
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

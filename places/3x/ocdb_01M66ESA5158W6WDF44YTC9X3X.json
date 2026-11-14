@@ -2,12 +2,24 @@
   "fact_sources": {
     "charge": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
     "charge": "Donation Box",
     "fee": true,
+    "lga": {
+      "name": "The District Council of Cleve",
+      "osm_id": 9108362
+    },
+    "locality": {
+      "distance_m": 4640,
+      "name": "Cleve",
+      "osm_id": 2142639912,
+      "type": "town"
+    },
     "showers": false,
     "toilets": true
   },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,9 +1,21 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Shire of Gnowangerup",
+      "osm_id": 11690325
+    },
+    "locality": {
+      "distance_m": 16120,
+      "name": "Amelup",
+      "osm_id": 5705053186,
+      "type": "village"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESENTNQFCJ09YRYEG1PN3",
@@ -21,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

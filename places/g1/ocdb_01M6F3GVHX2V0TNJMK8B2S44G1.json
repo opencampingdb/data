@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -11,6 +13,16 @@
       "postcode": "6258",
       "street": "Chopping Street",
       "suburb": "Manjimup"
+    },
+    "lga": {
+      "name": "Shire of Manjimup",
+      "osm_id": 11690439
+    },
+    "locality": {
+      "distance_m": 1610,
+      "name": "Manjimup",
+      "osm_id": 82404635,
+      "type": "town"
     },
     "nearest_major_road": {
       "distance_m": 130,
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bins": true,
+    "lga": {
+      "name": "Blackall Tambo Regional",
+      "osm_id": 11674900
+    },
+    "locality": {
+      "distance_m": 1230,
+      "name": "Tambo",
+      "osm_id": 1831929331,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 700
     },
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

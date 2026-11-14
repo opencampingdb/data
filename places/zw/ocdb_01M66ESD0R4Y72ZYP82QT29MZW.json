@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Campbelltown City Council",
+      "osm_id": 9107457
+    },
+    "locality": {
+      "distance_m": 4750,
+      "name": "Norton Summit",
+      "osm_id": 1905432827,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Magill Road"
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
@@ -11,6 +13,16 @@
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Noosa Shire",
+      "osm_id": 11676212
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Sunshine Beach",
+      "osm_id": 2968379126,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 130,
       "name": "Sunshine Beach"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

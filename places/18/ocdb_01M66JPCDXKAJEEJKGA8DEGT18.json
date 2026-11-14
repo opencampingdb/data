@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
       "postcode": "3352",
       "street": "Quoin Hill Road",
       "suburb": "Waubra"
+    },
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 3970,
+      "name": "Waubra",
+      "osm_id": 1658798945,
+      "type": "village"
     },
     "opening_hours": "Sa-Su 10:00-17:00"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -15,6 +17,16 @@
       "suburb": "Quirindi"
     },
     "email": "imperial-quirindi@outlook.com",
+    "lga": {
+      "name": "Liverpool Plains Shire Council",
+      "osm_id": 6364998
+    },
+    "locality": {
+      "distance_m": 800,
+      "name": "Quirindi",
+      "osm_id": 190751504,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Henry Street"
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

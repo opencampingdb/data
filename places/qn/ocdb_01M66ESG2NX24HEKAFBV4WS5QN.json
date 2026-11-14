@@ -8,6 +8,8 @@
     "dump_station": "osm",
     "email": "osm",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "power": "osm",
@@ -27,6 +29,16 @@
     "dump_station": true,
     "email": "reception@casinoholidaypark.com.au",
     "fee": true,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 1580,
+      "name": "Casino",
+      "osm_id": 114611174,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
       "distance_m": 3150,
       "name": "McDonald Park Boat Ramp"
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "pets": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -12,6 +14,16 @@
     "caravans": false,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Shire of Waroona",
+      "osm_id": 11690511
+    },
+    "locality": {
+      "distance_m": 11650,
+      "name": "Dwellingup",
+      "osm_id": 83353490,
+      "type": "town"
+    },
     "pets": "leashed",
     "showers": false,
     "toilets": true,
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T02:20:58Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -9,6 +11,16 @@
   "facts": {
     "caravans": true,
     "entry": "customers",
+    "lga": {
+      "name": "Singleton Council",
+      "osm_id": 6191883
+    },
+    "locality": {
+      "distance_m": 6280,
+      "name": "Branxton",
+      "osm_id": 114176185,
+      "type": "town"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://www.dashville.com.au/hunter-tent-stay/"
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

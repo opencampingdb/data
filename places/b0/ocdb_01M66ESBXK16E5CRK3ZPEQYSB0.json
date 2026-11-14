@@ -1,10 +1,22 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "water_type": "osm"
   },
   "facts": {
     "entry": "public",
+    "lga": {
+      "name": "Shire of Harvey",
+      "osm_id": 11690516
+    },
+    "locality": {
+      "distance_m": 13830,
+      "name": "Wokalup",
+      "osm_id": 648227423,
+      "type": "village"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -23,5 +35,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

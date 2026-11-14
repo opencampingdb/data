@@ -5,6 +5,8 @@
     "charge": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "charge": "Oasis Hotel",
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Shire of Wickepin",
+      "osm_id": 11688936
+    },
+    "locality": {
+      "distance_m": 120,
+      "name": "Harrismith",
+      "osm_id": 3045934818,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Stock Route Road"
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

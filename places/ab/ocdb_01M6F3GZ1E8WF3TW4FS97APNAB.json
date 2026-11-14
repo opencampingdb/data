@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
@@ -12,6 +14,16 @@
       "postcode": "2646",
       "street": "Federation Avenue",
       "suburb": "Corowa"
+    },
+    "lga": {
+      "name": "Federation Council",
+      "osm_id": 6232188
+    },
+    "locality": {
+      "distance_m": 880,
+      "name": "Corowa",
+      "osm_id": 3118349777,
+      "type": "town"
     },
     "nearest_beach": {
       "distance_m": 3900
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

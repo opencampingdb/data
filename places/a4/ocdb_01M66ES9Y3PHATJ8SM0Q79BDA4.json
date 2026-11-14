@@ -5,11 +5,23 @@
   },
   "fact_sources": {
     "entry": "community_report",
-    "fee": "community_report"
+    "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm"
   },
   "facts": {
     "entry": "permit",
-    "fee": true
+    "fee": true,
+    "lga": {
+      "name": "Yorke Peninsula Council",
+      "osm_id": 6673799
+    },
+    "locality": {
+      "distance_m": 10650,
+      "name": "Point Turton",
+      "osm_id": 601264023,
+      "type": "town"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Y3PHATJ8SM0Q79BDA4",
@@ -27,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T07:12:34Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

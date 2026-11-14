@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
@@ -13,6 +15,16 @@
   "facts": {
     "caravans": true,
     "entry": "public",
+    "lga": {
+      "name": "Narrabri Shire Council",
+      "osm_id": 6389900
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Gwabegar",
+      "osm_id": 113697571,
+      "type": "village"
+    },
     "max_stay": "24h",
     "nearest_major_road": {
       "distance_m": 280,
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

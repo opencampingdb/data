@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "entry": "customers",
     "fee": true,
+    "lga": {
+      "name": "Rural City of Swan Hill",
+      "osm_id": 3345551
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Manangatang",
+      "osm_id": 2053862151,
+      "type": "town"
+    },
     "max_stay": "72h",
     "nearest_major_road": {
       "distance_m": 50,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "showers": "osm",
@@ -15,6 +17,16 @@
     "caravans": true,
     "drinking_water": true,
     "fee": true,
+    "lga": {
+      "name": "Derwent Valley",
+      "osm_id": 10603742
+    },
+    "locality": {
+      "distance_m": 6160,
+      "name": "Westerway",
+      "osm_id": 324884969,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Gordon River Road"
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

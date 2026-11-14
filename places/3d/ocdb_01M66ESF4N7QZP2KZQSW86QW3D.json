@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -10,6 +12,16 @@
   "facts": {
     "caravans": true,
     "drinking_water": true,
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 1220,
+      "name": "Glen Innes",
+      "osm_id": 59848698,
+      "type": "town"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Church Street"
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

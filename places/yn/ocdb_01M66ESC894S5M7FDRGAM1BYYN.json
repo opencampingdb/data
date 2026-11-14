@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
     "picnic_tables": "osm"
   },
   "facts": {
     "bbq": false,
+    "lga": {
+      "name": "City of Hobart",
+      "osm_id": 10625466
+    },
+    "locality": {
+      "distance_m": 4330,
+      "name": "Hobart",
+      "osm_id": 59149739,
+      "type": "city"
+    },
     "nearest_beach": {
       "distance_m": 3880,
       "name": "Short Beach"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

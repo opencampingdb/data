@@ -1,12 +1,24 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/pages/Southern-Cross-BP-Roadhouse/151597861548620",
+    "lga": {
+      "name": "Shire of Yilgarn",
+      "osm_id": 11690085
+    },
+    "locality": {
+      "distance_m": 520,
+      "name": "Southern Cross",
+      "osm_id": 31064970,
+      "type": "village"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Orion Street"
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

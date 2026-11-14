@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "email": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "email": "historichermannsbur@bigpond.com.au",
+    "lga": {
+      "name": "Macdonnell Region",
+      "osm_id": 11716646
+    },
+    "locality": {
+      "distance_m": 450,
+      "name": "Hermannsburg",
+      "osm_id": 2365278670,
+      "type": "village"
+    },
     "phone": "+61 8 8956 7402",
     "website": "https://www.hermannsburg.com.au/"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

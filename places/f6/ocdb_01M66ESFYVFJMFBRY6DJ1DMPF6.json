@@ -10,6 +10,8 @@
     "camper_trailers": "contributed",
     "caravans": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "contributed",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
@@ -24,6 +26,16 @@
     "camper_trailers": true,
     "caravans": true,
     "fee": true,
+    "lga": {
+      "name": "The Hills Shire Council",
+      "osm_id": 6219220
+    },
+    "locality": {
+      "distance_m": 8650,
+      "name": "Windsor",
+      "osm_id": 117051750,
+      "type": "town"
+    },
     "motorhomes": true,
     "nearest_beach": {
       "distance_m": 1780
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

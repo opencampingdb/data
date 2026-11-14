@@ -5,6 +5,8 @@
     "dump_station": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "power": "osm",
@@ -18,6 +20,16 @@
     "dump_station": true,
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Shire of Collie",
+      "osm_id": 11688837
+    },
+    "locality": {
+      "distance_m": 12550,
+      "name": "Allanson",
+      "osm_id": 1090298694,
+      "type": "village"
+    },
     "nearest_boat_ramp": {
       "distance_m": 410
     },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-14T04:44:16Z"
 }

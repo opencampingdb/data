@@ -1,11 +1,23 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "street": "Gillingarra - New Norcia Road"
+    },
+    "lga": {
+      "name": "Shire of Victoria Plains",
+      "osm_id": 11689712
+    },
+    "locality": {
+      "distance_m": 200,
+      "name": "New Norcia",
+      "osm_id": 5432378577,
+      "type": "village"
     },
     "website": "https://www.newnorcia.wa.edu.au/"
   },
@@ -25,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-14T04:44:16Z"
 }
