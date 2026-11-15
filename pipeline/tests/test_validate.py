@@ -330,6 +330,9 @@ def test_nearby_facts_from_osm_are_allowed(synced):
         "nearest_major_road": {"distance_m": 140, "name": "Example Highway"},
         "locality": {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 12340},
         "lga": {"name": "Example Shire", "osm_id": 202},
+        "protected_area": {"name": "Example National Park", "osm_id": 303, "osm_type": "relation"},
+        "nearest_waterway": {"name": "Example Creek", "osm_id": 404, "distance_m": 90},
+        "nearest_feature": {"name": "Example Hill", "type": "peak", "osm_id": 505, "osm_type": "node", "distance_m": 220},
         "pub": True,
         "fuel": True,
         "car_wash": True,
@@ -349,6 +352,14 @@ def test_nearby_facts_from_osm_are_allowed(synced):
     rec["facts"]["locality"] = {"name": "Example Town", "osm_id": 101, "type": "suburb", "distance_m": 12340}
     write_place(path, rec)
     assert any("locality" in e for e in validate_repo(synced))
+    rec["facts"]["locality"] = {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 12340}
+    rec["facts"]["nearest_waterway"] = {"name": "Example Creek", "osm_id": 404, "distance_m": 210}
+    write_place(path, rec)
+    assert any("nearest_waterway" in e for e in validate_repo(synced))
+    rec["facts"]["nearest_waterway"] = {"name": "Example Creek", "osm_id": 404, "distance_m": 90}
+    rec["facts"]["nearest_feature"] = {"name": "Example Hill", "type": "suburb", "osm_id": 505, "osm_type": "node", "distance_m": 220}
+    write_place(path, rec)
+    assert any("nearest_feature" in e for e in validate_repo(synced))
 
 
 @pytest.mark.parametrize("fact, value", [
@@ -357,6 +368,9 @@ def test_nearby_facts_from_osm_are_allowed(synced):
     ("nearest_major_road", {"distance_m": 200}),
     ("locality", {"name": "Example Town", "osm_id": 101, "type": "town", "distance_m": 200}),
     ("lga", {"name": "Example Shire", "osm_id": 202}),
+    ("protected_area", {"name": "Example National Park", "osm_id": 303, "osm_type": "relation"}),
+    ("nearest_waterway", {"name": "Example Creek", "osm_id": 404, "distance_m": 90}),
+    ("nearest_feature", {"name": "Example Hill", "type": "peak", "osm_id": 505, "osm_type": "node", "distance_m": 220}),
 ])
 def test_reported_nearby_fact_is_refused(synced, fact, value):
     path, rec = first_place(synced)

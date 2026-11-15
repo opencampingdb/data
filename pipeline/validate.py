@@ -14,9 +14,11 @@ exits 1. Checks:
 - fact_sources has every key of facts and no other fact, plus optional
   name, location and status entries. Sources are osm, feedback,
   contributed, owner and community_report. The source rule and fact_rules
-  appear only in released records (pipeline.release), never in places/
+  appear only in released records (pipeline.release), never in places/,
+  and so does label (pipeline.labels)
 - the nearby facts nearest_beach, nearest_boat_ramp, nearest_major_road,
-  locality and lga have the source osm: no fact report sets them
+  locality, lga, protected_area, nearest_waterway and nearest_feature have
+  the source osm: no fact report sets them
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
@@ -207,6 +209,8 @@ def check_place_file(root: Path, path: Path, validator, now: str) -> tuple[dict 
             f"{where}: rule facts and fact_rules are set by the release from schema/fact_rules.json, "
             f"never stored in places/ (found {ruled or ['fact_rules']})"
         )
+    if "label" in record:
+        errors.append(f"{where}: label is built by the release (pipeline.labels), never stored in places/")
     if record.get("last_confirmed", "") > now:
         errors.append(f"{where}: last_confirmed {record['last_confirmed']} is in the future")
     if "standing" in record and record["osm"] is not None:

@@ -48,6 +48,14 @@ from .kinds import (
 )
 from .localities import LOCALITY_TAG_PAIRS, Localities, is_lga, locality_type, write_localities
 from .nearby import NEARBY_TAG_PAIRS, InsideFeatures, inside_fact
+from .surroundings import (
+    SURROUNDINGS_TAG_PAIRS,
+    Surroundings,
+    feature_type,
+    is_protected_area,
+    is_waterway,
+    place_node_type,
+)
 from .roads import MajorRoads
 from .water import WATER_TAG_PAIRS, WaterFeatures, crocodile_hazard, open_line, water_kinds
 
@@ -149,6 +157,23 @@ ENTRY_VALUES = {
     "private": "private",
     "no": "private",
 }
+
+
+# Tags that name a place with no name tag, in order. old_name, short_name,
+# operator, brand, name:signed and name:<lang> are never used.
+OTHER_NAME_KEYS = ("official_name", "loc_name", "alt_name")
+
+
+def place_name(tags: dict) -> str | None:
+    """The name tag, else the first name in official_name, loc_name or alt_name, trimmed, else None."""
+    name = tags.get("name", "").strip()
+    if name:
+        return name
+    for key in OTHER_NAME_KEYS:
+        first = tags.get(key, "").split(";")[0].strip()
+        if first:
+            return first
+    return None
 
 
 def first_value(value: str) -> str:
@@ -518,7 +543,8 @@ def interesting_tag_filter() -> "osmium.filter.TagFilter":
     A filter object belongs to one handler chain, so each chain gets its own.
     """
     return osmium.filter.TagFilter(
-        *PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS, *LOCALITY_TAG_PAIRS
+        *PLACE_TAG_PAIRS, *CONTAINER_TAG_PAIRS, *WATER_TAG_PAIRS, *NEARBY_TAG_PAIRS, *LOCALITY_TAG_PAIRS,
+        *SURROUNDINGS_TAG_PAIRS,
     )
 
 
@@ -680,6 +706,11 @@ class FirstPass:
         if inside_fact(tags) and way.is_closed():
             # A car wash drawn as an area is placed at its centroid.
             self.way_ids.add(way.id)
+        if (is_protected_area(tags) or feature_type(tags)) and way.is_closed():
+            self.way_ids.add(way.id)
+        if is_waterway(tags):
+            # Kept as a line, closed or not.
+            self.way_ids.add(way.id)
         if kind is None and container_type(tags) is None:
             return
         if way.is_closed() or kind in OPEN_WAY_KINDS:
@@ -699,6 +730,8 @@ class FirstPass:
             and not water_kinds(tags)
             and inside_fact(tags) is None
             and not is_lga(tags)
+            and not is_protected_area(tags)
+            and feature_type(tags) is None
         ):
             return True
         for member in relation.members:
@@ -872,6 +905,17 @@ def water_geometry(obj):
     return container_geometry(obj)
 
 
+WKB = osmium.geom.WKBFactory()
+
+
+def way_line(way):
+    """A shapely line through a way's nodes, closed or not, built in C++, or None when a location is missing."""
+    try:
+        return shapely.from_wkb(WKB.create_linestring(way))
+    except (osmium.InvalidLocationError, RuntimeError):
+        return None
+
+
 def feature_key(obj) -> tuple[str, int]:
     """(osm type, osm id) of a node, way or multipolygon area, as a place record names it."""
     if obj.is_node():
@@ -932,6 +976,7 @@ def extract_file(
     inside = InsideFeatures()
     roads = MajorRoads()
     localities = localities if localities is not None else Localities()
+    surroundings = Surroundings()
     if sidecar is not None:
         # The sidecar writes its road lines from the same roads.
         sidecar.roads = roads.roads
@@ -956,9 +1001,27 @@ def extract_file(
         if obj.is_area() and not obj.from_way() and is_lga(tags):
             localities.add_lga(obj.orig_id(), tags, container_geometry(obj))
 
+        # The outline of an area, built once for whichever collections want it.
+        outline = None
+        if not (obj.is_area() and obj.from_way()) and (is_protected_area(tags) or feature_type(tags) or container_type(tags)):
+            outline = container_geometry(obj)
+
+        if is_protected_area(tags) and not (obj.is_area() and obj.from_way()):
+            surroundings.add_protected_area(feature_key(obj), tags, outline)
+        if obj.is_way() and is_waterway(tags):
+            surroundings.add_waterway(("way", obj.id), tags, way_line(obj))
+        if feature_type(tags) and not (obj.is_area() and obj.from_way()):
+            if obj.is_node():
+                geometry = shapely.Point(obj.location.lon, obj.location.lat) if obj.location.valid() else None
+            else:
+                geometry = outline
+            surroundings.add_feature(feature_key(obj), tags, geometry)
+        if obj.is_node() and place_node_type(tags) and obj.location.valid():
+            surroundings.add_place_node(obj.id, tags, obj.location.lat, obj.location.lon)
+
         kind_of_container = container_type(tags)
         if kind_of_container is not None:
-            geometry = container_geometry(obj)
+            geometry = outline
             if geometry is not None:
                 containers.append((geometry, kind_of_container))
                 container_counts[kind_of_container] += 1
@@ -971,7 +1034,7 @@ def extract_file(
         osm_type, osm_id, lat, lon = position
         record = {
             "osm": osm_link(osm_type, osm_id, obj.version, osm_timestamp(obj), tags),
-            "name": tags.get("name", "").strip() or None,
+            "name": place_name(tags),
             "location": {"lat": round_coord(lat), "lon": round_coord(lon)},
             "facts": facts_from_tags(tags),
         }
@@ -991,7 +1054,7 @@ def extract_file(
         tags = site["tags"]
         record = {
             "osm": osm_link("relation", relation_id, site["version"], site["timestamp"], tags),
-            "name": tags.get("name", "").strip() or None,
+            "name": place_name(tags),
             "location": {"lat": round_coord(position[0]), "lon": round_coord(position[1])},
             "facts": facts_from_tags(tags),
         }
@@ -1022,6 +1085,7 @@ def extract_file(
         roads.set_facts(record)
         records.append(record)
     localities.set_facts(records)
+    surroundings.set_facts(records)
 
     stats["kept"] = len(records)
     stats["containers"] = container_counts
@@ -1029,6 +1093,7 @@ def extract_file(
     stats["inside"] = {fact: inside.count(fact) for fact in ("pub", "fuel", "car_wash")}
     stats["major_roads"] = roads.count()
     stats["localities"] = localities.counts()
+    stats["surroundings"] = surroundings.counts()
     records.sort(key=lambda r: (r["osm"]["type"], r["osm"]["id"]))
     return records
 
@@ -1071,6 +1136,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Pubs, fuel and car washes: {stats['inside']}", file=sys.stderr)
     print(f"Major roads: {stats['major_roads']}", file=sys.stderr)
     print(f"Localities and council areas: {stats['localities']}", file=sys.stderr)
+    print(f"Protected areas, waterways and features: {stats['surroundings']}", file=sys.stderr)
     return 0
 
 
