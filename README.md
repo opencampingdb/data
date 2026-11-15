@@ -169,7 +169,8 @@ Anything that shows this data must show:
    under "Possible duplicates". Sync never merges them. A person merges a
    pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate
    PR, or merges every pair the automatic merge rule accepts (the same name
-   once tidied, the same group, under 50 m apart and no major road between)
+   once tidied, the same group, under 50 m apart and no major road between,
+   or an unnamed overnight record inside or around a named one's outline)
    with `python -m pipeline.merge --auto`, which lists each merge in
    `moderation/automatic-merges.csv` for review. Either way the dropped
    record stays as a tombstone that points at the kept one, and releases

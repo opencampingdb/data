@@ -187,3 +187,94 @@ def test_a_merged_new_place_keeps_its_draft_record_as_a_tombstone(repo, tmp_path
     build_release(repo, tmp_path / "dist", data_version="20261030T160000Z-abc1234", generated="2026-10-30T16:00:00Z")
     merged = gzip.decompress((tmp_path / "dist" / "merged.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
     assert [json.loads(line) for line in merged] == [{"id": B, "merged_into": A}]
+
+
+# An unnamed park and the named place an outline makes it one place with.
+
+def square(metres: float, north: float = 0.0):
+    """A square outline about metres across, centred metres north of LAT, LON."""
+    from shapely import Polygon
+
+    h, w = metres / 2 * M, metres / 2 * M * 1.22  # a metre of longitude is shorter at 35 S
+    c = LAT + north * M
+    return Polygon([(LON - w, c - h), (LON + w, c - h), (LON + w, c + h), (LON - w, c + h), (LON - w, c - h)])
+
+
+def way(record, osm_id):
+    return dict(record, osm={"type": "way", "id": osm_id, "version": 1})
+
+
+def test_an_unnamed_park_drawn_around_a_named_point_merges_into_it():
+    geometry = Geometry(areas={"way/9": square(240)})
+    unnamed = way(place(A, "caravan_park", None), 9)
+    named = place(B, "campground", "Wongan Hills Caravan Park", 90, osm_id=2)
+    assert automatic_merge(unnamed, named, geometry) is None
+
+
+def test_an_unnamed_park_near_a_named_point_outside_its_outline_waits():
+    geometry = Geometry(areas={"way/9": square(40)})
+    unnamed = way(place(A, "caravan_park", None), 9)
+    named = place(B, "campground", "Inland Sea Restaurant", 45, osm_id=2)
+    assert "outline" in automatic_merge(unnamed, named, geometry)
+
+
+def test_two_unnamed_points_close_together_still_wait():
+    a = place(A, "caravan_park", None, osm_id=1)
+    b = place(B, "caravan_park", "Lucky Bay", 10, osm_id=2)
+    assert "outline" in automatic_merge(a, b, Geometry())
+
+
+@pytest.mark.parametrize("named", [
+    place(B, "roofed_accommodation", "Birchip Motel", 30, osm_id=2),  # a named motel keeps its own record
+    place(B, "campground", "Lucky Bay", 30, osm_id=None),
+    place(B, "rest_area", "Ironbark Rest Area", 30, osm_id=2),
+])
+def test_an_unnamed_park_does_not_merge_into_a_motel_a_non_osm_place_or_another_group(named):
+    geometry = Geometry(areas={"way/9": square(240)})
+    unnamed = way(place(A, "caravan_park", None), 9)
+    assert automatic_merge(unnamed, named, geometry) is not None
+
+
+def test_a_road_through_the_outline_keeps_them_apart():
+    geometry = Geometry(areas={"way/9": square(40)})
+    geometry.add_road(Road(7, "trunk", "Example Highway"), [(LON - 0.01, LAT + 30 * M), (LON + 0.01, LAT + 30 * M)])
+    unnamed = way(place(A, "caravan_park", None), 9)
+    named = place(B, "caravan_park", "Lucky Bay", 35, osm_id=2)
+    assert "road" in automatic_merge(unnamed, named, geometry)
+
+
+def test_the_batch_keeps_the_named_record_and_lists_the_unnamed_outline_as_mapped_twice(repo):
+    geometry = Geometry(areas={"way/9": square(240)})
+    write(repo, way(place(A, "caravan_park", None, facts={"power": True, "showers": True}), 9))
+    write(repo, place(B, "campground", "Wongan Hills Caravan Park", 90, osm_id=2))
+    [made] = merge_batch(repo, geometry, now=NOW)
+    assert (made["kept"], made["dropped"]) == (B, A)
+    assert load_places(repo)[B]["merged_osm"] == [{"type": "way", "id": 9}]
+
+
+def test_unnamed_sections_inside_a_named_park_are_merged_as_parts(repo):
+    geometry = Geometry(areas={"way/9": square(300), "way/10": square(30, 60), "way/11": square(30, -60)})
+    write(repo, way(place(A, "caravan_park", "BIG4 The Bend"), 9))
+    write(repo, way(place(B, "caravan_park", None, 60), 10))
+    write(repo, way(place(C, "caravan_park", None, -60), 11))
+    merges = merge_batch(repo, geometry, now=NOW)
+    assert sorted(m["dropped"] for m in merges) == [B, C]
+    assert load_places(repo)[A]["merged_osm"] == [{"type": "way", "id": 10, "part": True}, {"type": "way", "id": 11, "part": True}]
+    assert validate_repo(repo, now=NOW) == []
+
+
+def test_an_unnamed_outline_around_two_differently_named_places_waits(repo):
+    geometry = Geometry(areas={"way/9": square(300)})
+    write(repo, way(place(A, "caravan_park", None), 9))
+    write(repo, place(B, "campground", "Moon Creek", 40, osm_id=2))
+    write(repo, place(C, "campground", "Sun Valley", -40, osm_id=3))
+    assert merge_batch(repo, geometry, now=NOW) == []
+
+
+def test_an_unnamed_cabin_inside_a_named_park_is_merged_as_a_part(repo):
+    geometry = Geometry(areas={"way/9": square(300), "way/10": square(10, 50)})
+    write(repo, way(place(A, "caravan_park", "Lucky Bay Caravan Park"), 9))
+    write(repo, way(place(B, "roofed_accommodation", None, 50), 10))
+    [made] = merge_batch(repo, geometry, now=NOW)
+    assert (made["kept"], made["dropped"]) == (A, B)
+    assert load_places(repo)[A]["merged_osm"] == [{"type": "way", "id": 10, "part": True}]

@@ -14,7 +14,10 @@ Two places are a likely duplicate when all of these hold:
 - They are within 200 m of each other.
 - Their names are similar (a ratio of 0.8 or more once generic words such as
   "campground" or "caravan park" are removed), or one of them has no name and
-  they are within 50 m.
+  they are within 50 m, or one of them has no name and the outline rule in
+  pipeline.geometry (rule 1) makes them one place: an unnamed park drawn as
+  an area around a named point, or an unnamed part inside a named park's
+  outline (unnamed_in_area, below).
 Never paired:
 - two utility places that both have no name (unnamed toilets and taps often
   stand side by side) or two overnight places that both have no name (often
@@ -29,7 +32,9 @@ Never paired:
 
 The automatic merge rule (automatic_merge) is narrower: the same name once
 tidied, the same group, less than 50 m apart and nothing in pipeline.geometry
-that keeps them apart. python -m pipeline.merge --auto applies it to the
+that keeps them apart. It also merges an overnight OSM record with no name
+into the named one the outline rule makes it one place with, since the
+unnamed record has no name to lose. python -m pipeline.merge --auto applies it to the
 pairs found here, and the feedback engine applies the same rule to a new
 place a traveller adds next to an existing one.
 
@@ -48,7 +53,7 @@ import sys
 from difflib import SequenceMatcher
 from pathlib import Path
 
-from .common import load_distinct, load_places
+from .common import ROOFED_KINDS, load_distinct, load_places
 from .geometry import Geometry, group_of, judge, load_geometry
 
 MAX_DISTANCE_M = 200
@@ -134,6 +139,31 @@ def likely_duplicate(a: dict, b: dict, distance: float) -> bool:
     return SequenceMatcher(None, name_a, name_b).ratio() >= NAME_RATIO
 
 
+def has_name(record: dict) -> bool:
+    """True when a record's name says something once tidied ("Caravan Park" does not)."""
+    return bool(tidy_name(record.get("name")))
+
+
+def unnamed_in_area(a: dict, b: dict, verdict) -> bool:
+    """True for an unnamed overnight record and a named one that the outline rule makes one place.
+
+    Both are OSM records in the overnight group, exactly one has a name
+    (has_name), the named one is not a motel or hostel, and
+    pipeline.geometry.judge found one inside the other's outline, or within
+    EDGE_M of it with no major road between (verdict.same). The unnamed one
+    may be a motel or hostel: an unnamed cabin or motel building inside a
+    named caravan park is part of the park. A plain distance is not enough:
+    an unnamed caravan park is often a few metres from a named hotel or shop
+    that is a different business.
+    """
+    if not verdict.same or has_name(a) == has_name(b):
+        return False
+    named = a if has_name(a) else b
+    if named["kind"] in ROOFED_KINDS:
+        return False
+    return all(group_of(record) == "overnight" and record.get("osm") for record in (a, b))
+
+
 def automatic_merge(
     a: dict, b: dict, geometry: Geometry | None = None, distinct: set[frozenset[str]] = frozenset()
 ) -> str | None:
@@ -147,6 +177,8 @@ def automatic_merge(
       its rest area is not the rest area);
     - their names are the same once tidied (tidy_name), and not empty;
     - they are less than AUTO_MERGE_MAX_DISTANCE_M (50 m) apart;
+    or, in place of the name and distance tests, one of them has no name
+    and unnamed_in_area holds (an outline makes them one place);
     - the rules in pipeline.geometry do not find them to be separate places:
       no major road between them, and no different direction, operator or
       entry.
@@ -171,6 +203,13 @@ def automatic_merge(
     if group_of(a) != "overnight" and a["kind"] != b["kind"]:
         return f"kind differs outside the overnight group: {a['kind']} / {b['kind']}"
     name_a, name_b = tidy_name(a.get("name")), tidy_name(b.get("name"))
+    if bool(name_a) != bool(name_b):
+        verdict = judge(a, b, geometry, MAX_DISTANCE_M)
+        if verdict.separate:
+            return f"{verdict.reason}: {verdict.detail}"
+        if distance_m(a, b) > MAX_DISTANCE_M or not unnamed_in_area(a, b, verdict):
+            return "one has no name, and no outline makes them one place"
+        return None
     if not name_a or not name_b:
         return "name has nothing distinctive once tidied"
     if name_a != name_b:
@@ -182,6 +221,14 @@ def automatic_merge(
     if verdict.separate:
         return f"{verdict.reason}: {verdict.detail}"
     return None
+
+
+def maybe_unnamed_in_area(a: dict, b: dict) -> bool:
+    """unnamed_in_area's tests that need no outline, to skip judge for most pairs."""
+    if a["group"] != "overnight" or b["group"] != "overnight" or has_name(a) == has_name(b):
+        return False
+    named = a if has_name(a) else b
+    return named["kind"] not in ROOFED_KINDS and bool(a.get("osm")) and bool(b.get("osm"))
 
 
 def find_duplicates(
@@ -216,7 +263,13 @@ def find_duplicates(
                 if a["id"] >= b["id"] or frozenset((a["id"], b["id"])) in distinct:
                     continue
                 distance = distance_m(a, b)
-                if likely_duplicate(a, b, distance) and not judge(a, b, geometry, MAX_DISTANCE_M).separate:
+                if distance > MAX_DISTANCE_M or not comparable(a, b):
+                    continue
+                likely = likely_duplicate(a, b, distance)
+                if not likely and not maybe_unnamed_in_area(a, b):
+                    continue
+                verdict = judge(a, b, geometry, MAX_DISTANCE_M)
+                if not verdict.separate and (likely or unnamed_in_area(a, b, verdict)):
                     pairs.append({"a": a, "b": b, "distance_m": distance})
     pairs.sort(key=lambda p: (p["a"]["id"], p["b"]["id"]))
     return pairs

@@ -56,8 +56,8 @@ from .common import (
     utc_now,
     write_text,
 )
-from .duplicates import automatic_merge, distance_m, find_duplicates
-from .geometry import Geometry, load_geometry
+from .duplicates import automatic_merge, distance_m, find_duplicates, has_name, tidy_name
+from .geometry import Geometry, load_geometry, osm_ref
 
 # Sources whose facts move to the kept record.
 MOVABLE_SOURCES = ("feedback", "contributed", "community_report")
@@ -182,11 +182,11 @@ AUTO_MERGES_COLUMNS = (
 
 
 def keep_order(record: dict) -> tuple:
-    """Sort key for the record a group keeps: first an OSM link, then a camp
-    site over a motel or hostel, then the most facts, then a kind that says
-    more than campground, then the oldest id."""
+    """Sort key for the record a group keeps: first an OSM link, then a name
+    (has_name), then a camp site over a motel or hostel, then the most facts,
+    then a kind that says more than campground, then the oldest id."""
     return (
-        record.get("osm") is None, record["kind"] in ROOFED_KINDS, -len(record.get("facts", {})),
+        record.get("osm") is None, not has_name(record), record["kind"] in ROOFED_KINDS, -len(record.get("facts", {})),
         record["kind"] == "campground", record["id"],
     )
 
@@ -217,6 +217,15 @@ def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = 
         for pair in find_duplicates(list(places.values()), distinct, geometry)
         if pair["a"]["group"] in groups and automatic_merge(pair["a"], pair["b"], geometry, distinct) is None
     ]
+    # An unnamed record that pairs with places of different names (an
+    # unnamed outline around two named parks) waits for a reviewer.
+    names: dict[str, set[str]] = {}
+    for a, b in pairs:
+        for unnamed, named in ((a, b), (b, a)):
+            if not has_name(unnamed) and has_name(named):
+                names.setdefault(unnamed["id"], set()).add(tidy_name(named["name"]))
+    unsure = {place_id for place_id, found in names.items() if len(found) > 1}
+    pairs = [(a, b) for a, b in pairs if a["id"] not in unsure and b["id"] not in unsure]
 
     # Groups of records joined by accepted pairs.
     parent: dict[str, str] = {}
@@ -241,8 +250,12 @@ def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = 
                 continue
             distance = round(distance_m(keeper, other))
             # A motel or hostel and the caravan park it stands in are two
-            # features of one place in OSM, drawn apart on purpose.
-            part = (keeper["kind"] in ROOFED_KINDS) != (other["kind"] in ROOFED_KINDS)
+            # features of one place in OSM, drawn apart on purpose. So is an
+            # unnamed outline inside a named park's outline (a section or
+            # pitch of the park).
+            part = (keeper["kind"] in ROOFED_KINDS) != (other["kind"] in ROOFED_KINDS) or (
+                not has_name(other) and osm_ref(keeper) in (geometry or Geometry()).areas
+            )
             row = {
                 "merged": now[:10],
                 "kept_id": keeper["id"], "dropped_id": other["id"],
