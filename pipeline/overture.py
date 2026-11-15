@@ -39,11 +39,8 @@ from .common import (
     write_text,
 )
 from .geometry import Geometry, load_geometry, osm_ref
-from .sync import AUTO_MERGE_BELOW_PERCENT, MAX_REPORT_CHARS, REPORT_LIST_LIMIT, new_place_id
-
-# The longest import report. The monthly workflow's PR body adds the
-# automatic merges to it, and the whole body stays within MAX_REPORT_CHARS.
-REPORT_MAX_CHARS = MAX_REPORT_CHARS - 15_000
+from .overture_run import REPORT_MAX_CHARS
+from .sync import AUTO_MERGE_BELOW_PERCENT, REPORT_LIST_LIMIT, new_place_id
 
 # The kinds the importer fills. Every other kind is left alone.
 OVERTURE_KINDS = tuple(sorted(
@@ -870,13 +867,22 @@ def candidate_record(entry: dict, lists: KeptLists, now: str, place_id: str) -> 
     }
 
 
-def apply_decisions(root: Path, decisions: Iterable[dict], *, now: str, publish: bool = False, make_id=new_place_id) -> dict:
+def apply_decisions(
+    root: Path,
+    decisions: Iterable[dict],
+    *,
+    now: str,
+    publish: bool = False,
+    tiers: Iterable[str] | None = None,
+    make_id=new_place_id,
+) -> dict:
     """Act on reviewed candidates: candidate entries, each with decision approve, reject or flag.
 
     A rejected candidate's GERS id goes on overture/do-not-match.json, so it is
     never a candidate again. A flagged one waits for a person. An approved one
     is published (written to places/ and linked in the link file) only when
-    publish is true; otherwise it is held. A candidate whose GERS id is
+    publish is true and its tier is one of tiers (every tier when tiers is
+    None); otherwise it is held. A candidate whose GERS id is
     already linked to a place is not published again, and one within 250 m
     of a place (including one published in the same run, such as an
     Overture duplicate) waits for a person.
@@ -885,6 +891,7 @@ def apply_decisions(root: Path, decisions: Iterable[dict], *, now: str, publish:
     flagged, already linked and near a place.
     """
     root = Path(root)
+    allowed = set(TIERS if tiers is None else tiers)
     lists = load_kept_lists(root)
     links = load_links(root)
     linked = {link["gers"] for link in links.values()}
@@ -900,7 +907,7 @@ def apply_decisions(root: Path, decisions: Iterable[dict], *, now: str, publish:
             outcome["flagged"].append(gers)
         elif gers in linked:
             outcome["already"].append(gers)
-        elif not publish:
+        elif not publish or entry.get("tier") not in allowed:
             outcome["held"].append(gers)
         elif place_within(grid, entry["location"]["lat"], entry["location"]["lon"], CANDIDATE_CLEARANCE_M):
             outcome["near"].append(gers)
@@ -976,16 +983,15 @@ def summary_of(result: ImportResult, places: dict[str, dict]) -> dict:
     after = kind_counts({**places, **result.records})
     live = sum(1 for record in places.values() if record.get("status") != "merged")
     percent = 100.0 * len(result.records) / live if live else 0.0
-    candidates = sum(len(rows) for rows in result.candidates.values())
-    # Only gap fills under the limit merge themselves. Overture differs and
-    # candidates need a person, and so does a change of the limit or more.
+    # Only gap fills under the limit merge themselves. Overture differs needs a
+    # person, and so does a change of the limit or more. Candidates found are
+    # only listed, so they hold nothing. A candidate published in this run
+    # holds the PR (pipeline.overture_run).
     wait_reasons = []
     if percent >= AUTO_MERGE_BELOW_PERCENT:
         wait_reasons.append(f"{percent:.2f}% of records changed, {AUTO_MERGE_BELOW_PERCENT:g}% or more")
     if result.differs:
         wait_reasons.append(f"{len(result.differs)} Overture differs")
-    if candidates:
-        wait_reasons.append(f"{candidates} candidate" + ("" if candidates == 1 else "s"))
     return {
         "release": result.release,
         "places": live,

@@ -377,3 +377,38 @@ def test_an_approved_candidate_within_250_m_of_a_place_or_of_one_just_published_
                               now=RUN, publish=True, make_id=lambda: next(ids))
     assert outcome["published"] == [NEW_ID] and outcome["near"] == [G1]
     assert list(load_places(repo)) == [NEW_ID]
+
+
+# ------------------------------------------------------------ tiers
+
+
+def test_only_approvals_in_the_allowed_tiers_publish(repo):
+    kept_repo(repo)
+    strong = strong_candidate()
+    weak = dict(strong, gers=G1, name="McIntyres Campground", tier="weak",
+                location={"lat": strong["location"]["lat"] + 0.05, "lon": 145.0})
+    outcome = apply_decisions(repo, [dict(strong, decision="approve"), dict(weak, decision="approve")],
+                              now=RUN, publish=True, tiers={"strong"}, make_id=lambda: NEW_ID)
+    assert outcome["published"] == [NEW_ID] and outcome["held"] == [G1]
+    assert list(load_places(repo)) == [NEW_ID]
+
+
+def test_every_tier_publishes_when_no_tier_is_named(repo):
+    kept_repo(repo)
+    weak = dict(strong_candidate(), tier="weak")
+    outcome = apply_decisions(repo, [dict(weak, decision="approve")], now=RUN, publish=True, make_id=lambda: NEW_ID)
+    assert outcome["published"] == [NEW_ID]
+
+
+def test_the_decide_command_publishes_the_named_tiers_and_writes_its_counts(repo, tmp_path):
+    kept_repo(repo)
+    strong = strong_candidate()
+    weak = dict(strong, gers=G1, name="McIntyres Campground", tier="weak",
+                location={"lat": strong["location"]["lat"] + 0.05, "lon": 145.0})
+    decisions, counts = tmp_path / "decisions.ndjson", tmp_path / "decided.json"
+    decisions.write_text("".join(json.dumps(dict(c, decision="approve")) + "\n" for c in (strong, weak)), encoding="utf-8")
+    assert decide_main([str(decisions), "--root", str(repo), "--now", RUN, "--publish-candidates",
+                        "--tier", "strong", "--summary", str(counts)]) == 0
+    assert json.loads(counts.read_text(encoding="utf-8")) == {
+        "already": 0, "flagged": 0, "held": 1, "near": 0, "published": 1, "rejected": 0,
+    }

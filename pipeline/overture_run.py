@@ -5,16 +5,18 @@ Overture's public bucket, runs the newest one unless it was already applied,
 and opens one PR. This module does the parts that need no network:
 
     python -m pipeline.overture_run check --listing listing.xml --root . [--release R] [--output FILE]
+    python -m pipeline.overture_run carry --decisions FILE --do-not-match FILE --root .
     python -m pipeline.overture_run applied <release> --root .
     python -m pipeline.overture_run body --report overture-report.md --summary overture-summary.json \\
-        --merges merges.json --out pr-body.md [--output FILE]
+        [--decided decided.json] --out pr-body.md [--output FILE]
 
 check reads the bucket listing (an S3 ListObjectsV2 answer for the prefix
 release/ with the delimiter /) and writes release, changelog and skip as
-step outputs. applied records the release in overture/release.json, which
-the PR commits. body writes the PR body (the automatic merges, then the
-import report) and the auto_merge output. See pipeline/README.md "Monthly
-Overture workflow".
+step outputs. carry brings the reviewer's decisions and rejections from the
+last overture-sync branch into the rebuilt one. applied records the release
+in overture/release.json, which the PR commits. body writes the PR body
+(whether the PR merges itself, then the import report) and the auto_merge
+output. See pipeline/README.md "Monthly Overture workflow".
 """
 
 from __future__ import annotations
@@ -27,14 +29,16 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from .common import write_text
-from .merge import AUTO_MERGES_FILE
-from .overture import cell
 from .sync import MAX_REPORT_CHARS
 
 APPLIED_FILE = Path("overture") / "release.json"
+DECISIONS_FILE = Path("overture") / "decisions.ndjson"
+DO_NOT_MATCH_FILE = Path("overture") / "do-not-match.json"
 RELEASE_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2})\.(\d+)$")
-# Automatic merges listed in the PR body. The rest are in the review file.
-MERGE_ROWS = 100
+# The PR body's size budget. The body is one line saying whether the PR merges
+# itself, then the import report, which pipeline.overture cuts to
+# REPORT_MAX_CHARS. The whole body stays within MAX_REPORT_CHARS.
+REPORT_MAX_CHARS = MAX_REPORT_CHARS - 1_000
 
 
 def release_key(release: str) -> tuple[str, int]:
@@ -91,43 +95,49 @@ def write_applied(root: Path, release: str) -> None:
     write_text(Path(root) / APPLIED_FILE, json.dumps({"release": release}) + "\n")
 
 
-def should_auto_merge(summary: dict, merges: list[dict]) -> bool:
+def should_auto_merge(summary: dict, published: int = 0) -> bool:
     """Only gap fills under the limit merge themselves (the import summary's
-    auto_merge). The automatic merge rule's merges wait for a person too."""
-    return bool(summary["auto_merge"]) and not merges
+    auto_merge). A candidate published in this run waits for a person too."""
+    return bool(summary["auto_merge"]) and not published
 
 
-def pr_body(report: str, summary: dict, merges: list[dict]) -> str:
-    """The PR body: what happens to the PR, the automatic merges, then the import report."""
-    if should_auto_merge(summary, merges):
+def pr_body(report: str, summary: dict, published: int = 0) -> str:
+    """The PR body: whether the PR merges itself and why not, then the import report."""
+    if should_auto_merge(summary, published):
         decision = "Only gap fills, under the limit: the PR merges itself once CI passes."
     else:
         reasons = list(summary.get("wait_reasons") or [])
-        if merges:
-            reasons.insert(0, f"{len(merges)} automatic merge" + ("" if len(merges) == 1 else "s"))
+        if published:
+            reasons.append(f"{published} candidate" + ("" if published == 1 else "s") + " published in this run")
         decision = "The PR waits for a person: " + ", ".join(reasons) + "."
-    lines = [decision, "", "## Automatic merges", ""]
-    if merges:
-        lines += [
-            f"The automatic merge rule ran first. Each merge is also in `{AUTO_MERGES_FILE.as_posix()}`.",
-            "",
-            "| Kept | Dropped | Metres | Part |",
-            "|---|---|---:|---|",
-        ]
-        for m in merges[:MERGE_ROWS]:
-            lines.append(
-                f"| {cell(m.get('kept_name'))} (`{m['kept']}`) | {cell(m.get('dropped_name'))} (`{m['dropped']}`) "
-                f"| {m['distance_m']} | {'yes' if m.get('part') else 'no'} |"
-            )
-        if len(merges) > MERGE_ROWS:
-            lines.append(f"And {len(merges) - MERGE_ROWS} more, listed in `{AUTO_MERGES_FILE.as_posix()}`.")
-    else:
-        lines.append("None.")
-    body = "\n".join(lines) + "\n\n" + report
+    body = decision + "\n\n" + report
     if len(body) > MAX_REPORT_CHARS:
         cut = "\n\nThe report is cut here. The full report is in the workflow run's log.\n"
         body = body[: MAX_REPORT_CHARS - len(cut)] + cut
     return body
+
+
+def carry(root: Path, decisions: Path, do_not_match: Path) -> None:
+    """Bring the reviewer's work from the last overture-sync branch into the rebuilt one.
+
+    decisions and do_not_match are that branch's overture/decisions.ndjson and
+    overture/do-not-match.json, either of which may be missing. Its decisions
+    file replaces this one. Its do-not-match list is joined to this one, so a
+    pair or GERS id added on main since is kept too.
+    """
+    root = Path(root)
+    if decisions.exists():
+        write_text(root / DECISIONS_FILE, decisions.read_text(encoding="utf-8"))
+    if not do_not_match.exists():
+        return
+    theirs = json.loads(do_not_match.read_text(encoding="utf-8"))
+    path = root / DO_NOT_MATCH_FILE
+    ours = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"pairs": []}
+    pairs = list(ours.get("pairs", []))
+    pairs += [pair for pair in theirs.get("pairs", []) if pair not in pairs]
+    joined = dict(ours, pairs=pairs, gers=sorted(set(ours.get("gers", [])) | set(theirs.get("gers", []))))
+    if joined != ours:
+        write_text(path, json.dumps(joined, indent=2) + "\n")
 
 
 def write_outputs(path: Path | None, values: dict) -> None:
@@ -148,13 +158,17 @@ def main(argv: list[str] | None = None) -> int:
     check.add_argument("--root", type=Path, default=Path("."))
     check.add_argument("--release", default="", help="run this release instead of the newest")
     check.add_argument("--output", type=Path, help="GitHub Actions output file (default: print)")
+    carried = commands.add_parser("carry", help="carry the reviewer's files over from the last overture-sync branch")
+    carried.add_argument("--decisions", type=Path, required=True, help="that branch's overture/decisions.ndjson")
+    carried.add_argument("--do-not-match", type=Path, required=True, help="that branch's overture/do-not-match.json")
+    carried.add_argument("--root", type=Path, default=Path("."))
     applied = commands.add_parser("applied", help="record the release in overture/release.json")
     applied.add_argument("release")
     applied.add_argument("--root", type=Path, default=Path("."))
     body = commands.add_parser("body", help="write the PR body and the auto_merge output")
     body.add_argument("--report", type=Path, required=True)
     body.add_argument("--summary", type=Path, required=True)
-    body.add_argument("--merges", type=Path, required=True, help="written by pipeline.merge --auto --summary")
+    body.add_argument("--decided", type=Path, help="written by pipeline.overture_decide --summary")
     body.add_argument("--out", type=Path, required=True)
     body.add_argument("--output", type=Path, help="GitHub Actions output file (default: print)")
     args = parser.parse_args(argv)
@@ -173,13 +187,16 @@ def main(argv: list[str] | None = None) -> int:
             "skip": str(plan["skip"] is not None).lower(),
         })
         return 0
+    if args.command == "carry":
+        carry(args.root, args.decisions, args.do_not_match)
+        return 0
     if args.command == "applied":
         write_applied(args.root, args.release)
         return 0
     summary = json.loads(args.summary.read_text(encoding="utf-8"))
-    merges = json.loads(args.merges.read_text(encoding="utf-8"))
-    write_text(args.out, pr_body(args.report.read_text(encoding="utf-8"), summary, merges))
-    write_outputs(args.output, {"auto_merge": str(should_auto_merge(summary, merges)).lower()})
+    published = json.loads(args.decided.read_text(encoding="utf-8"))["published"] if args.decided else 0
+    write_text(args.out, pr_body(args.report.read_text(encoding="utf-8"), summary, published))
+    write_outputs(args.output, {"auto_merge": str(should_auto_merge(summary, published)).lower()})
     return 0
 
 

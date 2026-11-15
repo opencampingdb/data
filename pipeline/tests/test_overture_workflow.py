@@ -1,7 +1,7 @@
 """Tests for the monthly Overture workflow's Python side: the import report
 and summary as the PR body and the auto-merge limit (pipeline.overture), and
-the release check, the applied release and the PR body with the automatic
-merges (pipeline.overture_run). The workflow itself is
+the release check, the applied release, the reviewer's files carried over and
+the PR body (pipeline.overture_run). The workflow itself is
 .github/workflows/sync-overture.yml."""
 
 import json
@@ -12,6 +12,7 @@ from pipeline.common import place_path
 from pipeline.merge import main as merge_main
 from pipeline.overture import ImportResult, render_report, summary_of
 from pipeline.overture_run import (
+    REPORT_MAX_CHARS,
     applied_release,
     main,
     plan_run,
@@ -20,7 +21,7 @@ from pipeline.overture_run import (
     should_auto_merge,
 )
 from pipeline.sync import MAX_REPORT_CHARS
-from pipeline.tests.test_overture_import import A, B, G1, G2, RELEASE, extract, ov, place, run, write_repo
+from pipeline.tests.test_overture_import import A, B, G1, G2, RELEASE, REPO, extract, ov, place, run, write_repo
 
 LISTING = """<?xml version="1.0" encoding="UTF-8"?>
 <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>overturemaps-us-west-2</Name>
@@ -114,11 +115,12 @@ def test_overture_differs_waits_for_review_even_under_the_limit():
     assert summary["wait_reasons"] == ["1 Overture differs"]
 
 
-def test_candidates_wait_for_review_even_under_the_limit():
-    result = ImportResult(release=RELEASE, candidates={"approved": [{"gers": G1}], "rejected": []})
+def test_candidates_found_do_not_hold_the_gap_fills():
+    # Candidates are only listed: nothing in places/ changes until a decision publishes one.
+    result = ImportResult(release=RELEASE, candidates={"strong": [{"gers": G1}], "weak": []})
     summary = summary_of(result, many_places(100))
-    assert summary["auto_merge"] is False
-    assert summary["wait_reasons"] == ["1 candidate"]
+    assert summary["auto_merge"] is True
+    assert summary["wait_reasons"] == []
 
 
 def test_tiers_with_no_candidates_do_not_hold_the_run():
@@ -185,48 +187,100 @@ def test_the_check_command_writes_step_outputs(repo, tmp_path):
 # -------------------------------------------------------------- the PR body
 
 
-MERGE = {"kept": A, "dropped": B, "kept_name": "Riverbend Caravan Park", "dropped_name": "Riverbend CP",
-         "distance_m": 12, "part": False}
-
-
-def test_the_body_lists_the_automatic_merges_then_the_import_report():
-    summary = {"auto_merge": True, "wait_reasons": []}
-    body = pr_body("# Overture import report\n\nOverture release 2026-10-21.0.\n", summary, [MERGE])
-    assert body.index("## Automatic merges") < body.index("# Overture import report")
-    assert f"| Riverbend Caravan Park (`{A}`) | Riverbend CP (`{B}`) | 12 | no |" in body
+def test_the_body_says_whether_the_pr_merges_itself_then_gives_the_report():
+    body = pr_body("# Overture import report\n", {"auto_merge": True, "wait_reasons": []})
+    assert body.startswith("Only gap fills, under the limit: the PR merges itself once CI passes.")
+    assert "# Overture import report" in body
+    assert "Automatic merges" not in body
 
 
 def test_only_gap_fills_under_the_limit_merge_themselves():
-    assert should_auto_merge({"auto_merge": True, "wait_reasons": []}, []) is True
-    assert should_auto_merge({"auto_merge": False, "wait_reasons": ["1 Overture differs"]}, []) is False
-    # The automatic merge rule's merges are not gap fills: a person reviews them.
-    assert should_auto_merge({"auto_merge": True, "wait_reasons": []}, [MERGE]) is False
+    assert should_auto_merge({"auto_merge": True, "wait_reasons": []}) is True
+    assert should_auto_merge({"auto_merge": False, "wait_reasons": ["1 Overture differs"]}) is False
 
 
-def test_the_body_says_whether_the_pr_merges_itself():
-    assert "merges itself once CI passes" in pr_body("report\n", {"auto_merge": True, "wait_reasons": []}, [])
-    body = pr_body("report\n", {"auto_merge": False, "wait_reasons": ["1 Overture differs", "1 candidate"]}, [MERGE])
-    assert "waits for a person: 1 automatic merge, 1 Overture differs, 1 candidate." in body
+def test_a_candidate_published_in_this_run_waits_for_a_person():
+    summary = {"auto_merge": True, "wait_reasons": []}
+    assert should_auto_merge(summary, published=1) is False
+    body = pr_body("report\n", {"auto_merge": False, "wait_reasons": ["1 Overture differs"]}, published=2)
+    assert "waits for a person: 1 Overture differs, 2 candidates published in this run." in body
 
 
-def test_the_body_fits_a_pr_with_many_merges():
-    report = "x" * 50_000 + "\n"
-    body = pr_body(report, {"auto_merge": False, "wait_reasons": []}, [MERGE] * 2000)
+def test_the_body_fits_a_pr_body():
+    body = pr_body("x" * (MAX_REPORT_CHARS + 10), {"auto_merge": False, "wait_reasons": []})
     assert len(body) <= MAX_REPORT_CHARS
-    assert "And 1900 more, listed in `moderation/automatic-merges.csv`" in body
+    assert body.endswith("The full report is in the workflow run's log.\n")
+
+
+def test_the_report_budget_leaves_room_for_the_decision_line():
+    assert REPORT_MAX_CHARS + 1_000 <= MAX_REPORT_CHARS
 
 
 def test_the_body_command_writes_the_body_and_the_decision(repo, tmp_path):
-    report, summary, merges = tmp_path / "report.md", tmp_path / "summary.json", tmp_path / "merges.json"
+    report, summary, decided = tmp_path / "report.md", tmp_path / "summary.json", tmp_path / "decided.json"
     body, out = tmp_path / "body.md", tmp_path / "output"
     report.write_text("# Overture import report\n", encoding="utf-8")
     summary.write_text(json.dumps({"auto_merge": True, "wait_reasons": []}), encoding="utf-8")
-    merges.write_text("[]\n", encoding="utf-8")
-    args = ["body", "--report", str(report), "--summary", str(summary), "--merges", str(merges),
-            "--out", str(body), "--output", str(out)]
+    args = ["body", "--report", str(report), "--summary", str(summary), "--out", str(body), "--output", str(out)]
     assert main(args) == 0
     assert "# Overture import report" in body.read_text(encoding="utf-8")
     assert out.read_text(encoding="utf-8") == "auto_merge=true\n"
+
+    decided.write_text(json.dumps({"published": 1, "held": 0}), encoding="utf-8")
+    out.write_text("", encoding="utf-8")
+    assert main([*args, "--decided", str(decided)]) == 0
+    assert out.read_text(encoding="utf-8") == "auto_merge=false\n"
+    assert "1 candidate published in this run" in body.read_text(encoding="utf-8")
+
+
+# ------------------------------------------------- the reviewer's work carried
+
+
+def test_the_reviewers_decisions_and_rejections_are_carried_into_the_rebuilt_branch(repo, tmp_path):
+    (repo / "overture").mkdir(exist_ok=True)
+    (repo / "overture" / "do-not-match.json").write_text(
+        json.dumps({"pairs": [{"place": A, "gers": G1}], "gers": ["g-main"]}), encoding="utf-8")
+    branch = tmp_path / "branch"
+    branch.mkdir()
+    (branch / "decisions.ndjson").write_text('{"decision":"approve","gers":"g-new"}\n', encoding="utf-8")
+    (branch / "do-not-match.json").write_text(json.dumps({"pairs": [], "gers": ["g-branch", "g-main"]}), encoding="utf-8")
+
+    assert main(["carry", "--decisions", str(branch / "decisions.ndjson"),
+                 "--do-not-match", str(branch / "do-not-match.json"), "--root", str(repo)]) == 0
+
+    assert (repo / "overture" / "decisions.ndjson").read_text(encoding="utf-8") == '{"decision":"approve","gers":"g-new"}\n'
+    assert json.loads((repo / "overture" / "do-not-match.json").read_text(encoding="utf-8")) == {
+        "pairs": [{"place": A, "gers": G1}], "gers": ["g-branch", "g-main"],
+    }
+
+
+def test_carrying_from_a_branch_without_the_files_changes_nothing(repo, tmp_path):
+    (repo / "overture").mkdir(exist_ok=True)
+    kept = json.dumps({"pairs": [], "gers": ["g-main"]})
+    (repo / "overture" / "do-not-match.json").write_text(kept, encoding="utf-8")
+    assert main(["carry", "--decisions", str(tmp_path / "none.ndjson"),
+                 "--do-not-match", str(tmp_path / "none.json"), "--root", str(repo)]) == 0
+    assert not (repo / "overture" / "decisions.ndjson").exists()
+    assert (repo / "overture" / "do-not-match.json").read_text(encoding="utf-8") == kept
+
+
+# ------------------------------------------------------------ the workflow
+
+
+WORKFLOW = (REPO / ".github" / "workflows" / "sync-overture.yml").read_text(encoding="utf-8")
+
+
+def test_the_workflow_does_not_run_the_automatic_merge_rule():
+    assert "pipeline.merge" not in WORKFLOW
+
+
+def test_the_workflow_carries_the_reviewers_work_then_decides_before_the_import():
+    carry = WORKFLOW.index("pipeline.overture_run carry")
+    decide = WORKFLOW.index("pipeline.overture_decide overture/decisions.ndjson")
+    imported = WORKFLOW.index("python -m pipeline.overture \"$RUNNER_TEMP/overture.ndjson\"")
+    assert carry < decide < imported
+    assert "--publish-candidates" in WORKFLOW[decide:imported]
+    assert "--candidates overture/candidates.ndjson" in WORKFLOW[imported:]
 
 
 # ------------------------------------------------------ merge --auto summary

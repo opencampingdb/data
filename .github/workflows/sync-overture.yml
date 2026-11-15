@@ -5,16 +5,21 @@ name: Overture import
 # the releases in Overture's public bucket and takes the newest. When
 # overture/release.json already names it, the run stops there. Otherwise it
 # runs, in order:
-#   1. the automatic merge rule (pipeline.merge --auto), with the geometry
-#      sidecar from the Geofabrik extract, as the nightly OSM sync gets one;
-#   2. the Overture pull (tools/overture-pull), DuckDB over the public bucket;
-#   3. the Overture importer (pipeline.overture), a changelog run when the
-#      applied release is the one just before this one;
+#   1. carries the reviewer's overture/decisions.ndjson and
+#      overture/do-not-match.json over from the last overture-sync branch
+#      (pipeline.overture_run carry), so a rebuilt branch never loses them;
+#   2. acts on those decisions (pipeline.overture_decide): rejections go on
+#      the do-not-match list and approved candidates of the allowed tiers
+#      are published;
+#   3. the Overture pull (tools/overture-pull), DuckDB over the public bucket;
+#   4. the Overture importer (pipeline.overture), a changelog run when the
+#      applied release is the one just before this one, with the geometry
+#      sidecar from the Geofabrik extract for outlines;
 # then records the release in overture/release.json and opens or updates one
 # pull request from the overture-sync branch. Auto-merge is turned on only
-# for gap fills under 2% of records changed. Automatic merges, "Overture
-# differs" and candidates wait for review. See pipeline/README.md,
-# "Monthly Overture workflow".
+# for gap fills under the OSM sync's limit (AUTO_MERGE_BELOW_PERCENT in
+# pipeline/sync.py). "Overture differs" and candidates published in this run
+# wait for review. See pipeline/README.md, "Monthly Overture workflow".
 #
 # The branch push, the PR and the merge use a token for the opencampingdb-bot
 # GitHub App, never GITHUB_TOKEN: events caused by GITHUB_TOKEN do not start
@@ -27,6 +32,10 @@ on:
     inputs:
       release:
         description: "Overture release to run, such as 2026-10-21.0 (blank: the newest, skipped if already applied)"
+        required: false
+        default: ""
+      tiers:
+        description: "Candidate tiers whose approvals publish, such as strong (blank: every tier)"
         required: false
         default: ""
 
@@ -91,11 +100,37 @@ jobs:
           python -m pipeline.extract "$RUNNER_TEMP/australia-latest.osm.pbf" --out "$RUNNER_TEMP/extract.ndjson" \
             --geometry "$RUNNER_TEMP/geometry.ndjson"
 
-      - name: Run the automatic merge rule
+      - name: Carry over the reviewer's decisions
         if: steps.plan.outputs.skip != 'true'
         run: |
-          python -m pipeline.merge --auto --geometry "$RUNNER_TEMP/geometry.ndjson" --root . \
-            --summary "$RUNNER_TEMP/merges.json"
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/last"
+          # The last overture-sync branch, when there is one. The reviewer
+          # wrote its decisions and rejections there.
+          if git fetch --depth=1 origin overture-sync; then
+            git show FETCH_HEAD:overture/decisions.ndjson > "$RUNNER_TEMP/last/decisions.ndjson" \
+              || rm -f "$RUNNER_TEMP/last/decisions.ndjson"
+            git show FETCH_HEAD:overture/do-not-match.json > "$RUNNER_TEMP/last/do-not-match.json" \
+              || rm -f "$RUNNER_TEMP/last/do-not-match.json"
+          fi
+          python -m pipeline.overture_run carry --decisions "$RUNNER_TEMP/last/decisions.ndjson" \
+            --do-not-match "$RUNNER_TEMP/last/do-not-match.json" --root .
+
+      - name: Act on the decisions
+        if: steps.plan.outputs.skip != 'true'
+        env:
+          TIERS: ${{ inputs.tiers }}
+        run: |
+          set -euo pipefail
+          echo '{"published": 0}' > "$RUNNER_TEMP/decided.json"
+          if [ -f overture/decisions.ndjson ]; then
+            tiers=()
+            for tier in $TIERS; do
+              tiers+=(--tier "$tier")
+            done
+            python -m pipeline.overture_decide overture/decisions.ndjson --root . --publish-candidates \
+              "${tiers[@]}" --summary "$RUNNER_TEMP/decided.json"
+          fi
 
       - name: Pull the Overture release
         if: steps.plan.outputs.skip != 'true'
@@ -117,7 +152,8 @@ jobs:
           python -m pipeline.overture "$RUNNER_TEMP/overture.ndjson" --root . \
             --geometry "$RUNNER_TEMP/geometry.ndjson" "${changelog[@]}" \
             --report "$RUNNER_TEMP/overture-report.md" \
-            --summary "$RUNNER_TEMP/overture-summary.json"
+            --summary "$RUNNER_TEMP/overture-summary.json" \
+            --candidates overture/candidates.ndjson
           python -m pipeline.overture_run applied "$RELEASE" --root .
 
       - name: Write the PR body
@@ -125,7 +161,7 @@ jobs:
         if: steps.plan.outputs.skip != 'true'
         run: |
           python -m pipeline.overture_run body --report "$RUNNER_TEMP/overture-report.md" \
-            --summary "$RUNNER_TEMP/overture-summary.json" --merges "$RUNNER_TEMP/merges.json" \
+            --summary "$RUNNER_TEMP/overture-summary.json" --decided "$RUNNER_TEMP/decided.json" \
             --out "$RUNNER_TEMP/pr-body.md" --output "$GITHUB_OUTPUT"
           cat "$RUNNER_TEMP/overture-report.md"
 

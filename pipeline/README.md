@@ -548,13 +548,13 @@ is checked as in a full run, so places with no link can still match.
 websites, phones and addresses before and after, each gap fill (the place,
 the value and what it replaced), the "Overture differs" lines, the values
 taken off and the candidates by tier. Lists are cut at 200 rows, and
-shorter when the report would pass 45,000 characters, so the PR body stays
-under GitHub's limit. The summary JSON has the same counts,
-`change_percent` (records changed out of all live records), `auto_merge`
-and `wait_reasons`. `auto_merge` is true only for gap fills under 2% of
-records changed (the OSM sync's limit); `wait_reasons` names each thing
-that holds the run for a person: the limit, "Overture differs" lines and
-candidates. The summary also counts the candidates by tier (`candidates`)
+shorter when the report would pass `REPORT_MAX_CHARS` in
+`pipeline/overture_run.py`, so the PR body stays under GitHub's limit. The
+summary JSON has the same counts, `change_percent` (records changed out of
+all live records), `auto_merge` and `wait_reasons`. `auto_merge` is true
+only for gap fills under the OSM sync's limit (`AUTO_MERGE_BELOW_PERCENT` in
+`pipeline/sync.py`). `wait_reasons` names each thing that holds the run for
+a person: the limit and "Overture differs" lines. The summary also counts the candidates by tier (`candidates`)
 and by junk rule (`dropped`). `--candidates FILE` writes each candidate as
 one line, strong tier first, for the reviewer.
 
@@ -594,8 +594,10 @@ row.
 `flag`, and `python -m pipeline.overture_decide decisions.ndjson --root .`
 acts on them. A rejected candidate's GERS id goes on the do-not-match list.
 A flagged one waits for a person. An approved one is held unless
-`--publish-candidates` is given: publishing stays off until a person has seen
-the tier counts. A published candidate becomes a place record with `osm`
+`--publish-candidates` is given and its tier is one named with `--tier`
+(every tier when none is named): publishing stays off until a person has
+seen the tier counts. `--summary FILE` writes how many candidates got each
+outcome. A published candidate becomes a place record with `osm`
 null, standing `shown` (not checked yet), `overture` as the source of its
 name and location and of any website, phone and address Overture gives,
 each dated the run, and its GERS id in the link file. A GERS id already in
@@ -623,23 +625,35 @@ the third or fourth week.
    only when the applied release is the one just before: Overture's
    changelog holds only the changes since the release before it, so after a
    missed release every place is checked again.
-2. **The automatic merge rule.** `pipeline.merge --auto` runs first, with
-   the geometry sidecar `pipeline.extract --geometry` builds from the
-   Geofabrik extract, as in the nightly OSM sync. `--summary` writes the
-   merges made for the PR body.
-3. **The pull.** `tools/overture-pull/pull.py` writes the release's extract.
-4. **The import.** `pipeline.overture` writes the gap fills, the link file,
-   the report and the summary. `pipeline.overture_run applied` then records
-   the release in `overture/release.json`, so the release counts as applied
-   once the PR merges.
-5. **The PR.** `pipeline.overture_run body` writes the PR body: whether the
-   PR merges itself and why not, the automatic merges (100 rows, the rest in
-   `moderation/automatic-merges.csv`), then the import report. The run
-   validates the data and opens or updates one PR from the `overture-sync`
-   branch with the `opencampingdb-bot` token, as the OSM sync does. Only gap
-   fills under 2% of records changed turn on auto-merge. Automatic merges,
-   "Overture differs" lines, candidates and a change of 2% or more wait
-   for a person, and auto-merge is turned off for them.
+2. **The reviewer's work.** The branch is rebuilt from `main` on every
+   run, so `pipeline.overture_run carry` first brings `overture/decisions.ndjson`
+   and `overture/do-not-match.json` over from the last `overture-sync` branch,
+   where the AI reviewer and people wrote them. The decisions file replaces
+   main's, and the do-not-match list is joined to main's. The run does not
+   run the automatic merge rule: the nightly OSM sync applies it, and the
+   import works from the places as they are after it.
+3. **The decisions.** `pipeline.overture_decide overture/decisions.ndjson
+   --publish-candidates` acts on the carried decisions: rejections go on the
+   do-not-match list and approved candidates are published. The workflow
+   publishes approvals of every tier, or only the tiers given in the `tiers`
+   input of a run started by hand (`strong` for the first real run). Its
+   `--summary` counts what was published, for the PR body.
+4. **The pull.** `tools/overture-pull/pull.py` writes the release's extract.
+5. **The import.** `pipeline.overture` writes the gap fills, the link file,
+   the report, the summary and `overture/candidates.ndjson`, the candidates
+   the reviewer reads on the branch. The geometry sidecar
+   `pipeline.extract --geometry` builds from the Geofabrik extract gives the
+   outlines. `pipeline.overture_run applied` then records the release in
+   `overture/release.json`, so the release counts as applied once the PR
+   merges.
+6. **The PR.** `pipeline.overture_run body` writes the PR body: whether the
+   PR merges itself and why not, then the import report. The run validates
+   the data and opens or updates one PR from the `overture-sync` branch
+   with the `opencampingdb-bot` token, as the OSM sync does. Candidates found
+   and decisions do not change `places/` until a decision publishes one, so
+   they hold nothing. Auto-merge waits only for a change at the OSM sync's
+   limit or over, any "Overture differs" line, or any candidate published in
+   this run, and is turned off for them.
 
 The branch is rebuilt from `main` on every run. When the OSM sync merges
 first and the PR conflicts, start the workflow again by hand with the same
