@@ -121,7 +121,7 @@ jobs:
       - name: List the Overture releases
         run: |
           set -euo pipefail
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o "$RUNNER_TEMP/releases.xml" "$RELEASES_URL"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o "$RUNNER_TEMP/releases.xml" "$RELEASES_URL"
 
       - name: Choose the release
         id: plan
@@ -136,8 +136,8 @@ jobs:
         run: |
           set -euo pipefail
           cd "$RUNNER_TEMP"
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o australia-latest.osm.pbf "$EXTRACT_URL"
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o australia-latest.osm.pbf.md5 "$EXTRACT_URL.md5"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o australia-latest.osm.pbf "$EXTRACT_URL"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o australia-latest.osm.pbf.md5 "$EXTRACT_URL.md5"
           md5sum -c australia-latest.osm.pbf.md5
           ls -l australia-latest.osm.pbf
 
