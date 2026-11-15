@@ -195,7 +195,8 @@ def apply_decisions(
     None); otherwise it is held. A candidate whose GERS id is
     already linked to a place is not published again, and one within 250 m
     of a place (including one published in the same run, such as an
-    Overture duplicate) waits for a person.
+    Overture duplicate) waits for a person. A new place never takes the id of
+    a place already in places/.
 
     Returns the place ids published, and the GERS ids held, rejected,
     flagged, already linked and near a place.
@@ -205,7 +206,9 @@ def apply_decisions(
     lists = load_kept_lists(root)
     links = load_links(root)
     linked = {link["gers"] for link in links.values()}
-    grid = places_grid(load_places(root)) if publish else {}
+    places = load_places(root) if publish else {}
+    grid = places_grid(places)
+    used_ids = set(places)
     outcome = {"published": [], "held": [], "rejected": [], "flagged": [], "already": [], "near": []}
     for entry in decisions:
         decision, gers = entry["decision"], entry["gers"]
@@ -222,7 +225,11 @@ def apply_decisions(
         elif place_within(grid, entry["location"]["lat"], entry["location"]["lon"], CANDIDATE_CLEARANCE_M):
             outcome["near"].append(gers)
         else:
-            record = candidate_record(entry, lists, now, make_id())
+            place_id = make_id()
+            while place_id in used_ids:  # never write over a place already there
+                place_id = make_id()
+            used_ids.add(place_id)
+            record = candidate_record(entry, lists, now, place_id)
             write_text(place_path(root, record["id"]), dump_record(record))
             links[record["id"]] = {"gers": gers, "release": entry["release"]}
             linked.add(gers)

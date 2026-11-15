@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 import pytest
 
-from pipeline.common import dump_line, load_places
+from pipeline.common import dump_line, dump_record, load_places, place_path
 from pipeline.maproulette import DOUBLE_MAPPING, TRAVELLER_REPORTS, out_of_spec_tasks, write_challenges
 from pipeline.overture import import_overture
 from pipeline.overture_candidates import apply_decisions
@@ -295,6 +295,20 @@ def test_an_approved_candidate_publishes_as_not_checked_yet_with_overture_as_its
     }
     assert load_links(repo) == {NEW_ID: {"gers": G2, "release": "2026-10-21.0"}}
     assert validate_repo(repo, now=RUN) == []
+
+
+def test_a_published_candidate_never_takes_the_id_of_a_place_already_there(repo):
+    kept_repo(repo)
+    existing = place(NEW_ID)
+    path = place_path(repo, NEW_ID)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(dump_record(existing), encoding="utf-8", newline="\n")
+    ids = iter([NEW_ID, A])
+    outcome = apply_decisions(repo, [dict(strong_candidate(), decision="approve")], now=RUN, publish=True,
+                              make_id=lambda: next(ids))
+    assert outcome["published"] == [A]
+    assert load_places(repo)[NEW_ID] == existing
+    assert load_links(repo) == {A: {"gers": G2, "release": "2026-10-21.0"}}
 
 
 def test_flagged_candidates_wait_and_a_published_one_is_not_published_twice(repo):
