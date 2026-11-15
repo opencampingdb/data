@@ -634,6 +634,17 @@ def test_a_place_whose_kind_is_no_longer_filled_loses_its_overture_values():
     assert result.links == {}
 
 
+def test_updated_never_moves_back_when_the_record_changed_later_on_the_run_day():
+    # The run's time is the day at 00:00. A record the OSM sync or a traveller
+    # changed later that day keeps its later updated time.
+    later = "2026-11-15T16:00:00Z"
+    record = place(facts={"fee": True}, sources={"fee": "feedback"}, fact_dates={"fee": "2026-11-15T10:00:00Z"},
+                   updated=later)
+    result = run([record], [ov()])
+    assert result.records[A]["fact_sources"]["website"] == "overture"
+    assert result.records[A]["updated"] == later
+
+
 def test_a_merged_record_is_left_alone():
     record = place(status="merged", merged_into=B)
     assert run([record], [ov()]).records == {}

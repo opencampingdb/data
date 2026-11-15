@@ -173,7 +173,9 @@ def import_overture(
             if key not in after_values:
                 result.removals.append({"place": place_id, "key": key, "value": value})
         if new != record:
-            new["updated"] = now
+            # The run's time is the day at 00:00, so a record changed later
+            # that day keeps its later time.
+            new["updated"] = max(now, record.get("updated") or now)
             result.records[place_id] = new
     result.candidates, result.dropped = find_candidates(places, overture, lists)
     return result
