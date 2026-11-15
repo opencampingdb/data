@@ -1,14 +1,66 @@
 {
+  "fact_dates": {
+    "access": "2026-11-15T02:10:50Z",
+    "bbq": "2026-11-15T02:10:50Z",
+    "bins": "2026-11-15T02:10:50Z",
+    "brand": "2026-11-15T02:10:50Z",
+    "caravans": "2026-11-15T02:10:50Z",
+    "drinking_water": "2026-11-15T02:10:50Z",
+    "dump_station": "2026-11-15T02:10:50Z",
+    "entry": "2026-11-15T02:10:50Z",
+    "fee": "2026-11-15T02:10:50Z",
+    "hot_water": "2026-11-15T02:10:50Z",
+    "kitchen": "2026-11-15T02:10:50Z",
+    "laundry": "2026-11-15T02:10:50Z",
+    "pets": "2026-11-15T02:10:50Z",
+    "power": "2026-11-15T02:10:50Z",
+    "showers": "2026-11-15T02:10:50Z",
+    "swimming": "2026-11-15T02:10:50Z",
+    "toilet_type": "2026-11-15T02:10:50Z",
+    "toilets": "2026-11-15T02:10:50Z",
+    "wifi": "2026-11-15T02:10:50Z"
+  },
   "fact_sources": {
+    "access": "feedback",
+    "bbq": "feedback",
+    "bins": "feedback",
+    "brand": "feedback",
+    "caravans": "feedback",
+    "drinking_water": "feedback",
+    "dump_station": "feedback",
+    "entry": "feedback",
+    "fee": "feedback",
+    "hot_water": "feedback",
+    "kitchen": "feedback",
+    "laundry": "feedback",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "pets": "feedback",
     "phone": "osm",
-    "website": "osm"
+    "power": "feedback",
+    "showers": "feedback",
+    "swimming": "feedback",
+    "toilet_type": "feedback",
+    "toilets": "feedback",
+    "website": "osm",
+    "wifi": "feedback"
   },
   "facts": {
+    "access": "2wd",
+    "bbq": true,
+    "bins": true,
+    "brand": "ingenia",
+    "caravans": true,
+    "drinking_water": true,
+    "dump_station": true,
+    "entry": "customers",
+    "fee": true,
+    "hot_water": true,
+    "kitchen": true,
+    "laundry": true,
     "lga": {
       "name": "Tweed Shire Council",
       "osm_id": 6170302
@@ -30,8 +82,15 @@
       "distance_m": 120,
       "name": "Wommin Bay Road"
     },
+    "pets": "yes",
     "phone": "+61 2 6674 2505",
-    "website": "https://ingeniaholidays.com.au"
+    "power": true,
+    "showers": true,
+    "swimming": true,
+    "toilet_type": "flush",
+    "toilets": true,
+    "website": "https://ingeniaholidays.com.au",
+    "wifi": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEWMBRN1R9TJT6ZD0VMN",
@@ -49,5 +108,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T02:10:50Z"
 }
