@@ -301,6 +301,22 @@ def test_a_merge_moves_overture_values_the_kept_record_lacks_with_their_dates(re
     assert validate_repo(repo) == []
 
 
+def test_a_merge_lets_a_travellers_value_replace_the_kept_records_overture_value(repo):
+    # A gap fill gives way to any other source, in a merge too.
+    write(repo, filled(A, 1))
+    write(repo, osm_record(
+        B, 2, facts={"phone": "+61 2 5550 0199"}, fact_sources={"phone": "feedback"}, fact_dates={"phone": T1},
+    ))
+    merge(repo, A, B, now=T2)
+    kept = record(repo, A)
+    assert kept["facts"]["phone"] == "+61 2 5550 0199"
+    assert kept["fact_sources"]["phone"] == "feedback"
+    assert kept["fact_dates"]["phone"] == T1
+    # The kept record's other Overture value stays.
+    assert kept["fact_sources"]["website"] == "overture"
+    assert validate_repo(repo) == []
+
+
 def test_a_merge_moves_the_link_only_to_a_kept_place_with_no_link(repo):
     write(repo, osm_record(A, 1))
     write(repo, filled(B, 2))

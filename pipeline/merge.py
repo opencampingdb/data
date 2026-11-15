@@ -147,9 +147,13 @@ def merge(
         ]
 
     # Facts from travellers, contributions, community reports and Overture,
-    # where the kept record has none.
+    # where the kept record has none. A value from any of them but Overture
+    # also replaces an Overture value on the kept record, which is a gap fill.
     for key, source in sorted(dropped.get("fact_sources", {}).items()):
-        if key in FACT_KEYS and source in MOVABLE_SOURCES and key not in kept["facts"]:
+        replaceable = key not in kept["facts"] or (
+            kept["fact_sources"].get(key) == OVERTURE and source != OVERTURE
+        )
+        if key in FACT_KEYS and source in MOVABLE_SOURCES and replaceable:
             if key in dropped["facts"]:
                 kept["facts"][key] = dropped["facts"][key]
                 kept["fact_sources"][key] = source
