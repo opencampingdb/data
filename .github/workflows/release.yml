@@ -42,7 +42,54 @@ env:
   KEEP_RELEASES: "60"
 
 jobs:
+  # The timed start comes from the feedback intake through workflow_dispatch.
+  # The schedule above is a backup, so a scheduled run does nothing when a run
+  # started another way (the intake, a push or by hand) is queued, running or
+  # succeeded in the last 60 minutes. Scheduled runs are not counted, so
+  # a skipped backup never makes the next backup skip. If the check fails,
+  # the run goes ahead.
+  due:
+    name: Check if due
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      actions: read
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - name: Check for a run in this slot
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WORKFLOW_FILE: release.yml
+          WINDOW_MINUTES: "60"
+        run: |
+          run=true
+          why="started by $GITHUB_EVENT_NAME"
+          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+            since=$(date -u -d "$WINDOW_MINUTES minutes ago" +%Y-%m-%dT%H:%M:%SZ)
+            if runs=$(gh api -X GET "repos/$GITHUB_REPOSITORY/actions/workflows/$WORKFLOW_FILE/runs" \
+                -f created=">=$since" -f per_page=100 --jq .workflow_runs); then
+              other=$(jq -r --argjson self "$GITHUB_RUN_ID" '[.[]
+                | select(.id != $self and .event != "schedule")
+                | select(.status != "completed" or .conclusion == "success")][0]
+                | if . then "run \(.id) (\(.event), \(.conclusion // .status))" else "" end' <<< "$runs")
+              if [ -n "$other" ]; then
+                run=false
+                why="skipped, $other since $since"
+              else
+                why="no other run since $since"
+              fi
+            else
+              why="could not list runs, running anyway"
+            fi
+          fi
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+          echo "::notice::run=$run, $why"
+
   release:
+    needs: due
+    if: needs.due.outputs.run == 'true'
     name: Build and publish
     runs-on: ubuntu-24.04
     timeout-minutes: 30
