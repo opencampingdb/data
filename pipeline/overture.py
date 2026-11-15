@@ -61,7 +61,7 @@ SOCIAL_HOSTS = {
 }
 SOCIAL_FACTS = tuple(SOCIAL_HOSTS)
 
-# The facts a match fills, besides a name for an unnamed place.
+# The facts an Overture match or a name source fills, besides a name for an unnamed place.
 FILLED_FACTS = ("website", "phone", "address", *SOCIAL_FACTS)
 
 # Changelog entries that mean an Overture place has not changed (None: the
@@ -77,11 +77,11 @@ FRESH = ("added", "data_changed")
 # and never compared in "Overture differs".
 SHARED_PAGE_LIMIT = 5
 
-# The strong match.
+# The Overture match (the strong match), for a named place.
 MATCH_DISTANCE_M = 100
 MATCH_NAME_SIMILARITY = 0.85
 MATCH_CONFIDENCE = 0.7
-# The name for an unnamed place.
+# The name source, for an unnamed place.
 NAME_DISTANCE_M = 100
 NAME_CONFIDENCE = 0.8
 
@@ -138,11 +138,13 @@ class ImportResult:
 
     records: every changed record, by id. fills: one entry per value taken or
     changed ({place, key, value, previous}). removals: one per Overture value
-    taken off ({place, key, value}). differs: matched places where Overture's
-    website or phone disagrees with OSM's. links: the new link file, place id
+    taken off ({place, key, value}). differs: places with an Overture match
+    or a name source where Overture's website or phone disagrees with OSM's. links: the new link file, place id
     to {gers, release}. candidates: Overture candidates by tier (TIERS).
     dropped: the camping places each junk rule dropped, by rule. shared: each
     shared page left out (SHARED_PAGE_LIMIT) and how many places it was given for.
+    matches and name_sources: the places that got an Overture match or a name
+    source in this run.
     """
 
     release: str
@@ -155,6 +157,8 @@ class ImportResult:
     dropped: dict[str, list[dict]] = field(default_factory=dict)
     shared: dict[str, int] = field(default_factory=dict)
     checked: int = 0
+    matches: int = 0
+    name_sources: int = 0
 
 
 def load_kept_lists(root: Path) -> KeptLists:
@@ -399,7 +403,7 @@ def strip_overture(record: dict) -> dict:
 
 
 def strong_match(record: dict, overture: Overture, lists: KeptLists, fresh_only: bool = False) -> dict | None:
-    """The one Overture place that strongly matches a named place, or None.
+    """A named place's Overture match: the one Overture place that strongly matches it, or None.
 
     With fresh_only, only Overture places the changelog lists as added or changed count.
     """
@@ -450,10 +454,10 @@ def near_outline(overture: Overture, area, metres: float) -> list[dict]:
     return out
 
 
-def name_match(
+def name_source(
     record: dict, overture: Overture, lists: KeptLists, geometry: Geometry, fresh_only: bool = False
 ) -> dict | None:
-    """The one confident Overture place that names an unnamed place, or None.
+    """An unnamed place's name source: the one confident Overture place that names it, or None.
 
     With fresh_only, only Overture places the changelog lists as added or changed count.
     """
@@ -475,13 +479,14 @@ def name_match(
     return passing[0] if len(passing) == 1 else None
 
 
-def match_for(
+def overture_place_for(
     record: dict, overture: Overture, lists: KeptLists, geometry: Geometry, fresh_only: bool = False
 ) -> dict | None:
-    """The record's Overture match: the strong match for a named place, the name rule for an unnamed one."""
+    """The Overture place a record takes values from: its Overture match when it
+    has a name, its name source when it has none."""
     if record.get("name"):
         return strong_match(record, overture, lists, fresh_only)
-    return name_match(record, overture, lists, geometry, fresh_only)
+    return name_source(record, overture, lists, geometry, fresh_only)
 
 
 # First path pieces that are a post, photo, event, share link or a site page,
@@ -585,7 +590,7 @@ def offered_pages(row: dict, lists: KeptLists) -> set[str]:
 
 
 def values_from(row: dict, base: dict, lists: KeptLists, shared: frozenset[str] = frozenset()) -> dict:
-    """The values a matched Overture place gives where the base record has none."""
+    """The values an Overture place (an Overture match or a name source) gives where the base record has none."""
     out = {}
     facts = base.get("facts", {})
     if not base.get("name") and row.get("name") and len(row["name"]) <= 300:
@@ -735,12 +740,16 @@ def import_overture(
         base = strip_overture(record)
         row = None
         if is_candidate(record):
-            # A published candidate's match is the Overture place it came from.
+            # A published candidate takes values from the Overture place it came from.
             row = overture.places.get(link["gers"]) if link else None
             if link and not row:
                 result.links[place_id] = link
         elif record.get("kind") in OVERTURE_KINDS:
-            row = match_for(base, overture, lists, geometry, fresh_only=changelog_only and not link)
+            row = overture_place_for(base, overture, lists, geometry, fresh_only=changelog_only and not link)
+            if row and base.get("name"):
+                result.matches += 1
+            elif row:
+                result.name_sources += 1
         result.checked += 1
         checks.append((place_id, record, base, row))
     shared = shared_pages(checks, lists, result)
@@ -1084,6 +1093,8 @@ def summary_of(result: ImportResult, places: dict[str, dict]) -> dict:
         "removals": len(result.removals),
         "differs": len(result.differs),
         "shared_pages": len(result.shared),
+        "matches": result.matches,
+        "name_sources": result.name_sources,
         "links": len(result.links),
         "candidates": {tier: len(rows) for tier, rows in result.candidates.items()},
         "dropped": {rule: len(rows) for rule, rows in sorted(result.dropped.items())},
@@ -1141,7 +1152,9 @@ def _render_report(result: ImportResult, summary: dict, limit: int) -> str:
         "|---|---:|",
         f"| Places | {summary['places']} |",
         f"| Checked | {summary['checked']} |",
-        f"| Matched (links) | {summary['links']} |",
+        f"| Overture matches | {summary['matches']} |",
+        f"| Name sources | {summary['name_sources']} |",
+        f"| Places in the link file | {summary['links']} |",
         f"| Records changed | {summary['changed']} |",
         f"| Values filled or changed | {summary['fills']} |",
         f"| Values taken off | {summary['removals']} |",

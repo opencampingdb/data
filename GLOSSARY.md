@@ -39,8 +39,12 @@ A value from Overture Maps for a fact, name or other value the place has from no
 _Avoid_: default, fallback
 
 **Overture match**:
-The one Overture Maps place that strongly matches a place: its category fits the kind, it is within 100 m, its name is close and its confidence high, and no other Overture place passes. Only a match gives gap fills.
+The one Overture Maps place that strongly matches a named place: its category fits the kind, it is within 100 m, its name is close and its confidence high, and no other Overture place passes. Only an Overture match or a name source gives gap fills.
 _Avoid_: link, conflation
+
+**Name source**:
+The one confident Overture Maps place inside or near an unnamed place's outline whose category fits the kind. It gives the place its name, and gap fills as an Overture match does.
+_Avoid_: Overture match (for an unnamed place), name match
 
 **Overture candidate**:
 A camping place Overture Maps lists that the dataset lacks. It is published, with no OpenStreetMap link and as not checked yet, only after the rules and the AI reviewer pass it.

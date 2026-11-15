@@ -65,6 +65,17 @@ def test_the_report_lists_the_candidates_by_tier():
     assert "### flagged (0)" in text
 
 
+def test_the_report_counts_overture_matches_and_name_sources_apart():
+    places = [place(), place(B, name=None, metres_north=5000)]
+    rows = [ov(), ov(G2, name="Hilltop Camp", metres_north=5000)]
+    result = run(places, rows)
+    summary = summary_of(result, places_of(*places))
+    assert (summary["matches"], summary["name_sources"]) == (1, 1)
+    text = render_report(result, summary)
+    assert "| Overture matches | 1 |" in text and "| Name sources | 1 |" in text
+    assert "Matched (links)" not in text
+
+
 def test_the_report_and_summary_list_the_shared_pages_left_out():
     result = ImportResult(release=RELEASE, shared={"https://www.facebook.com/Shell": 642})
     summary = summary_of(result, {})

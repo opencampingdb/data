@@ -576,7 +576,7 @@ def test_an_overture_name_stays_while_the_name_rule_holds_and_comes_off_when_it_
     named["fact_dates"] = {"name": EARLIER, "website": EARLIER, "phone": EARLIER}
     assert run([named], [ov(confidence=0.85)], links=LINKED).records == {}
     # 0.75 is enough for a strong match, but the name came from Overture, so the
-    # place counts as unnamed and the name rule asks for 0.8.
+    # place counts as unnamed and a name source needs 0.8.
     record = run([named], [ov(confidence=0.75)], links=LINKED).records[A]
     assert record["name"] is None and "name" not in record["fact_sources"]
     assert record["facts"] == {} and "fact_dates" not in record

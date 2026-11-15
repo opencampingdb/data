@@ -489,24 +489,27 @@ Kept files:
 - `overture/taken.json`: `{"taken": [{"place", "fact", "value"}]}`, the
   Overture values a person or the AI reviewer chose over OSM's in "Overture
   differs" (see below).
-- `overture/links.ndjson`: the link file, one line per matched place,
-  `{"gers","place","release"}` sorted by place id, with the release the match
-  was last seen in. It is not released.
+- `overture/links.ndjson`: the link file, one line per place with an
+  Overture match, a name source or a published candidate,
+  `{"gers","place","release"}` sorted by place id, with the release the
+  Overture place was last seen in. It is not released.
 
-**The match.** Overture values a place already has are set aside first, so
-every run works from what other sources give. A named place's match is the
-strong match, and all of these must hold: the category fits the kind, the
+**Overture match and name source.** Overture values a place already has
+are set aside first, so every run works from what other sources give. A
+named place takes values only from its Overture match, the strong match,
+for which all of these must hold: the category fits the kind, the
 Overture place is within 100 m of the place's location, Jaro-Winkler
 similarity of the two names is 0.85 or more (names lower cased, every run of
 characters other than a to z and 0 to 9 made one space), Overture's
 confidence is 0.7 or more, and exactly one Overture place passes. An unnamed
-place (no name, or a name from Overture) matches an Overture place with a
-name that lies inside the place's outline from the geometry sidecar or
+place (no name, or a name from Overture) takes values only from its name
+source: an Overture place with a name that lies inside the place's outline from the geometry sidecar or
 within 100 m of it (of its location when it has no outline), whose category
 fits, at confidence 0.8 or more, when it is the only one.
 
-**Gap fills.** A match gives an unnamed place its name, and gives the
-website, phone and address where no other source has a value:
+**Gap fills.** A name source gives an unnamed place its name. An Overture
+match or a name source gives the website, phone and address where no other
+source has a value:
 
 - website: Overture's first website that starts with `http://` or
   `https://` and is not on a directory host or a social host (facebook.com,
@@ -539,11 +542,13 @@ Each value taken is sourced `overture` with a fact date of the run. A value
 that has not changed keeps its date.
 
 **Refresh.** An `overture` value follows Overture's change, and comes off
-when Overture no longer gives it or the match is lost (the Overture place
-removed, a second candidate, or a rule no longer met). A value another source
+when Overture no longer gives it or the place loses its Overture match or
+name source (the Overture place removed, a second candidate, or a rule no
+longer met). A value another source
 has since replaced is not touched.
 
-**Overture differs.** For a matched place, a website or phone sourced `osm`
+**Overture differs.** For a place with an Overture match or a name source,
+a website or phone sourced `osm`
 that disagrees with Overture's is listed for a person to decide. Websites
 agree when any Overture website has the same host (lower case, without
 `www.`). Phones agree when any Overture phone and any number in OSM's value

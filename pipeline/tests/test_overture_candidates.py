@@ -308,7 +308,7 @@ def test_a_published_candidate_is_no_candidate_next_run_and_keeps_its_name_and_l
     kept_repo(repo)
     decide(repo, (strong_candidate(), "approve"), publish=True)
     places, links = load_places(repo), load_links(repo)
-    row = far(confidence=0.75, websites=[], phones=["(03) 5550 0101"])  # below the name rule's 0.8, no website now
+    row = far(confidence=0.75, websites=[], phones=["(03) 5550 0101"])  # below a name source's 0.8, no website now
     result = import_overture(places, extract(row), links, load_kept_lists(repo), now="2026-12-15T00:00:00Z")
     assert all_gers(result) == [] and dropped_by(result, "near_place") == [G2]
     record = result.records[NEW_ID]
