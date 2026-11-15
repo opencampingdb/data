@@ -70,7 +70,11 @@ the attribution and sending feedback.
 
 A place can carry many more facts than this one: site features such as
 `campfires`, `telstra_signal` and `crocodiles`, a `charge` such as
-`57 AUD/night`, a park chain in `brand`, and contacts. Section 4 of
+`57 AUD/night`, a park chain in `brand`, and contacts. A place to stay also
+carries what it lies in or beside (`protected_area`, `nearest_waterway`,
+`nearest_feature`), and one with no name of its own gets a `label` built
+from them, such as "Campground by Black Bobs Creek": a description, never a
+name. Section 4 of
 [CONNECTING.md](CONNECTING.md) describes them, and section 1 has the format
 changelog. The current format is 13.
 

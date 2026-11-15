@@ -269,3 +269,20 @@ def test_the_index_leaves_out_town_and_council_area(repo, tmp_path):
     # The released record keeps both.
     released = json.loads(gzip.decompress((tmp_path / "dist" / "places.ndjson.gz").read_bytes()).decode("utf-8").splitlines()[0])
     assert released["facts"]["locality"] == town and released["facts"]["lga"] == shire
+
+
+def test_the_index_leaves_out_the_facts_that_describe_an_unnamed_place(repo, tmp_path):
+    new = {
+        "protected_area": {"name": "Example National Park", "osm_id": 303, "osm_type": "relation"},
+        "nearest_waterway": {"name": "Example Creek", "osm_id": 404, "distance_m": 90},
+        "nearest_feature": {"name": "Example Hill", "type": "peak", "osm_id": 505, "osm_type": "node", "distance_m": 220},
+    }
+    place = add_place(
+        repo, 1, -32.4, 117.0,
+        facts={"toilets": True, **new},
+        fact_sources={key: "osm" for key in ("toilets", *new)},
+    )
+    path = build(repo, tmp_path / "dist")
+    assert index_lines(path) == [
+        {"id": place, "cell": [117, -33], "facts": {"toilets": True}, "fact_sources": {"toilets": "osm"}, "fact_dates": {}},
+    ]

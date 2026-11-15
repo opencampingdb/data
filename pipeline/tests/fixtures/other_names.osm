@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Camp sites with no name tag but another name tag, for the extract's name
+fallback. The places are invented.
+-->
+<osm version="0.6" generator="fixture">
+  <!-- Node 1: official_name only. -->
+  <node id="1" version="1" lat="-33.0" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="official_name" v=" Fixture Official Camping Area "/>
+  </node>
+  <!-- Node 2: loc_name only. -->
+  <node id="2" version="1" lat="-33.1" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="loc_name" v="Bobs Bend"/>
+  </node>
+  <!-- Node 3: alt_name only, with two names. -->
+  <node id="3" version="1" lat="-33.2" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="alt_name" v="Fixture Flat; Second Flat"/>
+  </node>
+  <!-- Node 4: all three: official_name comes first. -->
+  <node id="4" version="1" lat="-33.3" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="alt_name" v="Fixture Alt"/>
+    <tag k="loc_name" v="Fixture Local"/>
+    <tag k="official_name" v="Fixture Official"/>
+  </node>
+  <!-- Node 5: loc_name and alt_name: loc_name comes first. -->
+  <node id="5" version="1" lat="-33.4" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="alt_name" v="Fixture Alt"/>
+    <tag k="loc_name" v="Fixture Local"/>
+  </node>
+  <!-- Node 6: only tags that are never used as a name. -->
+  <node id="6" version="1" lat="-33.5" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="old_name" v="Fixture Old"/>
+    <tag k="short_name" v="Fixture Short"/>
+    <tag k="operator" v="Fixture Council"/>
+    <tag k="brand" v="Fixture Brand"/>
+    <tag k="name:signed" v="no"/>
+    <tag k="name:en" v="Camping area by the river"/>
+  </node>
+  <!-- Node 7: a name tag wins over the others. -->
+  <node id="7" version="1" lat="-33.6" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="name" v="Fixture Named Camp"/>
+    <tag k="official_name" v="Fixture Official"/>
+  </node>
+  <!-- Node 8: an empty official_name is passed over. -->
+  <node id="8" version="1" lat="-33.7" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+    <tag k="official_name" v=" ; "/>
+    <tag k="alt_name" v="Fixture Alt"/>
+  </node>
+</osm>

@@ -25,7 +25,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 13,
-  "format_minor": 1,
+  "format_minor": 2,
   "layout_version": 3,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -103,6 +103,10 @@ separately.
 
 What each format changed, newest first:
 
+- **13.2**: the facts `protected_area`, `nearest_waterway` and
+  `nearest_feature` (section 4), and `label`, a description of a place to
+  stay that has no name (section 4). A place with no OSM `name` tag takes
+  its name from `official_name`, `loc_name` or `alt_name` when it has one.
 - **13.1** (`layout_version` 3): the facts `locality`, the nearest town, and
   `lga`, the council area a place is in (section 4), and the `localities`
   table of `ocdb.sqlite.gz` (section 3).
@@ -634,6 +638,38 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   "Winton Shire", "osm_id": 11676713}`. A place outside all of them, such as
   one offshore, has none. Its source is always `osm` and fact reports cannot
   set it.
+- `protected_area`, `nearest_waterway` and `nearest_feature` say what a
+  place lies in or beside, from named OSM objects, on places of every
+  group. Each name is as tagged in OSM.
+  `protected_area` is the smallest named area the place lies in tagged
+  `boundary=protected_area`, `boundary=national_park` or
+  `leisure=nature_reserve`, or `landuse=forest` with "State Forest" in its
+  name, as `{"name": "Oxley Wild Rivers National Park", "osm_id": 1234567,
+  "osm_type": "relation"}`. `nearest_waterway` is the nearest named
+  `waterway=river`, `stream`, `creek`, `canal` or `brook` within 200 m, as
+  `{"name": "Black Bobs Creek", "osm_id": 23456789, "distance_m": 90}`,
+  with the distance to the nearest point of the line, rounded to 10 m.
+  `nearest_feature` is the nearest named `natural=water`, `beach`, `bay`,
+  `peak`, `waterfall`, `spring`, `gorge`, `cave_entrance`, `cape` or
+  `wetland` within 300 m, as a node or an area (0 m inside it), or, when
+  there is none, the nearest named `place=locality` or `place=hamlet` node
+  within 1 km, as `{"name": "Mount Gibraltar", "type": "peak", "osm_id":
+  345678, "osm_type": "node", "distance_m": 220}`, where `type` is the
+  `natural` or `place` value. Their source is always `osm` and fact reports
+  cannot set them.
+- `label` is only on a place to stay with no name of its own: a description
+  built by the release from the three facts above, such as
+  `{"text": "Campground by Black Bobs Creek", "from": "nearest_waterway"}`.
+  The text is the kind's label, then "by" a waterway (or "on the" a river),
+  else "at" a beach, "by" water, a bay, spring, waterfall or wetland, or
+  "near" any other feature, a locality or hamlet included, else "in" the
+  protected area. Two places in one state with the same text each add their
+  `locality`, as in "Campsite on the Murray River, Corowa". `from` names the
+  fact the text came from. It is a description, not a name: show it in
+  place of a name if you like, but never as the place's name, never in a
+  report as a name, and never send it to OpenStreetMap. A place with none
+  of the three facts has no `label`; describe it some other way, or by its
+  kind alone.
 - `pub`, `fuel` and `car_wash` are also `true` from OSM when an
   `amenity=pub`, `amenity=fuel` or `amenity=car_wash` lies inside the
   place's area, such as a pub inside a caravan park. A place mapped as a

@@ -16,6 +16,10 @@ _Avoid_: suburb, hamlet (these do not count)
 The local government area a place lies in: a council, shire, city or municipality, or an unincorporated area, as OpenStreetMap's admin level 6 boundaries draw it. Held as the fact lga.
 _Avoid_: region, district
 
+**Label**:
+A description the release gives a place to stay that has no name of its own, from what it lies in or beside: "Campground by Black Bobs Creek". It is never a name, and never goes to OpenStreetMap as one.
+_Avoid_: generated name, title, made-up name
+
 ## Facts and where they come from
 
 **Fact**:

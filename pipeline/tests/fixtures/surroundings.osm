@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Protected areas, waterways and natural features around unnamed camp sites,
+for pipeline.surroundings. The places are invented. At latitude -33 one
+degree of latitude is 111,195 m and one degree of longitude 93,254 m.
+-->
+<osm version="0.6" generator="fixture">
+  <node id="1001" version="1" lat="-32.99" lon="150.99"/>
+  <node id="1002" version="1" lat="-32.99" lon="151.01"/>
+  <node id="1003" version="1" lat="-33.01" lon="151.01"/>
+  <node id="1004" version="1" lat="-33.01" lon="150.99"/>
+  <node id="1005" version="1" lat="-32.995" lon="150.995"/>
+  <node id="1006" version="1" lat="-32.995" lon="151.005"/>
+  <node id="1007" version="1" lat="-33.005" lon="151.005"/>
+  <node id="1008" version="1" lat="-33.005" lon="150.995"/>
+  <node id="1009" version="1" lat="-32.970000000000006" lon="150.95"/>
+  <node id="1010" version="1" lat="-32.970000000000006" lon="151.05"/>
+  <node id="1011" version="1" lat="-33.07" lon="151.05"/>
+  <node id="1012" version="1" lat="-33.07" lon="150.95"/>
+  <node id="1013" version="1" lat="-32.99" lon="151.001"/>
+  <node id="1014" version="1" lat="-33.01" lon="151.001"/>
+  <node id="1015" version="1" lat="-32.99" lon="150.9995"/>
+  <node id="1016" version="1" lat="-33.01" lon="150.9995"/>
+  <node id="1017" version="1" lat="-32.99" lon="151.003"/>
+  <node id="1018" version="1" lat="-33.01" lon="151.003"/>
+  <node id="1019" version="1" lat="-32.99" lon="151.0015"/>
+  <node id="1020" version="1" lat="-33.01" lon="151.0015"/>
+  <node id="1021" version="1" lat="-33.98" lon="150.98"/>
+  <node id="1022" version="1" lat="-33.98" lon="151.02"/>
+  <node id="1023" version="1" lat="-34.02" lon="151.02"/>
+  <node id="1024" version="1" lat="-34.02" lon="150.98"/>
+  <node id="1025" version="1" lat="-33.99" lon="150.99"/>
+  <node id="1026" version="1" lat="-33.99" lon="151.01"/>
+  <node id="1027" version="1" lat="-34.01" lon="151.01"/>
+  <node id="1028" version="1" lat="-34.01" lon="150.99"/>
+  <node id="1029" version="1" lat="-33.998" lon="150.998"/>
+  <node id="1030" version="1" lat="-33.998" lon="151.002"/>
+  <node id="1031" version="1" lat="-34.002" lon="151.002"/>
+  <node id="1032" version="1" lat="-34.002" lon="150.998"/>
+  <!-- Node 201: place A, an unnamed camp site at (-33.0, 151.0). -->
+  <node id="201" version="1" lat="-33.0" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <!-- Way 3001: a nature reserve 0.02 degrees across around place A. -->
+  <way id="3001" version="1">
+    <nd ref="1001"/><nd ref="1002"/><nd ref="1003"/><nd ref="1004"/><nd ref="1001"/>
+    <tag k="leisure" v="nature_reserve"/>
+    <tag k="name" v="Fixture Nature Reserve"/>
+  </way>
+  <!-- Way 3002: a smaller protected area around place A, with no name. -->
+  <way id="3002" version="1">
+    <nd ref="1005"/><nd ref="1006"/><nd ref="1007"/><nd ref="1008"/><nd ref="1005"/>
+    <tag k="boundary" v="protected_area"/>
+    <tag k="protect_class" v="7"/>
+  </way>
+  <!-- Way 3003 and relation 5001: a national park 0.1 degrees across around places A and E, as a boundary relation. -->
+  <way id="3003" version="1">
+    <nd ref="1009"/><nd ref="1010"/><nd ref="1011"/><nd ref="1012"/><nd ref="1009"/>
+  </way>
+  <relation id="5001" version="1">
+    <member type="way" ref="3003" role="outer"/>
+    <tag k="type" v="boundary"/>
+    <tag k="boundary" v="national_park"/>
+    <tag k="name" v="Fixture National Park"/>
+  </relation>
+  <!-- Way 3010: a creek running north to south 0.001 degrees (93 m) east of place A. -->
+  <way id="3010" version="1">
+    <nd ref="1013"/><nd ref="1014"/>
+    <tag k="waterway" v="creek"/>
+    <tag k="name" v="Black Bobs Creek"/>
+  </way>
+  <!-- Way 3011: an unnamed stream 47 m west of place A. -->
+  <way id="3011" version="1">
+    <nd ref="1015"/><nd ref="1016"/>
+    <tag k="waterway" v="stream"/>
+  </way>
+  <!-- Way 3012: a river 280 m east of place A, beyond 200 m. -->
+  <way id="3012" version="1">
+    <nd ref="1017"/><nd ref="1018"/>
+    <tag k="waterway" v="river"/>
+    <tag k="name" v="Fixture River"/>
+  </way>
+  <!-- Way 3013: a named drain 140 m east of place A. Drains do not count. -->
+  <way id="3013" version="1">
+    <nd ref="1019"/><nd ref="1020"/>
+    <tag k="waterway" v="drain"/>
+    <tag k="name" v="Fixture Drain"/>
+  </way>
+  <!-- Node 301: a peak 0.002 degrees (222 m) south of place A. -->
+  <node id="301" version="1" lat="-33.002" lon="151.0">
+    <tag k="natural" v="peak"/>
+    <tag k="name" v="Fixture Hill"/>
+  </node>
+  <!-- Node 302: a spring 389 m north of place A, beyond 300 m. -->
+  <node id="302" version="1" lat="-32.9965" lon="151.0">
+    <tag k="natural" v="spring"/>
+    <tag k="name" v="Far Spring"/>
+  </node>
+  <!-- Node 303: a hamlet 111 m north of place A. A natural feature within 300 m comes first. -->
+  <node id="303" version="1" lat="-32.999" lon="151.0">
+    <tag k="place" v="hamlet"/>
+    <tag k="name" v="Fixture Hamlet"/>
+  </node>
+  <!-- Node 202: place B, an unnamed camp site at (-34.0, 151.0). -->
+  <node id="202" version="1" lat="-34.0" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <!-- Way 3020: a state forest around place B. -->
+  <way id="3020" version="1">
+    <nd ref="1021"/><nd ref="1022"/><nd ref="1023"/><nd ref="1024"/><nd ref="1021"/>
+    <tag k="landuse" v="forest"/>
+    <tag k="name" v="Fixture State Forest"/>
+  </way>
+  <!-- Way 3021: a smaller forest around place B without State Forest in its name. It does not count. -->
+  <way id="3021" version="1">
+    <nd ref="1025"/><nd ref="1026"/><nd ref="1027"/><nd ref="1028"/><nd ref="1025"/>
+    <tag k="landuse" v="forest"/>
+    <tag k="name" v="Fixture Pine Plantation"/>
+  </way>
+  <!-- Way 3022: a lake drawn around place B, so the distance is 0. -->
+  <way id="3022" version="1">
+    <nd ref="1029"/><nd ref="1030"/><nd ref="1031"/><nd ref="1032"/><nd ref="1029"/>
+    <tag k="natural" v="water"/>
+    <tag k="name" v="Fixture Lake"/>
+  </way>
+  <!-- Node 304: a peak 111 m south of place B. The lake around it is nearer. -->
+  <node id="304" version="1" lat="-34.001" lon="151.0">
+    <tag k="natural" v="peak"/>
+    <tag k="name" v="Fixture Knoll"/>
+  </node>
+  <!-- Node 203: place C, an unnamed camp site at (-35.0, 151.0). -->
+  <node id="203" version="1" lat="-35.0" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <!-- Node 305: a locality 556 m south of place C, with no natural feature within 300 m. -->
+  <node id="305" version="1" lat="-35.005" lon="151.0">
+    <tag k="place" v="locality"/>
+    <tag k="name" v="Fixture Locality"/>
+  </node>
+  <!-- Node 306: an unnamed locality 445 m south of place C. It does not count. -->
+  <node id="306" version="1" lat="-35.004" lon="151.0">
+    <tag k="place" v="locality"/>
+  </node>
+  <!-- Node 307: a cave entrance 445 m north of place C, beyond 300 m. -->
+  <node id="307" version="1" lat="-34.996" lon="151.0">
+    <tag k="natural" v="cave_entrance"/>
+    <tag k="name" v="Fixture Cave"/>
+  </node>
+  <!-- Node 204: place D, an unnamed camp site at (-36.0, 151.0), with nothing near. -->
+  <node id="204" version="1" lat="-36.0" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+  <!-- Node 308: a hamlet 1,056 m south of place D, beyond 1,000 m. -->
+  <node id="308" version="1" lat="-36.0095" lon="151.0">
+    <tag k="place" v="hamlet"/>
+    <tag k="name" v="Far Hamlet"/>
+  </node>
+  <!-- Node 206: place F, a public toilet 19 m east of place A. -->
+  <node id="206" version="1" lat="-33.0" lon="151.0002">
+    <tag k="amenity" v="toilets"/>
+  </node>
+  <!-- Node 205: place E, an unnamed camp site inside only the national park. -->
+  <node id="205" version="1" lat="-33.04" lon="151.0">
+    <tag k="tourism" v="camp_site"/>
+  </node>
+</osm>
