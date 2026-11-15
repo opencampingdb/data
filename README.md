@@ -103,6 +103,11 @@ The kind vocabulary in [schema/kinds.json](schema/kinds.json) comes from the
 OTWD site types and is under the Apache License 2.0
 ([LICENSE-APACHE-2.0](LICENSE-APACHE-2.0)).
 
+Facts sourced from Overture Maps places come from sources under the
+[CDLA Permissive 2.0](LICENSE-CDLA-PERMISSIVE-2.0), the Apache License 2.0
+(Foursquare) and CC0 1.0. [NOTICE](NOTICE) lists them with their notices. Each
+release ships the licence texts and NOTICE beside the data files.
+
 In short: you may use, share and adapt the data, including commercially, if
 you show the attribution below, and if you publicly use or share an adapted
 database you offer it under the ODbL too. The licence text is what binds.
