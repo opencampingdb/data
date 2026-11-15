@@ -227,6 +227,33 @@ def test_a_candidate_published_in_this_run_waits_for_a_person():
     assert "waits for a person: 1 Overture differs, 2 candidates published in this run." in body
 
 
+def test_decision_lines_that_were_skipped_are_listed_for_a_person():
+    skipped = [{"line": 3, "gers": "08f2b1a0c4d5e6f70321a1b2c3d4e599", "problem": "unknown decision 'maybe'"},
+               {"line": 4, "gers": None, "problem": "not a JSON object: oops"}]
+    summary = {"auto_merge": True, "wait_reasons": []}
+    assert should_auto_merge(summary, skipped=skipped) is False
+    body = pr_body("# Overture import report\n", summary, skipped=skipped)
+    assert "waits for a person: 2 decision lines skipped." in body
+    assert "## Decision lines that need a person" in body
+    assert "| 3 | 08f2b1a0c4d5e6f70321a1b2c3d4e599 | unknown decision 'maybe' |" in body
+    assert "| 4 |  | not a JSON object: oops |" in body
+    assert body.index("## Decision lines that need a person") < body.index("# Overture import report")
+
+
+def test_the_body_command_lists_the_skipped_decision_lines(repo, tmp_path):
+    report, summary, decided = tmp_path / "report.md", tmp_path / "summary.json", tmp_path / "decided.json"
+    body, out = tmp_path / "body.md", tmp_path / "output"
+    report.write_text("# Overture import report\n", encoding="utf-8")
+    summary.write_text(json.dumps({"auto_merge": True, "wait_reasons": []}), encoding="utf-8")
+    decided.write_text(json.dumps({"published": 0, "skipped": 1,
+                                   "skipped_lines": [{"line": 1, "gers": None, "problem": "no GERS id"}]}),
+                       encoding="utf-8")
+    assert main(["body", "--report", str(report), "--summary", str(summary), "--decided", str(decided),
+                 "--out", str(body), "--output", str(out)]) == 0
+    assert out.read_text(encoding="utf-8") == "auto_merge=false\n"
+    assert "| 1 |  | no GERS id |" in body.read_text(encoding="utf-8")
+
+
 def test_the_body_fits_a_pr_body():
     body = pr_body("x" * (MAX_REPORT_CHARS + 10), {"auto_merge": False, "wait_reasons": []})
     assert len(body) <= MAX_REPORT_CHARS

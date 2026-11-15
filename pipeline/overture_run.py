@@ -15,7 +15,8 @@ release/ with the delimiter /) and writes release, changelog and skip as
 step outputs. carry brings the reviewer's decisions and rejections from the
 last overture-sync branch into the rebuilt one. applied records the release
 in overture/release.json, which the PR commits. body writes the PR body
-(whether the PR merges itself, then the import report) and the auto_merge
+(whether the PR merges itself, any decision lines skipped for a person,
+then the import report) and the auto_merge
 output. See pipeline/README.md "Monthly Overture workflow".
 """
 
@@ -95,22 +96,41 @@ def write_applied(root: Path, release: str) -> None:
     write_text(Path(root) / APPLIED_FILE, json.dumps({"release": release}) + "\n")
 
 
-def should_auto_merge(summary: dict, published: int = 0) -> bool:
+def should_auto_merge(summary: dict, published: int = 0, skipped: list | None = None) -> bool:
     """Only gap fills under the limit merge themselves (the import summary's
-    auto_merge). A candidate published in this run waits for a person too."""
-    return bool(summary["auto_merge"]) and not published
+    auto_merge). A candidate published in this run, or a decision line
+    pipeline.overture_decide skipped, waits for a person too."""
+    return bool(summary["auto_merge"]) and not published and not skipped
 
 
-def pr_body(report: str, summary: dict, published: int = 0) -> str:
-    """The PR body: whether the PR merges itself and why not, then the import report."""
-    if should_auto_merge(summary, published):
+def skipped_section(skipped: list) -> str:
+    """The PR body's table of decision lines pipeline.overture_decide skipped."""
+    from .overture_report import md_cell  # overture_report imports this module
+
+    rows = [
+        f"| {s['line']} | {md_cell(s.get('gers') or '')} | {md_cell(s['problem'])} |" for s in skipped
+    ]
+    return (
+        "## Decision lines that need a person\n\n"
+        "pipeline.overture_decide skipped these lines of overture/decisions.ndjson and did nothing for them.\n\n"
+        "| Line | GERS id | Problem |\n|---|---|---|\n" + "\n".join(rows) + "\n\n"
+    )
+
+
+def pr_body(report: str, summary: dict, published: int = 0, skipped: list | None = None) -> str:
+    """The PR body: whether the PR merges itself and why not, any skipped
+    decision lines, then the import report."""
+    skipped = list(skipped or [])
+    if should_auto_merge(summary, published, skipped):
         decision = "Only gap fills, under the limit: the PR merges itself once CI passes."
     else:
         reasons = list(summary.get("wait_reasons") or [])
         if published:
             reasons.append(f"{published} candidate" + ("" if published == 1 else "s") + " published in this run")
+        if skipped:
+            reasons.append(f"{len(skipped)} decision line" + ("" if len(skipped) == 1 else "s") + " skipped")
         decision = "The PR waits for a person: " + ", ".join(reasons) + "."
-    body = decision + "\n\n" + report
+    body = decision + "\n\n" + (skipped_section(skipped) if skipped else "") + report
     if len(body) > MAX_REPORT_CHARS:
         cut = "\n\nThe report is cut here. The full report is in the workflow run's log.\n"
         body = body[: MAX_REPORT_CHARS - len(cut)] + cut
@@ -194,9 +214,10 @@ def main(argv: list[str] | None = None) -> int:
         write_applied(args.root, args.release)
         return 0
     summary = json.loads(args.summary.read_text(encoding="utf-8"))
-    published = json.loads(args.decided.read_text(encoding="utf-8"))["published"] if args.decided else 0
-    write_text(args.out, pr_body(args.report.read_text(encoding="utf-8"), summary, published))
-    write_outputs(args.output, {"auto_merge": str(should_auto_merge(summary, published)).lower()})
+    decided = json.loads(args.decided.read_text(encoding="utf-8")) if args.decided else {}
+    published, skipped = decided.get("published", 0), decided.get("skipped_lines", [])
+    write_text(args.out, pr_body(args.report.read_text(encoding="utf-8"), summary, published, skipped))
+    write_outputs(args.output, {"auto_merge": str(should_auto_merge(summary, published, skipped)).lower()})
     return 0
 
 

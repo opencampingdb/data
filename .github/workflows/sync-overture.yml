@@ -18,8 +18,8 @@ name: Overture import
 # then records the release in overture/release.json and opens or updates one
 # pull request from the overture-sync branch. Auto-merge is turned on only
 # for gap fills under the OSM sync's limit (AUTO_MERGE_BELOW_PERCENT in
-# pipeline/sync.py). "Overture differs" and candidates published in this run
-# wait for review. See pipeline/README.md, "Monthly Overture workflow".
+# pipeline/sync.py). "Overture differs", candidates published in this run
+# and decision lines pipeline.overture_decide skipped wait for review. See pipeline/README.md, "Monthly Overture workflow".
 #
 # The branch push, the PR and the merge use a token for the opencampingdb-bot
 # GitHub App, never GITHUB_TOKEN: events caused by GITHUB_TOKEN do not start

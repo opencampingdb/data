@@ -664,7 +664,13 @@ Each line is one candidate line exactly as the import wrote it (`gers`,
 - `by_rules`: true when a rule decided without asking the model.
 
 Lines are compact JSON with sorted keys (`dump_line`), in the candidate
-file's order. A person decides a flagged candidate by changing its
+file's order. A line that is not JSON, has no `gers`, has a `decision` other
+than the three above, or is an approval missing what its place is made from
+(`tier`, `kind`, `name`, `location`, `release` or `row`) is skipped: nothing
+is done for it, the other lines are still acted on, and the `--summary` file
+lists it under `skipped_lines` (its line among the file's non-blank lines,
+its GERS id and the problem). The PR body lists those lines under "Decision
+lines that need a person", and the PR waits for one. A person decides a flagged candidate by changing its
 `decision`. A rejected candidate's GERS id also goes on the `gers` list of
 `overture/do-not-match.json`. This example line is checked by the tests of
 both repositories (`pipeline/tests/test_overture_candidates.py` here,
@@ -717,8 +723,9 @@ the third or fourth week.
    with the `opencampingdb-bot` token, as the OSM sync does. Candidates found
    and decisions do not change `places/` until a decision publishes one, so
    they hold nothing. Auto-merge waits only for a change at the OSM sync's
-   limit or over, any "Overture differs" line, or any candidate published in
-   this run, and is turned off for them.
+   limit or over, any "Overture differs" line, any candidate published in
+   this run, or any decision line `pipeline.overture_decide` skipped, and is
+   turned off for them.
 
 The branch is rebuilt from `main` on every run. When the OSM sync merges
 first and the PR conflicts, start the workflow again by hand with the same

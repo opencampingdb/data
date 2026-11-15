@@ -6,8 +6,11 @@ goes on overture/do-not-match.json. An approved one is published, as a place
 not checked yet with its GERS id in the link file, only with
 --publish-candidates and only when its tier is one named with --tier (every
 tier when none is named). Other approved candidates are held and nothing is
-written to places/ for them. --summary writes how many candidates each
-outcome got, as JSON.
+written to places/ for them. A line that is not JSON, has an unknown
+decision or cannot make a place is skipped, listed on stderr and in the
+summary as needing a person, and the other lines are still acted on.
+--summary writes how many candidates each outcome got, and the skipped lines
+under "skipped_lines", as JSON.
 
     python -m pipeline.overture_decide decisions.ndjson --root . [--publish-candidates] \\
         [--tier strong] [--summary decided.json]
@@ -25,7 +28,21 @@ from pathlib import Path
 
 from .common import write_text
 from .overture_candidates import TIERS, apply_decisions
-from .overture_rules import read_json_lines
+
+
+def read_decision_lines(path: Path):
+    """The decisions file's lines, one at a time, skipping blank lines.
+
+    A line that is JSON comes back parsed. One that is not comes back as its
+    text, so apply_decisions skips it and lists it for a person.
+    """
+    with open(path, encoding="utf-8") as f:
+        for text in f:
+            if text.strip():
+                try:
+                    yield json.loads(text)
+                except json.JSONDecodeError:
+                    yield text.strip()
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -46,12 +63,15 @@ def main(argv: list[str] | None = None) -> int:
 
     now = args.now or time.strftime("%Y-%m-%dT00:00:00Z", time.gmtime())
     outcome = apply_decisions(
-        args.root, read_json_lines(args.decisions), now=now, publish=args.publish_candidates, tiers=args.tiers
+        args.root, read_decision_lines(args.decisions), now=now, publish=args.publish_candidates, tiers=args.tiers
     )
-    counts = json.dumps({key: len(ids) for key, ids in outcome.items()}, sort_keys=True)
+    counts = {key: len(ids) for key, ids in outcome.items()}
     if args.summary:
-        write_text(args.summary, counts + "\n")
-    print(counts, file=sys.stderr)
+        write_text(args.summary, json.dumps(dict(counts, skipped_lines=outcome["skipped"]), sort_keys=True) + "\n")
+    print(json.dumps(counts, sort_keys=True), file=sys.stderr)
+    for skipped in outcome["skipped"]:
+        print(f"Decision line {skipped['line']} ({skipped['gers'] or 'no GERS id'}) needs a person: "
+              f"{skipped['problem']}", file=sys.stderr)
     return 0
 
 

@@ -210,6 +210,43 @@ def candidate_record(entry: dict, lists: KeptLists, now: str, place_id: str) -> 
     }
 
 
+def decision_problem(entry) -> str | None:
+    """Why a decision line cannot be acted on, or None when it can.
+
+    Rejections and flags need only a GERS id. An approval also needs what its
+    place record is made from: a tier, a kind, a name, a location, the
+    release and the Overture row.
+    """
+    if not isinstance(entry, dict):
+        return "not a JSON object: " + str(entry).strip()[:80]
+    if not isinstance(entry.get("gers"), str) or not entry["gers"].strip():
+        return "no GERS id"
+    decision = entry.get("decision")
+    if decision not in DECISIONS:
+        return f"unknown decision {decision!r}"
+    if decision != "approve":
+        return None
+    location = entry.get("location")
+    if not (
+        isinstance(location, dict)
+        and all(isinstance(location.get(k), (int, float)) and not isinstance(location.get(k), bool) for k in ("lat", "lon"))
+        and -90 <= location["lat"] <= 90
+        and -180 <= location["lon"] <= 180
+    ):
+        return "an approval with no usable location"
+    if not isinstance(entry.get("name"), str) or not entry["name"].strip():
+        return "an approval with no name"
+    if entry.get("kind") not in KIND_GROUP:
+        return f"an approval with an unknown kind {entry.get('kind')!r}"
+    if entry.get("tier") not in TIERS:
+        return f"an approval with an unknown tier {entry.get('tier')!r}"
+    if not isinstance(entry.get("release"), str) or not entry["release"]:
+        return "an approval with no release"
+    if not isinstance(entry.get("row"), dict):
+        return "an approval with no Overture row"
+    return None
+
+
 def apply_decisions(
     root: Path,
     decisions: Iterable[dict],
@@ -231,8 +268,14 @@ def apply_decisions(
     Overture duplicate) waits for a person. A new place never takes the id of
     a place already in places/.
 
-    Returns the place ids published, and the GERS ids held, rejected,
-    flagged, already linked and near a place.
+    A line that is not a JSON object (the decide command passes such a line
+    as its text), has no GERS id, has an unknown decision, or is an approval
+    that cannot make a place is skipped: nothing is done for it and it is
+    listed for a person. Every other line is still acted on.
+
+    Returns the place ids published, the GERS ids held, rejected, flagged,
+    already linked and near a place, and under "skipped" each skipped line
+    as {line, gers, problem}, line counting the decision lines from 1.
     """
     root = Path(root)
     allowed = set(TIERS if tiers is None else tiers)
@@ -242,11 +285,14 @@ def apply_decisions(
     places = load_places(root) if publish else {}
     grid = places_grid(places)
     used_ids = set(places)
-    outcome = {"published": [], "held": [], "rejected": [], "flagged": [], "already": [], "near": []}
-    for entry in decisions:
+    outcome = {"published": [], "held": [], "rejected": [], "flagged": [], "already": [], "near": [], "skipped": []}
+    for line, entry in enumerate(decisions, start=1):
+        problem = decision_problem(entry)
+        if problem:
+            gers = entry.get("gers") if isinstance(entry, dict) and isinstance(entry.get("gers"), str) else None
+            outcome["skipped"].append({"line": line, "gers": gers, "problem": problem})
+            continue
         decision, gers = entry["decision"], entry["gers"]
-        if decision not in DECISIONS:
-            raise ValueError(f"{gers}: unknown decision {decision!r}")
         if decision == "reject":
             outcome["rejected"].append(gers)
         elif decision == "flag":
@@ -262,7 +308,11 @@ def apply_decisions(
             while place_id in used_ids:  # never write over a place already there
                 place_id = make_id()
             used_ids.add(place_id)
-            record = candidate_record(entry, lists, now, place_id)
+            try:
+                record = candidate_record(entry, lists, now, place_id)
+            except (AttributeError, KeyError, TypeError, ValueError) as exc:
+                outcome["skipped"].append({"line": line, "gers": gers, "problem": f"an approval that makes no place ({exc!r})"})
+                continue
             write_text(place_path(root, record["id"]), dump_record(record))
             links[record["id"]] = {"gers": gers, "release": entry["release"]}
             linked.add(gers)

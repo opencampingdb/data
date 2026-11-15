@@ -348,7 +348,8 @@ def test_flagged_candidates_wait_and_a_published_one_is_not_published_twice(repo
     entry = strong_candidate()
     decide(repo, (entry, "approve"), publish=True)
     outcome = decide(repo, (entry, "approve"), (dict(entry, gers=G1), "flag"), publish=True)
-    assert outcome == {"published": [], "held": [], "rejected": [], "flagged": [G1], "already": [G2], "near": []}
+    assert outcome == {"published": [], "held": [], "rejected": [], "flagged": [G1], "already": [G2], "near": [],
+                       "skipped": []}
     assert list(load_places(repo)) == [NEW_ID]
 
 
@@ -458,8 +459,51 @@ def test_the_decide_command_publishes_the_named_tiers_and_writes_its_counts(repo
     assert decide_main([str(decisions), "--root", str(repo), "--now", RUN, "--publish-candidates",
                         "--tier", "strong", "--summary", str(counts)]) == 0
     assert json.loads(counts.read_text(encoding="utf-8")) == {
-        "already": 0, "flagged": 0, "held": 1, "near": 0, "published": 1, "rejected": 0,
+        "already": 0, "flagged": 0, "held": 1, "near": 0, "published": 1, "rejected": 0, "skipped": 0,
+        "skipped_lines": [],
     }
+
+
+# ------------------------------------------------- lines that need a person
+
+
+def test_an_unknown_or_malformed_decision_line_is_skipped_and_the_rest_are_acted_on(repo):
+    kept_repo(repo)
+    strong = strong_candidate()
+    no_location = dict(strong, gers=G1, decision="approve")
+    del no_location["location"]
+    outcome = apply_decisions(repo, [
+        dict(strong, gers="08f2b1a0c4d5e6f70321a1b2c3d4e599", decision="maybe"),
+        "{not json",
+        no_location,
+        {"decision": "reject"},
+        dict(strong, decision="approve"),
+    ], now=RUN, publish=True, make_id=lambda: NEW_ID)
+    assert outcome["published"] == [NEW_ID]
+    assert outcome["skipped"] == [
+        {"line": 1, "gers": "08f2b1a0c4d5e6f70321a1b2c3d4e599", "problem": "unknown decision 'maybe'"},
+        {"line": 2, "gers": None, "problem": "not a JSON object: {not json"},
+        {"line": 3, "gers": G1, "problem": "an approval with no usable location"},
+        {"line": 4, "gers": None, "problem": "no GERS id"},
+    ]
+    assert list(load_places(repo)) == [NEW_ID]
+    assert json.loads((repo / "overture" / "do-not-match.json").read_text(encoding="utf-8")).get("gers", []) == []
+
+
+def test_the_decide_command_skips_a_bad_line_and_lists_it_for_a_person(repo, tmp_path):
+    kept_repo(repo)
+    decisions, counts = tmp_path / "decisions.ndjson", tmp_path / "decided.json"
+    decisions.write_text(json.dumps(dict(strong_candidate(), decision="approve")) + "\n"
+                         + "{\"gers\": \"x\", \"decision\": \"later\"}\n" + "oops\n", encoding="utf-8")
+    assert decide_main([str(decisions), "--root", str(repo), "--now", RUN, "--publish-candidates",
+                        "--summary", str(counts)]) == 0
+    decided = json.loads(counts.read_text(encoding="utf-8"))
+    assert decided["published"] == 1 and decided["skipped"] == 2
+    assert decided["skipped_lines"] == [
+        {"line": 2, "gers": "x", "problem": "unknown decision 'later'"},
+        {"line": 3, "gers": None, "problem": "not a JSON object: oops"},
+    ]
+    assert len(load_places(repo)) == 1
 
 
 # ------------------------------------------------------------ the shared format
