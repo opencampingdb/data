@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 import pytest
 
-from pipeline.common import load_places
+from pipeline.common import dump_line, load_places
 from pipeline.maproulette import DOUBLE_MAPPING, TRAVELLER_REPORTS, out_of_spec_tasks, write_challenges
 from pipeline.overture import import_overture
 from pipeline.overture_candidates import apply_decisions
@@ -414,3 +414,39 @@ def test_the_decide_command_publishes_the_named_tiers_and_writes_its_counts(repo
     assert json.loads(counts.read_text(encoding="utf-8")) == {
         "already": 0, "flagged": 0, "held": 1, "near": 0, "published": 1, "rejected": 0,
     }
+
+
+# ------------------------------------------------------------ the shared format
+
+
+# The decision line in pipeline/README.md "Overture decisions". The feedback
+# engine's reviewer tests check the same line.
+EXAMPLE_DECISION = (
+    "{\"by_rules\":false,\"category\":\"campground\",\"confidence\":0.95,\"decision\":\"approve\",\"gers\":\"08f2b1a0c4d"
+    "5e6f70321a1b2c3d4e502\",\"kind\":\"campground\",\"location\":{\"lat\":-36.7311,\"lon\":146.9602},\"name\":\"Sheeps"
+    "kin Hut Campground\",\"phone\":\"(03) 5550 0101\",\"reason\":\"The name and the website show a campground.\","
+    "\"release\":\"2026-10-21.0\",\"reviewer\":\"ai:@cf/meta/llama-3.3-70b-instruct-fp8-fast\",\"row\":{\"addresses\""
+    ":[{\"country\":\"AU\",\"freeform\":\"Hut Rd\",\"locality\":\"Bright\",\"postcode\":\"3741\",\"region\":\"VIC\"}],\"basic_"
+    "category\":\"campground\",\"change\":\"added\",\"confidence\":0.95,\"id\":\"08f2b1a0c4d5e6f70321a1b2c3d4e502\",\"l"
+    "at\":-36.7311,\"lon\":146.9602,\"name\":\"Sheepskin Hut Campground\",\"phones\":[\"(03) 5550 0101\"],\"socials\":"
+    "[],\"sources\":[{\"dataset\":\"meta\",\"record_id\":\"1\",\"update_time\":\"2026-08-14T03:21:00.000Z\"}],\"taxonomy"
+    "_primary\":\"campground\",\"websites\":[\"https://sheepskinhut.example.au/\"]},\"state\":\"VIC\",\"taxonomy\":\"ca"
+    "mpground\",\"tier\":\"strong\",\"website\":\"https://sheepskinhut.example.au/\"}"
+)
+
+
+def test_the_example_decision_line_is_the_one_in_the_readme():
+    assert f"```\n{EXAMPLE_DECISION}\n```" in (REPO / "pipeline" / "README.md").read_text(encoding="utf-8")
+
+
+def test_the_example_decision_line_is_in_the_form_the_reviewer_writes_and_overture_decide_reads(repo, tmp_path):
+    kept_repo(repo)
+    line = json.loads(EXAMPLE_DECISION)
+    assert dump_line(line) == EXAMPLE_DECISION
+    decisions = tmp_path / "decisions.ndjson"
+    decisions.write_text(EXAMPLE_DECISION + "\n", encoding="utf-8")
+    assert decide_main([str(decisions), "--root", str(repo), "--now", RUN, "--publish-candidates"]) == 0
+    [record] = load_places(repo).values()
+    assert (record["name"], record["kind"], record["standing"]) == ("Sheepskin Hut Campground", "campground", "shown")
+    assert load_links(repo)[record["id"]] == {"gers": line["gers"], "release": "2026-10-21.0"}
+    assert validate_repo(repo, now=RUN) == []

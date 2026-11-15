@@ -621,7 +621,7 @@ confidence, location, state, website, phone, the release and the Overture
 row.
 
 **Decisions.** The reviewer marks each candidate `approve`, `reject` or
-`flag`, and `python -m pipeline.overture_decide decisions.ndjson --root .`
+`flag` (the format is in "Overture decisions" below), and `python -m pipeline.overture_decide decisions.ndjson --root .`
 acts on them. A rejected candidate's GERS id goes on the do-not-match list.
 A flagged one waits for a person. An approved one is held unless
 `--publish-candidates` is given and its tier is one named with `--tier`
@@ -638,6 +638,36 @@ lists some parks twice), waits for a person.
 A published candidate keeps its name and location on later runs. Its other
 Overture values refresh from the Overture place it is linked to, and come off
 when that place is gone. It never becomes a MapRoulette task.
+
+## Overture decisions
+
+The decisions file, `overture/decisions.ndjson`, is the one format the data
+repository and the feedback engine's AI reviewer share. This section is its
+only description: the engine's code and docs point here. The import writes
+the candidates to `overture/candidates.ndjson`. The reviewer writes each
+decided candidate to the decisions file on the `overture-sync` branch, and
+`pipeline.overture_decide` reads it.
+
+Each line is one candidate line exactly as the import wrote it (`gers`,
+`name`, `kind`, `category`, `taxonomy`, `confidence`, `location`, `state`,
+`website`, `phone`, `release`, `tier` and the Overture `row`), plus:
+
+- `decision`: `approve`, `reject` or `flag`;
+- `reason`: one short sentence saying why;
+- `reviewer`: who decided, `ai:<model>` for the AI reviewer or a person's
+  GitHub login;
+- `by_rules`: true when a rule decided without asking the model.
+
+Lines are compact JSON with sorted keys (`dump_line`), in the candidate
+file's order. A person decides a flagged candidate by changing its
+`decision`. A rejected candidate's GERS id also goes on the `gers` list of
+`overture/do-not-match.json`. This example line is checked by the tests of
+both repositories (`pipeline/tests/test_overture_candidates.py` here,
+`packages/intake/test/overture-reviewer.test.ts` in the feedback engine):
+
+```
+{"by_rules":false,"category":"campground","confidence":0.95,"decision":"approve","gers":"08f2b1a0c4d5e6f70321a1b2c3d4e502","kind":"campground","location":{"lat":-36.7311,"lon":146.9602},"name":"Sheepskin Hut Campground","phone":"(03) 5550 0101","reason":"The name and the website show a campground.","release":"2026-10-21.0","reviewer":"ai:@cf/meta/llama-3.3-70b-instruct-fp8-fast","row":{"addresses":[{"country":"AU","freeform":"Hut Rd","locality":"Bright","postcode":"3741","region":"VIC"}],"basic_category":"campground","change":"added","confidence":0.95,"id":"08f2b1a0c4d5e6f70321a1b2c3d4e502","lat":-36.7311,"lon":146.9602,"name":"Sheepskin Hut Campground","phones":["(03) 5550 0101"],"socials":[],"sources":[{"dataset":"meta","record_id":"1","update_time":"2026-08-14T03:21:00.000Z"}],"taxonomy_primary":"campground","websites":["https://sheepskinhut.example.au/"]},"state":"VIC","taxonomy":"campground","tier":"strong","website":"https://sheepskinhut.example.au/"}
+```
 
 ## Monthly Overture workflow
 
