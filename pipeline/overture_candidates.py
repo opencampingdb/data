@@ -126,8 +126,14 @@ def junk_rule(row: dict, grid: dict, lists: KeptLists) -> str | None:
     return None
 
 
-def find_candidates(places: dict[str, dict], overture: Overture, lists: KeptLists) -> tuple[dict, dict]:
-    """Overture camping places we lack, by tier, and the rows each junk rule dropped."""
+def find_candidates(
+    places: dict[str, dict], overture: Overture, lists: KeptLists, linked: frozenset[str] = frozenset()
+) -> tuple[dict, dict]:
+    """Overture camping places we lack, by tier, and the rows each junk rule dropped.
+
+    linked: GERS ids linked to a place (an Overture match, a name source or a
+    published candidate). They are places we have, so never candidates.
+    """
     found = {tier: [] for tier in TIERS}
     dropped = {}
     grid = places_grid(places)
@@ -140,7 +146,7 @@ def find_candidates(places: dict[str, dict], overture: Overture, lists: KeptList
         rule = junk_rule(row, grid, lists)
         if rule:
             dropped.setdefault(rule, []).append(entry)
-        else:
+        elif gers not in linked:
             entry["tier"] = tier_of(entry, lists)
             found[entry["tier"]].append(entry)
     return found, dropped

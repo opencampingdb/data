@@ -177,7 +177,9 @@ def import_overture(
             # that day keeps its later time.
             new["updated"] = max(now, record.get("updated") or now)
             result.records[place_id] = new
-    result.candidates, result.dropped = find_candidates(places, overture, lists)
+    result.candidates, result.dropped = find_candidates(
+        places, overture, lists, frozenset(link["gers"] for link in result.links.values())
+    )
     return result
 
 

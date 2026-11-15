@@ -297,6 +297,17 @@ def test_an_approved_candidate_publishes_as_not_checked_yet_with_overture_as_its
     assert validate_repo(repo, now=RUN) == []
 
 
+def test_the_overture_place_that_names_a_place_by_its_outline_is_never_a_candidate():
+    # 450 m from the place's point, but inside its outline: it is the place's
+    # name source, so it is no camping place the dataset lacks.
+    from pipeline.geometry import Geometry
+    from pipeline.tests.test_overture_import import outline
+    geometry = Geometry(areas={"way/1010": outline(100, 600)})
+    result = candidates([place(name=None)], [ov(metres_north=450, category="campground")], geometry=geometry)
+    assert result.links[A]["gers"] == G1
+    assert all_gers(result) == []
+
+
 def test_a_published_candidate_never_takes_the_id_of_a_place_already_there(repo):
     kept_repo(repo)
     existing = place(NEW_ID)
