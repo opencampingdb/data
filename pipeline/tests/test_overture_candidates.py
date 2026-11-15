@@ -330,7 +330,7 @@ def test_the_commands_write_the_candidates_then_act_on_the_decisions(repo, tmp_p
     assert counts["candidates"] == {"strong": 1, "weak": 1}
     assert counts["dropped"] == {"chain_name": 1}
     text = report.read_text(encoding="utf-8")
-    assert "## Overture candidates" in text and "Sheepskin Hut Campground" in text and "McIntyres Campground" in text
+    assert "## Candidates" in text and "chain_name 1" in text and "Sheepskin Hut Campground" in text and "McIntyres Campground" in text
     lines = [json.loads(t) for t in found.read_text(encoding="utf-8").splitlines()]
     assert [(c["tier"], c["name"]) for c in lines] == [("strong", "Sheepskin Hut Campground"), ("weak", "McIntyres Campground")]
 

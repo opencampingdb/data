@@ -1,4 +1,4 @@
-"""Merge two records of the same place. Run by a person, never by a workflow.
+"""Merge two records of the same place. Run by a person; the monthly Overture workflow runs --auto.
 
 Usage:
     python -m pipeline.merge <keep_id> <drop_id> --root . [--part]
@@ -206,7 +206,8 @@ def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = 
     motel or hostel merged with a camp site (ROOFED_KINDS on one side only)
     is merged as a part, so the double mapping challenge leaves it out.
     Each merge is added to moderation/automatic-merges.csv for a person to
-    review. Returns the merges made, as {"kept", "dropped", "distance_m"}.
+    review. Returns the merges made, as {"kept", "dropped", "distance_m",
+    "kept_name", "dropped_name", "part"}.
     """
     root = Path(root)
     now = now or utc_now()
@@ -265,7 +266,10 @@ def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = 
                 "distance_m": distance, "part": "yes" if part else "no",
             }
             merge(root, keeper["id"], other["id"], now=now, part=part, places=places)
-            merges.append({"kept": keeper["id"], "dropped": other["id"], "distance_m": distance, "row": row})
+            merges.append({
+                "kept": keeper["id"], "dropped": other["id"], "distance_m": distance,
+                "kept_name": row["kept_name"], "dropped_name": row["dropped_name"], "part": part, "row": row,
+            })
     if merges:
         append_review(root, [m.pop("row") for m in merges])
     return merges
@@ -294,6 +298,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--auto", action="store_true", help="merge every pair the automatic merge rule accepts")
     parser.add_argument("--geometry", type=Path, help="with --auto: the sidecar pipeline.extract --geometry wrote (needed for the road test)")
     parser.add_argument("--group", action="append", help="with --auto: a group to merge in (default overnight; repeat for more)")
+    parser.add_argument("--summary", type=Path, help="with --auto: also write the merges made as JSON here")
     args = parser.parse_args(argv)
     if args.auto:
         if args.keep_id or args.part:
@@ -301,6 +306,8 @@ def main(argv: list[str] | None = None) -> int:
         if args.geometry is None:
             parser.error("--auto needs --geometry: without roads the rule cannot tell opposite sides of a road apart")
         merges = merge_batch(args.root, load_geometry(args.geometry), groups=tuple(args.group or ["overnight"]))
+        if args.summary:
+            write_text(args.summary, json.dumps(merges, indent=2, sort_keys=True) + "\n")
         print(f"Merged {len(merges)} records; each is listed in {AUTO_MERGES_FILE.as_posix()}", file=sys.stderr)
         return 0
     if not args.keep_id or not args.drop_id:

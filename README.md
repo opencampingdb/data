@@ -133,7 +133,20 @@ Anything that shows this data must show:
    fewer than 2% of records changed, and waits for a person otherwise. A
    change to the tag mapping reaches the data only through this sync, so
    after one merges, run the sync before expecting a release to carry it.
-2. **Feedback.** Apps send reports, reviews and checks to the intake run by
+2. **Monthly Overture import** (`.github/workflows/sync-overture.yml`, the
+   28th of each month at 20:00 UTC, or started by hand with an optional
+   release). Lists the releases in Overture Maps' public bucket and takes the
+   newest; when `overture/release.json` already names it, the run stops.
+   Otherwise it runs the automatic merge rule (`pipeline.merge --auto`, with
+   the geometry sidecar from the Geofabrik extract), pulls the release's
+   Australian places (`tools/overture-pull`) and runs the Overture importer
+   (`pipeline.overture`), then opens or updates one pull request from the
+   `overture-sync` branch. The PR body lists the automatic merges, the gap
+   fills, "Overture differs" and the Overture candidates. Only gap fills
+   under 2% of records changed merge themselves once CI passes. Automatic
+   merges, "Overture differs", candidates or a bigger change wait for a
+   person. Overture values only fill gaps and never go to OpenStreetMap.
+3. **Feedback.** Apps send reports, reviews and checks to the intake run by
    the [feedback-engine](https://github.com/opencampingdb/feedback-engine). A
    workflow in the private `inbox` repository applies them every hour and
    keeps at most two pull requests open here: `feedback/auto` for changes
@@ -142,7 +155,7 @@ Anything that shows this data must show:
    positions, kinds and descriptions set by feedback are marked `"feedback"`
    in `fact_sources`, and the OSM sync leaves them alone. A check that finds
    an open place still there sets `last_confirmed`.
-3. **Contributed places and closures.** Places that are not in OSM, and
+4. **Contributed places and closures.** Places that are not in OSM, and
    closures of existing places, can be contributed directly under the ODbL
    by pull request. A contributed place has `osm: null` and `"contributed"`
    in `fact_sources` for its name and location. A contributed closure sets
@@ -150,7 +163,7 @@ Anything that shows this data must show:
    Every contributed value also gets the time it was accepted in
    `fact_dates`, as feedback and owner values do. The OSM sync never changes
    a place without an OSM link, and keeps a contributed status.
-4. **Community reports.** A person imports anonymous community reports from
+5. **Community reports.** A person imports anonymous community reports from
    public camping groups by pull request. Only facts are imported, never the
    reports' own words. Each value has `"community_report"` in `fact_sources`
    and, in `fact_dates`, the first day of the month the report was made. A
@@ -161,7 +174,7 @@ Anything that shows this data must show:
    report values never go to OSM: the MapRoulette challenges leave them out,
    and leave out places named or located by them. The OSM sync keeps them as
    they are.
-5. **Owners.** A place's owner can claim it through the owner page at
+6. **Owners.** A place's owner can claim it through the owner page at
    `https://opencampingdb.github.io/owners/`. A person approves every claim
    and every private property listing before anything is published. After
    that the owner's updates (facts, booking details, a short description, a
@@ -169,33 +182,34 @@ Anything that shows this data must show:
    sync never overwrites them. Private land that OSM does not map appears
    only as a `farm_stay` its owner lists, and apps show it as "Private
    property. Book with the owner first."
-6. **Duplicates.** After every OSM sync, likely duplicates (for example a
+7. **Duplicates.** After every OSM sync, likely duplicates (for example a
    campground mapped as both a node and a way) are listed in the PR body
    under "Possible duplicates". Sync never merges them. A person merges a
    pair with `python -m pipeline.merge <keep_id> <drop_id>` in a separate
    PR, or merges every pair the automatic merge rule accepts (the same name
    once tidied, the same group, under 50 m apart and no major road between,
    or an unnamed overnight record inside or around a named one's outline)
-   with `python -m pipeline.merge --auto`, which lists each merge in
+   with `python -m pipeline.merge --auto` (the monthly Overture import runs
+   it too, and lists its merges in the PR body), which lists each merge in
    `moderation/automatic-merges.csv` for review. Either way the dropped
    record stays as a tombstone that points at the kept one, and releases
    list it in `merged.ndjson.gz` so apps can redirect old ids.
-7. **Commons photos** (`.github/workflows/commons.yml`, 18:00 UTC, or started
+8. **Commons photos** (`.github/workflows/commons.yml`, 18:00 UTC, or started
    by hand). Matches places to stay with freely licensed Wikimedia Commons
    photos, up to 2,000 places a run, each place again after 30 days, and
    opens or updates a pull request from the `commons-sync` branch that merges
    itself once CI passes.
-8. **Validation** (`.github/workflows/validate.yml`) runs on every pull
+9. **Validation** (`.github/workflows/validate.yml`) runs on every pull
    request: the tests, the schema and content checks, and a trial build of
    the release and its database. The **Neutral** check
    (`.github/workflows/neutral.yml`) runs on every push and pull request and
    fails when a file or commit message names an app that uses the data.
-9. **Release** (`.github/workflows/release.yml`) runs on every push to
-   `main`, every hour as a backstop, and on demand. When `main` has changed
-   since the newest release, it publishes the files described above as a new
-   release, prunes the oldest and loads the place index into the feedback
-   intake.
-10. **MapRoulette** (`.github/workflows/maproulette.yml`). When a merge
+10. **Release** (`.github/workflows/release.yml`) runs on every push to
+    `main`, every hour as a backstop, and on demand. When `main` has changed
+    since the newest release, it publishes the files described above as a new
+    release, prunes the oldest and loads the place index into the feedback
+    intake.
+11. **MapRoulette** (`.github/workflows/maproulette.yml`). When a merge
     changes a challenge file on `main`, it opens or updates the issue
     "Rebuild the MapRoulette challenges" (see
     [maproulette/README.md](maproulette/README.md)).
@@ -243,9 +257,10 @@ Open Camping DB uses two GitHub Apps.
 - **`opencampingdb-bot`** is installed on this repository with read and
   write access to contents and pull requests, and on `inbox` with read and
   write access to contents. Its key lives only in Actions secrets.
-  - The nightly OSM sync and the Commons photos workflow push their
-    branches (`osm-sync`, `commons-sync`), open or update their PRs and turn
-    on auto-merge with this App's token.
+  - The nightly OSM sync, the monthly Overture import and the Commons
+    photos workflow push their branches (`osm-sync`, `overture-sync`,
+    `commons-sync`), open or update their PRs and turn on auto-merge with
+    this App's token.
   - The nightly OSM sync also makes a read-only token for `inbox` and checks
     out its `applied/` folder, the evidence MapRoulette report tasks need
     (see [maproulette/README.md](maproulette/README.md)). Nothing from the
@@ -269,8 +284,8 @@ this repository, so they use the default `GITHUB_TOKEN`.
 
 | Name | Kind | Used by |
 |---|---|---|
-| `OCDB_BOT_CLIENT_ID` | variable | OSM sync, Commons photos: the `opencampingdb-bot` client ID |
-| `OCDB_BOT_PRIVATE_KEY` | secret | OSM sync, Commons photos: the `opencampingdb-bot` private key |
+| `OCDB_BOT_CLIENT_ID` | variable | OSM sync, Overture import, Commons photos: the `opencampingdb-bot` client ID |
+| `OCDB_BOT_PRIVATE_KEY` | secret | OSM sync, Overture import, Commons photos: the `opencampingdb-bot` private key |
 | `INTAKE_URL` | variable | Release: the intake to load the place index into, an https URL. A manual run's `intake_url` input must have the same host. Without it the step is skipped |
 | `INTAKE_PLACES_TOKEN` | secret | Release: the intake's `PLACES_TOKEN`. Without it the step is skipped |
 | `NEUTRAL_TERMS` | organisation secret | Neutral: the names to look for, as an extended regular expression. Without it the check warns and passes |

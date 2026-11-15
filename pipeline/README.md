@@ -8,8 +8,11 @@ python -m pip install -r requirements.txt
 npm ci --ignore-scripts --prefix tools/oh-check   # opening_hours.js, for the out of spec check
 ```
 
-The nightly sync runs Extract, Sync and MapRoulette in that order, and the
-release workflow runs Validate, Release, Database and Place index.
+The nightly sync runs Extract, Sync and MapRoulette in that order, the
+monthly Overture workflow runs Extract (for the geometry sidecar), Merge
+`--auto`, Overture pull and Overture import (see "Monthly Overture
+workflow"), and the release workflow runs Validate, Release, Database and
+Place index.
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
@@ -22,13 +25,14 @@ release workflow runs Validate, Release, Database and Place index.
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews; with `--auto` every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, and with `--auto` by the monthly Overture workflow |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for a person to check and a mapper to tag in OSM. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. So are values with the source `overture` and Overture candidates, and a task never shows a name from Overture. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 | Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`), `charge` and `charge_conditional` against the Key:charge syntax. Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
 | Overture pull | `python tools/overture-pull/pull.py <release> overture.ndjson`, after `pip install -r tools/overture-pull/requirements.txt` (DuckDB) | one Overture Maps release's places theme and places changelog, from the public bucket | the Overture extract (see "Overture extract"). Runs by hand or in the Overture workflow, never in tests |
 | Overture import | `python -m pipeline.overture overture.ndjson --root . --geometry geometry.ndjson [--changelog] [--report overture-report.md] [--summary overture-summary.json]` | the Overture extract, `places/`, the geometry sidecar, `overture/links.ndjson` and the kept lists in `overture/` | gap fills in `places/`, `overture/links.ndjson`, the report (see "Overture import") |
+| Overture run | `python -m pipeline.overture_run check --listing releases.xml --root . [--release R]`, `applied <release> --root .`, or `body --report overture-report.md --summary overture-summary.json --merges merges.json --out pr-body.md` | the bucket listing, `overture/release.json`, the import report and summary, the merges | the release to run and whether to skip, `overture/release.json`, the PR body and whether it merges itself (see "Monthly Overture workflow") |
 
 Tests: `python -m pytest`. The out of spec tests skip without
 `tools/oh-check` installed as above. CI installs it and sets `REQUIRE_NODE=1`
@@ -489,12 +493,18 @@ does not list, keeps its values and link without a check. Every other place
 is checked as in a full run, so places with no link can still match.
 
 **Report and summary.** The report lists the counts, each kind's names,
-websites, phones and addresses before and after, the "Overture differs"
-lines and the values taken off. The summary JSON has the same counts,
-`change_percent` (records changed out of all live records) and `auto_merge`
-(under 2%, as in the OSM sync), plus the candidate counts by tier
-(`candidates`) and by junk rule (`dropped`). `--candidates FILE` writes each
-candidate as one line, strong tier first, for the reviewer.
+websites, phones and addresses before and after, each gap fill (the place,
+the value and what it replaced), the "Overture differs" lines, the values
+taken off and the candidates by tier. Lists are cut at 200 rows, and
+shorter when the report would pass 45,000 characters, so the PR body stays
+under GitHub's limit. The summary JSON has the same counts,
+`change_percent` (records changed out of all live records), `auto_merge`
+and `wait_reasons`. `auto_merge` is true only for gap fills under 2% of
+records changed (the OSM sync's limit); `wait_reasons` names each thing
+that holds the run for a person: the limit, "Overture differs" lines and
+candidates. The summary also counts the candidates by tier (`candidates`)
+and by junk rule (`dropped`). `--candidates FILE` writes each candidate as
+one line, strong tier first, for the reviewer.
 
 ## Overture candidates
 
@@ -543,6 +553,44 @@ lists some parks twice), waits for a person.
 A published candidate keeps its name and location on later runs. Its other
 Overture values refresh from the Overture place it is linked to, and come off
 when that place is gone. It never becomes a MapRoulette task.
+
+## Monthly Overture workflow
+
+`.github/workflows/sync-overture.yml` runs on the 28th of each month at
+20:00 UTC and by hand. Overture publishes a release about once a month, in
+the third or fourth week.
+
+1. **The release.** It lists Overture's public bucket
+   (`https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/?list-type=2&prefix=release/&delimiter=/`,
+   anonymous), the same bucket the pull reads, rather than the STAC release
+   index. `pipeline.overture_run check` takes the newest release (by date,
+   then patch number). When `overture/release.json` already names it, the
+   run stops. A release given by hand runs even when it was applied, and
+   must be in the listing. The import is a changelog run (`--changelog`)
+   only when the applied release is the one just before: Overture's
+   changelog holds only the changes since the release before it, so after a
+   missed release every place is checked again.
+2. **The automatic merge rule.** `pipeline.merge --auto` runs first, with
+   the geometry sidecar `pipeline.extract --geometry` builds from the
+   Geofabrik extract, as in the nightly OSM sync. `--summary` writes the
+   merges made for the PR body.
+3. **The pull.** `tools/overture-pull/pull.py` writes the release's extract.
+4. **The import.** `pipeline.overture` writes the gap fills, the link file,
+   the report and the summary. `pipeline.overture_run applied` then records
+   the release in `overture/release.json`, so the release counts as applied
+   once the PR merges.
+5. **The PR.** `pipeline.overture_run body` writes the PR body: whether the
+   PR merges itself and why not, the automatic merges (100 rows, the rest in
+   `moderation/automatic-merges.csv`), then the import report. The run
+   validates the data and opens or updates one PR from the `overture-sync`
+   branch with the `opencampingdb-bot` token, as the OSM sync does. Only gap
+   fills under 2% of records changed turn on auto-merge. Automatic merges,
+   "Overture differs" lines, candidates and a change of 2% or more wait
+   for a person, and auto-merge is turned off for them.
+
+The branch is rebuilt from `main` on every run. When the OSM sync merges
+first and the PR conflicts, start the workflow again by hand with the same
+release.
 
 ## Sync
 
