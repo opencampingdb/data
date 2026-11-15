@@ -341,6 +341,47 @@
             "osm_id": {"type": "integer", "minimum": 1}
           }
         },
+        "protected_area": {
+          "x-ocdb-class": "mapped",
+          "x-osm": "boundary=protected_area/national_park, leisure=nature_reserve, or landuse=forest named State Forest (an area) the place lies in",
+          "description": "The smallest named protected area the place's location lies in, from the extract only: an OSM area (a closed way or a multipolygon) tagged boundary=protected_area, boundary=national_park or leisure=nature_reserve, or landuse=forest with State Forest in its name. name is as tagged. For describing a place that has no name of its own.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "osm_id", "osm_type"],
+          "properties": {
+            "name": {"type": "string", "minLength": 1, "maxLength": 100},
+            "osm_id": {"type": "integer", "minimum": 1},
+            "osm_type": {"enum": ["way", "relation"]}
+          }
+        },
+        "nearest_waterway": {
+          "x-ocdb-class": "mapped",
+          "x-osm": "waterway=river/stream/creek/canal/brook (a named way) within 200 m",
+          "description": "The nearest named OSM way tagged waterway=river, stream, creek, canal or brook within 200 m of the place's location, from the extract only. distance_m is to the nearest point of the line, rounded to 10 m. For describing a place that has no name of its own.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "osm_id", "distance_m"],
+          "properties": {
+            "name": {"type": "string", "minLength": 1, "maxLength": 100},
+            "osm_id": {"type": "integer", "minimum": 1},
+            "distance_m": {"type": "integer", "minimum": 0, "maximum": 200, "multipleOf": 10}
+          }
+        },
+        "nearest_feature": {
+          "x-ocdb-class": "mapped",
+          "x-osm": "natural=water/beach/bay/peak/waterfall/spring/gorge/cave_entrance/cape/wetland within 300 m, else place=locality/hamlet (a node) within 1 km",
+          "description": "The nearest named OSM natural feature within 300 m of the place's location, as a node or an area: natural=water, beach, bay, peak, waterfall, spring, gorge, cave_entrance, cape or wetland. When there is none, the nearest named place=locality or place=hamlet node within 1 km. From the extract only. type is the natural or place value. distance_m is to the nearest point of the feature (0 inside an area), rounded to 10 m. For describing a place that has no name of its own.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "type", "osm_id", "osm_type", "distance_m"],
+          "properties": {
+            "name": {"type": "string", "minLength": 1, "maxLength": 100},
+            "type": {"enum": ["water", "beach", "bay", "peak", "waterfall", "spring", "gorge", "cave_entrance", "cape", "wetland", "locality", "hamlet"]},
+            "osm_id": {"type": "integer", "minimum": 1},
+            "osm_type": {"enum": ["node", "way", "relation"]},
+            "distance_m": {"type": "integer", "minimum": 0, "maximum": 1000, "multipleOf": 10}
+          }
+        },
         "water_type": {
           "x-ocdb-class": "mapped",
           "x-osm": "amenity=water_point/drinking_water",
@@ -413,7 +454,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|charge|charge_conditional|charge_powered|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|nearest_boat_ramp|nearest_major_road|locality|lga|kind|name|location|status|description)$": {
+        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|charge|charge_conditional|charge_powered|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|nearest_boat_ramp|nearest_major_road|locality|lga|protected_area|nearest_waterway|nearest_feature|kind|name|location|status|description)$": {
           "enum": ["osm", "feedback", "contributed", "owner", "community_report", "overture", "rule"]
         }
       }
@@ -424,7 +465,7 @@
       "additionalProperties": false,
       "minProperties": 1,
       "patternProperties": {
-        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|charge|charge_conditional|charge_powered|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|nearest_boat_ramp|nearest_major_road|locality|lga|kind|name|location|status|description)$": {
+        "^(fee|power|pets|pets_months|tents|caravans|toilets|showers|drinking_water|dump_station|max_stay|opening_hours|charge|charge_conditional|charge_powered|website|phone|access|entry|water_type|booking_url|booking_required|wheelchair|generators|motorhomes|camper_trailers|motorbikes|big_rigs|non_drinking_water|laundry|kitchen|bbq|drive_through|ensuite_sites|bins|picnic_tables|campfires|cabins|pub|swimming|fishing|walking_tracks|scenery|wildlife|playground|games_room|shade|cycling_tracks|offroad_tracks|boat_ramp_nearby|near_road|telstra_signal|mobile_signal|wifi|tv_reception|pet_sitting|fuel|lpg|car_wash|vehicle_storage|self_contained_only|crocodiles|sharks|marine_stingers|seasonal_closure|dangerous_when_wet|over_50s|nudist|brand|address|fuels|air|hot_water|toilet_type|operator|email|phone_2|facebook|instagram|tiktok|x|vehicle_access|nearest_beach|nearest_boat_ramp|nearest_major_road|locality|lga|protected_area|nearest_waterway|nearest_feature|kind|name|location|status|description)$": {
           "type": "string",
           "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
         }
@@ -439,6 +480,16 @@
         "^(toilets|drinking_water|showers|dump_station|pets)$": {
           "enum": ["kind:public_toilet", "kind:drinking_water_point", "kind:public_shower", "kind:dump_point", "national_park"]
         }
+      }
+    },
+    "label": {
+      "description": "Only in released records, never in places/: a description of a place to stay that has no name of its own, built from the facts nearest_waterway, nearest_feature and protected_area, such as \"Campground by Black Bobs Creek\" or \"Campsite on the Murray River\". text is the kind's label followed by: \"by\" a waterway within 200 m (\"on the\" one whose name ends in River and does not start with The); else \"at\" a beach, \"by\" water, a bay, spring, waterfall or wetland, or \"near\" any other nearest_feature; else \"in\" the protected_area, without any bracketed part of its name. When two places in the same state would have the same text, each adds \", \" and its locality's name. from is the fact the text came from. Left out on a named place, on a place outside the overnight group and on a place with none of those facts. It is a description, not a name: show it as one, and never send it to OSM as a name.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "from"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1, "maxLength": 300},
+        "from": {"enum": ["nearest_waterway", "nearest_feature", "protected_area"]}
       }
     },
     "last_confirmed": {

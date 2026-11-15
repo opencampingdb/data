@@ -42,6 +42,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .commons import load_do_not_match, without_listed
+from .labels import labels_for, with_label
 from .common import (
     ATTRIBUTION,
     LICENCE,
@@ -76,7 +77,9 @@ from .common import (
 # paid is no longer collected. The facts charge, charge_conditional and charge_powered
 # hold what a place publishes, and osm.check_dates says when a mapper checked a charge.
 # 13.1: the facts locality and lga, and the localities table of ocdb.sqlite.gz (layout 3).
-# 13.2: fact_sources may be overture (a gap fill from Overture Maps), and Overture
+# 13.2: the facts protected_area, nearest_waterway and nearest_feature, and label on an
+# unnamed place to stay.
+# 13.3: fact_sources may be overture (a gap fill from Overture Maps), and Overture
 # candidates are released: places with osm null whose name and location come from
 # overture, with standing. Raised as a minor change by decision (opencampingdb/data#187).
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
@@ -85,7 +88,7 @@ from .common import (
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 13
-FORMAT_MINOR = 2
+FORMAT_MINOR = 3
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 DEFAULT_REPOSITORY = "opencampingdb/data"
@@ -122,15 +125,18 @@ def gzip_bytes(data: bytes) -> bytes:
 def places_ndjson(root: Path) -> tuple[bytes, int]:
     """Every place record except merged ones (tombstones) and held or hidden new places, one per line, sorted by id.
 
-    Each record carries the facts its kind's rules set (pipeline.common.with_rule_facts).
+    Each record carries the facts its kind's rules set (pipeline.common.with_rule_facts),
+    and an unnamed place to stay its label (pipeline.labels).
     """
     places = load_places(root)
-    lines = [
-        dump_line(with_rule_facts(places[place_id])) + "\n"
+    kept = [
+        with_rule_facts(places[place_id])
         for place_id in sorted(places)
         if places[place_id].get("status") != "merged"
         and places[place_id].get("standing") not in UNRELEASED_STANDINGS
     ]
+    labels = labels_for(kept)
+    lines = [dump_line(with_label(record, labels.get(record["id"]))) + "\n" for record in kept]
     return "".join(lines).encode("utf-8"), len(lines)
 
 
@@ -141,7 +147,7 @@ def cell_of(location: dict) -> tuple[int, int]:
 
 # Facts the place index leaves out: only the extract sets them (OSM_ONLY_FACTS), so no
 # feedback is ever decided against them, and they would double the size of a city's map cell.
-INDEX_LEFT_OUT = ("locality", "lga")
+INDEX_LEFT_OUT = ("locality", "lga", "protected_area", "nearest_waterway", "nearest_feature")
 
 
 def index_part(values: dict) -> dict:

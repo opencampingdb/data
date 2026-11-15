@@ -198,7 +198,12 @@ one container type at most, checked in this order:
 State forests are checked first because a state forest tagged as a protected
 area often carries `protect_class=6`, which would otherwise make it a park.
 
-`name` is the `name` tag, or `null` when there is none.
+`name` is the `name` tag. A place with no `name` tag takes the first name in
+`official_name`, then `loc_name`, then `alt_name`: the value up to its first
+`;`, trimmed, passing over an empty one. `old_name`, `short_name`,
+`operator`, `brand`, `name:signed` and the `name:<lang>` tags are never used.
+`name` is `null` when none of these gives one. Either way it is OSM's name,
+so the record has no `name` entry in `fact_sources`.
 
 `osm` is `{"type", "id", "version", "timestamp"}`. `timestamp` is when that
 version of the object was saved in OSM, the last time anyone edited it, in
@@ -359,6 +364,40 @@ node id: `osm_id`, `name`, `type`, `lat`, `lon`, `population` when the
 node's `population` tag is a whole number (thousands separators allowed),
 and the town's own `lga`. The nightly sync commits the file with
 `places/`, and `pipeline.database` turns it into the `localities` table.
+
+#### Protected area, waterway and feature
+
+`protected_area`, `nearest_waterway` and `nearest_feature` say what a place
+lies in or beside, so an app can describe one that has no name of its own
+(the release's `label`, below). They come from named OSM objects collected
+in the same read (`pipeline/surroundings.py`), and are set on every place,
+in every group: once the objects are read, the lookups for all 97,000
+places take about 6 s. Each name is as tagged, and an object
+with no name, or a name longer than 100 characters, does not count.
+
+- `protected_area`: the smallest area (a closed way or a multipolygon) the
+  place's location lies in or on the edge of, tagged
+  `boundary=protected_area`, `boundary=national_park` or
+  `leisure=nature_reserve`, or `landuse=forest` with "State Forest" in its
+  name (any case), as `name`, `osm_id` and `osm_type` (`way` or
+  `relation`). Smallest means least area in square degrees, which compares
+  fairly at one location. Ties go to the lower type and id.
+- `nearest_waterway`: the nearest way tagged `waterway=river`, `stream`,
+  `creek`, `canal` or `brook` within 200 m, as `name`, `osm_id` and
+  `distance_m` to the nearest point of the line, worked out and rounded
+  like `nearest_beach`. Waterway relations are not read: the ways in them
+  carry their own names. Drains and ditches do not count.
+- `nearest_feature`: the nearest node or area tagged `natural=water`,
+  `beach`, `bay`, `peak`, `waterfall`, `spring`, `gorge`, `cave_entrance`,
+  `cape` or `wetland` within 300 m, or, when there is none, the nearest
+  node tagged `place=locality` or `place=hamlet` within 1 km, as `name`,
+  `type` (the `natural` or `place` value), `osm_id`, `osm_type` and
+  `distance_m` (0 inside an area), worked out and rounded like
+  `nearest_beach`. Open lines, such as a beach drawn as a line, do not
+  count.
+
+Ties in distance go to the lower OSM id. An object never counts for the
+place that is the same OSM object. All three always have the source `osm`.
 
 Swim spots (`leisure=bathing_place` and `leisure=swimming_area`) are places
 of their own, of kind `swimming_spot`, so they get no fact. OSM has no tag
@@ -915,10 +954,11 @@ and open a PR.
 - that `fact_sources` has an entry for every fact and no other fact, plus
   optional `name`, `location`, `kind`, `status` and `description` entries,
   each `osm`, `feedback`, `contributed`, `owner`, `community_report` or
-  `overture`. No
-  file holds a `rule` source or `fact_rules`: only the release sets those;
+  `overture`. No file holds a `rule` source, `fact_rules` or `label`: only
+  the release sets those;
 - that the nearby facts `nearest_beach`, `nearest_boat_ramp`,
-  `nearest_major_road`, `locality` and `lga` have the source `osm`;
+  `nearest_major_road`, `locality`, `lga`, `protected_area`,
+  `nearest_waterway` and `nearest_feature` have the source `osm`;
 - that `localities/localities.ndjson`, when present, matches its schema, in
   canonical form and sorted by `osm_id`, each town once;
 - that `fact_dates` has a date for exactly the `fact_sources` entries that
@@ -1074,6 +1114,33 @@ always wins, including `false`. A rule fact has the source `rule` in
 the place index only: files in `places/` never hold them (validation
 refuses one that does), so the OSM sync, merges and the MapRoulette
 challenges never see them, and nothing set by a rule reaches OSM.
+
+### Labels
+
+An unnamed place to stay gets a `label` in the release
+(`pipeline/labels.py`): `{"text": "Campground by Black Bobs Creek",
+"from": "nearest_waterway"}`. It is a description built from the place's
+facts, never a name, and the release never makes one up. A place gets one
+when it is in the `overnight` group and has no name that says anything
+(`pipeline.duplicates.has_name`, so "Caravan Park" alone counts as none).
+The text is the kind's label from `schema/kinds.json`, in sentence case,
+then the first of these that applies:
+
+1. `nearest_waterway`: "by" the waterway, or "on the" waterway when its
+   name ends in River and does not start with The ("Campsite on the Murray
+   River", "Campground by The Cut River").
+2. `nearest_feature`: "at" a beach, "by" water, a bay, spring, waterfall or
+   wetland, and "near" anything else, a locality or hamlet included.
+3. `protected_area`: "in" the area, without any bracketed part of its name,
+   so "Birriliburu Indigenous Protected Area (IUCN Cat. VI)" reads
+   "Birriliburu Indigenous Protected Area".
+
+A place with none of these has no label. When two or more labelled places
+in the same state (`pipeline.states`) have the same text, each adds ", "
+and the name of its `locality`, unless the text already holds it; one with
+no `locality` keeps the plain text. `from` names the fact the text came
+from. Files in `places/` never hold a label (validation refuses one that
+does), and the place index leaves it out.
 
 `place-index.ndjson.gz` is for feedback intakes, not apps: it is not a release
 file and the manifest leaves it out. It holds one line for each place
