@@ -27,6 +27,7 @@ release workflow runs Validate, Release, Database and Place index.
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 | Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`), `charge` and `charge_conditional` against the Key:charge syntax. Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
+| Overture pull | `python tools/overture-pull/pull.py <release> overture.ndjson`, after `pip install -r tools/overture-pull/requirements.txt` (DuckDB) | one Overture Maps release's places theme and places changelog, from the public bucket | the Overture extract (see "Overture extract"). Runs by hand or in the Overture workflow, never in tests |
 
 Tests: `python -m pytest`. The out of spec tests skip without
 `tools/oh-check` installed as above. CI installs it and sets `REQUIRE_NODE=1`
@@ -363,6 +364,52 @@ The extract never infers a fact from the kind: a `caravan_park` does not
 get `caravans: true` unless the `caravans` tag says so. `water_type` is the
 one fact the extract takes from the kind. The release adds a few facts by
 rule, never stored in `places/` (see "Rules" under "Release").
+
+## Overture extract
+
+`tools/overture-pull/pull.py` reads one Overture Maps release from
+`s3://overturemaps-us-west-2/release/<release>/theme=places/type=place/`,
+and that release's changelog from
+`s3://overturemaps-us-west-2/changelog/<release>/theme=places/type=place/`,
+anonymously in region us-west-2. It keeps the places whose bounding box
+starts inside Australia (longitude 112 to 154.5, latitude -44.5 to -9) and
+writes them to one NDJSON file, UTF-8, compact JSON, one object per line.
+Overture deletes a release about 60 days after it comes out.
+
+The first line is the header:
+
+```json
+{"extract":"overture-places","version":1,"release":"2026-10-21.0","bbox":[112.0,-44.5,154.5,-9.0],"places":5,"removed":1}
+```
+
+`bbox` is `[west, south, east, north]`. `places` and `removed` count the
+lines that follow. Every other line is a place or a removal, sorted by `id`
+(plain string order), with each id once.
+
+A place line has all of these keys, in this order:
+
+| Key | Value |
+|---|---|
+| `id` | the Overture GERS id |
+| `change` | the changelog's `change_type` for this id: `added`, `data_changed` or `unchanged`, or `null` when the changelog does not list it |
+| `name` | `names.primary`, or `null` |
+| `basic_category` | `basic_category`, or `null` |
+| `taxonomy_primary` | `taxonomy.primary`, or `null` |
+| `confidence` | `confidence`, a number from 0 to 1, or `null` |
+| `websites` | `websites` as given, `[]` when none |
+| `phones` | `phones` as given, `[]` when none |
+| `addresses` | each address as `{"freeform","locality","postcode","region","country"}`, any of them `null`, `[]` when none |
+| `sources` | each source as `{"dataset","record_id","update_time"}`, `[]` when none |
+| `lon`, `lat` | the centre of the bounding box, to 7 decimal places |
+
+A removal line is `{"id":"...","change":"removed"}`: an id the changelog lists
+as removed whose bounding box lies inside Australia. A removed id has no place
+line.
+
+The extract never holds emails, socials, brand, operating status or any other
+Overture field. `check_extract` in the tool lists every way a file breaks this
+format. `pipeline/tests/fixtures/overture-extract.ndjson` is a small
+hand-written extract for the importer's tests.
 
 ## Sync
 
