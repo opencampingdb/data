@@ -115,6 +115,9 @@ def import_overture(
     )
     result = ImportResult(release=overture.release)
     checks = []
+    # The Overture places of linked places a changelog run does not check
+    # again. Their pages still count towards SHARED_PAGE_LIMIT.
+    unchecked = []
     for place_id in sorted(places):
         record = places[place_id]
         if record.get("status") == "merged":
@@ -129,6 +132,8 @@ def import_overture(
             # The changelog says the Overture place has not changed: keep the
             # place as it is and note the link as seen in this release.
             result.links[place_id] = {"gers": link["gers"], "release": overture.release}
+            if link["gers"] in overture.places:
+                unchecked.append(overture.places[link["gers"]])
             continue
         base = strip_overture(record)
         row = None
@@ -145,7 +150,7 @@ def import_overture(
                 result.name_sources += 1
         result.checked += 1
         checks.append((place_id, record, base, row))
-    shared = shared_pages(checks, lists, result)
+    shared = shared_pages([row for *_, row in checks] + unchecked, lists, result)
     for place_id, record, base, row in checks:
         values = values_from(row, base, lists, shared) if row else {}
         values.update(taken_values(base, lists))
@@ -169,13 +174,14 @@ def import_overture(
     return result
 
 
-def shared_pages(checks: list[tuple], lists: KeptLists, result: ImportResult) -> frozenset[str]:
-    """The page keys Overture gives for more than SHARED_PAGE_LIMIT of the checked places.
+def shared_pages(rows: list[dict | None], lists: KeptLists, result: ImportResult) -> frozenset[str]:
+    """The page keys Overture gives for more than SHARED_PAGE_LIMIT of the places.
 
+    rows: the Overture place of each place (None for a place with none).
     Notes each one in result.shared, by the page as first given, with its count.
     """
     counts, shown = {}, {}
-    for _, _, _, row in checks:
+    for row in rows:
         if not row:
             continue
         for key in offered_pages(row, lists):

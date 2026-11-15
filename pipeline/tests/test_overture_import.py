@@ -512,6 +512,18 @@ def test_a_page_given_for_up_to_the_limit_of_places_is_taken():
     assert result.shared == {}
 
 
+def test_a_changelog_run_counts_the_pages_of_linked_places_it_does_not_check_again():
+    # Six stations share the chain's pages. Five are linked and unchanged, so
+    # a changelog run leaves them as they are. The sixth is new: the page is
+    # still given for six places, so it is not taken for the new one.
+    places, rows = stations(SHARED_PAGE_LIMIT + 1)
+    links = {p["id"]: {"gers": r["id"], "release": "2026-09-17.0"} for p, r in zip(places[1:], rows[1:])}
+    rows[0]["change"] = "added"
+    result = run(places, rows, links=links, changelog_only=True)
+    assert result.fills == []
+    assert result.shared == {SHELL_PAGE: 6, SHELL_SITE: 6}
+
+
 def test_a_shared_page_gives_way_to_the_next_page_overture_gives():
     places, rows = stations(SHARED_PAGE_LIMIT + 1)
     rows[0]["websites"] = [SHELL_SITE, "https://shellbright.example.au/"]
