@@ -437,8 +437,9 @@ def test_a_changelog_run_still_matches_places_with_no_link():
     assert result.records[A]["facts"]["website"] == "https://riverbend.example.au/"
 
 
-def test_the_candidates_are_left_for_their_own_step():
-    assert run([place()], [ov()]).candidates == {}
+def test_a_matched_overture_place_is_never_a_candidate():
+    # The candidate step (test_overture_candidates.py) drops anything next to a place.
+    assert run([place()], [ov()]).candidates == {"strong": [], "weak": []}
 
 
 # ------------------------------------------------------------------ command

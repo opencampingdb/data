@@ -431,8 +431,14 @@ Kept files:
 - `overture/directory-hosts.json`: directory, aggregator and social hosts
   (`placestars.com` first). A website on one of them, or on a subdomain of
   one, is never taken or compared.
-- `overture/do-not-match.json`: `{"pairs": [{"place", "gers"}]}`, place and
-  Overture place pairs never matched.
+- `overture/do-not-match.json`: `{"pairs": [{"place", "gers"}], "gers": [...]}`.
+  `pairs` are place and Overture place pairs never matched. `gers` are the
+  GERS ids of rejected Overture candidates, never candidates again.
+- `overture/chains.json`: chain-only names such as "BIG4 Holiday Parks",
+  compared as normalised names.
+- `categories.json` also holds `candidates`: the camping categories that make
+  an Overture candidate, and the kind each publishes as (`campground` as
+  `campground`, `rv_park` and `holiday_park` as `caravan_park`).
 - `overture/links.ndjson`: the link file, one line per matched place,
   `{"gers","place","release"}` sorted by place id, with the release the match
   was last seen in. It is not released.
@@ -486,9 +492,57 @@ is checked as in a full run, so places with no link can still match.
 websites, phones and addresses before and after, the "Overture differs"
 lines and the values taken off. The summary JSON has the same counts,
 `change_percent` (records changed out of all live records) and `auto_merge`
-(under 2%, as in the OSM sync). Overture candidates (places we lack) belong
-to a later step: `ImportResult.candidates` and the summary's `candidates`
-are empty until then.
+(under 2%, as in the OSM sync), plus the candidate counts by tier
+(`candidates`) and by junk rule (`dropped`). `--candidates FILE` writes each
+candidate as one line, strong tier first, for the reviewer.
+
+## Overture candidates
+
+The same run finds Overture candidates: camping places Overture lists that
+the dataset lacks. The pool is every Overture place in the extract at
+confidence 0.7 or more whose `basic_category` or `taxonomy_primary` is a
+camping category (`campground`, `rv_park`, `holiday_park`). Each place in the
+pool is dropped, with no one involved, by the first of these rules it breaks
+(the summary's `dropped` counts each rule):
+
+1. `do_not_match`: its GERS id is on the do-not-match list (rejected before).
+2. `no_name`: it has no name.
+3. `chain_name`: its normalised name is a chain-only name on
+   `overture/chains.json`. A park of a chain with its own name stays.
+4. `scout_school_church`: its name names a scout, guide, school or church
+   camp (scout, guide, school, college, church, christian, bible, baptist,
+   anglican, adventist, uniting, catholic, YMCA, YWCA). "Old school" and
+   "School Point" are place names and stay.
+5. `near_place`: a place of any kind (not merged) lies within 250 m. This
+   also drops the Overture place of every match, and of every candidate
+   already published.
+
+The rest are sorted into two tiers:
+
+- `strong`: confidence 0.9 or more, a camping `basic_category` (not only a
+  camping taxonomy entry), and a website of its own (not on a directory host);
+- `weak`: every other candidate.
+
+Each candidate carries its GERS id, name, kind, category, taxonomy entry,
+confidence, location, state, website, phone, the release and the Overture
+row.
+
+**Decisions.** The reviewer marks each candidate `approve`, `reject` or
+`flag`, and `python -m pipeline.overture_decide decisions.ndjson --root .`
+acts on them. A rejected candidate's GERS id goes on the do-not-match list.
+A flagged one waits for a person. An approved one is held unless
+`--publish-candidates` is given: publishing stays off until a person has seen
+the tier counts. A published candidate becomes a place record with `osm`
+null, standing `shown` (not checked yet), `overture` as the source of its
+name and location and of any website, phone and address Overture gives,
+each dated the run, and its GERS id in the link file. A GERS id already in
+the link file is not published again, and an approved candidate within 250 m
+of a place, or of a candidate published earlier in the same run (Overture
+lists some parks twice), waits for a person.
+
+A published candidate keeps its name and location on later runs. Its other
+Overture values refresh from the Overture place it is linked to, and come off
+when that place is gone. It never becomes a MapRoulette task.
 
 ## Sync
 
