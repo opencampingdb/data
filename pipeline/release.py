@@ -14,6 +14,10 @@ Released records carry the facts set by the rules in schema/fact_rules.json,
 with the source rule and the rule's name in fact_rules, wherever no other
 source gives a value. Place files in places/ never hold them.
 
+The release also ships the licence texts and NOTICE (LICENCE_FILES), copied
+byte for byte from the repository this pipeline runs from. NOTICE names every
+source and carries the notices their licences need.
+
 place-index.ndjson.gz is not a release file and the manifest leaves it out.
 It holds one line per released place, sorted by id: {"cell", "fact_dates",
 "fact_sources", "facts", "id"}, where cell is the whole-degree map cell
@@ -86,6 +90,16 @@ FORMAT_MINOR = 2
 UNRELEASED_STANDINGS = {"held", "hidden"}
 DEFAULT_REPOSITORY = "opencampingdb/data"
 PLACE_INDEX_FILE = "place-index.ndjson.gz"
+# The licence texts and NOTICE, shipped beside the data files. Overture places
+# need the CDLA Permissive 2.0 text and, for Foursquare's records, the Apache 2.0 text.
+LICENCE_FILES = (
+    "LICENSE",
+    "LICENSE-CONTENTS",
+    "LICENSE-APACHE-2.0",
+    "LICENSE-CDLA-PERMISSIVE-2.0",
+    "NOTICE",
+)
+LICENCE_ROOT = Path(__file__).resolve().parent.parent
 
 
 def release_tag(data_version: str) -> str:
@@ -232,7 +246,7 @@ def build_release(
     release: str | None = None,
     repository: str = DEFAULT_REPOSITORY,
 ) -> dict:
-    """Write the five data files, manifest.json and the place index into out_dir and return the manifest.
+    """Write the data files, manifest.json, the licence texts and the place index into out_dir and return the manifest.
 
     release defaults to data-<timestamp> taken from data_version.
     """
@@ -246,6 +260,8 @@ def build_release(
     index_raw, _ = place_index_ndjson(root)
     commons_raw, commons_count = commons_ndjson(root, released_ids(root))
     (out_dir / PLACE_INDEX_FILE).write_bytes(gzip_bytes(index_raw))
+    for name in LICENCE_FILES:
+        (out_dir / name).write_bytes((LICENCE_ROOT / name).read_bytes())
 
     manifest = {
         "format_version": FORMAT_VERSION,

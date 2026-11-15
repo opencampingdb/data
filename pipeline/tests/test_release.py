@@ -44,6 +44,11 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     manifest = build(repo, out)
 
     assert sorted(p.name for p in out.iterdir()) == [
+        "LICENSE",
+        "LICENSE-APACHE-2.0",
+        "LICENSE-CDLA-PERMISSIVE-2.0",
+        "LICENSE-CONTENTS",
+        "NOTICE",
         "commons.ndjson.gz",
         "manifest.json",
         "merged.ndjson.gz",
@@ -77,6 +82,34 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest["reviews"]["file"] == "reviews.ndjson.gz"
     assert manifest["reviews"]["url"].endswith("/data-20261030T160000Z/reviews.ndjson.gz")
     assert manifest["reviews"]["count"] == 1
+
+
+def test_release_ships_the_licence_texts_and_notice(repo, tmp_path):
+    out = tmp_path / "dist"
+    manifest = build(repo, out)
+
+    cdla = (out / "LICENSE-CDLA-PERMISSIVE-2.0").read_text(encoding="utf-8")
+    assert cdla.startswith("Community Data License Agreement - Permissive - Version 2.0\n")
+    assert "makes available the text of this agreement with the shared Data" in cdla
+    apache = (out / "LICENSE-APACHE-2.0").read_text(encoding="utf-8")
+    assert "Apache License" in apache and "Version 2.0, January 2004" in apache
+    assert "Open Database License" in (out / "LICENSE").read_text(encoding="utf-8")
+    assert "Database Contents License" in (out / "LICENSE-CONTENTS").read_text(encoding="utf-8")
+
+    notice = (out / "NOTICE").read_text(encoding="utf-8")
+    assert "    © OpenStreetMap contributors, Open Camping DB\n" in notice
+    assert "Overture Maps Foundation" in notice
+    for source in (
+        "Meta", "Microsoft", "PinMeTo", "Krick", "RenderSEO", "DAC", "BrightQuery",
+        "Birdeye", "Uberall", "OpenTravel Alliance", "AllThePlaces",
+    ):
+        assert f"Data from {source}. Available under" in notice
+    assert "Data from Foursquare. Copyright 2024 Foursquare Labs, Inc. All rights reserved." in notice
+    assert "Foursquare OS Places Notice" in notice
+    assert "preserving the full content of this NOTICE.txt file" in notice
+
+    # The attribution line stays as it was.
+    assert manifest["attribution"] == "© OpenStreetMap contributors, Open Camping DB"
 
 
 def test_release_is_byte_identical_on_rerun(repo, v1_osm, tmp_path):
