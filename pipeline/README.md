@@ -460,7 +460,11 @@ hand-written extract for the importer's tests.
 
 `pipeline/overture.py` matches places to Overture places and fills gaps from
 them. `import_overture` is the one entry point. The command reads and writes
-the files around it. It does no network work.
+the files around it. It does no network work. The parts that change for
+their own reasons are in their own modules: the match and name source rules
+and the files they read (`overture_rules.py`), social page parsing
+(`overture_socials.py`), candidates and decisions (`overture_candidates.py`)
+and the Markdown report (`overture_report.py`).
 
 Only these kinds are filled: every overnight kind, `information_centre`,
 `fuel`, `lpg_refill_swap`, `mechanic`, `food_and_drink`, `laundromat`,
@@ -531,7 +535,7 @@ source has a value:
 
 **Shared pages.** A website or social page that Overture gives for more
 than 5 of the places checked in one run (`SHARED_PAGE_LIMIT` in
-`pipeline/overture.py`) is a chain's or an agency's page, such as a fuel
+`pipeline/overture_rules.py`) is a chain's or an agency's page, such as a fuel
 brand's Facebook page on hundreds of stations. It is taken for none of
 them, the next page Overture gives is taken instead, and it is never
 compared in "Overture differs". Pages are compared lower case, without a

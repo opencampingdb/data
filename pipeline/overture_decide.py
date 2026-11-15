@@ -24,7 +24,8 @@ import time
 from pathlib import Path
 
 from .common import write_text
-from .overture import TIERS, apply_decisions, read_extract
+from .overture_candidates import TIERS, apply_decisions
+from .overture_rules import read_json_lines
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -45,7 +46,7 @@ def main(argv: list[str] | None = None) -> int:
 
     now = args.now or time.strftime("%Y-%m-%dT00:00:00Z", time.gmtime())
     outcome = apply_decisions(
-        args.root, read_extract(args.decisions), now=now, publish=args.publish_candidates, tiers=args.tiers
+        args.root, read_json_lines(args.decisions), now=now, publish=args.publish_candidates, tiers=args.tiers
     )
     counts = json.dumps({key: len(ids) for key, ids in outcome.items()}, sort_keys=True)
     if args.summary:

@@ -11,7 +11,8 @@ from shapely.geometry import Polygon
 
 from pipeline.common import KIND_GROUP, dump_record, place_path
 from pipeline.geometry import Geometry
-from pipeline.overture import OVERTURE_KINDS, SHARED_PAGE_LIMIT, KeptLists, import_overture, load_kept_lists, main
+from pipeline.overture import import_overture, main
+from pipeline.overture_rules import OVERTURE_KINDS, SHARED_PAGE_LIMIT, KeptLists, load_kept_lists
 from pipeline.validate import validate_repo
 
 REPO = Path(__file__).resolve().parents[2]

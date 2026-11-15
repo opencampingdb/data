@@ -11,7 +11,9 @@ import pytest
 
 from pipeline.common import load_places
 from pipeline.maproulette import DOUBLE_MAPPING, TRAVELLER_REPORTS, out_of_spec_tasks, write_challenges
-from pipeline.overture import apply_decisions, import_overture, load_kept_lists, load_links
+from pipeline.overture import import_overture
+from pipeline.overture_candidates import apply_decisions
+from pipeline.overture_rules import load_kept_lists, load_links
 from pipeline.overture import main as overture_main
 from pipeline.overture_decide import main as decide_main
 from pipeline.tests.test_overture_source import inbox_with
