@@ -29,7 +29,7 @@ from typing import Iterable
 
 from .common import dump_line, dump_record, load_places, place_path, write_text
 from .geometry import Geometry, load_geometry
-from .overture_candidates import TIERS, find_candidates
+from .overture_candidates import TIERS, find_candidates, without_shared_pages
 from .overture_report import COUNTED, render_report
 from .overture_rules import (
     OVERTURE_KINDS,
@@ -155,7 +155,14 @@ def import_overture(
                 result.name_sources += 1
         result.checked += 1
         checks.append((place_id, record, base, row))
-    shared = shared_pages([row for *_, row in checks] + unchecked, lists, result)
+    # The Overture places linked to a place are never candidates. A
+    # candidate's pages count towards SHARED_PAGE_LIMIT too, so publishing it
+    # never makes a page shared that was not, and a shared page is not its own.
+    linked = frozenset({row["id"] for *_, row in checks if row} | {link["gers"] for link in result.links.values()})
+    found, result.dropped = find_candidates(places, overture, lists, linked)
+    candidate_rows = [entry["row"] for tier in TIERS for entry in found[tier]]
+    shared = shared_pages([row for *_, row in checks] + unchecked + candidate_rows, lists, result)
+    result.candidates = without_shared_pages(found, shared, overture.release, lists)
     for place_id, record, base, row in checks:
         values = values_from(row, base, lists, shared) if row else {}
         values.update(taken_values(base, lists))
@@ -177,9 +184,6 @@ def import_overture(
             # that day keeps its later time.
             new["updated"] = max(now, record.get("updated") or now)
             result.records[place_id] = new
-    result.candidates, result.dropped = find_candidates(
-        places, overture, lists, frozenset(link["gers"] for link in result.links.values())
-    )
     return result
 
 

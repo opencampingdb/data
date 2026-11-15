@@ -13,7 +13,7 @@ from pipeline.common import dump_line, dump_record, load_places, place_path
 from pipeline.maproulette import DOUBLE_MAPPING, TRAVELLER_REPORTS, out_of_spec_tasks, write_challenges
 from pipeline.overture import import_overture
 from pipeline.overture_candidates import apply_decisions
-from pipeline.overture_rules import load_kept_lists, load_links
+from pipeline.overture_rules import SHARED_PAGE_LIMIT, load_kept_lists, load_links
 from pipeline.overture import main as overture_main
 from pipeline.overture_decide import main as decide_main
 from pipeline.tests.test_overture_source import inbox_with
@@ -306,6 +306,27 @@ def test_the_overture_place_that_names_a_place_by_its_outline_is_never_a_candida
     result = candidates([place(name=None)], [ov(metres_north=450, category="campground")], geometry=geometry)
     assert result.links[A]["gers"] == G1
     assert all_gers(result) == []
+
+
+def test_a_candidates_pages_count_towards_the_shared_page_limit_and_a_shared_page_is_not_its_own():
+    # Five parks of one chain match their Overture places, and a sixth park of
+    # the chain is a candidate. Publishing it would give the chain's page to
+    # six places, so the page is shared now, not only after publishing.
+    chain = "https://www.chainparks.example.au/"
+    parks = [place(f"ocdb_01M66CKP2X55A8CVGR95Z{i:05d}", name=f"Chain Park {i}", metres_north=i * 1000)
+             for i in range(SHARED_PAGE_LIMIT)]
+    rows = [ov(f"08f2b1a0c4d5e6f70321a1b2c{i:07d}", name=f"Chain Park {i}", metres_north=i * 1000, websites=[chain])
+            for i in range(SHARED_PAGE_LIMIT)]
+    rows.append(ov(G2, name="Chain Park Bright", category="campground", metres_north=20 * KM, confidence=0.95,
+                   websites=[chain], socials=["https://facebook.com/ChainParks/"]))
+    for row in rows[:-1]:
+        row["socials"] = ["https://www.facebook.com/ChainParks"]
+    result = candidates(parks, rows)
+    assert result.shared == {chain: SHARED_PAGE_LIMIT + 1, "https://www.facebook.com/ChainParks": SHARED_PAGE_LIMIT + 1}
+    assert [f for f in result.fills if f["key"] == "website"] == []
+    [entry] = result.candidates["weak"]
+    assert entry["gers"] == G2 and entry["website"] is None
+    assert entry["row"]["websites"] == [] and entry["row"]["socials"] == []
 
 
 def test_a_published_candidate_never_takes_the_id_of_a_place_already_there(repo):

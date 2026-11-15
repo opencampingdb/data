@@ -534,8 +534,9 @@ source has a value:
   page and gives nothing. A social link is never the website.
 
 **Shared pages.** A website or social page that Overture gives for more
-than 5 of the places checked in one run (`SHARED_PAGE_LIMIT` in
-`pipeline/overture_rules.py`) is a chain's or an agency's page, such as a fuel
+than 5 places in one run (`SHARED_PAGE_LIMIT` in
+`pipeline/overture_rules.py`), counting the places checked, the linked places
+a changelog run does not check again and the Overture candidates, is a chain's or an agency's page, such as a fuel
 brand's Facebook page on hundreds of stations. It is taken for none of
 them, the next page Overture gives is taken instead, and it is never
 compared in "Overture differs". Pages are compared lower case, without a
@@ -609,11 +610,15 @@ pool is dropped, with no one involved, by the first of these rules it breaks
    also drops the Overture place of every match, and of every candidate
    already published.
 
+An Overture place linked to a place in this run (an Overture match, a name
+source anywhere in an outline, or a published candidate) is never a
+candidate either.
+
 The rest are sorted into two tiers:
 
 - `strong`: confidence 0.9 or more, a camping `basic_category` (not only a
   camping taxonomy entry), and a website of its own (not on a directory host
-  or a social host);
+  or a social host, and not a shared page);
 - `weak`: every other candidate.
 
 Each candidate carries its GERS id, name, kind, category, taxonomy entry,

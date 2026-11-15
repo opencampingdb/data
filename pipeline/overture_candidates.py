@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .common import KIND_GROUP, OVERTURE, dump_record, load_places, place_path, write_text
+from .overture_socials import page_key, social_page
 from .overture_rules import (
     DO_NOT_MATCH_FILE,
     STATES,
@@ -150,6 +151,32 @@ def find_candidates(
             entry["tier"] = tier_of(entry, lists)
             found[entry["tier"]].append(entry)
     return found, dropped
+
+
+def without_shared_pages(found: dict, shared: frozenset[str], release: str, lists: KeptLists) -> dict:
+    """The candidates by tier again, their Overture rows without the shared pages (SHARED_PAGE_LIMIT).
+
+    A shared page is no candidate's own website, so its tier can change. The
+    row is what a published candidate takes its values from.
+    """
+    if not shared:
+        return found
+    def is_shared(url) -> bool:
+        if not isinstance(url, str):
+            return False
+        page = social_page(url)
+        return page_key(url) in shared or (page is not None and page_key(page[1]) in shared)
+
+    out = {tier: [] for tier in TIERS}
+    entries = sorted((entry for tier in TIERS for entry in found[tier]), key=lambda entry: entry["gers"])
+    for entry in entries:
+        row = dict(entry["row"])
+        for key in ("websites", "socials"):
+            row[key] = [url for url in row.get(key) or [] if not is_shared(url)]
+        fresh = candidate_entry(row, entry["kind"], release, lists)
+        fresh["tier"] = tier_of(fresh, lists)
+        out[fresh["tier"]].append(fresh)
+    return out
 
 
 DECISIONS = ("approve", "reject", "flag")
