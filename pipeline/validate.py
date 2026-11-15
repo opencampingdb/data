@@ -13,7 +13,7 @@ exits 1. Checks:
 - coordinates have at most 6 decimal places
 - fact_sources has every key of facts and no other fact, plus optional
   name, location and status entries. Sources are osm, feedback,
-  contributed, owner and community_report. The source rule and fact_rules
+  contributed, owner, community_report and overture. The source rule and fact_rules
   appear only in released records (pipeline.release), never in places/
 - the nearby facts nearest_beach, nearest_boat_ramp, nearest_major_road,
   locality and lga have the source osm: no fact report sets them
@@ -21,7 +21,8 @@ exits 1. Checks:
   not osm, none of them later than updated
 - last_confirmed is not in the future. It may be later than updated, which
   a confirmation does not move
-- standing and moderator are only on a place a traveller added (osm null)
+- standing and moderator are only on a place with osm null (a place a
+  traveller added, or an Overture candidate)
 - no two records share an id or an OSM object (merged_osm included,
   tombstones left out)
 - a tombstone (status merged) has merged_into, naming a record that is not

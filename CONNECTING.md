@@ -25,7 +25,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 13,
-  "format_minor": 1,
+  "format_minor": 2,
   "layout_version": 3,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -103,6 +103,11 @@ separately.
 
 What each format changed, newest first:
 
+- **13.2** (`layout_version` 3): the source `overture` in `fact_sources`, a
+  gap fill from Overture Maps (section 4), and Overture candidates: places
+  with `osm: null`, `overture` as the source of their name and location, and
+  `standing`. An app that expects only the sources of format 13.1 should
+  treat an unknown source as not from OSM.
 - **13.1** (`layout_version` 3): the facts `locality`, the nearest town, and
   `lga`, the council area a place is in (section 4), and the `localities`
   table of `ocdb.sqlite.gz` (section 3).
@@ -469,8 +474,10 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   requests, as the Wikimedia User-Agent policy asks.
 - `osm` is `null` for places that did not come from OpenStreetMap: places
   contributed directly to Open Camping DB, new places from feedback, places
-  found only in community reports and farm stays their owners listed.
-- `standing` is only on a place a traveller added in an app. `shown` means
+  found only in community reports, Overture candidates and farm stays their
+  owners listed.
+- `standing` is only on a place a traveller added in an app, or an Overture
+  candidate. `shown` means
   nobody has checked it yet: show it with a "not checked yet" label and let
   travellers leave such places out. `confirmed` means two travellers near it
   have found it there. The release leaves out new places that are `held` for
@@ -485,7 +492,8 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
 - `fact_sources` says where each fact came from: `osm`, `feedback` (from apps),
   `contributed` (given directly to Open Camping DB under the ODbL), `owner`
   (the place's verified owner), `community_report` (anonymous community
-  reports from public camping groups, imported by a person; see below) or
+  reports from public camping groups, imported by a person; see below),
+  `overture` (a gap fill from Overture Maps; see below) or
   `rule` (set by a documented rule, not reported by anyone; see below). It may
   also have `name`, `location`, `kind`, `status` and `description` entries.
   When `name`, `location` or `kind` is missing, the name, position and kind
@@ -500,6 +508,15 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   is `2026-03-01T00:00:00Z`), not when it was imported. A place
   found only in community reports is located at a specific mapped feature,
   never a town centre. These values are never passed to OpenStreetMap.
+- `overture` values come from Overture Maps places matched to the place:
+  a name for a place with none, and the website, phone and address where
+  the place has no value. They only fill gaps: a value from OSM, a
+  traveller, a contributor, the owner or a community report replaces one,
+  and travellers' reports can take one down. Their `fact_dates` entry is
+  the day they were taken. A place with `osm: null` and `overture` name and
+  location is an Overture candidate, a place Overture lists and OSM lacks,
+  published with `standing` `shown`. These values are never passed to
+  OpenStreetMap.
 - `rule` values are what a place of that kind usually has, set by the
   release where no source gives a value. `fact_rules` names the rule for
   each one, and [schema/fact_rules.json](schema/fact_rules.json) lists them:
@@ -518,7 +535,7 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
 - How fresh a place's information is: `osm.timestamp` is when its OSM object
   was last edited by anyone, in UTC. `fact_dates` gives, for each value that
   did not come from OSM (each `fact_sources` entry that is `feedback`,
-  `contributed`, `owner` or `community_report`), when it was accepted, or for
+  `contributed`, `owner`, `community_report` or `overture`), when it was accepted, or for
   `community_report` when it was reported. The newest of these is
   when someone last said something about the place. `updated` is when the
   record's content last changed in Open Camping DB, which is not the same:

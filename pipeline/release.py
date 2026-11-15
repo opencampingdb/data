@@ -72,13 +72,16 @@ from .common import (
 # paid is no longer collected. The facts charge, charge_conditional and charge_powered
 # hold what a place publishes, and osm.check_dates says when a mapper checked a charge.
 # 13.1: the facts locality and lga, and the localities table of ocdb.sqlite.gz (layout 3).
+# 13.2: fact_sources may be overture (a gap fill from Overture Maps), and Overture
+# candidates are released: places with osm null whose name and location come from
+# overture, with standing. Raised as a minor change by decision (opencampingdb/data#187).
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 13
-FORMAT_MINOR = 1
+FORMAT_MINOR = 2
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 DEFAULT_REPOSITORY = "opencampingdb/data"

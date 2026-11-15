@@ -25,7 +25,7 @@ release workflow runs Validate, Release, Database and Place index.
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for a person to check and a mapper to tag in OSM. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
-| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. So are values with the source `overture` and Overture candidates, and a task never shows a name from Overture. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 | Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`), `charge` and `charge_conditional` against the Key:charge syntax. Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
 
 Tests: `python -m pytest`. The out of spec tests skip without
@@ -371,9 +371,11 @@ rule, never stored in `places/` (see "Rules" under "Release").
   `rating: null` and every fact sourced from `osm`.
 - For a matched record, `name`, `kind`, `group`, `location`, `osm` and the
   OSM-sourced facts are replaced with what OSM says now. A fact whose source
-  is anything but `osm` (`feedback`, `contributed`, `owner` or
-  `community_report`) is kept, with its source: sync never turns a community
-  report value into an OSM value. An OSM-sourced fact whose tag has gone is
+  is anything but `osm` (`feedback`, `contributed`, `owner`,
+  `community_report` or `overture`) is kept, with its source: sync never turns a community
+  report value into an OSM value. The exception is `overture`, a gap fill:
+  once OSM gives a value for that fact, name or location, OSM's value
+  replaces it and its source and date are dropped. An OSM-sourced fact whose tag has gone is
   removed. `status` and `rating` are never touched. A kind change counts as
   an update.
 - A record without an OSM link (`osm: null`: a contributed place, a new
@@ -401,7 +403,8 @@ rule, never stored in `places/` (see "Rules" under "Release").
   does not move: the place did not change.
 - `fact_dates` says when each value that is not from OSM was accepted: one
   entry, in the same UTC form as `updated`, for every `fact_sources` entry
-  that is `feedback`, `contributed`, `owner` or `community_report`. Whoever
+  that is `feedback`, `contributed`, `owner`, `community_report` or
+  `overture`. Whoever
   sets such a value sets its date, the feedback engine for `feedback` and
   `owner` and the person opening the PR for `contributed`. A
   `community_report` value is dated the first day of the month the report
@@ -669,7 +672,8 @@ and open a PR.
   have at most 6 decimal places;
 - that `fact_sources` has an entry for every fact and no other fact, plus
   optional `name`, `location`, `kind`, `status` and `description` entries,
-  each `osm`, `feedback`, `contributed`, `owner` or `community_report`. No
+  each `osm`, `feedback`, `contributed`, `owner`, `community_report` or
+  `overture`. No
   file holds a `rule` source or `fact_rules`: only the release sets those;
 - that the nearby facts `nearest_beach`, `nearest_boat_ramp`,
   `nearest_major_road`, `locality` and `lga` have the source `osm`;

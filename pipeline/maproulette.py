@@ -85,6 +85,10 @@ Values from community reports (source community_report) never reach any
 file, and neither does a place whose name or location came from them, even
 if it has an OSM link: those reports are kept out of OSM.
 
+Values from Overture Maps (source overture) never reach any file either,
+and an Overture candidate (osm null) is never a task. A task for an OSM
+place whose name came from Overture shows it as an unnamed place.
+
 Each feature carries "id" (the Open Camping DB id, which MapRoulette uses to
 match a task across rebuilds) and "@id" (the OSM object, such as node/123).
 Report tasks repeat the id as "ocdb_id" for the instructions to show.
@@ -98,7 +102,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from .common import KIND_LABEL, ROOFED_KINDS, from_community_report, load_places, write_text
+from .common import KIND_LABEL, OVERTURE, ROOFED_KINDS, from_community_report, load_places, write_text
 from .duplicates import MAX_DISTANCE_M
 from .geometry import Geometry, judge, load_geometry
 from .out_of_spec import NO_NODE, OH_CHECK_DIR, charge_conditional_ok, charge_ok, check_opening_hours, checker_ready, phone_out_of_spec
@@ -118,7 +122,7 @@ TRAVELLER_REPORTS = "traveller_reports.geojson"
 OUT_OF_SPEC = "out_of_spec.geojson"
 
 # Only these sources are passed to OSM's mappers. Everything in NOT_FOR_OSM
-# (contributed values, community reports) stays in Open Camping DB.
+# (contributed values, community reports, Overture values) stays in Open Camping DB.
 REPORT_SOURCES = ("feedback", "owner")
 NEVER_SENT = ("booking_url",)
 CONTACT_FACTS = ("website", "phone", "phone_2", "email", "facebook", "instagram", "tiktok", "x")
@@ -375,6 +379,13 @@ def record_url(record: dict) -> str:
     return f"{DATA_REPO_URL}/blob/main/places/{record['id'][-2:].lower()}/{record['id']}.json"
 
 
+def task_name(record: dict) -> str:
+    """The place's name for a task. A name from Overture Maps never goes to OSM, so it shows as unnamed."""
+    if record.get("fact_sources", {}).get("name") == OVERTURE:
+        return "Unnamed place"
+    return record.get("name") or "Unnamed place"
+
+
 def feature(record: dict, ref: str, location: dict, properties: dict) -> dict:
     return {
         "type": "Feature",
@@ -460,7 +471,7 @@ def double_mapping_tasks(places: dict, extract: dict, geometry: Geometry | None 
             continue
         objects = " and ".join(present)
         properties = {
-            "name": record.get("name") or "Unnamed place",
+            "name": task_name(record),
             "objects": objects,
             "fix": double_mapping_fix(present, extract),
             "record": record_url(record),
@@ -679,7 +690,7 @@ def traveller_report_tasks(places: dict, extract: dict, evidence: dict, now: dat
         if not changes:
             continue
         properties = {
-            "name": record.get("name") or "Unnamed place",
+            "name": task_name(record),
             "changes": "\n".join(changes),
             "ocdb_id": record["id"],
             "record": record_url(record),
@@ -756,7 +767,7 @@ def out_of_spec_tasks(places: dict, extract: dict) -> list[dict]:
                 found.append(("charge:conditional", value, CHARGE_CONDITIONAL_FIX))
         for tag, value, fix in found:
             properties = {
-                "name": record.get("name") or "Unnamed place",
+                "name": task_name(record),
                 "tag": tag,
                 "value": value,
                 "check": f"OpenStreetMap has {tag}={value} on {ref}. {fix}\n\n{OUT_OF_SPEC_SKIP}",
