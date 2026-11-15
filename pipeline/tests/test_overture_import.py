@@ -11,7 +11,7 @@ from shapely.geometry import Polygon
 
 from pipeline.common import KIND_GROUP, dump_record, place_path
 from pipeline.geometry import Geometry
-from pipeline.overture import OVERTURE_KINDS, KeptLists, import_overture, load_kept_lists, main
+from pipeline.overture import OVERTURE_KINDS, SHARED_PAGE_LIMIT, KeptLists, import_overture, load_kept_lists, main
 from pipeline.validate import validate_repo
 
 REPO = Path(__file__).resolve().parents[2]
@@ -427,6 +427,54 @@ def test_overture_differs_leaves_out_values_from_other_sources_and_directory_hos
     assert run([owner], [ov()]).differs == []
     osm = place(facts={"website": "https://other.example.au/"})
     assert run([osm], [ov(websites=["https://placestars.com/riverbend"])]).differs == []
+
+
+# ------------------------------------------------------------ shared pages
+
+SHELL_PAGE = "https://www.facebook.com/Shell"
+SHELL_SITE = "https://www.shell.com.au/"
+
+
+def stations(n, **ov_changes):
+    """n fuel stations 1 km apart, each matched to its own Overture place that gives one chain's pages."""
+    places = [place(f"ocdb_01M66CKP2X55A8CVGR95Z{i:05d}", kind="fuel", name="Shell Coles Express",
+                    metres_north=i * 1000) for i in range(n)]
+    rows = [ov(f"08f2b1a0c4d5e6f70321a1b2c{i:07d}", name="Shell Coles Express", category="gas_station",
+               metres_north=i * 1000, websites=[SHELL_SITE], socials=[SHELL_PAGE], phones=[], **ov_changes)
+            for i in range(n)]
+    return places, rows
+
+
+def test_a_page_shared_by_more_than_the_limit_of_places_is_taken_for_none():
+    assert SHARED_PAGE_LIMIT == 5
+    places, rows = stations(SHARED_PAGE_LIMIT + 1)
+    result = run(places, rows)
+    assert result.fills == []
+    assert result.shared == {SHELL_PAGE: 6, SHELL_SITE: 6}
+
+
+def test_a_page_given_for_up_to_the_limit_of_places_is_taken():
+    places, rows = stations(SHARED_PAGE_LIMIT)
+    result = run(places, rows)
+    assert sorted({(f["key"], f["value"]) for f in result.fills}) == [("facebook", SHELL_PAGE), ("website", SHELL_SITE)]
+    assert len(result.fills) == 2 * SHARED_PAGE_LIMIT
+    assert result.shared == {}
+
+
+def test_a_shared_page_gives_way_to_the_next_page_overture_gives():
+    places, rows = stations(SHARED_PAGE_LIMIT + 1)
+    rows[0]["websites"] = [SHELL_SITE, "https://shellbright.example.au/"]
+    result = run(places, rows)
+    assert [(f["place"], f["key"], f["value"]) for f in result.fills] == [
+        (places[0]["id"], "website", "https://shellbright.example.au/"),
+    ]
+
+
+def test_a_shared_page_is_never_compared_with_the_osm_website():
+    places, rows = stations(SHARED_PAGE_LIMIT + 1)
+    places[0]["facts"] = {"website": "https://shellbright.example.au/"}
+    places[0]["fact_sources"] = {"website": "osm"}
+    assert run(places, rows).differs == []
 
 
 # ------------------------------------------------------------------ refresh

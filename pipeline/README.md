@@ -523,6 +523,14 @@ website, phone and address where no other source has a value:
   post, photo, event, video, group or share link, or a short link, is not a
   page and gives nothing. A social link is never the website.
 
+**Shared pages.** A website or social page that Overture gives for more
+than 5 of the places checked in one run (`SHARED_PAGE_LIMIT` in
+`pipeline/overture.py`) is a chain's or an agency's page, such as a fuel
+brand's Facebook page on hundreds of stations. It is taken for none of
+them, the next page Overture gives is taken instead, and it is never
+compared in "Overture differs". Pages are compared lower case, without a
+trailing `/`. The report lists each one with its count of places.
+
 Emails, brand, operating status and confidence are never taken.
 Each value taken is sourced `overture` with a fact date of the run. A value
 that has not changed keeps its date.

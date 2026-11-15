@@ -67,6 +67,12 @@ FILLED_FACTS = ("website", "phone", "address", *SOCIAL_FACTS)
 # run does not check a place linked to one of these again.
 UNCHANGED = ("unchanged", None)
 
+# A website or social page Overture gives for more than this many places in
+# one run is a chain's or an agency's shared page (Shell's Facebook page on
+# hundreds of stations), not any one place's: it is taken for none of them
+# and never compared in "Overture differs".
+SHARED_PAGE_LIMIT = 5
+
 # The strong match.
 MATCH_DISTANCE_M = 100
 MATCH_NAME_SIMILARITY = 0.85
@@ -128,7 +134,8 @@ class ImportResult:
     taken off ({place, key, value}). differs: matched places where Overture's
     website or phone disagrees with OSM's. links: the new link file, place id
     to {gers, release}. candidates: Overture candidates by tier (TIERS).
-    dropped: the camping places each junk rule dropped, by rule.
+    dropped: the camping places each junk rule dropped, by rule. shared: each
+    shared page left out (SHARED_PAGE_LIMIT) and how many places it was given for.
     """
 
     release: str
@@ -139,6 +146,7 @@ class ImportResult:
     links: dict[str, dict] = field(default_factory=dict)
     candidates: dict[str, list[dict]] = field(default_factory=dict)
     dropped: dict[str, list[dict]] = field(default_factory=dict)
+    shared: dict[str, int] = field(default_factory=dict)
     checked: int = 0
 
 
@@ -531,24 +539,39 @@ def social_page(url: str) -> tuple[str, str] | None:
     return "x", f"https://x.com/{first}"
 
 
-def social_pages(row: dict) -> dict[str, str]:
-    """Each social fact's page: the first from Overture's socials, then from its websites."""
+def page_key(url: str) -> str:
+    """A website or social page as compared for SHARED_PAGE_LIMIT: lower case, no trailing slash."""
+    return url.strip().lower().rstrip("/")
+
+
+def all_social_pages(row: dict) -> list[tuple[str, str]]:
+    """Every social page an Overture place gives, as (fact, page), socials first, then websites."""
+    pages = [social_page(url) if isinstance(url, str) else None for url in [*(row.get("socials") or []), *(row.get("websites") or [])]]
+    return [page for page in pages if page and len(page[1]) <= 500]
+
+
+def social_pages(row: dict, shared: frozenset[str] = frozenset()) -> dict[str, str]:
+    """Each social fact's page: the first from Overture's socials, then from its websites, leaving out shared pages."""
     out = {}
-    for url in [*(row.get("socials") or []), *(row.get("websites") or [])]:
-        page = social_page(url) if isinstance(url, str) else None
-        if page and page[0] not in out and len(page[1]) <= 500:
-            out[page[0]] = page[1]
+    for key, page in all_social_pages(row):
+        if key not in out and page_key(page) not in shared:
+            out[key] = page
     return out
 
 
-def values_from(row: dict, base: dict, lists: KeptLists) -> dict:
+def offered_pages(row: dict, lists: KeptLists) -> set[str]:
+    """Every website and social page an Overture place gives, as page keys."""
+    return {page_key(url) for url in own_websites(row, lists)} | {page_key(page) for _, page in all_social_pages(row)}
+
+
+def values_from(row: dict, base: dict, lists: KeptLists, shared: frozenset[str] = frozenset()) -> dict:
     """The values a matched Overture place gives where the base record has none."""
     out = {}
     facts = base.get("facts", {})
     if not base.get("name") and row.get("name") and len(row["name"]) <= 300:
         out["name"] = row["name"].strip()
     if "website" not in facts:
-        websites = [url for url in own_websites(row, lists) if len(url) <= 500]
+        websites = [url for url in own_websites(row, lists, shared) if len(url) <= 500]
         if websites:
             out["website"] = websites[0]
     if "phone" not in facts:
@@ -559,7 +582,7 @@ def values_from(row: dict, base: dict, lists: KeptLists) -> dict:
         address = overture_address(row.get("addresses") or [])
         if address:
             out["address"] = address
-    for key, page in social_pages(row).items():
+    for key, page in social_pages(row, shared).items():
         if key not in facts:
             out[key] = page
     return out
@@ -568,8 +591,8 @@ def values_from(row: dict, base: dict, lists: KeptLists) -> dict:
 SOCIAL_HOST_LIST = tuple(host for hosts in SOCIAL_HOSTS.values() for host in hosts)
 
 
-def own_websites(row: dict, lists: KeptLists) -> list[str]:
-    """Overture's websites, leaving out directory hosts and social hosts."""
+def own_websites(row: dict, lists: KeptLists, shared: frozenset[str] = frozenset()) -> list[str]:
+    """Overture's websites, leaving out directory hosts, social hosts and shared pages."""
     return [
         url.strip()
         for url in row.get("websites") or []
@@ -577,14 +600,15 @@ def own_websites(row: dict, lists: KeptLists) -> list[str]:
         and re.match(r"^https?://", url.strip())
         and not on_host(host_of(url), lists.directory_hosts)
         and not on_host(host_of(url), SOCIAL_HOST_LIST)
+        and page_key(url) not in shared
     ]
 
 
-def differences(base: dict, row: dict, lists: KeptLists) -> list[dict]:
+def differences(base: dict, row: dict, lists: KeptLists, shared: frozenset[str] = frozenset()) -> list[dict]:
     """Where Overture's website or phone disagrees with an OSM value.
 
     Websites are compared by host, phones as Australian numbers. They agree
-    when any Overture value matches any of OSM's.
+    when any Overture value matches any of OSM's. A shared page is not compared.
     """
     facts, sources = base.get("facts", {}), base.get("fact_sources", {})
     out = []
@@ -592,7 +616,7 @@ def differences(base: dict, row: dict, lists: KeptLists) -> list[dict]:
     if sources.get("phone") == "osm" and phones:
         if not {phone_key(p) for p in osm_phones(facts["phone"])} & {phone_key(p) for p in phones}:
             out.append(("phone", facts["phone"], phones[0]))
-    websites = own_websites(row, lists)
+    websites = own_websites(row, lists, shared)
     if sources.get("website") == "osm" and websites:
         if host_of(facts["website"]) not in {host_of(url) for url in websites}:
             out.append(("website", facts["website"], websites[0]))
@@ -670,6 +694,7 @@ def import_overture(
         extract, lists.categories, {link["gers"] for link in links.values()}, lists.candidate_kinds
     )
     result = ImportResult(release=overture.release)
+    checks = []
     for place_id in sorted(places):
         record = places[place_id]
         if record.get("status") == "merged":
@@ -696,9 +721,12 @@ def import_overture(
         elif record.get("kind") in OVERTURE_KINDS:
             row = match_for(base, overture, lists, geometry)
         result.checked += 1
-        values = values_from(row, base, lists) if row else {}
+        checks.append((place_id, record, base, row))
+    shared = shared_pages(checks, lists, result)
+    for place_id, record, base, row in checks:
+        values = values_from(row, base, lists, shared) if row else {}
         if row:
-            result.differs.extend(differences(base, row, lists))
+            result.differs.extend(differences(base, row, lists, shared))
             result.links[place_id] = {"gers": row["id"], "release": overture.release}
         new = with_values(base, values, record, now)
         before_values, after_values = overture_values(record), overture_values(new)
@@ -713,6 +741,24 @@ def import_overture(
             result.records[place_id] = new
     result.candidates, result.dropped = find_candidates(places, overture, lists)
     return result
+
+
+def shared_pages(checks: list[tuple], lists: KeptLists, result: ImportResult) -> frozenset[str]:
+    """The page keys Overture gives for more than SHARED_PAGE_LIMIT of the checked places.
+
+    Notes each one in result.shared, by the page as first given, with its count.
+    """
+    counts, shown = {}, {}
+    for _, _, _, row in checks:
+        if not row:
+            continue
+        for key in offered_pages(row, lists):
+            counts[key] = counts.get(key, 0) + 1
+        for url in [*own_websites(row, lists), *(page for _, page in all_social_pages(row))]:
+            shown.setdefault(page_key(url), url)
+    shared = {key for key, count in counts.items() if count > SHARED_PAGE_LIMIT}
+    result.shared = {shown[key]: counts[key] for key in sorted(shared, key=lambda k: (-counts[k], k))}
+    return frozenset(shared)
 
 
 # --------------------------------------------------------------- candidates
@@ -1003,6 +1049,7 @@ def summary_of(result: ImportResult, places: dict[str, dict]) -> dict:
         "fills": len(result.fills),
         "removals": len(result.removals),
         "differs": len(result.differs),
+        "shared_pages": len(result.shared),
         "links": len(result.links),
         "candidates": {tier: len(rows) for tier, rows in result.candidates.items()},
         "dropped": {rule: len(rows) for rule, rows in sorted(result.dropped.items())},
@@ -1111,6 +1158,18 @@ def _render_report(result: ImportResult, summary: dict, limit: int) -> str:
                 f"| {cell(row['overture_name'])} (`{row['gers']}`, {oloc['lat']},{oloc['lon']}) |"
             )
         lines += more(len(result.differs), limit)
+    else:
+        lines.append("None.")
+    lines += ["", "## Shared pages left out", ""]
+    if result.shared:
+        lines += [
+            f"Pages Overture gives for more than {SHARED_PAGE_LIMIT} places, taken for none of them.",
+            "",
+            "| Page | Places |",
+            "|---|---:|",
+        ]
+        lines += [f"| {cell(page)} | {count} |" for page, count in list(result.shared.items())[:limit]]
+        lines += more(len(result.shared), limit)
     else:
         lines.append("None.")
     lines += ["", "## Taken off", ""]

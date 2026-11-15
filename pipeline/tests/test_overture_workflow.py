@@ -65,6 +65,15 @@ def test_the_report_lists_the_candidates_by_tier():
     assert "### flagged (0)" in text
 
 
+def test_the_report_and_summary_list_the_shared_pages_left_out():
+    result = ImportResult(release=RELEASE, shared={"https://www.facebook.com/Shell": 642})
+    summary = summary_of(result, {})
+    assert summary["shared_pages"] == 1
+    text = render_report(result, summary)
+    assert "## Shared pages left out" in text
+    assert "| https://www.facebook.com/Shell | 642 |" in text
+
+
 def test_the_report_says_none_when_there_are_no_gap_fills_or_candidates():
     result = run([place(facts={"website": "https://riverbend.example.au/", "phone": "+61 2 5550 0101"})], [ov()])
     text = render_report(result, summary_of(result, {}))
@@ -74,7 +83,8 @@ def test_the_report_says_none_when_there_are_no_gap_fills_or_candidates():
 
 def test_the_report_fits_a_pr_body_when_every_place_is_filled():
     places = many_places(3000)
-    rows = [ov(f"08f2b1a0c4d5e6f70321a1b2c{i:07d}", metres_north=i * 1000) for i in range(3000)]
+    rows = [ov(f"08f2b1a0c4d5e6f70321a1b2c{i:07d}", metres_north=i * 1000, websites=[f"https://park{i}.example.au/"])
+            for i in range(3000)]
     result = run(list(places.values()), rows)
     assert len(result.fills) == 6000
     text = render_report(result, summary_of(result, places))
