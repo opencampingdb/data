@@ -557,10 +557,13 @@ leaves a value listed there alone while the record holds it. Every other
 `overture` value is still replaced once OSM gives one, and a traveller's
 report still replaces a taken value.
 
-**Changelog runs.** The first run checks every place. With `--changelog`, a
-linked place whose Overture place the changelog lists as `unchanged`, or
-does not list, keeps its values and link without a check. Every other place
-is checked as in a full run, so places with no link can still match.
+**Changelog runs.** The first run checks every place. With `--changelog`
+(spec decision 13), a linked place is checked again only when the changelog
+lists its Overture place as `data_changed` or `removed`. One the changelog
+lists as `unchanged`, or does not list, keeps its values and link without a
+check. A place with no link is matched only against Overture places the
+changelog lists as `added` or `data_changed`: an unchanged Overture place it
+did not match last time cannot match it now.
 
 **Report and summary.** The report lists the counts, each kind's names,
 websites, phones and addresses before and after, each gap fill (the place,

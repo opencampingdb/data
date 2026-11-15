@@ -614,10 +614,11 @@ def test_the_link_file_lists_each_matched_place_with_its_gers_id_and_the_release
     assert result.links == {A: {"gers": G1, "release": RELEASE}, B: {"gers": G2, "release": RELEASE}}
 
 
-def test_a_changelog_run_does_not_recheck_a_place_whose_overture_place_is_unchanged():
-    # Overture's phone differs, but the changelog says unchanged, so the place is not looked at again.
-    for change in ("unchanged", None):
-        result = run([filled_park()], [ov(phones=["+61 2 5550 0202"], change=change)], links=LINKED, changelog_only=True)
+def test_a_changelog_run_does_not_recheck_a_place_whose_overture_place_the_changelog_does_not_list_as_changed():
+    # Overture's phone differs, but the changelog says unchanged or does not list
+    # the GERS id, so the place is not looked at again.
+    for rows in ([ov(phones=["+61 2 5550 0202"], change="unchanged")], [ov(phones=["+61 2 5550 0202"], change=None)], []):
+        result = run([filled_park()], rows, links=LINKED, changelog_only=True)
         assert result.records == {} and result.fills == []
         assert result.links == {A: {"gers": G1, "release": RELEASE}}
     # A full run does.
@@ -628,17 +629,25 @@ def test_a_changelog_run_does_not_recheck_a_place_whose_overture_place_is_unchan
 @pytest.mark.parametrize("rows,phone", [
     ([ov(phones=["+61 2 5550 0202"], change="data_changed")], "+61 2 5550 0202"),
     ([{"id": G1, "change": "removed"}], None),
-    ([], None),
 ])
 def test_a_changelog_run_rechecks_a_changed_or_removed_overture_place(rows, phone):
     result = run([filled_park()], rows, links=LINKED, changelog_only=True)
     assert result.records[A]["facts"].get("phone") == phone
 
 
-def test_a_changelog_run_still_matches_places_with_no_link():
-    result = run([place()], [ov(change="unchanged")], changelog_only=True)
+@pytest.mark.parametrize("change", ["added", "data_changed"])
+def test_a_changelog_run_matches_places_with_no_link_to_added_or_changed_overture_places(change):
+    result = run([place()], [ov(change=change)], changelog_only=True)
     assert result.links == {A: {"gers": G1, "release": RELEASE}}
     assert result.records[A]["facts"]["website"] == "https://riverbend.example.au/"
+
+
+@pytest.mark.parametrize("change", ["unchanged", None])
+def test_a_changelog_run_does_not_match_places_with_no_link_to_unchanged_overture_places(change):
+    result = run([place()], [ov(change=change)], changelog_only=True)
+    assert result.links == {} and result.records == {}
+    unnamed = place(name=None)
+    assert run([unnamed], [ov(change=change)], changelog_only=True).records == {}
 
 
 def test_a_matched_overture_place_is_never_a_candidate():

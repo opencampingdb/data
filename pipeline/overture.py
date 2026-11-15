@@ -64,9 +64,12 @@ SOCIAL_FACTS = tuple(SOCIAL_HOSTS)
 # The facts a match fills, besides a name for an unnamed place.
 FILLED_FACTS = ("website", "phone", "address", *SOCIAL_FACTS)
 
-# Changelog entries that mean an Overture place has not changed. A changelog
-# run does not check a place linked to one of these again.
+# Changelog entries that mean an Overture place has not changed (None: the
+# changelog does not list it). A changelog run does not check a place linked
+# to one of these again.
 UNCHANGED = ("unchanged", None)
+# Changelog entries a changelog run matches places with no link against.
+FRESH = ("added", "data_changed")
 
 # A website or social page Overture gives for more than this many places in
 # one run is a chain's or an agency's shared page (Shell's Facebook page on
@@ -395,14 +398,18 @@ def strip_overture(record: dict) -> dict:
     return base
 
 
-def strong_match(record: dict, overture: Overture, lists: KeptLists) -> dict | None:
-    """The one Overture place that strongly matches a named place, or None."""
+def strong_match(record: dict, overture: Overture, lists: KeptLists, fresh_only: bool = False) -> dict | None:
+    """The one Overture place that strongly matches a named place, or None.
+
+    With fresh_only, only Overture places the changelog lists as added or changed count.
+    """
     name = normalised_name(record["name"])
     loc = record["location"]
     passing = [
         row
         for _, row in near(overture, loc["lat"], loc["lon"], MATCH_DISTANCE_M)
-        if fits(row, record["kind"], lists.categories)
+        if (not fresh_only or row.get("change") in FRESH)
+        and fits(row, record["kind"], lists.categories)
         and (row.get("confidence") or 0) >= MATCH_CONFIDENCE
         and jaro_winkler(name, normalised_name(row.get("name"))) >= MATCH_NAME_SIMILARITY
         and (record["id"], row["id"]) not in lists.do_not_match
@@ -443,8 +450,13 @@ def near_outline(overture: Overture, area, metres: float) -> list[dict]:
     return out
 
 
-def name_match(record: dict, overture: Overture, lists: KeptLists, geometry: Geometry) -> dict | None:
-    """The one confident Overture place that names an unnamed place, or None."""
+def name_match(
+    record: dict, overture: Overture, lists: KeptLists, geometry: Geometry, fresh_only: bool = False
+) -> dict | None:
+    """The one confident Overture place that names an unnamed place, or None.
+
+    With fresh_only, only Overture places the changelog lists as added or changed count.
+    """
     area = geometry.areas.get(osm_ref(record))
     if area is not None:
         nearby = near_outline(overture, area, NAME_DISTANCE_M)
@@ -454,7 +466,8 @@ def name_match(record: dict, overture: Overture, lists: KeptLists, geometry: Geo
     passing = [
         row
         for row in nearby
-        if row.get("name")
+        if (not fresh_only or row.get("change") in FRESH)
+        and row.get("name")
         and fits(row, record["kind"], lists.categories)
         and (row.get("confidence") or 0) >= NAME_CONFIDENCE
         and (record["id"], row["id"]) not in lists.do_not_match
@@ -462,11 +475,13 @@ def name_match(record: dict, overture: Overture, lists: KeptLists, geometry: Geo
     return passing[0] if len(passing) == 1 else None
 
 
-def match_for(record: dict, overture: Overture, lists: KeptLists, geometry: Geometry) -> dict | None:
+def match_for(
+    record: dict, overture: Overture, lists: KeptLists, geometry: Geometry, fresh_only: bool = False
+) -> dict | None:
     """The record's Overture match: the strong match for a named place, the name rule for an unnamed one."""
     if record.get("name"):
-        return strong_match(record, overture, lists)
-    return name_match(record, overture, lists, geometry)
+        return strong_match(record, overture, lists, fresh_only)
+    return name_match(record, overture, lists, geometry, fresh_only)
 
 
 # First path pieces that are a post, photo, event, share link or a site page,
@@ -690,9 +705,11 @@ def import_overture(
 
     places: every record by id. extract: the Overture extract's lines, the
     header first. links: the link file as read, place id to {gers, release}.
-    now: the run time, used for fact dates and updated. With changelog_only,
-    a linked place whose Overture place the changelog lists as unchanged (or
-    does not list) is not checked again: it keeps its values and link.
+    now: the run time, used for fact dates and updated. With changelog_only
+    (spec decision 13), a linked place is checked again only when the
+    changelog lists its Overture place as changed or removed: otherwise it
+    keeps its values and link. A place with no link is matched only against
+    Overture places the changelog lists as added or changed.
     """
     geometry = geometry or Geometry()
     overture = read_overture(
@@ -709,8 +726,7 @@ def import_overture(
             changelog_only
             and link
             and record.get("kind") in OVERTURE_KINDS
-            and link["gers"] in overture.changes
-            and overture.changes[link["gers"]] in UNCHANGED
+            and overture.changes.get(link["gers"]) in UNCHANGED
         ):
             # The changelog says the Overture place has not changed: keep the
             # place as it is and note the link as seen in this release.
@@ -724,7 +740,7 @@ def import_overture(
             if link and not row:
                 result.links[place_id] = link
         elif record.get("kind") in OVERTURE_KINDS:
-            row = match_for(base, overture, lists, geometry)
+            row = match_for(base, overture, lists, geometry, fresh_only=changelog_only and not link)
         result.checked += 1
         checks.append((place_id, record, base, row))
     shared = shared_pages(checks, lists, result)
@@ -1236,7 +1252,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("extract", type=Path, help="Overture extract written by tools/overture-pull/pull.py")
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
     parser.add_argument("--geometry", type=Path, help="geometry sidecar written by pipeline.extract --geometry, for outlines")
-    parser.add_argument("--changelog", action="store_true", help="check again only the linked places the changelog lists as changed or removed")
+    parser.add_argument("--changelog", action="store_true", help="check again only the linked places the changelog lists as changed or removed, "
+                        "and match the rest only against Overture places it lists as added or changed")
     parser.add_argument("--report", type=Path, default=Path("overture-report.md"))
     parser.add_argument("--summary", type=Path, help="also write counts as JSON here")
     parser.add_argument("--candidates", type=Path, help="also write the Overture candidates here, one line each, best tier first")
