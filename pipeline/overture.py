@@ -162,7 +162,11 @@ class ImportResult:
 
 
 def load_kept_lists(root: Path) -> KeptLists:
-    """Read the category map, the directory hosts and the do-not-match list from the repository."""
+    """Read the kept lists from the repository's overture/ folder.
+
+    categories.json, directory-hosts.json, and when present do-not-match.json,
+    chains.json and taken.json.
+    """
     root = Path(root)
     category_file = json.loads((root / CATEGORIES_FILE).read_text(encoding="utf-8"))
     hosts = json.loads((root / DIRECTORY_HOSTS_FILE).read_text(encoding="utf-8"))["hosts"]

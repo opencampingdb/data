@@ -1,4 +1,4 @@
-"""Merge two records of the same place. Run by a person; the monthly Overture workflow runs --auto.
+"""Merge two records of the same place. Run by a person, never by a workflow.
 
 Usage:
     python -m pipeline.merge <keep_id> <drop_id> --root . [--part]

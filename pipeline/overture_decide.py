@@ -37,7 +37,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--tier", action="append", choices=TIERS, dest="tiers",
-        help="publish approved candidates of this tier only (repeat for more; default: every tier)",
+        help="publish approved candidates of this tier only (repeat for more, default every tier)",
     )
     parser.add_argument("--summary", type=Path, help="also write the count of each outcome here, as JSON")
     parser.add_argument("--now", help="the run time, UTC (default: today at 00:00:00Z)")

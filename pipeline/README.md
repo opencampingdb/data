@@ -25,7 +25,7 @@ Place index.
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews; with `--auto` every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, and with `--auto` by the monthly Overture workflow |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews. With `--auto`, every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, never by a workflow |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for a person to check and a mapper to tag in OSM. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. So are values with the source `overture` and Overture candidates, and a task never shows a name from Overture. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
@@ -459,7 +459,7 @@ hand-written extract for the importer's tests.
 ## Overture import
 
 `pipeline/overture.py` matches places to Overture places and fills gaps from
-them. `import_overture` is the one entry point; the command reads and writes
+them. `import_overture` is the one entry point. The command reads and writes
 the files around it. It does no network work.
 
 Only these kinds are filled: every overnight kind, `information_centre`,
@@ -656,8 +656,8 @@ the third or fourth week.
    and `overture/do-not-match.json` over from the last `overture-sync` branch,
    where the AI reviewer and people wrote them. The decisions file replaces
    main's, and the do-not-match list is joined to main's. The run does not
-   run the automatic merge rule: the nightly OSM sync applies it, and the
-   import works from the places as they are after it.
+   run the automatic merge rule (`pipeline.merge --auto`, which a person
+   runs). The import works from the places as they are after it.
 3. **The decisions.** `pipeline.overture_decide overture/decisions.ndjson
    --publish-candidates` acts on the carried decisions: rejections go on the
    do-not-match list and approved candidates are published. The workflow
