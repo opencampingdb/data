@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4/2-6",
+      "postcode": "3803",
+      "state": "VIC",
+      "street": "Melverton Dr",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/109679975040021",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Hallam South Road"
-    }
+    },
+    "phone": "+61387863387",
+    "website": "http://www.aneautomotive.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPXEQY9NMWW58AH9ZKT3Q",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "4754",
+      "state": "QLD",
+      "street": "Caroline St",
+      "suburb": "Mirani"
+    },
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Mackay Eungella Road"
-    }
+    },
+    "phone": "(07) 4959 1239",
+    "website": "https://www.mackayregion.com/accommodation/mirani-caravan-park-and-swimming-pool"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES924HSCNCS17CS78XNXX",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

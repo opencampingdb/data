@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "6760",
+      "state": "WA",
+      "street": "Francis St",
+      "suburb": "Marble Bar"
+    },
+    "facebook": "https://www.facebook.com/1512085732369345",
     "lga": {
       "name": "Shire of East Pilbara",
       "osm_id": 11690247
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Francis Street"
-    }
+    },
+    "phone": "+61491301301",
+    "website": "http://www.marblebar.org.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW9Z5Q2KZ72KSVJR6NH1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

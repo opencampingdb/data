@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "entry": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3875",
+      "state": "VIC",
+      "street": "Cranswick Rd",
+      "suburb": "Banksia Peninsula"
+    },
     "entry": "private",
+    "facebook": "https://www.facebook.com/218667548201554",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -26,7 +41,8 @@
       "distance_m": 3880,
       "name": "Wattle Point Boat Ramp"
     },
-    "operator": "St Leonard's College"
+    "operator": "St Leonard's College",
+    "website": "http://www.stleonards.vic.edu.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCXWM6KDRMJBVF7VD5CE",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "119",
+      "postcode": "3775",
+      "state": "VIC",
+      "street": "Lorimers Ln",
+      "suburb": "Dixons Creek"
+    },
+    "facebook": "https://www.facebook.com/267457680039275",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -13,7 +31,9 @@
       "name": "Yarra Glen",
       "osm_id": 263675075,
       "type": "town"
-    }
+    },
+    "phone": "+61359652450",
+    "website": "http://www.allindawinery.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP5MCXEDQE7ECNKKX0ZCT",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

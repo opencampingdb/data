@@ -1,12 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5577",
+      "street": "N Coast Rd",
+      "suburb": "Yorke Peninsula Council"
+    },
+    "facebook": "https://www.facebook.com/112785960088439",
     "lga": {
       "name": "Yorke Peninsula Council",
       "osm_id": 6673799
@@ -23,7 +37,8 @@
     "nearest_boat_ramp": {
       "distance_m": 4830
     },
-    "operator": "Yorke Peninsula Council"
+    "operator": "Yorke Peninsula Council",
+    "phone": "+611800202445"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDW69DFQ61HZ2YSEM08J",
@@ -41,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

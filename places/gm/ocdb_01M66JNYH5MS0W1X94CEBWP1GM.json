@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "878-880",
+      "postcode": "3770",
+      "state": "VIC",
+      "street": "Maroondah Hwy",
+      "suburb": "Coldstream"
+    },
+    "facebook": "https://www.facebook.com/135607389793848",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Maroondah Highway"
-    }
+    },
+    "phone": "+61359573333",
+    "website": "http://rochfordwines.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JNYH5MS0W1X94CEBWP1GM",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

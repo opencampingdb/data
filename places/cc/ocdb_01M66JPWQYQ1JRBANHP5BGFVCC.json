@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "39",
+      "postcode": "2795",
+      "state": "NSW",
+      "street": "Sydney Road",
+      "suburb": "Bathurst"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/238473573372274",
     "lga": {
       "name": "Bathurst Regional Council",
       "osm_id": 6330866
@@ -22,6 +38,7 @@
       "distance_m": 60,
       "name": "Sydney Road"
     },
+    "phone": "+61263373739",
     "website": "https://map.bp.com/en-AU/AU/gas-station/raglan/bp-raglan/7308"
   },
   "group": "services",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

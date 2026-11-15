@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "396",
+      "postcode": "2000",
+      "state": "NSW",
+      "street": "Pitt St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/158333744191804",
     "lga": {
       "name": "City of Sydney",
       "osm_id": 1251066
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Goulburn Street"
-    }
+    },
+    "phone": "+61280807777",
+    "website": "http://www.mrbshotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW13CVQCETRBF947Z2YM",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

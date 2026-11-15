@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "110",
+      "postcode": "3888",
+      "state": "VIC",
+      "street": "Salisbury St",
+      "suburb": "Orbost"
+    },
+    "facebook": "https://www.facebook.com/464429333742098",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Salisbury Street"
-    }
+    },
+    "phone": "+61351541952"
   },
   "group": "services",
   "id": "ocdb_01M66JPJYZ3RCNVN8XKZE1AT3H",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

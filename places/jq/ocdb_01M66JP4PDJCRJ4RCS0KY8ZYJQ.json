@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "211",
+      "postcode": "2033",
+      "state": "NSW",
+      "street": "Anzac Pde",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/102139386081570",
     "lga": {
       "name": "Randwick City Council",
       "osm_id": 6201664
@@ -30,7 +46,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Anzac Parade"
-    }
+    },
+    "phone": "+611800240398"
   },
   "group": "services",
   "id": "ocdb_01M66JP4PDJCRJ4RCS0KY8ZYJQ",
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

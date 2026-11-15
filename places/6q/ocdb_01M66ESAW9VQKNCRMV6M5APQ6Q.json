@@ -1,19 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "4671",
+      "street": "Monduran Dam Rd",
+      "suburb": "Bundaberg Region"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/107407955948040",
     "fee": true,
     "lga": {
       "name": "Bundaberg Region",
@@ -28,6 +42,7 @@
     "nearest_boat_ramp": {
       "distance_m": 540
     },
+    "phone": "+61741573881",
     "tents": true,
     "website": "https://www.lakem.com.au/"
   },
@@ -47,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

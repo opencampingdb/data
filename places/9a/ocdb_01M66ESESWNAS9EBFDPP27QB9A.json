@@ -1,17 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "tents": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "6707",
+      "street": "Yardie Creek Rd"
+    },
     "booking_required": true,
     "caravans": true,
+    "facebook": "https://www.facebook.com/987970741283633",
     "lga": {
       "name": "Shire of Exmouth",
       "osm_id": 11689997
@@ -27,6 +40,7 @@
       "name": "South T-Bone Bay"
     },
     "opening_hours": "24/7",
+    "phone": "+61899492808",
     "tents": true,
     "wifi": false
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

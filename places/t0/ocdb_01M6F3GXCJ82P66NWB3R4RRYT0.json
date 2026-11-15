@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4564",
+      "state": "QLD",
+      "street": "Unit 126/151-153 Mudjimba Beach Rd",
+      "suburb": "Sunshine Coast"
+    },
+    "facebook": "https://www.facebook.com/155094181178722",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "David Low Way"
-    }
+    },
+    "phone": "+61754509400",
+    "website": "http://www.pacificparadiseresort.webs.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXCJ82P66NWB3R4RRYT0",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

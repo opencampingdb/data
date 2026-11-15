@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "147",
+      "postcode": "2852",
+      "state": "NSW",
+      "street": "Mayne St",
+      "suburb": "Gulgong"
+    },
+    "facebook": "https://www.facebook.com/434925683261094",
     "lga": {
       "name": "Mid-Western Regional Council",
       "osm_id": 6268502
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Fisher Street"
-    }
+    },
+    "phone": "+61263742049",
+    "website": "https://henrylawsoncentre.weebly.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GWNN7MXT2PY617X4Y1MS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

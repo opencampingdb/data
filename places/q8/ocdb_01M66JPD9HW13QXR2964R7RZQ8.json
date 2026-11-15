@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "202-210",
+      "postcode": "3218",
+      "state": "VIC",
+      "street": "Latrobe Terrace",
+      "suburb": "Geelong West"
+    },
     "air": true,
     "lga": {
       "name": "City of Greater Geelong",
@@ -29,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "La Trobe Terrace"
-    }
+    },
+    "phone": "+61 3 5101 0252",
+    "website": "https://find.shell.com/au/fuel/10111311-shell-reddy-express-latrobe-terrace/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPD9HW13QXR2964R7RZQ8",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

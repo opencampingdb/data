@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Great Alpine Road",
       "suburb": "Ovens"
     },
+    "facebook": "https://www.facebook.com/220272297996463",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -28,7 +35,8 @@
       "distance_m": 30,
       "name": "Great Alpine Road"
     },
-    "opening_hours": "We-Su 11:00-24:00; PH Mo 11:00-24:00"
+    "opening_hours": "We-Su 11:00-24:00; PH Mo 11:00-24:00",
+    "phone": "+61357511628"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYX7SW9SE4AY118EEJ2V",
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

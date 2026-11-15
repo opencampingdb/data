@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "166-170",
       "street": "Broadway"
     },
+    "facebook": "https://www.facebook.com/702940106235533",
     "lga": {
       "name": "City of Sydney",
       "osm_id": 1251066
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Broadway"
-    }
+    },
+    "phone": "+61280210185",
+    "website": "https://www.greenroombroadway.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVHX2V0TNJMK8B2S44FZ",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

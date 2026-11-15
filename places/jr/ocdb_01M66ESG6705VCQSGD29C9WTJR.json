@@ -1,17 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2577",
+      "street": "Dalys Rd",
+      "suburb": "Wingecarribee Shire Council"
+    },
     "booking_required": false,
     "caravans": true,
+    "facebook": "https://www.facebook.com/143165562746670",
     "fee": false,
     "lga": {
       "name": "Wingecarribee Shire Council",
@@ -24,8 +40,10 @@
       "type": "town"
     },
     "operator": "Forestry Corporation of NSW",
+    "phone": "+61264583177",
     "showers": false,
-    "tents": true
+    "tents": true,
+    "website": "http://au.localize123.com/dalys-clearing-camping-area-in-belanglo-nsw"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG6705VCQSGD29C9WTJR",
@@ -43,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

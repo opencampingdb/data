@@ -1,18 +1,24 @@
 {
   "fact_dates": {
     "access": "2026-11-04T22:12:38Z",
-    "camper_trailers": "2026-11-04T22:12:38Z"
+    "address": "2026-11-15T00:00:00Z",
+    "camper_trailers": "2026-11-04T22:12:38Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
     "access": "contributed",
+    "address": "overture",
     "booking_required": "osm",
     "camper_trailers": "contributed",
     "caravans": "osm",
     "drinking_water": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -22,10 +28,15 @@
   },
   "facts": {
     "access": "2wd",
+    "address": {
+      "postcode": "3956",
+      "street": "Bear Gully Rd"
+    },
     "booking_required": true,
     "camper_trailers": true,
     "caravans": true,
     "drinking_water": false,
+    "facebook": "https://www.facebook.com/172272426151936",
     "fee": true,
     "lga": {
       "name": "Shire of South Gippsland",
@@ -41,6 +52,7 @@
       "distance_m": 2200,
       "name": "Diggers Island South Beach"
     },
+    "phone": "+61131963",
     "power": false,
     "showers": false,
     "tents": true,
@@ -64,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

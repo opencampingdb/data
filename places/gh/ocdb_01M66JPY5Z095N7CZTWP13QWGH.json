@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "7310",
+      "state": "TAS",
+      "street": "Formby Road",
+      "suburb": "Devonport"
+    },
     "lga": {
       "name": "City of Devonport",
       "osm_id": 10586315
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Formby Road"
-    }
+    },
+    "phone": "+61 3 6214 2316",
+    "website": "https://find.shell.com/au/fuel/10130494-shell-otr-devonport-formby-road/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPY5Z095N7CZTWP13QWGH",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

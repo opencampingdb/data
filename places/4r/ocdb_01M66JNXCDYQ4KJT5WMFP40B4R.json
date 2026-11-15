@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2477",
+      "state": "NSW",
+      "street": "Lindendale Road",
+      "suburb": "Wollongbar"
+    },
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bruxner Highway"
-    }
+    },
+    "phone": "+61 2 6628 9206",
+    "website": "https://find.shell.com/au/fuel/10111683-shell-wollongbar/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNXCDYQ4KJT5WMFP40B4R",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

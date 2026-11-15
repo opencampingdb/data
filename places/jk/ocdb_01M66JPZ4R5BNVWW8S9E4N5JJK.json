@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "53-57",
+      "postcode": "2136",
+      "state": "NSW",
+      "street": "Punchbowl Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/180640822510698",
     "fuel": true,
     "lga": {
       "name": "Strathfield Municipal Council",
@@ -20,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Punchbowl Road"
-    }
+    },
+    "phone": "+61296421353",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/belfield/bp-belfield/5656"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ4R5BNVWW8S9E4N5JJK",
@@ -29,7 +51,7 @@
     "lat": -33.902555,
     "lon": 151.082471
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1307012096,
     "timestamp": "2024-08-11T10:41:24Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

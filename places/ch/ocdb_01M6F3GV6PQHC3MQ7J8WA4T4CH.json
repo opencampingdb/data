@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "378",
+      "postcode": "2153",
+      "state": "NSW",
+      "street": "Windsor Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/118616761166946",
     "lga": {
       "name": "The Hills Shire Council",
       "osm_id": 6219220
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Windsor Road"
-    }
+    },
+    "phone": "+61272588800",
+    "website": "https://www.bullandbushpub.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV6PQHC3MQ7J8WA4T4CH",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
@@ -7,12 +12,19 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2157",
+      "state": "NSW",
+      "street": "Marramarra National Park",
+      "suburb": "Canoelands"
+    },
     "booking_required": true,
     "caravans": false,
     "fee": true,
@@ -32,6 +44,7 @@
     "nearest_boat_ramp": {
       "distance_m": 900
     },
+    "phone": "1300072757",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -53,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

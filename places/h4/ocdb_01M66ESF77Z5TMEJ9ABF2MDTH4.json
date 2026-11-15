@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
@@ -10,14 +18,24 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "109",
+      "postcode": "4822",
+      "state": "QLD",
+      "street": "Goldring St",
+      "suburb": "Richmond"
+    },
     "cabins": true,
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1832335830413755",
     "fee": true,
     "kitchen": true,
     "lga": {
@@ -39,9 +57,11 @@
       "name": "Goldring Street"
     },
     "operator": "Kronosaurus Korner",
+    "phone": "+61747413772",
     "power": true,
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.richmondlakeviewcaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF77Z5TMEJ9ABF2MDTH4",
@@ -59,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

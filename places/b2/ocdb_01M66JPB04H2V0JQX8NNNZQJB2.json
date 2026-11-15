@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "170",
+      "postcode": "3072",
+      "state": "VIC",
+      "street": "Plenty Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/1445160272454746",
     "lga": {
       "name": "City of Darebin",
       "osm_id": 2404379
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Plenty Road"
-    }
+    },
+    "phone": "+61394846806",
+    "website": "http://www.candsservice.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPB04H2V0JQX8NNNZQJB2",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

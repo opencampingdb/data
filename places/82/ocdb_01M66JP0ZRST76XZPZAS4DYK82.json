@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "629",
+      "postcode": "6330",
+      "state": "WA",
+      "street": "LOWER KING RD",
+      "suburb": "LOWER KING"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lower King Road"
-    }
+    },
+    "phone": "+61 8 9844 7147",
+    "website": "https://find.shell.com/au/fuel/10111566-shell-lower-king/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP0ZRST76XZPZAS4DYK82",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

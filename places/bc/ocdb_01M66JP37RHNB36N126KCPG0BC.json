@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "name": "overture",
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "0872",
+      "street": "First St"
+    },
+    "facebook": "https://www.facebook.com/934244843358773",
     "lga": {
       "name": "Shire of Ngaanyatjarraku",
       "osm_id": 11690243
@@ -15,7 +32,9 @@
       "osm_id": 493230506,
       "type": "village"
     },
-    "operator": "Warakurna Roadhouse"
+    "operator": "Warakurna Roadhouse",
+    "phone": "+61889567344",
+    "website": "http://www.warakurnaroadhouse.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP37RHNB36N126KCPG0BC",
@@ -24,7 +43,7 @@
     "lat": -25.042874,
     "lon": 128.30328
   },
-  "name": null,
+  "name": "Warakurna Roadhouse",
   "osm": {
     "id": 1999553260,
     "timestamp": "2026-08-09T03:27:29Z",
@@ -33,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

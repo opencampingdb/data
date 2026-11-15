@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 283",
+      "postcode": "4314",
+      "street": "Glenhowden Rd",
+      "suburb": "Somerset Regional"
+    },
+    "facebook": "https://www.facebook.com/1520266694948840",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -13,7 +28,8 @@
       "name": "Benarkin",
       "osm_id": 1634843647,
       "type": "village"
-    }
+    },
+    "phone": "+61746394599"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Z8GAPXC8XTDJQ9Q1JY",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

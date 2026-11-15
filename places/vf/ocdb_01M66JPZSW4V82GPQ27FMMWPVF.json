@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "983",
+      "postcode": "4061",
+      "state": "QLD",
+      "street": "Waterworks Road",
+      "suburb": "THE GAP"
+    },
     "fuel": true,
     "lga": {
       "name": "City of Brisbane",
@@ -28,7 +43,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Waterworks Road"
-    }
+    },
+    "phone": "0482187835"
   },
   "group": "services",
   "id": "ocdb_01M66JPZSW4V82GPQ27FMMWPVF",
@@ -37,7 +53,7 @@
     "lat": -27.444641,
     "lon": 152.952453
   },
-  "name": null,
+  "name": "Caltex The Gap",
   "osm": {
     "id": 1459004034,
     "timestamp": "2025-12-16T11:35:48Z",
@@ -46,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

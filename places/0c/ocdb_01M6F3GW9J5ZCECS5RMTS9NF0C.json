@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "110",
+      "postcode": "5007",
+      "state": "SA",
+      "street": "Coglin St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/1624217837815042",
     "lga": {
       "name": "City of Charles Sturt",
       "osm_id": 9108013
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Torrens Road"
-    }
+    },
+    "phone": "+61883462521",
+    "website": "https://www.sevenrooms.com/explore/excelsiorhotelbrompton/reservations/create/search/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW9J5ZCECS5RMTS9NF0C",
@@ -31,7 +53,7 @@
     "lat": -34.896298,
     "lon": 138.575382
   },
-  "name": null,
+  "name": "Excelsior Hotel",
   "osm": {
     "id": 5225702748,
     "timestamp": "2017-11-13T02:17:30Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

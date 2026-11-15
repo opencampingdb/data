@@ -1,19 +1,35 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2372",
+      "street": "Morgans Gully Track",
+      "suburb": "Tenterfield Shire Council"
+    },
     "booking_required": true,
     "caravans": true,
+    "facebook": "https://www.facebook.com/563875130457469",
     "fee": true,
     "lga": {
       "name": "Tenterfield Shire Council",
@@ -26,9 +42,11 @@
       "type": "village"
     },
     "operator": "NSW National Parks and Wildlife Service",
+    "phone": "+61267364298",
     "showers": false,
     "tents": true,
     "toilets": true,
+    "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/cypresspine-campground",
     "wifi": false
   },
   "group": "overnight",
@@ -47,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

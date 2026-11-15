@@ -1,10 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4745",
+      "state": "QLD",
+      "street": "Cnr Hannah Cres & Garnham Dr",
+      "suburb": "Dysart"
+    },
+    "facebook": "https://www.facebook.com/1979999685352004",
     "lga": {
       "name": "Isaac Regional",
       "osm_id": 11676584
@@ -18,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 360,
       "name": "Garnham Drive"
-    }
+    },
+    "phone": "+61749500462",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/dysart/bp-dysart/1659"
   },
   "group": "services",
   "id": "ocdb_01M66JP6GRN2B346BXSHWKZ87F",
@@ -27,7 +48,7 @@
     "lat": -22.587871,
     "lon": 148.344436
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 3685430468,
     "timestamp": "2015-08-07T11:17:32Z",
@@ -36,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

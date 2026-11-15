@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "bbq": "osm",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -15,10 +21,16 @@
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2582",
+      "street": "Wee Jasper Rd",
+      "suburb": "Wee Jasper"
+    },
     "bbq": true,
     "caravans": true,
     "dump_station": false,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1554943571501129",
     "fee": true,
     "lga": {
       "name": "Yass Valley Council",
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

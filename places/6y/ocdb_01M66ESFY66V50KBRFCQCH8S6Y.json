@@ -1,12 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2830",
+      "state": "NSW",
+      "street": "Obley Rd Taronga Western Plains Zoo",
+      "suburb": "Dubbo"
+    },
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -26,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Peak Hill Road"
-    }
+    },
+    "phone": "(02) 6881 1488",
+    "website": "https://taronga.org.au/dubbo-zoo/accommodation/billabong-camp"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFY66V50KBRFCQCH8S6Y",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

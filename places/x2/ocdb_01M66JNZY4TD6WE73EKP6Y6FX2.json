@@ -1,11 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6330",
+      "state": "WA",
+      "street": "Warden Ave",
+      "suburb": "Albany"
+    },
+    "facebook": "https://www.facebook.com/580325595414230",
     "lga": {
       "name": "City of Albany",
       "osm_id": 11690341
@@ -22,7 +41,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 3940
-    }
+    },
+    "phone": "+61898922222",
+    "website": "http://www.health.wa.gov.au/services/detail.cfm?Unit_ID=4"
   },
   "group": "emergency",
   "id": "ocdb_01M66JNZY4TD6WE73EKP6Y6FX2",
@@ -31,7 +52,7 @@
     "lat": -35.003256,
     "lon": 117.902621
   },
-  "name": null,
+  "name": "Albany Regional Hospital",
   "osm": {
     "id": 902766181,
     "timestamp": "2022-01-01T09:19:57Z",
@@ -40,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

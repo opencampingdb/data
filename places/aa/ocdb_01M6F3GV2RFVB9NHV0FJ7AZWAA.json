@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "610",
+      "postcode": "4007",
+      "state": "QLD",
+      "street": "Kingsford Smith Dr",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1532953397015005",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -25,7 +43,9 @@
     },
     "nearest_major_road": {
       "distance_m": 30
-    }
+    },
+    "phone": "+61738684444",
+    "website": "https://hotelkingsley.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV2RFVB9NHV0FJ7AZWAA",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

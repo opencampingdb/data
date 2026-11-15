@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76-78",
+      "postcode": "2340",
+      "state": "NSW",
+      "street": "Jenkins St",
+      "suburb": "Nundle"
+    },
+    "facebook": "https://www.facebook.com/274124135975952",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Jenkins Street"
-    }
+    },
+    "phone": "+61267693222",
+    "website": "http://www.hillsofgoldmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXM6YR0T4BN4H74NKWT1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

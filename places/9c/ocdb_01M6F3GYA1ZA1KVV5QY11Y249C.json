@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "3031",
+      "state": "VIC",
+      "street": "Thompson St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/298946326938432",
     "lga": {
       "name": "City of Melbourne",
       "osm_id": 2404870
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Racecourse Road Offramp"
-    }
+    },
+    "phone": "+61370340271",
+    "website": "http://www.rumblecoffee.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYA1ZA1KVV5QY11Y249C",
@@ -27,7 +49,7 @@
     "lat": -37.792738,
     "lon": 144.93437
   },
-  "name": null,
+  "name": "Rumble Coffee Roasters",
   "osm": {
     "id": 13476681187,
     "timestamp": "2026-07-30T13:30:35Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4871",
+      "state": "QLD",
+      "street": "North St",
+      "suburb": "Georgetown"
+    },
+    "facebook": "https://www.facebook.com/1490463427864596",
     "fuel": true,
     "lga": {
       "name": "Etheridge Shire",
@@ -20,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "North Street"
-    }
+    },
+    "phone": "+61740621219"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZJEBV769T3TZ39G5W1",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

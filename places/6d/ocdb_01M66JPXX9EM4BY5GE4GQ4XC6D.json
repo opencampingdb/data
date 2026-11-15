@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -27,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wyee Road"
-    }
+    },
+    "phone": "0243121056",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-wyee"
   },
   "group": "services",
   "id": "ocdb_01M66JPXX9EM4BY5GE4GQ4XC6D",
@@ -36,7 +46,7 @@
     "lat": -33.176068,
     "lon": 151.487607
   },
-  "name": null,
+  "name": "United Petroleum Wyee",
   "osm": {
     "id": 1091622828,
     "timestamp": "2022-09-03T14:11:35Z",
@@ -45,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

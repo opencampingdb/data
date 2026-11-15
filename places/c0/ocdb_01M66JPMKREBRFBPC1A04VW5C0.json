@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -26,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Main Street"
-    }
+    },
+    "phone": "0364912794",
+    "website": "https://locations.ampol.com.au/en/ampol-sheffield"
   },
   "group": "services",
   "id": "ocdb_01M66JPMKREBRFBPC1A04VW5C0",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

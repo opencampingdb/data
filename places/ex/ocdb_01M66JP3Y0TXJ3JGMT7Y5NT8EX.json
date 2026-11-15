@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "176",
+      "postcode": "3166",
+      "state": "VIC",
+      "street": "kangaroo road",
+      "suburb": "Hughesdale"
+    },
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Warrigal Road"
-    }
+    },
+    "phone": "(03) 9569 0022",
+    "website": "http://www.kroozautomotive.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP3Y0TXJ3JGMT7Y5NT8EX",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

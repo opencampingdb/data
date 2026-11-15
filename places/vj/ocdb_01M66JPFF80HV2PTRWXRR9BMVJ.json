@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4740",
+      "state": "QLD",
+      "street": "Bluewater Lagoon",
+      "suburb": "Mackay"
+    },
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -28,7 +44,9 @@
       "distance_m": 40,
       "name": "Matsuura Drive"
     },
-    "opening_hours": "Mo-Su 09:00-13:00"
+    "opening_hours": "Mo-Su 09:00-13:00",
+    "phone": "1300130001",
+    "website": "http://www.mackayregion.com/"
   },
   "group": "services",
   "id": "ocdb_01M66JPFF80HV2PTRWXRR9BMVJ",
@@ -37,7 +55,7 @@
     "lat": -21.137552,
     "lon": 149.180695
   },
-  "name": null,
+  "name": "Mackay Visitor Information Centre",
   "osm": {
     "id": 9470580194,
     "timestamp": "2022-02-03T06:13:40Z",
@@ -46,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

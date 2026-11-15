@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "24",
       "street": "Davenport Drive"
     },
+    "facebook": "https://www.facebook.com/135110183169619",
     "lga": {
       "name": "Mount Hotham Alpine Resort",
       "osm_id": 14135897
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Great Alpine Road"
-    }
+    },
+    "phone": "+611300735358",
+    "website": "http://www.gravbrot.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYPZVRDH93ZB6M0XGS2W",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

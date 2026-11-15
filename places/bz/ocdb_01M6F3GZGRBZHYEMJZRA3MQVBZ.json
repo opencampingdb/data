@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "toilets": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "60",
+      "postcode": "3677",
+      "state": "VIC",
+      "street": "MacKay St",
+      "suburb": "Wangaratta"
+    },
+    "facebook": "https://www.facebook.com/369863106437383",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -25,6 +41,7 @@
       "distance_m": 100,
       "name": "Rowan Street"
     },
+    "phone": "+61357525311",
     "toilets": true,
     "wheelchair": true
   },
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

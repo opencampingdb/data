@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "91",
+      "postcode": "2077",
+      "state": "NSW",
+      "street": "Hunter St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/541877200099353",
     "lga": {
       "name": "The Council of the Shire of Hornsby",
       "osm_id": 6218957
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "George Street"
-    }
+    },
+    "phone": "+61420461299",
+    "website": "http://www.jlautoelectrical.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP5S7KRF934QB3T1ZH44M",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

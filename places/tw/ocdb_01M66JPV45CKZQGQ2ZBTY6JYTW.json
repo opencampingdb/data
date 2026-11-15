@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "105",
+      "postcode": "2460",
+      "state": "NSW",
+      "street": "Bent St",
+      "suburb": "Grafton"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/108356382316588",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -35,7 +51,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bent Street"
-    }
+    },
+    "phone": "+61266422981"
   },
   "group": "services",
   "id": "ocdb_01M66JPV45CKZQGQ2ZBTY6JYTW",
@@ -53,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Mackenzie Street",
       "suburb": "Blackwater"
     },
+    "facebook": "https://www.facebook.com/188368254661878",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Mackenzie Street"
-    }
+    },
+    "phone": "+61749801800"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPRPRXC61C0Q93EJX4K6M",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

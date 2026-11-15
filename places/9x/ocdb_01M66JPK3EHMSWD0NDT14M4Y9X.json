@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "3300",
+      "state": "VIC",
+      "street": "Cox St",
+      "suburb": "Hamilton"
+    },
+    "facebook": "https://www.facebook.com/246857453927452",
     "lga": {
       "name": "Shire of Southern Grampians",
       "osm_id": 3349959
@@ -20,7 +36,8 @@
       "distance_m": 30,
       "name": "Cox Street"
     },
-    "phone": "+61 3 5572 2622"
+    "phone": "+61 3 5572 2622",
+    "website": "https://www.goodyear.com.au/store-locator/goodyear-autocare-hamilton-vic"
   },
   "group": "services",
   "id": "ocdb_01M66JPK3EHMSWD0NDT14M4Y9X",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1517",
+      "postcode": "4503",
+      "state": "QLD",
+      "street": "Anzac Ave",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/120907657924560",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Anzac Avenue"
-    }
+    },
+    "phone": "+61732044333",
+    "website": "https://www.kallangurtavern.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYHREX8TX7CHPBG0HTDH",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

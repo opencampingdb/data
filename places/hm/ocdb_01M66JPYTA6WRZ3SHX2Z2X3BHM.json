@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4375",
+      "postcode": "3460",
+      "state": "VIC",
+      "street": "Midland Hwy",
+      "suburb": "Daylesford"
+    },
+    "facebook": "https://www.facebook.com/103935491626689",
     "lga": {
       "name": "Shire of Hepburn",
       "osm_id": 3327844
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Midland Highway"
-    }
+    },
+    "phone": "+61411473068"
   },
   "group": "services",
   "id": "ocdb_01M66JPYTA6WRZ3SHX2Z2X3BHM",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

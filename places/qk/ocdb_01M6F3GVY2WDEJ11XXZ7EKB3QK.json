@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "5291",
+      "state": "SA",
+      "street": "Charles St",
+      "suburb": "Port MacDonnell"
+    },
+    "facebook": "https://www.facebook.com/100156648286576",
     "lga": {
       "name": "The District Council of Grant",
       "osm_id": 3395908
@@ -28,7 +46,8 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Standish Street"
-    }
+    },
+    "phone": "+61887383000"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVY2WDEJ11XXZ7EKB3QK",
@@ -37,7 +56,7 @@
     "lat": -38.053267,
     "lon": 140.699587
   },
-  "name": null,
+  "name": "Port MacDonnell Maritime Museum",
   "osm": {
     "id": 3536171609,
     "timestamp": "2015-05-22T14:36:38Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

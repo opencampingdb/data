@@ -1,16 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3712",
+      "state": "VIC",
+      "street": "Rubicon Rd",
+      "suburb": "Rubicon"
+    },
     "caravans": true,
     "entry": "public",
+    "facebook": "https://www.facebook.com/244395555710475",
     "fee": false,
     "lga": {
       "name": "Shire of Murrindindi",
@@ -23,7 +38,8 @@
       "type": "village"
     },
     "operator": "DEECA",
-    "tents": true
+    "tents": true,
+    "website": "http://www.depi.vic.gov.au/__data/assets/pdf_file/0008/299150/FS0067-Rubicon-Camping-Areas.pdf"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESES6DDQ8XZFK8ZHMDQG1",
@@ -41,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

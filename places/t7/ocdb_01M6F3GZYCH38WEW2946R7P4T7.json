@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "33",
+      "postcode": "4133",
+      "state": "QLD",
+      "street": "Loganlea Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1066554980089002",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Loganlea Road"
-    }
+    },
+    "phone": "+61732007545",
+    "website": "http://www.econolodge.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZYCH38WEW2946R7P4T7",
@@ -31,7 +53,7 @@
     "lat": -27.688695,
     "lon": 153.137441
   },
-  "name": null,
+  "name": "Econo Lodge Waterford",
   "osm": {
     "id": 1321515010,
     "timestamp": "2024-10-06T00:54:32Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

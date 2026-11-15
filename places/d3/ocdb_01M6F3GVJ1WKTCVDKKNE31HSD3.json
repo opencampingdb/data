@@ -1,5 +1,12 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,10 +15,19 @@
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "phone": "overture",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2010",
+      "state": "NSW",
+      "street": "Raper St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/23550843701",
     "fee": false,
     "lga": {
       "name": "City of Sydney",
@@ -36,6 +52,7 @@
     },
     "opening_hours": "Th-Su 10:00-16:00",
     "operator": "Art Gallery of NSW",
+    "phone": "+61292251881",
     "toilets": true,
     "website": "https://www.artgallery.nsw.gov.au/visit/brett-whiteley-studio/"
   },
@@ -55,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

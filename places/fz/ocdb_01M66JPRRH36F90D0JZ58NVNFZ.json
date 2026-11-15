@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "337",
+      "postcode": "5015",
+      "state": "SA",
+      "street": "Saint Vincent Street East",
+      "suburb": "Port Adelaide"
+    },
     "fuel": true,
     "fuels": [
       "diesel",
@@ -34,7 +49,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Perkins Drive"
-    }
+    },
+    "phone": "0870700962",
+    "website": "https://www.libertyconvenience.com.au/home?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Port+Adelaide+St+Vincent&utm_term=plcid_132065467495585064"
   },
   "group": "services",
   "id": "ocdb_01M66JPRRH36F90D0JZ58NVNFZ",
@@ -52,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

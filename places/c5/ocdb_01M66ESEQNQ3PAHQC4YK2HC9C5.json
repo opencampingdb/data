@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "3463",
+      "street": "Hospital St"
+    },
+    "facebook": "https://www.facebook.com/1452089838437318",
     "lga": {
       "name": "Shire of Mount Alexander",
       "osm_id": 3339104
@@ -18,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 330,
       "name": "High Street"
-    }
+    },
+    "phone": "+61354752344",
+    "website": "http://www.maldoncaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQNQ3PAHQC4YK2HC9C5",
@@ -36,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

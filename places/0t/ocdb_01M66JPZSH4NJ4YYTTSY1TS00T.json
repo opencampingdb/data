@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "176",
+      "postcode": "2360",
+      "state": "NSW",
+      "street": "Otho Street",
+      "suburb": "Inverell"
+    },
     "fuel": true,
     "lga": {
       "name": "Inverell Shire Council",
@@ -20,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Otho Street"
-    }
+    },
+    "phone": "+61 2 5741 9817",
+    "website": "https://find.shell.com/au/fuel/10110859-shell-reddy-express-inverell/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPZSH4NJ4YYTTSY1TS00T",
@@ -29,7 +48,7 @@
     "lat": -29.778308,
     "lon": 151.115597
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1456609409,
     "timestamp": "2025-12-07T03:47:20Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "3977",
+      "state": "VIC",
+      "street": "Cameron St",
+      "suburb": "Cranbourne South"
+    },
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "South Gippsland Highway"
-    }
+    },
+    "phone": "0370201192",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-cranbourne-south?utm_content=United+Petroleum+Cranbourne+South+%28Pie+Face%29&utm_campaign=Bing+Places&utm_medium=organic&utm_source=bing&utm_term=plcid_2599066116344952081"
   },
   "group": "services",
   "id": "ocdb_01M66JPTQQDW79EY7MZMHE7D00",
@@ -27,7 +46,7 @@
     "lat": -38.119454,
     "lon": 145.288145
   },
-  "name": null,
+  "name": "United Petroleum Cranbourne South (Pie Face)",
   "osm": {
     "id": 448582293,
     "timestamp": "2016-10-20T00:21:02Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

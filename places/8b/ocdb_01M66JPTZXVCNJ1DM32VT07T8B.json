@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "215",
+      "postcode": "0812",
+      "state": "NT",
+      "street": "Vanderlin Dr",
+      "suburb": "Darwin"
+    },
+    "facebook": "https://www.facebook.com/123803797672985",
     "lga": {
       "name": "City of Darwin",
       "osm_id": 5515884
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Vanderlin Drive"
-    }
+    },
+    "phone": "+61889856588",
+    "website": "https://nt.gov.au/leisure/sport/facilities-and-contacts/find-a-sports-facility/leanyer-recreation-park"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPTZXVCNJ1DM32VT07T8B",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2606",
+      "state": "ACT",
+      "street": "Ground Floor C03/15 Bowes St",
+      "suburb": "Woden Valley"
+    },
+    "facebook": "https://www.facebook.com/128264750380828",
     "locality": {
       "distance_m": 930,
       "name": "Woden",
@@ -13,7 +30,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Callam Street"
-    }
+    },
+    "phone": "+61450276387",
+    "website": "http://washuplaundromat.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPPYZMGXKM92JXEY2QZK4",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

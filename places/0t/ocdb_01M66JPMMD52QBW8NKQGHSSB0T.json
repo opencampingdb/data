@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "504",
+      "postcode": "7030",
+      "state": "TAS",
+      "street": "Main Rd",
+      "suburb": "Granton"
+    },
+    "facebook": "https://www.facebook.com/677738138986247",
     "lga": {
       "name": "City of Glenorchy",
       "osm_id": 10625382
@@ -26,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61362750831"
   },
   "group": "services",
   "id": "ocdb_01M66JPMMD52QBW8NKQGHSSB0T",
@@ -35,7 +54,7 @@
     "lat": -42.761175,
     "lon": 147.239724
   },
-  "name": null,
+  "name": "Lagoon General Store",
   "osm": {
     "id": 12373185891,
     "timestamp": "2024-11-25T08:31:18Z",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

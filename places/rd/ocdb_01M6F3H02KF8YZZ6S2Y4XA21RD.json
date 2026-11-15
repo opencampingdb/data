@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "43",
+      "postcode": "2620",
+      "state": "NSW",
+      "street": "Canberra Ave",
+      "suburb": "Queanbeyan"
+    },
     "lga": {
       "name": "Queanbeyan-Palerang Regional Council",
       "osm_id": 6137309
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Canberra Avenue"
-    }
+    },
+    "phone": "+61262971288"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H02KF8YZZ6S2Y4XA21RD",
@@ -27,7 +43,7 @@
     "lat": -35.357,
     "lon": 149.2275
   },
-  "name": null,
+  "name": "Canberra Ave Villas",
   "osm": {
     "id": 1488794022,
     "timestamp": "2026-03-14T11:18:33Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

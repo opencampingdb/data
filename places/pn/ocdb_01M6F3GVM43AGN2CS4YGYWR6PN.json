@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "223",
+      "postcode": "2481",
+      "state": "NSW",
+      "street": "Broken Head Rd",
+      "suburb": "Suffolk Park"
+    },
+    "facebook": "https://www.facebook.com/1685072618461071",
     "lga": {
       "name": "Byron Shire Council",
       "osm_id": 6170304
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Broken Head Road"
-    }
+    },
+    "phone": "+61266853222",
+    "website": "http://www.parkhotelmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVM43AGN2CS4YGYWR6PN",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

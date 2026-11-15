@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2469",
+      "street": "Peacock Creek Road",
+      "suburb": "Kyogle Council"
+    },
+    "facebook": "https://www.facebook.com/415200878943254",
     "fee": false,
     "lga": {
       "name": "Kyogle Council",
@@ -15,7 +31,9 @@
       "name": "Duck Creek",
       "osm_id": 114643864,
       "type": "village"
-    }
+    },
+    "phone": "+61266320000",
+    "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/peacock-creek-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF6X5JW9KMADWA2TMKH8",
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

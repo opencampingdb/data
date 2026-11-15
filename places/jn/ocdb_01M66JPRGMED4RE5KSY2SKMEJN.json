@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "217",
       "street": "Sloane Street"
     },
+    "facebook": "https://www.facebook.com/110884737211298",
     "lga": {
       "name": "Goulburn Mulwaree Council",
       "osm_id": 6310493
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Sloane Street"
-    }
+    },
+    "phone": "+61248213622",
+    "website": "http://Tyrepower.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPRGMED4RE5KSY2SKMEJN",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "116",
+      "postcode": "2911",
+      "state": "ACT",
+      "street": "Lysaght St",
+      "suburb": "Gungahlin"
+    },
+    "facebook": "https://www.facebook.com/106513284277699",
     "fuel": true,
     "locality": {
       "distance_m": 4270,
@@ -15,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lysaght Street"
-    }
+    },
+    "phone": "+61262414032"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ1PZPR1F7N3B5Y0ZE95",
@@ -33,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

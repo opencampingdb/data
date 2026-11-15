@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "3728",
+      "state": "VIC",
+      "street": "Bailey St",
+      "suburb": "Tungamah"
+    },
+    "facebook": "https://www.facebook.com/100401765371353",
     "fee": false,
     "lga": {
       "name": "Shire of Moira",
@@ -20,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Middleton Street"
-    }
+    },
+    "phone": "+61411533339",
+    "website": "https://www.theeastcoastartstrail.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBM92NRBGQXVWV9DMAGM",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

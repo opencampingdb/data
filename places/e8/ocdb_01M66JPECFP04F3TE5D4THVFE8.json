@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "151",
       "street": "Chesterville Road"
     },
+    "facebook": "https://www.facebook.com/240867779340507",
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Chesterville Road"
-    }
+    },
+    "phone": "+61395322220",
+    "website": "http://www.absauto.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPECFP04F3TE5D4THVFE8",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

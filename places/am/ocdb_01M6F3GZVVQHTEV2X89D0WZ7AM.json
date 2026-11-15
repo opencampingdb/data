@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3700",
+      "state": "VIC",
+      "street": "Akuna Ave",
+      "suburb": "Tallangatta"
+    },
+    "facebook": "https://www.facebook.com/161304676287",
     "lga": {
       "name": "Shire of Towong",
       "osm_id": 3361220
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Towong Street"
-    }
+    },
+    "phone": "+61493249912",
+    "website": "http://www.tallangattamotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZVVQHTEV2X89D0WZ7AM",
@@ -31,7 +53,7 @@
     "lat": -36.217457,
     "lon": 147.174924
   },
-  "name": null,
+  "name": "Tallangatta Motor Inn",
   "osm": {
     "id": 1254245140,
     "timestamp": "2024-02-24T05:34:15Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

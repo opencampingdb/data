@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "38",
+      "postcode": "2794",
+      "state": "NSW",
+      "street": "Young Rd",
+      "suburb": "Cowra"
+    },
+    "facebook": "https://www.facebook.com/113591955396589",
     "lga": {
       "name": "Cowra Shire Council",
       "osm_id": 6257796
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Young Road"
-    }
+    },
+    "phone": "+61263422116"
   },
   "group": "services",
   "id": "ocdb_01M66JPJP3T1B9TMJZX58JDX8N",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

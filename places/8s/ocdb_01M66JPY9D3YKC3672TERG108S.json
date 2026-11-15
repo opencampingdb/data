@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 16",
+      "postcode": "4455",
+      "state": "QLD",
+      "street": "On Sp 229814 Billy Bob Way",
+      "suburb": "Roma"
+    },
     "lga": {
       "name": "Maranoa Regional",
       "osm_id": 11674862
@@ -20,7 +35,9 @@
       "distance_m": 330,
       "name": "Warrego Highway"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "1800240398",
+    "website": "https://locations.ampol.com.au/en/roma-diesel-stop"
   },
   "group": "services",
   "id": "ocdb_01M66JPY9D3YKC3672TERG108S",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

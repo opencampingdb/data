@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "279",
+      "postcode": "3097",
+      "state": "VIC",
+      "street": "Eltham-Yarra Glen Rd",
+      "suburb": "Kangaroo Ground"
+    },
+    "facebook": "https://www.facebook.com/1045743202285358",
     "lga": {
       "name": "Shire of Nillumbik",
       "osm_id": 3331023
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Eltham - Yarra Glen Road"
-    }
+    },
+    "phone": "+61488599665",
+    "website": "http://www.aumuseums.com/vic/melbourne/andrew-ross-museum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYMX3EDPRDW1H0N6H5D9",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

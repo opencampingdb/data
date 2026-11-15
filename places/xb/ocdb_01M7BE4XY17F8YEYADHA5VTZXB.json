@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10552",
+      "postcode": "4352",
+      "state": "QLD",
+      "street": "New England Hwy",
+      "suburb": "Highfields"
+    },
+    "facebook": "https://www.facebook.com/314969088543139",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "New England Highway"
-    }
+    },
+    "phone": "+61746996996",
+    "website": "http://www.highfieldsmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M7BE4XY17F8YEYADHA5VTZXB",

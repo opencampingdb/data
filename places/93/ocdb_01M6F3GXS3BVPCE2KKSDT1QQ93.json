@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3A",
+      "postcode": "2015",
+      "state": "NSW",
+      "street": "Locomotive St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/100829376123679",
     "lga": {
       "name": "City of Sydney",
       "osm_id": 1251066
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Gibbons Street"
-    }
+    },
+    "phone": "+61288658345",
+    "website": "https://bit.ly/3xkyzaN"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXS3BVPCE2KKSDT1QQ93",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

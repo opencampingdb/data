@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 2",
+      "postcode": "6230",
+      "state": "WA",
+      "street": "Bussell Hwy",
+      "suburb": "Bunbury"
+    },
+    "facebook": "https://www.facebook.com/297673233899577",
     "lga": {
       "name": "City of Bunbury",
       "osm_id": 11688799
@@ -23,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Bussell Highway"
-    }
+    },
+    "phone": "+61897957100"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESETZB6WR6VDAJ7ARM6KD",
@@ -32,7 +51,7 @@
     "lat": -33.376119,
     "lon": 115.64564
   },
-  "name": null,
+  "name": "Discovery Parks",
   "osm": {
     "id": 164788403,
     "timestamp": "2019-11-03T03:34:06Z",
@@ -41,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

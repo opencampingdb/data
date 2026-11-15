@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15620",
+      "postcode": "2579",
+      "state": "NSW",
+      "street": "Hume Hwy",
+      "suburb": "Marulan"
+    },
+    "facebook": "https://www.facebook.com/221657364661340",
     "lga": {
       "name": "Goulburn Mulwaree Council",
       "osm_id": 6310493
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Hume Highway"
-    }
+    },
+    "phone": "+61248411330"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZD22AJ8NQDTNF3S9G32",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

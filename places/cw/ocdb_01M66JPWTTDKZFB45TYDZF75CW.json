@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "246",
+      "postcode": "6154",
+      "state": "WA",
+      "street": "Leach Hwy",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/258828371342214",
     "lga": {
       "name": "City of Melville",
       "osm_id": 11689377
@@ -27,7 +45,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Leach Highway"
-    }
+    },
+    "phone": "+61893174233"
   },
   "group": "services",
   "id": "ocdb_01M66JPWTTDKZFB45TYDZF75CW",
@@ -36,7 +55,7 @@
     "lat": -32.045745,
     "lon": 115.820282
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 878489786,
     "timestamp": "2020-11-28T05:02:53Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

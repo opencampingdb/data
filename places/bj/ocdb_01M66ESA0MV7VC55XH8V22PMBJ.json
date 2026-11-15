@@ -1,21 +1,35 @@
 {
   "fact_dates": {
-    "fee": "2026-03-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2026-03-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "cabins": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "tents": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "47/51",
+      "postcode": "4570",
+      "state": "QLD",
+      "street": "Main St",
+      "suburb": "Kandanga"
+    },
     "booking_required": false,
     "cabins": false,
     "caravans": true,
+    "facebook": "https://www.facebook.com/941417562644944",
     "fee": false,
     "lga": {
       "name": "Gympie Regional",
@@ -27,6 +41,7 @@
       "osm_id": 213499050,
       "type": "village"
     },
+    "phone": "+61754884605",
     "tents": false,
     "wifi": false
   },
@@ -46,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

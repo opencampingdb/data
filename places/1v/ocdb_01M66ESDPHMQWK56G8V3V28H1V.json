@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
     },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/280247868498681",
     "fee": true,
     "lga": {
       "name": "Kyogle Council",
@@ -26,7 +35,9 @@
       "osm_id": 114644296,
       "type": "village"
     },
-    "tents": true
+    "phone": "+61400191341",
+    "tents": true,
+    "website": "http://rainforestgateway.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDPHMQWK56G8V3V28H1V",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

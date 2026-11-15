@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "124-126",
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/224000827750533",
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61397068611",
+    "website": "http://au.localize123.com/comfort-inn-dandenong-3175-in-dandenong-vic"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW9SWMF9JW23S0P72829",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

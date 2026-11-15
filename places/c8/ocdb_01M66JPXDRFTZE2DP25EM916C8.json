@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "106",
+      "postcode": "4017",
+      "state": "QLD",
+      "street": "Board St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1771105219610182",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -26,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Board Street"
-    }
+    },
+    "phone": "+61738692310"
   },
   "group": "services",
   "id": "ocdb_01M66JPXDRFTZE2DP25EM916C8",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

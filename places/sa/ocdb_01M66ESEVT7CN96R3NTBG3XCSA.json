@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "6225",
+      "state": "WA",
+      "street": "Porter St",
+      "suburb": "Collie"
+    },
+    "facebook": "https://www.facebook.com/423789741137568",
     "lga": {
       "name": "Shire of Collie",
       "osm_id": 11688837
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 1700
-    }
+    },
+    "phone": "+61897345088",
+    "website": "https://summerstar.com.au/caravan-parks/collie"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEVT7CN96R3NTBG3XCSA",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

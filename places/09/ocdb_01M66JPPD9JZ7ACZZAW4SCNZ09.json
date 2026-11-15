@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "5558",
+      "state": "SA",
+      "street": "Blyth Terrace",
+      "suburb": "Moonta"
+    },
     "lga": {
       "name": "Copper Coast Council",
       "osm_id": 9108139
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Blanche Terrace"
-    }
+    },
+    "phone": "+61 8 8825 2449",
+    "website": "https://find.shell.com/au/fuel/10111655-shell-moonta/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPPD9JZ7ACZZAW4SCNZ09",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,7 +1,14 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -9,14 +16,23 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "5601",
+      "state": "SA",
+      "street": "Boobialla Retreat",
+      "suburb": "Point Lowly"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1522272284744848",
     "fee": true,
     "lga": {
       "name": "The Corporation of the City of Whyalla",
@@ -39,6 +55,7 @@
       "name": "Point Lowly Road"
     },
     "operator": "Whyalla City Council",
+    "phone": "+61886457900",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -60,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

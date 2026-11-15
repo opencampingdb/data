@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "6230",
+      "state": "WA",
+      "street": "Forrest Ave",
+      "suburb": "Bunbury"
+    },
+    "facebook": "https://www.facebook.com/194378491162358",
     "lga": {
       "name": "City of Bunbury",
       "osm_id": 11688799
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Forrest Avenue"
-    }
+    },
+    "phone": "+61897217333",
+    "website": "http://www.bunburymotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVB5E7JXPJ18ZQKXC9P9",
@@ -36,7 +58,7 @@
     "lat": -33.339695,
     "lon": 115.645282
   },
-  "name": null,
+  "name": "Bunbury Apartment Motel",
   "osm": {
     "id": 1264963722,
     "timestamp": "2011-04-29T13:42:10Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

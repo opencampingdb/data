@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16-18",
+      "postcode": "4888",
+      "state": "QLD",
+      "street": "Moffat Street",
+      "suburb": "Ravenshoe"
+    },
     "lga": {
       "name": "Tablelands Regional",
       "osm_id": 11677293
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Moffat Street"
-    }
+    },
+    "phone": "0740976888",
+    "website": "https://maranos.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPTH05RNZ9D6B022RFG8E",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

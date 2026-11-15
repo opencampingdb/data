@@ -1,17 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "380",
+      "postcode": "6073",
+      "state": "WA",
+      "street": "Allen Rd",
+      "suburb": "Perth"
+    },
     "caravans": false,
+    "facebook": "https://www.facebook.com/163867430414733",
     "fee": true,
     "lga": {
       "name": "Shire of Mundaring",
@@ -27,6 +43,7 @@
       "distance_m": 460,
       "name": "Mundaring Weir Road"
     },
+    "phone": "+61892952244",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

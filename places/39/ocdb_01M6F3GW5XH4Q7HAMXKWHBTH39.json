@@ -1,14 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "street": "Queen Street"
     },
+    "facebook": "https://www.facebook.com/208698479155387",
     "lga": {
       "name": "Burdekin Shire",
       "osm_id": 11677016
@@ -22,7 +29,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Queen Street"
-    }
+    },
+    "phone": "+61747834141"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW5XH4Q7HAMXKWHBTH39",
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

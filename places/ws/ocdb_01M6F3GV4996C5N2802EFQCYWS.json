@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36",
+      "postcode": "3181",
+      "state": "VIC",
+      "street": "Greville St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/163335643676659",
     "lga": {
       "name": "City of Stonnington",
       "osm_id": 2404995
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Greville Street"
-    }
+    },
+    "phone": "+61398100074",
+    "website": "http://www.collegelawnhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV4996C5N2802EFQCYWS",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

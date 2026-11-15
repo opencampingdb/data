@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "446",
+      "postcode": "4034",
+      "state": "QLD",
+      "street": "Bilsen Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1372873956105824",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bilsen Road"
-    }
+    },
+    "phone": "+61738657006"
   },
   "group": "services",
   "id": "ocdb_01M66JPVM4BD3H7AA03YT24V2W",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

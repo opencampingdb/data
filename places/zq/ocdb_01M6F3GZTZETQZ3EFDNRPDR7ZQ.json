@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "255",
       "street": "Thomas Street"
     },
+    "facebook": "https://www.facebook.com/894168630734219",
     "lga": {
       "name": "City of Subiaco",
       "osm_id": 11349414
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Thomas Street"
-    }
+    },
+    "phone": "+61893810000",
+    "website": "http://www.kingsparkmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZTZETQZ3EFDNRPDR7ZQ",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

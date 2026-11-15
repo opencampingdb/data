@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4860",
+      "state": "QLD",
+      "street": "River Ave",
+      "suburb": "Mighell"
+    },
+    "facebook": "https://www.facebook.com/1659351554293541",
     "lga": {
       "name": "Cassowary Coast Regional",
       "osm_id": 11676958
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "River Avenue"
-    }
+    },
+    "phone": "+61740614988",
+    "website": "http://www.barrierreefmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVMCTF7E6WN5W0YFWBVH",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

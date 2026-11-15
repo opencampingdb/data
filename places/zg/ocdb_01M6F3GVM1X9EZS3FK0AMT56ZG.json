@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2173",
+      "state": "NSW",
+      "street": "Village Way",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/492245330841360",
     "lga": {
       "name": "Liverpool City Council",
       "osm_id": 6212442
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Australis Avenue"
-    }
+    },
+    "phone": "+61297311023",
+    "website": "http://linktr.ee/wattlegrovehotel"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVM1X9EZS3FK0AMT56ZG",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "2343",
+      "state": "NSW",
+      "street": "Whittaker St",
+      "suburb": "Quirindi"
+    },
+    "facebook": "https://www.facebook.com/942195472303210",
     "lga": {
       "name": "Liverpool Plains Shire Council",
       "osm_id": 6364998
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Whittaker Street"
-    }
+    },
+    "phone": "+61267462026"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY9Z7W078N9ECAR3CFQE",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

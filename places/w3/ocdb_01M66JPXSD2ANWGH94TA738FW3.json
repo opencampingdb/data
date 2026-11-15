@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1605",
+      "postcode": "4165",
+      "state": "QLD",
+      "street": "Mount Cotton Road",
+      "suburb": "Brisbane"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/1705378049580992",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -32,6 +48,7 @@
       "distance_m": 30,
       "name": "Mount Cotton Road"
     },
+    "phone": "+61732066238",
     "website": "https://map.bp.com/en-AU/AU/gas-station/mount-cotton/bp-mount-cotton/4979"
   },
   "group": "services",
@@ -50,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

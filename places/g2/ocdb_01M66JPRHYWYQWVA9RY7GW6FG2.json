@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "66",
+      "postcode": "3199",
+      "state": "VIC",
+      "street": "Dandenong Rd W",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/739425089504634",
     "lga": {
       "name": "City of Frankston",
       "osm_id": 3333252
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Dandenong Road West"
-    }
+    },
+    "phone": "+61397815266",
+    "website": "https://www.autoplus.com.au/mechanic/frankston-car-service"
   },
   "group": "services",
   "id": "ocdb_01M66JPRHYWYQWVA9RY7GW6FG2",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

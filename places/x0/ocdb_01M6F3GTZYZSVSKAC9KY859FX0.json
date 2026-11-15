@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "4805",
+      "state": "QLD",
+      "street": "Linley St",
+      "suburb": "Bowen"
+    },
+    "facebook": "https://www.facebook.com/632949713765653",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61747852293",
+    "website": "http://www.merindavillagehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GTZYZSVSKAC9KY859FX0",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

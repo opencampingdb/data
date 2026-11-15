@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "5081",
+      "state": "SA",
+      "street": "Nottage Terrace",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/157259120999728",
     "lga": {
       "name": "The Corporation of the Town of Walkerville",
       "osm_id": 9108033
@@ -21,7 +39,9 @@
     },
     "nearest_major_road": {
       "distance_m": 10
-    }
+    },
+    "phone": "+61882691555",
+    "website": "http://www.scottysmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV02C734R59J1V3X6BDV",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

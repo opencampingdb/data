@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "200",
+      "postcode": "3797",
+      "state": "VIC",
+      "street": "Doon Rd",
+      "suburb": "Yarra Junction"
+    },
+    "facebook": "https://www.facebook.com/138394369546422",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -13,7 +31,9 @@
       "name": "Yarra Junction",
       "osm_id": 192816449,
       "type": "town"
-    }
+    },
+    "phone": "+61359671674",
+    "website": "http://www.doonreserve.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF7B3GWREMX5H7C6YG4Q",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56",
+      "postcode": "2444",
+      "state": "NSW",
+      "street": "Burrawan St",
+      "suburb": "Port Macquarie"
+    },
+    "facebook": "https://www.facebook.com/122241007896364",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Lord Street"
-    }
+    },
+    "phone": "+61409040052",
+    "website": "http://www.eastportmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZNPY111MMV1SARVATNK",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

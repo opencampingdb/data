@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "street": "School Street",
       "suburb": "Rushworth"
     },
+    "facebook": "https://www.facebook.com/104788338449060",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Moora Road"
-    }
+    },
+    "phone": "+61427463584",
+    "website": "http://rushworth.budgetmotelchain.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVTFY9ECKZ7BR7APSN6J",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

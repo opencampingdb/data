@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18/16",
+      "postcode": "3732",
+      "state": "VIC",
+      "street": "Byrne St",
+      "suburb": "Moyhu"
+    },
+    "facebook": "https://www.facebook.com/496197750422825",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Byrne Street"
-    }
+    },
+    "phone": "+61357279333",
+    "website": "http://www.moyhuhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV6PQHC3MQ7J8WA4T4CK",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4625",
+      "state": "QLD",
+      "street": "Capper St",
+      "suburb": "Gayndah"
+    },
+    "facebook": "https://www.facebook.com/157989660885737",
     "lga": {
       "name": "North Burnett Regional",
       "osm_id": 11676093
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "(07) 4161 1801",
+    "website": "http://miele-professional.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJFXT2SEXQCAZH01DNQ",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5606",
+      "state": "SA",
+      "street": "Railway Pl",
+      "suburb": "Port Lincoln"
+    },
+    "facebook": "https://www.facebook.com/1075609925805875",
     "lga": {
       "name": "City of Port Lincoln",
       "osm_id": 9110111
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "London Street"
-    }
+    },
+    "phone": "+61428119287",
+    "website": "http://www.eprps.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYS25WQE47YX4NH7SBB7",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

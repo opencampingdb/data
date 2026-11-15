@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5222",
+      "street": "Lashmar Rd",
+      "suburb": "Kangaroo Island Council"
+    },
+    "facebook": "https://www.facebook.com/991517667598154",
     "lga": {
       "name": "Kangaroo Island Council",
       "osm_id": 6671370
@@ -19,7 +33,8 @@
     "nearest_beach": {
       "distance_m": 110
     },
-    "operator": "NPWS SA"
+    "operator": "NPWS SA",
+    "phone": "+61885534444"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9X0323FK35DE43MGJB6",
@@ -37,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

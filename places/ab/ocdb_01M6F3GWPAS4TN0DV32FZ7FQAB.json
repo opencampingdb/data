@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2715",
+      "state": "NSW",
+      "street": "Mailbox Road",
+      "suburb": "MUNGO"
+    },
     "lga": {
       "name": "Balranald Shire Council",
       "osm_id": 5897433
@@ -11,7 +25,9 @@
     "nearest_boat_ramp": {
       "distance_m": 510,
       "name": "Pontoon - House Ground Tank"
-    }
+    },
+    "phone": "1300072757",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/mungo-shearers-quarters"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWPAS4TN0DV32FZ7FQAB",
@@ -29,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

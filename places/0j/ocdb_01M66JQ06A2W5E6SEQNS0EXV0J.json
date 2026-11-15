@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "411",
       "street": "Canterbury Road"
     },
+    "facebook": "https://www.facebook.com/107029074040010",
     "lga": {
       "name": "City of Boroondara",
       "osm_id": 2404473
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Canterbury Road"
-    }
+    },
+    "phone": "+61426996699",
+    "website": "http://www.autosense.net.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JQ06A2W5E6SEQNS0EXV0J",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

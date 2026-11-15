@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "741",
+      "postcode": "3352",
+      "state": "VIC",
+      "street": "Bungaree-Wallace Rd",
+      "suburb": "Wallace"
+    },
+    "facebook": "https://www.facebook.com/116976235025186",
     "lga": {
       "name": "Shire of Moorabool",
       "osm_id": 3291957
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Bungaree - Wallace Road"
-    }
+    },
+    "phone": "+61353340322",
+    "website": "http://www.wallacehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV75EVXDH23N3SCWWHTD",
@@ -27,7 +49,7 @@
     "lat": -37.554571,
     "lon": 144.05072
   },
-  "name": null,
+  "name": "Wallace Hotel",
   "osm": {
     "id": 655115952,
     "timestamp": "2010-02-27T10:07:58Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

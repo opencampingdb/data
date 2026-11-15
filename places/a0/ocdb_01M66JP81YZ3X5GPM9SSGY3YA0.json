@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Pacific Highway",
       "suburb": "Ourimbah"
     },
+    "facebook": "https://www.facebook.com/112622326951638",
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -25,7 +32,8 @@
     },
     "nearest_major_road": {
       "distance_m": 30
-    }
+    },
+    "phone": "+61243629992"
   },
   "group": "services",
   "id": "ocdb_01M66JP81YZ3X5GPM9SSGY3YA0",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

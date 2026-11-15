@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "19",
+      "postcode": "3317",
+      "state": "VIC",
+      "street": "Blair St",
+      "suburb": "Harrow"
+    },
+    "facebook": "https://www.facebook.com/118582114868497",
     "lga": {
       "name": "Shire of West Wimmera",
       "osm_id": 3345520
@@ -20,7 +36,8 @@
       "distance_m": 410,
       "name": "Coleraine-Edenhope Road"
     },
-    "phone": "+61 3 5588 1387"
+    "phone": "+61 3 5588 1387",
+    "website": "http://www.harrow.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXQ7772EG926DE6V9T4W",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

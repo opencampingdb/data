@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2484",
+      "state": "NSW",
+      "street": "Mooball St",
+      "suburb": "Murwillumbah"
+    },
+    "facebook": "https://www.facebook.com/117721784609279",
     "fee": true,
     "lga": {
       "name": "Tweed Shire Council",
@@ -24,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Queensland Road"
-    }
+    },
+    "phone": "+61423327234",
+    "website": "https://murwillumbahshowground.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAYVE7E3SN4S7EHP72NX",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

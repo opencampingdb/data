@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6076",
+      "state": "WA",
+      "street": "Railway Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/404078299698036",
     "lga": {
       "name": "City of Kalamunda",
       "osm_id": 11689431
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Haynes Street"
-    }
+    },
+    "phone": "+61892931371",
+    "website": "http://www.kalamundahistoricalsociety.com"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GV0D5JP5RRZZGYJTEFP3",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

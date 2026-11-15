@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "2586",
+      "state": "NSW",
+      "street": "Marsden St",
+      "suburb": "Boorowa"
+    },
+    "facebook": "https://www.facebook.com/104923445573215",
     "lga": {
       "name": "Hilltops Council",
       "osm_id": 6256597
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Marsden Street"
-    }
+    },
+    "phone": "+61253001810",
+    "website": "http://www.thenedryan.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYBYVS6F0NJ5XSG9KDW4",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

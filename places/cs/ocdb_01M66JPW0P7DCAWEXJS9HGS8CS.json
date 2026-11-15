@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "2602",
+      "state": "ACT",
+      "street": "Street Pl",
+      "suburb": "Canberra"
+    },
+    "facebook": "https://www.facebook.com/285974231456092",
     "locality": {
       "distance_m": 1950,
       "name": "Belconnen",
@@ -21,7 +39,8 @@
     },
     "nearest_major_road": {
       "distance_m": 120
-    }
+    },
+    "website": "http://www.autoco.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPW0P7DCAWEXJS9HGS8CS",
@@ -30,7 +49,7 @@
     "lat": -35.237171,
     "lon": 149.061057
   },
-  "name": null,
+  "name": "Autoco Belconnen",
   "osm": {
     "id": 675365625,
     "timestamp": "2025-03-16T05:44:22Z",
@@ -39,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

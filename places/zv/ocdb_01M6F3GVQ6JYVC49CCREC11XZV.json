@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "49",
+      "postcode": "3737",
+      "state": "VIC",
+      "street": "Clyde St",
+      "suburb": "Myrtleford"
+    },
+    "facebook": "https://www.facebook.com/203707083094979",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Clyde Street"
-    }
+    },
+    "phone": "+61357511400",
+    "website": "http://buffalo-hotel.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVQ6JYVC49CCREC11XZV",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

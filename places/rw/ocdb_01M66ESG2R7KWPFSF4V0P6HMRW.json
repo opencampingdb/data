@@ -1,19 +1,37 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "105-107",
+      "postcode": "3412",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Goroke"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/513503111839108",
     "fee": true,
     "lga": {
       "name": "Shire of West Wimmera",
@@ -29,10 +47,12 @@
       "distance_m": 40,
       "name": "Main Street"
     },
+    "phone": "+61478000302",
     "power": true,
     "showers": true,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://book-directonline.com/properties/gorokeaccommodationpark"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG2R7KWPFSF4V0P6HMRW",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

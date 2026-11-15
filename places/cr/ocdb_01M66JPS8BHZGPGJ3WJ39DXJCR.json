@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4805",
+      "state": "QLD",
+      "street": "Gregory St",
+      "suburb": "Bowen"
+    },
+    "facebook": "https://www.facebook.com/117922578275741",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -29,7 +46,9 @@
       "distance_m": 230,
       "name": "Livingstone Street"
     },
-    "operator": "Mackay Hospital and Health Services"
+    "operator": "Mackay Hospital and Health Services",
+    "phone": "+61747868222",
+    "website": "https://www.health.qld.gov.au/services/mackay/bowen_hosp"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPS8BHZGPGJ3WJ39DXJCR",
@@ -47,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "4380",
+      "state": "QLD",
+      "street": "Maryland St",
+      "suburb": "Stanthorpe"
+    },
+    "facebook": "https://www.facebook.com/263455850441784",
     "lga": {
       "name": "Southern Downs Regional",
       "osm_id": 11677975
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Maryland Street"
-    }
+    },
+    "phone": "+61746811044",
+    "website": "http://www.omarashotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVCQAVB16SGE1ZPXYFK9",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

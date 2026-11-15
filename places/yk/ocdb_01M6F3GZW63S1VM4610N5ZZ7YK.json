@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "0854",
+      "state": "NT",
+      "street": "John St",
+      "suburb": "Borroloola"
+    },
+    "facebook": "https://www.facebook.com/100329422354773",
     "lga": {
       "name": "Roper Gulf Region",
       "osm_id": 11716437
@@ -23,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Robinson Road"
-    }
+    },
+    "phone": "+61889758606"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZW63S1VM4610N5ZZ7YK",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

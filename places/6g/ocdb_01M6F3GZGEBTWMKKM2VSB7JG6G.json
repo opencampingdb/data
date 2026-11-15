@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "3567",
+      "state": "VIC",
+      "street": "King George Street",
+      "suburb": "Leitchville"
+    },
+    "facebook": "https://www.facebook.com/78963336202",
     "lga": {
       "name": "Shire of Gannawarra",
       "osm_id": 3363585
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "King George Street"
-    }
+    },
+    "phone": "+61354567233"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZGEBTWMKKM2VSB7JG6G",
@@ -27,7 +46,7 @@
     "lat": -35.903705,
     "lon": 144.299523
   },
-  "name": null,
+  "name": "Leitchville Hotel",
   "osm": {
     "id": 890988610,
     "timestamp": "2021-01-01T15:21:08Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

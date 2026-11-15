@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "2624",
+      "state": "NSW",
+      "street": "Corroboree Road",
+      "suburb": "Smiggin Holes"
+    },
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Kosciuszko Road"
-    }
+    },
+    "phone": "0264505600",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/numbananga-lodge?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_11630007703772424302&utm_content=Numbananga+Lodge+-+Smiggin+Holes"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYSYJKVWSK1HQYQ7YRZ6",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

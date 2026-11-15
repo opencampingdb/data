@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "2430",
+      "state": "NSW",
+      "street": "Mill Rd",
+      "suburb": "Failford"
+    },
+    "facebook": "https://www.facebook.com/171741347011585",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Failford Road"
-    }
+    },
+    "phone": "+61265543144"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFFY5GBVNY0K61CFQBMZ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

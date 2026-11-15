@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "542",
+      "postcode": "3735",
+      "state": "VIC",
+      "street": "Whorouly Rd",
+      "suburb": "Whorouly"
+    },
+    "facebook": "https://www.facebook.com/213129455496084",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -13,7 +31,9 @@
       "name": "Whorouly",
       "osm_id": 1722445838,
       "type": "village"
-    }
+    },
+    "phone": "+61357271514",
+    "website": "http://www.whoroulyhotel.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ2HR9ZDMX8X82H4K7D4",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

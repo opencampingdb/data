@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 577",
+      "postcode": "2357",
+      "state": "NSW",
+      "street": "Oxley Hwy",
+      "suburb": "Coonabarabran"
+    },
+    "facebook": "https://www.facebook.com/133154283749284",
     "lga": {
       "name": "Warrumbungle Shire Council",
       "osm_id": 6268496
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Newell Highway"
-    }
+    },
+    "phone": "+61268421706",
+    "website": "http://www.castlereaghvillage.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVVAN80HHRE2HA3E5NGC",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

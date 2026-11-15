@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "270",
+      "postcode": "3181",
+      "state": "VIC",
+      "street": "Chapel St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/514004002000371",
     "lga": {
       "name": "City of Stonnington",
       "osm_id": 2404995
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Little Chapel Street"
-    }
+    },
+    "phone": "+61395293733",
+    "website": "http://www.courtjester.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXX33HXBWV7SXTQ2RGH1",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

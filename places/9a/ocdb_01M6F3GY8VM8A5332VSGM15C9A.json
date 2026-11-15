@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2541",
+      "state": "NSW",
+      "street": "Kinghorne St",
+      "suburb": "Nowra"
+    },
+    "facebook": "https://www.facebook.com/162242167179266",
     "lga": {
       "name": "Shoalhaven City Council",
       "osm_id": 6311648
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "North Street"
-    }
+    },
+    "phone": "+61244212433",
+    "website": "http://Australianhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY8VM8A5332VSGM15C9A",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

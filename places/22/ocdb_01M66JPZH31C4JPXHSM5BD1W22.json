@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10-12",
+      "postcode": "4821",
+      "state": "QLD",
+      "street": "Gray St",
+      "suburb": "Hughenden"
+    },
     "lga": {
       "name": "Flinders Shire",
       "osm_id": 11676765
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Mowbray Street"
-    }
+    },
+    "phone": "0747411132",
+    "website": "https://locations.ampol.com.au/en/ampol-hughenden"
   },
   "group": "services",
   "id": "ocdb_01M66JPZH31C4JPXHSM5BD1W22",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

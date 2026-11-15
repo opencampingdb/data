@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "23",
+      "postcode": "5118",
+      "state": "SA",
+      "street": "Murray St",
+      "suburb": "Gawler"
+    },
+    "facebook": "https://www.facebook.com/163174430366168",
     "lga": {
       "name": "Town of Gawler",
       "osm_id": 9106057
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Murray Street"
-    }
+    },
+    "phone": "+61885221065",
+    "website": "http://www.thesouthernhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZRF2XET10WNRVD61S9B",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

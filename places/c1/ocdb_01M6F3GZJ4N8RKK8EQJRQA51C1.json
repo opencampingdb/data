@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "102",
+      "postcode": "3467",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Avoca"
+    },
+    "facebook": "https://www.facebook.com/104817379582283",
     "lga": {
       "name": "Shire of Pyrenees",
       "osm_id": 3291903
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bridport Street"
-    }
+    },
+    "phone": "+61499009470",
+    "website": "http://www.pyreneesmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZJ4N8RKK8EQJRQA51C1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

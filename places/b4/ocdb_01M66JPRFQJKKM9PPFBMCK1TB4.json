@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3380",
+      "state": "VIC",
+      "street": "Sloane St",
+      "suburb": "Stawell"
+    },
+    "facebook": "https://www.facebook.com/252835761954376",
     "lga": {
       "name": "Shire of Northern Grampians",
       "osm_id": 3348880
@@ -20,6 +35,7 @@
       "distance_m": 400,
       "name": "Patrick Street"
     },
+    "phone": "+61353582255",
     "website": "https://www.srh.org.au/"
   },
   "group": "emergency",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

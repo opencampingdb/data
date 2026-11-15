@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "46",
+      "postcode": "4551",
+      "state": "QLD",
+      "street": "Pelican Waters Blvd",
+      "suburb": "PELICAN WATERS"
+    },
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -26,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Pelican Waters Boulevard"
-    }
+    },
+    "phone": "0753294611"
   },
   "group": "services",
   "id": "ocdb_01M66JPYPF97D0E5EANWPWSVBX",
@@ -35,7 +51,7 @@
     "lat": -26.833274,
     "lon": 153.107173
   },
-  "name": null,
+  "name": "Caltex Pelican Waters",
   "osm": {
     "id": 1224012070,
     "timestamp": "2023-11-16T05:16:24Z",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

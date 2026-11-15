@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "3638",
+      "state": "VIC",
+      "street": "Blake St",
+      "suburb": "Nathalia"
+    },
+    "facebook": "https://www.facebook.com/101047301340550",
     "lga": {
       "name": "Shire of Moira",
       "osm_id": 3365119
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Blake Street"
-    }
+    },
+    "phone": "+61358662530"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVTMFAKG8754HBSJS9XX",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

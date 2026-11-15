@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -14,10 +20,18 @@
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4496",
+      "state": "QLD",
+      "street": "Buckley St",
+      "suburb": "Talwood"
+    },
     "caravans": true,
     "charge": "Donation Box at General Store",
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/714950825216326",
     "fee": true,
     "lga": {
       "name": "Goondiwindi Regional",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

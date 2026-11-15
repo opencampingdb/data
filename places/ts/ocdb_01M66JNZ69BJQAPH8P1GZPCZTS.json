@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51-53",
+      "postcode": "2630",
+      "state": "NSW",
+      "street": "Sharp Street",
+      "suburb": "Cooma"
+    },
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -20,7 +35,9 @@
       "distance_m": 30,
       "name": "Sharp Street"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 2 6452 5706",
+    "website": "https://find.shell.com/au/fuel/10111003-shell-cooma/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNZ69BJQAPH8P1GZPCZTS",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "2321",
+      "state": "NSW",
+      "street": "Main Rd",
+      "suburb": "Cliftleigh"
+    },
+    "facebook": "https://www.facebook.com/1656621587702924",
     "lga": {
       "name": "Cessnock City Council",
       "osm_id": 6191219
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61249364558"
   },
   "group": "services",
   "id": "ocdb_01M66JPEHKM9VN0WX7B574Q6VZ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "72",
+      "postcode": "2221",
+      "state": "NSW",
+      "street": "Connells Point Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/264623664149250",
     "lga": {
       "name": "Georges River Council",
       "osm_id": 6205809
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "King Georges Road"
-    }
+    },
+    "phone": "+61295463436",
+    "website": "https://play.cricket.com.au/club/south-hurstville-carss-park-cricket-club/4338cd53-8ad8-eb11-a7ad-2818780da0cc?tab=info&programTypeId=10"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV231BZ8F4TZMSBCJRQG",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

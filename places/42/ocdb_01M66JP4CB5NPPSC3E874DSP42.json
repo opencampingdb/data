@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "149",
+      "postcode": "2508",
+      "state": "NSW",
+      "street": "Parkes Street",
+      "suburb": "Helensburgh"
+    },
     "lga": {
       "name": "Wollongong City Council",
       "osm_id": 6303077
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Parkes Street"
-    }
+    },
+    "phone": "+61 2 4294 1045",
+    "website": "https://find.shell.com/au/fuel/10111025-shell-helensburgh/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP4CB5NPPSC3E874DSP42",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

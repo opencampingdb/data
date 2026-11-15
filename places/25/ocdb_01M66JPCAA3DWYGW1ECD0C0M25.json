@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "5680",
+      "state": "SA",
+      "street": "Bay Road",
+      "suburb": "Streaky Bay"
+    },
     "lga": {
       "name": "The District Council of Streaky Bay",
       "osm_id": 7109329
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bay Road"
-    }
+    },
+    "phone": "0886261068",
+    "website": "https://locations.ampol.com.au/en/independent-streaky-bay"
   },
   "group": "services",
   "id": "ocdb_01M66JPCAA3DWYGW1ECD0C0M25",
@@ -35,7 +54,7 @@
     "lat": -32.796574,
     "lon": 134.210816
   },
-  "name": null,
+  "name": "Independent Streaky Bay",
   "osm": {
     "id": 7076957757,
     "timestamp": "2019-12-22T09:10:49Z",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

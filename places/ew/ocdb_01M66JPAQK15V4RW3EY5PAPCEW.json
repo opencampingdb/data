@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "57",
+      "postcode": "2506",
+      "state": "NSW",
+      "street": "Winnima Way",
+      "suburb": "Wollongong"
+    },
+    "facebook": "https://www.facebook.com/1650466288578682",
     "lga": {
       "name": "Wollongong City Council",
       "osm_id": 6303077
@@ -23,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Northcliffe Drive"
-    }
+    },
+    "phone": "+61242716398"
   },
   "group": "services",
   "id": "ocdb_01M66JPAQK15V4RW3EY5PAPCEW",
@@ -32,7 +51,7 @@
     "lat": -34.480216,
     "lon": 150.846194
   },
-  "name": null,
+  "name": "Metro Petroleum Berkeley",
   "osm": {
     "id": 5826129594,
     "timestamp": "2018-08-12T02:03:26Z",
@@ -41,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

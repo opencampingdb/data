@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6308",
+      "state": "WA",
+      "street": "Eliot St",
+      "suburb": "Pingelly"
+    },
+    "facebook": "https://www.facebook.com/112438451217577",
     "lga": {
       "name": "Shire of Pingelly",
       "osm_id": 11689064
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Great Southern Highway"
-    }
+    },
+    "phone": "+61895487262",
+    "website": "https://apac.littlehotelier.com/properties/pingellyretreatmotel"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYZXM1S4RRBGCK7SHVM4",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

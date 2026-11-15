@@ -131,9 +131,10 @@ OSM_ONLY_FACTS = (
 EXTRA_SOURCE_KEYS = ("name", "location", "kind", "status", "description")
 
 # Where a value came from: OpenStreetMap, app feedback, a place or closure
-# contributed directly to Open Camping DB, the place's verified owner, or
-# anonymous community reports from public camping groups, imported in bulk.
-SOURCES = ("osm", "feedback", "contributed", "owner", "community_report")
+# contributed directly to Open Camping DB, the place's verified owner,
+# anonymous community reports from public camping groups, imported in bulk,
+# or Overture Maps, which only fills gaps (any other source replaces it).
+SOURCES = ("osm", "feedback", "contributed", "owner", "community_report", "overture")
 
 # Kinds that are buildings to stay in rather than camp sites. The double
 # mapping challenge leaves them out, and an automatic merge of one with a
@@ -142,7 +143,7 @@ ROOFED_KINDS = ("roofed_accommodation", "backpacker_hostel")
 
 # Sources whose values never go back to OSM, in any form: not as a
 # MapRoulette task, not as an OSM note.
-NOT_FOR_OSM = ("contributed", "community_report", "rule")
+NOT_FOR_OSM = ("contributed", "community_report", "rule", "overture")
 
 # The source of a fact the release sets by a documented rule
 # (schema/fact_rules.json). It is never stored in places/: only released
@@ -177,6 +178,26 @@ def with_rule_facts(record: dict) -> dict:
 # The source of values imported from anonymous community reports. A place
 # whose name or location has this source is never passed to OSM at all.
 COMMUNITY_REPORT = "community_report"
+
+# The source of a gap fill from Overture Maps. Any value from another source
+# replaces it: the OSM sync drops it as soon as OSM gives a value, unless a
+# person took it over OSM's (TAKEN_FILE).
+OVERTURE = "overture"
+
+# The Overture values a person or the AI reviewer chose over OSM's in
+# "Overture differs": {"taken": [{"place", "fact", "value"}]}. The importer
+# writes each one sourced overture, and the OSM sync leaves it alone while the
+# record still holds that value.
+TAKEN_FILE = Path("overture") / "taken.json"
+
+
+def load_taken(root: Path) -> dict[tuple[str, str], object]:
+    """The taken Overture values, (place id, fact) to value. Empty when the file is missing."""
+    path = Path(root) / TAKEN_FILE
+    if not path.exists():
+        return {}
+    entries = json.loads(path.read_text(encoding="utf-8"))["taken"]
+    return {(entry["place"], entry["fact"]): entry["value"] for entry in entries}
 
 
 def from_community_report(record: dict) -> bool:

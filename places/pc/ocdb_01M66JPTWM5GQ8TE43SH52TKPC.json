@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "41",
+      "postcode": "4814",
+      "state": "QLD",
+      "street": "Camuglia St",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/368507957606",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Mather Street"
-    }
+    },
+    "phone": "+61747743826",
+    "website": "https://www.brashasworkshop.com.au/contact-us"
   },
   "group": "services",
   "id": "ocdb_01M66JPTWM5GQ8TE43SH52TKPC",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

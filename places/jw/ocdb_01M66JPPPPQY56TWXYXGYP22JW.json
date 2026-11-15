@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "39-41",
+      "postcode": "3550",
+      "state": "VIC",
+      "street": "McIvor Highway",
+      "suburb": "East Bendigo"
+    },
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "McIvor Road"
-    }
+    },
+    "phone": "+61 3 4435 0688",
+    "website": "https://find.shell.com/au/fuel/10111487-shell-reddy-express-woolpak/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPPPPQY56TWXYXGYP22JW",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

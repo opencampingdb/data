@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "3747",
+      "state": "VIC",
+      "street": "Bluegum Cr",
+      "suburb": "Beechworth"
+    },
+    "facebook": "https://www.facebook.com/983059841553511",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Hodge Street"
-    }
+    },
+    "phone": "+61357281171",
+    "website": "https://www.booking.com/hotel/au/linaker-art-deco-nurses-quarters.html"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ4RNQAWX6NACNQBMYZH",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

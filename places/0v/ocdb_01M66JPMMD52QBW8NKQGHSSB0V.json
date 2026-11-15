@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "388",
+      "postcode": "7005",
+      "state": "TAS",
+      "street": "Sandy Bay Rd",
+      "suburb": "Sandy Bay"
+    },
     "lga": {
       "name": "City of Hobart",
       "osm_id": 10625466
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Sandy Bay Road"
-    }
+    },
+    "phone": "0362251204",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-sandy-bay"
   },
   "group": "services",
   "id": "ocdb_01M66JPMMD52QBW8NKQGHSSB0V",
@@ -36,7 +55,7 @@
     "lat": -42.902223,
     "lon": 147.334679
   },
-  "name": null,
+  "name": "Ampol Foodary Sandy Bay",
   "osm": {
     "id": 12373194142,
     "timestamp": "2024-11-25T08:29:23Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

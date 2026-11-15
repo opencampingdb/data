@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "32",
+      "postcode": "2750",
+      "state": "NSW",
+      "street": "Bruce Neale Dr",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/351093305056510",
     "lga": {
       "name": "Penrith City Council",
       "osm_id": 6282698
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "High Street"
-    }
+    },
+    "phone": "+61247312255",
+    "website": "http://mazegroup.com.au/locations.html"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY908A7F5M3XH9ME468W",
@@ -35,7 +57,7 @@
     "lat": -33.745971,
     "lon": 150.683889
   },
-  "name": null,
+  "name": "Paddles at Nepean Rowers",
   "osm": {
     "id": 13397534126,
     "timestamp": "2025-12-23T12:06:48Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

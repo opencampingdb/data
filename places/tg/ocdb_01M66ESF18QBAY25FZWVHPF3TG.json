@@ -1,7 +1,14 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -9,12 +16,21 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "3137-3149",
+      "postcode": "2642",
+      "state": "NSW",
+      "street": "River Rd",
+      "suburb": "Jingellic"
+    },
     "caravans": true,
     "entry": "public",
+    "facebook": "https://www.facebook.com/831417656970625",
     "fee": false,
     "lga": {
       "name": "Snowy Valleys Council",
@@ -38,6 +54,7 @@
       "name": "Jingellic South Road"
     },
     "operator": "Snowy Valleys Council",
+    "phone": "+61260371290",
     "tents": true,
     "toilets": true
   },
@@ -57,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

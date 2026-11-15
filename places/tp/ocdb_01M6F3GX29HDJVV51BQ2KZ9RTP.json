@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "4415",
+      "state": "QLD",
+      "street": "Murilla St",
+      "suburb": "Miles"
+    },
+    "facebook": "https://www.facebook.com/1411368375765795",
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Murilla Street"
-    }
+    },
+    "phone": "+61746271152"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX29HDJVV51BQ2KZ9RTP",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

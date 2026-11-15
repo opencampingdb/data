@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "19",
+      "postcode": "4064",
+      "state": "QLD",
+      "street": "Sheehan Street",
+      "suburb": "Milton"
+    },
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Milton Road"
-    }
+    },
+    "phone": "0738762360",
+    "website": "http://miltonmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ56BZ6Z9XPDF4R4JKYT",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

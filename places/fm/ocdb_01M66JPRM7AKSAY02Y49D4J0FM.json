@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "152",
+      "postcode": "3915",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Hastings"
+    },
     "air": true,
     "lga": {
       "name": "Shire of Mornington Peninsula",
@@ -24,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Frankston-Flinders Road"
-    }
+    },
+    "phone": "+61 3 5911 7206",
+    "website": "https://find.shell.com/au/fuel/10110846-shell-reddy-express-hastings/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPRM7AKSAY02Y49D4J0FM",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

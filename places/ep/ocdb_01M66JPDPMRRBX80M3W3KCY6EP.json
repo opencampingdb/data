@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Summerland Way",
       "suburb": "Whiporie"
     },
+    "facebook": "https://www.facebook.com/1913395992225783",
     "fuels": [
       "diesel",
       "unleaded_91"
@@ -31,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Summerland Way"
-    }
+    },
+    "phone": "+61266619100"
   },
   "group": "services",
   "id": "ocdb_01M66JPDPMRRBX80M3W3KCY6EP",
@@ -49,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

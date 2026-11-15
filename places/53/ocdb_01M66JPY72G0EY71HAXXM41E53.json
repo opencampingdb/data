@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "259",
+      "postcode": "6111",
+      "state": "WA",
+      "street": "Railway Av",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/712797318755519",
     "lga": {
       "name": "City of Armadale",
       "osm_id": 11689426
@@ -23,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Railway Avenue"
-    }
+    },
+    "phone": "+61893991701",
+    "website": "https://www.pumaenergy.com.au/on-the-road/service-stations/"
   },
   "group": "services",
   "id": "ocdb_01M66JPY72G0EY71HAXXM41E53",
@@ -32,7 +54,7 @@
     "lat": -32.135304,
     "lon": 116.009529
   },
-  "name": null,
+  "name": "Lori's Fuel Station",
   "osm": {
     "id": 1148507989,
     "timestamp": "2023-02-22T13:11:34Z",
@@ -41,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

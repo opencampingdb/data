@@ -1,21 +1,38 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6522",
+      "state": "WA",
+      "street": "Lee St",
+      "suburb": "Mingenew"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/248353131915403",
     "kitchen": true,
     "lga": {
       "name": "Shire of Mingenew",
@@ -31,10 +48,12 @@
       "distance_m": 220,
       "name": "Midlands Road"
     },
+    "phone": "+61899281019",
     "power": true,
     "showers": true,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.mingenewspringcaravanpark.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFYRVFVPEEBH59SBZ5TR",
@@ -52,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

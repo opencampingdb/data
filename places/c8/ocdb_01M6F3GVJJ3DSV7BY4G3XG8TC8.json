@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "18-38",
       "street": "Siddeley"
     },
+    "facebook": "https://www.facebook.com/121274994597485",
     "lga": {
       "name": "City of Melbourne",
       "osm_id": 2404870
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Spencer Street"
-    }
+    },
+    "phone": "+61398100097",
+    "website": "http://www.wharfhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJJ3DSV7BY4G3XG8TC8",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

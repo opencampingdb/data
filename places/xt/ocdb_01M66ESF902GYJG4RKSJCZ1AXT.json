@@ -1,17 +1,33 @@
 {
   "fact_dates": {
-    "fee": "2026-07-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2026-07-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "169",
+      "postcode": "4215",
+      "state": "QLD",
+      "street": "Marine Parade",
+      "suburb": "Gold Coast"
+    },
+    "facebook": "https://www.facebook.com/178515358866744",
     "fee": true,
     "lga": {
       "name": "Gold Coast City",
@@ -33,7 +49,9 @@
       "distance_m": 140,
       "name": "Marine Parade"
     },
-    "power": true
+    "phone": "+61756672730",
+    "power": true,
+    "website": "https://goldcoasttouristparks.com.au/parks/broadwater"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF902GYJG4RKSJCZ1AXT",
@@ -51,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "123",
+      "postcode": "4557",
+      "state": "QLD",
+      "street": "Parkyn Parade",
+      "suburb": "Sunshine Coast"
+    },
+    "facebook": "https://www.facebook.com/637678966714488",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 290,
       "name": "River Esplanade"
-    }
+    },
+    "phone": "+61754448383",
+    "website": "https://www.savvysquire.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWC6SQYHDXQEC8KSK9W4",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

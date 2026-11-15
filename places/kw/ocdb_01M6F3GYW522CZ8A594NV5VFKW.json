@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18",
+      "postcode": "3871",
+      "state": "VIC",
+      "street": "Galvins Rd",
+      "suburb": "Mirboo North"
+    },
+    "facebook": "https://www.facebook.com/113194508703775",
     "lga": {
       "name": "Shire of South Gippsland",
       "osm_id": 3335917
@@ -13,7 +31,9 @@
       "name": "Mirboo North",
       "osm_id": 5704950561,
       "type": "town"
-    }
+    },
+    "phone": "+61394173019",
+    "website": "http://www.vicgolfleague.com.au/1st_t_motel-mirboo_north.html"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYW522CZ8A594NV5VFKW",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

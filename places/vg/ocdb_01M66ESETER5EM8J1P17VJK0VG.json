@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3942",
+      "state": "VIC",
+      "street": "William Rd",
+      "suburb": "Blairgowrie"
+    },
+    "facebook": "https://www.facebook.com/191574527522966",
     "lga": {
       "name": "Shire of Mornington Peninsula",
       "osm_id": 3333281
@@ -23,7 +38,8 @@
     "nearest_boat_ramp": {
       "distance_m": 1350,
       "name": "Tyrone Boat Ramp"
-    }
+    },
+    "phone": "+61359888394"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESETER5EM8J1P17VJK0VG",
@@ -41,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36",
+      "postcode": "4570",
+      "state": "QLD",
+      "street": "Edwin Campion Dr",
+      "suburb": "Gympie"
+    },
+    "facebook": "https://www.facebook.com/617596161776415",
     "lga": {
       "name": "Gympie Regional",
       "osm_id": 11675079
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Old Bruce Highway"
-    }
+    },
+    "phone": "+61754827633",
+    "website": "https://www.ultratune.com.au/location/gympie/"
   },
   "group": "services",
   "id": "ocdb_01M66JQ08NTT5MP0PY0SYE4N1W",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

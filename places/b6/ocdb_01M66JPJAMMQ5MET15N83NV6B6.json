@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Lentini Street",
       "unit": "1"
     },
+    "facebook": "https://www.facebook.com/1585742131668922",
     "lga": {
       "name": "City of Wyndham",
       "osm_id": 2432416
@@ -32,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Princes Freeway"
-    }
+    },
+    "phone": "+61433778102"
   },
   "group": "services",
   "id": "ocdb_01M66JPJAMMQ5MET15N83NV6B6",
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -8,6 +8,7 @@ from pipeline.common import dump_line, dump_record, place_path
 from pipeline.extract import extract_file
 from pipeline.release import build_release
 from pipeline.sync import sync
+from pipeline.validate import validate_repo
 
 VERSION = "20261030T160000Z-abc1234"
 GENERATED = "2026-10-30T16:00:00Z"
@@ -43,6 +44,11 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     manifest = build(repo, out)
 
     assert sorted(p.name for p in out.iterdir()) == [
+        "LICENSE",
+        "LICENSE-APACHE-2.0",
+        "LICENSE-CDLA-PERMISSIVE-2.0",
+        "LICENSE-CONTENTS",
+        "NOTICE",
         "commons.ndjson.gz",
         "manifest.json",
         "merged.ndjson.gz",
@@ -58,7 +64,8 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     # 13: fees.ndjson.gz is gone, and the charge facts arrive.
     assert manifest["format_version"] == 13
     # 13.2: the facts protected_area, nearest_waterway and nearest_feature, and label.
-    assert manifest["format_minor"] == 2
+    # 13.3: the source overture, and Overture candidates (osm null, standing).
+    assert manifest["format_minor"] == 3
     assert "fees" not in manifest
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
@@ -76,6 +83,34 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest["reviews"]["file"] == "reviews.ndjson.gz"
     assert manifest["reviews"]["url"].endswith("/data-20261030T160000Z/reviews.ndjson.gz")
     assert manifest["reviews"]["count"] == 1
+
+
+def test_release_ships_the_licence_texts_and_notice(repo, tmp_path):
+    out = tmp_path / "dist"
+    manifest = build(repo, out)
+
+    cdla = (out / "LICENSE-CDLA-PERMISSIVE-2.0").read_text(encoding="utf-8")
+    assert cdla.startswith("Community Data License Agreement - Permissive - Version 2.0\n")
+    assert "makes available the text of this agreement with the shared Data" in cdla
+    apache = (out / "LICENSE-APACHE-2.0").read_text(encoding="utf-8")
+    assert "Apache License" in apache and "Version 2.0, January 2004" in apache
+    assert "Open Database License" in (out / "LICENSE").read_text(encoding="utf-8")
+    assert "Database Contents License" in (out / "LICENSE-CONTENTS").read_text(encoding="utf-8")
+
+    notice = (out / "NOTICE").read_text(encoding="utf-8")
+    assert "    © OpenStreetMap contributors, Open Camping DB\n" in notice
+    assert "Overture Maps Foundation" in notice
+    for source in (
+        "Meta", "Microsoft", "PinMeTo", "Krick", "RenderSEO", "DAC", "BrightQuery",
+        "Birdeye", "Uberall", "OpenTravel Alliance", "AllThePlaces",
+    ):
+        assert f"Data from {source}. Available under" in notice
+    assert "Data from Foursquare. Copyright 2024 Foursquare Labs, Inc. All rights reserved." in notice
+    assert "Foursquare OS Places Notice" in notice
+    assert "preserving the full content of this NOTICE.txt file" in notice
+
+    # The attribution line stays as it was.
+    assert manifest["attribution"] == "© OpenStreetMap contributors, Open Camping DB"
 
 
 def test_release_is_byte_identical_on_rerun(repo, v1_osm, tmp_path):
@@ -153,6 +188,38 @@ def test_release_leaves_out_held_and_hidden_new_places(repo, v1_osm, tmp_path):
     assert standings == ["confirmed", "shown"]
     assert manifest["places"]["count"] == osm_count + 2
     assert manifest["format_version"] == 13
+
+
+def test_release_carries_overture_values_and_candidates(repo, v1_osm, tmp_path):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    filled_path = sorted((repo / "places").rglob("*.json"))[0]
+    filled = json.loads(filled_path.read_text(encoding="utf-8"))
+    filled["facts"]["phone"] = "+61 2 5550 0100"
+    filled["fact_sources"]["phone"] = "overture"
+    filled["fact_dates"] = {"phone": "2026-10-30T00:00:00Z"}
+    filled["updated"] = "2026-10-30T00:00:00Z"
+    filled_path.write_text(dump_record(filled), encoding="utf-8", newline="\n")
+    candidate = {
+        "id": "ocdb_01JC0000000000000000000V01", "name": "Riverbend Holiday Park", "kind": "caravan_park",
+        "group": "overnight", "location": {"lat": -35.1, "lon": 149.2}, "osm": None, "facts": {},
+        "status": "open", "rating": None, "standing": "shown",
+        "fact_sources": {"name": "overture", "location": "overture"},
+        "fact_dates": {"name": "2026-10-30T00:00:00Z", "location": "2026-10-30T00:00:00Z"},
+        "updated": "2026-10-30T00:00:00Z",
+    }
+    path = place_path(repo, candidate["id"])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(dump_record(candidate), encoding="utf-8", newline="\n")
+    assert validate_repo(repo) == []
+
+    manifest = build(repo, tmp_path / "dist")
+
+    lines = gzip.decompress((tmp_path / "dist" / "places.ndjson.gz").read_bytes()).decode("utf-8").splitlines()
+    released = {r["id"]: r for r in map(json.loads, lines)}
+    assert released[filled["id"]]["fact_sources"]["phone"] == "overture"
+    assert released[candidate["id"]]["fact_sources"] == {"name": "overture", "location": "overture"}
+    assert released[candidate["id"]]["standing"] == "shown"
+    assert (manifest["format_version"], manifest["format_minor"]) == (13, 3)
 
 
 def test_commons_lines_are_released_matches_only(tmp_path, v1_osm):

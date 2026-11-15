@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "140",
+      "postcode": "3431",
+      "state": "VIC",
+      "street": "Royal Pde",
+      "suburb": "Riddells Creek"
+    },
+    "facebook": "https://www.facebook.com/132382143582096",
     "lga": {
       "name": "Shire of Macedon Ranges",
       "osm_id": 3327683
@@ -13,7 +31,9 @@
       "name": "Riddells Creek",
       "osm_id": 536417243,
       "type": "town"
-    }
+    },
+    "phone": "+61354286756",
+    "website": "http://www.vicscouts.com.au/treetops-camp-and-activity-centre.html"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXN9TF96BS064F0ZRRF",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

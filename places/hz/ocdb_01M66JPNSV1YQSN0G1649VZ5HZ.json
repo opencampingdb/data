@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9",
+      "postcode": "6151",
+      "state": "WA",
+      "street": "Mends Street",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/602965173399510",
     "lga": {
       "name": "City of South Perth",
       "osm_id": 11334981
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mill Point Road"
-    }
+    },
+    "phone": "+61893681156",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/south-perth/bp-south-perth/6192"
   },
   "group": "services",
   "id": "ocdb_01M66JPNSV1YQSN0G1649VZ5HZ",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

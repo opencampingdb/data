@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4702",
+      "state": "QLD",
+      "street": "Main St",
+      "suburb": "Rubyvale"
+    },
+    "facebook": "https://www.facebook.com/640824299125140",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61749854118",
+    "website": "http://www.rubyvalecaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF89YM904009B48FRN9S",

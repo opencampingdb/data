@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56-60",
+      "postcode": "2800",
+      "state": "NSW",
+      "street": "Bathurst Rd",
+      "suburb": "Orange"
+    },
+    "facebook": "https://www.facebook.com/185502298708240",
     "lga": {
       "name": "Orange City Council",
       "osm_id": 6427044
@@ -20,7 +38,9 @@
       "distance_m": 20,
       "name": "Bathurst Road"
     },
-    "operator": "BP"
+    "operator": "BP",
+    "phone": "+61263627769",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/orange/bp-orange-bathurst-rd/9549"
   },
   "group": "services",
   "id": "ocdb_01M66JNYPQ10D1M2088M2EE60H",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

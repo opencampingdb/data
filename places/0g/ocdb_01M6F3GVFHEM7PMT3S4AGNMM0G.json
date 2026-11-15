@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "92",
+      "postcode": "4300",
+      "state": "QLD",
+      "street": "Brisbane Terrace",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/583292211798788",
     "lga": {
       "name": "Ipswich City",
       "osm_id": 11675604
@@ -23,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brisbane Terrace"
-    }
+    },
+    "phone": "+61732882213",
+    "website": "http://www.royalmailgoodna.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVFHEM7PMT3S4AGNMM0G",
@@ -32,7 +54,7 @@
     "lat": -27.606472,
     "lon": 152.90552
   },
-  "name": null,
+  "name": "Royal Mail Hotel",
   "osm": {
     "id": 1785687840,
     "timestamp": "2012-06-13T07:44:25Z",
@@ -41,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

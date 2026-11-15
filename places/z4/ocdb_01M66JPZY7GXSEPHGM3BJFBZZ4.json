@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "3496",
+      "state": "VIC",
+      "street": "Ilex St",
+      "suburb": "Red Cliffs"
+    },
+    "facebook": "https://www.facebook.com/101410942795978",
     "lga": {
       "name": "Rural City of Mildura",
       "osm_id": 3345519
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Jacaranda Street"
-    }
+    },
+    "phone": "+61499882963",
+    "website": "https://www.catalanoautorepairservices.repcoservice.net/"
   },
   "group": "services",
   "id": "ocdb_01M66JPZY7GXSEPHGM3BJFBZZ4",
@@ -27,7 +49,7 @@
     "lat": -34.305162,
     "lon": 142.187527
   },
-  "name": null,
+  "name": "Catalano Auto Repair Services",
   "osm": {
     "id": 1493040000,
     "timestamp": "2026-03-29T06:09:39Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

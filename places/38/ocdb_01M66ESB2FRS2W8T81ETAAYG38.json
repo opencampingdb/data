@@ -1,13 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2629",
+      "state": "NSW",
+      "street": "Port Phillip Trail",
+      "suburb": "Long Plain"
+    },
     "caravans": false,
     "fee": false,
     "lga": {
@@ -20,8 +34,10 @@
       "osm_id": 2270203043,
       "type": "village"
     },
+    "phone": "0269477025",
     "showers": false,
-    "tents": true
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/ghost-gully-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB2FRS2W8T81ETAAYG38",
@@ -39,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "64",
+      "postcode": "2620",
+      "state": "NSW",
+      "street": "Uriarra Rd",
+      "suburb": "Queanbeyan"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/101594611502497",
     "lga": {
       "name": "Queanbeyan-Palerang Regional Council",
       "osm_id": 6137309
@@ -20,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Uriarra Road"
-    }
+    },
+    "phone": "+61449743329"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ2ETWG9ANJTBZNA0SBG",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

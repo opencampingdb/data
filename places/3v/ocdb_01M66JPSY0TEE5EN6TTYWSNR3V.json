@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "93",
+      "postcode": "2289",
+      "state": "NSW",
+      "street": "Park Avenue",
+      "suburb": "Kotara"
+    },
     "lga": {
       "name": "City of Newcastle",
       "osm_id": 6189831
@@ -25,7 +42,9 @@
       "distance_m": 20,
       "name": "Park Avenue"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 2 4070 9143",
+    "website": "https://find.shell.com/au/fuel/10110870-shell-reddy-express-kotara/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPSY0TEE5EN6TTYWSNR3V",
@@ -34,7 +53,7 @@
     "lat": -32.940944,
     "lon": 151.708762
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 337717702,
     "timestamp": "2017-08-25T07:02:59Z",
@@ -43,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

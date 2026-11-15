@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9",
+      "postcode": "4382",
+      "state": "QLD",
+      "street": "Curtin Rd",
+      "suburb": "Lyra"
+    },
+    "facebook": "https://www.facebook.com/852787018207149",
     "lga": {
       "name": "Southern Downs Regional",
       "osm_id": 11677975
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "New England Highway"
-    }
+    },
+    "phone": "+61422582644",
+    "website": "http://www.radianceonlyra.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWAN62625N6EAHY6VRSA",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

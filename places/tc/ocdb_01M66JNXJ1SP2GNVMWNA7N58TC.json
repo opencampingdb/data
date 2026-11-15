@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "604",
+      "postcode": "6107",
+      "state": "WA",
+      "street": "Welshpool Road East",
+      "suburb": "WATTLE GROVE"
+    },
     "lga": {
       "name": "City of Kalamunda",
       "osm_id": 11689431
@@ -23,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Welshpool Road East"
-    }
+    },
+    "phone": "0482187824"
   },
   "group": "services",
   "id": "ocdb_01M66JNXJ1SP2GNVMWNA7N58TC",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

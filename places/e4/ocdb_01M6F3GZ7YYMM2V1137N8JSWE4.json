@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7219",
+      "postcode": "3269",
+      "state": "VIC",
+      "street": "Great Ocean Rd",
+      "suburb": "Princetown"
+    },
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Great Ocean Road"
-    }
+    },
+    "phone": "(03) 5598 8169",
+    "website": "http://www.arabellacountryhouse.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ7YYMM2V1137N8JSWE4",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

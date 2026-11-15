@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Constitution Avenue",
       "suburb": "Parkes"
     },
+    "facebook": "https://www.facebook.com/893339783868562",
     "locality": {
       "distance_m": 3030,
       "name": "South Canberra",
@@ -29,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Constitution Avenue"
-    }
+    },
+    "phone": "+61261059133"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYBP1FC9VVWD6FGYWWA3",
@@ -47,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

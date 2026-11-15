@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "5575",
+      "state": "SA",
+      "street": "Bluff Rd",
+      "suburb": "Minlaton"
+    },
+    "facebook": "https://www.facebook.com/108874137134696",
     "lga": {
       "name": "Yorke Peninsula Council",
       "osm_id": 6673799
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Maitland Road"
-    }
+    },
+    "phone": "+61888532435",
+    "website": "http://www.minlatoncaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF0NB5RAT1ABX593RKGN",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

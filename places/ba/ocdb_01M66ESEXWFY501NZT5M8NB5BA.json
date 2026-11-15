@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3192",
+      "postcode": "3909",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Kalimna"
+    },
+    "facebook": "https://www.facebook.com/1475560829378630",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61351551821",
+    "website": "http://www.lakescaravilla.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXWFY501NZT5M8NB5BA",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

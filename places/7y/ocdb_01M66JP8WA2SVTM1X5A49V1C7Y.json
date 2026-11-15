@@ -1,15 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4655",
+      "state": "QLD",
+      "street": "William Dean Avenue",
+      "suburb": "Hervey Bay"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/1617991661641886",
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -31,7 +49,9 @@
       "distance_m": 140,
       "name": "Booral Road"
     },
-    "opening_hours": "PH,Mo-Su 05:00-20:00"
+    "opening_hours": "PH,Mo-Su 05:00-20:00",
+    "phone": "+61741500962",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/urangan/bp-hervey-bay-airport/7190"
   },
   "group": "services",
   "id": "ocdb_01M66JP8WA2SVTM1X5A49V1C7Y",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

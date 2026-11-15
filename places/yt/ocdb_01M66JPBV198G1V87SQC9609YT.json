@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "90",
+      "postcode": "3392",
+      "state": "VIC",
+      "street": "Main Street",
+      "suburb": "Minyip"
+    },
     "lga": {
       "name": "Shire of Yarriambiack",
       "osm_id": 3345545
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Main Street"
-    }
+    },
+    "phone": "0353857491"
   },
   "group": "services",
   "id": "ocdb_01M66JPBV198G1V87SQC9609YT",
@@ -27,7 +43,7 @@
     "lat": -36.458513,
     "lon": 142.588612
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 6616677741,
     "timestamp": "2019-07-15T14:15:38Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

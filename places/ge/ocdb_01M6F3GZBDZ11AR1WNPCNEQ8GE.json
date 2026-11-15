@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2628",
+      "state": "NSW",
+      "street": "Brierly St",
+      "suburb": "Dalgety"
+    },
+    "facebook": "https://www.facebook.com/1719758391573491",
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Campbell Street"
-    }
+    },
+    "phone": "+61483725550",
+    "website": "http://www.buckleyscrossinghotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZBDZ11AR1WNPCNEQ8GE",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

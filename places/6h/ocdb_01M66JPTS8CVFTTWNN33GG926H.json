@@ -1,6 +1,12 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -12,7 +18,15 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2794",
+      "state": "NSW",
+      "street": "Grenfell Rd",
+      "suburb": "Cowra"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/106546341827592",
     "fuels": [
       "diesel",
       "adblue"
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

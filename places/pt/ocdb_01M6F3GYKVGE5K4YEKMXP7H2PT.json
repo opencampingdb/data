@@ -1,9 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "name": "overture",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6068",
+      "state": "WA",
+      "street": "Whiteman Drive East",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/103101081776201",
     "lga": {
       "name": "City of Swan",
       "osm_id": 11689336
@@ -13,7 +33,9 @@
       "name": "Perth",
       "osm_id": 29277817,
       "type": "city"
-    }
+    },
+    "phone": "+61892096040",
+    "website": "https://www.whitemanpark.com.au/trains-trams-museums/revolutions-transport-museum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYKVGE5K4YEKMXP7H2PT",
@@ -22,7 +44,7 @@
     "lat": -31.833558,
     "lon": 115.943151
   },
-  "name": null,
+  "name": "Revolutions Transport Museum",
   "osm": {
     "id": 123992159,
     "timestamp": "2017-11-26T16:24:13Z",
@@ -31,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

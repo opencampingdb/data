@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3844",
+      "state": "VIC",
+      "street": "Lodge Dr",
+      "suburb": "Traralgon"
+    },
+    "facebook": "https://www.facebook.com/278376332319641",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Princes Street"
-    }
+    },
+    "phone": "+61351742241",
+    "website": "http://www.moteltraralgon.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVFK0T24XE2X8M4GB6B1",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

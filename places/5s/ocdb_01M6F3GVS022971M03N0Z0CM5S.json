@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "3685",
+      "state": "VIC",
+      "street": "Moodemere St",
+      "suburb": "Rutherglen"
+    },
+    "facebook": "https://www.facebook.com/157267457634671",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Moodemere Street"
-    }
+    },
+    "phone": "+61260329776",
+    "website": "http://www.rutherglenmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVS022971M03N0Z0CM5S",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

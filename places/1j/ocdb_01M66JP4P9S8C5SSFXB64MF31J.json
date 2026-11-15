@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "244",
+      "postcode": "2756",
+      "state": "NSW",
+      "street": "Hawkesbury Valley Way",
+      "suburb": "Windsor"
+    },
+    "facebook": "https://www.facebook.com/776954492510375",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -33,7 +53,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hawkesbury Valley Way"
-    }
+    },
+    "phone": "+61245775127",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/clarendon/bp-clarendon/7788"
   },
   "group": "services",
   "id": "ocdb_01M66JP4P9S8C5SSFXB64MF31J",
@@ -42,7 +64,7 @@
     "lat": -33.608331,
     "lon": 150.789175
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 2573959527,
     "timestamp": "2023-03-19T12:06:14Z",
@@ -51,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

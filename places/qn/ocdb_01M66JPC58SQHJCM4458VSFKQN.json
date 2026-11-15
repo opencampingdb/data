@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "28 - 34",
       "street": "Westminster Street"
     },
+    "facebook": "https://www.facebook.com/101104060000386",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Burlington Street"
-    }
+    },
+    "phone": "+61395683600",
+    "website": "http://www.bmautowerks.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPC58SQHJCM4458VSFKQN",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "191",
+      "postcode": "3147",
+      "state": "VIC",
+      "street": "High Street",
+      "suburb": "Ashburton"
+    },
     "lga": {
       "name": "City of Boroondara",
       "osm_id": 2404473
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "High Street"
-    }
+    },
+    "phone": "+61 3 7052 9095",
+    "website": "https://find.shell.com/au/fuel/10111129-shell-reddy-express-ashburton/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTE7F3YQJA4H2Q0RDTHP",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

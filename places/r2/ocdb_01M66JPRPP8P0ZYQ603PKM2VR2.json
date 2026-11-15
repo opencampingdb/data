@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "2606",
+      "state": "ACT",
+      "street": "Rickerby St",
+      "suburb": "Woden Valley"
+    },
+    "facebook": "https://www.facebook.com/1483337588572336",
     "locality": {
       "distance_m": 720,
       "name": "Woden",
@@ -13,7 +31,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Athllon Drive"
-    }
+    },
+    "phone": "+61262819899",
+    "website": "http://www.pedders.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPRPP8P0ZYQ603PKM2VR2",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

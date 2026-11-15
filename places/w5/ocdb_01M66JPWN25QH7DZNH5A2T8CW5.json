@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "60",
+      "postcode": "6167",
+      "state": "WA",
+      "street": "Meares Avenue",
+      "suburb": "KWINANA TOWN CENTRE"
+    },
     "fuel": true,
     "lga": {
       "name": "City of Kwinana",
@@ -20,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Challenger Avenue"
-    }
+    },
+    "phone": "0894395239"
   },
   "group": "services",
   "id": "ocdb_01M66JPWN25QH7DZNH5A2T8CW5",
@@ -29,7 +45,7 @@
     "lat": -32.247201,
     "lon": 115.816769
   },
-  "name": null,
+  "name": "Caltex Parmelia",
   "osm": {
     "id": 837781772,
     "timestamp": "2020-08-17T07:54:18Z",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

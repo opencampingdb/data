@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "96",
+      "postcode": "7026",
+      "state": "TAS",
+      "street": "A Reeve Street",
+      "suburb": "Campania"
+    },
     "lga": {
       "name": "Southern Midlands",
       "osm_id": 10624828
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Reeve Street"
-    }
+    },
+    "phone": "+61 3 6260 4188",
+    "website": "https://find.shell.com/au/fuel/10121591-shell-campania/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPP6G6RN4VSAG2MXQEPFC",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

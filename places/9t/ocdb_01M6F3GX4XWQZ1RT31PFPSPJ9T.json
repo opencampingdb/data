@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5267",
+      "state": "SA",
+      "street": "Riddoch Hwy",
+      "suburb": "Willalooka"
+    },
     "facebook": "https://www.facebook.com/Willalooka-Tavern-102005116557727/",
     "lga": {
       "name": "Tatiara District Council",
@@ -20,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Riddoch Highway"
-    }
+    },
+    "phone": "+61417042054",
+    "website": "http://willalookatavern.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX4XWQZ1RT31PFPSPJ9T",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

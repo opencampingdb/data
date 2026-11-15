@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Huon Road",
       "suburb": "Fern Tree"
     },
+    "facebook": "https://www.facebook.com/392319544169178",
     "lga": {
       "name": "City of Hobart",
       "osm_id": 10625466
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Huon Road"
-    }
+    },
+    "phone": "+61362391171",
+    "website": "https://www.ferntreetavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZN00V48MPST5PRFBYCV",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

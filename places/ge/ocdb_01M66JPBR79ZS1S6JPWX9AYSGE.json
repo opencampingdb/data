@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "68",
+      "postcode": "2325",
+      "state": "NSW",
+      "street": "Aberdare Road",
+      "suburb": "Aberdare"
+    },
     "lga": {
       "name": "Cessnock City Council",
       "osm_id": 6191219
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Aberdare Road"
-    }
+    },
+    "phone": "0249905555",
+    "website": "https://find.shell.com/au/fuel/AU_A194-shell-aberdare"
   },
   "group": "services",
   "id": "ocdb_01M66JPBR79ZS1S6JPWX9AYSGE",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

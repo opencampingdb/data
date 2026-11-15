@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1c",
+      "postcode": "4626",
+      "state": "QLD",
+      "street": "Frank McCauley St",
+      "suburb": "Mundubbera"
+    },
+    "facebook": "https://www.facebook.com/536646529827304",
     "lga": {
       "name": "North Burnett Regional",
       "osm_id": 11676093
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Strathdee Street"
-    }
+    },
+    "phone": "+61429654012",
+    "website": "http://mundubberahistoricalmuseum.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3H01FG0KVAY291H6E9FTZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

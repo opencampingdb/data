@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "210",
+      "postcode": "2420",
+      "state": "NSW",
+      "street": "Wangat Trig Rd",
+      "suburb": "Bandon Grove"
+    },
+    "facebook": "https://www.facebook.com/222613244459117",
     "lga": {
       "name": "Dungog Shire Council",
       "osm_id": 6185449
@@ -13,7 +29,8 @@
       "name": "Salisbury",
       "osm_id": 114371357,
       "type": "village"
-    }
+    },
+    "phone": "+61249959309"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZCTDZS7DC2KYFKB651E",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

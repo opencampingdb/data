@@ -1,16 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "street": "Coonamble Road",
       "suburb": "Ravenswood"
     },
+    "facebook": "https://www.facebook.com/1642363225857123",
     "lga": {
       "name": "Warren Shire Council",
       "osm_id": 6100934
@@ -27,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Coonamble Road"
-    }
+    },
+    "phone": "+61268474420"
   },
   "group": "services",
   "id": "ocdb_01M66JP63WXQPFRR79V55PNNHS",
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

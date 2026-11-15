@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "473-477",
+      "postcode": "3805",
+      "state": "VIC",
+      "street": "Princes Highway",
+      "suburb": "Narre Warren"
+    },
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -20,7 +35,9 @@
       "distance_m": 30,
       "name": "Princes Highway"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "+61 3 8909 9142",
+    "website": "https://find.shell.com/au/fuel/10111372-shell-reddy-express-narre-warren/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNZAQAJE6B2ANBX7PDT0N",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

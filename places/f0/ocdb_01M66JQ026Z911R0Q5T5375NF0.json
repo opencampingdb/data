@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "320",
+      "postcode": "2113",
+      "state": "NSW",
+      "street": "Lane Cove Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/119339281108178",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -35,7 +53,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lane Cove Road"
-    }
+    },
+    "phone": "+61298782402",
+    "website": "https://www.convenienceworldmagazine.com.au/calvi-petrol-station-offers-good-old-fashioned-service"
   },
   "group": "services",
   "id": "ocdb_01M66JQ026Z911R0Q5T5375NF0",
@@ -53,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

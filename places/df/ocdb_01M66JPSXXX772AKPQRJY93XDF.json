@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "6157",
+      "state": "WA",
+      "street": "Carrington Street",
+      "suburb": "Palmyra"
+    },
     "lga": {
       "name": "City of Melville",
       "osm_id": 11689377
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Carrington Street"
-    }
+    },
+    "phone": "+61 8 6331 6380",
+    "website": "https://find.shell.com/au/fuel/10111410-shell-reddy-express-palmyra/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPSXXX772AKPQRJY93XDF",
@@ -35,7 +54,7 @@
     "lat": -32.04736,
     "lon": 115.779805
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 337151678,
     "timestamp": "2015-04-07T09:16:01Z",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

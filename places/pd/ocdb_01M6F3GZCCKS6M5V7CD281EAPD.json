@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2620",
+      "street": "Tharwa Dr"
+    },
+    "facebook": "https://www.facebook.com/103227889732760",
     "locality": {
       "distance_m": 2140,
       "name": "Tharwa",
@@ -12,7 +27,9 @@
     },
     "nearest_beach": {
       "distance_m": 4430
-    }
+    },
+    "phone": "+61262376500",
+    "website": "http://www.historicplaces.com.au/lanyon-homestead"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZCCKS6M5V7CD281EAPD",
@@ -30,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

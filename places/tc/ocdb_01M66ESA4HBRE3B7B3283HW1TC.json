@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2346",
+      "state": "NSW",
+      "street": "Warrabah Trail",
+      "suburb": "Namoi River"
+    },
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -13,7 +27,9 @@
       "name": "Kingstown",
       "osm_id": 114658066,
       "type": "village"
-    }
+    },
+    "phone": "0267390700",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/warrabah-campground-and-picnic-area"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA4HBRE3B7B3283HW1TC",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

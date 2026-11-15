@@ -1,13 +1,21 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,8 +23,16 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "6479",
+      "state": "WA",
+      "street": "Cruickshank Rd",
+      "suburb": "Mukinbudin"
+    },
     "cabins": true,
     "dump_station": true,
+    "facebook": "https://www.facebook.com/160490394154995",
     "fee": true,
     "kitchen": true,
     "lga": {
@@ -34,6 +50,7 @@
       "name": "Bent Street"
     },
     "operator": "Shire of Mukinbudin",
+    "phone": "+61429471103",
     "power": true,
     "showers": true,
     "tents": true,
@@ -56,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

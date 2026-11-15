@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Port Road",
       "suburb": "Aldinga"
     },
+    "facebook": "https://www.facebook.com/153271151380548",
     "lga": {
       "name": "City of Onkaparinga",
       "osm_id": 7262204
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Port Road"
-    }
+    },
+    "phone": "+61885577994",
+    "website": "http://www.aldingahotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVVCEP3EGR23Y3Z6V7B0",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

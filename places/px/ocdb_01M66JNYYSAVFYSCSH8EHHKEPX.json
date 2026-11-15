@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "39",
+      "postcode": "4519",
+      "state": "QLD",
+      "street": "Simpson Street",
+      "suburb": "Beerwah"
+    },
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -22,7 +37,9 @@
       "name": "Simpson Street"
     },
     "opening_hours": "Mo-Su 06:00-19:00",
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 7 5494 6219",
+    "website": "https://find.shell.com/au/fuel/10111105-shell-beerwah/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNYYSAVFYSCSH8EHHKEPX",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

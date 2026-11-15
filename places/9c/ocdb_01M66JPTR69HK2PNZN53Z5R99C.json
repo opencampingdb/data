@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "168-170",
+      "postcode": "2720",
+      "state": "NSW",
+      "street": "Snowy Mountains Highway",
+      "suburb": "Tumut"
+    },
     "lga": {
       "name": "Snowy Valleys Council",
       "osm_id": 6239423
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Adelong Road"
-    }
+    },
+    "phone": "+61 2 5926 3813",
+    "website": "https://find.shell.com/au/fuel/10110663-shell-reddy-express-tumut/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTR69HK2PNZN53Z5R99C",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

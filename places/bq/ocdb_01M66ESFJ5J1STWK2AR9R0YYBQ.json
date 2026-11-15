@@ -1,17 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "tents": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2325",
+      "postcode": "2446",
+      "state": "NSW",
+      "street": "Oxley Hwy",
+      "suburb": "Wauchope"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1789477121103453",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -29,6 +45,7 @@
       "distance_m": 50,
       "name": "High Street"
     },
+    "phone": "+61499652218",
     "tents": true,
     "wifi": false
   },
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

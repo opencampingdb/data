@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "49",
+      "postcode": "2536",
+      "state": "NSW",
+      "street": "Old Princes Hwy",
+      "suburb": "Batemans Bay"
+    },
+    "facebook": "https://www.facebook.com/176046875754831",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Vesper Street"
-    }
+    },
+    "phone": "+61244724972",
+    "website": "https://www.batemansbayholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF87A1V80S5DDNS7KMZB",
@@ -35,7 +57,7 @@
     "lat": -35.716696,
     "lon": 150.177941
   },
-  "name": null,
+  "name": "Batemans Bay Holiday Park",
   "osm": {
     "id": 435093125,
     "timestamp": "2016-08-01T05:48:06Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

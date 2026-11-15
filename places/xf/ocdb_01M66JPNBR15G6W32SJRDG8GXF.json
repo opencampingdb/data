@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6149",
+      "state": "WA",
+      "street": "Bull Creek Dr",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/730605610306630",
     "lga": {
       "name": "City of Melville",
       "osm_id": 11689377
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bull Creek Drive"
-    }
+    },
+    "phone": "+61893114470",
+    "website": "https://aviationmuseumwa.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPNBR15G6W32SJRDG8GXF",
@@ -36,7 +58,7 @@
     "lat": -32.049339,
     "lon": 115.8585
   },
-  "name": null,
+  "name": "Aviation Heritage Museum",
   "osm": {
     "id": 12830366080,
     "timestamp": "2025-05-12T13:38:27Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

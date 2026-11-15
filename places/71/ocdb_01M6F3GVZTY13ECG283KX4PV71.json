@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2551",
+      "state": "NSW",
+      "street": "Bellevue Pl",
+      "suburb": "Eden"
+    },
+    "facebook": "https://www.facebook.com/521490384594991",
     "lga": {
       "name": "Bega Valley Shire Council",
       "osm_id": 6239664
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Boyd Street"
-    }
+    },
+    "phone": "+61264961242",
+    "website": "http://www.bayviewmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZTY13ECG283KX4PV71",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

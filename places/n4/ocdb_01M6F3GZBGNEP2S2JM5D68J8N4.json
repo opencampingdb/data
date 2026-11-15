@@ -1,11 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "pub": "osm"
+    "phone": "overture",
+    "pub": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2766",
+      "state": "NSW",
+      "street": "Duke St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/103135185549442",
     "lga": {
       "name": "Blacktown City Council",
       "osm_id": 6217858
@@ -19,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 90
     },
-    "pub": true
+    "phone": "+61296259199",
+    "pub": true,
+    "website": "https://woodstock-hotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZBGNEP2S2JM5D68J8N4",
@@ -28,7 +49,7 @@
     "lat": -33.759228,
     "lon": 150.831675
   },
-  "name": null,
+  "name": "The Woodstock Hotel",
   "osm": {
     "id": 693752907,
     "timestamp": "2021-08-26T02:39:06Z",
@@ -37,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

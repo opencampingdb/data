@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "campfires": "osm",
     "dump_station": "osm",
     "entry": "osm",
@@ -7,6 +12,7 @@
     "locality": "osm",
     "opening_hours": "osm",
     "pets": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -14,6 +20,12 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2790",
+      "state": "NSW",
+      "street": "Wolgan Road",
+      "suburb": "Newnes"
+    },
     "campfires": true,
     "dump_station": false,
     "entry": "public",
@@ -29,6 +41,7 @@
     },
     "opening_hours": "24/7",
     "pets": "no",
+    "phone": "0247878877",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -51,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

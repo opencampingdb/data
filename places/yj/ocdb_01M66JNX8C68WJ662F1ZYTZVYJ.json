@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "191-195",
+      "postcode": "5033",
+      "state": "SA",
+      "street": "Richmond Road",
+      "suburb": "Richmond"
+    },
     "lga": {
       "name": "City of West Torrens",
       "osm_id": 9106092
@@ -24,7 +41,9 @@
       "distance_m": 20,
       "name": "Richmond Road"
     },
-    "operator": "Liberty"
+    "operator": "Liberty",
+    "phone": "0870950586",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-richmond-south"
   },
   "group": "services",
   "id": "ocdb_01M66JNX8C68WJ662F1ZYTZVYJ",
@@ -33,7 +52,7 @@
     "lat": -34.942264,
     "lon": 138.562762
   },
-  "name": null,
+  "name": "United Petroleum Richmond South",
   "osm": {
     "id": 93953023,
     "timestamp": "2025-01-26T07:27:12Z",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

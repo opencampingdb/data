@@ -1,13 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2640",
+      "state": "NSW",
+      "street": "Tin Mines Trail",
+      "suburb": "Talmalmo"
+    },
     "fee": true,
     "lga": {
       "name": "Greater Hume Shire Council",
@@ -19,6 +31,7 @@
       "osm_id": 320491630,
       "type": "village"
     },
+    "phone": "0269477025",
     "tents": true,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/samual-bollard-campground"
@@ -39,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

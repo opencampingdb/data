@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2259",
+      "street": "Freemans Birdie Link Track",
+      "suburb": "Central Coast Council"
+    },
+    "facebook": "https://www.facebook.com/102733456466363",
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -22,7 +36,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1830
-    }
+    },
+    "phone": "+611300072757"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3SGX3TDBWBXKBS110G",
@@ -40,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "651",
+      "postcode": "4122",
+      "state": "QLD",
+      "street": "Kessels Road",
+      "suburb": "Upper Mount Gravatt"
+    },
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kessels Road"
-    }
+    },
+    "phone": "+61 7 3532 7784",
+    "website": "https://find.shell.com/au/fuel/10111329-shell-reddy-express-kessels-rd/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPHNVJZFNA2MMGZFZ6ASJ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

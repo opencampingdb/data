@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5343",
+      "state": "SA",
+      "street": "Downer Ave",
+      "suburb": "Lyrup"
+    },
+    "facebook": "https://www.facebook.com/327776311025457",
     "lga": {
       "name": "Renmark Paringa Council",
       "osm_id": 6704735
@@ -18,7 +33,8 @@
     "nearest_boat_ramp": {
       "distance_m": 530,
       "name": "S.S. Ellen Park"
-    }
+    },
+    "phone": "+61885838280"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZBJ3TRKMJN448MNZ9GT",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

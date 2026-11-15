@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "John Street",
       "suburb": "Coonabarabran"
     },
+    "facebook": "https://www.facebook.com/190312444337522",
     "lga": {
       "name": "Warrumbungle Shire Council",
       "osm_id": 6268496
@@ -28,7 +37,9 @@
       "distance_m": 10,
       "name": "John Street"
     },
-    "opening_hours": "Mo-Sa 10:00-24:00; Su 11:00-21:00"
+    "opening_hours": "Mo-Sa 10:00-24:00; Su 11:00-21:00",
+    "phone": "+61268421023",
+    "website": "https://www.imperialhotelcoonabarabran.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVETKK3MWQ5WJYW4CK7B",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

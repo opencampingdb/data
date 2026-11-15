@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "4568",
+      "state": "QLD",
+      "street": "Station St",
+      "suburb": "Pomona"
+    },
+    "facebook": "https://www.facebook.com/456237534393890",
     "lga": {
       "name": "Noosa Shire",
       "osm_id": 11676212
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Station Street"
-    }
+    },
+    "phone": "+61754851141"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJAR6Q3JSXS569CBBX8",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

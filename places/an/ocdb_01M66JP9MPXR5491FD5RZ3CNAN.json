@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "295",
+      "postcode": "4570",
+      "state": "QLD",
+      "street": "Brisbane Road",
+      "suburb": "Gympie"
+    },
+    "facebook": "https://www.facebook.com/196004904505706",
     "lga": {
       "name": "Gympie Regional",
       "osm_id": 11675079
@@ -20,6 +36,7 @@
       "distance_m": 20,
       "name": "Old Bruce Highway"
     },
+    "phone": "+61741500945",
     "website": "https://map.bp.com/en-AU/AU/gas-station/gympie/bp-gympie-gateway/8349"
   },
   "group": "services",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

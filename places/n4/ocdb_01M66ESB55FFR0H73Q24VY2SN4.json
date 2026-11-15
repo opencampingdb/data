@@ -1,6 +1,13 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,12 +15,21 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "website": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "6720",
+      "state": "WA",
+      "street": "Bartley Ct",
+      "suburb": "Point Samson"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/252114358494702",
     "fee": true,
     "lga": {
       "name": "City of Karratha",
@@ -36,6 +52,7 @@
       "name": "Point Samson Roebourne Road"
     },
     "operator": "Samson Beach Chalets",
+    "phone": "+61891870202",
     "power": true,
     "website": "https://www.samsonbeach.com.au/",
     "wifi": true
@@ -56,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

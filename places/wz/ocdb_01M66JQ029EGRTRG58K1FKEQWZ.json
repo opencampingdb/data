@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6355",
+      "state": "WA",
+      "street": "McCracken Rd",
+      "suburb": "Newdegate"
+    },
+    "facebook": "https://www.facebook.com/111369834745818",
     "lga": {
       "name": "Shire of Lake Grace",
       "osm_id": 11688971
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Newdegate Ravensthorpe Road"
-    }
+    },
+    "phone": "+61898711398"
   },
   "group": "services",
   "id": "ocdb_01M66JQ029EGRTRG58K1FKEQWZ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

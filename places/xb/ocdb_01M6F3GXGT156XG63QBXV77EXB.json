@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2150",
+      "state": "NSW",
+      "street": "Smith St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/1654987228059458",
     "lga": {
       "name": "City of Parramatta Council",
       "osm_id": 6217262
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Fitzwilliam Street"
-    }
+    },
+    "phone": "+61405482814",
+    "website": "http://www.lancers.org.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXGT156XG63QBXV77EXB",
@@ -35,7 +57,7 @@
     "lat": -33.816704,
     "lon": 151.005277
   },
-  "name": null,
+  "name": "NSW Lancers Memorial Museum",
   "osm": {
     "id": 11024869566,
     "timestamp": "2023-07-04T08:06:18Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

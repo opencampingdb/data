@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "x": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "website": "osm"
+    "phone": "overture",
+    "website": "osm",
+    "x": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "3690",
+      "state": "VIC",
+      "street": "Moorefield Park Dr",
+      "suburb": "Wodonga"
+    },
+    "facebook": "https://www.facebook.com/156746917683999",
     "lga": {
       "name": "City of Wodonga",
       "osm_id": 3365492
@@ -25,7 +43,9 @@
       "distance_m": 50,
       "name": "Moorefield Park Drive"
     },
-    "website": "https://bordergatewaymotel.com.au/"
+    "phone": "(02) 6056 1011",
+    "website": "https://bordergatewaymotel.com.au/",
+    "x": "https://x.com/choicehotels_ap"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYY84GMZTSJD8S34D2N2",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

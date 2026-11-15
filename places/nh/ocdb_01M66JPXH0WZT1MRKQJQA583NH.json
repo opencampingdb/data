@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2200",
+      "state": "NSW",
+      "street": "Eldridge Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/166743643370508",
     "lga": {
       "name": "Canterbury-Bankstown Council",
       "osm_id": 2162244
@@ -31,6 +46,7 @@
       "name": "Eldridge Road"
     },
     "operator": "NSW Health",
+    "phone": "+61297228000",
     "website": "https://www.swslhd.health.nsw.gov.au/bankstown/"
   },
   "group": "emergency",
@@ -49,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

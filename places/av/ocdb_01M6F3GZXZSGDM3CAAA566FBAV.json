@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "820",
+      "postcode": "4501",
+      "state": "QLD",
+      "street": "Gympie Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/155174327837964",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Gympie Road"
-    }
+    },
+    "phone": "+61732857300",
+    "website": "https://www.lawntontavern.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZXZSGDM3CAAA566FBAV",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -14,6 +14,10 @@ Released records carry the facts set by the rules in schema/fact_rules.json,
 with the source rule and the rule's name in fact_rules, wherever no other
 source gives a value. Place files in places/ never hold them.
 
+The release also ships the licence texts and NOTICE (LICENCE_FILES), copied
+byte for byte from the repository this pipeline runs from. NOTICE names every
+source and carries the notices their licences need.
+
 place-index.ndjson.gz is not a release file and the manifest leaves it out.
 It holds one line per released place, sorted by id: {"cell", "fact_dates",
 "fact_sources", "facts", "id"}, where cell is the whole-degree map cell
@@ -75,17 +79,30 @@ from .common import (
 # 13.1: the facts locality and lga, and the localities table of ocdb.sqlite.gz (layout 3).
 # 13.2: the facts protected_area, nearest_waterway and nearest_feature, and label on an
 # unnamed place to stay.
+# 13.3: fact_sources may be overture (a gap fill from Overture Maps), and Overture
+# candidates are released: places with osm null whose name and location come from
+# overture, with standing. Raised as a minor change by decision (opencampingdb/data#187).
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 13
-FORMAT_MINOR = 2
+FORMAT_MINOR = 3
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 DEFAULT_REPOSITORY = "opencampingdb/data"
 PLACE_INDEX_FILE = "place-index.ndjson.gz"
+# The licence texts and NOTICE, shipped beside the data files. Overture places
+# need the CDLA Permissive 2.0 text and, for Foursquare's records, the Apache 2.0 text.
+LICENCE_FILES = (
+    "LICENSE",
+    "LICENSE-CONTENTS",
+    "LICENSE-APACHE-2.0",
+    "LICENSE-CDLA-PERMISSIVE-2.0",
+    "NOTICE",
+)
+LICENCE_ROOT = Path(__file__).resolve().parent.parent
 
 
 def release_tag(data_version: str) -> str:
@@ -235,7 +252,7 @@ def build_release(
     release: str | None = None,
     repository: str = DEFAULT_REPOSITORY,
 ) -> dict:
-    """Write the five data files, manifest.json and the place index into out_dir and return the manifest.
+    """Write the data files, manifest.json, the licence texts and the place index into out_dir and return the manifest.
 
     release defaults to data-<timestamp> taken from data_version.
     """
@@ -249,6 +266,8 @@ def build_release(
     index_raw, _ = place_index_ndjson(root)
     commons_raw, commons_count = commons_ndjson(root, released_ids(root))
     (out_dir / PLACE_INDEX_FILE).write_bytes(gzip_bytes(index_raw))
+    for name in LICENCE_FILES:
+        (out_dir / name).write_bytes((LICENCE_ROOT / name).read_bytes())
 
     manifest = {
         "format_version": FORMAT_VERSION,

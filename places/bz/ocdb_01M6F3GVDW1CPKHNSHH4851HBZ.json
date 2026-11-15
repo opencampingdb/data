@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "189",
+      "postcode": "2372",
+      "state": "NSW",
+      "street": "Pelham St",
+      "suburb": "Tenterfield"
+    },
     "lga": {
       "name": "Tenterfield Shire Council",
       "osm_id": 6163155
@@ -18,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Cowper Street"
-    }
+    },
+    "phone": "+61267363898"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVDW1CPKHNSHH4851HBZ",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

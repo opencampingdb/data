@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "886",
       "street": "Sydney Road"
     },
+    "facebook": "https://www.facebook.com/108831822998861",
     "lga": {
       "name": "City of Merri-bek",
       "osm_id": 3327767
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Sydney Road"
-    }
+    },
+    "phone": "+61393545055",
+    "website": "http://www.srar.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPDS3FZZH1VBJREV4S20S",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

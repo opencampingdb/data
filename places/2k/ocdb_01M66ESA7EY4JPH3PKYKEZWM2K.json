@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "316",
+      "postcode": "4556",
+      "state": "QLD",
+      "street": "Tanawha Tourist Dr",
+      "suburb": "Sunshine Coast"
+    },
+    "facebook": "https://www.facebook.com/1062133610516120",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Tanawha Tourist Drive"
-    }
+    },
+    "phone": "+61754452817"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA7EY4JPH3PKYKEZWM2K",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

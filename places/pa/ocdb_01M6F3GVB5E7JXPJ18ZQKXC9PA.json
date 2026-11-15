@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56",
+      "postcode": "6230",
+      "state": "WA",
+      "street": "Spencer St",
+      "suburb": "Bunbury"
+    },
+    "facebook": "https://www.facebook.com/152060438194005",
     "lga": {
       "name": "City of Bunbury",
       "osm_id": 11688799
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Spencer Street"
-    }
+    },
+    "phone": "+61897217322",
+    "website": "http://www.admiralmotelbunbury.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVB5E7JXPJ18ZQKXC9PA",
@@ -36,7 +58,7 @@
     "lat": -33.332945,
     "lon": 115.640094
   },
-  "name": null,
+  "name": "Admiral Motel Bunbury",
   "osm": {
     "id": 1264989485,
     "timestamp": "2011-04-29T14:02:14Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

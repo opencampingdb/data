@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
@@ -7,10 +12,17 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
+    "phone": "overture",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2462",
+      "state": "NSW",
+      "street": "Rocky Point Walk",
+      "suburb": "Minnie Water"
+    },
     "caravans": false,
     "entry": "customers",
     "fee": true,
@@ -29,6 +41,7 @@
       "name": "Sandon Beach"
     },
     "operator": "NPWS NSW",
+    "phone": "0266411500",
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/rocky-point-campground"
   },
@@ -48,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

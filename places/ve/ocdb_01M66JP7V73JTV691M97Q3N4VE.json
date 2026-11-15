@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2470",
+      "state": "NSW",
+      "street": "West St",
+      "suburb": "Casino"
+    },
+    "facebook": "https://www.facebook.com/741861082850667",
     "lga": {
       "name": "Richmond Valley Council",
       "osm_id": 6143221
@@ -25,7 +40,8 @@
       "distance_m": 60,
       "name": "West Street"
     },
-    "operator": "Casino Minature Railway"
+    "operator": "Casino Minature Railway",
+    "phone": "+61455673722"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP7V73JTV691M97Q3N4VE",
@@ -43,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

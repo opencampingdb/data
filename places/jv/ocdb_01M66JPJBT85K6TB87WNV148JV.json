@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2/25",
+      "postcode": "3095",
+      "state": "VIC",
+      "street": "Peel St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/181745225686394",
     "lga": {
       "name": "Shire of Nillumbik",
       "osm_id": 3331023
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61394313299"
   },
   "group": "services",
   "id": "ocdb_01M66JPJBT85K6TB87WNV148JV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

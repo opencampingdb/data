@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2710",
+      "state": "NSW",
+      "street": "Cobb Hwy & Pretty Pine Rd",
+      "suburb": "Pretty Pine"
+    },
+    "facebook": "https://www.facebook.com/514019292032396",
     "lga": {
       "name": "Edward River Council",
       "osm_id": 6139012
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Cobb Highway"
-    }
+    },
+    "phone": "+61358823564"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ38KGQ8W238ACT3ZEKW",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

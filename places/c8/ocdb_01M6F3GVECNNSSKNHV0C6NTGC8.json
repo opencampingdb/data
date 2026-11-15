@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4740",
+      "state": "QLD",
+      "street": "Phillip St",
+      "suburb": "Mackay"
+    },
+    "facebook": "https://www.facebook.com/131294726948625",
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -21,7 +37,8 @@
     },
     "nearest_major_road": {
       "distance_m": 40
-    }
+    },
+    "phone": "+61406262690"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVECNNSSKNHV0C6NTGC8",
@@ -39,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

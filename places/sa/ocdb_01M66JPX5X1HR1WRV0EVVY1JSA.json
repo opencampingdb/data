@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1332-1346",
+      "postcode": "4207",
+      "state": "QLD",
+      "street": "Waterford Tamborine Road",
+      "suburb": "Logan Village"
+    },
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Waterford-Tamborine Road"
-    }
+    },
+    "phone": "+61 7 5515 5954",
+    "website": "https://find.shell.com/au/fuel/10111491-shell-reddy-express-yarrabilba/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPX5X1HR1WRV0EVVY1JSA",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

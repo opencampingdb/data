@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Bridge Street",
       "suburb": "West Tamworth"
     },
+    "facebook": "https://www.facebook.com/1478106982449125",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61267620505",
+    "website": "http://golflinksmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZVK13F2VHTNWW1KH67M",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

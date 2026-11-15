@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Lime Avenue",
       "suburb": "Mildura"
     },
+    "facebook": "https://www.facebook.com/755398957927817",
     "lga": {
       "name": "Rural City of Mildura",
       "osm_id": 3345519
@@ -35,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Eighth Street"
-    }
+    },
+    "phone": "+61350235919"
   },
   "group": "services",
   "id": "ocdb_01M66JPW1PGVTTPTKB176HF15D",
@@ -53,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

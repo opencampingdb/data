@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "118",
+      "postcode": "3191",
+      "state": "VIC",
+      "street": "Beach Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/160565727303456",
     "lga": {
       "name": "City of Bayside",
       "osm_id": 3333042
@@ -31,6 +47,7 @@
       "name": "Beach Road"
     },
     "operator": "The Sandringham Hotel",
+    "phone": "+61395987255",
     "website": "https://www.sandringhamhotel.com.au/"
   },
   "group": "services",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "6336",
+      "state": "WA",
+      "street": "Walker St",
+      "suburb": "Ongerup"
+    },
+    "facebook": "https://www.facebook.com/262217243647914",
     "lga": {
       "name": "Shire of Gnowangerup",
       "osm_id": 11690325
@@ -13,7 +31,9 @@
       "name": "Ongerup",
       "osm_id": 1775453680,
       "type": "town"
-    }
+    },
+    "phone": "+61458524342",
+    "website": "http://www.ongerupcaravanpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZZCANK78JBW1K9W347",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

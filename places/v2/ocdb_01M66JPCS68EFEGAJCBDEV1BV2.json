@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1370",
+      "postcode": "3977",
+      "state": "VIC",
+      "street": "Thompsons Road",
+      "suburb": "Cranbourne"
+    },
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -20,7 +35,9 @@
       "distance_m": 70,
       "name": "Thompsons Road"
     },
-    "opening_hours": "Mo-Su 06:00-01:00"
+    "opening_hours": "Mo-Su 06:00-01:00",
+    "phone": "0468961491",
+    "website": "https://bluehippolaundry.com.au/laundromat-cranbourne/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPCS68EFEGAJCBDEV1BV2",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

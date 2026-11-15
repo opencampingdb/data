@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2/6",
+      "postcode": "2296",
+      "state": "NSW",
+      "street": "Beaumont St",
+      "suburb": "Newcastle"
+    },
+    "facebook": "https://www.facebook.com/914196668609372",
     "lga": {
       "name": "City of Newcastle",
       "osm_id": 6189831
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Beaumont Street"
-    }
+    },
+    "phone": "+61249613852",
+    "website": "http://www.thehamiltonstationhotel.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYX00FV8RC53YMXW024E",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

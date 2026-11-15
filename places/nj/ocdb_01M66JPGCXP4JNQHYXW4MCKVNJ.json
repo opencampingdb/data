@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "48-52",
+      "postcode": "2800",
+      "state": "NSW",
+      "street": "Peisley Street",
+      "suburb": "Orange"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -24,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Peisley Street"
-    }
+    },
+    "phone": "+61 2 6362 7800",
+    "website": "https://find.shell.com/au/fuel/10111028-shell-orange/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPGCXP4JNQHYXW4MCKVNJ",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

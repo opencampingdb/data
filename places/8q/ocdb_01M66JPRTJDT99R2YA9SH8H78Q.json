@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "postcode": "3300",
+      "state": "VIC",
+      "street": "Foster St",
+      "suburb": "Hamilton"
+    },
+    "facebook": "https://www.facebook.com/189973447705921",
     "lga": {
       "name": "Shire of Southern Grampians",
       "osm_id": 3349959
@@ -17,6 +33,7 @@
       "type": "town"
     },
     "operator": "Western District Health Service",
+    "phone": "+61355518222",
     "website": "http://www.wdhs.net"
   },
   "group": "emergency",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

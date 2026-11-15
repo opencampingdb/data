@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "55",
+      "postcode": "2643",
+      "state": "NSW",
+      "street": "Hume St",
+      "suburb": "Howlong"
+    },
+    "facebook": "https://www.facebook.com/830594953479991",
     "lga": {
       "name": "Federation Council",
       "osm_id": 6232188
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Sturt Street"
-    }
+    },
+    "phone": "+61493120415",
+    "website": "http://www.howlongcaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFDHFTT4CDNZMFCWPREW",
@@ -31,7 +53,7 @@
     "lat": -35.983916,
     "lon": 146.628708
   },
-  "name": null,
+  "name": "Howlong Caravan Park",
   "osm": {
     "id": 567253551,
     "timestamp": "2018-03-07T05:56:30Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

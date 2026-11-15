@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Bruce Highway",
       "suburb": "Bloomsbury"
     },
+    "facebook": "https://www.facebook.com/1933737416937986",
     "fuel": true,
     "lga": {
       "name": "Mackay Regional",
@@ -28,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61749475739",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/bloomsbury/bp-bloomsbury/7282"
   },
   "group": "services",
   "id": "ocdb_01M66JPWCZZV0ATRQD8876ZH64",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

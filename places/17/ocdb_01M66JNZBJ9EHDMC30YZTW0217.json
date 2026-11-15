@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5173",
+      "state": "SA",
+      "street": "Aldinga Beach Rd & Pridham Blvde",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/297702060917355",
     "lga": {
       "name": "City of Onkaparinga",
       "osm_id": 7262204
@@ -22,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Aldinga Beach Road"
-    }
+    },
+    "phone": "+61473485852"
   },
   "group": "services",
   "id": "ocdb_01M66JNZBJ9EHDMC30YZTW0217",
@@ -31,7 +49,7 @@
     "lat": -35.278653,
     "lon": 138.460773
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 634962467,
     "timestamp": "2012-11-08T12:04:32Z",
@@ -40,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

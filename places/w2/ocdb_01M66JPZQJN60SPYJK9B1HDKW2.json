@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "2321",
+      "state": "NSW",
+      "street": "Main Rd",
+      "suburb": "Cliftleigh"
+    },
+    "facebook": "https://www.facebook.com/1656621587702924",
     "fuel": true,
     "lga": {
       "name": "Cessnock City Council",
@@ -20,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61249364558"
   },
   "group": "services",
   "id": "ocdb_01M66JPZQJN60SPYJK9B1HDKW2",
@@ -29,7 +48,7 @@
     "lat": -32.792021,
     "lon": 151.519204
   },
-  "name": null,
+  "name": "Metro Petroleum Cliftleigh",
   "osm": {
     "id": 1442116054,
     "timestamp": "2025-10-14T10:50:37Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

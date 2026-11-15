@@ -1,5 +1,11 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
@@ -9,12 +15,20 @@
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2622",
+      "state": "NSW",
+      "street": "Big Hole Marble Arch Walk",
+      "suburb": "Krawarree"
+    },
     "booking_required": true,
     "caravans": true,
     "drinking_water": false,
@@ -32,10 +46,12 @@
       "type": "village"
     },
     "operator": "NSW National Parks and Wildlife Service",
+    "phone": "0244760800",
     "power": false,
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/berlang-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG662QGQRERJKB2XCNNS",
@@ -53,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3516",
+      "state": "VIC",
+      "street": "Cnr Calder Hwy & Kerang Rd",
+      "suburb": "Bridgewater On Loddon"
+    },
     "air": true,
     "lga": {
       "name": "Shire of Loddon",
@@ -26,7 +42,9 @@
       "distance_m": 40,
       "name": "Inglewood Road"
     },
-    "operator": "Ampol"
+    "operator": "Ampol",
+    "phone": "0354373549",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-bridgewater"
   },
   "group": "services",
   "id": "ocdb_01M66JPXAX1C6GAPGEPCEBQ3TA",
@@ -35,7 +53,7 @@
     "lat": -36.598955,
     "lon": 143.937281
   },
-  "name": null,
+  "name": "Ampol Foodary Bridgewater",
   "osm": {
     "id": 991662599,
     "timestamp": "2026-02-26T04:45:30Z",
@@ -44,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

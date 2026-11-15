@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "81",
+      "postcode": "6050",
+      "state": "WA",
+      "street": "Guildford Road",
+      "suburb": "MOUNT LAWLEY"
+    },
     "air": true,
     "lga": {
       "name": "City of Bayswater",
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Guildford Road"
-    }
+    },
+    "phone": "0892726833",
+    "website": "https://www.caltex.com/au/find-us.html"
   },
   "group": "services",
   "id": "ocdb_01M66JP1C2W5B7FW3A7BVAWY9F",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Wise Street",
       "suburb": "Joondalup"
     },
+    "facebook": "https://www.facebook.com/234403810003461",
     "lga": {
       "name": "City of Joondalup",
       "osm_id": 11689618
@@ -29,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Collier Pass"
-    }
+    },
+    "phone": "+61893012500",
+    "website": "http://autobahn.net.au/locations/joondalup/"
   },
   "group": "services",
   "id": "ocdb_01M66JPR8X6Y2R4PAPM2HTBTDE",
@@ -47,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

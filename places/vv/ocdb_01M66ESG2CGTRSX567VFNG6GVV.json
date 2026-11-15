@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3324",
+      "street": "Lake Tooliorook Rd"
+    },
+    "facebook": "https://www.facebook.com/459782404079705",
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -17,7 +32,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 70
-    }
+    },
+    "phone": "+61487337946",
+    "website": "http://lismore.vic.au/tourism/lake-tooliorook-camping-ground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG2CGTRSX567VFNG6GVV",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

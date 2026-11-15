@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "2423",
+      "state": "NSW",
+      "street": "Bengal St",
+      "suburb": "Coolongolook"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bengal Street"
-    }
+    },
+    "phone": "0426 857 731",
+    "website": "https://www.mobil.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPEK5S1M0DXGBJJJHNCS2",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

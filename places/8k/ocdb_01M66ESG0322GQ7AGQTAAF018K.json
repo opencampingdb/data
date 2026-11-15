@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4858",
+      "state": "QLD",
+      "street": "Etty Bay",
+      "suburb": "Etty Bay"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/915005075205410",
     "lga": {
       "name": "Cassowary Coast Regional",
       "osm_id": 11676958
@@ -25,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Etty Bay Road"
-    }
+    },
+    "phone": "+61740632314",
+    "website": "https://www.ettybaycaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG0322GQ7AGQTAAF018K",
@@ -43,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

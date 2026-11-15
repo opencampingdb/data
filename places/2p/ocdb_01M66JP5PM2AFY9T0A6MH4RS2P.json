@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Bourke Street",
       "suburb": "North Parramatta"
     },
+    "facebook": "https://www.facebook.com/1469093073308515",
     "lga": {
       "name": "City of Parramatta Council",
       "osm_id": 6217262
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Bourke Street"
-    }
+    },
+    "phone": "+61296308833",
+    "website": "http://www.australiantransmissioncentre.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP5PM2AFY9T0A6MH4RS2P",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

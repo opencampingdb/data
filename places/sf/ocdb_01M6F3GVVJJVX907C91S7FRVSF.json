@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "81",
+      "postcode": "2024",
+      "state": "NSW",
+      "street": "Carrington Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/310314769111589",
     "lga": {
       "name": "Waverley Council",
       "osm_id": 6203556
@@ -29,7 +47,9 @@
       "distance_m": 10,
       "name": "Bronte Road"
     },
-    "opening_hours": "Mo-Sa 10:00-02:00; Su 10:00-24:00"
+    "opening_hours": "Mo-Sa 10:00-02:00; Su 10:00-24:00",
+    "phone": "+61293893093",
+    "website": "http://www.CharingCrossHotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVVJJVX907C91S7FRVSF",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

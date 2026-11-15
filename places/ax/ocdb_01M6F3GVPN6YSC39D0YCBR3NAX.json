@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "705",
+      "postcode": "3458",
+      "state": "VIC",
+      "street": "James Ln",
+      "suburb": "Trentham East"
+    },
+    "facebook": "https://www.facebook.com/108951031633391",
     "lga": {
       "name": "Shire of Hepburn",
       "osm_id": 3327844
@@ -13,7 +31,9 @@
       "name": "Trentham",
       "osm_id": 1917800073,
       "type": "town"
-    }
+    },
+    "phone": "+61354241213",
+    "website": "https://www.sevenrooms.com/reservations/pigandwhistlehotel/ig?instant_experiences_enabled=true"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVPN6YSC39D0YCBR3NAX",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

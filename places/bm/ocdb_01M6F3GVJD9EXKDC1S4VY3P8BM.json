@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "postcode": "4492",
       "street": "Dowling Street"
     },
+    "facebook": "https://www.facebook.com/148923688495094",
     "lga": {
       "name": "Bulloo Shire",
       "osm_id": 11676708
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Dowling Street"
-    }
+    },
+    "phone": "+61746553125",
+    "website": "http://www.thargotourism.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJD9EXKDC1S4VY3P8BM",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

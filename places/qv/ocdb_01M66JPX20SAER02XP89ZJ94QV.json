@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "855",
+      "postcode": "2280",
+      "state": "NSW",
+      "street": "Macquarie Drive",
+      "suburb": "Valentine"
+    },
+    "facebook": "https://www.facebook.com/566234047090060",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Macquarie Drive"
-    }
+    },
+    "phone": "+61249468084",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/valentine/bp-valentine/1010"
   },
   "group": "services",
   "id": "ocdb_01M66JPX20SAER02XP89ZJ94QV",
@@ -35,7 +57,7 @@
     "lat": -33.007999,
     "lon": 151.642565
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 938228302,
     "timestamp": "2021-05-03T00:50:23Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

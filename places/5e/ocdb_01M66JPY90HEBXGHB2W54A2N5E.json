@@ -1,12 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2088",
+      "state": "NSW",
+      "street": "Bradleys Head Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/110584599004440",
     "lga": {
       "name": "Mosman Municipal Council",
       "osm_id": 6276645
@@ -26,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Athol Wharf Road"
-    }
+    },
+    "phone": "+61299692777",
+    "website": "https://taronga.org.au/taronga-zoo"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPY90HEBXGHB2W54A2N5E",
@@ -35,7 +56,7 @@
     "lat": -33.843686,
     "lon": 151.242292
   },
-  "name": null,
+  "name": "Taronga Zoo Sydney",
   "osm": {
     "id": 1158590559,
     "timestamp": "2024-08-07T05:23:42Z",
@@ -44,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

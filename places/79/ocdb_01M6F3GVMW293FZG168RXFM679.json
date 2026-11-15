@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "119",
+      "postcode": "2134",
+      "state": "NSW",
+      "street": "Burwood Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/163393897009258",
     "lga": {
       "name": "Burwood Council",
       "osm_id": 2161967
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Railway Parade"
-    }
+    },
+    "phone": "+61297472522",
+    "website": "https://www.theburwoodhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVMW293FZG168RXFM679",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "The Esplanade",
       "suburb": "Cairns North"
     },
+    "facebook": "https://www.facebook.com/670320643395792",
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Lake Street"
-    }
+    },
+    "phone": "+61742260000",
+    "website": "http://www.health.qld.gov.au/cairns_hinterland/html/cbh.asp"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPVS9FR7BMYMJ5P3B666Y",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

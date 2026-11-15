@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "118-122",
+      "postcode": "2675",
+      "state": "NSW",
+      "street": "High St",
+      "suburb": "Hillston"
+    },
     "facebook": "https://www.facebook.com/p/Harveys-Service-Centre-Pty-Ltd-100085147805781/",
     "lga": {
       "name": "Carrathool Shire Council",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "High Street"
-    }
+    },
+    "phone": "+61269672143"
   },
   "group": "services",
   "id": "ocdb_01M66JPJMS9JMHN09MH2NYCB04",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

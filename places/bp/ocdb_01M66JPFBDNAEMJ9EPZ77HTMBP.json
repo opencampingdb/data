@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "131",
+      "postcode": "3860",
+      "state": "VIC",
+      "street": "Johnson Street",
+      "suburb": "Maffra"
+    },
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Johnson Street"
-    }
+    },
+    "phone": "0351471744",
+    "website": "https://locations.ampol.com.au/en/independent-maffra"
   },
   "group": "services",
   "id": "ocdb_01M66JPFBDNAEMJ9EPZ77HTMBP",
@@ -27,7 +46,7 @@
     "lat": -37.967782,
     "lon": 146.977098
   },
-  "name": null,
+  "name": "Independent Maffra",
   "osm": {
     "id": 9399345674,
     "timestamp": "2022-01-07T11:17:20Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "681",
+      "postcode": "6112",
+      "state": "WA",
+      "street": "Albany Hwy",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/269752579712662",
     "lga": {
       "name": "City of Armadale",
       "osm_id": 11689426
@@ -20,7 +36,8 @@
       "distance_m": 20,
       "name": "Albany Highway"
     },
-    "operator": "Caltex"
+    "operator": "Caltex",
+    "phone": "+61893992431"
   },
   "group": "services",
   "id": "ocdb_01M66JPSEE0QMQCPSGEN0Y4TE0",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

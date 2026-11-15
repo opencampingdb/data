@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "458-468",
+      "postcode": "3214",
+      "state": "VIC",
+      "street": "Melbourne Road",
+      "suburb": "Norlane"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -34,7 +49,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Melbourne Road"
-    }
+    },
+    "phone": "+61 3 5260 0420",
+    "website": "https://find.shell.com/au/fuel/10110908-shell-reddy-express-norlane/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPY0JZW39VQ687C3RSJNQ",
@@ -52,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

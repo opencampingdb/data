@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2284",
+      "state": "NSW",
+      "street": "Main Rd",
+      "suburb": "Boolaroo"
+    },
+    "facebook": "https://www.facebook.com/297033510665",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61249581491",
+    "website": "http://www.commercialhotelboolaroo.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV2A4V2KV1MMQSK22ZTD",
@@ -31,7 +53,7 @@
     "lat": -32.949987,
     "lon": 151.623536
   },
-  "name": null,
+  "name": "Commercial Hotel",
   "osm": {
     "id": 353671649,
     "timestamp": "2014-09-03T18:06:20Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

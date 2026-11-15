@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "3936",
+      "state": "VIC",
+      "street": "Ponderosa Pl",
+      "suburb": "Dromana"
+    },
+    "facebook": "https://www.facebook.com/169295496433209",
     "lga": {
       "name": "Shire of Mornington Peninsula",
       "osm_id": 3333281
@@ -29,6 +45,7 @@
       "distance_m": 100,
       "name": "Ponderosa Place Offramp"
     },
+    "phone": "+61359872095",
     "website": "https://www.peninsulaholidaypark.com.au/"
   },
   "group": "overnight",

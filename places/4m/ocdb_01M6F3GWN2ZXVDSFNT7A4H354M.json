@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "40",
+      "postcode": "2320",
+      "state": "NSW",
+      "street": "Grady Rd",
+      "suburb": "Pokolbin"
+    },
     "facebook": "https://www.facebook.com/wirrawayaviationmuseum/",
     "lga": {
       "name": "Cessnock City Council",
@@ -15,7 +28,8 @@
       "name": "Nulkaba",
       "osm_id": 114176546,
       "type": "village"
-    }
+    },
+    "phone": "+61423217789"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GWN2ZXVDSFNT7A4H354M",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

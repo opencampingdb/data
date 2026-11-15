@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "2259",
+      "state": "NSW",
+      "street": "Cadonia Rd",
+      "suburb": "Central Coast"
+    },
+    "facebook": "https://www.facebook.com/848385925308299",
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -17,7 +33,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1330
-    }
+    },
+    "phone": "+61407325547"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQ2Q3EXHWV84H7FP4VZ",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

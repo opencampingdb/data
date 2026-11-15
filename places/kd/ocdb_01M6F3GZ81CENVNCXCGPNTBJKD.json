@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "483",
+      "postcode": "2280",
+      "state": "NSW",
+      "street": "Pacific Hwy",
+      "suburb": "Belmont"
+    },
+    "facebook": "https://www.facebook.com/173145626070559",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Pacific Highway"
-    }
+    },
+    "phone": "+61249450444",
+    "website": "http://www.belmonthotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ81CENVNCXCGPNTBJKD",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36",
+      "postcode": "3292",
+      "state": "VIC",
+      "street": "Kellett St",
+      "suburb": "Nelson"
+    },
+    "facebook": "https://www.facebook.com/103387034399395",
     "lga": {
       "name": "Shire of Glenelg",
       "osm_id": 3357380
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Portland - Nelson Road"
-    }
+    },
+    "phone": "+61887384399",
+    "website": "http://www.nelsonhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYTRHG7W65BTSBZDNFKT",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

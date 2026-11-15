@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "5291",
+      "state": "SA",
+      "street": "Eight Mile Creek Rd",
+      "suburb": "Port MacDonnell"
+    },
+    "facebook": "https://www.facebook.com/177660948923760",
     "lga": {
       "name": "The District Council of Grant",
       "osm_id": 3395908
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Eight Mile Creek Road"
-    }
+    },
+    "phone": "+61887382095",
+    "website": "http://www.woolwash.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEVHNTJE80B9JJNJQ9G4",
@@ -37,7 +59,7 @@
     "lat": -38.050374,
     "lon": 140.718254
   },
-  "name": null,
+  "name": "Port MacDonnell Foreshore Tourist Park",
   "osm": {
     "id": 183394138,
     "timestamp": "2013-01-27T04:25:32Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

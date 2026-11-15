@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "William Street",
       "suburb": "Wentworth"
     },
+    "facebook": "https://www.facebook.com/102602002465498",
     "lga": {
       "name": "Wentworth Shire Council",
       "osm_id": 5884892
@@ -29,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Silver City Highway"
-    }
+    },
+    "phone": "+61350273636",
+    "website": "http://www.darlingjunctionmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYR00DNYCCM2SZ81N42F",
@@ -47,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

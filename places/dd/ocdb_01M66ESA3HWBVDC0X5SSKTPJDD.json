@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5520",
+      "state": "SA",
+      "street": "North Terrace",
+      "suburb": "Snowtown"
+    },
+    "facebook": "https://www.facebook.com/248763992131176",
     "lga": {
       "name": "Wakefield Regional Council",
       "osm_id": 9108133
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "North Terrace"
-    }
+    },
+    "phone": "+61428751003"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA3HWBVDC0X5SSKTPJDD",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

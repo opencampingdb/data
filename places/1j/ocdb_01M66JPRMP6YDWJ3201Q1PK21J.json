@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "162",
+      "postcode": "2795",
+      "state": "NSW",
+      "street": "Russell St",
+      "suburb": "Bathurst"
+    },
+    "facebook": "https://www.facebook.com/1732839240158037",
     "lga": {
       "name": "Bathurst Regional Council",
       "osm_id": 6330866
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 350
-    }
+    },
+    "phone": "+61263322522",
+    "website": "http://bathursthistory.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRMP6YDWJ3201Q1PK21J",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

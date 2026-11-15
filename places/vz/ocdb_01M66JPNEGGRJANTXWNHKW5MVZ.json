@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4610",
+      "state": "QLD",
+      "street": "Sawtell St",
+      "suburb": "Kingaroy"
+    },
+    "facebook": "https://www.facebook.com/112774999266972",
     "lga": {
       "name": "South Burnett Regional",
       "osm_id": 11675024
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Youngman Street"
-    }
+    },
+    "phone": "+61741622282",
+    "website": "https://gmautoservicing.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPNEGGRJANTXWNHKW5MVZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 1",
+      "postcode": "4428",
+      "state": "QLD",
+      "street": "May St",
+      "suburb": "Wallumbilla"
+    },
+    "facebook": "https://www.facebook.com/147524648631342",
     "lga": {
       "name": "Maranoa Regional",
       "osm_id": 11674862
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "George Street"
-    }
+    },
+    "phone": "+61746234315"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZSDXY2XR1XH0PBP17KK",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5255",
+      "state": "SA",
+      "street": "Braemar Drive",
+      "suburb": "Strathalbyn"
+    },
     "lga": {
       "name": "Alexandrina Council",
       "osm_id": 7231567
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Adelaide Road"
-    }
+    },
+    "phone": "+61 8 8200 5740",
+    "website": "https://find.shell.com/au/fuel/10131034-shell-otr-strathalbyn/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPQY2RD18D1MR0GYR08KQ",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

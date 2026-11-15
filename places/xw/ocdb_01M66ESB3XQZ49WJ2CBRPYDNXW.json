@@ -1,13 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Davidson Street"
     },
     "caravans": true,
+    "facebook": "https://www.facebook.com/496688626852001",
     "lga": {
       "name": "Douglas Shire",
       "osm_id": 11677495
@@ -36,7 +45,9 @@
       "distance_m": 60,
       "name": "Davidson Street"
     },
-    "tents": true
+    "phone": "+61740995944",
+    "tents": true,
+    "website": "http://www.pandanuscp.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB3XQZ49WJ2CBRPYDNXW",
@@ -54,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

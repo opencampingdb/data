@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "113",
+      "postcode": "2466",
+      "state": "NSW",
+      "street": "Charles St",
+      "suburb": "Iluka"
+    },
+    "facebook": "https://www.facebook.com/631265526930992",
     "lga": {
       "name": "Clarence Valley Council",
       "osm_id": 6143220
@@ -22,7 +40,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 250
-    }
+    },
+    "phone": "+61266466163",
+    "website": "http://www.ilukacaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3MPQ78QPZRMNZ0N4QG",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

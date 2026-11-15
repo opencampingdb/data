@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3444",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Kyneton"
+    },
     "lga": {
       "name": "Shire of Macedon Ranges",
       "osm_id": 3327683
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "High Street"
-    }
+    },
+    "phone": "(03) 5421 9732",
+    "website": "http://www.visitvictoria.com/displayobject.cfm/objectid.8FAC9149-C488-40B3-8CDCDE782BA46CB3"
   },
   "group": "services",
   "id": "ocdb_01M66JNZM5MQ6SB6JTBAMAGFN1",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3561",
+      "state": "VIC",
+      "street": "Church St",
+      "suburb": "Rochester"
+    },
+    "facebook": "https://www.facebook.com/2762477867311156",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 190
-    }
+    },
+    "phone": "+61473222030",
+    "website": "http://www.rochesterriverside.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF93P5KYGWBBSBZH3KEV",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

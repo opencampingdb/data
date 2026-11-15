@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6513",
+      "street": "George St"
+    },
+    "facebook": "https://www.facebook.com/139942993114177",
     "lga": {
       "name": "Shire of Moora",
       "osm_id": 11689731
@@ -18,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "George Street"
-    }
+    },
+    "phone": "+61896517007"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYGGM7E4SM3372M0E238",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

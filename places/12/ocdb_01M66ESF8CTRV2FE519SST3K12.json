@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3683",
+      "state": "VIC",
+      "street": "Alliance St",
+      "suburb": "Chiltern"
+    },
+    "facebook": "https://www.facebook.com/110193959064454",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61357261298",
+    "website": "http://www.lakeandersoncaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF8CTRV2FE519SST3K12",
@@ -27,7 +49,7 @@
     "lat": -36.151956,
     "lon": 146.612884
   },
-  "name": null,
+  "name": "Lake Anderson Caravan Park",
   "osm": {
     "id": 440267642,
     "timestamp": "2016-09-02T01:07:10Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

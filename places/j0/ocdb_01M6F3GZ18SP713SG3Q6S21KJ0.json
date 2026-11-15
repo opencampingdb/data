@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "62",
+      "postcode": "3269",
+      "state": "VIC",
+      "street": "Lord St",
+      "suburb": "Port Campbell"
+    },
+    "facebook": "https://www.facebook.com/106540235184195",
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -24,6 +42,8 @@
       "distance_m": 50,
       "name": "Great Ocean Road"
     },
+    "phone": "+61417559238",
+    "website": "http://www.portsidemotel.com.au",
     "wifi": true
   },
   "group": "overnight",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

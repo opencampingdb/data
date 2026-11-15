@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4805",
+      "state": "QLD",
+      "street": "Powell St",
+      "suburb": "Bowen"
+    },
+    "facebook": "https://www.facebook.com/112861865489851",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Powell Street"
-    }
+    },
+    "phone": "+61747866289",
+    "website": "http://www.bluewatermotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYRX56J081S5A5B847EV",
@@ -36,7 +58,7 @@
     "lat": -20.009811,
     "lon": 148.249265
   },
-  "name": null,
+  "name": "The Bluewater Harbour Motel Bowen",
   "osm": {
     "id": 234770861,
     "timestamp": "2013-08-23T11:35:30Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

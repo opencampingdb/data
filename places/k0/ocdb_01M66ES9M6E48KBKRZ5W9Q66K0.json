@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "30",
+      "postcode": "4702",
+      "state": "QLD",
+      "street": "Willows Rd",
+      "suburb": "Willows"
+    },
+    "facebook": "https://www.facebook.com/1129795170460523",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -13,7 +29,8 @@
       "name": "Willows Gemfields",
       "osm_id": 527621080,
       "type": "village"
-    }
+    },
+    "phone": "+61432858280"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9M6E48KBKRZ5W9Q66K0",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

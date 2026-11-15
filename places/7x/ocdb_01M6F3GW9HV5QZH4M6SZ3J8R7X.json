@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "225",
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "Lonsdale St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/1128421150610089",
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lonsdale Street"
-    }
+    },
+    "phone": "+61397946697",
+    "website": "http://thepublicscorner.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW9HV5QZH4M6SZ3J8R7X",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

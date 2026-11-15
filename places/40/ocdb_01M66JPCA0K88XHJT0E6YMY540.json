@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "422-426",
+      "postcode": "3072",
+      "state": "VIC",
+      "street": "Bell St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/2091464784475412",
     "lga": {
       "name": "City of Darebin",
       "osm_id": 2404379
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 20
-    }
+    },
+    "phone": "+61394803448",
+    "website": "http://www.edanmotors.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPCA0K88XHJT0E6YMY540",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

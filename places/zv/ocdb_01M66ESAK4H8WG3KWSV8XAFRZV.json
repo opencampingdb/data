@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2536",
+      "street": "North Head Road",
+      "suburb": "Eurobodalla Shire Council"
+    },
+    "facebook": "https://www.facebook.com/1524216897653742",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -18,7 +32,8 @@
     "nearest_beach": {
       "distance_m": 110,
       "name": "North Head Beach"
-    }
+    },
+    "phone": "+61244549500"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAK4H8WG3KWSV8XAFRZV",
@@ -36,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "111",
+      "postcode": "2358",
+      "state": "NSW",
+      "street": "Bridge St",
+      "suburb": "Uralla"
+    },
+    "facebook": "https://www.facebook.com/102459045777783",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -30,7 +46,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61267784630"
   },
   "group": "services",
   "id": "ocdb_01M66JP2TARN7709F3YEJGYN3D",
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

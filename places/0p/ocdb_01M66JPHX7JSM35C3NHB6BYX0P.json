@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "2533",
+      "state": "NSW",
+      "street": "Collins St #2533",
+      "suburb": "Kiama"
+    },
     "lga": {
       "name": "The Council of the Municipality of Kiama",
       "osm_id": 6311642
@@ -27,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Collins Street"
-    }
+    },
+    "phone": "(02) 4232 2255",
+    "website": "http://parkfuels.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPHX7JSM35C3NHB6BYX0P",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

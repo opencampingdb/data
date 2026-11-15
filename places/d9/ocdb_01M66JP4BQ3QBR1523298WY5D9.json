@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "70",
+      "postcode": "3691",
+      "state": "VIC",
+      "street": "Bonegilla Road",
+      "suburb": "Ebden"
+    },
     "lga": {
       "name": "City of Wodonga",
       "osm_id": 3365492
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bonegilla Road"
-    }
+    },
+    "phone": "+61 2 6020 6122",
+    "website": "https://find.shell.com/au/fuel/10111524-shell-kangaroo-general-store-ebden/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP4BQ3QBR1523298WY5D9",
@@ -31,7 +50,7 @@
     "lat": -36.135047,
     "lon": 147.008594
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 2412916474,
     "timestamp": "2013-08-10T09:49:51Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

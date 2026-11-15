@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "49",
+      "postcode": "2720",
+      "state": "NSW",
+      "street": "Capper St",
+      "suburb": "Tumut"
+    },
+    "facebook": "https://www.facebook.com/204730980047576",
     "lga": {
       "name": "Snowy Valleys Council",
       "osm_id": 6239423
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Capper Street"
-    }
+    },
+    "phone": "+61269472273",
+    "website": "http://www.tumutexhaustbrake.repcoservice.net"
   },
   "group": "services",
   "id": "ocdb_01M66JPX0HAJSDFNVJRC3M0ZV5",
@@ -31,7 +53,7 @@
     "lat": -35.30035,
     "lon": 148.219394
   },
-  "name": null,
+  "name": "Tumut Exhaust & Brake",
   "osm": {
     "id": 930619231,
     "timestamp": "2021-04-14T10:50:04Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

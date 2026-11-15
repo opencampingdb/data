@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2940",
+      "postcode": "2420",
+      "state": "NSW",
+      "street": "Salisbury Rd",
+      "suburb": "Salisbury"
+    },
+    "facebook": "https://www.facebook.com/140451996107586",
     "lga": {
       "name": "Dungog Shire Council",
       "osm_id": 6185449
@@ -13,7 +31,9 @@
       "name": "Salisbury",
       "osm_id": 114371357,
       "type": "village"
-    }
+    },
+    "phone": "+61413264314",
+    "website": "http://www.barringtonwilderness.com.au/index.html"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWD3TT3PKXY4CMVY21X8",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

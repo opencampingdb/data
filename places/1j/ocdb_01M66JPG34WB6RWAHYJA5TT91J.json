@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "439",
+      "postcode": "3809",
+      "state": "VIC",
+      "street": "Princes Highway",
+      "suburb": "Officer"
+    },
     "lga": {
       "name": "Shire of Cardinia",
       "osm_id": 3335652
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61 3 5947 7753",
+    "website": "https://find.shell.com/au/fuel/10110919-shell-reddy-express-officer/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPG34WB6RWAHYJA5TT91J",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

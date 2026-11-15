@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "255",
+      "postcode": "2713",
+      "state": "NSW",
+      "street": "Murray Street",
+      "suburb": "Finley"
+    },
+    "facebook": "https://www.facebook.com/151395242166551",
     "lga": {
       "name": "Berrigan Shire Council",
       "osm_id": 6230406
@@ -20,6 +36,7 @@
       "distance_m": 40,
       "name": "Murray Street"
     },
+    "phone": "+61358833458",
     "website": "https://map.bp.com/en-AU/AU/gas-station/finley/bp-finley/0484"
   },
   "group": "services",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "3388",
+      "postcode": "4127",
+      "state": "QLD",
+      "street": "Pacific Highway",
+      "suburb": "Brisbane"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/370552066764977",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -22,6 +38,7 @@
       "distance_m": 30,
       "name": "Pacific Highway"
     },
+    "phone": "+61732086481",
     "website": "https://map.bp.com/en-AU/AU/gas-station/springwood/bp-springwood/4239"
   },
   "group": "services",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

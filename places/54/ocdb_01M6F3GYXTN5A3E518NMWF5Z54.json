@@ -1,12 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "85",
+      "postcode": "3580",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Koondrook"
+    },
     "facebook": "https://www.facebook.com/pages/Mates-Royal-Hotel-Koondrook/181492208548655",
     "lga": {
       "name": "Shire of Gannawarra",
@@ -24,7 +37,8 @@
     "nearest_major_road": {
       "distance_m": 500,
       "name": "Grigg Road"
-    }
+    },
+    "phone": "+61354532406"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYXTN5A3E518NMWF5Z54",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

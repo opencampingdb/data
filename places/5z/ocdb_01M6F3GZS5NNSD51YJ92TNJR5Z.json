@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Rawson Street",
       "suburb": "Auburn"
     },
+    "facebook": "https://www.facebook.com/533817729990800",
     "lga": {
       "name": "Cumberland City Council",
       "osm_id": 6210859
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Rawson Street"
-    }
+    },
+    "phone": "+61296497295",
+    "website": "http://www.keigheryhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZS5NNSD51YJ92TNJR5Z",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

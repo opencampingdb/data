@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "147",
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/144153822294522",
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -20,7 +38,9 @@
       "distance_m": 40,
       "name": "Princes Highway"
     },
-    "operator": "Budget Motel Chain"
+    "operator": "Budget Motel Chain",
+    "phone": "+61397940599",
+    "website": "http://www.dandenongmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVRYC0W9JQGR7JG9XM3H",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "2261",
+      "state": "NSW",
+      "street": "Toowoon Bay Rd",
+      "suburb": "Central Coast"
+    },
+    "facebook": "https://www.facebook.com/185840508094765",
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "The Entrance Road"
-    }
+    },
+    "phone": "+61418487135",
+    "website": "http://www.caravanparkphotos.com.au/long_jetty_duncans/index.htm"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEWG9EM349ASVDHGFRHC",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

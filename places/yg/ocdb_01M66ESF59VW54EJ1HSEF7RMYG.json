@@ -1,18 +1,36 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "power": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "2448",
+      "state": "NSW",
+      "street": "Riverside Dr",
+      "suburb": "Nambucca Heads"
+    },
     "drinking_water": true,
     "dump_station": true,
+    "facebook": "https://www.facebook.com/113463274958665",
     "fee": true,
     "lga": {
       "name": "Nambucca Valley Council",
@@ -31,8 +49,10 @@
       "distance_m": 610,
       "name": "RSL Boat Ramp"
     },
+    "phone": "+61265686014",
     "power": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.foreshorecaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF59VW54EJ1HSEF7RMYG",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "6479",
+      "state": "WA",
+      "street": "Cruickshank Rd",
+      "suburb": "Mukinbudin"
+    },
+    "facebook": "https://www.facebook.com/160490394154995",
     "lga": {
       "name": "Shire of Mukinbudin",
       "osm_id": 11690148
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 360,
       "name": "Bent Street"
-    }
+    },
+    "phone": "+61429471103",
+    "website": "http://www.mukinbudincaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA24REQRMASTCA5FRJ26",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

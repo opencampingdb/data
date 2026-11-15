@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2324",
+      "state": "NSW",
+      "street": "William St",
+      "suburb": "Raymond Terrace"
+    },
+    "facebook": "https://www.facebook.com/199856570196862",
     "lga": {
       "name": "Port Stephens Council",
       "osm_id": 6185732
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Adelaide Street"
-    }
+    },
+    "phone": "+61249872014",
+    "website": "https://www.junctioninnhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV4FMM511WYTXFD1F1ZS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

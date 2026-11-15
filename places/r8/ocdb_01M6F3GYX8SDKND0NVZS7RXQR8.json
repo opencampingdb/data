@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "0852",
+      "street": "Buchanan Hwy",
+      "suburb": "Victoria Daly Region"
+    },
+    "facebook": "https://www.facebook.com/2099213967040006",
     "lga": {
       "name": "Victoria Daly Region",
       "osm_id": 5514633
@@ -11,7 +25,8 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Buchanan Highway"
-    }
+    },
+    "phone": "+61889750767"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYX8SDKND0NVZS7RXQR8",
@@ -29,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

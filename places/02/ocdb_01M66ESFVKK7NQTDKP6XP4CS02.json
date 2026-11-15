@@ -1,14 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5602",
+      "state": "SA",
+      "street": "Esplanade",
+      "suburb": "Cowell"
+    },
+    "facebook": "https://www.facebook.com/504017879791378",
     "lga": {
       "name": "The District Council of Franklin Harbour",
       "osm_id": 9108354
@@ -26,9 +43,11 @@
       "distance_m": 160,
       "name": "Main Street"
     },
+    "phone": "+61886292307",
     "power": true,
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.cowellforeshore.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVKK7NQTDKP6XP4CS02",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

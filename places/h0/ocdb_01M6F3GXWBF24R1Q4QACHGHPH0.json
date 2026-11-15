@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "88",
+      "postcode": "4455",
+      "state": "QLD",
+      "street": "McDowall St",
+      "suburb": "Roma"
+    },
+    "facebook": "https://www.facebook.com/112487485429717",
     "lga": {
       "name": "Maranoa Regional",
       "osm_id": 11674862
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Bowen Street"
-    }
+    },
+    "phone": "+61746221330",
+    "website": "http://www.thequeensarms.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXWBF24R1Q4QACHGHPH0",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

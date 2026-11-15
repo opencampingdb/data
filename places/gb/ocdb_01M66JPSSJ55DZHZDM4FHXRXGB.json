@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "6330",
+      "state": "WA",
+      "street": "Albany Highway",
+      "suburb": "Albany"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/802649150123352",
     "lga": {
       "name": "City of Albany",
       "osm_id": 11690341
@@ -26,6 +42,7 @@
       "distance_m": 30,
       "name": "Albany Highway"
     },
+    "phone": "+61898415411",
     "website": "https://map.bp.com/en-AU/AU/gas-station/albany/bp-albany-allway-motors-temporary-closed/1862"
   },
   "group": "services",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

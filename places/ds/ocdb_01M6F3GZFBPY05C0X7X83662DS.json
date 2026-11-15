@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "218",
+      "postcode": "4163",
+      "state": "QLD",
+      "street": "Middle St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/429484160498723",
     "lga": {
       "name": "Redland City",
       "osm_id": 11677885
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Passage Street"
-    }
+    },
+    "phone": "+61732862488",
+    "website": "http://www.bayairmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZFBPY05C0X7X83662DS",
@@ -35,7 +57,7 @@
     "lat": -27.52623,
     "lon": 153.27998
   },
-  "name": null,
+  "name": "Bay Air Motel",
   "osm": {
     "id": 854388202,
     "timestamp": "2020-10-03T02:02:17Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

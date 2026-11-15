@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7306",
+      "state": "TAS",
+      "street": "Connells Ave",
+      "suburb": "Cradle Mountain"
+    },
+    "facebook": "https://www.facebook.com/1550370701928769",
     "lga": {
       "name": "Kentish",
       "osm_id": 10597614
@@ -17,7 +34,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2060
-    }
+    },
+    "phone": "+61364911179",
+    "website": "http://www.parks.tas.gov.au/index.aspx?base=7560"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWH9BYA8W7ZS6QS21X46",
@@ -35,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

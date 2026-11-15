@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "3960",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Foster"
+    },
+    "facebook": "https://www.facebook.com/111912861416478",
     "lga": {
       "name": "Shire of South Gippsland",
       "osm_id": 3335917
@@ -20,7 +38,9 @@
       "distance_m": 20,
       "name": "Main Street"
     },
-    "opening_hours": "Sa, Su 11:00-15:00"
+    "opening_hours": "Sa, Su 11:00-15:00",
+    "phone": "+61428821760",
+    "website": "http://www.promcountryhistory.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW4X07AHD1FDXQ716VE2",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

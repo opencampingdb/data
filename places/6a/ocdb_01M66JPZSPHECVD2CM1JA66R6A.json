@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "203",
+      "postcode": "3150",
+      "state": "VIC",
+      "street": "Gallaghers Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/109229817214953",
     "fuel": true,
     "lga": {
       "name": "City of Monash",
@@ -24,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "High Street Road"
-    }
+    },
+    "phone": "+61398023348"
   },
   "group": "services",
   "id": "ocdb_01M66JPZSPHECVD2CM1JA66R6A",
@@ -33,7 +52,7 @@
     "lat": -37.875927,
     "lon": 145.178537
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1458257996,
     "timestamp": "2025-12-13T12:00:14Z",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

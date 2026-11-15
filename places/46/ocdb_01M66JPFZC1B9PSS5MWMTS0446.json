@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "2380",
+      "state": "NSW",
+      "street": "Abbott St",
+      "suburb": "Gunnedah"
+    },
+    "facebook": "https://www.facebook.com/2055482104716516",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -25,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Abbott Street"
-    }
+    },
+    "phone": "+61267425355"
   },
   "group": "services",
   "id": "ocdb_01M66JPFZC1B9PSS5MWMTS0446",
@@ -43,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

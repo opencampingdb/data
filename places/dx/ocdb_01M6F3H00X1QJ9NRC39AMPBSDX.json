@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "43",
+      "postcode": "4380",
+      "state": "QLD",
+      "street": "Lock St",
+      "suburb": "Stanthorpe"
+    },
     "lga": {
       "name": "Southern Downs Regional",
       "osm_id": 11677975
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "ACW"
-    }
+    },
+    "phone": "(07) 4681 3520",
+    "website": "http://bottlemart.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3H00X1QJ9NRC39AMPBSDX",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

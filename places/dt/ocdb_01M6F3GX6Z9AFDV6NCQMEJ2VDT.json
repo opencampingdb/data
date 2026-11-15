@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Caswell Street",
       "suburb": "Peak Hill"
     },
+    "facebook": "https://www.facebook.com/1015024211896321",
     "lga": {
       "name": "Parkes Shire Council",
       "osm_id": 6271674
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Caswell Street"
-    }
+    },
+    "phone": "+61268691429",
+    "website": "http://peakhill.budgetmotelchain.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX6Z9AFDV6NCQMEJ2VDT",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

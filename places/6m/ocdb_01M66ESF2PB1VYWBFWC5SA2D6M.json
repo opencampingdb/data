@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3737",
+      "state": "VIC",
+      "street": "Nug Nug Reserve Rd",
+      "suburb": "Buffalo River"
+    },
+    "facebook": "https://www.facebook.com/100449803430018",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -13,7 +30,9 @@
       "name": "Ovens",
       "osm_id": 958059787,
       "type": "village"
-    }
+    },
+    "phone": "+61408542240",
+    "website": "http://www.nugnugreserve.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2PB1VYWBFWC5SA2D6M",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
@@ -12,10 +18,17 @@
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "5440",
+      "state": "SA",
+      "street": "Barrier Highway",
+      "suburb": "Olary"
+    },
     "caravans": true,
     "charge": "Donation Box",
     "dump_station": false,
     "entry": "public",
+    "facebook": "https://www.facebook.com/174013253304522",
     "fee": true,
     "lga": {
       "name": "Pastoral Unincorporated Area",
@@ -45,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

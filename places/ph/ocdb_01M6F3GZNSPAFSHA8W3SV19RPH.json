@@ -1,18 +1,27 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "239-241",
       "street": "Maroondah Highway"
     },
+    "facebook": "https://www.facebook.com/823121127890599",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -33,7 +42,9 @@
       "distance_m": 50,
       "name": "Maroondah Highway"
     },
-    "toilets": true
+    "phone": "+61370022947",
+    "toilets": true,
+    "website": "https://www.sportingglobe.com.au/book"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZNSPAFSHA8W3SV19RPH",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

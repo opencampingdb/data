@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "46",
+      "postcode": "2644",
+      "state": "NSW",
+      "street": "Albury St",
+      "suburb": "Holbrook"
+    },
     "lga": {
       "name": "Greater Hume Shire Council",
       "osm_id": 3487850
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Hume Freeway Offramp"
-    }
+    },
+    "phone": "(02) 6036 3944",
+    "website": "http://holbrookmotelgroup.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1NZ6EYM59TXM4NTF1J",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

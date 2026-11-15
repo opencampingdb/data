@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "69",
+      "postcode": "2446",
+      "state": "NSW",
+      "street": "High St",
+      "suburb": "Wauchope"
+    },
+    "facebook": "https://www.facebook.com/207023239352467",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -24,6 +40,7 @@
       "distance_m": 50,
       "name": "High Street"
     },
+    "phone": "+61265808000",
     "website": "https://mnclhd.health.nsw.gov.au/hospital/wauchope-district-memorial-hospital/"
   },
   "group": "emergency",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

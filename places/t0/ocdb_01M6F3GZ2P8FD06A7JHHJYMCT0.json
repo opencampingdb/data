@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Fisher Street",
       "suburb": "Clifton"
     },
+    "facebook": "https://www.facebook.com/100659533342448",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Felton Clifton Road"
-    }
+    },
+    "phone": "+61746973288",
+    "website": "http://www.oshanleys.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ2P8FD06A7JHHJYMCT0",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

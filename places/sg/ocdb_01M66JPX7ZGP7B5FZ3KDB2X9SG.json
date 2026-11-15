@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "155",
+      "postcode": "5253",
+      "state": "SA",
+      "street": "Adelaide Rd",
+      "suburb": "Murray Bridge"
+    },
+    "facebook": "https://www.facebook.com/256252624732179",
     "lga": {
       "name": "The Rural City of Murray Bridge",
       "osm_id": 7071420
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Adelaide Road"
-    }
+    },
+    "phone": "+61885435121"
   },
   "group": "services",
   "id": "ocdb_01M66JPX7ZGP7B5FZ3KDB2X9SG",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

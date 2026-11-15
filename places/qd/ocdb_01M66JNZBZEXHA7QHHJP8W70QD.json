@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5172",
+      "postcode": "2629",
+      "state": "NSW",
+      "street": "Snowy Mountains Highway",
+      "suburb": "Adaminaby"
+    },
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Snowy Mountains Highway"
-    }
+    },
+    "phone": "0264542256",
+    "website": "https://locations.ampol.com.au/en/ampol-adaminaby"
   },
   "group": "services",
   "id": "ocdb_01M66JNZBZEXHA7QHHJP8W70QD",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

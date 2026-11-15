@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "2594",
+      "state": "NSW",
+      "street": "Boorowa Street",
+      "suburb": "Young"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -25,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Zouch Street"
-    }
+    },
+    "phone": "0263824111",
+    "website": "https://locations.ampol.com.au/en/ampol-young"
   },
   "group": "services",
   "id": "ocdb_01M66JNZBZEXHA7QHHJP8W70QE",
@@ -43,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

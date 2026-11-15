@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "3664",
+      "state": "VIC",
+      "street": "Mitchell St",
+      "suburb": "Avenel"
+    },
     "lga": {
       "name": "Shire of Strathbogie",
       "osm_id": 3345839
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Livingstone Street"
-    }
+    },
+    "phone": "(03) 5796 2305",
+    "website": "http://hopbackbrewery.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV45NMGPWFW65TSWR5RQ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

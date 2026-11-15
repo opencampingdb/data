@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3325",
+      "street": "Chatsworth Rd"
+    },
+    "facebook": "https://www.facebook.com/1630791523899834",
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -18,7 +33,9 @@
     "nearest_boat_ramp": {
       "distance_m": 60,
       "name": "Deep Lake boat ramp"
-    }
+    },
+    "phone": "+61407201735",
+    "website": "http://deeplake.wix.com/recreationreserve"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9VMJXNE0KZV9XK43ZX7",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

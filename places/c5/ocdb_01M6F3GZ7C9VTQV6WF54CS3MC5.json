@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "2640",
+      "state": "NSW",
+      "street": "Kinross Ct",
+      "suburb": "Thurgoona"
+    },
+    "facebook": "https://www.facebook.com/105005317589951",
     "lga": {
       "name": "Albury City Council",
       "osm_id": 3487773
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Table Top Road"
-    }
+    },
+    "phone": "+61260469889",
+    "website": "http://www.kinrosswoolshed.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ7C9VTQV6WF54CS3MC5",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

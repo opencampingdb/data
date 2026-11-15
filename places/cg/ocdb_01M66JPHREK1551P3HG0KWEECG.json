@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Neeld Street",
       "suburb": "Wyalong"
     },
+    "facebook": "https://www.facebook.com/112687386864967",
     "lga": {
       "name": "Bland Shire Council",
       "osm_id": 6257747
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Neeld Street"
-    }
+    },
+    "phone": "+61447799528"
   },
   "group": "utility",
   "id": "ocdb_01M66JPHREK1551P3HG0KWEECG",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

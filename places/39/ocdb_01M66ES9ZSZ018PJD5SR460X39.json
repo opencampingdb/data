@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "2729",
+      "state": "NSW",
+      "street": "Victoria Hill Rd",
+      "suburb": "Adelong"
+    },
+    "facebook": "https://www.facebook.com/386612111446997",
     "lga": {
       "name": "Snowy Valleys Council",
       "osm_id": 6239423
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Snowy Mountains Highway"
-    }
+    },
+    "phone": "+61269462282",
+    "website": "http://www.adelongservicesclub.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9ZSZ018PJD5SR460X39",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

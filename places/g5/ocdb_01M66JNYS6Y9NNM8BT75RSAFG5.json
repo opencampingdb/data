@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3664",
+      "state": "VIC",
+      "street": "Jones St Cnr Ash St",
+      "suburb": "Avenel"
+    },
     "lga": {
       "name": "Shire of Strathbogie",
       "osm_id": 3345839
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Jones Street"
-    }
+    },
+    "phone": "0357962323",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-avenel"
   },
   "group": "services",
   "id": "ocdb_01M66JNYS6Y9NNM8BT75RSAFG5",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

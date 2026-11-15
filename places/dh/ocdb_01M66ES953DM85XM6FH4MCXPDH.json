@@ -1,18 +1,35 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7150",
+      "state": "TAS",
+      "street": "Cloudy Bay Rd",
+      "suburb": "South Bruny"
+    },
     "caravans": true,
     "entry": "public",
+    "facebook": "https://www.facebook.com/982022185210457",
     "fee": false,
     "lga": {
       "name": "Kingborough",
@@ -29,8 +46,10 @@
       "name": "Cloudy Bay Beach"
     },
     "operator": "Parks and Wildlife",
+    "phone": "+61362931446",
     "showers": false,
-    "tents": true
+    "tents": true,
+    "website": "http://www.parks.tas.gov.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES953DM85XM6FH4MCXPDH",
@@ -48,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

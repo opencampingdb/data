@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1418",
+      "postcode": "2444",
+      "state": "NSW",
+      "street": "Point Plomer Rd",
+      "suburb": "Limeburners Creek (North)"
+    },
+    "facebook": "https://www.facebook.com/1724824157772794",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 130
-    }
+    },
+    "phone": "+61427841251",
+    "website": "http://www.pointplomer.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW4HJB40QJFY8JVJR2BQ",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

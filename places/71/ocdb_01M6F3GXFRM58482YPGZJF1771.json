@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Barwell Avenue",
       "suburb": "Barmera"
     },
+    "facebook": "https://www.facebook.com/108152698526268",
     "lga": {
       "name": "The Berri Barmera Council",
       "osm_id": 6802509
@@ -26,7 +35,9 @@
     "nearest_boat_ramp": {
       "distance_m": 340,
       "name": "Boat Ramp"
-    }
+    },
+    "phone": "+61885882111",
+    "website": "http://www.barmerahotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXFRM58482YPGZJF1771",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

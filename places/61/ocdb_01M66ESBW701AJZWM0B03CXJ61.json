@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5655",
+      "street": "Scrubby Campground Track",
+      "suburb": "Pastoral Unincorporated Area"
+    },
+    "facebook": "https://www.facebook.com/1557081524620907",
     "lga": {
       "name": "Pastoral Unincorporated Area",
       "osm_id": 6804541
@@ -13,7 +29,9 @@
       "name": "Minnipa",
       "osm_id": 2142718641,
       "type": "town"
-    }
+    },
+    "phone": "+61886883111",
+    "website": "https://www.environment.sa.gov.au/parks/Find_a_Park/Browse_by_region/Eyre_Peninsula/gawler-ranges-national-park"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBW701AJZWM0B03CXJ61",
@@ -31,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "282",
+      "postcode": "3055",
+      "state": "VIC",
+      "street": "Albert St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/103653834695415",
     "lga": {
       "name": "City of Merri-bek",
       "osm_id": 3327767
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Sydney Road"
-    }
+    },
+    "phone": "+61393881666",
+    "website": "http://www.amrworkshop.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPKAD3TA6N8KVMB0DDDV3",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

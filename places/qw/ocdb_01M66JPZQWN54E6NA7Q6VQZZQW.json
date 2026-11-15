@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "4868",
+      "state": "QLD",
+      "street": "Southgate Cl",
+      "suburb": "Cairns"
+    },
+    "facebook": "https://www.facebook.com/1933920209960466",
     "fuel": true,
     "lga": {
       "name": "Cairns Regional",
@@ -28,7 +46,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Links Drive"
-    }
+    },
+    "phone": "+61742300629"
   },
   "group": "services",
   "id": "ocdb_01M66JPZQWN54E6NA7Q6VQZZQW",
@@ -37,7 +56,7 @@
     "lat": -16.952843,
     "lon": 145.751811
   },
-  "name": null,
+  "name": "United Petroleum Woree (Pie Face)",
   "osm": {
     "id": 1443643444,
     "timestamp": "2025-10-21T07:27:35Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

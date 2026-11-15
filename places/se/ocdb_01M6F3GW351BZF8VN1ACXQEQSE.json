@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "888",
+      "postcode": "2540",
+      "state": "NSW",
+      "street": "Greenwell Point Rd",
+      "suburb": "Pyree"
+    },
+    "facebook": "https://www.facebook.com/1544822212400301",
     "lga": {
       "name": "Shoalhaven City Council",
       "osm_id": 6311648
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Greenwell Point Road"
-    }
+    },
+    "website": "http://www.shoalhavenfamilyhistory.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW351BZF8VN1ACXQEQSE",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

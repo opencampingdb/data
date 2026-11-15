@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2290",
+      "state": "NSW",
+      "street": "Unit 5/10 Seasands Dr",
+      "suburb": "Redhead"
+    },
+    "facebook": "https://www.facebook.com/372502169471865",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kalaroo Road"
-    }
+    },
+    "phone": "+61249447855",
+    "website": "http://www.redheadautomotive.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPNYG2ZMFR8MFGRVJ78HQ",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

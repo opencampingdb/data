@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
@@ -10,12 +15,20 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "107",
+      "postcode": "2538",
+      "state": "NSW",
+      "street": "Croobyar Road",
+      "suburb": "Milton"
+    },
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
@@ -42,6 +55,7 @@
       "name": "Croobyar Road"
     },
     "operator": "Shoulhaven City Council",
+    "phone": "0473915394",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

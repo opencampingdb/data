@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "3746",
+      "state": "VIC",
+      "street": "MacKay St",
+      "suburb": "Eldorado"
+    },
+    "facebook": "https://www.facebook.com/1522777934708483",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -13,7 +29,8 @@
       "name": "Eldorado",
       "osm_id": 677370819,
       "type": "village"
-    }
+    },
+    "phone": "+61357251778"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYJ9G35BEWP6QCSPJPQX",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

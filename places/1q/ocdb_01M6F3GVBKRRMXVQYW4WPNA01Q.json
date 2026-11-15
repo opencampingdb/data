@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z",
+    "x": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
+    "x": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "166-172",
+      "postcode": "5006",
+      "state": "SA",
+      "street": "Warnertown Rd",
+      "suburb": "Port Pirie"
+    },
+    "facebook": "https://www.facebook.com/131521766890413",
     "lga": {
       "name": "Port Pirie Regional Council",
       "osm_id": 9108160
@@ -27,7 +47,10 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Warnertown Road"
-    }
+    },
+    "phone": "(08) 8632 4200",
+    "website": "http://www.1834hotels.com.au",
+    "x": "https://x.com/1834hotels"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVBKRRMXVQYW4WPNA01Q",
@@ -45,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

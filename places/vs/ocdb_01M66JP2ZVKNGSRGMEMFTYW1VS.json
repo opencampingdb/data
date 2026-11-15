@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25-27",
+      "postcode": "7301",
+      "state": "TAS",
+      "street": "Marlborough St",
+      "suburb": "Longford"
+    },
     "lga": {
       "name": "Northern Midlands",
       "osm_id": 10604255
@@ -23,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Marlborough Street"
-    }
+    },
+    "phone": "(03) 6391 2801"
   },
   "group": "services",
   "id": "ocdb_01M66JP2ZVKNGSRGMEMFTYW1VS",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

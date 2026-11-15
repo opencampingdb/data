@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "23",
+      "postcode": "0873",
+      "state": "NT",
+      "street": "Palm Cct",
+      "suburb": "Alice Springs"
+    },
+    "facebook": "https://www.facebook.com/206398549373433",
     "lga": {
       "name": "Town of Alice Springs",
       "osm_id": 9045378
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 280,
       "name": "8"
-    }
+    },
+    "phone": "+61889529589",
+    "website": "http://gdaymatetouristpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEVN68Y2C61TY9C39CWG",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

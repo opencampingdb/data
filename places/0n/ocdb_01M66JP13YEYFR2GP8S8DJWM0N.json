@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "32-34",
+      "postcode": "3728",
+      "state": "VIC",
+      "street": "Barr St",
+      "suburb": "Tungamah"
+    },
+    "facebook": "https://www.facebook.com/84564312244",
     "lga": {
       "name": "Shire of Moira",
       "osm_id": 3365119
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Middleton Street"
-    }
+    },
+    "phone": "+61357485521"
   },
   "group": "services",
   "id": "ocdb_01M66JP13YEYFR2GP8S8DJWM0N",
@@ -27,7 +46,7 @@
     "lat": -36.163813,
     "lon": 145.877297
   },
-  "name": null,
+  "name": "Tungamah Garage",
   "osm": {
     "id": 1488247948,
     "timestamp": "2011-11-01T05:59:02Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

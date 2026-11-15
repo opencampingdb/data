@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2529",
+      "postcode": "2549",
+      "state": "NSW",
+      "street": "Princes Hwy",
+      "suburb": "Millingandi"
+    },
+    "facebook": "https://www.facebook.com/179320255522178",
     "lga": {
       "name": "Bega Valley Shire Council",
       "osm_id": 6239664
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61428260734",
+    "website": "http://merimbula-nsw.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA7BVNS38C3KD7EY343W",
@@ -51,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

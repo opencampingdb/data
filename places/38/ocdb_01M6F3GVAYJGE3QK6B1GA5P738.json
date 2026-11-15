@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3460",
+      "state": "VIC",
+      "street": "East St",
+      "suburb": "Daylesford"
+    },
+    "facebook": "https://www.facebook.com/166470100033539",
     "lga": {
       "name": "Shire of Hepburn",
       "osm_id": 3327844
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Knox Street"
-    }
+    },
+    "phone": "+61353482091",
+    "website": "http://www.farmersarmsdaylesford.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVAYJGE3QK6B1GA5P738",
@@ -31,7 +53,7 @@
     "lat": -37.341254,
     "lon": 144.156209
   },
-  "name": null,
+  "name": "Farmers Arms Hotel",
   "osm": {
     "id": 1241982981,
     "timestamp": "2011-04-12T13:17:52Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

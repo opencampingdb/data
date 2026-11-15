@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "560",
+      "postcode": "2577",
+      "state": "NSW",
+      "street": "Meryla Rd",
+      "suburb": "Kangaroo Valley"
+    },
     "lga": {
       "name": "Wingecarribee Shire Council",
       "osm_id": 6304530
@@ -13,7 +28,9 @@
       "name": "Moss Vale",
       "osm_id": 97302052,
       "type": "town"
-    }
+    },
+    "phone": "1300 655 687",
+    "website": "http://www.forestrycorporation.com.au/visit/forests/meryla"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBG3G6ZANHNNNK5HDFYH",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

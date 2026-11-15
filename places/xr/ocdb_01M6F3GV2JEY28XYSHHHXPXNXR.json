@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +18,7 @@
       "street": "Moora Road",
       "suburb": "Rushworth"
     },
+    "facebook": "https://www.facebook.com/154072611731527",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -25,7 +32,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Moora Road"
-    }
+    },
+    "phone": "+61348318634"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV2JEY28XYSHHHXPXNXR",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

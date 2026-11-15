@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2656",
+      "state": "NSW",
+      "street": "Green St",
+      "suburb": "Lockhart"
+    },
+    "facebook": "https://www.facebook.com/159139240778578",
     "lga": {
       "name": "Lockhart Shire Council",
       "osm_id": 6322050
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Green Street"
-    }
+    },
+    "phone": "+61269205357",
+    "website": "http://www.lockhart.nsw.gov.au/all-businesses/lockhart-motel.aspx"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ3CTBGBB9M1JM6R95GG",
@@ -27,7 +49,7 @@
     "lat": -35.222012,
     "lon": 146.725577
   },
-  "name": null,
+  "name": "Lockhart Motel",
   "osm": {
     "id": 483125221,
     "timestamp": "2017-03-27T23:11:41Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

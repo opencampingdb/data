@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "482",
+      "postcode": "3134",
+      "state": "VIC",
+      "street": "Ringwood-Warrandyte Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/1614159918828841",
     "lga": {
       "name": "City of Manningham",
       "osm_id": 2405038
@@ -20,6 +36,7 @@
       "distance_m": 50,
       "name": "Ringwood - Warrandyte Road"
     },
+    "phone": "+61398440008",
     "wheelchair": true
   },
   "group": "services",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

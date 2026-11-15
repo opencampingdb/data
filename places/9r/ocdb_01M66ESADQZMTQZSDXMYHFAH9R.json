@@ -1,14 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2577",
+      "state": "NSW",
+      "street": "Griffins Firetrail",
+      "suburb": "Meryla"
+    },
     "caravans": false,
     "lga": {
       "name": "Wingecarribee Shire Council",
@@ -20,6 +32,7 @@
       "osm_id": 113237603,
       "type": "town"
     },
+    "phone": "1300072757",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -41,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

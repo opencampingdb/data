@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "4630",
+      "state": "QLD",
+      "street": "Newton St",
+      "suburb": "Monto"
+    },
+    "facebook": "https://www.facebook.com/103750322167827",
     "lga": {
       "name": "North Burnett Regional",
       "osm_id": 11676093
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Lister Street"
-    }
+    },
+    "phone": "+61418291998"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GY63M6FGS45VR91SMVDR",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

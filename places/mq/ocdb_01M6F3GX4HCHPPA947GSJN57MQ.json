@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "postcode": "5271",
+      "state": "SA",
+      "street": "Smith St",
+      "suburb": "Naracoorte"
+    },
+    "facebook": "https://www.facebook.com/504810959388999",
     "lga": {
       "name": "Naracoorte Lucindale Council",
       "osm_id": 6711653
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Smith Street"
-    }
+    },
+    "phone": "+61887623900",
+    "website": "http://www.countryroadsnaracoorte.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX4HCHPPA947GSJN57MQ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

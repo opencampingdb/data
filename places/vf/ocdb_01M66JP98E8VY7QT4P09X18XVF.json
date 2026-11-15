@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Maitland Street",
       "suburb": "Narrabri"
     },
+    "facebook": "https://www.facebook.com/603761646437904",
     "lga": {
       "name": "Narrabri Shire Council",
       "osm_id": 6389900
@@ -30,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 60
     },
-    "opening_hours": "Mo-Su 06:00-22:00"
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+61428944555",
+    "website": "http://www.washshednarrabrilaundry.com.au"
   },
   "group": "utility",
   "id": "ocdb_01M66JP98E8VY7QT4P09X18XVF",
@@ -48,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

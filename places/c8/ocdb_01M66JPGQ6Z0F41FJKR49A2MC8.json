@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +24,7 @@
       "suburb": "Penrith",
       "unit": "8"
     },
+    "facebook": "https://www.facebook.com/6712132221",
     "lga": {
       "name": "Penrith City Council",
       "osm_id": 6282698
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Coreen Avenue"
-    }
+    },
+    "phone": "+61291193895",
+    "website": "https://oztrack.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPGQ6Z0F41FJKR49A2MC8",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

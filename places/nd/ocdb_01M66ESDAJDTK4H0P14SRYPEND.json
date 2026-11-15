@@ -1,17 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "69",
+      "postcode": "4718",
+      "state": "QLD",
+      "street": "Dawson Hwy",
+      "suburb": "Moura"
+    },
     "dump_station": false,
+    "facebook": "https://www.facebook.com/117048988387718",
     "fee": true,
     "lga": {
       "name": "Banana Shire",
@@ -28,6 +44,7 @@
       "distance_m": 60,
       "name": "Theodore Moura Road"
     },
+    "phone": "+61749929500",
     "power": false,
     "showers": false,
     "wifi": false
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

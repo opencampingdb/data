@@ -1,17 +1,35 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "charge": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "5602",
+      "state": "SA",
+      "street": "Wellington Rd",
+      "suburb": "Cowell"
+    },
     "charge": "Box",
     "entry": "customers",
+    "facebook": "https://www.facebook.com/188236328598431",
     "fee": true,
     "lga": {
       "name": "The District Council of Franklin Harbour",
@@ -27,7 +45,9 @@
       "distance_m": 1200
     },
     "operator": "District Council of Franklin Harbour",
-    "toilets": false
+    "phone": "+61886292019",
+    "toilets": false,
+    "website": "https://www.franklinharbour.sa.gov.au/page.aspx?u=263"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVKK7NQTDKP6XP4CS01",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

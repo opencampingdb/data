@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 201",
+      "postcode": "2322",
+      "state": "NSW",
+      "street": "John Renshaw Drive",
+      "suburb": "Beresfield"
+    },
+    "facebook": "https://www.facebook.com/339958336410760",
     "lga": {
       "name": "City of Newcastle",
       "osm_id": 6189831
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "John Renshaw Drive"
-    }
+    },
+    "phone": "+61249644555",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/beresfield/bp-beresfield/1231"
   },
   "group": "services",
   "id": "ocdb_01M66JPW9F8E2WBW1WTR2CKZ1F",
@@ -27,7 +49,7 @@
     "lat": -32.811392,
     "lon": 151.639093
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 745615225,
     "timestamp": "2020-05-30T22:59:47Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

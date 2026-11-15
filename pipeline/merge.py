@@ -43,6 +43,7 @@ from pathlib import Path
 
 from .common import (
     FACT_KEYS,
+    OVERTURE,
     ROOFED_KINDS,
     dump_line,
     dump_record,
@@ -58,9 +59,23 @@ from .common import (
 )
 from .duplicates import automatic_merge, distance_m, find_duplicates, has_name, tidy_name
 from .geometry import Geometry, load_geometry, osm_ref
+from .overture_rules import load_links, write_links
 
-# Sources whose facts move to the kept record.
-MOVABLE_SOURCES = ("feedback", "contributed", "community_report")
+# Sources whose facts move to the kept record, where it has none.
+MOVABLE_SOURCES = ("feedback", "contributed", "community_report", OVERTURE)
+
+
+def move_overture_link(root: Path, keep_id: str, drop_id: str) -> None:
+    """The dropped record's Overture link goes to the kept one when it has no link of its own.
+
+    Either way the dropped record leaves the link file.
+    """
+    links = load_links(root)
+    if drop_id not in links:
+        return
+    link = links.pop(drop_id)
+    links.setdefault(keep_id, link)
+    write_links(root, links)
 
 
 class MergeError(Exception):
@@ -131,9 +146,14 @@ def merge(
             {"type": t, "id": i, **({"part": True} if (t, i) in parts else {})} for t, i in sorted(links)
         ]
 
-    # Facts from feedback and contributions, where the kept record has none.
+    # Facts from travellers, contributions, community reports and Overture,
+    # where the kept record has none. A value from any of them but Overture
+    # also replaces an Overture value on the kept record, which is a gap fill.
     for key, source in sorted(dropped.get("fact_sources", {}).items()):
-        if key in FACT_KEYS and source in MOVABLE_SOURCES and key not in kept["facts"]:
+        replaceable = key not in kept["facts"] or (
+            kept["fact_sources"].get(key) == OVERTURE and source != OVERTURE
+        )
+        if key in FACT_KEYS and source in MOVABLE_SOURCES and replaceable:
             if key in dropped["facts"]:
                 kept["facts"][key] = dropped["facts"][key]
                 kept["fact_sources"][key] = source
@@ -155,6 +175,8 @@ def merge(
         write_text(review_path(root, keep_id), "".join(dump_line(r) + "\n" for r in reviews))
     if moved:
         review_path(root, drop_id).unlink()
+
+    move_overture_link(root, keep_id, drop_id)
 
     kept["updated"] = now
     write_text(place_path(root, keep_id), dump_record(kept))
@@ -206,7 +228,8 @@ def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = 
     motel or hostel merged with a camp site (ROOFED_KINDS on one side only)
     is merged as a part, so the double mapping challenge leaves it out.
     Each merge is added to moderation/automatic-merges.csv for a person to
-    review. Returns the merges made, as {"kept", "dropped", "distance_m"}.
+    review. Returns the merges made, as {"kept", "dropped", "distance_m",
+    "kept_name", "dropped_name", "part"}.
     """
     root = Path(root)
     now = now or utc_now()
@@ -265,7 +288,10 @@ def merge_batch(root: Path, geometry: Geometry | None = None, now: str | None = 
                 "distance_m": distance, "part": "yes" if part else "no",
             }
             merge(root, keeper["id"], other["id"], now=now, part=part, places=places)
-            merges.append({"kept": keeper["id"], "dropped": other["id"], "distance_m": distance, "row": row})
+            merges.append({
+                "kept": keeper["id"], "dropped": other["id"], "distance_m": distance,
+                "kept_name": row["kept_name"], "dropped_name": row["dropped_name"], "part": part, "row": row,
+            })
     if merges:
         append_review(root, [m.pop("row") for m in merges])
     return merges
@@ -294,6 +320,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--auto", action="store_true", help="merge every pair the automatic merge rule accepts")
     parser.add_argument("--geometry", type=Path, help="with --auto: the sidecar pipeline.extract --geometry wrote (needed for the road test)")
     parser.add_argument("--group", action="append", help="with --auto: a group to merge in (default overnight; repeat for more)")
+    parser.add_argument("--summary", type=Path, help="with --auto: also write the merges made as JSON here")
     args = parser.parse_args(argv)
     if args.auto:
         if args.keep_id or args.part:
@@ -301,6 +328,8 @@ def main(argv: list[str] | None = None) -> int:
         if args.geometry is None:
             parser.error("--auto needs --geometry: without roads the rule cannot tell opposite sides of a road apart")
         merges = merge_batch(args.root, load_geometry(args.geometry), groups=tuple(args.group or ["overnight"]))
+        if args.summary:
+            write_text(args.summary, json.dumps(merges, indent=2, sort_keys=True) + "\n")
         print(f"Merged {len(merges)} records; each is listed in {AUTO_MERGES_FILE.as_posix()}", file=sys.stderr)
         return 0
     if not args.keep_id or not args.drop_id:

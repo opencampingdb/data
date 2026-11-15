@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2422",
+      "street": "Kholwha Trail",
+      "suburb": "Mid-Coast Council"
+    },
+    "facebook": "https://www.facebook.com/185234091855768",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -15,7 +29,8 @@
       "osm_id": 1003754272,
       "type": "village"
     },
-    "operator": "NSW National Parks and Wildlife Service"
+    "operator": "NSW National Parks and Wildlife Service",
+    "phone": "+611300072757"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA6GY4PZK9YNTA3T4CDP",
@@ -33,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

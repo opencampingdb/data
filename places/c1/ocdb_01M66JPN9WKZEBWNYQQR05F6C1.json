@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "4207",
+      "state": "QLD",
+      "street": "Horizon Dr",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/2322660641302218",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Logan River Road"
-    }
+    },
+    "phone": "+61738078995",
+    "website": "https://dans-autos.business.site"
   },
   "group": "services",
   "id": "ocdb_01M66JPN9WKZEBWNYQQR05F6C1",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

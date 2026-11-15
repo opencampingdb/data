@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "89",
+      "postcode": "3500",
+      "state": "VIC",
+      "street": "Seventh St",
+      "suburb": "Mildura"
+    },
+    "facebook": "https://www.facebook.com/103196064901143",
     "lga": {
       "name": "Rural City of Mildura",
       "osm_id": 3345519
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Seventh Street"
-    }
+    },
+    "phone": "+61350221077",
+    "website": "http://www.milduracitygatemotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ9KZST16NQ695P4PSWV",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

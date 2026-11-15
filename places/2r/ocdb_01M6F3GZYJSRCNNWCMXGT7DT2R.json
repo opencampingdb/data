@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "Takalvan St",
+      "suburb": "Bundaberg"
+    },
+    "facebook": "https://www.facebook.com/1627949190797979",
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Takalvan Street"
-    }
+    },
+    "phone": "+61741326999",
+    "website": "https://takalvanmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZYJSRCNNWCMXGT7DT2R",
@@ -31,7 +53,7 @@
     "lat": -24.871845,
     "lon": 152.33363
   },
-  "name": null,
+  "name": "Takalvan Motel",
   "osm": {
     "id": 1330710470,
     "timestamp": "2024-11-04T17:19:01Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6485",
+      "state": "WA",
+      "street": "Riches St",
+      "suburb": "Wyalkatchem"
+    },
+    "facebook": "https://www.facebook.com/915448085218566",
     "lga": {
       "name": "Shire of Wyalkatchem",
       "osm_id": 11689801
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Honour Avenue"
-    }
+    },
+    "phone": "+61438300117"
   },
   "group": "services",
   "id": "ocdb_01M66JPHDJW1AEFFVJKFP4NSMR",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

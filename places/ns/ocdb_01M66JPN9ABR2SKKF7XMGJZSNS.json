@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5169",
+      "state": "SA",
+      "street": "Unit 3/27 Seaford Rd",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/112767913902567",
     "lga": {
       "name": "City of Onkaparinga",
       "osm_id": 7262204
@@ -28,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Seaford Road"
-    }
+    },
+    "phone": "+61400302603",
+    "website": "http://www.truelocal.com.au/business/southern-steering-and-suspension/seaford-meadows"
   },
   "group": "services",
   "id": "ocdb_01M66JPN9ABR2SKKF7XMGJZSNS",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "436",
+      "postcode": "2641",
+      "state": "NSW",
+      "street": "Wagga Rd Cnr Dick Rd",
+      "suburb": "Lavington"
+    },
     "lga": {
       "name": "Albury City Council",
       "osm_id": 3487773
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wagga Road"
-    }
+    },
+    "phone": "0260255985",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-lavington"
   },
   "group": "services",
   "id": "ocdb_01M66JPCHDCVGVM2VV0N44SEY2",
@@ -27,7 +46,7 @@
     "lat": -36.044946,
     "lon": 146.944485
   },
-  "name": null,
+  "name": "Ampol Foodary Lavington",
   "osm": {
     "id": 7234554907,
     "timestamp": "2020-02-22T05:23:36Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

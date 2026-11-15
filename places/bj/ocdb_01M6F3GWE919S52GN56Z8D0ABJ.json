@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3000",
+      "state": "VIC",
+      "street": "Level 1/252 Flinders Ln",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/10438958311",
     "lga": {
       "name": "City of Melbourne",
       "osm_id": 2404870
@@ -29,6 +46,8 @@
       "distance_m": 90,
       "name": "Collins Street"
     },
+    "phone": "+61424549884",
+    "website": "http://www.lustrebar.com.au",
     "wheelchair": false
   },
   "group": "services",
@@ -47,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

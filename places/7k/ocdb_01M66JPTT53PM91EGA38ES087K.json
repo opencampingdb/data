@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1076",
+      "postcode": "4520",
+      "state": "QLD",
+      "street": "Mount Nebo Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1584640401826136",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Mount Nebo Road"
-    }
+    },
+    "phone": "+61732893904",
+    "website": "http://www.drred.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPTT53PM91EGA38ES087K",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

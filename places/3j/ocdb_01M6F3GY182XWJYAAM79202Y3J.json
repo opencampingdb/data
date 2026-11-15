@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Cavill Avenue",
       "suburb": "Surfers Paradise"
     },
+    "facebook": "https://www.facebook.com/1865659986814845",
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -36,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Surfers Paradise Boulevard"
-    }
+    },
+    "phone": "+61756290722",
+    "website": "https://finnmccools.com.au/goldcoast/functions/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY182XWJYAAM79202Y3J",
@@ -54,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

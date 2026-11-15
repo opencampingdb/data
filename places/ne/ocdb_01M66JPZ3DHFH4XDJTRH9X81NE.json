@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "6176",
+      "state": "WA",
+      "street": "Verdigris Rd",
+      "suburb": "Rockingham"
+    },
+    "facebook": "https://www.facebook.com/101672115156808",
     "lga": {
       "name": "City of Rockingham",
       "osm_id": 11689408
@@ -25,7 +43,9 @@
       "distance_m": 20,
       "name": "Mandurah Road"
     },
-    "opening_hours": "Mo-Fr 07:30-17:30; Sa 08:00-12:00"
+    "opening_hours": "Mo-Fr 07:30-17:30; Sa 08:00-12:00",
+    "phone": "+61863656788",
+    "website": "https://www.automasters.com.au/locations/karnup/?utm_source=facebook&utm_medium=store-page-book-button"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ3DHFH4XDJTRH9X81NE",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

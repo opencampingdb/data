@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "180",
+      "postcode": "7250",
+      "state": "TAS",
+      "street": "Charles St",
+      "suburb": "Launceston"
+    },
+    "facebook": "https://www.facebook.com/340240159359383",
     "lga": {
       "name": "City of Launceston",
       "osm_id": 10581631
@@ -27,7 +45,8 @@
     "nearest_major_road": {
       "distance_m": 300,
       "name": "York Street"
-    }
+    },
+    "phone": "+61363233000"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRTAXNP088EM5X00PJCP",
@@ -36,7 +55,7 @@
     "lat": -41.440988,
     "lon": 147.141444
   },
-  "name": null,
+  "name": "Prince's Square, Launceston",
   "osm": {
     "id": 188421833,
     "timestamp": "2026-04-28T11:22:34Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

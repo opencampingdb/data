@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "street": "Wilkinson Street",
       "suburb": "Berrima"
     },
+    "facebook": "https://www.facebook.com/1827734927455468",
     "lga": {
       "name": "Wingecarribee Shire Council",
       "osm_id": 6304530
@@ -20,7 +29,9 @@
       "name": "Berrima",
       "osm_id": 97299576,
       "type": "town"
-    }
+    },
+    "phone": "+61248772071",
+    "website": "http://harpersmansion.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZCQ8K1WX0AGZV69766N",
@@ -38,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

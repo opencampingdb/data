@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1100",
+      "postcode": "3978",
+      "state": "VIC",
+      "street": "Pound Road",
+      "suburb": "Clyde North"
+    },
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Berwick - Cranbourne Road"
-    }
+    },
+    "phone": "+61 3 8909 9080",
+    "website": "https://find.shell.com/au/fuel/10111231-shell-reddy-express-clyde-north/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPXDFG9MF1CW9DTZ6RFNW",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

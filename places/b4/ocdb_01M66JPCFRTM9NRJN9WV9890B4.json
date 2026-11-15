@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "William Street",
       "suburb": "Devonport"
     },
+    "facebook": "https://www.facebook.com/394854327238579",
     "lga": {
       "name": "City of Devonport",
       "osm_id": 10586315
@@ -30,7 +37,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1180
-    }
+    },
+    "phone": "+61364241168"
   },
   "group": "services",
   "id": "ocdb_01M66JPCFRTM9NRJN9WV9890B4",
@@ -48,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

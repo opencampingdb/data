@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "43",
+      "postcode": "2624",
+      "state": "NSW",
+      "street": "Corroboree Rd",
+      "suburb": "Smiggin Holes"
+    },
+    "facebook": "https://www.facebook.com/139707456108638",
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Kosciuszko Road"
-    }
+    },
+    "phone": "+61282683311",
+    "website": "http://www.southerncrossalpinelodge.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYSZ6NBRTW48WMGXV9MG",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

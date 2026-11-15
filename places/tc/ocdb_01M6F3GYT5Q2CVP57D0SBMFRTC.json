@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Main Street",
       "suburb": "Kapunda"
     },
+    "facebook": "https://www.facebook.com/961598267037033",
     "lga": {
       "name": "Light Regional Council",
       "osm_id": 9108117
@@ -28,7 +37,9 @@
       "distance_m": 30,
       "name": "Main Street"
     },
-    "toilets": true
+    "phone": "+61885662205",
+    "toilets": true,
+    "website": "http://north-kapunda-hotel.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYT5Q2CVP57D0SBMFRTC",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

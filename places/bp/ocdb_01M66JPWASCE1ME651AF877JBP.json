@@ -1,13 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "car_wash": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -18,6 +24,7 @@
       "suburb": "Lane Cove North"
     },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/551499581616533",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -43,7 +50,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mowbray Road"
-    }
+    },
+    "phone": "+61294284485"
   },
   "group": "services",
   "id": "ocdb_01M66JPWASCE1ME651AF877JBP",
@@ -61,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

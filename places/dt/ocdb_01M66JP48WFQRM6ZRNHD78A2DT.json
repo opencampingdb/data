@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "4824",
+      "state": "QLD",
+      "street": "Ramsey Street",
+      "suburb": "Cloncurry"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/106935414229291",
     "lga": {
       "name": "Cloncurry Shire",
       "osm_id": 11677395
@@ -29,6 +45,7 @@
       "name": "Ramsay Street"
     },
     "opening_hours": "Mo-Fr 07:00-19:00; Sa 07:00-17:00; Su 08:00-16:00",
+    "phone": "+61747421274",
     "website": "https://map.bp.com/en-AU/AU/gas-station/cloncurry/bp-cloncurry/8637"
   },
   "group": "services",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

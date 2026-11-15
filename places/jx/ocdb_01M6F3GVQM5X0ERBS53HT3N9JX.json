@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4730",
+      "postcode": "3238",
+      "state": "VIC",
+      "street": "Great Ocean Rd",
+      "suburb": "Lavers Hill"
+    },
+    "facebook": "https://www.facebook.com/106620227779252",
     "lga": {
       "name": "Shire of Colac Otway",
       "osm_id": 3291847
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Colac-Lavers Hill Road"
-    }
+    },
+    "phone": "+352373295",
+    "website": "http://www.otwayjunction.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVQM5X0ERBS53HT3N9JX",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

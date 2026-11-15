@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "82",
+      "postcode": "3597",
+      "state": "VIC",
+      "street": "Murray Street",
+      "suburb": "Piangil"
+    },
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -24,7 +39,9 @@
       "distance_m": 20,
       "name": "Murray Street"
     },
-    "operator": "Ampol"
+    "operator": "Ampol",
+    "phone": "0350305309",
+    "website": "https://locations.ampol.com.au/en/ampol-piangil"
   },
   "group": "services",
   "id": "ocdb_01M66JP3GFF8W2FDKJH7VBWRF4",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

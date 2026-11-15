@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "6403",
+      "state": "WA",
+      "street": "Carter St",
+      "suburb": "Grass Valley"
+    },
+    "facebook": "https://www.facebook.com/105754822587744",
     "lga": {
       "name": "Shire of Northam",
       "osm_id": 11689451
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Great Eastern Highway"
-    }
+    },
+    "phone": "+61896227683"
   },
   "group": "services",
   "id": "ocdb_01M6F3H002Q740AEE8AXATR6CV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

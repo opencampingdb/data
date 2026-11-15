@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "2161",
+      "state": "NSW",
+      "street": "Byron Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/600015080092029",
     "lga": {
       "name": "Cumberland City Council",
       "osm_id": 6210859
@@ -17,7 +35,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4810
-    }
+    },
+    "phone": "+61412606644",
+    "website": "http://www.linnwood.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW34RKTR2ERGDJNX62XG",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

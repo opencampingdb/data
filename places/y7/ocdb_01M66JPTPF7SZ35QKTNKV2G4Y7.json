@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "3945",
+      "state": "VIC",
+      "street": "Victoria Road",
+      "suburb": "Loch"
+    },
     "lga": {
       "name": "Shire of South Gippsland",
       "osm_id": 3335917
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 220,
       "name": "South Gippsland Highway"
-    }
+    },
+    "phone": "+61 3 5659 4360",
+    "website": "https://find.shell.com/au/fuel/10111648-shell-loch/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTPF7SZ35QKTNKV2G4Y7",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

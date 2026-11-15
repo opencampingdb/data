@@ -1,16 +1,32 @@
 {
   "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
     "campfires": "2024-01-01T00:00:00Z",
-    "fee": "2024-01-01T00:00:00Z"
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2024-01-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "campfires": "community_report",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "332",
+      "postcode": "4880",
+      "state": "QLD",
+      "street": "Paglietta Rd",
+      "suburb": "Chewko"
+    },
     "campfires": true,
+    "facebook": "https://www.facebook.com/972115092798667",
     "fee": true,
     "lga": {
       "name": "Mareeba Shire",
@@ -21,7 +37,9 @@
       "name": "Mareeba",
       "osm_id": 245382244,
       "type": "town"
-    }
+    },
+    "phone": "+61740932259",
+    "website": "http://www.granitegorge.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9ZX1QJ1HVGB4E56CWJ3",
@@ -39,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

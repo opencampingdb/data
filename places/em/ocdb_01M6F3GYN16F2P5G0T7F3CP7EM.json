@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "309",
+      "postcode": "4740",
+      "state": "QLD",
+      "street": "Shakespeare St",
+      "suburb": "Mackay"
+    },
+    "facebook": "https://www.facebook.com/471159649728695",
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Shakespeare Street"
-    }
+    },
+    "phone": "+61749690200",
+    "website": "http://www.shake-international.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYN16F2P5G0T7F3CP7EM",
@@ -37,7 +59,7 @@
     "lat": -21.147224,
     "lon": 149.180111
   },
-  "name": null,
+  "name": "Shakespeare Motel",
   "osm": {
     "id": 161645279,
     "timestamp": "2012-12-02T12:53:52Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "257-263",
+      "postcode": "3337",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Melton"
+    },
+    "facebook": "https://www.facebook.com/269417296512938",
     "lga": {
       "name": "City of Melton",
       "osm_id": 3327545
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "High Street"
-    }
+    },
+    "phone": "+61397435220",
+    "website": "http://www.goldenfleecehotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV20XYA9QZK0AC581FNK",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

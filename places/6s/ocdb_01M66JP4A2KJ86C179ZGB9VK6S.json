@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6532",
+      "postcode": "2627",
+      "state": "NSW",
+      "street": "Kosciuszko Rd",
+      "suburb": "Jindabyne"
+    },
+    "facebook": "https://www.facebook.com/173201525880597",
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Kosciuszko Road"
-    }
+    },
+    "phone": "+61264561300",
+    "website": "http://www.kosciuszkoautomotive.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP4A2KJ86C179ZGB9VK6S",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

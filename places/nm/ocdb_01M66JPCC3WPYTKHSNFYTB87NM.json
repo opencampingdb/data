@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "115",
+      "postcode": "6168",
+      "state": "WA",
+      "street": "Dixon Rd",
+      "suburb": "Rockingham"
+    },
+    "facebook": "https://www.facebook.com/336891669727335",
     "lga": {
       "name": "City of Rockingham",
       "osm_id": 11689408
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Day Road"
-    }
+    },
+    "phone": "+61895278999",
+    "website": "http://www.autoservice.net.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPCC3WPYTKHSNFYTB87NM",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "261",
+      "postcode": "2322",
+      "state": "NSW",
+      "street": "Anderson Drive",
+      "suburb": "Beresfield"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -28,7 +43,9 @@
       "distance_m": 410,
       "name": "Anderson Drive"
     },
-    "operator": "Astron"
+    "operator": "Astron",
+    "phone": "0415050206",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/astron-beresfield"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ12HQB38XXAT53689JZ",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

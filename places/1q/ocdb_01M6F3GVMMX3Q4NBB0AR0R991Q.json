@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "6110",
+      "state": "WA",
+      "street": "Holmes St",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/132149656839819",
     "lga": {
       "name": "City of Gosnells",
       "osm_id": 11689370
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Holmes Street"
-    }
+    },
+    "phone": "+61894909777",
+    "website": "http://www.brooklands.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVMMX3Q4NBB0AR0R991Q",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

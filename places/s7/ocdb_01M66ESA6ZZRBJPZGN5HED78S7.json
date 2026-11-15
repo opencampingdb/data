@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "60",
+      "postcode": "0852",
+      "state": "NT",
+      "street": "Buntine Hwy",
+      "suburb": "Kalkarindji"
+    },
+    "facebook": "https://www.facebook.com/1083694371682187",
     "lga": {
       "name": "Victoria Daly Region",
       "osm_id": 5514633
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Buntine Highway"
-    }
+    },
+    "phone": "+61477498573"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA6ZZRBJPZGN5HED78S7",

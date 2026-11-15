@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "2606",
+      "state": "ACT",
+      "street": "Salamander Court",
+      "suburb": "Phillip Canberra"
+    },
     "locality": {
       "distance_m": 760,
       "name": "Woden",
@@ -13,7 +28,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Athllon Drive"
-    }
+    },
+    "phone": "0262825555",
+    "website": "https://www.phillipheads.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP3E5ZXWSMHW9J30DSF30",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

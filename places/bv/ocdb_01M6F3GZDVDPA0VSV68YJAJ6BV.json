@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "5495",
+      "state": "SA",
+      "street": "High St",
+      "suburb": "Port Germein"
+    },
+    "facebook": "https://www.facebook.com/104610585031201",
     "lga": {
       "name": "The District Council of Mount Remarkable",
       "osm_id": 9108168
@@ -13,7 +31,9 @@
       "name": "Port Germein",
       "osm_id": 697240406,
       "type": "village"
-    }
+    },
+    "phone": "+61417153453",
+    "website": "http://www.portgermeinhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZDVDPA0VSV68YJAJ6BV",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

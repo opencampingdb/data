@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "57",
+      "postcode": "2000",
+      "state": "NSW",
+      "street": "King St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/132798533412380",
     "lga": {
       "name": "City of Sydney",
       "osm_id": 1251066
@@ -28,7 +46,9 @@
       "distance_m": 10,
       "name": "Clarence Street"
     },
-    "opening_hours": "Mo-We 12:00-00:00; Th 12:00-01:00; Fr 12:00-02:00; Sa 13:00-02:00; Su 13:00-00:00"
+    "opening_hours": "Mo-We 12:00-00:00; Th 12:00-01:00; Fr 12:00-02:00; Sa 13:00-02:00; Su 13:00-00:00",
+    "phone": "+61292901811",
+    "website": "http://www.pjobriens.com.au/sydney/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVC9C9WWKV7F6Z6HXJQ1",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

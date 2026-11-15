@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "6164",
+      "state": "WA",
+      "street": "Armadale Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/101864075294170",
     "lga": {
       "name": "City of Cockburn",
       "osm_id": 11689175
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Beeliar Drive"
-    }
+    },
+    "phone": "+61448913884",
+    "website": "https://ampol.com.au/service-stations/"
   },
   "group": "services",
   "id": "ocdb_01M66JPX2AFPBS0E2EFPDN0EER",
@@ -27,7 +49,7 @@
     "lat": -32.126555,
     "lon": 115.862289
   },
-  "name": null,
+  "name": "Ampol Foodary",
   "osm": {
     "id": 940690137,
     "timestamp": "2021-05-08T10:31:03Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2324",
+      "street": "Mungo Brush Side Rd",
+      "suburb": "Mid-Coast Council"
+    },
+    "facebook": "https://www.facebook.com/172325939478225",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -18,7 +34,9 @@
     "nearest_beach": {
       "distance_m": 600,
       "name": "Bennetts Beach"
-    }
+    },
+    "phone": "+61265910300",
+    "website": "http://www.environment.nsw.gov.au/nationalparks/parkCamping.aspx"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA8K4PYY56Z0T1PV2JP0",
@@ -36,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

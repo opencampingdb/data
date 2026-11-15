@@ -1,16 +1,25 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "1",
       "street": "Musgrave Street"
     },
+    "facebook": "https://www.facebook.com/116141791794142",
     "lga": {
       "name": "Cloncurry Shire",
       "osm_id": 11677395
@@ -25,7 +34,9 @@
       "distance_m": 330,
       "name": "McIlwraith Street"
     },
-    "operator": "Queensland Health"
+    "operator": "Queensland Health",
+    "phone": "+61747424500",
+    "website": "https://www.health.qld.gov.au/services/northwest/nwest_clonc_hosp"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPWZMM0SQ4N791FEAMEKG",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

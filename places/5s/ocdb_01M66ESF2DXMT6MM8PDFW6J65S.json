@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "4723",
+      "state": "QLD",
+      "street": "Langton St",
+      "suburb": "Capella"
+    },
+    "facebook": "https://www.facebook.com/139993172733368",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -20,7 +38,9 @@
       "distance_m": 210,
       "name": "Gregory Highway"
     },
-    "power": true
+    "phone": "+61749849615",
+    "power": true,
+    "website": "https://capellavanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2DXMT6MM8PDFW6J65S",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

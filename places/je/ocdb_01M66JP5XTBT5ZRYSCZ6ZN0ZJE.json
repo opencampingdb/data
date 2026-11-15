@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2137",
+      "postcode": "2324",
+      "state": "NSW",
+      "street": "Pacific Highway",
+      "suburb": "Heatherbrae"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -29,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Pacific Highway"
-    }
+    },
+    "phone": "+61 2 4013 8045",
+    "website": "https://find.shell.com/au/fuel/10110864-shell-reddy-express-motto-farm/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP5XTBT5ZRYSCZ6ZN0ZJE",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

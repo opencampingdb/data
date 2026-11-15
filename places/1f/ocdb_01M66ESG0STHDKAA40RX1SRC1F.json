@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -16,10 +22,18 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "4727",
+      "state": "QLD",
+      "street": "Main Ave",
+      "suburb": "Ilfracombe"
+    },
     "cabins": true,
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/130834387092094",
     "fee": true,
     "lga": {
       "name": "Longreach Regional",
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

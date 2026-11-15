@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "244",
+      "postcode": "3356",
+      "state": "VIC",
+      "street": "Albert St",
+      "suburb": "Ballarat"
+    },
+    "facebook": "https://www.facebook.com/174628572615071",
     "lga": {
       "name": "City of Ballarat",
       "osm_id": 3291925
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Albert Street"
-    }
+    },
+    "phone": "+61353355577",
+    "website": "http://au.localize123.com/begonia-city-motor-inn-in-sebastopol-vic"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYWDRGAK6ZJX238YDWCE",
@@ -31,7 +53,7 @@
     "lat": -37.60195,
     "lon": 143.840097
   },
-  "name": null,
+  "name": "Begonia City Motor Inn",
   "osm": {
     "id": 315284785,
     "timestamp": "2024-03-25T03:59:57Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

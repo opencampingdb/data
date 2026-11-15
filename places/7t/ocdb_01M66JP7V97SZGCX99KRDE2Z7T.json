@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "47",
+      "postcode": "2267",
+      "state": "NSW",
+      "street": "Dobell Dr",
+      "suburb": "Wangi Wangi"
+    },
+    "facebook": "https://www.facebook.com/440207769353143",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -21,7 +39,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2300
-    }
+    },
+    "phone": "+61400770257",
+    "website": "http://www.dobellhouse.org.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP7V97SZGCX99KRDE2Z7T",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

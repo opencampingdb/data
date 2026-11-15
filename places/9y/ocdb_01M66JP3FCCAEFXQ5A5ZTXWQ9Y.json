@@ -1,12 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "649",
+      "postcode": "6169",
+      "state": "WA",
+      "street": "Safety Bay Road",
+      "suburb": "Warnbro"
+    },
     "lga": {
       "name": "City of Rockingham",
       "osm_id": 11689408
@@ -26,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Safety Bay Road"
-    }
+    },
+    "phone": "0895680845"
   },
   "group": "services",
   "id": "ocdb_01M66JP3FCCAEFXQ5A5ZTXWQ9Y",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

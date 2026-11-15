@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7889",
+      "postcode": "2440",
+      "street": "Armidale-Kempsey Rd",
+      "suburb": "Comara"
+    },
+    "facebook": "https://www.facebook.com/860859603946888",
     "lga": {
       "name": "Kempsey Shire Council",
       "osm_id": 6178731
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Armidale Road"
-    }
+    },
+    "phone": "+61265631555"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF960J0XP3SBM4W7DJP3",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

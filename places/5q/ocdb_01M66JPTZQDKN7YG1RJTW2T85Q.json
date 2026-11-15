@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3799",
+      "street": "Cement Creek Rd",
+      "suburb": "East Warburton"
+    },
+    "facebook": "https://www.facebook.com/114378337073834",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -13,7 +29,9 @@
       "name": "Warburton",
       "osm_id": 30863907,
       "type": "town"
-    }
+    },
+    "phone": "+61359669600",
+    "website": "https://www.visitwarburton.com.au/activity/redwood-forest-cement-creek"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPTZQDKN7YG1RJTW2T85Q",
@@ -31,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

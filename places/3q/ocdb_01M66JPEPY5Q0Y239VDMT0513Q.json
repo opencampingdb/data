@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6112",
+      "state": "WA",
+      "street": "Corner Of South Western Highway And Dickens Place",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/792404434425154",
     "lga": {
       "name": "City of Armadale",
       "osm_id": 11689426
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "South Western Highway"
-    }
+    },
+    "phone": "+61861920152"
   },
   "group": "services",
   "id": "ocdb_01M66JPEPY5Q0Y239VDMT0513Q",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

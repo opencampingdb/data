@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "4737",
+      "state": "QLD",
+      "street": "Broad Street",
+      "suburb": "Sarina"
+    },
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Broad Street"
-    }
+    },
+    "phone": "0749431431",
+    "website": "http://www.sarinamotorinn.com.au/contact/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYRHPPBVXN2HCP0S8FSG",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

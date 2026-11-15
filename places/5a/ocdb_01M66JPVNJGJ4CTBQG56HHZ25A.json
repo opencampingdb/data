@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "130",
+      "postcode": "2304",
+      "state": "NSW",
+      "street": "Cormorant Road",
+      "suburb": "Kooragang"
+    },
     "lga": {
       "name": "City of Newcastle",
       "osm_id": 6189831
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Cormorant Road"
-    }
+    },
+    "phone": "+61 2 4070 9154",
+    "website": "https://find.shell.com/au/fuel/10110869-shell-otr-kooragang-island/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPVNJGJ4CTBQG56HHZ25A",
@@ -36,7 +55,7 @@
     "lat": -32.883733,
     "lon": 151.762017
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 595660682,
     "timestamp": "2024-08-21T00:07:02Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

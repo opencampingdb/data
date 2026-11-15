@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Service Street",
       "suburb": "Clunes"
     },
+    "facebook": "https://www.facebook.com/152693874764652",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bailey Street"
-    }
+    },
+    "phone": "+61353453139",
+    "website": "http://valley-of-gold-service-station.business.site"
   },
   "group": "services",
   "id": "ocdb_01M66JPVFGNY9JVT8NGKJSP9TD",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

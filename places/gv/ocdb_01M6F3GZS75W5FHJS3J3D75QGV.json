@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "46-48",
+      "postcode": "3869",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Yinnar"
+    },
+    "facebook": "https://www.facebook.com/311708727597",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -13,7 +31,9 @@
       "name": "Yinnar",
       "osm_id": 3440750988,
       "type": "village"
-    }
+    },
+    "phone": "+61351631263",
+    "website": "http://yinnarhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZS75W5FHJS3J3D75QGV",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

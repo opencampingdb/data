@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9981",
+      "postcode": "2370",
+      "state": "NSW",
+      "street": "New England Hwy",
+      "suburb": "Glen Innes"
+    },
+    "facebook": "https://www.facebook.com/156205101077249",
     "lga": {
       "name": "Glen Innes Severn Council",
       "osm_id": 6163165
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "New England Highway"
-    }
+    },
+    "phone": "+61267322044",
+    "website": "http://www.clansmanmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZDD42FMRX9KY56EYDCN",
@@ -27,7 +49,7 @@
     "lat": -29.755392,
     "lon": 151.734412
   },
-  "name": null,
+  "name": "Clansman Motel",
   "osm": {
     "id": 790231039,
     "timestamp": "2020-04-10T01:32:27Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

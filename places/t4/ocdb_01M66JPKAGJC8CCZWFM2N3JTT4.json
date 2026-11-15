@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7087",
+      "postcode": "2430",
+      "state": "NSW",
+      "street": "The Bucketts Way",
+      "suburb": "Kiwarrak"
+    },
+    "facebook": "https://www.facebook.com/1992924344354671",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "The Bucketts Way"
-    }
+    },
+    "phone": "+61451422478",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/taree-south/bp-taree-south/7495"
   },
   "group": "services",
   "id": "ocdb_01M66JPKAGJC8CCZWFM2N3JTT4",
@@ -37,7 +59,7 @@
     "lat": -31.93753,
     "lon": 152.459227
   },
-  "name": null,
+  "name": "BP Taree South",
   "osm": {
     "id": 11568475498,
     "timestamp": "2024-01-30T07:21:20Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

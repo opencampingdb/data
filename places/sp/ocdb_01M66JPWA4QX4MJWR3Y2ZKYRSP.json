@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "street": "Tayler Road",
       "unit": "2"
     },
+    "facebook": "https://www.facebook.com/287099851301155",
     "lga": {
       "name": "Blue Mountains City Council",
       "osm_id": 6299568
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Great Western Highway"
-    }
+    },
+    "phone": "+61247519561",
+    "website": "http://www.valleyheightsgarage.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPWA4QX4MJWR3Y2ZKYRSP",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

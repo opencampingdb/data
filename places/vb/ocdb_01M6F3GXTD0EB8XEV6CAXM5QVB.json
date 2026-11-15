@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "41",
+      "postcode": "4350",
+      "state": "QLD",
+      "street": "Margaret St",
+      "suburb": "Toowoomba"
+    },
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Margaret Street"
-    }
+    },
+    "phone": "(07) 4632 2088",
+    "website": "http://www.appleguminn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXTD0EB8XEV6CAXM5QVB",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

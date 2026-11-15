@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2443",
+      "state": "NSW",
+      "street": "Bold St",
+      "suburb": "Laurieton"
+    },
+    "facebook": "https://www.facebook.com/873981455969123",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Bold Street"
-    }
+    },
+    "phone": "+61265599004",
+    "website": "https://bookings.nowbookit.com/?accountid=33691cb6-98c1-4eb3-bef0-9d68d6fc10b4&venueid=6771&theme=outlined-light&colors=hex%2C1a237e%2C7e9da3"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYND1969SYMTTJ9BK3FN",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

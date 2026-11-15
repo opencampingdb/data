@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "4/2",
+      "postcode": "4207",
+      "state": "QLD",
+      "street": "Spanns Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/120818441284065",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -24,6 +42,8 @@
       "distance_m": 60,
       "name": "Logan River Road"
     },
+    "phone": "+61733820655",
+    "website": "http://www.ramsautocare.com.au/",
     "wheelchair": true
   },
   "group": "services",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

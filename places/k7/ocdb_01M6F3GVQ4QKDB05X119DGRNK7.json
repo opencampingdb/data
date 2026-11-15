@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "19",
+      "postcode": "0850",
+      "state": "NT",
+      "street": "O'Shea Terrace",
+      "suburb": "Katherine"
+    },
+    "facebook": "https://www.facebook.com/340536856425464",
     "lga": {
       "name": "Town of Katherine",
       "osm_id": 9045373
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "First Street"
-    }
+    },
+    "phone": "+61889721250",
+    "website": "http://www.katherineclubinc.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVQ4QKDB05X119DGRNK7",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

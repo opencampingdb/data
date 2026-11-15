@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "103",
+      "postcode": "3579",
+      "state": "VIC",
+      "street": "Wellington St",
+      "suburb": "Kerang"
+    },
+    "facebook": "https://www.facebook.com/192786256716",
     "lga": {
       "name": "Shire of Gannawarra",
       "osm_id": 3363585
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Wellington Street"
-    }
+    },
+    "phone": "+61354522511",
+    "website": "http://www.loddonrivermotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZJ17BEC8WK0GV4SAG9B",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

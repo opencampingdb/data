@@ -1,16 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3401",
+      "street": "Olive Plantation Rd"
+    },
     "booking_required": true,
     "caravans": true,
+    "facebook": "https://www.facebook.com/1127119454045096",
     "fee": true,
     "lga": {
       "name": "Shire of Northern Grampians",
@@ -23,7 +38,9 @@
       "type": "village"
     },
     "operator": "Parks Victoria",
-    "tents": true
+    "phone": "+61131963",
+    "tents": true,
+    "website": "https://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/stapylton-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFQR9FJCFJNNRCJY51SK",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

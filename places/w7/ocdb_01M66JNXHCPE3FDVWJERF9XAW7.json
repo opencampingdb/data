@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "42",
+      "postcode": "3450",
+      "state": "VIC",
+      "street": "Hunter St",
+      "suburb": "Castlemaine"
+    },
+    "facebook": "https://www.facebook.com/527449843986106",
     "lga": {
       "name": "Shire of Mount Alexander",
       "osm_id": 3339104
@@ -13,7 +31,9 @@
       "name": "Castlemaine",
       "osm_id": 97564451,
       "type": "town"
-    }
+    },
+    "phone": "+61354721032",
+    "website": "http://www.budacastlemaine.org/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JNXHCPE3FDVWJERF9XAW7",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

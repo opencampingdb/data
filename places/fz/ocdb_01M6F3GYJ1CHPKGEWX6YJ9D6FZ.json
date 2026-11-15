@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "3093",
+      "state": "VIC",
+      "street": "Main Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/20566280887",
     "lga": {
       "name": "City of Banyule",
       "osm_id": 2403625
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61394351722",
+    "website": "https://linktr.ee/LOWERPLENTYHOTEL"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYJ1CHPKGEWX6YJ9D6FZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

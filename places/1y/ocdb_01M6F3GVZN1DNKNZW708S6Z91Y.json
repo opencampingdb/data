@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "101",
+      "postcode": "2444",
+      "state": "NSW",
+      "street": "Hastings River Dr",
+      "suburb": "Port Macquarie"
+    },
+    "facebook": "https://www.facebook.com/384571238077528",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Hastings River Drive"
-    }
+    },
+    "phone": "+61265833100",
+    "website": "http://www.settlersinn.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVZN1DNKNZW708S6Z91Y",
@@ -35,7 +57,7 @@
     "lat": -31.429344,
     "lon": 152.885896
   },
-  "name": null,
+  "name": "Settlers Inn Hotel",
   "osm": {
     "id": 3843404434,
     "timestamp": "2024-01-16T10:47:15Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "4720",
+      "state": "QLD",
+      "street": "Borilla St",
+      "suburb": "Emerald"
+    },
+    "facebook": "https://www.facebook.com/494388571067630",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Clermont Street"
-    }
+    },
+    "website": "http://www.shelfieldcoffeebrewers.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVY3Y27K3ZKT1CWR7V4R",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

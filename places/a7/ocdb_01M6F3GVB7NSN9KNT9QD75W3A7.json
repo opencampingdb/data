@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "108-116",
+      "postcode": "2825",
+      "state": "NSW",
+      "street": "Nymagee St",
+      "suburb": "Nyngan"
+    },
+    "facebook": "https://www.facebook.com/215662511811993",
     "lga": {
       "name": "Bogan Shire Council",
       "osm_id": 6086047
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Nymagee Street"
-    }
+    },
+    "phone": "+61268321501",
+    "website": "http://www.outbackmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVB7NSN9KNT9QD75W3A7",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

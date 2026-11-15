@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "phone": "osm",
     "power": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "64",
+      "postcode": "5680",
+      "state": "SA",
+      "street": "South Terrace",
+      "suburb": "Smoky Bay"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/1562384534005793",
     "lga": {
       "name": "The District Council of Ceduna",
       "osm_id": 7106028
@@ -25,7 +41,8 @@
     },
     "phone": "+61 8 8625 7030",
     "power": true,
-    "tents": true
+    "tents": true,
+    "website": "http://smokybaycaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXQRM3SC0DF4FWNFSZC",
@@ -43,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

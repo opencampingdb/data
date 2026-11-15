@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "South Gippsland Highway",
+      "suburb": "Dandenong South"
+    },
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -20,7 +35,9 @@
       "distance_m": 50,
       "name": "South Gippsland Highway"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "+61 3 8774 7205",
+    "website": "https://find.shell.com/au/fuel/10111618-shell-dandenong-south/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTEB4AAW1381VKR41V0A",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

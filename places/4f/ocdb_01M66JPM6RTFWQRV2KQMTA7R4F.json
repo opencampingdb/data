@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1/12",
+      "postcode": "4010",
+      "state": "QLD",
+      "street": "Bimbil St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/816198485107913",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -29,7 +47,9 @@
       "distance_m": 60,
       "name": "Abbotsford Road"
     },
-    "opening_hours": "Mo-Fr 07:00-17:30"
+    "opening_hours": "Mo-Fr 07:00-17:30",
+    "phone": "+61738623057",
+    "website": "http://www.jjautofix.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPM6RTFWQRV2KQMTA7R4F",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

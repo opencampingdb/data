@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "668",
+      "postcode": "4560",
+      "state": "QLD",
+      "street": "Bli Bli Road",
+      "suburb": "Nambour"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -24,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bli Bli Road"
-    }
+    },
+    "phone": "0754595001",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-nambour"
   },
   "group": "services",
   "id": "ocdb_01M66JPZYJHKPBYY4GTN6GVTQ2",
@@ -33,7 +52,7 @@
     "lat": -26.616997,
     "lon": 152.973194
   },
-  "name": null,
+  "name": "Ampol Foodary Nambour",
   "osm": {
     "id": 1494107280,
     "timestamp": "2026-03-30T01:23:52Z",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "7025",
+      "state": "TAS",
+      "street": "Bridge St",
+      "suburb": "Richmond"
+    },
+    "facebook": "https://www.facebook.com/600823156732360",
     "lga": {
       "name": "City of Clarence",
       "osm_id": 10625764
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61362602161"
   },
   "group": "services",
   "id": "ocdb_01M66JNZBYJD5ADDN5WZTDMS70",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

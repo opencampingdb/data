@@ -1,15 +1,22 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "41",
       "street": "Albert Street"
     },
+    "facebook": "https://www.facebook.com/778002658724776",
     "lga": {
       "name": "Goondiwindi Regional",
       "osm_id": 11674848
@@ -23,7 +30,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Albert Street"
-    }
+    },
+    "phone": "+61448807857"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX9KJA3093AAWRDTNZEF",
@@ -41,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

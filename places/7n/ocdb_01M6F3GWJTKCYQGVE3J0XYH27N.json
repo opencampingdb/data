@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "686",
+      "postcode": "3441",
+      "state": "VIC",
+      "street": "Mount Macedon Rd",
+      "suburb": "Mount Macedon"
+    },
+    "facebook": "https://www.facebook.com/115565368525346",
     "lga": {
       "name": "Shire of Macedon Ranges",
       "osm_id": 3327683
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Mount Macedon Road"
-    }
+    },
+    "phone": "+61354261471",
+    "website": "http://www.mtmacedontp.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWJTKCYQGVE3J0XYH27N",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

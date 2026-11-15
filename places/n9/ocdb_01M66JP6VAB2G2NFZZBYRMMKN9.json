@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2399",
+      "postcode": "2540",
+      "state": "NSW",
+      "street": "Princes Highway",
+      "suburb": "Bewong"
+    },
     "lga": {
       "name": "Shoalhaven City Council",
       "osm_id": 6311648
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61 2 4443 3231",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/bewong/bp-bewong/1185"
   },
   "group": "services",
   "id": "ocdb_01M66JP6VAB2G2NFZZBYRMMKN9",
@@ -31,7 +50,7 @@
     "lat": -35.085529,
     "lon": 150.533257
   },
-  "name": null,
+  "name": "bp",
   "osm": {
     "id": 3877571144,
     "timestamp": "2024-12-20T12:49:44Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

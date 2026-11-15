@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2536",
+      "state": "NSW",
+      "street": "Durras Lake Rd",
+      "suburb": "South Durras"
+    },
+    "facebook": "https://www.facebook.com/140931119273726",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -22,7 +40,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 210
-    }
+    },
+    "phone": "+61244786122",
+    "website": "http://www.lakesea.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZZCANK78JBW1K9W344",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

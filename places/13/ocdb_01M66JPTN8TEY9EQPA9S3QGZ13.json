@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "130",
+      "postcode": "2644",
+      "state": "NSW",
+      "street": "Albury St",
+      "suburb": "Holbrook"
+    },
     "air": true,
     "fuels": [
       "diesel",
@@ -29,7 +46,9 @@
       "distance_m": 40,
       "name": "Albury Street"
     },
-    "opening_hours": "Mo-Su 07:00-20:00"
+    "opening_hours": "Mo-Su 07:00-20:00",
+    "phone": "0260362577",
+    "website": "https://locations.ampol.com.au/en/ampol-holbrook"
   },
   "group": "services",
   "id": "ocdb_01M66JPTN8TEY9EQPA9S3QGZ13",
@@ -38,7 +57,7 @@
     "lat": -35.721025,
     "lon": 147.31637
   },
-  "name": null,
+  "name": "Ampol Holbrook",
   "osm": {
     "id": 440125033,
     "timestamp": "2025-03-02T07:20:14Z",
@@ -47,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

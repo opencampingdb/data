@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "3747",
+      "state": "VIC",
+      "street": "Sydney Rd",
+      "suburb": "Beechworth"
+    },
+    "facebook": "https://www.facebook.com/127492713993924",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Sydney Road"
-    }
+    },
+    "phone": "+61357281404",
+    "website": "http://www.goldenheritage.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZGYPMTY7RV9J4XDMFW6",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "street": "Lee Street",
       "suburb": "Wellington"
     },
+    "facebook": "https://www.facebook.com/133473370047555",
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lee Street"
-    }
+    },
+    "phone": "+61268452555",
+    "website": "http://www.wellingtonbridgemotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV8ZME4KTVXS9A6XFHVX",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

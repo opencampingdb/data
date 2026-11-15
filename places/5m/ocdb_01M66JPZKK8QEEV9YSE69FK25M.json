@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3249",
+      "postcode": "6112",
+      "state": "WA",
+      "street": "Albany Hwy",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/169164420369083",
     "fuel": true,
     "lga": {
       "name": "City of Armadale",
@@ -25,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Albany Highway"
-    }
+    },
+    "phone": "+61893992204",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/armadale/bp-armadale/1803"
   },
   "group": "services",
   "id": "ocdb_01M66JPZKK8QEEV9YSE69FK25M",
@@ -34,7 +56,7 @@
     "lat": -32.148415,
     "lon": 116.020229
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1416073036,
     "timestamp": "2026-05-23T15:12:19Z",
@@ -43,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

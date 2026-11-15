@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "90",
+      "postcode": "3177",
+      "state": "VIC",
+      "street": "Doveton Ave",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/105373190851620",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -19,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 90
     },
-    "opening_hours": "Mo-Su 07:00-22:00"
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "phone": "+61397017021",
+    "website": "https://oceansbluelaundret.wixsite.com/oceansblue"
   },
   "group": "utility",
   "id": "ocdb_01M66JPZP1PGS765C4294Q6KND",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

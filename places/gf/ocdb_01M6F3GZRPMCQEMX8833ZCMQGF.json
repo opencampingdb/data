@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "186",
+      "postcode": "4013",
+      "state": "QLD",
+      "street": "Toombul Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/146955838655680",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Toombul Road"
-    }
+    },
+    "phone": "+61732567222",
+    "website": "http://www.northgatemotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZRPMCQEMX8833ZCMQGF",
@@ -31,7 +53,7 @@
     "lat": -27.393595,
     "lon": 153.07343
   },
-  "name": null,
+  "name": "Comfort Inn and Apartments",
   "osm": {
     "id": 1150817707,
     "timestamp": "2023-03-02T22:44:58Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

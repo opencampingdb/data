@@ -1,12 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2046",
+      "state": "NSW",
+      "street": "Ramsay Rd & Fairlight St",
+      "suburb": "Five Dock"
+    },
     "lga": {
       "name": "City of Canada Bay Council",
       "osm_id": 6217271
@@ -27,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Fairlight Street"
-    }
+    },
+    "phone": "0297127300",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-five-dock"
   },
   "group": "services",
   "id": "ocdb_01M66JNXHWPG5MXF2SM5F1N5M0",
@@ -45,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

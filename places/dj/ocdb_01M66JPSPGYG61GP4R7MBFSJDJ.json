@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "suburb": "Baxter"
     },
     "air": true,
+    "facebook": "https://www.facebook.com/112440942638472",
     "lga": {
       "name": "Shire of Mornington Peninsula",
       "osm_id": 3333281
@@ -27,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Grant Road"
-    }
+    },
+    "phone": "+61359714367"
   },
   "group": "services",
   "id": "ocdb_01M66JPSPGYG61GP4R7MBFSJDJ",
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

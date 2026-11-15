@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "168-172",
+      "postcode": "3136",
+      "state": "VIC",
+      "street": "Mount Dandenong Road",
+      "suburb": "Croydon"
+    },
     "air": true,
     "lga": {
       "name": "City of Maroondah",
@@ -22,7 +37,9 @@
       "distance_m": 30,
       "name": "Mount Dandenong Road"
     },
-    "operator": "Coles Group"
+    "operator": "Coles Group",
+    "phone": "+61 3 8799 5058",
+    "website": "https://find.shell.com/au/fuel/10110791-shell-reddy-express-croydon/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPHZZ2KAF2T5JWDNX7ZJ5",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

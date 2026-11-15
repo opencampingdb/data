@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2500",
+      "state": "NSW",
+      "street": "Harbour St",
+      "suburb": "Wollongong"
+    },
+    "facebook": "https://www.facebook.com/181354931882778",
     "lga": {
       "name": "Wollongong City Council",
       "osm_id": 6303077
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Cliff Road"
-    }
+    },
+    "phone": "+61242274614",
+    "website": "http://ntoldcourthouse.wix.com/och-ntisb"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW351BZF8VN1ACXQEQSJ",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

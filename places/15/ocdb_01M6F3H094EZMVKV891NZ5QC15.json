@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "486",
+      "postcode": "2478",
+      "state": "NSW",
+      "street": "River St",
+      "suburb": "Ballina"
+    },
+    "facebook": "https://www.facebook.com/1405173713057590",
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "River Street"
-    }
+    },
+    "phone": "+61266863399",
+    "website": "http://www.chaparralmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H094EZMVKV891NZ5QC15",
@@ -35,7 +57,7 @@
     "lat": -28.864086,
     "lon": 153.535365
   },
-  "name": null,
+  "name": "Chaparral Motel",
   "osm": {
     "id": 1553122322,
     "timestamp": "2026-08-30T09:11:46Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

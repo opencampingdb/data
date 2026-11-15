@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "124",
+      "postcode": "6225",
+      "state": "WA",
+      "street": "Throssell St",
+      "suburb": "Collie"
+    },
+    "facebook": "https://www.facebook.com/145827659401722",
     "lga": {
       "name": "Shire of Collie",
       "osm_id": 11688837
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Coalfields Highway"
-    }
+    },
+    "phone": "+61897347938"
   },
   "group": "services",
   "id": "ocdb_01M66JNX97P1257G3TC47J42JP",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

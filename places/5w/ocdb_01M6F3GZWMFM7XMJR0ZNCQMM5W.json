@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-9",
+      "postcode": "2666",
+      "state": "NSW",
+      "street": "Tom Moon Ave",
+      "suburb": "Temora"
+    },
+    "facebook": "https://www.facebook.com/158118837551113",
     "fee": true,
     "lga": {
       "name": "Temora Shire Council",
@@ -19,7 +37,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1820
-    }
+    },
+    "phone": "+61269771088",
+    "website": "http://www.aviationmuseum.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZWMFM7XMJR0ZNCQMM5W",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

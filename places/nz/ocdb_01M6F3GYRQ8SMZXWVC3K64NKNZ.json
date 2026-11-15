@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "street": "Kirby Street",
       "suburb": "McKinlay"
     },
+    "facebook": "https://www.facebook.com/862633380429613",
     "lga": {
       "name": "McKinlay Shire",
       "osm_id": 11677391
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Kirby Street"
-    }
+    },
+    "phone": "+61747468424",
+    "website": "http://www.walkaboutcreekhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYRQ8SMZXWVC3K64NKNZ",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

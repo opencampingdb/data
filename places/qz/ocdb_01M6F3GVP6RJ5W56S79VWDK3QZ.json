@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Adams Street",
       "suburb": "Wentworth"
     },
+    "facebook": "https://www.facebook.com/118323194553648",
     "lga": {
       "name": "Wentworth Shire Council",
       "osm_id": 5884892
@@ -28,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Sandwych Street"
-    }
+    },
+    "phone": "+61350272481",
+    "website": "http://captain-sturt-hotel.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVP6RJ5W56S79VWDK3QZ",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

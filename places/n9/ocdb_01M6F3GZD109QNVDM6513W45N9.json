@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "2533",
+      "state": "NSW",
+      "street": "Allowrie St",
+      "suburb": "Jamberoo"
+    },
+    "facebook": "https://www.facebook.com/350609222010114",
     "lga": {
       "name": "The Council of the Municipality of Kiama",
       "osm_id": 6311642
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Allowrie Street"
-    }
+    },
+    "phone": "+61242360270",
+    "website": "http://www.jamberoopub.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZD109QNVDM6513W45N9",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

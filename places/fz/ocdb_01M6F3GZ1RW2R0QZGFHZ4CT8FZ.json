@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "389",
+      "postcode": "3564",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Echuca"
+    },
+    "facebook": "https://www.facebook.com/106660012082286",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "High Street"
-    }
+    },
+    "phone": "+61354823822",
+    "website": "http://www.paddlewheelmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1RW2R0QZGFHZ4CT8FZ",
@@ -36,7 +58,7 @@
     "lat": -36.130702,
     "lon": 144.748246
   },
-  "name": null,
+  "name": "Paddlewheel Motel",
   "osm": {
     "id": 446942902,
     "timestamp": "2016-10-11T05:19:26Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

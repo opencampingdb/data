@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4798",
+      "state": "QLD",
+      "street": "McIntyre St",
+      "suburb": "Calen"
+    },
+    "facebook": "https://www.facebook.com/162701590407981",
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61749588266"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVWZVZK08HAG2SJ316GH",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

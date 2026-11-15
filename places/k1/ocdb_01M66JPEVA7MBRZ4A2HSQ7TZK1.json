@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "68",
+      "postcode": "4873",
+      "state": "QLD",
+      "street": "Pringle Street",
+      "suburb": "Mossman"
+    },
+    "facebook": "https://www.facebook.com/222358201689881",
     "lga": {
       "name": "Douglas Shire",
       "osm_id": 11677495
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Alchera Drive"
-    }
+    },
+    "phone": "+61740515900",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/mossman/bp-opt-mossman-pringle-st/5732"
   },
   "group": "services",
   "id": "ocdb_01M66JPEVA7MBRZ4A2HSQ7TZK1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

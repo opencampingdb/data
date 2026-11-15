@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Enmore Road",
       "suburb": "Enmore"
     },
+    "facebook": "https://www.facebook.com/120602804659423",
     "lga": {
       "name": "Inner West Council",
       "osm_id": 1251053
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Enmore Road"
-    }
+    },
+    "phone": "+61291147334",
+    "website": "http://merivale.com/venues/queenshotel"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVPM66PH0Q1TF0BJJ6NF",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Boronia Street",
       "suburb": "Bowral"
     },
+    "facebook": "https://www.facebook.com/102974002133761",
     "lga": {
       "name": "Wingecarribee Shire Council",
       "osm_id": 6304530
@@ -21,7 +30,9 @@
       "name": "Bowral",
       "osm_id": 113235258,
       "type": "town"
-    }
+    },
+    "phone": "+61248612777",
+    "website": "https://www.airbnb.com/h/golfviewvillabowral"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWPJV055KXA3KTT810SX",
@@ -39,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2446",
+      "state": "NSW",
+      "street": "Plateau Beech Walking Track",
+      "suburb": "Forbes River"
+    },
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -13,7 +27,9 @@
       "name": "Kookaburra",
       "osm_id": 115070927,
       "type": "village"
-    }
+    },
+    "phone": "0265885555",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/plateau-beech-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF0E1WN1HA39WHEPT0SB",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

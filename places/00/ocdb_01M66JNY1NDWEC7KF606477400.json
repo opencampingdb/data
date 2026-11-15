@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3338",
+      "state": "VIC",
+      "street": "Brooklyn Rd",
+      "suburb": "Melton"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/198223940561134",
     "lga": {
       "name": "City of Melton",
       "osm_id": 3327545
@@ -24,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Station Road"
-    }
+    },
+    "phone": "+61387989849"
   },
   "group": "services",
   "id": "ocdb_01M66JNY1NDWEC7KF606477400",
@@ -42,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

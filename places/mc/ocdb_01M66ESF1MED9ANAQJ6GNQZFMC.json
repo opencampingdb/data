@@ -1,19 +1,36 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4829",
+      "state": "QLD",
+      "street": "Diamantina Developmental Road",
+      "suburb": "Boulia"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/251675985287106",
     "fee": true,
     "lga": {
       "name": "Boulia Shire",
@@ -29,10 +46,12 @@
       "distance_m": 100,
       "name": "Diamantina Developmental Road"
     },
+    "phone": "+61427021002",
     "power": true,
     "showers": true,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.bouliacaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF1MED9ANAQJ6GNQZFMC",
@@ -50,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

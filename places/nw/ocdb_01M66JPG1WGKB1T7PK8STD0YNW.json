@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "33",
+      "postcode": "5641",
+      "state": "SA",
+      "street": "High St",
+      "suburb": "Kimba"
+    },
+    "facebook": "https://www.facebook.com/471247170108056",
     "lga": {
       "name": "The District Council of Kimba",
       "osm_id": 9108325
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Railway Terrace"
-    }
+    },
+    "phone": "+61455072380",
+    "website": "http://kimbamotorservices.bapnet.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPG1WGKB1T7PK8STD0YNW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

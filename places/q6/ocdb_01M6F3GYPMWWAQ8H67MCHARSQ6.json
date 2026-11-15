@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "47",
+      "postcode": "6155",
+      "state": "WA",
+      "street": "Burrendah Blvd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/153564318017574",
     "lga": {
       "name": "City of Canning",
       "osm_id": 11689373
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Burrendah Boulevard"
-    }
+    },
+    "phone": "+61893326966",
+    "website": "https://bookings.nowbookit.com/?accountid=8d1c3629-3ff2-4a28-bad8-baaf69282ced&venueid=9718&theme=light&colors=hex%2C6d4c41"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYPMWWAQ8H67MCHARSQ6",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

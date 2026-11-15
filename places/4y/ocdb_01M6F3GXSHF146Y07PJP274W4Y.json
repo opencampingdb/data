@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "155",
+      "postcode": "6003",
+      "state": "WA",
+      "street": "James St",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/103009921346233",
     "lga": {
       "name": "City of Perth",
       "osm_id": 11343564
@@ -26,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Roe Street"
-    }
+    },
+    "phone": "+61478045014"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXSHF146Y07PJP274W4Y",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

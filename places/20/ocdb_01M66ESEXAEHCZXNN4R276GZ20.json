@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1/13",
+      "postcode": "3234",
+      "state": "VIC",
+      "street": "Great Ocean Road",
+      "suburb": "Kennett River"
+    },
     "lga": {
       "name": "Shire of Colac Otway",
       "osm_id": 3291847
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Great Ocean Road"
-    }
+    },
+    "phone": "0352890272",
+    "website": "https://greatoceanroadparks.com.au/kennett-river"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXAEHCZXNN4R276GZ20",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

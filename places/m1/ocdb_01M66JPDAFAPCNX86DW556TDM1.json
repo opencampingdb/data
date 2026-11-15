@@ -1,15 +1,22 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "street": "Webster Way"
     },
+    "facebook": "https://www.facebook.com/363172500522182",
     "lga": {
       "name": "Shire of Cardinia",
       "osm_id": 3335652
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Bald Hill Road"
-    }
+    },
+    "phone": "+61359409396"
   },
   "group": "services",
   "id": "ocdb_01M66JPDAFAPCNX86DW556TDM1",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

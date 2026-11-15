@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "238",
+      "postcode": "2144",
+      "state": "NSW",
+      "street": "Cumberland Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/862699613840370",
     "fuel": true,
     "lga": {
       "name": "Cumberland City Council",
@@ -24,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Wellington Road"
-    }
+    },
+    "phone": "+61297492352",
+    "website": "https://speedway.com.au/locations/speedway-auburn"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ5M4ZZSN9CPG6APBHWK",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

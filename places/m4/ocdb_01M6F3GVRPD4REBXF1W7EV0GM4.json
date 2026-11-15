@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "85",
+      "postcode": "4207",
+      "state": "QLD",
+      "street": "George St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/107743685972727",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -26,7 +44,9 @@
       "name": "George Street"
     },
     "opening_hours": "Mo-Su 10:00-04:00",
-    "operator": "Woolworths"
+    "operator": "Woolworths",
+    "phone": "+61732875000",
+    "website": "https://www.royalhotelbeenleigh.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVRPD4REBXF1W7EV0GM4",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

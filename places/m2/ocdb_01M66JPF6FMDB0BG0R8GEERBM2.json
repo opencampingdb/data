@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "148",
+      "postcode": "3820",
+      "state": "VIC",
+      "street": "Queen St",
+      "suburb": "Warragul"
+    },
+    "facebook": "https://www.facebook.com/105753464402677",
     "lga": {
       "name": "Shire of Baw Baw",
       "osm_id": 3335695
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Queen Street"
-    }
+    },
+    "phone": "+61356234287",
+    "website": "http://www.gippslanddrycleaning.com.au"
   },
   "group": "utility",
   "id": "ocdb_01M66JPF6FMDB0BG0R8GEERBM2",
@@ -27,7 +49,7 @@
     "lat": -38.165358,
     "lon": 145.936169
   },
-  "name": null,
+  "name": "Warragul Dry Cleaners",
   "osm": {
     "id": 9301714301,
     "timestamp": "2021-12-02T03:27:13Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

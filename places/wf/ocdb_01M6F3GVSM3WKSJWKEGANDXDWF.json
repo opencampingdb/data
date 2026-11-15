@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "175",
+      "postcode": "3226",
+      "state": "VIC",
+      "street": "Bonnyvale Rd",
+      "suburb": "Ocean Grove"
+    },
     "facebook": "https://www.facebook.com/pages/Ocean-Grove-Hotel/151818218201471",
     "lga": {
       "name": "City of Greater Geelong",
@@ -25,7 +40,9 @@
     "nearest_boat_ramp": {
       "distance_m": 3760
     },
-    "opening_hours": "Mo-Fr 12:00-22:00; Sa,Su 12:00-24:00"
+    "opening_hours": "Mo-Fr 12:00-22:00; Sa,Su 12:00-24:00",
+    "phone": "+61352551122",
+    "website": "http://www.oceangrovehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVSM3WKSJWKEGANDXDWF",
@@ -43,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

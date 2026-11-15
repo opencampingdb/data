@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +18,7 @@
       "street": "Hawkesbury Road",
       "suburb": "Westmead"
     },
+    "facebook": "https://www.facebook.com/290348508007520",
     "lga": {
       "name": "Cumberland City Council",
       "osm_id": 6210859
@@ -27,7 +34,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 3240
-    }
+    },
+    "phone": "+61296354019"
   },
   "group": "services",
   "id": "ocdb_01M66JPX3FH1BQST8S4PSHAF5J",
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

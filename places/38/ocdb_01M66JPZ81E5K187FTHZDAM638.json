@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "117",
+      "postcode": "6109",
+      "state": "WA",
+      "street": "Burslem Drive",
+      "suburb": "Maddington"
+    },
     "lga": {
       "name": "City of Gosnells",
       "osm_id": 11689370
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Olga Road"
-    }
+    },
+    "phone": "+61 8 6287 9090",
+    "website": "https://find.shell.com/au/fuel/10111352-shell-reddy-express-maddington/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ81E5K187FTHZDAM638",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

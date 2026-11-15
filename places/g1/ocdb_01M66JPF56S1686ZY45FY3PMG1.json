@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "4306",
+      "state": "QLD",
+      "street": "Fairneyview Fernvale Rd",
+      "suburb": "Fernvale"
+    },
+    "facebook": "https://www.facebook.com/238983486723197",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Brisbane Valley Highway"
-    }
+    },
+    "phone": "+61413610707",
+    "website": "http://fernvaleautomotive.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPF56S1686ZY45FY3PMG1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

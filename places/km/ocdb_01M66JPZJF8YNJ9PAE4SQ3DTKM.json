@@ -1,15 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6169",
+      "state": "WA",
+      "street": "Malibu Rd",
+      "suburb": "Rockingham"
+    },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/2048891352017192",
     "fuel": true,
     "lga": {
       "name": "City of Rockingham",
@@ -30,7 +49,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Safety Bay Road"
-    }
+    },
+    "phone": "+61895273532",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/waikiki/bp-waikiki/1858"
   },
   "group": "services",
   "id": "ocdb_01M66JPZJF8YNJ9PAE4SQ3DTKM",
@@ -39,7 +60,7 @@
     "lat": -32.310045,
     "lon": 115.732456
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1408557869,
     "timestamp": "2025-06-22T12:33:09Z",
@@ -48,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

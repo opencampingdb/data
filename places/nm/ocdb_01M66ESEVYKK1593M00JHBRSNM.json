@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "69",
+      "postcode": "4869",
+      "state": "QLD",
+      "street": "Bruce Hwy",
+      "suburb": "Cairns"
+    },
+    "facebook": "https://www.facebook.com/266167730152356",
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61740554544",
+    "website": "http://www.barrierreeftouristpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEVYKK1593M00JHBRSNM",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

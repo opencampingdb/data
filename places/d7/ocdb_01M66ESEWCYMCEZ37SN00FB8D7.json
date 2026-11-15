@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "411",
+      "postcode": "3922",
+      "state": "VIC",
+      "street": "Settlement Rd",
+      "suburb": "Cowes"
+    },
+    "facebook": "https://www.facebook.com/161663027257734",
     "fee": true,
     "lga": {
       "name": "Bass Coast Shire",
@@ -29,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Settlement Road"
-    }
+    },
+    "phone": "+61359522033",
+    "website": "http://www.seaviewholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEWCYMCEZ37SN00FB8D7",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

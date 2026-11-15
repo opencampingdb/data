@@ -1,13 +1,28 @@
 {
   "fact_dates": {
-    "fee": "2024-01-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2024-01-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "community_report",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6060",
+      "postcode": "0822",
+      "street": "Litchfield Park Rd",
+      "suburb": "Rakula"
+    },
+    "facebook": "https://www.facebook.com/262020880514712",
     "fee": true,
     "locality": {
       "distance_m": 41470,
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 340,
       "name": "Litchfield Park Road"
-    }
+    },
+    "phone": "+61413175122",
+    "website": "http://www.litchfieldsafaricamp.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBXXA5WEJ26HRGXR75ZG",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

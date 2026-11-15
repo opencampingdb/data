@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "23",
+      "postcode": "2821",
+      "state": "NSW",
+      "street": "Burraway St",
+      "suburb": "Narromine"
+    },
+    "facebook": "https://www.facebook.com/102562352420107",
     "lga": {
       "name": "Narromine Shire Council",
       "osm_id": 6271676
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Burraway Street"
-    }
+    },
+    "phone": "+61268891015",
+    "website": "https://court-house-hotel.business.site"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWMTQA26R1G92M2F4NR9",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

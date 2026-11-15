@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Gibbons Lane"
     },
     "caravans": true,
+    "facebook": "https://www.facebook.com/420335644776135",
     "lga": {
       "name": "Mareeba Shire",
       "osm_id": 11677337
@@ -22,7 +31,9 @@
       "osm_id": 245382244,
       "type": "town"
     },
-    "tents": true
+    "phone": "+61400978311",
+    "tents": true,
+    "website": "http://www.mareebabushstays.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDAA29MZPVJMP16Z6F0A",
@@ -40,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

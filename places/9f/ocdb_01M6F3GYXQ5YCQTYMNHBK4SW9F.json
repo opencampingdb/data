@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1A",
+      "postcode": "4720",
+      "state": "QLD",
+      "street": "Dundas St",
+      "suburb": "Emerald"
+    },
+    "facebook": "https://www.facebook.com/1171147836083857",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Clermont Street"
-    }
+    },
+    "phone": "+61749820885",
+    "website": "http://www.emeraldparkmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYXQ5YCQTYMNHBK4SW9F",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Guthrie Street",
       "suburb": "Quambatook"
     },
+    "facebook": "https://www.facebook.com/1572728036272994",
     "lga": {
       "name": "Shire of Gannawarra",
       "osm_id": 3363585
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Kerang Road"
-    }
+    },
+    "phone": "+61429007732"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GY0G820977YKGYJ4CK0D",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

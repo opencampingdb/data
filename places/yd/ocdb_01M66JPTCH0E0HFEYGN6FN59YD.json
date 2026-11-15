@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "169",
+      "postcode": "2666",
+      "state": "NSW",
+      "street": "Temora Young Road",
+      "suburb": "Temora"
+    },
+    "facebook": "https://www.facebook.com/163359594331909",
     "lga": {
       "name": "Temora Shire Council",
       "osm_id": 6252224
@@ -17,7 +35,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4310
-    }
+    },
+    "phone": "+61269800200",
+    "website": "https://www.service.nsw.gov.au/nswgovdirectory/temora-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPTCH0E0HFEYGN6FN59YD",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

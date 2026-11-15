@@ -1,11 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2167",
+      "state": "NSW",
+      "street": "Cambridge Ave",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/145389265524556",
     "lga": {
       "name": "Liverpool City Council",
       "osm_id": 6212442
@@ -23,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Cambridge Avenue"
-    }
+    },
+    "phone": "+61296020614",
+    "website": "http://nsw.scouts.com.au/campsitesandhalls/component/k2/item/10292-glenfield-scout-activity-centre"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG17087ENQD7CAPGG2K6",
@@ -32,7 +53,7 @@
     "lat": -33.972921,
     "lon": 150.913462
   },
-  "name": null,
+  "name": "Glenfield Scout Camp",
   "osm": {
     "id": 1199632673,
     "timestamp": "2023-08-19T07:11:14Z",
@@ -41,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

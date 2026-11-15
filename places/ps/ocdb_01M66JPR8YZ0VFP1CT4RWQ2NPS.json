@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4655",
+      "postcode": "3984",
+      "state": "VIC",
+      "street": "South Gippsland Highway",
+      "suburb": "Lang Lang"
+    },
     "lga": {
       "name": "Shire of Cardinia",
       "osm_id": 3335652
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "McDonalds Track"
-    }
+    },
+    "phone": "+61 3 5926 3812",
+    "website": "https://find.shell.com/au/fuel/10111308-shell-reddy-express-lang-lang/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPR8YZ0VFP1CT4RWQ2NPS",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

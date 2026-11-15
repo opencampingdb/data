@@ -1,9 +1,22 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3900",
+      "street": "Limestone Creek Track"
+    },
+    "facebook": "https://www.facebook.com/684394825035275",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -13,7 +26,8 @@
       "name": "Benambra",
       "osm_id": 163564024,
       "type": "village"
-    }
+    },
+    "phone": "+61421075860"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAGJ2F8YNZY6Z3WFX8A5",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

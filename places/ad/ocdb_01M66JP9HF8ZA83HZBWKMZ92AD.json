@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6286",
+      "street": "Stevens Rd"
+    },
+    "facebook": "https://www.facebook.com/156828124338841",
     "lga": {
       "name": "Shire of Augusta Margaret River",
       "osm_id": 11688657
@@ -13,7 +28,9 @@
       "name": "Witchcliffe",
       "osm_id": 964687961,
       "type": "town"
-    }
+    },
+    "phone": "+61897590000",
+    "website": "http://leeuwinestate.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP9HF8ZA83HZBWKMZ92AD",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

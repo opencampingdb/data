@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37A",
+      "postcode": "2870",
+      "state": "NSW",
+      "street": "Albert St",
+      "suburb": "Parkes"
+    },
+    "facebook": "https://www.facebook.com/101335852558665",
     "fee": true,
     "lga": {
       "name": "Parkes Shire Council",
@@ -15,7 +33,9 @@
       "name": "Parkes",
       "osm_id": 113708225,
       "type": "town"
-    }
+    },
+    "phone": "+61268626162",
+    "website": "http://spicercaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFJBVZ3EAQRTGM25S4Z0",
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

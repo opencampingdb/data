@@ -8,25 +8,31 @@ python -m pip install -r requirements.txt
 npm ci --ignore-scripts --prefix tools/oh-check   # opening_hours.js, for the out of spec check
 ```
 
-The nightly sync runs Extract, Sync and MapRoulette in that order, and the
-release workflow runs Validate, Release, Database and Place index.
+The nightly sync runs Extract, Sync and MapRoulette in that order, the
+monthly Overture workflow runs Extract (for the geometry sidecar), Merge
+`--auto`, Overture pull and Overture import (see "Monthly Overture
+workflow"), and the release workflow runs Validate, Release, Database and
+Place index.
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson] [--localities localities/localities.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road"), and with `--localities` every town and its council area (see "Towns and council areas") |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
 | Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
-| Release | `python -m pipeline.release --root . --out dist [--repository opencampingdb/data] [--data-version V] [--generated T]` | `places/`, `reviews/`, `moderation/`, `commons/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/commons.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz` |
+| Release | `python -m pipeline.release --root . --out dist [--repository opencampingdb/data] [--data-version V] [--generated T]` | `places/`, `reviews/`, `moderation/`, `commons/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/commons.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz`, and the licence texts and `NOTICE` copied into `dist/` |
 | Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `localities/localities.ndjson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
-| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root .` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews; with `--auto` every pair the automatic merge rule accepts and `moderation/automatic-merges.csv`. Run by a person only |
+| Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews. With `--auto`, every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, never by a workflow |
 | Vehicle access | `python -m pipeline.vehicle_access --root .` | `places/` | `moderation/heavy-vehicle-candidates.csv`: rest areas and long vehicle parking whose name alone says truck, heavy vehicle, HV or B-double, with columns `place` (the id), `name` and `location` (`lat,lon`), for a person to check and a mapper to tag in OSM. Run by a person |
 | Moderate | `python -m pipeline.moderate hide\|show <review id>`, `remove <review id> --reason <reason>` or `block <contributor> --reason <reason>\|unblock <contributor>` | `reviews/`, `moderation/`, `places/` | the review line, the removed or blocked list, and the ratings it changes. Run by a person only |
-| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
+| MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. So are values with the source `overture` and Overture candidates, and a task never shows a name from Overture. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 | Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`), `charge` and `charge_conditional` against the Key:charge syntax. Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
+| Overture pull | `python tools/overture-pull/pull.py <release> overture.ndjson`, after `pip install -r tools/overture-pull/requirements.txt` (DuckDB) | one Overture Maps release's places theme and places changelog, from the public bucket | the Overture extract (see "Overture extract"). Runs by hand or in the Overture workflow, never in tests |
+| Overture import | `python -m pipeline.overture overture.ndjson --root . --geometry geometry.ndjson [--changelog] [--report overture-report.md] [--summary overture-summary.json]` | the Overture extract, `places/`, the geometry sidecar, `overture/links.ndjson` and the kept lists in `overture/` | gap fills in `places/`, `overture/links.ndjson`, the report (see "Overture import") |
+| Overture run | `python -m pipeline.overture_run check --listing releases.xml --root . [--release R]`, `applied <release> --root .`, or `body --report overture-report.md --summary overture-summary.json --merges merges.json --out pr-body.md` | the bucket listing, `overture/release.json`, the import report and summary, the merges | the release to run and whether to skip, `overture/release.json`, the PR body and whether it merges itself (see "Monthly Overture workflow") |
 
 Tests: `python -m pytest`. The out of spec tests skip without
 `tools/oh-check` installed as above. CI installs it and sets `REQUIRE_NODE=1`
@@ -403,6 +409,328 @@ get `caravans: true` unless the `caravans` tag says so. `water_type` is the
 one fact the extract takes from the kind. The release adds a few facts by
 rule, never stored in `places/` (see "Rules" under "Release").
 
+## Overture extract
+
+`tools/overture-pull/pull.py` reads one Overture Maps release from
+`s3://overturemaps-us-west-2/release/<release>/theme=places/type=place/`,
+and that release's changelog from
+`s3://overturemaps-us-west-2/changelog/<release>/theme=places/type=place/`,
+anonymously in region us-west-2. It keeps the places whose bounding box
+starts inside Australia (longitude 112 to 154.5, latitude -44.5 to -9) and
+writes them to one NDJSON file, UTF-8, compact JSON, one object per line.
+Overture deletes a release about 60 days after it comes out.
+
+The first line is the header:
+
+```json
+{"extract":"overture-places","version":2,"release":"2026-10-21.0","bbox":[112.0,-44.5,154.5,-9.0],"places":5,"removed":1}
+```
+
+`bbox` is `[west, south, east, north]`. Version 2 added `socials`. `places` and `removed` count the
+lines that follow. Every other line is a place or a removal, sorted by `id`
+(plain string order), with each id once.
+
+A place line has all of these keys, in this order:
+
+| Key | Value |
+|---|---|
+| `id` | the Overture GERS id |
+| `change` | the changelog's `change_type` for this id: `added`, `data_changed` or `unchanged`, or `null` when the changelog does not list it |
+| `name` | `names.primary`, or `null` |
+| `basic_category` | `basic_category`, or `null` |
+| `taxonomy_primary` | `taxonomy.primary`, or `null` |
+| `confidence` | `confidence`, a number from 0 to 1, or `null` |
+| `websites` | `websites` as given, `[]` when none |
+| `socials` | `socials` as given, `[]` when none |
+| `phones` | `phones` as given, `[]` when none |
+| `addresses` | each address as `{"freeform","locality","postcode","region","country"}`, any of them `null`, `[]` when none |
+| `sources` | each source as `{"dataset","record_id","update_time"}`, `[]` when none |
+| `lon`, `lat` | the centre of the bounding box, to 7 decimal places |
+
+A removal line is `{"id":"...","change":"removed"}`: an id the changelog lists
+as removed whose bounding box lies inside Australia. A removed id has no place
+line.
+
+The extract never holds emails, brand, operating status or any other
+Overture field. `check_extract` in the tool lists every way a file breaks this
+format. `pipeline/tests/fixtures/overture-extract.ndjson` is a small
+hand-written extract for the importer's tests.
+
+## Overture import
+
+`pipeline/overture.py` matches places to Overture places and fills gaps from
+them. `import_overture` is the one entry point. The command reads and writes
+the files around it. It does no network work. The parts that change for
+their own reasons are in their own modules: the match and name source rules
+and the files they read (`overture_rules.py`), social page parsing
+(`overture_socials.py`), candidates and decisions (`overture_candidates.py`)
+and the Markdown report (`overture_report.py`).
+
+Only these kinds are filled: every overnight kind, `information_centre`,
+`fuel`, `lpg_refill_swap`, `mechanic`, `food_and_drink`, `laundromat`,
+`hospital_emergency`, `attraction`, `heritage` and `experience`. Merged
+records are left alone.
+
+Kept files:
+
+- `overture/categories.json`: each kind and the Overture categories that fit
+  it. A category fits when it is the place's `basic_category` or
+  `taxonomy_primary`.
+- `overture/directory-hosts.json`: hosts whose websites are never taken or
+  compared (a subdomain counts too). The list starts empty. Shane, 15 Nov
+  2026: "When overture provides Hipcamp or any other commercial reference
+  under the Overture data model, we can use it." So a listing or directory
+  site Overture gives as the website is taken, sourced `overture`. Add a
+  host only when a place's link there should never be its website.
+- `overture/do-not-match.json`: `{"pairs": [{"place", "gers"}], "gers": [...]}`.
+  `pairs` are place and Overture place pairs never matched. `gers` are the
+  GERS ids of rejected Overture candidates, never candidates again.
+- `overture/chains.json`: chain-only names such as "BIG4 Holiday Parks",
+  compared as normalised names.
+- `categories.json` also holds `candidates`: the camping categories that make
+  an Overture candidate, and the kind each publishes as (`campground` as
+  `campground`, `rv_park` and `holiday_park` as `caravan_park`).
+- `overture/taken.json`: `{"taken": [{"place", "fact", "value"}]}`, the
+  Overture values a person or the AI reviewer chose over OSM's in "Overture
+  differs" (see below).
+- `overture/links.ndjson`: the link file, one line per place with an
+  Overture match, a name source or a published candidate,
+  `{"gers","place","release"}` sorted by place id, with the release the
+  Overture place was last seen in. It is not released.
+
+**Overture match and name source.** Overture values a place already has
+are set aside first, so every run works from what other sources give. A
+named place takes values only from its Overture match, the strong match,
+for which all of these must hold: the category fits the kind, the
+Overture place is within 100 m of the place's location, Jaro-Winkler
+similarity of the two names is 0.85 or more (names lower cased, every run of
+characters other than a to z and 0 to 9 made one space), Overture's
+confidence is 0.7 or more, and exactly one Overture place passes. An unnamed
+place (no name, or a name from Overture) takes values only from its name
+source: an Overture place with a name that lies inside the place's outline from the geometry sidecar or
+within 100 m of it (of its location when it has no outline), whose category
+fits, at confidence 0.8 or more, when it is the only one.
+
+**Gap fills.** A name source gives an unnamed place its name. An Overture
+match or a name source gives the website, phone and address where no other
+source has a value:
+
+- website: Overture's first website that starts with `http://` or
+  `https://` and is not on a directory host or a social host (facebook.com,
+  fb.com, instagram.com, tiktok.com, x.com, twitter.com);
+- phone: Overture's first phone, as Overture writes it;
+- address: the last comma-separated piece of Overture's first Australian
+  freeform address, split into `housenumber` (with "Lot") and `street`, plus
+  `suburb` from the locality (not a council area such as "Shire of
+  Manjimup"), `state` from the region, and a four digit `postcode`. A street
+  called "Unnamed Rd" is no street, and no address is taken without one.
+- facebook, instagram, tiktok and x: the first page for each network from
+  Overture's socials, then from its websites on that network's host. Each
+  is a canonical https page URL: `https://www.facebook.com/<page>` (a page
+  with no user name as `profile.php?id=<id>`),
+  `https://www.instagram.com/<name>/`, `https://www.tiktok.com/@<name>` and
+  `https://x.com/<name>` (twitter.com links too). The query is dropped. A
+  post, photo, event, video, group or share link, or a short link, is not a
+  page and gives nothing. A social link is never the website.
+
+**Shared pages.** A website or social page that Overture gives for more
+than 5 places in one run (`SHARED_PAGE_LIMIT` in
+`pipeline/overture_rules.py`), counting the places checked, the linked places
+a changelog run does not check again and the Overture candidates, is a chain's or an agency's page, such as a fuel
+brand's Facebook page on hundreds of stations. It is taken for none of
+them, the next page Overture gives is taken instead, and it is never
+compared in "Overture differs". Pages are compared lower case, without a
+trailing `/`. The report lists each one with its count of places.
+
+Emails, brand, operating status and confidence are never taken.
+Each value taken is sourced `overture` with a fact date of the run. A value
+that has not changed keeps its date.
+
+**Refresh.** An `overture` value follows Overture's change, and comes off
+when Overture no longer gives it or the place loses its Overture match or
+name source (the Overture place removed, a second candidate, or a rule no
+longer met). A value another source
+has since replaced is not touched.
+
+**Overture differs.** For a place with an Overture match or a name source,
+a website or phone sourced `osm`
+that disagrees with Overture's is listed for a person to decide. Websites
+agree when any Overture website has the same host (lower case, without
+`www.`). Phones agree when any Overture phone and any number in OSM's value
+(several are separated by `;`) are the same Australian number: digits only,
+`+61` and `+61 (0)` written as a leading 0.
+
+To take Overture's value, add `{"place", "fact", "value"}` to
+`overture/taken.json`. The importer then writes that value sourced
+`overture`, dated the run, over OSM's, and no longer lists it. The OSM sync
+leaves a value listed there alone while the record holds it. Every other
+`overture` value is still replaced once OSM gives one, and a traveller's
+report still replaces a taken value.
+
+**Changelog runs.** The first run checks every place. With `--changelog`
+(spec decision 13), a linked place is checked again only when the changelog
+lists its Overture place as `data_changed` or `removed`. One the changelog
+lists as `unchanged`, or does not list, keeps its values and link without a
+check, unless `overture/taken.json` lists a value for it. A place with no link is matched only against Overture places the
+changelog lists as `added` or `data_changed`: an unchanged Overture place it
+did not match last time cannot match it now.
+
+**Report and summary.** The report lists the counts, each kind's names,
+websites, phones and addresses before and after, each gap fill (the place,
+the value and what it replaced), the "Overture differs" lines, the values
+taken off and the candidates by tier. Lists are cut at 200 rows, and
+shorter when the report would pass `REPORT_MAX_CHARS` in
+`pipeline/overture_run.py`, so the PR body stays under GitHub's limit. The
+summary JSON has the same counts, `change_percent` (records changed out of
+all live records), `auto_merge` and `wait_reasons`. `auto_merge` is true
+only for gap fills under the OSM sync's limit (`AUTO_MERGE_BELOW_PERCENT` in
+`pipeline/sync.py`). `wait_reasons` names each thing that holds the run for
+a person: the limit and "Overture differs" lines. The summary also counts the candidates by tier (`candidates`)
+and by junk rule (`dropped`). `--candidates FILE` writes each candidate as
+one line, strong tier first, for the reviewer.
+
+## Overture candidates
+
+The same run finds Overture candidates: camping places Overture lists that
+the dataset lacks. The pool is every Overture place in the extract at
+confidence 0.7 or more whose `basic_category` or `taxonomy_primary` is a
+camping category (`campground`, `rv_park`, `holiday_park`). Each place in the
+pool is dropped, with no one involved, by the first of these rules it breaks
+(the summary's `dropped` counts each rule):
+
+1. `do_not_match`: its GERS id is on the do-not-match list (rejected before).
+2. `no_name`: it has no name.
+3. `chain_name`: its normalised name is a chain-only name on
+   `overture/chains.json`. A park of a chain with its own name stays.
+4. `scout_school_church`: its name names a scout, guide, school or church
+   camp (scout, guide, school, college, church, christian, bible, baptist,
+   anglican, adventist, uniting, catholic, YMCA, YWCA). "Old school" and
+   "School Point" are place names and stay.
+5. `near_place`: a place of any kind (not merged) lies within 250 m. This
+   also drops the Overture place of every match, and of every candidate
+   already published.
+
+An Overture place linked to a place in this run (an Overture match, a name
+source anywhere in an outline, or a published candidate) is never a
+candidate either.
+
+The rest are sorted into two tiers:
+
+- `strong`: confidence 0.9 or more, a camping `basic_category` (not only a
+  camping taxonomy entry), and a website of its own (not on a directory host
+  or a social host, and not a shared page);
+- `weak`: every other candidate.
+
+Each candidate carries its GERS id, name, kind, category, taxonomy entry,
+confidence, location, state, website, phone, the release and the Overture
+row.
+
+**Decisions.** The reviewer marks each candidate `approve`, `reject` or
+`flag` (the format is in "Overture decisions" below), and `python -m pipeline.overture_decide decisions.ndjson --root .`
+acts on them. A rejected candidate's GERS id goes on the do-not-match list.
+A flagged one waits for a person. An approved one is held unless
+`--publish-candidates` is given and its tier is one named with `--tier`
+(every tier when none is named): publishing stays off until a person has
+seen the tier counts. `--summary FILE` writes how many candidates got each
+outcome. A published candidate becomes a place record with `osm`
+null, standing `shown` (not checked yet), `overture` as the source of its
+name and location and of any website, phone and address Overture gives,
+each dated the run, and its GERS id in the link file. A GERS id already in
+the link file is not published again, and an approved candidate within 250 m
+of a place, or of a candidate published earlier in the same run (Overture
+lists some parks twice), waits for a person.
+
+A published candidate keeps its name and location on later runs. Its other
+Overture values refresh from the Overture place it is linked to, and come off
+when that place is gone. It never becomes a MapRoulette task.
+
+## Overture decisions
+
+The decisions file, `overture/decisions.ndjson`, is the one format the data
+repository and the feedback engine's AI reviewer share. This section is its
+only description: the engine's code and docs point here. The import writes
+the candidates to `overture/candidates.ndjson`. The reviewer writes each
+decided candidate to the decisions file on the `overture-sync` branch, and
+`pipeline.overture_decide` reads it.
+
+Each line is one candidate line exactly as the import wrote it (`gers`,
+`name`, `kind`, `category`, `taxonomy`, `confidence`, `location`, `state`,
+`website`, `phone`, `release`, `tier` and the Overture `row`), plus:
+
+- `decision`: `approve`, `reject` or `flag`;
+- `reason`: one short sentence saying why;
+- `reviewer`: who decided, `ai:<model>` for the AI reviewer or a person's
+  GitHub login;
+- `by_rules`: true when a rule decided without asking the model.
+
+Lines are compact JSON with sorted keys (`dump_line`), in the candidate
+file's order. A line that is not JSON, has no `gers`, has a `decision` other
+than the three above, or is an approval missing what its place is made from
+(`tier`, `kind`, `name`, `location`, `release` or `row`) is skipped: nothing
+is done for it, the other lines are still acted on, and the `--summary` file
+lists it under `skipped_lines` (its line among the file's non-blank lines,
+its GERS id and the problem). The PR body lists those lines under "Decision
+lines that need a person", and the PR waits for one. A person decides a flagged candidate by changing its
+`decision`. A rejected candidate's GERS id also goes on the `gers` list of
+`overture/do-not-match.json`. This example line is checked by the tests of
+both repositories (`pipeline/tests/test_overture_candidates.py` here,
+`packages/intake/test/overture-reviewer.test.ts` in the feedback engine):
+
+```
+{"by_rules":false,"category":"campground","confidence":0.95,"decision":"approve","gers":"08f2b1a0c4d5e6f70321a1b2c3d4e502","kind":"campground","location":{"lat":-36.7311,"lon":146.9602},"name":"Sheepskin Hut Campground","phone":"(03) 5550 0101","reason":"The name and the website show a campground.","release":"2026-10-21.0","reviewer":"ai:@cf/meta/llama-3.3-70b-instruct-fp8-fast","row":{"addresses":[{"country":"AU","freeform":"Hut Rd","locality":"Bright","postcode":"3741","region":"VIC"}],"basic_category":"campground","change":"added","confidence":0.95,"id":"08f2b1a0c4d5e6f70321a1b2c3d4e502","lat":-36.7311,"lon":146.9602,"name":"Sheepskin Hut Campground","phones":["(03) 5550 0101"],"socials":[],"sources":[{"dataset":"meta","record_id":"1","update_time":"2026-08-14T03:21:00.000Z"}],"taxonomy_primary":"campground","websites":["https://sheepskinhut.example.au/"]},"state":"VIC","taxonomy":"campground","tier":"strong","website":"https://sheepskinhut.example.au/"}
+```
+
+## Monthly Overture workflow
+
+`.github/workflows/sync-overture.yml` runs on the 28th of each month at
+20:00 UTC and by hand. Overture publishes a release about once a month, in
+the third or fourth week.
+
+1. **The release.** It lists Overture's public bucket
+   (`https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/?list-type=2&prefix=release/&delimiter=/`,
+   anonymous), the same bucket the pull reads, rather than the STAC release
+   index. `pipeline.overture_run check` takes the newest release (by date,
+   then patch number). When `overture/release.json` already names it, the
+   run stops. A release given by hand runs even when it was applied, and
+   must be in the listing. The import is a changelog run (`--changelog`)
+   only when the applied release is the one just before: Overture's
+   changelog holds only the changes since the release before it, so after a
+   missed release every place is checked again.
+2. **The reviewer's work.** The branch is rebuilt from `main` on every
+   run, so `pipeline.overture_run carry` first brings `overture/decisions.ndjson`
+   and `overture/do-not-match.json` over from the last `overture-sync` branch,
+   where the AI reviewer and people wrote them. The decisions file replaces
+   main's, and the do-not-match list is joined to main's. The run does not
+   run the automatic merge rule (`pipeline.merge --auto`, which a person
+   runs). The import works from the places as they are after it.
+3. **The decisions.** `pipeline.overture_decide overture/decisions.ndjson
+   --publish-candidates` acts on the carried decisions: rejections go on the
+   do-not-match list and approved candidates are published. The workflow
+   publishes approvals of every tier, or only the tiers given in the `tiers`
+   input of a run started by hand (`strong` for the first real run). Its
+   `--summary` counts what was published, for the PR body.
+4. **The pull.** `tools/overture-pull/pull.py` writes the release's extract.
+5. **The import.** `pipeline.overture` writes the gap fills, the link file,
+   the report, the summary and `overture/candidates.ndjson`, the candidates
+   the reviewer reads on the branch. The geometry sidecar
+   `pipeline.extract --geometry` builds from the Geofabrik extract gives the
+   outlines. `pipeline.overture_run applied` then records the release in
+   `overture/release.json`, so the release counts as applied once the PR
+   merges.
+6. **The PR.** `pipeline.overture_run body` writes the PR body: whether the
+   PR merges itself and why not, then the import report. The run validates
+   the data and opens or updates one PR from the `overture-sync` branch
+   with the `opencampingdb-bot` token, as the OSM sync does. Candidates found
+   and decisions do not change `places/` until a decision publishes one, so
+   they hold nothing. Auto-merge waits only for a change at the OSM sync's
+   limit or over, any "Overture differs" line, any candidate published in
+   this run, or any decision line `pipeline.overture_decide` skipped, and is
+   turned off for them.
+
+The branch is rebuilt from `main` on every run. When the OSM sync merges
+first and the PR conflicts, start the workflow again by hand with the same
+release.
+
 ## Sync
 
 - Matches each extract line to a record by `osm.type` and `osm.id`.
@@ -410,9 +738,13 @@ rule, never stored in `places/` (see "Rules" under "Release").
   `rating: null` and every fact sourced from `osm`.
 - For a matched record, `name`, `kind`, `group`, `location`, `osm` and the
   OSM-sourced facts are replaced with what OSM says now. A fact whose source
-  is anything but `osm` (`feedback`, `contributed`, `owner` or
-  `community_report`) is kept, with its source: sync never turns a community
-  report value into an OSM value. An OSM-sourced fact whose tag has gone is
+  is anything but `osm` (`feedback`, `contributed`, `owner`,
+  `community_report` or `overture`) is kept, with its source: sync never turns a community
+  report value into an OSM value. The exception is `overture`, a gap fill:
+  once OSM gives a value for that fact, name or location, OSM's value
+  replaces it and its source and date are dropped, unless
+  `overture/taken.json` lists the value the record holds (a person chose it
+  over OSM's in "Overture differs"). An OSM-sourced fact whose tag has gone is
   removed. `status` and `rating` are never touched. A kind change counts as
   an update.
 - A record without an OSM link (`osm: null`: a contributed place, a new
@@ -440,7 +772,8 @@ rule, never stored in `places/` (see "Rules" under "Release").
   does not move: the place did not change.
 - `fact_dates` says when each value that is not from OSM was accepted: one
   entry, in the same UTC form as `updated`, for every `fact_sources` entry
-  that is `feedback`, `contributed`, `owner` or `community_report`. Whoever
+  that is `feedback`, `contributed`, `owner`, `community_report` or
+  `overture`. Whoever
   sets such a value sets its date, the feedback engine for `feedback` and
   `owner` and the person opening the PR for `contributed`. A
   `community_report` value is dated the first day of the month the report
@@ -586,9 +919,11 @@ place. A person runs it and opens a PR with the result:
 - A pair on the distinct list is refused, unless `--part` says they are
   parts of one place, such as two sections of a caravan park on either side
   of a street.
-- Facts the dropped record got from `feedback`, `contributed` or `community_report` move to the
-  kept record where it has no value, with their `fact_dates`. OSM facts do
-  not move.
+- Facts the dropped record got from `feedback`, `contributed`,
+  `community_report` or `overture` move to the kept record where it has no
+  value, with their `fact_dates`. OSM facts do not move. The dropped
+  record's line in `overture/links.ndjson` goes to the kept record when it
+  has no Overture link of its own, and is removed otherwise.
 - The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
   rating is recalculated from its visible reviews.
@@ -708,9 +1043,9 @@ and open a PR.
   have at most 6 decimal places;
 - that `fact_sources` has an entry for every fact and no other fact, plus
   optional `name`, `location`, `kind`, `status` and `description` entries,
-  each `osm`, `feedback`, `contributed`, `owner` or `community_report`. No
-  file holds a `rule` source, `fact_rules` or `label`: only the release
-  sets those;
+  each `osm`, `feedback`, `contributed`, `owner`, `community_report` or
+  `overture`. No file holds a `rule` source, `fact_rules` or `label`: only
+  the release sets those;
 - that the nearby facts `nearest_beach`, `nearest_boat_ramp`,
   `nearest_major_road`, `locality`, `lga`, `protected_area`,
   `nearest_waterway` and `nearest_feature` have the source `osm`;

@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "4877",
+      "state": "QLD",
+      "street": "Warner St",
+      "suburb": "Port Douglas"
+    },
     "lga": {
       "name": "Douglas Shire",
       "osm_id": 11677495
@@ -21,7 +34,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 230
-    }
+    },
+    "phone": "(07) 4099 4567"
   },
   "group": "services",
   "id": "ocdb_01M66JP1451Q48PGH53BPW9M61",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

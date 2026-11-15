@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -26,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Crawford Street"
-    }
+    },
+    "phone": "(02) 6297 1533",
+    "website": "http://www.queanbeyanmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZV3E3YG5624Y613E3WJ",
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

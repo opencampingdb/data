@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2-4",
+      "postcode": "2680",
+      "state": "NSW",
+      "street": "Mackay Ave",
+      "suburb": "Griffith"
+    },
+    "facebook": "https://www.facebook.com/109421801284838",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -24,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Banna Avenue"
-    }
+    },
+    "phone": "+61269521415",
+    "website": "https://www.purtillgroup.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPJN6CZMD5W9973CWDCKQ",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

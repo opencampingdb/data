@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "260-270",
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "Frankston - Dandenong Road",
+      "suburb": "Dandenong South"
+    },
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Frankston-Dandenong Road"
-    }
+    },
+    "phone": "+61 3 8256 7039",
+    "website": "https://find.shell.com/au/fuel/10124052-shell-dandenong-truckstop/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPMKREBRFBPC1A04VW5C1",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

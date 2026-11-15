@@ -1,16 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2398",
+      "postcode": "2324",
+      "state": "NSW",
+      "street": "Pacific Hwy",
+      "suburb": "Heatherbrae"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/2083268645285735",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -33,6 +49,7 @@
     },
     "opening_hours": "24/7",
     "operator": "BP",
+    "phone": "+61249874495",
     "website": "https://map.bp.com/en-AU/AU/gas-station/heatherbrae/bp-heatherbrae/2143"
   },
   "group": "services",
@@ -51,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

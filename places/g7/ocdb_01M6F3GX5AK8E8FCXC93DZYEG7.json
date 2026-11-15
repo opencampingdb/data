@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2630",
+      "state": "NSW",
+      "street": "Bradley St",
+      "suburb": "Cooma"
+    },
+    "facebook": "https://www.facebook.com/441413925960930",
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -15,7 +32,9 @@
       "osm_id": 113486287,
       "type": "town"
     },
-    "operator": "Cooma Monaro Railway"
+    "operator": "Cooma Monaro Railway",
+    "phone": "+61264527791",
+    "website": "https://www.cmrailway.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GX5AK8E8FCXC93DZYEG7",
@@ -33,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

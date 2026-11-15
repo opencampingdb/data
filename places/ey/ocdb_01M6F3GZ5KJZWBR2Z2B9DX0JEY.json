@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "4101",
+      "state": "QLD",
+      "street": "Brereton St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/105189308704233",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Boundary Street"
-    }
+    },
+    "phone": "+61732172588",
+    "website": "http://www.sapphireresort.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ5KJZWBR2Z2B9DX0JEY",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

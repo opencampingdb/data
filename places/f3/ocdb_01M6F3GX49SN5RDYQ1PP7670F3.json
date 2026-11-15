@@ -1,14 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "3a",
       "street": "State Mine Gully Road"
     },
+    "facebook": "https://www.facebook.com/304916976283744",
     "lga": {
       "name": "Lithgow City Council",
       "osm_id": 6299566
@@ -18,7 +27,9 @@
       "name": "Lithgow",
       "osm_id": 78078822,
       "type": "town"
-    }
+    },
+    "phone": "+432843870",
+    "website": "https://www.stateminerailway.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GX49SN5RDYQ1PP7670F3",
@@ -36,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "2131",
+      "state": "NSW",
+      "street": "Milton St",
+      "suburb": "Ashfield"
+    },
     "lga": {
       "name": "Inner West Council",
       "osm_id": 1251053
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Frederick Street"
-    }
+    },
+    "phone": "(02) 9797 8974",
+    "website": "http://www.archautos.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPM256QZCN6F2N128TS8V",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

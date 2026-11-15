@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "55",
+      "postcode": "6503",
+      "state": "WA",
+      "street": "Dewar Road",
+      "suburb": "Granville"
+    },
     "lga": {
       "name": "Shire of Gingin",
       "osm_id": 11689578
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Dewar Road"
-    }
+    },
+    "phone": "+61 8 9575 2258",
+    "website": "https://find.shell.com/au/fuel/10121593-shell-gingin/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP651FBXWNGVB40NWMQ9H",
@@ -27,7 +46,7 @@
     "lat": -31.329407,
     "lon": 115.872815
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 3419441213,
     "timestamp": "2015-03-26T10:49:17Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

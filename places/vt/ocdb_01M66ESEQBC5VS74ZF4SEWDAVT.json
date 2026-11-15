@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6537",
+      "state": "WA",
+      "street": "Useless Loop Road",
+      "suburb": "Shark Bay"
+    },
     "lga": {
       "name": "Shire of Shark Bay",
       "osm_id": 11689946
@@ -18,7 +32,9 @@
     "nearest_beach": {
       "distance_m": 40,
       "name": "False Entrance Beach"
-    }
+    },
+    "phone": "0899482226",
+    "website": "https://exploreparks.dbca.wa.gov.au/site/false-entrance"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQBC5VS74ZF4SEWDAVT",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

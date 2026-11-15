@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "2317",
+      "state": "NSW",
+      "street": "Bagnall Beach Rd",
+      "suburb": "Salamander Bay"
+    },
+    "facebook": "https://www.facebook.com/113712250266926",
     "lga": {
       "name": "Port Stephens Council",
       "osm_id": 6185732
@@ -26,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bagnall Beach Road"
-    }
+    },
+    "phone": "+61272293923"
   },
   "group": "services",
   "id": "ocdb_01M66JPZCF5P5GWWPMM25TJAV8",
@@ -35,7 +54,7 @@
     "lat": -32.735267,
     "lon": 152.109034
   },
-  "name": null,
+  "name": "Mobil",
   "osm": {
     "id": 1358506369,
     "timestamp": "2025-02-10T06:12:21Z",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

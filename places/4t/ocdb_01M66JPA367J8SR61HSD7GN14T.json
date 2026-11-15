@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "2380",
+      "state": "NSW",
+      "street": "Railway Ave",
+      "suburb": "Gunnedah"
+    },
+    "facebook": "https://www.facebook.com/1070853686319733",
     "lga": {
       "name": "Gunnedah Shire Council",
       "osm_id": 6389934
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "South Street"
-    }
+    },
+    "phone": "+61267420391",
+    "website": "https://www.hopefuel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPA367J8SR61HSD7GN14T",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

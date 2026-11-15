@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "58",
+      "postcode": "3825",
+      "state": "VIC",
+      "street": "North Rd",
+      "suburb": "Yallourn"
+    },
+    "facebook": "https://www.facebook.com/1261289807262419",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -13,7 +31,9 @@
       "name": "Yallourn North",
       "osm_id": 1604746406,
       "type": "town"
-    }
+    },
+    "phone": "+61351330861",
+    "website": "http://www.theynh.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3H096S5RFBN7ED5HQ3P8C",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

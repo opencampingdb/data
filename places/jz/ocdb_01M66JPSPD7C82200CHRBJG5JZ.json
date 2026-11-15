@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "625",
+      "postcode": "3172",
+      "state": "VIC",
+      "street": "Lower Dandenong Road",
+      "suburb": "Dingley Village"
+    },
     "car_wash": true,
     "lga": {
       "name": "City of Kingston",
@@ -24,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Centre Dandenong Road"
-    }
+    },
+    "phone": "+61 3 8555 9577",
+    "website": "https://find.shell.com/au/fuel/10111017-shell-dingley/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPSPD7C82200CHRBJG5JZ",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

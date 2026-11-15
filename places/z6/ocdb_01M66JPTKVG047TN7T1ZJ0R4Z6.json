@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "3585",
+      "state": "VIC",
+      "street": "Saleyards Road",
+      "suburb": "Swan Hill"
+    },
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Murray Valley Highway"
-    }
+    },
+    "phone": "+61 3 5032 3277",
+    "website": "https://find.shell.com/au/fuel/10111697-shell-swan-hill-unmanned/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTKVG047TN7T1ZJ0R4Z6",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

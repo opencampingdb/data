@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "279",
+      "postcode": "6348",
+      "state": "WA",
+      "street": "Hopetoun-Ravensthorpe Rd",
+      "suburb": "Hopetoun"
+    },
+    "facebook": "https://www.facebook.com/666398393379385",
     "lga": {
       "name": "Shire of Ravensthorpe",
       "osm_id": 11688994
@@ -22,7 +40,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4080
-    }
+    },
+    "phone": "+61898383400",
+    "website": "http://www.wavecrestvillage.net.au/bar-bistro"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXEAY017MZPM47P60KF4",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

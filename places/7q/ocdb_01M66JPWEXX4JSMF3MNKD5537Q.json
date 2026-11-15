@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "646",
+      "postcode": "2761",
+      "state": "NSW",
+      "street": "Richmond Road",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/1998714723781292",
     "lga": {
       "name": "Blacktown City Council",
       "osm_id": 6217858
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Richmond Road"
-    }
+    },
+    "phone": "+61296770633",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/glendenning/bp-glendenning/2127"
   },
   "group": "services",
   "id": "ocdb_01M66JPWEXX4JSMF3MNKD5537Q",
@@ -27,7 +49,7 @@
     "lat": -33.737586,
     "lon": 150.853354
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 793092640,
     "timestamp": "2020-04-18T01:37:22Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

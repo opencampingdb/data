@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "3478",
+      "state": "VIC",
+      "street": "Runge Rd",
+      "suburb": "St Arnaud"
+    },
+    "facebook": "https://www.facebook.com/246514588721575",
     "lga": {
       "name": "Shire of Northern Grampians",
       "osm_id": 3348880
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Dundas Street"
-    }
+    },
+    "phone": "+61354951447",
+    "website": "http://www.starnaudcaravanpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFED5PDNBZGEBFZ5BFTA",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

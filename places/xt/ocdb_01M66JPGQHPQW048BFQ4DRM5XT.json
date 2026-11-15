@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +17,7 @@
       "street": "Jersey Road",
       "unit": "2"
     },
+    "facebook": "https://www.facebook.com/343142395809765",
     "lga": {
       "name": "City of Knox",
       "osm_id": 3333971
@@ -24,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Mountain Highway"
-    }
+    },
+    "phone": "+61397207565"
   },
   "group": "services",
   "id": "ocdb_01M66JPGQHPQW048BFQ4DRM5XT",
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

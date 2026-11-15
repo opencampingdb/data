@@ -1,15 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "campfires": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 283",
+      "postcode": "4314",
+      "street": "Glenhowden Rd",
+      "suburb": "Somerset Regional"
+    },
     "campfires": true,
     "caravans": true,
+    "facebook": "https://www.facebook.com/1520266694948840",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -20,6 +35,7 @@
       "osm_id": 1634843647,
       "type": "village"
     },
+    "phone": "+61746394599",
     "tents": true,
     "website": "http://www.derm.qld.gov.au/parks/benarkin/camping.html#clancys_camping_area"
   },
@@ -39,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Thorn Street",
       "suburb": "Warra"
     },
+    "facebook": "https://www.facebook.com/130577113464773",
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Thorn Street"
-    }
+    },
+    "phone": "+61417585563"
   },
   "group": "services",
   "id": "ocdb_01M66JPF4KMXA4870V0WXKKA09",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

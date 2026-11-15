@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Macadamia Drive",
       "suburb": "Maleny"
     },
+    "facebook": "https://www.facebook.com/103435295221473",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -35,7 +42,8 @@
       "distance_m": 40,
       "name": "Macadamia Drive"
     },
-    "operator": "Farm Barn"
+    "operator": "Farm Barn",
+    "phone": "+61753320611"
   },
   "group": "services",
   "id": "ocdb_01M66JPX5MPNQZ6FAG3N0R3E1F",
@@ -53,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

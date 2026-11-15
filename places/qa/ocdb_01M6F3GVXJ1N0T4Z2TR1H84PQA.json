@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "91",
+      "postcode": "2470",
+      "state": "NSW",
+      "street": "Hare St",
+      "suburb": "Casino"
+    },
+    "facebook": "https://www.facebook.com/218019698552572",
     "lga": {
       "name": "Richmond Valley Council",
       "osm_id": 6143221
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Hare Street"
-    }
+    },
+    "phone": "+61266621777",
+    "website": "http://www.casinomotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVXJ1N0T4Z2TR1H84PQA",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

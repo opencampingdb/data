@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "115",
+      "postcode": "3844",
+      "state": "VIC",
+      "street": "Princes Highway",
+      "suburb": "Traralgon"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -27,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Princes Street"
-    }
+    },
+    "phone": "+61 3 5158 9948",
+    "website": "https://find.shell.com/au/fuel/10111476-shell-reddy-express-traralgon/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPY7TG9D08V0XT4N6CJBX",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

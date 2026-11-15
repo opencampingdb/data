@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "60",
+      "postcode": "4415",
+      "state": "QLD",
+      "street": "McNulty St",
+      "suburb": "Miles"
+    },
+    "facebook": "https://www.facebook.com/601719589925670",
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Leichhardt Highway"
-    }
+    },
+    "phone": "+61746271517",
+    "website": "http://www.theroyalmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXVEDB33FYX2D0JSVY0B",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "6630",
+      "state": "WA",
+      "street": "Jose St",
+      "suburb": "Mullewa"
+    },
+    "facebook": "https://www.facebook.com/911947292237329",
     "lga": {
       "name": "City of Greater Geraldton",
       "osm_id": 11689919
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Geraldton-Mount Magnet Road"
-    }
+    },
+    "phone": "+61899611161"
   },
   "group": "services",
   "id": "ocdb_01M66JP8YQWJNA1G5HTM8TXS4H",
@@ -27,7 +46,7 @@
     "lat": -28.539797,
     "lon": 115.511897
   },
-  "name": null,
+  "name": "Yarrumba Service Station and Deli",
   "osm": {
     "id": 4827098217,
     "timestamp": "2017-04-30T14:58:35Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2722",
+      "state": "NSW",
+      "street": "Homer St",
+      "suburb": "Gundagai"
+    },
+    "facebook": "https://www.facebook.com/758379680972937",
     "lga": {
       "name": "Cootamundra-Gundagai Regional Council",
       "osm_id": 6247073
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Homer Street"
-    }
+    },
+    "phone": "+61269441995"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVQEMKZS2M9W9FYD00CV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

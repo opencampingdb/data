@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "320",
+      "postcode": "4310",
+      "state": "QLD",
+      "street": "Roadvale Rd",
+      "suburb": "Roadvale"
+    },
+    "facebook": "https://www.facebook.com/263294947022553",
     "lga": {
       "name": "Scenic Rim Regional",
       "osm_id": 11675525
@@ -13,7 +31,9 @@
       "name": "Kalbar",
       "osm_id": 1651185877,
       "type": "village"
-    }
+    },
+    "phone": "+61756162186",
+    "website": "https://www.theroadvalehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVERJ33M1FS9YPHENQEE",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

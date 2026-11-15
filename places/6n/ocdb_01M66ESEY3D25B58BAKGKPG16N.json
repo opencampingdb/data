@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2625",
+      "postcode": "3579",
+      "state": "VIC",
+      "street": "Murray Valley Hwy",
+      "suburb": "Mystic Park"
+    },
+    "facebook": "https://www.facebook.com/194345694382978",
     "fee": true,
     "lga": {
       "name": "Shire of Gannawarra",
@@ -24,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Murray Valley Highway"
-    }
+    },
+    "phone": "+61354579333",
+    "website": "https://kangaroolakehotelmotelaccommodation.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEY3D25B58BAKGKPG16N",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

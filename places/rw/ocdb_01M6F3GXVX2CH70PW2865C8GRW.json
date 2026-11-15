@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "127",
+      "postcode": "4725",
+      "state": "QLD",
+      "street": "Oak St",
+      "suburb": "Barcaldine"
+    },
+    "facebook": "https://www.facebook.com/641006545913051",
     "lga": {
       "name": "Barcaldine Regional",
       "osm_id": 11676690
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Oak Street"
-    }
+    },
+    "phone": "+61746511949",
+    "website": "http://www.australianworkersheritagecentre.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXVX2CH70PW2865C8GRW",
@@ -27,7 +49,7 @@
     "lat": -23.552014,
     "lon": 145.286998
   },
-  "name": null,
+  "name": "Australian Workers Heritage Centre",
   "osm": {
     "id": 11997780523,
     "timestamp": "2024-06-20T20:42:48Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

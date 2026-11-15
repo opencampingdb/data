@@ -1,12 +1,35 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "instagram": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
+    "instagram": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "2113",
+      "state": "NSW",
+      "street": "Halifax Street",
+      "suburb": "Macquarie Park"
+    },
+    "facebook": "https://www.facebook.com/61575737026119",
+    "instagram": "https://www.instagram.com/washme.au/",
     "lga": {
       "name": "Council of the City of Ryde",
       "osm_id": 6218884
@@ -27,7 +50,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Epping Road"
-    }
+    },
+    "phone": "+61 1300 791 730",
+    "website": "https://www.wash-megroup.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPNXK15WB9PD5GKM5WFKC",
@@ -36,7 +61,7 @@
     "lat": -33.793635,
     "lon": 151.134236
   },
-  "name": null,
+  "name": "Wash.ME - Lachlan Square Village",
   "osm": {
     "id": 13183611735,
     "timestamp": "2025-09-30T09:44:50Z",
@@ -45,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

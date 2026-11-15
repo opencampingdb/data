@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "284",
+      "postcode": "7248",
+      "state": "TAS",
+      "street": "Invermay Rd",
+      "suburb": "Mowbray"
+    },
     "lga": {
       "name": "City of Launceston",
       "osm_id": 10581631
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Invermay Road"
-    }
+    },
+    "phone": "(03) 6326 9057",
+    "website": "http://brads-automotive.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M66JPY2KXDJ5J1B5XRP6MKCW",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 111",
+      "postcode": "2398",
+      "street": "Newell Hwy",
+      "suburb": "Gurley"
+    },
+    "facebook": "https://www.facebook.com/105943965109177",
     "lga": {
       "name": "Moree Plains Shire Council",
       "osm_id": 6088821
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Gurley Street"
-    }
+    },
+    "phone": "+61497921541"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVE0C08DC2YKBTK7ZZ5Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

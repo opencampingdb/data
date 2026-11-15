@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "4818",
+      "state": "QLD",
+      "street": "Main St",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/103860282117037",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Erskine Place"
-    }
+    },
+    "phone": "+61744015000",
+    "website": "https://northshoretaverntownsville.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYCPPQSYKFHRK7S829EE",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

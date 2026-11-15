@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "297",
+      "postcode": "4109",
+      "state": "QLD",
+      "street": "Pinelands Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/104232021110034",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Pinelands Road"
-    }
+    },
+    "phone": "+61732737795",
+    "website": "http://www.brisbanecarservices.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPWNN9TWH1M807R4WYG3Q",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56",
+      "postcode": "7321",
+      "state": "TAS",
+      "street": "Farrell St",
+      "suburb": "Tullah"
+    },
+    "facebook": "https://www.facebook.com/136856129686473",
     "lga": {
       "name": "West Coast",
       "osm_id": 10594916
@@ -17,7 +35,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2930
-    }
+    },
+    "phone": "+61364734121",
+    "website": "http://www.tullahlakesidelodge.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV349GS32HFTWX8RMJ01",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "137",
+      "postcode": "2046",
+      "state": "NSW",
+      "street": "Kings Rd #2",
+      "suburb": "Sydney"
+    },
     "lga": {
       "name": "City of Canada Bay Council",
       "osm_id": 6217271
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Queens Road"
-    }
+    },
+    "phone": "(02) 9744 7577",
+    "website": "http://www.prolinepaintnpanel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPM4PDNX6MQ43H0T8MB95",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

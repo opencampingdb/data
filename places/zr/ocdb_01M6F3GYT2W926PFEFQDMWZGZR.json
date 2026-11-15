@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "216",
+      "postcode": "4800",
+      "state": "QLD",
+      "street": "Bruce Hwy",
+      "suburb": "Proserpine"
+    },
+    "facebook": "https://www.facebook.com/153456014721718",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61749451868",
+    "website": "http://www.whitsundaypalmsmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYT2W926PFEFQDMWZGZR",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

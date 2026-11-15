@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "411",
+      "postcode": "3833",
+      "state": "VIC",
+      "street": "Mt Baw Baw Tourist Rd",
+      "suburb": "Noojee"
+    },
+    "facebook": "https://www.facebook.com/996318070459639",
     "lga": {
       "name": "Shire of Baw Baw",
       "osm_id": 3335695
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mount Baw Baw Tourist Road"
-    }
+    },
+    "phone": "+61356289514",
+    "website": "http://www.noojeehotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJE417SJBPHJBB182EH",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

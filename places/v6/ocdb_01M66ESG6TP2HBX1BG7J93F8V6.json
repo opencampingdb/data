@@ -1,17 +1,35 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "drinking_water": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "tents": "osm",
     "toilets": "osm",
+    "website": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1/3",
+      "postcode": "4615",
+      "state": "QLD",
+      "street": "Scott St",
+      "suburb": "Nanango"
+    },
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/746810535185488",
     "fee": true,
     "lga": {
       "name": "South Burnett Regional",
@@ -27,9 +45,11 @@
       "distance_m": 130,
       "name": "King Street"
     },
+    "phone": "+61741631376",
     "power": true,
     "tents": true,
     "toilets": true,
+    "website": "https://twingums.com.au/",
     "wheelchair": true
   },
   "group": "overnight",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

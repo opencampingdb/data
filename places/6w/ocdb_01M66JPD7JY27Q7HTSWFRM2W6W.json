@@ -1,10 +1,15 @@
 {
   "fact_dates": {
-    "dump_station": "2026-11-04T13:32:35Z"
+    "address": "2026-11-15T00:00:00Z",
+    "dump_station": "2026-11-04T13:32:35Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "dump_station": "contributed",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -12,11 +17,20 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "41",
+      "postcode": "2478",
+      "state": "NSW",
+      "street": "Bruxner Highway",
+      "suburb": "Ballina"
+    },
     "air": true,
     "dump_station": true,
+    "facebook": "https://www.facebook.com/100776432441324",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -45,6 +59,7 @@
       "name": "Bruxner Highway"
     },
     "opening_hours": "24/7",
+    "phone": "+61499930132",
     "website": "https://map.bp.com/en-AU/AU/gas-station/west-ballina/bp-ballina-travel-centre/9072"
   },
   "group": "services",
@@ -63,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

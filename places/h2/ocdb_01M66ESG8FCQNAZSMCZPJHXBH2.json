@@ -1,16 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2879",
+      "state": "NSW",
+      "street": "Woolshed Drive",
+      "suburb": "Menindee"
+    },
     "booking_required": true,
     "caravans": true,
     "fee": true,
@@ -25,9 +39,11 @@
       "type": "town"
     },
     "operator": "NSW National Parks and Wildlife Service",
+    "phone": "1300072757",
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/emu-lake-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG8FCQNAZSMCZPJHXBH2",
@@ -45,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

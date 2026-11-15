@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1354",
+      "postcode": "4173",
+      "state": "QLD",
+      "street": "Wynnum Road",
+      "suburb": "Tingalpa"
+    },
     "air": true,
     "lga": {
       "name": "City of Brisbane",
@@ -29,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Wynnum Road"
-    }
+    },
+    "phone": "+61 7 3123 6101",
+    "website": "https://find.shell.com/au/fuel/10111673-shell-tingalpa/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPWNBKY7HRV6QRSPCHSBX",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

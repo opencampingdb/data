@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -9,9 +14,17 @@
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "210",
+      "postcode": "2830",
+      "state": "NSW",
+      "street": "Brisbane Street",
+      "suburb": "Dubbo"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -43,7 +56,8 @@
     "opening_hours": "24/7",
     "operator": "Ampol",
     "phone": "+61 2 6884 4622",
-    "toilets": false
+    "toilets": false,
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-dubbo"
   },
   "group": "services",
   "id": "ocdb_01M66JNYPZP44JF3KHCGKB7991",
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

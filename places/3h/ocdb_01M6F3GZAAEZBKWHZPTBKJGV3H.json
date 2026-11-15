@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2734",
+      "state": "NSW",
+      "street": "Lake Poomah Rd",
+      "suburb": "Kyalite"
+    },
+    "facebook": "https://www.facebook.com/133523950841673",
     "lga": {
       "name": "Balranald Shire Council",
       "osm_id": 5897433
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kyalite Road"
-    }
+    },
+    "phone": "+61350382221",
+    "website": "http://www.kyalitepub.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZAAEZBKWHZPTBKJGV3H",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

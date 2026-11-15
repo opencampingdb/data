@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5-7",
+      "postcode": "4506",
+      "state": "QLD",
+      "street": "Gaffield St #6",
+      "suburb": "Morayfield"
+    },
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Morayfield Road"
-    }
+    },
+    "phone": "(07) 5498 9419",
+    "website": "http://www.firstresponsemech.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPMXH9CRAB3A6ME1KK0YV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

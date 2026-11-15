@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "3984",
+      "state": "VIC",
+      "street": "Peters St",
+      "suburb": "Corinella"
+    },
+    "facebook": "https://www.facebook.com/286508841818021",
     "lga": {
       "name": "Bass Coast Shire",
       "osm_id": 3335921
@@ -24,7 +42,9 @@
     "nearest_boat_ramp": {
       "distance_m": 140
     },
-    "operator": "Corinella Foreshore Reserve Inc."
+    "operator": "Corinella Foreshore Reserve Inc.",
+    "phone": "+61417781141",
+    "website": "http://www.visitcorinella.com/corinellacaravan/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFYGT1PTBHWZS8XSWDZ4",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

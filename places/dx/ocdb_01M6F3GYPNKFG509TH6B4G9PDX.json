@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "2315",
+      "state": "NSW",
+      "street": "Lighthouse Rd",
+      "suburb": "Nelson Bay"
+    },
+    "facebook": "https://www.facebook.com/2261643770525612",
     "lga": {
       "name": "Port Stephens Council",
       "osm_id": 6185732
@@ -21,7 +41,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 310
-    }
+    },
+    "phone": "+61249842505",
+    "website": "https://innerlighttearooms.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYPNKFG509TH6B4G9PDX",
@@ -30,7 +52,7 @@
     "lat": -32.710393,
     "lon": 152.161415
   },
-  "name": null,
+  "name": "Nelson Bay Lighthouse",
   "osm": {
     "id": 193180778,
     "timestamp": "2015-01-27T08:50:50Z",
@@ -39,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

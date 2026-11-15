@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76",
+      "postcode": "7267",
+      "state": "TAS",
+      "street": "Brooks Rd",
+      "suburb": "Lalla"
+    },
+    "facebook": "https://www.facebook.com/128664817215412",
     "lga": {
       "name": "City of Launceston",
       "osm_id": 10581631
@@ -13,7 +31,9 @@
       "name": "Lilydale",
       "osm_id": 318863223,
       "type": "village"
-    }
+    },
+    "phone": "+61363954447",
+    "website": "http://www.leaningchurch.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JNZ792MVT7VYF1J2814V1",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3469",
+      "street": "Cameron Trak",
+      "suburb": "Victoria"
+    },
+    "facebook": "https://www.facebook.com/838322872956190",
     "lga": {
       "name": "Shire of Pyrenees",
       "osm_id": 3291903
@@ -13,7 +27,8 @@
       "name": "Elmhurst",
       "osm_id": 2469854292,
       "type": "village"
-    }
+    },
+    "website": "http://camerons-camp.placestars.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9KA8KYWWN6FAZ70NC1S",
@@ -31,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

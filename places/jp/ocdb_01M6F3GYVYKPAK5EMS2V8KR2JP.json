@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "660",
+      "postcode": "2289",
+      "state": "NSW",
+      "street": "Glebe Rd",
+      "suburb": "Newcastle"
+    },
+    "facebook": "https://www.facebook.com/213609885341493",
     "lga": {
       "name": "City of Newcastle",
       "osm_id": 6189831
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Glebe Road"
-    }
+    },
+    "phone": "+61249571679",
+    "website": "http://www.thegateshotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYVYKPAK5EMS2V8KR2JP",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "634",
+      "postcode": "2164",
+      "state": "NSW",
+      "street": "The Horsley Dr",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/183023585184672",
     "lga": {
       "name": "Fairfield City Council",
       "osm_id": 6212438
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "The Horsley Drive"
-    }
+    },
+    "phone": "+61297250190",
+    "website": "https://www.fcmg.nsw.gov.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZKVV7E08EGR8A8JERF4",
@@ -31,7 +53,7 @@
     "lat": -33.854335,
     "lon": 150.942163
   },
-  "name": null,
+  "name": "Fairfield City Museum & Gallery",
   "osm": {
     "id": 1009936216,
     "timestamp": "2021-12-07T13:35:35Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

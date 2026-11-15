@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "30",
       "street": "Commercial Drive"
     },
+    "facebook": "https://www.facebook.com/348164051975961",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Western Port Highway"
-    }
+    },
+    "phone": "+61387878711",
+    "website": "http://www.peerlessautomotive.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPGVSPNYMZGVZFBDVYPJF",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

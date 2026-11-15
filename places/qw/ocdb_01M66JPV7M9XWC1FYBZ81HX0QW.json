@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "5453",
+      "state": "SA",
+      "street": "Main North Rd",
+      "suburb": "Clare"
+    },
     "lga": {
       "name": "Clare and Gilbert Valleys Council",
       "osm_id": 9108116
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Horrocks Highway"
-    }
+    },
+    "phone": "0888422848",
+    "website": "https://locations.ampol.com.au/en/ampol-clare"
   },
   "group": "services",
   "id": "ocdb_01M66JPV7M9XWC1FYBZ81HX0QW",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

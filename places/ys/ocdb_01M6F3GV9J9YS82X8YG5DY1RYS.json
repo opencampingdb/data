@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4390",
+      "state": "QLD",
+      "street": "McLean St",
+      "suburb": "Goondiwindi"
+    },
     "lga": {
       "name": "Goondiwindi Regional",
       "osm_id": 11674848
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "McLean Street"
-    }
+    },
+    "phone": "(07) 4671 3041",
+    "website": "https://www.grc.qld.gov.au/visit/see-and-do/customs-house-museum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GV9J9YS82X8YG5DY1RYS",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

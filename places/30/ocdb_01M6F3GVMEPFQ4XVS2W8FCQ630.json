@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44040",
+      "postcode": "4816",
+      "state": "QLD",
+      "street": "Bruce Hwy",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/308817912518687",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -28,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61747707344"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVMEPFQ4XVS2W8FCQ630",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

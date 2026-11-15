@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "3840",
+      "state": "VIC",
+      "street": "Maryvale Cres",
+      "suburb": "Morwell"
+    },
+    "facebook": "https://www.facebook.com/454596874653070",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Commercial Road"
-    }
+    },
+    "phone": "+61351348266",
+    "website": "http://www.alwayswelcomemotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZCTDZS7DC2KYFKB651D",
@@ -27,7 +49,7 @@
     "lat": -38.236791,
     "lon": 146.392555
   },
-  "name": null,
+  "name": "Always Welcome Motel",
   "osm": {
     "id": 765383716,
     "timestamp": "2020-01-21T11:36:05Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

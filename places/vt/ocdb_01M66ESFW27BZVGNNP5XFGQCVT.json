@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "3525",
+      "state": "VIC",
+      "street": "John Curtin Dr",
+      "suburb": "Charlton"
+    },
+    "facebook": "https://www.facebook.com/311448876318382",
     "lga": {
       "name": "Shire of Buloke",
       "osm_id": 3345547
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 220,
       "name": "High Street"
-    }
+    },
+    "phone": "+61448276631",
+    "website": "http://www.charltontravellersrest.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFW27BZVGNNP5XFGQCVT",
@@ -27,7 +49,7 @@
     "lat": -36.26736,
     "lon": 143.351691
   },
-  "name": null,
+  "name": "Charlton Caravan Park",
   "osm": {
     "id": 1068952423,
     "timestamp": "2022-06-12T12:28:25Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

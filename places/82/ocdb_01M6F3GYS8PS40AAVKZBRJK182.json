@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "43",
+      "postcode": "6210",
+      "state": "WA",
+      "street": "Mandurah Ter",
+      "suburb": "Mandurah"
+    },
+    "facebook": "https://www.facebook.com/100519476681069",
     "lga": {
       "name": "City of Mandurah",
       "osm_id": 11690490
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mandurah Terrace"
-    }
+    },
+    "phone": "+61895352666",
+    "website": "http://www.murphysirishpub.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYS8PS40AAVKZBRJK182",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

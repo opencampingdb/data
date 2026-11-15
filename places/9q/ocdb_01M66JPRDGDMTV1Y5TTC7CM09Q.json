@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2330",
+      "state": "NSW",
+      "street": "Dangar Rd",
+      "suburb": "Singleton"
+    },
+    "facebook": "https://www.facebook.com/2018433648454496",
     "lga": {
       "name": "Singleton Council",
       "osm_id": 6191883
@@ -13,7 +30,9 @@
       "name": "Singleton",
       "osm_id": 128565480,
       "type": "town"
-    }
+    },
+    "phone": "+61265719222",
+    "website": "http://www.directory.nsw.gov.au/showorgunit.asp?id={CF6E6B1E-847B-4D59-BCD4-6DEB53877CB4}"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPRDGDMTV1Y5TTC7CM09Q",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4163",
+      "state": "QLD",
+      "street": "State Route 22",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/169361399744131",
     "lga": {
       "name": "Redland City",
       "osm_id": 11677885
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Shore Street North"
-    }
+    },
+    "phone": "+61738298999",
+    "website": "http://redland.qld.gov.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JNZ1RPM4FJ3PVAAA31NAA",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

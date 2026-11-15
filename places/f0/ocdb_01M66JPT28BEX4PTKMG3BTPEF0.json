@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-3",
+      "postcode": "4655",
+      "state": "QLD",
+      "street": "Torquay Road",
+      "suburb": "Pialba"
+    },
     "air": true,
     "lga": {
       "name": "Fraser Coast Regional",
@@ -29,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61 7 4194 5304",
+    "website": "https://find.shell.com/au/fuel/10111031-shell-pialba-hervey-bay/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPT28BEX4PTKMG3BTPEF0",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "66",
+      "postcode": "6751",
+      "state": "WA",
+      "street": "Nameless Valley Dr",
+      "suburb": "Tom Price"
+    },
+    "facebook": "https://www.facebook.com/279361475863793",
     "lga": {
       "name": "Shire of Ashburton",
       "osm_id": 11690012
@@ -20,7 +38,9 @@
       "distance_m": 350,
       "name": "Nameless Valley Drive"
     },
-    "tents": true
+    "phone": "+61891891515",
+    "tents": true,
+    "website": "https://summerstar.com.au/caravan-parks/tom-price"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF04KCEV3GA9W5XQ1ZGZ",

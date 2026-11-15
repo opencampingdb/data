@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "97-99",
+      "postcode": "2575",
+      "state": "NSW",
+      "street": "Old Hume Hwy",
+      "suburb": "Braemar"
+    },
+    "facebook": "https://www.facebook.com/289043281590736",
     "lga": {
       "name": "Wingecarribee Shire Council",
       "osm_id": 6304530
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Old Hume Highway"
-    }
+    },
+    "phone": "+61248894239"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVTE4VS8N0ZNYHRPPDMD",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

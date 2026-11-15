@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4720",
+      "state": "QLD",
+      "street": "Corner of Hospital Road and Theresa Street",
+      "suburb": "Emerald"
+    },
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Hospital Road"
-    }
+    },
+    "phone": "(07) 4982 3899",
+    "website": "http://www.westerngatewaymotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXVX2CH70PW2865C8GRT",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

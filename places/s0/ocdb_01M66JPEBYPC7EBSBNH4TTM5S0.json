@@ -1,15 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27A",
+      "postcode": "4878",
+      "state": "QLD",
+      "street": "Machans St",
+      "suburb": "Cairns"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/240116842520312",
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -30,7 +48,9 @@
       "distance_m": 190,
       "name": "Machans Street"
     },
-    "opening_hours": "Mo-Sa 06:00-20:00; Su 07:00-19:00"
+    "opening_hours": "Mo-Sa 06:00-20:00; Su 07:00-19:00",
+    "phone": "+61740559357",
+    "website": "http://www.machansbeachstore.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPEBYPC7EBSBNH4TTM5S0",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

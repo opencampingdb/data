@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Comur Street",
       "suburb": "Yass"
     },
+    "facebook": "https://www.facebook.com/138158122887162",
     "lga": {
       "name": "Yass Valley Council",
       "osm_id": 6247446
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Comur Street"
-    }
+    },
+    "phone": "+61262261744",
+    "website": "https://bookings.nowbookit.com/?accountid=3557d0ff-a167-4b16-b26e-038cbf08f625&venueid=13943&theme=light&colors=hex%2C006064"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX1PZFTF5QY6YDVF2HC3",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

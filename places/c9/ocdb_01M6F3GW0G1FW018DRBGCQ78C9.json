@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "65",
+      "postcode": "7000",
+      "state": "TAS",
+      "street": "Macquarie St",
+      "suburb": "Hobart"
+    },
+    "facebook": "https://www.facebook.com/100173226340079",
     "lga": {
       "name": "City of Hobart",
       "osm_id": 10625466
@@ -29,7 +47,9 @@
       "distance_m": 20,
       "name": "Macquarie Street"
     },
-    "opening_hours": "11:30 - 24:00"
+    "opening_hours": "11:30 - 24:00",
+    "phone": "+61362369982",
+    "website": "http://www.hopeandanchor.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW0G1FW018DRBGCQ78C9",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

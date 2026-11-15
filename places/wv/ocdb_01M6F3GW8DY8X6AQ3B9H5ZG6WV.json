@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2330",
+      "state": "NSW",
+      "street": "Golden Hwy",
+      "suburb": "Jerrys Plains"
+    },
+    "facebook": "https://www.facebook.com/922322177880936",
     "lga": {
       "name": "Singleton Council",
       "osm_id": 6191883
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Pagan Street"
-    }
+    },
+    "phone": "+61265764137"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW8DY8X6AQ3B9H5ZG6WV",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

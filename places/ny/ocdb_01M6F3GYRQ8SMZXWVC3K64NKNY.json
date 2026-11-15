@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "260",
+      "postcode": "2795",
+      "state": "NSW",
+      "street": "Sydney Rd",
+      "suburb": "Bathurst"
+    },
+    "facebook": "https://www.facebook.com/1587605411542579",
     "lga": {
       "name": "Bathurst Regional Council",
       "osm_id": 6330866
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Sydney Road"
-    }
+    },
+    "phone": "+61263314444",
+    "website": "http://www.bathurst-nsw.com/GoldPannerMotel.html"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYRQ8SMZXWVC3K64NKNY",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

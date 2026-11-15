@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "248",
+      "postcode": "5238",
+      "street": "Craignook Rd",
+      "suburb": "Mid Murray Council"
+    },
+    "facebook": "https://www.facebook.com/310463519039185",
     "lga": {
       "name": "Mid Murray Council",
       "osm_id": 6811114
@@ -17,7 +32,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2590
-    }
+    },
+    "phone": "+61885704309"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA14Y3HJ2KZ9AYEYF2F0",
@@ -35,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "116",
+      "postcode": "6566",
+      "state": "WA",
+      "street": "Stirling Ter",
+      "suburb": "Toodyay"
+    },
+    "facebook": "https://www.facebook.com/322785808513920",
     "lga": {
       "name": "Shire of Toodyay",
       "osm_id": 11689544
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Stirling Terrace"
-    }
+    },
+    "phone": "+61895742165",
+    "website": "http://www.victoriahoteltoodyay.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXDMWZ5TP5JGKB5NKXW3",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27881",
+      "postcode": "4660",
+      "state": "QLD",
+      "street": "Bruce Highway",
+      "suburb": "Isis River"
+    },
+    "facebook": "https://www.facebook.com/533809827013406",
     "fuel": true,
     "lga": {
       "name": "Bundaberg Region",
@@ -20,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61741262199",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/childers-south/bp-isis-river/1629"
   },
   "group": "services",
   "id": "ocdb_01M66JPZE8PQJNFXHXY3XYAJM8",
@@ -29,7 +51,7 @@
     "lat": -25.255723,
     "lon": 152.364455
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1368281993,
     "timestamp": "2025-03-17T05:22:12Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

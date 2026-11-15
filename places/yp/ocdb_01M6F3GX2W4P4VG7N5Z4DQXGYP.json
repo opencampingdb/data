@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2582",
+      "state": "NSW",
+      "street": "MacDonald St",
+      "suburb": "Yass"
+    },
+    "facebook": "https://www.facebook.com/126890894034484",
     "lga": {
       "name": "Yass Valley Council",
       "osm_id": 6247446
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Comur Street"
-    }
+    },
+    "phone": "+61262263313",
+    "website": "http://www.coloniallodge.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX2W4P4VG7N5Z4DQXGYP",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

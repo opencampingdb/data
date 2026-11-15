@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11200",
+      "postcode": "5540",
+      "state": "SA",
+      "street": "Augusta Hwy",
+      "suburb": "Warnertown"
+    },
+    "facebook": "https://www.facebook.com/206868056035149",
     "lga": {
       "name": "Port Pirie Regional Council",
       "osm_id": 9108160
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Augusta Highway"
-    }
+    },
+    "phone": "+61886343118",
+    "website": "http://lmgperformance.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPCRWBPEH5ZVS5T8EW0Z7",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

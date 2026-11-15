@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "4802",
+      "state": "QLD",
+      "street": "Hermitage Dr",
+      "suburb": "Airlie Beach"
+    },
+    "facebook": "https://www.facebook.com/114636645236956",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -28,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Shute Harbour Road"
-    }
+    },
+    "phone": "+61749467267",
+    "website": "http://www.backpackersbythebay.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYSJ87ZYQ114KQ0R1E62",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

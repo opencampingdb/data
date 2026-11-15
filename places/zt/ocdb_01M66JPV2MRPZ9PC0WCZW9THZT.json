@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 2",
+      "postcode": "4370",
+      "state": "QLD",
+      "street": "Cunningham Hwy",
+      "suburb": "Warwick"
+    },
     "lga": {
       "name": "Southern Downs Regional",
       "osm_id": 11677975
@@ -18,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Cunningham Highway"
-    }
+    },
+    "phone": "(07) 4661 7450"
   },
   "group": "services",
   "id": "ocdb_01M66JPV2MRPZ9PC0WCZW9THZT",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

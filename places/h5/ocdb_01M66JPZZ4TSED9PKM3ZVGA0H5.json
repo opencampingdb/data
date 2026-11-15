@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "4810",
+      "state": "QLD",
+      "street": "Ingham Road",
+      "suburb": "WEST END"
+    },
     "fuel": true,
     "lga": {
       "name": "Townsville City",
@@ -29,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Sturt Street"
-    }
+    },
+    "phone": "0747669465"
   },
   "group": "services",
   "id": "ocdb_01M66JPZZ4TSED9PKM3ZVGA0H5",
@@ -38,7 +54,7 @@
     "lat": -19.268408,
     "lon": 146.805523
   },
-  "name": null,
+  "name": "Caltex West End",
   "osm": {
     "id": 1497291752,
     "timestamp": "2026-04-07T08:50:33Z",
@@ -47,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

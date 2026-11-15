@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "2526",
+      "state": "NSW",
+      "street": "Central Rd",
+      "suburb": "Wollongong"
+    },
+    "facebook": "https://www.facebook.com/120716617981542",
     "lga": {
       "name": "Wollongong City Council",
       "osm_id": 6303077
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Nudjia Road"
-    }
+    },
+    "phone": "+61258393392",
+    "website": "http://www.unanderrahotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV0CMYH6QSBV1XMPV241",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

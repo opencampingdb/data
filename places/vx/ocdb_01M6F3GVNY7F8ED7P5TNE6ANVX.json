@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "139",
+      "postcode": "3340",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Bacchus Marsh"
+    },
+    "facebook": "https://www.facebook.com/161823050498565",
     "lga": {
       "name": "Shire of Moorabool",
       "osm_id": 3291957
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61353681280",
+    "website": "http://FlanagansBorderInn.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVNY7F8ED7P5TNE6ANVX",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

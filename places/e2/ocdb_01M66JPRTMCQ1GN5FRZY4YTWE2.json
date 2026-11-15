@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "70",
+      "postcode": "6770",
+      "state": "WA",
+      "street": "Roberta Ave",
+      "suburb": "Halls Creek"
+    },
+    "facebook": "https://www.facebook.com/159030017456082",
     "lga": {
       "name": "Shire of Halls Creek",
       "osm_id": 11690294
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Great Northern Highway"
-    }
+    },
+    "phone": "+61891689222",
+    "website": "https://www.healthdirect.gov.au/australian-health-services/20058828/halls-creek-hospital/services/halls-creek-6770-70-roberta-avenue"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPRTMCQ1GN5FRZY4YTWE2",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

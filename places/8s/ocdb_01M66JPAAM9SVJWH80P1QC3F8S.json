@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Coonawarra Road",
       "suburb": "Winnellie"
     },
+    "facebook": "https://www.facebook.com/1455657144699101",
     "lga": {
       "name": "City of Darwin",
       "osm_id": 5515884
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Tiger Brennan Drive"
-    }
+    },
+    "phone": "+611800393835",
+    "website": "http://www.fuelxpress.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPAAM9SVJWH80P1QC3F8S",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

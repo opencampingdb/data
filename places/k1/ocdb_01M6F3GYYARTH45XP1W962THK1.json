@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "372",
+      "postcode": "3678",
+      "state": "VIC",
+      "street": "Bowser Rd",
+      "suburb": "Wangaratta"
+    },
+    "facebook": "https://www.facebook.com/116567185068644",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -20,7 +38,9 @@
       "distance_m": 80,
       "name": "Bowser Road"
     },
-    "operator": "Budget Motel Chain"
+    "operator": "Budget Motel Chain",
+    "phone": "+61357212624",
+    "website": "http://www.wangnorthmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYYARTH45XP1W962THK1",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

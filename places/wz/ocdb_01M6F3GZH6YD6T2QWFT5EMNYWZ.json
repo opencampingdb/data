@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "2477",
+      "state": "NSW",
+      "street": "Wardell Rd",
+      "suburb": "Alstonville"
+    },
+    "facebook": "https://www.facebook.com/237678339768274",
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -20,7 +38,9 @@
       "distance_m": 40,
       "name": "Wardell Road"
     },
-    "opening_hours": "Fr 10:00-16:00, Su 13:00-16:00"
+    "opening_hours": "Fr 10:00-16:00, Su 13:00-16:00",
+    "phone": "+61266281829",
+    "website": "http://www.aphsmuseum.org.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZH6YD6T2QWFT5EMNYWZ",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

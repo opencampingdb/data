@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36",
+      "postcode": "3131",
+      "state": "VIC",
+      "street": "Station St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/375863483201051",
     "lga": {
       "name": "City of Whitehorse",
       "osm_id": 2406273
@@ -20,7 +38,9 @@
       "distance_m": 120,
       "name": "Springvale Road"
     },
-    "opening_hours": "PH,Mo-Su 06:00-22:00"
+    "opening_hours": "PH,Mo-Su 06:00-22:00",
+    "phone": "+61478250000",
+    "website": "http://www.nunawadingsuperwash.com"
   },
   "group": "utility",
   "id": "ocdb_01M66JPSC71RQY1ZN2D7Q6Y3YC",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

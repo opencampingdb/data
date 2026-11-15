@@ -1,20 +1,38 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "2539",
+      "state": "NSW",
+      "street": "Princess Ave S",
+      "suburb": "Burrill Lake"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/362140930515273",
     "fee": true,
     "lga": {
       "name": "Shoalhaven City Council",
@@ -37,7 +55,9 @@
       "distance_m": 100,
       "name": "Princes Highway"
     },
-    "power": true
+    "phone": "+61244448840",
+    "power": true,
+    "website": "https://burrilllake.holidayhaven.com.au/burrill-lake"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG2G6G709HD1VRZZAXRD",
@@ -55,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

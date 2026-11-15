@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "73",
+      "postcode": "2731",
+      "state": "NSW",
+      "street": "Meninya St",
+      "suburb": "Moama"
+    },
     "lga": {
       "name": "Murray River Council",
       "osm_id": 6134295
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Meninya Street"
-    }
+    },
+    "phone": "0354809489",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-moama"
   },
   "group": "services",
   "id": "ocdb_01M66JPTC9BH6G4PQM4505D1ET",
@@ -36,7 +55,7 @@
     "lat": -36.108159,
     "lon": 144.752853
   },
-  "name": null,
+  "name": "Ampol Foodary Moama",
   "osm": {
     "id": 392713801,
     "timestamp": "2026-02-18T08:35:57Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

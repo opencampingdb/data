@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "69",
+      "postcode": "3660",
+      "state": "VIC",
+      "street": "Anzac Ave",
+      "suburb": "Seymour"
+    },
+    "facebook": "https://www.facebook.com/111566510702811",
     "lga": {
       "name": "Shire of Mitchell",
       "osm_id": 3327815
@@ -23,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Anzac Avenue"
-    }
+    },
+    "phone": "+61428000468",
+    "website": "https://www.winebysam.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPHT4A5EPD78SWX76BZ39",
@@ -32,7 +54,7 @@
     "lat": -37.028364,
     "lon": 145.142679
   },
-  "name": null,
+  "name": "Wine by Sam",
   "osm": {
     "id": 10763067276,
     "timestamp": "2025-08-15T14:43:53Z",
@@ -41,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

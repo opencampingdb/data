@@ -1,12 +1,22 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -17,6 +27,7 @@
       "suburb": "Knoxfield",
       "unit": "3"
     },
+    "facebook": "https://www.facebook.com/148916655255465",
     "lga": {
       "name": "City of Knox",
       "osm_id": 3333971
@@ -36,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 470
     },
-    "operator": "CD Motor Group"
+    "operator": "CD Motor Group",
+    "phone": "+61397533737",
+    "website": "https://www.fastlaneautomotive.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPYDB2QK5PG13J56AP3K5",
@@ -45,7 +58,7 @@
     "lat": -37.898705,
     "lon": 145.252787
   },
-  "name": null,
+  "name": "Fast Lane Automotive",
   "osm": {
     "id": 1185893205,
     "timestamp": "2024-05-09T23:24:53Z",
@@ -54,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

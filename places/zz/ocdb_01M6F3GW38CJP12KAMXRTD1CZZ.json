@@ -1,14 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "instagram": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
+    "instagram": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2460",
+      "state": "NSW",
+      "street": "Merton St",
+      "suburb": "Lawrence"
+    },
+    "facebook": "https://www.facebook.com/635122579958857",
     "fee": false,
+    "instagram": "https://www.instagram.com/lawrence_museum/",
     "lga": {
       "name": "Clarence Valley Council",
       "osm_id": 6143220
@@ -26,7 +45,8 @@
       "distance_m": 140,
       "name": "Rutland Street"
     },
-    "opening_hours": "Tu 09:00-13:00; Sa,Su 13:00-16:00; Mo,We-Fr off"
+    "opening_hours": "Tu 09:00-13:00; Sa,Su 13:00-16:00; Mo,We-Fr off",
+    "phone": "+61266477588"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW38CJP12KAMXRTD1CZZ",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

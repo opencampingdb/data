@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4655",
+      "state": "QLD",
+      "street": "Jetty St",
+      "suburb": "Hervey Bay"
+    },
+    "facebook": "https://www.facebook.com/121156224616659",
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -29,6 +45,7 @@
       "distance_m": 390,
       "name": "Boat Harbour Drive"
     },
+    "phone": "+61457054463",
     "power": true,
     "website": "https://www.caravanparkherveybay.net.au/"
   },

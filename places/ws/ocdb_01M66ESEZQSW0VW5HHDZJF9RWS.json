@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44",
+      "postcode": "6285",
+      "state": "WA",
+      "street": "Station Rd",
+      "suburb": "Margaret River"
+    },
+    "facebook": "https://www.facebook.com/772028696229103",
     "lga": {
       "name": "Shire of Augusta Margaret River",
       "osm_id": 11688657
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 4660
-    }
+    },
+    "phone": "+61897572180",
+    "website": "https://summerstar.com.au/caravan-parks/margaret-river"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZQSW0VW5HHDZJF9RWS",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

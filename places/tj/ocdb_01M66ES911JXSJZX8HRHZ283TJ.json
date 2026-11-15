@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6214",
+      "state": "WA",
+      "street": "Herron Point Road",
+      "suburb": "Birchmont"
+    },
     "lga": {
       "name": "Shire of Murray",
       "osm_id": 11690485
@@ -13,7 +27,9 @@
       "name": "Coolup",
       "osm_id": 5859930480,
       "type": "village"
-    }
+    },
+    "phone": "0895317777",
+    "website": "https://pinjarra.destinationmurray.com.au/explore-our-region/herron-point/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES911JXSJZX8HRHZ283TJ",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

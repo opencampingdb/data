@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "opening_hours": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4067",
+      "state": "QLD",
+      "street": "Building 21",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/380274188687382",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -25,7 +42,9 @@
       "distance_m": 860
     },
     "opening_hours": "Mo 11:00-17:00; Tu-We 11:00-20:00; Th-Fr 11:00-21:00",
-    "toilets": true
+    "phone": "+61733772288",
+    "toilets": true,
+    "website": "http://www.redroombar.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVK0ZYT2T4QNFDF98HTA",
@@ -43,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

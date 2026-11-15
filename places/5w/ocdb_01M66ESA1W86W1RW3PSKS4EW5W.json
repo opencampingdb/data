@@ -1,17 +1,35 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "drinking_water": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "5558",
+      "state": "SA",
+      "street": "Tossell St",
+      "suburb": "Moonta Bay"
+    },
     "caravans": true,
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/147687802092741",
     "lga": {
       "name": "Copper Coast Council",
       "osm_id": 9108139
@@ -32,7 +50,9 @@
       "distance_m": 110,
       "name": "Moonta Bay"
     },
-    "tents": true
+    "phone": "+61888252406",
+    "tents": true,
+    "website": "http://www.moontabayholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA1W86W1RW3PSKS4EW5W",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

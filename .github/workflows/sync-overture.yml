@@ -1,0 +1,238 @@
+name: Overture import
+
+# Monthly on the 28th at 20:00 UTC, after the Overture release of that month
+# (Overture publishes about once a month, in the third or fourth week). Lists
+# the releases in Overture's public bucket and takes the newest. When
+# overture/release.json already names it, the run stops there. Otherwise it
+# runs, in order:
+#   1. carries the reviewer's overture/decisions.ndjson and
+#      overture/do-not-match.json over from the last overture-sync branch
+#      (pipeline.overture_run carry), so a rebuilt branch never loses them;
+#   2. acts on those decisions (pipeline.overture_decide): rejections go on
+#      the do-not-match list and approved candidates of the allowed tiers
+#      are published;
+#   3. the Overture pull (tools/overture-pull), DuckDB over the public bucket;
+#   4. the Overture importer (pipeline.overture), a changelog run when the
+#      applied release is the one just before this one, with the geometry
+#      sidecar from the Geofabrik extract for outlines;
+# then records the release in overture/release.json and opens or updates one
+# pull request from the overture-sync branch. Auto-merge is turned on only
+# for gap fills under the OSM sync's limit (AUTO_MERGE_BELOW_PERCENT in
+# pipeline/sync.py). "Overture differs", candidates published in this run
+# and decision lines pipeline.overture_decide skipped wait for review. See pipeline/README.md, "Monthly Overture workflow".
+#
+# The branch push, the PR and the merge use a token for the opencampingdb-bot
+# GitHub App, never GITHUB_TOKEN: events caused by GITHUB_TOKEN do not start
+# other workflows, so a PR opened with it would never get its Validate check.
+# See README.md, "Repository setup".
+on:
+  schedule:
+    - cron: "0 20 28 * *"
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Overture release to run, such as 2026-10-21.0 (blank: the newest, skipped if already applied)"
+        required: false
+        default: ""
+      tiers:
+        description: "Candidate tiers whose approvals publish, such as strong (blank: every tier)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: overture-sync
+  cancel-in-progress: false
+
+env:
+  EXTRACT_URL: https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf
+  RELEASES_URL: https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/?list-type=2&prefix=release/&delimiter=/
+  USER_AGENT: OpenCampingDB-pipeline (+https://github.com/opencampingdb/data)
+
+jobs:
+  import:
+    name: Import from Overture Maps
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt -r tools/overture-pull/requirements.txt
+
+      - name: List the Overture releases
+        run: |
+          set -euo pipefail
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o "$RUNNER_TEMP/releases.xml" "$RELEASES_URL"
+
+      - name: Choose the release
+        id: plan
+        env:
+          WANTED: ${{ inputs.release }}
+        run: |
+          python -m pipeline.overture_run check --listing "$RUNNER_TEMP/releases.xml" --root . \
+            --release "$WANTED" --output "$GITHUB_OUTPUT"
+
+      - name: Download the Australia extract
+        if: steps.plan.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o australia-latest.osm.pbf "$EXTRACT_URL"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 -o australia-latest.osm.pbf.md5 "$EXTRACT_URL.md5"
+          md5sum -c australia-latest.osm.pbf.md5
+          ls -l australia-latest.osm.pbf
+
+      - name: Build the geometry sidecar
+        if: steps.plan.outputs.skip != 'true'
+        run: |
+          python -m pipeline.extract "$RUNNER_TEMP/australia-latest.osm.pbf" --out "$RUNNER_TEMP/extract.ndjson" \
+            --geometry "$RUNNER_TEMP/geometry.ndjson"
+
+      - name: Carry over the reviewer's decisions
+        if: steps.plan.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/last"
+          # The last overture-sync branch, when there is one. The reviewer
+          # wrote its decisions and rejections there.
+          if git fetch --depth=1 origin overture-sync; then
+            git show FETCH_HEAD:overture/decisions.ndjson > "$RUNNER_TEMP/last/decisions.ndjson" \
+              || rm -f "$RUNNER_TEMP/last/decisions.ndjson"
+            git show FETCH_HEAD:overture/do-not-match.json > "$RUNNER_TEMP/last/do-not-match.json" \
+              || rm -f "$RUNNER_TEMP/last/do-not-match.json"
+          fi
+          python -m pipeline.overture_run carry --decisions "$RUNNER_TEMP/last/decisions.ndjson" \
+            --do-not-match "$RUNNER_TEMP/last/do-not-match.json" --root .
+
+      - name: Act on the decisions
+        if: steps.plan.outputs.skip != 'true'
+        env:
+          TIERS: ${{ inputs.tiers }}
+        run: |
+          set -euo pipefail
+          echo '{"published": 0}' > "$RUNNER_TEMP/decided.json"
+          if [ -f overture/decisions.ndjson ]; then
+            tiers=()
+            for tier in $TIERS; do
+              tiers+=(--tier "$tier")
+            done
+            python -m pipeline.overture_decide overture/decisions.ndjson --root . --publish-candidates \
+              "${tiers[@]}" --summary "$RUNNER_TEMP/decided.json"
+          fi
+
+      - name: Pull the Overture release
+        if: steps.plan.outputs.skip != 'true'
+        env:
+          RELEASE: ${{ steps.plan.outputs.release }}
+        run: python tools/overture-pull/pull.py "$RELEASE" "$RUNNER_TEMP/overture.ndjson"
+
+      - name: Import into places/
+        if: steps.plan.outputs.skip != 'true'
+        env:
+          RELEASE: ${{ steps.plan.outputs.release }}
+          CHANGELOG: ${{ steps.plan.outputs.changelog }}
+        run: |
+          set -euo pipefail
+          changelog=()
+          if [ "$CHANGELOG" = "true" ]; then
+            changelog=(--changelog)
+          fi
+          python -m pipeline.overture "$RUNNER_TEMP/overture.ndjson" --root . \
+            --geometry "$RUNNER_TEMP/geometry.ndjson" "${changelog[@]}" \
+            --report "$RUNNER_TEMP/overture-report.md" \
+            --summary "$RUNNER_TEMP/overture-summary.json" \
+            --candidates overture/candidates.ndjson
+          python -m pipeline.overture_run applied "$RELEASE" --root .
+
+      - name: Write the PR body
+        id: body
+        if: steps.plan.outputs.skip != 'true'
+        run: |
+          python -m pipeline.overture_run body --report "$RUNNER_TEMP/overture-report.md" \
+            --summary "$RUNNER_TEMP/overture-summary.json" --decided "$RUNNER_TEMP/decided.json" \
+            --out "$RUNNER_TEMP/pr-body.md" --output "$GITHUB_OUTPUT"
+          cat "$RUNNER_TEMP/overture-report.md"
+
+      - name: Validate
+        if: steps.plan.outputs.skip != 'true'
+        run: python -m pipeline.validate --root .
+
+      - name: Create an opencampingdb-bot token
+        id: app-token
+        if: steps.plan.outputs.skip != 'true'
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.OCDB_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.OCDB_BOT_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Open or update the Overture pull request
+        if: steps.plan.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          RELEASE: ${{ steps.plan.outputs.release }}
+          AUTO_MERGE: ${{ steps.body.outputs.auto_merge }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain -- places reviews moderation overture)" ]; then
+            echo "No record, review, moderation or Overture file changed. Nothing to propose."
+            exit 0
+          fi
+
+          gh auth setup-git
+          # Commit as the App's bot user, with GitHub's no-reply address for it.
+          bot_id="$(gh api '/users/opencampingdb-bot%5Bbot%5D' --jq .id)"
+          git config user.name "opencampingdb-bot[bot]"
+          git config user.email "${bot_id}+opencampingdb-bot[bot]@users.noreply.github.com"
+
+          # The branch is rebuilt from main every run, so the PR always shows
+          # main plus this run and nothing older.
+          # Stop rather than overwrite an overture-sync PR that someone else
+          # opened from this repository.
+          other="$(gh pr list --head overture-sync --base main --state open \
+            --json number,isCrossRepository,author \
+            --jq '[.[] | select(.isCrossRepository == false and .author.login != "app/opencampingdb-bot" and .author.login != "opencampingdb-bot[bot]")][0].number // empty')"
+          if [ -n "$other" ]; then
+            echo "::error::PR #${other} uses the overture-sync branch but was not opened by the bot"
+            exit 1
+          fi
+
+          git switch -C overture-sync
+          git add -- places reviews moderation overture
+          git commit -q -m "chore(overture): gap fills from Overture $RELEASE"
+          git push --force origin HEAD:overture-sync
+
+          title="Overture import $RELEASE"
+          # Only the bot's own PR from this repository's overture-sync branch
+          # counts. A PR from a fork can use the same branch name.
+          number="$(gh pr list --head overture-sync --base main --state open \
+            --json number,isCrossRepository,author \
+            --jq '[.[] | select(.isCrossRepository == false and (.author.login == "app/opencampingdb-bot" or .author.login == "opencampingdb-bot[bot]"))][0].number // empty')"
+          if [ -z "$number" ]; then
+            url="$(gh pr create --base main --head overture-sync --title "$title" --body-file "$RUNNER_TEMP/pr-body.md")"
+            number="${url##*/}"
+          else
+            gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md"
+          fi
+
+          if [ "$AUTO_MERGE" = "true" ]; then
+            gh pr merge "$number" --auto --squash
+          else
+            # Anything but gap fills under the limit waits for a person, even
+            # if an earlier run had turned auto-merge on for this PR.
+            gh pr merge "$number" --disable-auto || true
+          fi

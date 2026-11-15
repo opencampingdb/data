@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "151",
+      "postcode": "2647",
+      "state": "NSW",
+      "street": "Melbourne St",
+      "suburb": "Mulwala"
+    },
+    "facebook": "https://www.facebook.com/1655424764727385",
     "lga": {
       "name": "Federation Council",
       "osm_id": 6232188
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Melbourne Street"
-    }
+    },
+    "phone": "+61498264750",
+    "website": "http://mgnsw.org.au/organisations/yarrawonga-mulwala-pioneer-museum/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW329SHN5Y98B6PJCDZX",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

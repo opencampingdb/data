@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "369C",
+      "postcode": "2207",
+      "state": "NSW",
+      "street": "Bexley Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/208617306414670",
     "lga": {
       "name": "Bayside Council",
       "osm_id": 7038238
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bexley Road"
-    }
+    },
+    "phone": "+61295973360",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/bexley-north/bp-bexley-north/7903"
   },
   "group": "services",
   "id": "ocdb_01M66JP365RJ66KT9X24VCQDQF",
@@ -36,7 +58,7 @@
     "lat": -33.94587,
     "lon": 151.123117
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1982717300,
     "timestamp": "2017-04-28T16:37:29Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

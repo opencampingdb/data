@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "5260",
+      "state": "SA",
+      "street": "Railway Ter",
+      "suburb": "Tailem Bend"
+    },
+    "facebook": "https://www.facebook.com/224784304539727",
     "lga": {
       "name": "Coorong District Council",
       "osm_id": 7062764
@@ -22,7 +40,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Railway Terrace"
-    }
+    },
+    "phone": "+61885724044"
   },
   "group": "services",
   "id": "ocdb_01M66JPYAJ3NVE89ECN8YW5QDN",
@@ -31,7 +50,7 @@
     "lat": -35.258056,
     "lon": 139.457848
   },
-  "name": null,
+  "name": "Jaensch's Garage",
   "osm": {
     "id": 1168250482,
     "timestamp": "2023-05-03T11:37:38Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

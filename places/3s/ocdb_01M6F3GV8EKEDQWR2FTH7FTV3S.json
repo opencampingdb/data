@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "6765",
+      "street": "Skuthorp Rd"
+    },
+    "facebook": "https://www.facebook.com/1060003590824818",
     "lga": {
       "name": "Shire of Derby-West Kimberley",
       "osm_id": 11690291
@@ -13,7 +29,9 @@
       "name": "Fitzroy Crossing",
       "osm_id": 3806574898,
       "type": "town"
-    }
+    },
+    "phone": "+61891915080",
+    "website": "http://www.crossinginn.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV8EKEDQWR2FTH7FTV3S",
@@ -31,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6746",
+      "postcode": "3264",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Terang"
+    },
+    "facebook": "https://www.facebook.com/116109478559698",
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61355921260",
+    "website": "http://www.terangmotorinn.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVTXWWV808246WV5KKTT",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

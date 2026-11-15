@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4885",
+      "street": "Peeramon Rd",
+      "suburb": "Tablelands Regional"
+    },
+    "facebook": "https://www.facebook.com/164304462274",
     "lga": {
       "name": "Tablelands Regional",
       "osm_id": 11677293
@@ -13,7 +29,9 @@
       "name": "Peeramon",
       "osm_id": 1522559940,
       "type": "village"
-    }
+    },
+    "phone": "+61740965873",
+    "website": "http://peeramon-hotel.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVQNBRGMS7MJZ3XQCBSM",
@@ -31,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

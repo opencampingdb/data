@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "144",
+      "postcode": "3392",
+      "state": "VIC",
+      "street": "Scott St",
+      "suburb": "Warracknabeal"
+    },
     "lga": {
       "name": "Shire of Yarriambiack",
       "osm_id": 3345545
@@ -22,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "C234"
-    }
+    },
+    "website": "http://www.royalmail.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVTSJWWFXFQRC5CN182R",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "2564",
+      "state": "NSW",
+      "street": "Victoria Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/218749145392372",
     "lga": {
       "name": "Campbelltown City Council",
       "osm_id": 6290704
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Harold Street"
-    }
+    },
+    "phone": "+61296182685",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/macquarie-fields/bp-macquarie-fields/2272"
   },
   "group": "services",
   "id": "ocdb_01M66JPPFG3Q3P8S8KFPAZJZK1",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

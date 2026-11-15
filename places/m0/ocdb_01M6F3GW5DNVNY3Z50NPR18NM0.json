@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "103",
+      "postcode": "4807",
+      "state": "QLD",
+      "street": "Queen St",
+      "suburb": "Ayr"
+    },
+    "facebook": "https://www.facebook.com/115809488473623",
     "lga": {
       "name": "Burdekin Shire",
       "osm_id": 11677016
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Edwards Street"
-    }
+    },
+    "phone": "+61747832202",
+    "website": "http://www.queenshotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW5DNVNY3Z50NPR18NM0",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

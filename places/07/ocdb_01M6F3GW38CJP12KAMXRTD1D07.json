@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "71",
+      "postcode": "2347",
+      "state": "NSW",
+      "street": "Queen St",
+      "suburb": "Barraba"
+    },
+    "facebook": "https://www.facebook.com/155875634610847",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -20,7 +38,9 @@
       "distance_m": 20,
       "name": "Queen Street"
     },
-    "operator": "Barraba Historical Society"
+    "operator": "Barraba Historical Society",
+    "phone": "+61267821212",
+    "website": "http://www.aumuseums.com/nsw/northern-rivers/nandewar-historical-society-museum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW38CJP12KAMXRTD1D07",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

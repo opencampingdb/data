@@ -1,23 +1,38 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "4873",
+      "state": "QLD",
+      "street": "Dagmar St",
+      "suburb": "Daintree"
+    },
     "cabins": false,
     "caravans": true,
     "drinking_water": true,
     "dump_station": false,
+    "facebook": "https://www.facebook.com/109063045282430",
     "fee": true,
     "lga": {
       "name": "Douglas Shire",
@@ -32,6 +47,7 @@
     "nearest_boat_ramp": {
       "distance_m": 480
     },
+    "phone": "+61424368390",
     "power": false,
     "showers": false,
     "tents": true,
@@ -53,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

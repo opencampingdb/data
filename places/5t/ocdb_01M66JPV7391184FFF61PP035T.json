@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4211",
+      "state": "QLD",
+      "street": "Spencer Rd",
+      "suburb": "Gold Coast"
+    },
+    "facebook": "https://www.facebook.com/102045278075837",
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Railway Parade"
-    }
+    },
+    "phone": "+61423275110",
+    "website": "http://www.neumannpetroleum.com.au/?search=qld&page=7&id=46"
   },
   "group": "services",
   "id": "ocdb_01M66JPV7391184FFF61PP035T",
@@ -31,7 +53,7 @@
     "lat": -27.997118,
     "lon": 153.340671
   },
-  "name": null,
+  "name": "Metro Petroleum Nerang",
   "osm": {
     "id": 523107166,
     "timestamp": "2017-09-09T23:13:52Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

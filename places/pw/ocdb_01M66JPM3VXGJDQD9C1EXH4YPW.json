@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "134",
+      "postcode": "3585",
+      "state": "VIC",
+      "street": "Curlewis St",
+      "suburb": "Swan Hill"
+    },
+    "facebook": "https://www.facebook.com/644156349005505",
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Curlewis Street"
-    }
+    },
+    "phone": "+61350330053",
+    "website": "https://www.cordinasmechanical4x4.com.au/contact-us"
   },
   "group": "services",
   "id": "ocdb_01M66JPM3VXGJDQD9C1EXH4YPW",
@@ -31,7 +53,7 @@
     "lat": -35.340894,
     "lon": 143.561049
   },
-  "name": null,
+  "name": "Cordina's Mechanical & 4x4",
   "osm": {
     "id": 12073677332,
     "timestamp": "2024-07-25T15:04:44Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3758",
+      "state": "VIC",
+      "street": "Broadhurst Ln",
+      "suburb": "Wandong"
+    },
+    "facebook": "https://www.facebook.com/947414822022355",
     "lga": {
       "name": "Shire of Mitchell",
       "osm_id": 3327815
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wandong Road"
-    }
+    },
+    "phone": "+61357871401"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX73RQMN2B4TV7QWYTG7",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

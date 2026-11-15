@@ -1,13 +1,26 @@
 {
   "fact_dates": {
-    "fee": "2026-02-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2026-02-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3678/285",
+      "postcode": "3678",
+      "street": "Markwood-Everton Rd",
+      "suburb": "Rural City of Wangaratta"
+    },
+    "facebook": "https://www.facebook.com/152075188300586",
     "fee": false,
     "lga": {
       "name": "Rural City of Wangaratta",
@@ -18,7 +31,8 @@
       "name": "Everton",
       "osm_id": 669944036,
       "type": "village"
-    }
+    },
+    "phone": "+611800801065"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9W2DKXSJEZ0MEGJNYM6",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

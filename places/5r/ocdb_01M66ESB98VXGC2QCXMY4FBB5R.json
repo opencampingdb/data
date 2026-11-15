@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2269",
+      "postcode": "6521",
+      "state": "WA",
+      "street": "Wongonderrah Rd",
+      "suburb": "Nambung"
+    },
+    "facebook": "https://www.facebook.com/245293492344823",
     "lga": {
       "name": "Shire of Dandaragan",
       "osm_id": 11689595
@@ -15,7 +33,9 @@
       "osm_id": 222635897,
       "type": "village"
     },
-    "power": false
+    "phone": "+61896524048",
+    "power": false,
+    "website": "https://www.nambungstation.com.au/nambung-station-stay-and-caravan-park/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB98VXGC2QCXMY4FBB5R",
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "39",
+      "postcode": "3419",
+      "state": "VIC",
+      "street": "Commercial St",
+      "suburb": "Kaniva"
+    },
+    "facebook": "https://www.facebook.com/102038858828938",
     "lga": {
       "name": "Shire of West Wimmera",
       "osm_id": 3345520
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Commercial Street West"
-    }
+    },
+    "phone": "+61404721288",
+    "website": "https://www.kaniva.org/commercial-hotel.html"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZBB653XM91KYNT6HDGG",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

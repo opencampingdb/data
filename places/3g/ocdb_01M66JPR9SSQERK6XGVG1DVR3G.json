@@ -1,14 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "206-212",
+      "postcode": "3076",
+      "state": "VIC",
+      "street": "Cooper St",
+      "suburb": "Epping"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -32,7 +45,8 @@
     },
     "operator": "Ampol",
     "phone": "+61 3 9408 8588",
-    "toilets": false
+    "toilets": false,
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-epping"
   },
   "group": "services",
   "id": "ocdb_01M66JPR9SSQERK6XGVG1DVR3G",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

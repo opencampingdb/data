@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -10,6 +18,7 @@
       "street": "Coronation Avenue",
       "suburb": "Bright"
     },
+    "facebook": "https://www.facebook.com/796471973842016",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -19,7 +28,9 @@
       "name": "Bright",
       "osm_id": 34114869,
       "type": "town"
-    }
+    },
+    "phone": "+61418528631",
+    "website": "http://www.campcrusty.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYXD97SXFY4AD5YJ0WM",
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

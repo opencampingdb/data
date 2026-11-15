@@ -1,12 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4170",
+      "state": "QLD",
+      "street": "Cnr Wynnum and Junction Rds",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/966581440122914",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -25,7 +44,9 @@
     },
     "nearest_major_road": {
       "distance_m": 40
-    }
+    },
+    "phone": "+61732179853",
+    "website": "https://www.ultratune.com.au/location/morningside/"
   },
   "group": "services",
   "id": "ocdb_01M66JP7NYEB0D78JEEEKEWYKR",
@@ -34,7 +55,7 @@
     "lat": -27.466374,
     "lon": 153.078229
   },
-  "name": null,
+  "name": "Ultra Tune Morningside",
   "osm": {
     "id": 4324921748,
     "timestamp": "2016-07-28T09:55:09Z",
@@ -43,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

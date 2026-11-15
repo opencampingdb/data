@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "155-165",
+      "postcode": "2712",
+      "state": "NSW",
+      "street": "Chanter St",
+      "suburb": "Berrigan"
+    },
     "lga": {
       "name": "Berrigan Shire Council",
       "osm_id": 6230406
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Chanter Street"
-    }
+    },
+    "phone": "0407066750",
+    "website": "https://locations.ampol.com.au/en/ampol-berrigan"
   },
   "group": "services",
   "id": "ocdb_01M66JPAWKEGYCHSFP7HCBP4K5",
@@ -27,7 +46,7 @@
     "lat": -35.655971,
     "lon": 145.80124
   },
-  "name": null,
+  "name": "Ampol Berrigan",
   "osm": {
     "id": 5939923046,
     "timestamp": "2018-09-30T01:19:21Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "26",
+      "postcode": "4802",
+      "state": "QLD",
+      "street": "William Murray Dr",
+      "suburb": "Cannonvale"
+    },
+    "facebook": "https://www.facebook.com/1848761208783872",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Shute Harbour Road"
-    }
+    },
+    "phone": "+61478201845",
+    "website": "http://www.cannonvaleautorepairs.repcoservice.net/"
   },
   "group": "services",
   "id": "ocdb_01M66JPHVBE1CRQQWASHEZ0EXA",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

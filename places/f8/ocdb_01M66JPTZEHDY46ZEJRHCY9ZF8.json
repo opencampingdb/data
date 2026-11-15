@@ -1,16 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "403",
+      "postcode": "2194",
+      "state": "NSW",
+      "street": "Canterbury Rd",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/1730628723887732",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -37,7 +55,9 @@
       "name": "Canterbury Road"
     },
     "opening_hours": "24/7",
-    "operator": "Budget Petrol"
+    "operator": "Budget Petrol",
+    "phone": "+61297891080",
+    "website": "http://budgetpetrol.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPTZEHDY46ZEJRHCY9ZF8",
@@ -55,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

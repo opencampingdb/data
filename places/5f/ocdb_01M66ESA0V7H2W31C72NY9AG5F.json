@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2476",
+      "state": "NSW",
+      "street": "Koreelah Gorge Track",
+      "suburb": "Koreelah"
+    },
     "lga": {
       "name": "Tenterfield Shire Council",
       "osm_id": 6163155
@@ -13,7 +27,9 @@
       "name": "Old Koreelah",
       "osm_id": 114632812,
       "type": "village"
-    }
+    },
+    "phone": "0266320000",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/koreelah-creek-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA0V7H2W31C72NY9AG5F",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

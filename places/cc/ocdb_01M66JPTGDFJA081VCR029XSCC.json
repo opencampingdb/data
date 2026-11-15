@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1045",
+      "postcode": "3912",
+      "state": "VIC",
+      "street": "Frankston - Flinders Road",
+      "suburb": "Somerville"
+    },
     "lga": {
       "name": "Shire of Mornington Peninsula",
       "osm_id": 3333281
@@ -20,6 +33,7 @@
       "distance_m": 30,
       "name": "Frankston-Flinders Road"
     },
+    "phone": "+61 3 5911 7204",
     "website": "https://www.colesexpress.com.au/"
   },
   "group": "services",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

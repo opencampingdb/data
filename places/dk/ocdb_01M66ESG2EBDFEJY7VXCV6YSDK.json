@@ -1,13 +1,21 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -15,9 +23,16 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "6790",
+      "postcode": "2795",
+      "street": "Abercrombie Rd",
+      "suburb": "Oberon Council"
+    },
     "caravans": true,
     "charge": "Booking Fee Only",
     "entry": "public",
+    "facebook": "https://www.facebook.com/242736912728909",
     "fee": true,
     "lga": {
       "name": "Oberon Council",
@@ -34,6 +49,7 @@
       "distance_m": 200,
       "name": "Abercrombie Road"
     },
+    "phone": "+61263361972",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -56,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

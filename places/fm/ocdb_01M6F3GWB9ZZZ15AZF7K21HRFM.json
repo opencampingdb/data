@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "23",
+      "postcode": "4680",
+      "state": "QLD",
+      "street": "Coon St",
+      "suburb": "Gladstone"
+    },
+    "facebook": "https://www.facebook.com/156307991795022",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Toolooa Street"
-    }
+    },
+    "phone": "+61749724222",
+    "website": "http://www.harbour-viewmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWB9ZZZ15AZF7K21HRFM",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

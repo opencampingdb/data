@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "305",
+      "postcode": "4059",
+      "state": "QLD",
+      "street": "Kelvin Grove Rd",
+      "suburb": "Kelvin Grove"
+    },
     "air": true,
     "lga": {
       "name": "City of Brisbane",
@@ -31,7 +46,9 @@
       "distance_m": 20,
       "name": "Kelvin Grove Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "+61 7 3356 8830",
+    "website": "https://find.shell.com/au/fuel/10111559-shell-kelvin-grove/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPR5EZJW4P9V4S2FX17PM",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

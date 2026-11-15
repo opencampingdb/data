@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76-78",
+      "postcode": "4701",
+      "state": "QLD",
+      "street": "Glenmore Road",
+      "suburb": "Park Avenue"
+    },
     "air": true,
     "lga": {
       "name": "Rockhampton Regional",
@@ -19,7 +34,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1280
-    }
+    },
+    "phone": "+61 7 4819 0007",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/park-avenue/bp-glenmore-road/7730"
   },
   "group": "services",
   "id": "ocdb_01M66JPPWG9BX0SKTCHYZVJKCZ",
@@ -37,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

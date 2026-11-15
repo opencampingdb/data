@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "lot 500",
+      "postcode": "6639",
+      "state": "WA",
+      "street": "Irvine St",
+      "suburb": "Sandstone"
+    },
+    "facebook": "https://www.facebook.com/1067048730084397",
     "fee": true,
     "lga": {
       "name": "Shire of Sandstone",
@@ -20,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Mount Magnet Leinster Road"
-    }
+    },
+    "phone": "+61899635859"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF4XYD3AEQXVN7VD9JCK",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

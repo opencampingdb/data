@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "5280",
+      "state": "SA",
+      "street": "George St",
+      "suburb": "Millicent"
+    },
+    "facebook": "https://www.facebook.com/602979646401151",
     "lga": {
       "name": "Wattle Range Council",
       "osm_id": 3795329
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "George Street"
-    }
+    },
+    "phone": "+61887332888",
+    "website": "http://www.somerset-hotel-motel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVTE4VS8N0ZNYHRPPDMH",
@@ -31,7 +53,7 @@
     "lat": -37.594298,
     "lon": 140.351377
   },
-  "name": null,
+  "name": "Somerset Hotel Motel",
   "osm": {
     "id": 2891495780,
     "timestamp": "2014-05-31T13:59:03Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

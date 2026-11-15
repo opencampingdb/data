@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "entry": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4821",
+      "state": "QLD",
+      "street": "Stansfield St",
+      "suburb": "Hughenden"
+    },
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1470587493023821",
     "lga": {
       "name": "Flinders Shire",
       "osm_id": 11676765
@@ -25,7 +41,8 @@
     "nearest_boat_ramp": {
       "distance_m": 980
     },
-    "operator": "Flinders Shire Council"
+    "operator": "Flinders Shire Council",
+    "phone": "+61747412900"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA0ATZXBA0W2BQTD3JP2",
@@ -43,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

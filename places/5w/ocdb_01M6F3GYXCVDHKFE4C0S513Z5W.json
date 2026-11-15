@@ -1,10 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "instagram": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
+    "instagram": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "34",
+      "postcode": "5244",
+      "state": "SA",
+      "street": "Onkaparinga Valley Rd",
+      "suburb": "Woodside"
+    },
+    "facebook": "https://www.facebook.com/437549233030162",
+    "instagram": "https://www.instagram.com/thewoodsidehotel/",
     "lga": {
       "name": "Adelaide Hills Council",
       "osm_id": 9105845
@@ -18,7 +37,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Onkaparinga Valley Scenic Drive"
-    }
+    },
+    "phone": "+61883897140"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYXCVDHKFE4C0S513Z5W",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

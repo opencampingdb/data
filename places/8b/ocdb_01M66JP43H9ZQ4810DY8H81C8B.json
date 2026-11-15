@@ -1,16 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "127",
+      "postcode": "2232",
+      "state": "NSW",
+      "street": "Loftus Avenue",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/2166918086918740",
     "lga": {
       "name": "Sutherland Shire Council",
       "osm_id": 6206752
@@ -32,6 +48,7 @@
       "name": "Rawson Avenue"
     },
     "opening_hours": "24/7",
+    "phone": "+61295215017",
     "website": "https://map.bp.com/en-AU/AU/gas-station/loftus/bp-loftus/0899"
   },
   "group": "services",
@@ -50,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

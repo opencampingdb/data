@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "108-110",
+      "postcode": "2487",
+      "state": "NSW",
+      "street": "Chinderah Bay Dr",
+      "suburb": "Chinderah"
+    },
+    "facebook": "https://www.facebook.com/460190680759162",
     "lga": {
       "name": "Tweed Shire Council",
       "osm_id": 6170302
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Chinderah Bay Drive"
-    }
+    },
+    "phone": "+61266741660",
+    "website": "http://www.chinderahmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWQWW137AAY8KA2CNH01",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

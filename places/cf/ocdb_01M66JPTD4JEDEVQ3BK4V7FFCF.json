@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "150",
+      "postcode": "4215",
+      "state": "QLD",
+      "street": "Brisbane Rd",
+      "suburb": "Labrador North"
+    },
     "fuel": true,
     "lga": {
       "name": "Gold Coast City",
@@ -27,7 +44,9 @@
     },
     "nearest_major_road": {
       "distance_m": 40
-    }
+    },
+    "phone": "0755371744",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-labrador-north"
   },
   "group": "services",
   "id": "ocdb_01M66JPTD4JEDEVQ3BK4V7FFCF",
@@ -36,7 +55,7 @@
     "lat": -27.935046,
     "lon": 153.390888
   },
-  "name": null,
+  "name": "Ampol Foodary Labrador North",
   "osm": {
     "id": 396380919,
     "timestamp": "2021-06-27T05:50:57Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

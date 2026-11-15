@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "24-34",
+      "postcode": "4133",
+      "state": "QLD",
+      "street": "Albert St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/248953115199999",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Albert Street"
-    }
+    },
+    "phone": "+61730517640",
+    "website": "https://fitzyswaterford.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV8M3W2Z8H2JADZTZJEB",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

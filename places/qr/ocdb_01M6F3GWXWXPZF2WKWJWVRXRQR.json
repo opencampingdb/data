@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "4558",
+      "state": "QLD",
+      "street": "Beach Rd",
+      "suburb": "Maroochydore"
+    },
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -27,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Beach Road"
-    }
+    },
+    "phone": "(07) 5443 1245",
+    "website": "http://www.topspotmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWXWXPZF2WKWJWVRXRQR",
@@ -51,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

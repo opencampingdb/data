@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9-11",
+      "postcode": "2550",
+      "state": "NSW",
+      "street": "Sharpe St",
+      "suburb": "Candelo"
+    },
+    "facebook": "https://www.facebook.com/331747827390830",
     "lga": {
       "name": "Bega Valley Shire Council",
       "osm_id": 6239664
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Sharpe Street"
-    }
+    },
+    "phone": "+61264932214"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVRTKRPJBD5YNMP66KCN",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

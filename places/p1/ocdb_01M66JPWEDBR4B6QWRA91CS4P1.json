@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18/30",
+      "postcode": "2337",
+      "state": "NSW",
+      "street": "Kelly St",
+      "suburb": "Scone"
+    },
+    "facebook": "https://www.facebook.com/778157482537859",
     "lga": {
       "name": "Upper Hunter Shire Council",
       "osm_id": 6186848
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Kelly Street"
-    }
+    },
+    "phone": "+61265451373"
   },
   "group": "services",
   "id": "ocdb_01M66JPWEDBR4B6QWRA91CS4P1",
@@ -27,7 +46,7 @@
     "lat": -32.040298,
     "lon": 150.865389
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 790618242,
     "timestamp": "2020-04-11T02:07:12Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

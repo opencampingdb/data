@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4873",
+      "state": "QLD",
+      "street": "Mossman Daintree Rd",
+      "suburb": "Wonga Beach"
+    },
+    "facebook": "https://www.facebook.com/1579730942323491",
     "lga": {
       "name": "Douglas Shire",
       "osm_id": 11677495
@@ -20,7 +35,8 @@
       "distance_m": 30,
       "name": "Mossman Daintree Road"
     },
-    "opening_hours": "05:30-20:00"
+    "opening_hours": "05:30-20:00",
+    "phone": "+61740987616"
   },
   "group": "services",
   "id": "ocdb_01M66JPSECSRBV5QJ2QAEYMJNK",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

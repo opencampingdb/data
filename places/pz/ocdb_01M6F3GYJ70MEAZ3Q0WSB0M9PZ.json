@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "postcode": "4670",
       "street": "Quay Street"
     },
+    "facebook": "https://www.facebook.com/130965883637849",
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -28,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Tantitha Street"
-    }
+    },
+    "phone": "+61735583318",
+    "website": "http://www.oldbundy.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYJ70MEAZ3Q0WSB0M9PZ",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

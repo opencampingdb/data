@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "48",
+      "postcode": "6107",
+      "state": "WA",
+      "street": "Courtney Pl",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/104095962215017",
     "lga": {
       "name": "City of Kalamunda",
       "osm_id": 11689431
@@ -23,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Logistics Boulevard"
-    }
+    },
+    "phone": "+61883339777",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/wattle-grove/bp-kenwick/9030"
   },
   "group": "services",
   "id": "ocdb_01M66JPXY37A0WDXJS442KY9M4",
@@ -32,7 +54,7 @@
     "lat": -32.006066,
     "lon": 115.980385
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1096960058,
     "timestamp": "2026-07-02T09:40:24Z",
@@ -41,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

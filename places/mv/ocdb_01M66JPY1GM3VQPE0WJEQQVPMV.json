@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "73-87",
+      "postcode": "2880",
+      "state": "NSW",
+      "street": "Oxide St Cnr Beryl St",
+      "suburb": "Broken Hill"
+    },
     "lga": {
       "name": "Broken Hill City Council",
       "osm_id": 5892296
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Iodide Street"
-    }
+    },
+    "phone": "0880871517",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-broken-hill"
   },
   "group": "services",
   "id": "ocdb_01M66JPY1GM3VQPE0WJEQQVPMV",
@@ -27,7 +46,7 @@
     "lat": -31.955142,
     "lon": 141.465786
   },
-  "name": null,
+  "name": "Ampol Foodary Broken Hill",
   "osm": {
     "id": 1111001546,
     "timestamp": "2025-08-24T03:13:22Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

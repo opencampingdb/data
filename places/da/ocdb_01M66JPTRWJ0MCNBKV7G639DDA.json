@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "267-283",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Kangaroo Flat"
+    },
     "air": false,
     "lga": {
       "name": "City of Greater Bendigo",
@@ -20,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "High Street"
-    }
+    },
+    "phone": "(03) 5447 9352",
+    "website": "https://eg-australia.com"
   },
   "group": "services",
   "id": "ocdb_01M66JPTRWJ0MCNBKV7G639DDA",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

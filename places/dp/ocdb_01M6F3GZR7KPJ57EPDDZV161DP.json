@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "158",
+      "postcode": "2710",
+      "state": "NSW",
+      "street": "Hardinge St",
+      "suburb": "Deniliquin"
+    },
+    "facebook": "https://www.facebook.com/100719814798061",
     "lga": {
       "name": "Edward River Council",
       "osm_id": 6139012
@@ -28,7 +46,9 @@
       "distance_m": 60,
       "name": "Hardinge Street"
     },
-    "operator": "Purtills"
+    "operator": "Purtills",
+    "phone": "+611300333768",
+    "website": "http://www.depotdeni.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZR7KPJ57EPDDZV161DP",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

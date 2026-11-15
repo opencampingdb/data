@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2330",
+      "state": "NSW",
+      "street": "Mount Royal Road",
+      "suburb": "Mount Royal"
+    },
     "lga": {
       "name": "Singleton Council",
       "osm_id": 6191883
@@ -17,7 +31,9 @@
       "type": "village"
     },
     "operator": "NSW National Parks and Wildlife Service",
-    "tents": true
+    "phone": "0265745555",
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/youngville-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFJXM7BE07WM8A0ZNR6H",
@@ -35,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

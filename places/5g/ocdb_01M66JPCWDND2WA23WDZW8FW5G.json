@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35/37",
+      "postcode": "2847",
+      "state": "NSW",
+      "street": "Willewa Street",
+      "suburb": "Portland"
+    },
     "lga": {
       "name": "Lithgow City Council",
       "osm_id": 6299566
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Cullen Street"
-    }
+    },
+    "phone": "(02) 6355 4094",
+    "website": "https://www.bp.com/en_au/australia/home.html"
   },
   "group": "services",
   "id": "ocdb_01M66JPCWDND2WA23WDZW8FW5G",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

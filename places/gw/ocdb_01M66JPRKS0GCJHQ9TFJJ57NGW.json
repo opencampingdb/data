@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "4753",
+      "state": "QLD",
+      "street": "Anzac Ave",
+      "suburb": "Marian"
+    },
+    "facebook": "https://www.facebook.com/526322174184740",
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mackay Eungella Road"
-    }
+    },
+    "phone": "+61749544299"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRKS0GCJHQ9TFJJ57NGW",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

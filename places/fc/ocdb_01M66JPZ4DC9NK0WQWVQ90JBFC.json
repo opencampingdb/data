@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "2046",
+      "state": "NSW",
+      "street": "Regatta Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/209802992372818",
     "lga": {
       "name": "City of Canada Bay Council",
       "osm_id": 6217271
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Queens Road"
-    }
+    },
+    "phone": "+61297453173",
+    "website": "http://www.cianomotors.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ4DC9NK0WQWVQ90JBFC",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

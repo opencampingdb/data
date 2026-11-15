@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "3887",
+      "state": "VIC",
+      "street": "Bridge St",
+      "suburb": "Nowa Nowa"
+    },
+    "facebook": "https://www.facebook.com/2125000884413089",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Bruthen - Nowa Nowa Road"
-    }
+    },
+    "phone": "+61423545318",
+    "website": "http://nowanowacaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFNCP4FJ9C1PQK60A48W",
@@ -31,7 +53,7 @@
     "lat": -37.729972,
     "lon": 148.091922
   },
-  "name": null,
+  "name": "Nowa Nowa Camping and Caravan Park",
   "osm": {
     "id": 854889747,
     "timestamp": "2021-01-12T13:06:40Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

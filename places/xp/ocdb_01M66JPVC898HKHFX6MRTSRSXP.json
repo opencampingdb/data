@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "41",
+      "postcode": "5113",
+      "state": "SA",
+      "street": "Peachey Road",
+      "suburb": "Davoren Park"
+    },
     "car_wash": true,
     "lga": {
       "name": "City of Playford",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Peachey Road"
-    }
+    },
+    "phone": "0882524068"
   },
   "group": "services",
   "id": "ocdb_01M66JPVC898HKHFX6MRTSRSXP",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

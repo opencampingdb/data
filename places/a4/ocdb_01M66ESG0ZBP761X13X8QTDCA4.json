@@ -1,21 +1,30 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
+    "facebook": "https://www.facebook.com/101234601388979",
     "fee": true,
     "lga": {
       "name": "City of Onkaparinga",
@@ -27,10 +36,12 @@
       "osm_id": 5674778781,
       "type": "village"
     },
+    "phone": "+61885520300",
     "power": false,
     "showers": false,
     "tents": true,
     "toilets": true,
+    "website": "https://www.parks.sa.gov.au/parks/onkaparinga-river-national-park",
     "wifi": false
   },
   "group": "overnight",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

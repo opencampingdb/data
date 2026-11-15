@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "7469",
+      "state": "TAS",
+      "street": "Main St",
+      "suburb": "Zeehan"
+    },
+    "facebook": "https://www.facebook.com/180408445152658",
     "lga": {
       "name": "West Coast",
       "osm_id": 10594916
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61364716665"
   },
   "group": "services",
   "id": "ocdb_01M66JPTRY9JF6V3W97Z0H15ND",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

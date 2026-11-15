@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2806",
+      "state": "NSW",
+      "street": "Terrara Creek Firetrail",
+      "suburb": "Eugowra"
+    },
     "lga": {
       "name": "Cabonne Council",
       "osm_id": 6268804
@@ -16,8 +30,10 @@
       "osm_id": 81312484,
       "type": "town"
     },
+    "phone": "1300072757",
     "showers": false,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/terarra-creek-camping-and-picnic-area"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAJDAXWCMXJE3Y33HW4X",
@@ -35,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

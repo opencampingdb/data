@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "7209",
+      "state": "TAS",
+      "street": "Portugal St",
+      "suburb": "Ross"
+    },
+    "facebook": "https://www.facebook.com/402082513150625",
     "fee": false,
     "lga": {
       "name": "Northern Midlands",
@@ -22,7 +40,9 @@
       "distance_m": 300,
       "name": "Church Street"
     },
-    "opening_hours": "Mo-Fr 09:30-16:00; Sa,Su 10:00-16:00"
+    "opening_hours": "Mo-Fr 09:30-16:00; Sa,Su 10:00-16:00",
+    "phone": "+61363815466",
+    "website": "http://www.parks.tas.gov.au/index.aspx?base=2770"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYK5BHDDEN7H5FWW2P8S",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "instagram": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "x": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
+    "instagram": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "x": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6031",
+      "state": "WA",
+      "street": "Wanneroo Rd.",
+      "suburb": "Neerabup"
+    },
+    "facebook": "https://www.facebook.com/1561192677517285",
+    "instagram": "https://www.instagram.com/pumaenergyglobal/",
     "lga": {
       "name": "City of Wanneroo",
       "osm_id": 11689642
@@ -28,7 +48,9 @@
       "distance_m": 60,
       "name": "Wanneroo Road"
     },
-    "operator": "Puma"
+    "operator": "Puma",
+    "phone": "(08) 9407 5053",
+    "x": "https://x.com/onthegopuma"
   },
   "group": "services",
   "id": "ocdb_01M66JP0ZRST76XZPZAS4DYK80",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

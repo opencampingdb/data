@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "3722",
+      "state": "VIC",
+      "street": "Timothy Ln",
+      "suburb": "Mansfield"
+    },
+    "facebook": "https://www.facebook.com/103149322138030",
     "lga": {
       "name": "Shire of Mansfield",
       "osm_id": 3350291
@@ -20,7 +38,9 @@
       "distance_m": 170,
       "name": "Mount Buller Road"
     },
-    "tents": true
+    "phone": "+61357751383",
+    "tents": true,
+    "website": "https://www.mansfieldholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESERXAV5PBQ8BDVJ78JN9",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

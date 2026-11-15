@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "100",
+      "postcode": "2820",
+      "state": "NSW",
+      "street": "Arthur St",
+      "suburb": "Wellington"
+    },
+    "facebook": "https://www.facebook.com/423418087811927",
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Arthur Street"
-    }
+    },
+    "phone": "+61268452914"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV8ZME4KTVXS9A6XFHVV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

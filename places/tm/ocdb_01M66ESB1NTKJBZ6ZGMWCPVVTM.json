@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "drinking_water": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -12,8 +20,16 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "515",
+      "postcode": "2483",
+      "state": "NSW",
+      "street": "Wooyung Rd",
+      "suburb": "Wooyung"
+    },
     "caravans": true,
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/188837947821061",
     "lga": {
       "name": "Tweed Shire Council",
       "osm_id": 6170302
@@ -27,6 +43,7 @@
     "nearest_beach": {
       "distance_m": 170
     },
+    "phone": "+61266771300",
     "power": true,
     "showers": true,
     "tents": true,

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "86",
+      "postcode": "4305",
+      "state": "QLD",
+      "street": "Warwick Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1735510076683128",
     "lga": {
       "name": "Ipswich City",
       "osm_id": 11675604
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Warwick Road"
-    }
+    },
+    "phone": "+61732812633",
+    "website": "http://www.ipswichcitymotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYBB6V3D2F9QVDT08BHP",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

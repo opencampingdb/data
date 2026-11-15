@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "2577",
+      "state": "NSW",
+      "street": "Moss Vale Rd",
+      "suburb": "Kangaroo Valley"
+    },
+    "facebook": "https://www.facebook.com/1431519667068111",
     "lga": {
       "name": "Shoalhaven City Council",
       "osm_id": 6311648
@@ -25,7 +43,9 @@
       "distance_m": 40,
       "name": "Moss Vale Road"
     },
-    "toilets": true
+    "phone": "+61244061900",
+    "toilets": true,
+    "website": "http://holidayhaven.com.au/kangaroovalley"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAXP74SW7TBVJV6YQ2B1",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

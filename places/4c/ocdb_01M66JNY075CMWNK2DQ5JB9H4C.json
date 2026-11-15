@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "33",
+      "postcode": "5453",
+      "state": "SA",
+      "street": "Craig Hill Rd",
+      "suburb": "Stanley Flat"
+    },
+    "facebook": "https://www.facebook.com/302244369904791",
     "lga": {
       "name": "Clare and Gilbert Valleys Council",
       "osm_id": 9108116
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Horrocks Highway"
-    }
+    },
+    "phone": "+61888422261",
+    "website": "http://www.jimbarry.com"
   },
   "group": "attraction",
   "id": "ocdb_01M66JNY075CMWNK2DQ5JB9H4C",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

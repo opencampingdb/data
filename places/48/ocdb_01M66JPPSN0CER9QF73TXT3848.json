@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "88",
+      "postcode": "4659",
+      "state": "QLD",
+      "street": "William St",
+      "suburb": "Howard"
+    },
+    "facebook": "https://www.facebook.com/254492017741766",
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -13,7 +31,9 @@
       "name": "Howard",
       "osm_id": 1686562537,
       "type": "town"
-    }
+    },
+    "phone": "+61741294813",
+    "website": "https://www.howardmotorrepairs.repcoservice.net/"
   },
   "group": "services",
   "id": "ocdb_01M66JPPSN0CER9QF73TXT3848",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

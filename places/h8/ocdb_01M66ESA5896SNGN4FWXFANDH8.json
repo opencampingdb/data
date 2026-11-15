@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6284",
+      "state": "WA",
+      "street": "Caves Rd",
+      "suburb": "Gracetown"
+    },
+    "facebook": "https://www.facebook.com/155342567867759",
     "lga": {
       "name": "Shire of Augusta Margaret River",
       "osm_id": 11688657
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Caves Road"
-    }
+    },
+    "phone": "+61897555301",
+    "website": "http://www.gracetowncaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA5896SNGN4FWXFANDH8",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

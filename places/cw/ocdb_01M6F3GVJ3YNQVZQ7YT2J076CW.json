@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "49",
+      "postcode": "5231",
+      "state": "SA",
+      "street": "Scott Street",
+      "suburb": "Kersbrook"
+    },
     "lga": {
       "name": "Adelaide Hills Council",
       "osm_id": 9105845
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Scott Street"
-    }
+    },
+    "phone": "0874810001",
+    "website": "https://maidstonehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJ3YNQVZQ7YT2J076CW",
@@ -27,7 +46,7 @@
     "lat": -34.780016,
     "lon": 138.854634
   },
-  "name": null,
+  "name": "Maidstone Hotel at Kersbrook",
   "osm": {
     "id": 1859676337,
     "timestamp": "2012-08-10T03:14:11Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

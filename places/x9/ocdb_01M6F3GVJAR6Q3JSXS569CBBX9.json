@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "3892",
+      "state": "VIC",
+      "street": "Maurice Ave",
+      "suburb": "Mallacoota"
+    },
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Maurice Avenue"
-    }
+    },
+    "phone": "(03) 5158 0432",
+    "website": "https://www.mallamauriceholidayunits.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVJAR6Q3JSXS569CBBX9",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

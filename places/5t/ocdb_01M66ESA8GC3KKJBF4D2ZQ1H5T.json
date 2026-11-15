@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2545",
+      "street": "Blackfellows Point Rd",
+      "suburb": "Eurobodalla Shire Council"
+    },
+    "facebook": "https://www.facebook.com/119264088172417",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -22,7 +38,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 440
-    }
+    },
+    "phone": "+61244735312",
+    "website": "http://www.beachcomberholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA8GC3KKJBF4D2ZQ1H5T",

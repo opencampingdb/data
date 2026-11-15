@@ -1,9 +1,13 @@
 {
   "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
     "drinking_water": "2026-03-01T00:00:00Z",
-    "power": "2026-03-01T00:00:00Z"
+    "phone": "2026-11-15T00:00:00Z",
+    "power": "2026-03-01T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "drinking_water": "community_report",
     "dump_station": "osm",
     "entry": "osm",
@@ -13,11 +17,20 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "community_report",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "5690",
+      "state": "SA",
+      "street": "Stiggants rd",
+      "suburb": "Penong"
+    },
     "drinking_water": true,
     "dump_station": true,
     "entry": "customers",
@@ -38,9 +51,11 @@
       "distance_m": 430,
       "name": "Eyre Highway"
     },
+    "phone": "+61886251111",
     "power": true,
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.penongcaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEW59ER734NFE774T99J",
@@ -58,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

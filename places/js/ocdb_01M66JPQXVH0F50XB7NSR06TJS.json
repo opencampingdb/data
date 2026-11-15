@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56-60",
+      "postcode": "2560",
+      "state": "NSW",
+      "street": "Riverside Drive",
+      "suburb": "Airds"
+    },
     "lga": {
       "name": "Campbelltown City Council",
       "osm_id": 6290704
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Towner Avenue"
-    }
+    },
+    "phone": "0246287933"
   },
   "group": "services",
   "id": "ocdb_01M66JPQXVH0F50XB7NSR06TJS",
@@ -27,7 +43,7 @@
     "lat": -34.08594,
     "lon": 150.828752
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 14311114398,
     "timestamp": "2026-10-23T01:23:41Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

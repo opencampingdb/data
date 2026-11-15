@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "117",
+      "postcode": "3911",
+      "state": "VIC",
+      "street": "Baxter-Tooradin Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/2002269946770508",
     "lga": {
       "name": "Shire of Mornington Peninsula",
       "osm_id": 3333281
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Baxter - Tooradin Road"
-    }
+    },
+    "phone": "+61359712207",
+    "website": "http://www.baxtertavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVDX38JK3KPZ2MSDKFXS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

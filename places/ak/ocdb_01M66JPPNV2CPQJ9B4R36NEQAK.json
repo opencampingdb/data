@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "67",
+      "postcode": "4714",
+      "state": "QLD",
+      "street": "James St",
+      "suburb": "Mount Morgan"
+    },
+    "facebook": "https://www.facebook.com/107561668388914",
     "lga": {
       "name": "Rockhampton Regional",
       "osm_id": 11676441
@@ -22,7 +40,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "James Street"
-    }
+    },
+    "phone": "+61749382619"
   },
   "group": "services",
   "id": "ocdb_01M66JPPNV2CPQJ9B4R36NEQAK",
@@ -31,7 +50,7 @@
     "lat": -23.638597,
     "lon": 150.387888
   },
-  "name": null,
+  "name": "Mount Morgan Service Station",
   "osm": {
     "id": 13628255775,
     "timestamp": "2026-03-08T19:17:11Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

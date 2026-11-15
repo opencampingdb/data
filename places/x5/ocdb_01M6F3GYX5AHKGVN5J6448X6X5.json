@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Doyle Street",
       "suburb": "Brewarrina"
     },
+    "facebook": "https://www.facebook.com/163685093721873",
     "lga": {
       "name": "Brewarrina Shire Council",
       "osm_id": 6076330
@@ -28,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Bathurst Street"
-    }
+    },
+    "phone": "+61268392397",
+    "website": "http://www.brewarrina.nsw.gov.au/tourism/accommodation/brewarrina-river-view-motel.aspx"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYX5AHKGVN5J6448X6X5",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "4715",
+      "state": "QLD",
+      "street": "Exhibition Ave",
+      "suburb": "Biloela"
+    },
+    "facebook": "https://www.facebook.com/182240468578267",
     "lga": {
       "name": "Banana Shire",
       "osm_id": 11674950
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Burnett Highway"
-    }
+    },
+    "phone": "+61749922400",
+    "website": "http://www.qldheritagepark.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZSMFTCD5V2HE08P68B2",
@@ -27,7 +49,7 @@
     "lat": -24.405066,
     "lon": 150.499532
   },
-  "name": null,
+  "name": "Queensland Heritage Park",
   "osm": {
     "id": 1187072656,
     "timestamp": "2023-07-04T04:22:16Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

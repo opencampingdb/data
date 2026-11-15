@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "5253",
+      "state": "SA",
+      "street": "Thomas St",
+      "suburb": "Murray Bridge"
+    },
+    "facebook": "https://www.facebook.com/107633298140207",
     "lga": {
       "name": "The Rural City of Murray Bridge",
       "osm_id": 7071420
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Adelaide Road"
-    }
+    },
+    "phone": "+61885391142",
+    "website": "https://www.murraybridge.sa.gov.au/captainscottage"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZTMTA0HT36CQWHX3DAV",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

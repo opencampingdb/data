@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "779",
+      "postcode": "3029",
+      "state": "VIC",
+      "street": "Dohertys Road",
+      "suburb": "Truganina"
+    },
     "lga": {
       "name": "City of Wyndham",
       "osm_id": 2432416
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Dohertys Road"
-    }
+    },
+    "phone": "+61 3 8353 2106",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/truganina/bp-truganina-south/1131"
   },
   "group": "services",
   "id": "ocdb_01M66JPKY1C07SF0RYTZN25JEY",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

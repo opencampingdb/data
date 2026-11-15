@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1992",
+      "postcode": "5172",
+      "state": "SA",
+      "street": "Brookman Road",
+      "suburb": "Willunga"
+    },
     "lga": {
       "name": "City of Onkaparinga",
       "osm_id": 7262204
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brookman Road"
-    }
+    },
+    "phone": "+61 8 8349 5868",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/willunga-hill/bp-opt-willunga-hill/1282"
   },
   "group": "services",
   "id": "ocdb_01M66JP6D8D4WZC34W7WRBFGQB",
@@ -27,7 +46,7 @@
     "lat": -35.291443,
     "lon": 138.580339
   },
-  "name": null,
+  "name": "bp",
   "osm": {
     "id": 3604182224,
     "timestamp": "2015-06-19T01:43:15Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

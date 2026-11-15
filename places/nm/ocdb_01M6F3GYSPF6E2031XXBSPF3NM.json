@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "5000",
+      "state": "SA",
+      "street": "Hindley St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/522025891592381",
     "lga": {
       "name": "Adelaide City Council",
       "osm_id": 3093825
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "King William Street"
-    }
+    },
+    "phone": "+61882311000",
+    "website": "http://www.adelaideparinga.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYSPF6E2031XXBSPF3NM",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2404",
+      "state": "NSW",
+      "street": "Copeton Dam Rd",
+      "suburb": "Bingara"
+    },
+    "facebook": "https://www.facebook.com/853506494501901",
     "lga": {
       "name": "Gwydir Shire Council",
       "osm_id": 6260771
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Copeton Dam Road"
-    }
+    },
+    "phone": "+61427241300",
+    "website": "https://visitgwydir.com.au/bingara-riverside-caravan-park/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9XG3E2CQS0C0JDNYCKD",

@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "21",
       "street": "Beech Street"
     },
+    "facebook": "https://www.facebook.com/1475283209374418",
     "lga": {
       "name": "City of Whittlesea",
       "osm_id": 3327768
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Beech Street"
-    }
+    },
+    "phone": "+61397162006",
+    "website": "http://www.luscombeautomotive.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPMC5QMX6MZSFJFMXSQ2T",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

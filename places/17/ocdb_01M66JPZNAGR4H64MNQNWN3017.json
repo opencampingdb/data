@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "144",
+      "postcode": "2505",
+      "state": "NSW",
+      "street": "Wentworth St",
+      "suburb": "Wollongong"
+    },
+    "facebook": "https://www.facebook.com/192556304116556",
     "lga": {
       "name": "Wollongong City Council",
       "osm_id": 6303077
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Church Street"
-    }
+    },
+    "phone": "+61242762445",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/port-kembla/bp-port-kembla/4751"
   },
   "group": "services",
   "id": "ocdb_01M66JPZNAGR4H64MNQNWN3017",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

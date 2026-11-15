@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "operator": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2642",
+      "state": "NSW",
+      "street": "Khancoban area in Kosciuszko National Park",
+      "suburb": "Murray Gorge"
+    },
     "lga": {
       "name": "Snowy Valleys Council",
       "osm_id": 6239423
@@ -17,7 +33,9 @@
       "type": "village"
     },
     "operator": "Kosciuzko National Park Service",
-    "tents": true
+    "phone": "1300072757",
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tom-groggin-horse-camp?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_4464296607302285022&utm_content=Tom+Groggin+horse+camp+-+Murray+Gorge"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBMA7D065ZDY4PW80R34",
@@ -26,7 +44,7 @@
     "lat": -36.530748,
     "lon": 148.13651
   },
-  "name": null,
+  "name": "Tom Groggin horse camp",
   "osm": {
     "id": 5568369115,
     "timestamp": "2018-04-21T07:37:09Z",
@@ -35,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

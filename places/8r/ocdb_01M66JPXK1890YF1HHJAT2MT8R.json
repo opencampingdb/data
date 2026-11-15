@@ -1,6 +1,13 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,11 +15,20 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "632",
+      "postcode": "2087",
+      "state": "NSW",
+      "street": "Warringah Rd",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/980419578812013",
     "fuels": [
       "diesel",
       "e10",
@@ -40,6 +56,7 @@
       "name": "Warringah Road"
     },
     "opening_hours": "Mo-Sa 05:00-22:00; Su 06:00-22:00",
+    "phone": "+61294514165",
     "toilets": true,
     "website": "https://map.bp.com/en-AU/AU/gas-station/forestville/bp-forestville/2227"
   },
@@ -59,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

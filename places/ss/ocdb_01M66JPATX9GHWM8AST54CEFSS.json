@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "64",
+      "postcode": "3594",
+      "state": "VIC",
+      "street": "Murray Valley Highway",
+      "suburb": "Nyah"
+    },
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -20,7 +37,9 @@
       "distance_m": 10,
       "name": "Murray Valley Highway"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 3 5030 2981",
+    "website": "https://find.shell.com/au/fuel/10111659-shell-nyah-oasis/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPATX9GHWM8AST54CEFSS",
@@ -29,7 +48,7 @@
     "lat": -35.174594,
     "lon": 143.37741
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 5908981537,
     "timestamp": "2018-09-16T00:50:56Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

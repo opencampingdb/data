@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "149",
+      "postcode": "4891",
+      "state": "QLD",
+      "street": "Yappar St",
+      "suburb": "Karumba"
+    },
     "lga": {
       "name": "Carpentaria Shire",
       "osm_id": 11677417
@@ -17,7 +32,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 230
-    }
+    },
+    "phone": "(07) 4745 9359",
+    "website": "http://karumba.qld.au/directory/barramundi-discovery-centre"
   },
   "group": "services",
   "id": "ocdb_01M66JPEMDMKYB4QDN5BG8EFZA",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

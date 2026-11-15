@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7-9",
+      "postcode": "3380",
+      "state": "VIC",
+      "street": "Ararat Rd",
+      "suburb": "Stawell"
+    },
+    "facebook": "https://www.facebook.com/129139863832087",
     "lga": {
       "name": "Shire of Northern Grampians",
       "osm_id": 3348880
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Ararat Road"
-    }
+    },
+    "phone": "+61353582911",
+    "website": "http://www.goldfieldsmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYKM06HTZ095Z0881FC6",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36-37",
+      "postcode": "3073",
+      "state": "VIC",
+      "street": "Gisborne Cres",
+      "suburb": "Melbourne"
+    },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/922145471290344",
     "lga": {
       "name": "City of Darebin",
       "osm_id": 2404379
@@ -20,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Boldrewood Parade"
-    }
+    },
+    "phone": "+61394694103",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/reservoir/aa-reservoir/3722"
   },
   "group": "services",
   "id": "ocdb_01M66JPSV979P4FBEWJM543A9N",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

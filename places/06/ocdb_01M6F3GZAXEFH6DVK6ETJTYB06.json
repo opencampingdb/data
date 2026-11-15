@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1423",
+      "postcode": "2179",
+      "state": "NSW",
+      "street": "Camden Valley Way",
+      "suburb": "Leppington"
+    },
+    "facebook": "https://www.facebook.com/150567764984575",
     "lga": {
       "name": "Camden Council",
       "osm_id": 6290069
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Ingleburn Road"
-    }
+    },
+    "phone": "+61296065180",
+    "website": "http://www.lockies.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZAXEFH6DVK6ETJTYB06",
@@ -27,7 +49,7 @@
     "lat": -33.967765,
     "lon": 150.813972
   },
-  "name": null,
+  "name": "Lockies Hotel",
   "osm": {
     "id": 680818487,
     "timestamp": "2019-04-01T04:11:56Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

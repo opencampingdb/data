@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "167-185",
+      "postcode": "2680",
+      "state": "NSW",
+      "street": "Banna Ave",
+      "suburb": "Griffith"
+    },
+    "facebook": "https://www.facebook.com/1278108702266483",
     "lga": {
       "name": "City of Griffith",
       "osm_id": 6149251
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Banna Avenue"
-    }
+    },
+    "phone": "+61407485091",
+    "website": "http://www.gwmm.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXM04SKE783TH2YJ19DQ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

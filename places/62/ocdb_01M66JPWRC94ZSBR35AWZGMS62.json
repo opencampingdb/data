@@ -1,13 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "182",
+      "postcode": "4650",
+      "state": "QLD",
+      "street": "Kent St",
+      "suburb": "Maryborough"
+    },
     "fuels": [
       "diesel"
     ],
@@ -28,7 +41,8 @@
       "distance_m": 30,
       "name": "Kent Street"
     },
-    "operator": "Fraser Coast Fuel"
+    "operator": "Fraser Coast Fuel",
+    "phone": "(07) 4121 4892"
   },
   "group": "services",
   "id": "ocdb_01M66JPWRC94ZSBR35AWZGMS62",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

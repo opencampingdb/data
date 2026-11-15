@@ -1,15 +1,22 @@
 {
   "fact_dates": {
-    "dump_station": "2026-11-04T13:32:35Z"
+    "dump_station": "2026-11-04T13:32:35Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
     "dump_station": "contributed",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "dump_station": true,
+    "facebook": "https://www.facebook.com/138889642874413",
     "lga": {
       "name": "The Berri Barmera Council",
       "osm_id": 6802509
@@ -22,7 +29,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 280
-    }
+    },
+    "phone": "+61885821922",
+    "website": "http://www.berribarmera.sa.gov.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA1KW6WEK7HZJFG5FE35",
@@ -40,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

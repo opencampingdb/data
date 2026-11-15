@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "6239",
+      "state": "WA",
+      "street": "S Western Hwy",
+      "suburb": "Donnybrook"
+    },
+    "facebook": "https://www.facebook.com/128018500619282",
     "lga": {
       "name": "Shire of Donnybrook-Balingup",
       "osm_id": 11688751
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "South Western Highway"
-    }
+    },
+    "phone": "+61897311499",
+    "website": "https://www.donnybrookmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVHYN83P518QKHA5S2RW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

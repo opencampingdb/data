@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2415C",
+      "postcode": "3797",
+      "state": "VIC",
+      "street": "Warburton Hwy",
+      "suburb": "Yarra Junction"
+    },
+    "facebook": "https://www.facebook.com/100700352559837",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Warburton Highway"
-    }
+    },
+    "phone": "+61359672167",
+    "website": "https://www.upperyarramuseum.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GV74QCPWHACKX2KEKBES",
@@ -27,7 +49,7 @@
     "lat": -37.780662,
     "lon": 145.609466
   },
-  "name": null,
+  "name": "Upper Yarra Museum",
   "osm": {
     "id": 653304921,
     "timestamp": "2016-09-04T07:58:50Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

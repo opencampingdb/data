@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "61",
+      "postcode": "2760",
+      "state": "NSW",
+      "street": "Christie Street",
+      "suburb": "St Marys"
+    },
     "lga": {
       "name": "Penrith City Council",
       "osm_id": 6282698
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Christie Street"
-    }
+    },
+    "phone": "+61 2 8616 9670",
+    "website": "https://find.shell.com/au/fuel/10110927-shell-reddy-express-st-mary-s/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPY6R2V613E3TZ9NBKV80",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

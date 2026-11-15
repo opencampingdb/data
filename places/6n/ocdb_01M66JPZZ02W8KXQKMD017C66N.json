@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "2650",
+      "state": "NSW",
+      "street": "Messenger Avenue",
+      "suburb": "Boorooma"
+    },
     "fuel": true,
     "lga": {
       "name": "Wagga Wagga City Council",
@@ -28,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Boorooma Street"
-    }
+    },
+    "phone": "+61 2 9733 8355",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/boorooma/bp-boorooma/1180"
   },
   "group": "services",
   "id": "ocdb_01M66JPZZ02W8KXQKMD017C66N",
@@ -37,7 +56,7 @@
     "lat": -35.075211,
     "lon": 147.35897
   },
-  "name": null,
+  "name": "bp",
   "osm": {
     "id": 1496528648,
     "timestamp": "2026-04-05T13:21:54Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

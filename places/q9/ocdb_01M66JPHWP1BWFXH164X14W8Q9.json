@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "1",
       "street": "Cranbourne-Frankston Road"
     },
+    "facebook": "https://www.facebook.com/837001766164094",
     "lga": {
       "name": "City of Frankston",
       "osm_id": 3333252
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "McClelland Drive"
-    }
+    },
+    "phone": "+61397766191",
+    "website": "https://rapidtune.com.au/book-now-langwarrin/?l=langwarrin%40rapidtune.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPHWP1BWFXH164X14W8Q9",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

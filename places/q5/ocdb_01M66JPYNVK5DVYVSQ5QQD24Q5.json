@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4350",
+      "state": "QLD",
+      "street": "North Street",
+      "suburb": "North Toowoomba"
+    },
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Ruthven Street"
-    }
+    },
+    "phone": "+61 7 4632 6510",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/toowoomba/bp-toowoomba-north-st/4211"
   },
   "group": "services",
   "id": "ocdb_01M66JPYNVK5DVYVSQ5QQD24Q5",
@@ -27,7 +45,7 @@
     "lat": -27.542387,
     "lon": 151.954608
   },
-  "name": null,
+  "name": "bp",
   "osm": {
     "id": 1218246323,
     "timestamp": "2023-10-25T10:54:33Z",
@@ -36,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

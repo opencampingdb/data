@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "482-486",
+      "postcode": "2118",
+      "state": "NSW",
+      "street": "N Rocks Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/665219673654647",
     "fuel": true,
     "lga": {
       "name": "City of Parramatta Council",
@@ -22,7 +40,9 @@
       "distance_m": 30,
       "name": "Pennant Parade"
     },
-    "operator": "Carlingford Car Care"
+    "operator": "Carlingford Car Care",
+    "phone": "+61298711988",
+    "website": "https://www.carlingfordcarcare.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPTT7S917NM7P7YPTR2VY",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

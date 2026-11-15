@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "5201",
+      "state": "SA",
+      "street": "Battunga Rd",
+      "suburb": "Meadows"
+    },
+    "facebook": "https://www.facebook.com/1409634909296568",
     "lga": {
       "name": "Mount Barker District Council",
       "osm_id": 7294250
@@ -20,7 +38,9 @@
       "distance_m": 30,
       "name": "Battunga Road"
     },
-    "operator": "Mogas"
+    "operator": "Mogas",
+    "phone": "+61883883400",
+    "website": "https://retail.mogasregional.com.au/pages/site_location_details.aspx?listing_type=0&site_id=Phbf7SGRuH60Qs7/l4OlcB6smse+j3vj6HgRMeIO1xc="
   },
   "group": "services",
   "id": "ocdb_01M66JQ04FGD8JMGAYCBETWVYX",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

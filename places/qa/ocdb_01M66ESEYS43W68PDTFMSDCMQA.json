@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "3733",
+      "state": "VIC",
+      "street": "Valley View Dr",
+      "suburb": "Whitfield"
+    },
+    "facebook": "https://www.facebook.com/1523569131214201",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Wangaratta - Whitfield Road"
-    }
+    },
+    "phone": "+61357298350",
+    "website": "http://www.valleyviewcaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYS43W68PDTFMSDCMQA",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

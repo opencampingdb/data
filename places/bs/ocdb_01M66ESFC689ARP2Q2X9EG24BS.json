@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "89",
+      "postcode": "3959",
+      "state": "VIC",
+      "street": "Beach Parade",
+      "suburb": "Sandy Point"
+    },
+    "facebook": "https://www.facebook.com/398443453951392",
     "lga": {
       "name": "Shire of South Gippsland",
       "osm_id": 3335917
@@ -18,7 +36,9 @@
     "nearest_beach": {
       "distance_m": 250,
       "name": "Sandy Point (Waratah Bay)"
-    }
+    },
+    "phone": "+61356841312",
+    "website": "https://planner.hemax.com:443/?aspxerrorpath=/parks/vic/gippsland-victoria/sandy-point-holiday-park.aspx"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFC689ARP2Q2X9EG24BS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

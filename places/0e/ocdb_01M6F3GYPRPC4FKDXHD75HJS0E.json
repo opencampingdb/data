@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4891",
+      "state": "QLD",
+      "street": "Ward St",
+      "suburb": "Karumba"
+    },
+    "facebook": "https://www.facebook.com/459509077427565",
     "lga": {
       "name": "Carpentaria Shire",
       "osm_id": 11677417
@@ -19,7 +37,9 @@
     "nearest_boat_ramp": {
       "distance_m": 460
     },
-    "opening_hours": "Mo-Su 12:00-20:00"
+    "opening_hours": "Mo-Su 12:00-20:00",
+    "phone": "+61747459183",
+    "website": "http://www.sunsettavernkarumba.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYPRPC4FKDXHD75HJS0E",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

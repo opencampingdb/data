@@ -1,16 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "38",
       "street": "Gilba Road"
     },
+    "facebook": "https://www.facebook.com/1695399047380314",
     "lga": {
       "name": "Cumberland City Council",
       "osm_id": 6210859
@@ -27,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Wentworth Avenue"
-    }
+    },
+    "phone": "+61296313102"
   },
   "group": "services",
   "id": "ocdb_01M66JPYXKXDPY6H6FTKE672SG",
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

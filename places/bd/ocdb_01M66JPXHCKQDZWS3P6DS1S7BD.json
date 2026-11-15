@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2804",
+      "state": "NSW",
+      "street": "Browns Ave",
+      "suburb": "Canowindra"
+    },
+    "facebook": "https://www.facebook.com/276444622371296",
     "lga": {
       "name": "Cabonne Council",
       "osm_id": 6268804
@@ -15,6 +30,7 @@
       "osm_id": 113763726,
       "type": "town"
     },
+    "phone": "+61263644300",
     "website": "https://www.healthdirect.gov.au/australian-health-services/23008476/canowindra-health-service-emergency-department/services/canowindra-2804-browns"
   },
   "group": "emergency",
@@ -33,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

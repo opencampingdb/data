@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4802",
+      "state": "QLD",
+      "street": "The Esplanade",
+      "suburb": "Airlie Beach"
+    },
+    "facebook": "https://www.facebook.com/254136374619126",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Shute Harbour Road"
-    }
+    },
+    "phone": "+61749641999",
+    "website": "https://linktr.ee/airliebeachhotel"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVPJ9MJ85CMFV8TGC3FT",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

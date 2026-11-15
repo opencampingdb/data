@@ -1,8 +1,14 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "fuel": "osm",
     "lga": "osm",
@@ -16,9 +22,16 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "0870",
+      "state": "NT",
+      "street": "NT 0870",
+      "suburb": "Hugh"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/185000935211834",
     "fee": true,
     "fuel": true,
     "lga": {
@@ -60,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

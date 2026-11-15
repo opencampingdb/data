@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "67/75",
+      "postcode": "2787",
+      "state": "NSW",
+      "street": "North St",
+      "suburb": "Oberon"
+    },
+    "facebook": "https://www.facebook.com/136299566519238",
     "lga": {
       "name": "Oberon Council",
       "osm_id": 6307911
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Carrington Avenue"
-    }
+    },
+    "phone": "+61263366700",
+    "website": "http://www.oberon.nsw.gov.au/community-directory-3863/emergency-services/1131548-oberon-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPTVCY7PK8VQ9SBQBSVBM",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

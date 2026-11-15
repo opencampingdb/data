@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "70-72",
+      "postcode": "3677",
+      "state": "VIC",
+      "street": "Greta Rd",
+      "suburb": "Wangaratta"
+    },
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Vincent Road"
-    }
+    },
+    "phone": "0357217140",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-wangaratta-greta-rd"
   },
   "group": "services",
   "id": "ocdb_01M66JPW9ZYY7KYG6JWD0V0RQ8",
@@ -31,7 +50,7 @@
     "lat": -36.365466,
     "lon": 146.314383
   },
-  "name": null,
+  "name": "Ampol Foodary Wangaratta (greta Rd)",
   "osm": {
     "id": 753788553,
     "timestamp": "2019-12-09T01:29:44Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

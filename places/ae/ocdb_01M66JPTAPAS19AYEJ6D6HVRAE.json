@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18-20",
+      "postcode": "3363",
+      "state": "VIC",
+      "street": "Clunes Road",
+      "suburb": "Creswick"
+    },
     "lga": {
       "name": "Shire of Hepburn",
       "osm_id": 3327844
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Creswick - Clunes Road"
-    }
+    },
+    "phone": "+61 3 4310 9812",
+    "website": "https://find.shell.com/au/fuel/10111238-shell-reddy-express-creswick/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTAPAS19AYEJ6D6HVRAE",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "158",
+      "postcode": "2551",
+      "state": "NSW",
+      "street": "Imlay St",
+      "suburb": "Eden"
+    },
+    "facebook": "https://www.facebook.com/1111952918834459",
     "lga": {
       "name": "Bega Valley Shire Council",
       "osm_id": 6239664
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 420,
       "name": "A1"
-    }
+    },
+    "phone": "+61264961515",
+    "website": "https://www.greatsoutherninn.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYQZ467VT2SSY8X83Q3X",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

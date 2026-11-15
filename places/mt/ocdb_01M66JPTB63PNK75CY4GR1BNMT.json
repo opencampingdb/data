@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7-11",
+      "postcode": "2170",
+      "state": "NSW",
+      "street": "Newbridge Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/401871986922680",
     "lga": {
       "name": "Liverpool City Council",
       "osm_id": 6212442
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Newbridge Road"
-    }
+    },
+    "phone": "+61296013840",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/chipping-norton/bp-urbanista-chipping-norton/7202"
   },
   "group": "services",
   "id": "ocdb_01M66JPTB63PNK75CY4GR1BNMT",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

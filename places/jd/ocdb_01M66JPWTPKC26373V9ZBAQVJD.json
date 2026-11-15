@@ -1,15 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50-52",
+      "postcode": "2256",
+      "state": "NSW",
+      "street": "Ocean Beach Rd",
+      "suburb": "Woy Woy"
+    },
     "fuels": [
       "diesel",
       "e10",
@@ -38,7 +55,9 @@
       "name": "Ocean Beach Road"
     },
     "opening_hours": "24/7",
-    "operator": "Coles"
+    "operator": "Coles",
+    "phone": "+61 2 4398 9049",
+    "website": "https://find.shell.com/au/fuel/10110997-shell-reddy-express-woy-woy/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPWTPKC26373V9ZBAQVJD",
@@ -47,7 +66,7 @@
     "lat": -33.493914,
     "lon": 151.320841
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 876104296,
     "timestamp": "2020-11-23T10:18:51Z",
@@ -56,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

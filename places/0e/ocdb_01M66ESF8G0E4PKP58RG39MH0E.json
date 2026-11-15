@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9",
+      "postcode": "3909",
+      "state": "VIC",
+      "street": "Roadknight St",
+      "suburb": "Lakes Entrance"
+    },
+    "facebook": "https://www.facebook.com/969682573095544",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -27,7 +43,8 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Esplanade"
-    }
+    },
+    "phone": "+61351552750"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF8G0E4PKP58RG39MH0E",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

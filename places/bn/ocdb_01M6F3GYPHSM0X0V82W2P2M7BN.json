@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4401",
+      "street": "Bawden Boulevard",
+      "suburb": "Toowoomba Regional"
+    },
+    "facebook": "https://www.facebook.com/248240882050249",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -13,7 +29,9 @@
       "name": "Oakey",
       "osm_id": 298323860,
       "type": "town"
-    }
+    },
+    "phone": "+61775147040",
+    "website": "http://www.armyflyingmuseum.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYPHSM0X0V82W2P2M7BN",
@@ -31,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

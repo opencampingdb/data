@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "887/889",
+      "postcode": "5110",
+      "state": "SA",
+      "street": "Port Wakefield Rd",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/217005431671152",
     "lga": {
       "name": "City of Salisbury",
       "osm_id": 9108068
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 30
-    }
+    },
+    "phone": "+61882504144",
+    "website": "http://www.thewhitehorseinn.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVP1QX3W7BWNMSDG87S9",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

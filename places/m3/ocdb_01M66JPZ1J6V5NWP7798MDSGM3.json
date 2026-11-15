@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "415",
+      "postcode": "6556",
+      "state": "WA",
+      "street": "Avonholme Cir",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/165226796683879",
     "lga": {
       "name": "Shire of Mundaring",
       "osm_id": 11689676
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 890
-    }
+    },
+    "phone": "+61412650070",
+    "website": "https://lemmpwr.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ1J6V5NWP7798MDSGM3",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

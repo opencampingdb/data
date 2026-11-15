@@ -1,10 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6064",
+      "state": "WA",
+      "street": "Burbridge Ave",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/409066759562997",
     "lga": {
       "name": "City of Wanneroo",
       "osm_id": 11689642
@@ -18,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Koondoola Avenue"
-    }
+    },
+    "phone": "+61893424422",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/koondoola/bp-koondoola/5583"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ6WEA4YMR2TAJA26PFX",
@@ -27,7 +48,7 @@
     "lat": -31.841823,
     "lon": 115.858413
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1323542879,
     "timestamp": "2024-10-13T03:35:38Z",
@@ -36,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

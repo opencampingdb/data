@@ -1,14 +1,30 @@
 {
   "fact_dates": {
-    "fee": "2024-01-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2024-01-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "3250",
+      "state": "VIC",
+      "street": "Fyans St",
+      "suburb": "Colac"
+    },
+    "facebook": "https://www.facebook.com/104021862602956",
     "fee": false,
     "lga": {
       "name": "Shire of Colac Otway",
@@ -22,7 +38,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 160
-    }
+    },
+    "phone": "+61354405390",
+    "website": "http://www.lakecolacholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEV8WWH7WS0FTJM13J4J",
@@ -40,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "124",
+      "postcode": "6443",
+      "street": "Kingswood St"
+    },
+    "facebook": "https://www.facebook.com/173218976198321",
     "lga": {
       "name": "Shire of Coolgardie",
       "osm_id": 11690099
@@ -18,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Coolgardie-Esperance Highway"
-    }
+    },
+    "phone": "+61427752979",
+    "website": "https://www.booking.com/hotel/au/widgiemooltha-caravan-park.html"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXBVBD0723582WWWX6C1",
@@ -36,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

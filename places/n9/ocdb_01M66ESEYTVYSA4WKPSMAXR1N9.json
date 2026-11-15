@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "65",
+      "postcode": "4680",
+      "state": "QLD",
+      "street": "Stowe Rd",
+      "suburb": "Calliope"
+    },
+    "facebook": "https://www.facebook.com/108582565223122",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -13,7 +31,9 @@
       "name": "Calliope",
       "osm_id": 330656397,
       "type": "town"
-    }
+    },
+    "phone": "+61749757472",
+    "website": "http://www.calliopecaravanpark.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYTVYSA4WKPSMAXR1N9",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

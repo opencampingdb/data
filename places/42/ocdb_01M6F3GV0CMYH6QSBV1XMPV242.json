@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "191",
+      "postcode": "3450",
+      "state": "VIC",
+      "street": "Barker St",
+      "suburb": "Castlemaine"
+    },
+    "facebook": "https://www.facebook.com/156296224394866",
     "lga": {
       "name": "Shire of Mount Alexander",
       "osm_id": 3339104
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Barker Street"
-    }
+    },
+    "phone": "+61354721052",
+    "website": "http://www.cumberlandhotel.net.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV0CMYH6QSBV1XMPV242",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

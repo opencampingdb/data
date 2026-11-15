@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "3490",
+      "state": "VIC",
+      "street": "Calder Hwy",
+      "suburb": "Ouyen"
+    },
+    "facebook": "https://www.facebook.com/1000472303366987",
     "lga": {
       "name": "Rural City of Mildura",
       "osm_id": 3345519
@@ -22,7 +40,8 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Farrell Street"
-    }
+    },
+    "phone": "+61420932422"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9VGCD23F7FW80XX5AK6",
@@ -31,7 +50,7 @@
     "lat": -35.073481,
     "lon": 142.32056
   },
-  "name": null,
+  "name": "Ouyen Caravan Park",
   "osm": {
     "id": 1808391721,
     "timestamp": "2026-06-26T08:11:42Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

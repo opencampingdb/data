@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3282",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Koroit"
+    },
+    "facebook": "https://www.facebook.com/548241122367820",
     "lga": {
       "name": "Shire of Moyne",
       "osm_id": 3347615
@@ -13,7 +30,9 @@
       "name": "Koroit",
       "osm_id": 322765968,
       "type": "town"
-    }
+    },
+    "phone": "+61436027709",
+    "website": "http://www.portfairycaravanparks.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFJ4V66DDMBAJ4AG5N1D",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

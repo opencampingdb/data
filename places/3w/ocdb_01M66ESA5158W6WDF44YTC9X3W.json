@@ -1,24 +1,40 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "4388",
+      "state": "QLD",
+      "street": "Wyemo St",
+      "suburb": "Yelarbon"
+    },
     "caravans": true,
     "charge": "15.00 AUD /night unpwr,25.00 AUD pwr",
     "drinking_water": true,
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/175188896434384",
     "fee": true,
     "lga": {
       "name": "Goondiwindi Regional",
@@ -34,6 +50,7 @@
       "distance_m": 300,
       "name": "Cunningham Highway"
     },
+    "phone": "+61400018897",
     "showers": true,
     "tents": true,
     "toilets": true
@@ -54,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

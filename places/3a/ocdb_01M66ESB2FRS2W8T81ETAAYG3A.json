@@ -1,13 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2629",
+      "state": "NSW",
+      "street": "Pockets Saddle Rd",
+      "suburb": "Tantangara"
+    },
     "caravans": true,
     "fee": true,
     "lga": {
@@ -21,7 +35,9 @@
       "type": "village"
     },
     "operator": "NSW National Parks",
-    "tents": true
+    "phone": "0269477025",
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/old-snowy-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB2FRS2W8T81ETAAYG3A",
@@ -39,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

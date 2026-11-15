@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11294",
+      "postcode": "2350",
+      "state": "NSW",
+      "street": "New England Hwy",
+      "suburb": "Armidale"
+    },
+    "facebook": "https://www.facebook.com/185096185543801",
     "lga": {
       "name": "Armidale Regional Council",
       "osm_id": 6165969
@@ -20,7 +36,8 @@
       "distance_m": 110,
       "name": "New England Highway"
     },
-    "phone": "+61 2 6771 1281"
+    "phone": "+61 2 6771 1281",
+    "website": "http://www.armidaleacres.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV6TMH1S1YZEJHSP9QEC",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

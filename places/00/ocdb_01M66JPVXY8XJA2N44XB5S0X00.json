@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "2312",
+      "state": "NSW",
+      "street": "Clarkson St",
+      "suburb": "Nabiac"
+    },
+    "facebook": "https://www.facebook.com/260253220973165",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 80
-    }
+    },
+    "phone": "+61265541235",
+    "website": "https://www.localsearch.com.au/profile/modern-motors-nabiac/nabiac-nsw/CTZj"
   },
   "group": "services",
   "id": "ocdb_01M66JPVXY8XJA2N44XB5S0X00",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

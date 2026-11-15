@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "High Street",
       "suburb": "Axedale"
     },
+    "facebook": "https://www.facebook.com/263193927056995",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "McIvor Highway"
-    }
+    },
+    "phone": "+61354397377",
+    "website": "http://www.axedaletavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZJ346HFPBS04NT11VGB",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

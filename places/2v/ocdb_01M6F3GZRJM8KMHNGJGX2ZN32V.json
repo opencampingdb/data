@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Eaglehawk Road",
       "suburb": "California Gully"
     },
+    "facebook": "https://www.facebook.com/156600337696573",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -25,7 +34,9 @@
     },
     "nearest_major_road": {
       "distance_m": 30
-    }
+    },
+    "phone": "+61354528545",
+    "website": "http://www.thewhitehorse.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZRJM8KMHNGJGX2ZN32V",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

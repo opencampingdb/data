@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Bruce Highway",
       "suburb": "Yaamba"
     },
+    "facebook": "https://www.facebook.com/2188746761215821",
     "lga": {
       "name": "Livingstone Shire",
       "osm_id": 11677520
@@ -28,7 +35,8 @@
       "distance_m": 20,
       "name": "Bruce Highway"
     },
-    "opening_hours": "Mo-Sa 11:00-00:00; Su 11:00-21:00"
+    "opening_hours": "Mo-Sa 11:00-00:00; Su 11:00-21:00",
+    "phone": "+61749342438"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVDX38JK3KPZ2MSDKFXX",
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

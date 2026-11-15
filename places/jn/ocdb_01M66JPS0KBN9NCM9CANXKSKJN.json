@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "24",
+      "postcode": "2347",
+      "state": "NSW",
+      "street": "Edward St",
+      "suburb": "Barraba"
+    },
+    "facebook": "https://www.facebook.com/985237584889021",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -22,7 +38,8 @@
       "name": "Queen Street"
     },
     "operator": "NSW Health",
-    "phone": "+61 2 6767 7700"
+    "phone": "+61 2 6767 7700",
+    "website": "http://www.myhospitals.gov.au/hospital/1154J2020/barraba-multi-purpose-service"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPS0KBN9NCM9CANXKSKJN",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

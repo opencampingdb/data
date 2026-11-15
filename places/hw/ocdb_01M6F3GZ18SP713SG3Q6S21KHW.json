@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "3233",
+      "state": "VIC",
+      "street": "Great Ocean Rd",
+      "suburb": "Apollo Bay"
+    },
+    "facebook": "https://www.facebook.com/171857136169401",
     "lga": {
       "name": "Shire of Colac Otway",
       "osm_id": 3291847
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Great Ocean Road"
-    }
+    },
+    "phone": "+61352376100",
+    "website": "http://www.theinternational.info"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ18SP713SG3Q6S21KHW",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

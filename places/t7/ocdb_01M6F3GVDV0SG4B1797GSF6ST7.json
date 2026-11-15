@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "6450",
+      "state": "WA",
+      "street": "The Esplanade",
+      "suburb": "Esperance"
+    },
+    "facebook": "https://www.facebook.com/156929061002339",
     "lga": {
       "name": "Shire of Esperance",
       "osm_id": 11689020
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "The Esplanade"
-    }
+    },
+    "phone": "+61890712383",
+    "website": "http://captainhuonmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVDV0SG4B1797GSF6ST7",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

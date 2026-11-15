@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "4350",
+      "state": "QLD",
+      "street": "Burnage St",
+      "suburb": "Toowoomba"
+    },
+    "facebook": "https://www.facebook.com/111180635610258",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Toowoomba Connection Road"
-    }
+    },
+    "phone": "(07) 4639 3707",
+    "website": "http://www.coachman-motel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ9N88NXJCBHTNVZC0Z0",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

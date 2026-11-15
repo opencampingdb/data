@@ -1,18 +1,36 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "drinking_water": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "39-53",
+      "postcode": "4891",
+      "state": "QLD",
+      "street": "Palmer St",
+      "suburb": "Karumba"
+    },
     "cabins": true,
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/332550353439657",
     "fee": true,
     "lga": {
       "name": "Carpentaria Shire",
@@ -27,9 +45,11 @@
     "nearest_boat_ramp": {
       "distance_m": 250
     },
+    "phone": "+61747459277",
     "power": true,
     "showers": true,
-    "tents": true
+    "tents": true,
+    "website": "http://www.sunsetcp.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYG8SEP325B8JA57CHG",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

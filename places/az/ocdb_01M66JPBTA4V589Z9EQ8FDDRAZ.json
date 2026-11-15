@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "0853",
+      "state": "NT",
+      "street": "Tyler Place",
+      "suburb": "Tindal"
+    },
     "fuels": [
       "diesel",
       "unleaded_91"
@@ -20,7 +34,9 @@
       "osm_id": 6051889752,
       "type": "village"
     },
-    "operator": "AAFCANS"
+    "operator": "AAFCANS",
+    "phone": "+61 8 8973 6201",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/tindal-raaf/raaf-base-tindal/1747"
   },
   "group": "services",
   "id": "ocdb_01M66JPBTA4V589Z9EQ8FDDRAZ",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,15 +1,22 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "5",
       "street": "Lightwood Road"
     },
+    "facebook": "https://www.facebook.com/1855950744632303",
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -23,7 +30,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lightwood Road"
-    }
+    },
+    "phone": "+61395481103"
   },
   "group": "services",
   "id": "ocdb_01M66JPV9Q88C6050T8A23F1WJ",
@@ -41,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

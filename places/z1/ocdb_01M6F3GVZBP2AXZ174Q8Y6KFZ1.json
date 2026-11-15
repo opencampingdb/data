@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "25",
       "street": "Main Street"
     },
+    "facebook": "https://www.facebook.com/164455360244530",
     "lga": {
       "name": "Mount Barker District Council",
       "osm_id": 7294250
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Main Street"
-    }
+    },
+    "phone": "(08) 8388 1000",
+    "website": "https://www.choicehotels.com/ascend"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZBP2AXZ174Q8Y6KFZ1",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

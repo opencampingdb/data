@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "3300",
+      "state": "VIC",
+      "street": "West Boundary Rd",
+      "suburb": "Hamilton"
+    },
+    "facebook": "https://www.facebook.com/107264184196314",
     "lga": {
       "name": "Shire of Southern Grampians",
       "osm_id": 3349959
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Glenelg Highway"
-    }
+    },
+    "phone": "+61355628155",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/hamilton/bp-opt-hamilton/8618"
   },
   "group": "services",
   "id": "ocdb_01M66JPH8FGTGF4N8XNY4Q0R85",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

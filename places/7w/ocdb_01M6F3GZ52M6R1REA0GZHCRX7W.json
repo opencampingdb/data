@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1381",
+      "postcode": "2454",
+      "state": "NSW",
+      "street": "Waterfall Way",
+      "suburb": "Bellingen"
+    },
+    "facebook": "https://www.facebook.com/1150159438333843",
     "lga": {
       "name": "Bellingen Shire Council",
       "osm_id": 6165980
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Waterfall Way"
-    }
+    },
+    "phone": "+61266551599",
+    "website": "http://www.bellingenvalleylodge.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ52M6R1REA0GZHCRX7W",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

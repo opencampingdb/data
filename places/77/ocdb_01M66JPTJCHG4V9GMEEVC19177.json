@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "opening_hours": "osm"
+    "name": "overture",
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "100",
+      "postcode": "5290",
+      "state": "SA",
+      "street": "Commercial Street West",
+      "suburb": "Mount Gambier"
+    },
     "lga": {
       "name": "City of Mount Gambier",
       "osm_id": 3395909
@@ -15,7 +32,9 @@
       "osm_id": 59609477,
       "type": "city"
     },
-    "opening_hours": "24/7 closed"
+    "opening_hours": "24/7 closed",
+    "phone": "+61 8 8707 2676",
+    "website": "https://find.shell.com/au/fuel/10111360-shell-reddy-express-mount-gambier/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTJCHG4V9GMEEVC19177",
@@ -24,7 +43,7 @@
     "lat": -37.826761,
     "lon": 140.774578
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 426059864,
     "timestamp": "2025-03-20T02:41:36Z",
@@ -33,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

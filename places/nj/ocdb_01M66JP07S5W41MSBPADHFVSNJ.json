@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3763",
+      "state": "VIC",
+      "street": "Captains Creek Road",
+      "suburb": "Kinglake"
+    },
+    "facebook": "https://www.facebook.com/116337648453740",
     "lga": {
       "name": "Shire of Murrindindi",
       "osm_id": 3332647
@@ -13,7 +28,8 @@
       "name": "Kinglake",
       "osm_id": 60568232,
       "type": "town"
-    }
+    },
+    "website": "http://parkweb.vic.gov.au/explore/parks/kinglake-national-park/things-to-do/wombelano-falls/car-park-wombelano-falls"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP07S5W41MSBPADHFVSNJ",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

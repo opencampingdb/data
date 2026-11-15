@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "4560",
+      "state": "QLD",
+      "street": "Coronation Ave",
+      "suburb": "Nambour"
+    },
+    "facebook": "https://www.facebook.com/335069697860348",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Coronation Avenue"
-    }
+    },
+    "phone": "+61754412133",
+    "website": "https://www.goodyear.com.au/store-locator/goodyear-autocare-nambour"
   },
   "group": "services",
   "id": "ocdb_01M66JPQ596BAHXV046XRFW8HS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

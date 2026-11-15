@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18-20",
+      "postcode": "3566",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Gunbower"
+    },
+    "facebook": "https://www.facebook.com/104887242909543",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Murray Valley Highway"
-    }
+    },
+    "phone": "+61354871214",
+    "website": "http://gunbowerhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYXVZYR1WG24JDSM9JJ7",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

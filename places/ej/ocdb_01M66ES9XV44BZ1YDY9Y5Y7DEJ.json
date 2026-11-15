@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "86-100",
+      "postcode": "4871",
+      "state": "QLD",
+      "street": "Evans Rd",
+      "suburb": "Bramston Beach"
+    },
+    "facebook": "https://www.facebook.com/221660564868405",
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Bramston Beach Road"
-    }
+    },
+    "phone": "+61740674121",
+    "website": "https://www.cairns.qld.gov.au/facilities-sport-leisure/camping-grounds-and-caravan-parks"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9XV44BZ1YDY9Y5Y7DEJ",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

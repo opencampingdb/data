@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2423",
+      "street": "Old Gibber Road",
+      "suburb": "Mid-Coast Council"
+    },
+    "facebook": "https://www.facebook.com/1668496936745356",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -22,7 +36,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 3840
-    }
+    },
+    "phone": "+61265910300"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESASEKRSD2A6XEMS0DQEF",
@@ -40,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

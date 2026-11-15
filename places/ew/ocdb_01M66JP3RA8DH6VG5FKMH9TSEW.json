@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "3862",
+      "state": "VIC",
+      "street": "Tyers Street",
+      "suburb": "Stratford"
+    },
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -18,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Tyers Street"
-    }
+    },
+    "phone": "0351456502"
   },
   "group": "services",
   "id": "ocdb_01M66JP3RA8DH6VG5FKMH9TSEW",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

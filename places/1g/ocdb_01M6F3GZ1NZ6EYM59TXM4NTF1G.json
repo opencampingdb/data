@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "355",
+      "postcode": "3875",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Bairnsdale"
+    },
+    "facebook": "https://www.facebook.com/216051271887992",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61351528300",
+    "website": "http://www.bairnsdaleinternational.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1NZ6EYM59TXM4NTF1G",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

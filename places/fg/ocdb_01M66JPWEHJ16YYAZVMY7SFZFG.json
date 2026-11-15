@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "69-73",
+      "postcode": "2330",
+      "state": "NSW",
+      "street": "George Street",
+      "suburb": "Singleton"
+    },
     "lga": {
       "name": "Singleton Council",
       "osm_id": 6191883
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "George Street"
-    }
+    },
+    "phone": "+61 2 5500 0906",
+    "website": "https://find.shell.com/au/fuel/10110920-shell-reddy-express-singleton-nsw/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPWEHJ16YYAZVMY7SFZFG",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

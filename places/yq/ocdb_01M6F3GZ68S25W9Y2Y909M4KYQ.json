@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 1",
+      "postcode": "5700",
+      "state": "SA",
+      "street": "National Hwy A1",
+      "suburb": "Port Augusta"
+    },
     "lga": {
       "name": "Port Augusta City Council",
       "osm_id": 6805282
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Augusta Highway"
-    }
+    },
+    "phone": "(08) 8642 2555",
+    "website": "http://www.augustabudgetmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ68S25W9Y2Y909M4KYQ",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

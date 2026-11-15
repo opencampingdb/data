@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "351",
+      "postcode": "6163",
+      "state": "WA",
+      "street": "Progress Dr",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/603718966345617",
     "lga": {
       "name": "City of Cockburn",
       "osm_id": 11689175
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "North Lake Road"
-    }
+    },
+    "phone": "+61894179666",
+    "website": "http://AdventureWorld.net.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPAM1SE96ZCXP0HZAX7T4",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

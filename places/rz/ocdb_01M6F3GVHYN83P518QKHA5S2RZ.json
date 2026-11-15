@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "5434",
+      "state": "SA",
+      "street": "Elder Ter",
+      "suburb": "Hawker"
+    },
+    "facebook": "https://www.facebook.com/413141922078713",
     "lga": {
       "name": "The Flinders Ranges Council",
       "osm_id": 6805430
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 200,
       "name": "The Outback Highway"
-    }
+    },
+    "phone": "+61886484102",
+    "website": "http://hawkerhotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVHYN83P518QKHA5S2RZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

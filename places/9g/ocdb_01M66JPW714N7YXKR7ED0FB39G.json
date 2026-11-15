@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Brisbane Valley Highway"
     },
     "air": true,
+    "facebook": "https://www.facebook.com/175376212531550",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -32,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Brisbane Valley Highway"
-    }
+    },
+    "phone": "+61754235194"
   },
   "group": "services",
   "id": "ocdb_01M66JPW714N7YXKR7ED0FB39G",
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

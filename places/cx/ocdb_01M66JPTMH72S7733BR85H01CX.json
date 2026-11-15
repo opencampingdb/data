@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7302",
+      "state": "TAS",
+      "street": "Franklin Street",
+      "suburb": "Poatina"
+    },
     "lga": {
       "name": "Northern Midlands",
       "osm_id": 10604255
@@ -18,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Poatina Road"
-    }
+    },
+    "phone": "0363978280",
+    "website": "https://locations.ampol.com.au/en/independent-poatina"
   },
   "group": "services",
   "id": "ocdb_01M66JPTMH72S7733BR85H01CX",
@@ -27,7 +45,7 @@
     "lat": -41.795906,
     "lon": 146.960453
   },
-  "name": null,
+  "name": "Independent Poatina",
   "osm": {
     "id": 437391039,
     "timestamp": "2023-11-24T00:49:59Z",
@@ -36,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

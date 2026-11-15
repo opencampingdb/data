@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2444",
+      "state": "NSW",
+      "street": "Oxley Hwy",
+      "suburb": "Thrumster"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/261641727743350",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -22,6 +37,7 @@
       "distance_m": 60,
       "name": "Pacific Highway Onramp"
     },
+    "phone": "+61448919379",
     "website": "https://map.bp.com/en-AU/AU/gas-station/port-macquarie/bp-gateway-port-macquarie/5549"
   },
   "group": "services",
@@ -40,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

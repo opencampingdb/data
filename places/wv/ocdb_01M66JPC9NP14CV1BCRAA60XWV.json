@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "11",
       "street": "Libbett Avenue"
     },
+    "facebook": "https://www.facebook.com/1437141423018720",
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Westall Road"
-    }
+    },
+    "phone": "+61430399906",
+    "website": "http://WWW.AUTOSITTER.COM.AU/"
   },
   "group": "services",
   "id": "ocdb_01M66JPC9NP14CV1BCRAA60XWV",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

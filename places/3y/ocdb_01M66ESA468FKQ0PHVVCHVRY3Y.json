@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "17141",
+      "postcode": "2397",
+      "street": "Newell Hwy",
+      "suburb": "Narrabri Shire Council"
+    },
+    "facebook": "https://www.facebook.com/248463502164469",
     "lga": {
       "name": "Narrabri Shire Council",
       "osm_id": 6389900
@@ -21,6 +36,7 @@
       "distance_m": 60,
       "name": "Newell Highway"
     },
+    "phone": "+61132213",
     "showers": false,
     "toilets": true
   },
@@ -40,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

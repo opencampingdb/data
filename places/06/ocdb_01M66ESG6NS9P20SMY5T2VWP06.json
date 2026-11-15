@@ -1,13 +1,21 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "drinking_water": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -15,10 +23,18 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "127",
+      "postcode": "2476",
+      "state": "NSW",
+      "street": "Unumgar St",
+      "suburb": "Woodenbong"
+    },
     "caravans": true,
     "charge": "$10 u/p $15 pwr",
     "drinking_water": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/297970063578015",
     "fee": true,
     "lga": {
       "name": "Kyogle Council",
@@ -34,6 +50,7 @@
       "distance_m": 100,
       "name": "Mount Lindesay Road"
     },
+    "phone": "+61427612919",
     "power": true,
     "showers": true,
     "tents": true,
@@ -56,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "3723",
+      "state": "VIC",
+      "street": "Standard Ln",
+      "suburb": "Mount Buller"
+    },
+    "facebook": "https://www.facebook.com/195348767238071",
     "lga": {
       "name": "Mount Buller Alpine Resort",
       "osm_id": 16918862
@@ -13,7 +31,9 @@
       "name": "Sawmill Settlement",
       "osm_id": 910283354,
       "type": "village"
-    }
+    },
+    "phone": "+61468746130",
+    "website": "http://www.mansfieldskilodge.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYN6JT8KBXS4CR471D6M",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

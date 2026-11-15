@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "155",
+      "postcode": "4465",
+      "state": "QLD",
+      "street": "Alice St",
+      "suburb": "Mitchell"
+    },
     "lga": {
       "name": "Maranoa Regional",
       "osm_id": 11674862
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Alice Street"
-    }
+    },
+    "phone": "(07) 4623 1803",
+    "website": "https://www.racq.com.au/car/approved-repairers/mitchell-auto-care"
   },
   "group": "services",
   "id": "ocdb_01M66JPECJYABTZ7SD74Z2F74M",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

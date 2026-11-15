@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Hangar Lane",
       "suburb": "Benalla"
     },
+    "facebook": "https://www.facebook.com/100751282010404",
     "lga": {
       "name": "Rural City of Benalla",
       "osm_id": 3351593
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Samaria Road"
-    }
+    },
+    "phone": "+61429629415",
+    "website": "https://www.benallaaviationmuseum.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZ2MXJ6KX4H0S12ESD6W",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

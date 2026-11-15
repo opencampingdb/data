@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "postcode": "2800",
       "street": "Mitchell Highway"
     },
+    "facebook": "https://www.facebook.com/634012133332550",
     "lga": {
       "name": "Orange City Council",
       "osm_id": 6427044
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Mitchell Highway"
-    }
+    },
+    "phone": "+61263691045",
+    "website": "http://www.turnersmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H00F60XHWZ10EXSH7VS1",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

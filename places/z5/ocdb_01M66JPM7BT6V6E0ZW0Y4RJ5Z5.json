@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "10",
       "street": "Gladstone Road"
     },
+    "facebook": "https://www.facebook.com/300776286619802",
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gladstone Road"
-    }
+    },
+    "phone": "+61397925722",
+    "website": "https://www.cherryautoelectrics.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPM7BT6V6E0ZW0Y4RJ5Z5",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

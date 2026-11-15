@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "601",
+      "postcode": "3186",
+      "state": "VIC",
+      "street": "Hampton Street",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/433457730414373",
     "lga": {
       "name": "City of Bayside",
       "osm_id": 3333042
@@ -29,6 +45,7 @@
       "distance_m": 30,
       "name": "South Road"
     },
+    "phone": "+6195926582",
     "website": "https://map.bp.com/en-AU/AU/gas-station/brighton/bp-brighton-vic/0138"
   },
   "group": "services",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

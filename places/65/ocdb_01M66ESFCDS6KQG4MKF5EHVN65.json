@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "5255",
+      "state": "SA",
+      "street": "Ashbourne Rd",
+      "suburb": "Strathalbyn"
+    },
+    "facebook": "https://www.facebook.com/255839979491",
     "lga": {
       "name": "Alexandrina Council",
       "osm_id": 7231567
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Ashbourne Road"
-    }
+    },
+    "phone": "+61885363681",
+    "website": "http://www.strathalbyncaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFCDS6KQG4MKF5EHVN65",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "5575",
+      "state": "SA",
+      "street": "Liddiard Rd",
+      "suburb": "Corny Point"
+    },
+    "facebook": "https://www.facebook.com/620485101399492",
     "lga": {
       "name": "Yorke Peninsula Council",
       "osm_id": 6673799
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Liddiard Road"
-    }
+    },
+    "phone": "+61888553395"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZF97EB09BT4YQ5VW7MZ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

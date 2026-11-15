@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "4007",
+      "state": "QLD",
+      "street": "Lamington Ave",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/156325117728427",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -25,7 +43,9 @@
     },
     "nearest_major_road": {
       "distance_m": 50
-    }
+    },
+    "phone": "+61732682457",
+    "website": "http://www.airwaymotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV19QK97FA1N6KQZPKYS",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

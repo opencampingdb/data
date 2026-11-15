@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "100",
+      "postcode": "6638",
+      "state": "WA",
+      "street": "Hepburn St",
+      "suburb": "Mount Magnet"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/205584143151403",
     "lga": {
       "name": "Shire of Mount Magnet",
       "osm_id": 11690060
@@ -23,6 +39,7 @@
       "distance_m": 80,
       "name": "Hepburn Street"
     },
+    "phone": "+61899634198",
     "tents": true,
     "website": "https://www.mtmagnet.wa.gov.au/caravan-park"
   },
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

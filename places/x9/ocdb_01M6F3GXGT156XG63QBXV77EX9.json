@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "4812",
+      "state": "QLD",
+      "street": "Bowen Rd",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/107025768670374",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -24,6 +42,8 @@
       "distance_m": 50,
       "name": "Bowen Road"
     },
+    "phone": "+61744268690",
+    "website": "http://www.monte-carlo.com.au",
     "wifi": true
   },
   "group": "overnight",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

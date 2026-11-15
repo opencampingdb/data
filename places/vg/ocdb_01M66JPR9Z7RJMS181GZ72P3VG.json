@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "62-70",
+      "postcode": "3806",
+      "state": "VIC",
+      "street": "Kangan Drive",
+      "suburb": "Berwick"
+    },
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -20,7 +33,8 @@
       "distance_m": 150,
       "name": "Kangan Drive"
     },
-    "operator": "Southern Health"
+    "operator": "Southern Health",
+    "website": "https://monashhealth.org/"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPR9Z7RJMS181GZ72P3VG",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

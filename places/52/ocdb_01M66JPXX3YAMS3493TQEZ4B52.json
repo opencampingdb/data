@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "4814",
+      "state": "QLD",
+      "street": "Veness Ct",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/345417638937886",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Duckworth Street"
-    }
+    },
+    "phone": "+61747251592",
+    "website": "https://www.doubledautomotive.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPXX3YAMS3493TQEZ4B52",
@@ -27,7 +49,7 @@
     "lat": -19.277559,
     "lon": 146.760406
   },
-  "name": null,
+  "name": "Double D Automotive",
   "osm": {
     "id": 1090346020,
     "timestamp": "2023-08-31T00:11:01Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

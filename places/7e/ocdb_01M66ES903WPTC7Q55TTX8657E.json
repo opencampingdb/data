@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "0852",
+      "street": "Victoria Hwy",
+      "suburb": "Victoria Daly Region"
+    },
+    "facebook": "https://www.facebook.com/1020754791333337",
     "lga": {
       "name": "Victoria Daly Region",
       "osm_id": 5514633
@@ -22,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Victoria Highway"
-    }
+    },
+    "phone": "+61889750888"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES903WPTC7Q55TTX8657E",
@@ -40,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "131",
+      "postcode": "6258",
+      "state": "WA",
+      "street": "Giblett Street",
+      "suburb": "Manjimup"
+    },
     "lga": {
       "name": "Shire of Manjimup",
       "osm_id": 11690439
@@ -20,7 +35,9 @@
       "distance_m": 160,
       "name": "Mottram Street"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 8 9771 1777",
+    "website": "https://find.shell.com/au/fuel/10110659-shell-manjimup/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP6FRN81V4AADMXDHJGE3",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

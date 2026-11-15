@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "2481",
+      "state": "NSW",
+      "street": "Centennial Cct",
+      "suburb": "Byron Bay"
+    },
+    "facebook": "https://www.facebook.com/329562247118137",
     "lga": {
       "name": "Byron Shire Council",
       "osm_id": 6170304
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 410,
       "name": "Bayshore Drive"
-    }
+    },
+    "phone": "+61266855255",
+    "website": "https://www.byronbaysmashrepairs.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPA7PKBZMWAKMM62T1AE1",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

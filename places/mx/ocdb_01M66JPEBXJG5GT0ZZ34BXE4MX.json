@@ -1,14 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "89 - 93",
       "street": "Mackie Road"
     },
+    "facebook": "https://www.facebook.com/108366764150964",
     "lga": {
       "name": "City of Glen Eira",
       "osm_id": 3331087
@@ -18,7 +25,8 @@
       "name": "Melbourne",
       "osm_id": 21579127,
       "type": "city"
-    }
+    },
+    "phone": "+61395704998"
   },
   "group": "services",
   "id": "ocdb_01M66JPEBXJG5GT0ZZ34BXE4MX",
@@ -36,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

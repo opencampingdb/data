@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "130",
+      "postcode": "2372",
+      "state": "NSW",
+      "street": "High St",
+      "suburb": "Tenterfield"
+    },
+    "facebook": "https://www.facebook.com/102445602494302",
     "lga": {
       "name": "Tenterfield Shire Council",
       "osm_id": 6163155
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "High Street"
-    }
+    },
+    "phone": "+61267361833"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZAEMH60CXGNVXMV50JZ",
@@ -27,7 +46,7 @@
     "lat": -29.052917,
     "lon": 152.020431
   },
-  "name": null,
+  "name": "Royal Tenterfield",
   "osm": {
     "id": 666802906,
     "timestamp": "2024-04-07T09:32:12Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "2871",
+      "state": "NSW",
+      "street": "Newell Hwy",
+      "suburb": "Forbes"
+    },
+    "facebook": "https://www.facebook.com/110971078498742",
     "lga": {
       "name": "Forbes Shire Council",
       "osm_id": 6413174
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Parkes Road"
-    }
+    },
+    "phone": "+61268523444",
+    "website": "http://www.forbesmotel.net.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXQNWH21SMHPPPTAAW7D",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

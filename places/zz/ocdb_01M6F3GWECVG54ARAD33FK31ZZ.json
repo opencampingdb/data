@@ -1,19 +1,28 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "2",
       "street": "George Street"
     },
+    "facebook": "https://www.facebook.com/66978901884",
     "fee": false,
     "lga": {
       "name": "City of Brisbane",
@@ -35,7 +44,9 @@
       "distance_m": 230,
       "name": "Riverside Expressway"
     },
-    "operator": "Queensland University of Technology"
+    "operator": "Queensland University of Technology",
+    "phone": "+61731385370",
+    "website": "http://www.artmuseum.qut.edu.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GWECVG54ARAD33FK31ZZ",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2232",
+      "state": "NSW",
+      "street": "Menai Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/1421651701383133",
     "lga": {
       "name": "Sutherland Shire Council",
       "osm_id": 6206752
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "River Road"
-    }
+    },
+    "phone": "+61295212291",
+    "website": "http://au.localize123.com/woronora-village-tourist-park-in-woronora-nsw"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG4Z20WZ8M3939K4R02G",
@@ -35,7 +57,7 @@
     "lat": -34.020181,
     "lon": 151.047563
   },
-  "name": null,
+  "name": "Woronora Village Tourist Park",
   "osm": {
     "id": 1304042492,
     "timestamp": "2024-07-27T09:19:00Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

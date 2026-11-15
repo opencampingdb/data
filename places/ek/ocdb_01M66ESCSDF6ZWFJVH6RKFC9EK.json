@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3741",
+      "postcode": "3678",
+      "street": "Wangaratta-Whitfield Rd",
+      "suburb": "Rural City of Wangaratta"
+    },
+    "facebook": "https://www.facebook.com/141454245923315",
     "fee": false,
     "lga": {
       "name": "Rural City of Wangaratta",
@@ -22,7 +37,8 @@
       "distance_m": 110,
       "name": "Wangaratta - Whitfield Road"
     },
-    "operator": "DELWP Ovens"
+    "operator": "DELWP Ovens",
+    "phone": "+61357311222"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCSDF6ZWFJVH6RKFC9EK",
@@ -40,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

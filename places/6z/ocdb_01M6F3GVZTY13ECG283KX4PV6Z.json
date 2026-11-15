@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "317",
+      "postcode": "2541",
+      "state": "NSW",
+      "street": "Princes Hwy",
+      "suburb": "Bomaderry"
+    },
+    "facebook": "https://www.facebook.com/120939691294886",
     "lga": {
       "name": "Shoalhaven City Council",
       "osm_id": 6311648
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61244218244",
+    "website": "http://www.avaleenmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZTY13ECG283KX4PV6Z",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

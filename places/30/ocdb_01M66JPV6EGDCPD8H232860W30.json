@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6537/6541",
+      "postcode": "3292",
+      "state": "VIC",
+      "street": "Portland Nelson Rd",
+      "suburb": "Nelson"
+    },
+    "facebook": "https://www.facebook.com/1646031305514336",
     "lga": {
       "name": "Shire of Glenelg",
       "osm_id": 3357380
@@ -26,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Portland - Nelson Road"
-    }
+    },
+    "phone": "+61887384142"
   },
   "group": "services",
   "id": "ocdb_01M66JPV6EGDCPD8H232860W30",
@@ -35,7 +54,7 @@
     "lat": -38.047593,
     "lon": 141.008183
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 516001018,
     "timestamp": "2017-08-16T04:47:07Z",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

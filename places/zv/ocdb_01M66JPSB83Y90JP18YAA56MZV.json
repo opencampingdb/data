@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6258",
+      "state": "WA",
+      "street": "Hospital Ave",
+      "suburb": "Manjimup"
+    },
+    "facebook": "https://www.facebook.com/157212114331609",
     "lga": {
       "name": "Shire of Manjimup",
       "osm_id": 11690439
@@ -20,7 +35,8 @@
       "distance_m": 390,
       "name": "Mottram Street"
     },
-    "phone": "+61 8 9777 0300"
+    "phone": "+61 8 9777 0300",
+    "website": "https://www.myhospitals.gov.au/hospital/511000433/warren-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPSB83Y90JP18YAA56MZV",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

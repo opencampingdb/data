@@ -1,16 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "24",
+      "postcode": "6280",
+      "state": "WA",
+      "street": "Albert Street",
+      "suburb": "Busselton"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/343025592889941",
     "lga": {
       "name": "City of Busselton",
       "osm_id": 11688682
@@ -32,6 +48,7 @@
       "distance_m": 10,
       "name": "Albert Street"
     },
+    "phone": "+61897521509",
     "website": "https://map.bp.com/en-AU/AU/gas-station/busselton/bp-busselton-city-regional/1876",
     "wheelchair": true
   },
@@ -51,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

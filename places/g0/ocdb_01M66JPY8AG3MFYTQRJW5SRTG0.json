@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "148",
+      "postcode": "2333",
+      "state": "NSW",
+      "street": "Bridge Street",
+      "suburb": "Muswellbrook"
+    },
     "lga": {
       "name": "Muswellbrook Shire Council",
       "osm_id": 6343182
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61 2 9883 0628",
+    "website": "https://find.shell.com/au/fuel/10110894-shell-reddy-express-muswellbrook/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPY8AG3MFYTQRJW5SRTG0",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

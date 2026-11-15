@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18477",
+      "postcode": "4805",
+      "state": "QLD",
+      "street": "Bruce Hwy",
+      "suburb": "Bowen"
+    },
+    "facebook": "https://www.facebook.com/464081640438670",
     "lga": {
       "name": "Whitsunday Regional",
       "osm_id": 11676670
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "+61747862994",
+    "website": "http://www.bowenpalms.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYTVYSA4WKPSMAXR1NC",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

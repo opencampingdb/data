@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4380",
+      "street": "Amiens Rd"
+    },
+    "facebook": "https://www.facebook.com/1029280960479295",
     "lga": {
       "name": "Southern Downs Regional",
       "osm_id": 11677975
@@ -13,7 +28,9 @@
       "name": "The Summit",
       "osm_id": 443265468,
       "type": "village"
-    }
+    },
+    "phone": "+61746812057",
+    "website": "http://www.granitebeltwinecountry.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP0QEAPW182YKB9QAVTNF",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

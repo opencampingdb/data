@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7/21",
+      "postcode": "3844",
+      "state": "VIC",
+      "street": "Shakespeare Street",
+      "suburb": "Traralgon"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Shakespeare Street"
-    }
+    },
+    "phone": "0399991197",
+    "website": "https://www.libertyconvenience.com.au/?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Traralgon&utm_term=plcid_11402970924754713424"
   },
   "group": "services",
   "id": "ocdb_01M66JPY7SVW2M9PYCTPTEV5TH",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

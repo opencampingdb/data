@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "500",
+      "postcode": "7306",
+      "state": "TAS",
+      "street": "Staverton Rd",
+      "suburb": "Promised Land"
+    },
+    "facebook": "https://www.facebook.com/160990030638131",
     "lga": {
       "name": "Kentish",
       "osm_id": 10597614
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Staverton Road"
-    }
+    },
+    "phone": "+61364911934",
+    "website": "http://www.tasmazia.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRSVQQCZ5MV8GEMN1A0F",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

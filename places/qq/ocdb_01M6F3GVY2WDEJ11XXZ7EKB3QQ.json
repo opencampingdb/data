@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "798",
+      "postcode": "2280",
+      "state": "NSW",
+      "street": "Pacific Hwy",
+      "suburb": "Marks Point"
+    },
+    "facebook": "https://www.facebook.com/223567911100865",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -28,7 +46,9 @@
       "distance_m": 50,
       "name": "Pacific Highway"
     },
-    "operator": "Golden Chain"
+    "operator": "Golden Chain",
+    "phone": "+61240894528",
+    "website": "http://lakemacquariemotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVY2WDEJ11XXZ7EKB3QQ",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

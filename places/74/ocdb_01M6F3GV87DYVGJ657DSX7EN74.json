@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "0880",
+      "state": "NT",
+      "street": "Westal St",
+      "suburb": "Nhulunbuy"
+    },
+    "facebook": "https://www.facebook.com/997783380259311",
     "locality": {
       "distance_m": 1390,
       "name": "Nhulunbuy",
@@ -12,7 +30,9 @@
     },
     "nearest_beach": {
       "distance_m": 50
-    }
+    },
+    "phone": "+61461302297",
+    "website": "https://www.walkaboutlodge.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV87DYVGJ657DSX7EN74",
@@ -30,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

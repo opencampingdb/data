@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "43",
+      "postcode": "2425",
+      "state": "NSW",
+      "street": "Cowper St",
+      "suburb": "Stroud"
+    },
+    "facebook": "https://www.facebook.com/110134481539967",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Cowper Street"
-    }
+    },
+    "phone": "+61249945204",
+    "website": "http://midcoast.nsw.gov.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBTNJH3JQJQQBMFTXBAJ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "200",
+      "postcode": "2320",
+      "state": "NSW",
+      "street": "Paterson Road",
+      "suburb": "Bolwarra Heights"
+    },
+    "facebook": "https://www.facebook.com/101894984740658",
     "fuel": true,
     "lga": {
       "name": "Maitland City Council",
@@ -28,7 +46,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Tocal Road"
-    }
+    },
+    "phone": "+61249301912"
   },
   "group": "services",
   "id": "ocdb_01M66JQ03V43PGVJW54FY7Z0BA",
@@ -37,7 +56,7 @@
     "lat": -32.701101,
     "lon": 151.584605
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1532699770,
     "timestamp": "2026-06-26T12:04:33Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

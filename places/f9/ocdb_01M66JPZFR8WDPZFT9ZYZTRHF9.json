@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "255-257",
+      "postcode": "2795",
+      "state": "NSW",
+      "street": "Stewart St",
+      "suburb": "Bathurst"
+    },
+    "facebook": "https://www.facebook.com/242656059814103",
     "fuel": true,
     "lga": {
       "name": "Bathurst Regional Council",
@@ -20,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Stewart Street"
-    }
+    },
+    "phone": "+61263324499",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/bathurst/bp-bathurst-stewart-street/7380"
   },
   "group": "services",
   "id": "ocdb_01M66JPZFR8WDPZFT9ZYZTRHF9",
@@ -29,7 +51,7 @@
     "lat": -33.417326,
     "lon": 149.569179
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1376921612,
     "timestamp": "2025-04-12T05:00:30Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

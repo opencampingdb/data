@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "589",
+      "postcode": "4560",
+      "state": "QLD",
+      "street": "Nambour Connection Rd",
+      "suburb": "Nambour"
+    },
     "air": true,
     "lga": {
       "name": "Sunshine Coast Regional",
@@ -22,6 +37,8 @@
       "distance_m": 40,
       "name": "Nambour Connection Road"
     },
+    "phone": "+61 7 5220 8739",
+    "website": "https://find.shell.com/au/fuel/10111370-shell-reddy-express-nambour-panorama-dr/en_AU",
     "wheelchair": true
   },
   "group": "services",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

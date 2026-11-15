@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76",
+      "postcode": "2590",
+      "state": "NSW",
+      "street": "Olympic Hwy",
+      "suburb": "Cootamundra"
+    },
+    "facebook": "https://www.facebook.com/1584604358521967",
     "lga": {
       "name": "Cootamundra-Gundagai Regional Council",
       "osm_id": 6247073
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hovell Street"
-    }
+    },
+    "phone": "+61269402190"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW2ZDAH9Q11WW93Z41JJ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }
