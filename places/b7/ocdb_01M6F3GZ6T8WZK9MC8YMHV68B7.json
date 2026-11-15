@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "77",
       "street": "Hyde Street"
     },
+    "facebook": "https://www.facebook.com/516954855094124",
     "lga": {
       "name": "Bellingen Shire Council",
       "osm_id": 6165980
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hyde Street"
-    }
+    },
+    "phone": "+61266551003",
+    "website": "http://www.federalhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ6T8WZK9MC8YMHV68B7",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

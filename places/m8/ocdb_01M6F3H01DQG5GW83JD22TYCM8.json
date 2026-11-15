@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "4626",
+      "state": "QLD",
+      "street": "Lyons St",
+      "suburb": "Mundubbera"
+    },
+    "facebook": "https://www.facebook.com/770126179817141",
     "lga": {
       "name": "North Burnett Regional",
       "osm_id": 11676093
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Strathdee Street"
-    }
+    },
+    "website": "http://www.pickypackers.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H01DQG5GW83JD22TYCM8",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "42",
+      "postcode": "4885",
+      "state": "QLD",
+      "street": "James St",
+      "suburb": "Malanda"
+    },
+    "facebook": "https://www.facebook.com/281849578516393",
     "lga": {
       "name": "Tablelands Regional",
       "osm_id": 11677293
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Park Avenue"
-    }
+    },
+    "phone": "+61740965646",
+    "website": "http://caltexmalanda2.placeweb.site"
   },
   "group": "services",
   "id": "ocdb_01M66JPTGNG4QY1KNF87EW0X9C",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

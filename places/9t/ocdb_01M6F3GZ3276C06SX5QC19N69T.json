@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "pub": "osm"
+    "phone": "overture",
+    "pub": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2460",
+      "state": "NSW",
+      "street": "Prince St",
+      "suburb": "Grafton"
+    },
+    "facebook": "https://www.facebook.com/169618443098631",
     "lga": {
       "name": "Clarence Valley Council",
       "osm_id": 6143220
@@ -28,7 +46,9 @@
       "distance_m": 260,
       "name": "Fitzroy Street"
     },
-    "pub": true
+    "phone": "+61266424000",
+    "pub": true,
+    "website": "http://www.crownhotelmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ3276C06SX5QC19N69T",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

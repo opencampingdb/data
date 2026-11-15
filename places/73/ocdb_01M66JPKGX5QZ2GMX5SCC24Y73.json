@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "88A",
+      "postcode": "6156",
+      "state": "WA",
+      "street": "Moreing Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/312313349513276",
     "lga": {
       "name": "City of Melville",
       "osm_id": 11689377
@@ -29,7 +45,8 @@
       "distance_m": 140,
       "name": "Stock Road"
     },
-    "opening_hours": "07:00-19:30"
+    "opening_hours": "07:00-19:30",
+    "phone": "+61420480224"
   },
   "group": "utility",
   "id": "ocdb_01M66JPKGX5QZ2GMX5SCC24Y73",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

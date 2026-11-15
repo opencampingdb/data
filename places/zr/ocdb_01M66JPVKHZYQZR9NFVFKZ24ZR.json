@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "0870",
+      "state": "NT",
+      "street": "Larapinta Drive",
+      "suburb": "Alice Springs"
+    },
     "lga": {
       "name": "Town of Alice Springs",
       "osm_id": 9045378
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Larapinta Drive"
-    }
+    },
+    "phone": "+61 8 8929 1945",
+    "website": "https://find.shell.com/au/fuel/10111632-shell-reddy-express-alice-springs-mt-gillen/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPVKHZYQZR9NFVFKZ24ZR",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

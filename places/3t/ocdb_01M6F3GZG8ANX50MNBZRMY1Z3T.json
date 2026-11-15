@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6262",
+      "state": "WA",
+      "street": "Windy Harbour Rd",
+      "suburb": "Northcliffe"
+    },
+    "facebook": "https://www.facebook.com/101573892792242",
     "lga": {
       "name": "Shire of Manjimup",
       "osm_id": 11690439
@@ -20,7 +37,9 @@
       "distance_m": 40,
       "name": "Windy Harbour Road"
     },
-    "opening_hours": "Mo-Su 10:00-15:00"
+    "opening_hours": "Mo-Su 10:00-15:00",
+    "phone": "+61407384814",
+    "website": "http://www.northcliffe.org.au/museum_tour/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZG8ANX50MNBZRMY1Z3T",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

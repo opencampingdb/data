@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4507",
+      "state": "QLD",
+      "street": "North St",
+      "suburb": "Bribie Island"
+    },
+    "facebook": "https://www.facebook.com/300455553391410",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "North Street"
-    }
+    },
+    "phone": "+61734081004",
+    "website": "https://www.thebluepacific.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV75EVXDH23N3SCWWHTH",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

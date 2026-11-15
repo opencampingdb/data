@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Beaconsfield Street"
     },
     "air": false,
+    "facebook": "https://www.facebook.com/286983548378714",
     "lga": {
       "name": "Canterbury-Bankstown Council",
       "osm_id": 2162244
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Beaconsfield Street"
-    }
+    },
+    "phone": "+61297927271",
+    "website": "http://metropetroleum.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPJ2EPP96G4QA06YP4JA9",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

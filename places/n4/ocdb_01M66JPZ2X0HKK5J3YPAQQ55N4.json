@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "78-80",
+      "postcode": "3579",
+      "state": "VIC",
+      "street": "Bendigo Rd",
+      "suburb": "Kerang"
+    },
     "lga": {
       "name": "Shire of Gannawarra",
       "osm_id": 3363585
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bendigo Road"
-    }
+    },
+    "phone": "0354503066",
+    "website": "https://locations.ampol.com.au/en/ampol-kerang"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ2X0HKK5J3YPAQQ55N4",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

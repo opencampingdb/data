@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1A",
+      "postcode": "2790",
+      "state": "NSW",
+      "street": "Wolgan Road",
+      "suburb": "Lidsdale"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -28,7 +45,9 @@
       "distance_m": 40,
       "name": "Wolgan Road"
     },
-    "operator": "Astron"
+    "operator": "Astron",
+    "phone": "0263551297",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/astron-lidsdale"
   },
   "group": "services",
   "id": "ocdb_01M66JNZCT952HP45QA4TD6EJD",
@@ -37,7 +56,7 @@
     "lat": -33.397413,
     "lon": 150.083488
   },
-  "name": null,
+  "name": "Astron Lidsdale",
   "osm": {
     "id": 646579773,
     "timestamp": "2024-03-16T07:19:48Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

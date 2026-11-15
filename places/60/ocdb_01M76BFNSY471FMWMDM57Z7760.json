@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "32651",
+      "postcode": "5655",
+      "state": "SA",
+      "street": "Eyre Highway",
+      "suburb": "Poochera"
+    },
     "lga": {
       "name": "The District Council of Streaky Bay",
       "osm_id": 7109329
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Eyre Highway"
-    }
+    },
+    "phone": "+61 469 359 468",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/poochera/bp-poochera-roadhouse/1405"
   },
   "group": "services",
   "id": "ocdb_01M76BFNSY471FMWMDM57Z7760",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

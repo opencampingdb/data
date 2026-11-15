@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "137",
+      "postcode": "5540",
+      "state": "SA",
+      "street": "Warnertown Rd",
+      "suburb": "Port Pirie"
+    },
+    "facebook": "https://www.facebook.com/271411862882651",
     "lga": {
       "name": "Port Pirie Regional Council",
       "osm_id": 9108160
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Warnertown Road"
-    }
+    },
+    "phone": "+61886332666",
+    "website": "http://www.cabinpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVBMV7ZWZBNGMCFHXZRW",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

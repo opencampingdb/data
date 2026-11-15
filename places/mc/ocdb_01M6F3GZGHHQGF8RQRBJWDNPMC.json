@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "49",
+      "postcode": "3616",
+      "state": "VIC",
+      "street": "Hogan St",
+      "suburb": "Tatura"
+    },
+    "facebook": "https://www.facebook.com/398091246884959",
     "lga": {
       "name": "City of Greater Shepparton",
       "osm_id": 3365116
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Ross Street"
-    }
+    },
+    "phone": "+61358242111",
+    "website": "http://www.taturamuseum.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZGHHQGF8RQRBJWDNPMC",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

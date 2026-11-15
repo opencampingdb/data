@@ -1,16 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2422",
+      "street": "Gloucester Tops Rd",
+      "suburb": "Mid-Coast Council"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/964198370283649",
     "fee": true,
     "lga": {
       "name": "Mid-Coast Council",
@@ -22,6 +36,7 @@
       "osm_id": 114371357,
       "type": "village"
     },
+    "phone": "+61265385300",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -43,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

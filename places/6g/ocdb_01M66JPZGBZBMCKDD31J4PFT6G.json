@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "26",
+      "postcode": "4701",
+      "state": "QLD",
+      "street": "Edwin Street",
+      "suburb": "berserker"
+    },
     "fuel": true,
     "lga": {
       "name": "Rockhampton Regional",
@@ -24,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Queen Elizabeth Drive"
-    }
+    },
+    "phone": "0749942827"
   },
   "group": "services",
   "id": "ocdb_01M66JPZGBZBMCKDD31J4PFT6G",
@@ -33,7 +49,7 @@
     "lat": -23.369656,
     "lon": 150.519956
   },
-  "name": null,
+  "name": "Caltex Berserker",
   "osm": {
     "id": 1380464451,
     "timestamp": "2025-04-24T00:52:01Z",
@@ -42,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

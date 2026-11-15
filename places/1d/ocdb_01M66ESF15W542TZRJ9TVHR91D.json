@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "117",
+      "postcode": "2786",
+      "state": "NSW",
+      "street": "Mount Irvine Rd",
+      "suburb": "Mount Wilson"
+    },
+    "facebook": "https://www.facebook.com/917557095008530",
     "lga": {
       "name": "Blue Mountains City Council",
       "osm_id": 6299568
@@ -13,7 +31,9 @@
       "name": "Mount Wilson",
       "osm_id": 117041157,
       "type": "village"
-    }
+    },
+    "phone": "+61480688755",
+    "website": "http://www.mtwilson.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF15W542TZRJ9TVHR91D",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "3850",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Sale"
+    },
+    "facebook": "https://www.facebook.com/193579628062625",
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "A1"
-    }
+    },
+    "phone": "+61351447955",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/wurruk/bp-wurruk/3057"
   },
   "group": "services",
   "id": "ocdb_01M66JNZ32FF1ZSZ1VR3TPWDVP",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

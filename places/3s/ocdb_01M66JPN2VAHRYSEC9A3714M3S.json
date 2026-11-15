@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "945",
+      "postcode": "4075",
+      "state": "QLD",
+      "street": "Oxley Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/1395264363952930",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Oxley Road"
-    }
+    },
+    "phone": "+61732780211",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/oxley/temporarily-closed-bp-oxley/383"
   },
   "group": "services",
   "id": "ocdb_01M66JPN2VAHRYSEC9A3714M3S",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "184",
+      "postcode": "3081",
+      "state": "VIC",
+      "street": "Bell Street",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/185262928871952",
     "lga": {
       "name": "City of Banyule",
       "osm_id": 2403625
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bell Street"
-    }
+    },
+    "phone": "+61394596801",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/west-heidelberg/aa-heidelberg-west/588"
   },
   "group": "services",
   "id": "ocdb_01M66JP9T2JG03BERG2AXQYCPA",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

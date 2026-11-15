@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "83",
+      "postcode": "2580",
+      "state": "NSW",
+      "street": "Orchard St",
+      "suburb": "Taralga"
+    },
+    "facebook": "https://www.facebook.com/129203367480726",
     "lga": {
       "name": "Upper Lachlan Shire Council",
       "osm_id": 6257920
@@ -20,7 +40,9 @@
       "distance_m": 30,
       "name": "Orchard Street"
     },
-    "operator": "community art gallery"
+    "operator": "community art gallery",
+    "phone": "+61418919357",
+    "website": "http://taralgahistoricalsociety.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZG7MM51D3P34AZ2E0QX",
@@ -29,7 +51,7 @@
     "lat": -34.39903,
     "lon": 149.820177
   },
-  "name": null,
+  "name": "Taralga Historical Museum",
   "osm": {
     "id": 880512933,
     "timestamp": "2020-12-03T08:20:46Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

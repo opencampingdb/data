@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "5214",
+      "state": "SA",
+      "street": "Cadell St",
+      "suburb": "Goolwa"
+    },
+    "facebook": "https://www.facebook.com/101676799037621",
     "lga": {
       "name": "Alexandrina Council",
       "osm_id": 7231567
@@ -26,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Cadell Street"
-    }
+    },
+    "phone": "+61885552012"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV3VCEF6N96TJ9E48BTD",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

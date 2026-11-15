@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "978",
+      "postcode": "2477",
+      "state": "NSW",
+      "street": "Pimlico Rd",
+      "suburb": "Wardell"
+    },
+    "facebook": "https://www.facebook.com/105709968772049",
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Blackwall Drive"
-    }
+    },
+    "phone": "+61266834221",
+    "website": "http://www.sandalwoodvanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2NDP30GPKJ171X8N5T",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "4552",
+      "state": "QLD",
+      "street": "Bunya Street",
+      "suburb": "Maleny"
+    },
     "air": true,
     "lga": {
       "name": "Sunshine Coast Regional",
@@ -20,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Landsborough-Maleny Road"
-    }
+    },
+    "phone": "1800953282",
+    "website": "https://localcoinatm.com/en-au/bitcoin-atm/queensland/maleny/mobil_maleny-at-21-bunya-st/"
   },
   "group": "services",
   "id": "ocdb_01M66JPYHM12T5QZ3P03ACFGJP",
@@ -29,7 +48,7 @@
     "lat": -26.760875,
     "lon": 152.855026
   },
-  "name": null,
+  "name": "Localcoin Bitcoin ATM - Mobil Maleny",
   "osm": {
     "id": 1195995943,
     "timestamp": "2024-05-08T00:49:23Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "5723",
+      "state": "SA",
+      "street": "Hutchison St",
+      "suburb": "Coober Pedy"
+    },
     "air": true,
     "lga": {
       "name": "The District Council of Coober Pedy",
@@ -22,7 +37,9 @@
       "distance_m": 210,
       "name": "Hutchison Street"
     },
-    "opening_hours": "Mo-Su 07:00-21:00"
+    "opening_hours": "Mo-Su 07:00-21:00",
+    "phone": "0886725703",
+    "website": "https://locations.ampol.com.au/en/ampol-coober-pedy"
   },
   "group": "services",
   "id": "ocdb_01M66JPTSAMZY10Z8GHVFKF2HS",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

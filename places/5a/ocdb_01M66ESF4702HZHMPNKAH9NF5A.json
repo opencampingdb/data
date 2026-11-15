@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "6438",
+      "state": "WA",
+      "street": "Rochester St",
+      "suburb": "Leonora"
+    },
+    "facebook": "https://www.facebook.com/220225661329131",
     "fee": true,
     "lga": {
       "name": "Shire of Leonora",
@@ -20,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Goldfields Highway"
-    }
+    },
+    "phone": "+61890376568",
+    "website": "http://opl.net.au/accommodation/leonora-caravan-park/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF4702HZHMPNKAH9NF5A",
@@ -29,7 +51,7 @@
     "lat": -28.8857,
     "lon": 121.328271
   },
-  "name": null,
+  "name": "Leonora Cvan Pk",
   "osm": {
     "id": 360678548,
     "timestamp": "2015-07-15T07:37:30Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

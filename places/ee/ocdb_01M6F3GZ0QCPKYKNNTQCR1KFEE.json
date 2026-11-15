@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -23,7 +29,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "High Street"
-    }
+    },
+    "phone": "(02) 6967 1885",
+    "website": "http://www.tab.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ0QCPKYKNNTQCR1KFEE",
@@ -41,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

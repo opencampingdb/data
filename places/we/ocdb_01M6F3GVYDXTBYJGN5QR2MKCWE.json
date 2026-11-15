@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "79",
+      "postcode": "4490",
+      "state": "QLD",
+      "street": "Emma St",
+      "suburb": "Cunnamulla"
+    },
+    "facebook": "https://www.facebook.com/206055306199204",
     "lga": {
       "name": "Paroo Shire",
       "osm_id": 11674869
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Emma Street"
-    }
+    },
+    "phone": "+61407785785",
+    "website": "http://www.cunnamullacabins.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVYDXTBYJGN5QR2MKCWE",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

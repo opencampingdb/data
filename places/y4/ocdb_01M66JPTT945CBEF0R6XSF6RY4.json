@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "221",
+      "postcode": "2750",
+      "state": "NSW",
+      "street": "Wolseley Street",
+      "suburb": "Jamisontown"
+    },
     "lga": {
       "name": "Penrith City Council",
       "osm_id": 6282698
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Mulgoa Road"
-    }
+    },
+    "phone": "+61 2 4747 1090",
+    "website": "https://find.shell.com/au/fuel/10110837-shell-otr-jamisontown/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTT945CBEF0R6XSF6RY4",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

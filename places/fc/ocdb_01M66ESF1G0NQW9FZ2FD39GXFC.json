@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "George Street",
       "suburb": "Kellerberrin"
     },
+    "facebook": "https://www.facebook.com/814898611705732",
     "lga": {
       "name": "Shire of Kellerberrin",
       "osm_id": 11689523
@@ -26,7 +35,9 @@
       "distance_m": 70,
       "name": "Moore Street"
     },
-    "operator": "Chris Thill"
+    "operator": "Chris Thill",
+    "phone": "+61428138474",
+    "website": "https://www.kellerberrin.wa.gov.au/the-shire/council-facilities/caravan-park.aspx"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF1G0NQW9FZ2FD39GXFC",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

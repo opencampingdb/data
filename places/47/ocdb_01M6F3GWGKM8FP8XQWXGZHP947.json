@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59",
+      "postcode": "3726",
+      "state": "VIC",
+      "street": "Sargeant St",
+      "suburb": "Thoona"
+    },
+    "facebook": "https://www.facebook.com/171909522837694",
     "lga": {
       "name": "Rural City of Benalla",
       "osm_id": 3351593
@@ -13,7 +31,9 @@
       "name": "Thoona",
       "osm_id": 688577107,
       "type": "village"
-    }
+    },
+    "phone": "+61357652353",
+    "website": "http://www.thoonapub.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWGKM8FP8XQWXGZHP947",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

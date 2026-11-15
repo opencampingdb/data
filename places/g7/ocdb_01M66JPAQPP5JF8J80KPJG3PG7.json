@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "123",
       "street": "Cochranes Road"
     },
+    "facebook": "https://www.facebook.com/536141936724426",
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Cochranes Road"
-    }
+    },
+    "phone": "+61395555838",
+    "website": "http://www.bucketpanels.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPAQPP5JF8J80KPJG3PG7",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

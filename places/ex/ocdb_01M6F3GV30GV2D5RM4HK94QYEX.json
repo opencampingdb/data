@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "5556",
+      "state": "SA",
+      "street": "John Ter",
+      "suburb": "Wallaroo"
+    },
+    "facebook": "https://www.facebook.com/104886801198385",
     "lga": {
       "name": "Copper Coast Council",
       "osm_id": 9108139
@@ -27,7 +43,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Wildman Street"
-    }
+    },
+    "phone": "+61888232008"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV30GV2D5RM4HK94QYEX",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

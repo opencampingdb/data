@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "227-231",
+      "postcode": "3550",
+      "state": "VIC",
+      "street": "McIvor Hwy",
+      "suburb": "Bendigo"
+    },
+    "facebook": "https://www.facebook.com/149393808467876",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "McIvor Road"
-    }
+    },
+    "phone": "+61354414490"
   },
   "group": "services",
   "id": "ocdb_01M66JNYXT01V9Y3D8YV7FXGXV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

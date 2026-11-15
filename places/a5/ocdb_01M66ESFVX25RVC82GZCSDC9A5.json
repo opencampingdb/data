@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2636",
+      "postcode": "3594",
+      "state": "VIC",
+      "street": "Murray Valley Hwy",
+      "suburb": "Nyah"
+    },
     "facebook": "https://www.facebook.com/nyahvillage.c.p/",
     "lga": {
       "name": "Rural City of Swan Hill",
@@ -20,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Murray Valley Highway"
-    }
+    },
+    "phone": "+61350302284",
+    "website": "http://au.localize123.com/nyah-village-caravan-park-in-nyah-vic"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVX25RVC82GZCSDC9A5",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

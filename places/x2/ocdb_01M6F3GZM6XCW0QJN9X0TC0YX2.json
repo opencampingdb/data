@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Mt Spec Road",
       "suburb": "Paluma"
     },
+    "facebook": "https://www.facebook.com/249659588560330",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -21,7 +30,9 @@
       "name": "Mutarnee",
       "osm_id": 4074283389,
       "type": "village"
-    }
+    },
+    "phone": "+61747708688",
+    "website": "http://rainforestinnpaluma.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZM6XCW0QJN9X0TC0YX2",
@@ -39,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

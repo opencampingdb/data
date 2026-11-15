@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "entry": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-5",
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "Thomas Murrell Crescent",
+      "suburb": "Dandenong South"
+    },
     "entry": "public",
     "fuels": [
       "diesel"
@@ -24,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 440,
       "name": "EastLink"
-    }
+    },
+    "phone": "1300366245",
+    "website": "https://pacificfuelsolutions.com.au/?utm_term=plcid_5998079975305916498&utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Pacific+Fuel+Solutions+-+Dandenong+South"
   },
   "group": "services",
   "id": "ocdb_01M66JPF87A2K8T4K0NCNMYB1G",
@@ -33,7 +52,7 @@
     "lat": -38.020565,
     "lon": 145.192882
   },
-  "name": null,
+  "name": "Pacific Fuel Solutions",
   "osm": {
     "id": 9343053284,
     "timestamp": "2021-12-16T09:03:22Z",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

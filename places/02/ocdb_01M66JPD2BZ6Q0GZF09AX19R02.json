@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5075",
+      "state": "SA",
+      "street": "Unit 10/832 Lower North East Rd",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/109034324061504",
     "lga": {
       "name": "City of Tea Tree Gully",
       "osm_id": 9107506
@@ -20,7 +37,9 @@
       "distance_m": 60,
       "name": "Lower North East Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "+61871320933",
+    "website": "http://starlaundromat.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPD2BZ6Q0GZF09AX19R02",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

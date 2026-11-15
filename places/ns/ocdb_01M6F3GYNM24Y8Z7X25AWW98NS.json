@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "39",
+      "postcode": "5015",
+      "state": "SA",
+      "street": "Carlisle St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/168304063204186",
     "lga": {
       "name": "City of Port Adelaide Enfield",
       "osm_id": 9108064
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Bower Road"
-    }
+    },
+    "phone": "+61884496650",
+    "website": "http://www.carlisletavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYNM24Y8Z7X25AWW98NS",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

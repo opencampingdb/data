@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "490",
+      "postcode": "5041",
+      "state": "SA",
+      "street": "Goodwood Rd",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/108351774890400",
     "lga": {
       "name": "City of Mitcham",
       "osm_id": 9102859
@@ -20,6 +36,7 @@
       "distance_m": 10,
       "name": "Goodwood Road"
     },
+    "phone": "+61434067130",
     "website": "https://www.adelaidelaundromats.com.au"
   },
   "group": "utility",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

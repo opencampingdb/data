@@ -1,14 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "327",
+      "postcode": "2068",
+      "state": "NSW",
+      "street": "Eastern Valley Way",
+      "suburb": "Castlecrag"
+    },
     "air": true,
     "fuels": [
       "unleaded_95"
@@ -32,7 +45,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Eastern Valley Way"
-    }
+    },
+    "phone": "(02) 9417 5411"
   },
   "group": "services",
   "id": "ocdb_01M66JPCSWJWXRH8D2KNT8FM1Z",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

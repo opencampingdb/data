@@ -1,12 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +22,7 @@
       "street": "Bussell Highway",
       "suburb": "Margaret River"
     },
+    "facebook": "https://www.facebook.com/102811212099314",
     "fuels": [
       "diesel",
       "unleaded_95",
@@ -37,7 +44,8 @@
       "name": "Bussell Highway"
     },
     "opening_hours": "Mo-Su 06:00-22:00",
-    "operator": "Better Choice"
+    "operator": "Better Choice",
+    "phone": "+61897852811"
   },
   "group": "services",
   "id": "ocdb_01M66JPC59S43SC1T5W8PXNFBV",
@@ -55,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

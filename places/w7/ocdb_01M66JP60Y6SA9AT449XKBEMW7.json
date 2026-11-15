@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "380",
+      "postcode": "3029",
+      "state": "VIC",
+      "street": "Sayers Road",
+      "suburb": "Tarneit"
+    },
     "lga": {
       "name": "City of Wyndham",
       "osm_id": 2432416
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Sayers Road"
-    }
+    },
+    "phone": "+61 3 8721 0412",
+    "website": "https://find.shell.com/au/fuel/10110971-shell-reddy-express-tarneit/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP60Y6SA9AT449XKBEMW7",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

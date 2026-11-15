@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1/14",
+      "postcode": "2606",
+      "state": "ACT",
+      "street": "Dundas Ct",
+      "suburb": "Woden Valley"
+    },
+    "facebook": "https://www.facebook.com/928276253955678",
     "locality": {
       "distance_m": 720,
       "name": "Woden",
@@ -13,7 +31,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Melrose Drive"
-    }
+    },
+    "phone": "+61262810554",
+    "website": "http://mtaact.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP38F8WTGF1QHMQH3CPTT",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

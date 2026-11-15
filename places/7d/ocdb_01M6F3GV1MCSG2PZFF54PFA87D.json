@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1236",
+      "postcode": "3266",
+      "state": "VIC",
+      "street": "Camperdown-Cobden Rd",
+      "suburb": "Cobden"
+    },
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Camperdown-Cobden Road"
-    }
+    },
+    "phone": "(03) 5595 1535",
+    "website": "http://www.cobdenroadhousemotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV1MCSG2PZFF54PFA87D",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

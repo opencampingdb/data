@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -14,8 +22,16 @@
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "186",
+      "postcode": "4880",
+      "state": "QLD",
+      "street": "Tinaroo Creek Rd",
+      "suburb": "Mareeba"
+    },
     "drinking_water": true,
     "dump_station": true,
+    "facebook": "https://www.facebook.com/230419710897596",
     "fee": true,
     "kitchen": true,
     "lga": {
@@ -28,6 +44,7 @@
       "osm_id": 245382244,
       "type": "town"
     },
+    "phone": "+611300221888",
     "power": true,
     "showers": true,
     "tents": true,
@@ -51,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

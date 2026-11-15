@@ -1,17 +1,33 @@
 {
   "fact_dates": {
-    "fee": "2024-01-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "fee": "2024-01-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4741",
+      "state": "QLD",
+      "street": "Colonial Dr",
+      "suburb": "Clairview"
+    },
+    "facebook": "https://www.facebook.com/152992708223161",
     "fee": true,
     "lga": {
       "name": "Isaac Regional",
@@ -30,7 +46,9 @@
       "distance_m": 140,
       "name": "Bruce Highway"
     },
+    "phone": "+61749560190",
     "power": true,
+    "website": "http://www.barracrabcp.com.au",
     "wifi": false
   },
   "group": "overnight",
@@ -49,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

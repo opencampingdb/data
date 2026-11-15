@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3737",
+      "state": "VIC",
+      "street": "Willow Grove",
+      "suburb": "Myrtleford"
+    },
+    "facebook": "https://www.facebook.com/749381735178450",
     "fee": true,
     "lga": {
       "name": "Alpine Shire",
@@ -20,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Great Alpine Road"
-    }
+    },
+    "phone": "+61357521394",
+    "website": "http://www.arderns.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF39J230NXW48YE1Y16Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

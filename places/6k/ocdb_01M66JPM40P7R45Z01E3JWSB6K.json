@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1/84-86",
+      "postcode": "3194",
+      "state": "VIC",
+      "street": "Voltri St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/185128148853616",
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Second Avenue"
-    }
+    },
+    "phone": "+61395834891",
+    "website": "https://www.doeprestigeautomotive.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPM40P7R45Z01E3JWSB6K",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

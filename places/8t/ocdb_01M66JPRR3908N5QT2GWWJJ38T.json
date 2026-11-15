@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2605",
+      "state": "ACT",
+      "street": "Yamba Dr",
+      "suburb": "Woden Valley"
+    },
+    "facebook": "https://www.facebook.com/127094757439511",
     "locality": {
       "distance_m": 750,
       "name": "Woden",
@@ -16,6 +31,7 @@
       "distance_m": 120
     },
     "operator": "Canberra Health Services",
+    "phone": "+61251240000",
     "website": "https://www.health.act.gov.au/hospitals-and-health-centres"
   },
   "group": "emergency",
@@ -34,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

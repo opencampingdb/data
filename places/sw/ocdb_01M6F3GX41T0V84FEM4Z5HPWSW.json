@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "2630",
+      "state": "NSW",
+      "street": "Chapman St",
+      "suburb": "Cooma"
+    },
+    "facebook": "https://www.facebook.com/151355691571776",
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Sharp Street"
-    }
+    },
+    "phone": "+61264521277",
+    "website": "http://www.highcountrymoteltours.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX41T0V84FEM4Z5HPWSW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

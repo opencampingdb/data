@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "240",
+      "postcode": "3500",
+      "state": "VIC",
+      "street": "Tenth St",
+      "suburb": "Mildura"
+    },
     "lga": {
       "name": "Rural City of Mildura",
       "osm_id": 3345519
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Ontario Avenue"
-    }
+    },
+    "phone": "0350232827",
+    "website": "https://locations.ampol.com.au/en/ampol-mildura-tenth-st"
   },
   "group": "services",
   "id": "ocdb_01M66JPMMESRG759J37ZXJJ409",
@@ -36,7 +55,7 @@
     "lat": -34.179853,
     "lon": 142.149729
   },
-  "name": null,
+  "name": "Ampol Mildura Tenth St.",
   "osm": {
     "id": 12373215559,
     "timestamp": "2024-11-25T08:38:48Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

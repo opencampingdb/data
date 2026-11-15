@@ -1,8 +1,14 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
@@ -11,9 +17,16 @@
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "6770",
+      "state": "WA",
+      "street": "Great Northern Hwy",
+      "suburb": "Ord River"
+    },
     "caravans": true,
     "drinking_water": false,
     "dump_station": true,
+    "facebook": "https://www.facebook.com/217674445061485",
     "lga": {
       "name": "Shire of Halls Creek",
       "osm_id": 11690294
@@ -43,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "752",
+      "postcode": "2450",
+      "state": "NSW",
+      "street": "Pacific Hwy",
+      "suburb": "Boambee"
+    },
+    "facebook": "https://www.facebook.com/112000943566588",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -32,7 +50,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Pacific Highway"
-    }
+    },
+    "phone": "+61266588387",
+    "website": "https://www.libertyoil.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JNYRJ3030WTMQA9C379QE",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

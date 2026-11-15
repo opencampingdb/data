@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 181",
+      "postcode": "2835",
+      "state": "NSW",
+      "street": "Nyngan Rd",
+      "suburb": "Cobar"
+    },
+    "facebook": "https://www.facebook.com/189535867728672",
     "lga": {
       "name": "Cobar Shire Council",
       "osm_id": 6083910
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Nyngan Road"
-    }
+    },
+    "phone": "+61268362448",
+    "website": "http://www.visitnsw.com/destinations/outback-nsw/cobar-area/cobar/attractions/great-cobar-heritage-centre"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW373GPQFG46MSYKP8Q3",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

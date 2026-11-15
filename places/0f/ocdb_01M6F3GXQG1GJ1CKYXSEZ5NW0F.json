@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "57",
+      "postcode": "3465",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Maryborough"
+    },
+    "facebook": "https://www.facebook.com/113517426996648",
     "lga": {
       "name": "Shire of Central Goldfields",
       "osm_id": 3351397
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Inkerman Street"
-    }
+    },
+    "phone": "+61354611070"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXQG1GJ1CKYXSEZ5NW0F",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

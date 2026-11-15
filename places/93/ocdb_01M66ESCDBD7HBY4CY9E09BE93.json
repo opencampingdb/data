@@ -1,13 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2715",
+      "state": "NSW",
+      "street": "Mamagna Campground Trail",
+      "suburb": "Balranald"
+    },
     "fee": false,
     "lga": {
       "name": "Balranald Shire Council",
@@ -21,7 +33,8 @@
     },
     "operator": "NSW National Parks and Wildlife Service",
     "showers": false,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mamanga-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCDBD7HBY4CY9E09BE93",
@@ -39,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

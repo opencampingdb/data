@@ -1,21 +1,37 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2474",
+      "street": "Bandahngan campground",
+      "suburb": "Tenterfield Shire Council"
+    },
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
+    "facebook": "https://www.facebook.com/427595320632506",
     "fee": true,
     "lga": {
       "name": "Tenterfield Shire Council",
@@ -28,10 +44,12 @@
       "type": "town"
     },
     "operator": "National Caravan Parks Service",
+    "phone": "+61266320000",
     "power": false,
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.environment.nsw.gov.au/aboriginalplaces/TooloomFalls.htm"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA468FKQ0PHVVCHVRY3Z",
@@ -49,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

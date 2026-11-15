@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "12",
       "street": "Margaret Street"
     },
+    "facebook": "https://www.facebook.com/143869735656033",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Margaret Street"
-    }
+    },
+    "phone": "+61746392999",
+    "website": "http://www.whiteoaks.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYSX1DK73BHJN0KF9G6Y",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

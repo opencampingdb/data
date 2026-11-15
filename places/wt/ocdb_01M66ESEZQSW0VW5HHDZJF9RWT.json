@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8/10",
+      "postcode": "6285",
+      "state": "WA",
+      "street": "Willmott Ave",
+      "suburb": "Margaret River"
+    },
+    "facebook": "https://www.facebook.com/124633880945194",
     "lga": {
       "name": "Shire of Augusta Margaret River",
       "osm_id": 11688657
@@ -13,7 +31,9 @@
       "name": "Margaret River",
       "osm_id": 251285017,
       "type": "town"
-    }
+    },
+    "phone": "+61897572270",
+    "website": "http://www.riverviewtouristpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZQSW0VW5HHDZJF9RWT",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

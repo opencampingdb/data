@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "49",
+      "postcode": "4824",
+      "state": "QLD",
+      "street": "Sheaffe St",
+      "suburb": "Cloncurry"
+    },
+    "facebook": "https://www.facebook.com/104669417689237",
     "lga": {
       "name": "Cloncurry Shire",
       "osm_id": 11677395
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Scheaffe Street"
-    }
+    },
+    "phone": "+61744243608",
+    "website": "http://postofficehotelcloncurry.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZH5PB7WG4DHD9TEVSYK",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

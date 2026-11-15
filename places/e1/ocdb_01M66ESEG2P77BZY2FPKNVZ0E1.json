@@ -1,16 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2828",
+      "state": "NSW",
+      "street": "Dagda Shortcut",
+      "suburb": "Warrumbungle"
+    },
     "booking_required": true,
     "fee": true,
     "lga": {
@@ -24,9 +38,11 @@
       "type": "village"
     },
     "operator": "NSW National Parks and Wildlife Service",
+    "phone": "0268254364",
     "power": false,
     "showers": false,
     "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/balor-hut-campground",
     "wifi": false
   },
   "group": "overnight",
@@ -45,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

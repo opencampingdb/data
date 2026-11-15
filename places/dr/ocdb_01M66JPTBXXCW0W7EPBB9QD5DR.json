@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "632-642",
+      "postcode": "3015",
+      "state": "VIC",
+      "street": "Melbourne Rd",
+      "suburb": "Spotswood"
+    },
     "air": true,
     "lga": {
       "name": "City of Hobsons Bay",
@@ -30,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Melbourne Road"
-    }
+    },
+    "phone": "+61 3 9101 5706",
+    "website": "https://find.shell.com/au/fuel/10111426-shell-reddy-express-spotswood/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTBXXCW0W7EPBB9QD5DR",
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

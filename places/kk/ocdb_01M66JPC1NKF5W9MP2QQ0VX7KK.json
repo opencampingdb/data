@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "359",
+      "postcode": "2170",
+      "state": "NSW",
+      "street": "ELIZABETH DR",
+      "suburb": "MOUNT PRITCHARD"
+    },
     "air": true,
     "lga": {
       "name": "Fairfield City Council",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Elizabeth Drive"
-    }
+    },
+    "phone": "0296104541"
   },
   "group": "services",
   "id": "ocdb_01M66JPC1NKF5W9MP2QQ0VX7KK",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

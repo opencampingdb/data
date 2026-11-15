@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1790",
+      "postcode": "2448",
+      "state": "NSW",
+      "street": "Giinagay Way",
+      "suburb": "Nambucca Heads"
+    },
+    "facebook": "https://www.facebook.com/196573897079256",
     "lga": {
       "name": "Nambucca Valley Council",
       "osm_id": 6165979
@@ -30,7 +48,9 @@
       "distance_m": 50,
       "name": "Giinagay Way"
     },
-    "tents": true
+    "phone": "+61265686505",
+    "tents": true,
+    "website": "http://www.pelicanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES94TQ81Z8NGSYB22SK5W",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

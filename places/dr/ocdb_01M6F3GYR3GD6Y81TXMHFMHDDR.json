@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Beverley Street",
       "suburb": "Wentworth"
     },
+    "facebook": "https://www.facebook.com/102570819797392",
     "lga": {
       "name": "Wentworth Shire Council",
       "osm_id": 5884892
@@ -28,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Adams Street"
-    }
+    },
+    "phone": "+61350273337",
+    "website": "http://www.wentworth.nsw.gov.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYR3GD6Y81TXMHFMHDDR",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

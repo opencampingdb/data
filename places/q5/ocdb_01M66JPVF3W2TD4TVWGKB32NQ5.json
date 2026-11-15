@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "20-22",
+      "postcode": "3340",
+      "state": "VIC",
+      "street": "Gell Street",
+      "suburb": "Bacchus Marsh"
+    },
     "lga": {
       "name": "Shire of Moorabool",
       "osm_id": 3291957
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "C704"
-    }
+    },
+    "phone": "+61 3 4310 0890",
+    "website": "https://find.shell.com/au/fuel/10111131-shell-reddy-express-bacchus-marsh/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPVF3W2TD4TVWGKB32NQ5",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

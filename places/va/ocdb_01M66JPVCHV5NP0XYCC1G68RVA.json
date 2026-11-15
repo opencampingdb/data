@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "141-151",
+      "postcode": "2166",
+      "state": "NSW",
+      "street": "Hume Highway",
+      "suburb": "Lansvale"
+    },
     "lga": {
       "name": "Fairfield City Council",
       "osm_id": 6212438
@@ -29,7 +44,9 @@
       "distance_m": 30,
       "name": "Hume Highway"
     },
-    "operator": "Caltex"
+    "operator": "Caltex",
+    "phone": "0297234200",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-lansvale"
   },
   "group": "services",
   "id": "ocdb_01M66JPVCHV5NP0XYCC1G68RVA",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

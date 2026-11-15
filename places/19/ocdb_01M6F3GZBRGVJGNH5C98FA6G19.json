@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "4600",
+      "state": "QLD",
+      "street": "Bligh St",
+      "suburb": "Kilkivan"
+    },
+    "facebook": "https://www.facebook.com/1231429823571475",
     "lga": {
       "name": "Gympie Regional",
       "osm_id": 11675079
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bligh Street"
-    }
+    },
+    "phone": "+61754841612"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZBRGVJGNH5C98FA6G19",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "campfires": "osm",
     "caravans": "osm",
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2360",
+      "state": "NSW",
+      "street": "Ironbark Drive",
+      "suburb": "Kings Plains"
+    },
     "campfires": true,
     "caravans": false,
     "drinking_water": false,
@@ -21,7 +35,9 @@
       "osm_id": 114377163,
       "type": "village"
     },
-    "tents": true
+    "phone": "1300072757",
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/kings-plains-creek-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2S58S3WSTQJ9VP1WX6",
@@ -39,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

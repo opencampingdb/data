@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6027",
+      "state": "WA",
+      "street": "Unit 1/162 Winton Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/253055995156889",
     "lga": {
       "name": "City of Joondalup",
       "osm_id": 11689618
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Joondalup Drive"
-    }
+    },
+    "phone": "+61893002655",
+    "website": "https://www.automasters.com.au/locations/joondalup/?utm_source=facebook&utm_medium=store-page-book-button"
   },
   "group": "services",
   "id": "ocdb_01M66JP428BSGPATCF9J23P611",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

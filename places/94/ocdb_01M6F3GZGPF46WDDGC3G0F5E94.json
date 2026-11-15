@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "82",
+      "postcode": "5252",
+      "state": "SA",
+      "street": "Main Rd",
+      "suburb": "Nairne"
+    },
+    "facebook": "https://www.facebook.com/429742043859954",
     "lga": {
       "name": "Mount Barker District Council",
       "osm_id": 7294250
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Old Princes Highway"
-    }
+    },
+    "phone": "+61417823570"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZGPF46WDDGC3G0F5E94",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

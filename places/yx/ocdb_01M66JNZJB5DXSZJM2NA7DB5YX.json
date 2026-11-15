@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Oberon Street",
       "suburb": "Oberon"
     },
+    "facebook": "https://www.facebook.com/303953652810250",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Oberon Street"
-    }
+    },
+    "phone": "+61263361348",
+    "website": "https://ultrapetroleum.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JNZJB5DXSZJM2NA7DB5YX",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

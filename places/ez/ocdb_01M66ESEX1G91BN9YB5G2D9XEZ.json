@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "3480",
+      "state": "VIC",
+      "street": "Corack Rd",
+      "suburb": "Donald"
+    },
+    "facebook": "https://www.facebook.com/192818270738532",
     "lga": {
       "name": "Shire of Buloke",
       "osm_id": 3345547
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Corack Street"
-    }
+    },
+    "phone": "+61354971764",
+    "website": "http://www.donald.org.au/caravanpark.htm"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEX1G91BN9YB5G2D9XEZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

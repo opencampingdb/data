@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "48",
+      "postcode": "6401",
+      "state": "WA",
+      "street": "Thomas St",
+      "suburb": "Spencers Brook"
+    },
+    "facebook": "https://www.facebook.com/121041004606430",
     "lga": {
       "name": "Shire of Northam",
       "osm_id": 11689451
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Spencers Brook Road"
-    }
+    },
+    "phone": "+61896222422",
+    "website": "http://www.spencersbrooktavern.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV78XWGH40MJQQQV3C5P",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

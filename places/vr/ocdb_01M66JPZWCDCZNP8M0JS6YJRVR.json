@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "state": "SA",
       "street": "Greenhill Road"
     },
+    "facebook": "https://www.facebook.com/453822148499645",
     "lga": {
       "name": "City of Burnside",
       "osm_id": 9105810
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Greenhill Road"
-    }
+    },
+    "phone": "+61883333269",
+    "website": "http://www.bmconnections.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPZWCDCZNP8M0JS6YJRVR",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

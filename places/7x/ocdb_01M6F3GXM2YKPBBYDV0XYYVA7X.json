@@ -1,12 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6000",
+      "state": "WA",
+      "street": "St Georges Terrace & Barrack St",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/463578873821127",
     "lga": {
       "name": "City of Perth",
       "osm_id": 11343564
@@ -26,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "St Georges Terrace"
-    }
+    },
+    "phone": "+61861687888",
+    "website": "http://www.statebuildings.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXM2YKPBBYDV0XYYVA7X",
@@ -35,7 +56,7 @@
     "lat": -31.955769,
     "lon": 115.861531
   },
-  "name": null,
+  "name": "State Buildings",
   "osm": {
     "id": 11271174202,
     "timestamp": "2023-10-18T08:48:00Z",
@@ -44,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

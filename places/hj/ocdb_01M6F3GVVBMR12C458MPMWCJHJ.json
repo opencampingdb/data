@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2357",
+      "state": "NSW",
+      "street": "Oxley Hwy",
+      "suburb": "Coonabarabran"
+    },
+    "facebook": "https://www.facebook.com/112100772223059",
     "lga": {
       "name": "Warrumbungle Shire Council",
       "osm_id": 6268496
@@ -20,7 +35,8 @@
       "distance_m": 30,
       "name": "Newell Highway"
     },
-    "operator": "Budget"
+    "operator": "Budget",
+    "phone": "+61268421860"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVVBMR12C458MPMWCJHJ",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

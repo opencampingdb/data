@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "8",
       "street": "Ash Drive"
     },
+    "facebook": "https://www.facebook.com/298679676887558",
     "lga": {
       "name": "Mount Hotham Alpine Resort",
       "osm_id": 14135897
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Great Alpine Road"
-    }
+    },
+    "phone": "+61357593548",
+    "website": "http://www.vagabondski.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYPZVRDH93ZB6M0XGS2M",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

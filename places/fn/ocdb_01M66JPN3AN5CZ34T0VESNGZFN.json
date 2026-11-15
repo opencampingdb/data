@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1789",
+      "postcode": "3029",
+      "state": "VIC",
+      "street": "Western Highway",
+      "suburb": "Rockbank"
+    },
+    "facebook": "https://www.facebook.com/108546254075397",
     "lga": {
       "name": "City of Melton",
       "osm_id": 3327545
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Service Centre Offramp"
-    }
+    },
+    "phone": "+61397471544",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/rockbank/bp-rockbank-outbound/6719"
   },
   "group": "services",
   "id": "ocdb_01M66JPN3AN5CZ34T0VESNGZFN",
@@ -27,7 +49,7 @@
     "lat": -37.739352,
     "lon": 144.680399
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 12652649249,
     "timestamp": "2025-03-11T16:50:13Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

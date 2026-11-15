@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "2347",
+      "state": "NSW",
+      "street": "Edward St",
+      "suburb": "Barraba"
+    },
+    "facebook": "https://www.facebook.com/232404890158921",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Queen Street"
-    }
+    },
+    "phone": "+61267821555",
+    "website": "https://barraba.com.au/where-to-stay"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVN1ZD5QTC8RK49R5K3P",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

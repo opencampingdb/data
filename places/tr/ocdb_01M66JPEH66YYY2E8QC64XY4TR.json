@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "101",
+      "postcode": "4655",
+      "state": "QLD",
+      "street": "Boat Harbour Drive",
+      "suburb": "Urraween"
+    },
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -27,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Boat Harbour Drive"
-    }
+    },
+    "phone": "+61 7 3123 4736",
+    "website": "https://find.shell.com/au/fuel/10111592-shell-urraween-hervey-bay/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPEH66YYY2E8QC64XY4TR",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

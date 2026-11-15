@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "High Street",
       "suburb": "Thornbury"
     },
+    "facebook": "https://www.facebook.com/113107586072328",
     "lga": {
       "name": "City of Darebin",
       "osm_id": 2404379
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "High Street"
-    }
+    },
+    "phone": "+61485572700"
   },
   "group": "utility",
   "id": "ocdb_01M66JPVNW922M96HFTEZR7RFT",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

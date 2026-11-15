@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1222",
+      "postcode": "6258",
+      "state": "WA",
+      "street": "Wheatley Coast Rd",
+      "suburb": "Quinninup"
+    },
+    "facebook": "https://www.facebook.com/134992036546946",
     "lga": {
       "name": "Shire of Manjimup",
       "osm_id": 11690439
@@ -13,7 +31,9 @@
       "name": "Quinninup",
       "osm_id": 6052071711,
       "type": "village"
-    }
+    },
+    "phone": "+61491937659",
+    "website": "https://quinninuptavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVP2TAA5WCJN3BQM6XT4",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

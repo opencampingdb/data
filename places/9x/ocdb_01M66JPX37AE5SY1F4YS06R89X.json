@@ -1,14 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "317A",
+      "postcode": "2290",
+      "state": "NSW",
+      "street": "Pacific Hwy",
+      "suburb": "Newcastle"
+    },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/1148227502005923",
     "fuel": true,
     "lga": {
       "name": "City of Lake Macquarie",
@@ -27,7 +45,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Pacific Highway"
-    }
+    },
+    "phone": "+61249423178"
   },
   "group": "services",
   "id": "ocdb_01M66JPX37AE5SY1F4YS06R89X",
@@ -36,7 +55,7 @@
     "lat": -32.956631,
     "lon": 151.705693
   },
-  "name": null,
+  "name": "Metro Petroleum",
   "osm": {
     "id": 948667408,
     "timestamp": "2021-05-30T12:19:01Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

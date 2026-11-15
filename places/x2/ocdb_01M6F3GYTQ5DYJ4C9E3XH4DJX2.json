@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Mount Street",
       "suburb": "Upper Burnie"
     },
+    "facebook": "https://www.facebook.com/408497875873314",
     "lga": {
       "name": "City of Burnie",
       "osm_id": 10590496
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Mount Street"
-    }
+    },
+    "phone": "+61364314444",
+    "website": "http://www.totthm.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYTQ5DYJ4C9E3XH4DJX2",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

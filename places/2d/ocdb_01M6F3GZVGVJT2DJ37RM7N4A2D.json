@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "363",
+      "postcode": "2711",
+      "state": "NSW",
+      "street": "Moama St",
+      "suburb": "Hay South"
+    },
+    "facebook": "https://www.facebook.com/183085338459840",
     "lga": {
       "name": "Hay Shire Council",
       "osm_id": 6092948
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Moama Street"
-    }
+    },
+    "phone": "+61269933003",
+    "website": "http://www.bishopsinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZVGVJT2DJ37RM7N4A2D",
@@ -35,7 +57,7 @@
     "lat": -34.519294,
     "lon": 144.846506
   },
-  "name": null,
+  "name": "Comfort Inn Bishop's Lodge",
   "osm": {
     "id": 1243595126,
     "timestamp": "2025-03-22T08:48:46Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Hospital Road",
       "suburb": "Port Augusta"
     },
+    "facebook": "https://www.facebook.com/117810761613857",
     "lga": {
       "name": "Port Augusta City Council",
       "osm_id": 6805282
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Elizabeth Terrace"
-    }
+    },
+    "phone": "+61886687500",
+    "website": "http://au.localize123.com/port-augusta-hospital-in-port-augusta-city-council-sa"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPSFQ9T1020RD7TY6K6J7",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

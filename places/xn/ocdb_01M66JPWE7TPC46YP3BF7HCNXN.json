@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "102",
+      "postcode": "2370",
+      "state": "NSW",
+      "street": "Church Street",
+      "suburb": "Glen Innes"
+    },
     "fuel": true,
     "lga": {
       "name": "Glen Innes Severn Council",
@@ -20,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Church Street"
-    }
+    },
+    "phone": "0433970783",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/astron-glen-innes"
   },
   "group": "services",
   "id": "ocdb_01M66JPWE7TPC46YP3BF7HCNXN",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

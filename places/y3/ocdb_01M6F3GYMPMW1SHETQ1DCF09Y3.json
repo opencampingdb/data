@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1233",
+      "postcode": "3178",
+      "state": "VIC",
+      "street": "Stud Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/107032666631528",
     "lga": {
       "name": "City of Knox",
       "osm_id": 3333971
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Stud Road"
-    }
+    },
+    "phone": "+61397645050",
+    "website": "http://www.rowvilleinternational.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYMPMW1SHETQ1DCF09Y3",
@@ -35,7 +57,7 @@
     "lat": -37.930784,
     "lon": 145.233233
   },
-  "name": null,
+  "name": "Rowville International Hotel",
   "osm": {
     "id": 150576497,
     "timestamp": "2026-09-25T00:57:54Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

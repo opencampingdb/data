@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59",
+      "postcode": "3134",
+      "state": "VIC",
+      "street": "Maroondah Hwy",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/117597187953089",
     "lga": {
       "name": "City of Maroondah",
       "osm_id": 3333992
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Maroondah Highway"
-    }
+    },
+    "phone": "+611300513635"
   },
   "group": "utility",
   "id": "ocdb_01M66JPCTPNW55WBKKPD431DYN",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

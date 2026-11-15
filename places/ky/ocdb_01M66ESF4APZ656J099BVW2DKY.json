@@ -1,14 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "bbq": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2250",
+      "street": "Basin Forest Rd",
+      "suburb": "Gosford"
+    },
     "bbq": true,
+    "facebook": "https://www.facebook.com/926297857478100",
     "lga": {
       "name": "Cessnock City Council",
       "osm_id": 6191219
@@ -19,6 +33,7 @@
       "osm_id": 10561401757,
       "type": "village"
     },
+    "phone": "+61249270977",
     "showers": false,
     "tents": true,
     "toilets": true
@@ -39,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

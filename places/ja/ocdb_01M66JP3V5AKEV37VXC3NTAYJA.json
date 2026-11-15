@@ -1,13 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Northern Power Station Road",
       "unit": "Lot 8"
     },
+    "facebook": "https://www.facebook.com/896061760540466",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -41,7 +48,8 @@
       "distance_m": 60,
       "name": "Augusta Highway"
     },
-    "operator": "Puma"
+    "operator": "Puma",
+    "phone": "+61886410700"
   },
   "group": "services",
   "id": "ocdb_01M66JP3V5AKEV37VXC3NTAYJA",
@@ -59,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

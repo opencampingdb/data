@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-3",
+      "postcode": "5011",
+      "state": "SA",
+      "street": "Woodville Road",
+      "suburb": "Woodville South"
+    },
     "lga": {
       "name": "City of Charles Sturt",
       "osm_id": 9108013
@@ -26,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Findon Road"
-    }
+    },
+    "phone": "+61 8 8200 5768",
+    "website": "https://find.shell.com/au/fuel/10128753-shell-otr-woodville-south/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPYMH6RDZD2V1MXZZQ023",
@@ -35,7 +54,7 @@
     "lat": -34.884791,
     "lon": 138.531422
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1212179279,
     "timestamp": "2023-10-01T06:48:36Z",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

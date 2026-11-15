@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -7,9 +12,17 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "5700",
+      "state": "SA",
+      "street": "Eyre Highway",
+      "suburb": "Port Augusta West"
+    },
     "fuels": [
       "unleaded_91",
       "unleaded_95",
@@ -36,6 +49,7 @@
       "name": "Eyre Highway"
     },
     "opening_hours": "24/7",
+    "phone": "+61 8 8200 5767",
     "website": "https://www.shell.com.au/"
   },
   "group": "services",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

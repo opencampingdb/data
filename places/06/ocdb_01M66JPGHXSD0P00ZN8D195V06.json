@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4717",
+      "state": "QLD",
+      "street": "Bluff St",
+      "suburb": "Blackwater"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -26,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bluff Street"
-    }
+    },
+    "phone": "0415 556 521"
   },
   "group": "services",
   "id": "ocdb_01M66JPGHXSD0P00ZN8D195V06",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Rakow Street",
       "suburb": "Broken Hill"
     },
+    "facebook": "https://www.facebook.com/152714294761783",
     "lga": {
       "name": "Broken Hill City Council",
       "osm_id": 5892296
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Rakow Street"
-    }
+    },
+    "phone": "+61880873558",
+    "website": "http://www.sturtmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZSCAPEPT3BQHQP1JZ11",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

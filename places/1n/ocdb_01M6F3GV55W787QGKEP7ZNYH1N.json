@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Russell Street",
       "suburb": "Melbourne"
     },
+    "facebook": "https://www.facebook.com/249486528416676",
     "lga": {
       "name": "City of Melbourne",
       "osm_id": 2404870
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Russell Street"
-    }
+    },
+    "phone": "+61398100064",
+    "website": "http://www.hickenshotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV55W787QGKEP7ZNYH1N",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

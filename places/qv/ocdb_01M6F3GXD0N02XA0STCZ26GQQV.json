@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "6304",
+      "state": "WA",
+      "street": "Morrison St",
+      "suburb": "Beverley"
+    },
+    "facebook": "https://www.facebook.com/222214151464025",
     "lga": {
       "name": "Shire of Beverley",
       "osm_id": 11689465
@@ -20,7 +38,9 @@
       "distance_m": 20,
       "name": "Hunt Road"
     },
-    "operator": "Beverley Historical Society"
+    "operator": "Beverley Historical Society",
+    "phone": "+61417973559",
+    "website": "http://www.beverley.wa.gov.au/community/museums.aspx"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXD0N02XA0STCZ26GQQV",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

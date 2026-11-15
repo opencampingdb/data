@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "789",
+      "postcode": "5605",
+      "state": "SA",
+      "street": "Trinity Haven Rd",
+      "suburb": "Tumby Bay"
+    },
+    "facebook": "https://www.facebook.com/537086999775329",
     "lga": {
       "name": "The District Council of Tumby Bay",
       "osm_id": 9108371
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 50
-    }
+    },
+    "phone": "+61886881947",
+    "website": "http://www.redcliffcampsite.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG20QPBBHWKQ9ZNHV89A",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

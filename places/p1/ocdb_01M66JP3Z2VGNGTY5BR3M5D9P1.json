@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6353",
+      "state": "WA",
+      "street": "Dewar Street",
+      "suburb": "Lake Grace"
+    },
     "lga": {
       "name": "Shire of Lake Grace",
       "osm_id": 11688971
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Kulin Lake Grace Road"
-    }
+    },
+    "phone": "+61 8 9865 1221",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/lake-grace/dpt-lake-grace-gsf/6638"
   },
   "group": "services",
   "id": "ocdb_01M66JP3Z2VGNGTY5BR3M5D9P1",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

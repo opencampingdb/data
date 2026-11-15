@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6230",
+      "state": "WA",
+      "street": "Bussell Hwy",
+      "suburb": "Bunbury"
+    },
+    "facebook": "https://www.facebook.com/2198917266850115",
     "lga": {
       "name": "City of Bunbury",
       "osm_id": 11688799
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Robertson Drive"
-    }
+    },
+    "phone": "+61897221000",
+    "website": "http://www.sswahs.nsw.gov.au"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPR2QP2J6Q6GN43M1B96V",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "40",
+      "postcode": "5264",
+      "state": "SA",
+      "street": "Hyde Ave",
+      "suburb": "Meningie"
+    },
+    "facebook": "https://www.facebook.com/109365528914289",
     "lga": {
       "name": "Coorong District Council",
       "osm_id": 7062764
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61403423565",
+    "website": "https://www.meningiewaterfrontmotel.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVK6YT5TMNFVRVR79TWZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

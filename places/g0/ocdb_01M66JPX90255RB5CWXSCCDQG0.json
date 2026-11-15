@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Maddox Road",
       "suburb": "Williamstown North"
     },
+    "facebook": "https://www.facebook.com/188626961002198",
     "lga": {
       "name": "City of Hobsons Bay",
       "osm_id": 2432415
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Kororoit Creek Road"
-    }
+    },
+    "phone": "+61393977622",
+    "website": "https://www.dattoymotors.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPX90255RB5CWXSCCDQG0",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

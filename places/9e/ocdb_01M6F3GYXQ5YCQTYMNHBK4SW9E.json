@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "4720",
+      "state": "QLD",
+      "street": "Ruby St",
+      "suburb": "Emerald"
+    },
+    "facebook": "https://www.facebook.com/453169014735541",
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Ruby Street"
-    }
+    },
+    "phone": "+61487707080",
+    "website": "http://www.motel707.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYXQ5YCQTYMNHBK4SW9E",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

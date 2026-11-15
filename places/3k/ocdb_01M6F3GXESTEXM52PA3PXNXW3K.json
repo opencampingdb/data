@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "5304",
+      "state": "SA",
+      "street": "Railway Terrace S",
+      "suburb": "Pinnaroo"
+    },
+    "facebook": "https://www.facebook.com/1002420599919813",
     "lga": {
       "name": "Southern Mallee District Council",
       "osm_id": 6706319
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 370,
       "name": "Mallee Highway"
-    }
+    },
+    "phone": "+61885778644",
+    "website": "http://www.malleebound.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXESTEXM52PA3PXNXW3K",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

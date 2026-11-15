@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "2560",
+      "state": "NSW",
+      "street": "Queen Street",
+      "suburb": "Campbelltown"
+    },
     "lga": {
       "name": "Campbelltown City Council",
       "osm_id": 6290704
@@ -20,7 +35,9 @@
       "distance_m": 30,
       "name": "Queen Street"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 2 6323 2188",
+    "website": "https://find.shell.com/au/fuel/10110743-shell-reddy-express-campbelltown/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP331ENRB55PRGSYV0W0Z",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

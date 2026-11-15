@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3207",
+      "state": "VIC",
+      "street": "West Gate Fwy",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/201813523337672",
     "lga": {
       "name": "City of Melbourne",
       "osm_id": 2404870
@@ -30,6 +46,7 @@
       "distance_m": 40,
       "name": "West Gate Freeway Onramp"
     },
+    "phone": "+61383790781",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-west-gate-north"
   },
   "group": "services",
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

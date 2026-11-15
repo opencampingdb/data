@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "52-54",
+      "postcode": "4566",
+      "state": "QLD",
+      "street": "Mary St",
+      "suburb": "Sunshine Coast"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/185445778956522",
     "lga": {
       "name": "Noosa Shire",
       "osm_id": 11676212
@@ -31,6 +47,7 @@
       "distance_m": 30,
       "name": "Mary Street"
     },
+    "phone": "+61741500951",
     "website": "https://map.bp.com/en-AU/AU/gas-station/noosaville/bp-noosaville/5595"
   },
   "group": "services",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

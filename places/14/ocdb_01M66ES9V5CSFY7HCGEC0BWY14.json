@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Beach Road",
       "suburb": "Batehaven"
     },
+    "facebook": "https://www.facebook.com/295867897090004",
     "fee": true,
     "lga": {
       "name": "Eurobodalla Shire Council",
@@ -36,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Beach Road"
-    }
+    },
+    "phone": "+61244724224",
+    "website": "http://www.clydeview.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9V5CSFY7HCGEC0BWY14",

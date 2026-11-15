@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Days Road",
       "suburb": "Regency Park"
     },
+    "facebook": "https://www.facebook.com/161311840559448",
     "lga": {
       "name": "City of Port Adelaide Enfield",
       "osm_id": 9108064
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 310,
       "name": "North South Motorway"
-    }
+    },
+    "phone": "+61882686754",
+    "website": "http://www.regencytavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV0SFGZXQGKVHBV1DR9R",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

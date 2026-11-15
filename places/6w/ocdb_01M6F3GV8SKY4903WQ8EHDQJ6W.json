@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "195",
+      "postcode": "2602",
+      "state": "ACT",
+      "street": "Mouat St",
+      "suburb": "Canberra"
+    },
+    "facebook": "https://www.facebook.com/160761977275645",
     "locality": {
       "distance_m": 2320,
       "name": "North Canberra",
@@ -17,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Mouat Street"
-    }
+    },
+    "phone": "+61261346000",
+    "website": "http://www.oldcanberrainn.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV8SKY4903WQ8EHDQJ6W",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

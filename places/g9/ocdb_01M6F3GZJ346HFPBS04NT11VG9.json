@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "2650",
+      "state": "NSW",
+      "street": "Gardiner St",
+      "suburb": "Wagga Wagga"
+    },
+    "facebook": "https://www.facebook.com/943584435657500",
     "lga": {
       "name": "Wagga Wagga City Council",
       "osm_id": 6247060
@@ -21,7 +39,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 530
-    }
+    },
+    "phone": "+61269212279",
+    "website": "http://www.tab.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZJ346HFPBS04NT11VG9",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

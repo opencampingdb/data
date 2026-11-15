@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "85",
+      "postcode": "2537",
+      "state": "NSW",
+      "street": "Campbell St",
+      "suburb": "Moruya"
+    },
+    "facebook": "https://www.facebook.com/169059039947881",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -24,7 +42,9 @@
       "distance_m": 30,
       "name": "Campbell Street"
     },
-    "opening_hours": "We, Fr, Sa 10:00-12:00"
+    "opening_hours": "We, Fr, Sa 10:00-12:00",
+    "phone": "+61244743224",
+    "website": "http://www.mdhs.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW30GGY3D84C1THJ3GP9",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "2131",
+      "state": "NSW",
+      "street": "Charlotte St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/858044480940613",
     "fuel": true,
     "lga": {
       "name": "Inner West Council",
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Elizabeth Street"
-    }
+    },
+    "phone": "+61297980033",
+    "website": "http://Ashfieldservicecentre.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPYW5FF9PR6BVSP62YHN8",
@@ -37,7 +59,7 @@
     "lat": -33.886464,
     "lon": 151.125693
   },
-  "name": null,
+  "name": "Ashfield Service Centre",
   "osm": {
     "id": 1252818968,
     "timestamp": "2024-02-20T11:12:50Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

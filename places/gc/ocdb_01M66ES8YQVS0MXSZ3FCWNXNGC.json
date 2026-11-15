@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "198",
+      "postcode": "4884",
+      "state": "QLD",
+      "street": "Lakes Dr",
+      "suburb": "Lake Eacham"
+    },
+    "facebook": "https://www.facebook.com/165388410298622",
     "lga": {
       "name": "Tablelands Regional",
       "osm_id": 11677293
@@ -13,7 +31,9 @@
       "name": "Peeramon",
       "osm_id": 1522559940,
       "type": "village"
-    }
+    },
+    "phone": "+61740953730",
+    "website": "http://www.lakeeachamtouristpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES8YQVS0MXSZ3FCWNXNGC",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

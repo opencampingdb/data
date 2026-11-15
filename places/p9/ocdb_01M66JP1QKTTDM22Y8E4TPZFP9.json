@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "184",
+      "postcode": "4170",
+      "state": "QLD",
+      "street": "Oateson Skyline Dr",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/206870256083213",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -28,7 +46,9 @@
       "distance_m": 30,
       "name": "Oateson Skyline Drive"
     },
-    "opening_hours": "Mo-Fr 08:00-16:00"
+    "opening_hours": "Mo-Fr 08:00-16:00",
+    "phone": "+61733958555",
+    "website": "http://www.carrautomotive.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP1QKTTDM22Y8E4TPZFP9",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

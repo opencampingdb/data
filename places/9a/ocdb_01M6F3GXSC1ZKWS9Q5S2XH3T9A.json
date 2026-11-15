@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "61",
+      "postcode": "4350",
+      "state": "QLD",
+      "street": "Ruthven St",
+      "suburb": "Toowoomba"
+    },
+    "facebook": "https://www.facebook.com/337618503620062",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Ruthven Street"
-    }
+    },
+    "phone": "+61746321567",
+    "website": "http://gardencitybackpackers.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXSC1ZKWS9Q5S2XH3T9A",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

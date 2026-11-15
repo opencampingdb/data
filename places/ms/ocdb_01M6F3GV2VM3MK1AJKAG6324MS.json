@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7304",
+      "state": "TAS",
+      "street": "Emu Bay Rd",
+      "suburb": "Deloraine"
+    },
+    "facebook": "https://www.facebook.com/117402658320138",
     "lga": {
       "name": "Meander Valley",
       "osm_id": 10598717
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Emu Bay Road"
-    }
+    },
+    "phone": "+61363622022",
+    "website": "http://www.delorainehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV2VM3MK1AJKAG6324MS",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

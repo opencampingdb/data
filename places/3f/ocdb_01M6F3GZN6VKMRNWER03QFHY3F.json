@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "2380",
+      "state": "NSW",
+      "street": "Henry Street",
+      "suburb": "Gunnedah"
+    },
     "lga": {
       "name": "Gunnedah Shire Council",
       "osm_id": 6389934
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Bloomfield Street"
-    }
+    },
+    "phone": "0267420833",
+    "website": "http://redchiefmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZN6VKMRNWER03QFHY3F",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

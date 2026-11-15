@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "pub": "osm"
+    "phone": "overture",
+    "pub": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "212",
+      "postcode": "4312",
+      "state": "QLD",
+      "street": "Ipswich St",
+      "suburb": "Esk"
+    },
+    "facebook": "https://www.facebook.com/300961119963564",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -20,7 +40,9 @@
       "distance_m": 20,
       "name": "Ipswich Street"
     },
-    "pub": true
+    "phone": "+61754242424",
+    "pub": true,
+    "website": "http://www.nashgalleryesk.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZV19TJMFVJ28SWV3XJA",
@@ -29,7 +51,7 @@
     "lat": -27.236584,
     "lon": 152.419267
   },
-  "name": null,
+  "name": "Nash Gallery & Cafe",
   "osm": {
     "id": 1231398891,
     "timestamp": "2023-12-15T15:24:48Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

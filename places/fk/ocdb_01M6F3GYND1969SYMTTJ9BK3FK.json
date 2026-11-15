@@ -1,14 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "2444",
+      "state": "NSW",
+      "street": "Clarence St",
+      "suburb": "Port Macquarie"
+    },
+    "facebook": "https://www.facebook.com/300161396821102",
     "fee": false,
     "lga": {
       "name": "Port Macquarie-Hastings Council",
@@ -31,7 +49,9 @@
       "distance_m": 260,
       "name": "William Street"
     },
-    "opening_hours": "Mo-Fr 10:00-15:00; Sa 10:00-13:00"
+    "opening_hours": "Mo-Fr 10:00-15:00; Sa 10:00-13:00",
+    "phone": "+61265831108",
+    "website": "http://www.portmuseum.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYND1969SYMTTJ9BK3FK",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

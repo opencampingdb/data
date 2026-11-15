@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +24,7 @@
       "suburb": "West Gosford",
       "unit": "5"
     },
+    "facebook": "https://www.facebook.com/114562755226483",
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Manns Road"
-    }
+    },
+    "phone": "+61243257133",
+    "website": "http://www.nationwideauto.repcoservice.net/"
   },
   "group": "services",
   "id": "ocdb_01M66JPBNGQDRH58JE129W8MRE",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

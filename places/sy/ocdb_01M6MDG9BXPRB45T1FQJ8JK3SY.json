@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "73-75",
+      "postcode": "3880",
+      "state": "VIC",
+      "street": "The Esplanade",
+      "suburb": "Paynesville"
+    },
+    "facebook": "https://www.facebook.com/140218846023878",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Esplanade"
-    }
+    },
+    "phone": "+61351566442",
+    "website": "http://www.travelvictoria.com.au/paynesville/"
   },
   "group": "services",
   "id": "ocdb_01M6MDG9BXPRB45T1FQJ8JK3SY",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "suburb": "Jandakot",
       "unit": "2"
     },
+    "facebook": "https://www.facebook.com/139670842839696",
     "lga": {
       "name": "City of Cockburn",
       "osm_id": 11689175
@@ -27,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Solomon Road"
-    }
+    },
+    "phone": "+61894175992",
+    "website": "http://www.germanautoservice.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPW4Z8YCS5Z6J1XZDP9G3",
@@ -45,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

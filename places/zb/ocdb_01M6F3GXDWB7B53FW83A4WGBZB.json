@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "6315",
+      "state": "WA",
+      "street": "Tudhoe St",
+      "suburb": "Wagin"
+    },
+    "facebook": "https://www.facebook.com/1994727930589030",
     "lga": {
       "name": "Shire of Wagin",
       "osm_id": 11688953
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Collie Lake King"
-    }
+    },
+    "phone": "+61898611888",
+    "website": "http://www.waginmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXDWB7B53FW83A4WGBZB",
@@ -27,7 +49,7 @@
     "lat": -33.307697,
     "lon": 117.346211
   },
-  "name": null,
+  "name": "Wagin Motel",
   "osm": {
     "id": 10595171675,
     "timestamp": "2023-01-30T23:34:53Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

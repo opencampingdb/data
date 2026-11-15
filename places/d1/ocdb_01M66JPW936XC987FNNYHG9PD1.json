@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "26",
+      "postcode": "6076",
+      "state": "WA",
+      "street": "Kalamunda Road",
+      "suburb": "KALAMUNDA"
+    },
     "fuel": true,
     "lga": {
       "name": "City of Kalamunda",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Kalamunda Road"
-    }
+    },
+    "phone": "0892573258"
   },
   "group": "services",
   "id": "ocdb_01M66JPW936XC987FNNYHG9PD1",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "412",
+      "postcode": "4350",
+      "state": "QLD",
+      "street": "Tor Street",
+      "suburb": "Toowoomba"
+    },
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Tor Street"
-    }
+    },
+    "phone": "0746590000",
+    "website": "https://www.bestwestern.com/en_US/book/hotel-rooms.97393.html?aff=BAU&iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:97393"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZZZ3CX25ZJR4G3RTDZR",
@@ -27,7 +46,7 @@
     "lat": -27.562607,
     "lon": 151.928245
   },
-  "name": null,
+  "name": "Best Western Tuscany on Tor Motor Inn",
   "osm": {
     "id": 1370283543,
     "timestamp": "2025-03-24T09:37:33Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

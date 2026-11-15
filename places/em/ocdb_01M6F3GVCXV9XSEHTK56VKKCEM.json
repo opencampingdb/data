@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59",
+      "postcode": "2009",
+      "state": "NSW",
+      "street": "Harris St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/338978932793826",
     "lga": {
       "name": "City of Sydney",
       "osm_id": 1251066
@@ -29,7 +47,9 @@
       "distance_m": 380,
       "name": "Pyrmont Bridge Road Offramp"
     },
-    "opening_hours": "Mo-Su 11:00-24:00"
+    "opening_hours": "Mo-Su 11:00-24:00",
+    "phone": "+61296601908",
+    "website": "http://pyrmontpoint.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVCXV9XSEHTK56VKKCEM",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

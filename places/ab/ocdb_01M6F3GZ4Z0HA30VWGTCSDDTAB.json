@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "176",
+      "postcode": "6210",
+      "state": "WA",
+      "street": "Mandurah Ter",
+      "suburb": "Mandurah"
+    },
+    "facebook": "https://www.facebook.com/1469018046487597",
     "lga": {
       "name": "City of Mandurah",
       "osm_id": 11690490
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Mandurah Terrace"
-    }
+    },
+    "phone": "+61895351500",
+    "website": "https://silversandstavern.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ4Z0HA30VWGTCSDDTAB",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

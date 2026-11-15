@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Pearcedale Parade",
       "suburb": "Broadmeadows"
     },
+    "facebook": "https://www.facebook.com/261407050388630",
     "lga": {
       "name": "City of Hume",
       "osm_id": 3327634
@@ -28,7 +37,9 @@
       "distance_m": 90,
       "name": "Pearcedale Parade"
     },
-    "operator": "Broadmeadows Historical Society Inc."
+    "operator": "Broadmeadows Historical Society Inc.",
+    "phone": "+61414187986",
+    "website": "http://www.broadmeadowsmuseum.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXXB3WG7QWX0S2V9S0JC",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

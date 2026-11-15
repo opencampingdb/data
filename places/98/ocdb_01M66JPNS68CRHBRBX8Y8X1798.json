@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "351",
+      "postcode": "4700",
+      "state": "QLD",
+      "street": "Yaamba Rd",
+      "suburb": "ROCKHAMPTON"
+    },
     "lga": {
       "name": "Rockhampton Regional",
       "osm_id": 11676441
@@ -22,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Yaamba Road (Bruce Highway)"
-    }
+    },
+    "phone": "0749942818"
   },
   "group": "services",
   "id": "ocdb_01M66JPNS68CRHBRBX8Y8X1798",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

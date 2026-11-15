@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "6155",
+      "state": "WA",
+      "street": "South St",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/432129920470670",
     "lga": {
       "name": "City of Canning",
       "osm_id": 11689373
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "South Street"
-    }
+    },
+    "phone": "+61894554388",
+    "website": "https://www.automasters.com.au/locations/canning-vale/?utm_source=facebook&utm_medium=store-page-book-button"
   },
   "group": "services",
   "id": "ocdb_01M66JP4N2ES588D59V59QQW2P",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

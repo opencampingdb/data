@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "880-882",
+      "postcode": "3109",
+      "state": "VIC",
+      "street": "Doncaster Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/452454551842555",
     "lga": {
       "name": "City of Manningham",
       "osm_id": 2405038
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Doncaster Road"
-    }
+    },
+    "phone": "+61398483931",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/doncaster-east/aa-doncaster/56"
   },
   "group": "services",
   "id": "ocdb_01M66JPFM9RRVC0X8PG5A79A8D",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "67",
+      "postcode": "4865",
+      "state": "QLD",
+      "street": "George Street",
+      "suburb": "Gordonvale"
+    },
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -13,7 +28,9 @@
       "name": "Gordonvale",
       "osm_id": 169526059,
       "type": "town"
-    }
+    },
+    "phone": "0740563077",
+    "website": "https://www.trinitypet.com.au/locations/mobil-gordonvale"
   },
   "group": "services",
   "id": "ocdb_01M66JP9G4BAAE0V481F7PFM3M",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "106",
+      "postcode": "3616",
+      "state": "VIC",
+      "street": "Hogan St",
+      "suburb": "Tatura"
+    },
+    "facebook": "https://www.facebook.com/200731080331904",
     "lga": {
       "name": "City of Greater Shepparton",
       "osm_id": 3365116
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Hogan Street"
-    }
+    },
+    "phone": "+61411806553"
   },
   "group": "utility",
   "id": "ocdb_01M66JPWW7KAZKDXXVHH9M980K",
@@ -27,7 +46,7 @@
     "lat": -36.440267,
     "lon": 145.226363
   },
-  "name": null,
+  "name": "Tatura Laundromat",
   "osm": {
     "id": 890954214,
     "timestamp": "2023-12-22T18:18:44Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

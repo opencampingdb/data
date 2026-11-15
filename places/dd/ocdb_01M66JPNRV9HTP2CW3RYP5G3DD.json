@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "name": "overture",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "2880",
+      "state": "NSW",
+      "street": "Kanandah Road",
+      "suburb": "Broken Hill"
+    },
     "fuels": [
       "diesel"
     ],
@@ -17,7 +34,9 @@
       "name": "Broken Hill",
       "osm_id": 113763535,
       "type": "city"
-    }
+    },
+    "phone": "0880881011",
+    "website": "https://www.tascopetroleum.com.au/store/broken-hill-depot/"
   },
   "group": "services",
   "id": "ocdb_01M66JPNRV9HTP2CW3RYP5G3DD",
@@ -26,7 +45,7 @@
     "lat": -31.984348,
     "lon": 141.432688
   },
-  "name": null,
+  "name": "TASCO Petroleum Broken Hill Depot",
   "osm": {
     "id": 13093726766,
     "timestamp": "2025-08-24T03:10:55Z",
@@ -35,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

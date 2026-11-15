@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +24,7 @@
       "street": "Spencer Street",
       "suburb": "Albury"
     },
+    "facebook": "https://www.facebook.com/17767583810",
     "lga": {
       "name": "Albury City Council",
       "osm_id": 3487773
@@ -37,7 +46,9 @@
       "distance_m": 70,
       "name": "Dean Street"
     },
-    "operator": "Cartech Australia"
+    "operator": "Cartech Australia",
+    "phone": "+61432278324",
+    "website": "http://www.cartechaustralia.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPVTG3XSJCERTCWW7MXQ2",
@@ -55,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

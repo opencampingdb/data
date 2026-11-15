@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1/175",
+      "postcode": "6609",
+      "state": "WA",
+      "street": "Dowie St",
+      "suburb": "Dalwallinu"
+    },
+    "facebook": "https://www.facebook.com/108644970537785",
     "lga": {
       "name": "Shire of Dalwallinu",
       "osm_id": 11689810
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Great Northern Highway"
-    }
+    },
+    "phone": "+61459772352",
+    "website": "https://www.dalwallinu.wa.gov.au/listings/business-directory/80/rnr-auto-electrics"
   },
   "group": "services",
   "id": "ocdb_01M66JPH54H60DYWM30BY205M8",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

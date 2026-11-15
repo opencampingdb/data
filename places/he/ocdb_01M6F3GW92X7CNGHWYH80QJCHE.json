@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Venables Street",
       "suburb": "Macclesfield"
     },
+    "facebook": "https://www.facebook.com/281307541982782",
     "lga": {
       "name": "Mount Barker District Council",
       "osm_id": 7294250
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Venables Street"
-    }
+    },
+    "phone": "+61883889265",
+    "website": "https://threebrothersarms.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW92X7CNGHWYH80QJCHE",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

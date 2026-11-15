@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "265",
+      "postcode": "6100",
+      "state": "WA",
+      "street": "Great Eastern Highway",
+      "suburb": "BURSWOOD"
+    },
     "lga": {
       "name": "Town of Victoria Park",
       "osm_id": 11318562
@@ -26,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Great Eastern Highway"
-    }
+    },
+    "phone": "0862551980"
   },
   "group": "services",
   "id": "ocdb_01M66JP6JA9SJ2JJ8V9QS3Q8ZG",
@@ -35,7 +51,7 @@
     "lat": -31.960164,
     "lon": 115.902072
   },
-  "name": null,
+  "name": "Caltex Burswood",
   "osm": {
     "id": 3739126542,
     "timestamp": "2015-09-11T13:38:00Z",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

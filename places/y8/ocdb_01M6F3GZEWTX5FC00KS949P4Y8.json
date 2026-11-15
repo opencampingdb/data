@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "4812",
+      "state": "QLD",
+      "street": "Bowen Road",
+      "suburb": "Townsville"
+    },
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bowen Road"
-    }
+    },
+    "phone": "0747753066",
+    "website": "http://www.raintreemotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZEWTX5FC00KS949P4Y8",
@@ -36,7 +55,7 @@
     "lat": -19.292318,
     "lon": 146.796365
   },
-  "name": null,
+  "name": "Raintree Motel",
   "osm": {
     "id": 841718249,
     "timestamp": "2020-08-28T10:56:07Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

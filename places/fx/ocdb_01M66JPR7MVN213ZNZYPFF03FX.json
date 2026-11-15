@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "111",
+      "postcode": "4118",
+      "state": "QLD",
+      "street": "121 Brown Plains Road",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/472396806515173",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Browns Plains Road"
-    }
+    },
+    "phone": "+61738093211",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/browns-plains/bp-central-browns-plains/5435"
   },
   "group": "services",
   "id": "ocdb_01M66JPR7MVN213ZNZYPFF03FX",
@@ -27,7 +49,7 @@
     "lat": -27.662371,
     "lon": 153.048145
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 48627426,
     "timestamp": "2010-01-21T10:04:16Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

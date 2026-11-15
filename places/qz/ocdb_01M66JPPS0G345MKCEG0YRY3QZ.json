@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "149",
+      "postcode": "2666",
+      "state": "NSW",
+      "street": "Hoskins St",
+      "suburb": "Temora"
+    },
+    "facebook": "https://www.facebook.com/203353949865559",
     "lga": {
       "name": "Temora Shire Council",
       "osm_id": 6252224
@@ -24,7 +40,8 @@
       "distance_m": 20,
       "name": "Hoskins Street"
     },
-    "phone": "+61 438 892 363"
+    "phone": "+61 438 892 363",
+    "website": "http://www.temora.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPPS0G345MKCEG0YRY3QZ",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

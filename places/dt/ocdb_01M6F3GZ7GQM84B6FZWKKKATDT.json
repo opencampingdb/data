@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "5276",
+      "state": "SA",
+      "street": "Mundy Terrace",
+      "suburb": "Robe"
+    },
+    "facebook": "https://www.facebook.com/834424546652417",
     "lga": {
       "name": "District Council of Robe",
       "osm_id": 6738647
@@ -22,7 +40,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 510
-    }
+    },
+    "phone": "+61887682077",
+    "website": "https://robehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ7GQM84B6FZWKKKATDT",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

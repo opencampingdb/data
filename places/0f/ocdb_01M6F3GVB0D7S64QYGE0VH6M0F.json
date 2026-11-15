@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2642",
+      "street": "Olympic Hwy",
+      "suburb": "Greater Hume Shire Council"
+    },
+    "facebook": "https://www.facebook.com/425759467528104",
     "lga": {
       "name": "Greater Hume Shire Council",
       "osm_id": 3487850
@@ -18,7 +32,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Huon Street"
-    }
+    },
+    "phone": "+61260260516"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVB0D7S64QYGE0VH6M0F",
@@ -36,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

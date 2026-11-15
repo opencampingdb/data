@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1A",
+      "postcode": "2261",
+      "state": "NSW",
+      "street": "Tumbi Creek Road",
+      "suburb": "Berkeley Vale"
+    },
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Wyong Road"
-    }
+    },
+    "phone": "+61 2 4388 4254",
+    "website": "https://find.shell.com/au/fuel/10110698-shell-berkeley-vale/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPBQYEPC360A202Y4R40Y",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

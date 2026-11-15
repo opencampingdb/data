@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5946",
+      "postcode": "4877",
+      "state": "QLD",
+      "street": "Davidson St",
+      "suburb": "Craiglie"
+    },
+    "facebook": "https://www.facebook.com/2174589796151345",
     "lga": {
       "name": "Douglas Shire",
       "osm_id": 11677495
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Captain Cook Highway"
-    }
+    },
+    "phone": "+61740155848",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/craiglie/bp-port-douglas/8512"
   },
   "group": "services",
   "id": "ocdb_01M66JPMJSCKNK86R5WH9Q254G",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

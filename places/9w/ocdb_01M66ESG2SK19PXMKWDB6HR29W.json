@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "151",
+      "postcode": "3460",
+      "state": "VIC",
+      "street": "Lake Rd",
+      "suburb": "Daylesford"
+    },
+    "facebook": "https://www.facebook.com/111471905532087",
     "lga": {
       "name": "Shire of Hepburn",
       "osm_id": 3327844
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 2300
-    }
+    },
+    "phone": "+61353482186",
+    "website": "http://www.jubileelake.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG2SK19PXMKWDB6HR29W",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "241",
+      "postcode": "3074",
+      "state": "VIC",
+      "street": "Settlement Rd",
+      "suburb": "Thomastown"
+    },
     "lga": {
       "name": "City of Whittlesea",
       "osm_id": 3327768
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Settlement Road"
-    }
+    },
+    "phone": "(03) 9464 1522",
+    "website": "http://corporateautobody.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPQEA3MZREDGY5AP200MV",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

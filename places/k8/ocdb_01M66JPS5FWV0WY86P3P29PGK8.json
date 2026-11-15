@@ -1,5 +1,12 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -7,9 +14,18 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "169",
+      "postcode": "2065",
+      "state": "NSW",
+      "street": "Willoughby Road",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/1964227027160929",
     "fuels": [
       "diesel",
       "e10",
@@ -38,6 +54,7 @@
       "name": "Willoughby Road"
     },
     "operator": "BP",
+    "phone": "+61294363990",
     "website": "https://map.bp.com/en-AU/AU/gas-station/naremburn/bp-naremburn/9544"
   },
   "group": "services",
@@ -56,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8/43",
+      "postcode": "2064",
+      "state": "NSW",
+      "street": "Herbert St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/104167044742193",
     "lga": {
       "name": "Willoughby City Council",
       "osm_id": 6230051
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Gore Hill Freeway"
-    }
+    },
+    "phone": "+61280483844",
+    "website": "http://motorserve.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPNHSF7D7M04T346C5FQ7",
@@ -36,7 +58,7 @@
     "lat": -33.81518,
     "lon": 151.190459
   },
-  "name": null,
+  "name": "Motorserve",
   "osm": {
     "id": 12955267121,
     "timestamp": "2025-06-27T00:25:47Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

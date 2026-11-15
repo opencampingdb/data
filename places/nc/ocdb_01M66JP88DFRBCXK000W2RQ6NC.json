@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 903",
+      "postcode": "6751",
+      "state": "WA",
+      "street": "Doradeen Rd",
+      "suburb": "Tom Price"
+    },
+    "facebook": "https://www.facebook.com/530331356993439",
     "lga": {
       "name": "Shire of Ashburton",
       "osm_id": 11690012
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Mine Road"
-    }
+    },
+    "phone": "+61891891109",
+    "website": "http://www.puremech.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP88DFRBCXK000W2RQ6NC",
@@ -27,7 +49,7 @@
     "lat": -22.696542,
     "lon": 117.785742
   },
-  "name": null,
+  "name": "Pure Mechanical",
   "osm": {
     "id": 4531533109,
     "timestamp": "2016-12-01T07:42:15Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

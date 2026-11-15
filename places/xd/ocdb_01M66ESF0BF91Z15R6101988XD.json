@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "power": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "188",
+      "postcode": "6566",
+      "state": "WA",
+      "street": "Racecourse Rd",
+      "suburb": "Toodyay"
+    },
+    "facebook": "https://www.facebook.com/201102549978326",
     "fee": true,
     "lga": {
       "name": "Shire of Toodyay",
@@ -18,8 +36,10 @@
       "osm_id": 270477547,
       "type": "town"
     },
+    "phone": "+61447498937",
     "power": true,
-    "tents": true
+    "tents": true,
+    "website": "http://www.toodyayholidaypark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF0BF91Z15R6101988XD",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,21 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "state": "QLD",
+      "street": "Isa Street",
+      "suburb": "Mount Isa, QLD"
+    },
     "lga": {
       "name": "Mount Isa City",
       "osm_id": 11677400
@@ -18,7 +29,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Isa Street"
-    }
+    },
+    "phone": "(07) 4743 4274"
   },
   "group": "services",
   "id": "ocdb_01M66JP2YFKYGA0QTXG51MF4ZX",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18",
+      "postcode": "7260",
+      "state": "TAS",
+      "street": "Ten Mile Track",
+      "suburb": "Scottsdale"
+    },
     "lga": {
       "name": "Dorset",
       "osm_id": 10578020
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Ten Mile Track"
-    }
+    },
+    "phone": "+61 3 6331 4155",
+    "website": "https://find.shell.com/au/fuel/10111578-shell-scottsdale-unmanned/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPYCFS7C9Q9WAECJR7PAZ",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

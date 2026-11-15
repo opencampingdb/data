@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "7172",
+      "state": "TAS",
+      "street": "Gordon St",
+      "suburb": "Sorell"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/122879511622956",
     "lga": {
       "name": "Sorell",
       "osm_id": 10624975
@@ -31,6 +47,7 @@
       "distance_m": 20,
       "name": "Gordon Street"
     },
+    "phone": "+61354811591",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-sorell"
   },
   "group": "services",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

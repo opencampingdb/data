@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "postcode": "6124",
       "street": "Jarrahdale Road"
     },
+    "facebook": "https://www.facebook.com/118506511345492",
     "lga": {
       "name": "Shire of Serpentine-Jarrahdale",
       "osm_id": 11689420
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Jarrahdale Road"
-    }
+    },
+    "phone": "+61895255015",
+    "website": "http://www.jarrahdaletavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVK23D9FVVHSK2HZ01JK",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

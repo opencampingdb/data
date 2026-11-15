@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "19",
+      "postcode": "6330",
+      "state": "WA",
+      "street": "Station Street",
+      "suburb": "Youngs Siding"
+    },
+    "facebook": "https://www.facebook.com/194038637894294",
     "lga": {
       "name": "City of Albany",
       "osm_id": 11690341
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Lower Denmark Road"
-    }
+    },
+    "phone": "+61898452010",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/youngs-siding/bp-youngs-siding-gen-store/2407"
   },
   "group": "services",
   "id": "ocdb_01M66JP30C80H3XD430N81ZWMH",
@@ -27,7 +49,7 @@
     "lat": -35.013185,
     "lon": 117.522801
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1919263023,
     "timestamp": "2019-05-10T03:48:10Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

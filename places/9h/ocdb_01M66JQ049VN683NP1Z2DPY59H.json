@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "3722",
+      "state": "VIC",
+      "street": "Chenery St",
+      "suburb": "Mansfield"
+    },
     "lga": {
       "name": "Shire of Mansfield",
       "osm_id": 3350291
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Chenery Street"
-    }
+    },
+    "phone": "0357752284",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-mansfield"
   },
   "group": "services",
   "id": "ocdb_01M66JQ049VN683NP1Z2DPY59H",
@@ -27,7 +46,7 @@
     "lat": -37.053226,
     "lon": 146.092954
   },
-  "name": null,
+  "name": "Ampol Foodary Mansfield",
   "osm": {
     "id": 1535156244,
     "timestamp": "2026-07-04T09:49:09Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

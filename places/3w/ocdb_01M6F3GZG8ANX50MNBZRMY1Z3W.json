@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18",
+      "postcode": "2766",
+      "state": "NSW",
+      "street": "Station St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/244837992535606",
     "lga": {
       "name": "Blacktown City Council",
       "osm_id": 6217858
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Westlink M7"
-    }
+    },
+    "phone": "+611300554595"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZG8ANX50MNBZRMY1Z3W",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

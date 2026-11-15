@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "78",
+      "postcode": "4811",
+      "state": "QLD",
+      "street": "Abbott St",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/181802278576769",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Abbott Street"
-    }
+    },
+    "phone": "+61747783573",
+    "website": "http://www.oonoonbahotelmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZYSGW19FM4RFQJAGYE2",
@@ -35,7 +57,7 @@
     "lat": -19.300818,
     "lon": 146.818991
   },
-  "name": null,
+  "name": "Oonoonba Hotel",
   "osm": {
     "id": 1341161974,
     "timestamp": "2024-12-09T04:15:50Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

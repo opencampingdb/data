@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "2913",
+      "state": "ACT",
+      "street": "Kingsland Parade",
+      "suburb": "Gungahlin"
+    },
+    "facebook": "https://www.facebook.com/950093748417631",
     "locality": {
       "distance_m": 2570,
       "name": "Gungahlin",
@@ -13,7 +31,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Kingsland Parade"
-    }
+    },
+    "phone": "+61262538961",
+    "website": "http://caseyjones.pub/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY7MR5CESPNR7E6210CS",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

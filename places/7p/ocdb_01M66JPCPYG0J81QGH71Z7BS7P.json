@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "2617",
+      "state": "ACT",
+      "street": "Cohen St",
+      "suburb": "Belconnen"
+    },
+    "facebook": "https://www.facebook.com/376315389230543",
     "locality": {
       "distance_m": 2150,
       "name": "Belconnen",
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Lathlain Street"
-    }
+    },
+    "phone": "+61262531191"
   },
   "group": "services",
   "id": "ocdb_01M66JPCPYG0J81QGH71Z7BS7P",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

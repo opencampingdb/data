@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "2100",
+      "state": "NSW",
+      "street": "Dale St",
+      "suburb": "Brookvale"
+    },
     "lga": {
       "name": "Northern Beaches Council",
       "osm_id": 2978550
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Pittwater Road"
-    }
+    },
+    "phone": "(02) 9939 1500",
+    "website": "http://www.audimosman.com.au/au_partner/p_au_21020/en_home/contact_us/contact_us.html"
   },
   "group": "services",
   "id": "ocdb_01M66JPN3FPWEHWYCHNG8DB4AQ",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

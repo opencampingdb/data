@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "62",
+      "postcode": "2870",
+      "state": "NSW",
+      "street": "Peak Hill Rd",
+      "suburb": "Parkes"
+    },
+    "facebook": "https://www.facebook.com/104077164298865",
     "lga": {
       "name": "Parkes Shire Council",
       "osm_id": 6271674
@@ -20,7 +36,8 @@
       "distance_m": 40,
       "name": "Peak Hill Road"
     },
-    "operator": "Budget"
+    "operator": "Budget",
+    "phone": "+61268623388"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVQZE2CWP6K8CYPQAXRM",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

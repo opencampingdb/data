@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 52",
+      "postcode": "6338",
+      "street": "Ocomup Rd"
+    },
+    "facebook": "https://www.facebook.com/1805661642800257",
     "lga": {
       "name": "Shire of Jerramungup",
       "osm_id": 11688990
@@ -13,7 +27,8 @@
       "name": "Bremer Bay",
       "osm_id": 2569235180,
       "type": "town"
-    }
+    },
+    "phone": "+61428371015"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBFQ7GCQ3V9W59ZWX9S7",
@@ -31,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

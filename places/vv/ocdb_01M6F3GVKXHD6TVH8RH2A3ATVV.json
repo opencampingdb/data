@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +17,7 @@
       "postcode": "3871",
       "street": "Ridgway"
     },
+    "facebook": "https://www.facebook.com/1371527242924403",
     "lga": {
       "name": "Shire of South Gippsland",
       "osm_id": 3335917
@@ -24,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Ridgway"
-    }
+    },
+    "phone": "+61356681552"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVKXHD6TVH8RH2A3ATVV",
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

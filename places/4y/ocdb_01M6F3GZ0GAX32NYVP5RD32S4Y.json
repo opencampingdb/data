@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "2326",
+      "state": "NSW",
+      "street": "Cessnock Rd",
+      "suburb": "Neath"
+    },
+    "facebook": "https://www.facebook.com/2077797765576779",
     "lga": {
       "name": "Cessnock City Council",
       "osm_id": 6191219
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Cessnock Road"
-    }
+    },
+    "phone": "+61409042566",
+    "website": "http://neathhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ0GAX32NYVP5RD32S4Y",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "463",
       "street": "Greenhill Road"
     },
+    "facebook": "https://www.facebook.com/2032518913681893",
     "lga": {
       "name": "City of Burnside",
       "osm_id": 9105810
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Greenhill Road"
-    }
+    },
+    "phone": "+61871320933",
+    "website": "http://www.starlaundromat.com.au"
   },
   "group": "utility",
   "id": "ocdb_01M66JPXEKX5M2JDGSFGJNR3JB",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

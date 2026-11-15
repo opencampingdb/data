@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "72-76",
+      "postcode": "5244",
+      "state": "SA",
+      "street": "Onkaparinga Valley Rd",
+      "suburb": "Woodside"
+    },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/123639969031719",
     "lga": {
       "name": "Adelaide Hills Council",
       "osm_id": 9105845
@@ -20,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Onkaparinga Valley Scenic Drive"
-    }
+    },
+    "phone": "+61883897268"
   },
   "group": "services",
   "id": "ocdb_01M66JPSYGS6V5CN40W21Z90TE",
@@ -29,7 +48,7 @@
     "lat": -34.950307,
     "lon": 138.876713
   },
-  "name": null,
+  "name": "Ampol Woodside",
   "osm": {
     "id": 341978096,
     "timestamp": "2019-05-08T04:20:21Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

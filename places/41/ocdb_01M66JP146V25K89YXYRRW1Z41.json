@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1067",
+      "postcode": "4878",
+      "state": "QLD",
+      "street": "Captain Cook Highway",
+      "suburb": "Cairns"
+    },
+    "facebook": "https://www.facebook.com/1974873682545903",
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -29,7 +47,9 @@
       "distance_m": 70,
       "name": "Captain Cook Highway"
     },
-    "operator": "BP"
+    "operator": "BP",
+    "phone": "+61740383055",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/smithfield/bp-smithfield-qld/7007"
   },
   "group": "services",
   "id": "ocdb_01M66JP146V25K89YXYRRW1Z41",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

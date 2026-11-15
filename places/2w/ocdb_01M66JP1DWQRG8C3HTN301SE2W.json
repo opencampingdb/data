@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4874",
+      "state": "QLD",
+      "street": "Bramwell Jct",
+      "suburb": "Shelburne"
+    },
+    "facebook": "https://www.facebook.com/379832205474054",
     "lga": {
       "name": "Cook Shire",
       "osm_id": 11677441
@@ -11,7 +28,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bamaga Road (Southern Bypass Road)"
-    }
+    },
+    "phone": "+61740603230",
+    "website": "http://www.bramwellstationcapeyork.com.au/contacts"
   },
   "group": "services",
   "id": "ocdb_01M66JP1DWQRG8C3HTN301SE2W",
@@ -29,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

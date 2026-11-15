@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "2710",
+      "state": "NSW",
+      "street": "Moama Street",
+      "suburb": "Mathoura"
+    },
     "lga": {
       "name": "Murray River Council",
       "osm_id": 6134295
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Moama Street"
-    }
+    },
+    "phone": "0358843269",
+    "website": "https://locations.ampol.com.au/en/ampol-mathoura"
   },
   "group": "services",
   "id": "ocdb_01M66JPAMWS31NKGTPJZW9DXQM",
@@ -27,7 +46,7 @@
     "lat": -35.812959,
     "lon": 144.902459
   },
-  "name": null,
+  "name": "Ampol Mathoura",
   "osm": {
     "id": 5777997270,
     "timestamp": "2018-07-23T00:42:16Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

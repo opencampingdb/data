@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "phone": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "131",
+      "postcode": "4207",
+      "state": "QLD",
+      "street": "George St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/321658257887901",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -26,6 +42,7 @@
       "name": "George Street"
     },
     "opening_hours": "Mo-Fr 08:00-17:30; Sa 08:00-12:00; PH closed",
+    "phone": "+61738078133",
     "wheelchair": true
   },
   "group": "services",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

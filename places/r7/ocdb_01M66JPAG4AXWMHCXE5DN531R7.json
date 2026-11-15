@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "7321",
+      "state": "TAS",
+      "street": "Smith St",
+      "suburb": "Waratah"
+    },
+    "facebook": "https://www.facebook.com/868292519930063",
     "lga": {
       "name": "Waratah-Wynyard",
       "osm_id": 10593034
@@ -20,7 +36,8 @@
       "distance_m": 30,
       "name": "William Street"
     },
-    "opening_hours": "07:30-15:00"
+    "opening_hours": "07:30-15:00",
+    "phone": "+61364391110"
   },
   "group": "services",
   "id": "ocdb_01M66JPAG4AXWMHCXE5DN531R7",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

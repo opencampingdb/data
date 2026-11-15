@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "136",
+      "postcode": "2450",
+      "state": "NSW",
+      "street": "Pacific Highway",
+      "suburb": "Coffs Harbour"
+    },
+    "facebook": "https://www.facebook.com/133799454155877",
     "fuel": true,
     "lga": {
       "name": "Coffs Harbour City Council",
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Grafton Street"
-    }
+    },
+    "phone": "+61266513877",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/coffs-harbour/bp-coffs-harbour/1124"
   },
   "group": "services",
   "id": "ocdb_01M66JPZCCMM9SB4N5W56S85G6",
@@ -37,7 +59,7 @@
     "lat": -30.291618,
     "lon": 153.118327
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1357913795,
     "timestamp": "2025-02-08T03:44:22Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

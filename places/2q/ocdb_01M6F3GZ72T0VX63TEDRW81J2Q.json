@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "127Conadilly",
+      "postcode": "2380",
+      "state": "NSW",
+      "street": "St",
+      "suburb": "Gunnedah"
+    },
+    "facebook": "https://www.facebook.com/447996025310512",
     "lga": {
       "name": "Gunnedah Shire Council",
       "osm_id": 6389934
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Conadilly Street"
-    }
+    },
+    "phone": "+61267422511",
+    "website": "http://www.plainsmotorinn.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ72T0VX63TEDRW81J2Q",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

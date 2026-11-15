@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "2720",
+      "state": "NSW",
+      "street": "Wynyard St",
+      "suburb": "Tumut"
+    },
+    "facebook": "https://www.facebook.com/109982828115339",
     "lga": {
       "name": "Snowy Valleys Council",
       "osm_id": 6239423
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Fitzroy Street"
-    }
+    },
+    "phone": "+61269471335",
+    "website": "http://www.themonarchtumut.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZGQQTGWH7BZKMJSY1HT",
@@ -31,7 +53,7 @@
     "lat": -35.300854,
     "lon": 148.227433
   },
-  "name": null,
+  "name": "The Monarch Tumut",
   "osm": {
     "id": 904102740,
     "timestamp": "2021-02-05T10:50:59Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

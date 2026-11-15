@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "66",
+      "postcode": "3858",
+      "state": "VIC",
+      "street": "Temple St.",
+      "suburb": "Heyfield"
+    },
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Traralgon - Maffra Road"
-    }
+    },
+    "phone": "(03) 5148 2482",
+    "website": "http://www.heyfield.net"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJWAE17W1XBT6WX3D6T",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

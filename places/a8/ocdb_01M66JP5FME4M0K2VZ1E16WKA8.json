@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56",
+      "postcode": "2850",
+      "state": "NSW",
+      "street": "Sydney Rd",
+      "suburb": "Mudgee"
+    },
+    "facebook": "https://www.facebook.com/101619991627755",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -28,7 +46,9 @@
       "distance_m": 30,
       "name": "Sydney Road"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61263723259",
+    "website": "https://find.shell.com/au/fuel/AU_A310-shell-mudgee"
   },
   "group": "services",
   "id": "ocdb_01M66JP5FME4M0K2VZ1E16WKA8",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

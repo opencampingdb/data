@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "4561",
+      "state": "QLD",
+      "street": "Pioneer Rd",
+      "suburb": "Yandina"
+    },
+    "facebook": "https://www.facebook.com/207935264568869",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -19,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 80
     },
-    "opening_hours": "Mo-Fr 10:00-13:00"
+    "opening_hours": "Mo-Fr 10:00-13:00",
+    "phone": "+61754727181",
+    "website": "http://www.yandinahistorichouse.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZ6A3M718K5VJ59FM9PQ",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

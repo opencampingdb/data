@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3960",
+      "street": "Inlet Marine & Coastal Park"
+    },
+    "facebook": "https://www.facebook.com/504552579576169",
     "fee": true,
     "lga": {
       "name": "Shire of South Gippsland",
@@ -19,7 +34,9 @@
     },
     "nearest_beach": {
       "distance_m": 3540
-    }
+    },
+    "phone": "+61356809555",
+    "website": "http://parkweb.vic.gov.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA8A1DH0YH7EGSP5Q5D8",
@@ -37,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

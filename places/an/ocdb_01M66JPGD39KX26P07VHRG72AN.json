@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "4824",
+      "state": "QLD",
+      "street": "Mcilwraith St",
+      "suburb": "Cloncurry"
+    },
+    "facebook": "https://www.facebook.com/124188827661164",
     "lga": {
       "name": "Cloncurry Shire",
       "osm_id": 11677395
@@ -23,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "McIlwraith Street"
-    }
+    },
+    "phone": "+61747421416"
   },
   "group": "services",
   "id": "ocdb_01M66JPGD39KX26P07VHRG72AN",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

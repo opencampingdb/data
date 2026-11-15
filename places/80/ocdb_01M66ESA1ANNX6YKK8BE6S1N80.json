@@ -1,16 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4552",
+      "state": "QLD",
+      "street": "Maleny Kenilworth Rd",
+      "suburb": "Cambroon"
+    },
     "cabins": false,
     "caravans": true,
+    "facebook": "https://www.facebook.com/1671753223111401",
     "fee": false,
     "lga": {
       "name": "Sunshine Coast Regional",
@@ -26,7 +43,9 @@
       "distance_m": 50,
       "name": "Maleny Kenilworth Road"
     },
-    "tents": true
+    "phone": "+61754757272",
+    "tents": true,
+    "website": "https://www.sunshinecoast.qld.gov.au/living-and-community/community-support/healthy-and-active/beaches-and-parks-directory/little-yabba-rest-area"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA1ANNX6YKK8BE6S1N80",
@@ -44,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

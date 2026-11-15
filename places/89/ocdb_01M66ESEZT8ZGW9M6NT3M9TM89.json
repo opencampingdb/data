@@ -1,12 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5351",
+      "street": "Warren Rd",
+      "suburb": "The Barossa Council"
+    },
+    "facebook": "https://www.facebook.com/520074384867008",
     "lga": {
       "name": "The Barossa Council",
       "osm_id": 9105938
@@ -25,7 +39,8 @@
       "distance_m": 210,
       "name": "Warren Road"
     },
-    "operator": "Forestry SA"
+    "operator": "Forestry SA",
+    "phone": "+61885211700"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZT8ZGW9M6NT3M9TM89",
@@ -43,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

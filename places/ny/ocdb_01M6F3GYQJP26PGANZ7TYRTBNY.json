@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "230",
+      "postcode": "2880",
+      "state": "NSW",
+      "street": "Blende St",
+      "suburb": "Broken Hill"
+    },
+    "facebook": "https://www.facebook.com/1627469970813191",
     "lga": {
       "name": "Broken Hill City Council",
       "osm_id": 5892296
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 310,
       "name": "B79"
-    }
+    },
+    "phone": "+61880884660",
+    "website": "http://www.brokenhillaustralia.com.au/explore-and-discover/local-attractions/sulphide-street-railway-and-historical-museum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYQJP26PGANZ7TYRTBNY",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "7018",
+      "state": "TAS",
+      "street": "Howrah Road",
+      "suburb": "Howrah"
+    },
     "lga": {
       "name": "City of Clarence",
       "osm_id": 10625764
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Shoreline Drive"
-    }
+    },
+    "phone": "+61 3 6240 8539",
+    "website": "https://find.shell.com/au/fuel/10110627-shell-reddy-express-howrah/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTKGQ41GZ676Y9HZQZEF",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

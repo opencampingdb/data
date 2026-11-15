@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "132",
+      "postcode": "2430",
+      "state": "NSW",
+      "street": "Manning River Dr",
+      "suburb": "Taree"
+    },
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Manning River Drive"
-    }
+    },
+    "phone": "(02) 7229 3922",
+    "website": "https://www.mobil.com.au/en-au/find-station/tareesouth-nsw-tareesouth-6100207"
   },
   "group": "services",
   "id": "ocdb_01M66JPRP78J0R14ZR7VCQGYWM",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

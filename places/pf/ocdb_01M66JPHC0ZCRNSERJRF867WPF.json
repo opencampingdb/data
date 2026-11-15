@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "6375",
+      "state": "WA",
+      "street": "Kunjin St",
+      "suburb": "Corrigin"
+    },
+    "facebook": "https://www.facebook.com/1535286533396107",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -24,7 +40,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Kunjin Street"
-    }
+    },
+    "phone": "+61429399644"
   },
   "group": "services",
   "id": "ocdb_01M66JPHC0ZCRNSERJRF867WPF",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

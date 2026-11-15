@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Calder Highway",
       "suburb": "Hattah"
     },
+    "facebook": "https://www.facebook.com/275789072850992",
     "lga": {
       "name": "Rural City of Mildura",
       "osm_id": 3345519
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Calder Highway"
-    }
+    },
+    "phone": "+61350291314",
+    "website": "https://hattah-outback-roadhouse.business.site/"
   },
   "group": "services",
   "id": "ocdb_01M66JPSMAPPR84JBGCAJBS9PE",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

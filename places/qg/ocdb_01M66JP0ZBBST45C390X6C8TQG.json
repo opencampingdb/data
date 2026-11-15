@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Morrison Road",
       "suburb": "Putney"
     },
+    "facebook": "https://www.facebook.com/100187259219760",
     "lga": {
       "name": "Council of the City of Ryde",
       "osm_id": 6218884
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Morrison Road"
-    }
+    },
+    "phone": "+61298091074",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/putney/bp-putney/7463"
   },
   "group": "services",
   "id": "ocdb_01M66JP0ZBBST45C390X6C8TQG",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

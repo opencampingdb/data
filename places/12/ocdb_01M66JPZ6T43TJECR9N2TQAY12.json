@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "330",
+      "postcode": "3095",
+      "state": "VIC",
+      "street": "Ryans Road",
+      "suburb": "Eltham North"
+    },
     "lga": {
       "name": "Shire of Nillumbik",
       "osm_id": 3331023
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Ryans Road"
-    }
+    },
+    "phone": "+61 3 9431 2822",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/eltham-north/bp-eltham-north/1058"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ6T43TJECR9N2TQAY12",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

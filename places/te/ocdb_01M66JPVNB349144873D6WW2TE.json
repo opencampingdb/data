@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "69",
+      "postcode": "3043",
+      "state": "VIC",
+      "street": "Keilor Park Drive",
+      "suburb": "Tullamarine"
+    },
     "lga": {
       "name": "City of Brimbank",
       "osm_id": 3327554
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Keilor Park Drive"
-    }
+    },
+    "phone": "+61 3 9454 9740",
+    "website": "https://find.shell.com/au/fuel/10111328-shell-reddy-express-keilor-park/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPVNB349144873D6WW2TE",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

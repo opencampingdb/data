@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "217",
+      "postcode": "3741",
+      "state": "VIC",
+      "street": "Great Alpine Rd",
+      "suburb": "Harrietville"
+    },
+    "facebook": "https://www.facebook.com/1522475101331149",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -20,7 +38,9 @@
       "distance_m": 30,
       "name": "Great Alpine Road"
     },
-    "opening_hours": "Sa,Su 12:00-15:00; May-Nov off"
+    "opening_hours": "Sa,Su 12:00-15:00; May-Nov off",
+    "phone": "+61417656965",
+    "website": "http://www.alpinehistory.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVRX1PTZYFN9B9KTMJQQ",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

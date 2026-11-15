@@ -1,10 +1,22 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2170",
+      "state": "NSW",
+      "street": "Hume Hwy.",
+      "suburb": "Casula"
+    },
     "lga": {
       "name": "Liverpool City Council",
       "osm_id": 6212442
@@ -18,7 +30,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hume Highway"
-    }
+    },
+    "phone": "(02) 9602 8482"
   },
   "group": "services",
   "id": "ocdb_01M66JPV5GS80CCVTFSA9874PG",
@@ -36,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

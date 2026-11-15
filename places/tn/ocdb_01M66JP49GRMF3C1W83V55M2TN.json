@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "3875",
+      "state": "VIC",
+      "street": "MacLeod St",
+      "suburb": "Bairnsdale"
+    },
+    "facebook": "https://www.facebook.com/252118524908052",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Macleod Street"
-    }
+    },
+    "phone": "+61351416006",
+    "website": "http://www.bridgestonetyres.com.au/bairnsdale"
   },
   "group": "services",
   "id": "ocdb_01M66JP49GRMF3C1W83V55M2TN",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3337",
+      "state": "VIC",
+      "street": "Coburns Central Shopping Centre",
+      "suburb": "Meltons West"
+    },
     "lga": {
       "name": "City of Melton",
       "osm_id": 3327545
@@ -20,7 +34,9 @@
       "distance_m": 70,
       "name": "Coburns Road"
     },
-    "opening_hours": "Mo-Su 06:00-01:00"
+    "opening_hours": "Mo-Su 06:00-01:00",
+    "phone": "0468961491",
+    "website": "https://bluehippolaundry.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPMTRTYSJD6C03D1DH46Y",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "33",
+      "postcode": "5353",
+      "state": "SA",
+      "street": "Murray St",
+      "suburb": "Angaston"
+    },
+    "facebook": "https://www.facebook.com/120878637784616",
     "lga": {
       "name": "The Barossa Council",
       "osm_id": 9105938
@@ -20,7 +38,9 @@
       "distance_m": 10,
       "name": "Murray Street"
     },
-    "opening_hours": "Su-Th 09:00-23:00, Fr,Sa 09:00-02:00"
+    "opening_hours": "Su-Th 09:00-23:00, Fr,Sa 09:00-02:00",
+    "phone": "+61875090029",
+    "website": "https://www.barossapho.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVNQWY7EDW1DBVG7F7MA",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

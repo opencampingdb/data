@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3216",
+      "state": "VIC",
+      "street": "Shop 10/17 - 19 Stephen St",
+      "suburb": "Geelong"
+    },
+    "facebook": "https://www.facebook.com/1709658476026947",
     "lga": {
       "name": "City of Greater Geelong",
       "osm_id": 2646730
@@ -19,7 +36,9 @@
     "nearest_boat_ramp": {
       "distance_m": 1740
     },
-    "opening_hours": "Mo-Su 06:00-22:00"
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+611300469274",
+    "website": "http://www.greenlaundry.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPSHE67KQHA9E0G0E4128",
@@ -37,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "652",
+      "postcode": "5174",
+      "state": "SA",
+      "street": "Old Sellicks Hill Rd",
+      "suburb": "Sellicks Hill"
+    },
+    "facebook": "https://www.facebook.com/480367515436",
     "lga": {
       "name": "City of Onkaparinga",
       "osm_id": 7262204
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Main South Road"
-    }
+    },
+    "phone": "+61885563083",
+    "website": "http://www.victoryhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVV7ANBFH8FAVHCV4YVC",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

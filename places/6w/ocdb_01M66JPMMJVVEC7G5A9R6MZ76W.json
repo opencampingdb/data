@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1148",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "Gin Gin Rd",
+      "suburb": "Sharon"
+    },
+    "facebook": "https://www.facebook.com/363555650404081",
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Gin Gin Road"
-    }
+    },
+    "phone": "+61741599206",
+    "website": "http://sharon-service-station.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M66JPMMJVVEC7G5A9R6MZ76W",
@@ -31,7 +53,7 @@
     "lat": -24.87303,
     "lon": 152.262441
   },
-  "name": null,
+  "name": "Sharon Service Station",
   "osm": {
     "id": 12378287988,
     "timestamp": "2024-11-27T08:19:11Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "street": "Lennox Street"
     },
+    "facebook": "https://www.facebook.com/508862952549548",
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Lennox Street"
-    }
+    },
+    "phone": "+61741212250",
+    "website": "http://www.nationaltrust.org.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPC24A84M437D5DJ27ASN",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

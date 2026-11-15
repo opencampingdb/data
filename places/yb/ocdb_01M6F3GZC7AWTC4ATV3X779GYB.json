@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "postcode": "3228",
+      "state": "VIC",
+      "street": "School Rd",
+      "suburb": "Bellbrae"
+    },
+    "facebook": "https://www.facebook.com/162117853800045",
     "lga": {
       "name": "Surf Coast Shire",
       "osm_id": 3290432
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Anglesea Road"
-    }
+    },
+    "phone": "+61352613777",
+    "website": "https://www.budgetmotels.com.au/affordable_accommodation/?location=Bellbrae"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZC7AWTC4ATV3X779GYB",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "name": "overture",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2668",
+      "state": "NSW",
+      "street": "Mandamah Road",
+      "suburb": "Barmedman"
+    },
     "lga": {
       "name": "Bland Shire Council",
       "osm_id": 6257747
@@ -13,7 +30,9 @@
       "name": "Barmedman",
       "osm_id": 113711888,
       "type": "town"
-    }
+    },
+    "phone": "+61 2 6977 2999",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/barmedman/bp-opt-barmedman/7176"
   },
   "group": "services",
   "id": "ocdb_01M66JPXG7D868FNWV2XMEC8VZ",
@@ -22,7 +41,7 @@
     "lat": -34.159803,
     "lon": 147.383409
   },
-  "name": null,
+  "name": "bp Truckstop",
   "osm": {
     "id": 1020230976,
     "timestamp": "2022-01-11T09:39:06Z",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

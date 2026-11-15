@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1388",
+      "postcode": "2453",
+      "state": "NSW",
+      "street": "Point Lookout Road",
+      "suburb": "Ebor"
+    },
     "lga": {
       "name": "Armidale Regional Council",
       "osm_id": 6165969
@@ -13,7 +28,9 @@
       "name": "Ebor",
       "osm_id": 114382510,
       "type": "village"
-    }
+    },
+    "phone": "1300072757",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/toms-cabin?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_2962376976537987953&utm_content=Toms+Cabin+-+Ebor"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV9DPQ8J9JBBVT32WXV3",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,14 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "0820",
+      "state": "NT",
+      "street": "MacDonald St",
+      "suburb": "Darwin"
+    },
+    "facebook": "https://www.facebook.com/232772376775860",
     "fee": false,
     "lga": {
       "name": "City of Darwin",
@@ -30,7 +48,9 @@
       "distance_m": 230,
       "name": "Ross Smith Avenue"
     },
-    "opening_hours": "Mo-Fr 09:00-16:00; Sa 09:00-12:00; Su off"
+    "opening_hours": "Mo-Fr 09:00-16:00; Sa 09:00-12:00; Su off",
+    "phone": "+61889424839",
+    "website": "http://mvec.org.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW86PFKHXQXWAPFDZ2AX",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

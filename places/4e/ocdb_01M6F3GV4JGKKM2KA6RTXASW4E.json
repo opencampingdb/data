@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "74",
+      "postcode": "2538",
+      "state": "NSW",
+      "street": "Princes Hwy",
+      "suburb": "Milton"
+    },
+    "facebook": "https://www.facebook.com/107358777542077",
     "lga": {
       "name": "Shoalhaven City Council",
       "osm_id": 6311648
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61244540727",
+    "website": "http://www.themiltonhotel.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV4JGKKM2KA6RTXASW4E",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

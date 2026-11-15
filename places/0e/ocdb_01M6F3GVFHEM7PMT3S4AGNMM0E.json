@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36",
+      "postcode": "7320",
+      "state": "TAS",
+      "street": "Queen St",
+      "suburb": "Burnie"
+    },
+    "facebook": "https://www.facebook.com/109672569109788",
     "lga": {
       "name": "City of Burnie",
       "osm_id": 10590496
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Bass Highway"
-    }
+    },
+    "phone": "(03) 6431 1088",
+    "website": "http://www.wellersinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVFHEM7PMT3S4AGNMM0E",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

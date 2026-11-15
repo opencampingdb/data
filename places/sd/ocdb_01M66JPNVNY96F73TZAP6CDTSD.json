@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6025",
+      "state": "WA",
+      "street": "Warburton Ave",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/1250031111794711",
     "lga": {
       "name": "City of Joondalup",
       "osm_id": 11689618
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Warburton Avenue"
-    }
+    },
+    "phone": "+61894016644",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/padbury/bp-padbury/6222"
   },
   "group": "services",
   "id": "ocdb_01M66JPNVNY96F73TZAP6CDTSD",
@@ -35,7 +57,7 @@
     "lat": -31.813681,
     "lon": 115.759145
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 13152309409,
     "timestamp": "2025-09-18T07:02:54Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

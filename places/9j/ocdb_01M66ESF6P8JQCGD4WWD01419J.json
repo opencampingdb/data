@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "6517",
+      "state": "WA",
+      "street": "Macpherson St",
+      "suburb": "Carnamah"
+    },
+    "facebook": "https://www.facebook.com/1640860226198893",
     "lga": {
       "name": "Shire of Carnamah",
       "osm_id": 11689755
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Bowman Street"
-    }
+    },
+    "phone": "+61419772575",
+    "website": "http://www.carnamah.wa.gov.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF6P8JQCGD4WWD01419J",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

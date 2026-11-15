@@ -1,16 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "577",
+      "postcode": "4600",
+      "state": "QLD",
+      "street": "Rossmore Rd",
+      "suburb": "Kilkivan"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/303687023117780",
     "fee": true,
     "lga": {
       "name": "Gympie Regional",
@@ -22,6 +38,7 @@
       "osm_id": 253861289,
       "type": "town"
     },
+    "phone": "+61754841340",
     "tents": true,
     "website": "https://www.bushcamping.com.au/"
   },
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

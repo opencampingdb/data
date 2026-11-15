@@ -1,19 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "6333",
+      "street": "Parry Rd"
+    },
     "cabins": false,
     "caravans": true,
+    "facebook": "https://www.facebook.com/1268221029860895",
     "fee": true,
     "lga": {
       "name": "Shire of Denmark",
@@ -28,6 +41,7 @@
     "nearest_beach": {
       "distance_m": 80
     },
+    "phone": "+61427641524",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

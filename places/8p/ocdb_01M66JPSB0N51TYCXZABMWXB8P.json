@@ -1,5 +1,12 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "fuels": "osm",
     "lga": "osm",
@@ -7,9 +14,17 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2322",
+      "state": "NSW",
+      "street": "Maitland Road",
+      "suburb": "Hexham"
+    },
+    "facebook": "https://www.facebook.com/2076065189319048",
     "fuel": true,
     "fuels": [
       "unleaded_95"
@@ -32,6 +47,7 @@
       "name": "Maitland Road"
     },
     "operator": "BP",
+    "phone": "+61249648163",
     "website": "https://map.bp.com/en-AU/AU/gas-station/hexham/bp-hexham/2231"
   },
   "group": "services",
@@ -50,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

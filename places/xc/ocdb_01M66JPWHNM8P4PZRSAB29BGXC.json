@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "2546",
+      "state": "NSW",
+      "street": "Wallaga Road",
+      "suburb": "Bermagui"
+    },
+    "facebook": "https://www.facebook.com/213519339457620",
     "fuel": true,
     "lga": {
       "name": "Bega Valley Shire Council",
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wallaga Lake Road"
-    }
+    },
+    "phone": "+61264934174",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/bermagui/bp-bermagui/1067"
   },
   "group": "services",
   "id": "ocdb_01M66JPWHNM8P4PZRSAB29BGXC",
@@ -37,7 +59,7 @@
     "lat": -36.419965,
     "lon": 150.064308
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 817732678,
     "timestamp": "2020-06-20T00:10:15Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15-17",
+      "postcode": "2456",
+      "state": "NSW",
+      "street": "Beach St",
+      "suburb": "Woolgoolga"
+    },
+    "facebook": "https://www.facebook.com/668148279862378",
     "lga": {
       "name": "Coffs Harbour City Council",
       "osm_id": 6165983
@@ -28,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Clarence Street"
-    }
+    },
+    "phone": "+61266905900",
+    "website": "http://woolgoolgadiggers.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZHMJMJKAXJWFSDWXRW8",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

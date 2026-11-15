@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3564",
+      "state": "VIC",
+      "street": "Scenic Dr",
+      "suburb": "Echuca"
+    },
+    "facebook": "https://www.facebook.com/804310229701465",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -27,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 360,
       "name": "Cobb Highway"
-    }
+    },
+    "phone": "+61354812200"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPXTMSEXXP9QSW2NNK9JD",
@@ -36,7 +54,7 @@
     "lat": -36.116461,
     "lon": 144.742612
   },
-  "name": null,
+  "name": "Victoria Park",
   "osm": {
     "id": 1075455092,
     "timestamp": "2022-07-03T05:25:44Z",
@@ -45,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,5 +1,10 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,10 +13,18 @@
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "phone": "overture",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "2000",
+      "state": "NSW",
+      "street": "Macquarie Street",
+      "suburb": "Sydney"
+    },
     "fee": false,
     "lga": {
       "name": "City of Sydney",
@@ -35,6 +48,7 @@
     },
     "opening_hours": "Mo-Fr 09:00-16:00; PH off",
     "operator": "Museums of History New South Wales",
+    "phone": "0282392288",
     "toilets": true,
     "website": "https://mhnsw.au/visit-us/the-mint/"
   },
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

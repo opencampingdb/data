@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "548",
+      "postcode": "3169",
+      "state": "VIC",
+      "street": "Clayton Road",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/100468212472767",
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -20,6 +36,7 @@
       "distance_m": 30,
       "name": "Clayton Road"
     },
+    "phone": "+61383941049",
     "website": "https://map.bp.com/en-AU/AU/gas-station/clayton-south/bp-clayton-road/9852"
   },
   "group": "services",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

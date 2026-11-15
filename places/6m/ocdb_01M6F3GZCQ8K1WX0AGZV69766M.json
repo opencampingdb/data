@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Punchbowl Road",
       "suburb": "Punchbowl"
     },
+    "facebook": "https://www.facebook.com/156237781100156",
     "lga": {
       "name": "Canterbury-Bankstown Council",
       "osm_id": 2162244
@@ -31,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Punchbowl Road"
-    }
+    },
+    "phone": "+61297591538"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZCQ8K1WX0AGZV69766M",
@@ -49,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

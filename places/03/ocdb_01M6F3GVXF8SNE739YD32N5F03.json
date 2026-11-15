@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Rouse Street",
       "suburb": "Tenterfield"
     },
+    "facebook": "https://www.facebook.com/153885711359707",
     "lga": {
       "name": "Tenterfield Shire Council",
       "osm_id": 6163155
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Rouse Street"
-    }
+    },
+    "phone": "+61267361177",
+    "website": "http://www.tenterfieldmotorinn.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVXF8SNE739YD32N5F03",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "suburb": "Kooralbyn",
       "unit": "1"
     },
+    "facebook": "https://www.facebook.com/113527902318413",
     "lga": {
       "name": "Scenic Rim Regional",
       "osm_id": 11675525
@@ -27,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Routley Drive"
-    }
+    },
+    "phone": "+61755445915",
+    "website": "http://thekooralbynvalley.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZEXQDTCN54P3GZ9WX6E",
@@ -45,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13/15",
+      "postcode": "6155",
+      "state": "WA",
+      "street": "Bannister Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/184652205691696",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -32,7 +50,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bannister Road"
-    }
+    },
+    "phone": "+61893532566",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/canning-vale/bp-opt-canning-vale/6644"
   },
   "group": "services",
   "id": "ocdb_01M66JPYCZYYV5X2Z74VJ3V99H",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

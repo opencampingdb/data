@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "3350",
+      "state": "VIC",
+      "street": "Wendouree Parade",
+      "suburb": "Ballarat"
+    },
+    "facebook": "https://www.facebook.com/1513824662261802",
     "lga": {
       "name": "City of Ballarat",
       "osm_id": 3291925
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Wendouree Parade"
-    }
+    },
+    "phone": "+61490097982",
+    "website": "https://www.paypal.com/pools/c/120411156201337932"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYMNMDZB9ZG8E64M9S66",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

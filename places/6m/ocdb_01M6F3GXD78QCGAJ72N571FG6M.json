@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "57",
+      "postcode": "6365",
+      "state": "WA",
+      "street": "Johnston St",
+      "suburb": "Kulin"
+    },
+    "facebook": "https://www.facebook.com/103547442332803",
     "lga": {
       "name": "Shire of Kulin",
       "osm_id": 11688974
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Johnston Street"
-    }
+    },
+    "phone": "+61898801201",
+    "website": "https://www.wheatbelttourism.com/where-to-stay/kulin/kulin-accommodation/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXD78QCGAJ72N571FG6M",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

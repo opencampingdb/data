@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "324",
+      "postcode": "3440",
+      "state": "VIC",
+      "street": "Black Forest Dr",
+      "suburb": "Macedon"
+    },
+    "facebook": "https://www.facebook.com/162627927106924",
     "lga": {
       "name": "Shire of Macedon Ranges",
       "osm_id": 3327683
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Black Forest Drive"
-    }
+    },
+    "phone": "+61417387361",
+    "website": "https://macedoncaravanpark.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESERQ7QR6YNQBNQKA9QNG",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

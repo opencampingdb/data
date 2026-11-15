@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "75",
+      "postcode": "3472",
+      "state": "VIC",
+      "street": "Broadway",
+      "suburb": "Dunolly"
+    },
+    "facebook": "https://www.facebook.com/700707233435384",
     "lga": {
       "name": "Shire of Central Goldfields",
       "osm_id": 3351397
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Broadway"
-    }
+    },
+    "phone": "+61354681516",
+    "website": "http://members.westnet.com.au/likelyprospects/dunollymuseum.html"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVXE9NZ08RXCN3QZ8K99",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

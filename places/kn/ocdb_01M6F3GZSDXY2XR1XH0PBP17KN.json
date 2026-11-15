@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "King Street",
       "suburb": "Bendigo"
     },
+    "facebook": "https://www.facebook.com/1544656285815354",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Myrtle Street"
-    }
+    },
+    "phone": "+61354436063",
+    "website": "http://www.goldenvinehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZSDXY2XR1XH0PBP17KN",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

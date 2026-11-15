@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "2337",
+      "state": "NSW",
+      "street": "Kelly St",
+      "suburb": "Scone"
+    },
+    "facebook": "https://www.facebook.com/108611488755133",
     "fee": true,
     "lga": {
       "name": "Upper Hunter Shire Council",
@@ -23,8 +41,10 @@
       "distance_m": 340,
       "name": "Kelly Street"
     },
+    "phone": "+61265452024",
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.sconecaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF452A1BF5ZCBS8MSNYA",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

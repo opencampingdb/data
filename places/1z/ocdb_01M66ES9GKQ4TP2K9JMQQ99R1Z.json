@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "3371",
+      "state": "VIC",
+      "street": "Barnes St",
+      "suburb": "Talbot"
+    },
+    "facebook": "https://www.facebook.com/109923099547183",
     "lga": {
       "name": "Shire of Central Goldfields",
       "osm_id": 3351397
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Talbot - Avoca Road"
-    }
+    },
+    "phone": "+61458632828"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9GKQ4TP2K9JMQQ99R1Z",
@@ -27,7 +46,7 @@
     "lat": -37.168823,
     "lon": 143.694149
   },
-  "name": null,
+  "name": "Talbot Recreation Reserve",
   "osm": {
     "id": 1080408439,
     "timestamp": "2015-02-13T02:34:18Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

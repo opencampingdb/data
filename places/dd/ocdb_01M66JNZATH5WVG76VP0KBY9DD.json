@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "418",
+      "postcode": "3189",
+      "state": "VIC",
+      "street": "Warrigal Road",
+      "suburb": "Moorabbin"
+    },
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Warrigal Road"
-    }
+    },
+    "phone": "+61 3 7504 3629",
+    "website": "https://find.shell.com/au/fuel/10110861-shell-reddy-express-moorabbin-warrigal-rd/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNZATH5WVG76VP0KBY9DD",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "5483",
+      "state": "SA",
+      "street": "Stuart St",
+      "suburb": "Melrose"
+    },
+    "facebook": "https://www.facebook.com/203332789713794",
     "lga": {
       "name": "The District Council of Mount Remarkable",
       "osm_id": 9108168
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Stuart Street"
-    }
+    },
+    "phone": "+61886662119",
+    "website": "http://www.mtremarkablehotel.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYQRKS780MXJG6S09VHM",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

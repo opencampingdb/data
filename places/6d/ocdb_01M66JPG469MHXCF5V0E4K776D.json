@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "60",
+      "postcode": "5577",
+      "state": "SA",
+      "street": "Main Street",
+      "suburb": "Warooka"
+    },
     "lga": {
       "name": "Yorke Peninsula Council",
       "osm_id": 6673799
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61 8 8854 5138",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/warooka/bp-warroka-m-g-auto/5996"
   },
   "group": "services",
   "id": "ocdb_01M66JPG469MHXCF5V0E4K776D",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

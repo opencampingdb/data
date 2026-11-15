@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "2353",
+      "state": "NSW",
+      "street": "Churchill Dr",
+      "suburb": "Moonbi"
+    },
+    "facebook": "https://www.facebook.com/132294890175763",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "New England Highway"
-    }
+    },
+    "phone": "+61459447232",
+    "website": "http://www.tamworthkootingalcaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFPDTZ2578A1H3HWY8MQ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

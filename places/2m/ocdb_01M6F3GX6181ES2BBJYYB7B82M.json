@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "99",
+      "postcode": "2340",
+      "state": "NSW",
+      "street": "Gunnedah Rd",
+      "suburb": "Tamworth"
+    },
+    "facebook": "https://www.facebook.com/153699608008166",
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -20,7 +38,9 @@
       "distance_m": 30,
       "name": "Dampier Street"
     },
-    "opening_hours": "Mo-Su,PH 10:00-24:00"
+    "opening_hours": "Mo-Su,PH 10:00-24:00",
+    "phone": "+61267655655",
+    "website": "http://www.thepub.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX6181ES2BBJYYB7B82M",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

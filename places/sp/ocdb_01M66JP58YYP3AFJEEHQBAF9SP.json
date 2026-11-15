@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +17,7 @@
       "street": "Liverpool Road",
       "suburb": "Strathfield South"
     },
+    "facebook": "https://www.facebook.com/503933863429036",
     "lga": {
       "name": "Strathfield Municipal Council",
       "osm_id": 6210847
@@ -24,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Liverpool Road"
-    }
+    },
+    "phone": "+611800240398"
   },
   "group": "services",
   "id": "ocdb_01M66JP58YYP3AFJEEHQBAF9SP",
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "275-277",
+      "postcode": "3795",
+      "state": "VIC",
+      "street": "Monbulk Road",
+      "suburb": "Silvan"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -26,7 +41,9 @@
       "distance_m": 30,
       "name": "Monbulk Road"
     },
-    "operator": "Princi Motors"
+    "operator": "Princi Motors",
+    "phone": "+61 3 9737 9308",
+    "website": "https://find.shell.com/au/fuel/10111547-shell-princi-motors/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPXMEHV1TRK170E8XSJZS",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

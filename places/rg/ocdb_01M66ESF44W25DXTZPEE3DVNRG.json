@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "Paul Mittelheuser St",
+      "suburb": "Burnett Heads"
+    },
+    "facebook": "https://www.facebook.com/1519312168142834",
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -27,7 +43,8 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Zunker Street"
-    }
+    },
+    "phone": "+61741594313"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF44W25DXTZPEE3DVNRG",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

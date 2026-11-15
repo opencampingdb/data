@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "311",
+      "postcode": "7249",
+      "state": "TAS",
+      "street": "Wellington St",
+      "suburb": "Launceston"
+    },
     "facebook": "https://www.facebook.com/theallyearroundtavern",
     "lga": {
       "name": "City of Launceston",
@@ -29,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Wellington Street"
-    }
+    },
+    "phone": "+61363441558",
+    "website": "http://all-year-round-hotel.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVJJ3DSV7BY4G3XG8TCD",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

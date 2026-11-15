@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "6233",
+      "state": "WA",
+      "street": "Portland Dr",
+      "suburb": "Binningup"
+    },
+    "facebook": "https://www.facebook.com/189012181263577",
     "lga": {
       "name": "Shire of Harvey",
       "osm_id": 11690516
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 270
-    }
+    },
+    "phone": "+61897201057",
+    "website": "http://www.binningupbeachcaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB59P0TV1WHMN5Q4M4NS",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

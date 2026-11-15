@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6284",
+      "street": "Crossing Rd & Cane Brake Road"
+    },
     "entry": "customers",
+    "facebook": "https://www.facebook.com/403262463570068",
     "fee": true,
     "lga": {
       "name": "Shire of Augusta Margaret River",
@@ -20,8 +35,10 @@
       "osm_id": 1857977959,
       "type": "town"
     },
+    "phone": "+61897525555",
     "showers": false,
-    "toilets": true
+    "toilets": true,
+    "website": "https://parkstay.dpaw.wa.gov.au/camp-finder/viewproperty/canebrake-pool/109"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Y8TK9V44WAT4952HZ1",
@@ -39,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "23",
+      "postcode": "2650",
+      "state": "NSW",
+      "street": "Horseshoe Rd",
+      "suburb": "Cartwrights Hill"
+    },
+    "facebook": "https://www.facebook.com/147854421936786",
     "lga": {
       "name": "Wagga Wagga City Council",
       "osm_id": 6247060
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Olympic Highway"
-    }
+    },
+    "phone": "+61269216033",
+    "website": "https://www.horseshoetouristpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFE1B7FCS4XQ5E1HKAMZ",
@@ -35,7 +57,7 @@
     "lat": -35.069992,
     "lon": 147.385444
   },
-  "name": null,
+  "name": "Horseshoe Tourist Park",
   "osm": {
     "id": 585293416,
     "timestamp": "2018-05-03T04:04:13Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

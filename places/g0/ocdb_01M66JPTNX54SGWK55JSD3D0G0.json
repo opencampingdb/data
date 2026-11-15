@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "68",
+      "postcode": "2580",
+      "state": "NSW",
+      "street": "Goldsmith St Cnr Bourke St",
+      "suburb": "Goulburn"
+    },
     "lga": {
       "name": "Goulburn Mulwaree Council",
       "osm_id": 6310493
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bourke Street"
-    }
+    },
+    "phone": "0248221031",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-goulburn"
   },
   "group": "services",
   "id": "ocdb_01M66JPTNX54SGWK55JSD3D0G0",
@@ -27,7 +46,7 @@
     "lat": -34.750531,
     "lon": 149.719194
   },
-  "name": null,
+  "name": "Ampol Foodary Goulburn",
   "osm": {
     "id": 440937703,
     "timestamp": "2017-04-28T16:41:59Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2312",
+      "state": "NSW",
+      "street": "Pacific Hwy",
+      "suburb": "Nabiac"
+    },
+    "facebook": "https://www.facebook.com/408705162589628",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 40
-    }
+    },
+    "phone": "+61265541210",
+    "website": "http://www.nabiachotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV74QCPWHACKX2KEKBER",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

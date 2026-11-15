@@ -1,14 +1,26 @@
 {
   "fact_dates": {
-    "dump_station": "2026-11-04T13:32:35Z"
+    "address": "2026-11-15T00:00:00Z",
+    "dump_station": "2026-11-04T13:32:35Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "contributed",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6346",
+      "state": "WA",
+      "street": "Starvation Boat Harbour Road",
+      "suburb": "Jerdacuttup"
+    },
     "dump_station": true,
     "lga": {
       "name": "Shire of Ravensthorpe",
@@ -22,7 +34,9 @@
     },
     "nearest_beach": {
       "distance_m": 70
-    }
+    },
+    "phone": "0898390000",
+    "website": "http://www.fitzgeraldcoast.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES90YZRP18W67JHECY9AY",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

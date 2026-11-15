@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "73",
+      "postcode": "4562",
+      "state": "QLD",
+      "street": "Memorial Dr",
+      "suburb": "Eumundi"
+    },
+    "facebook": "https://www.facebook.com/252291527211",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Memorial Drive"
-    }
+    },
+    "phone": "+61754428762",
+    "website": "http://www.discovereumundi.com"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZV4EMMMAQ8Y1KW7CMGS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

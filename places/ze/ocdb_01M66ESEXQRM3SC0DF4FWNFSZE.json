@@ -1,9 +1,22 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3833",
+      "street": "Big Creek Rd"
+    },
+    "facebook": "https://www.facebook.com/1072420439445567",
     "lga": {
       "name": "Shire of Baw Baw",
       "osm_id": 3335695
@@ -13,7 +26,8 @@
       "name": "Warburton",
       "osm_id": 30863907,
       "type": "town"
-    }
+    },
+    "phone": "+61359667203"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXQRM3SC0DF4FWNFSZE",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

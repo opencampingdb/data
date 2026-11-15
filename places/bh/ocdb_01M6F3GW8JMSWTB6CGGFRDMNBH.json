@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "121",
+      "postcode": "2716",
+      "state": "NSW",
+      "street": "Newell Hwy",
+      "suburb": "Jerilderie"
+    },
+    "facebook": "https://www.facebook.com/262143624570411",
     "lga": {
       "name": "Murrumbidgee Council",
       "osm_id": 6231900
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Jerilderie Street"
-    }
+    },
+    "phone": "+61358861366",
+    "website": "http://www.jmcpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW8JMSWTB6CGGFRDMNBH",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

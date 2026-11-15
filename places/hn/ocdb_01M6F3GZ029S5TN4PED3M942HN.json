@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6420",
+      "street": "Crossland St"
+    },
+    "facebook": "https://www.facebook.com/122967327799677",
     "lga": {
       "name": "Shire of Merredin",
       "osm_id": 11689039
@@ -13,7 +28,9 @@
       "name": "Narembeen",
       "osm_id": 1855431791,
       "type": "town"
-    }
+    },
+    "phone": "+61477670609",
+    "website": "http://munty-pub.business.site"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ029S5TN4PED3M942HN",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

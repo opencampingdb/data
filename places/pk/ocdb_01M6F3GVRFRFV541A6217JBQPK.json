@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2360",
+      "state": "NSW",
+      "street": "NSW",
+      "suburb": "Graman"
+    },
+    "facebook": "https://www.facebook.com/134347926669948",
     "lga": {
       "name": "Inverell Shire Council",
       "osm_id": 6195194
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Yetman Road"
-    }
+    },
+    "phone": "+6167256482"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVRFRFV541A6217JBQPK",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

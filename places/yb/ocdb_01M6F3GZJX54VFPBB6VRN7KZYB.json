@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "190",
+      "postcode": "2365",
+      "state": "NSW",
+      "street": "Bradley St",
+      "suburb": "Guyra"
+    },
+    "facebook": "https://www.facebook.com/337597060059768",
     "lga": {
       "name": "Armidale Regional Council",
       "osm_id": 6165969
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Malpas Street"
-    }
+    },
+    "phone": "+61267792132"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZJX54VFPBB6VRN7KZYB",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

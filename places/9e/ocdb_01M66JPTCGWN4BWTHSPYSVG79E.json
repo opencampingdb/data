@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "86",
+      "postcode": "6026",
+      "state": "WA",
+      "street": "Kingsley Dr",
+      "suburb": "Kingsley"
+    },
     "lga": {
       "name": "City of Joondalup",
       "osm_id": 11689618
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kingsley Drive"
-    }
+    },
+    "phone": "0894096294",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-kingsley"
   },
   "group": "services",
   "id": "ocdb_01M66JPTCGWN4BWTHSPYSVG79E",
@@ -36,7 +55,7 @@
     "lat": -31.806955,
     "lon": 115.788852
   },
-  "name": null,
+  "name": "Ampol Foodary Kingsley",
   "osm": {
     "id": 394365274,
     "timestamp": "2016-01-28T13:51:25Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

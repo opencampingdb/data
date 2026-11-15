@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1001-1007",
+      "postcode": "3023",
+      "state": "VIC",
+      "street": "Western Hwy",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/2515271792031902",
     "lga": {
       "name": "City of Melton",
       "osm_id": 3327545
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Ballarat Road"
-    }
+    },
+    "phone": "+61393612077",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/deer-park/aa-deer-park/3857"
   },
   "group": "services",
   "id": "ocdb_01M66JPTCBEGET85W02N1ER283",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

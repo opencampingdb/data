@@ -1,5 +1,11 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "fuels": "osm",
     "lga": "osm",
@@ -7,9 +13,18 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "315",
+      "postcode": "6707",
+      "state": "WA",
+      "street": "Murat Rd",
+      "suburb": "Exmouth"
+    },
     "air": true,
     "fuels": [
       "diesel",
@@ -37,6 +52,8 @@
       "distance_m": 30,
       "name": "Maidstone Crescent"
     },
+    "phone": "0899491052",
+    "website": "https://locations.ampol.com.au/en/ampol-exmouth",
     "wheelchair": true
   },
   "group": "services",
@@ -55,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

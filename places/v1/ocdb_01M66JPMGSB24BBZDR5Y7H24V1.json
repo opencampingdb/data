@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4207",
+      "state": "QLD",
+      "street": "Mill St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/342229205644296",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Yarrabilba Drive"
-    }
+    },
+    "phone": "+61756099701"
   },
   "group": "services",
   "id": "ocdb_01M66JPMGSB24BBZDR5Y7H24V1",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

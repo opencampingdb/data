@@ -1,19 +1,33 @@
 {
   "fact_dates": {
-    "dump_station": "2026-11-04T13:32:35Z"
+    "address": "2026-11-15T00:00:00Z",
+    "dump_station": "2026-11-04T13:32:35Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "contributed",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "3",
+      "postcode": "4816",
+      "state": "QLD",
+      "street": "Tooth St",
+      "suburb": "Townsville"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/132423127150739",
     "fee": false,
     "lga": {
       "name": "Townsville City",
@@ -34,6 +48,7 @@
       "distance_m": 60,
       "name": "Balgal Beach Boat Ramp"
     },
+    "phone": "+61134810",
     "wifi": false
   },
   "group": "overnight",
@@ -52,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

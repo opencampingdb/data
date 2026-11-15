@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "106",
+      "postcode": "4304",
+      "state": "QLD",
+      "street": "Brisbane Road",
+      "suburb": "Booval"
+    },
     "lga": {
       "name": "Ipswich City",
       "osm_id": 11675604
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Brisbane Road"
-    }
+    },
+    "phone": "+61 7 3447 6804",
+    "website": "https://find.shell.com/au/fuel/10111156-shell-reddy-express-booval/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPDJJ499NJ7BMWEAJ6PRF",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

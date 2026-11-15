@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "112",
+      "postcode": "3555",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Bendigo"
+    },
+    "facebook": "https://www.facebook.com/358709267628296",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "High Street"
-    }
+    },
+    "phone": "+61354477240",
+    "website": "http://www.windermerehotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXQG1GJ1CKYXSEZ5NW0J",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

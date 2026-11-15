@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "700",
+      "postcode": "2767",
+      "state": "NSW",
+      "street": "Great Western Hwy",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/965726533483624",
     "lga": {
       "name": "Blacktown City Council",
       "osm_id": 6217858
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Great Western Highway"
-    }
+    },
+    "phone": "+61272022560",
+    "website": "http://www.sydneyzoo.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPXCWN187DJ4070V6PH80",
@@ -31,7 +53,7 @@
     "lat": -33.788832,
     "lon": 150.86808
   },
-  "name": null,
+  "name": "Sydney Zoo",
   "osm": {
     "id": 1000697686,
     "timestamp": "2021-11-09T05:46:54Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

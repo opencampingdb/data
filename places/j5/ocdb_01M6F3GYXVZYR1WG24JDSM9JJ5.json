@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5601",
+      "postcode": "3844",
+      "state": "VIC",
+      "street": "Princes St",
+      "suburb": "Traralgon"
+    },
+    "facebook": "https://www.facebook.com/1537403246570341",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Princes Street"
-    }
+    },
+    "phone": "+61351737500",
+    "website": "http://www.comfortinnlatrobe.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYXVZYR1WG24JDSM9JJ5",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

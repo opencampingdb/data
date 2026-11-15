@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "High Street",
       "suburb": "Rushworth"
     },
+    "facebook": "https://www.facebook.com/1603087999923985",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "High Street"
-    }
+    },
+    "phone": "+61412673053",
+    "website": "http://rushworthmuseum.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYJHQYAVYSW00FKMA9V8",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

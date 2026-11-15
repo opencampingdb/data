@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3580",
+      "state": "VIC",
+      "street": "Keene St",
+      "suburb": "Koondrook"
+    },
+    "facebook": "https://www.facebook.com/266721653342192",
     "lga": {
       "name": "Shire of Gannawarra",
       "osm_id": 3363585
@@ -17,7 +35,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2270
-    }
+    },
+    "phone": "+61354532300",
+    "website": "http://www.murraywatersmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H02GX5X9012N5FQZXMVN",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

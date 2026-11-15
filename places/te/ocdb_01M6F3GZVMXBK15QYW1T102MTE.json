@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "406",
+      "postcode": "5032",
+      "state": "SA",
+      "street": "Sir Donald Bradman Dr",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/700741293385157",
     "lga": {
       "name": "City of West Torrens",
       "osm_id": 9106092
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Sir Donald Bradman Drive"
-    }
+    },
+    "phone": "+61882344000",
+    "website": "http://www.adelaideairportmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZVMXBK15QYW1T102MTE",
@@ -35,7 +57,7 @@
     "lat": -34.932432,
     "lon": 138.539572
   },
-  "name": null,
+  "name": "Adelaide Airport Motel",
   "osm": {
     "id": 1245714434,
     "timestamp": "2026-07-13T14:52:36Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

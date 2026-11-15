@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1539",
+      "postcode": "2354",
+      "state": "NSW",
+      "street": "Wollun Rd",
+      "suburb": "Walcha Road"
+    },
+    "facebook": "https://www.facebook.com/132279746869132",
     "lga": {
       "name": "Walcha Council",
       "osm_id": 6180603
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Oxley Highway"
-    }
+    },
+    "phone": "+61267775829",
+    "website": "http://www.walcharoadhotel.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVMW293FZG168RXFM678",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "postcode": "2756",
       "street": "Box Avenue"
     },
+    "facebook": "https://www.facebook.com/1169793316447398",
     "lga": {
       "name": "Hawkesbury City Council",
       "osm_id": 6222206
@@ -32,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Sackville Road"
-    }
+    },
+    "phone": "+61245751474"
   },
   "group": "services",
   "id": "ocdb_01M66JPYS6NARDPNBZE56R8KEY",
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

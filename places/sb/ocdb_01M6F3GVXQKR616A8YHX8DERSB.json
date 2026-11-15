@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Lawson Street",
       "suburb": "Byron Bay"
     },
+    "facebook": "https://www.facebook.com/1576532072594746",
     "lga": {
       "name": "Byron Shire Council",
       "osm_id": 6170304
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 390,
       "name": "30"
-    }
+    },
+    "phone": "+61266856090",
+    "website": "http://www.baybeachmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVXQKR616A8YHX8DERSB",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

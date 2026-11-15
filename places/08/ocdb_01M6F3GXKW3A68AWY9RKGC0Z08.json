@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "64",
+      "postcode": "2877",
+      "state": "NSW",
+      "street": "Bathurst St",
+      "suburb": "Condobolin"
+    },
+    "facebook": "https://www.facebook.com/102919275344739",
     "lga": {
       "name": "Lachlan Shire Council",
       "osm_id": 6106054
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bathurst Street"
-    }
+    },
+    "phone": "+61268211156"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXKW3A68AWY9RKGC0Z08",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

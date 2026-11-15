@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44",
+      "postcode": "5280",
+      "state": "SA",
+      "street": "Mount Gambier Rd",
+      "suburb": "Millicent"
+    },
     "lga": {
       "name": "Wattle Range Council",
       "osm_id": 3795329
@@ -22,7 +35,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Princes Highway"
-    }
+    },
+    "website": "https://www.millicentmazda.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPSSX8WVHPZE2G6S7BHPS",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2464",
+      "state": "NSW",
+      "street": "Clarence St",
+      "suburb": "Yamba"
+    },
+    "facebook": "https://www.facebook.com/395215380546040",
     "lga": {
       "name": "Clarence Valley Council",
       "osm_id": 6143220
@@ -27,7 +45,8 @@
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Yamba Street"
-    }
+    },
+    "website": "http://www.thepilotage.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYKDNMK9KKXS0R2JR39W",
@@ -36,7 +55,7 @@
     "lat": -29.433941,
     "lon": 153.362349
   },
-  "name": null,
+  "name": "The Pilotage",
   "osm": {
     "id": 103627388,
     "timestamp": "2024-06-11T01:37:35Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

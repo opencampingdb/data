@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "2506",
+      "state": "NSW",
+      "street": "Devon St",
+      "suburb": "Wollongong"
+    },
+    "facebook": "https://www.facebook.com/351515581379249",
     "lga": {
       "name": "Wollongong City Council",
       "osm_id": 6303077
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Northcliffe Drive"
-    }
+    },
+    "phone": "+61242440804",
+    "website": "http://www.theberkeleyhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV0RT90Q0GJQZ1SQX8WC",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4307",
+      "state": "QLD",
+      "street": "Wholey Dr",
+      "suburb": "Harrisville"
+    },
+    "facebook": "https://www.facebook.com/141846359264285",
     "lga": {
       "name": "Scenic Rim Regional",
       "osm_id": 11675525
@@ -13,7 +31,9 @@
       "name": "Harrisville",
       "osm_id": 845466803,
       "type": "town"
-    }
+    },
+    "phone": "+61754671882",
+    "website": "http://www.royalhotelharrisville.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ772ZGYR04MM4VP2ZNX",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

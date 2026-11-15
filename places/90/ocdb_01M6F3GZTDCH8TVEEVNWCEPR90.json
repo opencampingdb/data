@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "3280",
+      "state": "VIC",
+      "street": "King St",
+      "suburb": "Warrnambool"
+    },
+    "facebook": "https://www.facebook.com/813437379046543",
     "lga": {
       "name": "City of Warrnambool",
       "osm_id": 3347796
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Raglan Parade"
-    }
+    },
+    "phone": "+61468468761",
+    "website": "http://www.botanicapartments.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZTDCH8TVEEVNWCEPR90",
@@ -36,7 +58,7 @@
     "lat": -38.376081,
     "lon": 142.481405
   },
-  "name": null,
+  "name": "The Botanic Apartments",
   "osm": {
     "id": 1212633933,
     "timestamp": "2023-10-02T23:20:58Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

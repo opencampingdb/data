@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "218",
+      "postcode": "2478",
+      "state": "NSW",
+      "street": "River St",
+      "suburb": "Ballina"
+    },
+    "facebook": "https://www.facebook.com/565312943640514",
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "River Street"
-    }
+    },
+    "phone": "+61414876824",
+    "website": "https://ballina-laundromat.business.site"
   },
   "group": "utility",
   "id": "ocdb_01M66JPJX36J29Y8ARKPSJG8CV",
@@ -35,7 +57,7 @@
     "lat": -28.869728,
     "lon": 153.55813
   },
-  "name": null,
+  "name": "Ballina Laundromat",
   "osm": {
     "id": 11406622703,
     "timestamp": "2023-12-10T02:26:02Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

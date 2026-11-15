@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "4854",
+      "state": "QLD",
+      "street": "Butler St",
+      "suburb": "Tully"
+    },
+    "facebook": "https://www.facebook.com/120962151291418",
     "lga": {
       "name": "Cassowary Coast Regional",
       "osm_id": 11676958
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Butler Street"
-    }
+    },
+    "phone": "+61740680455",
+    "website": "http://www.bananabarracks.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYCE2XQCFQ75SFH2SECH",
@@ -27,7 +49,7 @@
     "lat": -17.93317,
     "lon": 145.925777
   },
-  "name": null,
+  "name": "Banana Barracks",
   "osm": {
     "id": 13754786200,
     "timestamp": "2026-04-23T10:45:29Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

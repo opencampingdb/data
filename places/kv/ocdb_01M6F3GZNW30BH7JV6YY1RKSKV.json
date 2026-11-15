@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "2827",
+      "state": "NSW",
+      "street": "Castlereagh St",
+      "suburb": "Gilgandra"
+    },
+    "facebook": "https://www.facebook.com/210921622265648",
     "lga": {
       "name": "Gilgandra Shire Council",
       "osm_id": 6268488
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Castlereagh Street"
-    }
+    },
+    "phone": "+61268470111",
+    "website": "http://www.silveroaksmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZNW30BH7JV6YY1RKSKV",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,14 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "30",
+      "postcode": "2281",
+      "state": "NSW",
+      "street": "Gommera St",
+      "suburb": "Blacksmiths"
+    },
+    "facebook": "https://www.facebook.com/144889725562789",
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -29,8 +47,10 @@
       "distance_m": 330,
       "name": "Pacific Highway"
     },
+    "phone": "+61249712858",
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.lakemacholidayparks.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQ3D9QWAN3V4XGVHVFA",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4806",
+      "state": "QLD",
+      "street": "Eighth St",
+      "suburb": "Home Hill"
+    },
+    "facebook": "https://www.facebook.com/1058089777598069",
     "lga": {
       "name": "Burdekin Shire",
       "osm_id": 11677016
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Eighth Avenue"
-    }
+    },
+    "phone": "+61747839800"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA088VZZ599EWG2JHN7X",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

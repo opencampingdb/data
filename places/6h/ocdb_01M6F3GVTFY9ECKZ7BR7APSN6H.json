@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "42",
+      "postcode": "2800",
+      "state": "NSW",
+      "street": "Mount Canobolas Rd",
+      "suburb": "Canobolas"
+    },
+    "facebook": "https://www.facebook.com/849881155200595",
     "lga": {
       "name": "Cabonne Council",
       "osm_id": 6268804
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 4720
-    }
+    },
+    "phone": "+61409841632",
+    "website": "http://www.canobolasmountaincabins.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVTFY9ECKZ7BR7APSN6H",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

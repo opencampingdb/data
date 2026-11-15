@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "200",
+      "postcode": "2285",
+      "state": "NSW",
+      "street": "Main Road",
+      "suburb": "Cardiff"
+    },
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Road"
-    }
+    },
+    "phone": "0249569385",
+    "website": "https://find.shell.com/au/fuel/AU_A726-shell-cardiff"
   },
   "group": "services",
   "id": "ocdb_01M66JPYMH6RDZD2V1MXZZQ024",
@@ -27,7 +46,7 @@
     "lat": -32.941018,
     "lon": 151.668444
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1212190085,
     "timestamp": "2023-10-01T08:54:14Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

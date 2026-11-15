@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 3095",
+      "postcode": "0822",
+      "state": "NT",
+      "street": "Arnhem Hwy",
+      "suburb": "Marrakai"
+    },
+    "facebook": "https://www.facebook.com/473002779560315",
     "fee": true,
     "locality": {
       "distance_m": 170,
@@ -17,7 +35,9 @@
       "distance_m": 230,
       "name": "Arnhem Highway"
     },
-    "toilets": true
+    "phone": "+61889788920",
+    "toilets": true,
+    "website": "http://www.corroboreeparktavern.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAV1EBWBMNRFWRY1T9WD",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

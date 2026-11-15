@@ -1,14 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "street": "Queen Street"
     },
+    "facebook": "https://www.facebook.com/390675887681547",
     "lga": {
       "name": "Burdekin Shire",
       "osm_id": 11677016
@@ -22,7 +31,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Queen Street"
-    }
+    },
+    "phone": "+61747831999",
+    "website": "https://www.couttscommercialhotel.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW5JC2VEZTD0MYV1ZFS9",
@@ -40,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

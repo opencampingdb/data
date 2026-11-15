@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4721",
+      "state": "QLD",
+      "street": "Capella St",
+      "suburb": "Clermont"
+    },
+    "facebook": "https://www.facebook.com/126403840901672",
     "lga": {
       "name": "Isaac Regional",
       "osm_id": 11676584
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Capella Street"
-    }
+    },
+    "phone": "+61749831566"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX93H1WHGKXJG2XKX9WP",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

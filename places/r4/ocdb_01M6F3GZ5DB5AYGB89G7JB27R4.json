@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +24,7 @@
       "street": "Hall Street",
       "suburb": "Newport"
     },
+    "facebook": "https://www.facebook.com/303257216368773",
     "lga": {
       "name": "City of Hobsons Bay",
       "osm_id": 2432415
@@ -38,7 +47,9 @@
       "distance_m": 20,
       "name": "Hall Street"
     },
-    "opening_hours": "Tu 16:00-22:00; Mo off; We,Th 12:00-22:00; Fr,Sa 12:00-18:00+; Su 12:00-21:00"
+    "opening_hours": "Tu 16:00-22:00; Mo off; We,Th 12:00-22:00; Fr,Sa 12:00-18:00+; Su 12:00-21:00",
+    "phone": "+61393918188",
+    "website": "http://www.junctionnewport.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ5DB5AYGB89G7JB27R4",
@@ -56,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

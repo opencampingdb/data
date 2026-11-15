@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "88-92",
+      "postcode": "4715",
+      "state": "QLD",
+      "street": "Callide St",
+      "suburb": "Biloela"
+    },
+    "facebook": "https://www.facebook.com/278232622194168",
     "lga": {
       "name": "Banana Shire",
       "osm_id": 11674950
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Gladstone Road"
-    }
+    },
+    "phone": "(07) 4992 5080",
+    "website": "http://www.callidemotorinn.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXVKFMXKNZ5Y12E9QZJP",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

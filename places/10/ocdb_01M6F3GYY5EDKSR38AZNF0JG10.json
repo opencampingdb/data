@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2260",
+      "postcode": "2170",
+      "state": "NSW",
+      "street": "Camden Valley Wy",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/168516533297196",
     "lga": {
       "name": "Liverpool City Council",
       "osm_id": 6212442
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Camden Valley Way"
-    }
+    },
+    "phone": "+61296028194",
+    "website": "http://www.crossroadshotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYY5EDKSR38AZNF0JG10",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

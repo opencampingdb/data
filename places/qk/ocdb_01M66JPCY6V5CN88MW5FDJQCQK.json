@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "2844",
+      "state": "NSW",
+      "street": "Caigan Street",
+      "suburb": "Dunedoo"
+    },
     "lga": {
       "name": "Warrumbungle Shire Council",
       "osm_id": 6268496
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Golden Highway"
-    }
+    },
+    "phone": "+61 428 687 408",
+    "website": "https://find.shell.com/au/fuel/10111018-shell-dunedoo/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPCY6V5CN88MW5FDJQCQK",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4326",
+      "postcode": "3691",
+      "state": "VIC",
+      "street": "Kiewa Valley Highway",
+      "suburb": "Dederang"
+    },
+    "facebook": "https://www.facebook.com/1574073899292079",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kiewa Valley Highway"
-    }
+    },
+    "phone": "+61260289325",
+    "website": "https://www.opentable.com.au/r/dederang-hotel-reservations-lake-hume-village?restref=228212&lang=en-AU&ot_source=Facebook"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ6YW484N42HH862Y63C",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

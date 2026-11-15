@@ -1,6 +1,13 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
@@ -8,10 +15,19 @@
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "38",
+      "postcode": "2843",
+      "state": "NSW",
+      "street": "Cunningham St",
+      "suburb": "Coolah"
+    },
     "cabins": true,
+    "facebook": "https://www.facebook.com/1389371138000334",
     "fee": true,
     "kitchen": true,
     "lga": {
@@ -30,7 +46,8 @@
     },
     "phone": "+61 2 6377 1338",
     "power": true,
-    "tents": true
+    "tents": true,
+    "website": "http://www.coolahcp.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF1P1SY6N0QFGR4V5JWR",
@@ -48,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

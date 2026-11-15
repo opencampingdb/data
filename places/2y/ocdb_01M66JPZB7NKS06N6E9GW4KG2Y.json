@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "67",
+      "postcode": "2263",
+      "state": "NSW",
+      "street": "Wallarah Road",
+      "suburb": "Gorokan"
+    },
     "fuel": true,
     "lga": {
       "name": "Central Coast Council",
@@ -24,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wallarah Road"
-    }
+    },
+    "phone": "+61 2 4317 2896",
+    "website": "https://find.shell.com/au/fuel/10110801-shell-reddy-express-gorokan/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPZB7NKS06N6E9GW4KG2Y",
@@ -33,7 +52,7 @@
     "lat": -33.256129,
     "lon": 151.507746
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1354061075,
     "timestamp": "2025-01-25T00:09:18Z",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

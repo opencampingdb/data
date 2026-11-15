@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "2737",
+      "state": "NSW",
+      "street": "Murray Ter",
+      "suburb": "Euston"
+    },
+    "facebook": "https://www.facebook.com/124748574267769",
     "lga": {
       "name": "Balranald Shire Council",
       "osm_id": 5897433
@@ -23,7 +39,8 @@
     "nearest_major_road": {
       "distance_m": 280,
       "name": "A20"
-    }
+    },
+    "phone": "+61350261543"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFGCRP8WJSHS1MWHF1WX",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

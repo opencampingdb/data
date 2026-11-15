@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2322",
+      "postcode": "3678",
+      "state": "VIC",
+      "street": "Beechworth-Wangaratta Rd",
+      "suburb": "Tarrawingee"
+    },
+    "facebook": "https://www.facebook.com/253987117981059",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Beechworth-Wangaratta Road"
-    }
+    },
+    "phone": "+61357192722",
+    "website": "https://www.theploughinn.com.au/_files/ugd/73199a_29fa41f58a7e4a548d81b4d388d0c956.pdf"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZKYT78WAN37JY115DSN",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "740-750",
+      "postcode": "3217",
+      "state": "VIC",
+      "street": "Torquay Rd",
+      "suburb": "Mount Duneed"
+    },
+    "facebook": "https://www.facebook.com/747336421789490",
     "fuel": true,
     "lga": {
       "name": "City of Greater Geelong",
@@ -22,7 +38,8 @@
       "distance_m": 60,
       "name": "Lower Duneed Road"
     },
-    "operator": "APCO"
+    "operator": "APCO",
+    "phone": "+61342510361"
   },
   "group": "services",
   "id": "ocdb_01M66JPZMGTQ6F23WG65379MDZ",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

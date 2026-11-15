@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "104",
+      "postcode": "5000",
+      "state": "SA",
+      "street": "Gouger St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/438112056217726",
     "lga": {
       "name": "Adelaide City Council",
       "osm_id": 3093825
@@ -24,6 +42,8 @@
       "distance_m": 80,
       "name": "Gouger Street"
     },
+    "phone": "+61882319780",
+    "website": "http://www.labomba.com.au/",
     "wheelchair": true
   },
   "group": "services",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

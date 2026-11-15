@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "250",
+      "postcode": "2795",
+      "state": "NSW",
+      "street": "Sydney Rd",
+      "suburb": "Bathurst"
+    },
+    "facebook": "https://www.facebook.com/428906969936",
     "lga": {
       "name": "Bathurst Regional Council",
       "osm_id": 6330866
@@ -20,7 +38,9 @@
       "distance_m": 210,
       "name": "Ashworth Drive"
     },
-    "operator": "NRMA"
+    "operator": "NRMA",
+    "phone": "+61263318286",
+    "website": "https://www.nrmaparksandresorts.com.au/bathurst/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYK8YAS419QAADE1MGV",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

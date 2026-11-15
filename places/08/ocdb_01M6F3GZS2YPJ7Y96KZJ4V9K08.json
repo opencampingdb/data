@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "45",
       "street": "Macquoid Street"
     },
+    "facebook": "https://www.facebook.com/179150726250866",
     "lga": {
       "name": "Queanbeyan-Palerang Regional Council",
       "osm_id": 6137309
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "B52"
-    }
+    },
+    "phone": "+61262992800",
+    "website": "http://www.grandmanor.net.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZS2YPJ7Y96KZJ4V9K08",
@@ -47,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

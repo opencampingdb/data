@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Brighton Road",
       "suburb": "Highgate Hill"
     },
+    "facebook": "https://www.facebook.com/165483926802317",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Vulture Street"
-    }
+    },
+    "phone": "+61733332964",
+    "website": "http://www.somewheretostay.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ5H9NG64635WSEBTGM4",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

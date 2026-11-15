@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Rankin Street",
       "suburb": "Innisfail"
     },
+    "facebook": "https://www.facebook.com/2656802351007198",
     "lga": {
       "name": "Cassowary Coast Regional",
       "osm_id": 11676958
@@ -36,7 +45,9 @@
       "distance_m": 60,
       "name": "Fitzgerald Esplanade"
     },
-    "operator": "Queensland Health"
+    "operator": "Queensland Health",
+    "phone": "+61740161411",
+    "website": "http://www.healthier.qld.gov.au/health-service/innisfail-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPWP1KAERFZ6J7Y70RZXG",
@@ -54,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

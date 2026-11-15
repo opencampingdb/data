@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1351",
+      "postcode": "5157",
+      "state": "SA",
+      "street": "Bull Creek Rd",
+      "suburb": "Ashbourne"
+    },
+    "facebook": "https://www.facebook.com/1465059973709870",
     "lga": {
       "name": "Alexandrina Council",
       "osm_id": 7231567
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bull Creek Road"
-    }
+    },
+    "phone": "+61487033006",
+    "website": "http://thegreenmaninn.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ51W2NEQSW56JZ4GSAB",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

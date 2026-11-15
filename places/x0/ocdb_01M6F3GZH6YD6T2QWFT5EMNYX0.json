@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "77",
+      "postcode": "2477",
+      "state": "NSW",
+      "street": "Main St",
+      "suburb": "Alstonville"
+    },
+    "facebook": "https://www.facebook.com/154049244767793",
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61266280719",
+    "website": "http://www.thefedhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZH6YD6T2QWFT5EMNYX0",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Guthridge Parade",
       "suburb": "Sale"
     },
+    "facebook": "https://www.facebook.com/118735051860435",
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -26,7 +35,9 @@
       "distance_m": 80,
       "name": "Guthridge Parade"
     },
-    "operator": "Central Gippsland Health Service"
+    "operator": "Central Gippsland Health Service",
+    "phone": "(03) 5143 8600",
+    "website": "http://www.salecommunity.com/hospital.php"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPRGHWM7CKHVT124E4S4J",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

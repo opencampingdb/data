@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "5355",
+      "state": "SA",
+      "street": "Belvidere Road",
+      "suburb": "Nuriootpa"
+    },
     "lga": {
       "name": "The Barossa Council",
       "osm_id": 9105938
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Sturt Highway"
-    }
+    },
+    "phone": "+61 8 8565 7137",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/nuriootpa/bp-x-convenience-nuriootpa/1232"
   },
   "group": "services",
   "id": "ocdb_01M66JPGAT9JZ9EH46AFNKRC3W",
@@ -27,7 +46,7 @@
     "lat": -34.460418,
     "lon": 138.985517
   },
-  "name": null,
+  "name": "bp X Convenience",
   "osm": {
     "id": 9857096137,
     "timestamp": "2022-06-30T03:22:29Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2627",
+      "state": "NSW",
+      "street": "Barry Way",
+      "suburb": "Kosciuszko National Park"
+    },
     "caravans": true,
     "lga": {
       "name": "Snowy Monaro Regional Council",
@@ -23,8 +37,10 @@
       "distance_m": 200,
       "name": "Barry Way"
     },
+    "phone": "0264505600",
     "showers": false,
-    "tents": true
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/jacobs-river-tongaroo-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEX4V2Q5KJ3RR82HBHFF",
@@ -42,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

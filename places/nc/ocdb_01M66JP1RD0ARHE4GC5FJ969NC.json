@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "6330",
+      "state": "WA",
+      "street": "Campbell Rd",
+      "suburb": "Albany"
+    },
+    "facebook": "https://www.facebook.com/110966137094970",
     "lga": {
       "name": "City of Albany",
       "osm_id": 11690341
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Campbell Road"
-    }
+    },
+    "phone": "+61898422312",
+    "website": "https://crauto.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP1RD0ARHE4GC5FJ969NC",
@@ -31,7 +53,7 @@
     "lat": -35.014525,
     "lon": 117.893248
   },
-  "name": null,
+  "name": "Campbell Road Automotive & Motorcycles",
   "osm": {
     "id": 1770242115,
     "timestamp": "2015-09-18T09:56:28Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

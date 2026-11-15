@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Ipswich Street"
     },
     "air": true,
+    "facebook": "https://www.facebook.com/187334014452467",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -25,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Ipswich Street"
-    }
+    },
+    "phone": "+61754241166"
   },
   "group": "services",
   "id": "ocdb_01M66JPYQF6ZZRW8TY0Z318SRS",
@@ -34,7 +44,7 @@
     "lat": -27.235886,
     "lon": 152.418144
   },
-  "name": null,
+  "name": "Mobil Esk",
   "osm": {
     "id": 1231399580,
     "timestamp": "2026-10-18T01:21:15Z",
@@ -43,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "34",
+      "postcode": "4020",
+      "state": "QLD",
+      "street": "Anzac Ave",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/167109566528",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Anzac Avenue"
-    }
+    },
+    "phone": "+61730517644",
+    "website": "http://www.redcliffetavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVQD816CGWKX11YKT8W2",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

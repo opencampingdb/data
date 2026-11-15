@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "61",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "Takalvan St",
+      "suburb": "Bundaberg"
+    },
+    "facebook": "https://www.facebook.com/108859408661166",
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Takalvan Street"
-    }
+    },
+    "phone": "+61741522768",
+    "website": "http://www.midtowncaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF466RMX83EW49R68VPA",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

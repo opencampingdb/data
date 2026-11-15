@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "127-133",
+      "postcode": "3083",
+      "state": "VIC",
+      "street": "Plenty Road",
+      "suburb": "Bundoora"
+    },
     "lga": {
       "name": "City of Whittlesea",
       "osm_id": 3327768
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Plenty Road"
-    }
+    },
+    "phone": "+61 3 8419 4521",
+    "website": "https://find.shell.com/au/fuel/10111204-shell-reddy-express-bundoora/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTZKZV87K19GHYX37BQG",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

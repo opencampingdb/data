@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Fox Street",
       "suburb": "Walgett"
     },
+    "facebook": "https://www.facebook.com/212410453523827",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Fox Street"
-    }
+    },
+    "phone": "+61268281296",
+    "website": "https://www.inlandpetroleum.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP0KWME2536T7HMWMZ2X9",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

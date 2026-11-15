@@ -1,15 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "power": "osm",
     "tents": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "3889",
+      "state": "VIC",
+      "street": "Sydenham Inlet Rd",
+      "suburb": "Bemm River"
+    },
+    "facebook": "https://www.facebook.com/116087158257313",
     "fee": true,
     "lga": {
       "name": "Shire of East Gippsland",
@@ -27,8 +45,10 @@
     "nearest_boat_ramp": {
       "distance_m": 470
     },
+    "phone": "+61428557438",
     "power": true,
     "tents": true,
+    "website": "https://www.bemmrivercaravanpark.com.au/",
     "wifi": false
   },
   "group": "overnight",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "66",
+      "postcode": "4740",
+      "state": "QLD",
+      "street": "Hill End Road",
+      "suburb": "Glenella"
+    },
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Hill End Road"
-    }
+    },
+    "phone": "0749421200"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ1E75K0MNZBD8478XNT",
@@ -27,7 +43,7 @@
     "lat": -21.119611,
     "lon": 149.147308
   },
-  "name": null,
+  "name": "BP Glenella Store",
   "osm": {
     "id": 1292388215,
     "timestamp": "2024-06-14T14:08:08Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

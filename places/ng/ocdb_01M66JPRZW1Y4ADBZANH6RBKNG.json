@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Naas Street",
       "suburb": "Tenterfield"
     },
+    "facebook": "https://www.facebook.com/142531535794188",
     "lga": {
       "name": "Tenterfield Shire Council",
       "osm_id": 6163155
@@ -21,7 +30,9 @@
       "name": "Tenterfield",
       "osm_id": 91294880,
       "type": "town"
-    }
+    },
+    "phone": "+61267395200",
+    "website": "http://www.myhospitals.gov.au/hospital/tenterfield-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPRZW1Y4ADBZANH6RBKNG",
@@ -39,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

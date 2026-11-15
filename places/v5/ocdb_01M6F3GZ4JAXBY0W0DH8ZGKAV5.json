@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "2259",
+      "state": "NSW",
+      "street": "Cape Rd",
+      "suburb": "Wyong"
+    },
     "fee": true,
     "lga": {
       "name": "Central Coast Council",
@@ -24,7 +39,9 @@
       "name": "Pacific Motorway"
     },
     "opening_hours": "Su-Th 10:00-14:00",
-    "operator": "Wyong Historical Society"
+    "operator": "Wyong Historical Society",
+    "phone": "(02) 4352 1886",
+    "website": "http://www.alisonhomestead.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZ4JAXBY0W0DH8ZGKAV5",
@@ -42,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

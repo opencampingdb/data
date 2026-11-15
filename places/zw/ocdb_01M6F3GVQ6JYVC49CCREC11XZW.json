@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Myrtle Street",
       "suburb": "Myrtleford"
     },
+    "facebook": "https://www.facebook.com/350013629133684",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Myrtle Street"
-    }
+    },
+    "phone": "+61357521438",
+    "website": "http://www.motelonalpine.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVQ6JYVC49CCREC11XZW",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "23",
+      "postcode": "2350",
+      "state": "NSW",
+      "street": "Crescent St",
+      "suburb": "Armidale"
+    },
+    "facebook": "https://www.facebook.com/801900729979478",
     "lga": {
       "name": "Armidale Regional Council",
       "osm_id": 6165969
@@ -15,6 +31,7 @@
       "osm_id": 59851594,
       "type": "city"
     },
+    "phone": "+61267715644",
     "wheelchair": true
   },
   "group": "services",
@@ -33,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

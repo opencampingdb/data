@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7536",
+      "postcode": "3890",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Cann River"
+    },
+    "facebook": "https://www.facebook.com/153745127996391",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61351539500",
+    "website": "https://www.eastgippsland.vic.gov.au/Services/Council_Caravan_Parks/Cann_River_Rainforest_Caravan_Park"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXXP5W8D9H4G6BNAC9V",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

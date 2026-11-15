@@ -1,5 +1,11 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
@@ -7,11 +13,19 @@
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2642",
+      "state": "NSW",
+      "street": "Bullocks Hill Trail",
+      "suburb": "Kosciuszko National Park"
+    },
     "caravans": true,
     "entry": "customers",
     "fee": true,
@@ -30,9 +44,11 @@
       "name": "Snowy Mountains Highway"
     },
     "operator": "NSW National Parks",
+    "phone": "0269477025",
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/bullocks-hill-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Bullocks+Hill+campground+-+Kosciuszko+National+Park&utm_term=plcid_4216311066079514894"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB2ED6H9VYYBNKWRH9GH",
@@ -50,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

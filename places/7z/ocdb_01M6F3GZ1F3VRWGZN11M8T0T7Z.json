@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76",
+      "postcode": "2644",
+      "state": "NSW",
+      "street": "Albury St",
+      "suburb": "Holbrook"
+    },
+    "facebook": "https://www.facebook.com/258164381007386",
     "lga": {
       "name": "Greater Hume Shire Council",
       "osm_id": 3487850
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Young Street"
-    }
+    },
+    "phone": "+61260363464",
+    "website": "http://www.australianpottery.net.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZ1F3VRWGZN11M8T0T7Z",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

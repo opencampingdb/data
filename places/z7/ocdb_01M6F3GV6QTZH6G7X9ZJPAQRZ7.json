@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "15",
       "street": "Scarsdale Pitfield Road"
     },
+    "facebook": "https://www.facebook.com/100938012813817",
     "lga": {
       "name": "Golden Plains Shire",
       "osm_id": 3290692
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Pitfield-Scarsdale Road"
-    }
+    },
+    "phone": "+61427877918",
+    "website": "https://www.melbourneplaygrounds.com.au/scarsdale-community-park-playground-scarsdale-pitfield-road-scarsdale"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV6QTZH6G7X9ZJPAQRZ7",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

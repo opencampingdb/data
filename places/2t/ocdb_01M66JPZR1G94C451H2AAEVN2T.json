@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "65",
+      "postcode": "2400",
+      "state": "NSW",
+      "street": "Greenbah Rd",
+      "suburb": "Moree"
+    },
+    "facebook": "https://www.facebook.com/208162546641722",
     "lga": {
       "name": "Moree Plains Shire Council",
       "osm_id": 6088821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Greenbah Road"
-    }
+    },
+    "phone": "+61267527366",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/moree/bp-moree-greenbah-rd/7195"
   },
   "group": "services",
   "id": "ocdb_01M66JPZR1G94C451H2AAEVN2T",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4921",
+      "postcode": "2817",
+      "street": "Tooraweenah Rd",
+      "suburb": "Gilgandra Shire Council"
+    },
+    "facebook": "https://www.facebook.com/179902659084707",
     "lga": {
       "name": "Gilgandra Shire Council",
       "osm_id": 6268488
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Tooraweenah Road"
-    }
+    },
+    "phone": "+61412970992"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZNK60056ZBHWHT567TC",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "187",
       "street": "Jasper Road"
     },
+    "facebook": "https://www.facebook.com/144018608975344",
     "lga": {
       "name": "City of Glen Eira",
       "osm_id": 3331087
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Jasper Road"
-    }
+    },
+    "phone": "+61395575333",
+    "website": "http://www.bentleighgarage.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPECSWF3VM630E03XV4AG",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

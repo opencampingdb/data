@@ -1,14 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "281",
+      "postcode": "2049",
+      "state": "NSW",
+      "street": "New Canterbury Rd",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/211079212991357",
     "lga": {
       "name": "Inner West Council",
       "osm_id": 1251053
@@ -28,7 +46,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "New Canterbury Road"
-    }
+    },
+    "phone": "+61295683141"
   },
   "group": "services",
   "id": "ocdb_01M66JPW2P54QRW54XPBDY989T",
@@ -37,7 +56,7 @@
     "lat": -33.898591,
     "lon": 151.145588
   },
-  "name": null,
+  "name": "Tanwar Petroleum",
   "osm": {
     "id": 685526851,
     "timestamp": "2025-07-19T01:50:45Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

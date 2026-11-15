@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2380",
+      "state": "NSW",
+      "street": "Oxley Hwy",
+      "suburb": "Gunnedah"
+    },
+    "facebook": "https://www.facebook.com/609919712194401",
     "lga": {
       "name": "Gunnedah Shire Council",
       "osm_id": 6389934
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Oxley Highway"
-    }
+    },
+    "phone": "+61267424690",
+    "website": "http://www.gunnedahruralmuseum.net.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZB6R444ZQTF0Z2KV5VM",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "900",
+      "postcode": "6082",
+      "state": "WA",
+      "street": "Keane St W",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/311843468900675",
     "lga": {
       "name": "Shire of Mundaring",
       "osm_id": 11689676
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Keane Street West"
-    }
+    },
+    "phone": "+61895722121",
+    "website": "https://www.sevenrooms.com/reservations/mounthelenatavern"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ9TW99SHD0QF1NECWME",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59",
+      "postcode": "5491",
+      "state": "SA",
+      "street": "Cockburn Rd",
+      "suburb": "Jamestown"
+    },
     "lga": {
       "name": "Northern Areas Council",
       "osm_id": 9108167
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Cockburn Road"
-    }
+    },
+    "phone": "(08) 8664 1348",
+    "website": "http://www.huntscrashrepairs.websyte.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPG34WB6RWAHYJA5TT91K",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

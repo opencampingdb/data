@@ -1,23 +1,40 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2583",
+      "state": "NSW",
+      "street": "Laggan Rd",
+      "suburb": "Crookwell"
+    },
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/2082110445357124",
     "fee": true,
     "kitchen": true,
     "lga": {
@@ -35,10 +52,12 @@
       "name": "Goulburn Street"
     },
     "operator": "Upper Lachlan Shire Council",
+    "phone": "+61248321988",
     "power": true,
     "showers": true,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.visitupperlachlan.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB0BECV7E91HH08ZDVZB",
@@ -56,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

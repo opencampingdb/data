@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6210",
+      "state": "WA",
+      "street": "Wattleglen Avenue",
+      "suburb": "Erskine"
+    },
     "lga": {
       "name": "City of Mandurah",
       "osm_id": 11690490
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wattleglen Avenue"
-    }
+    },
+    "phone": "+61 8 9581 2030",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/erskine/bp-x-convenience-erskine/1214"
   },
   "group": "services",
   "id": "ocdb_01M66JPYC3YFM6WH9Z4DQAZWVF",
@@ -36,7 +55,7 @@
     "lat": -32.565022,
     "lon": 115.682376
   },
-  "name": null,
+  "name": "bp X Convenience",
   "osm": {
     "id": 1177169402,
     "timestamp": "2023-05-29T06:11:29Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

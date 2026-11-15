@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "3232",
+      "state": "VIC",
+      "street": "Great Ocean Road",
+      "suburb": "Lorne"
+    },
     "lga": {
       "name": "Surf Coast Shire",
       "osm_id": 3290432
@@ -27,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Ocean Road"
-    }
+    },
+    "phone": "0352891382",
+    "website": "https://greatoceanroadparks.com.au/lorne"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFW0J0MCQT5755RDAA7R",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

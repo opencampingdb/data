@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "4420",
+      "state": "QLD",
+      "street": "Miller St",
+      "suburb": "Taroom"
+    },
+    "facebook": "https://www.facebook.com/120905764631805",
     "lga": {
       "name": "Banana Shire",
       "osm_id": 11674950
@@ -24,7 +42,9 @@
       "distance_m": 170,
       "name": "Yaldwyn Street"
     },
-    "operator": "Darling Downs Health"
+    "operator": "Darling Downs Health",
+    "phone": "+61746289900",
+    "website": "http://www.myhospitals.gov.au"
   },
   "group": "emergency",
   "id": "ocdb_01M66JP0RTZVSEZF965BDF4ACQ",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

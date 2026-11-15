@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5199",
+      "postcode": "2629",
+      "state": "NSW",
+      "street": "Snowy Mountains Hwy",
+      "suburb": "Adaminaby"
+    },
+    "facebook": "https://www.facebook.com/427292190618644",
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Snowy Mountains Highway"
-    }
+    },
+    "phone": "+61264541643",
+    "website": "http://www.snowyschememuseum.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3H004ZHB2MASSD53F058E",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

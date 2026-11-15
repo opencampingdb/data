@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Great Eastern Highway",
       "suburb": "Redcliffe"
     },
+    "facebook": "https://www.facebook.com/114514207063321",
     "lga": {
       "name": "City of Belmont",
       "osm_id": 11311129
@@ -34,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Great Eastern Highway"
-    }
+    },
+    "phone": "+61450273401"
   },
   "group": "services",
   "id": "ocdb_01M66JPFCBEF3FMPXY8KMV92RW",
@@ -52,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

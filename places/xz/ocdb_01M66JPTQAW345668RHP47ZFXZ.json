@@ -1,12 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "117",
+      "postcode": "4300",
+      "state": "QLD",
+      "street": "Brisbane Tce",
+      "suburb": "Goodna"
+    },
     "air": true,
     "lga": {
       "name": "Ipswich City",
@@ -25,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Brisbane Terrace"
-    }
+    },
+    "phone": "(07) 3818 1433"
   },
   "group": "services",
   "id": "ocdb_01M66JPTQAW345668RHP47ZFXZ",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Myall Street",
       "suburb": "Dubbo"
     },
+    "facebook": "https://www.facebook.com/232928976833049",
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -35,7 +44,9 @@
       "distance_m": 40,
       "name": "Myall Street"
     },
-    "operator": "Budget"
+    "operator": "Budget",
+    "phone": "(02) 6882 6500",
+    "website": "http://www.forestlodgedubbo.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVCH68QHZ5214SHA6QFG",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

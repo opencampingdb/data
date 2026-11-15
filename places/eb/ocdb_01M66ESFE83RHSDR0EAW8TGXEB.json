@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "14",
+      "postcode": "3691",
+      "state": "VIC",
+      "street": "Kergunyah Rd",
+      "suburb": "Kergunyah"
+    },
+    "facebook": "https://www.facebook.com/331537904296495",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Kiewa Valley Highway"
-    }
+    },
+    "phone": "+61260275205",
+    "website": "http://www.kergunyahcaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFE83RHSDR0EAW8TGXEB",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

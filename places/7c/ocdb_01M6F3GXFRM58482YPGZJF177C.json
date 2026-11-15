@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Elderslie Street",
       "suburb": "Winton"
     },
+    "facebook": "https://www.facebook.com/1182030361927740",
     "lga": {
       "name": "Winton Shire",
       "osm_id": 11676713
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Elderslie Street"
-    }
+    },
+    "phone": "+61746571309"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXFRM58482YPGZJF177C",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

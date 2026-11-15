@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Monoplane Street",
       "suburb": "Ashgrove"
     },
+    "facebook": "https://www.facebook.com/1438777633003590",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Waterworks Road"
-    }
+    },
+    "phone": "+61733663691",
+    "website": "http://www.chandlersauto.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPWJ8ZKEVZD2Y1ENB41WF",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

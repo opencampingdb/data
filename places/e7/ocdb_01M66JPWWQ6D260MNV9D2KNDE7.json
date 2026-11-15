@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "111-125",
+      "postcode": "3630",
+      "state": "VIC",
+      "street": "Numurkah Rd",
+      "suburb": "Shepparton"
+    },
+    "facebook": "https://www.facebook.com/1500309190261762",
     "fuel": true,
     "lga": {
       "name": "City of Greater Shepparton",
@@ -25,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Numurkah Road"
-    }
+    },
+    "phone": "+61358215712",
+    "website": "http://apco.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPWWQ6D260MNV9D2KNDE7",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

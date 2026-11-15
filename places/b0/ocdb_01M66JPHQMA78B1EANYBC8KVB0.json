@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "379",
+      "postcode": "2710",
+      "state": "NSW",
+      "street": "Moama St",
+      "suburb": "Hay South"
+    },
+    "facebook": "https://www.facebook.com/942654232562460",
     "lga": {
       "name": "Hay Shire Council",
       "osm_id": 6092948
@@ -26,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Moama Street"
-    }
+    },
+    "phone": "+61269932233"
   },
   "group": "services",
   "id": "ocdb_01M66JPHQMA78B1EANYBC8KVB0",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

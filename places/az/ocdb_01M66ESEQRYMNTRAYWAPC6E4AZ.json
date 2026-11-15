@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "91",
+      "postcode": "6055",
+      "state": "WA",
+      "street": "Benara Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/561471480696132",
     "lga": {
       "name": "City of Swan",
       "osm_id": 11689336
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Benara Road"
-    }
+    },
+    "phone": "+61892796700",
+    "website": "http://www.aspenparks.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQRYMNTRAYWAPC6E4AZ",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "4810",
+      "state": "QLD",
+      "street": "Victoria St",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/1063262423530048",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Wills Street"
-    }
+    },
+    "phone": "+61747212122",
+    "website": "http://www.summitmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVD8EBZCRTQ44YTE0YYH",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

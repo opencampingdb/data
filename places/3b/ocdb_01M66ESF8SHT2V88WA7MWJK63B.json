@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4680",
+      "state": "QLD",
+      "street": "Millenium Esplanade",
+      "suburb": "Tannum Sands"
+    },
+    "facebook": "https://www.facebook.com/297862190549807",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -22,7 +37,8 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 750
-    }
+    },
+    "phone": "+61749737201"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF8SHT2V88WA7MWJK63B",

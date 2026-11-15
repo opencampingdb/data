@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "142",
+      "postcode": "3056",
+      "state": "VIC",
+      "street": "Dawson Street",
+      "suburb": "Melbourne"
+    },
     "air": false,
+    "facebook": "https://www.facebook.com/452887258483262",
     "lga": {
       "name": "City of Merri-bek",
       "osm_id": 3327767
@@ -22,6 +38,7 @@
       "distance_m": 20,
       "name": "Dawson Street"
     },
+    "phone": "+61393802652",
     "website": "https://map.bp.com/en-AU/AU/gas-station/brunswick-west/bp-brunswick-west/5571"
   },
   "group": "services",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

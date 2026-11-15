@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59/61",
+      "postcode": "3032",
+      "state": "VIC",
+      "street": "St Leonards Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/333377004124893",
     "lga": {
       "name": "City of Moonee Valley",
       "osm_id": 3329056
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Union Road"
-    }
+    },
+    "phone": "+61401112624",
+    "website": "https://www.splashndashlaundrylounge.com"
   },
   "group": "utility",
   "id": "ocdb_01M66JPQSTBGNVS7Z6QMYXB8ZW",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

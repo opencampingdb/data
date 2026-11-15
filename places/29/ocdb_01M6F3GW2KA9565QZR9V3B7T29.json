@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "Station St",
+      "suburb": "Bundaberg"
+    },
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Tallon Bridge"
-    }
+    },
+    "phone": "0411 384 319",
+    "website": "https://www.bundaberg.qld.gov.au/botanic-gardens"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW2KA9565QZR9V3B7T29",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

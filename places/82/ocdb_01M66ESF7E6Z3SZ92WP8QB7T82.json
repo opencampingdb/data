@@ -1,16 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "drinking_water": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "302",
+      "postcode": "2460",
+      "state": "NSW",
+      "street": "Gwydir Hwy",
+      "suburb": "Waterview"
+    },
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/386501525140698",
     "fee": true,
     "lga": {
       "name": "Clarence Valley Council",
@@ -32,7 +50,9 @@
       "distance_m": 100,
       "name": "Gwydir Highway"
     },
-    "power": true
+    "phone": "+61266423824",
+    "power": true,
+    "website": "http://www.graftoncaravanpark.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF7E6Z3SZ92WP8QB7T82",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

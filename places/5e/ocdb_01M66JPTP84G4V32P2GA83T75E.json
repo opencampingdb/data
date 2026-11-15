@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "bins": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2560",
+      "state": "NSW",
+      "street": "Acacia Ave",
+      "suburb": "Sydney"
+    },
     "bins": true,
+    "facebook": "https://www.facebook.com/184160205309462",
     "lga": {
       "name": "Campbelltown City Council",
       "osm_id": 6290704
@@ -20,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Junction Road"
-    }
+    },
+    "phone": "+61246255242"
   },
   "group": "services",
   "id": "ocdb_01M66JPTP84G4V32P2GA83T75E",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

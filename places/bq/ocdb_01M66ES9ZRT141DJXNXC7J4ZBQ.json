@@ -1,15 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "222",
+      "postcode": "4370",
+      "street": "Glendon Rd",
+      "suburb": "Southern Downs Regional"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/273046080954",
     "fee": true,
     "lga": {
       "name": "Southern Downs Regional",
@@ -21,6 +36,7 @@
       "osm_id": 1232242829,
       "type": "village"
     },
+    "phone": "+61448203048",
     "website": "https://glendoncamping.com.au/"
   },
   "group": "overnight",
@@ -39,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

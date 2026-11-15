@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "734",
+      "postcode": "5043",
+      "state": "SA",
+      "street": "Marion Rd",
+      "suburb": "Adelaide"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/376560639870863",
     "lga": {
       "name": "City of Marion",
       "osm_id": 9102764
@@ -28,7 +44,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Marion Road"
-    }
+    },
+    "phone": "+61883744731"
   },
   "group": "services",
   "id": "ocdb_01M66JPVP49P89665NV5G3KZG2",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

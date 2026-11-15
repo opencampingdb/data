@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "147-149",
+      "postcode": "2340",
+      "state": "NSW",
+      "street": "Bridge Street",
+      "suburb": "West Tamworth"
+    },
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61 2 5732 5854",
+    "website": "https://find.shell.com/au/fuel/10110968-shell-reddy-express-tamworth-west/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPKA5BHJ9DQS24K2FNM2C",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

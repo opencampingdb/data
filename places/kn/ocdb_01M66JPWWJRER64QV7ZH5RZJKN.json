@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8025",
+      "postcode": "3631",
+      "state": "VIC",
+      "street": "Goulburn Valley Highway",
+      "suburb": "Kialla"
+    },
     "lga": {
       "name": "City of Greater Shepparton",
       "osm_id": 3365116
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Wyndham Street"
-    }
+    },
+    "phone": "+61 3 5858 2930",
+    "website": "https://find.shell.com/au/fuel/10111331-shell-reddy-express-kialla/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPWWJRER64QV7ZH5RZJKN",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Garden Street",
       "unit": "1"
     },
+    "facebook": "https://www.facebook.com/217849884904887",
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Colchester Road"
-    }
+    },
+    "phone": "+61397297792",
+    "website": "https://aus4wd.shop/"
   },
   "group": "services",
   "id": "ocdb_01M66JPEZAV9H3RW4FV4RJPW6S",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

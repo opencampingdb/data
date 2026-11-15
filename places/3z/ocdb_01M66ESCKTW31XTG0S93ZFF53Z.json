@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,15 +21,21 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "6754",
+      "street": "Nanutarra Munjina Road"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/543377905718405",
     "fee": true,
     "kitchen": true,
     "lga": {
       "name": "Shire of Ashburton",
       "osm_id": 11690012
     },
+    "phone": "+61435633008",
     "power": true,
     "showers": true,
     "tents": true,
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

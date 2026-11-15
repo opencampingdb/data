@@ -1,18 +1,32 @@
 {
   "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
     "fee": "2024-01-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
     "showers": "2024-01-01T00:00:00Z",
     "toilets": "2024-01-01T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "community_report",
     "toilets": "community_report"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "4741",
+      "state": "QLD",
+      "street": "Child St",
+      "suburb": "Pinnacle"
+    },
+    "facebook": "https://www.facebook.com/123663324355862",
     "fee": false,
     "lga": {
       "name": "Mackay Regional",
@@ -28,6 +42,7 @@
       "distance_m": 40,
       "name": "Mackay Eungella Road"
     },
+    "phone": "+61749585207",
     "showers": true,
     "toilets": true
   },
@@ -47,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

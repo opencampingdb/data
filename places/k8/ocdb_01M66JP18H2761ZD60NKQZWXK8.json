@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-3",
+      "postcode": "4415",
+      "state": "QLD",
+      "street": "Tully St Cnr Murilla St",
+      "suburb": "Miles"
+    },
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -20,7 +35,9 @@
       "distance_m": 30,
       "name": "Murilla Street"
     },
-    "operator": "Caltex"
+    "operator": "Caltex",
+    "phone": "0746272809",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-miles"
   },
   "group": "services",
   "id": "ocdb_01M66JP18H2761ZD60NKQZWXK8",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "4650",
+      "state": "QLD",
+      "street": "Saltwater Creek Rd",
+      "suburb": "Maryborough"
+    },
+    "facebook": "https://www.facebook.com/1805465049759099",
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Saltwater Creek Road"
-    }
+    },
+    "phone": "+61741500916",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/maryborough/bp-saltwater/6961"
   },
   "group": "services",
   "id": "ocdb_01M66JQ012A2W8AXMEJK0VX56Z",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

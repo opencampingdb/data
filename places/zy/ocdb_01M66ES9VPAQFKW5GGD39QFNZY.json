@@ -1,20 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3891",
+      "street": "Park Rd",
+      "suburb": "Genoa"
+    },
     "caravans": true,
     "charge": "Donation",
     "entry": "public",
+    "facebook": "https://www.facebook.com/246061888797735",
     "fee": true,
     "lga": {
       "name": "Shire of East Gippsland",
@@ -32,7 +46,8 @@
       "name": "Princes Highway"
     },
     "operator": "East Gippsland Shire Council",
-    "tents": true
+    "tents": true,
+    "website": "http://www.campee.com/au/vic/rest-area/genoa-rest-area/site9460"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9VPAQFKW5GGD39QFNZY",
@@ -50,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,5 +1,11 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -7,9 +13,18 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "101",
+      "postcode": "6160",
+      "state": "WA",
+      "street": "Hampton Road",
+      "suburb": "Fremantle"
+    },
     "air": true,
     "lga": {
       "name": "City of Fremantle",
@@ -33,7 +48,9 @@
       "name": "South Street"
     },
     "opening_hours": "PH,Mo-Su 00:00-23:59",
-    "operator": "Coles Group"
+    "operator": "Coles Group",
+    "phone": "+61 8 6215 0474",
+    "website": "https://find.shell.com/au/fuel/10111249-shell-reddy-express-fremantle/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNX742A7ABFX6KVKBBJ06",
@@ -51,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

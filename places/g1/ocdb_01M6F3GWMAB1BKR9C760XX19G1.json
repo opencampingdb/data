@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "2357",
+      "state": "NSW",
+      "street": "John St",
+      "suburb": "Coonabarabran"
+    },
+    "facebook": "https://www.facebook.com/207008442744641",
     "lga": {
       "name": "Warrumbungle Shire Council",
       "osm_id": 6268496
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "John Street"
-    }
+    },
+    "phone": "+61422559986",
+    "website": "http://www.acaciamotorlodge.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWMAB1BKR9C760XX19G1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

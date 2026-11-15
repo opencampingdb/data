@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2462",
+      "state": "NSW",
+      "street": "Angophora Grove Walk",
+      "suburb": "Minnie Water"
+    },
     "lga": {
       "name": "Clarence Valley Council",
       "osm_id": 6143220
@@ -18,7 +32,9 @@
     "nearest_beach": {
       "distance_m": 50,
       "name": "Sandon Beach"
-    }
+    },
+    "phone": "0266411500",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/illaroo-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3QEQ09YP5A8EXG2STZ",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

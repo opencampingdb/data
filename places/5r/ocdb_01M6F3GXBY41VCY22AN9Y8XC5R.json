@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "26",
+      "postcode": "6426",
+      "state": "WA",
+      "street": "Antares St",
+      "suburb": "Southern Cross"
+    },
+    "facebook": "https://www.facebook.com/240186886139830",
     "lga": {
       "name": "Shire of Yilgarn",
       "osm_id": 11690085
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Antares Street"
-    }
+    },
+    "phone": "+61890491001",
+    "website": "http://www.yilgarn.wa.gov.au/visitors/yilgarn-history-museum/yilgarn-history-museum.aspx"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GXBY41VCY22AN9Y8XC5R",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

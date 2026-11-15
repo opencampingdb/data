@@ -1,16 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "charge": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "4420/2525",
+      "postcode": "4420",
+      "state": "QLD",
+      "street": "Glebe Weir Rd",
+      "suburb": "Spring Creek (Taroom)"
+    },
     "charge": "$10 envelope and locked box",
+    "facebook": "https://www.facebook.com/1084701538217085",
     "fee": true,
     "lga": {
       "name": "Banana Shire",
@@ -25,6 +41,7 @@
     "nearest_boat_ramp": {
       "distance_m": 110
     },
+    "phone": "+61409792554",
     "power": true,
     "showers": true,
     "toilets": true
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

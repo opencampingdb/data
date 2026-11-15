@@ -1,16 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "3272",
+      "state": "VIC",
+      "street": "Montgomery Way",
+      "suburb": "Mortlake"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/1617203765212558",
     "fee": true,
     "lga": {
       "name": "Shire of Moyne",
@@ -27,8 +45,10 @@
       "name": "Terang - Mortlake Road"
     },
     "operator": "Moyne Shire Council",
+    "phone": "+61409428870",
     "power": true,
-    "tents": true
+    "tents": true,
+    "website": "https://www.mortlakecaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFA6CM245VN2HPNSB496",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

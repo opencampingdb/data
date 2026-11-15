@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "154",
+      "postcode": "4817",
+      "state": "QLD",
+      "street": "Thuringowa Dr",
+      "suburb": "Townsville"
+    },
+    "facebook": "https://www.facebook.com/163168197028803",
     "lga": {
       "name": "Townsville City",
       "osm_id": 11676862
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Thuringowa Drive"
-    }
+    },
+    "phone": "+61747733366",
+    "website": "https://www.kirwantavern.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYNJJ5KJ8389W49Z39TW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

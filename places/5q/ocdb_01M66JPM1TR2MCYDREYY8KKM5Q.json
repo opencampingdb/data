@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "4455",
+      "state": "QLD",
+      "street": "Quintin St",
+      "suburb": "Roma"
+    },
+    "facebook": "https://www.facebook.com/746360141889846",
     "lga": {
       "name": "Maranoa Regional",
       "osm_id": 11674862
@@ -20,7 +36,8 @@
       "distance_m": 10,
       "name": "Quintin Street"
     },
-    "phone": "+61 7 4622 1933"
+    "phone": "+61 7 4622 1933",
+    "website": "http://www.maranoalaundry.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPM1TR2MCYDREYY8KKM5Q",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

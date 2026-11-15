@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "7190",
+      "state": "TAS",
+      "street": "Franklin Street",
+      "suburb": "Swansea"
+    },
     "fee": false,
     "lga": {
       "name": "Glamorgan-Spring Bay",
@@ -31,7 +46,9 @@
       "distance_m": 20,
       "name": "Franklin Street"
     },
-    "opening_hours": "Tu,Fr 10:00-16:00"
+    "opening_hours": "Tu,Fr 10:00-16:00",
+    "phone": "0362565066",
+    "website": "http://www.eastcoastheritage.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVDPP04Q74NTMGGPXBVG",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

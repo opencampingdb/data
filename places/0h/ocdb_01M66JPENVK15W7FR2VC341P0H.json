@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "590",
+      "postcode": "3875",
+      "state": "VIC",
+      "street": "Princes Hwy Cnr Calvert St",
+      "suburb": "Bairnsdale"
+    },
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Street"
-    }
+    },
+    "phone": "0352751151",
+    "website": "https://locations.ampol.com.au/en/ampol-bairnsdale-opt-unmanned-truckstop"
   },
   "group": "services",
   "id": "ocdb_01M66JPENVK15W7FR2VC341P0H",
@@ -31,7 +50,7 @@
     "lat": -37.836081,
     "lon": 147.59994
   },
-  "name": null,
+  "name": "Ampol Bairnsdale Opt Unmanned Truckstop",
   "osm": {
     "id": 8911155322,
     "timestamp": "2021-07-11T08:54:19Z",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

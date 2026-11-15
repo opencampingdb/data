@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "171",
+      "postcode": "4560",
+      "state": "QLD",
+      "street": "Currie St",
+      "suburb": "Nambour"
+    },
+    "facebook": "https://www.facebook.com/146829265358632",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Currie Street"
-    }
+    },
+    "phone": "+61499998008",
+    "website": "http://www.nambourlodge.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYX2VB2M8YCEPT1KZ43E",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

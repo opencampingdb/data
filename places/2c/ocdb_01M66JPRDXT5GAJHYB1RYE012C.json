@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2073",
+      "state": "NSW",
+      "street": "Kendall St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/2118715568347638",
     "lga": {
       "name": "Ku-ring-gai Council",
       "osm_id": 6228261
@@ -23,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Yanko Road"
-    }
+    },
+    "phone": "+61294985160",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/pymble/bp-pymble-centre-st/2268"
   },
   "group": "services",
   "id": "ocdb_01M66JPRDXT5GAJHYB1RYE012C",
@@ -41,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

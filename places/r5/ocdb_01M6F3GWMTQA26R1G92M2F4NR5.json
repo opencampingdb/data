@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2870",
+      "state": "NSW",
+      "street": "Newell Hwy",
+      "suburb": "Parkes"
+    },
+    "facebook": "https://www.facebook.com/159468754081365",
     "lga": {
       "name": "Parkes Shire Council",
       "osm_id": 6271674
@@ -20,6 +35,7 @@
       "distance_m": 60,
       "name": "Peak Hill Road"
     },
+    "phone": "+61432585090",
     "wheelchair": true
   },
   "group": "attraction",
@@ -38,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

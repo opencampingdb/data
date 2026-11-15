@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "345",
+      "postcode": "3285",
+      "state": "VIC",
+      "street": "Carrolls Rd",
+      "suburb": "Yambuk"
+    },
+    "facebook": "https://www.facebook.com/199165120175875",
     "lga": {
       "name": "Shire of Moyne",
       "osm_id": 3347615
@@ -18,7 +36,9 @@
     "nearest_boat_ramp": {
       "distance_m": 160,
       "name": "Lake Yambuk Boatramp"
-    }
+    },
+    "phone": "+61419006201",
+    "website": "https://www.yambukcaravanpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES91JK3ASCVRYVGCPV36M",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

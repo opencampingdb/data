@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "40",
+      "postcode": "6286",
+      "state": "WA",
+      "street": "Bussell Hwy",
+      "suburb": "Witchcliffe"
+    },
     "air": true,
     "lga": {
       "name": "Shire of Augusta Margaret River",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bussell Highway"
-    }
+    },
+    "phone": "(08) 9757 6360"
   },
   "group": "services",
   "id": "ocdb_01M66JNYDAXWRB66HK57RADRNT",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

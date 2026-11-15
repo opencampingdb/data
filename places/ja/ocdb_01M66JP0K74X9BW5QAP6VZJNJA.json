@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "6233",
+      "state": "WA",
+      "street": "Piggott Dr",
+      "suburb": "Bunbury"
+    },
+    "facebook": "https://www.facebook.com/992102547585560",
     "lga": {
       "name": "Shire of Harvey",
       "osm_id": 11690516
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "The Promenade"
-    }
+    },
+    "phone": "+61897259111",
+    "website": "https://www.bridgestonetyres.com.au/treendale"
   },
   "group": "services",
   "id": "ocdb_01M66JP0K74X9BW5QAP6VZJNJA",
@@ -31,7 +53,7 @@
     "lat": -33.276943,
     "lon": 115.745856
   },
-  "name": null,
+  "name": "Australind Tyre Service",
   "osm": {
     "id": 1266467870,
     "timestamp": "2011-04-30T07:51:19Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

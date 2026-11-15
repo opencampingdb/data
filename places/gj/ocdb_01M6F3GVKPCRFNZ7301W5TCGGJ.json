@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "65",
+      "postcode": "4492",
+      "state": "QLD",
+      "street": "Dowling St",
+      "suburb": "Thargomindah"
+    },
+    "facebook": "https://www.facebook.com/108565865444354",
     "lga": {
       "name": "Bulloo Shire",
       "osm_id": 11676708
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Dowling Street"
-    }
+    },
+    "phone": "+61746553155",
+    "website": "http://oasismotel.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVKPCRFNZ7301W5TCGGJ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

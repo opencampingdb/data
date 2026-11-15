@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1975",
+      "postcode": "3812",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Nar Nar Goon"
+    },
+    "facebook": "https://www.facebook.com/441547669232444",
     "lga": {
       "name": "Shire of Cardinia",
       "osm_id": 3335652
@@ -22,7 +38,8 @@
       "name": "Princes Highway on-ramp"
     },
     "opening_hours": "24/7",
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61359425584"
   },
   "group": "services",
   "id": "ocdb_01M66JNXRQWVQ7G5A1GRGQB8GG",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,4 +1,8 @@
 {
+  "fact_dates": {
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "fuels": "osm",
@@ -7,7 +11,9 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -43,7 +49,9 @@
       "distance_m": 50,
       "name": "Whitehall Street"
     },
-    "operator": "Shell Australia"
+    "operator": "Shell Australia",
+    "phone": "+61 3 9999 1275",
+    "website": "https://find.shell.com/au/fuel/10111576-shell-yarraville/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPVM5QK16C316T3PGNNDF",
@@ -61,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

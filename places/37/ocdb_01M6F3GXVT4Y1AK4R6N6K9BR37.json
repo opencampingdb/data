@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "81",
+      "postcode": "6160",
+      "state": "WA",
+      "street": "High St",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/110704612044760",
     "lga": {
       "name": "City of Fremantle",
       "osm_id": 11346296
@@ -26,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Market Street"
-    }
+    },
+    "website": "https://honkytonkblues.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXVT4Y1AK4R6N6K9BR37",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

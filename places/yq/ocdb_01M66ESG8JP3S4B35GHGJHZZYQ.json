@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1879",
+      "postcode": "2850",
+      "state": "NSW",
+      "street": "Windeyer Rd",
+      "suburb": "Windeyer"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/251147531407033",
     "lga": {
       "name": "Mid-Western Regional Council",
       "osm_id": 6268502
@@ -15,7 +33,9 @@
       "name": "Mudgee",
       "osm_id": 114608650,
       "type": "town"
-    }
+    },
+    "phone": "+61263738252",
+    "website": "http://www.bushlandstouristpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG8JP3S4B35GHGJHZZYQ",
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,21 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44",
+      "postcode": "4470",
+      "street": "Sturt Street (Mitchell Hwy)"
+    },
     "lga": {
       "name": "Murweh Shire",
       "osm_id": 11674879
@@ -18,7 +29,8 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Sturt Street"
-    }
+    },
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-charleville-south-roadhouse"
   },
   "group": "services",
   "id": "ocdb_01M66JPE6P9RSH2HGTXZ0QQ4DQ",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

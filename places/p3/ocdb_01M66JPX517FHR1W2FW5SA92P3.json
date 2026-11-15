@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "7018",
+      "state": "TAS",
+      "street": "Gordons Hill Rd Cnr Cambridge Rd",
+      "suburb": "Bellerive"
+    },
     "fuel": true,
     "lga": {
       "name": "City of Clarence",
@@ -29,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gordons Hill Road"
-    }
+    },
+    "phone": "0362451745",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-eastlands"
   },
   "group": "services",
   "id": "ocdb_01M66JPX517FHR1W2FW5SA92P3",
@@ -38,7 +57,7 @@
     "lat": -42.866074,
     "lon": 147.372995
   },
-  "name": null,
+  "name": "Ampol Foodary Eastlands",
   "osm": {
     "id": 960635990,
     "timestamp": "2021-07-02T05:16:15Z",
@@ -47,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

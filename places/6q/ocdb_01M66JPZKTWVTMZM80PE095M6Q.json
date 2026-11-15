@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6122",
+      "state": "WA",
+      "street": "South West Hway Cnr Nettleton Rd",
+      "suburb": "Byford"
+    },
     "fuel": true,
     "lga": {
       "name": "Shire of Serpentine-Jarrahdale",
@@ -20,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Nettleton Road"
-    }
+    },
+    "phone": "0895251033",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-byford"
   },
   "group": "services",
   "id": "ocdb_01M66JPZKTWVTMZM80PE095M6Q",
@@ -29,7 +47,7 @@
     "lat": -32.226375,
     "lon": 116.008089
   },
-  "name": null,
+  "name": "Ampol Foodary Byford",
   "osm": {
     "id": 1416522929,
     "timestamp": "2025-07-22T12:36:08Z",
@@ -38,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

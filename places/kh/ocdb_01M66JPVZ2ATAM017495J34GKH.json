@@ -1,9 +1,13 @@
 {
+  "fact_dates": {
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "fuel": true,
@@ -20,7 +24,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Rouse Street"
-    }
+    },
+    "phone": "0267362005"
   },
   "group": "services",
   "id": "ocdb_01M66JPVZ2ATAM017495J34GKH",
@@ -38,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

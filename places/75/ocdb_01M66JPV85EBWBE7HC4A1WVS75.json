@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Ettalong Road",
       "suburb": "Greystanes"
     },
+    "facebook": "https://www.facebook.com/104320317956445",
     "lga": {
       "name": "Cumberland City Council",
       "osm_id": 6210859
@@ -30,7 +37,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Old Prospect Road"
-    }
+    },
+    "phone": "+61296368917"
   },
   "group": "services",
   "id": "ocdb_01M66JPV85EBWBE7HC4A1WVS75",
@@ -48,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Anson Street",
       "suburb": "Orange"
     },
+    "facebook": "https://www.facebook.com/285627142344883",
     "lga": {
       "name": "Orange City Council",
       "osm_id": 6427044
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Anson Street"
-    }
+    },
+    "phone": "+61263691444",
+    "website": "https://townsquaremotelorange.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ2TK74YBNVKEZM08JX1",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

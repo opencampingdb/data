@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "182/174",
+      "postcode": "3677",
+      "state": "VIC",
+      "street": "Greta Rd",
+      "suburb": "Wangaratta"
+    },
+    "facebook": "https://www.facebook.com/176397509176601",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Greta Road"
-    }
+    },
+    "phone": "+61357221788",
+    "website": "http://www.townandcountrytavern.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV6N3RMK4VY0CC9A8WA3",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1517",
+      "postcode": "4503",
+      "state": "QLD",
+      "street": "Anzac Ave",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/192181580988443",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Anzac Avenue"
-    }
+    },
+    "phone": "+61478781273",
+    "website": "http://www.kallangurmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ6ZDYKEFJZMK4CPW0E2",
@@ -31,7 +53,7 @@
     "lat": -27.250418,
     "lon": 153.000891
   },
-  "name": null,
+  "name": "Kallangur Motel",
   "osm": {
     "id": 565582480,
     "timestamp": "2021-11-26T10:52:30Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

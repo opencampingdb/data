@@ -1,18 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "190",
+      "postcode": "7262",
+      "street": "Tomahawk Dr",
+      "suburb": "Dorset"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/283175008523226",
     "fee": true,
     "lga": {
       "name": "Dorset",
@@ -31,6 +46,7 @@
     "nearest_boat_ramp": {
       "distance_m": 300
     },
+    "phone": "+61492484780",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -52,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

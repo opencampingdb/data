@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "98-110",
+      "postcode": "3825",
+      "state": "VIC",
+      "street": "Narracan Dr",
+      "suburb": "Moe"
+    },
+    "facebook": "https://www.facebook.com/104387418861021",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Narracan Drive"
-    }
+    },
+    "phone": "+61351273344",
+    "website": "http://www.moeparklandsmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H00GG2YPD38T5FRCTF3Q",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "47",
+      "postcode": "5352",
+      "state": "SA",
+      "street": "Murray St",
+      "suburb": "Tanunda"
+    },
+    "facebook": "https://www.facebook.com/205104002675307",
     "lga": {
       "name": "The Barossa Council",
       "osm_id": 9105938
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Murray Street"
-    }
+    },
+    "phone": "+61885638340",
+    "website": "http://www.barossamuseum.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GX7QZZSQE4S6DKR9MZYH",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

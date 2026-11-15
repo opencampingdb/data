@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "2529",
+      "state": "NSW",
+      "street": "Government Rd",
+      "suburb": "Oak Flats"
+    },
+    "facebook": "https://www.facebook.com/118071044927425",
     "lga": {
       "name": "Shellharbour City Council",
       "osm_id": 6304532
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Government Road"
-    }
+    },
+    "phone": "+61242561822",
+    "website": "http://www.cellarbrations.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZT8FNFCZKEHPMRQVC48",
@@ -36,7 +58,7 @@
     "lat": -34.562157,
     "lon": 150.830953
   },
-  "name": null,
+  "name": "Lakeview Hotel Motel",
   "osm": {
     "id": 1205107245,
     "timestamp": "2023-09-05T02:44:13Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

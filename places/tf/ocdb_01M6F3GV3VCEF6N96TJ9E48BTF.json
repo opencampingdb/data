@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "99",
+      "postcode": "2756",
+      "state": "NSW",
+      "street": "George St",
+      "suburb": "Windsor"
+    },
+    "facebook": "https://www.facebook.com/113561322029462",
     "lga": {
       "name": "Hawkesbury City Council",
       "osm_id": 6222206
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61245772206",
+    "website": "http://www.macquariearms.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV3VCEF6N96TJ9E48BTF",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

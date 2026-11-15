@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "40",
+      "postcode": "4486",
+      "state": "QLD",
+      "street": "Railway St",
+      "suburb": "Dirranbandi"
+    },
     "facebook": "https://www.facebook.com/p/The-Dirran-Pub-100064691300514/",
     "lga": {
       "name": "Balonne Shire",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Railway Street"
-    }
+    },
+    "phone": "+61746258322"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWZH1FKXDV65QA2R69GN",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

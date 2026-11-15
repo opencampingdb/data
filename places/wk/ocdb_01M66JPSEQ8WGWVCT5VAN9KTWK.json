@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "2580",
+      "state": "NSW",
+      "street": "Victoria Arch Dr",
+      "suburb": "Wombeyan Caves"
+    },
     "lga": {
       "name": "Upper Lachlan Shire Council",
       "osm_id": 6257920
@@ -20,7 +37,9 @@
       "distance_m": 450,
       "name": "Wombeyan Caves Road"
     },
-    "operator": "NSW National Parks and Wildlife Service"
+    "operator": "NSW National Parks and Wildlife Service",
+    "phone": "0248435976",
+    "website": "https://www.nationalparks.nsw.gov.au/things-to-do/cafes-and-kiosks/kui-kiosk"
   },
   "group": "services",
   "id": "ocdb_01M66JPSEQ8WGWVCT5VAN9KTWK",
@@ -29,7 +48,7 @@
     "lat": -34.308801,
     "lon": 149.969108
   },
-  "name": null,
+  "name": "Kui Kiosk",
   "osm": {
     "id": 259688444,
     "timestamp": "2026-01-09T05:27:15Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

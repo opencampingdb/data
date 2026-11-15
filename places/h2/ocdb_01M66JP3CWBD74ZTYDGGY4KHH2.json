@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "3875",
+      "state": "VIC",
+      "street": "Payne St #1",
+      "suburb": "Bairnsdale"
+    },
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Main Street"
-    }
+    },
+    "phone": "(03) 5153 1115",
+    "website": "https://www.broadlandsauto.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP3CWBD74ZTYDGGY4KHH2",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

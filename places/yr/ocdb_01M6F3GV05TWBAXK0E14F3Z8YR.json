@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2062",
+      "postcode": "3888",
+      "state": "VIC",
+      "street": "Bonang Rd",
+      "suburb": "Delegate River"
+    },
+    "facebook": "https://www.facebook.com/562273990895746",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bonang Road"
-    }
+    },
+    "phone": "+61409928687"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV05TWBAXK0E14F3Z8YR",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

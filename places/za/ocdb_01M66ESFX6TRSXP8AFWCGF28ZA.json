@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5016",
+      "postcode": "3714",
+      "state": "VIC",
+      "street": "Maroondah Hwy",
+      "suburb": "Alexandra"
+    },
+    "facebook": "https://www.facebook.com/181645731850668",
     "lga": {
       "name": "Shire of Murrindindi",
       "osm_id": 3332647
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Maroondah Highway"
-    }
+    },
+    "phone": "+61409410631",
+    "website": "http://www.alexandratouristpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFX6TRSXP8AFWCGF28ZA",
@@ -31,7 +53,7 @@
     "lat": -37.194869,
     "lon": 145.699152
   },
-  "name": null,
+  "name": "Alexandra Tourist Park",
   "osm": {
     "id": 1098704167,
     "timestamp": "2022-09-29T01:28:28Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

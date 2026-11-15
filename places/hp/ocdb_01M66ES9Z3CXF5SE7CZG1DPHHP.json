@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "345",
+      "postcode": "0840",
+      "street": "Barramundi Dr",
+      "suburb": "Dundee Downs"
+    },
+    "facebook": "https://www.facebook.com/481334952057562",
     "locality": {
       "distance_m": 15520,
       "name": "Crab Claw Island",
@@ -13,7 +30,9 @@
     "nearest_boat_ramp": {
       "distance_m": 2730,
       "name": "Javelin Road Boat Ramp"
-    }
+    },
+    "phone": "+61889782900",
+    "website": "http://www.dundeedownsbushresort.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Z3CXF5SE7CZG1DPHHP",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

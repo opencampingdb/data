@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "7304",
+      "state": "TAS",
+      "street": "Bass Highway",
+      "suburb": "Deloraine"
+    },
+    "facebook": "https://www.facebook.com/2068330000149165",
     "lga": {
       "name": "Meander Valley",
       "osm_id": 10598717
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Meander Valley Road"
-    }
+    },
+    "phone": "+61363622170",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/deloraine/bp-deloraine/610"
   },
   "group": "services",
   "id": "ocdb_01M66JPTRFQ7QZAAGBJHWRQ97N",
@@ -27,7 +49,7 @@
     "lat": -41.524859,
     "lon": 146.664064
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 451257215,
     "timestamp": "2016-11-03T23:04:11Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

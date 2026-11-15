@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "103",
+      "postcode": "7250",
+      "state": "TAS",
+      "street": "Canning St",
+      "suburb": "Launceston"
+    },
+    "facebook": "https://www.facebook.com/149532705084409",
     "lga": {
       "name": "City of Launceston",
       "osm_id": 10581631
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bathurst Street"
-    }
+    },
+    "phone": "+61363342327",
+    "website": "http://www.launcestonbackpackers.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW0AGQ9QPMQ9BNY1CD6G",
@@ -36,7 +58,7 @@
     "lat": -41.444344,
     "lon": 147.136632
   },
-  "name": null,
+  "name": "Launceston Backpackers",
   "osm": {
     "id": 3931398243,
     "timestamp": "2016-01-06T23:22:57Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "32B",
+      "postcode": "2263",
+      "state": "NSW",
+      "street": "Evans Rd",
+      "suburb": "Central Coast"
+    },
+    "facebook": "https://www.facebook.com/120322498025313",
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -22,7 +40,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 890
-    }
+    },
+    "phone": "+61243964336",
+    "website": "http://www.camptoukley.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB2HEA7R91WN1BBYJ4ND",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2322",
+      "state": "NSW",
+      "street": "Weakleys Drive",
+      "suburb": "Thornton"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -29,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Weakleys Drive"
-    }
+    },
+    "phone": "0240286830"
   },
   "group": "services",
   "id": "ocdb_01M66JPVD9ED0T16854S6A9DY0",
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

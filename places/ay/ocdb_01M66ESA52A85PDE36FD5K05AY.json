@@ -1,27 +1,42 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "charge": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "53-59",
+      "postcode": "2410",
+      "street": "MacIntyre St",
+      "suburb": "Inverell Shire Council"
+    },
     "caravans": true,
     "charge": "10.00 AUD",
     "drinking_water": true,
     "dump_station": false,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/119115078809184",
     "fee": true,
     "lga": {
       "name": "Inverell Shire Council",
@@ -39,6 +54,7 @@
       "name": "River Street"
     },
     "operator": "Inverell Shire Council",
+    "phone": "+61400970866",
     "power": true,
     "showers": true,
     "tents": true,
@@ -60,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

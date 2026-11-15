@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "64",
       "street": "Lennox Street"
     },
+    "facebook": "https://www.facebook.com/171154759600012",
     "lga": {
       "name": "City of Yarra",
       "osm_id": 2404491
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Lennox Street"
-    }
+    },
+    "phone": "+61394281564",
+    "website": "http://www.allnationshotel.pub"
   },
   "group": "services",
   "id": "ocdb_01M6F3H00EH4FK5DVK43W9ZKBA",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

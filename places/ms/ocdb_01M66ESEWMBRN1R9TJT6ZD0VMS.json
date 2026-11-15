@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "80",
+      "postcode": "2456",
+      "state": "NSW",
+      "street": "Lakes Rd",
+      "suburb": "Woolgoolga"
+    },
+    "facebook": "https://www.facebook.com/474653862685594",
     "lga": {
       "name": "Coffs Harbour City Council",
       "osm_id": 6165983
@@ -23,7 +41,9 @@
     "nearest_boat_ramp": {
       "distance_m": 1070,
       "name": "VRO/Fishing Club Boat Ramp"
-    }
+    },
+    "phone": "+61266484715",
+    "website": "https://www.coffscoastholidayparks.com.au/woolgoolga-lakeside-holiday-park/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEWMBRN1R9TJT6ZD0VMS",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

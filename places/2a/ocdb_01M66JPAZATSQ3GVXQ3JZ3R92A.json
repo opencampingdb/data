@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "3011",
+      "state": "VIC",
+      "street": "Buckley St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/574829315862344",
     "lga": {
       "name": "City of Maribyrnong",
       "osm_id": 3330965
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Buckley Street"
-    }
+    },
+    "phone": "+61396894988",
+    "website": "http://www.footscrayautocare.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPAZATSQ3GVXQ3JZ3R92A",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

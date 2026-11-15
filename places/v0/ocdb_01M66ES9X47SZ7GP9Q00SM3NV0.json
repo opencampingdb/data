@@ -1,17 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5451",
+      "state": "SA",
+      "street": "Saddleworth Rd",
+      "suburb": "Auburn"
+    },
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1580987555318835",
     "fee": true,
     "kitchen": true,
     "lga": {
@@ -28,9 +45,11 @@
       "distance_m": 170,
       "name": "Ford Street"
     },
+    "phone": "+61417550781",
     "power": true,
     "showers": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.clarevalley.com.au/learn/local-directory/auburn_community_caravan_park"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9X47SZ7GP9Q00SM3NV0",
@@ -48,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

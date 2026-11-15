@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11A",
+      "postcode": "2127",
+      "state": "NSW",
+      "street": "Olympic Blvd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/329249143602392",
     "lga": {
       "name": "City of Parramatta Council",
       "osm_id": 6217262
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Olympic Boulevard"
-    }
+    },
+    "phone": "+61287621111",
+    "website": "https://www.novotelsydneyolympicpark.com.au/eat-drink/the-brewery-bar-kitchen"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXKQGXJXM8PH5VDR7E6W",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

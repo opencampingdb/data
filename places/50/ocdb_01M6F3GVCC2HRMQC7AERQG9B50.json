@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31-33",
+      "postcode": "3400",
+      "state": "VIC",
+      "street": "Roberts Ave",
+      "suburb": "Horsham"
+    },
+    "facebook": "https://www.facebook.com/214241755791468",
     "lga": {
       "name": "Rural City of Horsham",
       "osm_id": 3359337
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Firebrace Street"
-    }
+    },
+    "phone": "+61353824691",
+    "website": "http://www.townhousemotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVCC2HRMQC7AERQG9B50",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,14 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2707",
+      "state": "NSW",
+      "street": "Kingfisher Ave",
+      "suburb": "Coleambally"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/75540162730",
     "lga": {
       "name": "Murrumbidgee Council",
       "osm_id": 6231900
@@ -23,8 +40,10 @@
       "distance_m": 80,
       "name": "Kidman Way"
     },
+    "phone": "+61478550522",
     "showers": false,
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.coleamballycaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9YJ7HNKHNGRS1HAFJ8H",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

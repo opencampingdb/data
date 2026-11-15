@@ -1,16 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2720",
+      "state": "NSW",
+      "street": "Snowy Mountains Hwy",
+      "suburb": "Tumut"
+    },
     "caravans": true,
     "drinking_water": false,
     "dump_station": false,
@@ -24,10 +38,12 @@
       "osm_id": 113372218,
       "type": "village"
     },
+    "phone": "1300072757",
     "power": false,
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/denison-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9QHHCSQ00QM0DY30RFJ",
@@ -45,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

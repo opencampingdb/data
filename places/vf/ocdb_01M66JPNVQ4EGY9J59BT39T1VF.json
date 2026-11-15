@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Sandgate Road",
       "suburb": "Nundah"
     },
+    "facebook": "https://www.facebook.com/101903918623866",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -35,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Sandgate Road"
-    }
+    },
+    "phone": "+61738619625",
+    "website": "https://ampol.com.au/service-stations/"
   },
   "group": "services",
   "id": "ocdb_01M66JPNVQ4EGY9J59BT39T1VF",
@@ -53,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "85",
+      "postcode": "3464",
+      "state": "VIC",
+      "street": "Simson St",
+      "suburb": "Carisbrook"
+    },
     "lga": {
       "name": "Shire of Central Goldfields",
       "osm_id": 3351397
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Simson Street"
-    }
+    },
+    "phone": "(03) 5464 2334",
+    "website": "http://www.visitmaryborough.com.au/motels/carisbrook-country-retreat-motel"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYJXR68PK0130EMS7T7J",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

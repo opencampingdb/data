@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56",
+      "postcode": "3709",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Walwa"
+    },
     "lga": {
       "name": "Shire of Towong",
       "osm_id": 3361220
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Main Street"
-    }
+    },
+    "phone": "(02) 6037 1202",
+    "website": "http://www.philcribbpanels.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPN41J04E47E7656S929X",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "2421",
+      "state": "NSW",
+      "street": "Prince St",
+      "suburb": "Paterson"
+    },
+    "facebook": "https://www.facebook.com/101955186563587",
     "lga": {
       "name": "Dungog Shire Council",
       "osm_id": 6185449
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Duke Street"
-    }
+    },
+    "phone": "+61240187522",
+    "website": "http://www.patersontavern.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVHQGGT0BAX69CHKGTFM",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

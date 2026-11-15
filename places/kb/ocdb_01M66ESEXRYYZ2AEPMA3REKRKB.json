@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "4737",
+      "state": "QLD",
+      "street": "Anzac St",
+      "suburb": "Sarina"
+    },
+    "facebook": "https://www.facebook.com/118924821300150",
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 340
-    }
+    },
+    "phone": "+61749561892",
+    "website": "http://www.sarinapalms.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXRYYZ2AEPMA3REKRKB",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "Lot 2",
+      "postcode": "5269",
+      "state": "SA",
+      "street": "Kingdon Rd",
+      "suburb": "Wolseley"
+    },
+    "facebook": "https://www.facebook.com/223391144415418",
     "lga": {
       "name": "Tatiara District Council",
       "osm_id": 6706440
@@ -13,7 +29,8 @@
       "name": "Wolseley",
       "osm_id": 1800147536,
       "type": "village"
-    }
+    },
+    "phone": "+61887532239"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV35DQCC59BSEWGACZXJ",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "68",
+      "postcode": "5523",
+      "state": "SA",
+      "street": "Eyre Road",
+      "suburb": "Crystal Brook"
+    },
     "lga": {
       "name": "Port Pirie Regional Council",
       "osm_id": 9108160
@@ -18,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Eyre Road"
-    }
+    },
+    "phone": "0886362222"
   },
   "group": "services",
   "id": "ocdb_01M66JP84MPH5ZGEJ5N8PFQYAM",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

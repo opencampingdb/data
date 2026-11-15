@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "2594",
+      "state": "NSW",
+      "street": "Campbell St",
+      "suburb": "Young"
+    },
+    "facebook": "https://www.facebook.com/134958125385757",
     "lga": {
       "name": "Hilltops Council",
       "osm_id": 6256597
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Campbell Street"
-    }
+    },
+    "phone": "+61263823444",
+    "website": "http://www.goldrushmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GY8KN6PC7HNYW2TA7A9D",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

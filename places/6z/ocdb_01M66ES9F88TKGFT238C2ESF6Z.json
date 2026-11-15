@@ -1,20 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "bbq": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "operator": "osm",
+    "phone": "overture",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2265",
+      "street": "Bangalow Road",
+      "suburb": "Lake Macquarie City Council"
+    },
     "bbq": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/921621347953033",
     "fee": false,
     "lga": {
       "name": "City of Lake Macquarie",
@@ -27,6 +41,7 @@
       "type": "village"
     },
     "operator": "NSW NPWS",
+    "phone": "+61249729000",
     "tents": true,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/gap-creek-campground"
@@ -47,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5112",
+      "state": "SA",
+      "street": "Lot 92",
+      "suburb": "Elizabeth Vale"
+    },
     "car_wash": true,
     "lga": {
       "name": "City of Playford",
@@ -22,7 +34,8 @@
       "distance_m": 40,
       "name": "Main North Road"
     },
-    "operator": "OTR"
+    "operator": "OTR",
+    "phone": "0882552270"
   },
   "group": "services",
   "id": "ocdb_01M66JPXKAYE4VFSJRJNQA9MQE",
@@ -40,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

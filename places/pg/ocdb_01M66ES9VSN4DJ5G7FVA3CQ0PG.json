@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1121",
+      "postcode": "3673",
+      "street": "Lima E Rd",
+      "suburb": "Rural City of Benalla"
+    },
+    "facebook": "https://www.facebook.com/160642274406452",
     "lga": {
       "name": "Rural City of Benalla",
       "osm_id": 3351593
@@ -13,7 +28,8 @@
       "name": "Swanpool",
       "osm_id": 1728909993,
       "type": "village"
-    }
+    },
+    "phone": "+61357621749"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9VSN4DJ5G7FVA3CQ0PG",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

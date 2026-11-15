@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z",
+    "x": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture",
+    "x": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "2448",
+      "state": "NSW",
+      "street": "Riverside Drive",
+      "suburb": "Nambucca Heads"
+    },
+    "facebook": "https://www.facebook.com/200969413280005",
     "lga": {
       "name": "Nambucca Valley Council",
       "osm_id": 6165979
@@ -29,7 +49,10 @@
       "distance_m": 80,
       "name": "15"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "(02) 6568 5317",
+    "website": "https://find.shell.com/au/fuel/AU_B721-nambucca-heads",
+    "x": "https://x.com/shell_australia"
   },
   "group": "services",
   "id": "ocdb_01M66JNYJ63R01TJ5SPQW25XSK",
@@ -47,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

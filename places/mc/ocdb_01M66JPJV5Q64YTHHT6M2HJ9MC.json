@@ -1,17 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "5",
       "street": "Yarun Road"
     },
+    "facebook": "https://www.facebook.com/973565346173032",
     "lga": {
       "name": "Byron Shire Council",
       "osm_id": 6170304
@@ -29,7 +36,8 @@
       "distance_m": 40,
       "name": "Pacific Motorway Onramp"
     },
-    "operator": "North Coast Petroleum"
+    "operator": "North Coast Petroleum",
+    "phone": "+61266842172"
   },
   "group": "services",
   "id": "ocdb_01M66JPJV5Q64YTHHT6M2HJ9MC",
@@ -47,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

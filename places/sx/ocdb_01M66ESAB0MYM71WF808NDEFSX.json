@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "161",
+      "postcode": "2431",
+      "state": "NSW",
+      "street": "Phillip Dr",
+      "suburb": "South West Rocks"
+    },
+    "facebook": "https://www.facebook.com/133036656711866",
     "lga": {
       "name": "Kempsey Shire Council",
       "osm_id": 6178731
@@ -24,7 +42,9 @@
     "nearest_boat_ramp": {
       "distance_m": 1680
     },
-    "toilets": true
+    "phone": "+61265666142",
+    "toilets": true,
+    "website": "https://www.nrmaparksandresorts.com.au/south-west-rocks/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAB0MYM71WF808NDEFSX",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "188",
+      "postcode": "2333",
+      "state": "NSW",
+      "street": "Bridge St",
+      "suburb": "Muswellbrook"
+    },
+    "facebook": "https://www.facebook.com/644315895588021",
     "lga": {
       "name": "Muswellbrook Shire Council",
       "osm_id": 6343182
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bridge Street"
-    }
+    },
+    "phone": "+61265437147",
+    "website": "https://www.eatonshotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYV5PDYWY4YVAJ7RNMEZ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

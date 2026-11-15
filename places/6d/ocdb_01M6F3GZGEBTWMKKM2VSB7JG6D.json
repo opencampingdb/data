@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "162",
+      "postcode": "3616",
+      "state": "VIC",
+      "street": "Hogan St",
+      "suburb": "Tatura"
+    },
+    "facebook": "https://www.facebook.com/295774160468541",
     "lga": {
       "name": "City of Greater Shepparton",
       "osm_id": 3365116
@@ -20,7 +38,9 @@
       "distance_m": 30,
       "name": "Hogan Street"
     },
-    "opening_hours": "Tu-Th 12:00-22:00; Fr-Sa 12:00-23:00; Su 12:00-21:00"
+    "opening_hours": "Tu-Th 12:00-22:00; Fr-Sa 12:00-23:00; Su 12:00-21:00",
+    "phone": "+61358782211",
+    "website": "http://www.taturamiddlehotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZGEBTWMKKM2VSB7JG6D",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

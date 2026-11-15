@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "33",
+      "postcode": "3699",
+      "state": "VIC",
+      "street": "Ranch Rd",
+      "suburb": "Tawonga South"
+    },
+    "facebook": "https://www.facebook.com/207668942617515",
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Tawonga Gap Road"
-    }
+    },
+    "phone": "+61357544365",
+    "website": "http://www.allamarmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV6JJVVNGRA4NZXEXZ77",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

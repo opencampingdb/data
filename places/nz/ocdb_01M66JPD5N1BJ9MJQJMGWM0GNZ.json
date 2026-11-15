@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "180",
+      "postcode": "3078",
+      "state": "VIC",
+      "street": "Christmas St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/592451577463089",
     "lga": {
       "name": "City of Darebin",
       "osm_id": 2404379
@@ -28,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Grange Road"
-    }
+    },
+    "phone": "+61394158181",
+    "website": "https://www.seek.com.au/File-Finish-jobs/in-All-Melbourne-VIC"
   },
   "group": "services",
   "id": "ocdb_01M66JPD5N1BJ9MJQJMGWM0GNZ",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

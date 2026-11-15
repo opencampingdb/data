@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "4738",
+      "state": "QLD",
+      "street": "Mumby St",
+      "suburb": "Koumala"
+    },
     "lga": {
       "name": "Mackay Regional",
       "osm_id": 11677563
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Brown Street"
-    }
+    },
+    "phone": "(07) 4950 3657",
+    "website": "http://koumala-park.jany.io"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXMXAENH1Z1BJBX8F7N",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

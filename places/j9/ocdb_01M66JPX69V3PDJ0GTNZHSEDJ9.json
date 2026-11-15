@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "151",
+      "postcode": "2650",
+      "state": "NSW",
+      "street": "Hammond Ave",
+      "suburb": "Wagga Wagga"
+    },
+    "facebook": "https://www.facebook.com/106866347887134",
     "lga": {
       "name": "Wagga Wagga City Council",
       "osm_id": 6247060
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Hammond Avenue"
-    }
+    },
+    "phone": "+61269215309",
+    "website": "https://rivergum-fuels.business.site/"
   },
   "group": "services",
   "id": "ocdb_01M66JPX69V3PDJ0GTNZHSEDJ9",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

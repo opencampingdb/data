@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "93",
+      "postcode": "2820",
+      "state": "NSW",
+      "street": "Montefiores St",
+      "suburb": "Montefiores"
+    },
+    "facebook": "https://www.facebook.com/1230607390419221",
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -13,7 +31,9 @@
       "name": "Montefiores",
       "osm_id": 2660957086,
       "type": "village"
-    }
+    },
+    "phone": "+61268453636",
+    "website": "https://www.visitnsw.com/destinations/country-nsw/dubbo-area/wellington/attractions/the-lion-waterloo"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVVVNH1WTHA0DEREKF7P",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

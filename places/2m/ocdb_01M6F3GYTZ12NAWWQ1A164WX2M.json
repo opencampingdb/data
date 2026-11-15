@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "61",
+      "postcode": "4744",
+      "state": "QLD",
+      "street": "Mills Ave",
+      "suburb": "Moranbah"
+    },
     "lga": {
       "name": "Isaac Regional",
       "osm_id": 11676584
@@ -20,7 +33,8 @@
       "distance_m": 70,
       "name": "Mills Avenue"
     },
-    "phone": "+61 7 4941 7555"
+    "phone": "+61 7 4941 7555",
+    "website": "http://www.moranbah.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYTZ12NAWWQ1A164WX2M",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

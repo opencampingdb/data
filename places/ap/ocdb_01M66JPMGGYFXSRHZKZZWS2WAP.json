@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "345",
+      "postcode": "6725",
+      "state": "WA",
+      "street": "Flowerdale Rd Cnr Mavis Rd",
+      "suburb": "Broome North"
+    },
     "air": true,
     "lga": {
       "name": "Shire of Broome",
@@ -28,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Gubinge Road"
-    }
+    },
+    "phone": "0891921574",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-broome-north"
   },
   "group": "services",
   "id": "ocdb_01M66JPMGGYFXSRHZKZZWS2WAP",
@@ -37,7 +56,7 @@
     "lat": -17.929107,
     "lon": 122.236462
   },
-  "name": null,
+  "name": "Ampol Foodary Broome North",
   "osm": {
     "id": 12273542917,
     "timestamp": "2026-09-06T14:52:30Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

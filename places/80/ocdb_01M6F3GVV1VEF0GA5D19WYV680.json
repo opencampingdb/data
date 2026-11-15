@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Eagle Street",
       "suburb": "Longreach"
     },
+    "facebook": "https://www.facebook.com/379365742130019",
     "lga": {
       "name": "Longreach Regional",
       "osm_id": 11676693
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Eagle Street"
-    }
+    },
+    "phone": "+61746581996",
+    "website": "https://miriam-vale-motel.queenslandhotels.net/en"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVV1VEF0GA5D19WYV680",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

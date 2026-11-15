@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Conness Street",
       "suburb": "Chiltern"
     },
+    "facebook": "https://www.facebook.com/396200360413010",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -28,7 +35,8 @@
       "distance_m": 20,
       "name": "Conness Street"
     },
-    "opening_hours": "Tu,Su 11:30-19:00; We,Th 11:30-22:00; Fr,Sa 11:30-01:00"
+    "opening_hours": "Tu,Su 11:30-19:00; We,Th 11:30-22:00; Fr,Sa 11:30-01:00",
+    "phone": "+61357261470"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ1GG433T8ST3JN5T91C",
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

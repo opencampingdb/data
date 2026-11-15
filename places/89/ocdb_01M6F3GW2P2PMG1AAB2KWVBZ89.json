@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2340",
+      "state": "NSW",
+      "street": "New England Highway",
+      "suburb": "Tamworth"
+    },
     "lga": {
       "name": "Tamworth Regional Council",
       "osm_id": 6365595
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Goonoo Goonoo Road"
-    }
+    },
+    "phone": "0267657022",
+    "website": "https://www.choicehotels.com/new-south-wales/tamworth/econo-lodge-hotels/au191?mc=llbixxap"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW2P2PMG1AAB2KWVBZ89",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

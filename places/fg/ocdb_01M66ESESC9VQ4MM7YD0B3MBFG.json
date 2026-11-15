@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3551",
+      "state": "VIC",
+      "street": "Gunmins Ln",
+      "suburb": "Kimbolton"
+    },
+    "facebook": "https://www.facebook.com/336536283040116",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -17,7 +35,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 820
-    }
+    },
+    "phone": "+61354392538",
+    "website": "http://www.lakeeppalockholidaypark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESESC9VQ4MM7YD0B3MBFG",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

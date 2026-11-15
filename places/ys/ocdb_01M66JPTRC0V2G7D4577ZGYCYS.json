@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "52",
+      "postcode": "7120",
+      "state": "TAS",
+      "street": "High St",
+      "suburb": "Oatlands"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/2058673621121875",
     "lga": {
       "name": "Southern Midlands",
       "osm_id": 10624828
@@ -17,6 +33,7 @@
       "osm_id": 324755992,
       "type": "town"
     },
+    "phone": "+61362541533",
     "website": "https://map.bp.com/en-AU/AU/gas-station/oatlands/bp-oatlands/0707"
   },
   "group": "services",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "tents": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "102",
+      "postcode": "0862",
+      "state": "NT",
+      "street": "Stuart Hwy",
+      "suburb": "Pamayu"
+    },
+    "facebook": "https://www.facebook.com/257370117613744",
     "fuel": true,
     "lga": {
       "name": "Barkly Region",
@@ -22,6 +38,7 @@
       "distance_m": 100,
       "name": "Stuart Highway"
     },
+    "phone": "+61889692037",
     "tents": true
   },
   "group": "overnight",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

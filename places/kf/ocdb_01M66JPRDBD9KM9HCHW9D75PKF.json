@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Centre Road",
       "suburb": "Bentleigh East"
     },
+    "facebook": "https://www.facebook.com/1556384054674262",
     "lga": {
       "name": "City of Glen Eira",
       "osm_id": 3331087
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Centre Road"
-    }
+    },
+    "phone": "+61395706886",
+    "website": "https://www.bentleighservicecentre.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPRDBD9KM9HCHW9D75PKF",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

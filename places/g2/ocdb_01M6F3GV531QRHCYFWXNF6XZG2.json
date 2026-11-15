@@ -1,16 +1,25 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "2",
       "street": "Raleigh Road"
     },
+    "facebook": "https://www.facebook.com/153417118023883",
     "lga": {
       "name": "City of Maribyrnong",
       "osm_id": 3330965
@@ -27,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Maribyrnong Road"
-    }
+    },
+    "phone": "+61393182811",
+    "website": "http://www.anglers-tavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV531QRHCYFWXNF6XZG2",
@@ -45,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

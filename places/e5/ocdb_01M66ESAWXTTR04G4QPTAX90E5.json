@@ -1,16 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "bbq": "osm",
     "charge": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2611",
+      "state": "NSW",
+      "street": "Coree Summit Trail",
+      "suburb": "URIARRA"
+    },
     "bbq": true,
     "charge": "$6 AUD",
     "fee": true,
@@ -24,6 +36,7 @@
       "osm_id": 2813049267,
       "type": "village"
     },
+    "phone": "0262297166",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -45,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

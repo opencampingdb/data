@@ -1,19 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "bbq": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3579",
+      "state": "VIC",
+      "street": "Riverwood Dr",
+      "suburb": "Kerang"
+    },
     "bbq": true,
     "caravans": true,
+    "facebook": "https://www.facebook.com/148336762228733",
     "fee": true,
     "lga": {
       "name": "Shire of Gannawarra",
@@ -29,6 +44,7 @@
       "distance_m": 260,
       "name": "Wellington Street"
     },
+    "phone": "+61354521161",
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -50,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "150",
+      "postcode": "2300",
+      "state": "NSW",
+      "street": "Wharf Rd",
+      "suburb": "Newcastle"
+    },
+    "facebook": "https://www.facebook.com/725662817506959",
     "lga": {
       "name": "City of Newcastle",
       "osm_id": 6189831
@@ -29,7 +47,9 @@
       "distance_m": 20,
       "name": "Wharf Road"
     },
-    "opening_hours": "11:30-21:00 \"Restaurant\"; Su-Th 10:30-22:00 \"Bar\"; Fr-Sa 10:30-02:00 \"Bar\""
+    "opening_hours": "11:30-21:00 \"Restaurant\"; Su-Th 10:30-22:00 \"Bar\"; Fr-Sa 10:30-02:00 \"Bar\"",
+    "phone": "+61249296333",
+    "website": "http://queenswharfhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV349GS32HFTWX8RMHZX",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

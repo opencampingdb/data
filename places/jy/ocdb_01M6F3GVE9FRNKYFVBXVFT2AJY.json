@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4881",
+      "state": "QLD",
+      "street": "Arara St",
+      "suburb": "Kuranda"
+    },
+    "facebook": "https://www.facebook.com/1496408700426612",
     "lga": {
       "name": "Mareeba Shire",
       "osm_id": 11677337
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Therwine Street"
-    }
+    },
+    "phone": "+61460415886",
+    "website": "http://www.kurandahotel.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVE9FRNKYFVBXVFT2AJY",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

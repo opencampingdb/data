@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2050",
+      "postcode": "3887",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Nowa Nowa"
+    },
+    "facebook": "https://www.facebook.com/371869922997651",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61351557600",
+    "website": "http://www.minglingwaters.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEXZ63HJEV5FAM65YJV0",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

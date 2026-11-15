@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "The Horsley Drive",
       "suburb": "Smithfield"
     },
+    "facebook": "https://www.facebook.com/183023585184672",
     "lga": {
       "name": "Fairfield City Council",
       "osm_id": 6212438
@@ -32,7 +41,9 @@
       "distance_m": 40,
       "name": "The Horsley Drive"
     },
-    "operator": "Fairfield City Council"
+    "operator": "Fairfield City Council",
+    "phone": "+61297250190",
+    "website": "https://www.fcmg.nsw.gov.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZKVV7E08EGR8A8JERF3",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

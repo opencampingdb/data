@@ -1,6 +1,12 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -12,7 +18,14 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3175",
+      "state": "VIC",
+      "street": "Cnr Heatherton & Stud Roads",
+      "suburb": "Melbourne"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/198381910979871",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -55,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

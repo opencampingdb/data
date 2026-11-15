@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3016",
+      "state": "VIC",
+      "street": "Syme St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/652365358131886",
     "locality": {
       "distance_m": 7250,
       "name": "Melbourne",
@@ -24,7 +42,9 @@
       "distance_m": 270,
       "name": "Nelson Place"
     },
-    "operator": "Maritime Trust of Australia Inc."
+    "operator": "Maritime Trust of Australia Inc.",
+    "phone": "+61393972363",
+    "website": "http://www.hmascastlemaine.org.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYN26GRN1VHARMVHAFCA",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

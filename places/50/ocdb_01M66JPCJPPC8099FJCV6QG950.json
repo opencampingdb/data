@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "86",
+      "postcode": "2156",
+      "state": "NSW",
+      "street": "Kenthurst Road",
+      "suburb": "Kenthurst"
+    },
     "lga": {
       "name": "The Hills Shire Council",
       "osm_id": 6219220
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Kenthurst Road"
-    }
+    },
+    "phone": "+61 2 9654 0100",
+    "website": "https://find.shell.com/au/fuel/10111036-shell-kenthurst/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPCJPPC8099FJCV6QG950",
@@ -27,7 +46,7 @@
     "lat": -33.682171,
     "lon": 151.010864
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 7284920520,
     "timestamp": "2020-03-11T12:44:22Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

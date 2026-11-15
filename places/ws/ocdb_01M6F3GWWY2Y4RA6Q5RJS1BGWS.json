@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "125",
+      "postcode": "3909",
+      "state": "VIC",
+      "street": "Esplanade",
+      "suburb": "Lakes Entrance"
+    },
+    "facebook": "https://www.facebook.com/101521443344342",
     "fee": true,
     "lga": {
       "name": "Shire of East Gippsland",
@@ -29,7 +45,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Esplanade"
-    }
+    },
+    "phone": "+61419843211"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GWWY2Y4RA6Q5RJS1BGWS",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

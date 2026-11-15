@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "94",
+      "postcode": "2329",
+      "state": "NSW",
+      "street": "Bettington St",
+      "suburb": "Merriwa"
+    },
+    "facebook": "https://www.facebook.com/109707731881013",
     "lga": {
       "name": "Upper Hunter Shire Council",
       "osm_id": 6186848
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bettington Street"
-    }
+    },
+    "phone": "+61265482235",
+    "website": "http://www.royalmerriwa.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYXR8KWTQFSN41QGS038",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

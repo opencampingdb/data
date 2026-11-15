@@ -1,22 +1,38 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "39",
+      "postcode": "2361",
+      "state": "NSW",
+      "street": "Bukkulla St",
+      "suburb": "Ashford"
+    },
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/221849058164654",
     "fee": true,
     "lga": {
       "name": "Inverell Shire Council",
@@ -33,6 +49,7 @@
       "name": "Duff Street"
     },
     "operator": "Inverell Shire Council",
+    "phone": "+61267254268",
     "power": true,
     "showers": true,
     "tents": true,
@@ -54,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

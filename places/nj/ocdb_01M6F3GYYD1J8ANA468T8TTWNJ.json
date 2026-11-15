@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2705",
+      "state": "NSW",
+      "street": "Gogeldrie St",
+      "suburb": "Whitton"
+    },
+    "facebook": "https://www.facebook.com/808492869197047",
     "lga": {
       "name": "Leeton Shire Council",
       "osm_id": 6411154
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Benerembah Street"
-    }
+    },
+    "phone": "+61269536481",
+    "website": "http://www.leeton.nsw.gov.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYYD1J8ANA468T8TTWNJ",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

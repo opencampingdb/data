@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Gympie Road",
       "suburb": "Aspley"
     },
+    "facebook": "https://www.facebook.com/817233634967326",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gayford Street"
-    }
+    },
+    "phone": "+61732634480",
+    "website": "http://www.aspleycentraltavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXA4YD5A95Q18RB815KS",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

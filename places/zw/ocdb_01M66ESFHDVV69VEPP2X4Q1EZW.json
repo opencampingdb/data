@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2550",
+      "state": "NSW",
+      "street": "Aragunnu Rd",
+      "suburb": "Wapengo"
+    },
+    "facebook": "https://www.facebook.com/1118323081533751",
     "lga": {
       "name": "Bega Valley Shire Council",
       "osm_id": 6239664
@@ -18,7 +33,8 @@
     "nearest_beach": {
       "distance_m": 1450,
       "name": "Bunga South"
-    }
+    },
+    "phone": "+61244762888"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFHDVV69VEPP2X4Q1EZW",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

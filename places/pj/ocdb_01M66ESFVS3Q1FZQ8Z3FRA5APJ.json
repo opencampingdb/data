@@ -1,13 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "cabins": "osm",
     "drinking_water": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "phone": "overture",
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -19,6 +27,7 @@
     },
     "cabins": true,
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/181763211848838",
     "fee": true,
     "lga": {
       "name": "City of Greater Bendigo",
@@ -34,7 +43,9 @@
       "distance_m": 210,
       "name": "Midland Highway"
     },
-    "tents": true
+    "phone": "+61354484747",
+    "tents": true,
+    "website": "http://www.goldnugget.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVS3Q1FZQ8Z3FRA5APJ",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

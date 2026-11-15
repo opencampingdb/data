@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "104",
+      "postcode": "6304",
+      "state": "WA",
+      "street": "Vincent St",
+      "suburb": "Beverley"
+    },
+    "facebook": "https://www.facebook.com/146659305376491",
     "lga": {
       "name": "Shire of Beverley",
       "osm_id": 11689465
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Hunt Road"
-    }
+    },
+    "phone": "+61896461347",
+    "website": "http://orac2.no-ip.com/freemasonstavern/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYZWE8BS4WZMPBDBWFG7",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

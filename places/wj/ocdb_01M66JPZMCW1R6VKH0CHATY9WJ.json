@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76",
+      "postcode": "2760",
+      "state": "NSW",
+      "street": "Glossop St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/153363415375364",
     "lga": {
       "name": "Penrith City Council",
       "osm_id": 6282698
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Glossop Street"
-    }
+    },
+    "phone": "+61296230558",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/st-marys/bp-st-marys-glossop-st-nsw/2195"
   },
   "group": "services",
   "id": "ocdb_01M66JPZMCW1R6VKH0CHATY9WJ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "127",
+      "postcode": "2765",
+      "state": "NSW",
+      "street": "Garfield Rd E",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/112465493453589",
     "lga": {
       "name": "Blacktown City Council",
       "osm_id": 6217858
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Garfield Road East"
-    }
+    },
+    "phone": "+61296271117",
+    "website": "https://zoomautomotive.bapnet.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPX7X7M5BSYXAKBMG0535",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

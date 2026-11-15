@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3429",
+      "state": "VIC",
+      "street": "Horne Street",
+      "suburb": "Sunbury"
+    },
     "air": true,
     "lga": {
       "name": "City of Hume",
@@ -22,7 +37,9 @@
       "distance_m": 30,
       "name": "Horne Street"
     },
-    "operator": "Eureka Operations"
+    "operator": "Eureka Operations",
+    "phone": "+61 3 8798 9837",
+    "website": "https://find.shell.com/au/fuel/10110954-shell-reddy-express-sunbury/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTCQ599MM23KQNTYHP08",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "4824",
+      "state": "QLD",
+      "street": "Ramsay St",
+      "suburb": "Cloncurry"
+    },
+    "facebook": "https://www.facebook.com/305112043259306",
     "lga": {
       "name": "Cloncurry Shire",
       "osm_id": 11677395
@@ -23,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Ramsay Street"
-    }
+    },
+    "phone": "+61747421366",
+    "website": "https://oasishotelmotelcloncurry.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX8G74GFP8PVQ03RVMAK",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

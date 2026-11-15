@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "217",
+      "postcode": "4018",
+      "state": "QLD",
+      "street": "Beams Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/562089937137008",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Beams Road"
-    }
+    },
+    "phone": "+61730517625",
+    "website": "https://www.ausvenueco.com.au/queensland/venue/taigum-tavern"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYHGAQKH7ECRW299JDW7",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

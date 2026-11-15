@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "3239",
+      "state": "VIC",
+      "street": "Main Rd",
+      "suburb": "Gellibrand"
+    },
+    "facebook": "https://www.facebook.com/422071171174541",
     "lga": {
       "name": "Shire of Colac Otway",
       "osm_id": 3291847
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61352358357",
+    "website": "http://www.otwaystouristpark.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESESYY0NV1QCEBKHN3VF2",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

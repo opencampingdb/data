@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "47",
+      "postcode": "2850",
+      "state": "NSW",
+      "street": "Church St",
+      "suburb": "Mudgee"
+    },
     "air": true,
     "fuels": [
       "diesel",
@@ -29,7 +44,9 @@
       "name": "A"
     },
     "opening_hours": "Mo-Sa 05:00-22:00; Su 06:00-22:00",
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 2 5345 9905",
+    "website": "https://find.shell.com/au/fuel/10110892-shell-reddy-express-mudgee/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNZA73ZR9BCRTSR1RQAB4",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

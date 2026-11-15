@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2644",
+      "state": "NSW",
+      "street": "Albury St & Wallace St",
+      "suburb": "Holbrook"
+    },
+    "facebook": "https://www.facebook.com/1300893376639756",
     "lga": {
       "name": "Greater Hume Shire Council",
       "osm_id": 3487850
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Albury Street"
-    }
+    },
+    "phone": "+61260362422",
+    "website": "http://mgnsw.org.au/organisations/holbrook-submarine-museum"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRPC98PBXQD3DCH6JNDV",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

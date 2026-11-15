@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4032",
+      "postcode": "5238",
+      "state": "SA",
+      "street": "Hunter Rd",
+      "suburb": "Nildottie"
+    },
+    "facebook": "https://www.facebook.com/1580209705615325",
     "lga": {
       "name": "Mid Murray Council",
       "osm_id": 6811114
@@ -22,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Hunter Road"
-    }
+    },
+    "phone": "+61400725035"
   },
   "group": "services",
   "id": "ocdb_01M66JP0E8WF4GZAT189N7H41E",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

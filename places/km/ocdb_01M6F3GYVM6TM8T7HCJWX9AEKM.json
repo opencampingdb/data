@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "303",
+      "postcode": "7249",
+      "state": "TAS",
+      "street": "Hobart Rd",
+      "suburb": "Launceston"
+    },
+    "facebook": "https://www.facebook.com/1944160619229959",
     "lga": {
       "name": "City of Launceston",
       "osm_id": 10581631
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Hobart Road"
-    }
+    },
+    "phone": "+61363431930",
+    "website": "http://www.abeltas.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYVM6TM8T7HCJWX9AEKM",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

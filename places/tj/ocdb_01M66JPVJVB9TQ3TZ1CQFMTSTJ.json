@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2118",
+      "state": "NSW",
+      "street": "Adderton Road",
+      "suburb": "Carlingford"
+    },
     "air": true,
     "fuels": [
       "diesel",
@@ -34,7 +50,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Adderton Road"
-    }
+    },
+    "phone": "0298711377",
+    "website": "https://find.shell.com/au/fuel/AU_A084-coles-express-carlingford-west"
   },
   "group": "services",
   "id": "ocdb_01M66JPVJVB9TQ3TZ1CQFMTSTJ",
@@ -43,7 +61,7 @@
     "lat": -33.785078,
     "lon": 151.043527
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 580258786,
     "timestamp": "2024-06-10T08:12:00Z",
@@ -52,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

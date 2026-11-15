@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "114",
+      "postcode": "2321",
+      "state": "NSW",
+      "street": "New England Hwy",
+      "suburb": "Lochinvar"
+    },
+    "facebook": "https://www.facebook.com/27764078203",
     "lga": {
       "name": "Maitland City Council",
       "osm_id": 6189782
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "New England Highway"
-    }
+    },
+    "phone": "+61249307216",
+    "website": "https://www.lochinvarhotelmotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZC5GNBTWKZ5E16Q7CBX",
@@ -27,7 +49,7 @@
     "lat": -32.700051,
     "lon": 151.449219
   },
-  "name": null,
+  "name": "Lochinvar Hotel Motel",
   "osm": {
     "id": 727425964,
     "timestamp": "2019-09-23T09:44:03Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

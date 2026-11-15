@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6164",
+      "state": "WA",
+      "street": "Omeo St Cnr North Lake Rd",
+      "suburb": "South Lake"
+    },
     "lga": {
       "name": "City of Cockburn",
       "osm_id": 11689175
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "North Lake Road"
-    }
+    },
+    "phone": "0894173657",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-south-lake"
   },
   "group": "services",
   "id": "ocdb_01M66JPMGPZG8917FMEB83DFEF",
@@ -27,7 +46,7 @@
     "lat": -32.108275,
     "lon": 115.829185
   },
-  "name": null,
+  "name": "Ampol Foodary South Lake",
   "osm": {
     "id": 12273587265,
     "timestamp": "2024-10-21T14:15:10Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

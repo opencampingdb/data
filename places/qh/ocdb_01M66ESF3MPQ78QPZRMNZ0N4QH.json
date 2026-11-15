@@ -1,15 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "drinking_water": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "109",
+      "postcode": "2463",
+      "state": "NSW",
+      "street": "River St",
+      "suburb": "Maclean"
+    },
     "drinking_water": true,
+    "facebook": "https://www.facebook.com/101278775296750",
     "fee": true,
     "lga": {
       "name": "Clarence Valley Council",
@@ -28,7 +46,9 @@
       "distance_m": 50,
       "name": "River Street"
     },
-    "power": true
+    "phone": "+61266452987",
+    "power": true,
+    "website": "http://www.macleanriversidecaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3MPQ78QPZRMNZ0N4QH",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

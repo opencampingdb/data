@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "320",
       "street": "George Street"
     },
+    "facebook": "https://www.facebook.com/171460779384471",
     "lga": {
       "name": "City of Sydney",
       "osm_id": 1251066
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "York Street"
-    }
+    },
+    "phone": "+61291147308",
+    "website": "https://merivale.com/venues/theroyalgeorge"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX5G51KHNM36Q4W6E8Y9",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

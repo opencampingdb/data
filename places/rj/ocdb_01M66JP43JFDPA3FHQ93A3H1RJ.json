@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "125",
+      "postcode": "3024",
+      "state": "VIC",
+      "street": "Ballan Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/1180487965347224",
     "lga": {
       "name": "City of Wyndham",
       "osm_id": 2432416
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Ballan Road"
-    }
+    },
+    "phone": "+61397426462",
+    "website": "http://www.ultratune.com.au/location/wyndham-vale/"
   },
   "group": "services",
   "id": "ocdb_01M66JP43JFDPA3FHQ93A3H1RJ",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

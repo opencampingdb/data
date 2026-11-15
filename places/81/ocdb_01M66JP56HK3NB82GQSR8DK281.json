@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "359-361",
+      "postcode": "7000",
+      "state": "TAS",
+      "street": "Elizabeth St",
+      "suburb": "Hobart"
+    },
+    "facebook": "https://www.facebook.com/426835111482434",
     "lga": {
       "name": "City of Hobart",
       "osm_id": 10625466
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Elizabeth Street"
-    }
+    },
+    "phone": "+61362343777",
+    "website": "http://www.statusdrycleaners.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JP56HK3NB82GQSR8DK281",
@@ -36,7 +58,7 @@
     "lat": -42.872938,
     "lon": 147.31536
   },
-  "name": null,
+  "name": "Status Dry Cleaners",
   "osm": {
     "id": 2825563059,
     "timestamp": "2023-09-26T06:22:28Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

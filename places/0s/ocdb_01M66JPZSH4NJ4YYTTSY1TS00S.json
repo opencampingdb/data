@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "0810",
+      "state": "NT",
+      "street": "Progress Drive",
+      "suburb": "Nightcliff"
+    },
     "fuel": true,
     "lga": {
       "name": "City of Darwin",
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Progress Drive"
-    }
+    },
+    "phone": "+61 8 8914 6790",
+    "website": "https://find.shell.com/au/fuel/10111623-shell-reddy-express-nightcliff/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPZSH4NJ4YYTTSY1TS00S",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

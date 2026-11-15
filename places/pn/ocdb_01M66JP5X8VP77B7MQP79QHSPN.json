@@ -1,13 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6147",
+      "state": "WA",
+      "street": "- 4 Lynwood Ave",
+      "suburb": "LYNWOOD"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -34,7 +47,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lynwood Avenue"
-    }
+    },
+    "phone": "0893583255"
   },
   "group": "services",
   "id": "ocdb_01M66JP5X8VP77B7MQP79QHSPN",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

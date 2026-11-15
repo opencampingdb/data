@@ -1,20 +1,36 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "10",
+      "postcode": "2672",
+      "state": "NSW",
+      "street": "City St",
+      "suburb": "Lake Cargelligo"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/103725786145447",
     "fee": true,
     "lga": {
       "name": "Lachlan Shire Council",
@@ -34,7 +50,8 @@
       "name": "Canada Street"
     },
     "phone": "+61 2 6898 1077",
-    "tents": true
+    "tents": true,
+    "website": "https://www.visitlachlanshire.com.au/operators/lakeview-caravan-park/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA14Y3HJ2KZ9AYEYF2EY",
@@ -52,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

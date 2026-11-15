@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-3",
+      "postcode": "5290",
+      "state": "SA",
+      "street": "Ramsay Avenue",
+      "suburb": "Mount Gambier"
+    },
     "lga": {
       "name": "City of Mount Gambier",
       "osm_id": 3395909
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Jubilee Highway East"
-    }
+    },
+    "phone": "+61 8 8419 7919",
+    "website": "https://find.shell.com/au/fuel/10129126-shell-otr-mount-gambier-east/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPWMRS10H5HE8KQAACFSM",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

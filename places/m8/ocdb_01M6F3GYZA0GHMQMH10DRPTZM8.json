@@ -1,14 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "96-120",
+      "postcode": "7000",
+      "state": "TAS",
+      "street": "Davey St",
+      "suburb": "Hobart"
+    },
+    "facebook": "https://www.facebook.com/276543566566189",
     "lga": {
       "name": "City of Hobart",
       "osm_id": 10625466
@@ -31,7 +49,9 @@
       "name": "Davey Street"
     },
     "opening_hours": "Tu-Sa  09:00-13:00; Su 10:00-14:00",
-    "operator": "AAHU"
+    "operator": "AAHU",
+    "phone": "+61362157503",
+    "website": "https://armymuseumtasmania.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYZA0GHMQMH10DRPTZM8",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,16 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "9",
       "street": "Gonn Avenue"
     },
+    "facebook": "https://www.facebook.com/101275666149434",
     "lga": {
       "name": "Shire of Gannawarra",
       "osm_id": 3363585
@@ -25,7 +32,8 @@
       "distance_m": 40,
       "name": "Gonn Avenue"
     },
-    "opening_hours": "Mo-Tu 07:00-18:00; We-Fr 07:00-20:00; Sa 08:00-20:00; Su 09:00-14:00"
+    "opening_hours": "Mo-Tu 07:00-18:00; We-Fr 07:00-20:00; Sa 08:00-20:00; Su 09:00-14:00",
+    "phone": "+61488289630"
   },
   "group": "services",
   "id": "ocdb_01M6F3H091M60HAA0WSBK9NGQ1",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

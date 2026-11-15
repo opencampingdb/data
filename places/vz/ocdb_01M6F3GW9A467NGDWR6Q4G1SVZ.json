@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2155",
+      "state": "NSW",
+      "street": "Commercial Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/149853748389332",
     "lga": {
       "name": "The Hills Shire Council",
       "osm_id": 6219220
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Windsor Road"
-    }
+    },
+    "phone": "+61296294811",
+    "website": "http://www.thefiddler.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW9A467NGDWR6Q4G1SVZ",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

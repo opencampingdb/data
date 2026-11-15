@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45-47",
+      "postcode": "5356",
+      "state": "SA",
+      "street": "Moorundie St",
+      "suburb": "Truro"
+    },
+    "facebook": "https://www.facebook.com/100190625598387",
     "lga": {
       "name": "Mid Murray Council",
       "osm_id": 6811114
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Moorundie Street"
-    }
+    },
+    "phone": "+61885640172",
+    "website": "http://www.oaktreedural.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVNC01DCAXR26T6GADY2",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

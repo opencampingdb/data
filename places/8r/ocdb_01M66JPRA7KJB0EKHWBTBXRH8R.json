@@ -1,12 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "4123",
+      "state": "QLD",
+      "street": "Rochedale Road",
+      "suburb": "Rochedale"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -27,6 +39,7 @@
       "distance_m": 40,
       "name": "Rochedale Road"
     },
+    "phone": "+61 7 3532 7790",
     "website": "https://www.shell.com.au/fuel-finder.html"
   },
   "group": "services",
@@ -45,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

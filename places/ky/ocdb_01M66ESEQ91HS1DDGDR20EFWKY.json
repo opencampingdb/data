@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4703",
+      "street": "Upper Stoney Creek Rd",
+      "suburb": "Livingstone Shire"
+    },
+    "facebook": "https://www.facebook.com/1147782688592166",
     "lga": {
       "name": "Livingstone Shire",
       "osm_id": 11677520
@@ -13,7 +27,8 @@
       "name": "Yeppoon",
       "osm_id": 326110624,
       "type": "town"
-    }
+    },
+    "phone": "+61137468"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQ91HS1DDGDR20EFWKY",
@@ -31,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "pub": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "483",
+      "postcode": "3204",
+      "state": "VIC",
+      "street": "Centre Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/157406054735119",
     "lga": {
       "name": "City of Glen Eira",
       "osm_id": 3331087
@@ -31,6 +47,7 @@
       "distance_m": 30,
       "name": "Centre Road"
     },
+    "phone": "+61452254316",
     "pub": true,
     "website": "https://www.bentleighrsl.com.au/",
     "wheelchair": true
@@ -51,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

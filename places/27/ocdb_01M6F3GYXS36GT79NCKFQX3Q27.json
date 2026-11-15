@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Cudgery Street",
       "suburb": "Dorrigo"
     },
+    "facebook": "https://www.facebook.com/886419554546947",
     "lga": {
       "name": "Bellingen Shire Council",
       "osm_id": 6165980
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Karabin Street"
-    }
+    },
+    "phone": "+61266571956",
+    "website": "http://mgnsw.org.au/organisations/dorrigo-and-guy-fawkes-historical-society"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYXS36GT79NCKFQX3Q27",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

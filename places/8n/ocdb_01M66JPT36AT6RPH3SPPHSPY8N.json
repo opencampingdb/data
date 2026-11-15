@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "267",
+      "postcode": "5093",
+      "state": "SA",
+      "street": "Wright Road",
+      "suburb": "Valley View"
+    },
     "air": true,
     "lga": {
       "name": "City of Salisbury",
@@ -26,7 +41,9 @@
       "distance_m": 30,
       "name": "Wright Road"
     },
-    "opening_hours": "Mo-Fr 06:00-22:00; Sa,Su 07:00-22:00"
+    "opening_hours": "Mo-Fr 06:00-22:00; Sa,Su 07:00-22:00",
+    "phone": "+61 8 7096 8587",
+    "website": "https://find.shell.com/au/fuel/10111456-shell-reddy-express-valley-view-wright-rd/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPT36AT6RPH3SPPHSPY8N",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

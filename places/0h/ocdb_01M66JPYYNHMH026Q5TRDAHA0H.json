@@ -1,12 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +22,7 @@
       "street": "Avenue Road",
       "suburb": "Mosman"
     },
+    "facebook": "https://www.facebook.com/147986812558459",
     "fuel": true,
     "lga": {
       "name": "Mosman Municipal Council",
@@ -36,7 +43,8 @@
     "nearest_major_road": {
       "distance_m": 340,
       "name": "Rangers Avenue"
-    }
+    },
+    "phone": "+61299694013"
   },
   "group": "services",
   "id": "ocdb_01M66JPYYNHMH026Q5TRDAHA0H",
@@ -54,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

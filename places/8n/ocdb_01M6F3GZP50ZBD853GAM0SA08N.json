@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "McCullough Street",
       "suburb": "Sunnybank"
     },
+    "facebook": "https://www.facebook.com/133792856679733",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -24,7 +33,9 @@
     },
     "nearest_major_road": {
       "distance_m": 70
-    }
+    },
+    "phone": "+61733451081",
+    "website": "https://www.sunnybankhotel.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZP50ZBD853GAM0SA08N",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

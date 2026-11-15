@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
+    "phone": "overture",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "2460",
+      "state": "NSW",
+      "street": "Ryries Rd",
+      "suburb": "Lawrence"
+    },
     "caravans": true,
     "lga": {
       "name": "Clarence Valley Council",
@@ -18,8 +35,10 @@
       "osm_id": 114204220,
       "type": "village"
     },
+    "phone": "0499732738",
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://secretlakeretreat.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDFSF904AXVPD72KTK93",
@@ -28,7 +47,7 @@
     "lat": -29.449081,
     "lon": 153.02581
   },
-  "name": null,
+  "name": "Secret Lake Retreat",
   "osm": {
     "id": 11377030898,
     "timestamp": "2023-11-26T03:10:44Z",
@@ -37,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

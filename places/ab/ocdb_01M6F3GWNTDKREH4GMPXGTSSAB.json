@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 1138",
+      "postcode": "5723",
+      "state": "SA",
+      "street": "Catacomb Rd",
+      "suburb": "Coober Pedy"
+    },
+    "facebook": "https://www.facebook.com/163285217031383",
     "lga": {
       "name": "The District Council of Coober Pedy",
       "osm_id": 6799901
@@ -13,7 +31,9 @@
       "name": "Coober Pedy",
       "osm_id": 29383350,
       "type": "town"
-    }
+    },
+    "phone": "+61886725324",
+    "website": "http://www.theundergroundmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GWNTDKREH4GMPXGTSSAB",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

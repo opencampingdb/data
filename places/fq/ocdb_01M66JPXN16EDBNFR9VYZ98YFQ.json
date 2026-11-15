@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "name": "overture",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6437",
+      "state": "WA",
+      "street": "Mansbridge Street",
+      "suburb": "Leinster"
+    },
     "fuel": true,
     "lga": {
       "name": "Shire of Leonora",
@@ -15,7 +31,9 @@
       "name": "Leinster",
       "osm_id": 317951908,
       "type": "town"
-    }
+    },
+    "phone": "+61 8 9022 7711",
+    "website": "https://find.shell.com/au/fuel/10123531-shell-leinster/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPXN16EDBNFR9VYZ98YFQ",
@@ -24,7 +42,7 @@
     "lat": -27.916402,
     "lon": 120.69935
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1047197560,
     "timestamp": "2022-04-01T16:22:51Z",
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,14 +1,34 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "204/208",
+      "postcode": "2049",
+      "state": "NSW",
+      "street": "New Canterbury Rd",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/117050245025427",
     "lga": {
       "name": "Inner West Council",
       "osm_id": 1251053
@@ -28,7 +48,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "New Canterbury Road"
-    }
+    },
+    "phone": "+61295641401",
+    "website": "http://www.budgetpetrol.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPARWVCYQYAEDEAQHZ54F",
@@ -37,7 +59,7 @@
     "lat": -33.897063,
     "lon": 151.14907
   },
-  "name": null,
+  "name": "Budget Petrol",
   "osm": {
     "id": 5849979899,
     "timestamp": "2025-09-23T10:58:34Z",
@@ -46,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

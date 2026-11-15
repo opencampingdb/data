@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "147",
+      "postcode": "2283",
+      "state": "NSW",
+      "street": "Cary St",
+      "suburb": "Toronto"
+    },
     "lga": {
       "name": "City of Lake Macquarie",
       "osm_id": 6191221
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Cary Street"
-    }
+    },
+    "phone": "0249592177",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-toronto"
   },
   "group": "services",
   "id": "ocdb_01M66JPVC1N3G6V5D5WA8GK525",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

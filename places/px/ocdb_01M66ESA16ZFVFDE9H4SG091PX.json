@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7315",
+      "street": "Leven Canyon Rd",
+      "suburb": "Nietta"
+    },
+    "facebook": "https://www.facebook.com/1191919527514696",
     "fee": false,
     "lga": {
       "name": "Central Coast",
@@ -15,7 +31,9 @@
       "name": "Wilmot",
       "osm_id": 2634782123,
       "type": "village"
-    }
+    },
+    "phone": "+61364252839",
+    "website": "http://www.coasttocanyon.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA16ZFVFDE9H4SG091PX",
@@ -33,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "5006",
+      "state": "SA",
+      "street": "O'Connell St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/108327878584552",
     "lga": {
       "name": "Adelaide City Council",
       "osm_id": 3093825
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "O'Connell Street"
-    }
+    },
+    "phone": "+61883187924",
+    "website": "https://blackrhinohotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVPM66PH0Q1TF0BJJ6NH",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

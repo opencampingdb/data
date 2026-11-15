@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 2",
+      "postcode": "3825",
+      "state": "VIC",
+      "street": "Walhalla Rd",
+      "suburb": "Walhalla"
+    },
+    "facebook": "https://www.facebook.com/320049484742294",
     "lga": {
       "name": "Shire of Baw Baw",
       "osm_id": 3335695
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Road"
-    }
+    },
+    "phone": "+61460516228",
+    "website": "http://abnreport.com.au/abnlookup/62776309261-jessie-louise-matthews"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYNS2VZA0CZ3QCNY3NRA",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

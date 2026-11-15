@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "200",
+      "postcode": "2320",
+      "state": "NSW",
+      "street": "Paterson Road",
+      "suburb": "Bolwarra Heights"
+    },
+    "facebook": "https://www.facebook.com/101894984740658",
     "lga": {
       "name": "Maitland City Council",
       "osm_id": 6189782
@@ -28,6 +44,7 @@
       "distance_m": 10,
       "name": "Paterson Road"
     },
+    "phone": "+61249301912",
     "website": "https://map.bp.com/en-AU/AU/gas-station/bolwarra-heights/bp-bolwarra-heights/8605"
   },
   "group": "services",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

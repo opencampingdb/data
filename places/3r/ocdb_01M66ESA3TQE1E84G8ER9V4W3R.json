@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "55",
+      "postcode": "2823",
+      "state": "NSW",
+      "street": "John St",
+      "suburb": "Trangie"
+    },
+    "facebook": "https://www.facebook.com/223374834417552",
     "lga": {
       "name": "Narromine Shire Council",
       "osm_id": 6271676
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Dandaloo Street"
-    }
+    },
+    "phone": "+61268887330",
+    "website": "http://www.tandaracaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA3TQE1E84G8ER9V4W3R",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

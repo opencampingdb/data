@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "pub": "osm"
+    "phone": "overture",
+    "pub": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "268",
+      "postcode": "2140",
+      "state": "NSW",
+      "street": "Parramatta Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/298339233576147",
     "lga": {
       "name": "Strathfield Municipal Council",
       "osm_id": 6210847
@@ -28,7 +46,9 @@
       "distance_m": 50,
       "name": "Parramatta Road"
     },
-    "pub": true
+    "phone": "+61297643500",
+    "pub": true,
+    "website": "http://www.marketshotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYSR7YCSHM610YDN9GCM",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,16 @@
 {
   "fact_dates": {
-    "pets": "2026-02-01T00:00:00Z"
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "pets": "2026-02-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -12,13 +18,21 @@
     "nearest_boat_ramp": "osm",
     "operator": "osm",
     "pets": "community_report",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2545",
+      "street": "Brou Lake Rd",
+      "suburb": "Bodalla"
+    },
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/193871184794290",
     "fee": true,
     "lga": {
       "name": "Eurobodalla Shire Council",
@@ -39,9 +53,11 @@
     },
     "operator": "NSW National Parks and Wildlife Service",
     "pets": "no",
+    "phone": "+61244760800",
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/brou-lake-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF56CJHADGK8M7JEZQSQ",
@@ -59,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

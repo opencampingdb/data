@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1349",
+      "postcode": "5091",
+      "state": "SA",
+      "street": "North East Road",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/817864774923581",
     "lga": {
       "name": "City of Tea Tree Gully",
       "osm_id": 9107506
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "North East Road"
-    }
+    },
+    "phone": "+61882642288",
+    "website": "http://www.thegullyphg.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ1WZM32CPH6FTE4G4P3",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

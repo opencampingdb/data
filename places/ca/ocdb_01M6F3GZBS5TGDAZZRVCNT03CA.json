@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "street": "First Street"
     },
+    "facebook": "https://www.facebook.com/455884594436325",
     "lga": {
       "name": "Etheridge Shire",
       "osm_id": 11676973
@@ -24,7 +33,9 @@
       "distance_m": 40,
       "name": "First Street"
     },
-    "opening_hours": "Mo-Su 08:00-21:00"
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "phone": "+61740625374",
+    "website": "http://www.visitforsayth.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZBS5TGDAZZRVCNT03CA",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "53",
+      "postcode": "6606",
+      "state": "WA",
+      "street": "Federation St",
+      "suburb": "Ballidu"
+    },
+    "facebook": "https://www.facebook.com/195486047157251",
     "lga": {
       "name": "Shire of Wongan-Ballidu",
       "osm_id": 11689780
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Northam Pithara Road"
-    }
+    },
+    "phone": "+61896741213",
+    "website": "https://www.marshallday.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYZV3XCH1QZNVKAYJ1QM",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

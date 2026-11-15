@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "5670",
+      "state": "SA",
+      "street": "Memorial Dr",
+      "suburb": "Elliston"
+    },
+    "facebook": "https://www.facebook.com/105141772933494",
     "lga": {
       "name": "District Council of Elliston",
       "osm_id": 7125331
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Flinders Highway"
-    }
+    },
+    "phone": "+61418982459",
+    "website": "http://elliston.com.au/business/bakery-9"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX6E8E19424GN1FVEBNS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "430",
+      "postcode": "2400",
+      "street": "Frome Street",
+      "suburb": "Moree"
+    },
     "lga": {
       "name": "Moree Plains Shire Council",
       "osm_id": 6088821
@@ -18,7 +32,8 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Frome Street"
-    }
+    },
+    "website": "https://www.taitford.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JQ0AHETGXCPSHH0XSZ5KW",
@@ -27,7 +42,7 @@
     "lat": -29.479947,
     "lon": 149.844995
   },
-  "name": null,
+  "name": "Tait Ford",
   "osm": {
     "id": 1567468837,
     "timestamp": "2026-10-11T22:37:48Z",
@@ -36,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59-61",
+      "postcode": "2460",
+      "state": "NSW",
+      "street": "Fitzroy St",
+      "suburb": "Grafton"
+    },
+    "facebook": "https://www.facebook.com/562665457501560",
     "lga": {
       "name": "Clarence Valley Council",
       "osm_id": 6143220
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Fitzroy Street"
-    }
+    },
+    "phone": "+61266426122",
+    "website": "http://abbeymotorinn.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ71REHWFYM6EW7039E7",
@@ -35,7 +57,7 @@
     "lat": -29.693089,
     "lon": 152.93545
   },
-  "name": null,
+  "name": "Abbey Motor Inn",
   "osm": {
     "id": 567010259,
     "timestamp": "2026-07-06T08:58:42Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

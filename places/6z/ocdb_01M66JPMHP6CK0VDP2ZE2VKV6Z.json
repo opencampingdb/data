@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "6112",
+      "state": "WA",
+      "street": "Erade Drive",
+      "suburb": "Piara Waters"
+    },
     "lga": {
       "name": "City of Armadale",
       "osm_id": 11689426
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Erade Drive"
-    }
+    },
+    "phone": "+61 477 111 940",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/piara-waters/bp-piara-waters/1110"
   },
   "group": "services",
   "id": "ocdb_01M66JPMHP6CK0VDP2ZE2VKV6Z",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

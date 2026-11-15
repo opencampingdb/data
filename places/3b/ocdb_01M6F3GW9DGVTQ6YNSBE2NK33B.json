@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5000",
+      "state": "SA",
+      "street": "Festival Dr",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/319967888751225",
     "lga": {
       "name": "Adelaide City Council",
       "osm_id": 3093825
@@ -24,7 +41,9 @@
       "distance_m": 220,
       "name": "North Terrace"
     },
-    "opening_hours": "We 15:00-23:00; Th-Su 11:30+"
+    "opening_hours": "We 15:00-23:00; Th-Su 11:30+",
+    "phone": "+61883315215",
+    "website": "http://maltshoveltaphouse.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW9DGVTQ6YNSBE2NK33B",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

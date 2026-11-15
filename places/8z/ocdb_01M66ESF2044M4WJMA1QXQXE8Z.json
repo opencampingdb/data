@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "74",
+      "postcode": "4703",
+      "state": "QLD",
+      "street": "Whitman St",
+      "suburb": "Yeppoon"
+    },
+    "facebook": "https://www.facebook.com/127173488148261",
     "lga": {
       "name": "Livingstone Shire",
       "osm_id": 11677520
@@ -28,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "John Street"
-    }
+    },
+    "phone": "+61749393140",
+    "website": "http://www.bluedolphincaravanpk.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2044M4WJMA1QXQXE8Z",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

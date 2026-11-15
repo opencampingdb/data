@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "62-70",
+      "postcode": "2066",
+      "state": "NSW",
+      "street": "Epping Rd",
+      "suburb": "Sydney"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/209581593178137",
     "lga": {
       "name": "Lane Cove Municipal Council",
       "osm_id": 6275980
@@ -31,6 +47,7 @@
       "distance_m": 20,
       "name": "Epping Road"
     },
+    "phone": "+61294271091",
     "website": "https://map.bp.com/en-AU/AU/gas-station/lane-cove/bp-lane-cove/2212"
   },
   "group": "services",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

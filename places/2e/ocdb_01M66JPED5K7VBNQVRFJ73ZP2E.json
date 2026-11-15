@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "612",
       "street": "Neerim Road"
     },
+    "facebook": "https://www.facebook.com/1059141207535200",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61395691119",
+    "website": "https://www.ultratune.com.au/location/chadstone/"
   },
   "group": "services",
   "id": "ocdb_01M66JPED5K7VBNQVRFJ73ZP2E",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44",
+      "postcode": "2150",
+      "state": "NSW",
+      "street": "Great Western Hwy",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/123701801034176",
     "lga": {
       "name": "City of Parramatta Council",
       "osm_id": 6217262
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Great Western Highway"
-    }
+    },
+    "phone": "+61296357266",
+    "website": "http://www.citymotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1KXQX9DCDG491D20DM",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

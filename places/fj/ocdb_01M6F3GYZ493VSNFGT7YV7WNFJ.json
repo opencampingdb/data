@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Hastings River Drive",
       "suburb": "Port Macquarie"
     },
+    "facebook": "https://www.facebook.com/149172501785934",
     "lga": {
       "name": "Port Macquarie-Hastings Council",
       "osm_id": 6180709
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hastings River Drive"
-    }
+    },
+    "phone": "+61265835222",
+    "website": "http://www.portocallmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYZ493VSNFGT7YV7WNFJ",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

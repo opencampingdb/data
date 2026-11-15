@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6947",
+      "postcode": "6214",
+      "state": "WA",
+      "street": "S Western Highway",
+      "suburb": "COOLUP"
+    },
     "lga": {
       "name": "Shire of Murray",
       "osm_id": 11690485
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "South Western Highway"
-    }
+    },
+    "phone": "0895303293"
   },
   "group": "services",
   "id": "ocdb_01M66JP8T83WRHWJBYNXF8944S",
@@ -27,7 +43,7 @@
     "lat": -32.727019,
     "lon": 115.881747
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 4756706428,
     "timestamp": "2017-03-27T17:00:03Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

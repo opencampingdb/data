@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Vasto Place",
       "suburb": "Balcatta"
     },
+    "facebook": "https://www.facebook.com/1870303116591577",
     "lga": {
       "name": "City of Stirling",
       "osm_id": 11689256
@@ -28,7 +37,9 @@
       "distance_m": 120,
       "name": "Balcatta Road"
     },
-    "operator": "Northern Districts Model Engineering Society (Perth) Inc"
+    "operator": "Northern Districts Model Engineering Society (Perth) Inc",
+    "phone": "+61862619719",
+    "website": "https://www.ndmes.org.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPNH18ETKE1BR6JD6BVYX",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

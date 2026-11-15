@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "name": "overture",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "829",
+      "postcode": "2785",
+      "state": "NSW",
+      "street": "Megalong Rd",
+      "suburb": "Megalong Valley"
+    },
     "lga": {
       "name": "Blue Mountains City Council",
       "osm_id": 6299568
@@ -13,7 +28,8 @@
       "name": "Medlow Bath",
       "osm_id": 117041024,
       "type": "village"
-    }
+    },
+    "phone": "+61247879127"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZCVEA9ME306HTPAP72R",
@@ -22,7 +38,7 @@
     "lat": -33.698129,
     "lon": 150.25591
   },
-  "name": null,
+  "name": "Werriberri",
   "osm": {
     "id": 766631500,
     "timestamp": "2020-01-26T09:59:49Z",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

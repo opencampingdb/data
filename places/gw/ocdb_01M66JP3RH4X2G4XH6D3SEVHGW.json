@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "967",
+      "postcode": "7170",
+      "state": "TAS",
+      "street": "Cambridge Rd",
+      "suburb": "Cambridge"
+    },
+    "facebook": "https://www.facebook.com/638703793136233",
     "lga": {
       "name": "City of Clarence",
       "osm_id": 10625764
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Cambridge Road"
-    }
+    },
+    "phone": "+61362485451",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/cambridge/bp-cambridge/7045"
   },
   "group": "services",
   "id": "ocdb_01M66JP3RH4X2G4XH6D3SEVHGW",
@@ -27,7 +49,7 @@
     "lat": -42.836964,
     "lon": 147.440709
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 2190905070,
     "timestamp": "2013-03-08T08:43:22Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

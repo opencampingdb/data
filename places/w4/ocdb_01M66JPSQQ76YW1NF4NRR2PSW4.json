@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "100",
+      "postcode": "3021",
+      "state": "VIC",
+      "street": "Sunshine Avenue",
+      "suburb": "Kealba"
+    },
     "lga": {
       "name": "City of Brimbank",
       "osm_id": 3327554
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Sunshine Avenue"
-    }
+    },
+    "phone": "+61 3 9454 9708",
+    "website": "https://find.shell.com/au/fuel/10111324-shell-reddy-express-kealba/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPSQQ76YW1NF4NRR2PSW4",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

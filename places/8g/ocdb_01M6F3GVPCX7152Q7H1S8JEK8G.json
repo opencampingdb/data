@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "56",
+      "postcode": "2628",
+      "state": "NSW",
+      "street": "Oliver Street",
+      "suburb": "Berridale"
+    },
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -13,7 +28,9 @@
       "name": "Berridale",
       "osm_id": 332810669,
       "type": "village"
-    }
+    },
+    "phone": "0428587440",
+    "website": "http://sierravillalodge.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVPCX7152Q7H1S8JEK8G",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

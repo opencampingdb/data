@@ -1,16 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "124",
       "street": "High Street"
     },
+    "facebook": "https://www.facebook.com/105063585776779",
     "fuel": true,
     "lga": {
       "name": "Shire of Mount Alexander",
@@ -25,7 +32,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "High Street"
-    }
+    },
+    "phone": "+61354232805"
   },
   "group": "services",
   "id": "ocdb_01M66JQ099KRQNB5NWVFCYQG2T",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

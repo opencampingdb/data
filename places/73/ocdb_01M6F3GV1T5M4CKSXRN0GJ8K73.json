@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "221",
+      "postcode": "5049",
+      "state": "SA",
+      "street": "Esplanade",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/121657792093",
     "lga": {
       "name": "City of Holdfast Bay",
       "osm_id": 9102763
@@ -23,7 +41,9 @@
     "nearest_boat_ramp": {
       "distance_m": 320
     },
-    "operator": "ALH Hotels"
+    "operator": "ALH Hotels",
+    "phone": "+61882967466",
+    "website": "https://www.seacliffbeachhotel.com.au/book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV1T5M4CKSXRN0GJ8K73",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1363",
+      "postcode": "2785",
+      "state": "NSW",
+      "street": "Megalong Rd",
+      "suburb": "Megalong Valley"
+    },
+    "facebook": "https://www.facebook.com/166623467256003",
     "lga": {
       "name": "Blue Mountains City Council",
       "osm_id": 6299568
@@ -17,9 +35,11 @@
       "osm_id": 20968413,
       "type": "town"
     },
+    "phone": "+61247805000",
     "showers": false,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "http://bmcc.nsw.gov.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA2FVSSN6DDQMDWCSPDJ",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

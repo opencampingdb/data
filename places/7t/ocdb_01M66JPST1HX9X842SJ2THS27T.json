@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "Burwood Highway",
       "suburb": "Ferntree Gully"
     },
+    "facebook": "https://www.facebook.com/1143252155720034",
     "lga": {
       "name": "City of Knox",
       "osm_id": 3333971
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Burwood Highway"
-    }
+    },
+    "phone": "+61387995088"
   },
   "group": "services",
   "id": "ocdb_01M66JPST1HX9X842SJ2THS27T",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "postcode": "6027",
+      "state": "WA",
+      "street": "Reid Promenade",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/1451354024993289",
     "lga": {
       "name": "City of Joondalup",
       "osm_id": 11689618
@@ -21,7 +39,9 @@
     },
     "nearest_major_road": {
       "distance_m": 60
-    }
+    },
+    "phone": "+61861496655",
+    "website": "http://www.varsity.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV7VD5T74MG2KP7YFGKQ",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

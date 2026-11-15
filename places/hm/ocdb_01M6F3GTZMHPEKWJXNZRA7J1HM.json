@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5-9",
+      "postcode": "2620",
+      "state": "NSW",
+      "street": "High Street",
+      "suburb": "Queanbeyan"
+    },
     "lga": {
       "name": "Queanbeyan-Palerang Regional Council",
       "osm_id": 6137309
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Bungendore Road"
-    }
+    },
+    "phone": "(02) 6297 4711",
+    "website": "http://www.aussiesettler.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GTZMHPEKWJXNZRA7J1HM",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

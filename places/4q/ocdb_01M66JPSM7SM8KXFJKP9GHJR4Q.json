@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "134",
+      "postcode": "2336",
+      "state": "NSW",
+      "street": "Macqueen St",
+      "suburb": "Aberdeen"
+    },
+    "facebook": "https://www.facebook.com/106144514233304",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -27,7 +43,8 @@
       "distance_m": 30,
       "name": "Macqueen Street"
     },
-    "operator": "Metro"
+    "operator": "Metro",
+    "phone": "+61255131796"
   },
   "group": "services",
   "id": "ocdb_01M66JPSM7SM8KXFJKP9GHJR4Q",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

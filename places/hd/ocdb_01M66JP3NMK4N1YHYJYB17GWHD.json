@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "3802",
+      "state": "VIC",
+      "street": "Heatherton Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/313048582206672",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Heatherton Road"
-    }
+    },
+    "phone": "+61397002655",
+    "website": "http://www.sonnytyrecentre.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP3NMK4N1YHYJYB17GWHD",
@@ -31,7 +53,7 @@
     "lat": -37.973653,
     "lon": 145.242906
   },
-  "name": null,
+  "name": "Sonny Tyre & Autocare",
   "osm": {
     "id": 2149821436,
     "timestamp": "2015-01-16T03:35:29Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

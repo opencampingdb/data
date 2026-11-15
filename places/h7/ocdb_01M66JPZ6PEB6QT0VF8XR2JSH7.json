@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "175",
+      "postcode": "2088",
+      "state": "NSW",
+      "street": "Ourimbah Road",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/219895152121401",
     "lga": {
       "name": "Mosman Municipal Council",
       "osm_id": 6276645
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Ourimbah Road"
-    }
+    },
+    "phone": "+61299533760",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/mosman/bp-mosman-ourimbah-rd/926"
   },
   "group": "services",
   "id": "ocdb_01M66JPZ6PEB6QT0VF8XR2JSH7",
@@ -35,7 +57,7 @@
     "lat": -33.821064,
     "lon": 151.233291
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 1321552053,
     "timestamp": "2026-06-20T07:24:13Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

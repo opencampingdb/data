@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "30",
+      "postcode": "6020",
+      "state": "WA",
+      "street": "Elvire St",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/112979878826572",
     "lga": {
       "name": "City of Stirling",
       "osm_id": 11689256
@@ -26,7 +46,9 @@
     "nearest_major_road": {
       "distance_m": 280,
       "name": "West Coast Drive"
-    }
+    },
+    "phone": "+61892058555",
+    "website": "https://www.stirling.wa.gov.au/mountfloramuseum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GV0FA385Q4S8PW309WDK",
@@ -35,7 +57,7 @@
     "lat": -31.852885,
     "lon": 115.755448
   },
-  "name": null,
+  "name": "Mount Flora Regional Museum",
   "osm": {
     "id": 277751613,
     "timestamp": "2008-12-20T04:06:44Z",
@@ -44,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

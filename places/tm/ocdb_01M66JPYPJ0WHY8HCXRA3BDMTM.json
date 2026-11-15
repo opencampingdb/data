@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "250",
+      "postcode": "2260",
+      "state": "NSW",
+      "street": "Terrigal Drive",
+      "suburb": "Terrigal"
+    },
     "fuel": true,
     "lga": {
       "name": "Central Coast Council",
@@ -30,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Terrigal Drive"
-    }
+    },
+    "phone": "+61 2 4398 9056",
+    "website": "https://find.shell.com/au/fuel/10110974-shell-reddy-express-terrigal/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPYPJ0WHY8HCXRA3BDMTM",
@@ -39,7 +58,7 @@
     "lat": -33.440198,
     "lon": 151.433813
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1224955466,
     "timestamp": "2023-11-18T09:37:18Z",
@@ -48,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "x": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "website": "osm"
+    "phone": "overture",
+    "website": "osm",
+    "x": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2794",
+      "state": "NSW",
+      "street": "Cowra NSW 2794",
+      "suburb": "Cowra"
+    },
     "lga": {
       "name": "Cowra Shire Council",
       "osm_id": 6257796
@@ -24,7 +38,9 @@
       "distance_m": 20,
       "name": "Grenfell Road"
     },
-    "website": "http://www.cowracountrygardensmotel.com.au"
+    "phone": "(02) 6341 1100",
+    "website": "http://www.cowracountrygardensmotel.com.au",
+    "x": "https://x.com/cg_gardens"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVRJ4JFB73B5BPAR6QPM",
@@ -42,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

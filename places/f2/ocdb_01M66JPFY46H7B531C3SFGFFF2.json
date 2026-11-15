@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "3185",
+      "state": "VIC",
+      "street": "Glen Eira Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/659957497199607",
     "lga": {
       "name": "City of Port Phillip",
       "osm_id": 2404889
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Glen Eira Road"
-    }
+    },
+    "phone": "+61494178514",
+    "website": "http://freshwavelaundry.com.au/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPFY46H7B531C3SFGFFF2",
@@ -36,7 +58,7 @@
     "lat": -37.876542,
     "lon": 144.995913
   },
-  "name": null,
+  "name": "Loads of Laundry",
   "osm": {
     "id": 9679144735,
     "timestamp": "2025-06-03T11:22:29Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

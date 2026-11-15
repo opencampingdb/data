@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2609",
+      "postcode": "3444",
+      "state": "VIC",
+      "street": "Kyneton-Heathcote Road",
+      "suburb": "Redesdale"
+    },
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -18,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Kyneton-Redesdale Road"
-    }
+    },
+    "phone": "0354253154"
   },
   "group": "services",
   "id": "ocdb_01M66JPSPHRETBBA03SY5YMFPA",
@@ -27,7 +43,7 @@
     "lat": -37.024645,
     "lon": 144.530907
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 303610078,
     "timestamp": "2014-09-16T12:40:45Z",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

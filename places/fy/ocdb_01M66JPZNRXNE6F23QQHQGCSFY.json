@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "40",
+      "postcode": "5009",
+      "state": "SA",
+      "street": "Pope St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/719037314802874",
     "lga": {
       "name": "City of Charles Sturt",
       "osm_id": 9108013
@@ -25,7 +45,9 @@
     },
     "nearest_major_road": {
       "distance_m": 340
-    }
+    },
+    "phone": "+61404595488",
+    "website": "http://www.lnnauto.com/"
   },
   "group": "services",
   "id": "ocdb_01M66JPZNRXNE6F23QQHQGCSFY",
@@ -34,7 +56,7 @@
     "lat": -34.891332,
     "lon": 138.544781
   },
-  "name": null,
+  "name": "LNN Auto",
   "osm": {
     "id": 1426194280,
     "timestamp": "2026-03-08T11:24:39Z",
@@ -43,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

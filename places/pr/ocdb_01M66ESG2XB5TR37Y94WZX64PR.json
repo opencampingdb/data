@@ -1,9 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2354",
+      "state": "NSW",
+      "street": "Mooraback Rest Area Road",
+      "suburb": "Yarrowitch"
+    },
     "lga": {
       "name": "Walcha Council",
       "osm_id": 6180603
@@ -13,7 +27,9 @@
       "name": "Kookaburra",
       "osm_id": 115070927,
       "type": "village"
-    }
+    },
+    "phone": "0267774700",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mooraback-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG2XB5TR37Y94WZX64PR",
@@ -31,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

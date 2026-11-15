@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "2721",
+      "state": "NSW",
+      "street": "Second St",
+      "suburb": "Quandialla"
+    },
+    "facebook": "https://www.facebook.com/194927487217402",
     "lga": {
       "name": "Weddin Shire Council",
       "osm_id": 6257772
@@ -13,7 +31,9 @@
       "name": "Quandialla",
       "osm_id": 113728580,
       "type": "village"
-    }
+    },
+    "phone": "+61263471253",
+    "website": "http://quandialla.com.au/accomodation"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVNTE95CXMY82RQVHNJG",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "2806",
+      "state": "NSW",
+      "street": "Pye St",
+      "suburb": "Eugowra"
+    },
+    "facebook": "https://www.facebook.com/752153988519434",
     "lga": {
       "name": "Cabonne Council",
       "osm_id": 6268804
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Pye Street"
-    }
+    },
+    "phone": "+61268592218",
+    "website": "http://www.eugowra.aus.net/eugowra-historical-museum-bushranger-centre/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW373GPQFG46MSYKP8PY",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

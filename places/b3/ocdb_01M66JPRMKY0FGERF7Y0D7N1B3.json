@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6056",
+      "state": "WA",
+      "street": "LOT46 Great Northern Highway",
+      "suburb": "Middle Swan"
+    },
     "lga": {
       "name": "City of Swan",
       "osm_id": 11689336
@@ -22,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Great Northern Highway"
-    }
+    },
+    "phone": "+61 8 6155 3833",
+    "website": "https://find.shell.com/au/fuel/10111341-shell-reddy-express-middle-swan/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPRMKY0FGERF7Y0D7N1B3",
@@ -40,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

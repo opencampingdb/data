@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "2703",
+      "state": "NSW",
+      "street": "Binya St",
+      "suburb": "Yanco"
+    },
+    "facebook": "https://www.facebook.com/1159560257471698",
     "fee": true,
     "lga": {
       "name": "Leeton Shire Council",
@@ -22,6 +38,7 @@
       "distance_m": 270,
       "name": "Main Avenue"
     },
+    "phone": "+61484761576",
     "website": "https://yphm.org.au/"
   },
   "group": "attraction",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

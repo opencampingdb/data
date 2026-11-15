@@ -1,15 +1,30 @@
 {
   "fact_dates": {
-    "dump_station": "2026-11-04T13:32:35Z"
+    "address": "2026-11-15T00:00:00Z",
+    "dump_station": "2026-11-04T13:32:35Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "contributed",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5422",
+      "state": "SA",
+      "street": "Corner of Oxford Terrace and Torrens Road",
+      "suburb": "Riverton"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/1102706442935638",
     "lga": {
       "name": "Clare and Gilbert Valleys Council",
       "osm_id": 9108116
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Barrier Highway"
-    }
+    },
+    "phone": "+61888472419",
+    "website": "http://www.rivertoncaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFH087AJB84XSW61VXE6",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

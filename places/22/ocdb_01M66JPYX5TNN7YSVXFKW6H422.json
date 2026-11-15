@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "24",
+      "postcode": "6317",
+      "state": "WA",
+      "street": "Cornwall St",
+      "suburb": "Katanning"
+    },
+    "facebook": "https://www.facebook.com/191868441435397",
     "lga": {
       "name": "Shire of Katanning",
       "osm_id": 11688904
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Drove Street"
-    }
+    },
+    "phone": "+61865007858",
+    "website": "https://find.shell.com/au/fuel/AU_S121-shell-katanning"
   },
   "group": "services",
   "id": "ocdb_01M66JPYX5TNN7YSVXFKW6H422",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

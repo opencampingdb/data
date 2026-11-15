@@ -1,6 +1,12 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -13,7 +19,13 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "state": "WA",
+      "street": "Cosy Corner Rd",
+      "suburb": "Albany"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/460706141120611",
     "fee": true,
     "lga": {
       "name": "City of Albany",
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

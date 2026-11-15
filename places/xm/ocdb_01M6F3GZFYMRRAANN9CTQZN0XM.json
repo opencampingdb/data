@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7547",
+      "postcode": "4355",
+      "state": "QLD",
+      "street": "New England Hwy",
+      "suburb": "Crows Nest"
+    },
+    "facebook": "https://www.facebook.com/123085351089879",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "New England Highway"
-    }
+    },
+    "phone": "+61746981399",
+    "website": "http://www.crowsnestmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZFYMRRAANN9CTQZN0XM",
@@ -27,7 +49,7 @@
     "lat": -27.272882,
     "lon": 152.056837
   },
-  "name": null,
+  "name": "Crows Nest Motel",
   "osm": {
     "id": 873312417,
     "timestamp": "2025-05-21T11:22:03Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

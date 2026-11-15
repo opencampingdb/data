@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4613",
+      "postcode": "2800",
+      "state": "NSW",
+      "street": "Mitchell Hwy",
+      "suburb": "Lucknow"
+    },
+    "facebook": "https://www.facebook.com/152497353609686",
     "lga": {
       "name": "Orange City Council",
       "osm_id": 6427044
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mitchell Highway"
-    }
+    },
+    "phone": "+61263602321"
   },
   "group": "services",
   "id": "ocdb_01M66JP48Y484M99T9TJ0AWQVR",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

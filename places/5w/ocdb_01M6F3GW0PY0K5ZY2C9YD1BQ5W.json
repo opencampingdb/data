@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "7331",
+      "state": "TAS",
+      "street": "Church street",
+      "suburb": "Stanley"
+    },
     "lga": {
       "name": "Circular Head",
       "osm_id": 10593534
@@ -28,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Main Road"
-    }
+    },
+    "phone": "0400 340 074",
+    "website": "http://touchwoodstanley.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW0PY0K5ZY2C9YD1BQ5W",
@@ -46,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

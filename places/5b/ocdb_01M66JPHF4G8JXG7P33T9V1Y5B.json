@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "30",
+      "postcode": "6308",
+      "state": "WA",
+      "street": "Parade St",
+      "suburb": "Pingelly"
+    },
+    "facebook": "https://www.facebook.com/578702382284845",
     "lga": {
       "name": "Shire of Pingelly",
       "osm_id": 11689064
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Parade Street"
-    }
+    },
+    "phone": "+61898870077"
   },
   "group": "services",
   "id": "ocdb_01M66JPHF4G8JXG7P33T9V1Y5B",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

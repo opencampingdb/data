@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "77",
+      "postcode": "4405",
+      "state": "QLD",
+      "street": "Drayton St",
+      "suburb": "Dalby"
+    },
+    "facebook": "https://www.facebook.com/849110825203651",
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Drayton Street"
-    }
+    },
+    "phone": "+61746623303",
+    "website": "https://www.criterionhoteldalby.com.au/wp-content/uploads/2026/04/CRIDAB_MainMenu_FEB26_WEB.pdf"
   },
   "group": "services",
   "id": "ocdb_01M6F3GTWQ5V2X1X8DP57C2ZYW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

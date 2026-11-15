@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "65",
+      "postcode": "4490",
+      "state": "QLD",
+      "street": "Watson St",
+      "suburb": "Cunnamulla"
+    },
+    "facebook": "https://www.facebook.com/414536608688894",
     "lga": {
       "name": "Paroo Shire",
       "osm_id": 11674869
@@ -13,7 +31,9 @@
       "name": "Cunnamulla",
       "osm_id": 246087334,
       "type": "town"
-    }
+    },
+    "phone": "+61746551421",
+    "website": "http://www.cunnamullapark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEWWRH6SN7EEDGN0GHQC",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

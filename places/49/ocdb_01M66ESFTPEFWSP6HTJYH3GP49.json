@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "suburb": "Port Wakefield"
     },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/106339488508482",
     "lga": {
       "name": "Wakefield Regional Council",
       "osm_id": 9108133
@@ -30,7 +39,9 @@
     "nearest_boat_ramp": {
       "distance_m": 530
     },
-    "power": true
+    "phone": "+61888620800",
+    "power": true,
+    "website": "http://www.wakefieldrc.sa.gov.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFTPEFWSP6HTJYH3GP49",
@@ -48,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

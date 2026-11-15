@@ -1,5 +1,13 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -7,10 +15,19 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7320",
+      "state": "TAS",
+      "street": "Cooee Point Rd",
+      "suburb": "Burnie"
+    },
+    "facebook": "https://www.facebook.com/1084633928246799",
     "fee": false,
     "lga": {
       "name": "City of Burnie",
@@ -33,8 +50,10 @@
       "name": "Bass Highway"
     },
     "operator": "Burnie City Council",
+    "phone": "+61364305700",
     "power": false,
-    "tents": false
+    "tents": false,
+    "website": "https://www.burnie.net/Explore/Parks-and-Reserves/Cooee-Point-Reserve"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF1R6HMB1QRYZYZ65KJK",
@@ -52,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

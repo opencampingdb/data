@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "528",
       "street": "Northbourne Avenue"
     },
+    "facebook": "https://www.facebook.com/156977524320565",
     "locality": {
       "distance_m": 2140,
       "name": "North Canberra",
@@ -22,7 +31,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Northbourne Avenue"
-    }
+    },
+    "phone": "+61262572599",
+    "website": "http://www.northbournelodge.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H092NM856TN89SFRAH9H",
@@ -40,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

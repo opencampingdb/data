@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6041",
+      "state": "WA",
+      "street": "Dewar St",
+      "suburb": "Guilderton"
+    },
+    "facebook": "https://www.facebook.com/102536631603593",
     "lga": {
       "name": "Shire of Gingin",
       "osm_id": 11689578
@@ -21,7 +41,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 280
-    }
+    },
+    "phone": "+61895771021",
+    "website": "http://www.guildertoncaravanpark.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEVM6BKRQCRNNJJVKBV0",
@@ -30,7 +52,7 @@
     "lat": -31.350307,
     "lon": 115.500347
   },
-  "name": null,
+  "name": "Guilderton Holiday Park",
   "osm": {
     "id": 185508006,
     "timestamp": "2012-10-12T18:43:15Z",
@@ -39,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

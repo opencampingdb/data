@@ -1,8 +1,14 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
@@ -16,9 +22,17 @@
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "19",
+      "postcode": "2355",
+      "state": "NSW",
+      "street": "Havannah St",
+      "suburb": "Bendemeer"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/248881515458605",
     "fee": true,
     "kitchen": false,
     "lga": {
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

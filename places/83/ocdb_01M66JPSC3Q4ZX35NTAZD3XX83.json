@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "36-38",
+      "postcode": "4350",
+      "state": "QLD",
+      "street": "Brisbane St",
+      "suburb": "Toowoomba"
+    },
+    "facebook": "https://www.facebook.com/1648501455413107",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Brisbane Street"
-    }
+    },
+    "phone": "+61746301946"
   },
   "group": "services",
   "id": "ocdb_01M66JPSC3Q4ZX35NTAZD3XX83",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

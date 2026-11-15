@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "Murdochs Rd",
+      "suburb": "Moore Park Beach"
+    },
+    "facebook": "https://www.facebook.com/309948332451742",
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -17,7 +35,9 @@
     },
     "nearest_beach": {
       "distance_m": 860
-    }
+    },
+    "phone": "+61741548519",
+    "website": "http://www.mooreparkbeachtavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYXZEJYN44MK2JEPYN69",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

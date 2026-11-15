@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2825",
+      "state": "NSW",
+      "street": "Railway Station",
+      "suburb": "Nyngan"
+    },
+    "facebook": "https://www.facebook.com/244279929239738",
     "lga": {
       "name": "Bogan Shire Council",
       "osm_id": 6086047
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Nymagee Street"
-    }
+    },
+    "phone": "+61268321056",
+    "website": "http://www.bogan.nsw.gov.au/services-facilities/museums"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYZWE8BS4WZMPBDBWFG8",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

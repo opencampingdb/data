@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "402",
+      "postcode": "3195",
+      "state": "VIC",
+      "street": "Lower Dandenong Road",
+      "suburb": "Braeside"
+    },
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lower Dandenong Road"
-    }
+    },
+    "phone": "0387971409",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/astron-braeside"
   },
   "group": "services",
   "id": "ocdb_01M66JNYKB1TRJ7XHQ9NK64JH9",
@@ -36,7 +55,7 @@
     "lat": -37.987402,
     "lon": 145.113896
   },
-  "name": null,
+  "name": "Astron Braeside",
   "osm": {
     "id": 448782116,
     "timestamp": "2012-07-20T00:47:31Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

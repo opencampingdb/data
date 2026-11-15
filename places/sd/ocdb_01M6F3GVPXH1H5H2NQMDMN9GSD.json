@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "0845",
+      "state": "NT",
+      "street": "Nurndina St",
+      "suburb": "Batchelor"
+    },
     "lga": {
       "name": "Coomalie Shire",
       "osm_id": 9045376
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 360,
       "name": "Rum Jungle Road"
-    }
+    },
+    "phone": "(08) 8976 0811",
+    "website": "http://rumjungletavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVPXH1H5H2NQMDMN9GSD",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

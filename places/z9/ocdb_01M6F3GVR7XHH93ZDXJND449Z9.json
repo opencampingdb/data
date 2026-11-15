@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "118",
+      "postcode": "2642",
+      "state": "NSW",
+      "street": "Urana St",
+      "suburb": "Jindera"
+    },
+    "facebook": "https://www.facebook.com/176910103032376",
     "fee": true,
     "lga": {
       "name": "Greater Hume Shire Council",
@@ -20,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Urana Street"
-    }
+    },
+    "phone": "+61260263622",
+    "website": "http://www.jinderamuseum.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVR7XHH93ZDXJND449Z9",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

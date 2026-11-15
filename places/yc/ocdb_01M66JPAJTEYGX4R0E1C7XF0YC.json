@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "5556",
+      "state": "SA",
+      "street": "Victoria Street",
+      "suburb": "Wallaroo"
+    },
     "lga": {
       "name": "Copper Coast Council",
       "osm_id": 9108139
@@ -26,7 +41,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Victoria Street"
-    }
+    },
+    "phone": "0888233691"
   },
   "group": "services",
   "id": "ocdb_01M66JPAJTEYGX4R0E1C7XF0YC",
@@ -35,7 +51,7 @@
     "lat": -33.934579,
     "lon": 137.631978
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 5733668857,
     "timestamp": "2026-02-02T07:52:06Z",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

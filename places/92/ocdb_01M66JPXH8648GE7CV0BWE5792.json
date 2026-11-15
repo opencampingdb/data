@@ -1,10 +1,18 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Railway Street",
       "suburb": "Mount Druitt"
     },
+    "facebook": "https://www.facebook.com/111437118918107",
     "lga": {
       "name": "Blacktown City Council",
       "osm_id": 6217858
@@ -28,7 +37,9 @@
       "distance_m": 140,
       "name": "Railway Street"
     },
-    "operator": "NSW Health - Western Sydney Local Health District"
+    "operator": "NSW Health - Western Sydney Local Health District",
+    "phone": "+61298811555",
+    "website": "http://www.wsahs.nsw.gov.au/mtdruitt/index.htm"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPXH8648GE7CV0BWE5792",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "664",
+      "postcode": "6258",
+      "state": "WA",
+      "street": "Ralston Rd",
+      "suburb": "Dixvale"
+    },
+    "facebook": "https://www.facebook.com/252399458441195",
     "lga": {
       "name": "Shire of Manjimup",
       "osm_id": 11690439
@@ -13,7 +31,9 @@
       "name": "Manjimup",
       "osm_id": 82404635,
       "type": "town"
-    }
+    },
+    "phone": "+61455909002",
+    "website": "http://www.normaleehostel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZ0XREFFG3VZJ1PG5E7",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

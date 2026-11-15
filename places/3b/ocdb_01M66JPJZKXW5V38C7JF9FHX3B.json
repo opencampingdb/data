@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Yabba Road",
       "suburb": "Imbil"
     },
+    "facebook": "https://www.facebook.com/126568027927710",
     "lga": {
       "name": "Gympie Regional",
       "osm_id": 11675079
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Yabba Road"
-    }
+    },
+    "phone": "+61413831346",
+    "website": "http://www.puzzlesonyabba.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPJZKXW5V38C7JF9FHX3B",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

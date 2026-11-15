@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1106",
+      "postcode": "2790",
+      "state": "NSW",
+      "street": "Great Western Hwy",
+      "suburb": "Lithgow"
+    },
+    "facebook": "https://www.facebook.com/262394234503211",
     "lga": {
       "name": "Lithgow City Council",
       "osm_id": 6299566
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Great Western Highway"
-    }
+    },
+    "phone": "+61263523442",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/lithgow/bp-lithgow-gt-western-hwy/1245"
   },
   "group": "services",
   "id": "ocdb_01M66JPFDZYVVEMKV1K4J1P3A0",
@@ -27,7 +49,7 @@
     "lat": -33.484248,
     "lon": 150.135107
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 9446172594,
     "timestamp": "2025-01-07T21:28:46Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

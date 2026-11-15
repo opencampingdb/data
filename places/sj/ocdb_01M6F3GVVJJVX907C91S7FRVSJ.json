@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "16",
+      "postcode": "4677",
+      "state": "QLD",
+      "street": "Roe St",
+      "suburb": "Miriam Vale"
+    },
+    "facebook": "https://www.facebook.com/157614144262039",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Roe Street"
-    }
+    },
+    "phone": "+61749745233",
+    "website": "http://www.miriamvalemotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVVJJVX907C91S7FRVSJ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

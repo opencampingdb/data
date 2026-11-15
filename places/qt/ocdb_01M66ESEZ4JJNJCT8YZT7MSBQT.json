@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "55",
+      "postcode": "3888",
+      "street": "Burbang Rd"
+    },
+    "facebook": "https://www.facebook.com/290624987628597",
     "lga": {
       "name": "Shire of East Gippsland",
       "osm_id": 3359756
@@ -22,7 +38,9 @@
     "nearest_boat_ramp": {
       "distance_m": 3630,
       "name": "West Cape Boat Ramp"
-    }
+    },
+    "phone": "+61351548219",
+    "website": "http://www.junglebeachcp.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZ4JJNJCT8YZT7MSBQT",
@@ -40,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44",
+      "postcode": "2582",
+      "state": "NSW",
+      "street": "Comur St",
+      "suburb": "Yass"
+    },
     "lga": {
       "name": "Yass Valley Council",
       "osm_id": 6247446
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Comur Street"
-    }
+    },
+    "phone": "(02) 6226 2622",
+    "website": "https://www.mobil.com.au/en-AU/Find-Station/?longitude1=-180&longitude2=180&latitude1=-86.87695957512986&latitude2=80.92361304263699"
   },
   "group": "services",
   "id": "ocdb_01M66JPZR36YHFDAE15JG6DQEZ",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

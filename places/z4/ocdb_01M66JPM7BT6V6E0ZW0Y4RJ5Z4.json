@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -11,6 +19,7 @@
       "street": "Centre Road",
       "unit": "5"
     },
+    "facebook": "https://www.facebook.com/1518970668417993",
     "lga": {
       "name": "City of Greater Dandenong",
       "osm_id": 3333235
@@ -24,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61395623408",
+    "website": "http://jbprestige.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPM7BT6V6E0ZW0Y4RJ5Z4",
@@ -42,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

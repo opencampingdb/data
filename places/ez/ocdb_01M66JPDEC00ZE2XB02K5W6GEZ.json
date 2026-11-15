@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Brisbane Street",
       "suburb": "West Ipswich"
     },
+    "facebook": "https://www.facebook.com/833256103212448",
     "fuels": [
       "diesel",
       "e10",
@@ -36,7 +43,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brisbane Street"
-    }
+    },
+    "phone": "+61732023684"
   },
   "group": "services",
   "id": "ocdb_01M66JPDEC00ZE2XB02K5W6GEZ",
@@ -54,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

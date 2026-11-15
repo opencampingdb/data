@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Banksia Street",
       "suburb": "Walkamin"
     },
+    "facebook": "https://www.facebook.com/1708550842690798",
     "lga": {
       "name": "Tablelands Regional",
       "osm_id": 11677293
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Kennedy Highway"
-    }
+    },
+    "phone": "+61740933729",
+    "website": "https://walkamin-service-station.business.site"
   },
   "group": "services",
   "id": "ocdb_01M66JP8A44XXNGMYHB4PF4K7X",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

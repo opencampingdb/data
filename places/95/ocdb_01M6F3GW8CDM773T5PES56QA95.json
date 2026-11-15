@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2321",
+      "state": "NSW",
+      "street": "Paterson St",
+      "suburb": "Hinton"
+    },
+    "facebook": "https://www.facebook.com/1449166481971714",
     "lga": {
       "name": "Port Stephens Council",
       "osm_id": 6185732
@@ -21,7 +39,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2710
-    }
+    },
+    "phone": "+61249305260",
+    "website": "http://www.victoriahotelhinton.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GW8CDM773T5PES56QA95",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

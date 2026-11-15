@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "suburb": "Moranbah",
       "unit": "81"
     },
+    "facebook": "https://www.facebook.com/110006352989",
     "lga": {
       "name": "Isaac Regional",
       "osm_id": 11676584
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Griffin Street"
-    }
+    },
+    "phone": "+61749417185",
+    "website": "http://www.bnhm.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXHKP5R8T1RDQKNPPYVN",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

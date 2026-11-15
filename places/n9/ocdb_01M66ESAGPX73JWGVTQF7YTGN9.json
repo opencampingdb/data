@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -10,6 +18,7 @@
       "street": "Barrier Highway",
       "suburb": "Wilcannia"
     },
+    "facebook": "https://www.facebook.com/500808489978528",
     "lga": {
       "name": "Central Darling Shire Council",
       "osm_id": 5885448
@@ -19,7 +28,9 @@
       "name": "Wilcannia",
       "osm_id": 113465471,
       "type": "town"
-    }
+    },
+    "phone": "+61437010105",
+    "website": "http://www.warrawongonthedarling.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAGPX73JWGVTQF7YTGN9",
@@ -37,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

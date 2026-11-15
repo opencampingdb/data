@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "phone": "overture",
     "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "6161",
+      "state": "WA",
+      "street": "Bedford Ave",
+      "suburb": "Rottnest Island"
+    },
+    "facebook": "https://www.facebook.com/119821238207535",
     "lga": {
       "name": "City of Cockburn",
       "osm_id": 11689175
@@ -19,6 +35,7 @@
     "nearest_beach": {
       "distance_m": 30
     },
+    "phone": "+61892925171",
     "wheelchair": true
   },
   "group": "services",
@@ -37,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "postcode": "2480",
+      "state": "NSW",
+      "street": "Sibley St",
+      "suburb": "Nimbin"
+    },
+    "facebook": "https://www.facebook.com/1237053866322553",
     "lga": {
       "name": "Lismore City Council",
       "osm_id": 6168485
@@ -20,7 +38,8 @@
       "distance_m": 450,
       "name": "Cullen Street"
     },
-    "operator": "Matilda Blue"
+    "operator": "Matilda Blue",
+    "phone": "+61427873441"
   },
   "group": "services",
   "id": "ocdb_01M66JP7R3P0661XGVZWY03B5G",
@@ -29,7 +48,7 @@
     "lat": -28.59314,
     "lon": 153.22689
   },
-  "name": null,
+  "name": "Nimbin Servo Shop",
   "osm": {
     "id": 4338346554,
     "timestamp": "2017-04-28T16:40:27Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

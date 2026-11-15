@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "34",
+      "postcode": "2621",
+      "state": "NSW",
+      "street": "Gibraltar St",
+      "suburb": "Bungendore"
+    },
     "facebook": "https://www.facebook.com/royalhotelbungendore",
     "lga": {
       "name": "Queanbeyan-Palerang Regional Council",
@@ -20,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Gibraltar Street"
-    }
+    },
+    "phone": "+61493841434",
+    "website": "http://www.royalhotelbungendore.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWN4JG51R6N721TGMF4B",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

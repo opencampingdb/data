@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "871-881",
+      "postcode": "3150",
+      "state": "VIC",
+      "street": "Ferntree Gully Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/251192741567510",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Ferntree Gully Road"
-    }
+    },
+    "phone": "+61395608922",
+    "website": "https://www.wheelershillhotel.com.au/?utm_source=facebook_yext&utm_medium=social&utm_campaign=book-a-table"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV1YEHSWPXCTWT98AE4D",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

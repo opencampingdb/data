@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7153",
+      "postcode": "5374",
+      "state": "SA",
+      "street": "Thiele Hwy",
+      "suburb": "Sutherlands"
+    },
     "facebook": "https://www.facebook.com/Sutherlands-Hotel-103907664507486/",
     "lga": {
       "name": "The Regional Council of Goyder",
@@ -20,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Thiele Highway"
-    }
+    },
+    "phone": "+61409229474"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZAS99R6WP2H7312QVBD",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

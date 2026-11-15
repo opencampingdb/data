@@ -1,5 +1,11 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
@@ -9,11 +15,18 @@
     "locality": "osm",
     "motorbikes": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4830",
+      "street": "Doomadgee Rd",
+      "suburb": "Burke Shire"
+    },
     "cabins": true,
     "caravans": true,
     "entry": "customers",
@@ -31,9 +44,11 @@
     },
     "motorbikes": true,
     "operator": "Tirranna Springs Roadhouse",
+    "phone": "+61747483998",
     "showers": true,
     "tents": true,
-    "toilets": true
+    "toilets": true,
+    "website": "https://tirranna.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCY2MHJ86XR31VVA9ZJA",
@@ -51,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

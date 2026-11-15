@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "4746",
+      "state": "QLD",
+      "street": "Howard Jones Ave",
+      "suburb": "Middlemount"
+    },
+    "facebook": "https://www.facebook.com/1226932790651489",
     "lga": {
       "name": "Isaac Regional",
       "osm_id": 11676584
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Alfred Quinn Drive"
-    }
+    },
+    "phone": "+61749857133",
+    "website": "https://www.middlemountcommunitychurch.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX915VY7J3MXABPD5R84",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6163",
+      "state": "WA",
+      "street": "Azelia Rd",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/628549240589558",
     "lga": {
       "name": "City of Cockburn",
       "osm_id": 11689175
@@ -22,7 +39,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2940
-    }
+    },
+    "phone": "+61894186648",
+    "website": "http://azelialeymuseum.cockburn.wa.gov.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYHJEN5DN3N4VGSX8PKA",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

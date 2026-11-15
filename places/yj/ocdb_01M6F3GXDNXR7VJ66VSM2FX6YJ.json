@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "193",
+      "postcode": "2753",
+      "state": "NSW",
+      "street": "Windsor St",
+      "suburb": "Richmond"
+    },
+    "facebook": "https://www.facebook.com/1802784433327219",
     "lga": {
       "name": "Hawkesbury City Council",
       "osm_id": 6222206
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "East Market Street"
-    }
+    },
+    "phone": "+61245781503",
+    "website": "http://www.rgmcgees.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXDNXR7VJ66VSM2FX6YJ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

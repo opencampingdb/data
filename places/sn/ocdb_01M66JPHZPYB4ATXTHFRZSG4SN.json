@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "316",
+      "postcode": "3358",
+      "state": "VIC",
+      "street": "Glenelg Hwy",
+      "suburb": "Smythes Creek"
+    },
+    "facebook": "https://www.facebook.com/104624772160565",
     "lga": {
       "name": "City of Ballarat",
       "osm_id": 3291925
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Wiltshire Lane"
-    }
+    },
+    "phone": "+61353356992",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/delacombe/bp-delacombe/8007"
   },
   "group": "services",
   "id": "ocdb_01M66JPHZPYB4ATXTHFRZSG4SN",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

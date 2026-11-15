@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-7",
+      "postcode": "3976",
+      "state": "VIC",
+      "street": "Ormond Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/1706345649451447",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -17,7 +37,9 @@
     },
     "nearest_major_road": {
       "distance_m": 30
-    }
+    },
+    "phone": "+61397997080",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/hampton-park/bp-hallam-rd/7612"
   },
   "group": "services",
   "id": "ocdb_01M66JNY5R0MCYGTXSDMP1XD6G",
@@ -26,7 +48,7 @@
     "lat": -38.047254,
     "lon": 145.265421
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 354451937,
     "timestamp": "2009-03-01T11:13:16Z",
@@ -35,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

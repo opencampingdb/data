@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "110",
+      "postcode": "2800",
+      "state": "NSW",
+      "street": "Bathurst Rd",
+      "suburb": "Orange"
+    },
+    "facebook": "https://www.facebook.com/104772559587167",
     "lga": {
       "name": "Orange City Council",
       "osm_id": 6427044
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bathurst Road"
-    }
+    },
+    "phone": "+61263624600",
+    "website": "http://www.bestwestern.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVQD816CGWKX11YKT8VW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

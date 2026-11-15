@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "54",
       "street": "McIvor Road"
     },
+    "facebook": "https://www.facebook.com/105841358801171",
     "lga": {
       "name": "City of Greater Bendigo",
       "osm_id": 3343791
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "McIvor Road"
-    }
+    },
+    "phone": "+61354635388",
+    "website": "https://themcivor.com/dine-%26-drink-1"
   },
   "group": "services",
   "id": "ocdb_01M6F3H02JEC8JAAYYJHC9CWVF",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

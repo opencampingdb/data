@@ -1,17 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "dump_station": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
+    "phone": "overture",
     "power": "osm",
     "website": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "6714",
+      "street": "Cleaverville Rd"
+    },
     "dump_station": true,
+    "facebook": "https://www.facebook.com/165728633480781",
     "fee": true,
     "lga": {
       "name": "City of Karratha",
@@ -27,6 +40,7 @@
       "distance_m": 40
     },
     "operator": "City of Karratha Ranger Services",
+    "phone": "+61891868555",
     "power": false,
     "website": "https://karratha.wa.gov.au/camping",
     "wifi": false
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

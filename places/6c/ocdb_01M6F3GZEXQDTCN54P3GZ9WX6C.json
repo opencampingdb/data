@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Black Oak Drive",
       "suburb": "Leigh Creek"
     },
+    "facebook": "https://www.facebook.com/1081142858663821",
     "lga": {
       "name": "Pastoral Unincorporated Area",
       "osm_id": 6804541
@@ -22,7 +31,9 @@
       "osm_id": 3442199307,
       "type": "town"
     },
-    "operator": "Leigh Creek Outback Resort"
+    "operator": "Leigh Creek Outback Resort",
+    "phone": "+61886752025",
+    "website": "https://www.leighcreekresort.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZEXQDTCN54P3GZ9WX6C",
@@ -46,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

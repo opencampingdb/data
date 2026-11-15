@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3860",
+      "state": "VIC",
+      "street": "Johnson Street",
+      "suburb": "Maffra"
+    },
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -18,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Traralgon - Maffra Road"
-    }
+    },
+    "phone": "(03) 5147 1668",
+    "website": "https://www.macalistertyreservice.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP66JNTF6S3B4C9THD6TM",
@@ -36,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

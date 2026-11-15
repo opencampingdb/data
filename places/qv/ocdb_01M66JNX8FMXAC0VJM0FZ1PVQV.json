@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "621",
+      "postcode": "3150",
+      "state": "VIC",
+      "street": "Ferntree Gully Rd (Cnr Springvale Rd)",
+      "suburb": "Melbourne"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/228826647698868",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -26,7 +42,8 @@
       "distance_m": 30,
       "name": "Springvale Road"
     },
-    "operator": "Reddy Express"
+    "operator": "Reddy Express",
+    "phone": "+61375043620"
   },
   "group": "services",
   "id": "ocdb_01M66JNX8FMXAC0VJM0FZ1PVQV",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

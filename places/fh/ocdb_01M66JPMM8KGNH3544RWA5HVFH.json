@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4870",
+      "state": "QLD",
+      "street": "Mayers Street",
+      "suburb": "Manunda"
+    },
     "lga": {
       "name": "Cairns Regional",
       "osm_id": 11677109
@@ -26,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Alfred Street"
-    }
+    },
+    "phone": "+61 7 4053 2692",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/manunda/bp-manunda/1467"
   },
   "group": "services",
   "id": "ocdb_01M66JPMM8KGNH3544RWA5HVFH",
@@ -35,7 +53,7 @@
     "lat": -16.925235,
     "lon": 145.741482
   },
-  "name": null,
+  "name": "bp Truckstop",
   "osm": {
     "id": 12367931162,
     "timestamp": "2024-11-23T15:35:54Z",
@@ -44,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

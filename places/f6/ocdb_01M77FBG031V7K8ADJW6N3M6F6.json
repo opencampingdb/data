@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "148",
+      "postcode": "3039",
+      "state": "VIC",
+      "street": "Pascoe Vale Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/1711649178859547",
     "lga": {
       "name": "City of Moonee Valley",
       "osm_id": 3329056
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Pascoe Vale Road"
-    }
+    },
+    "phone": "+61480221977",
+    "website": "https://thesoaplounge.company.site/"
   },
   "group": "utility",
   "id": "ocdb_01M77FBG031V7K8ADJW6N3M6F6",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

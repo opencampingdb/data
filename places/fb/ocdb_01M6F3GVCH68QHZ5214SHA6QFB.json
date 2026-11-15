@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "phone": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "4314",
+      "state": "QLD",
+      "street": "George St",
+      "suburb": "Linville"
+    },
+    "facebook": "https://www.facebook.com/387400795011019",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -17,7 +33,8 @@
       "type": "village"
     },
     "phone": "+61 7 5424 7280",
-    "toilets": true
+    "toilets": true,
+    "website": "http://www.linvillestoreandcafe.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVCH68QHZ5214SHA6QFB",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

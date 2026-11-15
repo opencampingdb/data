@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "18",
+      "postcode": "4551",
+      "state": "QLD",
+      "street": "Bowman Rd",
+      "suburb": "Sunshine Coast"
+    },
+    "facebook": "https://www.facebook.com/155082811178406",
     "lga": {
       "name": "Sunshine Coast Regional",
       "osm_id": 11675192
@@ -27,7 +47,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Bowman Road"
-    }
+    },
+    "phone": "+61754911499",
+    "website": "http://www.anchoragemotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZCGD8K33CN7T7DWEGDG",
@@ -36,7 +58,7 @@
     "lat": -26.804897,
     "lon": 153.123203
   },
-  "name": null,
+  "name": "Anchorage Motor Inn",
   "osm": {
     "id": 753766047,
     "timestamp": "2023-11-21T00:33:30Z",
@@ -45,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

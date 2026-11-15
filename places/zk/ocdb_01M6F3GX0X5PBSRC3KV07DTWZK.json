@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "3595",
+      "state": "VIC",
+      "street": "Station St",
+      "suburb": "Nyah West"
+    },
+    "facebook": "https://www.facebook.com/1412768822276232",
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -13,7 +29,8 @@
       "name": "Nyah West",
       "osm_id": 2059381201,
       "type": "village"
-    }
+    },
+    "phone": "+61350302403"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX0X5PBSRC3KV07DTWZK",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

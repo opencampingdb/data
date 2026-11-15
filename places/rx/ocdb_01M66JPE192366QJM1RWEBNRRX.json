@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "154",
+      "postcode": "6395",
+      "state": "WA",
+      "street": "Albany Hwy",
+      "suburb": "KOJONUP"
+    },
     "lga": {
       "name": "Shire of Kojonup",
       "osm_id": 11690464
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "High Street"
-    }
+    },
+    "phone": "0898311045",
+    "website": "https://locations.ampol.com.au/en/ampol-kojonup"
   },
   "group": "services",
   "id": "ocdb_01M66JPE192366QJM1RWEBNRRX",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

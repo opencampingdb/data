@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "6521",
+      "state": "WA",
+      "street": "Meagher Dr",
+      "suburb": "Badgingarra"
+    },
+    "facebook": "https://www.facebook.com/592866384236518",
     "fuels": [
       "diesel",
       "unleaded_91"
@@ -25,7 +43,9 @@
       "distance_m": 30,
       "name": "Meagher Drive"
     },
-    "opening_hours": "Mo-Su 06:00-20:00"
+    "opening_hours": "Mo-Su 06:00-20:00",
+    "phone": "+61896529051",
+    "website": "http://badgingarra-roadhouse.edan.io"
   },
   "group": "services",
   "id": "ocdb_01M66JNX6KDJCGX1SDPFH85EX9",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

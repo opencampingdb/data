@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "72",
+      "postcode": "3540",
+      "state": "VIC",
+      "street": "Quambatook-Swan Hill Road",
+      "suburb": "Quambatook"
+    },
     "fuels": [
       "diesel",
       "unleaded_91"
@@ -23,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Quambatook - Swan Hill Road"
-    }
+    },
+    "phone": "+61 3 5032 3277",
+    "website": "https://find.shell.com/au/fuel/10111033-shell-quambatook-unmanned/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPEF20QEY2KC52QCCAXNS",
@@ -41,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

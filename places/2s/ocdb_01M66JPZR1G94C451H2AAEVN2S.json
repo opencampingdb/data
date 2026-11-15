@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "54",
+      "postcode": "2400",
+      "state": "NSW",
+      "street": "Alice Street",
+      "suburb": "Moree"
+    },
     "lga": {
       "name": "Moree Plains Shire Council",
       "osm_id": 6088821
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Frome Street"
-    }
+    },
+    "phone": "0267526111",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-moree"
   },
   "group": "services",
   "id": "ocdb_01M66JPZR1G94C451H2AAEVN2S",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

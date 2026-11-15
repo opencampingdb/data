@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "630",
+      "postcode": "3630",
+      "state": "VIC",
+      "street": "Wyndham St",
+      "suburb": "Shepparton"
+    },
+    "facebook": "https://www.facebook.com/110213322392988",
     "lga": {
       "name": "City of Greater Shepparton",
       "osm_id": 3365116
@@ -25,7 +43,9 @@
       "distance_m": 70,
       "name": "Wyndham Street"
     },
-    "operator": "Golden Chain"
+    "operator": "Golden Chain",
+    "phone": "+61358214833",
+    "website": "http://bookings.goldenchain.com.au/booking/index/9546e3e7-730f-4ebb-8474-4c1e39a0ddf8?checkindate=sun,%20nov%2011,%202012"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ2MXJ6KX4H0S12ESD6T",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

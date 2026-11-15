@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3002",
+      "state": "VIC",
+      "street": "Fitzroy Gardens",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/118524498221682",
     "lga": {
       "name": "City of Melbourne",
       "osm_id": 2404870
@@ -30,6 +45,7 @@
       "distance_m": 180,
       "name": "Clarendon Street"
     },
+    "phone": "+61397396122",
     "website": "https://citycollection.melbourne.vic.gov.au/model-tudor-village/"
   },
   "group": "attraction",
@@ -48,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

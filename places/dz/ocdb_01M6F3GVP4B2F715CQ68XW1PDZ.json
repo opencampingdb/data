@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "postcode": "2647",
       "street": "Melbourne Street"
     },
+    "facebook": "https://www.facebook.com/275017095889058",
     "lga": {
       "name": "Federation Council",
       "osm_id": 6232188
@@ -31,7 +40,9 @@
     },
     "nearest_major_road": {
       "distance_m": 20
-    }
+    },
+    "phone": "+61357433663",
+    "website": "http://www.royalmailmulwala.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVP4B2F715CQ68XW1PDZ",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

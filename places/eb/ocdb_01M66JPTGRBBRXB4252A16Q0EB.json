@@ -1,12 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +22,7 @@
       "street": "Myall Street",
       "suburb": "Dubbo"
     },
+    "facebook": "https://www.facebook.com/101960048178301",
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -34,7 +43,9 @@
       "distance_m": 220,
       "name": "B84"
     },
-    "operator": "NSW Health, Western NSW Local Health District"
+    "operator": "NSW Health, Western NSW Local Health District",
+    "phone": "+61268858666",
+    "website": "http://www.service.nsw.gov.au/nswgovdirectory/dubbo-base-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPTGRBBRXB4252A16Q0EB",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

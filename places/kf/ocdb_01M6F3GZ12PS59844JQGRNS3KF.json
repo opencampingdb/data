@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "35",
+      "postcode": "3250",
+      "state": "VIC",
+      "street": "Murray St E",
+      "suburb": "Colac"
+    },
+    "facebook": "https://www.facebook.com/266790177377045",
     "lga": {
       "name": "Shire of Colac Otway",
       "osm_id": 3291847
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Murray Street East"
-    }
+    },
+    "phone": "+61352312100",
+    "website": "http://www.barongamotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ12PS59844JQGRNS3KF",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

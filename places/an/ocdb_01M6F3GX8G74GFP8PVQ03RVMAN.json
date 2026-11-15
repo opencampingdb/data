@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "98",
+      "postcode": "4823",
+      "state": "QLD",
+      "street": "Burke St",
+      "suburb": "Julia Creek"
+    },
     "lga": {
       "name": "McKinlay Shire",
       "osm_id": 11677391
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Goldring Street"
-    }
+    },
+    "phone": "(07) 4746 7305",
+    "website": "https://www.juliacreekmotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX8G74GFP8PVQ03RVMAN",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

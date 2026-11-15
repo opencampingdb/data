@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3644",
+      "state": "VIC",
+      "street": "Main St",
+      "suburb": "Cobram"
+    },
+    "facebook": "https://www.facebook.com/186628025048164",
     "lga": {
       "name": "Shire of Moira",
       "osm_id": 3365119
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Punt Road"
-    }
+    },
+    "phone": "+61358722488",
+    "website": "http://www.regencycourtmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXPYCC85KMY3W7T8HT4S",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

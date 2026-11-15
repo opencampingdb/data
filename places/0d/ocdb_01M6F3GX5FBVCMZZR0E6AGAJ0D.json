@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Main Street",
       "suburb": "Grenfell"
     },
+    "facebook": "https://www.facebook.com/278229202205305",
     "lga": {
       "name": "Weddin Shire Council",
       "osm_id": 6257772
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Camp Street"
-    }
+    },
+    "phone": "+61263431199",
+    "website": "http://madgoodworth.wixsite.com/albion-grenfell"
   },
   "group": "services",
   "id": "ocdb_01M6F3GX5FBVCMZZR0E6AGAJ0D",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

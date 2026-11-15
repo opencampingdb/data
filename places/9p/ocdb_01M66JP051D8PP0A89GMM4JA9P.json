@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-5",
+      "postcode": "2328",
+      "state": "NSW",
+      "street": "Ogilvie St",
+      "suburb": "Denman"
+    },
+    "facebook": "https://www.facebook.com/1782086018693073",
     "lga": {
       "name": "Muswellbrook Shire Council",
       "osm_id": 6343182
@@ -20,7 +38,9 @@
       "distance_m": 200,
       "name": "Crinoline Street"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61265472308",
+    "website": "https://find.shell.com/au/fuel/10016827"
   },
   "group": "services",
   "id": "ocdb_01M66JP051D8PP0A89GMM4JA9P",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

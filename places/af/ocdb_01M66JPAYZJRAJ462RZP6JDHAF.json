@@ -1,10 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "6258",
+      "street": "Rose St"
+    },
     "lga": {
       "name": "Shire of Manjimup",
       "osm_id": 11690439
@@ -18,7 +31,8 @@
     "nearest_major_road": {
       "distance_m": 260,
       "name": "1"
-    }
+    },
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-petroleum-fuels-west-manjimup"
   },
   "group": "services",
   "id": "ocdb_01M66JPAYZJRAJ462RZP6JDHAF",
@@ -27,7 +41,7 @@
     "lat": -34.248182,
     "lon": 116.14097
   },
-  "name": null,
+  "name": "United Petroleum Fuels West Manjimup (Unmanned)",
   "osm": {
     "id": 5985315244,
     "timestamp": "2018-10-15T12:22:02Z",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

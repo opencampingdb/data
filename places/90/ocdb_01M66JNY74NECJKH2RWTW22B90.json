@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1-3",
+      "postcode": "2580",
+      "state": "NSW",
+      "street": "Sowerby Street",
+      "suburb": "Goulburn"
+    },
     "air": true,
     "lga": {
       "name": "Goulburn Mulwaree Council",
@@ -21,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "+61 2 4826 9674",
+    "website": "https://find.shell.com/au/fuel/10110803-shell-reddy-express-goulburn-big-merino/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JNY74NECJKH2RWTW22B90",
@@ -39,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

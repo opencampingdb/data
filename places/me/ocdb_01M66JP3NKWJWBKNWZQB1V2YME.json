@@ -1,11 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4152",
+      "state": "QLD",
+      "street": "Cnr Creek Rd & Cuthred St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/2136906819925893",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -23,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Creek Road"
-    }
+    },
+    "phone": "+61733985155",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/carindale/bp-carindale/1414"
   },
   "group": "services",
   "id": "ocdb_01M66JP3NKWJWBKNWZQB1V2YME",
@@ -32,7 +53,7 @@
     "lat": -27.495351,
     "lon": 153.101668
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 2149725229,
     "timestamp": "2013-02-10T22:13:09Z",
@@ -41,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

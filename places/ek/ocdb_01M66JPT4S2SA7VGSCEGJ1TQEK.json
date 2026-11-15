@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "5231",
+      "state": "SA",
+      "street": "Scott Street",
+      "suburb": "Kersbrook"
+    },
     "lga": {
       "name": "Adelaide Hills Council",
       "osm_id": 9105845
@@ -20,7 +37,9 @@
       "distance_m": 30,
       "name": "Scott Street"
     },
-    "operator": "Mogil"
+    "operator": "Mogil",
+    "phone": "+61 8 8389 3239",
+    "website": "https://find.shell.com/au/fuel/10120815-shell-kersbrook/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPT4S2SA7VGSCEGJ1TQEK",
@@ -29,7 +48,7 @@
     "lat": -34.781903,
     "lon": 138.852075
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 374709198,
     "timestamp": "2015-10-10T14:28:21Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

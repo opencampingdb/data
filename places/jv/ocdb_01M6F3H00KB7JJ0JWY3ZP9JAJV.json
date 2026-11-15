@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "62",
+      "postcode": "3874",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Woodside"
+    },
+    "facebook": "https://www.facebook.com/112457177926266",
     "lga": {
       "name": "Shire of Wellington",
       "osm_id": 3351438
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Victoria Street"
-    }
+    },
+    "phone": "+61351871325",
+    "website": "http://www.woodsidebeachhotel.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3H00KB7JJ0JWY3ZP9JAJV",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2611",
+      "state": "ACT",
+      "street": "Forest Dr",
+      "suburb": "Molonglo Valley"
+    },
+    "facebook": "https://www.facebook.com/442591482443381",
     "locality": {
       "distance_m": 3100,
       "name": "Canberra",
@@ -16,7 +33,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2730
-    }
+    },
+    "phone": "+61262078484",
+    "website": "https://www.nationalarboretum.act.gov.au/support-us/sponsorship/asset-naming-rights"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPJRB71HS44AS8J4JVS5W",
@@ -34,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

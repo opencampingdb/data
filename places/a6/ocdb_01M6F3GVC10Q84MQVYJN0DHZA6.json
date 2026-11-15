@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2619",
+      "state": "NSW",
+      "street": "Limestone Dr",
+      "suburb": "Queanbeyan"
+    },
+    "facebook": "https://www.facebook.com/170789209651410",
     "lga": {
       "name": "Queanbeyan-Palerang Regional Council",
       "osm_id": 6137309
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 60
-    }
+    },
+    "phone": "+61262998911",
+    "website": "http://jerrahotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVC10Q84MQVYJN0DHZA6",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

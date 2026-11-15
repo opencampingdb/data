@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "5352",
+      "state": "SA",
+      "street": "MacDonnell St",
+      "suburb": "Tanunda"
+    },
+    "facebook": "https://www.facebook.com/139330046218738",
     "lga": {
       "name": "The Barossa Council",
       "osm_id": 9105938
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Murray Street"
-    }
+    },
+    "phone": "+61885632058",
+    "website": "http://www.theclubhousebarossa.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ31Z6H91K5WGGW2RMEP",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

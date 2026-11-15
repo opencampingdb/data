@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9",
+      "postcode": "5255",
+      "state": "SA",
+      "street": "15 South Terrace",
+      "suburb": "Strathalbyn"
+    },
+    "facebook": "https://www.facebook.com/103834424543411",
     "lga": {
       "name": "Alexandrina Council",
       "osm_id": 7231567
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "South Terrace"
-    }
+    },
+    "phone": "+61884194674",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/strathalbyn/bp-ampm-strathalbyn/4066"
   },
   "group": "services",
   "id": "ocdb_01M66JPQXDQ1CK2QM07RV8PDXE",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

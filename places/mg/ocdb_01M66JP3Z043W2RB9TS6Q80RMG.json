@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "265",
+      "postcode": "3021",
+      "state": "VIC",
+      "street": "Main Road West",
+      "suburb": "St Albans"
+    },
     "lga": {
       "name": "City of Brimbank",
       "osm_id": 3327554
@@ -20,7 +35,9 @@
       "distance_m": 30,
       "name": "Main Road West"
     },
-    "operator": "Shell"
+    "operator": "Shell",
+    "phone": "+61 3 9454 9705",
+    "website": "https://find.shell.com/au/fuel/10111429-shell-reddy-express-st-albans/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JP3Z043W2RB9TS6Q80RMG",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

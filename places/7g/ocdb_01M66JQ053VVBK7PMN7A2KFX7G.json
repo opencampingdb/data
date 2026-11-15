@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "83",
+      "postcode": "2810",
+      "state": "NSW",
+      "street": "Camp St",
+      "suburb": "Grenfell"
+    },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/103207854641517",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -26,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Camp Street"
-    }
+    },
+    "phone": "+61263432482"
   },
   "group": "services",
   "id": "ocdb_01M66JQ053VVBK7PMN7A2KFX7G",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

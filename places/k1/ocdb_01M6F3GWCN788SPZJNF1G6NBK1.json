@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "571-583",
+      "postcode": "3076",
+      "state": "VIC",
+      "street": "High St",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/112029157382323",
     "lga": {
       "name": "City of Whittlesea",
       "osm_id": 3327768
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Miller Street"
-    }
+    },
+    "phone": "+61394089309",
+    "website": "https://eppingplazahotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GWCN788SPZJNF1G6NBK1",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

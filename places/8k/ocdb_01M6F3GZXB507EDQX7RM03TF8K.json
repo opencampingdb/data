@@ -1,12 +1,32 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "95",
+      "postcode": "2478",
+      "state": "NSW",
+      "street": "Cherry St",
+      "suburb": "Ballina"
+    },
+    "facebook": "https://www.facebook.com/1296607533534181",
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -25,7 +45,9 @@
     },
     "nearest_major_road": {
       "distance_m": 50
-    }
+    },
+    "phone": "+61266863333",
+    "website": "http://www.ballinahomesteadmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZXB507EDQX7RM03TF8K",
@@ -34,7 +56,7 @@
     "lat": -28.862677,
     "lon": 153.56631
   },
-  "name": null,
+  "name": "Ballina Homestead Motel",
   "osm": {
     "id": 1300659980,
     "timestamp": "2024-07-11T05:49:28Z",
@@ -43,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

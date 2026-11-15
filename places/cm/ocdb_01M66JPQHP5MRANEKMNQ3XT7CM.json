@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "31",
+      "postcode": "3076",
+      "state": "VIC",
+      "street": "Salicki Ave",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/259964277785637",
     "lga": {
       "name": "City of Whittlesea",
       "osm_id": 3327768
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 300,
       "name": "High Street"
-    }
+    },
+    "phone": "+61391909933"
   },
   "group": "services",
   "id": "ocdb_01M66JPQHP5MRANEKMNQ3XT7CM",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

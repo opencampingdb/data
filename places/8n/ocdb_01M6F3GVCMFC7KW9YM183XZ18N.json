@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "235",
+      "postcode": "5290",
+      "state": "SA",
+      "street": "Commercial St E",
+      "suburb": "Mount Gambier"
+    },
+    "facebook": "https://www.facebook.com/256967997747255",
     "lga": {
       "name": "City of Mount Gambier",
       "osm_id": 3395909
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Commercial Street East"
-    }
+    },
+    "phone": "+61887267700",
+    "website": "http://www.southeasternhotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVCMFC7KW9YM183XZ18N",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

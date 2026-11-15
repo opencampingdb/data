@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6015",
+      "state": "WA",
+      "street": "Challenger Pde",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/417876558280230",
     "lga": {
       "name": "Town of Cambridge",
       "osm_id": 11689232
@@ -23,7 +38,8 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Challenger Parade"
-    }
+    },
+    "phone": "+61893476000"
   },
   "group": "attraction",
   "id": "ocdb_01M66JP9PWG681V7CR775S6KHS",
@@ -41,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

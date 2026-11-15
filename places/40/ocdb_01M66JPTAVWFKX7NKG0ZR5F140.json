@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "60",
+      "postcode": "3177",
+      "state": "VIC",
+      "street": "64 Princes Highway",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/853915924795886",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61397923901"
   },
   "group": "services",
   "id": "ocdb_01M66JPTAVWFKX7NKG0ZR5F140",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

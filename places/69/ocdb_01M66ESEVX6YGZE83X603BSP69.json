@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "185",
+      "postcode": "4680",
+      "state": "QLD",
+      "street": "Toolooa St",
+      "suburb": "Gladstone"
+    },
+    "facebook": "https://www.facebook.com/949143441787216",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Toolooa Street"
-    }
+    },
+    "phone": "+61749791305",
+    "website": "http://www.gladstonecitycaravanpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEVX6YGZE83X603BSP69",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

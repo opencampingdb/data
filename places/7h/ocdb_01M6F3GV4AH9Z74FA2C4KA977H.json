@@ -1,9 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "3430",
+      "state": "VIC",
+      "street": "Station Street",
+      "suburb": "Clarkefield"
+    },
     "lga": {
       "name": "Shire of Macedon Ranges",
       "osm_id": 3327683
@@ -13,7 +28,9 @@
       "name": "Riddells Creek",
       "osm_id": 536417243,
       "type": "town"
-    }
+    },
+    "phone": "(03) 5428 5391",
+    "website": "http://www.coachandhorseshotel.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV4AH9Z74FA2C4KA977H",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

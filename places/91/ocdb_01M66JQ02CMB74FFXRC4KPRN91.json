@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "111",
+      "postcode": "6436",
+      "state": "WA",
+      "street": "Morgans St",
+      "suburb": "Ravensthorpe"
+    },
+    "facebook": "https://www.facebook.com/153935755140537",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -24,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Jamieson Street"
-    }
+    },
+    "phone": "+61898381860",
+    "website": "https://find.shell.com/au/fuel/AU_Q033-shell-ravensthorpe"
   },
   "group": "services",
   "id": "ocdb_01M66JQ02CMB74FFXRC4KPRN91",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

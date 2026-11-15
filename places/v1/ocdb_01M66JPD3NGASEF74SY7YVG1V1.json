@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "240",
+      "postcode": "5082",
+      "state": "SA",
+      "street": "Main North Rd",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/274438789641183",
     "lga": {
       "name": "City of Prospect",
       "osm_id": 9108032
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main North Road"
-    }
+    },
+    "phone": "+61882691277",
+    "website": "https://www.ultratune.com.au/location/prospect/"
   },
   "group": "services",
   "id": "ocdb_01M66JPD3NGASEF74SY7YVG1V1",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

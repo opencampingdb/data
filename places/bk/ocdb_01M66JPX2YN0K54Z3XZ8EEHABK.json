@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "50",
+      "postcode": "2732",
+      "state": "NSW",
+      "street": "Moulamein Rd",
+      "suburb": "Barham"
+    },
+    "facebook": "https://www.facebook.com/405975752597869",
     "lga": {
       "name": "Murray River Council",
       "osm_id": 6134295
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Moulamein Road"
-    }
+    },
+    "phone": "+61354532214",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/barham/bp-opt-barham/7684"
   },
   "group": "services",
   "id": "ocdb_01M66JPX2YN0K54Z3XZ8EEHABK",
@@ -31,7 +53,7 @@
     "lat": -35.620205,
     "lon": 144.131945
   },
-  "name": null,
+  "name": "BP",
   "osm": {
     "id": 945679255,
     "timestamp": "2021-05-22T06:01:54Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

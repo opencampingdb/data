@@ -1,23 +1,37 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "5275",
+      "street": "Marine Parade",
+      "suburb": "Kingston District Council"
+    },
     "caravans": true,
     "dump_station": true,
     "entry": "customers",
+    "facebook": "https://www.facebook.com/1785647624889522",
     "fee": true,
     "lga": {
       "name": "Kingston District Council",
@@ -36,6 +50,7 @@
     "nearest_boat_ramp": {
       "distance_m": 490
     },
+    "phone": "+61887672033",
     "power": false,
     "showers": true,
     "tents": false,
@@ -57,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

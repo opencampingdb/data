@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "car_wash": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "783-795",
+      "postcode": "3039",
+      "state": "VIC",
+      "street": "Mount Alexander Road",
+      "suburb": "Moonee Ponds"
+    },
     "air": true,
     "car_wash": true,
     "lga": {
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mount Alexander Road"
-    }
+    },
+    "phone": "+61 3 9101 5704",
+    "website": "https://find.shell.com/au/fuel/10111382-shell-reddy-express-moonee-ponds/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPV018K4D4WSWPW3FH2YS",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

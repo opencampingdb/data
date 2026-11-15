@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "52",
+      "postcode": "5106",
+      "state": "SA",
+      "street": "Anderson Dr",
+      "suburb": "Parafield"
+    },
+    "facebook": "https://www.facebook.com/227838357268108",
     "lga": {
       "name": "City of Salisbury",
       "osm_id": 9108068
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Anderson Drive"
-    }
+    },
+    "phone": "(08) 8258 2277",
+    "website": "http://www.classicjets.com"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVC9C9WWKV7F6Z6HXJPY",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

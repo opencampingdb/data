@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "93",
+      "postcode": "3269",
+      "state": "VIC",
+      "street": "Old Coach Road",
+      "suburb": "Princetown"
+    },
     "lga": {
       "name": "Shire of Corangamite",
       "osm_id": 3291894
@@ -17,7 +32,9 @@
     },
     "nearest_beach": {
       "distance_m": 550
-    }
+    },
+    "phone": "0457198662",
+    "website": "https://greatoceanroadparks.com.au/princetown"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFD936GHE33XHJ8JP7Y0",

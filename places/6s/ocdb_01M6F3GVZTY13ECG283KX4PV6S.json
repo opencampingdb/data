@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +23,7 @@
       "street": "Imlay Street",
       "suburb": "Eden"
     },
+    "facebook": "https://www.facebook.com/101237879152720",
     "lga": {
       "name": "Bega Valley Shire Council",
       "osm_id": 6239664
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "A1"
-    }
+    },
+    "phone": "+61474694322",
+    "website": "http://www.coastmoteleden.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZTY13ECG283KX4PV6S",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

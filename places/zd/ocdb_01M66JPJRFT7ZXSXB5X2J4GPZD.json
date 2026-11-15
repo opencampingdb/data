@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2612",
+      "state": "ACT",
+      "street": "Treloar Cres",
+      "suburb": "Canberra"
+    },
+    "facebook": "https://www.facebook.com/1650935625138436",
     "locality": {
       "distance_m": 2350,
       "name": "North Canberra",
@@ -21,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Fairbairn Avenue"
-    }
+    },
+    "phone": "+61262434211",
+    "website": "http://www.awm.gov.au"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPJRFT7ZXSXB5X2J4GPZD",
@@ -39,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

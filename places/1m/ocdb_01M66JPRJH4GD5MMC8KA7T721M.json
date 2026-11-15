@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7263",
+      "state": "TAS",
+      "street": "Main St",
+      "suburb": "Legerwood"
+    },
+    "facebook": "https://www.facebook.com/648848181813086",
     "lga": {
       "name": "Dorset",
       "osm_id": 10578020
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Street"
-    }
+    },
+    "phone": "+61363532339",
+    "website": "http://www.northeasttasmania.com.au/legerwood-memorial-carvings"
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRJH4GD5MMC8KA7T721M",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

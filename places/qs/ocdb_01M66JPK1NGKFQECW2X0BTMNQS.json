@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +18,7 @@
       "street": "Victoria Street",
       "suburb": "Nhill"
     },
+    "facebook": "https://www.facebook.com/111844398231139",
     "lga": {
       "name": "Shire of Hindmarsh",
       "osm_id": 3345532
@@ -25,7 +32,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Victoria Street"
-    }
+    },
+    "phone": "+61353911515"
   },
   "group": "services",
   "id": "ocdb_01M66JPK1NGKFQECW2X0BTMNQS",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

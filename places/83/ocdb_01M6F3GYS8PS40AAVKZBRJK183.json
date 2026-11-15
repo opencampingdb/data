@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "1635-1637",
       "street": "Sydney Road"
     },
+    "facebook": "https://www.facebook.com/138499762862623",
     "lga": {
       "name": "City of Hume",
       "osm_id": 3327634
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Sydney Road"
-    }
+    },
+    "phone": "+61393594099",
+    "website": "http://www.thesylvaniahotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYS8PS40AAVKZBRJK183",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

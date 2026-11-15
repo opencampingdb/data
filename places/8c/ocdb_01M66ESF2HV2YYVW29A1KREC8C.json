@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "7",
+      "postcode": "6324",
+      "state": "WA",
+      "street": "Boxhill Rd",
+      "suburb": "Porongurup"
+    },
+    "facebook": "https://www.facebook.com/100454058354686",
     "lga": {
       "name": "Shire of Plantagenet",
       "osm_id": 11690400
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Porongurup Road"
-    }
+    },
+    "phone": "+61404062943",
+    "website": "https://poronguruprangetouristpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF2HV2YYVW29A1KREC8C",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

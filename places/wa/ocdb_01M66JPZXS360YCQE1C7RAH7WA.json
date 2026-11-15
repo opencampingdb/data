@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4700",
+      "state": "QLD",
+      "street": "Campbell St",
+      "suburb": "Rockhampton"
+    },
+    "facebook": "https://www.facebook.com/145190145876893",
     "lga": {
       "name": "Rockhampton Regional",
       "osm_id": 11676441
@@ -22,7 +37,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Fitzroy Street"
-    }
+    },
+    "phone": "+61749943406"
   },
   "group": "services",
   "id": "ocdb_01M66JPZXS360YCQE1C7RAH7WA",
@@ -40,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

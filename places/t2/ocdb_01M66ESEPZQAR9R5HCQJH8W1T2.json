@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Crooked River Road",
       "suburb": "Gerroa"
     },
+    "facebook": "https://www.facebook.com/1642109286111307",
     "lga": {
       "name": "The Council of the Municipality of Kiama",
       "osm_id": 6311642
@@ -35,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Crooked River Road"
-    }
+    },
+    "phone": "+61242341233"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEPZQAR9R5HCQJH8W1T2",
@@ -53,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

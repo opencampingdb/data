@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "12",
+      "postcode": "2333",
+      "state": "NSW",
+      "street": "Maitland St",
+      "suburb": "Muswellbrook"
+    },
+    "facebook": "https://www.facebook.com/1516000398629305",
     "lga": {
       "name": "Muswellbrook Shire Council",
       "osm_id": 6343182
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Maitland Street"
-    }
+    },
+    "phone": "+61265432852",
+    "website": "http://redcedar.budgetmotelchain.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZGAQHWSKEQZPXP7Z2PF",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

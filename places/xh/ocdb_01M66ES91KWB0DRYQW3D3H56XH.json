@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "state": "VIC",
+      "street": "Camerons Rd",
+      "suburb": "Wannon"
+    },
+    "facebook": "https://www.facebook.com/514279948636833",
     "lga": {
       "name": "Shire of Southern Grampians",
       "osm_id": 3349959
@@ -18,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Glenelg Highway"
-    }
+    },
+    "phone": "+611800807056",
+    "website": "http://www.visitsoutherngrampians.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES91KWB0DRYQW3D3H56XH",
@@ -36,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

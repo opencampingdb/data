@@ -1,18 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
     "caravans": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4514",
+      "state": "QLD",
+      "street": "Cruice Dr",
+      "suburb": "Woodford"
+    },
     "cabins": false,
     "caravans": true,
     "entry": "public",
+    "facebook": "https://www.facebook.com/218397025414202",
     "fee": false,
     "lga": {
       "name": "City of Moreton Bay",
@@ -28,7 +43,8 @@
       "distance_m": 70,
       "name": "Kilcoy Beerwah Road"
     },
-    "tents": true
+    "tents": true,
+    "website": "http://www.visitmoretonbayregion.com.au/natural-attractions/cruice-park-woodford"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES929EDRQCC262WNB5MB6",
@@ -46,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

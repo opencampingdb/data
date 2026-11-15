@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "61",
+      "postcode": "6460",
+      "state": "WA",
+      "street": "Railway Terr",
+      "suburb": "Goomalling"
+    },
     "facebook": "https://www.facebook.com/goomallingtavern/",
     "lga": {
       "name": "Shire of Goomalling",
@@ -20,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Railway Terrace"
-    }
+    },
+    "phone": "0402 255 167",
+    "website": "https://goomallingtav.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXDFS08FRG2Z39WSB4W7",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

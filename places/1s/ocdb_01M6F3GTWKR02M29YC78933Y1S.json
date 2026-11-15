@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "59B",
+      "postcode": "2022",
+      "state": "NSW",
+      "street": "Oxford St",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/113007456824423",
     "lga": {
       "name": "Waverley Council",
       "osm_id": 6203556
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Syd Einfeld Drive"
-    }
+    },
+    "phone": "+61278136222",
+    "website": "http://www.themillbondi.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GTWKR02M29YC78933Y1S",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "96",
+      "postcode": "2580",
+      "state": "NSW",
+      "street": "Union St",
+      "suburb": "Goulburn"
+    },
+    "facebook": "https://www.facebook.com/109486728752674",
     "lga": {
       "name": "Goulburn Mulwaree Council",
       "osm_id": 6310493
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Union Street"
-    }
+    },
+    "phone": "+61248161866",
+    "website": "https://gpubg.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZD3PC1ECCJX4YAFRJW6",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "112",
+      "postcode": "4670",
+      "state": "QLD",
+      "street": "George St",
+      "suburb": "Bundaberg"
+    },
     "lga": {
       "name": "Bundaberg Region",
       "osm_id": 5656285
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Hinkler Avenue"
-    }
+    },
+    "phone": "0477 411 992",
+    "website": "http://www.tomatobackpackers.com.au/contact-us"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZEA8NAYRNHQ8RWF1B4",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

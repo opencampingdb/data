@@ -1,24 +1,41 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "campfires": "osm",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2581",
+      "state": "NSW",
+      "street": "Yass St",
+      "suburb": "Gunning"
+    },
     "campfires": false,
     "caravans": true,
     "dump_station": true,
     "entry": "public",
+    "facebook": "https://www.facebook.com/400001666829661",
     "fee": false,
     "lga": {
       "name": "Upper Lachlan Shire Council",
@@ -36,9 +53,11 @@
       "name": "Yass Street"
     },
     "operator": "Upper Lachlan Shire Council",
+    "phone": "+61248454100",
     "showers": true,
     "tents": false,
-    "toilets": true
+    "toilets": true,
+    "website": "http://barbourpark.placeweb.site"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFGXA5Q5VJWKSEK5D0Z8",
@@ -56,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

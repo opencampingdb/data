@@ -1,13 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "power": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2828",
+      "state": "NSW",
+      "street": "Waally Road",
+      "suburb": "Warrumbungle"
+    },
     "caravans": true,
     "fee": true,
     "lga": {
@@ -21,7 +33,8 @@
       "type": "village"
     },
     "power": true,
-    "tents": true
+    "tents": true,
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/camp-walaay-group-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVQ485P0G04ATH96HBB",
@@ -39,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

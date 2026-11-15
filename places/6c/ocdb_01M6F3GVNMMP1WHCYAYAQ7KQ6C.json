@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Gale Street",
       "suburb": "Coramba"
     },
+    "facebook": "https://www.facebook.com/155429307870782",
     "lga": {
       "name": "Coffs Harbour City Council",
       "osm_id": 6165983
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Gale Street"
-    }
+    },
+    "phone": "+61266544216",
+    "website": "https://thecorambahotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVNMMP1WHCYAYAQ7KQ6C",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

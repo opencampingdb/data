@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "11",
+      "postcode": "4874",
+      "state": "QLD",
+      "street": "Kerr Point Dr",
+      "suburb": "Nanum"
+    },
+    "facebook": "https://www.facebook.com/201322273269045",
     "lga": {
       "name": "Weipa Town",
       "osm_id": 11677428
@@ -18,7 +36,9 @@
     "nearest_boat_ramp": {
       "distance_m": 2740,
       "name": "Rocky Point Boat Ramp"
-    }
+    },
+    "phone": "+61740697871",
+    "website": "https://www.racq.com.au/peopleschoice"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA4MZCJP92V7BXKD4Z3R",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

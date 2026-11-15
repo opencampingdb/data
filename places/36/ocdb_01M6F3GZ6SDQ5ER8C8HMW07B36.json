@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "54",
+      "postcode": "3691",
+      "state": "VIC",
+      "street": "Kiewa E Rd",
+      "suburb": "Tangambalanga"
+    },
+    "facebook": "https://www.facebook.com/403488576446666",
     "lga": {
       "name": "Shire of Indigo",
       "osm_id": 3365369
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kiewa East Road"
-    }
+    },
+    "phone": "+61260273253"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ6SDQ5ER8C8HMW07B36",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

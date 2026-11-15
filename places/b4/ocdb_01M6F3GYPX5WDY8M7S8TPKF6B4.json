@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "2666",
+      "state": "NSW",
+      "street": "Junee Rd",
+      "suburb": "Temora"
+    },
+    "facebook": "https://www.facebook.com/246348765537986",
     "fee": true,
     "lga": {
       "name": "Temora Shire Council",
@@ -22,7 +40,9 @@
       "distance_m": 120,
       "name": "Junee Road"
     },
-    "toilets": true
+    "phone": "+61269771291",
+    "toilets": true,
+    "website": "http://www.temoraruralmuseum.com/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYPX5WDY8M7S8TPKF6B4",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "The Crescent",
       "suburb": "Fairfield"
     },
+    "facebook": "https://www.facebook.com/325396530666444",
     "lga": {
       "name": "Fairfield City Council",
       "osm_id": 6212438
@@ -33,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Lawson Street"
-    }
+    },
+    "phone": "+61297242131",
+    "website": "http://www.fairfieldhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVTA002X9CVH5M7KQYRP",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

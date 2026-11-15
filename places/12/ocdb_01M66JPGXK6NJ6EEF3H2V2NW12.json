@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "29",
+      "postcode": "3082",
+      "state": "VIC",
+      "street": "Childs Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/234346809764477",
     "lga": {
       "name": "City of Whittlesea",
       "osm_id": 3327768
@@ -18,7 +36,8 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Redleap Avenue"
-    }
+    },
+    "phone": "+61431856644"
   },
   "group": "utility",
   "id": "ocdb_01M66JPGXK6NJ6EEF3H2V2NW12",
@@ -27,7 +46,7 @@
     "lat": -37.667416,
     "lon": 145.06204
   },
-  "name": null,
+  "name": "Mill Park Dry Cleaners",
   "osm": {
     "id": 10160929868,
     "timestamp": "2022-11-06T06:17:33Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

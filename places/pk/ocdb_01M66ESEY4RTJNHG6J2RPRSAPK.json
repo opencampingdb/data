@@ -1,9 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "875",
+      "postcode": "0870",
+      "state": "NT",
+      "street": "Ilparpa Rd",
+      "suburb": "Alice Springs"
+    },
+    "facebook": "https://www.facebook.com/355496267829816",
     "lga": {
       "name": "Town of Alice Springs",
       "osm_id": 9045378
@@ -13,7 +29,8 @@
       "name": "Ilparpa",
       "osm_id": 2288340792,
       "type": "village"
-    }
+    },
+    "phone": "+61455922533"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEY4RTJNHG6J2RPRSAPK",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

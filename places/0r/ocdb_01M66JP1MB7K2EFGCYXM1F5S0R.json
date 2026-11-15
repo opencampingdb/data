@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4856",
+      "state": "QLD",
+      "street": "Silkwood Japoon Rd",
+      "suburb": "Silkwood"
+    },
     "air": true,
     "lga": {
       "name": "Cassowary Coast Regional",
@@ -20,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bruce Highway"
-    }
+    },
+    "phone": "0740652263",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/astron-silkwood?utm_content=Astron+Silkwood&utm_campaign=Bing+Places&utm_medium=organic&utm_source=bing&utm_term=plcid_13129638483889995105"
   },
   "group": "services",
   "id": "ocdb_01M66JP1MB7K2EFGCYXM1F5S0R",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Aubrey Street",
       "unit": "2A"
     },
+    "facebook": "https://www.facebook.com/129455220419003",
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -34,7 +43,9 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Gold Coast Highway"
-    }
+    },
+    "phone": "+61755702255",
+    "website": "http://www.regentapartments.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVY1422SM80P8M73AA73",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

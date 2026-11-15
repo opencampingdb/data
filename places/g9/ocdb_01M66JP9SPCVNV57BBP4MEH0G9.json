@@ -1,13 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -17,6 +25,7 @@
       "street": "River Street",
       "suburb": "Woolgoolga"
     },
+    "facebook": "https://www.facebook.com/295974591053857",
     "lga": {
       "name": "Coffs Harbour City Council",
       "osm_id": 6165983
@@ -40,7 +49,9 @@
       "name": "Solitary Islands Way"
     },
     "opening_hours": "Mo-Fr 08:00-17:00",
-    "operator": "Mark Beard"
+    "operator": "Mark Beard",
+    "phone": "+61266540111",
+    "website": "http://woolgoolgasc.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JP9SPCVNV57BBP4MEH0G9",
@@ -58,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "4850",
+      "state": "QLD",
+      "street": "Dungeness Rd",
+      "suburb": "Lucinda"
+    },
+    "facebook": "https://www.facebook.com/129093430503354",
     "lga": {
       "name": "Hinchinbrook Shire",
       "osm_id": 11676894
@@ -22,7 +39,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1490
-    }
+    },
+    "phone": "+61747778103",
+    "website": "http://www.lucindahotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXBD036R2HAT31RE24QV",
@@ -40,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

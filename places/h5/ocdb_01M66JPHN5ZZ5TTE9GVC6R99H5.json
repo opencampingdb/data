@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "LOT 77",
+      "postcode": "5661",
+      "state": "SA",
+      "street": "Hay Terrace",
+      "suburb": "Wirrulla"
+    },
+    "facebook": "https://www.facebook.com/213524709037126",
     "lga": {
       "name": "The District Council of Streaky Bay",
       "osm_id": 7109329
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Hay Terrace"
-    }
+    },
+    "phone": "+61886268021",
+    "website": "http://www.mta-sa.asn.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPHN5ZZ5TTE9GVC6R99H5",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

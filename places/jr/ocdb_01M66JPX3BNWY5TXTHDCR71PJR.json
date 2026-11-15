@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "9",
+      "postcode": "5501",
+      "state": "SA",
+      "street": "Wylie Road",
+      "suburb": "LOWER LIGHT"
+    },
     "fuel": true,
     "lga": {
       "name": "Adelaide Plains Council",
@@ -20,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Port Wakefield Highway"
-    }
+    },
+    "phone": "0883126199",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-lower-light"
   },
   "group": "services",
   "id": "ocdb_01M66JPX3BNWY5TXTHDCR71PJR",
@@ -29,7 +48,7 @@
     "lat": -34.532966,
     "lon": 138.437238
   },
-  "name": null,
+  "name": "United Petroleum Lower Light",
   "osm": {
     "id": 950219535,
     "timestamp": "2026-05-15T02:47:52Z",
@@ -38,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,13 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z",
+    "x": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture",
+    "x": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "76",
+      "postcode": "5015",
+      "state": "SA",
+      "street": "Causeway Rd",
+      "suburb": "Glanville"
+    },
+    "facebook": "https://www.facebook.com/141816242533401",
     "lga": {
       "name": "City of Port Adelaide Enfield",
       "osm_id": 9108064
@@ -28,7 +48,10 @@
       "distance_m": 20,
       "name": "Causeway Road"
     },
-    "opening_hours": "Mo-Sa 10:00-18:00+, Su,PH 11:00-18:00+"
+    "opening_hours": "Mo-Sa 10:00-18:00+, Su,PH 11:00-18:00+",
+    "phone": "(08) 8449 6694",
+    "website": "https://thecumberlandhotel.com.au",
+    "x": "https://x.com/cumbynewport"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYNM24Y8Z7X25AWW98NR",
@@ -46,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

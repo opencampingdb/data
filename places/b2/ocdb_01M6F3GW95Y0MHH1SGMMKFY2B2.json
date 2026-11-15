@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "1790",
       "street": "Princes Highway"
     },
+    "facebook": "https://www.facebook.com/117129495012625",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61395440911",
+    "website": "http://www.claytonmonashmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW95Y0MHH1SGMMKFY2B2",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

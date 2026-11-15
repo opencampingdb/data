@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "pub": "osm"
+    "phone": "overture",
+    "pub": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21n",
+      "postcode": "4505",
+      "state": "QLD",
+      "street": "North Shore Dr",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/279124922162085",
     "lga": {
       "name": "City of Moreton Bay",
       "osm_id": 11677711
@@ -24,7 +42,9 @@
       "distance_m": 170,
       "name": "North Shore Drive"
     },
-    "pub": true
+    "phone": "+61738886927",
+    "pub": true,
+    "website": "http://thecentraltavern.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZ9GAYQS1SYP023WPMMN",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

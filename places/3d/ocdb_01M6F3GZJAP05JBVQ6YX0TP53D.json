@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "52",
+      "postcode": "3429",
+      "state": "VIC",
+      "street": "Ligar St",
+      "suburb": "Sunbury"
+    },
+    "facebook": "https://www.facebook.com/194096360660454",
     "lga": {
       "name": "City of Hume",
       "osm_id": 3327634
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gap Road"
-    }
+    },
+    "phone": "+61397404000",
+    "website": "http://www.sunburymotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZJAP05JBVQ6YX0TP53D",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

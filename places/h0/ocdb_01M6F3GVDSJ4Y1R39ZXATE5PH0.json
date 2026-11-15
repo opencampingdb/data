@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "87",
+      "postcode": "4405",
+      "state": "QLD",
+      "street": "Drayton St",
+      "suburb": "Dalby"
+    },
+    "facebook": "https://www.facebook.com/129181550465421",
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Drayton Street"
-    }
+    },
+    "phone": "+61746690444",
+    "website": "http://www.droversmotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVDSJ4Y1R39ZXATE5PH0",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

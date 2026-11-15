@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "4718",
+      "state": "QLD",
+      "street": "Bell St",
+      "suburb": "Moura"
+    },
     "lga": {
       "name": "Banana Shire",
       "osm_id": 11674950
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Dawson Highway"
-    }
+    },
+    "phone": "(07) 4997 2100",
+    "website": "https://www.mouratavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXW661J6EK6CZPE8G52D",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

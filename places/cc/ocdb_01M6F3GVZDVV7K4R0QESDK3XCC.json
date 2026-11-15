@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "15",
+      "postcode": "2631",
+      "state": "NSW",
+      "street": "Stanton St",
+      "suburb": "Nimmitabel"
+    },
     "lga": {
       "name": "Snowy Monaro Regional Council",
       "osm_id": 6239422
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Monaro Highway"
-    }
+    },
+    "phone": "0481 481 034",
+    "website": "http://nimmitabel.nsw.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVZDVV7K4R0QESDK3XCC",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

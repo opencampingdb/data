@@ -1,8 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Malarra Drive",
       "suburb": "Alyangula"
     },
+    "facebook": "https://www.facebook.com/114654189954987",
     "locality": {
       "distance_m": 390,
       "name": "Alyangula",
@@ -20,7 +29,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 500
-    }
+    },
+    "phone": "+61436674767",
+    "website": "https://play.google.com/store/apps/details?id=com.thesmartq.compass.jumpr.plus&hl=en_AU"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYS7PWR7BRWJD6V50KE1",
@@ -38,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

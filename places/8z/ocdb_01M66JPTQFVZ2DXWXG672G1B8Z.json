@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "167",
+      "postcode": "2390",
+      "state": "NSW",
+      "street": "Maitland Street",
+      "suburb": "Narrabri"
+    },
     "fuel": true,
     "lga": {
       "name": "Narrabri Shire Council",
@@ -24,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Tibbereena Street"
-    }
+    },
+    "phone": "+61 2 6792 1932",
+    "website": "https://find.shell.com/au/fuel/10111051-shell-narrabri/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTQFVZ2DXWXG672G1B8Z",
@@ -33,7 +52,7 @@
     "lat": -30.322937,
     "lon": 149.78127
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 447969310,
     "timestamp": "2016-10-16T10:43:26Z",
@@ -42,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

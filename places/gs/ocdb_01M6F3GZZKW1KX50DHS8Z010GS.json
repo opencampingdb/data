@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "4340",
+      "state": "QLD",
+      "street": "School St",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/123558867846361",
     "lga": {
       "name": "Ipswich City",
       "osm_id": 11675604
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "School Street"
-    }
+    },
+    "phone": "+61754641413",
+    "website": "https://www.risingsunrosewood.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZZKW1KX50DHS8Z010GS",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

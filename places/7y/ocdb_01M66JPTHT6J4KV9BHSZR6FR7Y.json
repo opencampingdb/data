@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -12,6 +20,7 @@
       "street": "Warren Road",
       "suburb": "Gilgandra"
     },
+    "facebook": "https://www.facebook.com/108086100934971",
     "lga": {
       "name": "Gilgandra Shire Council",
       "osm_id": 6268488
@@ -25,7 +34,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Miller Street"
-    }
+    },
+    "phone": "+61268471699",
+    "website": "https://www.inlandpetroleum.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JPTHT6J4KV9BHSZR6FR7Y",
@@ -43,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

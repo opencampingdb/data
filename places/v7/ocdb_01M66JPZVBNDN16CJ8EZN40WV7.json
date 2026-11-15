@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "77",
+      "postcode": "4810",
+      "state": "QLD",
+      "street": "Bundock Street",
+      "suburb": "Belgian Gardens"
+    },
     "fuel": true,
     "lga": {
       "name": "Townsville City",
@@ -28,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bundock Street"
-    }
+    },
+    "phone": "+61 417 740 962",
+    "website": "https://find.shell.com/au/fuel/10111106-shell-belgian-gardens/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPZVBNDN16CJ8EZN40WV7",
@@ -37,7 +56,7 @@
     "lat": -19.246811,
     "lon": 146.792865
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1467533709,
     "timestamp": "2026-01-16T09:06:36Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

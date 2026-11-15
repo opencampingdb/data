@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "5",
+      "postcode": "7325",
+      "state": "TAS",
+      "street": "Inglis St",
+      "suburb": "Wynyard"
+    },
+    "facebook": "https://www.facebook.com/212383635452356",
     "lga": {
       "name": "Waratah-Wynyard",
       "osm_id": 10593034
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Inglis Street"
-    }
+    },
+    "phone": "(03) 6442 2736",
+    "website": "http://www.acemotors.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP5R8PWEK6NDRCFZ78BY9",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

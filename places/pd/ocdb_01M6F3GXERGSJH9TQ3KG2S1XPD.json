@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "32",
+      "postcode": "5311",
+      "state": "SA",
+      "street": "Railway Ter",
+      "suburb": "Wunkar"
+    },
+    "facebook": "https://www.facebook.com/109739591656612",
     "lga": {
       "name": "The District Council of Loxton Waikerie",
       "osm_id": 6704840
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Stott Highway"
-    }
+    },
+    "phone": "+61885876233"
   },
   "group": "services",
   "id": "ocdb_01M6F3GXERGSJH9TQ3KG2S1XPD",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

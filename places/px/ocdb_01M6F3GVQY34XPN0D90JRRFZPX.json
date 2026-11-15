@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "444",
+      "postcode": "2870",
+      "state": "NSW",
+      "street": "Clarinda St",
+      "suburb": "Parkes"
+    },
     "lga": {
       "name": "Parkes Shire Council",
       "osm_id": 6271674
@@ -20,7 +35,9 @@
       "distance_m": 40,
       "name": "Peak Hill Road"
     },
-    "operator": "Best Western"
+    "operator": "Best Western",
+    "phone": "(02) 6862 2355",
+    "website": "http://www.moonrakermotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GVQY34XPN0D90JRRFZPX",
@@ -38,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

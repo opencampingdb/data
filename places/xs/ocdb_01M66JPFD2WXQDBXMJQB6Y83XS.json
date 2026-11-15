@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2701",
+      "state": "NSW",
+      "street": "Dr Buchanan Dr",
+      "suburb": "Coolamon"
+    },
+    "facebook": "https://www.facebook.com/346573919091781",
     "lga": {
       "name": "Coolamon Shire Council",
       "osm_id": 6321566
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Cowabbie Street"
-    }
+    },
+    "phone": "+61269273303",
+    "website": "https://www.service.nsw.gov.au/nswgovdirectory/coolamon-ganmain-multi-purpose-service-hospital"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPFD2WXQDBXMJQB6Y83XS",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

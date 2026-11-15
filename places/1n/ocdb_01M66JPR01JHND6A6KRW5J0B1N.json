@@ -1,13 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "4680",
+      "state": "QLD",
+      "street": "Park St",
+      "suburb": "Gladstone"
+    },
+    "facebook": "https://www.facebook.com/329468371135276",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -28,7 +46,9 @@
       "distance_m": 150,
       "name": "Flinders Street"
     },
-    "operator": "Queensland Government"
+    "operator": "Queensland Government",
+    "phone": "+61749763200",
+    "website": "http://www.theartgallerygladstonehospital.com/"
   },
   "group": "emergency",
   "id": "ocdb_01M66JPR01JHND6A6KRW5J0B1N",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

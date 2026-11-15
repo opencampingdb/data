@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "112-118",
+      "postcode": "2869",
+      "state": "NSW",
+      "street": "Caswell Street",
+      "suburb": "Peak Hill"
+    },
     "lga": {
       "name": "Parkes Shire Council",
       "osm_id": 6271674
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Caswell Street"
-    }
+    },
+    "phone": "0268691993",
+    "website": "https://find.shell.com/au/fuel/AU_X137-shell-peak-hill"
   },
   "group": "services",
   "id": "ocdb_01M66JPXQ6JMQ8JXJ5J8VN9AFD",
@@ -27,7 +46,7 @@
     "lat": -32.726595,
     "lon": 148.191685
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 1058619231,
     "timestamp": "2022-05-09T16:23:13Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

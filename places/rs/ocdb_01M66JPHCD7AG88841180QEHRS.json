@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1109",
+      "postcode": "2571",
+      "state": "NSW",
+      "street": "Argyle Street",
+      "suburb": "Wilton"
+    },
     "lga": {
       "name": "Wollondilly Shire Council",
       "osm_id": 6287823
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Almond Street"
-    }
+    },
+    "phone": "0246309455",
+    "website": "https://find.shell.com/au/fuel/10111064-shell-wilton/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPHCD7AG88841180QEHRS",
@@ -27,7 +46,7 @@
     "lat": -34.240429,
     "lon": 150.699047
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 10553925318,
     "timestamp": "2023-01-14T06:12:26Z",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

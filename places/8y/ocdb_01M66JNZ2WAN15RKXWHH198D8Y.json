@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "274-280",
       "street": "Swan Street"
     },
+    "facebook": "https://www.facebook.com/1813164582078048",
     "lga": {
       "name": "City of Yarra",
       "osm_id": 2404491
@@ -32,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Swan Street"
-    }
+    },
+    "phone": "+61394277089",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/richmond/aa-swan-street/3931"
   },
   "group": "services",
   "id": "ocdb_01M66JNZ2WAN15RKXWHH198D8Y",
@@ -50,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

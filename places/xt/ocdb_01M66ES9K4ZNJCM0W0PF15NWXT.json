@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44-48",
+      "postcode": "2820",
+      "state": "NSW",
+      "street": "Curtis St",
+      "suburb": "Wellington"
+    },
+    "facebook": "https://www.facebook.com/251720951534220",
     "lga": {
       "name": "Dubbo Regional Council",
       "osm_id": 6268489
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Curtis Street"
-    }
+    },
+    "phone": "+61409252107"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9K4ZNJCM0W0PF15NWXT",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

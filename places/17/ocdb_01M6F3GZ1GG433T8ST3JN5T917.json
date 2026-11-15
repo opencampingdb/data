@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "44",
+      "postcode": "3675",
+      "state": "VIC",
+      "street": "Gladstone St",
+      "suburb": "Glenrowan"
+    },
+    "facebook": "https://www.facebook.com/173682079310291",
     "lga": {
       "name": "Rural City of Wangaratta",
       "osm_id": 3351439
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Hume Freeway"
-    }
+    },
+    "phone": "(03) 5766 2202",
+    "website": "http://www.kellycountrymotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1GG433T8ST3JN5T917",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

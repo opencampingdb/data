@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3842",
+      "state": "VIC",
+      "street": "Balfour Pl",
+      "suburb": "Churchill"
+    },
+    "facebook": "https://www.facebook.com/492795577745576",
     "lga": {
       "name": "City of Latrobe",
       "osm_id": 3355071
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Monash Way"
-    }
+    },
+    "phone": "+61351221800",
+    "website": "http://www.churchillhotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYXNSV5KZ1FHCCFHMWRA",
@@ -27,7 +49,7 @@
     "lat": -38.31602,
     "lon": 146.419945
   },
-  "name": null,
+  "name": "Churchill Hotel",
   "osm": {
     "id": 347001976,
     "timestamp": "2020-04-15T02:04:25Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

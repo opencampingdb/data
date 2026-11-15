@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "toilets": "osm"
+    "phone": "overture",
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "58",
+      "postcode": "6415",
+      "state": "WA",
+      "street": "Bates St",
+      "suburb": "Merredin"
+    },
+    "facebook": "https://www.facebook.com/176605216495562",
     "lga": {
       "name": "Shire of Merredin",
       "osm_id": 11689039
@@ -20,7 +38,9 @@
       "distance_m": 40,
       "name": "Bates Street"
     },
-    "toilets": true
+    "phone": "+61890411635",
+    "toilets": true,
+    "website": "http://www.thenorthsidetavern.net"
   },
   "group": "services",
   "id": "ocdb_01M6F3GY8CH99DPC23QGHEYG2J",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

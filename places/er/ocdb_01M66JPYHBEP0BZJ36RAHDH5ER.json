@@ -1,12 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "34",
+      "postcode": "2478",
+      "state": "NSW",
+      "street": "Links Ave",
+      "suburb": "East Ballina"
+    },
     "lga": {
       "name": "Ballina Shire Council",
       "osm_id": 6168644
@@ -27,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Links Avenue"
-    }
+    },
+    "phone": "0266866444",
+    "website": "https://locations.ampol.com.au/en/ampol-ballina-east"
   },
   "group": "services",
   "id": "ocdb_01M66JPYHBEP0BZJ36RAHDH5ER",
@@ -36,7 +55,7 @@
     "lat": -28.850057,
     "lon": 153.582879
   },
-  "name": null,
+  "name": "Ampol Ballina East",
   "osm": {
     "id": 1194324976,
     "timestamp": "2025-11-10T02:09:27Z",
@@ -45,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

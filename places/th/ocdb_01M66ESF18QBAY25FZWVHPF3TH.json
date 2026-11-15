@@ -1,16 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2627",
+      "state": "NSW",
+      "street": "Horseshoe Camping Area Access",
+      "suburb": "Kosciuszko National Park"
+    },
     "caravans": true,
     "fee": false,
     "lga": {
@@ -27,6 +39,7 @@
       "distance_m": 100,
       "name": "Barry Way"
     },
+    "phone": "0264505600",
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -48,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

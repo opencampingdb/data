@@ -1,19 +1,33 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
     "dump_station": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "operator": "osm",
     "pets": "osm",
+    "phone": "overture",
     "tents": "osm",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "4735",
+      "street": "Opalton Rd",
+      "suburb": "Winton Shire"
+    },
     "caravans": true,
     "dump_station": false,
     "entry": "public",
+    "facebook": "https://www.facebook.com/393976367752626",
     "fee": true,
     "lga": {
       "name": "Winton Shire",
@@ -21,6 +35,7 @@
     },
     "operator": "Opalton Progress Association",
     "pets": "yes",
+    "phone": "+61429347642",
     "tents": true,
     "wifi": true
   },
@@ -40,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

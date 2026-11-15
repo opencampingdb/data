@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "506",
+      "postcode": "5201",
+      "state": "SA",
+      "street": "Brookman Rd",
+      "suburb": "Kuitpo"
+    },
+    "facebook": "https://www.facebook.com/113013437103566",
     "lga": {
       "name": "Alexandrina Council",
       "osm_id": 7231567
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brookman Road"
-    }
+    },
+    "phone": "+61415123524",
+    "website": "https://www.forestgatecottage.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GV7YM49X39AN37XCWF26",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

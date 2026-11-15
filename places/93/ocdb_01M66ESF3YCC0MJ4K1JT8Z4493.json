@@ -1,12 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6525",
+      "state": "WA",
+      "street": "Ocean Drive",
+      "suburb": "Port Denison"
+    },
     "lga": {
       "name": "Shire of Irwin",
       "osm_id": 11689909
@@ -26,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Point Leander Drive"
-    }
+    },
+    "phone": "1800 600 776",
+    "website": "http://www.ddbeachholidaypark.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3YCC0MJ4K1JT8Z4493",
@@ -44,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

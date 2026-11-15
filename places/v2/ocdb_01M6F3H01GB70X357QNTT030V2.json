@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "102",
+      "postcode": "3356",
+      "state": "VIC",
+      "street": "Smythes Rd",
+      "suburb": "Ballarat"
+    },
+    "facebook": "https://www.facebook.com/363780733684986",
     "lga": {
       "name": "City of Ballarat",
       "osm_id": 3291925
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Smythes Road"
-    }
+    },
+    "phone": "+61353359666",
+    "website": "http://www.peppinellamotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H01GB70X357QNTT030V2",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

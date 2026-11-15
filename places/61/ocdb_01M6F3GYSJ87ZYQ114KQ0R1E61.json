@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "71",
       "street": "Hallam Road"
     },
+    "facebook": "https://www.facebook.com/1781282271918449",
     "lga": {
       "name": "City of Casey",
       "osm_id": 3333276
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Hallam Road"
-    }
+    },
+    "phone": "+61397993322",
+    "website": "http://www.tavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYSJ87ZYQ114KQ0R1E61",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

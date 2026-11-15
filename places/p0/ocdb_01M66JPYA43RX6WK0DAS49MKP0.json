@@ -1,11 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -16,6 +24,7 @@
       "suburb": "Scoresby",
       "unit": "2"
     },
+    "facebook": "https://www.facebook.com/1620302451423883",
     "lga": {
       "name": "City of Knox",
       "osm_id": 3333971
@@ -34,7 +43,9 @@
     },
     "nearest_major_road": {
       "distance_m": 20
-    }
+    },
+    "phone": "+61426526131",
+    "website": "https://scoresbylaundromat.com/"
   },
   "group": "utility",
   "id": "ocdb_01M66JPYA43RX6WK0DAS49MKP0",
@@ -52,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

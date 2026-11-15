@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "8",
+      "postcode": "6430",
+      "state": "WA",
+      "street": "Great Eastern Hwy",
+      "suburb": "Kalgoorlie"
+    },
+    "facebook": "https://www.facebook.com/635230726512226",
     "lga": {
       "name": "City of Kalgoorlie-Boulder",
       "osm_id": 11690214
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Great Eastern Highway"
-    }
+    },
+    "phone": "+61419939338",
+    "website": "http://kalcp.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG2M0GK1PJMN49W53T69",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

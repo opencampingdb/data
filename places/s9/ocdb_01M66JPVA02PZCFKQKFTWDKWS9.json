@@ -1,11 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "209",
+      "postcode": "4077",
+      "state": "QLD",
+      "street": "Progress Rd Cnr Garden Rd",
+      "suburb": "Richlands"
+    },
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -23,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Garden Road"
-    }
+    },
+    "phone": "0732713178",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-richlands"
   },
   "group": "services",
   "id": "ocdb_01M66JPVA02PZCFKQKFTWDKWS9",
@@ -32,7 +51,7 @@
     "lat": -27.597965,
     "lon": 152.949747
   },
-  "name": null,
+  "name": "Ampol Foodary Richlands",
   "osm": {
     "id": 542868252,
     "timestamp": "2020-10-22T06:11:15Z",
@@ -41,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

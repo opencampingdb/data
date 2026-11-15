@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1662-1664",
+      "postcode": "3180",
+      "state": "VIC",
+      "street": "Ferntree Gully Road",
+      "suburb": "Knoxfield"
+    },
     "lga": {
       "name": "City of Knox",
       "osm_id": 3333971
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Ferntree Gully Road"
-    }
+    },
+    "phone": "+61 3 8799 5102",
+    "website": "https://find.shell.com/au/fuel/10111305-shell-reddy-express-knox-park/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPZFH1YF5T2G4GWBYQJA5",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

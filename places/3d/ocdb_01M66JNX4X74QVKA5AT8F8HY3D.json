@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "37",
+      "postcode": "4405",
+      "state": "QLD",
+      "street": "Drayton Street",
+      "suburb": "Dalby"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Drayton Street"
-    }
+    },
+    "phone": "0745165605",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-dalby"
   },
   "group": "services",
   "id": "ocdb_01M66JNX4X74QVKA5AT8F8HY3D",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

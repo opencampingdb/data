@@ -1,14 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "54",
+      "postcode": "6058",
+      "state": "WA",
+      "street": "Cumberland Rd",
+      "suburb": "Forrestfield"
+    },
     "air": false,
     "lga": {
       "name": "City of Kalamunda",
@@ -31,7 +46,9 @@
       "distance_m": 60,
       "name": "Lincoln Road"
     },
-    "operator": "Fast Fuel 24/7"
+    "operator": "Fast Fuel 24/7",
+    "phone": "0423 506 566",
+    "website": "http://forrestfield-wa.auto-australia.com/fastfuel-247"
   },
   "group": "services",
   "id": "ocdb_01M66JPWNH90GVGGTP5STJGB7M",
@@ -49,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

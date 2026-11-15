@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "42",
+      "postcode": "2844",
+      "state": "NSW",
+      "street": "Bolaro St",
+      "suburb": "Dunedoo"
+    },
+    "facebook": "https://www.facebook.com/110389190637254",
     "lga": {
       "name": "Warrumbungle Shire Council",
       "osm_id": 6268496
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Bolaro Street"
-    }
+    },
+    "phone": "+61263751468"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW30GGY3D84C1THJ3GNW",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

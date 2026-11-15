@@ -1,19 +1,39 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "power": "osm",
     "tents": "osm",
     "toilets": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "97",
+      "postcode": "6280",
+      "state": "WA",
+      "street": "Caves Rd",
+      "suburb": "Busselton"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/153077471393775",
     "fee": true,
     "lga": {
       "name": "City of Busselton",
@@ -36,9 +56,11 @@
       "distance_m": 130,
       "name": "Caves Road"
     },
+    "phone": "+61897554241",
     "power": true,
     "tents": false,
     "toilets": false,
+    "website": "http://parksandresorts.rac.com.au/busselton",
     "wifi": true
   },
   "group": "overnight",
@@ -48,7 +70,7 @@
     "lat": -33.660791,
     "lon": 115.249312
   },
-  "name": null,
+  "name": "RAC Busselton Holiday Park",
   "osm": {
     "id": 1295004587,
     "timestamp": "2024-06-22T16:29:07Z",
@@ -57,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

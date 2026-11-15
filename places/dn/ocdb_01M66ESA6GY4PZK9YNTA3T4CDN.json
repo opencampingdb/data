@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2337",
+      "state": "NSW",
+      "street": "Horse Swamp Access",
+      "suburb": "Moonan Brook"
+    },
     "lga": {
       "name": "Upper Hunter Shire Council",
       "osm_id": 6186848
@@ -15,7 +29,9 @@
       "osm_id": 1003754272,
       "type": "village"
     },
-    "operator": "NSW National Parks and Wildlife Service"
+    "operator": "NSW National Parks and Wildlife Service",
+    "phone": "0265451128",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/horse-swamp-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Horse+Swamp+campground+-+Moonan+Brook&utm_term=plcid_9677840317988261055"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA6GY4PZK9YNTA3T4CDN",
@@ -33,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

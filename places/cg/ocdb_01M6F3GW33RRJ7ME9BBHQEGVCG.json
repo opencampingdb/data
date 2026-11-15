@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "86",
+      "postcode": "2563",
+      "state": "NSW",
+      "street": "Menangle Rd",
+      "suburb": "Menangle Park"
+    },
+    "facebook": "https://www.facebook.com/1477522595843850",
     "lga": {
       "name": "Campbelltown City Council",
       "osm_id": 6290704
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Menangle Road"
-    }
+    },
+    "phone": "+61417215513",
+    "website": "http://www.csmm.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW33RRJ7ME9BBHQEGVCG",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

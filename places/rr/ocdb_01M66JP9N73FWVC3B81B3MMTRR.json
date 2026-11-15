@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3020",
+      "state": "VIC",
+      "street": "Shop/3/17 Carrington Dr",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/205856306122576",
     "lga": {
       "name": "City of Brimbank",
       "osm_id": 3327554
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Ballarat Road"
-    }
+    },
+    "phone": "+61383619523",
+    "website": "https://www.edgemotorworks.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JP9N73FWVC3B81B3MMTRR",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "29",
       "street": "Clyde Street"
     },
+    "facebook": "https://www.facebook.com/108356293887049",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Princes Highway"
-    }
+    },
+    "phone": "+61244726344",
+    "website": "http://www.bridgemotel.com"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ1APVVY5B3PMTGHYG3P",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

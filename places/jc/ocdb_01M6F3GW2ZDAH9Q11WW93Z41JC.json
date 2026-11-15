@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "6",
+      "postcode": "2834",
+      "state": "NSW",
+      "street": "Opal St",
+      "suburb": "Lightning Ridge"
+    },
+    "facebook": "https://www.facebook.com/570896803401855",
     "lga": {
       "name": "Walgett Shire Council",
       "osm_id": 6079201
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Morilla Street"
-    }
+    },
+    "phone": "+61268290518",
+    "website": "https://sites.google.com/view/blackopalmotel/home?authuser=1"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GW2ZDAH9Q11WW93Z41JC",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

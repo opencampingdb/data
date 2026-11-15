@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "3128",
+      "state": "VIC",
+      "street": "Unit 12/277-289 Middleborough Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/101093778948698",
     "lga": {
       "name": "City of Whitehorse",
       "osm_id": 2406273
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Middleborough Road"
-    }
+    },
+    "phone": "+61491041968",
+    "website": "https://insideoutautomel.wixsite.com/insideoutautocare"
   },
   "group": "services",
   "id": "ocdb_01M66JPHBJ229GEWRKDXT4ZRCG",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

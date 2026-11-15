@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "641",
+      "postcode": "3144",
+      "state": "VIC",
+      "street": "Dandenong Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/837597752778880",
     "lga": {
       "name": "City of Stonnington",
       "osm_id": 2404995
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Glenferrie Road"
-    }
+    },
+    "phone": "+61399641895",
+    "website": "http://www.angeltavern.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZR0G1V89N51E8M9NYCB",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

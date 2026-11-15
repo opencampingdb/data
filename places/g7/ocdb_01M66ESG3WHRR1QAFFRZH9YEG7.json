@@ -1,9 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "name": "overture",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "375",
+      "postcode": "4380",
+      "street": "Goldfields Rd"
+    },
+    "facebook": "https://www.facebook.com/410976709697373",
     "lga": {
       "name": "Southern Downs Regional",
       "osm_id": 11677975
@@ -13,7 +31,9 @@
       "name": "Amiens",
       "osm_id": 4072833980,
       "type": "village"
-    }
+    },
+    "phone": "+61477369227",
+    "website": "http://www.foxbarfalls.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG3WHRR1QAFFRZH9YEG7",
@@ -22,7 +42,7 @@
     "lat": -28.581931,
     "lon": 151.771248
   },
-  "name": null,
+  "name": "Foxbar Falls Campground",
   "osm": {
     "id": 1270618448,
     "timestamp": "2024-04-07T12:13:17Z",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

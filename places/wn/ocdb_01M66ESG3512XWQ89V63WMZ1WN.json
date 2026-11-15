@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2460",
+      "street": "Station Creek Rd",
+      "suburb": "Coffs Harbour City Council"
+    },
+    "facebook": "https://www.facebook.com/1382358161789668",
     "lga": {
       "name": "Coffs Harbour City Council",
       "osm_id": 6165983
@@ -22,7 +38,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4010
-    }
+    },
+    "phone": "+61266411500",
+    "website": "http://www.environment.nsw.gov.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG3512XWQ89V63WMZ1WN",
@@ -40,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

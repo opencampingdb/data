@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "189",
+      "postcode": "2370",
+      "state": "NSW",
+      "street": "Bourke St",
+      "suburb": "Glen Innes"
+    },
+    "facebook": "https://www.facebook.com/242981259585382",
     "lga": {
       "name": "Glen Innes Severn Council",
       "osm_id": 6163165
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Church Street"
-    }
+    },
+    "phone": "+61267321171",
+    "website": "http://www.jamesiesfuelandfix.repcoservice.net/"
   },
   "group": "services",
   "id": "ocdb_01M66JPMYQRTPJ9S6V5N9X12EW",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

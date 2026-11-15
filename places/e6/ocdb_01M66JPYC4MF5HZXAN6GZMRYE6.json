@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "car_wash": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3095",
+      "state": "VIC",
+      "street": "Cnr Main Rd & Beard St",
+      "suburb": "Melbourne"
+    },
     "car_wash": true,
+    "facebook": "https://www.facebook.com/169112030449724",
     "lga": {
       "name": "Shire of Nillumbik",
       "osm_id": 3331023
@@ -22,6 +37,7 @@
       "distance_m": 30,
       "name": "Main Road"
     },
+    "phone": "+61394397213",
     "website": "https://map.bp.com/en-AU/AU/gas-station/eltham/bp-eltham/0259"
   },
   "group": "services",
@@ -40,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "279",
+      "postcode": "2320",
+      "state": "NSW",
+      "street": "New England Hwy",
+      "suburb": "Maitland"
+    },
+    "facebook": "https://www.facebook.com/100336443393563",
     "lga": {
       "name": "Maitland City Council",
       "osm_id": 6189782
@@ -24,6 +42,8 @@
       "distance_m": 40,
       "name": "New England Highway"
     },
+    "phone": "+61249325255",
+    "website": "http://www.oldmaitlandinn.com.au",
     "wifi": true
   },
   "group": "overnight",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

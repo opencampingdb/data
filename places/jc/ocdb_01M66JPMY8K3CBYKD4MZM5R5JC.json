@@ -1,12 +1,23 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "200",
+      "postcode": "4127",
+      "street": "Kingston Rd"
+    },
     "air": true,
     "lga": {
       "name": "Logan City",
@@ -22,7 +33,8 @@
       "distance_m": 30,
       "name": "Kingston Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "website": "https://servicestations.unitedpetroleum.com.au/location/united-slacks-creek"
   },
   "group": "services",
   "id": "ocdb_01M66JPMY8K3CBYKD4MZM5R5JC",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2278",
+      "postcode": "7120",
+      "state": "TAS",
+      "street": "Woodsdale Rd",
+      "suburb": "Woodsdale"
+    },
+    "facebook": "https://www.facebook.com/172868972266",
     "lga": {
       "name": "Southern Midlands",
       "osm_id": 10624828
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Woodsdale Road"
-    }
+    },
+    "phone": "+61362546171",
+    "website": "http://thewoodsdalemuseum.edublogs.org"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVN5MXYYMCEWMWBHVNWF",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

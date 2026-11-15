@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "13",
+      "postcode": "6213",
+      "state": "WA",
+      "street": "Marinup St",
+      "suburb": "Dwellingup"
+    },
+    "facebook": "https://www.facebook.com/180857728596422",
     "lga": {
       "name": "Shire of Murray",
       "osm_id": 11690485
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "McLarty Street"
-    }
+    },
+    "phone": "+61895381000",
+    "website": "http://www.dwellinguphotel.com.au"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYWH6YW7ZGSVA8S2ATNQ",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,17 +1,26 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "240",
       "street": "Ipswich Road"
     },
+    "facebook": "https://www.facebook.com/284068625110194",
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -31,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Ipswich Road"
-    }
+    },
+    "phone": "+61733356600",
+    "website": "http://www.alexapts.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYN16F2P5G0T7F3CP7EP",
@@ -49,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

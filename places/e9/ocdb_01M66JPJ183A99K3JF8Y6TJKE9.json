@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "3339",
+      "postcode": "4127",
+      "state": "QLD",
+      "street": "Pacific Mwy",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/307731772746220",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -17,7 +35,9 @@
     },
     "nearest_major_road": {
       "distance_m": 50
-    }
+    },
+    "phone": "+61738087637",
+    "website": "http://www.SuziAuto.com/"
   },
   "group": "services",
   "id": "ocdb_01M66JPJ183A99K3JF8Y6TJKE9",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

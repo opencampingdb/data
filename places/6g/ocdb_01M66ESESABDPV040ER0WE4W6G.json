@@ -1,15 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "showers": "osm",
     "tents": "osm",
-    "toilets": "osm"
+    "toilets": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2265",
+      "street": "Watagan Road & Bakers Road",
+      "suburb": "Cessnock City Council"
+    },
     "caravans": true,
+    "facebook": "https://www.facebook.com/664728247001720",
     "fee": false,
     "lga": {
       "name": "Cessnock City Council",
@@ -21,9 +37,11 @@
       "osm_id": 114176529,
       "type": "village"
     },
+    "phone": "+61249729000",
     "showers": false,
     "tents": true,
-    "toilets": false
+    "toilets": false,
+    "website": "http://www.forestrycorporation.com.au/visit/forests/heaton"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESESABDPV040ER0WE4W6G",
@@ -41,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

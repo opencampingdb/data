@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "4650",
+      "state": "QLD",
+      "street": "Mayne St",
+      "suburb": "Tiaro"
+    },
+    "facebook": "https://www.facebook.com/1490496447868038",
     "lga": {
       "name": "Fraser Coast Regional",
       "osm_id": 11676269
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Mayne Street"
-    }
+    },
+    "phone": "+61741939363",
+    "website": "http://www.tiaromotorinn.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYGTHT0524JVETEDQQXK",
@@ -31,7 +53,7 @@
     "lat": -25.723729,
     "lon": 152.582494
   },
-  "name": null,
+  "name": "Tiaro Motor Inn",
   "osm": {
     "id": 17662992,
     "timestamp": "2024-06-02T06:05:43Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

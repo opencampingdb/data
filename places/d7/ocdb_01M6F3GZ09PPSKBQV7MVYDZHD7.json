@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "99A",
+      "postcode": "2430",
+      "state": "NSW",
+      "street": "Manning St",
+      "suburb": "Taree"
+    },
+    "facebook": "https://www.facebook.com/249952155067042",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -17,7 +35,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1070
-    }
+    },
+    "phone": "+61265513000",
+    "website": "http://web.me.com/zaner/Railway_Lodge_Motel/Welcome.html"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZ09PPSKBQV7MVYDZHD7",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

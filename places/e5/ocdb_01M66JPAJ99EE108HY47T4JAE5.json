@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "53",
+      "postcode": "5043",
+      "state": "SA",
+      "street": "Norfolk Rd Unit 6",
+      "suburb": "Marion"
+    },
     "lga": {
       "name": "City of Marion",
       "osm_id": 9102764
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Marion Road"
-    }
+    },
+    "phone": "(08) 8377 1016",
+    "website": "http://tacho-automotive.jany.io"
   },
   "group": "services",
   "id": "ocdb_01M66JPAJ99EE108HY47T4JAE5",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

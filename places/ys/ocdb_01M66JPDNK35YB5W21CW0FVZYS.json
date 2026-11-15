@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "name": "overture",
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2259",
+      "state": "NSW",
+      "street": "Cadonia Road",
+      "suburb": "Tuggerawong"
+    },
     "lga": {
       "name": "Central Coast Council",
       "osm_id": 6195207
@@ -17,7 +34,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1320
-    }
+    },
+    "phone": "1800953282",
+    "website": "https://localcoinatm.com/en-au/bitcoin-atm/new-south-wales/tuggerawong/metro_petroleum_tuggerawong-at-2-cadonia-rd/"
   },
   "group": "services",
   "id": "ocdb_01M66JPDNK35YB5W21CW0FVZYS",
@@ -26,7 +45,7 @@
     "lat": -33.280575,
     "lon": 151.480705
   },
-  "name": null,
+  "name": "Localcoin Bitcoin ATM - Metro Petroleum Tuggerawong",
   "osm": {
     "id": 8377412683,
     "timestamp": "2021-01-30T05:41:54Z",
@@ -35,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

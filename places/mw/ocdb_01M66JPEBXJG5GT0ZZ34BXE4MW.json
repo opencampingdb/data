@@ -1,15 +1,24 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "17",
       "street": "Carinish Road"
     },
+    "facebook": "https://www.facebook.com/644818512231321",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -23,7 +32,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Milgate Street"
-    }
+    },
+    "phone": "+61395441162",
+    "website": "https://www.kerollaspares.com/"
   },
   "group": "services",
   "id": "ocdb_01M66JPEBXJG5GT0ZZ34BXE4MW",
@@ -41,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

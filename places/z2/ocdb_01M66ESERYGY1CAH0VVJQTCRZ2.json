@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "25",
+      "postcode": "3549",
+      "state": "VIC",
+      "street": "McLennan Dr",
+      "suburb": "Robinvale"
+    },
+    "facebook": "https://www.facebook.com/166917016694274",
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Bromley Road"
-    }
+    },
+    "phone": "+61431615132",
+    "website": "http://www.robinvaleaccommodation.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESERYGY1CAH0VVJQTCRZ2",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "155",
+      "postcode": "3953",
+      "state": "VIC",
+      "street": "S Gippsland Hwy",
+      "suburb": "Leongatha"
+    },
+    "facebook": "https://www.facebook.com/262246990602901",
     "lga": {
       "name": "Shire of South Gippsland",
       "osm_id": 3335917
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "South Gippsland Highway"
-    }
+    },
+    "phone": "(03) 5662 2321",
+    "website": "http://www.opalmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZY0VTAYZ0EP3NRN3ZQR",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

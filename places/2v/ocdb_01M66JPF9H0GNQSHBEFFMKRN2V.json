@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -14,6 +20,7 @@
       "street": "Queen Street",
       "suburb": "St Marys"
     },
+    "facebook": "https://www.facebook.com/2384289414924447",
     "lga": {
       "name": "Penrith City Council",
       "osm_id": 6282698
@@ -28,7 +35,8 @@
       "distance_m": 60,
       "name": "Phillip Street"
     },
-    "opening_hours": "Mo-Su 06:00-22:00"
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+611300911292"
   },
   "group": "utility",
   "id": "ocdb_01M66JPF9H0GNQSHBEFFMKRN2V",
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2-4",
+      "postcode": "2022",
+      "state": "NSW",
+      "street": "Bronte Rd",
+      "suburb": "Sydney"
+    },
+    "facebook": "https://www.facebook.com/337531952992698",
     "lga": {
       "name": "Waverley Council",
       "osm_id": 6203556
@@ -27,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Syd Einfeld Drive"
-    }
+    },
+    "phone": "+61293893288",
+    "website": "http://www.teagardenshotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYAFFNG8442DRHN29YSN",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

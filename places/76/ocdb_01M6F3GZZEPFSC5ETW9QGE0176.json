@@ -1,9 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2580",
+      "state": "NSW",
+      "street": "Marsden Weir Fitzroy Street",
+      "suburb": "Goulburn"
+    },
+    "facebook": "https://www.facebook.com/1412281569028600",
     "lga": {
       "name": "Goulburn Mulwaree Council",
       "osm_id": 6310493
@@ -13,7 +30,9 @@
       "name": "Goulburn",
       "osm_id": 29798816,
       "type": "city"
-    }
+    },
+    "phone": "+61248234448",
+    "website": "http://www.goulburnwaterworks.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZZEPFSC5ETW9QGE0176",
@@ -31,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

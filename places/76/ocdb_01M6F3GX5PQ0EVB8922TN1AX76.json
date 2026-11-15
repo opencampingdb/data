@@ -1,11 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "71",
+      "postcode": "3139",
+      "state": "VIC",
+      "street": "Wellington Rd",
+      "suburb": "Melbourne"
+    },
+    "facebook": "https://www.facebook.com/294877960607331",
     "fee": true,
     "lga": {
       "name": "Shire of Yarra Ranges",
@@ -17,6 +33,7 @@
       "osm_id": 1617198913,
       "type": "town"
     },
+    "phone": "+61359642088",
     "website": "https://montdelancey.org.au/"
   },
   "group": "attraction",
@@ -35,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

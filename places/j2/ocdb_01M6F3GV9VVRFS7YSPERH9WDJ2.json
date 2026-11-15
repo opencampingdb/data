@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "41",
+      "postcode": "2847",
+      "state": "NSW",
+      "street": "Williwa St",
+      "suburb": "Portland"
+    },
+    "facebook": "https://www.facebook.com/347297435471352",
     "lga": {
       "name": "Lithgow City Council",
       "osm_id": 6299566
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Cullen Street"
-    }
+    },
+    "phone": "+61460971163",
+    "website": "http://www.thecoroportland.com/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV9VVRFS7YSPERH9WDJ2",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

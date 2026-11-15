@@ -1,15 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "6281",
+      "state": "WA",
+      "street": "Dunn Bay Rd",
+      "suburb": "Dunsborough"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/2112973008939418",
     "lga": {
       "name": "City of Busselton",
       "osm_id": 11688682
@@ -30,6 +45,7 @@
       "distance_m": 30,
       "name": "Naturaliste Terrace"
     },
+    "phone": "+61897553161",
     "website": "https://map.bp.com/en-AU/AU/gas-station/dunsborough/bp-dunsborough/5464"
   },
   "group": "services",
@@ -48,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

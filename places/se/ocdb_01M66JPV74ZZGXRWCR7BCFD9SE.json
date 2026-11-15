@@ -1,13 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "air": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "891",
+      "postcode": "3128",
+      "state": "VIC",
+      "street": "Canterbury Road",
+      "suburb": "Melbourne"
+    },
     "air": true,
+    "facebook": "https://www.facebook.com/412015272559512",
     "lga": {
       "name": "City of Whitehorse",
       "osm_id": 2406273
@@ -22,6 +38,7 @@
       "distance_m": 30,
       "name": "Canterbury Road"
     },
+    "phone": "+61398992152",
     "website": "https://map.bp.com/en-AU/AU/gas-station/box-hill/bp-aa-box-hill-south/3828"
   },
   "group": "services",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

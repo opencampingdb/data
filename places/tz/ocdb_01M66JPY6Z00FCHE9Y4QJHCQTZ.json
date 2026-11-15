@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1440",
+      "postcode": "6107",
+      "state": "WA",
+      "street": "Albany Hwy",
+      "suburb": "Perth"
+    },
+    "facebook": "https://www.facebook.com/1391300030962810",
     "lga": {
       "name": "City of Canning",
       "osm_id": 11689373
@@ -26,7 +44,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Albany Highway"
-    }
+    },
+    "phone": "+61894582239",
+    "website": "http://www.lanceautoelectrics.com.au"
   },
   "group": "services",
   "id": "ocdb_01M66JPY6Z00FCHE9Y4QJHCQTZ",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

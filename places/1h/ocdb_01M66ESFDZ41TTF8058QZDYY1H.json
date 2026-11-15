@@ -1,10 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "28",
+      "postcode": "4405",
+      "state": "QLD",
+      "street": "Black St",
+      "suburb": "Dalby"
+    },
+    "facebook": "https://www.facebook.com/231163650565855",
     "lga": {
       "name": "Western Downs Regional",
       "osm_id": 11674821
@@ -18,7 +34,8 @@
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Black Street"
-    }
+    },
+    "phone": "+61480621810"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFDZ41TTF8058QZDYY1H",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

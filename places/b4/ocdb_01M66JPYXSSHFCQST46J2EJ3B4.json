@@ -1,11 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -15,6 +21,7 @@
       "street": "Thorney Road",
       "suburb": "Fairfield West"
     },
+    "facebook": "https://www.facebook.com/446620099130794",
     "lga": {
       "name": "Fairfield City Council",
       "osm_id": 6212438
@@ -35,7 +42,8 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "New Cambridge Street"
-    }
+    },
+    "phone": "+61281197212"
   },
   "group": "services",
   "id": "ocdb_01M66JPYXSSHFCQST46J2EJ3B4",
@@ -53,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

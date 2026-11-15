@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "123",
+      "postcode": "3777",
+      "state": "VIC",
+      "street": "Maroondah Highway",
+      "suburb": "Healesville"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -26,7 +41,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Maroondah Highway"
-    }
+    },
+    "phone": "+61 3 5911 6051",
+    "website": "https://find.shell.com/au/fuel/10110849-shell-reddy-express-healesville/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPTSHXEVNEAE5FNRT03YY",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

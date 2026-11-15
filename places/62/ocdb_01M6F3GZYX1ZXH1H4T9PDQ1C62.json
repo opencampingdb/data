@@ -1,14 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
       "housenumber": "42",
       "street": "Victoria Road"
     },
+    "facebook": "https://www.facebook.com/1980012615613639",
     "lga": {
       "name": "Clare and Gilbert Valleys Council",
       "osm_id": 9108116
@@ -18,7 +27,9 @@
       "name": "Clare",
       "osm_id": 249338605,
       "type": "town"
-    }
+    },
+    "phone": "+61448663372",
+    "website": "http://jackshouseclare.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZYX1ZXH1H4T9PDQ1C62",
@@ -36,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

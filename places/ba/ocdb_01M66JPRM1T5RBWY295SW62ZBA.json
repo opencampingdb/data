@@ -1,12 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "63",
+      "postcode": "2795",
+      "state": "NSW",
+      "street": "Sydney Road",
+      "suburb": "Bathurst"
+    },
+    "facebook": "https://www.facebook.com/103255786089677",
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -29,7 +47,9 @@
       "distance_m": 30,
       "name": "Sydney Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "+61263325325",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/kelso/bp-kelso/1225"
   },
   "group": "services",
   "id": "ocdb_01M66JPRM1T5RBWY295SW62ZBA",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

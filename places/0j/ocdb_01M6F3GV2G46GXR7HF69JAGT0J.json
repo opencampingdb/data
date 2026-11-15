@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "21",
+      "postcode": "4119",
+      "state": "QLD",
+      "street": "Kingston Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/280351925352148",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "95"
-    }
+    },
+    "phone": "+61730517641",
+    "website": "https://hotelhq.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV2G46GXR7HF69JAGT0J",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

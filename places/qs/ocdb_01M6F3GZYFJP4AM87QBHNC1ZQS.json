@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "116-120",
+      "postcode": "4118",
+      "state": "QLD",
+      "street": "Johnson Rd",
+      "suburb": "Brisbane"
+    },
+    "facebook": "https://www.facebook.com/122099261108001267",
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -22,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Johnson Road"
-    }
+    },
+    "phone": "+61738091000",
+    "website": "http://www.johnsonroadmotel.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GZYFJP4AM87QBHNC1ZQS",
@@ -31,7 +53,7 @@
     "lat": -27.658927,
     "lon": 153.02745
   },
-  "name": null,
+  "name": "Johnson Road Motel",
   "osm": {
     "id": 1328040454,
     "timestamp": "2024-10-25T02:07:17Z",
@@ -40,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

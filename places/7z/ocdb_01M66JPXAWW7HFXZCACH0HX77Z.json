@@ -1,12 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "61-63",
+      "postcode": "6059",
+      "state": "WA",
+      "street": "Walter Road West",
+      "suburb": "Dianella"
+    },
     "lga": {
       "name": "City of Stirling",
       "osm_id": 11689256
@@ -24,7 +37,8 @@
       "distance_m": 40,
       "name": "Walter Road West"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "0894731213"
   },
   "group": "services",
   "id": "ocdb_01M66JPXAWW7HFXZCACH0HX77Z",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

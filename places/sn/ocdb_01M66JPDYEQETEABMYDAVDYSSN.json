@@ -1,10 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2095",
+      "postcode": "6083",
+      "state": "WA",
+      "street": "Toodyay Road",
+      "suburb": "Gidgegannup"
+    },
     "lga": {
       "name": "City of Swan",
       "osm_id": 11689336
@@ -18,7 +33,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Toodyay Road"
-    }
+    },
+    "phone": "0895783411",
+    "website": "https://find.shell.com/au/fuel/10111665-shell-gidgegannup/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPDYEQETEABMYDAVDYSSN",
@@ -36,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "200",
+      "postcode": "3984",
+      "state": "VIC",
+      "street": "Grantville-Glen Alvie Rd",
+      "suburb": "Grantville"
+    },
+    "facebook": "https://www.facebook.com/206931156024731",
     "lga": {
       "name": "Bass Coast Shire",
       "osm_id": 3335921
@@ -21,7 +39,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2160
-    }
+    },
+    "phone": "(03) 5678 8370",
+    "website": "http://www.uccamping.org.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFWGM4Z5RPW3VM27QSCD",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

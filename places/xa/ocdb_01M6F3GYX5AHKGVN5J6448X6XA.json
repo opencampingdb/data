@@ -1,10 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "name": "overture",
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "1982",
+      "postcode": "6753",
+      "state": "WA",
+      "street": "Newman Dr",
+      "suburb": "Newman"
+    },
+    "facebook": "https://www.facebook.com/684879574860679",
     "lga": {
       "name": "Shire of East Pilbara",
       "osm_id": 11690247
@@ -18,7 +38,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Newman Drive"
-    }
+    },
+    "phone": "+61891759555",
+    "website": "https://redsandstavern.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYX5AHKGVN5J6448X6XA",
@@ -27,7 +49,7 @@
     "lat": -23.352505,
     "lon": 119.740295
   },
-  "name": null,
+  "name": "The Red Sands Tavern",
   "osm": {
     "id": 333926541,
     "timestamp": "2015-03-21T00:15:32Z",
@@ -36,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

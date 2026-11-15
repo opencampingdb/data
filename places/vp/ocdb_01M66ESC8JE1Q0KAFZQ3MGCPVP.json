@@ -1,10 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2324",
+      "state": "NSW",
+      "street": "Tattersals Road",
+      "suburb": "Limeburners Creek"
+    },
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -17,7 +31,9 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4820
-    }
+    },
+    "phone": "0249848200",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tattersalls-campground"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESC8JE1Q0KAFZQ3MGCPVP",
@@ -35,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

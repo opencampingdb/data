@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "84-88",
+      "postcode": "2428",
+      "state": "NSW",
+      "street": "MacIntosh Street",
+      "suburb": "Forster"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -33,7 +50,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Macintosh Street"
-    }
+    },
+    "phone": "1800953282",
+    "website": "https://localcoinatm.com/en-au/bitcoin-atm/new-south-wales/forster/pearl_energy_forster-at-84-88-macintosh-street/"
   },
   "group": "services",
   "id": "ocdb_01M66JP797VE1JJK5S6BBW8HG5",
@@ -42,7 +61,7 @@
     "lat": -32.190776,
     "lon": 152.515414
   },
-  "name": null,
+  "name": "Localcoin Bitcoin ATM - Pearl Energy Forster",
   "osm": {
     "id": 4030804298,
     "timestamp": "2024-02-01T11:27:51Z",
@@ -51,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

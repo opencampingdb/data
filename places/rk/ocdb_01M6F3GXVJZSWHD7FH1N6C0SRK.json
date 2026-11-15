@@ -1,14 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "cabins": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "27",
+      "postcode": "4719",
+      "state": "QLD",
+      "street": "The Blvd",
+      "suburb": "Theodore"
+    },
     "cabins": true,
+    "facebook": "https://www.facebook.com/390259710841255",
     "lga": {
       "name": "Banana Shire",
       "osm_id": 11674950
@@ -26,7 +42,8 @@
       "distance_m": 30,
       "name": "The Boulevard"
     },
-    "phone": "+61 7 4993 1244"
+    "phone": "+61 7 4993 1244",
+    "website": "https://www.hoteltheodore.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GXVJZSWHD7FH1N6C0SRK",
@@ -44,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

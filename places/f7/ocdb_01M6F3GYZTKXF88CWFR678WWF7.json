@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "4823",
+      "state": "QLD",
+      "street": "Burke St",
+      "suburb": "Julia Creek"
+    },
+    "facebook": "https://www.facebook.com/111221731755463",
     "lga": {
       "name": "McKinlay Shire",
       "osm_id": 11677391
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Burke Street"
-    }
+    },
+    "phone": "+61422104809",
+    "website": "http://www.juliacreekvillas.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYZTKXF88CWFR678WWF7",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

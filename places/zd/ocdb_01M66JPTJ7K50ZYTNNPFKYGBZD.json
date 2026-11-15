@@ -1,12 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "45",
+      "postcode": "3823",
+      "state": "VIC",
+      "street": "Princes Hwy",
+      "suburb": "Yarragon"
+    },
+    "facebook": "https://www.facebook.com/1530096643953770",
     "fuel": true,
     "lga": {
       "name": "Shire of Baw Baw",
@@ -22,6 +38,7 @@
       "distance_m": 40,
       "name": "Princes Highway"
     },
+    "phone": "+61383790724",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-yarragon"
   },
   "group": "services",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

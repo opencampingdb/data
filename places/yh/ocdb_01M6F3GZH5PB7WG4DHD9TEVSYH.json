@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "pub": "osm"
+    "phone": "overture",
+    "pub": "osm",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "postcode": "5573",
+      "state": "SA",
+      "street": "Robert St",
+      "suburb": "Maitland"
+    },
+    "facebook": "https://www.facebook.com/155042904518836",
     "lga": {
       "name": "Yorke Peninsula Council",
       "osm_id": 6673799
@@ -20,7 +38,9 @@
       "distance_m": 30,
       "name": "Robert Street"
     },
-    "pub": true
+    "phone": "+61888322422",
+    "pub": true,
+    "website": "http://www.yorkevalleyhotel.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M6F3GZH5PB7WG4DHD9TEVSYH",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

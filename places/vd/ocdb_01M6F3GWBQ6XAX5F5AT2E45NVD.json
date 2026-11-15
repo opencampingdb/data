@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "7321",
+      "state": "TAS",
+      "street": "Smith Street",
+      "suburb": "Waratah"
+    },
+    "facebook": "https://www.facebook.com/1821332878126383",
     "lga": {
       "name": "Waratah-Wynyard",
       "osm_id": 10593034
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 200,
       "name": "William Street"
-    }
+    },
+    "phone": "+61364391252",
+    "website": "https://www.discovertasmania.com.au/attraction/waratahmuseum"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GWBQ6XAX5F5AT2E45NVD",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

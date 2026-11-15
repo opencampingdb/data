@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "161",
+      "postcode": "5006",
+      "state": "SA",
+      "street": "Melbourne St",
+      "suburb": "Adelaide"
+    },
+    "facebook": "https://www.facebook.com/134610523241038",
     "lga": {
       "name": "Adelaide City Council",
       "osm_id": 3093825
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Melbourne Street"
-    }
+    },
+    "phone": "+61883670222",
+    "website": "http://www.thelionhotel.com"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYPX5WDY8M7S8TPKF6B1",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

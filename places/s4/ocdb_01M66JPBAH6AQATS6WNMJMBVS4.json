@@ -1,11 +1,26 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "315-325",
+      "postcode": "4131",
+      "state": "QLD",
+      "street": "Loganlea Road",
+      "suburb": "Meadowbrook"
+    },
     "lga": {
       "name": "Logan City",
       "osm_id": 11675411
@@ -22,7 +37,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Loganlea Road"
-    }
+    },
+    "phone": "+61 7 2810 5629",
+    "website": "https://find.shell.com/au/fuel/10111348-shell-reddy-express-loganlea/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPBAH6AQATS6WNMJMBVS4",
@@ -40,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

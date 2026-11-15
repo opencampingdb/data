@@ -1,10 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "5633",
+      "state": "SA",
+      "street": "Tod Hwy",
+      "suburb": "Lock"
+    },
+    "facebook": "https://www.facebook.com/424060157611513",
     "lga": {
       "name": "District Council of Elliston",
       "osm_id": 7125331
@@ -18,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Tod Highway"
-    }
+    },
+    "phone": "+61886891217",
+    "website": "http://www.boomerangmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX6KYE227JNW5V208SEW",
@@ -36,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

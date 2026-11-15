@@ -1,13 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "332-336",
+      "postcode": "2528",
+      "state": "NSW",
+      "street": "Shellharbour Rd",
+      "suburb": "Barrack Heights"
+    },
     "lga": {
       "name": "Shellharbour City Council",
       "osm_id": 6304532
@@ -29,7 +44,9 @@
       "distance_m": 30,
       "name": "Shellharbour Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "phone": "0242523901",
+    "website": "https://locations.ampol.com.au/en/ampol-foodary-barrack-heights"
   },
   "group": "services",
   "id": "ocdb_01M66JPYKGC6ZJ5PQQCFF6P75G",
@@ -47,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

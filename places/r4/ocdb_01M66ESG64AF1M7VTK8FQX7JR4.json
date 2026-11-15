@@ -1,15 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "phone": "overture",
     "tents": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "2631",
+      "street": "Nunnock Wilkinsons Track",
+      "suburb": "Bega Valley Shire Council"
+    },
     "booking_required": true,
     "caravans": true,
+    "facebook": "https://www.facebook.com/516545668525641",
     "fee": true,
     "lga": {
       "name": "Bega Valley Shire Council",
@@ -21,6 +35,7 @@
       "osm_id": 260347881,
       "type": "village"
     },
+    "phone": "+611300072757",
     "tents": true
   },
   "group": "overnight",
@@ -39,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

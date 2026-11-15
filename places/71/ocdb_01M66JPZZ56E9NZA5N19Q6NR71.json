@@ -1,12 +1,27 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "260",
+      "postcode": "3195",
+      "state": "VIC",
+      "street": "Governor Road",
+      "suburb": "Braeside"
+    },
     "lga": {
       "name": "City of Kingston",
       "osm_id": 3333046
@@ -27,7 +42,9 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Governor Road"
-    }
+    },
+    "phone": "+61 3 7503 7697",
+    "website": "https://map.bp.com/en-AU/AU/gas-station/braeside/bp-braeside/1375"
   },
   "group": "services",
   "id": "ocdb_01M66JPZZ56E9NZA5N19Q6NR71",
@@ -45,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

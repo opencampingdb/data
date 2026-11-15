@@ -1,11 +1,29 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "2",
+      "postcode": "2824",
+      "state": "NSW",
+      "street": "Udora Rd",
+      "suburb": "Beemunnel"
+    },
+    "facebook": "https://www.facebook.com/278544455641537",
     "lga": {
       "name": "Warren Shire Council",
       "osm_id": 6100934
@@ -22,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Coonamble Road"
-    }
+    },
+    "phone": "+61268474706",
+    "website": "http://www.macquarievanpark.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB0AHNZWJJZVBCSBRCQ5",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,9 +1,15 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +19,7 @@
       "street": "North Road",
       "suburb": "Oakleigh South"
     },
+    "facebook": "https://www.facebook.com/102024104541674",
     "lga": {
       "name": "City of Monash",
       "osm_id": 2905535
@@ -26,7 +33,8 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "North Road"
-    }
+    },
+    "phone": "+61395441233"
   },
   "group": "services",
   "id": "ocdb_01M66JP9JSWE6F4W23FDHHXW97",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

@@ -1,11 +1,25 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "booking_required": "osm",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "2550",
+      "state": "NSW",
+      "street": "South East Forest National Park",
+      "suburb": "Tantawangalo"
+    },
     "booking_required": true,
     "fee": true,
     "lga": {
@@ -17,7 +31,9 @@
       "name": "Cathcart",
       "osm_id": 10923047162,
       "type": "village"
-    }
+    },
+    "phone": "1300072757",
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/postmans-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_7336519824448048784&utm_content=Postmans+campground+-+Tantawangalo"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDXN47THJBNCKSQEY5YR",
@@ -35,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

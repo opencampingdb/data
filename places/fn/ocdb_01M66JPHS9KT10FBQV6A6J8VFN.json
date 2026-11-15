@@ -1,11 +1,31 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "659",
+      "postcode": "2753",
+      "state": "NSW",
+      "street": "Grose Vale Rd",
+      "suburb": "Grose Vale"
+    },
+    "facebook": "https://www.facebook.com/100278519352296",
     "lga": {
       "name": "Hawkesbury City Council",
       "osm_id": 6222206
@@ -20,7 +40,9 @@
       "distance_m": 20,
       "name": "Grose Vale Road"
     },
-    "operator": "Speedway"
+    "operator": "Speedway",
+    "phone": "+61245721569",
+    "website": "https://speedway.com.au/locations/speedway-grose-vale"
   },
   "group": "services",
   "id": "ocdb_01M66JPHS9KT10FBQV6A6J8VFN",
@@ -29,7 +51,7 @@
     "lat": -33.582174,
     "lon": 150.660701
   },
-  "name": null,
+  "name": "Speedway Grose Vale",
   "osm": {
     "id": 10745030009,
     "timestamp": "2023-03-19T12:04:56Z",
@@ -38,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

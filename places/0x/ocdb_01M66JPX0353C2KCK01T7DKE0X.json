@@ -1,13 +1,30 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "name": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
+    "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "452",
+      "postcode": "5012",
+      "state": "SA",
+      "street": "Grand Junction Road",
+      "suburb": "Mansfield Park"
+    },
     "fuel": true,
     "lga": {
       "name": "City of Port Adelaide Enfield",
@@ -28,7 +45,9 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Grand Junction Road"
-    }
+    },
+    "phone": "+61 8 8448 4591",
+    "website": "https://find.shell.com/au/fuel/10111356-shell-otr-mansfield-park/en_AU"
   },
   "group": "services",
   "id": "ocdb_01M66JPX0353C2KCK01T7DKE0X",
@@ -37,7 +56,7 @@
     "lat": -34.85051,
     "lon": 138.554643
   },
-  "name": null,
+  "name": "Shell",
   "osm": {
     "id": 927466280,
     "timestamp": "2025-08-16T00:37:46Z",
@@ -46,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

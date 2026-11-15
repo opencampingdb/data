@@ -1,10 +1,28 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "address": {
+      "housenumber": "51",
+      "postcode": "4356",
+      "state": "QLD",
+      "street": "Helens St",
+      "suburb": "Pittsworth"
+    },
+    "facebook": "https://www.facebook.com/454700021054714",
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
@@ -18,7 +36,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Gore Highway"
-    }
+    },
+    "phone": "+61746932888",
+    "website": "https://www.pittsworthmotorinn.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3H02JEC8JAAYYJHC9CWVE",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

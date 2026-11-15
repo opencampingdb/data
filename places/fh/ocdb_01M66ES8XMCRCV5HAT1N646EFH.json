@@ -1,11 +1,24 @@
 {
+  "fact_dates": {
+    "address": "2026-11-15T00:00:00Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "address": "overture",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "phone": "overture"
   },
   "facts": {
+    "address": {
+      "postcode": "6398",
+      "street": "State Route 3"
+    },
+    "facebook": "https://www.facebook.com/1734332290186403",
     "fee": true,
     "lga": {
       "name": "Shire of Manjimup",
@@ -19,7 +32,8 @@
     },
     "nearest_beach": {
       "distance_m": 150
-    }
+    },
+    "phone": "+61898400400"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES8XMCRCV5HAT1N646EFH",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }

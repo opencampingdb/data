@@ -1,9 +1,17 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -13,6 +21,7 @@
       "street": "Sydney Street",
       "suburb": "Kilmore"
     },
+    "facebook": "https://www.facebook.com/2087268457986437",
     "lga": {
       "name": "Shire of Mitchell",
       "osm_id": 3327815
@@ -26,7 +35,9 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Sydney Street"
-    }
+    },
+    "phone": "+61357821346",
+    "website": "http://www.foxontherunmotel.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GX12CV2MBRP67HGKKXV1",
@@ -44,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-15T00:00:00Z"
 }
