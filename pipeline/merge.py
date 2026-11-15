@@ -43,6 +43,7 @@ from pathlib import Path
 
 from .common import (
     FACT_KEYS,
+    OVERTURE,
     ROOFED_KINDS,
     dump_line,
     dump_record,
@@ -58,9 +59,23 @@ from .common import (
 )
 from .duplicates import automatic_merge, distance_m, find_duplicates, has_name, tidy_name
 from .geometry import Geometry, load_geometry, osm_ref
+from .overture_rules import load_links, write_links
 
-# Sources whose facts move to the kept record.
-MOVABLE_SOURCES = ("feedback", "contributed", "community_report")
+# Sources whose facts move to the kept record, where it has none.
+MOVABLE_SOURCES = ("feedback", "contributed", "community_report", OVERTURE)
+
+
+def move_overture_link(root: Path, keep_id: str, drop_id: str) -> None:
+    """The dropped record's Overture link goes to the kept one when it has no link of its own.
+
+    Either way the dropped record leaves the link file.
+    """
+    links = load_links(root)
+    if drop_id not in links:
+        return
+    link = links.pop(drop_id)
+    links.setdefault(keep_id, link)
+    write_links(root, links)
 
 
 class MergeError(Exception):
@@ -131,7 +146,8 @@ def merge(
             {"type": t, "id": i, **({"part": True} if (t, i) in parts else {})} for t, i in sorted(links)
         ]
 
-    # Facts from feedback and contributions, where the kept record has none.
+    # Facts from travellers, contributions, community reports and Overture,
+    # where the kept record has none.
     for key, source in sorted(dropped.get("fact_sources", {}).items()):
         if key in FACT_KEYS and source in MOVABLE_SOURCES and key not in kept["facts"]:
             if key in dropped["facts"]:
@@ -155,6 +171,8 @@ def merge(
         write_text(review_path(root, keep_id), "".join(dump_line(r) + "\n" for r in reviews))
     if moved:
         review_path(root, drop_id).unlink()
+
+    move_overture_link(root, keep_id, drop_id)
 
     kept["updated"] = now
     write_text(place_path(root, keep_id), dump_record(kept))

@@ -877,9 +877,11 @@ place. A person runs it and opens a PR with the result:
 - A pair on the distinct list is refused, unless `--part` says they are
   parts of one place, such as two sections of a caravan park on either side
   of a street.
-- Facts the dropped record got from `feedback`, `contributed` or `community_report` move to the
-  kept record where it has no value, with their `fact_dates`. OSM facts do
-  not move.
+- Facts the dropped record got from `feedback`, `contributed`,
+  `community_report` or `overture` move to the kept record where it has no
+  value, with their `fact_dates`. OSM facts do not move. The dropped
+  record's line in `overture/links.ndjson` goes to the kept record when it
+  has no Overture link of its own, and is removed otherwise.
 - The kept record takes the newer `last_confirmed` of the two.
 - The dropped record's reviews move to the kept record, and the kept record's
   rating is recalculated from its visible reviews.

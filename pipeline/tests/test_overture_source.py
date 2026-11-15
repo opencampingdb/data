@@ -10,6 +10,8 @@ import json
 from datetime import datetime, timezone
 
 from pipeline.common import NOT_FOR_OSM, SOURCES, dump_record, load_places, place_path
+from pipeline.merge import merge
+from pipeline.overture_rules import load_links, write_links
 from pipeline.maproulette import DOUBLE_MAPPING, REPORT_SOURCES, TRAVELLER_REPORTS, write_challenges
 from pipeline.sync import sync
 from pipeline.validate import validate_repo
@@ -282,3 +284,34 @@ def test_an_overture_name_never_reaches_a_task(repo, tmp_path):
     for text in (doubles, reports):
         assert "Riverbend" not in text and "Creekside" not in text
         assert "Unnamed place" in text
+
+
+# -------------------------------------------------------------------- merge
+
+
+def test_a_merge_moves_overture_values_the_kept_record_lacks_with_their_dates(repo):
+    write(repo, osm_record(A, 1, facts={"website": "https://lakecamp.org.au/"}, fact_sources={"website": "osm"}))
+    write(repo, filled(B, 2))
+    merge(repo, A, B, now=T2)
+    kept = record(repo, A)
+    # The kept record's own website stays. The phone it lacked moves, sourced and dated as it was.
+    assert kept["facts"] == {"website": "https://lakecamp.org.au/", "phone": "+61 2 5550 0100"}
+    assert kept["fact_sources"] == {"website": "osm", "phone": "overture"}
+    assert kept["fact_dates"] == {"phone": FILLED}
+    assert validate_repo(repo) == []
+
+
+def test_a_merge_moves_the_link_only_to_a_kept_place_with_no_link(repo):
+    write(repo, osm_record(A, 1))
+    write(repo, filled(B, 2))
+    write_links(repo, {B: {"gers": "g-b", "release": "2026-10-21.0"}})
+    merge(repo, A, B, now=T2)
+    assert load_links(repo) == {A: {"gers": "g-b", "release": "2026-10-21.0"}}
+
+
+def test_a_merge_keeps_the_kept_places_own_link(repo):
+    write(repo, osm_record(A, 1))
+    write(repo, filled(B, 2))
+    write_links(repo, {A: {"gers": "g-a", "release": "2026-10-21.0"}, B: {"gers": "g-b", "release": "2026-10-21.0"}})
+    merge(repo, A, B, now=T2)
+    assert load_links(repo) == {A: {"gers": "g-a", "release": "2026-10-21.0"}}
