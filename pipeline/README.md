@@ -28,6 +28,7 @@ release workflow runs Validate, Release, Database and Place index.
 | MapRoulette | `python -m pipeline.maproulette extract.ndjson --root . --geometry geometry.ndjson --inbox <inbox> --report sync-report.md` | the extract, `places/` and the inbox's `applied/` folder | `maproulette/double_mapping.geojson`, `maproulette/traveller_reports.geojson`, `maproulette/out_of_spec.geojson`, a section of the sync report (the nightly sync workflow runs this after Sync). Values with the source `community_report`, and places whose name or location has it, are left out. So are values with the source `overture` and Overture candidates, and a task never shows a name from Overture. Report tasks need the evidence in `--inbox`, and without it the report file has no tasks. See [maproulette/README.md](../maproulette/README.md) |
 | Out of spec check | runs inside the MapRoulette step, with `npm ci --ignore-scripts` in `tools/oh-check` first | facts in `places/` whose source is `osm`, while the extract still has the same value | `maproulette/out_of_spec.geojson`: one task per place and tag whose value the tag's reference refuses, `opening_hours` read by opening_hours.js (node, `tools/oh-check`) as Australian, `phone` and `phone_2` against the international form (`+61 ...`), `charge` and `charge_conditional` against the Key:charge syntax. Style warnings and values that fail only for missing school holiday data make no task. Without node the file is left as it was and the sync report says why. See [pipeline/out_of_spec.py](out_of_spec.py) |
 | Overture pull | `python tools/overture-pull/pull.py <release> overture.ndjson`, after `pip install -r tools/overture-pull/requirements.txt` (DuckDB) | one Overture Maps release's places theme and places changelog, from the public bucket | the Overture extract (see "Overture extract"). Runs by hand or in the Overture workflow, never in tests |
+| Overture import | `python -m pipeline.overture overture.ndjson --root . --geometry geometry.ndjson [--changelog] [--report overture-report.md] [--summary overture-summary.json]` | the Overture extract, `places/`, the geometry sidecar, `overture/links.ndjson` and the kept lists in `overture/` | gap fills in `places/`, `overture/links.ndjson`, the report (see "Overture import") |
 
 Tests: `python -m pytest`. The out of spec tests skip without
 `tools/oh-check` installed as above. CI installs it and sets `REQUIRE_NODE=1`
@@ -410,6 +411,84 @@ The extract never holds emails, socials, brand, operating status or any other
 Overture field. `check_extract` in the tool lists every way a file breaks this
 format. `pipeline/tests/fixtures/overture-extract.ndjson` is a small
 hand-written extract for the importer's tests.
+
+## Overture import
+
+`pipeline/overture.py` matches places to Overture places and fills gaps from
+them. `import_overture` is the one entry point; the command reads and writes
+the files around it. It does no network work.
+
+Only these kinds are filled: every overnight kind, `information_centre`,
+`fuel`, `lpg_refill_swap`, `mechanic`, `food_and_drink`, `laundromat`,
+`hospital_emergency`, `attraction`, `heritage` and `experience`. Merged
+records are left alone.
+
+Kept files:
+
+- `overture/categories.json`: each kind and the Overture categories that fit
+  it. A category fits when it is the place's `basic_category` or
+  `taxonomy_primary`.
+- `overture/directory-hosts.json`: directory, aggregator and social hosts
+  (`placestars.com` first). A website on one of them, or on a subdomain of
+  one, is never taken or compared.
+- `overture/do-not-match.json`: `{"pairs": [{"place", "gers"}]}`, place and
+  Overture place pairs never matched.
+- `overture/links.ndjson`: the link file, one line per matched place,
+  `{"gers","place","release"}` sorted by place id, with the release the match
+  was last seen in. It is not released.
+
+**The match.** Overture values a place already has are set aside first, so
+every run works from what other sources give. A named place's match is the
+strong match, and all of these must hold: the category fits the kind, the
+Overture place is within 100 m of the place's location, Jaro-Winkler
+similarity of the two names is 0.85 or more (names lower cased, every run of
+characters other than a to z and 0 to 9 made one space), Overture's
+confidence is 0.7 or more, and exactly one Overture place passes. An unnamed
+place (no name, or a name from Overture) matches an Overture place with a
+name that lies inside the place's outline from the geometry sidecar or
+within 100 m of it (of its location when it has no outline), whose category
+fits, at confidence 0.8 or more, when it is the only one.
+
+**Gap fills.** A match gives an unnamed place its name, and gives the
+website, phone and address where no other source has a value:
+
+- website: Overture's first website that starts with `http://` or
+  `https://` and is not on a directory host;
+- phone: Overture's first phone, as Overture writes it;
+- address: the last comma-separated piece of Overture's first Australian
+  freeform address, split into `housenumber` (with "Lot") and `street`, plus
+  `suburb` from the locality (not a council area such as "Shire of
+  Manjimup"), `state` from the region, and a four digit `postcode`. A street
+  called "Unnamed Rd" is no street, and no address is taken without one.
+
+Emails, socials, brand, operating status and confidence are never taken.
+Each value taken is sourced `overture` with a fact date of the run. A value
+that has not changed keeps its date.
+
+**Refresh.** An `overture` value follows Overture's change, and comes off
+when Overture no longer gives it or the match is lost (the Overture place
+removed, a second candidate, or a rule no longer met). A value another source
+has since replaced is not touched.
+
+**Overture differs.** For a matched place, a website or phone sourced `osm`
+that disagrees with Overture's is listed for a person to decide. Websites
+agree when any Overture website has the same host (lower case, without
+`www.`). Phones agree when any Overture phone and any number in OSM's value
+(several are separated by `;`) are the same Australian number: digits only,
+`+61` and `+61 (0)` written as a leading 0.
+
+**Changelog runs.** The first run checks every place. With `--changelog`, a
+linked place whose Overture place the changelog lists as `unchanged`, or
+does not list, keeps its values and link without a check. Every other place
+is checked as in a full run, so places with no link can still match.
+
+**Report and summary.** The report lists the counts, each kind's names,
+websites, phones and addresses before and after, the "Overture differs"
+lines and the values taken off. The summary JSON has the same counts,
+`change_percent` (records changed out of all live records) and `auto_merge`
+(under 2%, as in the OSM sync). Overture candidates (places we lack) belong
+to a later step: `ImportResult.candidates` and the summary's `candidates`
+are empty until then.
 
 ## Sync
 
