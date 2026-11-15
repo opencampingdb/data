@@ -360,6 +360,8 @@ def strong_match(record: dict, overture: Overture, lists: KeptLists, fresh_only:
     With fresh_only, only Overture places the changelog lists as added or changed count.
     """
     name = normalised_name(record["name"])
+    if not name:
+        return None  # a name with nothing to compare (no letters a-z or digits) matches nothing
     loc = record["location"]
     passing = [
         row
@@ -423,7 +425,7 @@ def name_source(
         row
         for row in nearby
         if (not fresh_only or row.get("change") in FRESH)
-        and row.get("name")
+        and (row.get("name") or "").strip()
         and fits(row, record["kind"], lists.categories)
         and (row.get("confidence") or 0) >= NAME_CONFIDENCE
         and (record["id"], row["id"]) not in lists.do_not_match
@@ -450,8 +452,9 @@ def values_from(row: dict, base: dict, lists: KeptLists, shared: frozenset[str] 
     """The values an Overture place (an Overture match or a name source) gives where the base record has none."""
     out = {}
     facts = base.get("facts", {})
-    if not base.get("name") and row.get("name") and len(row["name"]) <= 300:
-        out["name"] = row["name"].strip()
+    name = (row.get("name") or "").strip()
+    if not base.get("name") and name and len(name) <= 300:
+        out["name"] = name
     if "website" not in facts:
         websites = [url for url in own_websites(row, lists, shared) if len(url) <= 500]
         if websites:

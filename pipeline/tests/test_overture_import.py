@@ -161,6 +161,13 @@ def test_the_kept_category_map_covers_every_kind_filled_and_no_other():
     assert all(lists.categories[kind] for kind in OVERTURE_KINDS)
 
 
+def test_a_name_with_no_latin_letters_never_matches_an_overture_place_with_no_name():
+    # Both names normalise to nothing. Nothing in common is no match.
+    result = run([place(name="营地")], [ov(name=None, metres_north=10)])
+    assert A not in result.records
+    assert result.links == {}
+
+
 # ------------------------------------------------------- name for unnamed
 
 
@@ -210,6 +217,11 @@ def test_an_unnamed_place_takes_no_name_short_of_the_rule(why, rows):
     geometry = Geometry(areas={"way/1010": outline(100, 200)})
     result = run([unnamed_park()], rows, geometry=geometry)
     assert result.records == {}, why
+
+
+def test_a_name_of_only_spaces_never_names_an_unnamed_place():
+    result = run([place(name=None)], [ov(name="   ", metres_north=10)])
+    assert result.records.get(A, place(name=None))["name"] is None
 
 
 # --------------------------------------------------------------- gap fills
