@@ -366,13 +366,26 @@ def strong_match(record: dict, overture: Overture, lists: KeptLists, fresh_only:
     passing = [
         row
         for _, row in near(overture, loc["lat"], loc["lon"], MATCH_DISTANCE_M)
-        if (not fresh_only or row.get("change") in FRESH)
-        and fits(row, record["kind"], lists.categories)
+        if fits(row, record["kind"], lists.categories)
         and (row.get("confidence") or 0) >= MATCH_CONFIDENCE
         and jaro_winkler(name, normalised_name(row.get("name"))) >= MATCH_NAME_SIMILARITY
         and (record["id"], row["id"]) not in lists.do_not_match
     ]
-    return passing[0] if len(passing) == 1 else None
+    return only_one(passing, fresh_only)
+
+
+def only_one(passing: list[dict], fresh_only: bool) -> dict | None:
+    """The one passing Overture place, or None when there are none or several.
+
+    With fresh_only it must also be one the changelog lists as added or
+    changed. Every passing place counts towards "several", so a changelog
+    run never matches where a full run would find two.
+    """
+    if len(passing) != 1:
+        return None
+    if fresh_only and passing[0].get("change") not in FRESH:
+        return None
+    return passing[0]
 
 
 def in_box(overture: Overture, west: float, south: float, east: float, north: float) -> list[dict]:
@@ -424,13 +437,12 @@ def name_source(
     passing = [
         row
         for row in nearby
-        if (not fresh_only or row.get("change") in FRESH)
-        and (row.get("name") or "").strip()
+        if (row.get("name") or "").strip()
         and fits(row, record["kind"], lists.categories)
         and (row.get("confidence") or 0) >= NAME_CONFIDENCE
         and (record["id"], row["id"]) not in lists.do_not_match
     ]
-    return passing[0] if len(passing) == 1 else None
+    return only_one(passing, fresh_only)
 
 
 def overture_place_for(

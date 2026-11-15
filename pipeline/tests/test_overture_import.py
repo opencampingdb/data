@@ -696,6 +696,17 @@ def test_a_changelog_run_does_not_match_places_with_no_link_to_unchanged_overtur
     assert run([unnamed], [ov(change=change)], changelog_only=True).records == {}
 
 
+def test_a_changelog_run_never_matches_where_a_full_run_finds_two_overture_places():
+    # Two Overture places fit: a full run takes neither. A changelog run must
+    # not take the added one just because the other is unchanged.
+    named = [ov(change="added", metres_north=20), ov(G2, change="unchanged", metres_north=40)]
+    assert run([place()], named).records == {}
+    assert run([place()], named, changelog_only=True).records == {}
+    unnamed = [ov(change="added", metres_north=20), ov(G2, name="Creekside Park", change="unchanged", metres_north=40)]
+    assert run([place(name=None)], unnamed).records == {}
+    assert run([place(name=None)], unnamed, changelog_only=True).records == {}
+
+
 def test_a_matched_overture_place_is_never_a_candidate():
     # The candidate step (test_overture_candidates.py) drops anything next to a place.
     assert run([place()], [ov()]).candidates == {"strong": [], "weak": []}
