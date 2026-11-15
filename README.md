@@ -126,7 +126,7 @@ Anything that shows this data must show:
 
 ## How it is built
 
-1. **Nightly OSM sync** (`.github/workflows/sync-osm.yml`, 16:00 UTC, or
+1. **Daily OSM sync** (`.github/workflows/sync-osm.yml`, 02:00 UTC, or
    started by hand). Downloads the Geofabrik extract for Australia, keeps the
    tags that map to a kind of place, classifies camp sites by the park, state
    forest, reserve or showground they lie in, merges the result into

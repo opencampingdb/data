@@ -1,6 +1,7 @@
 name: OSM sync
 
-# Nightly at 16:00 UTC (02:00 or 03:00 in Melbourne and Sydney). Downloads the
+# Daily at 02:00 UTC (12:00 or 13:00 in Melbourne and Sydney), within an hour
+# of Geofabrik publishing the day's extract (about 01:20 UTC). Downloads the
 # Geofabrik extract for Australia, merges it into places/, rewrites the
 # MapRoulette challenge files in maproulette/ and opens or updates one pull
 # request from the osm-sync branch. Auto-merge is turned on only when
@@ -17,7 +18,7 @@ name: OSM sync
 # See README.md, "Repository setup".
 on:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 permissions:
