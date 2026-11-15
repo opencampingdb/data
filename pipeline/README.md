@@ -578,13 +578,28 @@ All of these must hold:
 - `pipeline.geometry.judge` does not find them separate: no major road
   between them, and no different direction, operator or entry.
 
+Or, in place of the name and distance tests: one of them has no name
+(`has_name`: nothing left once tidied), both are OSM records in the
+overnight group, the named one is not a motel or hostel, and the outline
+rule (`judge`'s rule 1) makes them one place, so one lies inside the
+other's outline or within 20 m of it with no major road between
+(`unnamed_in_area`). This folds an unnamed park drawn as an area around a
+named point into the named record, and unnamed sections, cabins and motel
+buildings inside a named park's outline into the park. A plain distance is
+not enough here: an unnamed caravan park is often a few metres from a named
+hotel or shop. An unnamed record that pairs this way with places of
+different names waits for a reviewer.
+
 `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--group overnight]`
 runs it over the finder's pairs in the overnight group (or the groups
 given). Pairs that share a record make one group, merged into the record
-with an OSM link, then a camp site over a motel or hostel, then the most
+with an OSM link, then a name, then a camp site over a motel or hostel, then the most
 facts, then a kind more specific than `campground`, then the oldest id. A
 motel or hostel merged with a camp site is merged as a part (`--part`):
-OSM maps the two as separate features of one place on purpose. Each merge
+OSM maps the two as separate features of one place on purpose. So is an
+unnamed record merged into a named park drawn as an area, since it lies in
+the park's outline. An unnamed area merged into the named point inside it
+is the same place mapped twice, and is not a part. Each merge
 is added to `moderation/automatic-merges.csv` (merged date, both ids,
 names, kinds and OSM objects, the distance and whether it was a part) for
 the person who reviews the PR. The geometry sidecar is required, because
