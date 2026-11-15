@@ -106,7 +106,8 @@ def import_overture(
     now: the run time, used for fact dates and updated. With changelog_only
     (spec decision 13), a linked place is checked again only when the
     changelog lists its Overture place as changed or removed: otherwise it
-    keeps its values and link. A place with no link is matched only against
+    keeps its values and link, unless overture/taken.json lists a value for
+    it. A place with no link is matched only against
     Overture places the changelog lists as added or changed.
     """
     geometry = geometry or Geometry()
@@ -118,6 +119,9 @@ def import_overture(
     # The Overture places of linked places a changelog run does not check
     # again. Their pages still count towards SHARED_PAGE_LIMIT.
     unchecked = []
+    # Places with a value taken in "Overture differs", always checked so a
+    # value taken since the last run is written.
+    with_taken = {place_id for place_id, _ in lists.taken}
     for place_id in sorted(places):
         record = places[place_id]
         if record.get("status") == "merged":
@@ -128,6 +132,7 @@ def import_overture(
             and link
             and record.get("kind") in OVERTURE_KINDS
             and overture.changes.get(link["gers"]) in UNCHANGED
+            and place_id not in with_taken
         ):
             # The changelog says the Overture place has not changed: keep the
             # place as it is and note the link as seen in this release.

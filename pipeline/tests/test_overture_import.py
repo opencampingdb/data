@@ -462,6 +462,16 @@ def test_a_taken_value_stays_on_later_runs_even_without_a_match():
     assert result.records == {} and result.removals == []
 
 
+def test_a_changelog_run_writes_a_value_taken_since_the_last_run_even_when_overture_has_not_changed():
+    osm = place(facts={"website": "https://www.riverbendpark.com.au/book"})
+    lists = KeptLists(**{**LISTS.__dict__, "taken": {(A, "website"): "https://riverbend.example.au/"}})
+    links = {A: {"gers": G1, "release": "2026-09-17.0"}}
+    result = run([osm], [ov(change="unchanged")], links=links, lists=lists, changelog_only=True)
+    record = result.records[A]
+    assert record["facts"]["website"] == "https://riverbend.example.au/"
+    assert record["fact_sources"]["website"] == "overture"
+
+
 def test_a_traveller_can_still_take_down_a_taken_value():
     reported = place(facts={"website": "https://riverbend-new.example.au/"}, sources={"website": "feedback"},
                      fact_dates={"website": T0})

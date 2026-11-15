@@ -570,7 +570,7 @@ report still replaces a taken value.
 (spec decision 13), a linked place is checked again only when the changelog
 lists its Overture place as `data_changed` or `removed`. One the changelog
 lists as `unchanged`, or does not list, keeps its values and link without a
-check. A place with no link is matched only against Overture places the
+check, unless `overture/taken.json` lists a value for it. A place with no link is matched only against Overture places the
 changelog lists as `added` or `data_changed`: an unchanged Overture place it
 did not match last time cannot match it now.
 
