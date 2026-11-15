@@ -36,7 +36,11 @@ from .common import (
     write_text,
 )
 from .geometry import Geometry, load_geometry, osm_ref
-from .sync import AUTO_MERGE_BELOW_PERCENT, REPORT_LIST_LIMIT
+from .sync import AUTO_MERGE_BELOW_PERCENT, MAX_REPORT_CHARS, REPORT_LIST_LIMIT
+
+# The longest import report. The monthly workflow's PR body adds the
+# automatic merges to it, and the whole body stays within MAX_REPORT_CHARS.
+REPORT_MAX_CHARS = MAX_REPORT_CHARS - 15_000
 
 # The kinds the importer fills. Every other kind is left alone.
 OVERTURE_KINDS = tuple(sorted(
@@ -623,13 +627,24 @@ def summary_of(result: ImportResult, places: dict[str, dict]) -> dict:
     after = kind_counts({**places, **result.records})
     live = sum(1 for record in places.values() if record.get("status") != "merged")
     percent = 100.0 * len(result.records) / live if live else 0.0
+    candidates = sum(len(rows) for rows in result.candidates.values())
+    # Only gap fills under the limit merge themselves. Overture differs and
+    # candidates need a person, and so does a change of the limit or more.
+    wait_reasons = []
+    if percent >= AUTO_MERGE_BELOW_PERCENT:
+        wait_reasons.append(f"{percent:.2f}% of records changed, {AUTO_MERGE_BELOW_PERCENT:g}% or more")
+    if result.differs:
+        wait_reasons.append(f"{len(result.differs)} Overture differs")
+    if candidates:
+        wait_reasons.append(f"{candidates} candidate" + ("" if candidates == 1 else "s"))
     return {
         "release": result.release,
         "places": live,
         "checked": result.checked,
         "changed": len(result.records),
         "change_percent": round(percent, 2),
-        "auto_merge": percent < AUTO_MERGE_BELOW_PERCENT,
+        "auto_merge": not wait_reasons,
+        "wait_reasons": wait_reasons,
         "fills": len(result.fills),
         "removals": len(result.removals),
         "differs": len(result.differs),
@@ -650,8 +665,36 @@ def cell(text) -> str:
     return str(text if text is not None else "").replace("|", "\\|").replace("\n", " ")
 
 
-def render_report(result: ImportResult, summary: dict, limit: int = REPORT_LIST_LIMIT) -> str:
-    """The run's report as Markdown, used as the PR body."""
+def render_report(result: ImportResult, summary: dict) -> str:
+    """The run's report as Markdown, the monthly workflow's PR body.
+
+    Lists are cut at REPORT_LIST_LIMIT rows, and shorter when the report
+    would be longer than REPORT_MAX_CHARS.
+    """
+    limit = REPORT_LIST_LIMIT
+    while True:
+        report = _render_report(result, summary, limit)
+        if len(report) <= REPORT_MAX_CHARS or limit == 0:
+            return report
+        limit //= 2
+
+
+def more(count: int, limit: int) -> list[str]:
+    return [f"And {count - limit} more, not listed here."] if count > limit else []
+
+
+def place_label(result: ImportResult, place_id: str) -> str:
+    name = (result.records.get(place_id) or {}).get("name")
+    return f"{cell(name)} (`{place_id}`)" if name else f"`{place_id}`"
+
+
+def value_text(value) -> str:
+    if isinstance(value, dict):
+        return cell(", ".join(f"{k}: {v}" for k, v in value.items()))
+    return cell(value)
+
+
+def _render_report(result: ImportResult, summary: dict, limit: int) -> str:
     lines = [
         "# Overture import report",
         "",
@@ -677,6 +720,21 @@ def render_report(result: ImportResult, summary: dict, limit: int = REPORT_LIST_
     for kind, entry in summary["kinds"].items():
         cells = [f"{entry['before'][key]} to {entry['after'][key]}" for key in COUNTED]
         lines.append(f"| {kind} | {entry['places']} | " + " | ".join(cells) + " |")
+    lines += ["", "## Gap fills", ""]
+    if result.fills:
+        lines += [
+            "Values taken or changed, each sourced `overture`.",
+            "",
+            "| Place | Value | Overture | Was |",
+            "|---|---|---|---|",
+        ]
+        lines += [
+            f"| {place_label(result, f['place'])} | {f['key']} | {value_text(f['value'])} | {value_text(f['previous'])} |"
+            for f in result.fills[:limit]
+        ]
+        lines += more(len(result.fills), limit)
+    else:
+        lines.append("None.")
     lines += [
         "",
         "## Overture differs",
@@ -696,16 +754,33 @@ def render_report(result: ImportResult, summary: dict, limit: int = REPORT_LIST_
                 f"| {cell(row['osm'])} | {cell(row['overture'])} "
                 f"| {cell(row['overture_name'])} (`{row['gers']}`, {oloc['lat']},{oloc['lon']}) |"
             )
-        if len(result.differs) > limit:
-            lines.append(f"| and {len(result.differs) - limit} more | | | | | |")
+        lines += more(len(result.differs), limit)
     else:
         lines.append("None.")
     lines += ["", "## Taken off", ""]
     if result.removals:
         lines += ["| Place | Value | Was |", "|---|---|---|"]
         lines += [f"| `{r['place']}` | {r['key']} | {cell(r['value'])} |" for r in result.removals[:limit]]
-        if len(result.removals) > limit:
-            lines.append(f"| and {len(result.removals) - limit} more | | |")
+        lines += more(len(result.removals), limit)
+    else:
+        lines.append("None.")
+    lines += ["", "## Candidates", ""]
+    if result.candidates:
+        lines += ["Overture places we lack, by tier. Each one waits for a person.", ""]
+        for tier, rows in result.candidates.items():
+            lines += [f"### {tier} ({len(rows)})", ""]
+            if rows:
+                lines += ["| Overture place | Category | Confidence | Location |", "|---|---|---:|---|"]
+                for row in rows[:limit]:
+                    loc = row.get("location") or {}
+                    where = f"{loc['lat']},{loc['lon']}" if "lat" in loc else ""
+                    lines.append(
+                        f"| {cell(row.get('name'))} (`{row.get('gers', '')}`) | {cell(row.get('category'))} "
+                        f"| {cell(row.get('confidence'))} | {where} |"
+                    )
+                lines += more(len(rows), limit)
+            lines.append("")
+        lines.pop()
     else:
         lines.append("None.")
     return "\n".join(lines) + "\n"
