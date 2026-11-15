@@ -58,6 +58,7 @@ def test_a_row_keeps_only_the_fields_the_importer_uses():
         "taxonomy_primary": "rv_park",
         "confidence": 0.93,
         "websites": ["https://lakeside.example.au/"],
+        "socials": ["https://www.facebook.com/lakeside"],
         "phones": ["+61 2 5550 1234"],
         "addresses": [
             {"freeform": "1 Shore Rd", "locality": "Lakeside", "postcode": "2000", "region": "NSW", "country": "AU"}
@@ -77,7 +78,7 @@ def test_an_extract_has_a_header_then_every_place_and_removal_sorted_by_id(tmp_p
     lines = [json.loads(text) for text in out.read_text(encoding="utf-8").splitlines()]
     assert lines[0] == {
         "extract": "overture-places",
-        "version": 1,
+        "version": 2,
         "release": "2026-10-21.0",
         "bbox": [112.0, -44.5, 154.5, -9.0],
         "places": 2,
@@ -97,11 +98,21 @@ def test_a_place_the_changelog_does_not_list_has_no_change():
 
 
 def test_a_row_with_no_name_or_contacts_keeps_every_key():
-    row = overture_row(names=None, taxonomy=None, websites=None, phones=None, addresses=None, sources=None)
+    row = overture_row(names=None, taxonomy=None, websites=None, socials=None, phones=None, addresses=None, sources=None)
     line = json.loads(pull.place_line(row, change="added"))
     assert line["name"] is None
     assert line["taxonomy_primary"] is None
-    assert (line["websites"], line["phones"], line["addresses"], line["sources"]) == ([], [], [], [])
+    assert (line["websites"], line["socials"], line["phones"], line["addresses"], line["sources"]) == ([], [], [], [], [])
+
+
+def test_a_version_1_extract_without_socials_is_no_longer_the_format():
+    header = json.dumps({"extract": "overture-places", "version": 1, "release": "2026-10-21.0",
+                         "bbox": [112.0, -44.5, 154.5, -9.0], "places": 1, "removed": 0})
+    place = json.loads(pull.place_line(overture_row(id="a1"), change=None))
+    del place["socials"]
+    problems = pull.check_extract([header, json.dumps(place)])
+    assert any("version 2" in problem for problem in problems)
+    assert any("missing socials" in problem for problem in problems)
 
 
 def test_the_fixture_follows_the_extract_format():
@@ -115,7 +126,7 @@ def test_a_written_extract_follows_the_extract_format(tmp_path):
 
 
 def test_the_format_check_finds_disorder_and_fields_never_taken():
-    header = json.dumps({"extract": "overture-places", "version": 1, "release": "2026-10-21.0",
+    header = json.dumps({"extract": "overture-places", "version": 2, "release": "2026-10-21.0",
                          "bbox": [112.0, -44.5, 154.5, -9.0], "places": 1, "removed": 1})
     place = json.loads(pull.place_line(overture_row(id="b2"), change=None))
     place["emails"] = ["a@b.example"]

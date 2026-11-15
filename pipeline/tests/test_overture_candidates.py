@@ -15,7 +15,7 @@ from pipeline.overture import apply_decisions, import_overture, load_kept_lists,
 from pipeline.overture import main as overture_main
 from pipeline.overture_decide import main as decide_main
 from pipeline.tests.test_overture_source import inbox_with
-from pipeline.tests.test_overture_import import G1, G2, LISTS, REPO, extract, ov, place, run
+from pipeline.tests.test_overture_import import A, G1, G2, LISTS, REPO, extract, ov, place, run
 from pipeline.validate import validate_repo
 
 KM = 1000  # metres
@@ -151,6 +151,25 @@ def test_a_candidate_with_high_confidence_a_camping_category_and_its_own_website
 ])
 def test_a_candidate_short_of_the_strong_tier_is_weak(why, row):
     assert tier_of(row) == "weak"
+
+
+def test_a_social_website_is_not_its_own_website_for_the_strong_tier():
+    lists = CANDIDATE_LISTS.__class__(**{**CANDIDATE_LISTS.__dict__,
+                                         "directory_hosts": load_kept_lists(REPO).directory_hosts})
+    for social in ("https://www.facebook.com/sheepskinhut", "https://www.tiktok.com/@sheepskinhut"):
+        result = candidates([place()], [far(confidence=0.99, websites=[social])], lists=lists)
+        assert gers_in(result, "strong") == []
+        assert [c["website"] for c in result.candidates["weak"]] == [None]
+
+
+def test_a_hipcamp_listing_overture_gives_as_the_website_counts_as_its_website():
+    listing = "https://www.hipcamp.com/en-AU/land/sheepskin-hut-12345"
+    lists = CANDIDATE_LISTS.__class__(**{**CANDIDATE_LISTS.__dict__,
+                                         "directory_hosts": load_kept_lists(REPO).directory_hosts})
+    result = candidates([place()], [far(confidence=0.99, websites=[listing])], lists=lists)
+    assert [c["website"] for c in result.candidates["strong"]] == [listing]
+    record = run([place()], [ov(websites=[listing])], lists=load_kept_lists(REPO)).records[A]
+    assert record["facts"]["website"] == listing and record["fact_sources"]["website"] == "overture"
 
 
 def test_every_candidate_carries_what_the_reviewer_needs():

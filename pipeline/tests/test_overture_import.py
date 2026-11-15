@@ -59,7 +59,7 @@ def place(place_id=A, kind="caravan_park", name="Riverbend Caravan Park", metres
 
 
 def ov(gers=G1, name="Riverbend Caravan Park", category="rv_park", metres_north=0.0, confidence=0.9,
-       websites=None, phones=None, addresses=None, change="unchanged"):
+       websites=None, phones=None, addresses=None, change="unchanged", socials=None):
     return {
         "id": gers,
         "change": change,
@@ -68,6 +68,7 @@ def ov(gers=G1, name="Riverbend Caravan Park", category="rv_park", metres_north=
         "taxonomy_primary": category,
         "confidence": confidence,
         "websites": websites if websites is not None else ["https://riverbend.example.au/"],
+        "socials": socials if socials is not None else [],
         "phones": phones if phones is not None else ["+61 2 5550 0101"],
         "addresses": addresses if addresses is not None else [],
         "sources": [{"dataset": "meta", "record_id": "1", "update_time": "2026-08-14T03:21:00.000Z"}],
@@ -264,21 +265,138 @@ def test_a_website_on_a_directory_host_is_never_taken():
     assert "website" not in run([place()], rows).records[A]["facts"]
 
 
-def test_the_kept_directory_host_list_starts_with_placestars_and_holds_social_hosts():
-    hosts = load_kept_lists(REPO).directory_hosts
-    assert hosts[0] == "placestars.com"
-    assert {"facebook.com", "instagram.com", "linktr.ee"} <= set(hosts)
+def test_the_kept_directory_host_list_starts_empty_so_listing_sites_are_taken():
+    lists = load_kept_lists(REPO)
+    assert lists.directory_hosts == ()
+    for listing in ("https://www.placestars.com/riverbend", "https://www.hipcamp.com/en-AU/land/riverbend-1"):
+        record = run([place()], [ov(websites=[listing])], lists=lists).records[A]
+        assert record["facts"]["website"] == listing
     rows = [ov(websites=["https://m.facebook.com/riverbend", "https://riverbend.example.au"])]
-    assert run([place()], rows, lists=load_kept_lists(REPO)).records[A]["facts"]["website"] == "https://riverbend.example.au"
+    assert run([place()], rows, lists=lists).records[A]["facts"]["website"] == "https://riverbend.example.au"
 
 
-def test_email_socials_brand_operating_status_and_confidence_are_never_taken():
+def test_email_brand_operating_status_and_confidence_are_never_taken():
     row = ov(websites=[], phones=[])
-    row.update({"emails": ["info@riverbend.example.au"], "socials": ["https://facebook.com/riverbend"],
+    row.update({"emails": ["info@riverbend.example.au"],
                 "brand": {"names": {"primary": "Big4"}}, "operating_status": "open"})
     result = run([place()], [row])
     assert result.records == {} and result.fills == []
     assert result.links[A]["gers"] == G1
+
+
+# ------------------------------------------------------------- social pages
+
+
+@pytest.mark.parametrize("given,key,page", [
+    ("https://www.facebook.com/riverbendpark", "facebook", "https://www.facebook.com/riverbendpark"),
+    ("http://m.facebook.com/riverbendpark/?ref=page", "facebook", "https://www.facebook.com/riverbendpark"),
+    ("https://facebook.com/profile.php?id=100063511234567&sk=about", "facebook",
+     "https://www.facebook.com/profile.php?id=100063511234567"),
+    ("https://www.facebook.com/pages/Riverbend-Park/123456789", "facebook", "https://www.facebook.com/123456789"),
+    ("https://www.facebook.com/people/Riverbend-Park/61576217580151/", "facebook",
+     "https://www.facebook.com/profile.php?id=61576217580151"),
+    ("https://www.facebook.com/p/Riverbend-Park-100054544415650/", "facebook",
+     "https://www.facebook.com/profile.php?id=100054544415650"),
+    ("https://instagram.com/riverbend.park/", "instagram", "https://www.instagram.com/riverbend.park/"),
+    ("https://www.tiktok.com/@riverbendpark?lang=en", "tiktok", "https://www.tiktok.com/@riverbendpark"),
+    ("https://twitter.com/RiverbendPark", "x", "https://x.com/RiverbendPark"),
+    ("https://x.com/RiverbendPark/", "x", "https://x.com/RiverbendPark"),
+])
+def test_a_strong_match_fills_each_social_page_from_overtures_socials(given, key, page):
+    result = run([place()], [ov(socials=[given])])
+    record = result.records[A]
+    assert record["facts"][key] == page
+    assert record["fact_sources"][key] == "overture"
+    assert record["fact_dates"][key] == RUN
+    assert record["facts"]["website"] == "https://riverbend.example.au/"
+    assert {"place": A, "key": key, "value": page, "previous": None} in result.fills
+
+
+@pytest.mark.parametrize("website,key,page", [
+    ("https://www.facebook.com/riverbendpark/", "facebook", "https://www.facebook.com/riverbendpark"),
+    ("https://www.instagram.com/riverbendpark", "instagram", "https://www.instagram.com/riverbendpark/"),
+    ("https://www.tiktok.com/@riverbendpark", "tiktok", "https://www.tiktok.com/@riverbendpark"),
+    ("https://x.com/riverbendpark", "x", "https://x.com/riverbendpark"),
+    ("https://mobile.twitter.com/riverbendpark", "x", "https://x.com/riverbendpark"),
+])
+def test_a_website_on_a_social_host_fills_that_social_page_and_never_the_website(website, key, page):
+    # LISTS names no social host as a directory host: the rule holds without the kept list.
+    record = run([place()], [ov(websites=[website], phones=[])]).records[A]
+    assert record["facts"] == {key: page}
+    rows = [ov(websites=[website, "https://riverbend.example.au/"])]
+    record = run([place()], rows).records[A]
+    assert record["facts"]["website"] == "https://riverbend.example.au/"
+    assert record["facts"][key] == page
+
+
+def test_a_social_url_is_never_compared_with_the_osm_website():
+    facts = {"website": "https://www.riverbendpark.com.au/"}
+    result = run([place(facts=facts)], [ov(websites=["https://www.facebook.com/riverbendpark"])])
+    assert result.differs == []
+    assert result.records[A]["facts"]["website"] == "https://www.riverbendpark.com.au/"
+
+
+def test_overtures_socials_come_before_a_social_website():
+    rows = [ov(socials=["https://www.facebook.com/riverbendpark"], websites=["https://www.facebook.com/otherpage"])]
+    assert run([place()], rows).records[A]["facts"]["facebook"] == "https://www.facebook.com/riverbendpark"
+
+
+@pytest.mark.parametrize("link", [
+    "https://www.facebook.com/riverbendpark/posts/pfbid02abc",
+    "https://www.facebook.com/photo/?fbid=123456",
+    "https://www.facebook.com/photo.php?fbid=123456",
+    "https://www.facebook.com/riverbendpark/photos/a.1/2/",
+    "https://www.facebook.com/events/123456789/",
+    "https://www.facebook.com/share/1AbCdEf/",
+    "https://www.facebook.com/sharer/sharer.php?u=https://riverbend.example.au",
+    "https://www.facebook.com/permalink.php?story_fbid=1&id=2",
+    "https://www.facebook.com/groups/riverbendcampers",
+    "https://www.facebook.com/profile.php",
+    "https://www.instagram.com/p/C1a2B3c4D5e/",
+    "https://www.instagram.com/reel/C1a2B3c4D5e/",
+    "https://www.instagram.com/stories/riverbendpark/123/",
+    "https://www.tiktok.com/@riverbendpark/video/7300000000000000000",
+    "https://vm.tiktok.com/ZMabc123/",
+    "https://www.tiktok.com/t/ZTabc123/",
+    "https://x.com/riverbendpark/status/1700000000000000000",
+    "https://twitter.com/intent/tweet?text=hi",
+    "https://twitter.com/share?url=https://riverbend.example.au",
+    "https://twitter.com/hashtag/camping",
+    "ftp://facebook.com/riverbendpark",
+    "facebook.com/riverbendpark",
+])
+def test_a_post_photo_event_or_share_link_is_no_social_page(link):
+    result = run([place()], [ov(websites=[], phones=[], socials=[link])])
+    assert result.records == {} and result.fills == []
+    result = run([place()], [ov(websites=[link], phones=[])])
+    assert result.records == {} and result.fills == []
+
+
+def test_a_social_page_from_any_other_source_is_never_replaced():
+    facts = {"facebook": "https://www.facebook.com/osmpage"}
+    result = run([place(facts=facts)], [ov(socials=["https://www.facebook.com/riverbendpark"])])
+    record = result.records[A]
+    assert record["facts"]["facebook"] == "https://www.facebook.com/osmpage"
+    assert record["fact_sources"]["facebook"] == "osm"
+
+
+def test_an_overture_social_page_is_refreshed_and_comes_off_like_the_other_values():
+    facts = {"website": "https://riverbend.example.au/", "phone": "+61 2 5550 0101",
+             "facebook": "https://www.facebook.com/riverbendpark", "x": "https://x.com/riverbendpark"}
+    sources = {key: "overture" for key in facts}
+    dates = {key: EARLIER for key in facts}
+    park = place(facts=facts, sources=sources, fact_dates=dates)
+    rows = [ov(socials=["https://www.facebook.com/riverbendpark", "https://www.instagram.com/riverbendpark"])]
+    result = run([park], rows, links=LINKED)
+    record = result.records[A]
+    assert record["fact_dates"]["facebook"] == EARLIER
+    assert record["facts"]["instagram"] == "https://www.instagram.com/riverbendpark/"
+    assert record["fact_dates"]["instagram"] == RUN
+    assert "x" not in record["facts"] and "x" not in record["fact_sources"]
+    assert result.removals == [{"place": A, "key": "x", "value": "https://x.com/riverbendpark"}]
+    result = run([park], [{"id": G1, "change": "removed"}], links=LINKED)
+    assert result.records[A]["facts"] == {}
+    assert {r["key"] for r in result.removals} == {"website", "phone", "facebook", "x"}
 
 
 # ---------------------------------------------------------- Overture differs
@@ -458,7 +576,8 @@ def write_repo(repo, records):
 def test_the_command_writes_places_the_link_file_a_report_and_a_summary(repo, tmp_path):
     differs = place(B, name="Main Road Roadhouse", kind="fuel", metres_north=5000, facts={"phone": "+61 8 5550 9999"})
     write_repo(repo, [place(), differs])
-    rows = [ov(addresses=[{"freeform": "12 River St", "locality": "Bendigo Creek", "postcode": "2640", "region": "NSW", "country": "AU"}]),
+    rows = [ov(addresses=[{"freeform": "12 River St", "locality": "Bendigo Creek", "postcode": "2640", "region": "NSW", "country": "AU"}],
+               socials=["https://www.facebook.com/riverbendpark"]),
             ov(G2, name="Main Road Roadhouse", category="gas_station", metres_north=5010, websites=[], phones=["+61 8 5550 0303"])]
     source = tmp_path / "overture.ndjson"
     source.write_text("".join(json.dumps(line) + "\n" for line in extract(*rows)), encoding="utf-8")
@@ -473,14 +592,17 @@ def test_the_command_writes_places_the_link_file_a_report_and_a_summary(repo, tm
         f'{{"gers":"{G2}","place":"{B}","release":"{RELEASE}"}}\n'
     )
     text = report.read_text(encoding="utf-8")
+    assert "| Facebook | Instagram | TikTok | X |" in text
     assert "## Overture differs" in text and "+61 8 5550 0303" in text and "+61 8 5550 9999" in text
     counts = json.loads(summary.read_text(encoding="utf-8"))
     assert counts["release"] == RELEASE
     assert counts["changed"] == 1 and counts["differs"] == 1
     assert counts["kinds"]["caravan_park"] == {
         "places": 1,
-        "before": {"name": 1, "website": 0, "phone": 0, "address": 0},
-        "after": {"name": 1, "website": 1, "phone": 1, "address": 1},
+        "before": {"name": 1, "website": 0, "phone": 0, "address": 0,
+                   "facebook": 0, "instagram": 0, "tiktok": 0, "x": 0},
+        "after": {"name": 1, "website": 1, "phone": 1, "address": 1,
+                  "facebook": 1, "instagram": 0, "tiktok": 0, "x": 0},
     }
     assert validate_repo(repo, now=RUN) == []
 

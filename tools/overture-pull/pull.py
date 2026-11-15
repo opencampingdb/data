@@ -16,7 +16,7 @@ import json
 
 COORD_PLACES = 7
 EXTRACT = "overture-places"
-VERSION = 1
+VERSION = 2
 # Australia, as [west, south, east, north] in degrees.
 BBOX = (112.0, -44.5, 154.5, -9.0)
 REMOVED = "removed"
@@ -24,7 +24,7 @@ CHANGES = (None, "added", "data_changed", "unchanged")
 HEADER_KEYS = ("extract", "version", "release", "bbox", "places", "removed")
 PLACE_KEYS = (
     "id", "change", "name", "basic_category", "taxonomy_primary", "confidence",
-    "websites", "phones", "addresses", "sources", "lon", "lat",
+    "websites", "socials", "phones", "addresses", "sources", "lon", "lat",
 )
 
 
@@ -45,6 +45,7 @@ def place_line(row, change):
         "taxonomy_primary": taxonomy.get("primary"),
         "confidence": row.get("confidence"),
         "websites": list(row.get("websites") or []),
+        "socials": list(row.get("socials") or []),
         "phones": list(row.get("phones") or []),
         "addresses": [
             {key: address.get(key) for key in ("freeform", "locality", "postcode", "region", "country")}
@@ -169,7 +170,7 @@ def read_release(release):
         ).fetchall()
     )
     result = con.execute(
-        f"""select id, names, basic_category, taxonomy, confidence, websites, phones, addresses, sources, bbox
+        f"""select id, names, basic_category, taxonomy, confidence, websites, socials, phones, addresses, sources, bbox
         from read_parquet('{BUCKET}/release/{release}/theme=places/type=place/*')
         where {_inside()}"""
     )

@@ -384,10 +384,10 @@ Overture deletes a release about 60 days after it comes out.
 The first line is the header:
 
 ```json
-{"extract":"overture-places","version":1,"release":"2026-10-21.0","bbox":[112.0,-44.5,154.5,-9.0],"places":5,"removed":1}
+{"extract":"overture-places","version":2,"release":"2026-10-21.0","bbox":[112.0,-44.5,154.5,-9.0],"places":5,"removed":1}
 ```
 
-`bbox` is `[west, south, east, north]`. `places` and `removed` count the
+`bbox` is `[west, south, east, north]`. Version 2 added `socials`. `places` and `removed` count the
 lines that follow. Every other line is a place or a removal, sorted by `id`
 (plain string order), with each id once.
 
@@ -402,6 +402,7 @@ A place line has all of these keys, in this order:
 | `taxonomy_primary` | `taxonomy.primary`, or `null` |
 | `confidence` | `confidence`, a number from 0 to 1, or `null` |
 | `websites` | `websites` as given, `[]` when none |
+| `socials` | `socials` as given, `[]` when none |
 | `phones` | `phones` as given, `[]` when none |
 | `addresses` | each address as `{"freeform","locality","postcode","region","country"}`, any of them `null`, `[]` when none |
 | `sources` | each source as `{"dataset","record_id","update_time"}`, `[]` when none |
@@ -411,7 +412,7 @@ A removal line is `{"id":"...","change":"removed"}`: an id the changelog lists
 as removed whose bounding box lies inside Australia. A removed id has no place
 line.
 
-The extract never holds emails, socials, brand, operating status or any other
+The extract never holds emails, brand, operating status or any other
 Overture field. `check_extract` in the tool lists every way a file breaks this
 format. `pipeline/tests/fixtures/overture-extract.ndjson` is a small
 hand-written extract for the importer's tests.
@@ -432,9 +433,12 @@ Kept files:
 - `overture/categories.json`: each kind and the Overture categories that fit
   it. A category fits when it is the place's `basic_category` or
   `taxonomy_primary`.
-- `overture/directory-hosts.json`: directory, aggregator and social hosts
-  (`placestars.com` first). A website on one of them, or on a subdomain of
-  one, is never taken or compared.
+- `overture/directory-hosts.json`: hosts whose websites are never taken or
+  compared (a subdomain counts too). The list starts empty. Shane, 15 Nov
+  2026: "When overture provides Hipcamp or any other commercial reference
+  under the Overture data model, we can use it." So a listing or directory
+  site Overture gives as the website is taken, sourced `overture`. Add a
+  host only when a place's link there should never be its website.
 - `overture/do-not-match.json`: `{"pairs": [{"place", "gers"}], "gers": [...]}`.
   `pairs` are place and Overture place pairs never matched. `gers` are the
   GERS ids of rejected Overture candidates, never candidates again.
@@ -463,15 +467,24 @@ fits, at confidence 0.8 or more, when it is the only one.
 website, phone and address where no other source has a value:
 
 - website: Overture's first website that starts with `http://` or
-  `https://` and is not on a directory host;
+  `https://` and is not on a directory host or a social host (facebook.com,
+  fb.com, instagram.com, tiktok.com, x.com, twitter.com);
 - phone: Overture's first phone, as Overture writes it;
 - address: the last comma-separated piece of Overture's first Australian
   freeform address, split into `housenumber` (with "Lot") and `street`, plus
   `suburb` from the locality (not a council area such as "Shire of
   Manjimup"), `state` from the region, and a four digit `postcode`. A street
   called "Unnamed Rd" is no street, and no address is taken without one.
+- facebook, instagram, tiktok and x: the first page for each network from
+  Overture's socials, then from its websites on that network's host. Each
+  is a canonical https page URL: `https://www.facebook.com/<page>` (a page
+  with no user name as `profile.php?id=<id>`),
+  `https://www.instagram.com/<name>/`, `https://www.tiktok.com/@<name>` and
+  `https://x.com/<name>` (twitter.com links too). The query is dropped. A
+  post, photo, event, video, group or share link, or a short link, is not a
+  page and gives nothing. A social link is never the website.
 
-Emails, socials, brand, operating status and confidence are never taken.
+Emails, brand, operating status and confidence are never taken.
 Each value taken is sourced `overture` with a fact date of the run. A value
 that has not changed keeps its date.
 
@@ -530,7 +543,8 @@ pool is dropped, with no one involved, by the first of these rules it breaks
 The rest are sorted into two tiers:
 
 - `strong`: confidence 0.9 or more, a camping `basic_category` (not only a
-  camping taxonomy entry), and a website of its own (not on a directory host);
+  camping taxonomy entry), and a website of its own (not on a directory host
+  or a social host);
 - `weak`: every other candidate.
 
 Each candidate carries its GERS id, name, kind, category, taxonomy entry,
