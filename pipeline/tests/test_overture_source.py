@@ -305,7 +305,7 @@ def test_a_merge_lets_a_travellers_value_replace_the_kept_records_overture_value
     # A gap fill gives way to any other source, in a merge too.
     write(repo, filled(A, 1))
     write(repo, osm_record(
-        B, 2, facts={"phone": "+61 2 5550 0199"}, fact_sources={"phone": "feedback"}, fact_dates={"phone": T1},
+        B, 2, facts={"phone": "+61 2 5550 0199"}, fact_sources={"phone": "feedback"}, fact_dates={"phone": T1}, updated=T1,
     ))
     merge(repo, A, B, now=T2)
     kept = record(repo, A)
