@@ -35,6 +35,7 @@ from .common import (
     dump_line,
     dump_record,
     load_places,
+    load_taken,
     place_path,
     write_text,
 )
@@ -115,6 +116,8 @@ class KeptLists:
     candidate_kinds: each camping category that makes an Overture candidate,
     and the kind it publishes as. chains: chain-only names, normalised.
     rejected: GERS ids of rejected candidates, never candidates again.
+    taken: (place id, fact) to the Overture value a person or the reviewer
+    chose over OSM's in "Overture differs" (overture/taken.json).
     """
 
     categories: dict[str, set[str]]
@@ -123,6 +126,7 @@ class KeptLists:
     candidate_kinds: dict[str, str] = field(default_factory=dict)
     chains: tuple[str, ...] = ()
     rejected: frozenset[str] = frozenset()
+    taken: dict[tuple[str, str], object] = field(default_factory=dict)
 
 
 @dataclass
@@ -173,6 +177,7 @@ def load_kept_lists(root: Path) -> KeptLists:
         candidate_kinds=dict(category_file.get("candidates", {})),
         chains=tuple(chains),
         rejected=frozenset(rejected),
+        taken=load_taken(root),
     )
 
 
@@ -725,8 +730,11 @@ def import_overture(
     shared = shared_pages(checks, lists, result)
     for place_id, record, base, row in checks:
         values = values_from(row, base, lists, shared) if row else {}
+        values.update(taken_values(base, lists))
         if row:
-            result.differs.extend(differences(base, row, lists, shared))
+            result.differs.extend(
+                d for d in differences(base, row, lists, shared) if (place_id, d["key"]) not in lists.taken
+            )
             result.links[place_id] = {"gers": row["id"], "release": overture.release}
         new = with_values(base, values, record, now)
         before_values, after_values = overture_values(record), overture_values(new)
@@ -741,6 +749,16 @@ def import_overture(
             result.records[place_id] = new
     result.candidates, result.dropped = find_candidates(places, overture, lists)
     return result
+
+
+def taken_values(base: dict, lists: KeptLists) -> dict:
+    """The values a person took from Overture for this place, where no source but OSM has one."""
+    sources = base.get("fact_sources", {})
+    return {
+        fact: value
+        for (place_id, fact), value in lists.taken.items()
+        if place_id == base["id"] and sources.get(fact, "osm") == "osm"
+    }
 
 
 def shared_pages(checks: list[tuple], lists: KeptLists, result: ImportResult) -> frozenset[str]:
@@ -1145,7 +1163,8 @@ def _render_report(result: ImportResult, summary: dict, limit: int) -> str:
     ]
     if result.differs:
         lines += [
-            "OSM's value stays unless a person takes Overture's, which then becomes `overture`-sourced.",
+            "OSM's value stays unless a person takes Overture's by listing it in `overture/taken.json`, "
+            "which then makes it `overture`-sourced.",
             "",
             "| Place | Kind | Value | OSM | Overture | Overture place |",
             "|---|---|---|---|---|---|",

@@ -486,6 +486,9 @@ Kept files:
 - `categories.json` also holds `candidates`: the camping categories that make
   an Overture candidate, and the kind each publishes as (`campground` as
   `campground`, `rv_park` and `holiday_park` as `caravan_park`).
+- `overture/taken.json`: `{"taken": [{"place", "fact", "value"}]}`, the
+  Overture values a person or the AI reviewer chose over OSM's in "Overture
+  differs" (see below).
 - `overture/links.ndjson`: the link file, one line per matched place,
   `{"gers","place","release"}` sorted by place id, with the release the match
   was last seen in. It is not released.
@@ -546,6 +549,13 @@ agree when any Overture website has the same host (lower case, without
 `www.`). Phones agree when any Overture phone and any number in OSM's value
 (several are separated by `;`) are the same Australian number: digits only,
 `+61` and `+61 (0)` written as a leading 0.
+
+To take Overture's value, add `{"place", "fact", "value"}` to
+`overture/taken.json`. The importer then writes that value sourced
+`overture`, dated the run, over OSM's, and no longer lists it. The OSM sync
+leaves a value listed there alone while the record holds it. Every other
+`overture` value is still replaced once OSM gives one, and a traveller's
+report still replaces a taken value.
 
 **Changelog runs.** The first run checks every place. With `--changelog`, a
 linked place whose Overture place the changelog lists as `unchanged`, or
@@ -678,7 +688,9 @@ release.
   `community_report` or `overture`) is kept, with its source: sync never turns a community
   report value into an OSM value. The exception is `overture`, a gap fill:
   once OSM gives a value for that fact, name or location, OSM's value
-  replaces it and its source and date are dropped. An OSM-sourced fact whose tag has gone is
+  replaces it and its source and date are dropped, unless
+  `overture/taken.json` lists the value the record holds (a person chose it
+  over OSM's in "Overture differs"). An OSM-sourced fact whose tag has gone is
   removed. `status` and `rating` are never touched. A kind change counts as
   an update.
 - A record without an OSM link (`osm: null`: a contributed place, a new

@@ -141,6 +141,30 @@ def test_sync_replaces_an_overture_value_once_osm_gives_one(repo):
     assert validate_repo(repo) == []
 
 
+def take(repo, *entries):
+    (repo / "overture").mkdir(exist_ok=True)
+    (repo / "overture" / "taken.json").write_text(
+        json.dumps({"taken": [{"place": p, "fact": f, "value": v} for p, f, v in entries]}), encoding="utf-8")
+
+
+def test_sync_leaves_an_overture_value_a_person_took_over_osm(repo):
+    write(repo, filled())
+    take(repo, (A, "website", "https://lakecamp.example.au/"))
+    sync(repo, [osm_place(1, website="https://lakecamp.org.au/", phone="+61 2 5550 0199")], now=T2)
+    after = record(repo)
+    assert (after["facts"]["website"], after["fact_sources"]["website"]) == ("https://lakecamp.example.au/", "overture")
+    assert after["fact_dates"] == {"website": FILLED}
+    # The phone was not taken, so OSM's replaces it as usual.
+    assert (after["facts"]["phone"], after["fact_sources"]["phone"]) == ("+61 2 5550 0199", "osm")
+
+
+def test_sync_replaces_a_taken_value_once_overtures_value_is_no_longer_the_one_taken(repo):
+    write(repo, filled())
+    take(repo, (A, "website", "https://lakecamp.example.au/old"), (B, "website", "https://lakecamp.example.au/"))
+    sync(repo, [osm_place(1, website="https://lakecamp.org.au/")], now=T2)
+    assert record(repo)["fact_sources"]["website"] == "osm"
+
+
 def test_sync_drops_overture_dates_when_osm_gives_every_value(repo):
     write(repo, filled())
     sync(repo, [osm_place(1, website="https://lakecamp.org.au/", phone="+61 2 5550 0199")], now=T2)

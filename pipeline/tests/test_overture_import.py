@@ -429,6 +429,44 @@ def test_overture_differs_leaves_out_values_from_other_sources_and_directory_hos
     assert run([osm], [ov(websites=["https://placestars.com/riverbend"])]).differs == []
 
 
+def test_a_value_a_person_took_from_overture_differs_replaces_osms():
+    osm = place(facts={"website": "https://www.riverbendpark.com.au/book", "phone": "+61 2 5550 9999"})
+    lists = KeptLists(**{**LISTS.__dict__, "taken": {(A, "website"): "https://riverbend.example.au/"}})
+    result = run([osm], [ov()], lists=lists)
+    record = result.records[A]
+    assert record["facts"]["website"] == "https://riverbend.example.au/"
+    assert record["fact_sources"] == {"website": "overture", "phone": "osm"}
+    assert record["fact_dates"] == {"website": RUN}
+    # Only the phone is still listed.
+    assert [d["key"] for d in result.differs] == ["phone"]
+
+
+def test_a_taken_value_stays_on_later_runs_even_without_a_match():
+    taken = place(facts={"website": "https://riverbend.example.au/"}, sources={"website": "overture"},
+                  fact_dates={"website": T0})
+    lists = KeptLists(**{**LISTS.__dict__, "taken": {(A, "website"): "https://riverbend.example.au/"}})
+    result = run([taken], [], lists=lists)
+    assert result.records == {} and result.removals == []
+
+
+def test_a_traveller_can_still_take_down_a_taken_value():
+    reported = place(facts={"website": "https://riverbend-new.example.au/"}, sources={"website": "feedback"},
+                     fact_dates={"website": T0})
+    lists = KeptLists(**{**LISTS.__dict__, "taken": {(A, "website"): "https://riverbend.example.au/"}})
+    result = run([reported], [ov(phones=[])], lists=lists)
+    assert result.records == {}
+
+
+def test_the_kept_lists_read_the_values_people_took(tmp_path):
+    for name in ("categories.json", "directory-hosts.json"):
+        (tmp_path / "overture").mkdir(exist_ok=True)
+        (tmp_path / "overture" / name).write_bytes((REPO / "overture" / name).read_bytes())
+    (tmp_path / "overture" / "taken.json").write_text(
+        json.dumps({"taken": [{"place": A, "fact": "phone", "value": "+61 2 5550 0101"}]}), encoding="utf-8")
+    assert load_kept_lists(tmp_path).taken == {(A, "phone"): "+61 2 5550 0101"}
+    assert (REPO / "overture" / "taken.json").exists()
+
+
 # ------------------------------------------------------------ shared pages
 
 SHELL_PAGE = "https://www.facebook.com/Shell"

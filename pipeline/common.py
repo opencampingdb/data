@@ -180,8 +180,24 @@ def with_rule_facts(record: dict) -> dict:
 COMMUNITY_REPORT = "community_report"
 
 # The source of a gap fill from Overture Maps. Any value from another source
-# replaces it: the OSM sync drops it as soon as OSM gives a value.
+# replaces it: the OSM sync drops it as soon as OSM gives a value, unless a
+# person took it over OSM's (TAKEN_FILE).
 OVERTURE = "overture"
+
+# The Overture values a person or the AI reviewer chose over OSM's in
+# "Overture differs": {"taken": [{"place", "fact", "value"}]}. The importer
+# writes each one sourced overture, and the OSM sync leaves it alone while the
+# record still holds that value.
+TAKEN_FILE = Path("overture") / "taken.json"
+
+
+def load_taken(root: Path) -> dict[tuple[str, str], object]:
+    """The taken Overture values, (place id, fact) to value. Empty when the file is missing."""
+    path = Path(root) / TAKEN_FILE
+    if not path.exists():
+        return {}
+    entries = json.loads(path.read_text(encoding="utf-8"))["taken"]
+    return {(entry["place"], entry["fact"]): entry["value"] for entry in entries}
 
 
 def from_community_report(record: dict) -> bool:

@@ -13,7 +13,8 @@ Rules (SPEC, "OSM sync"):
   community reports never becomes an OSM value. The one exception is
   overture, a gap fill: once OSM gives a value for that fact, name or
   location, OSM's value replaces it and its source and date are dropped.
-  While OSM gives none, the overture value stays. Sync never overwrites a value whose source is owner. A record with no
+  While OSM gives none, the overture value stays, and so does a value listed
+  in overture/taken.json, which a person chose over OSM's. Sync never overwrites a value whose source is owner. A record with no
   fact_sources entry for name or location takes both from OSM.
 - A record whose OSM object has gone is never deleted. It is listed in the
   report as "gone from OSM" for a person to decide. Records a person has
@@ -66,6 +67,7 @@ from .common import (
     dump_record,
     load_distinct,
     load_places,
+    load_taken,
     place_path,
     utc_now,
     write_text,
@@ -133,22 +135,29 @@ def osm_key(osm: dict) -> tuple[str, int]:
     return osm["type"], osm["id"]
 
 
-def merge_facts(record: dict, osm_facts: dict) -> tuple[dict, dict]:
+def merge_facts(record: dict, osm_facts: dict, taken: dict | None = None) -> tuple[dict, dict]:
     """Combine a record's feedback facts with fresh OSM facts.
 
     Returns (facts, fact_sources). Facts from feedback or contributions win. An
-    overture fact is a gap fill: it stays only while OSM has no value for it.
+    overture fact is a gap fill: it stays only while OSM has no value for it,
+    unless taken (overture/taken.json, (place id, fact) to value) lists the
+    value the record holds, which a person chose over OSM's.
     Every other fact is whatever OSM says now, so a tag removed in OSM removes
     its fact.
     """
     old_facts = record.get("facts", {})
     old_sources = record.get("fact_sources", {})
+    taken = taken or {}
 
     facts, sources = {}, {}
     for key, source in old_sources.items():
         if key in EXTRA_SOURCE_KEYS:
             continue  # name and location are handled in refreshed_record
-        if source == OVERTURE and key in osm_facts:
+        if (
+            source == OVERTURE
+            and key in osm_facts
+            and taken.get((record.get("id"), key), Ellipsis) != old_facts.get(key)
+        ):
             continue  # OSM now gives a value, which replaces the gap fill
         if source != "osm" and key in old_facts:
             facts[key] = old_facts[key]
@@ -230,7 +239,7 @@ def refreshed_osm(old: dict | None, new: dict) -> dict:
     return fresh
 
 
-def refreshed_record(record: dict, place: dict, now: str) -> dict:
+def refreshed_record(record: dict, place: dict, now: str, taken: dict | None = None) -> dict:
     """The record with OSM data refreshed. "updated" moves only if something changed.
 
     A timestamp added to an osm link that had none is not a change to the
@@ -243,7 +252,7 @@ def refreshed_record(record: dict, place: dict, now: str) -> dict:
         fresh["kind"] = place["kind"]
         fresh["group"] = KIND_GROUP[place["kind"]]
     fresh["osm"] = refreshed_osm(record.get("osm"), place["osm"])
-    fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"])
+    fresh["facts"], fresh["fact_sources"] = merge_facts(record, place["facts"], taken)
     # Source entries for name, location, kind and status are carried over as
     # they were. name, location and kind follow OSM unless their source is
     # something else (feedback, contributed, owner, community_report or overture). status
@@ -300,6 +309,7 @@ def sync(
     """Merge extract records into root/places. Returns what changed."""
     now = now or utc_now()
     places = load_places(root)
+    taken = load_taken(root)
     result = SyncResult(records_before=len(places))
     validator = load_validator("place.schema.json")
 
@@ -319,7 +329,7 @@ def sync(
         if existing is None:
             record = new_record(place, now, make_id)
         else:
-            record = refreshed_record(existing, place, now)
+            record = refreshed_record(existing, place, now, taken)
             if record == existing:
                 result.unchanged += 1
                 continue
