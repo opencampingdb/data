@@ -739,3 +739,17 @@ def test_the_command_writes_places_the_link_file_a_report_and_a_summary(repo, tm
     # A second run, changelog only, changes nothing.
     assert main([str(source), "--root", str(repo), "--report", str(report), "--changelog", "--now", "2026-12-01T00:00:00Z"]) == 0
     assert json.loads(place_path(repo, A).read_text(encoding="utf-8")) == record
+
+
+@pytest.mark.parametrize("text", ["", json.dumps(extract()[0]) + "\n"])
+def test_the_command_refuses_an_empty_extract_and_changes_nothing(repo, tmp_path, text):
+    # A pull that found no places is broken: a full run on it would take
+    # every Overture value off.
+    record = place(facts={"website": "https://riverbend.example.au/"}, sources={"website": "overture"},
+                   fact_dates={"website": T0})
+    write_repo(repo, [record])
+    source = tmp_path / "overture.ndjson"
+    source.write_text(text, encoding="utf-8")
+    with pytest.raises(SystemExit, match="no places"):
+        main([str(source), "--root", str(repo), "--report", str(tmp_path / "r.md"), "--now", RUN])
+    assert json.loads(place_path(repo, A).read_text(encoding="utf-8")) == record

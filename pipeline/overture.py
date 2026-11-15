@@ -268,6 +268,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     started = time.monotonic()
+    # A pull that found no places is broken. A run on it would take every
+    # Overture value off, so it stops before anything is written.
+    header = next(read_json_lines(args.extract), None)
+    if not header or not header.get("places"):
+        raise SystemExit(f"{args.extract}: the extract has no places")
     now = args.now or time.strftime("%Y-%m-%dT00:00:00Z", time.gmtime())
     places = load_places(args.root)
     result = import_overture(
