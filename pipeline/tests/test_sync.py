@@ -617,3 +617,18 @@ def test_refresh_the_place_schema_refuses_leaves_the_record_as_it_was(repo, tmp_
     assert result.updated == []
     assert [s["record"]["osm"]["id"] for s in result.skipped] == [9001]
     assert "Sync Test Park" in render_report(result)
+
+
+def test_report_lists_every_gone_record_before_the_long_lists():
+    def rec(n):
+        return {"id": f"ocdb_01M66ES{n:017d}", "kind": "caravan_park",
+                "name": f"A long caravan park name number {n}", "osm": {"type": "way", "id": n}}
+    result = SyncResult(records_before=50000)
+    result.updated = [rec(n) for n in range(50000)]
+    result.duplicates = [{"a": rec(n), "b": rec(n + 1), "distance_m": 50} for n in range(4000)]
+    result.gone = [rec(n) for n in range(60000, 60150)]
+    result.records_after = 50000
+    report = render_report(result)
+    assert len(report) <= MAX_REPORT_CHARS
+    gone = report.split("## Gone from OSM")[1].split("\n## ")[0]
+    assert gone.count("| `ocdb_") == 150 and "not listed here" not in gone

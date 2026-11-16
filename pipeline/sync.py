@@ -16,9 +16,16 @@ Rules (SPEC, "OSM sync"):
   While OSM gives none, the overture value stays, and so does a value listed
   in overture/taken.json, which a person chose over OSM's. Sync never overwrites a value whose source is owner. A record with no
   fact_sources entry for name or location takes both from OSM.
-- A record whose OSM object has gone is never deleted. It is listed in the
-  report as "gone from OSM" for a person to decide. Records a person has
-  already set to "closed" are no longer listed.
+- A record whose OSM object has gone (deleted, or its tags taken off) follows
+  the place when a mapper draws it again as another object, most often a
+  point replaced by an outline (find_moves). It keeps its id, so nothing that
+  hangs off the id is lost: its osm link moves to the new object, which gets
+  no record of its own, and the old object goes into merged_osm, so it never
+  becomes a record again if it comes back. The report lists these under
+  "Moved to a new OSM object".
+- A record whose OSM object has gone with no such object is never deleted. It
+  is listed in the report as "gone from OSM" for a person to decide. Records
+  a person has already set to "closed" are no longer listed.
 - status, reopens, description, owner_verified and rating never come from
   OSM, so sync leaves them alone, with their fact_sources entries.
 - A record without an OSM link (osm is null) is never touched, flagged or
@@ -72,6 +79,8 @@ from .common import (
     utc_now,
     write_text,
 )
+from .custody import HISTORY_FILE, OsmHistory, Resolution, ref, relink, resolve
+from .merge import MergeError, merge
 from .duplicates import find_duplicates
 from .geometry import Geometry, load_geometry
 from .validate import load_validator
@@ -107,6 +116,10 @@ class SyncResult:
     new: list[dict] = field(default_factory=list)
     updated: list[dict] = field(default_factory=list)
     gone: list[dict] = field(default_factory=list)
+    # Records that followed their place to another OSM object, each {"record": ..., "from": old osm link, "how": Resolution}.
+    moved: list[dict] = field(default_factory=list)
+    # What custody.resolve found for every record whose object left the extract.
+    custody: list[Resolution] = field(default_factory=list)
     duplicates: list[dict] = field(default_factory=list)
     # Records the place schema refuses, each {"record": ..., "errors": [...]}.
     skipped: list[dict] = field(default_factory=list)
@@ -116,12 +129,12 @@ class SyncResult:
 
     @property
     def change_percent(self) -> float:
-        """New, updated and gone records as a percentage of all records after the sync.
+        """New, updated, moved and gone records as a percentage of all records after the sync.
 
         A record that is both updated and gone (an old record migrated to the
         new kinds) counts once.
         """
-        changed = len({r["id"] for r in self.new + self.updated + self.gone})
+        changed = len({r["id"] for r in self.new + self.updated + self.gone + [m["record"] for m in self.moved]})
         if changed == 0:
             return 0.0
         return round(100.0 * changed / max(self.records_after, 1), 2)
@@ -304,25 +317,91 @@ def schema_reasons(validator, record: dict) -> list[str]:
 
 
 def sync(
-    root: Path, extract: list[dict], now: str | None = None, make_id=new_place_id, geometry: Geometry | None = None
+    root: Path,
+    extract: list[dict],
+    now: str | None = None,
+    make_id=new_place_id,
+    geometry: Geometry | None = None,
+    history: OsmHistory | None = None,
 ) -> SyncResult:
-    """Merge extract records into root/places. Returns what changed."""
+    """Merge extract records into root/places. Returns what changed.
+
+    history, when given, is OSM's history, which custody.resolve reads for
+    records whose object left the extract. Without it, only a record's own
+    merged_osm links and the nearby rule can resolve them.
+    """
     now = now or utc_now()
     places = load_places(root)
     taken = load_taken(root)
     result = SyncResult(records_before=len(places))
     validator = load_validator("place.schema.json")
 
+    # Records whose object left the extract follow their place where OSM shows where it went.
+    # Each is checked against the schema before anything is merged or written.
+    result.custody = resolve(places, extract, geometry, history, now)
+    in_extract = {osm_key(p["osm"]): p for p in extract}
+    handled, moved_ids, stopped = set(), set(), set()
+    # Plain moves first, so a merge below finds the record it merges with already following its new object.
+    for res in sorted((r for r in result.custody if r.follows), key=lambda r: r.outcome == "merged"):
+        place = in_extract[res.new]
+        if res.outcome == "merged" and res.merged_id in stopped:
+            # The record it would merge with could not follow the object this run: a person looks.
+            res.outcome, res.new, res.merged_id = "unclear", None, None
+            continue
+        keep, drop = res.record_id, res.merged_id
+        if res.outcome == "merged" and drop < keep:
+            keep, drop = drop, keep  # the older id stays: it is the one most likely to carry what travellers sent
+        if keep == res.record_id:
+            candidate = refreshed_record(relink(places[keep], res.new), place, now, taken)
+        elif keep in moved_ids:
+            candidate = places[keep]  # it followed the object above, refreshed and checked
+        else:
+            candidate = refreshed_record(places[keep], place, now, taken)
+        errors = schema_reasons(validator, candidate)
+        if not errors and res.outcome == "merged":
+            try:
+                merge(root, keep, drop, now=now, places=places)
+            except MergeError:
+                res.outcome, res.new, res.merged_id = "unclear", None, None
+                continue
+            if keep == res.record_id:
+                candidate = refreshed_record(relink(places[keep], res.new), place, now, taken)
+                errors = schema_reasons(validator, candidate)
+            else:
+                candidate = places[keep]
+        if errors:
+            result.skipped.append({"record": candidate, "errors": errors})
+            res.outcome = "refused"
+            stopped.add(res.record_id)
+            # Nor does the object get a record of its own: the place would then have two.
+            handled.add(res.new)
+            continue
+        if res.outcome == "merged" and drop in moved_ids:
+            # The dropped record followed the object above. It is a tombstone now, so it leaves the moved list.
+            result.moved = [m for m in result.moved if m["id"] != drop]
+            moved_ids.discard(drop)
+        res.kept_id = keep
+        if keep == res.record_id:
+            candidate["updated"] = now
+            places[keep] = candidate
+            write_text(place_path(root, keep), dump_record(candidate))
+        res.merged_id = drop if res.outcome == "merged" else None
+        result.moved.append({"id": res.record_id, "record": candidate, "from": {"type": res.old[0], "id": res.old[1]}, "how": res})
+        if keep == res.record_id:
+            handled.add(res.new)  # written above; a kept older record is refreshed by the loop below
+        moved_ids.add(res.record_id)
+
     live = [r for r in places.values() if r.get("status") != "merged"]
     by_osm = {osm_key(r["osm"]): r for r in live if r.get("osm")}
     merged_osm = {
         (m["type"], m["id"]): r["id"] for r in live for m in r.get("merged_osm", [])
     }
-    seen = set()
+    seen = {osm_key(place["osm"]) for place in extract}
 
     for place in extract:
         key = osm_key(place["osm"])
-        seen.add(key)
+        if key in handled:
+            continue  # a record followed its place here, above
         if key in merged_osm and key not in by_osm:
             continue  # merged into another record by a person
         existing = by_osm.get(key)
@@ -345,7 +424,7 @@ def sync(
     updated_ids = {r["id"] for r in result.updated}
     for record in sorted(live, key=lambda r: r["id"]):
         osm = record.get("osm")
-        if not osm or osm_key(osm) in seen:
+        if not osm or osm_key(osm) in seen or record["id"] in moved_ids:
             continue
         current = migrated_record(record, now)
         if current != record and current["id"] not in updated_ids:
@@ -354,6 +433,9 @@ def sync(
         if current.get("status") != "closed":
             result.gone.append(current)
     result.gone.sort(key=lambda r: osm_key(r["osm"]))
+    result.moved.sort(key=lambda m: osm_key(m["from"]))
+    if history is not None:
+        history.save({ref(r.old) for r in result.custody if r.record_id not in moved_ids})
 
     result.records_after = result.records_before + len(result.new)
     result.duplicates = find_duplicates(list(load_places(root).values()), load_distinct(root), geometry)
@@ -392,6 +474,64 @@ def table(records: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
     if len(records) > limit:
         lines.append("")
         lines.append(f"And {len(records) - limit} more, not listed here.")
+    return lines
+
+
+HOW_MOVED = {
+    "own": "already merged into this record",
+    "history": "took over in {changeset}",
+    "merged": "took over in {changeset}; `{dropped}` merged into `{kept}`, the older record",
+    "nearby": "the same name, drawn again nearby",
+}
+
+WHAT_OSM_SAYS = {
+    "closed_in_osm": "closed in OSM ({tags}) in {changeset}",
+    "retagged": "now tagged {tags} in {changeset}",
+    "deleted": "removed in {changeset}, with nothing in its place",
+    "unclear": "more than one record or object could be it, or it has an owner",
+    "refused": "could follow another object, but the place schema refuses the record",
+    "not_looked_up": "history not read",
+}
+
+
+def changeset_link(changeset: int | None) -> str:
+    return f"[changeset {changeset}](https://www.openstreetmap.org/changeset/{changeset})" if changeset else "an unknown changeset"
+
+
+def custody_words(res, table: dict) -> str:
+    tags = ", ".join(f"{escape_cell(k)}={escape_cell(v)}" for k, v in sorted((res.tags or {}).items()))
+    kept = res.kept_id or res.record_id
+    return table[res.outcome].format(
+        changeset=changeset_link(res.changeset), dropped=res.merged_id, kept=kept, tags=tags or "no tags"
+    )
+
+
+def moved_table(moved: list[dict], limit: int = REPORT_LIST_LIMIT) -> list[str]:
+    lines = ["| Record | Kind | Name | Was | Now | How |", "|---|---|---|---|---|---|"]
+    for move in moved[:limit]:
+        record = move["record"]
+        lines.append(
+            f"| `{move.get('id', record['id'])}` | {record['kind']} | {escape_cell(record['name'])} "
+            f"| {osm_link(move['from'])} | {osm_link(record.get('osm'))} | {custody_words(move['how'], HOW_MOVED)} |"
+        )
+    if len(moved) > limit:
+        lines.append("")
+        lines.append(f"And {len(moved) - limit} more, not listed here.")
+    return lines
+
+
+def gone_table(gone: list[dict], custody: list, limit: int = REPORT_LIST_LIMIT) -> list[str]:
+    said = {r.record_id: r for r in custody}
+    lines = ["| Record | Kind | Name | OSM object | What OSM says |", "|---|---|---|---|---|"]
+    for record in gone[:limit]:
+        res = said.get(record["id"])
+        lines.append(
+            f"| `{record['id']}` | {record['kind']} | {escape_cell(record['name'])} "
+            f"| {osm_link(record.get('osm'))} | {custody_words(res, WHAT_OSM_SAYS) if res else 'history not read'} |"
+        )
+    if len(gone) > limit:
+        lines.append("")
+        lines.append(f"And {len(gone) - limit} more, not listed here.")
     return lines
 
 
@@ -440,17 +580,24 @@ def render_report(result: SyncResult, source: str | None = None) -> str:
     """The sync report as Markdown, used as the PR body, at most MAX_REPORT_CHARS long.
 
     Lists are cut at REPORT_LIST_LIMIT rows, and shorter when the report
-    would still be too long.
+    would still be too long: first the possible duplicates, new and updated
+    lists, then the lists a person acts on (moved, gone and skipped).
     """
-    limit = REPORT_LIST_LIMIT
-    while True:
-        report = _render_report(result, source, limit)
-        if len(report) <= MAX_REPORT_CHARS or limit == 0:
-            return report
-        limit //= 2
+    for keep in (REPORT_LIST_LIMIT, REPORT_LIST_LIMIT // 2, REPORT_LIST_LIMIT // 4, 0):
+        limit = REPORT_LIST_LIMIT
+        while True:
+            report = _render_report(result, source, limit, keep)
+            if len(report) <= MAX_REPORT_CHARS:
+                return report
+            if limit == 0:
+                break
+            limit //= 2
+    return report
 
 
-def _render_report(result: SyncResult, source: str | None, limit: int) -> str:
+def _render_report(result: SyncResult, source: str | None, limit: int, keep: int | None = None) -> str:
+    """The report with the duplicates, new and updated lists cut at limit, and the moved, gone and skipped lists at keep."""
+    keep = limit if keep is None else keep
     auto = result.change_percent < AUTO_MERGE_BELOW_PERCENT
     lines = ["# OSM sync report", ""]
     if source:
@@ -462,12 +609,13 @@ def _render_report(result: SyncResult, source: str | None, limit: int) -> str:
         f"| New | {len(result.new)} |",
         f"| Updated | {len(result.updated)} |",
         f"| Unchanged | {result.unchanged} |",
+        f"| Moved to a new OSM object | {len(result.moved)} |",
         f"| Gone from OSM | {len(result.gone)} |",
         f"| Skipped | {len(result.skipped)} |",
         f"| After | {result.records_after} |",
         "",
         f"Change: {result.change_percent:.2f}% of records "
-        f"(new, updated and gone, out of all records after the sync).",
+        f"(new, updated, moved and gone, out of all records after the sync).",
         "",
         (
             f"This is under {AUTO_MERGE_BELOW_PERCENT:g}%, so the PR merges itself once CI passes."
@@ -475,20 +623,36 @@ def _render_report(result: SyncResult, source: str | None, limit: int) -> str:
             else f"This is {AUTO_MERGE_BELOW_PERCENT:g}% or more, so the PR waits for a person."
         ),
         "",
+        "## Moved to a new OSM object",
+        "",
+    ]
+    if result.moved:
+        lines += [
+            "OSM shows these places mapped as another object now: a mapper merged a point into an outline, "
+            "redrew the place or fixed a place mapped twice. Each record keeps its id and follows the new object, "
+            "and the old one is kept in `merged_osm`. To undo one, set `osm` back and take the old object out of `merged_osm`.",
+            "",
+            *moved_table(result.moved, keep),
+        ]
+    else:
+        lines.append("None.")
+    lines += [
+        "",
         "## Gone from OSM",
         "",
     ]
     if result.gone:
         lines += [
             "These records are kept. A person decides for each one: set `status` to "
-            "`closed`, fix it in OSM, or remove the file in a separate PR.",
+            "`closed`, fix it in OSM, or remove the file in a separate PR. The last column is what "
+            "OSM's history says happened to the object.",
             "",
-            *table(result.gone, limit),
+            *gone_table(result.gone, result.custody, keep),
         ]
     else:
         lines.append("None.")
     lines += ["", "## Skipped", ""]
-    lines += skipped_table(result.skipped, limit) if result.skipped else ["None."]
+    lines += skipped_table(result.skipped, keep) if result.skipped else ["None."]
     lines += ["", "## Possible duplicates", ""]
     lines += duplicates_table(result.duplicates, limit) if result.duplicates else ["None."]
     lines += ["", "## New", ""]
@@ -511,14 +675,23 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--summary", type=Path, help="also write counts as JSON here")
     parser.add_argument("--source", help="describes the OSM file, shown in the report")
     parser.add_argument("--geometry", type=Path, help="geometry sidecar written by pipeline.extract --geometry, for the duplicate rules")
+    parser.add_argument(
+        "--osm-history",
+        action="store_true",
+        help=f"read OSM's history for records whose object left the extract, kept in {HISTORY_FILE}",
+    )
     args = parser.parse_args(argv)
 
-    result = sync(args.root, load_extract(args.extract), geometry=load_geometry(args.geometry))
+    history = OsmHistory(args.root / HISTORY_FILE) if args.osm_history else None
+    result = sync(args.root, load_extract(args.extract), geometry=load_geometry(args.geometry), history=history)
+    if history is not None:
+        print(f"OSM history: {history.looked_up} looked up, {history.failed} could not be read", file=sys.stderr)
     write_text(args.report, render_report(result, args.source))
 
     summary = {
         "new": len(result.new),
         "updated": len(result.updated),
+        "moved": len(result.moved),
         "gone": len(result.gone),
         "skipped": len(result.skipped),
         "unchanged": result.unchanged,

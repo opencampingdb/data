@@ -132,8 +132,10 @@ Anything that shows this data must show:
    forest, reserve or showground they lie in, merges the result into
    `places/`, rewrites the MapRoulette files and opens or updates one pull
    request from the `osm-sync` branch. The PR body lists what is new, what
-   changed and what has gone from OSM. Records that have gone from OSM are
-   never deleted: a person decides. The PR merges itself once CI passes if
+   changed and what has gone from OSM. A record whose place a mapper drew again
+   as another object, such as an outline in place of a point, keeps its id and
+   follows the new object. Other records that have gone from OSM are never
+   deleted: a person decides. The PR merges itself once CI passes if
    fewer than 2% of records changed, and waits for a person otherwise. A
    change to the tag mapping reaches the data only through this sync, so
    after one merges, run the sync before expecting a release to carry it.
