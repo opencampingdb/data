@@ -127,7 +127,9 @@ Anything that shows this data must show:
 ## How it is built
 
 1. **Daily OSM sync** (`.github/workflows/sync-osm.yml`, 02:00 UTC, or
-   started by hand). Downloads the Geofabrik extract for Australia, keeps the
+   started by hand). Downloads the Geofabrik extract for Australia, or the
+   OpenStreetMap France mirror's copy when Geofabrik cannot be reached
+   (`tools/download-extract`), keeps the
    tags that map to a kind of place, classifies camp sites by the park, state
    forest, reserve or showground they lie in, merges the result into
    `places/`, rewrites the MapRoulette files and opens or updates one pull

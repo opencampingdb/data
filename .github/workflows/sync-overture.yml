@@ -47,7 +47,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  EXTRACT_URL: https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf
   RELEASES_URL: https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/?list-type=2&prefix=release/&delimiter=/
   USER_AGENT: OpenCampingDB-pipeline (+https://github.com/opencampingdb/data)
 
@@ -135,11 +134,7 @@ jobs:
         if: steps.plan.outputs.skip != 'true'
         run: |
           set -euo pipefail
-          cd "$RUNNER_TEMP"
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o australia-latest.osm.pbf "$EXTRACT_URL"
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o australia-latest.osm.pbf.md5 "$EXTRACT_URL.md5"
-          md5sum -c australia-latest.osm.pbf.md5
-          ls -l australia-latest.osm.pbf
+          tools/download-extract "$RUNNER_TEMP"
 
       - name: Build the geometry sidecar
         if: steps.plan.outputs.skip != 'true'
