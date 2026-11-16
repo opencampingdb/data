@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Downloads the Australia OSM extract to <dir>/australia-latest.osm.pbf and
+# checks its md5. Tries Geofabrik first, then the OpenStreetMap France mirror
+# when Geofabrik cannot be reached or its file fails the check: Geofabrik
+# sometimes refuses connections from GitHub's runners.
+#
+# Writes the name of the server it used to <dir>/extract-source.txt, for the
+# sync report. The mirror's copy is refused when its data is more than
+# MAX_AGE_H hours old (default 72), so a stalled mirror never rolls places
+# back.
+#
+# Usage: tools/download-extract <dir>
+# Env: USER_AGENT (required), GEOFABRIK_URL, MIRROR_URL, MAX_AGE_H.
+set -euo pipefail
+
+dir="${1:?usage: tools/download-extract <dir>}"
+: "${USER_AGENT:?USER_AGENT is not set}"
+GEOFABRIK_URL="${GEOFABRIK_URL:-https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf}"
+MIRROR_URL="${MIRROR_URL:-https://download.openstreetmap.fr/extracts/oceania/australia.osm.pbf}"
+MAX_AGE_H="${MAX_AGE_H:-72}"
+out="australia-latest.osm.pbf"
+cd "$dir"
+
+fetch() { curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o "$2" "$1"; }
+
+# The md5 file names the file as the server calls it, so check against our name.
+check_md5() { awk -v f="$out" '{ print $1 "  " f }' "$out.md5" | md5sum -c -; }
+
+if fetch "$GEOFABRIK_URL" "$out" && fetch "$GEOFABRIK_URL.md5" "$out.md5" && check_md5; then
+  echo "Geofabrik" > extract-source.txt
+else
+  echo "Geofabrik failed, trying the OpenStreetMap France mirror" >&2
+  rm -f "$out" "$out.md5"
+  state_url="${MIRROR_URL%.osm.pbf}.state.txt"
+  fetch "$state_url" state.txt
+  stamp="$(sed -n 's/^timestamp=//p' state.txt | tr -d '\\')"
+  [ -n "$stamp" ] || { echo "the mirror's state file has no timestamp" >&2; exit 1; }
+  age_h=$(( ( $(date -u +%s) - $(date -u -d "$stamp" +%s) ) / 3600 ))
+  if [ "$age_h" -gt "$MAX_AGE_H" ]; then
+    echo "the mirror's extract is from $stamp, $age_h hours old, over $MAX_AGE_H" >&2
+    exit 1
+  fi
+  fetch "$MIRROR_URL" "$out"
+  fetch "$MIRROR_URL.md5" "$out.md5"
+  check_md5
+  echo "OpenStreetMap France mirror (data to $stamp)" > extract-source.txt
+fi
+ls -l "$out"
+cat extract-source.txt
