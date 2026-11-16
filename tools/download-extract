@@ -6,11 +6,12 @@
 #
 # Writes the name of the server it used to <dir>/extract-source.txt, for the
 # sync report. The mirror's copy is refused when its data is more than
-# MAX_AGE_H hours old (default 72), so a stalled mirror never rolls places
-# back.
+# MAX_AGE_H hours old (default 72), or older than the newest OSM edit already
+# in PLACES_DIR (default places/, from the folder it is run in), so a lagging
+# mirror never undoes edits an earlier sync took in.
 #
 # Usage: tools/download-extract <dir>
-# Env: USER_AGENT (required), GEOFABRIK_URL, MIRROR_URL, MAX_AGE_H.
+# Env: USER_AGENT (required), GEOFABRIK_URL, MIRROR_URL, MAX_AGE_H, PLACES_DIR.
 set -euo pipefail
 
 dir="${1:?usage: tools/download-extract <dir>}"
@@ -18,6 +19,7 @@ dir="${1:?usage: tools/download-extract <dir>}"
 GEOFABRIK_URL="${GEOFABRIK_URL:-https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf}"
 MIRROR_URL="${MIRROR_URL:-https://download.openstreetmap.fr/extracts/oceania/australia.osm.pbf}"
 MAX_AGE_H="${MAX_AGE_H:-72}"
+PLACES_DIR="$(cd "${PLACES_DIR:-places}" 2>/dev/null && pwd || true)"
 out="australia-latest.osm.pbf"
 cd "$dir"
 
@@ -39,6 +41,14 @@ else
   if [ "$age_h" -gt "$MAX_AGE_H" ]; then
     echo "the mirror's extract is from $stamp, $age_h hours old, over $MAX_AGE_H" >&2
     exit 1
+  fi
+  if [ -n "$PLACES_DIR" ]; then
+    newest="$(python3 -I -c 'import glob, json, sys
+print(max(((json.load(open(p)).get("osm") or {}).get("timestamp") or "" for p in glob.glob(sys.argv[1] + "/*/*.json")), default=""))' "$PLACES_DIR")"
+    if [[ "$stamp" < "$newest" ]]; then
+      echo "the mirror's extract is from $stamp, older than the newest OSM edit in places/ ($newest)" >&2
+      exit 1
+    fi
   fi
   fetch "$MIRROR_URL" "$out"
   fetch "$MIRROR_URL.md5" "$out.md5"
