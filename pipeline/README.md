@@ -784,9 +784,31 @@ release.
   a traveller's check finds an open place still there.
 - `updated` is set to the time of the run only when the record's content
   changed. Running the same extract twice changes no file.
-- A record whose OSM object is no longer in the extract is never deleted. It
-  is listed under "Gone from OSM" in the report until a person sets its
-  `status` to `closed` or removes it.
+- A record whose OSM object is no longer in the extract (deleted, its tags
+  taken off, or tagged as something the extract does not take) follows its
+  place when OSM shows where it went (`pipeline.custody`). First its own
+  `merged_osm`: when Open Camping DB merged two records and a mapper then
+  removed the other object, the record follows the one still there. Then
+  OSM's history (`--osm-history`): the changeset that removed the object, and
+  the one object in it that took over (a way or relation that now holds the
+  old node, or an object given the same name and main tag). When that object
+  has a record of its own, the two are merged with this record kept, unless
+  either has an owner. Last, a nearby object with no record, in the same group
+  and with a matching name, whose outline holds the old point or lies within
+  200 m of it, with nothing in `pipeline.geometry` keeping them apart. The
+  record keeps its id, its `osm` link moves to the new object and the old one
+  goes into `merged_osm`. An object two records could follow is followed by
+  neither, a record a person closed is left alone, and a record the schema
+  would refuse after the move stays where it was. The report lists these
+  under "Moved to a new OSM object", with the changeset. What the history
+  said about each object still gone is kept in `osm/history.ndjson` (ids,
+  versions, changesets and main tags, nothing about the mapper), read again
+  after 30 days.
+- Any other record whose OSM object is no longer in the extract is never
+  deleted. It is listed under "Gone from OSM" in the report, with what OSM's
+  history says happened (closed with a lifecycle prefix, retagged, or removed
+  with nothing in its place), until a person sets its `status` to `closed` or
+  removes it.
 - A new or refreshed record that `schema/place.schema.json` refuses is not
   written: a new one gets no file and an existing one keeps its file as it
   was. The report lists it under "Skipped" with the field and the rule it

@@ -712,7 +712,8 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   `entry` is who may stay (`public`, `customers`, `permit`, `private`).
   Consider leaving `private` places out of what you show.
 - Records gone from OpenStreetMap are kept until a person reviews them, so a
-  place may linger for a while after it has really closed.
+  place may linger for a while after it has really closed. When a mapper draws
+  a place again as another object, its record keeps its id and follows it.
 
 ### Owners and private property
 
