@@ -2,7 +2,9 @@ name: OSM sync
 
 # Daily at 02:00 UTC (12:00 or 13:00 in Melbourne and Sydney), within an hour
 # of Geofabrik publishing the day's extract (about 01:20 UTC). Downloads the
-# Geofabrik extract for Australia, merges it into places/, rewrites the
+# Geofabrik extract for Australia (tools/download-extract, which falls back to
+# the OpenStreetMap France mirror when Geofabrik refuses the runner), merges
+# it into places/, rewrites the
 # MapRoulette challenge files in maproulette/ and opens or updates one pull
 # request from the osm-sync branch. Auto-merge is turned on only when
 # fewer than 2% of records changed.
@@ -29,7 +31,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  EXTRACT_URL: https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf
   USER_AGENT: OpenCampingDB-pipeline (+https://github.com/opencampingdb/data)
 
 jobs:
@@ -113,11 +114,7 @@ jobs:
       - name: Download the Australia extract
         run: |
           set -euo pipefail
-          cd "$RUNNER_TEMP"
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o australia-latest.osm.pbf "$EXTRACT_URL"
-          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors -o australia-latest.osm.pbf.md5 "$EXTRACT_URL.md5"
-          md5sum -c australia-latest.osm.pbf.md5
-          ls -l australia-latest.osm.pbf
+          tools/download-extract "$RUNNER_TEMP"
 
       - name: Extract camping places
         run: |
@@ -132,7 +129,7 @@ jobs:
             --summary "$RUNNER_TEMP/sync-summary.json" \
             --geometry "$RUNNER_TEMP/geometry.ndjson" \
             --osm-history \
-            --source "Geofabrik australia-latest.osm.pbf, downloaded $(date -u +%Y-%m-%dT%H:%MZ)"
+            --source "$(cat "$RUNNER_TEMP/extract-source.txt") australia extract, downloaded $(date -u +%Y-%m-%dT%H:%MZ)"
 
       - name: Create a read-only inbox token
         id: inbox-token
