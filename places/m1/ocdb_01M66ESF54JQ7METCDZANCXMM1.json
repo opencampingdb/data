@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -33,7 +35,19 @@
       "distance_m": 100,
       "name": "Middle Beach"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Middle Beach",
+      "osm_id": 378122331,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "0244760800",
+    "protected_area": {
+      "name": "Mimosa Rocks National Park",
+      "osm_id": 5947723,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/middle-beach-campground"
   },
   "group": "overnight",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,18 @@
       "name": "Price",
       "osm_id": 893482662,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Black Swamp",
+      "osm_id": 4615045,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
+    "protected_area": {
+      "name": "Upper Gulf St Vincent Marine Park",
+      "osm_id": 16238252,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

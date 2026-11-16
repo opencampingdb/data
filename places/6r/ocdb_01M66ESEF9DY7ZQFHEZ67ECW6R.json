@@ -9,6 +9,8 @@
     "fee": "contributed",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "contributed"
   },
   "facts": {
@@ -23,6 +25,16 @@
       "name": "Blackwood",
       "osm_id": 2140871545,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Sardine Creek",
+      "osm_id": 60428968
+    },
+    "protected_area": {
+      "name": "Wombat - Lerderderg National Park",
+      "osm_id": 21814105,
+      "osm_type": "relation"
     },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/wombat-lerderderg-national-park/where-to-stay/camping-in-wombat-lerderderg-national-park"
   },
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

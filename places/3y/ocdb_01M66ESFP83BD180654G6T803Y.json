@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilet_type": "osm",
@@ -23,6 +25,16 @@
       "name": "Wentworth Falls",
       "osm_id": 20968412,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Waterfall Creek",
+      "osm_id": 506213808
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true,
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

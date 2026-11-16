@@ -1,27 +1,60 @@
 {
   "fact_sources": {
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "fee": false,
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 40,
+      "name": "Bridgewater on Loddon",
+      "osm_id": 564343915,
+      "type": "village"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 690
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Main Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Loddon River",
+      "osm_id": 37703862
+    },
     "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESBTTV337QYR4Q6F4D9QD",
   "kind": "public_toilet",
   "location": {
-    "lat": -36.601464,
-    "lon": 143.941385
+    "lat": -36.601404,
+    "lon": 143.941424
   },
+  "merged_osm": [
+    {
+      "id": 6209232403,
+      "type": "node"
+    }
+  ],
   "name": null,
   "osm": {
-    "id": 6209232403,
-    "timestamp": "2024-11-04T23:36:58Z",
-    "type": "node",
-    "version": 3
+    "id": 1575746598,
+    "timestamp": "2026-11-05T08:36:45Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

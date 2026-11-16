@@ -6,6 +6,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -28,6 +30,18 @@
     "nearest_boat_ramp": {
       "distance_m": 760
     },
+    "nearest_feature": {
+      "distance_m": 500,
+      "name": "Palm Valley",
+      "osm_id": 113765223,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Walgun Cape Byron State Conservation Area",
+      "osm_id": 5937627,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -20,7 +22,19 @@
     "nearest_beach": {
       "distance_m": 4460
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "South East Point",
+      "osm_id": 8920471274,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Wilsons Promontory National Park",
+      "osm_id": 554585,
+      "osm_type": "relation"
+    },
     "website": "https://parkweb.vic.gov.au/explore/parks/wilsons-promontory-national-park/things-to-do/wilsons-promontory-lightstation"
   },
   "group": "overnight",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +21,21 @@
     "nearest_beach": {
       "distance_m": 70
     },
+    "nearest_feature": {
+      "distance_m": 650,
+      "name": "Cowrie Point",
+      "osm_id": 4258407193,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Bass Highway"
+    },
+    "protected_area": {
+      "name": "Little Peggs Beach State Reserve",
+      "osm_id": 6174428,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

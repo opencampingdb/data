@@ -7,7 +7,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -29,7 +31,17 @@
       "distance_m": 30,
       "name": "Maroondah Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Watts River",
+      "osm_id": 1387135017
+    },
     "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Yarra Ranges National Park",
+      "osm_id": 5891684,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

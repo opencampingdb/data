@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2300
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Murrumbidgee River",
+      "osm_id": 2723485,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Baylis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Murrumbidgee River",
+      "osm_id": 179754041
     },
     "phone": "+61269372300",
     "website": "http://www.centralpointmotel.com"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

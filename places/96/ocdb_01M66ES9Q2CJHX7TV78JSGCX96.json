@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "wheelchair": "osm"
   },
@@ -22,6 +23,13 @@
     "nearest_beach": {
       "distance_m": 60,
       "name": "Twilight Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Twilight Beach",
+      "osm_id": 183604125,
+      "osm_type": "way",
+      "type": "beach"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

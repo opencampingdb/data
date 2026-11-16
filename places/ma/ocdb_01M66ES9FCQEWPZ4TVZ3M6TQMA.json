@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Angle Vale",
       "osm_id": 1896340198,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Andrews Farm Wetland",
+      "osm_id": 2386947,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Smith Creek Drain",
+      "osm_id": 559919517
     }
   },
   "group": "utility",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

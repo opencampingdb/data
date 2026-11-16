@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Clarendon",
       "osm_id": 5674778781,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Mount Bold Reservoir",
+      "osm_id": 2073091,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Onkaparinga River",
+      "osm_id": 24256441
+    },
+    "protected_area": {
+      "name": "McLaren Vale District",
+      "osm_id": 5261959,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

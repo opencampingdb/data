@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 312681507,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Culgoa",
+      "osm_id": 312681182,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Calder Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Tyrrell Creek",
+      "osm_id": 227330740
     }
   },
   "group": "utility",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

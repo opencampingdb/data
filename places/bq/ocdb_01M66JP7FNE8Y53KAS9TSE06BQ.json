@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +20,23 @@
     },
     "nearest_beach": {
       "distance_m": 3690
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Nepean Gorge",
+      "osm_id": 1390629161,
+      "osm_type": "way",
+      "type": "gorge"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Nepean River",
+      "osm_id": 32261733
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

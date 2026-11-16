@@ -5,6 +5,8 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -22,6 +24,18 @@
       "name": "Cannons Creek",
       "osm_id": 2608684125,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "River Bend",
+      "osm_id": 221019047,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Rockpool Waterway",
+      "osm_id": 223260254
     },
     "opening_hours": "Mo-Su 09:00-17:00; Dec 25 off",
     "toilet_type": "flush",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

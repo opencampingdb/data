@@ -6,8 +6,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -35,10 +37,22 @@
     "nearest_boat_ramp": {
       "distance_m": 730
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Boondall Wetlands",
+      "osm_id": 6177140,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 200
     },
     "opening_hours": "Tu-Su 09:00-16:00",
+    "protected_area": {
+      "name": "Boondall Wetlands",
+      "osm_id": 6177140,
+      "osm_type": "relation"
+    },
     "website": "https://www.brisbane.qld.gov.au/clean-and-green/natural-environment-and-water/environment-centres/boondall-wetlands-environment-centre"
   },
   "group": "attraction",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1730,
       "name": "Wellington Drive Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Main Beach",
+      "osm_id": 383406313,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Swimming Creek",
+      "osm_id": 189938617
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

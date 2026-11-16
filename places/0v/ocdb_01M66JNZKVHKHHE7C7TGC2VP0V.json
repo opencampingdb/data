@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,9 +27,21 @@
       "distance_m": 2880,
       "name": "Heybridge Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Round Hill",
+      "osm_id": 728322013,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Bass Highway"
+    },
+    "protected_area": {
+      "name": "Round Hill Reserve",
+      "osm_id": 10590487,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

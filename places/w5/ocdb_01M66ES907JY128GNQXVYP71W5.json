@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -34,7 +36,19 @@
       "distance_m": 70,
       "name": "Goolawah Beach"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Goolawah Beach",
+      "osm_id": 189326453,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Goolawah National Park",
+      "osm_id": 6050097,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/Racecourse-campground"
   },
   "group": "overnight",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,11 +1,17 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "West Arnhem Region",
       "osm_id": 11716450
+    },
+    "protected_area": {
+      "name": "Kakadu National Park World Heritage Site",
+      "osm_id": 2386081,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -24,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

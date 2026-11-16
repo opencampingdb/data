@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +18,26 @@
       "osm_id": 65641576,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 760,
+      "name": "Kerrisdale",
+      "osm_id": 1729007951,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Goulburn Valley Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "King Parrot Creek",
+      "osm_id": 176488130
+    },
+    "protected_area": {
+      "name": "Wyndham Streamside Reserve",
+      "osm_id": 9266553,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

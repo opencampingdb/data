@@ -7,7 +7,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/714730832225253",
@@ -26,6 +27,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 3280
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Savannah Lake",
+      "osm_id": 7076127,
+      "osm_type": "relation",
+      "type": "water"
     }
   },
   "group": "attraction",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

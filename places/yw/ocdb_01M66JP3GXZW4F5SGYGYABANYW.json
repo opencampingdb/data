@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1350
     },
+    "nearest_feature": {
+      "distance_m": 850,
+      "name": "Goondi Hill",
+      "osm_id": 6035839091,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bruce Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Sweeneys Creek",
+      "osm_id": 140213039
     },
     "website": "https://metropetroleum.com.au/"
   },
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

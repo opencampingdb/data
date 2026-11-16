@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
@@ -24,6 +25,13 @@
     "nearest_boat_ramp": {
       "distance_m": 810,
       "name": "Dragon Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Sydney Harbour",
+      "osm_id": 1252425,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -47,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

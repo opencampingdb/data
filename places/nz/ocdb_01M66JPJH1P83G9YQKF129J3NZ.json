@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -30,9 +32,21 @@
       "distance_m": 860,
       "name": "Carrack Road Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Kincumber Creek",
+      "osm_id": 499888250,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Empire Bay Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Kincumber Creek",
+      "osm_id": 302900969
     },
     "operator": "Central Coast Council",
     "website": "https://www.centralcoast.nsw.gov.au/recreation/recreational-area/hawke-street-boatramp"
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

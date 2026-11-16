@@ -11,8 +11,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report",
+    "protected_area": "osm",
     "website": "contributed"
   },
   "facts": {
@@ -30,11 +33,28 @@
     "nearest_boat_ramp": {
       "distance_m": 2200
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Green Patch",
+      "osm_id": 127727416,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Jervis Bay Road"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Telegraph Creek",
+      "osm_id": 446296327
+    },
     "pets": "no",
+    "protected_area": {
+      "name": "Booderee National Park",
+      "osm_id": 4447256,
+      "osm_type": "relation"
+    },
     "website": "https://booderee.gov.au/camping/green-patch/"
   },
   "group": "utility",
@@ -53,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,10 @@
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -35,7 +38,24 @@
       "type": "village"
     },
     "motorbikes": true,
+    "nearest_feature": {
+      "distance_m": 810,
+      "name": "Tom Groggin",
+      "osm_id": 113713195,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Murray River",
+      "osm_id": 366647281
+    },
     "phone": "0260769373",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tom-groggin-campground",
     "wifi": false
@@ -56,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

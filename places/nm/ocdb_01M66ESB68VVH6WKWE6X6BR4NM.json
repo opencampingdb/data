@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -23,7 +25,17 @@
       "osm_id": 186612722,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Frankland River",
+      "osm_id": 738536268
+    },
     "operator": "Department of Parks & Wildlife",
+    "protected_area": {
+      "name": "Walpole-Nornalup National Park",
+      "osm_id": 11992711,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -22,6 +24,18 @@
     "nearest_boat_ramp": {
       "distance_m": 190,
       "name": "Munbililla Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Munbililla",
+      "osm_id": 8285822320,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Limmen National Park",
+      "osm_id": 12993212,
+      "osm_type": "relation"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

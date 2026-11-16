@@ -13,9 +13,12 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -39,12 +42,29 @@
       "osm_id": 113373467,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 780,
+      "name": "Ngarigo",
+      "osm_id": 113373423,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Alpine Way"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Thredbo River",
+      "osm_id": 7693200
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61264505600",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/Ngarigo-campground"
   },
@@ -64,5 +84,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

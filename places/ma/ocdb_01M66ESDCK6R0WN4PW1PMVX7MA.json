@@ -7,9 +7,12 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilet_type": "osm",
     "toilets": "osm",
@@ -36,12 +39,29 @@
       "osm_id": 97302052,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Cecil Hoskins",
+      "osm_id": 2875944,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 440,
       "name": "Moss Vale Road"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Wingecarribee River",
+      "osm_id": 185736761
+    },
     "opening_hours": "24/7",
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Cecil Hoskins Nature Reserve",
+      "osm_id": 404518335,
+      "osm_type": "way"
+    },
     "showers": false,
     "toilet_type": "pit",
     "toilets": true,
@@ -63,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

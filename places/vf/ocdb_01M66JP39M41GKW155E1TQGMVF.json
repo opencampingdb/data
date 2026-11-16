@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Ruffey Lake",
+      "osm_id": 13257715,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "King Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Ruffey Creek",
+      "osm_id": 54911881
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

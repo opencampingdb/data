@@ -5,6 +5,7 @@
     "fee": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm",
     "wifi": "osm"
   },
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "North West Coastal Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Minilya River",
+      "osm_id": 190527021
     },
     "tents": true,
     "wifi": false
@@ -39,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

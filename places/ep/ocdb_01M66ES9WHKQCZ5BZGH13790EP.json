@@ -1,10 +1,22 @@
 {
   "fact_sources": {
+    "caravans": "osm",
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
   },
   "facts": {
+    "caravans": true,
+    "entry": "public",
+    "fee": false,
     "lga": {
       "name": "Shire of Southern Grampians",
       "osm_id": 3349959
@@ -16,13 +28,28 @@
       "type": "village"
     },
     "nearest_boat_ramp": {
-      "distance_m": 1040,
-      "name": "Glendinning Campground slipway"
-    }
+      "distance_m": 430
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Rocklands Reservoir",
+      "osm_id": 17231100,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "operator": "GWM Water",
+    "protected_area": {
+      "name": "State Forest",
+      "osm_id": 1250674298,
+      "osm_type": "way"
+    },
+    "showers": false,
+    "tents": true,
+    "toilets": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9WHKQCZ5BZGH13790EP",
-  "kind": "campground",
+  "kind": "free_camp",
   "location": {
     "lat": -37.297647,
     "lon": 141.997955
@@ -30,11 +57,11 @@
   "name": "Glendinning Campground",
   "osm": {
     "id": 1808393376,
-    "timestamp": "2013-05-01T07:51:37Z",
+    "timestamp": "2026-11-15T09:23:28Z",
     "type": "node",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
     "website": "osm"
   },
   "facts": {
@@ -11,23 +14,43 @@
       "street": "Haig Street",
       "suburb": "Mitiamo"
     },
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 70,
+      "name": "Mitiamo",
+      "osm_id": 427836164,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 210,
+      "name": "Echuca - Mitiamo Road"
+    },
     "website": "https://www.loddon.vic.gov.au/For-residents/Community-support/Community-Directory/East-Loddon-Historical-Society"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GY4RKT39CMK5JPHM0N64",
   "kind": "heritage",
   "location": {
-    "lat": -36.209302,
-    "lon": 144.232161
+    "lat": -36.209332,
+    "lon": 144.232227
   },
+  "merged_osm": [
+    {
+      "id": 12701769495,
+      "type": "node"
+    }
+  ],
   "name": "East Loddon Historical Society",
   "osm": {
-    "id": 12701769495,
-    "timestamp": "2025-03-26T19:11:39Z",
-    "type": "node",
-    "version": 2
+    "id": 1575391317,
+    "timestamp": "2026-11-04T11:59:53Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-04T23:14:53Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

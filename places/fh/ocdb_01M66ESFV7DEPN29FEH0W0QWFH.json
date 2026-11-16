@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -30,9 +32,21 @@
       "distance_m": 1400,
       "name": "Picnic Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Maroochy River",
+      "osm_id": 1380753,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Horton Parade"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Cornmeal Creek",
+      "osm_id": 813056183
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

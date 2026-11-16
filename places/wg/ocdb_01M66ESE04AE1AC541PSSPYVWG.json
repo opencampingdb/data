@@ -3,8 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -19,11 +21,23 @@
       "osm_id": 113711904,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 660,
+      "name": "Laurel Hill",
+      "osm_id": 113712894,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Batlow Road"
     },
     "operator": "Forestry Corporation of NSW",
+    "protected_area": {
+      "name": "Green Hills State Forest",
+      "osm_id": 5996096,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

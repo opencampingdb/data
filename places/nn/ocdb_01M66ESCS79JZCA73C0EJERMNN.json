@@ -1,33 +1,53 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Shire of Wellington",
+      "osm_id": 3351438
+    },
+    "locality": {
+      "distance_m": 4710,
+      "name": "Licola North",
+      "osm_id": 1665456278,
+      "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Barkly River",
+      "osm_id": 17503463
+    },
+    "operator": "DELWP Hayfield"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCS79JZCA73C0EJERMNN",
   "kind": "free_camp",
   "location": {
-    "lat": -37.558782,
-    "lon": 146.567997
+    "lat": -37.559348,
+    "lon": 146.568828
   },
   "merged_osm": [
     {
-      "id": 2424892886,
+      "id": 9580325629,
       "type": "node"
     }
   ],
   "name": "Barkly Bridge",
   "osm": {
-    "id": 9580325629,
-    "timestamp": "2026-05-26T06:45:35Z",
+    "id": 2424892886,
+    "timestamp": "2026-11-05T08:03:43Z",
     "type": "node",
-    "version": 3
+    "version": 7
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:37:03Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

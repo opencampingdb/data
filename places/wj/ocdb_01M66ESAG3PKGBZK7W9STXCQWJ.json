@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -29,7 +31,19 @@
       "osm_id": 2174282817,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Lookout Point",
+      "osm_id": 11228351027,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Mitchell and Wonnangatta Rivers Heritage River",
+      "osm_id": 16570361,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

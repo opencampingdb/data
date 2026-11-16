@@ -1,14 +1,17 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
     "lga": {
       "name": "Sunshine Coast Regional",
@@ -30,6 +33,11 @@
       "distance_m": 80,
       "name": "Point Cartwright Drive"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Myuna Canal",
+      "osm_id": 832076637
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -42,11 +50,11 @@
   "name": null,
   "osm": {
     "id": 5023110522,
-    "timestamp": "2026-01-22T06:56:25Z",
+    "timestamp": "2026-11-15T17:35:16Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

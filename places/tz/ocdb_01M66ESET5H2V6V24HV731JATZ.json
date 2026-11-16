@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2980
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Bulli Beach",
+      "osm_id": 95786693,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Farrell Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Wartons Creek",
+      "osm_id": 967741710
     },
     "phone": "+61242855677",
     "website": "http://www.wollongongtouristparks.com.au/parks/bulli/Pages/default.aspx"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

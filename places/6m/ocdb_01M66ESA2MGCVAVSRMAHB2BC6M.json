@@ -7,7 +7,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -24,7 +26,17 @@
       "osm_id": 2365278670,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Palm Creek",
+      "osm_id": 208044845
+    },
     "phone": "+61889525800",
+    "protected_area": {
+      "name": "Finke Gorge National Park",
+      "osm_id": 8329055,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

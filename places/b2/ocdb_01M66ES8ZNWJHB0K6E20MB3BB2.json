@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -19,9 +21,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Warringal Swamp",
+      "osm_id": 139054844,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Jika Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Salt Creek",
+      "osm_id": 54571801
     }
   },
   "group": "utility",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

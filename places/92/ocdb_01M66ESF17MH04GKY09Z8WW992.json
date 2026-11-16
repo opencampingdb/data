@@ -11,6 +11,7 @@
     "locality": "osm",
     "name": "overture",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "tents": "osm",
@@ -39,6 +40,13 @@
     "nearest_boat_ramp": {
       "distance_m": 260
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Lake Eucumbene",
+      "osm_id": 66849,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Buckenderra Road"
@@ -63,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

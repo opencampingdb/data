@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 30,
       "name": "Gibson Beach"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Gibson Beach",
+      "osm_id": 305524795,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Great Ocean Road"
+    },
+    "protected_area": {
+      "name": "Port Campbell National Park",
+      "osm_id": 9212138,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

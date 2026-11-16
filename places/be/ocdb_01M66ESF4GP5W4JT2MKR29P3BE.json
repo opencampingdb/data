@@ -50,7 +50,9 @@
     "lga": "osm",
     "locality": "osm",
     "motorhomes": "feedback",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "feedback",
     "playground": "feedback",
     "power": "feedback",
@@ -95,9 +97,21 @@
       "type": "town"
     },
     "motorhomes": true,
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Bogan River",
+      "osm_id": 258617306,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Mitchell Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Bogan River",
+      "osm_id": 285603958
     },
     "phone": "02 68321729",
     "playground": true,
@@ -124,5 +138,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

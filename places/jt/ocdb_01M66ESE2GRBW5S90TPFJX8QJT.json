@@ -7,7 +7,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "tents": "osm",
@@ -34,9 +36,21 @@
       "osm_id": 291767363,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Warra",
+      "osm_id": 100827769,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Thorn Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Cooranga Creek",
+      "osm_id": 1002847252
     },
     "operator": "Warra Hotel",
     "phone": "+61 419 789 351",
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

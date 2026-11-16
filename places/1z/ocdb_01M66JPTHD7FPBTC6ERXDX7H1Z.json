@@ -13,7 +13,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "overture",
@@ -53,9 +55,21 @@
     "nearest_boat_ramp": {
       "distance_m": 210
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Breakfast Creek",
+      "osm_id": 1627026,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Burrows Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Breakfast Creek",
+      "osm_id": 207260184
     },
     "opening_hours": "24/7",
     "operator": "BP",
@@ -79,5 +93,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

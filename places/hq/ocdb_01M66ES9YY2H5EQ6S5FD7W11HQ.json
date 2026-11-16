@@ -3,7 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 4290201325,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Briseis Hole",
+      "osm_id": 244899754,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Main Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Ringarooma River",
+      "osm_id": 38700569
     },
     "tents": true
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

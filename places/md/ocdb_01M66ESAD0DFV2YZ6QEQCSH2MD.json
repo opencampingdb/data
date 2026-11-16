@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -23,6 +25,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1130
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Paperbark Creek",
+      "osm_id": 230539665,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Kings Park",
+      "osm_id": 12949347,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

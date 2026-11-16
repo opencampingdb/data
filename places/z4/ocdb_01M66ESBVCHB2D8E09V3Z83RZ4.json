@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,6 +23,16 @@
       "name": "Mount Cole",
       "osm_id": 1707835886,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Cave Hill Creek",
+      "osm_id": 1362129766
+    },
+    "protected_area": {
+      "name": "Mount Buangor National Park",
+      "osm_id": 2124184,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

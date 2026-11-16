@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -16,6 +18,18 @@
       "name": "Queanbeyan",
       "osm_id": 40817809,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Mount Jerrabomberra",
+      "osm_id": 54013202,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Mount Jerrabomberra Reserve",
+      "osm_id": 7711712,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

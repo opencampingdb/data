@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +21,21 @@
     "nearest_beach": {
       "distance_m": 350
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Daylesford",
+      "osm_id": 53050350,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 440,
       "name": "Vincent Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Blind Creek",
+      "osm_id": 1491155842
     }
   },
   "group": "attraction",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,6 +10,7 @@
     "locality": "osm",
     "name": "overture",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -26,6 +27,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1750
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Leschenault Estuary",
+      "osm_id": 17058920,
+      "osm_type": "relation",
+      "type": "water"
     },
     "phone": "+61897971095"
   },
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

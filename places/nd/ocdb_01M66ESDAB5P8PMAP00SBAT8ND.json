@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -10,6 +11,11 @@
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Carnarvon Creek",
+      "osm_id": 184276646
     }
   },
   "group": "utility",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

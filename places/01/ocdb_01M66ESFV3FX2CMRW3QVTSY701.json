@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -30,9 +32,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1160
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Lorne Beach",
+      "osm_id": 289707336,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Mountjoy Parade"
+    },
+    "protected_area": {
+      "name": "Lorne - Queenscliff Coastal Reserve",
+      "osm_id": 9212148,
+      "osm_type": "relation"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

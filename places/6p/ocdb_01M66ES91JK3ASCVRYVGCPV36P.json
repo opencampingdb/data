@@ -14,8 +14,10 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -45,8 +47,18 @@
       "distance_m": 220,
       "name": "Wartook Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "MacKenzie River",
+      "osm_id": 675738597
+    },
     "operator": "Parks Victoria",
     "phone": "+61131963",
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/smiths-mill-campground"
   },
@@ -66,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

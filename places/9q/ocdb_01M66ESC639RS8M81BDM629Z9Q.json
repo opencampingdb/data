@@ -3,7 +3,13 @@
     "address": "osm",
     "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm"
   },
   "facts": {
@@ -12,9 +18,38 @@
     },
     "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Kempsey Shire Council",
+      "osm_id": 6178731
+    },
+    "locality": {
+      "distance_m": 860,
+      "name": "South West Rocks",
+      "osm_id": 97626453,
+      "type": "town"
+    },
     "nearest_beach": {
-      "distance_m": 730,
+      "distance_m": 710,
       "name": "Back Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 320
+    },
+    "nearest_feature": {
+      "distance_m": 870,
+      "name": "Point Briner",
+      "osm_id": 12093259536,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Gregory Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "South West Rocks Creek",
+      "osm_id": 174632256
     },
     "power": true
   },
@@ -22,17 +57,23 @@
   "id": "ocdb_01M66ESC639RS8M81BDM629Z9Q",
   "kind": "caravan_park",
   "location": {
-    "lat": -30.889091,
-    "lon": 153.033598
+    "lat": -30.889098,
+    "lon": 153.03414
   },
+  "merged_osm": [
+    {
+      "id": 7727925523,
+      "type": "node"
+    }
+  ],
   "name": "Ingenia Holidays South West Rocks",
   "osm": {
-    "id": 7727925523,
-    "timestamp": "2020-07-19T06:31:14Z",
-    "type": "node",
-    "version": 1
+    "id": 615647905,
+    "timestamp": "2026-11-08T01:05:15Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

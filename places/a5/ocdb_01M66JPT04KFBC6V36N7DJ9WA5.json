@@ -3,7 +3,9 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fuels": [
@@ -21,9 +23,21 @@
       "osm_id": 59834908,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 770,
+      "name": "Marx Hill",
+      "osm_id": 113751596,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Waterfall Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Connell Creek",
+      "osm_id": 104276990
     }
   },
   "group": "services",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -20,6 +22,18 @@
     },
     "nearest_beach": {
       "distance_m": 3270
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Wagon Bay Pond",
+      "osm_id": 143178778,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Tower Hill Wildlife Reserve",
+      "osm_id": 9273095,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

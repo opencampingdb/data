@@ -12,9 +12,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "toilets": "osm",
     "website": "overture",
     "wheelchair": "osm",
@@ -42,12 +44,24 @@
       "distance_m": 3760,
       "name": "Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Lake King",
+      "osm_id": 2442196,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Princes Highway"
     },
     "phone": "+61351551581",
     "power": true,
+    "protected_area": {
+      "name": "Lakes Entrance - Lake Tyers Coastal Reserve (COM)",
+      "osm_id": 9202647,
+      "osm_type": "relation"
+    },
     "toilets": true,
     "website": "https://www.nrmaparksandresorts.com.au/eastern-beach/",
     "wheelchair": true,
@@ -69,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

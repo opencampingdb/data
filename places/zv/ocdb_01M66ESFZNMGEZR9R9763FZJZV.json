@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -27,9 +29,21 @@
       "distance_m": 50,
       "name": "Rhyll Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Fisherman Point",
+      "osm_id": 3790938740,
+      "osm_type": "node",
+      "type": "cape"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Lock Road"
+    },
+    "protected_area": {
+      "name": "Phillip Island Coastal Reserve",
+      "osm_id": 9278060,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

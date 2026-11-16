@@ -9,6 +9,7 @@
     "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -40,6 +41,11 @@
       "distance_m": 80,
       "name": "Flinders Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Campaspe River",
+      "osm_id": 703798811
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -60,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,6 +10,7 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -36,6 +37,13 @@
     "nearest_boat_ramp": {
       "distance_m": 410
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Woolooware Bay",
+      "osm_id": 1333569,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Captain Cook Drive"
@@ -57,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

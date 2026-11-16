@@ -14,7 +14,9 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -43,9 +45,21 @@
     "nearest_boat_ramp": {
       "distance_m": 110
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Oxbow Lake",
+      "osm_id": 46874785,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Portland - Nelson Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Glenelg River",
+      "osm_id": 285171981
     },
     "phone": "+61887384123",
     "website": "http://www.rivervupark.com.au"
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

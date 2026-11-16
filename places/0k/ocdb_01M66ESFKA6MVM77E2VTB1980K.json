@@ -14,8 +14,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -50,8 +52,20 @@
     "nearest_boat_ramp": {
       "distance_m": 2610
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Depot Beach",
+      "osm_id": 311100774,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "operator": "NPWS",
     "phone": "+611300072757",
+    "protected_area": {
+      "name": "Murramarang National Park",
+      "osm_id": 5858067,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -73,5 +87,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

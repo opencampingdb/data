@@ -6,6 +6,7 @@
     "nearest_major_road": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
+    "protected_area": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -26,6 +27,11 @@
     },
     "operator": "Transport for NSW",
     "picnic_tables": true,
+    "protected_area": {
+      "name": "Pilliga East State Forest",
+      "osm_id": 5845999,
+      "osm_type": "relation"
+    },
     "toilets": false
   },
   "group": "utility",
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

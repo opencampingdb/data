@@ -12,6 +12,7 @@
     "fee": "osm",
     "kitchen": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
@@ -31,6 +32,13 @@
     "lga": {
       "name": "Barkly Region",
       "osm_id": 8878329
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Barkly Homestead",
+      "osm_id": 316581304,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 220,
@@ -59,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

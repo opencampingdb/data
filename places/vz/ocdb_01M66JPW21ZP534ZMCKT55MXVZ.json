@@ -8,8 +8,10 @@
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -22,8 +24,20 @@
       "name": "Shire of Laverton",
       "osm_id": 11690240
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Ilkurlka",
+      "osm_id": 493182940,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "operator": "Western Australia's Department of Indigenous Affairs",
     "phone": "+61890371147",
+    "protected_area": {
+      "name": "Anangu Tjutaku Indigenous Protected Area",
+      "osm_id": 16203014,
+      "osm_type": "relation"
+    },
     "website": "https://www.ilkurlka.org.au/roadhouse"
   },
   "group": "services",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

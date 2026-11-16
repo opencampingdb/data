@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 2190,
       "name": "Redgate Beach"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Calgardup Cave",
+      "osm_id": 370538351,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Caves Road"
+    },
+    "protected_area": {
+      "name": "Leeuwin-Naturaliste National Park",
+      "osm_id": 7709175,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

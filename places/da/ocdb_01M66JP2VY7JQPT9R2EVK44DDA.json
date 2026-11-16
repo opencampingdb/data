@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,7 +25,12 @@
       "distance_m": 220,
       "name": "Cape Naturaliste Road"
     },
-    "opening_hours": "Mo-Su,PH 09:00-16:30"
+    "opening_hours": "Mo-Su,PH 09:00-16:30",
+    "protected_area": {
+      "name": "Leeuwin-Naturaliste National Park",
+      "osm_id": 7709175,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP2VY7JQPT9R2EVK44DDA",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

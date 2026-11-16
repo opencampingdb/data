@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +18,26 @@
       "osm_id": 1787039672,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Gooram Falls Lower Pool",
+      "osm_id": 1214776042,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Euroa-Mansfield Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Seven Creeks",
+      "osm_id": 237360611
+    },
+    "protected_area": {
+      "name": "Seven Creeks Wildlife Reserve (no hunting)",
+      "osm_id": 9273684,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

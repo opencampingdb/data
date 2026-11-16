@@ -10,8 +10,10 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,11 +34,23 @@
       "osm_id": 291559783,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Willunga Hill",
+      "osm_id": 10067921279,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Brookman Road"
     },
     "phone": "+61 8 8349 5868",
+    "protected_area": {
+      "name": "McLaren Vale District",
+      "osm_id": 5261959,
+      "osm_type": "relation"
+    },
     "website": "https://map.bp.com/en-AU/AU/gas-station/willunga-hill/bp-opt-willunga-hill/1282"
   },
   "group": "services",
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

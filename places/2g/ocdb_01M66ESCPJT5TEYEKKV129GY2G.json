@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 80,
       "name": "Kayak launch"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Warren Reservoir",
+      "osm_id": 175550158,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Warren Road"
+    },
+    "protected_area": {
+      "name": "Barossa Valley District",
+      "osm_id": 5261942,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

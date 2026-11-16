@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -26,6 +27,11 @@
       "name": "Silverband Road"
     },
     "operator": "Parks Victoria, Victoria State Government",
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "wifi": false
   },
   "group": "overnight",
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

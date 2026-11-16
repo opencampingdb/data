@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Fishermans Paradise",
       "osm_id": 113134719,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Conjola Lake",
+      "osm_id": 1356456,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Conjola Creek",
+      "osm_id": 49932682
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

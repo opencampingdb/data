@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "pets": "osm"
+    "nearest_feature": "osm",
+    "pets": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,19 @@
       "osm_id": 114371357,
       "type": "village"
     },
-    "pets": "no"
+    "nearest_feature": {
+      "distance_m": 390,
+      "name": "Lagoon Pinch",
+      "osm_id": 114371190,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "pets": "no",
+    "protected_area": {
+      "name": "Barrington Tops National Park",
+      "osm_id": 6111953,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESFJXM7BE07WM8A0ZNR6G",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

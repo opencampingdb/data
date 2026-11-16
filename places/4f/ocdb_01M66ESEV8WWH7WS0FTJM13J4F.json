@@ -11,8 +11,10 @@
     "locality": "osm",
     "name": "overture",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -38,11 +40,23 @@
     "nearest_boat_ramp": {
       "distance_m": 4970
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Lake Burrumbeet",
+      "osm_id": 40032480,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Remembrance Drive"
     },
     "phone": "+61 3 5344 0583",
+    "protected_area": {
+      "name": "Lake Burrumbeet Lake Reserve",
+      "osm_id": 1305915142,
+      "osm_type": "way"
+    },
     "website": "http://www.lakeburrumbeetcaravanpark.com/"
   },
   "group": "overnight",
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,6 +8,9 @@
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -19,6 +22,20 @@
       "suburb": "Pyramid Hill"
     },
     "facebook": "https://www.facebook.com/860825857361470",
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 890,
+      "name": "Pyramid Hill",
+      "osm_id": 427834880,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Victoria Street"
+    },
     "phone": "+61354557450",
     "website": "http://www.pyramidhill.net.au/caravanpark.html"
   },
@@ -26,17 +43,23 @@
   "id": "ocdb_01M66ES9W32XQGFHWTJYQ1RY9E",
   "kind": "campground",
   "location": {
-    "lat": -36.05528,
-    "lon": 144.125
+    "lat": -36.055623,
+    "lon": 144.125412
   },
+  "merged_osm": [
+    {
+      "id": 1808392075,
+      "type": "node"
+    }
+  ],
   "name": "Pyramid Hill Caravan Park",
   "osm": {
-    "id": 1808392075,
-    "timestamp": "2012-07-01T04:20:58Z",
-    "type": "node",
-    "version": 1
+    "id": 1359084743,
+    "timestamp": "2026-11-03T12:00:08Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

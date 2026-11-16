@@ -3,7 +3,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "locality": {
@@ -18,9 +20,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1660
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Molonglo River",
+      "osm_id": 316616957,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Gladstone Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Molonglo River",
+      "osm_id": 5071213
     }
   },
   "group": "attraction",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

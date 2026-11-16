@@ -10,8 +10,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -38,8 +41,25 @@
       "osm_id": 26392887,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Marramarra Creek",
+      "osm_id": 5575201,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Marramarra Creek",
+      "osm_id": 374780763
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0294728949",
+    "protected_area": {
+      "name": "Marramarra National Park",
+      "osm_id": 5993690,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -62,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -22,6 +24,18 @@
     },
     "nearest_beach": {
       "distance_m": 130
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Fowlers Bay Conservation Park",
+      "osm_id": 1421738,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

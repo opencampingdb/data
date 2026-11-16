@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +25,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 160
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Dunns Swamp",
+      "osm_id": 231044585,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Cudgegong River",
+      "osm_id": 269762371
+    },
+    "protected_area": {
+      "name": "Wollemi National Park",
+      "osm_id": 5901253,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

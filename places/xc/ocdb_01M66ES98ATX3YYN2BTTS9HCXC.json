@@ -8,6 +8,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -33,6 +36,23 @@
     "nearest_boat_ramp": {
       "distance_m": 4820
     },
+    "nearest_feature": {
+      "distance_m": 880,
+      "name": "The Ironbarks",
+      "osm_id": 117041276,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Euroka Creek",
+      "osm_id": 49742963
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/euroka-campground"
@@ -53,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

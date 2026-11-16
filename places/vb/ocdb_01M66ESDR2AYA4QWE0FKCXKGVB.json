@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -18,9 +21,26 @@
       "osm_id": 2603797837,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Millers Pond",
+      "osm_id": 83451220,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Reynolds Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Mullum Mullum Creek",
+      "osm_id": 25313519
+    },
+    "protected_area": {
+      "name": "Currawong Bush Park",
+      "osm_id": 229654708,
+      "osm_type": "way"
     },
     "water_type": "fountain"
   },
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

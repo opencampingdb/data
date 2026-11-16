@@ -8,6 +8,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -41,6 +42,13 @@
     "nearest_boat_ramp": {
       "distance_m": 360
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Snug Beach",
+      "osm_id": 626065981,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "+61 3 6267 9138",
     "power": true,
     "website": "https://www.snugpark.com.au/",
@@ -62,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

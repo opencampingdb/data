@@ -7,7 +7,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1615254202132768",
@@ -21,7 +23,17 @@
       "osm_id": 2272268803,
       "type": "town"
     },
-    "phone": "+61882077700"
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Mambray Creek",
+      "osm_id": 435710141
+    },
+    "phone": "+61882077700",
+    "protected_area": {
+      "name": "Mount Remarkable National Park",
+      "osm_id": 16129246,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFBHJ2CNE6Y45WYW0CV4",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

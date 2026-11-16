@@ -5,7 +5,8 @@
   "fact_sources": {
     "dump_station": "contributed",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "dump_station": true,
@@ -18,6 +19,11 @@
       "name": "Geurie",
       "osm_id": 113727773,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Macquarie River",
+      "osm_id": 173728178
     }
   },
   "group": "overnight",
@@ -36,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

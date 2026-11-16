@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Gympie",
       "osm_id": 1882969315,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Lake Alford",
+      "osm_id": 7752099,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 140,
@@ -36,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

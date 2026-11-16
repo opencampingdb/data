@@ -8,7 +8,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -28,9 +31,26 @@
       "osm_id": 1615434719,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 690,
+      "name": "Knockwood",
+      "osm_id": 12082934217,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Mansfield - Woods Point Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Gaffneys Creek",
+      "osm_id": 1387505774
+    },
+    "protected_area": {
+      "name": "Upper Goulburn State Forest",
+      "osm_id": 20306077,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

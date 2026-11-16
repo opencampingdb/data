@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +24,11 @@
     "nearest_boat_ramp": {
       "distance_m": 3690,
       "name": "Port of Airlie Boat Ramp"
+    },
+    "protected_area": {
+      "name": "Conway National Park",
+      "osm_id": 8404104,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -48,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

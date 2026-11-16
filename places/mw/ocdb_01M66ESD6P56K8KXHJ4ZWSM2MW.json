@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Walpole",
       "osm_id": 186612722,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Rowell's Pool",
+      "osm_id": 210559529,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Deep River",
+      "osm_id": 159164085
+    },
+    "protected_area": {
+      "name": "Mount Frankland South National Park",
+      "osm_id": 11992822,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,6 +8,7 @@
     "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
+    "protected_area": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -30,6 +31,11 @@
     "operator": "Transport for NSW",
     "picnic_tables": true,
     "playground": false,
+    "protected_area": {
+      "name": "Conjola National Park",
+      "osm_id": 6047243,
+      "osm_type": "relation"
+    },
     "toilets": true
   },
   "group": "utility",
@@ -48,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

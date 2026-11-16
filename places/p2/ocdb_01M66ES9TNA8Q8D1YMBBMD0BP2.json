@@ -1,27 +1,52 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
     "entry": "public",
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "Kentish",
+      "osm_id": 10597614
+    },
+    "locality": {
+      "distance_m": 110,
+      "name": "Sheffield",
+      "osm_id": 2050809159,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "High Street"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ES9TNA8Q8D1YMBBMD0BP2",
   "kind": "public_toilet",
   "location": {
-    "lat": -41.381627,
-    "lon": 146.325967
+    "lat": -41.381621,
+    "lon": 146.325952
   },
+  "merged_osm": [
+    {
+      "id": 1767067599,
+      "type": "node"
+    }
+  ],
   "name": null,
   "osm": {
-    "id": 1767067599,
-    "timestamp": "2024-11-20T15:19:27Z",
-    "type": "node",
-    "version": 4
+    "id": 1335991864,
+    "timestamp": "2026-11-09T21:40:22Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

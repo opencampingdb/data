@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -34,7 +36,17 @@
       "distance_m": 40,
       "name": "John Renshaw Parkway"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Belougery Creek",
+      "osm_id": 296187857
+    },
     "phone": "0268254364",
+    "protected_area": {
+      "name": "Warrumbungle National Park",
+      "osm_id": 5836978,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/camp-wambelong?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=undefined&utm_term=plcid_12108444800479792541"
   },
   "group": "overnight",
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

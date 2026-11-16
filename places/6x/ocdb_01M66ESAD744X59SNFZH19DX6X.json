@@ -1,27 +1,50 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Lismore City Council",
+      "osm_id": 6168485
+    },
+    "locality": {
+      "distance_m": 360,
+      "name": "Lismore",
+      "osm_id": 114651471,
+      "type": "city"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1410
+    },
+    "nearest_major_road": {
+      "distance_m": 70,
+      "name": "Dawson Street"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESAD744X59SNFZH19DX6X",
   "kind": "caravan_park",
   "location": {
-    "lat": -28.80824,
-    "lon": 153.282464
+    "lat": -28.807964,
+    "lon": 153.28283
   },
   "merged_osm": [
     {
-      "id": 370122386,
-      "type": "way"
+      "id": 2401271722,
+      "type": "node"
     }
   ],
   "name": "Lismore Tourist Caravan Park",
   "osm": {
-    "id": 2401271722,
-    "timestamp": "2015-09-11T02:28:32Z",
-    "type": "node",
-    "version": 2
+    "id": 370122386,
+    "timestamp": "2015-09-11T02:28:30Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:37:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

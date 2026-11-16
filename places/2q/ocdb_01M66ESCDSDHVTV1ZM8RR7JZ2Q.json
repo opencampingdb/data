@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -14,6 +15,11 @@
       "name": "Toongabbie",
       "osm_id": 59728920,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Thomson River",
+      "osm_id": 235612210
     },
     "opening_hours": "24/7"
   },
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

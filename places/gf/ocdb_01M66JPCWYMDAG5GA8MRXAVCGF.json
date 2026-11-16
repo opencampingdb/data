@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +15,11 @@
       "name": "Ceres",
       "osm_id": 335617392,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Waurn Ponds Creek",
+      "osm_id": 312855737
     },
     "water_type": "tank_fill"
   },
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

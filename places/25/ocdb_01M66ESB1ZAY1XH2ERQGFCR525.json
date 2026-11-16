@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 113237609,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Lake Couridjah",
+      "osm_id": 30779328,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 360,
       "name": "West Parade"
+    },
+    "protected_area": {
+      "name": "Thirlmere Lakes National Park",
+      "osm_id": 6055790,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "crocodiles": true,
@@ -19,6 +21,18 @@
       "name": "Kununurra",
       "osm_id": 30480122,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Ord River",
+      "osm_id": 4626870,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Ord River",
+      "osm_id": 140358381
     }
   },
   "group": "overnight",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

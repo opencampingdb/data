@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -34,6 +35,13 @@
     "nearest_boat_ramp": {
       "distance_m": 250
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Murray River",
+      "osm_id": 2203586,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "Federation Council",
     "power": false,
     "showers": false,
@@ -56,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

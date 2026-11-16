@@ -14,8 +14,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -45,8 +47,20 @@
     "nearest_boat_ramp": {
       "distance_m": 4610
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Western Port",
+      "osm_id": 13053988,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "operator": "Parks Victoria",
     "phone": "+61131963",
+    "protected_area": {
+      "name": "French Island National Park",
+      "osm_id": 1531607,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parkweb.vic.gov.au/explore/parks/french-island-national-park/things-to-do/fairhaven"
   },
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

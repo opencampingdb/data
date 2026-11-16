@@ -5,7 +5,11 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -15,9 +19,26 @@
       "street": "Swan Street"
     },
     "facebook": "https://www.facebook.com/165147060167317",
+    "lga": {
+      "name": "City of Yarra",
+      "osm_id": 2404491
+    },
+    "locality": {
+      "distance_m": 4070,
+      "name": "Melbourne",
+      "osm_id": 21579127,
+      "type": "city"
+    },
     "nearest_beach": {
-      "distance_m": 2480,
+      "distance_m": 2460,
       "name": "Horse Arena"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 990
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Burnley Street"
     },
     "phone": "+61 3 9427 9992",
     "website": "https://theriser.com.au/"
@@ -26,17 +47,23 @@
   "id": "ocdb_01M6F3GV3X3P9NMGSVPAE3APQK",
   "kind": "food_and_drink",
   "location": {
-    "lat": -37.826531,
-    "lon": 145.006828
+    "lat": -37.826389,
+    "lon": 145.006838
   },
+  "merged_osm": [
+    {
+      "id": 470286695,
+      "type": "node"
+    }
+  ],
   "name": "Rising Sun Hotel",
   "osm": {
-    "id": 470286695,
-    "timestamp": "2023-11-13T10:33:21Z",
-    "type": "node",
-    "version": 10
+    "id": 1311133948,
+    "timestamp": "2026-11-11T07:06:06Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

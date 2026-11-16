@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -29,6 +30,13 @@
       "distance_m": 1450,
       "name": "Bucasia Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Bucasia Beach",
+      "osm_id": 398639015,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -47,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

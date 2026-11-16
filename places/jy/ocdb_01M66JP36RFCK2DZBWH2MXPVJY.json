@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -27,7 +29,17 @@
       "distance_m": 0,
       "name": "Cape Tribulation Road"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Daintree River",
+      "osm_id": 173271431
+    },
     "opening_hours": "Mo-Su 06:00-00:00",
+    "protected_area": {
+      "name": "Great Barrier Reef Coast Marine Park",
+      "osm_id": 16623817,
+      "osm_type": "relation"
+    },
     "website": "https://douglas.qld.gov.au/community/daintree-ferry/"
   },
   "group": "transport",
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

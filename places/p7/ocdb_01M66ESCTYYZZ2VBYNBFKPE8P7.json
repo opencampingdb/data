@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -16,9 +18,21 @@
       "osm_id": 78094548,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Darlingsford Lake",
+      "osm_id": 3829127,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Western Freeway"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Ryans Creek",
+      "osm_id": 540101014
     },
     "water_type": "fountain"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -23,9 +25,21 @@
       "osm_id": 260193221,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Glenoran Pool",
+      "osm_id": 375552878,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Graphite Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Donnelly River",
+      "osm_id": 532544159
     },
     "phone": "+61 8 9777 1196",
     "website": "http://www.onetreebridge.com.au/"
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,9 +11,12 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -38,12 +41,29 @@
     "nearest_beach": {
       "distance_m": 60
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Wye River",
+      "osm_id": 353145624,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Great Ocean Road"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Wye River",
+      "osm_id": 45689173
+    },
     "phone": "+61352890412",
     "power": true,
+    "protected_area": {
+      "name": "Wye River Coastal Reserve",
+      "osm_id": 9212146,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "http://apollobayrecreationreserve.com/index.php/otway-coast-camping/wye-river-foreshore"
   },
@@ -63,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

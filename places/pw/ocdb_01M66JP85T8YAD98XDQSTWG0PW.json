@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -32,9 +34,21 @@
       "distance_m": 910,
       "name": "Isle of Capri Public Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Rover's Beach",
+      "osm_id": 1576946526,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Ferny Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Nerang River",
+      "osm_id": 593943553
     },
     "website": "https://aquaduck.com.au/"
   },
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

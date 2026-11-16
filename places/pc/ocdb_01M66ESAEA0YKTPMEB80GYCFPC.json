@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -25,9 +28,26 @@
       "distance_m": 1190,
       "name": "Canoe Launching Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Adenia Lagoon",
+      "osm_id": 8068286,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Duff Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Bannister Creek",
+      "osm_id": 8070631
+    },
+    "protected_area": {
+      "name": "Canning River Regional Park",
+      "osm_id": 22372179,
+      "osm_type": "way"
     },
     "water_type": "fountain"
   },
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

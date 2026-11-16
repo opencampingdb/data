@@ -4,7 +4,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "wifi": "osm"
@@ -22,7 +24,17 @@
       "osm_id": 106783005,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Holland Creek",
+      "osm_id": 238943362
+    },
     "power": false,
+    "protected_area": {
+      "name": "Toombullup State Forest",
+      "osm_id": 1374094312,
+      "osm_type": "way"
+    },
     "showers": false,
     "toilets": true,
     "wifi": false
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -17,7 +18,12 @@
       "osm_id": 841479815,
       "type": "village"
     },
-    "operator": "DELWP Alexandra"
+    "operator": "DELWP Alexandra",
+    "protected_area": {
+      "name": "Black Range State Forest",
+      "osm_id": 1368679093,
+      "osm_type": "way"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCSBQFTEGM8VH96YRXG5",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

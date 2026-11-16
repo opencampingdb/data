@@ -8,8 +8,10 @@
     "address": "overture",
     "entry": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture",
     "wifi": "osm"
   },
@@ -25,8 +27,18 @@
       "name": "Shire of Ashburton",
       "osm_id": 11690012
     },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Millstream Creek",
+      "osm_id": 1195242170
+    },
     "operator": "DPAW",
     "phone": "0891822000",
+    "protected_area": {
+      "name": "Millstream Chichester National Park",
+      "osm_id": 8383702,
+      "osm_type": "relation"
+    },
     "website": "https://exploreparks.dbca.wa.gov.au/site/miliyanha-campground",
     "wifi": false
   },
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

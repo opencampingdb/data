@@ -6,7 +6,8 @@
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": true,
@@ -23,6 +24,11 @@
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Bilton Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Livingstone Creek",
+      "osm_id": 198098519
     }
   },
   "group": "overnight",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

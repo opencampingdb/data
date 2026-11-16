@@ -6,6 +6,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -29,6 +31,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1550
     },
+    "nearest_feature": {
+      "distance_m": 430,
+      "name": "North Head Sanctuary",
+      "osm_id": 535170656,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "North Head Private Nature Reserve",
+      "osm_id": 16327967,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

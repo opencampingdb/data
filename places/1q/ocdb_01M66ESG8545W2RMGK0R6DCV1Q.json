@@ -20,9 +20,12 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "contributed"
   },
@@ -50,12 +53,29 @@
       "osm_id": 113373467,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 790,
+      "name": "Bullocks Flat",
+      "osm_id": 6043415771,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Alpine Way"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Bull Creek",
+      "osm_id": 409054191
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 6450 5600",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/thredbo-diggings-campground"
   },
@@ -75,5 +95,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

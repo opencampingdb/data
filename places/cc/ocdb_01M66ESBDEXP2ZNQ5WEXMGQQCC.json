@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -28,7 +30,19 @@
       "osm_id": 6001944126,
       "type": "town"
     },
-    "phone": "+61131963"
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Lake Becking",
+      "osm_id": 76027059,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "phone": "+61131963",
+    "protected_area": {
+      "name": "Murray-Sunset National Park",
+      "osm_id": 5470870,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBDEXP2ZNQ5WEXMGQQCC",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

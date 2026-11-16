@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -26,6 +27,11 @@
       "distance_m": 60,
       "name": "Bruce Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Mulgrave River",
+      "osm_id": 118034304
+    },
     "showers": true,
     "toilet_type": "flush",
     "wheelchair": true
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

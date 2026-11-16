@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +22,26 @@
     "nearest_boat_ramp": {
       "distance_m": 60
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Corinna",
+      "osm_id": 2079457073,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 0,
       "name": "Corinna Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Pieman River",
+      "osm_id": 39810101
+    },
+    "protected_area": {
+      "name": "Pieman River State Reserve",
+      "osm_id": 6214323,
+      "osm_type": "relation"
     }
   },
   "group": "transport",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

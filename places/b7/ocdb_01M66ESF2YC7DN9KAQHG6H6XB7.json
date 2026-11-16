@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "wheelchair": "osm"
   },
@@ -20,6 +21,11 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Scott Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Wannon River",
+      "osm_id": 47280962
     },
     "operator": "Southern Grampians Shire Council",
     "wheelchair": true
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

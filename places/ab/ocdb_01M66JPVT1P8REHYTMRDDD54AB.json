@@ -3,9 +3,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -21,12 +23,24 @@
     "nearest_beach": {
       "distance_m": 4760
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Cunningham’s Rest",
+      "osm_id": 10991771752,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Mona Vale Road"
     },
     "opening_hours": "Mo-Su 10:00-16:00; PH 10:00-16:00; easter -2 days off; Dec 25-26, Jan 1 off",
-    "operator": "Ku-ring-gai Council"
+    "operator": "Ku-ring-gai Council",
+    "protected_area": {
+      "name": "Ku-ring-gai Wildflower Garden",
+      "osm_id": 386286293,
+      "osm_type": "way"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPVT1P8REHYTMRDDD54AB",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

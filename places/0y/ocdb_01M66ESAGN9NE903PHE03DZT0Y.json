@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Halls Gap",
       "osm_id": 324529175,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Victoria Range",
+      "osm_id": 5065258981,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Victoria Range Remote and Natural Area",
+      "osm_id": 1209033942,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

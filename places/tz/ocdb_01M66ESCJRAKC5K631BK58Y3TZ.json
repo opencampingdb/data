@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "pets": "osm",
     "power": "osm",
@@ -24,6 +26,18 @@
       "name": "Netherdale",
       "osm_id": 1665767630,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 330,
+      "name": "Mount Britton",
+      "osm_id": 1775974356,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Bread and Tea Gully",
+      "osm_id": 170577457
     },
     "opening_hours": "24/7",
     "pets": "leashed",
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

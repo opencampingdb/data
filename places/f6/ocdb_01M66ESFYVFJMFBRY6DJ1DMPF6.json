@@ -18,7 +18,10 @@
     "motorhomes": "contributed",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -53,7 +56,24 @@
     "nearest_boat_ramp": {
       "distance_m": 1880
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Hawkesbury River",
+      "osm_id": 6517019,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Hawkesbury River",
+      "osm_id": 422317479
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Cattai National Park",
+      "osm_id": 6034366,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -75,5 +95,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

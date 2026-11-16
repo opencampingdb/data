@@ -9,10 +9,12 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "pets": "osm",
     "picnic_tables": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -36,10 +38,20 @@
       "osm_id": 4316622215,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Coomera River",
+      "osm_id": 386575504
+    },
     "opening_hours": "Feb 01-Nov 30 00:00-24:00",
     "pets": "no",
     "picnic_tables": false,
     "power": false,
+    "protected_area": {
+      "name": "Lamington National Park",
+      "osm_id": 306382,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": false,
@@ -61,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

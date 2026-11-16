@@ -12,6 +12,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "tents": "osm",
     "website": "osm",
@@ -43,6 +45,18 @@
     "nearest_boat_ramp": {
       "distance_m": 210
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Lake Natimuk",
+      "osm_id": 96666666,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Natimuk Creek",
+      "osm_id": 96666671
+    },
     "phone": "+61 407 800 753",
     "tents": true,
     "website": "https://natimuklakecp.com/",
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -25,6 +27,16 @@
       "distance_m": 80,
       "name": "Mount Dandenong Tourist Road"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Ferntree Gully Creek",
+      "osm_id": 814040578
+    },
+    "protected_area": {
+      "name": "Dandenong Ranges National Park",
+      "osm_id": 9212909,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

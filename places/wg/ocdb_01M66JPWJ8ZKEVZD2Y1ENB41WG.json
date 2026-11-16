@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -31,9 +33,21 @@
       "osm_id": 113134619,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 390,
+      "name": "Benandarah",
+      "osm_id": 113259337,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Benandarah Creek",
+      "osm_id": 445653531
     }
   },
   "group": "services",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

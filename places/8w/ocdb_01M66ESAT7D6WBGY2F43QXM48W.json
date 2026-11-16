@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Woodend",
       "osm_id": 273048501,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Lake Earnshaw",
+      "osm_id": 446989318,
+      "osm_type": "way",
+      "type": "water"
     },
     "water_type": "fountain"
   },
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,8 +6,10 @@
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -25,8 +27,18 @@
       "type": "village"
     },
     "motorbikes": false,
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Wild Dog Creek",
+      "osm_id": 248775719
+    },
     "operator": "Parks Victoria",
     "pets": "no",
+    "protected_area": {
+      "name": "Mount Samaria State Park",
+      "osm_id": 1066326,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

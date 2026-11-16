@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -31,9 +33,21 @@
       "distance_m": 160,
       "name": "Burgess Cove Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "South Cave",
+      "osm_id": 5483478320,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Rocky Cape Road"
+    },
+    "protected_area": {
+      "name": "Rocky Cape National Park",
+      "osm_id": 6182223,
+      "osm_type": "relation"
     },
     "toilet_type": "chemical"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

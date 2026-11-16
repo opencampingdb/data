@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Tyalgum",
       "osm_id": 1573432792,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Brummies Lookout",
+      "osm_id": 3019436932,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Wollumbin National Park",
+      "osm_id": 5928022,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "fee": "contributed",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -34,6 +36,16 @@
     "nearest_major_road": {
       "distance_m": 360,
       "name": "Yarra Junction - Noojee Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Latrobe River",
+      "osm_id": 1378844923
+    },
+    "protected_area": {
+      "name": "Latrobe State Forest",
+      "osm_id": 20302020,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

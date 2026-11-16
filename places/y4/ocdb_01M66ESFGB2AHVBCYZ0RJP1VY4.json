@@ -15,7 +15,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -47,7 +49,19 @@
     "nearest_boat_ramp": {
       "distance_m": 2230
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Pittwater",
+      "osm_id": 1216240,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "phone": "+61 2 9472 8949",
+    "protected_area": {
+      "name": "Ku-ring-gai Chase National Park",
+      "osm_id": 5989782,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -69,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

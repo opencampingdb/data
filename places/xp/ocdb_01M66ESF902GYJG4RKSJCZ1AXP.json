@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -32,7 +34,19 @@
     "nearest_boat_ramp": {
       "distance_m": 2500
     },
-    "phone": "+61244430977"
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Ryans Swamp",
+      "osm_id": 279515401,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "phone": "+61244430977",
+    "protected_area": {
+      "name": "Booderee National Park",
+      "osm_id": 4447256,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF902GYJG4RKSJCZ1AXP",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

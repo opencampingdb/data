@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -29,9 +31,21 @@
     "nearest_beach": {
       "distance_m": 190
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Colo River",
+      "osm_id": 6516891,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Putty Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Colo River",
+      "osm_id": 199581817
     },
     "toilet_type": "pit",
     "website": "https://www.toiletmap.gov.au/2530",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

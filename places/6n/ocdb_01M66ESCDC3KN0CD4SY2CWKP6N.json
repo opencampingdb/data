@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -14,6 +16,16 @@
       "name": "Balranald",
       "osm_id": 113393311,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Murrumbidgee River",
+      "osm_id": 339934137
+    },
+    "protected_area": {
+      "name": "Yanga National Park",
+      "osm_id": 7132770,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -26,6 +28,16 @@
     "nearest_major_road": {
       "distance_m": 410,
       "name": "Great Ocean Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Cumberland River",
+      "osm_id": 45689181
+    },
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

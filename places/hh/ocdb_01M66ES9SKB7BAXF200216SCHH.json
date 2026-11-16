@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -20,6 +22,18 @@
     "nearest_beach": {
       "distance_m": 90,
       "name": "Sandon Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Sandon Beach",
+      "osm_id": 9133280,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Yuraygir National Park",
+      "osm_id": 5911645,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

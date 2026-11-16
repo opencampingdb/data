@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
@@ -21,6 +23,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 50
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Jandowae Dam",
+      "osm_id": 177799780,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Jandowae Creek",
+      "osm_id": 1233440718
     },
     "operator": "Western Downs Regional Council",
     "toilet_type": "flush"
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

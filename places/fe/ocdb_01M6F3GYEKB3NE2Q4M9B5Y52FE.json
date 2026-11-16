@@ -9,7 +9,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -33,9 +35,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3020
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Parramatta River",
+      "osm_id": 1249186,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "O'Connell Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Parramatta River",
+      "osm_id": 4085516
     },
     "operator": "Parramatta Female Factory Action Group Inc.",
     "phone": "+61 451 332 823",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

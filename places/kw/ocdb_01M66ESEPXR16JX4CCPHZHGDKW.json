@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "phone": "contributed",
     "power": "osm",
@@ -43,9 +45,21 @@
     "nearest_boat_ramp": {
       "distance_m": 130
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Killick Creek",
+      "osm_id": 4763154,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "12"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Killick Creek",
+      "osm_id": 920005753
     },
     "pets": "yes",
     "phone": "+61 2 6566 0261",
@@ -71,5 +85,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

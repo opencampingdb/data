@@ -4,7 +4,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -22,7 +25,24 @@
       "distance_m": 410,
       "name": "Canoe entry point"
     },
-    "operator": "Hornsby Council"
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Berowra Creek",
+      "osm_id": 2870595,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Berowra Creek",
+      "osm_id": 374867401
+    },
+    "operator": "Hornsby Council",
+    "protected_area": {
+      "name": "Berowra Valley National Park",
+      "osm_id": 5993629,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEYNRBX3SHNA9E2VPQ6T",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

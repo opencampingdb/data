@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "website": "osm"
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1030
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Luffman Ponds",
+      "osm_id": 1196997103,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Wallen Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Yarra River",
+      "osm_id": 307868205
     },
     "opening_hours": "Sa[2],Sa[4] 11:00-17:00; PH Sa[2],Sa[4] 11:00-17:00; Dec Sa[4] off",
     "phone": "+61398199522",
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

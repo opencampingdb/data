@@ -13,6 +13,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
     "power": "osm",
     "showers": "osm",
@@ -41,6 +42,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 150
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Lake Tinaroo",
+      "osm_id": 3238143,
+      "osm_type": "relation",
+      "type": "water"
     },
     "phone": "+61740953563",
     "power": true,
@@ -71,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

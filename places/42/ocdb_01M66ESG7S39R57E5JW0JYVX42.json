@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -26,9 +28,21 @@
       "distance_m": 510,
       "name": "Picnic Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Maroochy River",
+      "osm_id": 1380753,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Bradman Avenue"
+    },
+    "protected_area": {
+      "name": "Maroochy Fish Habitat Area",
+      "osm_id": 16316944,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

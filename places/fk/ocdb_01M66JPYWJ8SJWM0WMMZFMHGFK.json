@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "toilets": "osm",
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 880
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "River Torrens",
+      "osm_id": 590824250,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Port Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "River Torrens/Karrawirra Pari",
+      "osm_id": 1495970862
     },
     "opening_hours": "Mo-Su 10:00-16:00",
     "phone": "+61882314062",
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -7,6 +7,7 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -27,6 +28,11 @@
       "type": "village"
     },
     "max_stay": "72h",
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Fish River",
+      "osm_id": 214475682
+    },
     "operator": "Oberon Council",
     "showers": false,
     "toilets": true
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

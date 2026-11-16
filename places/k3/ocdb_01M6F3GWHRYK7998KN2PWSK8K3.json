@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1540
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Little Murray River",
+      "osm_id": 672638169,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Curlewis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Little Murray River",
+      "osm_id": 385869358
     },
     "phone": "+61350329077",
     "website": "http://www.jacarandaholidayunits.com.au"
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

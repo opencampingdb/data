@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,8 +17,20 @@
       "osm_id": 2288360808,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Talinguru Nyakunytjaku",
+      "osm_id": 2215174742,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 290
+    },
+    "protected_area": {
+      "name": "Uluṟu-Kata Tjuṯa National Park",
+      "osm_id": 8314513,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

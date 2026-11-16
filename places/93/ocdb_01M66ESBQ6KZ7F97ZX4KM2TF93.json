@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -17,6 +18,13 @@
       "name": "Kuranda",
       "osm_id": 2060753757,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 870,
+      "name": "Speewah",
+      "osm_id": 6036337045,
+      "osm_type": "node",
+      "type": "hamlet"
     }
   },
   "group": "overnight",
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

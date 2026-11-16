@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -26,6 +28,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 0
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Shoal Point",
+      "osm_id": 398639013,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Great Barrier Reef Coast Marine Park",
+      "osm_id": 16623817,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

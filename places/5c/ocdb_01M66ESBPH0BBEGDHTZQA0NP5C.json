@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "toilet_type": "osm"
@@ -31,9 +33,21 @@
     "nearest_boat_ramp": {
       "distance_m": 40
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Duck River",
+      "osm_id": 11060826,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Davis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Duck River",
+      "osm_id": 39560816
     },
     "opening_hours": "24/7",
     "operator": "Smithton Counil",
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

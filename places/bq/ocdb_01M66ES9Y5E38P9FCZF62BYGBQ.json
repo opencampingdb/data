@@ -7,7 +7,9 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -30,9 +32,21 @@
       "type": "village"
     },
     "max_stay": "2d",
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Bylong",
+      "osm_id": 114607260,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Bylong Valley Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Bylong River",
+      "osm_id": 441541490
     },
     "operator": "Bylong Community",
     "power": false,
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

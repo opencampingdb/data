@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,7 +21,19 @@
     "nearest_beach": {
       "distance_m": 80
     },
-    "operator": "SA NPWS"
+    "nearest_feature": {
+      "distance_m": 960,
+      "name": "MacLaren Point",
+      "osm_id": 1078160549,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "operator": "SA NPWS",
+    "protected_area": {
+      "name": "Lincoln National Park",
+      "osm_id": 954175,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCPXKA98DGK98F50TX0Y",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

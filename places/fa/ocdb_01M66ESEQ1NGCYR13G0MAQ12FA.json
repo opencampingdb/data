@@ -4,6 +4,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -13,6 +17,22 @@
     "drinking_water": false,
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Rural City of Wangaratta",
+      "osm_id": 3351439
+    },
+    "locality": {
+      "distance_m": 5720,
+      "name": "Peechelba",
+      "osm_id": 1720085954,
+      "type": "village"
+    },
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Warby-Ovens National Park",
+      "osm_id": 9210302,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -21,23 +41,23 @@
   "id": "ocdb_01M66ESEQ1NGCYR13G0MAQ12FA",
   "kind": "national_park_campsite",
   "location": {
-    "lat": -36.221639,
-    "lon": 146.178967
+    "lat": -36.221642,
+    "lon": 146.178979
   },
   "merged_osm": [
     {
-      "id": 503368571,
-      "type": "way"
+      "id": 7358008,
+      "type": "relation"
     }
   ],
   "name": "The Forest Camp",
   "osm": {
-    "id": 7358008,
-    "timestamp": "2025-03-23T04:24:50Z",
-    "type": "relation",
-    "version": 2
+    "id": 503368571,
+    "timestamp": "2026-11-05T07:59:56Z",
+    "type": "way",
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:39:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

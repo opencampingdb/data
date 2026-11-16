@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Wombeyan Caves",
       "osm_id": 84321801,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Billys Point",
+      "osm_id": 4628620057,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Kowmung River",
+      "osm_id": 446028705
+    },
+    "protected_area": {
+      "name": "Kanangra-Boyd National Park",
+      "osm_id": 5909870,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

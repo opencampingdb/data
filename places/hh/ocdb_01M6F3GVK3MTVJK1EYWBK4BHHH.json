@@ -9,6 +9,7 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "website": "osm"
@@ -30,6 +31,13 @@
       "name": "Hamilton",
       "osm_id": 124405711,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake Hamilton",
+      "osm_id": 2734266,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -54,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

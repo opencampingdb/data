@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -25,6 +27,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2650
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Hungry Head",
+      "osm_id": 959620718,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Dalhousie Creek",
+      "osm_id": 918175506
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

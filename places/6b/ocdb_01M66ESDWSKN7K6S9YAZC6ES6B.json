@@ -1,12 +1,33 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": false,
+    "bins": true,
+    "lga": {
+      "name": "Yass Valley Council",
+      "osm_id": 6247446
+    },
+    "locality": {
+      "distance_m": 7510,
+      "name": "Sutton",
+      "osm_id": 113708481,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Federal Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "playground": false,
     "toilets": false
@@ -15,23 +36,27 @@
   "id": "ocdb_01M66ESDWSKN7K6S9YAZC6ES6B",
   "kind": "rest_area",
   "location": {
-    "lat": -35.143229,
-    "lon": 149.333886
+    "lat": -35.143291,
+    "lon": 149.333847
   },
   "merged_osm": [
     {
       "id": 1811186722,
       "type": "node"
+    },
+    {
+      "id": 12405689914,
+      "type": "node"
     }
   ],
-  "name": "Middleton VC Rest Area",
+  "name": "Rawdon Middleton VC Rest Area;Middleton VC Rest Area",
   "osm": {
-    "id": 12405689914,
-    "timestamp": "2025-06-27T03:02:12Z",
-    "type": "node",
-    "version": 4
+    "id": 157863158,
+    "timestamp": "2026-11-05T07:16:49Z",
+    "type": "way",
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

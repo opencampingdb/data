@@ -1,11 +1,31 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Carrathool Shire Council",
       "osm_id": 6095007
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Willandra",
+      "osm_id": 114176699,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Willandra Creek",
+      "osm_id": 320463983
+    },
+    "protected_area": {
+      "name": "Willandra National Park",
+      "osm_id": 6012316,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -24,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

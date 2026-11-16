@@ -12,9 +12,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -42,9 +44,19 @@
       "osm_id": 1956084935,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Wandabadgery Creek",
+      "osm_id": 391542246
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "1300072757",
     "power": false,
+    "protected_area": {
+      "name": "Goobang National Park",
+      "osm_id": 5763862,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -67,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

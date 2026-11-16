@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 840
     },
+    "nearest_feature": {
+      "distance_m": 750,
+      "name": "Hay South",
+      "osm_id": 113649229,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lachlan Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Murrumbidgee River",
+      "osm_id": 385942779
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -35,9 +37,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2930
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "River Torrens",
+      "osm_id": 590834892,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Stephen Terrace"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Karrawirra Parri (River Torrens)",
+      "osm_id": 174742688
     },
     "phone": "+61 8 8362 1147"
   },
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

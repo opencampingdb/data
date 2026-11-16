@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,7 +22,17 @@
       "osm_id": 456874812,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Mitchell River",
+      "osm_id": 241576426
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Mitchell and Wonnangatta Rivers Heritage River",
+      "osm_id": 16570361,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

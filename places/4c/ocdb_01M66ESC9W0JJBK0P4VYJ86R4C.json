@@ -5,7 +5,9 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "wheelchair": "osm"
@@ -24,9 +26,21 @@
       "osm_id": 115055373,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 310,
+      "name": "Coolatai",
+      "osm_id": 114382267,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Yetman Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Ottley Creek",
+      "osm_id": 510040512
     },
     "opening_hours": "24/7",
     "operator": "Shire of Gwydir",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -27,7 +29,19 @@
       "distance_m": 530,
       "name": "Boatramp"
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Fortescue Lagoon",
+      "osm_id": 233237823,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Tasman National Park",
+      "osm_id": 3045026,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/tasman-national-park/fortescue-bay-camping"
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

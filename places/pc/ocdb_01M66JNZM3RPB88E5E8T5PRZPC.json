@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -24,6 +26,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2180
     },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Hideaway Bay",
+      "osm_id": 964845467,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Great Barrier Reef World Heritage Area",
+      "osm_id": 10156269,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "attraction",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

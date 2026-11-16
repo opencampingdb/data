@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Dundas",
       "osm_id": 11690221
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Murra El-Elevyn Cave",
+      "osm_id": 2701934933,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "protected_area": {
+      "name": "Nuytsland Nature Reserve",
+      "osm_id": 8143978,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

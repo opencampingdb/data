@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,7 +20,19 @@
       "osm_id": 252839015,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Lake Tahune",
+      "osm_id": 228320361,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Franklin-Gordon Wild Rivers National Park",
+      "osm_id": 6206896,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -16,6 +19,23 @@
       "name": "Ilparpa",
       "osm_id": 2288340792,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 780,
+      "name": "Simpsons Gap",
+      "osm_id": 77923070,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Roe Creek",
+      "osm_id": 537551617
+    },
+    "protected_area": {
+      "name": "Tjoritja / West MacDonnell National Park",
+      "osm_id": 8329105,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

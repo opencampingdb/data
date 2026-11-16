@@ -3,6 +3,7 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
@@ -17,6 +18,13 @@
       "name": "Kyancutta",
       "osm_id": 940925757,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Warramboo",
+      "osm_id": 2142718642,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

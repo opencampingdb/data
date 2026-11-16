@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -21,6 +23,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4210
+    },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Yallingup Beach",
+      "osm_id": 70946851,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Yallingup Brook",
+      "osm_id": 547579313
     }
   },
   "group": "utility",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

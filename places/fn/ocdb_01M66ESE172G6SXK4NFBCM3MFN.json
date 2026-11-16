@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +16,13 @@
       "name": "Adaminaby",
       "osm_id": 113372218,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Lake Eucumbene",
+      "osm_id": 66849,
+      "osm_type": "relation",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

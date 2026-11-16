@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -22,6 +24,18 @@
     "nearest_beach": {
       "distance_m": 3570,
       "name": "Gabo-Tullabergo"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Wau Wauka Lagoon",
+      "osm_id": 138361756,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Cape Howe Wilderness Zone",
+      "osm_id": 16486379,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

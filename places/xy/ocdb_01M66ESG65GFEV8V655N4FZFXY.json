@@ -7,6 +7,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -27,6 +28,11 @@
       "distance_m": 240
     },
     "power": false,
+    "protected_area": {
+      "name": "Beowa National Park",
+      "osm_id": 5719126,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -45,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

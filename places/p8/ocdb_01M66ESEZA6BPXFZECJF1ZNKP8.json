@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -22,6 +24,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 130
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Pykes Creek Reservoir",
+      "osm_id": 7072247,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Stony Hut Creek",
+      "osm_id": 280206832
     },
     "toilet_type": "flush"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

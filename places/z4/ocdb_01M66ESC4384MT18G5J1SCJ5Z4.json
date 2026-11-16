@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,17 @@
       "osm_id": 1003754272,
       "type": "village"
     },
-    "operator": "NSW National Parks and Wildlife Service"
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Manning River",
+      "osm_id": 185745169
+    },
+    "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Barrington Tops State Forest",
+      "osm_id": 6114655,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESC4384MT18G5J1SCJ5Z4",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

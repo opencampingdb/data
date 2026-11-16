@@ -6,7 +6,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/865508106908529",
@@ -23,6 +25,16 @@
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Cashmere Kirrama Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Blencoe Creek",
+      "osm_id": 708161206
+    },
+    "protected_area": {
+      "name": "Girringun National Park",
+      "osm_id": 1518815,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,8 @@
   "fact_sources": {
     "fuels": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fuels": [
@@ -19,6 +20,11 @@
       "name": "Tenthill",
       "osm_id": 4947868190,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Tenthill Creek",
+      "osm_id": 162841812
     }
   },
   "group": "services",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm"
   },
@@ -20,6 +21,11 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Mid Dural Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Colah Creek",
+      "osm_id": 440543943
     },
     "opening_hours": "Su[2] 09:30-15:00",
     "operator": "Hornsby Model Engineers Co-operative Limited"
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

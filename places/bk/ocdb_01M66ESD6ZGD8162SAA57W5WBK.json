@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 1020,
       "name": "Sandy Beach"
     },
+    "nearest_feature": {
+      "distance_m": 650,
+      "name": "Snake Head Rock",
+      "osm_id": 393030929,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Mungalup Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Collie River",
+      "osm_id": 15220062
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

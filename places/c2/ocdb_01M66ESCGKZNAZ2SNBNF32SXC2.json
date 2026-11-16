@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -22,6 +24,18 @@
       "name": "Muttaburra",
       "osm_id": 3608314156,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Pump Hole",
+      "osm_id": 3608435772,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Thomson River",
+      "osm_id": 355223420
     },
     "operator": "Barcaldine Regional Council",
     "tents": true,
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

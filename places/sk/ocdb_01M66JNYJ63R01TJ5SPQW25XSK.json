@@ -13,7 +13,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
     "website": "overture",
@@ -45,9 +47,21 @@
       "distance_m": 1230,
       "name": "RSL Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Nambucca River",
+      "osm_id": 2353972,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "15"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Bellwood Creek",
+      "osm_id": 428852030
     },
     "operator": "Shell",
     "phone": "(02) 6568 5317",
@@ -70,5 +84,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

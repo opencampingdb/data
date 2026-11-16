@@ -5,8 +5,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -26,8 +28,18 @@
       "osm_id": 113726764,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Dandry Creek",
+      "osm_id": 391477990
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "power": false,
+    "protected_area": {
+      "name": "Pilliga Nature Reserve",
+      "osm_id": 5817146,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

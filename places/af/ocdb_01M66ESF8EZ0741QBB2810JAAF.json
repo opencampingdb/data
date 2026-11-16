@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Roper Gulf Region",
       "osm_id": 11716437
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Andanangki",
+      "osm_id": 4382809985,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "protected_area": {
+      "name": "South-East Arnhem Land Indigenous Protected Area",
+      "osm_id": 12993288,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

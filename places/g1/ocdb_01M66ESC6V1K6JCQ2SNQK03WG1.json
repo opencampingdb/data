@@ -3,6 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,6 +21,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1290
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Katarapko creek",
+      "osm_id": 9351141,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Katarapko Creek",
+      "osm_id": 305975795
+    },
+    "protected_area": {
+      "name": "Murray River National Park",
+      "osm_id": 568850,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -16,6 +19,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4020
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Murrumbidgee River",
+      "osm_id": 17595818,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Murrumbidgee River",
+      "osm_id": 463031821
+    },
+    "protected_area": {
+      "name": "Bullen Range Nature Reserve",
+      "osm_id": 9417754,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -34,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

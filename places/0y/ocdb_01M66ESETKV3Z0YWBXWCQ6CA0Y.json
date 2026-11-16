@@ -14,7 +14,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "tents": "osm",
     "website": "overture"
@@ -45,9 +47,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1110
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Mt Beauty Regulating Pondage",
+      "osm_id": 178732824,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Kiewa Valley Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Kiewa River West Branch",
+      "osm_id": 178732826
     },
     "phone": "+61357544396",
     "tents": true,
@@ -69,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

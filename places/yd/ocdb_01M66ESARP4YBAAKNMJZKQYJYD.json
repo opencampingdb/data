@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,6 +22,16 @@
       "name": "Wollar",
       "osm_id": 4129399183,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Spring Gully",
+      "osm_id": 922793514
+    },
+    "protected_area": {
+      "name": "Goulburn River National Park",
+      "osm_id": 5910254,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

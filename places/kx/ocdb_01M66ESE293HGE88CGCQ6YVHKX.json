@@ -3,7 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -19,9 +21,21 @@
       "osm_id": 1952410833,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 600,
+      "name": "Victoria Hill",
+      "osm_id": 6035862001,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Ryeford - Pratton Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Condamine River",
+      "osm_id": 199021536
     },
     "tents": true,
     "toilets": false
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,6 +9,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -34,6 +36,18 @@
     "nearest_boat_ramp": {
       "distance_m": 110
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lake Mary Kathleen",
+      "osm_id": 26955080,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Leichhardt River (East Branch)",
+      "osm_id": 27738286
+    },
     "power": false,
     "showers": false,
     "tents": true,
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

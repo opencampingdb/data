@@ -6,10 +6,13 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
-    "pets": "osm"
+    "pets": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -35,13 +38,30 @@
     "nearest_boat_ramp": {
       "distance_m": 110
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Lane Cove River",
+      "osm_id": 2013600,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Delhi Road"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Lane Cove River",
+      "osm_id": 377705613
+    },
     "opening_hours": "\"Daylight hours\"",
     "operator": "NSW National Parks and Wildlife Service",
-    "pets": "no"
+    "pets": "no",
+    "protected_area": {
+      "name": "Lane Cove National Park",
+      "osm_id": 2962929,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEXB05NKXV937C7F1H4Q",
@@ -59,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

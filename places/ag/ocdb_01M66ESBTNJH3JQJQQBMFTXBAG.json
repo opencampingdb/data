@@ -5,7 +5,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -22,7 +24,19 @@
       "osm_id": 2003164307,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 660,
+      "name": "Tornado Flat",
+      "osm_id": 7857811250,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "operator": "Tasmania Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Tasman National Park",
+      "osm_id": 3045026,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

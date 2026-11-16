@@ -3,8 +3,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -21,11 +24,28 @@
     "nearest_beach": {
       "distance_m": 300
     },
+    "nearest_feature": {
+      "distance_m": 350,
+      "name": "Wye River",
+      "osm_id": 353145624,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Great Ocean Road"
     },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Wye River",
+      "osm_id": 45689173
+    },
     "power": true,
+    "protected_area": {
+      "name": "Wye River Coastal Reserve",
+      "osm_id": 9212146,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

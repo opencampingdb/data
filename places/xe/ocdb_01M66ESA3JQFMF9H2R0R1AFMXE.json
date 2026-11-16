@@ -1,11 +1,17 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Roper Gulf Region",
       "osm_id": 11716437
+    },
+    "protected_area": {
+      "name": "Limmen National Park",
+      "osm_id": 12993212,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -24,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

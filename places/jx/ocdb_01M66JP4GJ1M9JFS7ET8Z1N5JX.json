@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,18 @@
     "nearest_beach": {
       "distance_m": 230,
       "name": "Eleanor-Crystal Cks"
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Eleanor-Crystal Cks",
+      "osm_id": 959658571,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Crystal Creek",
+      "osm_id": 643242619
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

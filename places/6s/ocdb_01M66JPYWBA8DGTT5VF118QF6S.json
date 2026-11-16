@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "private",
@@ -26,9 +28,21 @@
     "nearest_boat_ramp": {
       "distance_m": 440
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Secret Beach",
+      "osm_id": 839178869,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Southern Port Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Ross River",
+      "osm_id": 204616689
     }
   },
   "group": "attraction",
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

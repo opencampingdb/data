@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Wonboyn Lake",
       "osm_id": 113255592,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Green Cape",
+      "osm_id": 6618281581,
+      "osm_type": "node",
+      "type": "cape"
+    },
+    "protected_area": {
+      "name": "Beowa National Park",
+      "osm_id": 5719126,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

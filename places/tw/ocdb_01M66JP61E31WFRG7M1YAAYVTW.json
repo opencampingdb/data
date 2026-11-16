@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -26,9 +28,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3800
     },
+    "nearest_feature": {
+      "distance_m": 780,
+      "name": "Eastwood Five Ways",
+      "osm_id": 4861281221,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Balaclava Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Terrys Creek",
+      "osm_id": 418274995
     },
     "water_type": "tank_fill"
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

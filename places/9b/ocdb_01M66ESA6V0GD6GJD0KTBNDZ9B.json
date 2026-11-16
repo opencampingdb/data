@@ -6,16 +6,33 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "overture"
   },
   "facts": {
     "address": {
-      "housenumber": "176",
+      "housenumber": "176-180",
       "street": "Ibis Street"
     },
     "facebook": "https://www.facebook.com/372519742614615",
+    "lga": {
+      "name": "Longreach Regional",
+      "osm_id": 11676693
+    },
+    "locality": {
+      "distance_m": 1910,
+      "name": "Longreach",
+      "osm_id": 90130799,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Owl Street"
+    },
     "phone": "+61 7 4658 1770",
     "power": true,
     "website": "https://www.longreachcaravanpark.com.au/book-your-stay/"
@@ -24,23 +41,23 @@
   "id": "ocdb_01M66ESA6V0GD6GJD0KTBNDZ9B",
   "kind": "caravan_park",
   "location": {
-    "lat": -23.445807,
-    "lon": 144.24221
+    "lat": -23.446058,
+    "lon": 144.242206
   },
   "merged_osm": [
     {
-      "id": 400750548,
-      "type": "way"
+      "id": 1984157208,
+      "type": "node"
     }
   ],
   "name": "Longreach Caravan Park",
   "osm": {
-    "id": 1984157208,
-    "timestamp": "2023-02-03T04:51:08Z",
-    "type": "node",
-    "version": 3
+    "id": 400750548,
+    "timestamp": "2026-11-11T06:59:43Z",
+    "type": "way",
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

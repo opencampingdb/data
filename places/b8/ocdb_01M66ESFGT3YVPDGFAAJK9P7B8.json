@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -22,6 +23,11 @@
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Macqueen Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Hunter River",
+      "osm_id": 38457311
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

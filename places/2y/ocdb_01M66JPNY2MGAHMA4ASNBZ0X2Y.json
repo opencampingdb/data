@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 31446304,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 320,
+      "name": "Elliot Springs",
+      "osm_id": 6894336383,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Whites Creek Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Whites Creek",
+      "osm_id": 707489870
     },
     "phone": "+61747782518",
     "website": "https://map.bp.com/en-AU/AU/gas-station/julago/bp-elliot-springs/9768"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Chillingham",
       "osm_id": 2527482788,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Coomera River",
+      "osm_id": 964803257
+    },
+    "protected_area": {
+      "name": "Limpinwood Nature Reserve",
+      "osm_id": 5948505,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

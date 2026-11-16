@@ -1,9 +1,30 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "lga": {
+      "name": "Goulburn Mulwaree Council",
+      "osm_id": 6310493
+    },
+    "locality": {
+      "distance_m": 11480,
+      "name": "Marulan",
+      "osm_id": 251724227,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Hume Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": true
   },
@@ -11,23 +32,23 @@
   "id": "ocdb_01M66ESDSZ5FCHNFP1VCZY6H30",
   "kind": "rest_area",
   "location": {
-    "lat": -34.743764,
-    "lon": 149.887244
+    "lat": -34.74367,
+    "lon": 149.887219
   },
   "merged_osm": [
     {
-      "id": 764005995,
-      "type": "way"
+      "id": 12158650634,
+      "type": "node"
     }
   ],
   "name": "Chowne VC Rest Area",
   "osm": {
-    "id": 12158650634,
-    "timestamp": "2025-02-26T02:37:24Z",
-    "type": "node",
-    "version": 2
+    "id": 764005995,
+    "timestamp": "2026-11-05T07:20:51Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

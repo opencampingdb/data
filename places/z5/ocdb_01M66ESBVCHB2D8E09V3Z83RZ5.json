@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4840
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Lake Burrumbeet",
+      "osm_id": 40032480,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Remembrance Drive"
+    },
+    "protected_area": {
+      "name": "Lake Burrumbeet Lake Reserve",
+      "osm_id": 1305915142,
+      "osm_type": "way"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

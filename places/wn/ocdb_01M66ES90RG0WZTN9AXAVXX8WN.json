@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -32,9 +34,21 @@
       "distance_m": 2430,
       "name": "Tungatinah Lagoon Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Liapootah",
+      "osm_id": 6257624,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Lyell Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Nive River",
+      "osm_id": 332310392
     }
   },
   "group": "overnight",
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

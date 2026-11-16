@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,17 @@
       "distance_m": 270,
       "name": "Minmi Road"
     },
-    "opening_hours": "07:30-17:00"
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Back Creek",
+      "osm_id": 926185272
+    },
+    "opening_hours": "07:30-17:00",
+    "protected_area": {
+      "name": "Blue Gum Hills Regional Park",
+      "osm_id": 31976631,
+      "osm_type": "way"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES94QBCWREDXG5V8DWE9X",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

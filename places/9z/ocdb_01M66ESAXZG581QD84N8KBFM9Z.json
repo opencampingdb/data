@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,7 +22,19 @@
       "osm_id": 113237603,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Mount Carnarvon",
+      "osm_id": 3008339346,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "operator": "NPWS Highlands Area",
+    "protected_area": {
+      "name": "Morton National Park",
+      "osm_id": 1356411,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

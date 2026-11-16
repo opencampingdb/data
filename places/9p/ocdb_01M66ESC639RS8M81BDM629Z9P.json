@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Texas",
       "osm_id": 1971192126,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Dumaresq River",
+      "osm_id": 5985167,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Dumaresq River",
+      "osm_id": 219897264
     },
     "toilets": false
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

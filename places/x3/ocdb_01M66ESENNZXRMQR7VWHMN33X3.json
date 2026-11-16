@@ -3,7 +3,8 @@
     "campfires": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "campfires": false,
@@ -20,6 +21,11 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "High Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Avoca River",
+      "osm_id": 1169527535
     }
   },
   "group": "overnight",
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

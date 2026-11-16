@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -21,6 +22,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Sturt Highway"
+    },
+    "protected_area": {
+      "name": "Brookfield Conservation Park",
+      "osm_id": 570782,
+      "osm_type": "relation"
     },
     "toilets": false
   },
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

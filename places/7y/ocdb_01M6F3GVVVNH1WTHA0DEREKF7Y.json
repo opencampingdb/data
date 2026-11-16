@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -29,9 +31,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Coburg Lake",
+      "osm_id": 898601,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Sydney Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Merri Creek",
+      "osm_id": 582855310
     },
     "phone": "+61393501855",
     "website": "http://www.coburgmotorinn.com.au"
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

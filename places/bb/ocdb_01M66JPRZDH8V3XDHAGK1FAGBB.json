@@ -3,6 +3,8 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
       "name": "Mossman",
       "osm_id": 169580856,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 690,
+      "name": "Mossman Gorge Aboriginal Community",
+      "osm_id": 2106525313,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Mossman River",
+      "osm_id": 1352439674
     },
     "website": "https://www.mossmangorge.com.au/centre/facilities"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

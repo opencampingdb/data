@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -35,9 +37,21 @@
     "nearest_boat_ramp": {
       "distance_m": 960
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Warriewood Wetlands",
+      "osm_id": 22882224,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Pittwater Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Narrabeen Creek",
+      "osm_id": 224450393
     },
     "opening_hours": "06:00-21:00",
     "toilet_type": "flush",
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

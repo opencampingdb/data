@@ -5,8 +5,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -33,11 +35,23 @@
     "nearest_boat_ramp": {
       "distance_m": 390
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Tallebudgera Creek",
+      "osm_id": 4580501,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gold Coast Highway"
     },
     "phone": "+61 7 5525 5955",
+    "protected_area": {
+      "name": "Burleigh Head National Park",
+      "osm_id": 13056696,
+      "osm_type": "relation"
+    },
     "website": "https://www.jellurgal.com.au/"
   },
   "group": "attraction",
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

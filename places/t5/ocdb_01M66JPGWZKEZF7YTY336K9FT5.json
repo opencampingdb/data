@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -26,9 +28,21 @@
       "distance_m": 390,
       "name": "T E Peters Drive Boatramp"
     },
+    "nearest_feature": {
+      "distance_m": 690,
+      "name": "Florida Gardens",
+      "osm_id": 4313885664,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gold Coast Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Little Tallebudgera Creek",
+      "osm_id": 728920060
     },
     "operator": "Ampol"
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

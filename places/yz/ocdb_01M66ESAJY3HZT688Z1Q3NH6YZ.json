@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,17 @@
       "osm_id": 34103046,
       "type": "town"
     },
-    "operator": "Parks Victoria"
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Buckland River East Branch",
+      "osm_id": 1453866240
+    },
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAJY3HZT688Z1Q3NH6YZ",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

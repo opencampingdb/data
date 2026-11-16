@@ -3,7 +3,9 @@
     "bins": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
@@ -19,9 +21,21 @@
       "osm_id": 114382510,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Yooroonah",
+      "osm_id": 113737144,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Grafton Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Oaky River",
+      "osm_id": 401374655
     },
     "operator": "Transport for NSW",
     "toilets": false
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

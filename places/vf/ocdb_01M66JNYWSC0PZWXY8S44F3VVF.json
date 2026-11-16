@@ -2,7 +2,9 @@
   "fact_sources": {
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -15,9 +17,21 @@
       "distance_m": 290,
       "name": "South Gorge Beach"
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "South Gorge Beach",
+      "osm_id": 927018172,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Mooloomba Road"
+    },
+    "protected_area": {
+      "name": "CPZ07",
+      "osm_id": 7927861,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

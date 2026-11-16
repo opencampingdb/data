@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -12,9 +14,21 @@
       "name": "Murweh Shire",
       "osm_id": 11674879
     },
+    "nearest_feature": {
+      "distance_m": 340,
+      "name": "Cooladdi",
+      "osm_id": 2379021944,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Diamantina Developmental Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Quilberry Creek",
+      "osm_id": 229356788
     },
     "toilet_type": "flush",
     "wheelchair": false
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

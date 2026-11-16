@@ -2,7 +2,10 @@
   "fact_sources": {
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -14,9 +17,26 @@
     "nearest_beach": {
       "distance_m": 2770
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Molonglo River",
+      "osm_id": 8316537,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Fred Daly Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Holden's Creek",
+      "osm_id": 487353068
+    },
+    "protected_area": {
+      "name": "Molonglo River Reserve",
+      "osm_id": 9386893,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

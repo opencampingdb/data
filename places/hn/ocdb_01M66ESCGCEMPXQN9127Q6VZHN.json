@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -20,6 +22,16 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Walhalla Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Thomson River",
+      "osm_id": 16581654
+    },
+    "protected_area": {
+      "name": "Thomson River Heritage River",
+      "osm_id": 16538799,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,9 +10,11 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "pets": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -39,9 +41,19 @@
       "osm_id": 116990408,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Little Capertee Creek",
+      "osm_id": 405273065
+    },
     "opening_hours": "24/7",
     "pets": "no",
     "phone": "0247878877",
+    "protected_area": {
+      "name": "Wollemi National Park",
+      "osm_id": 5901253,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -64,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

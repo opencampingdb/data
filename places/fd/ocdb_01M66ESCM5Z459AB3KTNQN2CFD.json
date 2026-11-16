@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -20,8 +22,20 @@
       "osm_id": 19949789,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 670,
+      "name": "Toowoomba City",
+      "osm_id": 6036336822,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 20
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "East Creek",
+      "osm_id": 350561780
     },
     "water_type": "fountain"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

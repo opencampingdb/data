@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -17,7 +19,17 @@
       "osm_id": 11271236430,
       "type": "village"
     },
-    "operator": "Parks Victoria"
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Diamantina River",
+      "osm_id": 291100212
+    },
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBFDCN7R96YYD4DA0Y8R",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

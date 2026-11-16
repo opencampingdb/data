@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -21,7 +23,17 @@
       "distance_m": 80,
       "name": "Grampians Road"
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Fyans Creek",
+      "osm_id": 236356949
+    },
     "opening_hours": "Mo-Su 09:00-16:00",
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "services",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,9 +21,26 @@
       "osm_id": 324884969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 620,
+      "name": "National Park",
+      "osm_id": 4293047115,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Gordon River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Russell Falls Creek",
+      "osm_id": 421597769
+    },
+    "protected_area": {
+      "name": "Mount Field National Park",
+      "osm_id": 3004976,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +27,26 @@
     "nearest_boat_ramp": {
       "distance_m": 190
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Prosser River",
+      "osm_id": 8384035,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Tasman Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Prosser River",
+      "osm_id": 238169218
+    },
+    "protected_area": {
+      "name": "Millingtons Beach Conservation Area",
+      "osm_id": 6252198,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

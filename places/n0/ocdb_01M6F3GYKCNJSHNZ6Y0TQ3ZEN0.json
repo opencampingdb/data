@@ -3,7 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -19,6 +20,11 @@
     },
     "nearest_beach": {
       "distance_m": 430
+    },
+    "protected_area": {
+      "name": "South Bruny National Park",
+      "osm_id": 6172367,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

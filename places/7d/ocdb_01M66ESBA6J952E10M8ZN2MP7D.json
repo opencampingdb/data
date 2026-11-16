@@ -4,7 +4,9 @@
     "bins": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
@@ -23,9 +25,21 @@
       "osm_id": 230571223,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 570,
+      "name": "Bundaburrah",
+      "osm_id": 1798956841,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Newell Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Bundaburrah Creek",
+      "osm_id": 454612127
     },
     "operator": "Transport for NSW",
     "picnic_tables": false,
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

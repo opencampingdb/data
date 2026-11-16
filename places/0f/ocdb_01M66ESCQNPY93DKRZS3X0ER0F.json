@@ -4,6 +4,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -25,6 +27,18 @@
       "osm_id": 81328631,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Hawkesbury River",
+      "osm_id": 174440291,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Hawkesbury River",
+      "osm_id": 369993203
+    },
     "website": "https://www.toiletmap.gov.au/2549"
   },
   "group": "utility",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

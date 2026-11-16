@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4750
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Seven Mile Beach",
+      "osm_id": 5954873,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Crooked River Road"
+    },
+    "protected_area": {
+      "name": "Seven Mile Beach National Park",
+      "osm_id": 6055734,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/picnic-areas/gerroa-picnic-area"
   },
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

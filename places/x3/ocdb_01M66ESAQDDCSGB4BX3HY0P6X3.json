@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -24,6 +25,13 @@
       "distance_m": 20,
       "name": "Maslin Beach"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Maslin Beach",
+      "osm_id": 296585849,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

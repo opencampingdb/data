@@ -6,8 +6,11 @@
     "instagram": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -29,8 +32,25 @@
       "osm_id": 2270203043,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Yarrangobilly Caves",
+      "osm_id": 6348581011,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Rules Creek",
+      "osm_id": 446644955
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 6454 9597",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/visitor-centres/yarrangobilly-caves-visitor-centre"
   },
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

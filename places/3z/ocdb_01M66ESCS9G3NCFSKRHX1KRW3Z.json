@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +19,17 @@
       "osm_id": 151064574,
       "type": "village"
     },
-    "operator": "DELWP Erica"
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Donnelly Creek",
+      "osm_id": 184238028
+    },
+    "operator": "DELWP Erica",
+    "protected_area": {
+      "name": "Aberfeldy / Nambruc State Forest",
+      "osm_id": 20306079,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCS9G3NCFSKRHX1KRW3Z",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -28,7 +30,19 @@
     "nearest_boat_ramp": {
       "distance_m": 920
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lobster Beach",
+      "osm_id": 180072642,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Bouddi National Park",
+      "osm_id": 7117852,
+      "osm_type": "relation"
+    },
     "toilet_type": "chemical",
     "wheelchair": false
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

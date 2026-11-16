@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -27,6 +29,18 @@
       "distance_m": 110,
       "name": "Gordon Park Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Nambucca River",
+      "osm_id": 2353972,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Freshwater Creek",
+      "osm_id": 918175452
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

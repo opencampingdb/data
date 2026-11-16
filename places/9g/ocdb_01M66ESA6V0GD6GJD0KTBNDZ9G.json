@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,11 @@
       "name": "Gruyere Mine Village",
       "osm_id": 7210810212,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Yeo Lake Nature Reserve",
+      "osm_id": 575162947,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

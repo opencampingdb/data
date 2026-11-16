@@ -4,6 +4,7 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
       "name": "Boundary Bend",
       "osm_id": 1615025574,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 810,
+      "name": "Narrung",
+      "osm_id": 13511828735,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 10,
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

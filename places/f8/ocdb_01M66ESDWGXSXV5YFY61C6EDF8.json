@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -23,7 +25,17 @@
       "osm_id": 5246890365,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Dogwood Creek",
+      "osm_id": 539083039
+    },
     "operator": "Department of the Environment, Tourism, Sience and Innovation.",
+    "protected_area": {
+      "name": "Barakula State Forest",
+      "osm_id": 1483528,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parks.desi.qld.gov.au/parks/barakula/camping"
   },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

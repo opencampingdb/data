@@ -8,7 +8,10 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -29,7 +32,24 @@
       "osm_id": 114382510,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 650,
+      "name": "Treefern Valley",
+      "osm_id": 8613782915,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Styx River",
+      "osm_id": 447601534
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "New England National Park",
+      "osm_id": 5678194,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/toms-cabin?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_2962376976537987953&utm_content=Toms+Cabin+-+Ebor"
   },
   "group": "overnight",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

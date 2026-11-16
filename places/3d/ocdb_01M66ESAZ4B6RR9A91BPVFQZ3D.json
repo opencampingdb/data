@@ -4,6 +4,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -21,6 +22,13 @@
       "name": "Jenolan Caves",
       "osm_id": 113707646,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Mount Trickett",
+      "osm_id": 4679124706,
+      "osm_type": "node",
+      "type": "peak"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

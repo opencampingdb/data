@@ -13,6 +13,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -43,6 +45,18 @@
     "nearest_boat_ramp": {
       "distance_m": 70
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Patonga Creek",
+      "osm_id": 6015758,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Patonga Creek",
+      "osm_id": 26563929
+    },
     "phone": "+61243791287",
     "website": "https://patongacamping.cchp.com.au/"
   },
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

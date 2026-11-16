@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Kingfisher Bay",
       "osm_id": 827070405,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Urang Creek",
+      "osm_id": 299452488
+    },
+    "protected_area": {
+      "name": "Hervey Bay - Tin Can Bay Dugong Protection Area",
+      "osm_id": 16298526,
+      "osm_type": "relation"
     }
   },
   "group": "transport",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

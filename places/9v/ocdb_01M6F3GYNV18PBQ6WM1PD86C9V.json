@@ -11,10 +11,12 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -45,6 +47,13 @@
     "nearest_boat_ramp": {
       "distance_m": 3180
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Botany Bay",
+      "osm_id": 1214649,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Anzac Parade"
@@ -52,6 +61,11 @@
     "opening_hours": "We, Fr 10:00-14:00; Sa-Su 10:00-16:00",
     "operator": "Randwick Council",
     "phone": "+61290936190",
+    "protected_area": {
+      "name": "Kamay Botany Bay National Park",
+      "osm_id": 1239917,
+      "osm_type": "relation"
+    },
     "toilets": true,
     "website": "https://www.randwick.nsw.gov.au/facilities-and-recreation/buildings/la-perouse-museum"
   },
@@ -71,5 +85,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

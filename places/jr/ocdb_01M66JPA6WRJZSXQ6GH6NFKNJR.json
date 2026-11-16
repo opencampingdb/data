@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -31,9 +33,21 @@
       "osm_id": 29804937,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Bangalow Weir Swimming Hole",
+      "osm_id": 469649076,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Byron Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Byron Creek",
+      "osm_id": 65959902
     },
     "phone": "+61266871441"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

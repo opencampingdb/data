@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "water_type": "osm"
   },
@@ -26,6 +28,18 @@
       "distance_m": 1050,
       "name": "Bundeena Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Horderns Beach",
+      "osm_id": 23141277,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Bundeena Gully",
+      "osm_id": 23141199
+    },
     "pets": "no",
     "water_type": "fountain"
   },
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

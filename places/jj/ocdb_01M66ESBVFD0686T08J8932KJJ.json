@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,6 +19,16 @@
       "name": "Bambaroo",
       "osm_id": 4074288167,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Crystal Creek",
+      "osm_id": 233377586
+    },
+    "protected_area": {
+      "name": "Paluma Range National Park",
+      "osm_id": 1478696,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": false
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

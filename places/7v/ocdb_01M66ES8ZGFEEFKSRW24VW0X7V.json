@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
@@ -29,6 +30,11 @@
     "nearest_boat_ramp": {
       "distance_m": 3000
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Kedron Brook",
+      "osm_id": 425947323
+    },
     "water_type": "fountain",
     "wheelchair": false
   },
@@ -48,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,8 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -40,8 +42,20 @@
       "distance_m": 10,
       "name": "Sandon Beach"
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Sandon Beach",
+      "osm_id": 9133280,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "operator": "NPWS NSW",
     "phone": "0266411500",
+    "protected_area": {
+      "name": "Yuraygir National Park",
+      "osm_id": 5911645,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/rocky-point-campground"
   },
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 270
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Port Phillip",
+      "osm_id": 1221199,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Beach Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Mordialloc Creek",
+      "osm_id": 178762778
     },
     "wheelchair": true
   },
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

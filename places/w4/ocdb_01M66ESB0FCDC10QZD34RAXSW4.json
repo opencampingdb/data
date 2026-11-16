@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,7 +22,17 @@
       "osm_id": 1003754272,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Manning River",
+      "osm_id": 185745169
+    },
     "operator": "Forestry Corporation of NSW",
+    "protected_area": {
+      "name": "Barrington Tops State Forest",
+      "osm_id": 6114655,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

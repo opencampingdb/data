@@ -13,7 +13,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -39,7 +42,24 @@
     "nearest_boat_ramp": {
       "distance_m": 160
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Lake Colac",
+      "osm_id": 2200603,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Barongarook Creek",
+      "osm_id": 125450832
+    },
     "phone": "+61354405390",
+    "protected_area": {
+      "name": "Lake Colac Lake Reserve",
+      "osm_id": 1305910790,
+      "osm_type": "way"
+    },
     "website": "http://www.lakecolacholidaypark.com.au/"
   },
   "group": "overnight",
@@ -58,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

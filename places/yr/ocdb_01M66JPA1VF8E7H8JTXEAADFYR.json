@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -21,6 +24,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 770
+    },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Lake King",
+      "osm_id": 2442196,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Mississippi Creek",
+      "osm_id": 114127321
+    },
+    "protected_area": {
+      "name": "Lakes Entrance - Lake Tyers Coastal Reserve (COM)",
+      "osm_id": 9202647,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

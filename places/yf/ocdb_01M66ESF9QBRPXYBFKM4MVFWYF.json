@@ -7,8 +7,11 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "caravans": true,
@@ -23,11 +26,28 @@
       "osm_id": 324884969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 440,
+      "name": "National Park",
+      "osm_id": 4293047115,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Gordon River Road"
     },
-    "operator": "Parks and Wildlife Services"
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Tyenna River",
+      "osm_id": 295465843
+    },
+    "operator": "Parks and Wildlife Services",
+    "protected_area": {
+      "name": "Mount Field National Park",
+      "osm_id": 3004976,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF9QBRPXYBFKM4MVFWYF",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

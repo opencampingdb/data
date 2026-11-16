@@ -9,6 +9,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -30,6 +32,18 @@
     "nearest_beach": {
       "distance_m": 110
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Stewarts Crossing",
+      "osm_id": 1886240282,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Shoalhaven River",
+      "osm_id": 178251832
+    },
     "website": "https://www.caravancaravan.com.au/entity/charleyong-crossing-(stewarts-crossing)-camping-area/nsw"
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

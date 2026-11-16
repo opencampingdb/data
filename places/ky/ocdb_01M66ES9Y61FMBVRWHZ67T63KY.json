@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "community_report",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilets": "community_report",
     "wifi": "osm"
@@ -29,9 +31,21 @@
       "type": "town"
     },
     "max_stay": "48h",
+    "nearest_feature": {
+      "distance_m": 470,
+      "name": "River Ranch",
+      "osm_id": 2508075821,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Bruce Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Calliope River",
+      "osm_id": 233084846
     },
     "operator": "Gladstone City Council",
     "toilets": true,
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

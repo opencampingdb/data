@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
     "website": "osm",
@@ -46,9 +48,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2160
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Cumbebin Swamp",
+      "osm_id": 425078058,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Butler Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Belongil Creek",
+      "osm_id": 395497077
     },
     "phone": "+61266857382",
     "power": true,
@@ -71,5 +85,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

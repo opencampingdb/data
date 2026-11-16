@@ -4,6 +4,7 @@
     "fee": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,6 +18,11 @@
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Stuart Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Attack Creek",
+      "osm_id": 190293775
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,7 +12,9 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "power": "osm",
     "showers": "osm",
@@ -41,9 +43,21 @@
       "type": "town"
     },
     "max_stay": "72h",
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Currabubula",
+      "osm_id": 114638396,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Davis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Currabubula Creek",
+      "osm_id": 483545348
     },
     "operator": "Liverpool Plains Shire Council",
     "power": false,
@@ -67,5 +81,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

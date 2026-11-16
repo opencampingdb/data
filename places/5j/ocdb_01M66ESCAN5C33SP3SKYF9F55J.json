@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -18,6 +20,18 @@
       "name": "Morven",
       "osm_id": 655914772,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Sadlers Waterhole",
+      "osm_id": 130711619,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Hamburg Creek",
+      "osm_id": 130992865
     },
     "opening_hours": "24/7",
     "toilet_type": "flush",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

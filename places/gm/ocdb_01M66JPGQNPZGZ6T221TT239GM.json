@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -14,6 +15,11 @@
       "name": "Grey",
       "osm_id": 222635897,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Nambung National Park",
+      "osm_id": 3201965,
+      "osm_type": "relation"
     },
     "wheelchair": false
   },
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

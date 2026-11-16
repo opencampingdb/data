@@ -4,6 +4,8 @@
     "dump_station": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "wheelchair": "osm"
   },
@@ -19,6 +21,16 @@
       "name": "Brocklehurst",
       "osm_id": 114370654,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Macquarie River",
+      "osm_id": 174997597
+    },
+    "protected_area": {
+      "name": "Redbank Reserve",
+      "osm_id": 586942980,
+      "osm_type": "way"
     },
     "tents": true,
     "wheelchair": false
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,6 +8,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -42,6 +44,18 @@
       "distance_m": 190,
       "name": "Scylla Bay Boat Ramp, Como"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Scylla Bay",
+      "osm_id": 910343391,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Carina Creek",
+      "osm_id": 798760179
+    },
     "opening_hours": "sunrise-sunset",
     "operator": "Sutherland Shire Council",
     "showers": true,
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

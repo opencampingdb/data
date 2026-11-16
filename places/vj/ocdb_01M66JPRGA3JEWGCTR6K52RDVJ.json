@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Buxton - Marysville Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Steavenson River",
+      "osm_id": 70945472
     },
     "opening_hours": "Mo-Su 09:00-17:00"
   },
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

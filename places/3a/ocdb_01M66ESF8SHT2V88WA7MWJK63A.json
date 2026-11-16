@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -15,6 +16,13 @@
       "name": "Bambaroo",
       "osm_id": 4074288167,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Paluma",
+      "osm_id": 10283612,
+      "osm_type": "relation",
+      "type": "water"
     },
     "operator": "Townsville City Council",
     "website": "https://www.townsville.qld.gov.au/facilities-and-recreation/parks-beaches-and-community-venues/parks-trails-and-camping/lake-paluma"
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

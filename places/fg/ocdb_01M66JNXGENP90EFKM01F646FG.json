@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,11 @@
       "name": "St Andrews",
       "osm_id": 75040965,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Mullum Mullum Creek",
+      "osm_id": 293706505
     }
   },
   "group": "attraction",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

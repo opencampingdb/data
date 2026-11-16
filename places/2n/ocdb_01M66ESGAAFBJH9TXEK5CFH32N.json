@@ -4,8 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -26,11 +28,23 @@
       "distance_m": 1310,
       "name": "Catamaran Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Gillams Beach",
+      "osm_id": 277736470,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Cockle Creek Road"
     },
-    "operator": "Tasmania Parks and Wildlife Service"
+    "operator": "Tasmania Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Recherche Bay Nature Recreation Area",
+      "osm_id": 6177558,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESGAAFBJH9TXEK5CFH32N",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

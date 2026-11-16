@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Buckland",
       "osm_id": 2181017903,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Sandspit River",
+      "osm_id": 238169177
+    },
+    "protected_area": {
+      "name": "Sandspit River Conservation Area",
+      "osm_id": 6252195,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

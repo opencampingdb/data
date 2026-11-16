@@ -11,8 +11,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "overture",
@@ -38,8 +40,18 @@
       "osm_id": 113727311,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Coxs Creek",
+      "osm_id": 496291382
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0263709000",
+    "protected_area": {
+      "name": "Coolah Tops National Park",
+      "osm_id": 6024502,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/the-barracks-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_1774101522819805605&utm_content=The+Barracks+campground+-+Coolah",
@@ -61,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

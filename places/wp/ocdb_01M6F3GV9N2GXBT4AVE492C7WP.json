@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -20,6 +21,11 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Cosmo Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Stony Creek",
+      "osm_id": 1374137443
     },
     "toilets": true,
     "website": "https://www.thecosmopolitanhotel.com.au/"
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

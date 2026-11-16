@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "overture"
@@ -32,9 +34,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2600
     },
+    "nearest_feature": {
+      "distance_m": 670,
+      "name": "Warrayu",
+      "osm_id": 1976079161,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Great Northern Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Three Mile Creek",
+      "osm_id": 204105217
     },
     "phone": "+61 8 9161 1064",
     "power": true,
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

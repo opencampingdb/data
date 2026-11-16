@@ -15,6 +15,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
     "power": "osm",
     "showers": "osm",
@@ -52,6 +53,13 @@
     "nearest_boat_ramp": {
       "distance_m": 300
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "phone": "+61886255073",
     "power": true,
     "showers": true,
@@ -77,5 +85,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

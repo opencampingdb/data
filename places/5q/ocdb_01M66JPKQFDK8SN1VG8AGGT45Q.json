@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1970
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "First Creek Wetland",
+      "osm_id": 491353789,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Dequetteville Terrace"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "First Creek",
+      "osm_id": 49855316
     },
     "opening_hours": "Mo-Fr 09:00-17:00, Sa \"By Appointment\""
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

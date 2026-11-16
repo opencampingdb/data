@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "wheelchair": "osm"
@@ -25,9 +27,21 @@
       "distance_m": 100,
       "name": "Dusthole Bay Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Berowra Creek",
+      "osm_id": 2870595,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bay Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Crossland Creek",
+      "osm_id": 374927093
     },
     "opening_hours": "06:00-22:00",
     "operator": "Hornsby Shire Council",
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

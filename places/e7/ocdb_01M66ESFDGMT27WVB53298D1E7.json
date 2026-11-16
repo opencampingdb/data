@@ -6,6 +6,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -29,6 +30,11 @@
     "nearest_major_road": {
       "distance_m": 380
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Dumaresq Creek",
+      "osm_id": 22673715
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -48,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

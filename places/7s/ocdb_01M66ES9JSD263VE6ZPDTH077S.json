@@ -2,7 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +16,12 @@
       "osm_id": 1286260837,
       "type": "village"
     },
-    "operator": "Qld NPWS"
+    "operator": "Qld NPWS",
+    "protected_area": {
+      "name": "Girraween National Park",
+      "osm_id": 1376762,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9JSD263VE6ZPDTH077S",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

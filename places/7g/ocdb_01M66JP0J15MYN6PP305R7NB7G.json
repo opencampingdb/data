@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,9 +27,21 @@
       "distance_m": 750,
       "name": "Kayak launch / Fishing platform"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Smelly Beach",
+      "osm_id": 1298501117,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Great Ocean Road"
+    },
+    "protected_area": {
+      "name": "Lorne - Queenscliff Coastal Reserve",
+      "osm_id": 9212148,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

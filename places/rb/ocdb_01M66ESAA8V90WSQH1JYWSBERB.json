@@ -8,6 +8,10 @@
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -20,6 +24,28 @@
       "suburb": "Lostock"
     },
     "facebook": "https://www.facebook.com/302808929800529",
+    "lga": {
+      "name": "Dungog Shire Council",
+      "osm_id": 6185449
+    },
+    "locality": {
+      "distance_m": 14340,
+      "name": "Gresford",
+      "osm_id": 114371036,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 610,
+      "name": "Lostock",
+      "osm_id": 114371155,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Paterson River",
+      "osm_id": 165545516
+    },
     "phone": "+61249317118",
     "website": "http://lostockvanpark.com.au/"
   },
@@ -27,17 +53,23 @@
   "id": "ocdb_01M66ESAA8V90WSQH1JYWSBERB",
   "kind": "caravan_park",
   "location": {
-    "lat": -32.326059,
-    "lon": 151.453042
+    "lat": -32.325878,
+    "lon": 151.45254
   },
+  "merged_osm": [
+    {
+      "id": 2270117416,
+      "type": "node"
+    }
+  ],
   "name": "Lostock Dam Caravan Park",
   "osm": {
-    "id": 2270117416,
-    "timestamp": "2013-04-17T00:02:12Z",
-    "type": "node",
-    "version": 1
+    "id": 217701318,
+    "timestamp": "2026-11-08T01:09:41Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

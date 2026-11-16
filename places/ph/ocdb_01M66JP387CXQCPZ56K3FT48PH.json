@@ -2,6 +2,7 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm"
   },
@@ -12,6 +13,13 @@
     "lga": {
       "name": "Shire of Ashburton",
       "osm_id": 11690012
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Ashburton River",
+      "osm_id": 8732353,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

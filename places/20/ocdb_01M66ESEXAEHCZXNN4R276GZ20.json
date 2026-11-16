@@ -9,8 +9,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -34,11 +37,28 @@
     "nearest_beach": {
       "distance_m": 100
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Kennett River",
+      "osm_id": 353145622,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Great Ocean Road"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Kennett River",
+      "osm_id": 45689179
+    },
     "phone": "0352890272",
+    "protected_area": {
+      "name": "Kennet River Coastal Reserve",
+      "osm_id": 9212141,
+      "osm_type": "relation"
+    },
     "website": "https://greatoceanroadparks.com.au/kennett-river"
   },
   "group": "overnight",
@@ -57,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -25,6 +26,11 @@
       "distance_m": 430,
       "name": "Rode Road"
     },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Downfall Creek",
+      "osm_id": 23989872
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -43,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

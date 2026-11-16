@@ -7,7 +7,9 @@
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -26,6 +28,18 @@
       "name": "Amphitheatre",
       "osm_id": 3403187751,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Glenpatrick",
+      "osm_id": 1779005114,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Glenpatrick Creek",
+      "osm_id": 239172727
     }
   },
   "group": "overnight",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

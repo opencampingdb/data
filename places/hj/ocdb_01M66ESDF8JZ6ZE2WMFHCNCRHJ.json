@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,17 @@
       "distance_m": 60,
       "name": "Grampians Road"
     },
-    "opening_hours": "Mo-Su 09:00-17:00"
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Fyans Creek",
+      "osm_id": 236356949
+    },
+    "opening_hours": "Mo-Su 09:00-17:00",
+    "protected_area": {
+      "name": "Brambuk - The National Park and Cultural Centre Park",
+      "osm_id": 9216408,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDF8JZ6ZE2WMFHCNCRHJ",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

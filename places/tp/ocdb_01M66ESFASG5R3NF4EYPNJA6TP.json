@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "wifi": "osm"
@@ -24,7 +26,17 @@
       "osm_id": 113727311,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Coxs Creek",
+      "osm_id": 295657919
+    },
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Coolah Tops National Park",
+      "osm_id": 6024502,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true,
     "wifi": false
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

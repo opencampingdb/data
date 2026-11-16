@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,6 +20,16 @@
       "name": "Eugowra",
       "osm_id": 81312484,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Terarra Creek",
+      "osm_id": 281218254
+    },
+    "protected_area": {
+      "name": "Nangar National Park",
+      "osm_id": 6029505,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm",
@@ -38,9 +40,21 @@
     "nearest_boat_ramp": {
       "distance_m": 730
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Brisbane River",
+      "osm_id": 7642164,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Stanley Place"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Brisbane River",
+      "osm_id": 27165909
     },
     "opening_hours": "Mo-Su 10:00-17:00",
     "phone": "+61 7 3840 7303",
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

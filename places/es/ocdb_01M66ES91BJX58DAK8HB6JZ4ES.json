@@ -8,6 +8,9 @@
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -20,6 +23,20 @@
       "suburb": "Erica"
     },
     "facebook": "https://www.facebook.com/2069824969897542",
+    "lga": {
+      "name": "Shire of Baw Baw",
+      "osm_id": 3335695
+    },
+    "locality": {
+      "distance_m": 300,
+      "name": "Erica",
+      "osm_id": 171095775,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Moe - Rawson Road"
+    },
     "phone": "+61351653315",
     "website": "https://bookingsau.newbook.cloud/online/erica_caravan_park?place_booking"
   },
@@ -27,27 +44,27 @@
   "id": "ocdb_01M66ES91BJX58DAK8HB6JZ4ES",
   "kind": "caravan_park",
   "location": {
-    "lat": -37.978547,
-    "lon": 146.373442
+    "lat": -37.978639,
+    "lon": 146.373561
   },
   "merged_osm": [
     {
-      "id": 10855673205,
+      "id": 316597086,
       "type": "node"
     },
     {
-      "id": 167307383,
-      "type": "way"
+      "id": 10855673205,
+      "type": "node"
     }
   ],
   "name": "Erica Caravan Park",
   "osm": {
-    "id": 316597086,
-    "timestamp": "2020-07-23T09:36:14Z",
-    "type": "node",
-    "version": 5
+    "id": 167307383,
+    "timestamp": "2026-11-03T14:44:02Z",
+    "type": "way",
+    "version": 7
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

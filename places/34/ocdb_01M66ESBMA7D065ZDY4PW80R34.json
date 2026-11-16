@@ -10,8 +10,10 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -32,8 +34,18 @@
       "osm_id": 113373977,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Murray River",
+      "osm_id": 176906826
+    },
     "operator": "Kosciuzko National Park Service",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tom-groggin-horse-camp?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_4464296607302285022&utm_content=Tom+Groggin+horse+camp+-+Murray+Gorge"
   },
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

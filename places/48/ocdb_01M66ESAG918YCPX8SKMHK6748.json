@@ -3,7 +3,10 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -19,7 +22,24 @@
       "osm_id": 252839015,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lake Vera",
+      "osm_id": 228320274,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Vera Creek",
+      "osm_id": 256658188
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Franklin-Gordon Wild Rivers National Park",
+      "osm_id": 6206896,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true
   },
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

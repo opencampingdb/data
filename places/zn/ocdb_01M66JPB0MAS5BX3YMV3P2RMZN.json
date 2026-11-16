@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +10,18 @@
       "name": "Michelago",
       "osm_id": 113486396,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Mount Boboyan",
+      "osm_id": 325089601,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Namadgi National Park",
+      "osm_id": 2616224,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -26,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

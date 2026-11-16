@@ -3,7 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -17,7 +18,12 @@
       "osm_id": 6035839183,
       "type": "village"
     },
-    "operator": "Queensland Parks and Wildlife Service"
+    "operator": "Queensland Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Wooroonooran National Park",
+      "osm_id": 1518774,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBSMJCMMJMD0C52VSV5N",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,0 +1,46 @@
+{
+  "fact_sources": {
+    "caravans": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "caravans": true,
+    "entry": "customers",
+    "fee": true,
+    "lga": {
+      "name": "Shire of Glenelg",
+      "osm_id": 3357380
+    },
+    "locality": {
+      "distance_m": 50,
+      "name": "Digby",
+      "osm_id": 535134021,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Clarke Street"
+    }
+  },
+  "group": "overnight",
+  "id": "ocdb_01M7K5W24SS1V6F0GQY1V4RP5Z",
+  "kind": "paid_campground",
+  "location": {
+    "lat": -37.804423,
+    "lon": 141.530799
+  },
+  "name": "The Digby Hotel",
+  "osm": {
+    "id": 14379494510,
+    "timestamp": "2026-11-15T04:10:16Z",
+    "type": "node",
+    "version": 2
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-16T21:51:41Z"
+}

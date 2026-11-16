@@ -1,10 +1,23 @@
 {
   "fact_sources": {
+    "drinking_water": "osm",
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
   },
   "facts": {
+    "drinking_water": true,
+    "entry": "public",
+    "fee": true,
     "lga": {
       "name": "Shire of Glenelg",
       "osm_id": 3357380
@@ -15,26 +28,37 @@
       "osm_id": 536327590,
       "type": "village"
     },
+    "max_stay": "3d",
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Portland - Casterton Road"
-    }
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Merino Creek",
+      "osm_id": 359076548
+    },
+    "operator": "Glenelg Shire Council",
+    "power": false,
+    "showers": false,
+    "tents": true,
+    "toilets": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBJXX6GDXPZRWK0QEZ72",
-  "kind": "campground",
+  "kind": "paid_campground",
   "location": {
     "lat": -37.710977,
     "lon": 141.545817
   },
-  "name": "Merino Showgrounds",
+  "name": "Merino Recreation Reserve",
   "osm": {
     "id": 5443898822,
-    "timestamp": "2018-02-28T22:01:46Z",
+    "timestamp": "2026-11-15T06:22:30Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

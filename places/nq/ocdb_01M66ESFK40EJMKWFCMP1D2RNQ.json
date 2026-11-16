@@ -4,6 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,6 +22,23 @@
       "name": "Robertson",
       "osm_id": 113238201,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Blue Pool",
+      "osm_id": 773693107,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Missingham Creek",
+      "osm_id": 445413631
+    },
+    "protected_area": {
+      "name": "Budderoo National Park",
+      "osm_id": 3682824,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

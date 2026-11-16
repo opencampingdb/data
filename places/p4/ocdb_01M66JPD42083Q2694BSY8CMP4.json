@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "private",
@@ -28,9 +30,21 @@
       "distance_m": 2460,
       "name": "Picnic Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Wises Farm Lake",
+      "osm_id": 184781938,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Sunshine Cove Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Wises Farm Creek",
+      "osm_id": 752884440
     }
   },
   "group": "attraction",
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

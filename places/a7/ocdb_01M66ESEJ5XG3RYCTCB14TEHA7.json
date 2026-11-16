@@ -5,7 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "fee": false,
@@ -25,6 +26,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 270
+    },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Little Beach",
+      "osm_id": 193180790,
+      "osm_type": "way",
+      "type": "beach"
     }
   },
   "group": "utility",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,6 +11,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
     "website": "overture",
@@ -36,6 +38,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1450
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Flynns Beach",
+      "osm_id": 251279951,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Wrights Creek",
+      "osm_id": 1357128619
+    },
     "phone": "+61265835754",
     "power": true,
     "website": "http://www.flynnsbeachcaravanpark.com.au",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

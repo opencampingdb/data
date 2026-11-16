@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -24,9 +26,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1790
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "BHP Pond",
+      "osm_id": 2319090,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Newcastle Inner City Bypass Onramp"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Canoe Channel",
+      "osm_id": 59697074
     },
     "opening_hours": "Mo-Su 09:00-16:00",
     "phone": "+61 2 4951 6466",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

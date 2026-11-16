@@ -12,7 +12,9 @@
     "lga": "osm",
     "locality": "osm",
     "motorhomes": "contributed",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "big_rigs": false,
@@ -29,9 +31,21 @@
       "type": "village"
     },
     "motorhomes": true,
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Lake Catani",
+      "osm_id": 15464564,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 500,
       "name": "Mount Buffalo Road"
+    },
+    "protected_area": {
+      "name": "Mount Buffalo National Park",
+      "osm_id": 5726564,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

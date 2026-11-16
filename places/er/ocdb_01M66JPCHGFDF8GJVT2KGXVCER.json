@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Wilcannia",
       "osm_id": 113465471,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Darling River Flood Plain",
+      "osm_id": 10732201,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Darling River",
+      "osm_id": 174889524
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

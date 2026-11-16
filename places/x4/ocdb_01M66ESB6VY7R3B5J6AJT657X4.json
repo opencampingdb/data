@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "locality": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -9,6 +10,11 @@
       "name": "Hall",
       "osm_id": 249060149,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Halls Creek",
+      "osm_id": 824143245
     },
     "water_type": "fountain"
   },
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

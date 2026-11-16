@@ -10,6 +10,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -35,6 +36,13 @@
     "nearest_boat_ramp": {
       "distance_m": 3240
     },
+    "nearest_feature": {
+      "distance_m": 700,
+      "name": "Southern Domain",
+      "osm_id": 8386386925,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "+61296354019"
   },
   "group": "services",
@@ -53,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

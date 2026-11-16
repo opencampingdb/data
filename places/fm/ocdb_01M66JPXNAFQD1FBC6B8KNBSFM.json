@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 113723912,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Kyalite",
+      "osm_id": 113393419,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Kyalite Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Wakool River",
+      "osm_id": 339884279
     }
   },
   "group": "attraction",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

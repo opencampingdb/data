@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -29,9 +31,21 @@
       "osm_id": 4316622215,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 360,
+      "name": "Green Mountains",
+      "osm_id": 4343834892,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Lamington National Park Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Morans Creek",
+      "osm_id": 326158025
     },
     "phone": "+61755024911"
   },
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

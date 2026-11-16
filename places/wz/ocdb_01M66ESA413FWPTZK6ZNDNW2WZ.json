@@ -9,7 +9,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -33,7 +36,24 @@
       "osm_id": 83353490,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 580,
+      "name": "Nanga Brook",
+      "osm_id": 217692395,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Murray River",
+      "osm_id": 16207771
+    },
     "phone": "0895381078",
+    "protected_area": {
+      "name": "Lane Poole Reserve",
+      "osm_id": 12936746,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://exploreparks.dbca.wa.gov.au/site/stringers-campground"
@@ -54,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

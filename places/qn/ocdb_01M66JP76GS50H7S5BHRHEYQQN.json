@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -31,6 +32,13 @@
     "nearest_boat_ramp": {
       "distance_m": 650
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Sydney International Regatta Centre",
+      "osm_id": 3311130,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "1800Jetpack",
     "website": "https://www.jetpackadventures.com.au/sydney/"
   },
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

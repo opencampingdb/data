@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +18,26 @@
       "osm_id": 4316622215,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Kweebani Cave",
+      "osm_id": 568243317,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Binna Burra Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Barrabareen Creek",
+      "osm_id": 391716482
+    },
+    "protected_area": {
+      "name": "Lamington National Park",
+      "osm_id": 306382,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

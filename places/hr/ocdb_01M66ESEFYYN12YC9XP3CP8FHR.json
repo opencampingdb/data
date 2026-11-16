@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,9 +27,26 @@
     "nearest_boat_ramp": {
       "distance_m": 680
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Carters Wetland",
+      "osm_id": 11211224120,
+      "osm_type": "node",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Guildford Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Bayswater Brook",
+      "osm_id": 8024802
+    },
+    "protected_area": {
+      "name": "Eric Singleton Bird Sanctuary",
+      "osm_id": 299863096,
+      "osm_type": "way"
     },
     "water_type": "fountain"
   },
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

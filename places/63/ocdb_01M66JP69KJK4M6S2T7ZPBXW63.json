@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +21,12 @@
       "distance_m": 80,
       "name": "Kakadu Highway"
     },
-    "phone": "+61 8 8938 1121"
+    "phone": "+61 8 8938 1121",
+    "protected_area": {
+      "name": "Kakadu National Park World Heritage Site",
+      "osm_id": 2386081,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP69KJK4M6S2T7ZPBXW63",
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

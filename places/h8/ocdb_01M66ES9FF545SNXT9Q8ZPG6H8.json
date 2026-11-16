@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,6 +26,16 @@
       "distance_m": 80,
       "name": "Woodhill Road"
     },
+    "nearest_waterway": {
+      "distance_m": 0,
+      "name": "Cabbage Tree Creek",
+      "osm_id": 53744405
+    },
+    "protected_area": {
+      "name": "Hall Reserve",
+      "osm_id": 54231461,
+      "osm_type": "way"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

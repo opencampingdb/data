@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1200
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Jays Beach",
+      "osm_id": 581237594,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Blackwood River",
+      "osm_id": 14362070
     }
   },
   "group": "utility",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,10 +5,13 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -26,13 +29,30 @@
       "osm_id": 114382663,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 500,
+      "name": "Tobins Camp",
+      "osm_id": 114385306,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Oxley Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Stockyard Creek",
+      "osm_id": 1109779772
+    },
     "operator": "Transport for NSW",
     "picnic_tables": true,
     "playground": false,
+    "protected_area": {
+      "name": "The Cells State Conservation Area",
+      "osm_id": 6324469,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true
   },
@@ -52,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

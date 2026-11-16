@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,18 @@
     "nearest_boat_ramp": {
       "distance_m": 80,
       "name": "Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Southport Lagoon",
+      "osm_id": 10631908,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Southport Lagoon Conservation Area",
+      "osm_id": 6177598,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

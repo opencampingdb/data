@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 510
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Airlie Bay",
+      "osm_id": 2541206070,
+      "osm_type": "node",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "6"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Airlie Creek",
+      "osm_id": 854101683
     }
   },
   "group": "attraction",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

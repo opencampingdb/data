@@ -4,7 +4,9 @@
     "email": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -27,9 +29,21 @@
       "osm_id": 114608215,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Aarons Pass",
+      "osm_id": 114606814,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 370,
       "name": "Castlereagh Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Tabrabucca Creek",
+      "osm_id": 347096310
     },
     "phone": "+61 407 490 774",
     "website": "https://www.facebook.com/Tabrabuccalodge/"
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1670
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Robertson Knoll",
+      "osm_id": 30962323,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Royal National Park",
+      "osm_id": 285416,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

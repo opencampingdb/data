@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,7 +11,19 @@
       "name": "Pastoral Unincorporated Area",
       "osm_id": 6804541
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Canopus",
+      "osm_id": 4316616988,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "operator": "National Parks and Wildlife Service South Australia",
+    "protected_area": {
+      "name": "Danggali Conservation Park",
+      "osm_id": 6186519,
+      "osm_type": "relation"
+    },
     "website": "https://www.parks.sa.gov.au/parks/danggali-conservation-park-and-wilderness-protection-area/booking/139975"
   },
   "group": "overnight",
@@ -28,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

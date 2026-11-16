@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
     "nearest_beach": {
       "distance_m": 120,
       "name": "1080 Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "1080 Beach",
+      "osm_id": 664606759,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Eurobodalla National Park",
+      "osm_id": 6052866,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

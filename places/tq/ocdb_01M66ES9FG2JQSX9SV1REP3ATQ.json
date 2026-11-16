@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,11 @@
       "name": "Kyneton",
       "osm_id": 273048504,
       "type": "town"
+    },
+    "protected_area": {
+      "name": "Langley I12 Bushland Reserve",
+      "osm_id": 84831066,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

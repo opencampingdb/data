@@ -2,6 +2,7 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +10,11 @@
     "lga": {
       "name": "Maranoa Regional",
       "osm_id": 11674862
+    },
+    "protected_area": {
+      "name": "Carnarvon National Park",
+      "osm_id": 1483563,
+      "osm_type": "relation"
     },
     "website": "https://parks.des.qld.gov.au/parks/carnarvon-mount-moffat/camping/rotary-shelter-shed-mount-moffatt"
   },
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

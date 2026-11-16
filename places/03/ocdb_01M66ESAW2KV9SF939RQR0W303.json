@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,17 @@
       "osm_id": 2092082609,
       "type": "village"
     },
-    "operator": "Parks and Wildlife"
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Louisa River",
+      "osm_id": 201876568
+    },
+    "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESAW2KV9SF939RQR0W303",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "distance_m": 1920,
       "name": "Pontoon - House Ground Tank"
     },
+    "nearest_feature": {
+      "distance_m": 800,
+      "name": "Mungo",
+      "osm_id": 1856545153,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Arumpo Road"
+    },
+    "protected_area": {
+      "name": "Mungo National Park",
+      "osm_id": 6321578,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 117004676,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Hunter River",
+      "osm_id": 1240053,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Adelaide Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Hunter River",
+      "osm_id": 165545518
     },
     "phone": "+61249872014",
     "website": "https://www.junctioninnhotel.com.au/"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

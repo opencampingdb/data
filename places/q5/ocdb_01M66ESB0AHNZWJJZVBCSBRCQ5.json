@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1100
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Tiger Bay Wetlands",
+      "osm_id": 335171633,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Coonamble Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Macquarie River",
+      "osm_id": 197794550
     },
     "phone": "+61268474706",
     "website": "http://www.macquarievanpark.com/"
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

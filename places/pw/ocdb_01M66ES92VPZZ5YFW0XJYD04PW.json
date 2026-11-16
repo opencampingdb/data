@@ -4,7 +4,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "bins": false,
@@ -19,6 +21,18 @@
       "name": "Mount Lion",
       "osm_id": 114644296,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 310,
+      "name": "Border Loop",
+      "osm_id": 114643666,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Border Ranges National Park",
+      "osm_id": 5816906,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

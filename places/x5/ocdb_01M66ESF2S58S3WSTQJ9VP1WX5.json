@@ -9,7 +9,9 @@
     "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -35,7 +37,17 @@
       "distance_m": 350,
       "name": "Bruxner Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Crooked Creek",
+      "osm_id": 493526634
+    },
     "operator": "Forestry Corporation of NSW",
+    "protected_area": {
+      "name": "Girard State Forest",
+      "osm_id": 5927793,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

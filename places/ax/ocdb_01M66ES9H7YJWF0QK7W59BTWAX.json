@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
     "nearest_beach": {
       "distance_m": 350,
       "name": "Swimming and Kayak Launch"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Yarrunga",
+      "osm_id": 5448831,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Kangaroo River",
+      "osm_id": 424694139
     },
     "water_type": "fountain"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

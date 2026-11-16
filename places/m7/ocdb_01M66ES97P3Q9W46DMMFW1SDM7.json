@@ -5,7 +5,9 @@
   "fact_sources": {
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1153066554726306",
@@ -18,6 +20,18 @@
       "name": "Tallarook",
       "osm_id": 1702667833,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Trawool Reservoir",
+      "osm_id": 45896958,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Tallarook State Forest",
+      "osm_id": 439648841,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

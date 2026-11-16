@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "wheelchair": "osm"
@@ -35,9 +37,21 @@
     "nearest_boat_ramp": {
       "distance_m": 730
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Narrabeen Lagoon",
+      "osm_id": 2248380,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Pittwater Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Middle Creek",
+      "osm_id": 180823229
     },
     "opening_hours": "24/7",
     "operator": "7-Eeleven",
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

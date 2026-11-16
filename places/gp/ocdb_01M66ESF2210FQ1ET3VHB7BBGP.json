@@ -9,7 +9,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "power": "osm",
     "website": "osm",
@@ -43,9 +45,21 @@
     "nearest_boat_ramp": {
       "distance_m": 780
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Legges",
+      "osm_id": 959006604,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Shadrachs Creek",
+      "osm_id": 305506180
     },
     "phone": "+61 2 6496 1651",
     "power": true,
@@ -216,5 +230,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

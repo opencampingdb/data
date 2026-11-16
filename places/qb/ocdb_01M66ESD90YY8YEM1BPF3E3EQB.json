@@ -3,6 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -11,6 +13,18 @@
     "lga": {
       "name": "Unincorporated Far West Area",
       "osm_id": 7032873
+    },
+    "nearest_feature": {
+      "distance_m": 940,
+      "name": "Fort Grey",
+      "osm_id": 2052325978,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Sturt National Park",
+      "osm_id": 6110851,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

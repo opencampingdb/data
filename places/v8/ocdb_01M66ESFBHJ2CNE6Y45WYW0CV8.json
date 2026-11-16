@@ -5,7 +5,9 @@
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "osm"
@@ -30,9 +32,21 @@
       "osm_id": 686358262,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Tooma",
+      "osm_id": 2148869825,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Tooma Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Tumbarumba Creek",
+      "osm_id": 448289873
     },
     "opening_hours": "We-Su 10:00-23:00; Mo,Tu,PH off",
     "operator": "Rob McClung and Lindy O'Connor",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -37,7 +39,19 @@
       "distance_m": 580,
       "name": "Maslin Beach"
     },
+    "nearest_feature": {
+      "distance_m": 930,
+      "name": "Blanche Point",
+      "osm_id": 541339782,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "+61885566113",
+    "protected_area": {
+      "name": "McLaren Vale District",
+      "osm_id": 5261959,
+      "osm_type": "relation"
+    },
     "website": "https://www.big4.com.au/caravan-parks/sa/fleurieu-peninsula/port-willunga-tourist-park/contact"
   },
   "group": "overnight",
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

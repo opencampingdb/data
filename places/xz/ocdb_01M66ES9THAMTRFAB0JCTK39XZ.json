@@ -1,9 +1,16 @@
 {
   "fact_sources": {
+    "cabins": "osm",
+    "caravans": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
+    "tents": "osm"
   },
   "facts": {
+    "cabins": false,
+    "caravans": false,
     "lga": {
       "name": "Scenic Rim Regional",
       "osm_id": 11675525
@@ -13,7 +20,20 @@
       "name": "Kalbar",
       "osm_id": 1651185877,
       "type": "village"
-    }
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Mount French (North Peak)",
+      "osm_id": 2844503128,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Moogerah Peaks National Park",
+      "osm_id": 8247592,
+      "osm_type": "relation"
+    },
+    "tents": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9THAMTRFAB0JCTK39XZ",
@@ -22,14 +42,14 @@
     "lat": -27.985143,
     "lon": 152.620877
   },
-  "name": null,
+  "name": "Mount French Camping Area",
   "osm": {
     "id": 1751926315,
-    "timestamp": "2012-05-14T01:54:03Z",
+    "timestamp": "2026-11-14T20:05:10Z",
     "type": "node",
-    "version": 1
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

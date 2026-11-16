@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 113664189,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Jerilderie Lake",
+      "osm_id": 2512718,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Jerilderie Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Billabong Creek",
+      "osm_id": 37276243
     },
     "wheelchair": true
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

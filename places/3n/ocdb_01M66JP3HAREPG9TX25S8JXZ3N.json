@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,9 +27,21 @@
       "distance_m": 570,
       "name": "Stanley Boat Ramps"
     },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "The Nut",
+      "osm_id": 2179111249,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Wharf Road"
+    },
+    "protected_area": {
+      "name": "The Nut State Reserve",
+      "osm_id": 6174954,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

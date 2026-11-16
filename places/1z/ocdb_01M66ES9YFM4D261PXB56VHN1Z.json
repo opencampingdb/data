@@ -10,7 +10,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -31,7 +34,24 @@
       "osm_id": 1634843647,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Emu Creek",
+      "osm_id": 608742190,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Emu Creek",
+      "osm_id": 50792197
+    },
     "phone": "+61137468",
+    "protected_area": {
+      "name": "Benarkin State Forest",
+      "osm_id": 8681576,
+      "osm_type": "relation"
+    },
     "website": "http://www.nprsr.qld.gov.au/parks/benarkin/camping.html"
   },
   "group": "overnight",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

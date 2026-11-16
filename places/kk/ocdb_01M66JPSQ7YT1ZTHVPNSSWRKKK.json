@@ -8,6 +8,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -34,6 +36,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1280
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Moruya River",
+      "osm_id": 23663303,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Moruya River",
+      "osm_id": 71707142
+    },
     "operator": "Southern NSW Local Health District",
     "phone": "+61 2 4474 2666",
     "website": "https://www.nsw.gov.au/departments-and-agencies/nsw-health/service-directory/moruya-eurobodalla-health-service"
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

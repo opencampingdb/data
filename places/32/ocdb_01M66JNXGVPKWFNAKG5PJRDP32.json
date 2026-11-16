@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,7 +26,17 @@
       "distance_m": 60,
       "name": "Great Ocean Road"
     },
-    "opening_hours": "Mo-Su 09:00-17:00"
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Port Campbell Creek",
+      "osm_id": 103276343
+    },
+    "opening_hours": "Mo-Su 09:00-17:00",
+    "protected_area": {
+      "name": "Port Campbell Recreation and Camping Reserve",
+      "osm_id": 9212166,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JNXGVPKWFNAKG5PJRDP32",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

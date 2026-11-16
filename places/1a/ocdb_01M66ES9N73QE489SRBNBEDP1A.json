@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,16 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Rode Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Downfall Creek",
+      "osm_id": 25637072
+    },
+    "protected_area": {
+      "name": "Raven Street Reserve",
+      "osm_id": 1712076,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

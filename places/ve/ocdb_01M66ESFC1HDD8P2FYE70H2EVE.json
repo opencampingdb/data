@@ -10,6 +10,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "toilets": "osm",
@@ -40,6 +41,13 @@
     "nearest_boat_ramp": {
       "distance_m": 380
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "The Bay",
+      "osm_id": 14292888,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Cape Paterson - Inverloch Road"
@@ -64,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Walpeup",
       "osm_id": 2108209134,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lake Walpeup",
+      "osm_id": 167541172,
+      "osm_type": "way",
+      "type": "wetland"
     },
     "toilet_type": "pit"
   },
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

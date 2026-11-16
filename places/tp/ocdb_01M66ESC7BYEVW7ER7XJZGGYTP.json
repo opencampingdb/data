@@ -2,6 +2,7 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +10,13 @@
     "lga": {
       "name": "Diamantina Shire",
       "osm_id": 11676755
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Gum Waterhole",
+      "osm_id": 489210207,
+      "osm_type": "way",
+      "type": "water"
     },
     "website": "https://parks.des.qld.gov.au/parks/diamantina/camping/gum-hole"
   },
@@ -28,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

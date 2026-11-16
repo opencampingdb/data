@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -32,9 +34,21 @@
       "osm_id": 115096395,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Bulga",
+      "osm_id": 115096462,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Putty Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Wollombi Brook",
+      "osm_id": 423602957
     },
     "phone": "+61407936069",
     "website": "http://www.bulgatavern.com.au/"
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

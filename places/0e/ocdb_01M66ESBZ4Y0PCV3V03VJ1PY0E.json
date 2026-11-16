@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Charters Towers",
       "osm_id": 1974780324,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 530,
+      "name": "Big Bend",
+      "osm_id": 6696508483,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Burdekin River",
+      "osm_id": 375230482
     }
   },
   "group": "overnight",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

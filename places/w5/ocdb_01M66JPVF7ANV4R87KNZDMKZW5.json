@@ -3,7 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,6 +19,18 @@
       "name": "Katoomba",
       "osm_id": 20968413,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lake Catalina",
+      "osm_id": 94682721,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Kedumba River",
+      "osm_id": 869884539
     }
   },
   "group": "attraction",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

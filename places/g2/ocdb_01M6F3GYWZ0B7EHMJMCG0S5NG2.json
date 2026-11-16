@@ -11,6 +11,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -41,6 +43,18 @@
       "distance_m": 1210,
       "name": "Bundeena Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Gunyah Beach",
+      "osm_id": 27006536,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Bundeena Gully",
+      "osm_id": 23141199
+    },
     "phone": "+61295232115",
     "website": "https://bundeenacsc.com.au/"
   },
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

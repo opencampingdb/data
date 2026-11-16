@@ -6,7 +6,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "showers": "osm",
     "toilets": "osm",
@@ -27,9 +29,21 @@
       "osm_id": 634962919,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Naracoorte Swimming Lake",
+      "osm_id": 96567107,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Smith Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Naracoorte Creek",
+      "osm_id": 167960479
     },
     "power": false,
     "showers": true,
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

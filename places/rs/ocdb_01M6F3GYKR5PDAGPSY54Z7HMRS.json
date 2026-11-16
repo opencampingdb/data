@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +25,19 @@
     "nearest_boat_ramp": {
       "distance_m": 1250
     },
-    "opening_hours": "Su 10:00-16:00"
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Brisbane River",
+      "osm_id": 1693549,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "opening_hours": "Su 10:00-16:00",
+    "protected_area": {
+      "name": "Fort Lytton National Park",
+      "osm_id": 70682123,
+      "osm_type": "way"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYKR5PDAGPSY54Z7HMRS",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

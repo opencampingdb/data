@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Sawmill Settlement",
       "osm_id": 910283354,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Howqua River",
+      "osm_id": 1169793358
+    },
+    "protected_area": {
+      "name": "Howqua Hills Historic Area",
+      "osm_id": 6881266,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

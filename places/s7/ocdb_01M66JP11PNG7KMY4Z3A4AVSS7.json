@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,18 @@
     "nearest_boat_ramp": {
       "distance_m": 130,
       "name": "Lake Conjola Entrance boat ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Conjola Lake",
+      "osm_id": 1356456,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Conjola Creek",
+      "osm_id": 446081026
     }
   },
   "group": "attraction",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -14,6 +15,13 @@
     },
     "nearest_beach": {
       "distance_m": 4450
+    },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Murrumbidgee River",
+      "osm_id": 589990349,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -32,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

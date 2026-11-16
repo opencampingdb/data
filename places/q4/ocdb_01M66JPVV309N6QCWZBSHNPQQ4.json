@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "website": "overture",
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 650
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Brisbane River",
+      "osm_id": 7642164,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Coronation Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Milton Canal",
+      "osm_id": 30212799
     },
     "opening_hours": "24/7",
     "phone": "+61 7 3506 0254",
@@ -67,5 +81,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

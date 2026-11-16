@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 2603797837,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Croydon Sediment Pond",
+      "osm_id": 222466561,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Mount Dandenong Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Tarralla Creek",
+      "osm_id": 1117269447
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

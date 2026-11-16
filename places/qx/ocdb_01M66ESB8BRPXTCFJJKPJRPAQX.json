@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -21,6 +23,16 @@
     "nearest_boat_ramp": {
       "distance_m": 2540,
       "name": "Donnelly Boat Landing"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Carey Brook",
+      "osm_id": 101872226
+    },
+    "protected_area": {
+      "name": "Greater Hawke National Park",
+      "osm_id": 11993346,
+      "osm_type": "relation"
     },
     "wifi": false
   },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

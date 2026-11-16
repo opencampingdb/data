@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +10,16 @@
       "name": "Michelago",
       "osm_id": 113486396,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Orroral River",
+      "osm_id": 286882157
+    },
+    "protected_area": {
+      "name": "Namadgi National Park",
+      "osm_id": 2616224,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

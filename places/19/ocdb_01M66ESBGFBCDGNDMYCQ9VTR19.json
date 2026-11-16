@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,7 +20,12 @@
     "nearest_beach": {
       "distance_m": 70
     },
-    "operator": "Parks and Wildlife"
+    "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBGFBCDGNDMYCQ9VTR19",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

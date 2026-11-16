@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -27,6 +28,11 @@
     "nearest_boat_ramp": {
       "distance_m": 90
     },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Murray River",
+      "osm_id": 173241448
+    },
     "website": "http://www.rivergums.com.au/",
     "wifi": false
   },
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

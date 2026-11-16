@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Burnett Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Sawmill Creek",
+      "osm_id": 1206746260
     },
     "website": "https://map.bp.com/en-AU/AU/gas-station/eidsvold/bp-eidsvold/8009"
   },
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -33,7 +35,19 @@
       "distance_m": 110,
       "name": "North Head Beach"
     },
-    "phone": "+61244549500"
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "North Head Beach",
+      "osm_id": 283571937,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "phone": "+61244549500",
+    "protected_area": {
+      "name": "Murramarang National Park",
+      "osm_id": 5858067,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAK4H8WG3KWSV8XAFRZV",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

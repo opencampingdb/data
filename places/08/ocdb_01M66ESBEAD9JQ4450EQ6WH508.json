@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -35,9 +37,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1090
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Dawson River",
+      "osm_id": 7995899,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Manning River Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Dawson River",
+      "osm_id": 563131231
     },
     "phone": "+61 2 6553 9237",
     "website": "https://www.dawsonrivertouristpark.com.au/"
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

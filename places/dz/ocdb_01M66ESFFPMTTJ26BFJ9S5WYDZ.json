@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -16,6 +18,18 @@
       "name": "Yackandandah",
       "osm_id": 161251891,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 550,
+      "name": "Ferny Hole",
+      "osm_id": 4789023671,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Yackandandah Creek",
+      "osm_id": 406897191
     },
     "tents": true
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

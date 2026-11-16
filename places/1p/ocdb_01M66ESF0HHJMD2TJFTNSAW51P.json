@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "power": "osm",
     "tents": "osm"
   },
@@ -22,6 +23,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1180,
       "name": "Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 340,
+      "name": "Habels Bend",
+      "osm_id": 2710315954,
+      "osm_type": "node",
+      "type": "locality"
     },
     "power": true,
     "tents": true
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,21 +1,62 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "website": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "Gold Coast City",
+      "osm_id": 11675459
+    },
+    "locality": {
+      "distance_m": 8750,
+      "name": "Gold Coast",
+      "osm_id": 145620822,
+      "type": "city"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4890
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Coombabah Lakelands Conservation Area (Arundel Section)",
+      "osm_id": 556606008,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Napper Road"
+    },
+    "opening_hours": "24/7",
+    "website": "https://www.7eleven.com.au/"
+  },
   "group": "services",
   "id": "ocdb_01M66JPTF7J38639C2P8FMVNHN",
   "kind": "fuel",
   "location": {
-    "lat": -27.947112,
-    "lon": 153.351174
+    "lat": -27.947078,
+    "lon": 153.351175
   },
+  "merged_osm": [
+    {
+      "id": 404807145,
+      "type": "way"
+    }
+  ],
   "name": "7-Eleven",
   "osm": {
-    "id": 404807145,
-    "timestamp": "2021-10-24T12:02:04Z",
-    "type": "way",
-    "version": 5
+    "id": 14353518919,
+    "timestamp": "2026-11-06T01:48:16Z",
+    "type": "node",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

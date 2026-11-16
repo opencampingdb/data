@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 81328631,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Grose River",
+      "osm_id": 8763979,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Springwood Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Phillip Charley Creek",
+      "osm_id": 1181493697
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

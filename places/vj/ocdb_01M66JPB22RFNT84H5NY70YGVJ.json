@@ -8,8 +8,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -30,8 +32,18 @@
       "osm_id": 193757622,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "North Para River",
+      "osm_id": 180558528
+    },
     "opening_hours": "Mo-Su 10:30-16:30",
     "phone": "+61 8 8563 2595",
+    "protected_area": {
+      "name": "Barossa Valley District",
+      "osm_id": 5261942,
+      "osm_type": "relation"
+    },
     "website": "https://www.langmeilwinery.com.au/"
   },
   "group": "attraction",
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

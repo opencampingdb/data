@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -28,9 +30,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1520
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Bilgola Beach",
+      "osm_id": 4042505,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Barrenjoey Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Bilgola Creek",
+      "osm_id": 1185605542
     }
   },
   "group": "utility",
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

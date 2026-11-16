@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2000
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Manly Lagoon",
+      "osm_id": 172396727,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Pittwater Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Manly Creek",
+      "osm_id": 565590414
     },
     "phone": "+61299394440",
     "website": "https://powerhouse-auto.business.site/"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

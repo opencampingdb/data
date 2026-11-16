@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 1831538106,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Main Canal",
+      "osm_id": 364717837,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Banna Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Main Canal",
+      "osm_id": 225233997
     },
     "phone": "+61402042611",
     "website": "http://littleredlaunderette.com.au/#"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

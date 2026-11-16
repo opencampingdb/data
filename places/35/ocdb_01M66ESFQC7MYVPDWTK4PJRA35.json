@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -25,9 +27,21 @@
       "osm_id": 114658066,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 860,
+      "name": "Yarrowyck",
+      "osm_id": 114658121,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Thunderbolts Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Gwydir River",
+      "osm_id": 375751494
     },
     "operator": "Uralla Shire Council",
     "showers": false,
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

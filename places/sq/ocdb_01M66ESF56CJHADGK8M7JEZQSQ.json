@@ -16,9 +16,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "pets": "community_report",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -51,9 +53,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3720
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Brou Lake",
+      "osm_id": 379887953,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "pets": "no",
     "phone": "+61244760800",
+    "protected_area": {
+      "name": "Eurobodalla National Park",
+      "osm_id": 6052866,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -75,5 +89,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

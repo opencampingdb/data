@@ -6,8 +6,10 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -29,8 +31,18 @@
       "osm_id": 91294880,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Four Bull Creek",
+      "osm_id": 913442233
+    },
     "operator": "NSW NPWS",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Washpool National Park",
+      "osm_id": 5926152,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/four-bull-hut",
     "wifi": false
   },
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

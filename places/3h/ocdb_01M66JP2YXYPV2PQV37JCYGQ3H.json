@@ -3,7 +3,9 @@
     "air": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "air": true,
@@ -17,9 +19,21 @@
       "osm_id": 25939676,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Dora Creek",
+      "osm_id": 6694764,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Freemans Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Dora Creek",
+      "osm_id": 90555949
     }
   },
   "group": "services",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

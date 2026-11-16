@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "private",
@@ -20,6 +22,16 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Sherbrook Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 0,
+      "name": "Hornsby Creek",
+      "osm_id": 108530061
+    },
+    "protected_area": {
+      "name": "Neal Park Bush Regeneration Area",
+      "osm_id": 588255290,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

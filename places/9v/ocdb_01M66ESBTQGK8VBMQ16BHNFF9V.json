@@ -2,7 +2,9 @@
   "fact_sources": {
     "caravans": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -11,7 +13,19 @@
       "name": "Huon Valley",
       "osm_id": 10627315
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Bathurst Harbour",
+      "osm_id": 2712010,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "operator": "Par Avion",
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,7 +20,12 @@
     "nearest_beach": {
       "distance_m": 140
     },
-    "operator": "RIA"
+    "operator": "RIA",
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYHQY9031CQ5RK2FX7Z7",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

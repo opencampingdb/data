@@ -3,9 +3,12 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -25,12 +28,29 @@
       "osm_id": 324884969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 630,
+      "name": "National Park",
+      "osm_id": 4293047115,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 470,
       "name": "Gordon River Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Russell Falls Creek",
+      "osm_id": 421597769
+    },
     "opening_hours": "Mo-Su 09:00-17:00",
-    "operator": "Department of Primary Industries, Parks, Water and Environment"
+    "operator": "Department of Primary Industries, Parks, Water and Environment",
+    "protected_area": {
+      "name": "Mount Field National Park",
+      "osm_id": 3004976,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP0JSEDENE3K7JQGK4TVC",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

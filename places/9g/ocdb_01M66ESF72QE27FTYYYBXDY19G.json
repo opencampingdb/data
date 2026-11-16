@@ -5,7 +5,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -26,7 +29,24 @@
       "osm_id": 113704510,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Wyanbene Caves",
+      "osm_id": 2636707320,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Wyanbene Caves Creek",
+      "osm_id": 445035248
+    },
     "phone": "+61 2 4476 2888",
+    "protected_area": {
+      "name": "Deua National Park",
+      "osm_id": 5849996,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

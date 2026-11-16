@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -25,9 +27,21 @@
       "distance_m": 1920,
       "name": "Captain Cook Memorial Reserve Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Erina Creek",
+      "osm_id": 148169132,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "The Entrance Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Erina Creek",
+      "osm_id": 499213409
     },
     "toilet_type": "flush"
   },
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

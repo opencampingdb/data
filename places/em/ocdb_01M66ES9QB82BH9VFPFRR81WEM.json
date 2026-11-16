@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -21,6 +22,13 @@
     "nearest_beach": {
       "distance_m": 40,
       "name": "Little Boat Harbour"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Little Boat Harbour",
+      "osm_id": 169326373,
+      "osm_type": "way",
+      "type": "beach"
     },
     "wheelchair": false
   },
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -7,6 +7,8 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -24,6 +26,16 @@
       "name": "Ellenborough",
       "osm_id": 114382663,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Doyles River",
+      "osm_id": 404485954
+    },
+    "protected_area": {
+      "name": "Doyles River State Forest",
+      "osm_id": 5793876,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/maxwells-flat-campground"
   },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

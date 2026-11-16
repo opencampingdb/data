@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,7 +26,19 @@
     "nearest_boat_ramp": {
       "distance_m": 1040
     },
-    "opening_hours": "07:00-20:30"
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Port Hacking",
+      "osm_id": 285916,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "opening_hours": "07:00-20:30",
+    "protected_area": {
+      "name": "Royal National Park",
+      "osm_id": 285416,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESF39J230NXW48YE1Y170",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

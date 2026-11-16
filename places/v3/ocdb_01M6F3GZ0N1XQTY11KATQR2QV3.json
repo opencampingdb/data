@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -30,9 +32,21 @@
       "osm_id": 1882969315,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Lake Alford",
+      "osm_id": 7752099,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Brisbane Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Langton Gully",
+      "osm_id": 1204649341
     },
     "phone": "+61754823995",
     "website": "http://www.gympiegoldmuseum.com.au/"
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -18,9 +21,26 @@
     "nearest_boat_ramp": {
       "distance_m": 890
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Cotter River",
+      "osm_id": 590289499,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Paddys River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Cotter River",
+      "osm_id": 1290602905
+    },
+    "protected_area": {
+      "name": "Cotter Reserve",
+      "osm_id": 9389209,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

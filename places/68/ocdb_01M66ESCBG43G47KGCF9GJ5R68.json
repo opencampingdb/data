@@ -5,7 +5,9 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -23,9 +25,21 @@
       "osm_id": 190751211,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 330,
+      "name": "Currabubula",
+      "osm_id": 114638396,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Davis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Currabubula Creek",
+      "osm_id": 483545348
     },
     "opening_hours": "24/7",
     "wheelchair": true
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

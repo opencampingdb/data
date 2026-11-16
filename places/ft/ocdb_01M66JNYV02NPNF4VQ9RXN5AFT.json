@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm",
@@ -29,9 +31,21 @@
       "distance_m": 220,
       "name": "Raymond Island Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Victoria",
+      "osm_id": 10157994,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Esplanade"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Mariners Quay",
+      "osm_id": 47574985
     },
     "operator": "East Gippsland Shire Council",
     "phone": "+61 418 517 959",
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

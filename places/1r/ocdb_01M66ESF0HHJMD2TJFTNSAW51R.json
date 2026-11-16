@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
@@ -21,9 +23,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Edwardes Lake",
+      "osm_id": 983893761,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "McFadzean Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Edgars Creek",
+      "osm_id": 33762831
     },
     "operator": "Darebin Council",
     "toilet_type": "flush"
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

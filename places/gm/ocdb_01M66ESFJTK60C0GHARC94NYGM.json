@@ -6,7 +6,9 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm"
   },
@@ -25,9 +27,21 @@
       "osm_id": 113237857,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 360,
+      "name": "Hoddles Cross Roads",
+      "osm_id": 113237965,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Hume Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Black Bobs Creek",
+      "osm_id": 264288426
     },
     "opening_hours": "24/7",
     "toilet_type": "pit"
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

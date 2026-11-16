@@ -8,9 +8,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "pets": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -33,9 +35,21 @@
     "nearest_beach": {
       "distance_m": 10
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Chance Bay",
+      "osm_id": 8925547809,
+      "osm_type": "node",
+      "type": "bay"
+    },
     "operator": "Queensland Parks and Wildlife",
     "pets": "no",
     "power": false,
+    "protected_area": {
+      "name": "Whitsunday Islands National Park",
+      "osm_id": 7435953,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true
   },
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,7 +19,19 @@
       "distance_m": 4310,
       "name": "Shoal Cape Beach"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Stokes Inlet",
+      "osm_id": 22894686,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "Parks and Wildlife Service, Western Australia",
+    "protected_area": {
+      "name": "Stokes National Park",
+      "osm_id": 8162409,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

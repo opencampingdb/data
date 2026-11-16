@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -32,7 +34,19 @@
       "distance_m": 230,
       "name": "Shipwreck Creek Beach"
     },
-    "phone": "+61131963"
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Shipwreck Creek Beach",
+      "osm_id": 167619359,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "phone": "+61131963",
+    "protected_area": {
+      "name": "East Gippsland Coastal streams Natural Catchment Area",
+      "osm_id": 16487020,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES916ZF91Z58QQC5TXX5W",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Licola",
       "osm_id": 151064574,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Mount Useful Creek",
+      "osm_id": 1392283013
+    },
+    "protected_area": {
+      "name": "Macalister Gorge Natural Features and Scenic Reserve",
+      "osm_id": 666583960,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

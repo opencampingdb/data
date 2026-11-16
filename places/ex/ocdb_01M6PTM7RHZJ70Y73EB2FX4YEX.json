@@ -4,7 +4,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "pets": "osm",
     "water_type": "osm"
@@ -22,9 +24,21 @@
       "osm_id": 2506724881,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Caboolture River",
+      "osm_id": 17634934,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Matthew Flinders Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Caboolture River",
+      "osm_id": 34731497
     },
     "operator": "Moreton Bay Council",
     "pets": "yes",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

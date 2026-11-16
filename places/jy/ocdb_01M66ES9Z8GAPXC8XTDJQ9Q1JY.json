@@ -9,7 +9,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -29,7 +32,24 @@
       "osm_id": 1634843647,
       "type": "village"
     },
-    "phone": "+61746394599"
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Clancy's",
+      "osm_id": 608741376,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Emu Creek",
+      "osm_id": 1441536165
+    },
+    "phone": "+61746394599",
+    "protected_area": {
+      "name": "Benarkin State Forest",
+      "osm_id": 8681576,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Z8GAPXC8XTDJQ9Q1JY",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -31,9 +33,21 @@
       "osm_id": 4290201325,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Briseis Hole",
+      "osm_id": 244899754,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Main Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Ringarooma River",
+      "osm_id": 38700569
     },
     "phone": "+61457281257"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

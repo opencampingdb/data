@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Marysville",
       "osm_id": 99490721,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 0,
+      "name": "Steavenson River",
+      "osm_id": 70945472
+    },
+    "protected_area": {
+      "name": "Steavensons Falls Natural Features and Scenic Reserve",
+      "osm_id": 12000088,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

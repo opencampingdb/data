@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -22,6 +24,18 @@
     },
     "nearest_beach": {
       "distance_m": 2310
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Seal Rocks Lagoons",
+      "osm_id": 813354183,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Seal Rocks State Reserve",
+      "osm_id": 6213928,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

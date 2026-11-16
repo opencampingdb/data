@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 301983645,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Calembeen Lake",
+      "osm_id": 356143895,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Creswick - Clunes Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "The Sludge Channel",
+      "osm_id": 241260073
     },
     "phone": "+61353452411",
     "website": "http://www.creswickcaravanpark.com.au"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

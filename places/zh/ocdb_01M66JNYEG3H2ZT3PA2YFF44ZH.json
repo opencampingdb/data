@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,7 +23,12 @@
       "name": "Mittagong Road"
     },
     "opening_hours": "24/7",
-    "operator": "Wingecarribee Shire Council"
+    "operator": "Wingecarribee Shire Council",
+    "protected_area": {
+      "name": "Mount Gibraltar Reserve",
+      "osm_id": 596031330,
+      "osm_type": "way"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JNYEG3H2ZT3PA2YFF44ZH",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

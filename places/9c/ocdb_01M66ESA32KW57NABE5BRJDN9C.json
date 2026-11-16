@@ -8,7 +8,11 @@
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
     "phone": "overture",
     "website": "overture",
     "wifi": "osm"
@@ -20,8 +24,29 @@
       "suburb": "The District Council of Yankalilla"
     },
     "facebook": "https://www.facebook.com/181469665843016",
+    "lga": {
+      "name": "The District Council of Yankalilla",
+      "osm_id": 7250425
+    },
+    "locality": {
+      "distance_m": 2530,
+      "name": "Second Valley",
+      "osm_id": 2286688211,
+      "type": "village"
+    },
     "nearest_beach": {
-      "distance_m": 60
+      "distance_m": 70
+    },
+    "nearest_feature": {
+      "distance_m": 440,
+      "name": "Rapid Bay",
+      "osm_id": 2286688210,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_major_road": {
+      "distance_m": 440,
+      "name": "Finniss Drive"
     },
     "phone": "+61887260498",
     "website": "http://www.rapidbayjetty.org/gallery/camping_ground/",
@@ -31,17 +56,23 @@
   "id": "ocdb_01M66ESA32KW57NABE5BRJDN9C",
   "kind": "campground",
   "location": {
-    "lat": -35.52472,
-    "lon": 138.19167
+    "lat": -35.524151,
+    "lon": 138.193886
   },
+  "merged_osm": [
+    {
+      "id": 1811193485,
+      "type": "node"
+    }
+  ],
   "name": "Rapid Bay Camping Area",
   "osm": {
-    "id": 1811193485,
-    "timestamp": "2017-10-04T04:01:02Z",
-    "type": "node",
-    "version": 3
+    "id": 354704448,
+    "timestamp": "2026-11-08T01:10:26Z",
+    "type": "way",
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

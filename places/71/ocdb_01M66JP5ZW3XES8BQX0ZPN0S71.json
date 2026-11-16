@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Tuena",
       "osm_id": 2571375037,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Grove Creek",
+      "osm_id": 452045448
+    },
+    "protected_area": {
+      "name": "Abercrombie Karst Conservation Reserve",
+      "osm_id": 6041324,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

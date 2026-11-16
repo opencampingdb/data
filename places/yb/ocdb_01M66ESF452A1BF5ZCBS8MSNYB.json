@@ -4,8 +4,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -22,11 +25,28 @@
       "osm_id": 59149739,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Old Hotel Site",
+      "osm_id": 8246104941,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Pinnacle Road"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Browns River",
+      "osm_id": 431125428
+    },
     "operator": "City of Hobart",
+    "protected_area": {
+      "name": "Wellington Park",
+      "osm_id": 3161685,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

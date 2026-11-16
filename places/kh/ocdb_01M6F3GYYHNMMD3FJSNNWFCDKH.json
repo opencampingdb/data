@@ -7,7 +7,9 @@
     "address": "osm",
     "facebook": "overture",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -21,9 +23,21 @@
       "name": "Bourke Shire Council",
       "osm_id": 5892186
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Louth",
+      "osm_id": 113461366,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Bloxham Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Darling River",
+      "osm_id": 795109647
     },
     "phone": "+61268747422",
     "website": "http://www.shindysinn.com.au/"
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

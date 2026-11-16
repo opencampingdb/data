@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -39,9 +41,21 @@
     "nearest_boat_ramp": {
       "distance_m": 580
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Kooloonbung Creek",
+      "osm_id": 939102441,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Gordon Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Kooloonbung Creek",
+      "osm_id": 920002969
     },
     "phone": "+61265834646",
     "website": "http://www.finnians.com.au"
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

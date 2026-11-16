@@ -7,7 +7,9 @@
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -24,6 +26,16 @@
       "name": "Orbost",
       "osm_id": 59633024,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Snowy River",
+      "osm_id": 241399058
+    },
+    "protected_area": {
+      "name": "Snowy River Heritage River",
+      "osm_id": 16487232,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

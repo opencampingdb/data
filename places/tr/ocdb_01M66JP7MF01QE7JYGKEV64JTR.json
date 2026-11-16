@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,18 @@
     },
     "nearest_beach": {
       "distance_m": 160
+    },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Whitehaven Beach",
+      "osm_id": 138684320,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Whitsunday Islands National Park",
+      "osm_id": 7435953,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

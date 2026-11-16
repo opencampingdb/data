@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "tents": "osm",
     "wifi": "osm"
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 230
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Lake Jindabyne",
+      "osm_id": 66850,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Kosciuszko Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Widows Creek",
+      "osm_id": 409033751
     },
     "power": true,
     "tents": true,
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

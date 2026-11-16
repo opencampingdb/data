@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +24,11 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Progress Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Bullock Head Creek",
+      "osm_id": 1187158494
     }
   },
   "group": "utility",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +21,21 @@
     "nearest_beach": {
       "distance_m": 360
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Coraki Junction",
+      "osm_id": 114651322,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 370,
       "name": "Queen Elizabeth Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Richmond River",
+      "osm_id": 413305372
     }
   },
   "group": "attraction",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

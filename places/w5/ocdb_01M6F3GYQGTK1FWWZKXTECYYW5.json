@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1690
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Macleod Morass Game Reserve",
+      "osm_id": 10211224,
+      "osm_type": "relation",
+      "type": "wetland"
     },
     "nearest_major_road": {
       "distance_m": 460,
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

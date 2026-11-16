@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +25,17 @@
     "nearest_boat_ramp": {
       "distance_m": 400
     },
-    "operator": "Queensland National Parks"
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Noosa River",
+      "osm_id": 23022721
+    },
+    "operator": "Queensland National Parks",
+    "protected_area": {
+      "name": "Great Sandy National Park",
+      "osm_id": 1507019,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBZ9Y6P6HRW2KGKB1CY0",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

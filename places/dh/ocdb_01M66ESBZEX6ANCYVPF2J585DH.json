@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -19,6 +21,18 @@
       "name": "Miena",
       "osm_id": 321958019,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Lake St Clair",
+      "osm_id": 2893412,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Cradle Mountain-Lake St Clair National Park",
+      "osm_id": 3000260,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

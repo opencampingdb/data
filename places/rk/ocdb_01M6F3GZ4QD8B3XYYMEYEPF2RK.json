@@ -2,6 +2,7 @@
   "fact_sources": {
     "bins": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -9,6 +10,13 @@
     "lga": {
       "name": "Winton Shire",
       "osm_id": 11676713
+    },
+    "nearest_feature": {
+      "distance_m": 600,
+      "name": "Corfield",
+      "osm_id": 3612292637,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -31,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

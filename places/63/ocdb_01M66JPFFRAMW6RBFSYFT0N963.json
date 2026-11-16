@@ -10,7 +10,9 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture"
   },
@@ -37,9 +39,21 @@
       "osm_id": 194066513,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 430,
+      "name": "Tanawha",
+      "osm_id": 6036337595,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Tanawha Tourist Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Mountain Creek",
+      "osm_id": 815583088
     },
     "opening_hours": "Mo-Su 05:00-19:00",
     "phone": "+61752946618"
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

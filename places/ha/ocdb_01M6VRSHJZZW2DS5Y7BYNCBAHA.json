@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "nearest_waterway": "osm",
+    "phone": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,17 @@
       "distance_m": 20,
       "name": "Miller Street"
     },
-    "phone": "+61 466 355 886"
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Springton Creek",
+      "osm_id": 176435434
+    },
+    "phone": "+61 466 355 886",
+    "protected_area": {
+      "name": "Barossa Valley District",
+      "osm_id": 5261942,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6VRSHJZZW2DS5Y7BYNCBAHA",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

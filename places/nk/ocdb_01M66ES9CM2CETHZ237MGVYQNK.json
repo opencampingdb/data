@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -22,7 +24,19 @@
       "distance_m": 2860,
       "name": "Wahine Drive Boat Ramp"
     },
-    "operator": "Redland City Council"
+    "nearest_feature": {
+      "distance_m": 730,
+      "name": "Koureyabba",
+      "osm_id": 4336421496,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "operator": "Redland City Council",
+    "protected_area": {
+      "name": "Moreton Bay Marine Park (IUCN Cat IV Parts)",
+      "osm_id": 7930278,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9CM2CETHZ237MGVYQNK",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

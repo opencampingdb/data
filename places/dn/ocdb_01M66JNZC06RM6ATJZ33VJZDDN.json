@@ -8,6 +8,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -36,6 +37,11 @@
     "nearest_major_road": {
       "distance_m": 80
     },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Burrangong Creek",
+      "osm_id": 209941112
+    },
     "operator": "EG Australia",
     "website": "https://eg-australia.com/eg-store-locator/"
   },
@@ -55,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

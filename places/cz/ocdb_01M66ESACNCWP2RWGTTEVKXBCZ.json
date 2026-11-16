@@ -14,8 +14,11 @@
     "locality": "osm",
     "motorbikes": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -48,8 +51,25 @@
       "distance_m": 100,
       "name": "North Era Beach"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "North Era Beach",
+      "osm_id": 23784597,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Collary Gully",
+      "osm_id": 528007166
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61295420648",
+    "protected_area": {
+      "name": "Royal National Park",
+      "osm_id": 285416,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -72,5 +92,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

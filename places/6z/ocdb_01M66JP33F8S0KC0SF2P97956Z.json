@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,9 +15,21 @@
       "distance_m": 1660,
       "name": "Pontoon - House Ground Tank"
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Mungo",
+      "osm_id": 183253235,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 490,
       "name": "Arumpo Road"
+    },
+    "protected_area": {
+      "name": "Willandra Lakes Region World Heritage Area",
+      "osm_id": 5993833,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -34,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

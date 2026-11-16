@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Dinner Plain",
       "osm_id": 251155078,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Precipice Creek",
+      "osm_id": 911425524
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

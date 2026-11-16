@@ -11,8 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -38,11 +40,23 @@
       "distance_m": 1590,
       "name": "Shelly Beach"
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Western Port",
+      "osm_id": 13053988,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Ventnor Road"
     },
     "phone": "+61359512820",
+    "protected_area": {
+      "name": "Phillip Island Nature Park",
+      "osm_id": 9261379,
+      "osm_type": "relation"
+    },
     "website": "http://www.penguins.org.au"
   },
   "group": "attraction",
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -31,9 +33,21 @@
       "distance_m": 670,
       "name": "Boat Launch Ramp No.1"
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Carrum Beach",
+      "osm_id": 178758777,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Nepean Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Patterson River",
+      "osm_id": 298020384
     },
     "opening_hours": "24/7",
     "wheelchair": true
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

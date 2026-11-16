@@ -9,7 +9,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -35,9 +37,21 @@
     "nearest_boat_ramp": {
       "distance_m": 340
     },
+    "nearest_feature": {
+      "distance_m": 730,
+      "name": "Trevors Corner",
+      "osm_id": 4069734583,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "10"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Camden Haven Inlet",
+      "osm_id": 447581737
     },
     "phone": "+61 2 6559 9088",
     "website": "https://www.woongarramotel.com.au/"
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

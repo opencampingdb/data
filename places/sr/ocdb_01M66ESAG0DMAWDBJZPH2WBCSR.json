@@ -3,7 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -19,7 +21,17 @@
       "osm_id": 252839015,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Loddon River",
+      "osm_id": 231801523
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Franklin-Gordon Wild Rivers National Park",
+      "osm_id": 6206896,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

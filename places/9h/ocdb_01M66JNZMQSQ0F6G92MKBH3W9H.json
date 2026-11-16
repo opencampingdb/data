@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -24,6 +26,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2760
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Barrenjoey Headland",
+      "osm_id": 1417494221,
+      "osm_type": "way",
+      "type": "cape"
+    },
+    "protected_area": {
+      "name": "Ku-ring-gai Chase National Park",
+      "osm_id": 5989782,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "attraction",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,8 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fuels": [
@@ -23,6 +24,11 @@
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Burley Griffin Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bygoo Creek",
+      "osm_id": 717421249
     }
   },
   "group": "services",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

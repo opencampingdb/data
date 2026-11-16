@@ -1,6 +1,22 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_feature": "osm",
+    "protected_area": "osm"
+  },
+  "facts": {
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Scott Cove",
+      "osm_id": 3020493838,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Western Kangaroo Island Marine Park",
+      "osm_id": 13945708,
+      "osm_type": "relation"
+    }
+  },
   "group": "attraction",
   "id": "ocdb_01M66JNXGZ0EFZ69SPTBH493KB",
   "kind": "attraction",
@@ -17,5 +33,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

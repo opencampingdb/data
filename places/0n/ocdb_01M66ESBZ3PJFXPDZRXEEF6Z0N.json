@@ -1,6 +1,20 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
+  },
+  "facts": {
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Douglas River",
+      "osm_id": 99152416
+    },
+    "protected_area": {
+      "name": "Douglas River / Daly River Esplanade Conservation Area",
+      "osm_id": 12993060,
+      "osm_type": "relation"
+    }
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESBZ3PJFXPDZRXEEF6Z0N",
   "kind": "campground",
@@ -17,5 +31,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

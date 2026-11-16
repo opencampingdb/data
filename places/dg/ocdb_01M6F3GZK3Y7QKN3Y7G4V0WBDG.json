@@ -8,7 +8,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -33,9 +35,21 @@
     "nearest_boat_ramp": {
       "distance_m": 160
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Adelaide Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Gol Gol Creek",
+      "osm_id": 547361186
     },
     "phone": "+61 3 5024 8492",
     "website": "https://golgolpub.com.au/"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

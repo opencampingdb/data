@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,9 +23,21 @@
       "osm_id": 30917754,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Charing Cross",
+      "osm_id": 13588782341,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Pall Mall"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Bendigo Creek",
+      "osm_id": 174740274
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

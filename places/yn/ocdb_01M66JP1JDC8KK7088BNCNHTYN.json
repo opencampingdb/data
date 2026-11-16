@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +10,18 @@
       "name": "Smoky Bay",
       "osm_id": 1679244878,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Nuyts Archipelago Marine Park",
+      "osm_id": 13945538,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -26,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

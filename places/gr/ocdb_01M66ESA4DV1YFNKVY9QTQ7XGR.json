@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -19,7 +21,19 @@
       "osm_id": 2143388593,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "operator": "District Council of Elliston",
+    "protected_area": {
+      "name": "Lake Newland Conservation Park",
+      "osm_id": 571950,
+      "osm_type": "relation"
+    },
     "showers": true,
     "toilets": true
   },
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

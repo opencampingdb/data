@@ -7,6 +7,7 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -28,6 +29,11 @@
       "type": "town"
     },
     "max_stay": "48h",
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Avon River",
+      "osm_id": 25480016
+    },
     "operator": "Shire of Beverely",
     "showers": false,
     "tents": false,
@@ -49,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

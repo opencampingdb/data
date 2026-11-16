@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -24,7 +26,17 @@
       "osm_id": 11221818201,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Crooked Creek",
+      "osm_id": 493526634
+    },
     "operator": "Tenterfield Endurance Riding Club Inc",
+    "protected_area": {
+      "name": "Girard State Forest",
+      "osm_id": 5927793,
+      "osm_type": "relation"
+    },
     "showers": true,
     "toilets": true,
     "website": "https://tenterfieldendurance.com.au/"
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

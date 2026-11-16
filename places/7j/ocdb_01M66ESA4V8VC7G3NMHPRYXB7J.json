@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -18,6 +20,18 @@
       "name": "Ceduna",
       "osm_id": 32024642,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Wittelbee Conservation Park",
+      "osm_id": 12913225,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

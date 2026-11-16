@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -23,6 +25,16 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2280
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "South-West River",
+      "osm_id": 317733943
+    },
+    "protected_area": {
+      "name": "Kelly Hill Conservation Park",
+      "osm_id": 1013443,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

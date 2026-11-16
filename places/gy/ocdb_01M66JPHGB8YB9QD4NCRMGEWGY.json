@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Queenstown",
       "osm_id": 252839015,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 440,
+      "name": "Dubbil Barril",
+      "osm_id": 4294350174,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "King River",
+      "osm_id": 238549727
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

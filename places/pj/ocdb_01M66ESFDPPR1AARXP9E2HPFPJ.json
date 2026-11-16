@@ -1,14 +1,41 @@
 {
   "fact_sources": {
+    "address": "osm",
     "cabins": "osm",
+    "dump_station": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
     "power": "osm",
     "tents": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "19",
+      "postcode": "2787",
+      "state": "NSW",
+      "street": "Albion Street",
+      "suburb": "Oberon"
+    },
     "cabins": true,
+    "dump_station": true,
     "fee": true,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 450,
+      "name": "Oberon",
+      "osm_id": 33547125,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 450,
+      "name": "Oberon Street"
+    },
     "power": true,
     "tents": true,
     "website": "https://www.jenolanholidaypark.com.au/"
@@ -17,23 +44,27 @@
   "id": "ocdb_01M66ESFDPPR1AARXP9E2HPFPJ",
   "kind": "caravan_park",
   "location": {
-    "lat": -33.700554,
-    "lon": 149.857969
+    "lat": -33.700184,
+    "lon": 149.858005
   },
   "merged_osm": [
     {
-      "id": 911055136,
+      "id": 21902139,
+      "type": "relation"
+    },
+    {
+      "id": 574598389,
       "type": "way"
     }
   ],
-  "name": "Jenolan Holiday Park",
+  "name": "Jenolan Holiday Park;Jenolan Caravan Park",
   "osm": {
-    "id": 574598389,
-    "timestamp": "2021-02-26T00:28:57Z",
+    "id": 911055136,
+    "timestamp": "2026-11-12T04:19:34Z",
     "type": "way",
-    "version": 5
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

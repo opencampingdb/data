@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,6 +20,18 @@
       "name": "Ouyen",
       "osm_id": 10780927727,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Lake Hattah",
+      "osm_id": 1444466904,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Hattah - Kulkyne National Park",
+      "osm_id": 9267287,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

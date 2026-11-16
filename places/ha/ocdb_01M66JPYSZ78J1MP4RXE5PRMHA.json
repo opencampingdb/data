@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "toilets": "osm",
@@ -45,9 +47,21 @@
     "nearest_boat_ramp": {
       "distance_m": 410
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Avalon Beach",
+      "osm_id": 5622266,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Barrenjoey Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Careel Creek",
+      "osm_id": 546735257
     },
     "opening_hours": "Mo-Su 06:00-22:00",
     "phone": "+61 2 8414 1815",
@@ -70,5 +84,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Hawkesbury Heights",
       "osm_id": 117040913,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Grose River",
+      "osm_id": 8763979,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/lookouts/vale-of-avoca-lookout"
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

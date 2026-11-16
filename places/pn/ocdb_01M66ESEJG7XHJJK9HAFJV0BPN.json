@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -21,6 +22,11 @@
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Meander Valley Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Meander River",
+      "osm_id": 217523566
     },
     "wheelchair": true
   },
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

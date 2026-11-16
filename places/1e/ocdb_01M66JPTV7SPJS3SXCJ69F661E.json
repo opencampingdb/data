@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +22,26 @@
     "nearest_beach": {
       "distance_m": 3740
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "White Hill",
+      "osm_id": 12093464144,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Main Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 0,
+      "name": "Spring Creek",
+      "osm_id": 387663685
+    },
+    "protected_area": {
+      "name": "Hepburn Regional Park",
+      "osm_id": 53051823,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

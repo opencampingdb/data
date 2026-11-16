@@ -5,6 +5,8 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -18,6 +20,18 @@
     "lga": {
       "name": "Bulloo Shire",
       "osm_id": 11676708
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Noccundra Waterhole",
+      "osm_id": 191347348,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Wilson River",
+      "osm_id": 194559299
     },
     "operator": "Bulloo Shire Council",
     "showers": true,
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

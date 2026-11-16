@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
@@ -26,9 +28,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1590
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Brisbane River",
+      "osm_id": 1627033,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Bradfield Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Brisbane River",
+      "osm_id": 29124796
     },
     "operator": "RiverCity Ferries",
     "wheelchair": true,
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

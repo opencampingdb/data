@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -15,6 +17,16 @@
       "name": "Hotham Village",
       "osm_id": 11271236430,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Diamantina River",
+      "osm_id": 291100212
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": false
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

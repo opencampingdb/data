@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 97564451,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Adelaide Hill",
+      "osm_id": 9860331402,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Main Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Forest Creek",
+      "osm_id": 28841303
     }
   },
   "group": "attraction",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

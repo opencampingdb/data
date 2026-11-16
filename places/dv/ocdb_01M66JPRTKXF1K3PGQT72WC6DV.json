@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +25,23 @@
     "nearest_boat_ramp": {
       "distance_m": 3060,
       "name": "Kayak Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Geoff Skinner Wetlands",
+      "osm_id": 1603779,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Hilliards Creek",
+      "osm_id": 134727243
+    },
+    "protected_area": {
+      "name": "Moreton Bay Marine Park (IUCN Cat IV Parts)",
+      "osm_id": 7930278,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

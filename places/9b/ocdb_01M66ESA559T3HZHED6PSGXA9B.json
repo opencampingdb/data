@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Netherdale",
       "osm_id": 1665767630,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Moonlight Dam",
+      "osm_id": 170578382,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Homevale National Park",
+      "osm_id": 1491082,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

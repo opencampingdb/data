@@ -8,8 +8,10 @@
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "contributed",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -30,8 +32,20 @@
       "osm_id": 2300348834,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Wilpena Pound",
+      "osm_id": 268218233,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "phone": "+61 1800 805 802",
     "power": true,
+    "protected_area": {
+      "name": "Ikara-Flinders Ranges National Park",
+      "osm_id": 541743,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

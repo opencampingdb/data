@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -31,6 +32,11 @@
       "distance_m": 360,
       "name": "Evans Road"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Rocky Waterholes Creek",
+      "osm_id": 16376354
+    },
     "wheelchair": true
   },
   "group": "services",
@@ -49,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

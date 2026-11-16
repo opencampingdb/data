@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +18,26 @@
       "osm_id": 113373467,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Smiggin Holes",
+      "osm_id": 5705013973,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Kosciuszko Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Smiggin Creek",
+      "osm_id": 443171588
+    },
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

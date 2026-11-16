@@ -4,8 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
     "lga": {
@@ -24,11 +26,19 @@
     "nearest_boat_ramp": {
       "distance_m": 930
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Pertobe",
+      "osm_id": 7564426,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Pertobe Road"
     },
-    "operator": "Local council"
+    "operator": "Local council",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESBTBK8BS2S8DBAPWQDRR",
@@ -40,11 +50,11 @@
   "name": null,
   "osm": {
     "id": 6169807985,
-    "timestamp": "2018-12-29T04:32:20Z",
+    "timestamp": "2026-11-15T08:21:27Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,42 +1,58 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "toilet_type": "osm"
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Shire of Glenelg",
       "osm_id": 3357380
     },
     "locality": {
-      "distance_m": 660,
+      "distance_m": 670,
       "name": "Dartmoor",
       "osm_id": 536319772,
       "type": "village"
     },
     "nearest_major_road": {
-      "distance_m": 470,
+      "distance_m": 460,
       "name": "Lindsay Street"
     },
-    "toilet_type": "pit"
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Glenelg River",
+      "osm_id": 285171653
+    },
+    "protected_area": {
+      "name": "Glenelg River Heritage River",
+      "osm_id": 16348426,
+      "osm_type": "relation"
+    },
+    "toilet_type": "pit",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESBXF8YGBXWVE1R0YGBE0",
   "kind": "public_toilet",
   "location": {
-    "lat": -37.925211,
-    "lon": 141.283427
+    "lat": -37.925049,
+    "lon": 141.283578
   },
-  "name": null,
+  "name": "Fort O'Hare Picnic Area",
   "osm": {
     "id": 6453362835,
-    "timestamp": "2024-01-22T16:40:56Z",
+    "timestamp": "2026-11-14T22:13:42Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

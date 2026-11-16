@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,6 +26,18 @@
       "distance_m": 2870,
       "name": "Wahine Drive Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 750,
+      "name": "Koureyabba",
+      "osm_id": 4336421496,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Moreton Bay Marine Park (IUCN Cat IV Parts)",
+      "osm_id": 7930278,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

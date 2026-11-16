@@ -2,7 +2,10 @@
   "fact_sources": {
     "entry": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -14,6 +17,23 @@
     },
     "nearest_beach": {
       "distance_m": 1850
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Murrumbidgee River",
+      "osm_id": 590214482,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Murrumbidgee River",
+      "osm_id": 358357956
+    },
+    "protected_area": {
+      "name": "Gigerline Nature Reserve",
+      "osm_id": 9417652,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -32,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

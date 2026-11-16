@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +21,12 @@
       "distance_m": 40,
       "name": "Tasman Highway"
     },
-    "operator": "Parks and Wildlife Service Tasmania"
+    "operator": "Parks and Wildlife Service Tasmania",
+    "protected_area": {
+      "name": "Weldborough Pass State Reserve",
+      "osm_id": 6214103,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRJBGGD6A7DH5PR8ZQHR",
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

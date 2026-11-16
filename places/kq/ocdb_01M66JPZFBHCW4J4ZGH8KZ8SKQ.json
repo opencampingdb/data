@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -29,7 +31,19 @@
     "nearest_boat_ramp": {
       "distance_m": 3280
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Dee Why Head",
+      "osm_id": 13928393812,
+      "osm_type": "node",
+      "type": "cape"
+    },
     "operator": "Northern Beaches Council",
+    "protected_area": {
+      "name": "Dee Why Headland Intertidal Protected Area",
+      "osm_id": 1574026080,
+      "osm_type": "way"
+    },
     "website": "https://www.northernbeaches.nsw.gov.au/things-to-do/recreation-area/north-curl-curl-rockpool"
   },
   "group": "attraction",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

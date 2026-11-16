@@ -1,6 +1,7 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +9,11 @@
       "name": "Tharwa",
       "osm_id": 186947418,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Tidbinbilla Nature Reserve",
+      "osm_id": 16344285,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -26,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

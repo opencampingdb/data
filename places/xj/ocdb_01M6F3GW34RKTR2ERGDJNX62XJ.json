@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -27,6 +28,11 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Lachlan Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Gills Bridge Creek",
+      "osm_id": 919110608
     }
   },
   "group": "attraction",
@@ -45,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

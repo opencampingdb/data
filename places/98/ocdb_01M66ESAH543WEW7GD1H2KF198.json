@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,9 +26,21 @@
     "nearest_boat_ramp": {
       "distance_m": 190
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Hunter River",
+      "osm_id": 1240053,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Cowper Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Throsby Creek",
+      "osm_id": 26210871
     },
     "water_type": "fountain"
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

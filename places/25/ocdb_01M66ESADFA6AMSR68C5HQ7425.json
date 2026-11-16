@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,6 +21,18 @@
       "name": "Marulan",
       "osm_id": 251724227,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "B4 Fosil Cave",
+      "osm_id": 3902774268,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "protected_area": {
+      "name": "Bungonia National Park",
+      "osm_id": 6044265,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

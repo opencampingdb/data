@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
     "nearest_beach": {
       "distance_m": 4250,
       "name": "Eagle Gorge Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 370,
+      "name": "Shellhouse",
+      "osm_id": 2291620447,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Kalbarri National Park",
+      "osm_id": 8369343,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

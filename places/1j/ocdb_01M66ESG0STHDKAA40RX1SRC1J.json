@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -21,7 +23,19 @@
       "osm_id": 2143386970,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Lake Gilles",
+      "osm_id": 1189914783,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "South Australian Government",
+    "protected_area": {
+      "name": "Lake Gilles Conservation Park",
+      "osm_id": 558094,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.parks.sa.gov.au/parks/lake-gilles-conservation-park"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

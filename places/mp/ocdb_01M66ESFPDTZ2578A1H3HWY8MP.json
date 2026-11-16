@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +23,26 @@
       "distance_m": 110,
       "name": "Summerland Beach"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Summerland Beach",
+      "osm_id": 28186464,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 490,
       "name": "Ventnor Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Swan Lake Drain",
+      "osm_id": 891206217
+    },
+    "protected_area": {
+      "name": "Phillip Island Nature Park",
+      "osm_id": 9261379,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

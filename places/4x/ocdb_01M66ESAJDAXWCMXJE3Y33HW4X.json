@@ -8,7 +8,9 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "overture"
@@ -30,7 +32,17 @@
       "osm_id": 81312484,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Terarra Creek",
+      "osm_id": 281218254
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Nangar National Park",
+      "osm_id": 6029505,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/terarra-creek-camping-and-picnic-area"
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

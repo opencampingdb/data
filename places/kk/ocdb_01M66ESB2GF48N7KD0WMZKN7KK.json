@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -25,6 +26,11 @@
     },
     "nearest_beach": {
       "distance_m": 2010
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Toongabbie Creek",
+      "osm_id": 370373877
     },
     "showers": true,
     "tents": true,
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

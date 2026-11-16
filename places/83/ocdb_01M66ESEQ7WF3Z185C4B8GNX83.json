@@ -7,8 +7,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -33,11 +36,28 @@
     "nearest_boat_ramp": {
       "distance_m": 540
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Pebble Beach",
+      "osm_id": 14074203,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Murray River Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Murray River",
+      "osm_id": 177256710
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "River Murray Reserve",
+      "osm_id": 7115294,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": false
   },
@@ -57,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

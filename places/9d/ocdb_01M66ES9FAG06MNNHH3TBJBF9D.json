@@ -7,6 +7,10 @@
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -17,29 +21,48 @@
       "suburb": "Muswellbrook"
     },
     "facebook": "https://www.facebook.com/950342351708872",
+    "lga": {
+      "name": "Muswellbrook Shire Council",
+      "osm_id": 6343182
+    },
+    "locality": {
+      "distance_m": 410,
+      "name": "Muswellbrook",
+      "osm_id": 114607613,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 150,
+      "name": "Sydney Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Muscle Creek",
+      "osm_id": 485970753
+    },
     "phone": "+61265412535"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9FAG06MNNHH3TBJBF9D",
   "kind": "caravan_park",
   "location": {
-    "lat": -32.267561,
-    "lon": 150.885438
+    "lat": -32.267419,
+    "lon": 150.885212
   },
   "merged_osm": [
     {
-      "id": 443480391,
-      "type": "way"
+      "id": 966774018,
+      "type": "node"
     }
   ],
   "name": "Riverside Cabin and Van Park",
   "osm": {
-    "id": 966774018,
-    "timestamp": "2010-10-27T12:39:49Z",
-    "type": "node",
-    "version": 1
+    "id": 443480391,
+    "timestamp": "2026-11-11T06:46:18Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,6 +6,7 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -27,6 +28,11 @@
       "distance_m": 150
     },
     "operator": "Redland City Council",
+    "protected_area": {
+      "name": "Moreton Bay Marine Park (IUCN Cat IV Parts)",
+      "osm_id": 7930278,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -45,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +21,23 @@
     "nearest_boat_ramp": {
       "distance_m": 4050,
       "name": "Picnic Point Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Murray River",
+      "osm_id": 2203586,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Murray River",
+      "osm_id": 173320163
+    },
+    "protected_area": {
+      "name": "Murray Valley Regional Park",
+      "osm_id": 5836868,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

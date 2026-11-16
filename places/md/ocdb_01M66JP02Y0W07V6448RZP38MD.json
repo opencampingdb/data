@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Comboyne",
       "osm_id": 114382244,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 770,
+      "name": "Bulgong",
+      "osm_id": 114381797,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Ellenborough River",
+      "osm_id": 195280411
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

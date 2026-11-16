@@ -11,6 +11,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -33,6 +35,18 @@
     "nearest_boat_ramp": {
       "distance_m": 160
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Gil Weir",
+      "osm_id": 405970622,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Dogwood Creek",
+      "osm_id": 142487304
+    },
     "showers": false,
     "toilets": true
   },
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

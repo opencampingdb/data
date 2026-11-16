@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +18,26 @@
       "osm_id": 60819338,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 830,
+      "name": "Dundas",
+      "osm_id": 6036336074,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Northbrook Parkway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Northbrook Creek",
+      "osm_id": 174731836
+    },
+    "protected_area": {
+      "name": "D'Aguilar National Park",
+      "osm_id": 7006909,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

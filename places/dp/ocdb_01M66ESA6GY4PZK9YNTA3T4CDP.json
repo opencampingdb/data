@@ -9,8 +9,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -29,8 +31,20 @@
       "osm_id": 1003754272,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Little Murray Swamp",
+      "osm_id": 407886074,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "operator": "NSW National Parks and Wildlife Service",
-    "phone": "+611300072757"
+    "phone": "+611300072757",
+    "protected_area": {
+      "name": "Barrington Tops National Park",
+      "osm_id": 6111953,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA6GY4PZK9YNTA3T4CDP",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

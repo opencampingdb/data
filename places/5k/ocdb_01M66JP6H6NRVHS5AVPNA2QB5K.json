@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,16 @@
     "nearest_boat_ramp": {
       "distance_m": 500,
       "name": "Wilson Hall Boat Ramp"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Glenelg River",
+      "osm_id": 285171983
+    },
+    "protected_area": {
+      "name": "Glenelg River Heritage River",
+      "osm_id": 16348426,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

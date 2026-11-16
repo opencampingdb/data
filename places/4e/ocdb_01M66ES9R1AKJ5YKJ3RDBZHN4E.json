@@ -8,7 +8,9 @@
     "entry": "osm",
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -27,6 +29,16 @@
       "name": "Mount Beauty",
       "osm_id": 2385074315,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Mountain Creek",
+      "osm_id": 47345974
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -13,6 +14,13 @@
     "lga": {
       "name": "Town of Port Hedland",
       "osm_id": 11690043
+    },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Coolenar Pool",
+      "osm_id": 1513089447,
+      "osm_type": "way",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 120,
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

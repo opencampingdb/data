@@ -2,7 +2,9 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +17,16 @@
       "name": "Dimboola",
       "osm_id": 10772645882,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Wimmera River",
+      "osm_id": 188149622
+    },
+    "protected_area": {
+      "name": "Wail State Forest",
+      "osm_id": 166253,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Nayook",
       "osm_id": 12769425141,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Barrel Creek",
+      "osm_id": 1381326496
+    },
+    "protected_area": {
+      "name": "Ada River Sawmills Historic and Cultural Features Reserve",
+      "osm_id": 9296690,
+      "osm_type": "relation"
     },
     "wifi": false
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

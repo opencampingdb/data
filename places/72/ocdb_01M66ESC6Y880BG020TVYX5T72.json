@@ -3,7 +3,8 @@
     "entry": "osm",
     "hot_water": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -17,6 +18,11 @@
       "name": "Gloucester",
       "osm_id": 39091652,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Gloucester River",
+      "osm_id": 13729043
     }
   },
   "group": "utility",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

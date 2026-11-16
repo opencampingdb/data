@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Coburg Lake",
+      "osm_id": 898601,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Gaffney Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Merri Creek",
+      "osm_id": 582855310
     },
     "wheelchair": true
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -26,6 +28,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2890
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Little Cove",
+      "osm_id": 61281920,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Noosa National Park",
+      "osm_id": 1506302,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

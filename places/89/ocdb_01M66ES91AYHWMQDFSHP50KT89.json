@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -19,7 +21,17 @@
       "osm_id": 256017271,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Delegate River",
+      "osm_id": 467946382
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Delegate River Streamside Reserve",
+      "osm_id": 666584963,
+      "osm_type": "way"
+    },
     "showers": false,
     "toilets": true
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

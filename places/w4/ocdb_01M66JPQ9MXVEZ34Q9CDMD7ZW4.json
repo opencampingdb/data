@@ -3,7 +3,8 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -24,6 +25,11 @@
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Springfield Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Troups Creek East Branch",
+      "osm_id": 102213466
     }
   },
   "group": "services",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

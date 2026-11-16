@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -26,9 +28,21 @@
       "distance_m": 2890,
       "name": "Deep Water Point"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Bull Creek Wetlands",
+      "osm_id": 240365832,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Karel Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Bull Creek",
+      "osm_id": 310758790
     },
     "toilet_type": "flush",
     "wheelchair": false
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

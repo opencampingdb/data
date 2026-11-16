@@ -4,8 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,8 +27,20 @@
     "nearest_boat_ramp": {
       "distance_m": 60
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Narrabeen Lagoon",
+      "osm_id": 2248380,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "opening_hours": "Mo-Su 06:00-21:00",
-    "operator": "Warringah Council"
+    "operator": "Warringah Council",
+    "protected_area": {
+      "name": "Jamieson Park",
+      "osm_id": 1557876798,
+      "osm_type": "way"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBYJDW664PE5WB2TENJR",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

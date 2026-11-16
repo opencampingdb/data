@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
@@ -30,8 +32,20 @@
     "nearest_boat_ramp": {
       "distance_m": 4310
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Cooks River",
+      "osm_id": 2023911,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 370
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Cooks River",
+      "osm_id": 380547866
     },
     "operator": "City of Canterbury-Bankstown",
     "water_type": "fountain",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Bourke Shire Council",
       "osm_id": 5892186
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Warrego River",
+      "osm_id": 796340343
+    },
+    "protected_area": {
+      "name": "Toorale National Park",
+      "osm_id": 6148781,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

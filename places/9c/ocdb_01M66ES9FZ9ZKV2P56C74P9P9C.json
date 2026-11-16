@@ -3,6 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,6 +20,23 @@
       "name": "Moonan Flat",
       "osm_id": 1003754272,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Polblue Swamp",
+      "osm_id": 409498875,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Polblue Creek",
+      "osm_id": 409502052
+    },
+    "protected_area": {
+      "name": "Barrington Tops National Park",
+      "osm_id": 6111953,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

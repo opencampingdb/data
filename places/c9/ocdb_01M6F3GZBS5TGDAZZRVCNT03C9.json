@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -39,9 +41,21 @@
       "distance_m": 1820,
       "name": "Kremur Street Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Murray River",
+      "osm_id": 2203586,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Wodonga Place"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Oddies Creek",
+      "osm_id": 450039730
     },
     "phone": "+61260216000",
     "website": "http://www.australiaparkmotel.com.au"
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

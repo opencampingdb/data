@@ -10,6 +10,8 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -32,6 +34,18 @@
       "osm_id": 941125358,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "River Torrens",
+      "osm_id": 590859011,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Karrawirra Parri (River Torrens)",
+      "osm_id": 174742688
+    },
     "phone": "(08) 8261 1091",
     "website": "http://www.windsorgardenscaravanpark.com.au"
   },
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

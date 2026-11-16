@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -24,9 +26,21 @@
       "osm_id": 20968413,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 540,
+      "name": "The Gully",
+      "osm_id": 8067150682,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Great Western Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Kedumba River",
+      "osm_id": 869884543
     },
     "phone": "+61 2 4782 4226",
     "website": "https://www.theflyingfox.com.au/",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

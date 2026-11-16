@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,16 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 480
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Boyne River",
+      "osm_id": 593211647
+    },
+    "protected_area": {
+      "name": "Port of Gladstone - Rodds Bay Dugong Protection Area",
+      "osm_id": 16298413,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

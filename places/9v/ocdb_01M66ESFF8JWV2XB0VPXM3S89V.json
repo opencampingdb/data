@@ -4,7 +4,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -23,7 +26,24 @@
       "osm_id": 114371357,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Ladies Well",
+      "osm_id": 631574130,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Allyn River",
+      "osm_id": 631574114
+    },
     "pets": "yes",
+    "protected_area": {
+      "name": "Chichester State Forest",
+      "osm_id": 6298499,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

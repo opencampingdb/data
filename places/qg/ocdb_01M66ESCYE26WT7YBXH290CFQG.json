@@ -6,7 +6,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1668193943431058",
@@ -22,6 +24,18 @@
     },
     "nearest_beach": {
       "distance_m": 130
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Lake McKenzie",
+      "osm_id": 22771943,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Great Sandy National Park",
+      "osm_id": 1507019,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

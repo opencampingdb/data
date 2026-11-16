@@ -10,6 +10,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -34,6 +36,18 @@
     "nearest_boat_ramp": {
       "distance_m": 470
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Myall Lake",
+      "osm_id": 8364732,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Myall Lakes National Park",
+      "osm_id": 3215560,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/neranie-campground-and-picnic-area"
   },
   "group": "overnight",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -16,6 +17,13 @@
       "name": "Woodford",
       "osm_id": 298692557,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Lake Gkula",
+      "osm_id": 13553374,
+      "osm_type": "relation",
+      "type": "water"
     },
     "wheelchair": true
   },
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

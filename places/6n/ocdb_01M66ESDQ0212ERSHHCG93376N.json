@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 140
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Emigrant Creek",
+      "osm_id": 23587,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "River Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Emigrant Creek",
+      "osm_id": 159640006
     }
   },
   "group": "utility",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

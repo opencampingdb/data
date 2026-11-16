@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,6 +20,16 @@
       "name": "Upper Horton",
       "osm_id": 111352220,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Horton River",
+      "osm_id": 209695484
+    },
+    "protected_area": {
+      "name": "Horton Falls National Park",
+      "osm_id": 6026417,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

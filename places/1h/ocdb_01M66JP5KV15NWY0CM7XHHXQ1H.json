@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -19,6 +21,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1800
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Murray River",
+      "osm_id": 165400300
     },
     "operator": "Coomealla Mountainless Mountain Bike Club",
     "website": "https://mountainlessbikeclub.net.au/"
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

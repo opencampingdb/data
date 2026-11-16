@@ -13,7 +13,9 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "pub": "osm",
     "website": "overture"
@@ -44,9 +46,21 @@
     "nearest_boat_ramp": {
       "distance_m": 90
     },
+    "nearest_feature": {
+      "distance_m": 520,
+      "name": "Jingellic",
+      "osm_id": 113712789,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Jingellic South Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Horse Creek",
+      "osm_id": 205178299
     },
     "phone": "+61260371290",
     "pub": true,
@@ -68,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -24,6 +25,11 @@
       "distance_m": 70,
       "name": "Main Street"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Murray River",
+      "osm_id": 154643191
+    },
     "operator": "Towong Shire Council"
   },
   "group": "attraction",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

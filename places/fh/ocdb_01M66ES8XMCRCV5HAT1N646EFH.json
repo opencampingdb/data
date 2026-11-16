@@ -11,7 +11,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -33,7 +34,12 @@
     "nearest_beach": {
       "distance_m": 150
     },
-    "phone": "+61898400400"
+    "phone": "+61898400400",
+    "protected_area": {
+      "name": "D'Entrecasteaux National Park",
+      "osm_id": 7743426,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES8XMCRCV5HAT1N646EFH",
@@ -51,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

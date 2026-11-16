@@ -8,6 +8,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm"
   },
   "facts": {
@@ -32,6 +33,11 @@
       "distance_m": 30,
       "name": "Watson Street"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Molong Creek",
+      "osm_id": 258583543
+    },
     "phone": "+61 2 6366 8280"
   },
   "group": "services",
@@ -50,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

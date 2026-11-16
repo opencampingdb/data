@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -17,9 +20,26 @@
       "osm_id": 324884969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 470,
+      "name": "National Park",
+      "osm_id": 4293047115,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Gordon River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Tyenna River",
+      "osm_id": 295465843
+    },
+    "protected_area": {
+      "name": "Mount Field National Park",
+      "osm_id": 3004976,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

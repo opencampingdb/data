@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
@@ -25,6 +26,11 @@
     },
     "nearest_major_road": {
       "distance_m": 10
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Bundabah Creek",
+      "osm_id": 75805330
     },
     "operator": "Transport for NSW",
     "picnic_tables": true,
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

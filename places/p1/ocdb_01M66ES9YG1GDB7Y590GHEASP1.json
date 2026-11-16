@@ -6,6 +6,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -27,6 +29,16 @@
       "distance_m": 80,
       "name": "Tooma Road"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Shingle Creek",
+      "osm_id": 248365670
+    },
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true
   },
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

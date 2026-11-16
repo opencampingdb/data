@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -40,9 +42,21 @@
     "nearest_boat_ramp": {
       "distance_m": 270
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Murray River",
+      "osm_id": 2203586,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Deniliquin Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Murray River",
+      "osm_id": 173320123
     },
     "phone": "+61358742078"
   },
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

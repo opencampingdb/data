@@ -2,6 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -10,6 +12,18 @@
     "lga": {
       "name": "Macdonnell Region",
       "osm_id": 11716646
+    },
+    "nearest_feature": {
+      "distance_m": 840,
+      "name": "Hugh Gorge Waterhole",
+      "osm_id": 3034921417,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Tjoritja / West MacDonnell National Park",
+      "osm_id": 8329105,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

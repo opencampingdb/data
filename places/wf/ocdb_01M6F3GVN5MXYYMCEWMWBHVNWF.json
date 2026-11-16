@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 244593781,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Woodsdale",
+      "osm_id": 4293047170,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Woodsdale Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Nutting Garden Rivulet",
+      "osm_id": 667858090
     },
     "phone": "+61362546171",
     "website": "http://thewoodsdalemuseum.edublogs.org"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }
