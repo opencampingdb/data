@@ -1,10 +1,19 @@
 {
+  "fact_dates": {
+    "caravans": "2026-11-16T13:38:52Z",
+    "swimming": "2026-11-16T13:38:52Z",
+    "tents": "2026-11-16T13:38:52Z"
+  },
   "fact_sources": {
+    "caravans": "feedback",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "swimming": "feedback",
+    "tents": "feedback"
   },
   "facts": {
+    "caravans": true,
     "lga": {
       "name": "Cook Shire",
       "osm_id": 11677441
@@ -18,7 +27,9 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Peninsula Developmental Road"
-    }
+    },
+    "swimming": true,
+    "tents": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA3YVDFQDK9JDSMX5ZVT",
@@ -36,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T13:38:52Z"
 }
