@@ -1,12 +1,19 @@
 {
   "fact_dates": {
     "access": "2024-01-01T00:00:00Z",
-    "bins": "2024-01-01T00:00:00Z"
+    "bins": "2024-01-01T00:00:00Z",
+    "caravans": "2026-11-16T13:38:52Z",
+    "dangerous_when_wet": "2026-11-16T13:38:52Z",
+    "self_contained_only": "2026-11-16T13:38:52Z",
+    "tents": "2026-11-16T13:38:52Z",
+    "website": "2026-11-16T13:38:52Z"
   },
   "fact_sources": {
     "access": "community_report",
     "address": "osm",
     "bins": "community_report",
+    "caravans": "feedback",
+    "dangerous_when_wet": "feedback",
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
@@ -14,7 +21,9 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "operator": "osm",
-    "website": "osm"
+    "self_contained_only": "feedback",
+    "tents": "feedback",
+    "website": "feedback"
   },
   "facts": {
     "access": "4wd",
@@ -22,6 +31,8 @@
       "street": "Notch Point Road"
     },
     "bins": true,
+    "caravans": "offroad",
+    "dangerous_when_wet": true,
     "entry": "public",
     "fee": false,
     "lga": {
@@ -42,7 +53,9 @@
       "distance_m": 210
     },
     "operator": "Isaac Regional Council",
-    "website": "https://www.isaac.qld.gov.au/greenhill-ilbilbie/greenhill-ilbilbie-1"
+    "self_contained_only": true,
+    "tents": true,
+    "website": "https://www.isaac.qld.gov.au/Tourism/Camping-across-Isaac/Notch-Point"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFW8VEQKDQQK6F4Y9DR0",
@@ -60,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T13:38:52Z"
 }
