@@ -6,8 +6,10 @@
     "lga": "osm",
     "locality": "osm",
     "motorhomes": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -28,8 +30,18 @@
       "type": "village"
     },
     "motorhomes": true,
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Mopra Creek",
+      "osm_id": 1060011264
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "power": false,
+    "protected_area": {
+      "name": "Warrumbungle National Park",
+      "osm_id": 5836978,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

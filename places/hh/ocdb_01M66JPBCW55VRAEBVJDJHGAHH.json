@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,16 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "McKillops Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Snowy River",
+      "osm_id": 446944011
+    },
+    "protected_area": {
+      "name": "Snowy River Heritage River",
+      "osm_id": 16487232,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

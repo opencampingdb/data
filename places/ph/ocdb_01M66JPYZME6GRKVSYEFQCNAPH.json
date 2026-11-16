@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -31,9 +33,21 @@
       "osm_id": 124405711,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Lake Hamilton",
+      "osm_id": 2734266,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Ballarat Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Grange Burn",
+      "osm_id": 46606371
     },
     "phone": "+61355721573"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

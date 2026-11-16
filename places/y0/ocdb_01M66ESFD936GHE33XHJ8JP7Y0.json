@@ -9,6 +9,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -32,6 +34,18 @@
     },
     "nearest_beach": {
       "distance_m": 550
+    },
+    "nearest_feature": {
+      "distance_m": 730,
+      "name": "Princetown",
+      "osm_id": 131102871,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Gellibrand River",
+      "osm_id": 355966183
     },
     "phone": "0457198662",
     "website": "https://greatoceanroadparks.com.au/princetown"
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

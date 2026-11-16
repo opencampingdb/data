@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "website": "overture"
@@ -33,6 +34,13 @@
     "nearest_boat_ramp": {
       "distance_m": 190
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Lake Cargelligo",
+      "osm_id": 1872999,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 210
     },
@@ -55,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

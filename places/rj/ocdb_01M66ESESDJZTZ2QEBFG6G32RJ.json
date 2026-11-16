@@ -12,9 +12,12 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -42,12 +45,29 @@
       "osm_id": 2270203043,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 640,
+      "name": "Yarrangobilly",
+      "osm_id": 113713430,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Snowy Mountains Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Yarongabilly River",
+      "osm_id": 442403689
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0269477025",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -69,5 +89,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

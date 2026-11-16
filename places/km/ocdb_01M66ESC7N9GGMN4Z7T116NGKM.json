@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +22,26 @@
     "nearest_beach": {
       "distance_m": 3420
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Tarmaroo Pool",
+      "osm_id": 497985263,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 500,
       "name": "Heathcote Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Heathcote Creek",
+      "osm_id": 43110893
+    },
+    "protected_area": {
+      "name": "Heathcote National Park",
+      "osm_id": 1282169,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

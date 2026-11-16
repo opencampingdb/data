@@ -3,6 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -16,6 +19,23 @@
       "name": "St Andrews",
       "osm_id": 75040965,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Bob's Wetlands",
+      "osm_id": 912219456,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Yarra River",
+      "osm_id": 25564198
+    },
+    "protected_area": {
+      "name": "Warrandyte State Park",
+      "osm_id": 9267544,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

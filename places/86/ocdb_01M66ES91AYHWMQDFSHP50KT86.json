@@ -6,6 +6,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -22,6 +24,16 @@
     "nearest_beach": {
       "distance_m": 3680,
       "name": "West Beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Thurra River",
+      "osm_id": 1478534795
+    },
+    "protected_area": {
+      "name": "Croajingolong National Park",
+      "osm_id": 9202648,
+      "osm_type": "relation"
     },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/thurra-river-campground"
   },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

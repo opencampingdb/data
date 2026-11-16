@@ -10,8 +10,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "contributed"
   },
@@ -37,11 +39,23 @@
       "distance_m": 3230,
       "name": "Catamaran Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Fords Green",
+      "osm_id": 13680667903,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Cockle Creek Road"
     },
     "operator": "Tasmania Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/southwest-national-park/cockle-creek-camping"
   },
@@ -78,5 +92,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

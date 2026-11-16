@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 267902536,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Kelly Hill Caves",
+      "osm_id": 267902555,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "South Coast Road"
+    },
+    "protected_area": {
+      "name": "Kelly Hill Conservation Park",
+      "osm_id": 1013443,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

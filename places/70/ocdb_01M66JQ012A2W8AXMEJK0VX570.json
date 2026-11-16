@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "private",
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 10
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Woolooware Bay",
+      "osm_id": 1333569,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Captain Cook Drive"
+    },
+    "protected_area": {
+      "name": "Towra Point Aquatic Reserve (Refuge Zone)",
+      "osm_id": 16817700,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

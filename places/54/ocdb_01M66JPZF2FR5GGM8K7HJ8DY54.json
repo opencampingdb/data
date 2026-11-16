@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Kerang",
       "osm_id": 145478410,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "First Reedy Lake",
+      "osm_id": 178573775,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Middle and Reedy Lake Nature Reserve",
+      "osm_id": 225412450,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

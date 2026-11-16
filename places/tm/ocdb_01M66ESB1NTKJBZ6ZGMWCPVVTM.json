@@ -12,6 +12,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
     "showers": "osm",
@@ -43,6 +45,18 @@
     "nearest_beach": {
       "distance_m": 170
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Wooyung",
+      "osm_id": 114633168,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Billinudgel Creek",
+      "osm_id": 577774269
+    },
     "phone": "+61266771300",
     "power": true,
     "showers": true,
@@ -73,5 +87,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

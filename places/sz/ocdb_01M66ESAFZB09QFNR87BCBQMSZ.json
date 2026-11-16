@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,6 +26,16 @@
       "distance_m": 170,
       "name": "Ballarat Road"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Maribyrnong River",
+      "osm_id": 20076471
+    },
+    "protected_area": {
+      "name": "Pipemakers, Burndap and Footscay Park Parklands (COM)",
+      "osm_id": 17914911,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

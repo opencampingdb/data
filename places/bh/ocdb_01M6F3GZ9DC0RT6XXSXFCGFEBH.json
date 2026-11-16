@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "phone_2": "osm",
     "wifi": "osm"
@@ -27,6 +29,18 @@
       "distance_m": 3880,
       "name": "Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Eckert Wide Water",
+      "osm_id": 306107944,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Eckert Creek",
+      "osm_id": 306544098
+    },
     "phone": "+61 8 8583 7365",
     "phone_2": "+61 408 899 058",
     "wifi": false
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

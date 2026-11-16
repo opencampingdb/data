@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,7 +26,12 @@
       "distance_m": 380,
       "name": "Bridgewater Road"
     },
-    "operator": "Parks Victoria"
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Discovery Bay Coastal Park",
+      "osm_id": 9223216,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCV4ZEDKH1VTKRRN99KF",
@@ -43,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

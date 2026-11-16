@@ -10,7 +10,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -35,7 +38,24 @@
       "osm_id": 83353490,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 520,
+      "name": "Nanga Brook",
+      "osm_id": 217692395,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Nanga Brook",
+      "osm_id": 660123830
+    },
     "phone": "0895381078",
+    "protected_area": {
+      "name": "Lane Poole Reserve",
+      "osm_id": 12936746,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "website": "https://exploreparks.dbca.wa.gov.au/site/nanga-brook-campground"
@@ -56,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

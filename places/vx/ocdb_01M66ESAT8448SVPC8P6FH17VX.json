@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Yarralin",
       "osm_id": 3268092465,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Gunbunbu Waterhole",
+      "osm_id": 3631302672,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Humbert River",
+      "osm_id": 320357254
+    },
+    "protected_area": {
+      "name": "Judbarra / Gregory National Park",
+      "osm_id": 8340969,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

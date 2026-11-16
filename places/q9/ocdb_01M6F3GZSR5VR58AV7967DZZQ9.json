@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -29,9 +31,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1290
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Tweed River",
+      "osm_id": 8356866,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Tweed Valley Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Tweed River",
+      "osm_id": 174944929
     },
     "opening_hours": "Mo-Th 09:00-22:00; Fr,Sa 09:00-24:00; Su 00:00-03:00,10:00-22:00",
     "phone": "+61 2 6672 1006",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

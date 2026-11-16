@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -33,9 +35,21 @@
       "osm_id": 97564451,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Lake Joanna",
+      "osm_id": 4024595,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Barker Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Barkers Creek",
+      "osm_id": 28757703
     },
     "phone": "+61 3 5472 1125",
     "website": "https://www.big4.com.au/caravan-parks/vic/goldfields/castlemaine-gardens-holiday-park",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

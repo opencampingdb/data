@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture",
     "wifi": "osm"
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1030
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Torakina Beach",
+      "osm_id": 5174290,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 390,
       "name": "Tweed Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Simpsons Creek",
+      "osm_id": 403434846
     },
     "phone": "+61266851070",
     "website": "http://www.brunswickriverinn.com.au",
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +16,12 @@
       "osm_id": 519940187,
       "type": "village"
     },
-    "operator": "United States Army Air Forces"
+    "operator": "United States Army Air Forces",
+    "protected_area": {
+      "name": "Kroombit Tops National Park",
+      "osm_id": 1502994,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JNYSWVBQ0R6Z2CT5PNM7B",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

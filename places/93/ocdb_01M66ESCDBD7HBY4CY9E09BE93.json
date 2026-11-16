@@ -8,7 +8,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "overture"
@@ -31,7 +33,17 @@
       "osm_id": 113393311,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Murrumbidgee River",
+      "osm_id": 339934137
+    },
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Yanga National Park",
+      "osm_id": 7132770,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mamanga-campground"
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,35 +2,73 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Northern Beaches Council",
+      "osm_id": 2978550
+    },
+    "locality": {
+      "distance_m": 4790,
+      "name": "Mona Vale",
+      "osm_id": 117078564,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 10,
       "name": "Narrabeen Beach"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 630,
+      "name": "Manly Warringah Kayak Club"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Narrabeen Beach",
+      "osm_id": 14040977,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Pittwater Road"
+    },
     "showers": true,
+    "toilet_type": "flush",
     "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ES8YRZ2SZ0SCQ1A3CPXZZ",
   "kind": "public_toilet",
   "location": {
-    "lat": -33.719936,
-    "lon": 151.299197
+    "lat": -33.719946,
+    "lon": 151.299207
   },
+  "merged_osm": [
+    {
+      "id": 288382387,
+      "type": "node"
+    }
+  ],
   "name": null,
   "osm": {
-    "id": 288382387,
-    "timestamp": "2026-08-25T10:59:50Z",
-    "type": "node",
-    "version": 8
+    "id": 1576467956,
+    "timestamp": "2026-11-08T05:04:38Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -24,9 +27,26 @@
       "distance_m": 20,
       "name": "Kilcunda East Beach"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Kilcunda East Beach",
+      "osm_id": 1040098625,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Bass Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Bourne Creek",
+      "osm_id": 633247376
+    },
+    "protected_area": {
+      "name": "Wonthaggi Railway Historic Reserve",
+      "osm_id": 9221693,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

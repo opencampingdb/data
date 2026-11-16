@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,7 +34,19 @@
     "nearest_beach": {
       "distance_m": 170
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Saltwater Creek",
+      "osm_id": 9799780,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Beowa National Park",
+      "osm_id": 5719126,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/saltwater-creek-campground"
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

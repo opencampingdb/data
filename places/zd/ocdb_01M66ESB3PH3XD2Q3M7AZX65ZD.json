@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,18 @@
     },
     "nearest_beach": {
       "distance_m": 1440
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Fresh water spring",
+      "osm_id": 4359439022,
+      "osm_type": "node",
+      "type": "spring"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Smiths Creek",
+      "osm_id": 244647587
     }
   },
   "group": "utility",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -26,9 +28,21 @@
       "distance_m": 410,
       "name": "Isle of Capri Public Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Northcliffe Beach",
+      "osm_id": 986843614,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Surfers Paradise Boulevard"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Nerang River",
+      "osm_id": 593943553
     },
     "water_type": "fountain"
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

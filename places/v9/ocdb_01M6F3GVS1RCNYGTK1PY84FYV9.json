@@ -11,6 +11,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "overture",
@@ -38,6 +39,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1500
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Top Lake",
+      "osm_id": 329596202,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "East Terrace"
@@ -62,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

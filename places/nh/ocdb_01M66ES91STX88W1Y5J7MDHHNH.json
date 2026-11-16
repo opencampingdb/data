@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -34,9 +36,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1070
     },
+    "nearest_feature": {
+      "distance_m": 350,
+      "name": "Walker Flat",
+      "osm_id": 5441352815,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Angas Valley Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Murray River",
+      "osm_id": 173241448
     },
     "operator": "Seventh-Day Adventist Church",
     "phone": "+61 428 440 133",
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

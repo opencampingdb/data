@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm"
   },
@@ -27,6 +28,11 @@
       "distance_m": 20,
       "name": "Main Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Cocked Hat Creek",
+      "osm_id": 177294958
+    },
     "opening_hours": "Mo-Sa 05:00-23:00; Su 06:00-21:00",
     "operator": "Pearl Energy"
   },
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

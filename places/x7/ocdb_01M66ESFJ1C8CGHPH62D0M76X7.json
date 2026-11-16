@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -20,6 +22,16 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Miller Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Yea River",
+      "osm_id": 62182000
+    },
+    "protected_area": {
+      "name": "Yea River, Yea Streamside Reserve",
+      "osm_id": 9210307,
+      "osm_type": "relation"
     },
     "tents": true,
     "website": "https://www.yeariverside.com.au/"
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

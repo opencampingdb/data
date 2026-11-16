@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +21,12 @@
       "distance_m": 50,
       "name": "Kauri Creek Boat Ramp"
     },
-    "operator": "Council"
+    "operator": "Council",
+    "protected_area": {
+      "name": "Tuan State Forest",
+      "osm_id": 8812793,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESD7BX9HVCQ9VSYBPEAVD",
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

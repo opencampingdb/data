@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +16,13 @@
       "name": "Hastings",
       "osm_id": 31617240,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Yumarrala Wetlands",
+      "osm_id": 595096843,
+      "osm_type": "way",
+      "type": "wetland"
     }
   },
   "group": "utility",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

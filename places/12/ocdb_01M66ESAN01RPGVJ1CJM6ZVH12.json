@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "private",
@@ -17,7 +19,17 @@
       "osm_id": 1686474719,
       "type": "village"
     },
-    "operator": "Namoi District Scouts"
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Bullawa Creek",
+      "osm_id": 298802584
+    },
+    "operator": "Namoi District Scouts",
+    "protected_area": {
+      "name": "Mount Kaputar National Park",
+      "osm_id": 5837096,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAN01RPGVJ1CJM6ZVH12",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

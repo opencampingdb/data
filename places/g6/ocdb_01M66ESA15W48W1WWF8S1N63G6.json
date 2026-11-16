@@ -7,6 +7,7 @@
     "locality": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -29,6 +30,11 @@
       "distance_m": 70,
       "name": "Burnett Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Finnigan Creek",
+      "osm_id": 1204561635
+    },
     "tents": true,
     "toilets": false
   },
@@ -48,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

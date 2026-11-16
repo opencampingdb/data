@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "showers": "osm",
     "toilet_type": "osm"
   },
@@ -27,6 +28,13 @@
       "distance_m": 740,
       "name": "paddlecraft launch point"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Nathan Road Wetlands Reserve",
+      "osm_id": 17891871,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
     "showers": true,
     "toilet_type": "flush"
   },
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

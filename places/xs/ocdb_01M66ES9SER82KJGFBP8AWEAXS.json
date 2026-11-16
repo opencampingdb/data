@@ -10,7 +10,12 @@
     "address": "overture",
     "facebook": "overture",
     "fee": "community_report",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -23,9 +28,33 @@
     },
     "facebook": "https://www.facebook.com/726836980660899",
     "fee": true,
+    "lga": {
+      "name": "Byron Shire Council",
+      "osm_id": 6170304
+    },
+    "locality": {
+      "distance_m": 1030,
+      "name": "Byron Bay",
+      "osm_id": 26010100,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 80,
       "name": "Belongil Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1720
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Belongil Beach",
+      "osm_id": 306312031,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 120,
+      "name": "Shirley Street"
     },
     "phone": "+61266856544",
     "website": "http://www.firstsunholidaypark.com.au"
@@ -34,23 +63,23 @@
   "id": "ocdb_01M66ES9SER82KJGFBP8AWEAXS",
   "kind": "caravan_park",
   "location": {
-    "lat": -28.641076,
-    "lon": 153.61151
+    "lat": -28.640979,
+    "lon": 153.611289
   },
   "merged_osm": [
     {
-      "id": 571838021,
-      "type": "way"
+      "id": 1682656557,
+      "type": "node"
     }
   ],
-  "name": "First Sun",
+  "name": "First Sun Holiday Park",
   "osm": {
-    "id": 1682656557,
-    "timestamp": "2014-10-12T21:15:28Z",
-    "type": "node",
-    "version": 2
+    "id": 571838021,
+    "timestamp": "2026-11-09T06:54:19Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

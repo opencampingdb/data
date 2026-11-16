@@ -3,7 +3,8 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -17,6 +18,13 @@
       "name": "Tremont",
       "osm_id": 2603797837,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Anniversary Lake",
+      "osm_id": 48878412,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "attraction",
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

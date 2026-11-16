@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +21,12 @@
       "distance_m": 410,
       "name": "Cobden - Warrnambool Road"
     },
-    "operator": "Trust for Nature"
+    "operator": "Trust for Nature",
+    "protected_area": {
+      "name": "Unnamed P0126 Private Nature Reserve",
+      "osm_id": 16354059,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESAHTXKHZ142K4HT7E183",
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +18,12 @@
       "osm_id": 341864205,
       "type": "village"
     },
-    "operator": "Parks Victoria"
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Brisbane Ranges National Park",
+      "osm_id": 9216331,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESG32ZXKMD5TV5EWZ7ZMM",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

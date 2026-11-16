@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -20,7 +22,17 @@
       "distance_m": 40,
       "name": "Adavale Road"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Ambathala Creek",
+      "osm_id": 740088442
+    },
     "operator": "Quilpie Shire",
+    "protected_area": {
+      "name": "Lake Dartmouth Nature Refuge",
+      "osm_id": 8205732,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

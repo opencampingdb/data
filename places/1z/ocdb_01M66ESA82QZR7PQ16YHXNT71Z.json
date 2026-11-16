@@ -2,7 +2,9 @@
   "fact_sources": {
     "drinking_water": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -15,6 +17,16 @@
       "name": "Termeil",
       "osm_id": 113135793,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Yadboro River",
+      "osm_id": 265928061
+    },
+    "protected_area": {
+      "name": "Budawang National Park",
+      "osm_id": 6133564,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

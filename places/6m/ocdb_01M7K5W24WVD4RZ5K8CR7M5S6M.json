@@ -1,0 +1,64 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "hot_water": false,
+    "lga": {
+      "name": "Shire of Moyne",
+      "osm_id": 3347615
+    },
+    "locality": {
+      "distance_m": 280,
+      "name": "Peterborough",
+      "osm_id": 131091197,
+      "type": "village"
+    },
+    "nearest_beach": {
+      "distance_m": 80
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 510
+    },
+    "nearest_major_road": {
+      "distance_m": 280,
+      "name": "Great Ocean Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Curdies River",
+      "osm_id": 248624669
+    },
+    "protected_area": {
+      "name": "Peterborough Coastal Reserve (COM)",
+      "osm_id": 9212158,
+      "osm_type": "relation"
+    }
+  },
+  "group": "utility",
+  "id": "ocdb_01M7K5W24WVD4RZ5K8CR7M5S6M",
+  "kind": "public_shower",
+  "location": {
+    "lat": -38.607745,
+    "lon": 142.879463
+  },
+  "name": null,
+  "osm": {
+    "id": 14379917227,
+    "timestamp": "2026-11-15T08:21:27Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-16T21:51:41Z"
+}

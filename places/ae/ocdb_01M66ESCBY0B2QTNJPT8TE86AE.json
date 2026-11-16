@@ -9,7 +9,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -33,9 +35,21 @@
       "osm_id": 206236593,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 800,
+      "name": "St Ives",
+      "osm_id": 4956628437,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "South Eastern Freeway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Dawesley Creek",
+      "osm_id": 949986390
     },
     "phone": "0409 278 123",
     "website": "https://www.jakemfarm.com.au/"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

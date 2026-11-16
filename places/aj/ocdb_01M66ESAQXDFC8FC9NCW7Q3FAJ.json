@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
@@ -19,9 +21,21 @@
       "osm_id": 6035839084,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "South Maroochy River",
+      "osm_id": 483830386,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Nambour North Connection Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "South Maroochy River",
+      "osm_id": 780661025
     },
     "operator": "Sunshine Coast Council",
     "toilet_type": "flush"
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -25,6 +26,13 @@
       "name": "Bega",
       "osm_id": 59608762,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 500,
+      "name": "North Bega",
+      "osm_id": 113255318,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
       "distance_m": 180,
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -36,9 +38,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1330
     },
+    "nearest_feature": {
+      "distance_m": 970,
+      "name": "Diamantina Rocks",
+      "osm_id": 11470980831,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Lord Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Wrights Creek",
+      "osm_id": 4282890
     },
     "phone": "+61475345231"
   },
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

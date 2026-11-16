@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "pets": "osm"
+    "nearest_waterway": "osm",
+    "pets": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,17 @@
       "osm_id": 114371357,
       "type": "village"
     },
-    "pets": "yes"
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Telegherry River",
+      "osm_id": 206186844
+    },
+    "pets": "yes",
+    "protected_area": {
+      "name": "Forestry Management Areas in Chichester (FMZ2) Protected Area",
+      "osm_id": 16308781,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESFJV8CVT2ZMGBDZ11YR1",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

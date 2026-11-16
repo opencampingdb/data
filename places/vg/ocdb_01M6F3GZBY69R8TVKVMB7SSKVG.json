@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "wheelchair": "osm"
   },
@@ -28,9 +30,21 @@
       "osm_id": 302765478,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Harlin",
+      "osm_id": 4085996677,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Brisbane Valley Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Maronghi Creek",
+      "osm_id": 355409447
     },
     "phone": "+61493444094",
     "wheelchair": true
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

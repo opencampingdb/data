@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +25,19 @@
     "nearest_boat_ramp": {
       "distance_m": 350
     },
-    "operator": "Parks Victoria"
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Lysterfield Lake",
+      "osm_id": 5914565,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Lysterfield Park",
+      "osm_id": 5401082,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPR9MPQDT5W9QECPBCACS",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

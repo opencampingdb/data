@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +26,21 @@
     "nearest_boat_ramp": {
       "distance_m": 290
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Clarkes Beach",
+      "osm_id": 306312022,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Lighthouse Road"
+    },
+    "protected_area": {
+      "name": "Walgun Cape Byron State Conservation Area",
+      "osm_id": 5937627,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

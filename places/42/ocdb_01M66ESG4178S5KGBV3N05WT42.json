@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -28,6 +29,13 @@
     "nearest_boat_ramp": {
       "distance_m": 180
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Dumaresq Dam",
+      "osm_id": 202641563,
+      "osm_type": "way",
+      "type": "water"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -47,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

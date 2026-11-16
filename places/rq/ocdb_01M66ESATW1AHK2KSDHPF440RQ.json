@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Laura",
       "osm_id": 244399885,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Normanby River",
+      "osm_id": 393897605
+    },
+    "protected_area": {
+      "name": "Rinyirru (Lakefield) National Park (Cape York Peninsula Aboriginal Land)",
+      "osm_id": 1476118,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

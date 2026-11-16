@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "locality": {
@@ -12,6 +13,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 100
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Corroboree Billabong",
+      "osm_id": 371329124,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

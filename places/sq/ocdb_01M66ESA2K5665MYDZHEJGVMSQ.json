@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -33,9 +35,21 @@
       "distance_m": 70,
       "name": "Dianas Beach"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Dianas Beach",
+      "osm_id": 837272821,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Tasman Highway"
+    },
+    "protected_area": {
+      "name": "Scamander Conservation Area",
+      "osm_id": 6253518,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

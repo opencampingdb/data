@@ -7,7 +7,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "pets": "community_report"
+    "nearest_feature": "osm",
+    "pets": "community_report",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1722471074699135",
@@ -21,7 +23,19 @@
       "osm_id": 6001944126,
       "type": "town"
     },
-    "pets": "no"
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Lake Crosbie",
+      "osm_id": 76026180,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "pets": "no",
+    "protected_area": {
+      "name": "Murray-Sunset National Park",
+      "osm_id": 5470870,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9VVZSZBVGD6ATNWYD7P",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -23,6 +25,18 @@
     "nearest_boat_ramp": {
       "distance_m": 230
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Sydenham Inlet",
+      "osm_id": 151173301,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Bemm, Goolengook, Arte and Errinundra Rivers Heritage River",
+      "osm_id": 16505084,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

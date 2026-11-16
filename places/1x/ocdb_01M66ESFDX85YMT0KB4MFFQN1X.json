@@ -14,8 +14,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -44,8 +47,25 @@
       "osm_id": 2270203043,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Blue Waterholes",
+      "osm_id": 12753715136,
+      "osm_type": "node",
+      "type": "spring"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Cave Creek",
+      "osm_id": 186598715
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 6947 7025",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -68,5 +88,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

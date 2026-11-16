@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Millstream",
       "osm_id": 8460762754,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "The Millstream",
+      "osm_id": 375707533
+    },
+    "protected_area": {
+      "name": "Millstream Falls National Park",
+      "osm_id": 8672476,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

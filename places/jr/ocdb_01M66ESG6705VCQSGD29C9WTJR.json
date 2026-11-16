@@ -13,8 +13,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "overture"
@@ -39,8 +41,18 @@
       "osm_id": 97299576,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Fire Dam Creek",
+      "osm_id": 177941947
+    },
     "operator": "Forestry Corporation of NSW",
     "phone": "+61264583177",
+    "protected_area": {
+      "name": "Belanglo State Forest",
+      "osm_id": 5810271,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "http://au.localize123.com/dalys-clearing-camping-area-in-belanglo-nsw"
@@ -61,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

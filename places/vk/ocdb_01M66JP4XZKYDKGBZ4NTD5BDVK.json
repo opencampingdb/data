@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +21,23 @@
     "nearest_beach": {
       "distance_m": 840,
       "name": "Nine Mile Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Sea Elephant",
+      "osm_id": 4259673673,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Sea Elephant River",
+      "osm_id": 261062469
+    },
+    "protected_area": {
+      "name": "Lavinia State Reserve",
+      "osm_id": 6421290,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

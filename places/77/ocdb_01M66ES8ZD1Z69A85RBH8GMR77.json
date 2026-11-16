@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -24,6 +25,11 @@
       "distance_m": 300,
       "name": "Parker Street"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Yarra River",
+      "osm_id": 146419312
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

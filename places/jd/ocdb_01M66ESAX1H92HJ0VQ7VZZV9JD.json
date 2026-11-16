@@ -4,7 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -21,6 +22,13 @@
     },
     "nearest_beach": {
       "distance_m": 110
+    },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Butchers Lake",
+      "osm_id": 329596676,
+      "osm_type": "way",
+      "type": "wetland"
     }
   },
   "group": "utility",
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

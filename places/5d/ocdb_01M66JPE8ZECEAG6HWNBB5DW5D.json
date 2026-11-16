@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Prior Creek",
+      "osm_id": 173815251
     },
     "opening_hours": "Mo-Fr 08:30-17:00; Sa 08:30-16:00; Su 10:00-16:00"
   },
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

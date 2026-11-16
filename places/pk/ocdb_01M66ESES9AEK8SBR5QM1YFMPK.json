@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -30,7 +32,17 @@
       "osm_id": 213500096,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Amamoor Creek",
+      "osm_id": 996197651
+    },
     "phone": "+61137468",
+    "protected_area": {
+      "name": "Amamoor State Forest",
+      "osm_id": 8799104,
+      "osm_type": "relation"
+    },
     "website": "http://www.nprsr.qld.gov.au/parks/amamoor/camping.html"
   },
   "group": "overnight",
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

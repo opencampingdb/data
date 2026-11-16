@@ -7,6 +7,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "website": "overture"
   },
   "facts": {
@@ -26,6 +28,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2150
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Tamboon Inlet",
+      "osm_id": 152498387,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Cann River",
+      "osm_id": 38387252
+    },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/peachtree-creek-campground"
   },
   "group": "overnight",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

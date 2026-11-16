@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "overture"
@@ -40,7 +42,19 @@
     "nearest_boat_ramp": {
       "distance_m": 4570
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Oaky Beach",
+      "osm_id": 342079226,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "power": false,
+    "protected_area": {
+      "name": "Murramarang National Park",
+      "osm_id": 5858067,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/oaky-beach-campground"
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

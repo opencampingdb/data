@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -20,6 +21,11 @@
     },
     "nearest_beach": {
       "distance_m": 4750
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "The Blowhole",
+      "osm_id": 1371370383
     },
     "wheelchair": false
   },
@@ -39,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

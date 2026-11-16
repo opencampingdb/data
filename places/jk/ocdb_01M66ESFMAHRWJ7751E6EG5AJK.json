@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3430
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Sunshine Cove",
+      "osm_id": 959015295,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Beach Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Short Beach Creek",
+      "osm_id": 307135311
     }
   },
   "group": "utility",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -23,7 +25,17 @@
       "osm_id": 21385974,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Cronan Creek",
+      "osm_id": 638995657
+    },
     "operator": "Queensland Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Mount Barney National Park",
+      "osm_id": 8257022,
+      "osm_type": "relation"
+    },
     "toilets": false,
     "website": "https://parks.des.qld.gov.au/parks/mount-barney/camping/burbank"
   },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

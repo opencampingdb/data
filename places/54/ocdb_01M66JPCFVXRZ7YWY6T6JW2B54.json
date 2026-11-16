@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -19,6 +20,11 @@
       "name": "Medlow Bath",
       "osm_id": 117041024,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Pulpit Hill Creek",
+      "osm_id": 856545639
     }
   },
   "group": "attraction",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

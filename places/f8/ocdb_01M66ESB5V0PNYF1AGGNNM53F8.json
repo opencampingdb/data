@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +22,26 @@
     "nearest_beach": {
       "distance_m": 3700
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Hepburn Pool",
+      "osm_id": 463193827,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Main Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Spring Creek",
+      "osm_id": 387663685
+    },
+    "protected_area": {
+      "name": "Hepburn Regional Park",
+      "osm_id": 53051823,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

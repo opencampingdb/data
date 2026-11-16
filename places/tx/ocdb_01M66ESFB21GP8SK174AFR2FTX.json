@@ -15,8 +15,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -51,8 +53,20 @@
     "nearest_boat_ramp": {
       "distance_m": 1990
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Putty Beach",
+      "osm_id": 7966651,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 4320 4200",
+    "protected_area": {
+      "name": "Bouddi National Park",
+      "osm_id": 7117852,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -74,5 +88,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

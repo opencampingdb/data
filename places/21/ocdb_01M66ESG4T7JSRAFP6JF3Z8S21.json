@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Majors Creek",
       "osm_id": 5283292201,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Lowden Creek",
+      "osm_id": 444894711
+    },
+    "protected_area": {
+      "name": "South Coast Subregion of Southern Region Protected Area",
+      "osm_id": 16328207,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

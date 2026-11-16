@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,7 +22,19 @@
       "osm_id": 910283354,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Macalister Springs",
+      "osm_id": 3916080314,
+      "osm_type": "node",
+      "type": "spring"
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

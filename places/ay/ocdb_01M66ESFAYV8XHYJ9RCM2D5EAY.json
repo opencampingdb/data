@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -39,7 +41,19 @@
       "distance_m": 4880,
       "name": "Hawke Street Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Little Beach",
+      "osm_id": 25397185,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Bouddi National Park",
+      "osm_id": 7117852,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/little-beach-campground"
   },
   "group": "overnight",
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

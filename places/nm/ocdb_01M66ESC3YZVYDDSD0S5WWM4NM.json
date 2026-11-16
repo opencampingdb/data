@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,6 +23,23 @@
     "nearest_beach": {
       "distance_m": 30,
       "name": "McKays Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "McKays Beach",
+      "osm_id": 10990936,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Murray River",
+      "osm_id": 173309631
+    },
+    "protected_area": {
+      "name": "River Murray Reserve",
+      "osm_id": 7115294,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

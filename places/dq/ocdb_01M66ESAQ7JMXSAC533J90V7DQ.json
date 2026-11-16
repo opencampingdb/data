@@ -5,6 +5,8 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -28,23 +30,33 @@
       "distance_m": 290,
       "name": "Great Ocean Road"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Curdies River",
+      "osm_id": 248624669
+    },
+    "protected_area": {
+      "name": "Peterborough Coastal Reserve (COM)",
+      "osm_id": 9212158,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAQ7JMXSAC533J90V7DQ",
   "kind": "public_toilet",
   "location": {
-    "lat": -38.60783,
-    "lon": 142.87943
+    "lat": -38.607804,
+    "lon": 142.879449
   },
   "name": null,
   "osm": {
     "id": 3291533145,
-    "timestamp": "2019-05-13T23:36:33Z",
+    "timestamp": "2026-11-15T08:21:27Z",
     "type": "node",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

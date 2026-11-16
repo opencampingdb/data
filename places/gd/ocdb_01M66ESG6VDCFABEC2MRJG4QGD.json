@@ -5,7 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -26,6 +27,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 60
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Port Hacking",
+      "osm_id": 285916,
+      "osm_type": "relation",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -13,6 +13,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -43,6 +45,18 @@
     "nearest_beach": {
       "distance_m": 20
     },
+    "nearest_feature": {
+      "distance_m": 500,
+      "name": "Lower Wallaby Rocks",
+      "osm_id": 114658074,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Rocky River",
+      "osm_id": 375752408
+    },
     "operator": "Uralla Shire Council",
     "showers": false,
     "tents": true,
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

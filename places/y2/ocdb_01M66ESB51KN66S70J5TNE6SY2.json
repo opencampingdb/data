@@ -5,7 +5,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "pets": "contributed"
+    "nearest_feature": "osm",
+    "pets": "contributed",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,7 +20,19 @@
       "osm_id": 1139924440,
       "type": "town"
     },
-    "pets": "no"
+    "nearest_feature": {
+      "distance_m": 740,
+      "name": "14 Mile Beach",
+      "osm_id": 5840697425,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "pets": "no",
+    "protected_area": {
+      "name": "Nyingguulu (Ningaloo) Coastal Reserve 5(1)(h) Reserve",
+      "osm_id": 16107120,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB51KN66S70J5TNE6SY2",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

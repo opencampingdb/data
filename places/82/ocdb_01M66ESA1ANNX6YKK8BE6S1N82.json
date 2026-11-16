@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "caravans": true,
@@ -23,6 +25,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 330
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Lock No 10",
+      "osm_id": 1444434519,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Murray River",
+      "osm_id": 165400300
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -17,6 +19,16 @@
       "name": "Djirrbiyak",
       "osm_id": 4429629174,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Burdulba Creek",
+      "osm_id": 344447457
+    },
+    "protected_area": {
+      "name": "Kakadu National Park World Heritage Site",
+      "osm_id": 2386081,
+      "osm_type": "relation"
     },
     "tents": true,
     "toilets": true
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

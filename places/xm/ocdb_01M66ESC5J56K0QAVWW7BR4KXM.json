@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -21,7 +24,24 @@
       "distance_m": 3400,
       "name": "Picnic Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Murray River",
+      "osm_id": 2203586,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Murray River",
+      "osm_id": 173320163
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Barmah National Park",
+      "osm_id": 2379504,
+      "osm_type": "relation"
+    },
     "toilets": false
   },
   "group": "overnight",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

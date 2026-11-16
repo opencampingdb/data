@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,7 +34,19 @@
       "osm_id": 1561327789,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Purrumbete",
+      "osm_id": 25113756,
+      "osm_type": "way",
+      "type": "water"
+    },
     "phone": "+61355945377",
+    "protected_area": {
+      "name": "Lake Purrumbete Wildlife Reserve (no hunting)",
+      "osm_id": 666736642,
+      "osm_type": "way"
+    },
     "website": "http://www.lakepurrumbeteholidaypark.com.au/"
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

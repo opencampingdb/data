@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Old Bonalbo",
       "osm_id": 354450622,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 470,
+      "name": "Big Fish Flat",
+      "osm_id": 3996598257,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Clarence River",
+      "osm_id": 414031364
     }
   },
   "group": "utility",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

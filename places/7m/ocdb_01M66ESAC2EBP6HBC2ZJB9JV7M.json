@@ -3,6 +3,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
@@ -17,6 +18,13 @@
       "name": "Bendigo",
       "osm_id": 30917754,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Kennington Reservoir",
+      "osm_id": 19220524,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

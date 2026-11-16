@@ -12,8 +12,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -43,11 +46,28 @@
     "nearest_boat_ramp": {
       "distance_m": 4970
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Skenes Creek",
+      "osm_id": 353145621,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Great Ocean Road"
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Skenes Creek",
+      "osm_id": 72711524
+    },
     "phone": "0352376132",
+    "protected_area": {
+      "name": "Apollo Bay Coastal Reserve",
+      "osm_id": 9212160,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://greatoceanroadparks.com.au/skenes-creek"
   },
@@ -73,5 +93,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

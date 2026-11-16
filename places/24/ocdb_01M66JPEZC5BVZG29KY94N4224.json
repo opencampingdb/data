@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +21,12 @@
       "distance_m": 2920,
       "name": "Graham Creek Boatramp"
     },
-    "operator": "APLNG"
+    "operator": "APLNG",
+    "protected_area": {
+      "name": "Port of Gladstone - Rodds Bay Dugong Protection Area",
+      "osm_id": 16298413,
+      "osm_type": "relation"
+    }
   },
   "group": "transport",
   "id": "ocdb_01M66JPEZC5BVZG29KY94N4224",
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

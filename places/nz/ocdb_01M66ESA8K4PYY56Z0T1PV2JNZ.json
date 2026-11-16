@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -37,7 +39,19 @@
     "nearest_boat_ramp": {
       "distance_m": 1920
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Two Mile Lake",
+      "osm_id": 8364730,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Myall Lakes National Park",
+      "osm_id": 3215560,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/freshwater-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Freshwater+campground+-+Boolambayte&utm_term=plcid_3354666606768033931"
   },
   "group": "overnight",
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

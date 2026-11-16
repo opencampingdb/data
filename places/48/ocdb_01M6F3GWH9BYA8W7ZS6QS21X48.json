@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 1070,
       "name": "Denison Beach"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Douglas River",
+      "osm_id": 2405964702,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Tasman Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Douglas River",
+      "osm_id": 641020061
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

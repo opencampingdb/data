@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,11 @@
       "name": "Connellan",
       "osm_id": 2294504896,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Napwerte / Ewaninga Rock Carvings Conservation Reserve",
+      "osm_id": 591282095,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

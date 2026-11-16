@@ -11,8 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -38,11 +40,23 @@
       "distance_m": 110,
       "name": "Strathgordon Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake Pedder",
+      "osm_id": 86893,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Gordon River Road"
     },
     "phone": "+61362801166",
+    "protected_area": {
+      "name": "Southwest Conservation Area",
+      "osm_id": 3148684,
+      "osm_type": "relation"
+    },
     "website": "https://www.pedderwildernesslodge.com.au/"
   },
   "group": "overnight",
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

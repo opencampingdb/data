@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -23,6 +24,11 @@
     "nearest_boat_ramp": {
       "distance_m": 390
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "John P Goleby Canal",
+      "osm_id": 1079344095
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

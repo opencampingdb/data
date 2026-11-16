@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -29,6 +30,11 @@
       "distance_m": 280,
       "name": "High Street"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "McIvor Creek",
+      "osm_id": 227422281
+    },
     "tents": true
   },
   "group": "overnight",
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

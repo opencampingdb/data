@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -25,6 +26,11 @@
       "distance_m": 30,
       "name": "Texas Road"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Rocky Creek",
+      "osm_id": 260209716
+    },
     "toilet_type": "flush",
     "wheelchair": false
   },
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

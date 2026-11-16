@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Moruya",
       "osm_id": 39827381,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Bendethera",
+      "osm_id": 113259358,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Deua River",
+      "osm_id": 319988322
+    },
+    "protected_area": {
+      "name": "Deua National Park",
+      "osm_id": 5849996,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -13,6 +15,18 @@
     "nearest_beach": {
       "distance_m": 260,
       "name": "Yokinup Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Point Jedacorrudup",
+      "osm_id": 252541624,
+      "osm_type": "node",
+      "type": "cape"
+    },
+    "protected_area": {
+      "name": "Cape Arid National Park",
+      "osm_id": 8144456,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

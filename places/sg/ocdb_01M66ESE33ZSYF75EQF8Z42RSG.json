@@ -7,7 +7,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -29,7 +32,24 @@
     "nearest_boat_ramp": {
       "distance_m": 930
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Katarapko creek",
+      "osm_id": 9351141,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Katarapko Creek",
+      "osm_id": 305975795
+    },
     "operator": "National Parks and Wildlife Service South Australia",
+    "protected_area": {
+      "name": "Murray River National Park",
+      "osm_id": 568850,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.parks.sa.gov.au/parks/murray-river-national-park/booking/83204"
   },
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

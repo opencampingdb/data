@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +21,23 @@
     "nearest_beach": {
       "distance_m": 1020,
       "name": "Burwood Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Glenrock Lagoon",
+      "osm_id": 13636456,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Flaggy Creek",
+      "osm_id": 676171216
+    },
+    "protected_area": {
+      "name": "Glenrock State Conservation Area",
+      "osm_id": 6079088,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

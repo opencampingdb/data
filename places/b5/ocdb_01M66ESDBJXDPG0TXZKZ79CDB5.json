@@ -3,6 +3,7 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -11,6 +12,11 @@
     "lga": {
       "name": "Shire of Ashburton",
       "osm_id": 11690012
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Joffre Creek",
+      "osm_id": 741157648
     },
     "toilet_type": "pit"
   },
@@ -30,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

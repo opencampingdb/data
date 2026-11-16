@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,18 @@
       "name": "Goroke",
       "osm_id": 1745457597,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Broughtons Waterhole",
+      "osm_id": 732355066,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Little Desert National Park",
+      "osm_id": 160864,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

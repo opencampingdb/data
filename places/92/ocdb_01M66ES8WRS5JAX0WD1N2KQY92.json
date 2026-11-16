@@ -4,6 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -21,6 +24,23 @@
     "nearest_beach": {
       "distance_m": 270,
       "name": "Kylie's Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Kylie's Beach",
+      "osm_id": 382435198,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Mineral Creek",
+      "osm_id": 345715944
+    },
+    "protected_area": {
+      "name": "Crowdy Bay National Park",
+      "osm_id": 6047323,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

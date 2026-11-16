@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -22,7 +24,19 @@
       "distance_m": 1480,
       "name": "North Sheperd Beach"
     },
-    "operator": "Parks and Wildlife Service"
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Macushla Cove",
+      "osm_id": 6562263976,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "operator": "Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Hinchinbrook Island National Park",
+      "osm_id": 8421272,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBY5EXN97A5WWRBQP94K",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Walla Walla",
       "osm_id": 2120573397,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Walla Walla Hill / Morgan's Lookout",
+      "osm_id": 8086686984,
+      "osm_type": "node",
+      "type": "peak"
     },
     "opening_hours": "08:00-17:00; Apr Su[1]-Oct Su[1] -1 day 08:00-19:00"
   },
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

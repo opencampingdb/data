@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "showers": "osm"
   },
   "facts": {
@@ -19,6 +20,13 @@
     "nearest_boat_ramp": {
       "distance_m": 340,
       "name": "Burrinjuck Waters Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Lake Burrinjuck",
+      "osm_id": 3487227,
+      "osm_type": "relation",
+      "type": "water"
     },
     "showers": true
   },
@@ -38,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -7,7 +7,9 @@
     "address": "overture",
     "facebook": "overture",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -26,6 +28,16 @@
     "nearest_boat_ramp": {
       "distance_m": 1380,
       "name": "Rockhole"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Mary River",
+      "osm_id": 372022232
+    },
+    "protected_area": {
+      "name": "Mary River National Park",
+      "osm_id": 12990112,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

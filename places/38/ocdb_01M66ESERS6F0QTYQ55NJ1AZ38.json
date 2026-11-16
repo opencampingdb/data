@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -26,7 +28,17 @@
       "distance_m": 110,
       "name": "Fitzsimons Lane"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Yarra River",
+      "osm_id": 398989790
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Yarra Valley Parklands",
+      "osm_id": 17915341,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": false
   },
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

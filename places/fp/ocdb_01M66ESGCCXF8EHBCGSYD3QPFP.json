@@ -6,8 +6,10 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -26,11 +28,23 @@
       "osm_id": 289620071,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 960,
+      "name": "St. Fillans",
+      "osm_id": 12672672643,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Maroondah Highway"
     },
     "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Marysville State Forest",
+      "osm_id": 721573,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 240
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Lake Jindabyne",
+      "osm_id": 66850,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Kosciuszko Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Widows Creek",
+      "osm_id": 409033751
     },
     "phone": "+61264561300",
     "website": "http://www.kosciuszkoautomotive.com.au"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

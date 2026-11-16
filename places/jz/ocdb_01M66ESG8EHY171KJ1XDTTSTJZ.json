@@ -11,8 +11,10 @@
     "fee": "osm",
     "lga": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -29,11 +31,23 @@
       "distance_m": 1930,
       "name": "Pontoon - House Ground Tank"
     },
+    "nearest_feature": {
+      "distance_m": 820,
+      "name": "Mungo",
+      "osm_id": 1856545153,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Arumpo Road"
     },
     "phone": "+61350218900",
+    "protected_area": {
+      "name": "Mungo National Park",
+      "osm_id": 6321578,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/Main-campground"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

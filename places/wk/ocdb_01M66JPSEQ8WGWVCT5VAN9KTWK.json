@@ -10,9 +10,12 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -33,12 +36,29 @@
       "osm_id": 84321801,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Kooringa Cave",
+      "osm_id": 4681453148,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Wombeyan Caves Road"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Wombeyan Creek",
+      "osm_id": 474133915
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0248435976",
+    "protected_area": {
+      "name": "Wombeyan Karst Conservation Reserve",
+      "osm_id": 5912937,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/cafes-and-kiosks/kui-kiosk"
   },
   "group": "services",
@@ -57,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

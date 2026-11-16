@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -32,9 +34,21 @@
       "osm_id": 910283354,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Mirimbah",
+      "osm_id": 911746160,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mount Buller Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Delatite River",
+      "osm_id": 86093479
     },
     "phone": "(03) 5777 5529",
     "website": "http://www.mirimbah.com.au"
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

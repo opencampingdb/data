@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,9 +28,26 @@
       "distance_m": 1490,
       "name": "Torquay Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Spring Creek",
+      "osm_id": 71082911,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Bell Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Spring Creek",
+      "osm_id": 71222422
+    },
+    "protected_area": {
+      "name": "Lorne - Queenscliff Coastal Reserve",
+      "osm_id": 9212148,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

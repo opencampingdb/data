@@ -15,7 +15,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "showers": "osm",
     "tents": "osm",
@@ -48,9 +50,21 @@
     "nearest_boat_ramp": {
       "distance_m": 290
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Junction Island",
+      "osm_id": 12813874,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Adams Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Darling River",
+      "osm_id": 174949765
     },
     "phone": "+61350273213",
     "showers": true,
@@ -74,5 +88,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

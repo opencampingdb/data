@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
       "osm_id": 1895756363,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "shady lagoon",
+      "osm_id": 469609912,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Bowen Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Bungil Creek",
+      "osm_id": 165579436
     },
     "opening_hours": "24/7"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

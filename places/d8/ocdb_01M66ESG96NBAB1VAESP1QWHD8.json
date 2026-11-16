@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
       "osm_id": 2603797837,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 760,
+      "name": "Kia Ora",
+      "osm_id": 12896160087,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Mount Dandenong Tourist Road"
+    },
+    "protected_area": {
+      "name": "Kalorama Park",
+      "osm_id": 662839803,
+      "osm_type": "way"
     },
     "wheelchair": true
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

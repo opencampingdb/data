@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -14,6 +16,16 @@
       "name": "Derby",
       "osm_id": 4290201325,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Full Moon Creek",
+      "osm_id": 263159337
+    },
+    "protected_area": {
+      "name": "Blue Tier Regional Reserve",
+      "osm_id": 3161795,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

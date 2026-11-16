@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Nyewente",
       "osm_id": 4529107343,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 910,
+      "name": "Anthelk Ewlpaye",
+      "osm_id": 4382961778,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "opening_hours": "24/7"
   },
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

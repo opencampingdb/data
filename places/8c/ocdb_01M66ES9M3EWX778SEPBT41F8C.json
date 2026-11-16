@@ -1,12 +1,18 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
     "lga": {
       "name": "Central Desert Region",
       "osm_id": 8878328
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Marshall River",
+      "osm_id": 780002760
     },
     "water_type": "fountain"
   },
@@ -26,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

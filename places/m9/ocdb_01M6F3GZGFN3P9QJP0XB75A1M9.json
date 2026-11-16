@@ -5,7 +5,9 @@
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -29,9 +31,21 @@
       "osm_id": 190751211,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 520,
+      "name": "Currabubula",
+      "osm_id": 114638396,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Davis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Ansteys Creek",
+      "osm_id": 891196057
     },
     "phone": "+61 2 6768 9005",
     "website": "https://www.currabubulapub.com.au/"
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "website": "osm"
@@ -37,6 +38,13 @@
       "distance_m": 100,
       "name": "Home Beach"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Home Beach",
+      "osm_id": 8098412,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Dickson Way"
@@ -60,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

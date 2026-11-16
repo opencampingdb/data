@@ -10,6 +10,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "website": "osm"
@@ -36,6 +37,13 @@
     "nearest_boat_ramp": {
       "distance_m": 280
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Port Phillip",
+      "osm_id": 1221199,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Fitzroy Street"
@@ -59,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

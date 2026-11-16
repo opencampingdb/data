@@ -1,11 +1,40 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": true,
+    "bins": true,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 10790,
+      "name": "Gundaroo",
+      "osm_id": 30201112,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake George",
+      "osm_id": 8060816,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Federal Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": true
   },
@@ -13,23 +42,23 @@
   "id": "ocdb_01M66ESDWKVG3MWE6Y82KAT1N2",
   "kind": "rest_area",
   "location": {
-    "lat": -35.066884,
-    "lon": 149.374186
+    "lat": -35.066945,
+    "lon": 149.374324
   },
   "merged_osm": [
     {
-      "id": 764005989,
-      "type": "way"
+      "id": 12397316576,
+      "type": "node"
     }
   ],
   "name": "Wheatley VC Rest Area",
   "osm": {
-    "id": 12397316576,
-    "timestamp": "2025-02-26T02:37:24Z",
-    "type": "node",
+    "id": 764005989,
+    "timestamp": "2026-11-05T07:18:36Z",
+    "type": "way",
     "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

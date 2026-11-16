@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 1895756363,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "duck pond",
+      "osm_id": 276432858,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Bowen Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Bungil Creek",
+      "osm_id": 165579436
     },
     "phone": "+61746240204",
     "website": "http://www.bigrigroma.com.au/"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

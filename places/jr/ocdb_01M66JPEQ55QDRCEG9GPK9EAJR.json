@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -12,6 +13,11 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Kennedy Developmental Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Min Min Creek",
+      "osm_id": 1387901174
     },
     "operator": "Boulia Shire Council"
   },
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

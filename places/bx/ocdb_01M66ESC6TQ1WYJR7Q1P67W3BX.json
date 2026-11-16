@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,18 @@
     },
     "nearest_beach": {
       "distance_m": 2150
+    },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Budela-budela Lake",
+      "osm_id": 302532963,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Warill Parkland",
+      "osm_id": 1365506283,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

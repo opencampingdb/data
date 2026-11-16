@@ -13,8 +13,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "phone": "contributed"
+    "phone": "contributed",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -41,11 +43,23 @@
     "nearest_boat_ramp": {
       "distance_m": 2420
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Marengo",
+      "osm_id": 353145619,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Great Ocean Road"
     },
-    "phone": "+61 3 5237 6162"
+    "phone": "+61 3 5237 6162",
+    "protected_area": {
+      "name": "Apollo Bay Coastal Reserve",
+      "osm_id": 9212160,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESETKV3Z0YWBXWCQ6CA10",
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

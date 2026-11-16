@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm",
     "wifi": "osm"
   },
@@ -23,9 +25,21 @@
       "osm_id": 2620633328,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 690,
+      "name": "Fonthill Flat",
+      "osm_id": 4290201339,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Upper Esk Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "South Esk River",
+      "osm_id": 795458756
     },
     "tents": true,
     "wifi": false
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,7 +27,19 @@
       "distance_m": 3720,
       "name": "VRO/Fishing Club Boat Ramp"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Mullawarra Beach",
+      "osm_id": 3903434,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Coffs Coast Regional Park",
+      "osm_id": 6058508,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE4YYAMX9CPMX091BCR8",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

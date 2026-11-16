@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_feature": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -8,6 +9,13 @@
     "lga": {
       "name": "Shire of Broome",
       "osm_id": 11690277
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Eighty Mile Beach",
+      "osm_id": 19346591,
+      "osm_type": "relation",
+      "type": "wetland"
     },
     "phone": "+61 8 9176 5941",
     "website": "https://eightymilebeach.com.au/"
@@ -28,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

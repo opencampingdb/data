@@ -9,6 +9,8 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -30,6 +32,16 @@
       "name": "Mount Cole",
       "osm_id": 1707835886,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Cave Hill Creek",
+      "osm_id": 1362129766
+    },
+    "protected_area": {
+      "name": "Mount Cole State Forest",
+      "osm_id": 2124181,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -60,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

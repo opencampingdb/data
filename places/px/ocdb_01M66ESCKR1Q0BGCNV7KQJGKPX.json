@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -23,6 +25,18 @@
       "name": "Amiens",
       "osm_id": 4072833980,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Amiens",
+      "osm_id": 982171903,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Thirteen Mile Creek",
+      "osm_id": 1486794832
     },
     "operator": "Harslett Farm"
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -28,6 +29,13 @@
     "nearest_boat_ramp": {
       "distance_m": 4200
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Middleton Beach",
+      "osm_id": 77094610,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Middleton Road"
@@ -49,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

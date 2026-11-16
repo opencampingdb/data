@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "St Lawrence",
       "osm_id": 2214191252,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Bund Creek",
+      "osm_id": 325095783
+    },
+    "protected_area": {
+      "name": "Great Barrier Reef Coast Marine Park",
+      "osm_id": 16623817,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +18,23 @@
       "name": "Alice Springs",
       "osm_id": 29341070,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Alice Springs Waterhole",
+      "osm_id": 225794433,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Todd River",
+      "osm_id": 208044858
+    },
+    "protected_area": {
+      "name": "Alice Springs Telegraph Station Historical Reserve",
+      "osm_id": 8330755,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

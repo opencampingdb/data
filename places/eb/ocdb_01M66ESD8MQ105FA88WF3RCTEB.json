@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -31,9 +33,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1160
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Front Beach",
+      "osm_id": 207998312,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Gregory Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Saltwater Creek",
+      "osm_id": 208000103
     },
     "opening_hours": "24/7"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

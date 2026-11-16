@@ -4,9 +4,12 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -27,12 +30,29 @@
       "distance_m": 490,
       "name": "Winders Park Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Palm Beach Parklands",
+      "osm_id": 8360926,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Gold Coast Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Currumbin Creek",
+      "osm_id": 591918250
+    },
     "opening_hours": "24/7",
-    "operator": "City of Gold Coast"
+    "operator": "City of Gold Coast",
+    "protected_area": {
+      "name": "Tarrabora Reserve",
+      "osm_id": 327585372,
+      "osm_type": "way"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBMHP40RCY01K2F5056N",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

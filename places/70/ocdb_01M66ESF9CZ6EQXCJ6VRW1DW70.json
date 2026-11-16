@@ -7,8 +7,10 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -29,8 +31,18 @@
       "osm_id": 5003065749,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Abercrombie River",
+      "osm_id": 185228779
+    },
     "operator": "National Parks and Wildlife",
     "phone": "0263361972",
+    "protected_area": {
+      "name": "Abercrombie River National Park",
+      "osm_id": 2469186,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/the-beach",
     "wifi": false
   },
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

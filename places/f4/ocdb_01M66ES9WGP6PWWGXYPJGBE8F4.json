@@ -7,7 +7,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1539320789712705",
@@ -27,6 +30,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 160
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Dead River Beach",
+      "osm_id": 11035938,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Murray River",
+      "osm_id": 173320137
+    },
+    "protected_area": {
+      "name": "River Murray Reserve",
+      "osm_id": 7115294,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

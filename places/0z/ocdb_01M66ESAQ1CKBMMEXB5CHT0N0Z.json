@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,9 +21,26 @@
       "osm_id": 324529175,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Cherrypool",
+      "osm_id": 3453099314,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Henty Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Glenelg River",
+      "osm_id": 951339104
+    },
+    "protected_area": {
+      "name": "Cherrypool State Forest",
+      "osm_id": 17216417,
+      "osm_type": "relation"
     },
     "toilet_type": "flush"
   },
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

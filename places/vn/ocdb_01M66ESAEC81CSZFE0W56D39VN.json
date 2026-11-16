@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Gellibrand",
       "osm_id": 677284293,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Birnam",
+      "osm_id": 11737689356,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Ten Mile Creek",
+      "osm_id": 742135996
     }
   },
   "group": "utility",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

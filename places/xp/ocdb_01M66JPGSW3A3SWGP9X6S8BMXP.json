@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,18 @@
     },
     "nearest_beach": {
       "distance_m": 30
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lucky Bay Beach",
+      "osm_id": 16357187,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Cape Le Grand National Park",
+      "osm_id": 8141497,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

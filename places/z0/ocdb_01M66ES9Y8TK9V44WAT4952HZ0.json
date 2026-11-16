@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -11,6 +13,16 @@
     "nearest_major_road": {
       "distance_m": 350,
       "name": "North West Coastal Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Cane River",
+      "osm_id": 190517008
+    },
+    "protected_area": {
+      "name": "Cane River Conservation Park",
+      "osm_id": 8383599,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -29,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

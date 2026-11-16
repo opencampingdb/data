@@ -10,6 +10,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -34,6 +36,18 @@
       "distance_m": 300,
       "name": "Picnic Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Murray River",
+      "osm_id": 2203586,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Murray River",
+      "osm_id": 910394157
+    },
     "phone": "+61358843375",
     "website": "http://www.picnicpointcaravanpark.com.au/index.htm"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

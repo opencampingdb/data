@@ -8,6 +8,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "osm",
     "wheelchair": "osm"
   },
@@ -35,6 +37,18 @@
     "nearest_boat_ramp": {
       "distance_m": 4170
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Long Nose Point",
+      "osm_id": 910343354,
+      "osm_type": "node",
+      "type": "cape"
+    },
+    "protected_area": {
+      "name": "Kamay Botany Bay National Park",
+      "osm_id": 1239917,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/cape-baily-lighthouse",
     "wheelchair": false
   },
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

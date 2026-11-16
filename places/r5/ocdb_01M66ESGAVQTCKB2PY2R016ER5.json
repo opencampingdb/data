@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "nudist": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -27,9 +29,21 @@
     "nearest_beach": {
       "distance_m": 3290
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Swan River",
+      "osm_id": 139515117,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Reid Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Jane Brook",
+      "osm_id": 1281158438
     },
     "nudist": false,
     "operator": "Anglican Diocese of Perth",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -23,7 +25,17 @@
       "osm_id": 1651171335,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Dalrymple Creek",
+      "osm_id": 834191252
+    },
     "phone": "+6113137468",
+    "protected_area": {
+      "name": "Main Range National Park",
+      "osm_id": 8257202,
+      "osm_type": "relation"
+    },
     "website": "http://www.npsr.qld.gov.au/parks/main-range/camping.html"
   },
   "group": "overnight",
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

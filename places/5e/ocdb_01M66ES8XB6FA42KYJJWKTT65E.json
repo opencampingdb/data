@@ -7,8 +7,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "overture",
@@ -27,8 +30,25 @@
       "osm_id": 2997428966,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 830,
+      "name": "Grand High Tops",
+      "osm_id": 2094308639,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Spirey Creek",
+      "osm_id": 296187997
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "power": false,
+    "protected_area": {
+      "name": "Warrumbungle National Park",
+      "osm_id": 5836978,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": false,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/hurleys-camp",
@@ -50,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

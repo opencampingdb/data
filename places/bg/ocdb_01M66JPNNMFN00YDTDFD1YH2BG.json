@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -15,6 +17,18 @@
       "name": "Chillagoe",
       "osm_id": 4074574918,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Bauhinia Cave",
+      "osm_id": 13018256782,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "protected_area": {
+      "name": "Chillagoe-Mungana Caves National Park",
+      "osm_id": 8669528,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

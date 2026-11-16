@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -18,6 +19,13 @@
       "name": "Warragamba",
       "osm_id": 2299079187,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 940,
+      "name": "Warragamba Dam",
+      "osm_id": 5705013941,
+      "osm_type": "node",
+      "type": "locality"
     }
   },
   "group": "services",
@@ -36,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

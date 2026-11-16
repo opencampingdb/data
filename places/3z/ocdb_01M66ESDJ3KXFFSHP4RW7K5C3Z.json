@@ -13,7 +13,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -40,7 +42,19 @@
       "osm_id": 598180807,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lake Bolac",
+      "osm_id": 28842795,
+      "osm_type": "way",
+      "type": "water"
+    },
     "phone": "+61353502204",
+    "protected_area": {
+      "name": "Lake Bolac Foreshore Reserve",
+      "osm_id": 1305915148,
+      "osm_type": "way"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

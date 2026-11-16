@@ -9,8 +9,10 @@
     "entry": "osm",
     "fee": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -26,8 +28,18 @@
       "osm_id": 31432758,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Florence Creek",
+      "osm_id": 256329425
+    },
     "pets": "no",
     "power": false,
+    "protected_area": {
+      "name": "Litchfield National Park",
+      "osm_id": 2614041,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -26,6 +28,18 @@
       "distance_m": 180,
       "name": "Copmanhurst Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Clarence River",
+      "osm_id": 1395122,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Eaton Creek",
+      "osm_id": 914944622
+    },
     "operator": "Clarence Valley Council",
     "toilet_type": "flush",
     "wheelchair": true
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "tents": "osm"
@@ -22,6 +23,13 @@
       "name": "Gilgai",
       "osm_id": 2324185963,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Lake Copeton",
+      "osm_id": 5621217,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 370,
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

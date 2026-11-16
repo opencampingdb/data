@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +26,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4200
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Kingfisher Lake",
+      "osm_id": 291265846,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Ibis Boulevard"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Eli Creek",
+      "osm_id": 628437859
     }
   },
   "group": "utility",
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

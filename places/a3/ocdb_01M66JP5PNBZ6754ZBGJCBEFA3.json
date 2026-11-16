@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -30,9 +32,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3850
     },
+    "nearest_feature": {
+      "distance_m": 1000,
+      "name": "Flying Fox Colony",
+      "osm_id": 6897174185,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Church Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Darling Mills Creek",
+      "osm_id": 340579759
     }
   },
   "group": "services",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

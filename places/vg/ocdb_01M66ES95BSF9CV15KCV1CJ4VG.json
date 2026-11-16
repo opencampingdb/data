@@ -1,25 +1,50 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Shire of Loddon",
+      "osm_id": 3344106
+    },
+    "locality": {
+      "distance_m": 50,
+      "name": "Pyramid Hill",
+      "osm_id": 427834880,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Victoria Street"
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ES95BSF9CV15KCV1CJ4VG",
   "kind": "public_toilet",
   "location": {
-    "lat": -36.054187,
-    "lon": 144.115138
+    "lat": -36.054157,
+    "lon": 144.11516
   },
+  "merged_osm": [
+    {
+      "id": 427835119,
+      "type": "node"
+    }
+  ],
   "name": null,
   "osm": {
-    "id": 427835119,
-    "timestamp": "2025-03-26T19:11:39Z",
-    "type": "node",
-    "version": 3
+    "id": 1574975600,
+    "timestamp": "2026-11-03T12:00:08Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

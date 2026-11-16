@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -11,6 +13,18 @@
     "nearest_beach": {
       "distance_m": 240,
       "name": "Seal Creek Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Seal Creek Beach",
+      "osm_id": 586429835,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Cape Arid National Park",
+      "osm_id": 8144456,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -29,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -26,6 +28,18 @@
     "nearest_boat_ramp": {
       "distance_m": 110
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Woody Head Beach",
+      "osm_id": 724045500,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Bundjalung National Park",
+      "osm_id": 5815155,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

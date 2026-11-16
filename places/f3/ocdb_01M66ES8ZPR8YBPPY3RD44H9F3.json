@@ -9,7 +9,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1511247542331313",
@@ -28,7 +31,24 @@
       "distance_m": 70,
       "name": "Sealers Beach"
     },
-    "phone": "+61131963"
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Sealers Beach",
+      "osm_id": 45283770,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Sealers Creek",
+      "osm_id": 45283535
+    },
+    "phone": "+61131963",
+    "protected_area": {
+      "name": "Southern Wilsons Promontory Remote and Natural Area",
+      "osm_id": 16321671,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES8ZPR8YBPPY3RD44H9F3",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

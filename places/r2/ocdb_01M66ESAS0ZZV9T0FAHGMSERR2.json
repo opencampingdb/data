@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -28,9 +30,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1850
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Elliot Heads Beach",
+      "osm_id": 353073401,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Lihs Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Elliott River",
+      "osm_id": 353073419
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

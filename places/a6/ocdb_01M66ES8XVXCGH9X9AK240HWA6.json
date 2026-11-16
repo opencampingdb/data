@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
     "nearest_beach": {
       "distance_m": 4800
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Cunningham’s Rest",
+      "osm_id": 10991771752,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Mona Vale Road"
+    },
+    "protected_area": {
+      "name": "Ku-ring-gai Wildflower Garden",
+      "osm_id": 386286293,
+      "osm_type": "way"
     },
     "website": "https://www.krg.nsw.gov.au/Things-to-do/Parks-playgrounds-and-sportsfields/Dampiers-Clearing-Picnic-Area"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

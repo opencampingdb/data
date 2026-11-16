@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
     "nearest_beach": {
       "distance_m": 160,
       "name": "Trousers Point Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Trousers Point Beach",
+      "osm_id": 648159329,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Strzelecki National Park",
+      "osm_id": 3045087,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

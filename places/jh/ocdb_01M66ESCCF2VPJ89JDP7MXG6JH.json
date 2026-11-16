@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,7 +21,17 @@
       "osm_id": 113749879,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Rogans Creek",
+      "osm_id": 456345558
+    },
     "operator": "Forestry Corporation of NSW",
+    "protected_area": {
+      "name": "Vittoria State Forest",
+      "osm_id": 6268652,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": false
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

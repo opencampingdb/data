@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -29,7 +31,19 @@
       "distance_m": 4360,
       "name": "Rhyll Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Western Port",
+      "osm_id": 13053988,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "phone": "+61 3 5951 2800",
+    "protected_area": {
+      "name": "Phillip Island Nature Park",
+      "osm_id": 9261379,
+      "osm_type": "relation"
+    },
     "website": "https://penguins.org.au/attractions/churchill-island/"
   },
   "group": "attraction",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

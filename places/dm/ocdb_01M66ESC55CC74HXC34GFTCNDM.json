@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -22,7 +23,12 @@
       "distance_m": 1060,
       "name": "Ramsay Beach"
     },
-    "operator": "Parks and Wildlife Service"
+    "operator": "Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Hinchinbrook Island National Park",
+      "osm_id": 8421272,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESC55CC74HXC34GFTCNDM",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

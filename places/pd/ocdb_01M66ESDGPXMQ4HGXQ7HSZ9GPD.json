@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -15,6 +17,16 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "McKillops Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Little River",
+      "osm_id": 170584459
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": false
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

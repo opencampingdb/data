@@ -4,9 +4,13 @@
   },
   "fact_sources": {
     "address": "overture",
-    "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -18,29 +22,52 @@
       "street": "Barrack St",
       "suburb": "Perth"
     },
-    "facebook": "https://m.facebook.com/museumofperth",
-    "nearest_beach": {
-      "distance_m": 620
+    "lga": {
+      "name": "City of Perth",
+      "osm_id": 11343564
     },
-    "opening_hours": "Mo-Fr 10:00-16:00",
-    "phone": "+61 402 901 766",
+    "locality": {
+      "distance_m": 840,
+      "name": "Perth",
+      "osm_id": 29277817,
+      "type": "city"
+    },
+    "nearest_beach": {
+      "distance_m": 900
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 930
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Murray Street"
+    },
+    "opening_hours": "Mo-Sa 10:00-16:00; PH off",
+    "operator": "Perth History Association",
+    "phone": "+61 8 6186 6592",
     "website": "https://www.museumofperth.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GVZJJ0WFAP0C42FXJX3G",
   "kind": "heritage",
   "location": {
-    "lat": -31.956425,
-    "lon": 115.857981
+    "lat": -31.951068,
+    "lon": 115.853676
   },
+  "merged_osm": [
+    {
+      "id": 3823720858,
+      "type": "node"
+    }
+  ],
   "name": "Museum of Perth",
   "osm": {
-    "id": 3823720858,
-    "timestamp": "2023-11-18T06:08:11Z",
+    "id": 13903373944,
+    "timestamp": "2026-11-10T19:29:48Z",
     "type": "node",
-    "version": 6
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

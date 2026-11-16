@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -24,6 +26,16 @@
       "distance_m": 40,
       "name": "Acheron Way"
     },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Acheron River",
+      "osm_id": 1387118613
+    },
+    "protected_area": {
+      "name": "Yarra Ranges National Park",
+      "osm_id": 5891684,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

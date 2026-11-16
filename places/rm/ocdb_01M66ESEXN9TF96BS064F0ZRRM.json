@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -37,7 +39,17 @@
       "distance_m": 70,
       "name": "Murchison - Tatura Road"
     },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Goulburn River",
+      "osm_id": 64883752
+    },
     "phone": "+61497149058",
+    "protected_area": {
+      "name": "Goulburn River Heritage River",
+      "osm_id": 16354539,
+      "osm_type": "relation"
+    },
     "website": "https://www.murchcaravanpark.com.au/"
   },
   "group": "overnight",
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

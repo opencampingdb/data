@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Cook Shire",
       "osm_id": 11677441
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "White Lily Lagoon",
+      "osm_id": 368882904,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Rinyirru (Lakefield) National Park (Cape York Peninsula Aboriginal Land)",
+      "osm_id": 1476118,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm"
   },
@@ -22,6 +23,13 @@
     "nearest_boat_ramp": {
       "distance_m": 70,
       "name": "Windermere Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 430,
+      "name": "Windermere",
+      "osm_id": 4290197353,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 10,
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

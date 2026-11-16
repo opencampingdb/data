@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "water_type": "osm"
   },
@@ -31,9 +33,21 @@
       "distance_m": 450,
       "name": "Kayak/Canoe Launch point"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Horse Arena",
+      "osm_id": 28319985,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Studley Park Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Yarra River",
+      "osm_id": 8065249
     },
     "opening_hours": "24/7",
     "water_type": "fountain"
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

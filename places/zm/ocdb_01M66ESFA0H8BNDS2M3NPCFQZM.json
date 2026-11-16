@@ -1,13 +1,19 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "lga": "osm"
+    "lga": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
     "lga": {
       "name": "Shire of Derby-West Kimberley",
       "osm_id": 11690291
+    },
+    "protected_area": {
+      "name": "Bandilngan (Windjana Gorge) National Park",
+      "osm_id": 8351352,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -26,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

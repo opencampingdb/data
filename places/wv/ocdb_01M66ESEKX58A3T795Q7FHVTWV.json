@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -22,7 +24,17 @@
       "distance_m": 130,
       "name": "Dargo Road"
     },
-    "operator": "DEECA Dargo"
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Castleburn Creek",
+      "osm_id": 739766967
+    },
+    "operator": "DEECA Dargo",
+    "protected_area": {
+      "name": "Dargo State Forest",
+      "osm_id": 20311372,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEKX58A3T795Q7FHVTWV",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

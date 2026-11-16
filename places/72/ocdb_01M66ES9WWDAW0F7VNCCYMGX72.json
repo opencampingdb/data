@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Trunkey Creek",
       "osm_id": 113749898,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Abercrombie Caves",
+      "osm_id": 4053861443,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Grove Creek",
+      "osm_id": 452045448
+    },
+    "protected_area": {
+      "name": "Abercrombie Karst Conservation Reserve",
+      "osm_id": 6041324,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

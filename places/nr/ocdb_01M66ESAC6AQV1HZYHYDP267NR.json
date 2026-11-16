@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -13,6 +14,11 @@
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Stuart Highway"
+    },
+    "protected_area": {
+      "name": "Arulte Atwatye Conservation Reserve",
+      "osm_id": 13005895,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

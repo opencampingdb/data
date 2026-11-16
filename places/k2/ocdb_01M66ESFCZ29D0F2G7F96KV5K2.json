@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -38,7 +40,19 @@
     "nearest_boat_ramp": {
       "distance_m": 1250
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Tallow Beach",
+      "osm_id": 159097569,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "+61 2 4320 4200",
+    "protected_area": {
+      "name": "Bouddi National Park",
+      "osm_id": 7117852,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

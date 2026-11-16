@@ -12,7 +12,9 @@
     "lga": "osm",
     "locality": "osm",
     "motorhomes": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -41,7 +43,17 @@
       "type": "town"
     },
     "motorhomes": true,
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Severn River",
+      "osm_id": 203782512
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Kwiambal National Park",
+      "osm_id": 6014678,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -64,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

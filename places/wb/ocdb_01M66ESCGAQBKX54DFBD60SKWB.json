@@ -7,6 +7,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -26,6 +28,16 @@
     "nearest_boat_ramp": {
       "distance_m": 1570,
       "name": "Darlington Point Boat Ramp (Old)"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Murrumbidgee River",
+      "osm_id": 1011341623
+    },
+    "protected_area": {
+      "name": "Murrumbidgee Valley Regional Park",
+      "osm_id": 6004749,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/bunyip-hole-campground"
   },
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

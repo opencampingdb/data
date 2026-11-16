@@ -1,6 +1,7 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -9,6 +10,13 @@
     "lga": {
       "name": "Diamantina Shire",
       "osm_id": 11676755
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Vaughan Johnson Lookout",
+      "osm_id": 2403586518,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
       "distance_m": 370,
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

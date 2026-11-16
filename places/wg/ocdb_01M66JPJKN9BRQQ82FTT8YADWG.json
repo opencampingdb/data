@@ -8,7 +8,9 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
     "website": "overture"
@@ -36,9 +38,21 @@
       "osm_id": 59608762,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 620,
+      "name": "North Bega",
+      "osm_id": 113255318,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Bega River",
+      "osm_id": 32257040
     },
     "operator": "Campbell Petroleum",
     "phone": "0264912800",
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

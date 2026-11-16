@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,9 +22,26 @@
       "osm_id": 113712291,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Three Mile Dam",
+      "osm_id": 16175028,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Link Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Three Mile Creek",
+      "osm_id": 442900274
+    },
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

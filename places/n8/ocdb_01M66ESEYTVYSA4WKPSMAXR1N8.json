@@ -8,7 +8,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "overture"
@@ -33,7 +35,19 @@
       "distance_m": 160,
       "name": "Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Southport Lagoon",
+      "osm_id": 10631908,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Southport Lagoon Conservation Area",
+      "osm_id": 6177598,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/southport-lagoon-conservation-area/southport-lagoon-camping"
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

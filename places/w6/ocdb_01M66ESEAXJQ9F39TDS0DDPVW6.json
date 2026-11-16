@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -27,7 +29,19 @@
       "distance_m": 1700,
       "name": "Cowes Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Red Rock Point",
+      "osm_id": 3793576601,
+      "osm_type": "node",
+      "type": "cape"
+    },
     "pets": "no",
+    "protected_area": {
+      "name": "Phillip Island Coastal Reserve",
+      "osm_id": 9278060,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

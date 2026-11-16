@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -25,6 +27,18 @@
     "nearest_boat_ramp": {
       "distance_m": 470
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Lysterfield Lake",
+      "osm_id": 5914565,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Lysterfield Park",
+      "osm_id": 5401082,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

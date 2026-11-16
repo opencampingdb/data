@@ -11,7 +11,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -41,9 +43,21 @@
       "osm_id": 324884969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 430,
+      "name": "National Park",
+      "osm_id": 4293047115,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Gordon River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Tyenna River",
+      "osm_id": 295465843
     },
     "phone": "+61 418 136 434",
     "showers": true,
@@ -68,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

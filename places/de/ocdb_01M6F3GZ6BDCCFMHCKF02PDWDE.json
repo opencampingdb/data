@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 1493309476,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Lake C.Y. O'Connor",
+      "osm_id": 25004696,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Mundaring Weir Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Helena River",
+      "osm_id": 30594587
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

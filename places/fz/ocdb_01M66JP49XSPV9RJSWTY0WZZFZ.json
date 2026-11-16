@@ -8,9 +8,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -35,9 +37,19 @@
       "distance_m": 150,
       "name": "Alpine Way"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Thredbo River",
+      "osm_id": 7693200
+    },
     "opening_hours": "Mo-Su 08:30-17:00",
     "operator": "BP",
     "phone": "+61 2 6457 6234",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "website": "https://www.thredbo.com.au/shopping-services/thredbo-service-station"
   },
   "group": "services",
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

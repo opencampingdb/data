@@ -9,6 +9,8 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -30,6 +32,18 @@
       "osm_id": 456874812,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Talbotville",
+      "osm_id": 1973324475,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Crooked River",
+      "osm_id": 1447929058
+    },
     "phone": "+61384272002"
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

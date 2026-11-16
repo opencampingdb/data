@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -22,6 +24,18 @@
     },
     "nearest_beach": {
       "distance_m": 60
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Fays Bay",
+      "osm_id": 1994956296,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

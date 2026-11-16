@@ -6,7 +6,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1224197654262111",
@@ -23,6 +25,18 @@
     "nearest_beach": {
       "distance_m": 0,
       "name": "Peppertree (or Faraway) Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Peppertree (or Faraway) Beach",
+      "osm_id": 11059740,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Murray River",
+      "osm_id": 911415438
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

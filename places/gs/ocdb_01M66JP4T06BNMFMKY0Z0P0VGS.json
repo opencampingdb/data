@@ -2,6 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,6 +17,23 @@
       "name": "Djirrbiyak",
       "osm_id": 4429629174,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Yellow Water Billabong",
+      "osm_id": 312390513,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Jim Jim Creek",
+      "osm_id": 308868766
+    },
+    "protected_area": {
+      "name": "Kakadu National Park World Heritage Site",
+      "osm_id": 2386081,
+      "osm_type": "relation"
     },
     "website": "http://www.gagudju-dreaming.com/Cruises.aspx"
   },
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

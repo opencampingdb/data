@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -19,6 +20,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 330
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake Victoria",
+      "osm_id": 10157994,
+      "osm_type": "relation",
+      "type": "water"
     },
     "phone": "+61 3 5146 0320",
     "website": "https://90milebeachholidayretreat.com/"
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

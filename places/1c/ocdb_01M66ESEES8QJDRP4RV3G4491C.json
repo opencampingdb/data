@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,19 @@
       "distance_m": 4130,
       "name": "Seventy Five Mile Beach"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Lake Boomanjin",
+      "osm_id": 9819854,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Great Sandy National Park",
+      "osm_id": 1507019,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEES8QJDRP4RV3G4491C",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -19,7 +21,19 @@
       "osm_id": 113465381,
       "type": "town"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Emu Lake",
+      "osm_id": 889068721,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Kinchega National Park",
+      "osm_id": 6333939,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEMXFW3FD447Z7RQHMQM",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

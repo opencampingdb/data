@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -22,9 +24,21 @@
       "osm_id": 2506724881,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Caboolture River",
+      "osm_id": 13557881,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lower King Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Caboolture River",
+      "osm_id": 34731497
     }
   },
   "group": "overnight",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

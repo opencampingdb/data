@@ -13,7 +13,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "website": "contributed"
   },
   "facts": {
@@ -33,7 +35,19 @@
     "nearest_beach": {
       "distance_m": 50
     },
+    "nearest_feature": {
+      "distance_m": 490,
+      "name": "Termeil Point",
+      "osm_id": 5705013974,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "+61 2 4454 9500",
+    "protected_area": {
+      "name": "Meroo National Park",
+      "osm_id": 5876526,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/sunburnt-beach-campground"
   },
   "group": "overnight",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

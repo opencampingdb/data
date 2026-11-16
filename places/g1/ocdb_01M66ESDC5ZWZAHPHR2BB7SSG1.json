@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,6 +23,18 @@
     },
     "nearest_beach": {
       "distance_m": 90
+    },
+    "nearest_feature": {
+      "distance_m": 510,
+      "name": "Lower Wallaby Rocks",
+      "osm_id": 114658074,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Rocky River",
+      "osm_id": 375752408
     },
     "toilet_type": "pit",
     "wheelchair": false
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

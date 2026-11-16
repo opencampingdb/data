@@ -2,7 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +16,12 @@
       "osm_id": 6001944126,
       "type": "town"
     },
-    "operator": "Parks Victoria"
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Murray-Sunset National Park",
+      "osm_id": 5470870,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF4RAB8TFQ7SQAS13NVV",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

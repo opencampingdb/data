@@ -3,7 +3,10 @@
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -20,6 +23,23 @@
     "nearest_beach": {
       "distance_m": 4050,
       "name": "Boyds Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 870,
+      "name": "Blue Gum Forest",
+      "osm_id": 117040756,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Govetts Creek",
+      "osm_id": 376319497
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

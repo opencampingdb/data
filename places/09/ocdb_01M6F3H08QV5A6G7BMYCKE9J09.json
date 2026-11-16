@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -37,9 +39,21 @@
       "distance_m": 2840,
       "name": "Bass Landing Boat ramp"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Bass",
+      "osm_id": 255363666,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Bass Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Bass River",
+      "osm_id": 53457285
     },
     "phone": "+61356782048",
     "website": "https://www.chateaubass.com.au/"
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,8 +9,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -35,8 +37,18 @@
       "distance_m": 290,
       "name": "John Renshaw Parkway"
     },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Spirey Creek",
+      "osm_id": 296878275
+    },
     "opening_hours": "Mo-Su 09:00-16:00",
     "phone": "0268254364",
+    "protected_area": {
+      "name": "Warrumbungle National Park",
+      "osm_id": 5836978,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/visitor-centres/warrumbungle-visitor-centre?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_term=plcid_6865463307644188876&utm_content=Warrumbungle+Visitor+Centre+-+Warrumbungle"
   },
   "group": "services",
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

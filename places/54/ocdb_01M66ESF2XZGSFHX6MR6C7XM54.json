@@ -20,7 +20,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "phone": "overture",
     "power": "osm",
@@ -66,9 +68,21 @@
     "nearest_boat_ramp": {
       "distance_m": 840
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Swan Lake",
+      "osm_id": 38145718,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Collier Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Swan Lake Inlet",
+      "osm_id": 446081069
     },
     "pets": "leashed",
     "phone": "+61244412182",
@@ -107,5 +121,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -13,9 +13,12 @@
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture",
     "wifi": "osm"
@@ -41,12 +44,29 @@
       "type": "town"
     },
     "motorbikes": true,
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Sawpit Creek",
+      "osm_id": 113373633,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Kosciuszko Road"
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Sawpit Creek",
+      "osm_id": 176723532
+    },
     "phone": "+61264562224",
     "power": true,
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "http://www.kositreat.com.au",
     "wifi": false
@@ -67,5 +87,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

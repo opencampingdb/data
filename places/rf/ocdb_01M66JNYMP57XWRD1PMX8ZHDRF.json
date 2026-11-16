@@ -3,6 +3,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "wheelchair": "osm"
   },
@@ -19,6 +21,18 @@
     "nearest_boat_ramp": {
       "distance_m": 120,
       "name": "Cabarita boat ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Parramatta River",
+      "osm_id": 1249186,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Parramatta River",
+      "osm_id": 340572809
     },
     "operator": "Transdev Sydney Ferries",
     "wheelchair": true
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,8 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -33,6 +34,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Maitland Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Muscle Creek",
+      "osm_id": 485970753
     }
   },
   "group": "services",
@@ -51,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

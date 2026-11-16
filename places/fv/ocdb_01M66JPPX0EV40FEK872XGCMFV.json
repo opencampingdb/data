@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,16 @@
     "nearest_boat_ramp": {
       "distance_m": 2330,
       "name": "Kayak launch / Fishing platform"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Distillery Creek",
+      "osm_id": 1469948553
+    },
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 420
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Mount Olympus",
+      "osm_id": 8927949817,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Cooks River",
+      "osm_id": 161420810
     }
   },
   "group": "attraction",
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

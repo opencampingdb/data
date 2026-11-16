@@ -6,6 +6,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -21,6 +23,18 @@
     },
     "nearest_beach": {
       "distance_m": 1080
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake Mombeong",
+      "osm_id": 47033916,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Discovery Bay Coastal Park",
+      "osm_id": 9223216,
+      "osm_type": "relation"
     },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/lake-mombeong-campground"
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

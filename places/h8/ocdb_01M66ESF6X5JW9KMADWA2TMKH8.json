@@ -11,7 +11,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,7 +34,17 @@
       "osm_id": 114643864,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Peacock Creek",
+      "osm_id": 913387991
+    },
     "phone": "+61266320000",
+    "protected_area": {
+      "name": "Richmond Range National Park",
+      "osm_id": 5948958,
+      "osm_type": "relation"
+    },
     "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/peacock-creek-campground"
   },
   "group": "overnight",
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

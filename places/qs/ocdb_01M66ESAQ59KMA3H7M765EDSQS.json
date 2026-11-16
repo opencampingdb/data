@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -25,6 +27,16 @@
       "distance_m": 2390,
       "name": "Bonville Creek Boat Ramp"
     },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Bonville Creek",
+      "osm_id": 105876261
+    },
+    "protected_area": {
+      "name": "Bongil Bongil National Park",
+      "osm_id": 6044163,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

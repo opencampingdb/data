@@ -11,9 +11,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "website": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
@@ -46,9 +48,21 @@
     "nearest_boat_ramp": {
       "distance_m": 230
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Coalmine Beach",
+      "osm_id": 669503220,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "operator": "Coalmine Beach Holiday Park",
     "phone": "+61 8 9840 1026",
     "power": true,
+    "protected_area": {
+      "name": "Walpole-Nornalup National Park",
+      "osm_id": 11992711,
+      "osm_type": "relation"
+    },
     "website": "https://www.coalminebeach.com.au",
     "wheelchair": true,
     "wifi": true
@@ -69,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

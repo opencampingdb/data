@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -18,6 +19,13 @@
       "name": "Mount Wilson",
       "osm_id": 117041157,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Bebeah Garden Summer Lake",
+      "osm_id": 929096475,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "attraction",
@@ -36,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,6 +12,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
     "power": "osm",
     "pub": "osm"
@@ -36,6 +37,13 @@
     "nearest_boat_ramp": {
       "distance_m": 670
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Lake Argyle",
+      "osm_id": 59785,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "phone": "+61891687777",
     "power": true,
     "pub": true
@@ -56,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

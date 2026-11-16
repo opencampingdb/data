@@ -3,7 +3,9 @@
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/overtherangetyres/",
@@ -20,6 +22,16 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Gibb River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Adcock River",
+      "osm_id": 313547639
+    },
+    "protected_area": {
+      "name": "Wilinggin Indigenous Protected Area (IUCN Cat. V)",
+      "osm_id": 12954883,
+      "osm_type": "relation"
     }
   },
   "group": "services",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

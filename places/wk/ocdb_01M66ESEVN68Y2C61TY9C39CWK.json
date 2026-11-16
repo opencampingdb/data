@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 60,
       "name": "Coolum Beach"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Stumers Creek",
+      "osm_id": 34909977,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "David Low Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Stumers Creek",
+      "osm_id": 62208009
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

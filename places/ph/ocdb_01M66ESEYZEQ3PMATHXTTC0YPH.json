@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -25,6 +27,18 @@
     "nearest_beach": {
       "distance_m": 370,
       "name": "Tiny's Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 970,
+      "name": "Archies Island",
+      "osm_id": 4628758562,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Wollondilly River",
+      "osm_id": 31745860
     }
   },
   "group": "overnight",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,13 @@
       "name": "Ilparpa",
       "osm_id": 2288340792,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Standley Chasm",
+      "osm_id": 77923027,
+      "osm_type": "node",
+      "type": "locality"
     }
   },
   "group": "attraction",
@@ -31,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

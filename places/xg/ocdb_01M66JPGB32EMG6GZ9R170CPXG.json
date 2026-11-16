@@ -4,8 +4,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,11 +28,28 @@
     "nearest_boat_ramp": {
       "distance_m": 2360
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Smiths Lake",
+      "osm_id": 1164841,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "The Lakes Way"
     },
-    "operator": "Great Lakes Council"
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Wamwarra Creek",
+      "osm_id": 922032120
+    },
+    "operator": "Great Lakes Council",
+    "protected_area": {
+      "name": "Bramble's Reserve",
+      "osm_id": 393382606,
+      "osm_type": "way"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPGB32EMG6GZ9R170CPXG",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

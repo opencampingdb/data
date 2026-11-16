@@ -3,6 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -11,6 +14,23 @@
     "lga": {
       "name": "Shire of Ashburton",
       "osm_id": 11690012
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Jirndawurrunha Pool",
+      "osm_id": 1195242078,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Millstream Creek",
+      "osm_id": 1195242170
+    },
+    "protected_area": {
+      "name": "Millstream Chichester National Park",
+      "osm_id": 8383702,
+      "osm_type": "relation"
     },
     "toilet_type": "flush"
   },
@@ -30,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

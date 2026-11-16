@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -36,9 +38,21 @@
     "nearest_beach": {
       "distance_m": 160
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Hunter River",
+      "osm_id": 592440090,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Belmore Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Hunter River",
+      "osm_id": 69994164
     },
     "phone": "+61249336566",
     "website": "http://imperialmaitland.com.au/"
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

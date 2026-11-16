@@ -4,7 +4,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -22,9 +24,21 @@
       "osm_id": 113764901,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Bogan River",
+      "osm_id": 258617306,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Mitchell Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Bogan River",
+      "osm_id": 285603958
     },
     "showers": false,
     "tents": false,
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

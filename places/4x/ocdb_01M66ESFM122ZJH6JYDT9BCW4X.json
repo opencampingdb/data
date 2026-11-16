@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -19,9 +21,21 @@
       "osm_id": 59608762,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 740,
+      "name": "North Bega",
+      "osm_id": 113255318,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Bega River",
+      "osm_id": 32257040
     }
   },
   "group": "utility",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

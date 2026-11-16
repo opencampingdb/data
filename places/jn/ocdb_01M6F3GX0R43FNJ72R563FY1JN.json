@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -30,6 +31,11 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Watton Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Werribee River",
+      "osm_id": 19690973
     }
   },
   "group": "services",
@@ -48,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

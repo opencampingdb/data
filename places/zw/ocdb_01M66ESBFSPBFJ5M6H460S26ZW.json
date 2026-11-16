@@ -3,6 +3,7 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -13,6 +14,13 @@
     "lga": {
       "name": "Shire of Ravensthorpe",
       "osm_id": 11688994
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Munglinup",
+      "osm_id": 244468001,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 80,
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

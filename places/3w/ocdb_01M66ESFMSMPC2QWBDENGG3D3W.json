@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 50,
       "name": "Swimcart Beach"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Swimcart Beach",
+      "osm_id": 254301166,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Gardens Road"
+    },
+    "protected_area": {
+      "name": "Bay of Fires Conservation Area",
+      "osm_id": 6247008,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

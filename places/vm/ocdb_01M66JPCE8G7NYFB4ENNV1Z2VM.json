@@ -8,8 +8,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -30,8 +32,18 @@
       "osm_id": 14106654113,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Greenock Creek",
+      "osm_id": 219063574
+    },
     "operator": "Seppeltsfield",
     "phone": "+61885686200",
+    "protected_area": {
+      "name": "Barossa Valley District",
+      "osm_id": 5261942,
+      "osm_type": "relation"
+    },
     "website": "https://www.seppeltsfield.com.au/"
   },
   "group": "attraction",
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

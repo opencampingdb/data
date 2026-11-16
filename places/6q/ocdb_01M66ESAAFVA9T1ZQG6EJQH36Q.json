@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -23,6 +25,16 @@
     "nearest_beach": {
       "distance_m": 4030,
       "name": "Duck Hole Beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Glenbrook Creek",
+      "osm_id": 24528414
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true,
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

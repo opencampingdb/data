@@ -3,7 +3,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -19,9 +21,21 @@
     "nearest_boat_ramp": {
       "distance_m": 680
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Molonglo River",
+      "osm_id": 10014753,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Morshead Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Molonglo River",
+      "osm_id": 358505727
     },
     "water_type": "fountain"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

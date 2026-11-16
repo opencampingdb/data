@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -31,9 +33,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1410
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Macleay River",
+      "osm_id": 7388017,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Smith Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Macleay River",
+      "osm_id": 38273567
     },
     "phone": "+61265621361"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

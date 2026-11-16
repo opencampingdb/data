@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -32,7 +34,17 @@
       "distance_m": 70,
       "name": "Mansfield - Woods Point Road"
     },
-    "phone": "+61423468715"
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Goulburn River",
+      "osm_id": 503331935
+    },
+    "phone": "+61423468715",
+    "protected_area": {
+      "name": "Upper Goulburn State Forest",
+      "osm_id": 20306077,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEYE2JCRPZHHPEKRV551",
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

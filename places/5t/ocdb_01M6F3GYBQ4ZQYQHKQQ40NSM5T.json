@@ -3,7 +3,8 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -26,6 +27,11 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Railway Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Popes Creek",
+      "osm_id": 450567111
     }
   },
   "group": "attraction",
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

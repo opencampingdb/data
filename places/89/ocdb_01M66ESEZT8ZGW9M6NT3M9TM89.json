@@ -12,7 +12,8 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -40,7 +41,12 @@
       "name": "Warren Road"
     },
     "operator": "Forestry SA",
-    "phone": "+61885211700"
+    "phone": "+61885211700",
+    "protected_area": {
+      "name": "Barossa Valley District",
+      "osm_id": 5261942,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEZT8ZGW9M6NT3M9TM89",
@@ -58,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

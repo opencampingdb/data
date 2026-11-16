@@ -5,7 +5,9 @@
     "dump_station": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -25,9 +27,21 @@
       "osm_id": 145472402,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Bears Lagoon",
+      "osm_id": 10127066,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Loddon Valley Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Channel 12",
+      "osm_id": 1172943262
     },
     "power": false,
     "showers": false,
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

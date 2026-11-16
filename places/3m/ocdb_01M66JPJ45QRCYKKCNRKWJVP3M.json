@@ -2,6 +2,7 @@
   "fact_sources": {
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "website": "osm"
   },
   "facts": {
@@ -13,6 +14,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 60
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Corroboree Billabong",
+      "osm_id": 371329124,
+      "osm_type": "way",
+      "type": "water"
     },
     "website": "https://www.wetlandcruises.com.au/"
   },
@@ -32,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

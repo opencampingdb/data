@@ -3,7 +3,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "locality": {
@@ -18,9 +20,21 @@
     "nearest_boat_ramp": {
       "distance_m": 720
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Chimney Hill",
+      "osm_id": 6385469418,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Quality Row"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Watermill Creek",
+      "osm_id": 681850985
     }
   },
   "group": "attraction",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

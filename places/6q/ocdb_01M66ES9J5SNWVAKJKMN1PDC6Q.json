@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -31,6 +33,16 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 190
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Major Creek",
+      "osm_id": 476192783
+    },
+    "protected_area": {
+      "name": "Major Creek Streamside Reserve",
+      "osm_id": 666538977,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

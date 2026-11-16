@@ -3,7 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +18,12 @@
       "osm_id": 3421293712,
       "type": "town"
     },
-    "operator": "DBCA"
+    "operator": "DBCA",
+    "protected_area": {
+      "name": "Wandoo National Park",
+      "osm_id": 12936736,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESAFHWEH6NM9P5NCSWCDB",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 40,
       "name": "Four Mile Beach"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Four Mile Beach",
+      "osm_id": 18182636,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 470,
       "name": "Hamersley Drive"
+    },
+    "protected_area": {
+      "name": "Fitzgerald River National Park",
+      "osm_id": 8135128,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

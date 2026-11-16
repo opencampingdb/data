@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +16,13 @@
       "name": "Lameroo",
       "osm_id": 2285649509,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 380,
+      "name": "Geranium",
+      "osm_id": 2104263091,
+      "osm_type": "node",
+      "type": "hamlet"
     }
   },
   "group": "overnight",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

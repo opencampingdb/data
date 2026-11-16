@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -18,6 +19,11 @@
       "name": "Beerburrum",
       "osm_id": 839531800,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Glass House Mountains National Park",
+      "osm_id": 1107716,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

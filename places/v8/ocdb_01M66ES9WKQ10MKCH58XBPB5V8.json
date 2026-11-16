@@ -6,7 +6,9 @@
     "dump_station": "contributed",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "dump_station": true,
@@ -20,9 +22,21 @@
       "osm_id": 283286686,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Jack Emmett Billabong",
+      "osm_id": 2933083,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Wimmera Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Dunmunkle Creek",
+      "osm_id": 1132143570
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

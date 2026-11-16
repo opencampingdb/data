@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
@@ -26,6 +27,11 @@
       "distance_m": 160,
       "name": "Great Western Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Macquarie River",
+      "osm_id": 32246485
+    },
     "operator": "Bathurst Regional Council",
     "water_type": "fountain",
     "wheelchair": true
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

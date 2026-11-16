@@ -4,7 +4,9 @@
     "fuel": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -19,9 +21,21 @@
       "osm_id": 1884215396,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Polieman's Hill",
+      "osm_id": 12898679104,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Moore Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Nangur Creek",
+      "osm_id": 1313460200
     }
   },
   "group": "utility",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

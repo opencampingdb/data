@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -18,6 +19,11 @@
     },
     "nearest_major_road": {
       "distance_m": 180
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Campaspe River",
+      "osm_id": 185271615
     },
     "operator": "Elmore Water Tower"
   },
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

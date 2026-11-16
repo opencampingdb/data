@@ -4,6 +4,7 @@
     "lga": "osm",
     "max_stay": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -17,6 +18,11 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Eyre Highway"
+    },
+    "protected_area": {
+      "name": "Dundas Nature Reserve",
+      "osm_id": 8165048,
+      "osm_type": "relation"
     },
     "showers": false,
     "toilets": true
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

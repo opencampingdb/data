@@ -9,9 +9,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -44,12 +46,24 @@
     "nearest_boat_ramp": {
       "distance_m": 2550
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Seven Mile Beach",
+      "osm_id": 222390016,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "The Lakes Way"
     },
     "operator": "NSW National Parks and Wildlife Service",
     "power": false,
+    "protected_area": {
+      "name": "Booti Booti National Park",
+      "osm_id": 6044249,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -72,5 +86,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

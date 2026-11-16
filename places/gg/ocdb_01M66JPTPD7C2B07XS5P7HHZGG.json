@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -21,7 +23,17 @@
       "distance_m": 70,
       "name": "Palmerston Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Chunga Creek",
+      "osm_id": 709818514
+    },
     "opening_hours": "Mo-Su 09:30-17:30; Dec 25 off",
+    "protected_area": {
+      "name": "Wooroonooran National Park",
+      "osm_id": 1518774,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "attraction",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

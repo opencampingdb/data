@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 181304750,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Stirk Park Pond",
+      "osm_id": 479479978,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Kalamunda Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Poison Gully",
+      "osm_id": 740974952
     },
     "toilet_type": "flush"
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,8 +8,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -29,8 +31,18 @@
       "osm_id": 193757622,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "North Para River",
+      "osm_id": 180558528
+    },
     "opening_hours": "Mo-Fr 09:30-17:00; Sa-Su 10:30-16:30; PH 10:30-16:30; Dec 25 off; easter -2 days off",
     "phone": "+61 8 8565 9555",
+    "protected_area": {
+      "name": "Barossa Valley District",
+      "osm_id": 5261942,
+      "osm_type": "relation"
+    },
     "website": "https://www.peterlehmannwines.com"
   },
   "group": "attraction",
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

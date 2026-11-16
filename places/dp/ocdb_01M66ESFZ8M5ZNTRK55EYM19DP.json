@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -19,9 +21,21 @@
       "osm_id": 19949789,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 880,
+      "name": "Toowoomba City",
+      "osm_id": 6036336822,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Margaret Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "East Creek",
+      "osm_id": 350561780
     }
   },
   "group": "utility",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

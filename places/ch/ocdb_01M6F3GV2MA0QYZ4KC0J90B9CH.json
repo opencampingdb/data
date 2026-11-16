@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1530
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Murrumbidgee River",
+      "osm_id": 2723484,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Fitzmaurice Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Murrumbidgee River",
+      "osm_id": 179754041
     },
     "phone": "+61269211922",
     "website": "http://princeofwaleswagga.com/"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

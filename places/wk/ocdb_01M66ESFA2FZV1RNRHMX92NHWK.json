@@ -3,7 +3,8 @@
     "bins": "osm",
     "entry": "osm",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "bins": true,
@@ -15,6 +16,11 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Stuart Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "The Marryat Creek",
+      "osm_id": 1068920689
     }
   },
   "group": "overnight",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

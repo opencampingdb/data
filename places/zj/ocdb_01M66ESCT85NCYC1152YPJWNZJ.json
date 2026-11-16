@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
@@ -29,6 +30,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1970
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Waterfront Artificial Beach",
+      "osm_id": 282486263,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "water_type": "fountain",
     "wheelchair": true
   },
@@ -48,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

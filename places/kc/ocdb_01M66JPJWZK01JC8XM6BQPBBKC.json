@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Church Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Macquarie River",
+      "osm_id": 29467159
     },
     "website": "https://www.facebook.com/photo/?fbid=767994805363313"
   },
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -19,7 +21,17 @@
       "osm_id": 171095775,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Tyers River",
+      "osm_id": 187745302
+    },
     "pets": "no",
+    "protected_area": {
+      "name": "Moondarra State Park",
+      "osm_id": 9267275,
+      "osm_type": "relation"
+    },
     "toilets": true,
     "website": "https://www.parks.vic.gov.au/"
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

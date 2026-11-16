@@ -5,7 +5,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -22,7 +25,24 @@
       "osm_id": 456874812,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Scotts",
+      "osm_id": 11228351022,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Mitchell River",
+      "osm_id": 38605177
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Mitchell and Wonnangatta Rivers Heritage River",
+      "osm_id": 16570361,
+      "osm_type": "relation"
+    },
     "tents": false
   },
   "group": "overnight",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

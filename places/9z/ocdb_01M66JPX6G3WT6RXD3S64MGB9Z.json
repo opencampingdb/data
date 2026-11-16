@@ -11,6 +11,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -38,6 +39,13 @@
     "nearest_boat_ramp": {
       "distance_m": 360
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Blue Waters Lake",
+      "osm_id": 40119115,
+      "osm_type": "way",
+      "type": "water"
+    },
     "phone": "+61352563326"
   },
   "group": "services",
@@ -56,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

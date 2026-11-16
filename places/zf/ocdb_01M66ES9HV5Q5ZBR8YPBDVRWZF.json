@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -21,6 +24,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1270
+    },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Oxbow Lake",
+      "osm_id": 46874785,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Glenelg River",
+      "osm_id": 285171981
+    },
+    "protected_area": {
+      "name": "Discovery Bay Coastal Park",
+      "osm_id": 9223216,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

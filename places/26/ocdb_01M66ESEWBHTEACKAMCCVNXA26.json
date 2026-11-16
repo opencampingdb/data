@@ -11,8 +11,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -41,8 +44,25 @@
     "nearest_boat_ramp": {
       "distance_m": 680
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Western Port",
+      "osm_id": 13053988,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "East Creek",
+      "osm_id": 177969468
+    },
     "phone": "+61 3 5989 8333",
     "power": true,
+    "protected_area": {
+      "name": "Flinders - Somers Coastal Reserve",
+      "osm_id": 9278065,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "website": "https://pointleo.com"
@@ -69,5 +89,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

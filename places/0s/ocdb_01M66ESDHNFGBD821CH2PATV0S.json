@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -26,7 +28,17 @@
       "distance_m": 360,
       "name": "Waterfall Way"
     },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Guy Fawkes River",
+      "osm_id": 82275252
+    },
     "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Guy Fawkes River National Park",
+      "osm_id": 5925953,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

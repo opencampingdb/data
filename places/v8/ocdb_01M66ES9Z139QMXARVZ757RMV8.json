@@ -11,7 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -34,7 +37,24 @@
     "nearest_boat_ramp": {
       "distance_m": 3440
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Tinaroo",
+      "osm_id": 3238143,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Downfall Creek",
+      "osm_id": 712568845
+    },
     "phone": "+61740914222",
+    "protected_area": {
+      "name": "Danbulla State Forest 1",
+      "osm_id": 8465049,
+      "osm_type": "relation"
+    },
     "website": "http://nprsr.qld.gov.au/parks/danbulla/camping.html#downfall_creek_camping_area"
   },
   "group": "overnight",
@@ -53,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

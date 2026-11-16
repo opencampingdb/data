@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,7 +26,12 @@
       "distance_m": 120,
       "name": "West Tamar Highway"
     },
-    "opening_hours": "We-Su 10:00-16:00"
+    "opening_hours": "We-Su 10:00-16:00",
+    "protected_area": {
+      "name": "Tamar Conservation Area",
+      "osm_id": 6246061,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP0CAX8CXXAVYX8ERWMJF",
@@ -43,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

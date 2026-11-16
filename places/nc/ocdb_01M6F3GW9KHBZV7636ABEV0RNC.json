@@ -12,9 +12,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -43,12 +45,24 @@
     "nearest_boat_ramp": {
       "distance_m": 1400
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Geoffrey Bay",
+      "osm_id": 2122458812,
+      "osm_type": "node",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Marine Parade"
     },
     "operator": "Summer House",
     "phone": "+61 7 2147 8840",
+    "protected_area": {
+      "name": "Great Barrier Reef World Heritage Area",
+      "osm_id": 10156269,
+      "osm_type": "relation"
+    },
     "website": "https://staysummerhouse.com/magnetic-island/",
     "wifi": true
   },
@@ -68,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

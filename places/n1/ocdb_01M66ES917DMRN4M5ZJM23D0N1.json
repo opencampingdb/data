@@ -10,7 +10,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -34,7 +35,12 @@
       "distance_m": 230,
       "name": "Bogong High Plains Road"
     },
-    "phone": "+61131963"
+    "phone": "+61131963",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES917DMRN4M5ZJM23D0N1",
@@ -52,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -13,7 +13,9 @@
     "locality": "osm",
     "name": "overture",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -39,9 +41,21 @@
       "distance_m": 2950,
       "name": "Simmos Beach"
     },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Georges River",
+      "osm_id": 592853581,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Cambridge Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Georges River",
+      "osm_id": 372035915
     },
     "phone": "+61296020614",
     "website": "http://nsw.scouts.com.au/campsitesandhalls/component/k2/item/10292-glenfield-scout-activity-centre"
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

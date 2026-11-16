@@ -18,8 +18,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -52,8 +54,18 @@
       "distance_m": 2200,
       "name": "Diggers Island South Beach"
     },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Bear Creek",
+      "osm_id": 742838807
+    },
     "phone": "+61131963",
     "power": false,
+    "protected_area": {
+      "name": "Cape Liptrap Coastal Park",
+      "osm_id": 9267535,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -76,5 +88,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

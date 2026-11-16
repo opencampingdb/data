@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -32,6 +33,13 @@
     "nearest_beach": {
       "distance_m": 4650
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "phone": "+61886267003"
   },
   "group": "overnight",
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

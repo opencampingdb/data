@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "private",
@@ -15,6 +17,16 @@
       "name": "Blackwood",
       "osm_id": 2140871545,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Lerderderg River",
+      "osm_id": 60670319
+    },
+    "protected_area": {
+      "name": "Lerderderg River Heritage River",
+      "osm_id": 9195665,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

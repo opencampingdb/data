@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -19,6 +21,16 @@
       "name": "Licola North",
       "osm_id": 1665456278,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Wellington River",
+      "osm_id": 1415106987
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     },
     "tents": true,
     "toilets": true
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

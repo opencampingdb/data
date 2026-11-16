@@ -9,6 +9,8 @@
     "fee": "contributed",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "website": "contributed"
   },
   "facts": {
@@ -23,6 +25,18 @@
       "name": "Briagolong",
       "osm_id": 11384987822,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Blue Pool",
+      "osm_id": 323047598,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Freestone Creek",
+      "osm_id": 1418828818
     },
     "website": "https://www.exploreoutdoors.vic.gov.au/activities/camping/blue-pool-campground"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

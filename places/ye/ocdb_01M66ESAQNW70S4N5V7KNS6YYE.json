@@ -11,8 +11,11 @@
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -39,8 +42,25 @@
       "type": "town"
     },
     "motorbikes": false,
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Mirang Pool",
+      "osm_id": 45323620,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Heathcote Creek",
+      "osm_id": 43110893
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Heathcote National Park",
+      "osm_id": 1282169,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": false,
@@ -62,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

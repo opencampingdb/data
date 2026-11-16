@@ -3,6 +3,7 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm"
   },
@@ -19,6 +20,13 @@
       "name": "Whittlesea",
       "osm_id": 267458656,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Peter Hopper Lake",
+      "osm_id": 7037796,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

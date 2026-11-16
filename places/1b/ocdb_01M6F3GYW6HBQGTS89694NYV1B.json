@@ -7,7 +7,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "phone": "osm",
     "website": "osm"
@@ -29,9 +31,21 @@
       "osm_id": 222499640,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Kerwin Swamp",
+      "osm_id": 86812049,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Boonah - Rathdowney Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Teviot Brook",
+      "osm_id": 121211366
     },
     "pets": "yes",
     "phone": "+61 7 5463 1048",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

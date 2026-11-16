@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,19 @@
       "osm_id": 116961349,
       "type": "city"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Mount Elliot",
+      "osm_id": 5156399765,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Katandra Reserve",
+      "osm_id": 7626524,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBEQXRM39Q888SR7F1YN",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

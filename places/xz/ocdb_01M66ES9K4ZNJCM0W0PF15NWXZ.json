@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -20,6 +22,16 @@
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Acheron Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Acheron River",
+      "osm_id": 1387118756
+    },
+    "protected_area": {
+      "name": "Marysville State Forest",
+      "osm_id": 721573,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

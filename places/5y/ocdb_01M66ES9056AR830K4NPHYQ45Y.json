@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Numeralla",
       "osm_id": 1887102624,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Tuross River",
+      "osm_id": 363231357
+    },
+    "protected_area": {
+      "name": "Wadbilliga National Park",
+      "osm_id": 5950846,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/cascades-campground"
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,8 +6,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -35,8 +37,20 @@
     "nearest_boat_ramp": {
       "distance_m": 680
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Lagoon Beach",
+      "osm_id": 157694680,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "opening_hours": "Mo-Su 00:00-23:59",
     "operator": "Lord Howe Island Board",
+    "protected_area": {
+      "name": "Lord Howe Island Group World Heritage Area",
+      "osm_id": 46150262,
+      "osm_type": "way"
+    },
     "website": "https://www.anbg.gov.au/chabg/bg-dir/lord-howe.html"
   },
   "group": "attraction",
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,9 +18,21 @@
       "osm_id": 113193831,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Lachlan",
+      "osm_id": 4293050132,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Lachlan Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Lachlan River",
+      "osm_id": 247355128
     },
     "toilet_type": "flush"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

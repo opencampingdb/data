@@ -8,6 +8,9 @@
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -19,6 +22,23 @@
       "suburb": "Muswellbrook Shire Council"
     },
     "facebook": "https://www.facebook.com/188867867821567",
+    "lga": {
+      "name": "Muswellbrook Shire Council",
+      "osm_id": 6343182
+    },
+    "locality": {
+      "distance_m": 11560,
+      "name": "Ravensworth",
+      "osm_id": 3058982703,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Lake Liddell",
+      "osm_id": 173271564,
+      "osm_type": "way",
+      "type": "water"
+    },
     "phone": "+61473177025",
     "website": "http://www.lakeliddellrecreationarea.com.au"
   },
@@ -26,23 +46,23 @@
   "id": "ocdb_01M66ESA11FN0JJDPKHHJT5YKA",
   "kind": "campground",
   "location": {
-    "lat": -32.352611,
-    "lon": 150.995688
+    "lat": -32.352981,
+    "lon": 150.995792
   },
   "merged_osm": [
     {
-      "id": 650415352,
-      "type": "way"
+      "id": 1811181752,
+      "type": "node"
     }
   ],
   "name": "Lake Liddell Recreation Area",
   "osm": {
-    "id": 1811181752,
-    "timestamp": "2018-11-29T03:43:02Z",
-    "type": "node",
-    "version": 2
+    "id": 650415352,
+    "timestamp": "2026-11-11T06:52:03Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,10 @@
     "drinking_water": "osm",
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -17,6 +20,23 @@
       "name": "Eungella",
       "osm_id": 1817627474,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Broken River",
+      "osm_id": 1743948990,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Broken River",
+      "osm_id": 23502012
+    },
+    "protected_area": {
+      "name": "Eungella National Park",
+      "osm_id": 8411769,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

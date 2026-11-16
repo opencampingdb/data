@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Elaine",
       "osm_id": 482791864,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Blue Gums",
+      "osm_id": 12553777658,
+      "osm_type": "node",
+      "type": "locality"
     },
     "water_type": "fountain"
   },
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

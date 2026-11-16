@@ -5,7 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "air": true,
@@ -28,6 +29,11 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mulgoa Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "School House Creek",
+      "osm_id": 174757517
     }
   },
   "group": "services",
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

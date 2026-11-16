@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Bostobrick",
       "osm_id": 113751007,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Mest Creek",
+      "osm_id": 914337021
+    },
+    "protected_area": {
+      "name": "Guy Fawkes River National Park",
+      "osm_id": 5925953,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,7 +6,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/514623578701597",
@@ -23,6 +26,23 @@
     "nearest_beach": {
       "distance_m": 0,
       "name": "Carter Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Carter Beach",
+      "osm_id": 11059737,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Murray River",
+      "osm_id": 173320123
+    },
+    "protected_area": {
+      "name": "Tocumwal Regional Park",
+      "osm_id": 20174028,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

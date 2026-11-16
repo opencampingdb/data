@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
@@ -19,6 +21,18 @@
       "name": "Isisford",
       "osm_id": 2214209529,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Oma Waterhole",
+      "osm_id": 356899835,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Barcoo River",
+      "osm_id": 1265994521
     },
     "operator": "Longreach Regional Council",
     "toilets": true
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

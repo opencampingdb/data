@@ -16,7 +16,9 @@
     "fee": "contributed",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "contributed"
   },
   "facts": {
@@ -40,7 +42,17 @@
       "osm_id": 1573432792,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Byrrill Creek",
+      "osm_id": 341062561
+    },
     "phone": "0266708600",
+    "protected_area": {
+      "name": "Mebbin National Park",
+      "osm_id": 5928172,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/cutters-camp-campground"
   },
   "group": "overnight",
@@ -59,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "tents": "osm",
     "wifi": "osm"
@@ -33,9 +35,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4710
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Rainbow Beach",
+      "osm_id": 1460440652,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 340,
       "name": "Ocean Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Duchess Gully",
+      "osm_id": 173068756
     },
     "power": true,
     "tents": true,
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

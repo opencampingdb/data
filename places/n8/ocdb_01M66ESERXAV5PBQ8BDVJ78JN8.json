@@ -9,8 +9,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -37,11 +39,23 @@
       "distance_m": 100,
       "name": "Kilcunda West 2 Beach"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Kilcunda West 2 Beach",
+      "osm_id": 1040098444,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Bass Highway"
     },
     "phone": "+61356787260",
+    "protected_area": {
+      "name": "Kilcunda Coastal Reserve",
+      "osm_id": 9221700,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://kilcundaoceanview.com.au/"
   },
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,7 +8,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -31,7 +33,19 @@
       "osm_id": 320491630,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Tin Mines",
+      "osm_id": 113638084,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "0269477025",
+    "protected_area": {
+      "name": "Woomargama National Park",
+      "osm_id": 5970473,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tin-mines-campground"
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

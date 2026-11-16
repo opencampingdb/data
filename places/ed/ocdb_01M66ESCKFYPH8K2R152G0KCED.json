@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilet_type": "osm"
   },
@@ -23,6 +25,18 @@
     },
     "nearest_beach": {
       "distance_m": 70
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Geordie Bay",
+      "osm_id": 1994951791,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
     },
     "showers": true,
     "toilet_type": "flush"
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

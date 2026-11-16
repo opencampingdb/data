@@ -4,6 +4,9 @@
     "fee": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,6 +22,23 @@
     "nearest_beach": {
       "distance_m": 120,
       "name": "Kambah Rock Pool Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Murrumbidgee River",
+      "osm_id": 17595818,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Murrumbidgee River",
+      "osm_id": 463031821
+    },
+    "protected_area": {
+      "name": "Kambah Pool Recreation Area",
+      "osm_id": 9417752,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

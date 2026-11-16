@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -14,6 +15,13 @@
       "name": "Tammin",
       "osm_id": 1793989751,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 470,
+      "name": "Liveseys",
+      "osm_id": 6041677878,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
       "distance_m": 60,
@@ -36,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

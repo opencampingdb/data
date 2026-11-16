@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -18,6 +19,11 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1790
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Enoggera Creek",
+      "osm_id": 23193239
     },
     "water_type": "fountain"
   },
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

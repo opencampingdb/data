@@ -8,7 +8,9 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -30,9 +32,21 @@
       "osm_id": 1831953132,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Stuarts Rocks",
+      "osm_id": 115098423,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mayne Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Pages River",
+      "osm_id": 83257101
     },
     "phone": "0418 647 176",
     "website": "http://www.murrurundihistoricalsociety.com"
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

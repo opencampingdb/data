@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -22,7 +23,12 @@
       "distance_m": 110,
       "name": "Ben Lomond Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Ben Lomond National Park",
+      "osm_id": 3044787,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBJYQJKK9WWBYZDJXHK8",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

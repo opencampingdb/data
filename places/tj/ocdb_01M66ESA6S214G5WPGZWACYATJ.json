@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Laverton",
       "osm_id": 11690240
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Neale Junction",
+      "osm_id": 1980485680,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Neale Junction Nature Reserve",
+      "osm_id": 575160868,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

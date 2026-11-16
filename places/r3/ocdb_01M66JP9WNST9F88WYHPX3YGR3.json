@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +23,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Weakleys Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Scotch Dairy Creek",
+      "osm_id": 237747322
     }
   },
   "group": "attraction",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

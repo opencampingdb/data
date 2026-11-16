@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -26,6 +28,16 @@
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Davidson Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Edward River",
+      "osm_id": 173383058
+    },
+    "protected_area": {
+      "name": "Murray Valley Regional Park",
+      "osm_id": 5836868,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

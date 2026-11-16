@@ -8,6 +8,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "power": "community_report",
     "showers": "osm",
     "tents": "osm",
@@ -29,6 +30,13 @@
     },
     "nearest_beach": {
       "distance_m": 210
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Lake Brockman",
+      "osm_id": 72937736,
+      "osm_type": "way",
+      "type": "water"
     },
     "power": true,
     "showers": true,
@@ -52,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

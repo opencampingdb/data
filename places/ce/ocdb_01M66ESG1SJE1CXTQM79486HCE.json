@@ -5,7 +5,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -22,7 +25,24 @@
       "osm_id": 986281846,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Carroll's Spring",
+      "osm_id": 11217088378,
+      "osm_type": "node",
+      "type": "spring"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Werribee River",
+      "osm_id": 60723421
+    },
     "operator": "Forest Fire Managment Victoria",
+    "protected_area": {
+      "name": "Spargo Creek Regional Park",
+      "osm_id": 21814513,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

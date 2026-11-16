@@ -3,6 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -16,6 +19,23 @@
       "name": "Lyrup",
       "osm_id": 2079501285,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Disher Creek",
+      "osm_id": 329689896,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Murray River",
+      "osm_id": 173241448
+    },
+    "protected_area": {
+      "name": "Murray River National Park",
+      "osm_id": 568850,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -19,6 +20,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1640,
       "name": "Eildon Pondage Wall A"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Eildon Pondage",
+      "osm_id": 8878767,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -41,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

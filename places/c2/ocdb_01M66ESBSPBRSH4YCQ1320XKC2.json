@@ -11,8 +11,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -39,11 +42,28 @@
     "nearest_boat_ramp": {
       "distance_m": 1500
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Cotter River",
+      "osm_id": 8319422,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Cotter Road"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Cotter River",
+      "osm_id": 31150901
+    },
     "phone": "+61132281",
+    "protected_area": {
+      "name": "Cotter Reserve",
+      "osm_id": 9389209,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://actparks.bookeasy.com/cotter-campground#/accom/132235"
   },
@@ -63,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,13 @@
       "name": "Gayndah",
       "osm_id": 246283163,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Mount Gayndah",
+      "osm_id": 2844413082,
+      "osm_type": "node",
+      "type": "peak"
     }
   },
   "group": "utility",
@@ -31,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

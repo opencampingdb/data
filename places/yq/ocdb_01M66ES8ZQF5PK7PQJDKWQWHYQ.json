@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -19,6 +21,16 @@
     },
     "nearest_beach": {
       "distance_m": 60
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Cove Creek",
+      "osm_id": 1444657756
+    },
+    "protected_area": {
+      "name": "Southern Wilsons Promontory Remote and Natural Area",
+      "osm_id": 16321671,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

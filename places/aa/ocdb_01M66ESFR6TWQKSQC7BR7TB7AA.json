@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Miena",
       "osm_id": 321958019,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Lake Augusta",
+      "osm_id": 4559862,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Central Plateau Conservation Area",
+      "osm_id": 3155206,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

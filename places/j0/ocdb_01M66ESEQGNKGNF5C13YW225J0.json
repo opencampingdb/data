@@ -15,9 +15,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "contributed",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -51,9 +53,21 @@
       "distance_m": 280,
       "name": "Canoe Launch"
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Lane Cove River",
+      "osm_id": 2013600,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "Discovery Parks",
     "phone": "+61 2 9888 9133",
     "power": true,
+    "protected_area": {
+      "name": "Lane Cove National Park",
+      "osm_id": 2962929,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -76,5 +90,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

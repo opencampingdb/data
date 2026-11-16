@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -26,7 +27,12 @@
     "nearest_beach": {
       "distance_m": 1770
     },
-    "operator": "Queensland Health"
+    "operator": "Queensland Health",
+    "protected_area": {
+      "name": "Great Barrier Reef World Heritage Area",
+      "osm_id": 10156269,
+      "osm_type": "relation"
+    }
   },
   "group": "emergency",
   "id": "ocdb_01M66JPXDCY7AAJ4D6FPXE68PF",
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

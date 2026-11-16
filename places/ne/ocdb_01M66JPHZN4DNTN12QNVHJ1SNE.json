@@ -3,8 +3,10 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -21,11 +23,23 @@
       "osm_id": 113711904,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 590,
+      "name": "Laurel Hill",
+      "osm_id": 113712894,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Batlow Road"
     },
-    "operator": "Foresty Corp NSW"
+    "operator": "Foresty Corp NSW",
+    "protected_area": {
+      "name": "Bago State Forest",
+      "osm_id": 5996163,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPHZN4DNTN12QNVHJ1SNE",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,7 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
       "name": "Quilpie",
       "osm_id": 246024896,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Lake Houdraman",
+      "osm_id": 192855730,
+      "osm_type": "way",
+      "type": "water"
     },
     "wheelchair": false
   },
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

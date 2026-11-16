@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "drinking_water": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -10,6 +11,11 @@
       "name": "Tharwa",
       "osm_id": 186947418,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Tidbinbilla River",
+      "osm_id": 444991249
     }
   },
   "group": "utility",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

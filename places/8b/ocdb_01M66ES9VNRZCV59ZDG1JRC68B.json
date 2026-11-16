@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,18 @@
     "nearest_boat_ramp": {
       "distance_m": 3190,
       "name": "Wattle Point Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake Victoria",
+      "osm_id": 10157994,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "The Lakes National Park",
+      "osm_id": 9267271,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

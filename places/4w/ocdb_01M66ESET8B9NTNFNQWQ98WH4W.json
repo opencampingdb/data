@@ -12,7 +12,9 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -43,7 +45,17 @@
       "distance_m": 120,
       "name": "Great Ocean Road"
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Curdies River",
+      "osm_id": 248624669
+    },
     "phone": "+61 3 5598 5477",
+    "protected_area": {
+      "name": "Peterborough Coastal Reserve (COM)",
+      "osm_id": 9212158,
+      "osm_type": "relation"
+    },
     "website": "http://www.gortp.com.au"
   },
   "group": "overnight",
@@ -62,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

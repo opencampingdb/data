@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -10,7 +11,12 @@
       "name": "Lockhart River Aboriginal Shire",
       "osm_id": 11677446
     },
-    "operator": "Chuulangun Aboriginal Corporation"
+    "operator": "Chuulangun Aboriginal Corporation",
+    "protected_area": {
+      "name": "Kaanju Ngaachi Wenlock and Pascoe Rivers Indigenous Protected Area",
+      "osm_id": 13106811,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9YFM4D261PXB56VHN1Y",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

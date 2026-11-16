@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -39,9 +41,21 @@
       "distance_m": 1970,
       "name": "Boat Launch Ramp No.1"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Seaford Beach",
+      "osm_id": 49960617,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Nepean Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Kananook Creek",
+      "osm_id": 12471412
     },
     "phone": "+61397865666",
     "website": "http://www.rivierahotel.com.au/"
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

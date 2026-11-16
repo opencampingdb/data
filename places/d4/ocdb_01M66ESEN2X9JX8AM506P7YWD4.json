@@ -5,7 +5,8 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -24,6 +25,11 @@
     "nearest_boat_ramp": {
       "distance_m": 2010,
       "name": "Dry Creek"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Glenelg River",
+      "osm_id": 285171981
     }
   },
   "group": "utility",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

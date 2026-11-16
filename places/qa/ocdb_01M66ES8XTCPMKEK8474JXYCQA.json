@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +25,23 @@
     "nearest_boat_ramp": {
       "distance_m": 130,
       "name": "Canoe Launch"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lane Cove River",
+      "osm_id": 2013600,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Lane Cove River",
+      "osm_id": 377704136
+    },
+    "protected_area": {
+      "name": "Lane Cove National Park",
+      "osm_id": 2962929,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

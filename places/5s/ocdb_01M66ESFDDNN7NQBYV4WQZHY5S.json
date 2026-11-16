@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
@@ -19,6 +21,18 @@
       "name": "Berrima",
       "osm_id": 97299576,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Wingecarribee River",
+      "osm_id": 639902687,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Wingecarribee River",
+      "osm_id": 575241377
     },
     "operator": "Wingecarribee Shire Council",
     "toilet_type": "flush"
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

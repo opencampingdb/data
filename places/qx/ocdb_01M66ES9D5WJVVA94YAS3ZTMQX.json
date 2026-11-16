@@ -11,6 +11,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,6 +34,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 680
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Main Beach",
+      "osm_id": 852387569,
+      "osm_type": "way",
+      "type": "beach"
     },
     "phone": "+61244738236",
     "website": "http://www.turossbeach.com.au"
@@ -60,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

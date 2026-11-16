@@ -5,6 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -22,6 +25,23 @@
     },
     "nearest_beach": {
       "distance_m": 3160
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Mooney Mooney Creek",
+      "osm_id": 1256209,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Mooney Mooney Creek",
+      "osm_id": 176740037
+    },
+    "protected_area": {
+      "name": "Brisbane Water National Park",
+      "osm_id": 5860233,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +24,12 @@
     "nearest_boat_ramp": {
       "distance_m": 70
     },
-    "operator": "Sealink"
+    "operator": "Sealink",
+    "protected_area": {
+      "name": "Moreton Bay Marine Park (IUCN Cat IV Parts)",
+      "osm_id": 7930278,
+      "osm_type": "relation"
+    }
   },
   "group": "transport",
   "id": "ocdb_01M66JPGS1QYWM5VAZ2N17DTFW",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

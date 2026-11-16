@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -23,7 +25,17 @@
       "osm_id": 324609419,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Little Yabba Creek",
+      "osm_id": 142227132
+    },
     "operator": "Queensland Government Deptmartment of Environment, Science and Innovation",
+    "protected_area": {
+      "name": "Imbil State Forest 1",
+      "osm_id": 1506575,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parks.desi.qld.gov.au/parks/imbil/camping/charlie-moreland"
   },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

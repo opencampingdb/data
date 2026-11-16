@@ -9,6 +9,9 @@
     "entry": "osm",
     "facebook": "overture",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "power": "osm"
   },
@@ -23,6 +26,21 @@
     "entry": "public",
     "facebook": "https://www.facebook.com/1709254439353507",
     "fee": false,
+    "lga": {
+      "name": "Barcaldine Regional",
+      "osm_id": 11676690
+    },
+    "locality": {
+      "distance_m": 12800,
+      "name": "Barcaldine",
+      "osm_id": 1837486209,
+      "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Alice River",
+      "osm_id": 293133292
+    },
     "pets": "yes",
     "power": false
   },
@@ -30,23 +48,23 @@
   "id": "ocdb_01M66ESA1ANNX6YKK8BE6S1N81",
   "kind": "free_camp",
   "location": {
-    "lat": -23.65,
-    "lon": 145.21583
+    "lat": -23.649801,
+    "lon": 145.215899
   },
   "merged_osm": [
     {
-      "id": 1496349762,
-      "type": "way"
+      "id": 1811183588,
+      "type": "node"
     }
   ],
   "name": "Lloyd Jones Weir Campground",
   "osm": {
-    "id": 1811183588,
-    "timestamp": "2026-04-05T06:09:15Z",
-    "type": "node",
-    "version": 3
+    "id": 1496349762,
+    "timestamp": "2026-11-11T06:54:01Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

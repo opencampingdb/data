@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +16,13 @@
       "name": "Ridgley",
       "osm_id": 957924576,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Kara",
+      "osm_id": 419687855,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "overnight",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -14,8 +14,10 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -44,11 +46,23 @@
     "nearest_boat_ramp": {
       "distance_m": 1310
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Nelly Bay",
+      "osm_id": 385403707,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Nelly Bay Road"
     },
     "phone": "+61744137360",
+    "protected_area": {
+      "name": "Great Barrier Reef World Heritage Area",
+      "osm_id": 10156269,
+      "osm_type": "relation"
+    },
     "website": "http://islandburger.com.au/"
   },
   "group": "services",
@@ -67,5 +81,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

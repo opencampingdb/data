@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +11,23 @@
       "name": "Pine Creek",
       "osm_id": 31562954,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Main Pool",
+      "osm_id": 436854451,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Douglas River",
+      "osm_id": 99152416
+    },
+    "protected_area": {
+      "name": "Butterfly Gorge Nature Park",
+      "osm_id": 13003421,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -26,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

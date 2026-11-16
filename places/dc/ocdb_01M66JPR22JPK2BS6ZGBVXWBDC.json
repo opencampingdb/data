@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -23,9 +25,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1760
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Murrissippi River",
+      "osm_id": 8400508,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Whitewater Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Oaky Creek",
+      "osm_id": 575920355
     },
     "operator": "Ardent Leisure",
     "website": "https://www.dreamworld.com.au/rides-and-attractions/the-giant-drop/"
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

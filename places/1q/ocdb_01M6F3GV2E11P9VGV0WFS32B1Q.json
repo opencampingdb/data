@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 400
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Manning River",
+      "osm_id": 1164818,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Beach Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Wards Gully",
+      "osm_id": 921238577
     },
     "phone": "+61265561386",
     "website": "http://harringtonvillagemotel.com"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

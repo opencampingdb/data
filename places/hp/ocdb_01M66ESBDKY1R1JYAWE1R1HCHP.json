@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -21,7 +23,19 @@
     "nearest_beach": {
       "distance_m": 4670
     },
-    "operator": "QPWS"
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Koombaloomba Dam",
+      "osm_id": 1406317,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "operator": "QPWS",
+    "protected_area": {
+      "name": "Koombooloomba Conservation Park",
+      "osm_id": 8430832,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBDKY1R1JYAWE1R1HCHP",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

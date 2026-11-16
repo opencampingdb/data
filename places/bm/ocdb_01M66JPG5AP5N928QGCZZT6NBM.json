@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -26,6 +28,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2960
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Currimundi Lake",
+      "osm_id": 186383590,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Currimundi Creek",
+      "osm_id": 719342792
     }
   },
   "group": "attraction",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

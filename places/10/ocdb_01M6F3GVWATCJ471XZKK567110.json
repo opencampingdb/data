@@ -10,6 +10,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -36,6 +38,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2500
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Cumbebin Swamp",
+      "osm_id": 425078058,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Belongil Creek",
+      "osm_id": 307508618
+    },
     "phone": "+61266857709",
     "website": "https://nomadsworld.com/australia/arts-factory-lodge/"
   },
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

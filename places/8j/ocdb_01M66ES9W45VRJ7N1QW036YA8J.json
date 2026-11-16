@@ -6,7 +6,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -28,7 +30,17 @@
       "distance_m": 230,
       "name": "Northern Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Campaspe River",
+      "osm_id": 185271604
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Runnymede Streamside Reserve",
+      "osm_id": 281741198,
+      "osm_type": "way"
+    },
     "tents": true,
     "toilets": false
   },
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -23,7 +25,19 @@
       "osm_id": 113704510,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Shoalhaven River",
+      "osm_id": 177962940,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Deua National Park",
+      "osm_id": 5849996,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

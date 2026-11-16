@@ -11,7 +11,9 @@
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "pets": "feedback",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -30,7 +32,17 @@
       "osm_id": 113135793,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Clyde River",
+      "osm_id": 195256978
+    },
     "pets": "yes",
+    "protected_area": {
+      "name": "Yadboro State Forest",
+      "osm_id": 6308542,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "https://www.forestrycorporation.com.au/visit/forests/yadboro"
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T13:59:46Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

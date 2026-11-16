@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 1030,
       "name": "North Ipswich Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Bremer River",
+      "osm_id": 3326772,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "The Terrace"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Bremer River",
+      "osm_id": 28249548
     }
   },
   "group": "services",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

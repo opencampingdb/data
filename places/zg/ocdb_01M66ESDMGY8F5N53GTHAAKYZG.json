@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Thornton",
       "osm_id": 65640166,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Rubicon River",
+      "osm_id": 45753227
+    },
+    "protected_area": {
+      "name": "Rubicon Valley Historic and Cultural Features Reserve",
+      "osm_id": 1176649,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

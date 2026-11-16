@@ -9,7 +9,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,7 +35,24 @@
     "nearest_beach": {
       "distance_m": 130
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Termeil Lake",
+      "osm_id": 7453912,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Termeil Creek",
+      "osm_id": 1375839461
+    },
     "phone": "0244549500",
+    "protected_area": {
+      "name": "Meroo National Park",
+      "osm_id": 5876526,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/termeil-point-campground"
   },
   "group": "overnight",
@@ -51,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

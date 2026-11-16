@@ -14,7 +14,9 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "website": "overture"
@@ -44,9 +46,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1600
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Norman Creek",
+      "osm_id": 5325731,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Logan Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Norman Creek",
+      "osm_id": 33699385
     },
     "opening_hours": "Mo-Su 06:00-21:00",
     "phone": "+61731861042",
@@ -68,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

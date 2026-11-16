@@ -3,7 +3,9 @@
     "drinking_water": "osm",
     "fee": "osm",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -12,9 +14,21 @@
       "name": "Shire of Ashburton",
       "osm_id": 11690012
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Circular Pool",
+      "osm_id": 737734757,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Dales Road"
+    },
+    "protected_area": {
+      "name": "Karijini National Park",
+      "osm_id": 6930316,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

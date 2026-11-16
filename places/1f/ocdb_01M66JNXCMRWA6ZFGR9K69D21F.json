@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,9 +26,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3760
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "The Summit",
+      "osm_id": 127753337,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Sir Samuel Griffith Drive"
+    },
+    "protected_area": {
+      "name": "Mt Coot-tha Reserve",
+      "osm_id": 10030856,
+      "osm_type": "relation"
     },
     "water_type": "tank_fill"
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

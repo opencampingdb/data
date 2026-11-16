@@ -8,7 +8,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -38,9 +40,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1170
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Tweed River",
+      "osm_id": 8356866,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Alma Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Tweed River",
+      "osm_id": 174944929
     },
     "phone": "+61 2 6672 5589",
     "website": "https://find.shell.com/au/fuel/AU_A725-coles-express-murwillumbah"
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

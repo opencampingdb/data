@@ -5,6 +5,7 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -20,6 +21,13 @@
       "name": "Bathurst",
       "osm_id": 172987017,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Flood area",
+      "osm_id": 1106031271,
+      "osm_type": "way",
+      "type": "water"
     },
     "wheelchair": false
   },
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

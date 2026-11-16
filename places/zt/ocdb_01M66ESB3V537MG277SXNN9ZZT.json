@@ -3,6 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -18,6 +21,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1580
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "North Pine River",
+      "osm_id": 68252,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "North Pine River",
+      "osm_id": 24353233
+    },
+    "protected_area": {
+      "name": "Mungarra Reserve",
+      "osm_id": 906999689,
+      "osm_type": "way"
     },
     "water_type": "fountain"
   },
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

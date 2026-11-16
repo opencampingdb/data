@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "lga": {
@@ -21,6 +22,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4820
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Mount Clarence",
+      "osm_id": 912089021,
+      "osm_type": "node",
+      "type": "peak"
     }
   },
   "group": "attraction",
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

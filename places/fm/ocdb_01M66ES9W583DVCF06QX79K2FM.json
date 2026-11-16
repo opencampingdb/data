@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -30,6 +32,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 50
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Skinners Flat Reservoir",
+      "osm_id": 108297299,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Wychitella Nature Conservation Reserve",
+      "osm_id": 8530667,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

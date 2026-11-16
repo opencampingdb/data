@@ -4,7 +4,9 @@
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -21,9 +23,21 @@
       "osm_id": 266597469,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Avoca River",
+      "osm_id": 503474314,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Calder Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Avoca River",
+      "osm_id": 165529272
     },
     "showers": false,
     "tents": true
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

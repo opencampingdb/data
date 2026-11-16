@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -9,7 +11,17 @@
       "name": "Central Highlands Regional",
       "osm_id": 11676571
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Carnarvon Creek",
+      "osm_id": 184279043
+    },
     "opening_hours": "Mo-Su 08:00-16:00",
+    "protected_area": {
+      "name": "Carnarvon National Park",
+      "osm_id": 1483563,
+      "osm_type": "relation"
+    },
     "wifi": true
   },
   "group": "services",
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

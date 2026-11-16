@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,9 +21,26 @@
       "osm_id": 1680935969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "La Souef",
+      "osm_id": 2963915329,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mount Buffalo Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Skeleton Gully",
+      "osm_id": 1454379081
+    },
+    "protected_area": {
+      "name": "Mount Buffalo National Park",
+      "osm_id": 5726564,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

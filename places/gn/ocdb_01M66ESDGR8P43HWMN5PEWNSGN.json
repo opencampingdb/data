@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,9 +22,26 @@
       "osm_id": 161302593,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 890,
+      "name": "Anglers Rest",
+      "osm_id": 324832783,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Omeo Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Cobungra River",
+      "osm_id": 38733580
+    },
+    "protected_area": {
+      "name": "Mitta Mitta River Heritage River",
+      "osm_id": 16506844,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": false
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

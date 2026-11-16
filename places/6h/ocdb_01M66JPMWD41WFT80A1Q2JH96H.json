@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 6036336569,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 640,
+      "name": "Booran",
+      "osm_id": 269903143,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Acacia Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Slacks Creek",
+      "osm_id": 1064219296
     }
   },
   "group": "services",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

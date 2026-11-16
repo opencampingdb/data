@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -37,7 +39,19 @@
       "distance_m": 650,
       "name": "Port Sorell Boat Ramp"
     },
-    "phone": "+61364286277"
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Port Sorell",
+      "osm_id": 11205449,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "phone": "+61364286277",
+    "protected_area": {
+      "name": "Narawntapu National Park",
+      "osm_id": 6170308,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAH69WBZ9FMWN2X1VZ0X",
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

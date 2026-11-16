@@ -8,6 +8,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm",
@@ -33,6 +34,13 @@
     "nearest_boat_ramp": {
       "distance_m": 150
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Shoalhaven River",
+      "osm_id": 3682825,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "Bridge Road"
@@ -57,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

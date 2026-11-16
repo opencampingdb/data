@@ -11,7 +11,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,7 +34,19 @@
       "osm_id": 2634782123,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 490,
+      "name": "Leven Canyon",
+      "osm_id": 966666677,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "+61364252839",
+    "protected_area": {
+      "name": "Leven Canyon Regional Reserve",
+      "osm_id": 6210171,
+      "osm_type": "relation"
+    },
     "website": "http://www.coasttocanyon.com.au"
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

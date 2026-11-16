@@ -1,25 +1,60 @@
 {
   "fact_sources": {
-    "opening_hours": "osm"
+    "air": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
-    "opening_hours": "Mo-Su,PH 00:00-00:00"
+    "air": true,
+    "lga": {
+      "name": "Redland City",
+      "osm_id": 11677885
+    },
+    "locality": {
+      "distance_m": 1060,
+      "name": "Cleveland",
+      "osm_id": 80868537,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 2680
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2850
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Shore Street West"
+    },
+    "opening_hours": "Mo-Su,PH 00:00-00:00",
+    "operator": "7-Eleven"
   },
   "group": "services",
   "id": "ocdb_01M66JPWQ7X0PDXWP10HT2ACZ2",
   "kind": "fuel",
   "location": {
-    "lat": -27.524455,
-    "lon": 153.256142
+    "lat": -27.524407,
+    "lon": 153.256176
   },
+  "merged_osm": [
+    {
+      "id": 851929130,
+      "type": "way"
+    }
+  ],
   "name": "7-Eleven Cleveland",
   "osm": {
-    "id": 851929130,
-    "timestamp": "2025-11-11T07:25:16Z",
-    "type": "way",
-    "version": 4
+    "id": 14340459785,
+    "timestamp": "2026-11-02T10:26:42Z",
+    "type": "node",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

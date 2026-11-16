@@ -8,6 +8,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -32,6 +33,11 @@
       "distance_m": 250,
       "name": "Hamilton-Port Fairy Road"
     },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Eumeralla River",
+      "osm_id": 46868837
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -52,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

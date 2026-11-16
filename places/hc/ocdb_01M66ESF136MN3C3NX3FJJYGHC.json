@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
-    "phone": "overture"
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -31,7 +33,17 @@
       "osm_id": 2939016806,
       "type": "village"
     },
-    "phone": "+61351652200"
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Thomson River",
+      "osm_id": 281736997
+    },
+    "phone": "+61351652200",
+    "protected_area": {
+      "name": "Thomson River Heritage River",
+      "osm_id": 16538799,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF136MN3C3NX3FJJYGHC",
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

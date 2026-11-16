@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -41,9 +43,21 @@
       "distance_m": 1140,
       "name": "Picnic Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Maroochy River",
+      "osm_id": 1380753,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Ocean Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Maroochy River",
+      "osm_id": 186825618
     },
     "opening_hours": "Mo-Su 10:00+",
     "phone": "+61 7 5443 1999",
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

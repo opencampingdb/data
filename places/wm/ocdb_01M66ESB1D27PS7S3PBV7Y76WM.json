@@ -9,7 +9,9 @@
     "email": "contributed",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "contributed"
@@ -27,7 +29,19 @@
       "osm_id": 20968413,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "The Ruined Castle",
+      "osm_id": 273117801,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "phone": "+61 2 4787 8877",
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/ruined-castle-campground"
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

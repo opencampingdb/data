@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +26,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4590
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "First Bay",
+      "osm_id": 186393737,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "David Low Way"
+    },
+    "protected_area": {
+      "name": "Yaroomba Coolum Foreshore Reserve",
+      "osm_id": 186863731,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

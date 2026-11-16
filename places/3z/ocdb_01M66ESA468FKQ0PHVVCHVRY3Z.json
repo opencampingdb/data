@@ -14,9 +14,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -43,9 +45,19 @@
       "osm_id": 354827502,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Tooloom Creek",
+      "osm_id": 414031452
+    },
     "operator": "National Caravan Parks Service",
     "phone": "+61266320000",
     "power": false,
+    "protected_area": {
+      "name": "Bandahngan Aboriginal Area",
+      "osm_id": 6036921,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -67,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

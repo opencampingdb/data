@@ -8,8 +8,11 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -29,8 +32,25 @@
       "osm_id": 1003754272,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Junction Pools",
+      "osm_id": 114377189,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Barrington River",
+      "osm_id": 408849926
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0265385300",
+    "protected_area": {
+      "name": "Barrington Tops National Park",
+      "osm_id": 6111953,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/junction-pools-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Junction+Pools+campground+-+Barrington+Tops&utm_term=plcid_1469245387636527203"
   },
   "group": "overnight",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

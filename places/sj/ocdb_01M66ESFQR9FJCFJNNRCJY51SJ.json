@@ -8,7 +8,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -26,7 +28,17 @@
       "osm_id": 595501874,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Troopers Creek",
+      "osm_id": 951339124
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/troopers-creek-campground"
   },
@@ -46,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

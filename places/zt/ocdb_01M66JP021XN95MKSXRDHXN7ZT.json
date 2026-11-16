@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 59834611,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Dorrigo Mountain",
+      "osm_id": 113751237,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Waterfall Way"
+    },
+    "protected_area": {
+      "name": "Dorrigo National Park",
+      "osm_id": 5678193,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

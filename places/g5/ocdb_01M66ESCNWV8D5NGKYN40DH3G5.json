@@ -4,6 +4,7 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
       "name": "Elliston",
       "osm_id": 2143388593,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Great Australian Bight",
+      "osm_id": 9425816,
+      "osm_type": "relation",
+      "type": "bay"
     },
     "wheelchair": true
   },
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

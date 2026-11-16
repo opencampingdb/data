@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4420
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Mt Eliza Quarry",
+      "osm_id": 89786298,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Moorooduc Highway"
+    },
+    "protected_area": {
+      "name": "Moorooduc Quarry Flora and Fauna Reserve",
+      "osm_id": 1536390414,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

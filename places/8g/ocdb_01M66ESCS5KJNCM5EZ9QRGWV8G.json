@@ -10,8 +10,11 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -30,8 +33,25 @@
       "osm_id": 11384987822,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Blue Pool",
+      "osm_id": 323047598,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Freestone Creek",
+      "osm_id": 1418828894
+    },
     "operator": "DELWP Briagolong",
-    "phone": "+61136186"
+    "phone": "+61136186",
+    "protected_area": {
+      "name": "Moornapa State Forest",
+      "osm_id": 20311376,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCS5KJNCM5EZ9QRGWV8G",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

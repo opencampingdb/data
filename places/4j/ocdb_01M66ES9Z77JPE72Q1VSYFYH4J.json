@@ -5,7 +5,8 @@
   "fact_sources": {
     "fee": "community_report",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -18,6 +19,11 @@
       "name": "Cape Burney",
       "osm_id": 3390094295,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Greenough River",
+      "osm_id": 331979516
     }
   },
   "group": "overnight",
@@ -36,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

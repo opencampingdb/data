@@ -2,7 +2,9 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +17,18 @@
       "name": "Euabalong",
       "osm_id": 113468356,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Booberoi Weir",
+      "osm_id": 1567230430,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Booberoi Creek",
+      "osm_id": 444338666
     }
   },
   "group": "utility",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

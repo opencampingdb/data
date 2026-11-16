@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -20,6 +22,16 @@
       "name": "Dayboro",
       "osm_id": 315257817,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Kobble Creek (Middle Branch)",
+      "osm_id": 584129969
+    },
+    "protected_area": {
+      "name": "D'Aguilar National Park",
+      "osm_id": 7006909,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -19,6 +21,18 @@
     },
     "nearest_beach": {
       "distance_m": 160
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Lake McKenzie",
+      "osm_id": 22771943,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Great Sandy National Park",
+      "osm_id": 1507019,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

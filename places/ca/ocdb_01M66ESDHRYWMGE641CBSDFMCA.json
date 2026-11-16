@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,18 @@
     "nearest_beach": {
       "distance_m": 10,
       "name": "Normanville Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Normanville Beach",
+      "osm_id": 224350180,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Bungala River",
+      "osm_id": 333660246
     }
   },
   "group": "utility",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

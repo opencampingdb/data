@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -22,6 +24,18 @@
     },
     "nearest_beach": {
       "distance_m": 280
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Radar Hill (PA)",
+      "osm_id": 9012992847,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,7 +6,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -27,9 +29,21 @@
       "osm_id": 114608215,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 370,
+      "name": "Ilford",
+      "osm_id": 114608243,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Castlereagh Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Cunningham Creek",
+      "osm_id": 443684500
     },
     "operator": "Ilford Community",
     "showers": false,
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

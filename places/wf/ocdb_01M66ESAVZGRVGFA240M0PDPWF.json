@@ -3,7 +3,9 @@
     "dump_station": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "dump_station": false,
@@ -20,6 +22,18 @@
     "nearest_beach": {
       "distance_m": 1360,
       "name": "Rocky River Mouth"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Snake Lagoon",
+      "osm_id": 255346367,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "protected_area": {
+      "name": "Flinders Chase National Park",
+      "osm_id": 812876,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

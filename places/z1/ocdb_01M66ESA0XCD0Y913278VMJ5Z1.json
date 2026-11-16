@@ -3,6 +3,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -17,6 +18,13 @@
       "name": "Ravensthorpe",
       "osm_id": 1940218406,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Kundip",
+      "osm_id": 6000259025,
+      "osm_type": "node",
+      "type": "locality"
     },
     "showers": false,
     "toilets": true
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

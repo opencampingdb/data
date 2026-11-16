@@ -3,7 +3,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -17,9 +20,26 @@
       "osm_id": 4316622215,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Natural Bridge",
+      "osm_id": 2090725633,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Nerang Murwillumbah Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Cave Creek",
+      "osm_id": 728941080
+    },
+    "protected_area": {
+      "name": "Springbrook National Park",
+      "osm_id": 306431,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,6 +1,8 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +10,16 @@
       "name": "Pine Creek",
       "osm_id": 31562954,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Douglas River",
+      "osm_id": 99152416
+    },
+    "protected_area": {
+      "name": "Tjuwaliyn (Douglas) Hot Springs Nature Park",
+      "osm_id": 13003346,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

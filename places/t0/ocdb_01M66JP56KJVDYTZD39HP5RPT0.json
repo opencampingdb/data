@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -18,6 +19,11 @@
     },
     "nearest_major_road": {
       "distance_m": 40
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Taylors Creek",
+      "osm_id": 285378679
     },
     "website": "https://www.mycar.com.au"
   },
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -14,13 +15,20 @@
       "osm_id": 6247073
     },
     "locality": {
-      "distance_m": 16530,
+      "distance_m": 16520,
       "name": "Gundagai",
       "osm_id": 30674102,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Coolac",
+      "osm_id": 113381674,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
-      "distance_m": 40,
+      "distance_m": 50,
       "name": "Muttama Road"
     },
     "toilet_type": "chemical",
@@ -30,17 +38,17 @@
   "id": "ocdb_01M66ESEPWRMRGDSNJ5EPB5MTK",
   "kind": "public_toilet",
   "location": {
-    "lat": -34.924009,
-    "lon": 148.165763
+    "lat": -34.924008,
+    "lon": 148.165614
   },
   "name": null,
   "osm": {
     "id": 14325178660,
-    "timestamp": "2026-10-28T12:06:03Z",
+    "timestamp": "2026-11-15T09:53:49Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 1682720009,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 480,
+      "name": "Many Peaks",
+      "osm_id": 11201600113,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Gladstone-Monto Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Deception Creek",
+      "osm_id": 1208734422
     }
   },
   "group": "utility",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

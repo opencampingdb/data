@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -25,9 +27,21 @@
       "distance_m": 850,
       "name": "Sawtell Boatramp"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Sawtell Main Beach",
+      "osm_id": 1111689460,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "First Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Chinamans Creek",
+      "osm_id": 327858326
     }
   },
   "group": "attraction",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

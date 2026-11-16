@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -30,7 +32,17 @@
     "nearest_boat_ramp": {
       "distance_m": 280
     },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Murray River",
+      "osm_id": 173241448
+    },
     "phone": "+61885821922",
+    "protected_area": {
+      "name": "Martin Bend Reserve",
+      "osm_id": 306841551,
+      "osm_type": "way"
+    },
     "website": "http://www.berribarmera.sa.gov.au"
   },
   "group": "overnight",
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

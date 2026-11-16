@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -22,9 +24,21 @@
     "nearest_boat_ramp": {
       "distance_m": 470
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Logan River",
+      "osm_id": 1360767,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Pacific Motorway"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Logan River",
+      "osm_id": 620532604
     },
     "wheelchair": true
   },
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

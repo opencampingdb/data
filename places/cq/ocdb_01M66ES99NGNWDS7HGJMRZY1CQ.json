@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,7 +20,12 @@
     "nearest_boat_ramp": {
       "distance_m": 3050
     },
-    "operator": "Nat Parks"
+    "operator": "Nat Parks",
+    "protected_area": {
+      "name": "Cradle Mountain-Lake St Clair National Park",
+      "osm_id": 3000260,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES99NGNWDS7HGJMRZY1CQ",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

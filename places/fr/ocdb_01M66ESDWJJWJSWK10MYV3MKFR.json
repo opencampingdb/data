@@ -1,12 +1,41 @@
 {
   "fact_sources": {
     "bbq": "osm",
+    "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
     "toilets": "osm"
   },
   "facts": {
     "bbq": false,
+    "bins": true,
+    "lga": {
+      "name": "Lithgow City Council",
+      "osm_id": 6299566
+    },
+    "locality": {
+      "distance_m": 2570,
+      "name": "Capertee",
+      "osm_id": 116990408,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Pearsons Lookout",
+      "osm_id": 265023459,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Castlereagh Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": false,
     "playground": false,
     "toilets": false
@@ -15,23 +44,23 @@
   "id": "ocdb_01M66ESDWJJWJSWK10MYV3MKFR",
   "kind": "rest_area",
   "location": {
-    "lat": -33.167456,
-    "lon": 149.998438
+    "lat": -33.167011,
+    "lon": 149.998221
   },
   "merged_osm": [
     {
-      "id": 4871895492,
+      "id": 12396852981,
       "type": "node"
     }
   ],
   "name": "Pearsons Lookout Rest Area",
   "osm": {
-    "id": 12396852981,
-    "timestamp": "2025-03-27T23:25:30Z",
+    "id": 4871895492,
+    "timestamp": "2026-11-05T07:24:12Z",
     "type": "node",
     "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -19,6 +21,16 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Upper Sturt Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Minno Creek",
+      "osm_id": 972409724
+    },
+    "protected_area": {
+      "name": "Belair National Park",
+      "osm_id": 1421712,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

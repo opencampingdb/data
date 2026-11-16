@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Jimna",
       "osm_id": 1884404091,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Cowwah Creek",
+      "osm_id": 219849044
+    },
+    "protected_area": {
+      "name": "Yabba Forest Reserve 2",
+      "osm_id": 1506577,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,9 +5,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nudist": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
@@ -28,9 +30,21 @@
     "nearest_beach": {
       "distance_m": 2780
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Crocketts Bay",
+      "osm_id": 321393115,
+      "osm_type": "node",
+      "type": "bay"
+    },
     "nudist": false,
     "opening_hours": "24/7",
     "operator": "Tasmania Parks & Wildlife Service",
+    "protected_area": {
+      "name": "Freycinet National Park",
+      "osm_id": 3044789,
+      "osm_type": "relation"
+    },
     "tents": true,
     "wheelchair": false,
     "wifi": false
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Isisford",
       "osm_id": 2214209529,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Yuranigh Ponds",
+      "osm_id": 969744680,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bullock Creek",
+      "osm_id": 1267289455
     },
     "toilets": false
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

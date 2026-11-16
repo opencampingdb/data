@@ -5,6 +5,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -32,6 +33,11 @@
       "distance_m": 30,
       "name": "Padstow Road"
     },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Bulimba Creek",
+      "osm_id": 309004146
+    },
     "website": "https://www.shell.com.au/fuel-finder.html"
   },
   "group": "services",
@@ -50,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

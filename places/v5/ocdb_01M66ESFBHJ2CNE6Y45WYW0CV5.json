@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -23,7 +25,17 @@
       "osm_id": 2272268803,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Mambray Creek",
+      "osm_id": 435710141
+    },
     "phone": "+61888413400",
+    "protected_area": {
+      "name": "Mount Remarkable National Park",
+      "osm_id": 16129246,
+      "osm_type": "relation"
+    },
     "website": "https://www.environment.sa.gov.au/parks/find-a-park/Browse_by_region/flinders-ranges-outback/mount-remarkable-national-park"
   },
   "group": "overnight",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

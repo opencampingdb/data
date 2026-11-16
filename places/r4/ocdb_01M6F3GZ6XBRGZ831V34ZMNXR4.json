@@ -3,6 +3,8 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -24,6 +26,18 @@
       "osm_id": 97299576,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Wingecarribee River",
+      "osm_id": 639902687,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Wingecarribee River",
+      "osm_id": 575241377
+    },
     "opening_hours": "We-Su 10:00-16:00",
     "phone": "+61 2 4877 1130",
     "website": "https://www.berrimadistricthistoricalsociety.org.au/"
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

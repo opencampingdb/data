@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,7 +23,17 @@
       "osm_id": 114382244,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Upsalls Creek",
+      "osm_id": 449794426
+    },
     "operator": "The Forestry Corporation of NSW",
+    "protected_area": {
+      "name": "Kerewong State Forest",
+      "osm_id": 6292466,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

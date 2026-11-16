@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Burwood Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Gardiners Creek",
+      "osm_id": 10483493
     },
     "opening_hours": "sunset-sunrise open; sunrise-sunset closed"
   },
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

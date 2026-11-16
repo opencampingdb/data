@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -20,6 +21,11 @@
     },
     "nearest_major_road": {
       "distance_m": 60
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Diamond Creek",
+      "osm_id": 254426932
     },
     "wheelchair": true
   },
@@ -39,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

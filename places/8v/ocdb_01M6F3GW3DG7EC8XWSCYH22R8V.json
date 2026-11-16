@@ -1,7 +1,13 @@
 {
   "fact_sources": {
     "address": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,26 +18,57 @@
       "street": "Oxley Highway",
       "suburb": "Port Macquarie"
     },
-    "nearest_beach": {
-      "distance_m": 1920
+    "lga": {
+      "name": "Port Macquarie-Hastings Council",
+      "osm_id": 6180709
     },
+    "locality": {
+      "distance_m": 1820,
+      "name": "Port Macquarie",
+      "osm_id": 21676216,
+      "type": "city"
+    },
+    "nearest_beach": {
+      "distance_m": 1910
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1120
+    },
+    "nearest_feature": {
+      "distance_m": 350,
+      "name": "John Warner Centre",
+      "osm_id": 1993642420,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Oxley Highway"
+    },
+    "operator": "Douglas Vale Conservation Group",
     "website": "https://douglasvale.com.au/"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW3DG7EC8XWSCYH22R8V",
   "kind": "heritage",
   "location": {
-    "lat": -31.436856,
-    "lon": 152.89286
+    "lat": -31.436762,
+    "lon": 152.89294
   },
+  "merged_osm": [
+    {
+      "id": 4374907068,
+      "type": "node"
+    }
+  ],
   "name": "Douglas Vale Historic Homestead & Vineyard",
   "osm": {
-    "id": 4374907068,
-    "timestamp": "2024-12-25T17:06:27Z",
-    "type": "node",
-    "version": 6
+    "id": 1343978876,
+    "timestamp": "2026-11-08T03:19:38Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

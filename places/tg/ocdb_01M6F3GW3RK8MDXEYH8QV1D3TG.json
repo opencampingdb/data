@@ -4,7 +4,9 @@
     "email": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm"
   },
@@ -27,9 +29,21 @@
       "osm_id": 324755992,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Dulverton",
+      "osm_id": 99462245,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Midland Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Dulverton Rivulet",
+      "osm_id": 673722806
     },
     "opening_hours": "Mo-Su 10:30-16:00",
     "phone": "+61 3 6254 0021"
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

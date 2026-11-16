@@ -5,7 +5,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -19,9 +21,21 @@
       "osm_id": 36698974,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "WP 42",
+      "osm_id": 44356874,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Deans Marsh - Lorne Road"
+    },
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
     },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/big-hill-campground"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -33,7 +35,19 @@
       "distance_m": 50,
       "name": "Sandon Beach"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Sandon Beach",
+      "osm_id": 9133280,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "phone": "0266411500",
+    "protected_area": {
+      "name": "Yuraygir National Park",
+      "osm_id": 5911645,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/illaroo-campground"
   },
   "group": "overnight",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

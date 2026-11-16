@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -21,6 +22,13 @@
     "nearest_beach": {
       "distance_m": 200,
       "name": "Wairo Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Tabourie Lake",
+      "osm_id": 190372386,
+      "osm_type": "way",
+      "type": "water"
     },
     "wheelchair": true
   },
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

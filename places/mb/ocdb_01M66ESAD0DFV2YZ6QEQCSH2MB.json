@@ -1,16 +1,34 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Shire of Mansfield",
+      "osm_id": 3350291
+    },
+    "locality": {
+      "distance_m": 240,
+      "name": "Jamieson",
+      "osm_id": 1701813096,
+      "type": "town"
+    },
     "nearest_boat_ramp": {
-      "distance_m": 3970
+      "distance_m": 4060
     },
     "nearest_major_road": {
-      "distance_m": 130,
+      "distance_m": 190,
       "name": "Mansfield - Woods Point Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Jamieson River",
+      "osm_id": 765637830
     },
     "website": "https://www.jamiesoncaravanpark.com.au/"
   },
@@ -18,17 +36,23 @@
   "id": "ocdb_01M66ESAD0DFV2YZ6QEQCSH2MB",
   "kind": "caravan_park",
   "location": {
-    "lat": -37.303947,
-    "lon": 146.135847
+    "lat": -37.305013,
+    "lon": 146.137307
   },
+  "merged_osm": [
+    {
+      "id": 2389520854,
+      "type": "node"
+    }
+  ],
   "name": "Jamieson Caravan Park",
   "osm": {
-    "id": 2389520854,
-    "timestamp": "2019-03-19T22:30:10Z",
-    "type": "node",
+    "id": 353250514,
+    "timestamp": "2026-11-12T00:18:08Z",
+    "type": "way",
     "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-12T08:52:31Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

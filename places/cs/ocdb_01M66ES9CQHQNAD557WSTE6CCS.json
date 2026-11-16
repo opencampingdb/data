@@ -2,7 +2,10 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +18,23 @@
       "name": "Monto",
       "osm_id": 247796333,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Two Storey Cave",
+      "osm_id": 8111306579,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Three Moon Creek",
+      "osm_id": 155567557
+    },
+    "protected_area": {
+      "name": "Cania Gorge National Park",
+      "osm_id": 1493174,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 105417096,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 420,
+      "name": "Myall Creek",
+      "osm_id": 3766699533,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Bingara Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Myall Creek",
+      "osm_id": 373163644
     },
     "toilets": false
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

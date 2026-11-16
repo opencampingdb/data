@@ -9,6 +9,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
@@ -46,6 +47,13 @@
     "nearest_boat_ramp": {
       "distance_m": 560
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "City Beach",
+      "osm_id": 1539734659,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Marine Drive"
@@ -74,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

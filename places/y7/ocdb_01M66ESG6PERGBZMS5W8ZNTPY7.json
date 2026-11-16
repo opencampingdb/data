@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,16 @@
     "nearest_major_road": {
       "distance_m": 340,
       "name": "Centenary Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Six Mile Creek",
+      "osm_id": 409217166
+    },
+    "protected_area": {
+      "name": "White Rock Conservation Park",
+      "osm_id": 8247399,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

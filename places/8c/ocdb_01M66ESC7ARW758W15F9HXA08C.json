@@ -2,6 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +11,16 @@
     "lga": {
       "name": "Paroo Shire",
       "osm_id": 11674869
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Paroo River",
+      "osm_id": 194423341
+    },
+    "protected_area": {
+      "name": "Currawinya National Park",
+      "osm_id": 8189614,
+      "osm_type": "relation"
     },
     "website": "https://parks.des.qld.gov.au/parks/currawinya/camping/caiwarro-waterhole"
   },
@@ -28,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

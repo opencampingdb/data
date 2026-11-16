@@ -14,7 +14,9 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "tents": "osm",
     "website": "overture"
@@ -41,9 +43,21 @@
       "type": "town"
     },
     "max_stay": "72h",
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Genoa",
+      "osm_id": 59636037,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Genoa River",
+      "osm_id": 419855060
     },
     "operator": "East Gippsland Shire Council",
     "tents": true,
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

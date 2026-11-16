@@ -7,7 +7,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -30,7 +32,17 @@
     "nearest_beach": {
       "distance_m": 1550
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Davies Creek",
+      "osm_id": 610096781
+    },
     "power": false,
+    "protected_area": {
+      "name": "Davies Creek National Park",
+      "osm_id": 1518756,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -51,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

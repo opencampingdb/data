@@ -14,8 +14,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "overture"
@@ -45,8 +47,20 @@
       "distance_m": 270,
       "name": "Cloudy Bay Beach"
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Cloudy Bay Beach",
+      "osm_id": 661373569,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "operator": "Parks and Wildlife",
     "phone": "+61362931446",
+    "protected_area": {
+      "name": "South Bruny National Park",
+      "osm_id": 6172367,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "http://www.parks.tas.gov.au"
@@ -67,5 +81,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

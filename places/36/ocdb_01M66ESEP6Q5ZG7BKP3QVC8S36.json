@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "picnic_tables": "osm",
     "power": "osm",
     "showers": "osm",
@@ -36,6 +37,11 @@
     "nearest_boat_ramp": {
       "distance_m": 1250
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Corella River",
+      "osm_id": 28647897
+    },
     "picnic_tables": true,
     "power": false,
     "showers": false,
@@ -57,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

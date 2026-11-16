@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "private",
@@ -21,9 +23,21 @@
     "nearest_beach": {
       "distance_m": 4610
     },
+    "nearest_feature": {
+      "distance_m": 950,
+      "name": "Lower Macdonald",
+      "osm_id": 117051190,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 260,
       "name": "Saint Albans Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Webb's Creek",
+      "osm_id": 26493336
     }
   },
   "group": "overnight",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

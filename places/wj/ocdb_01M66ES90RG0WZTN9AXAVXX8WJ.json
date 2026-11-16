@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
   },
@@ -37,9 +39,21 @@
       "distance_m": 90,
       "name": "Neck Beach"
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Neck Beach",
+      "osm_id": 488141318,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Bruny Island Main Road"
+    },
+    "protected_area": {
+      "name": "Bruny Island Neck Game Reserve",
+      "osm_id": 16380679,
+      "osm_type": "relation"
     },
     "wheelchair": false,
     "wifi": false
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

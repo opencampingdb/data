@@ -1,9 +1,14 @@
 {
   "fact_sources": {
+    "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "fee": false,
     "lga": {
       "name": "Scenic Rim Regional",
       "osm_id": 11675525
@@ -13,7 +18,20 @@
       "name": "Kalbar",
       "osm_id": 1651185877,
       "type": "village"
-    }
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Mount French (North Peak)",
+      "osm_id": 2844503128,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Moogerah Peaks National Park",
+      "osm_id": 8247592,
+      "osm_type": "relation"
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESAVTDKWN0GTJA9F0V6DY",
@@ -25,11 +43,11 @@
   "name": null,
   "osm": {
     "id": 3770128458,
-    "timestamp": "2015-10-03T07:40:31Z",
+    "timestamp": "2026-11-14T20:04:53Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

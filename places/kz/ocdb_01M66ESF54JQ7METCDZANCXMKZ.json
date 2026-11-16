@@ -13,7 +13,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "status": "contributed",
     "website": "osm"
   },
@@ -35,7 +37,19 @@
       "distance_m": 60,
       "name": "Gillard's Beach"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Gillard's Beach",
+      "osm_id": 378122714,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "+61 2 4476 0800",
+    "protected_area": {
+      "name": "Mimosa Rocks National Park",
+      "osm_id": 5947723,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/"
   },
   "group": "overnight",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "temporarily_closed",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1000
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Deakin Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Murray River",
+      "osm_id": 165400300
     },
     "opening_hours": "Mo-Tu 10:00-14:00; Th-Su 10:00-14:00"
   },
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

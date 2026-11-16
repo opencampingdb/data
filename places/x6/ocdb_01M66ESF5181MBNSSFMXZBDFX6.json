@@ -9,9 +9,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "website": "osm",
     "wifi": "osm"
   },
@@ -36,12 +38,24 @@
       "distance_m": 90,
       "name": "Back Beach"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Western Port",
+      "osm_id": 13053988,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Phillip Island Road"
     },
     "phone": "+61 3 5619 7190",
     "power": true,
+    "protected_area": {
+      "name": "San Remo Coastal Reserve",
+      "osm_id": 9278066,
+      "osm_type": "relation"
+    },
     "website": "https://srbfcp.com.au",
     "wifi": false
   },
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

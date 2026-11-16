@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -16,6 +18,18 @@
       "name": "Leura",
       "osm_id": 20968411,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 460,
+      "name": "Solitary Pass",
+      "osm_id": 6223992099,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,18 @@
       "name": "Barrington",
       "osm_id": 39093056,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 960,
+      "name": "Gibson's Mill",
+      "osm_id": 4082918585,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Barrington Tops State Forest",
+      "osm_id": 6114655,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

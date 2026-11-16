@@ -10,7 +10,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -36,7 +38,17 @@
       "osm_id": 117076654,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Ten Mile Hollow",
+      "osm_id": 1183052849
+    },
     "phone": "0243204200",
+    "protected_area": {
+      "name": "Dharug National Park",
+      "osm_id": 5825751,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -58,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

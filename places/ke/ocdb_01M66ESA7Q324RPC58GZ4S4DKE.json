@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -22,9 +24,21 @@
       "osm_id": 268698332,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Avon River",
+      "osm_id": 10154504,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Avon River",
+      "osm_id": 165469089
     },
     "opening_hours": "24/7",
     "toilet_type": "flush",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

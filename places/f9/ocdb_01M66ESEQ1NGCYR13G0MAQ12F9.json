@@ -4,7 +4,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "bins": true,
@@ -22,6 +23,11 @@
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Stuart Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Agnes Creek",
+      "osm_id": 485754470
     }
   },
   "group": "overnight",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

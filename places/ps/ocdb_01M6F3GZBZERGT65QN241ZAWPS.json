@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -31,7 +33,19 @@
     "nearest_boat_ramp": {
       "distance_m": 290
     },
-    "operator": "NSW National Parks and Wildlife Service"
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Front Beach",
+      "osm_id": 207998312,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Arakoon National Park",
+      "osm_id": 6041438,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GZBZERGT65QN241ZAWPS",
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

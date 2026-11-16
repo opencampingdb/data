@@ -7,6 +7,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -25,6 +26,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Diamantina Developmental Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Cooper Creek",
+      "osm_id": 1262050853
     },
     "showers": false,
     "toilets": true
@@ -45,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

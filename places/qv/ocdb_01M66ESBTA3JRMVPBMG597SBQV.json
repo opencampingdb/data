@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2700
     },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "De Freitas Wetland",
+      "osm_id": 911708153,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 330,
       "name": "Lawson Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Prospect Creek",
+      "osm_id": 373185363
     },
     "toilet_type": "flush"
   },
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

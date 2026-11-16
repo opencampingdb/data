@@ -9,7 +9,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -32,7 +35,24 @@
     "nearest_boat_ramp": {
       "distance_m": 4820
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Karuah River",
+      "osm_id": 2310866,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Karuah River",
+      "osm_id": 11716931
+    },
     "phone": "0249848200",
+    "protected_area": {
+      "name": "Karuah National Park",
+      "osm_id": 6053151,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/tattersalls-campground"
   },
   "group": "overnight",
@@ -51,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

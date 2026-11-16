@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,17 @@
       "distance_m": 90,
       "name": "Cardstone Road"
     },
-    "operator": "QPWS"
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Tully River",
+      "osm_id": 23013773
+    },
+    "operator": "QPWS",
+    "protected_area": {
+      "name": "Tully Gorge National Park",
+      "osm_id": 8433135,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG21REG813A197PKEPAG",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

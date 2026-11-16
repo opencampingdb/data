@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "wheelchair": "osm"
   },
@@ -21,9 +23,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1550
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Kainka Wirra Main Lake",
+      "osm_id": 46094826,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 290,
       "name": "Hackney Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "First Creek",
+      "osm_id": 28416089
     },
     "opening_hours": "Mo-Su 10:00-16:00",
     "wheelchair": true
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

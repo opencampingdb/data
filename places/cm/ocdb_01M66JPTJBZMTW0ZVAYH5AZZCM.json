@@ -2,7 +2,9 @@
   "fact_sources": {
     "fuels": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -15,9 +17,21 @@
       "name": "Shire of Meekatharra",
       "osm_id": 11690204
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Kumarina",
+      "osm_id": 4252302855,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Great Northern Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Kumarina South",
+      "osm_id": 425914715
     },
     "phone": "+61 8 9981 2930",
     "website": "https://kumarinaroadhouse.com.au/"
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,8 +11,10 @@
     "dump_station": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -38,8 +40,20 @@
       "osm_id": 113372218,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 400,
+      "name": "Denison",
+      "osm_id": 113372788,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "1300072757",
     "power": false,
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,9 +24,26 @@
       "osm_id": 205379654,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Castle Rock",
+      "osm_id": 271830629,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 440,
       "name": "South Eastern Freeway"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "First Creek",
+      "osm_id": 1033110713
+    },
+    "protected_area": {
+      "name": "Cleland National Park",
+      "osm_id": 1345489,
+      "osm_type": "relation"
     },
     "water_type": "fountain",
     "wheelchair": true
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

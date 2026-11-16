@@ -11,7 +11,9 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -38,9 +40,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1160
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Port Arthur",
+      "osm_id": 2562650,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Arthur Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Alberry Creek",
+      "osm_id": 830705542
     },
     "phone": "+61362502888"
   },
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

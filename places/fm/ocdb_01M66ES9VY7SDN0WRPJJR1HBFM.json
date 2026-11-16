@@ -13,6 +13,8 @@
     "fee": "contributed",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "contributed"
   },
   "facts": {
@@ -29,6 +31,16 @@
       "name": "Buxton",
       "osm_id": 289619307,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Murrindindi River",
+      "osm_id": 1489726866
+    },
+    "protected_area": {
+      "name": "Toolangi State Forest",
+      "osm_id": 20304276,
+      "osm_type": "relation"
     },
     "website": "https://www.exploreoutdoors.vic.gov.au/activities/camping/murrindindi-camping"
   },
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

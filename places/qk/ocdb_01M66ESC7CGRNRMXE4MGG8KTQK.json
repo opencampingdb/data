@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -21,6 +23,18 @@
     "nearest_beach": {
       "distance_m": 390,
       "name": "Five Rocks Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 630,
+      "name": "Stockyard Point",
+      "osm_id": 10561435738,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "protected_area": {
+      "name": "Byfield Conservation Park",
+      "osm_id": 1503399,
+      "osm_type": "relation"
     },
     "website": "https://parks.des.qld.gov.au/parks/byfield/camping/five-rocks"
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

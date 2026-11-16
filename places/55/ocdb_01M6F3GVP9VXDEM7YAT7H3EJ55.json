@@ -1,27 +1,56 @@
 {
   "fact_sources": {
     "facebook": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/p/Woods-Point-Hotel-Commercial-Hotel-Woods-Point-100077511081584/",
+    "lga": {
+      "name": "Shire of Mansfield",
+      "osm_id": 3350291
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "Woods Point",
+      "osm_id": 1615434719,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bridge Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Goulburn River",
+      "osm_id": 742610948
+    },
     "opening_hours": "Th-Fr 11:30-21:00; Sa 10:00-21:00; Su 10:00-20:00"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVP9VXDEM7YAT7H3EJ55",
   "kind": "food_and_drink",
   "location": {
-    "lat": -37.569836,
-    "lon": 146.254123
+    "lat": -37.569773,
+    "lon": 146.254105
   },
+  "merged_osm": [
+    {
+      "id": 2345175489,
+      "type": "node"
+    }
+  ],
   "name": "Commercial Hotel",
   "osm": {
-    "id": 2345175489,
-    "timestamp": "2024-03-12T03:12:02Z",
-    "type": "node",
+    "id": 847430633,
+    "timestamp": "2026-11-08T11:31:28Z",
+    "type": "way",
     "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

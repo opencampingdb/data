@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,6 +19,18 @@
       "name": "Ebor",
       "osm_id": 114382510,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Point Lookout",
+      "osm_id": 3019437843,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "New England National Park",
+      "osm_id": 5678194,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

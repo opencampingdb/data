@@ -6,8 +6,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -28,11 +30,23 @@
       "distance_m": 460,
       "name": "Cynthia Bay Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Lake St Clair",
+      "osm_id": 2893412,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Lake St Clair Road"
     },
     "opening_hours": "Mo-Su 09:00-16:00",
+    "protected_area": {
+      "name": "Cradle Mountain-Lake St Clair National Park",
+      "osm_id": 3000260,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

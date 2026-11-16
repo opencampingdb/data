@@ -7,6 +7,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -29,6 +30,11 @@
     "nearest_major_road": {
       "distance_m": 50
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Carthurbie Creek",
+      "osm_id": 541227583
+    },
     "operator": "EG Australia"
   },
   "group": "services",
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

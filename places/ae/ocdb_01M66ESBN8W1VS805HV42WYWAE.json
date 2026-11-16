@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -26,7 +28,19 @@
     "nearest_boat_ramp": {
       "distance_m": 3280
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Yaroomba Beach",
+      "osm_id": 54772826,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Yaroomba-Marcoola Foreshore",
+      "osm_id": 19348126,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESBN8W1VS805HV42WYWAE",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

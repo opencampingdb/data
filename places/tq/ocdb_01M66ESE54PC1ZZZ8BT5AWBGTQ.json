@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "permit",
@@ -17,7 +19,17 @@
       "osm_id": 4072794517,
       "type": "village"
     },
-    "operator": "QPWS"
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Burdekin River",
+      "osm_id": 700037112
+    },
+    "operator": "QPWS",
+    "protected_area": {
+      "name": "Girringun National Park",
+      "osm_id": 1518815,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESE54PC1ZZZ8BT5AWBGTQ",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

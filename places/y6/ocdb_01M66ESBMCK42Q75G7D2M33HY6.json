@@ -1,33 +1,51 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "protected_area": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "The District Council of Lower Eyre Peninsula",
+      "osm_id": 9110112
+    },
+    "locality": {
+      "distance_m": 11670,
+      "name": "Port Lincoln",
+      "osm_id": 253012105,
+      "type": "town"
+    },
     "nearest_beach": {
-      "distance_m": 10
+      "distance_m": 0
+    },
+    "protected_area": {
+      "name": "Lincoln National Park",
+      "osm_id": 954175,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBMCK42Q75G7D2M33HY6",
   "kind": "national_park_campsite",
   "location": {
-    "lat": -34.784413,
-    "lon": 135.961531
+    "lat": -34.784177,
+    "lon": 135.961387
   },
   "merged_osm": [
     {
-      "id": 625013752,
-      "type": "way"
+      "id": 5572678021,
+      "type": "node"
     }
   ],
   "name": "Spalding Cove",
   "osm": {
-    "id": 5572678021,
-    "timestamp": "2018-09-05T08:29:49Z",
-    "type": "node",
+    "id": 625013752,
+    "timestamp": "2026-11-11T07:48:23Z",
+    "type": "way",
     "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

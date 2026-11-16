@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -20,6 +21,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "A32"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Bell River",
+      "osm_id": 219386977
     },
     "operator": "Dubbo Regional Council",
     "website": "https://www.visitnsw.com/visitor-information-centres/wellington-visitor-information-centre"
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

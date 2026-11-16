@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
       "osm_id": 82359265,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Pemberton Pool",
+      "osm_id": 251577806,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Brockman Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Lefroy Brook",
+      "osm_id": 400200087
     },
     "toilet_type": "flush"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

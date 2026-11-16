@@ -3,7 +3,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,9 +21,26 @@
       "osm_id": 113373467,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 870,
+      "name": "Bullocks Flat",
+      "osm_id": 6043415771,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Alpine Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Thredbo River",
+      "osm_id": 7693200
+    },
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

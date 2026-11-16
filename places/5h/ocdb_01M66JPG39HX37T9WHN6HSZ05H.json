@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Baradine",
       "osm_id": 113726764,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 750,
+      "name": "Dandry Gorge",
+      "osm_id": 3946969163,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Dandry Creek",
+      "osm_id": 391477990
+    },
+    "protected_area": {
+      "name": "Timmallallie National Park",
+      "osm_id": 5836965,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +24,12 @@
     "nearest_boat_ramp": {
       "distance_m": 1070
     },
-    "operator": "QCLNG"
+    "operator": "QCLNG",
+    "protected_area": {
+      "name": "Port of Gladstone - Rodds Bay Dugong Protection Area",
+      "osm_id": 16298413,
+      "osm_type": "relation"
+    }
   },
   "group": "transport",
   "id": "ocdb_01M66JPEZC5BVZG29KY94N4223",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

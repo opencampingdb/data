@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Tullah",
       "osm_id": 422512548,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Fleece Creek",
+      "osm_id": 225682830
+    },
+    "protected_area": {
+      "name": "Reynolds Falls Nature Recreation Area",
+      "osm_id": 6209157,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

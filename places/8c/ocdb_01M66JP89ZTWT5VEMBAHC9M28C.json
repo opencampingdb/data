@@ -1,28 +1,86 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "address": "osm",
+    "air": "osm",
+    "car_wash": "osm",
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm",
+    "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "251",
+      "street": "The Horsley Drive"
+    },
+    "air": true,
+    "car_wash": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "lga": {
+      "name": "Fairfield City Council",
+      "osm_id": 6212438
+    },
+    "locality": {
+      "distance_m": 6420,
+      "name": "Liverpool",
+      "osm_id": 26795879,
+      "type": "town"
+    },
     "nearest_beach": {
-      "distance_m": 3080,
+      "distance_m": 3100,
       "name": "Eora Beach"
-    }
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3420
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Fairfield Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Prospect Creek",
+      "osm_id": 418262405
+    },
+    "opening_hours": "Mo-Su 05:00-24:00",
+    "phone": "+61 2 9726 1177",
+    "toilets": true,
+    "website": "https://speedway.com.au/locations/speedway-fairfield"
   },
   "group": "services",
   "id": "ocdb_01M66JP89ZTWT5VEMBAHC9M28C",
   "kind": "fuel",
   "location": {
-    "lat": -33.87131,
-    "lon": 150.962927
+    "lat": -33.871171,
+    "lon": 150.963018
   },
+  "merged_osm": [
+    {
+      "id": 4547862192,
+      "type": "node"
+    }
+  ],
   "name": "Speedway",
   "osm": {
-    "id": 4547862192,
-    "timestamp": "2016-12-10T12:53:02Z",
-    "type": "node",
-    "version": 1
+    "id": 1060194396,
+    "timestamp": "2026-11-08T04:55:58Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

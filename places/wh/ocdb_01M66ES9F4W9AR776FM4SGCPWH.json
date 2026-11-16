@@ -4,6 +4,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
       "name": "Jamberoo",
       "osm_id": 2190657718,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Saddleback Mountain",
+      "osm_id": 943287414,
+      "osm_type": "node",
+      "type": "peak"
     },
     "wheelchair": true
   },
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

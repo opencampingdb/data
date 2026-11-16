@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +15,11 @@
       "name": "Robertstown",
       "osm_id": 438033587,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Unnamed (No.HA1448) Heritage Agreement",
+      "osm_id": 9162704,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

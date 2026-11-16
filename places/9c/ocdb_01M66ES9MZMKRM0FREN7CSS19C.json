@@ -3,6 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -13,6 +16,23 @@
       "name": "Queanbeyan",
       "osm_id": 40817809,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Molonglo River",
+      "osm_id": 19040813,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Molonglo River",
+      "osm_id": 31539624
+    },
+    "protected_area": {
+      "name": "Molonglo Gorge Nature Reserve",
+      "osm_id": 16344223,
+      "osm_type": "relation"
     },
     "toilet_type": "flush"
   },
@@ -32,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

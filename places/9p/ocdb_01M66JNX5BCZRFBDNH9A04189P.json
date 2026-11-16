@@ -4,6 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -24,6 +26,18 @@
     "nearest_boat_ramp": {
       "distance_m": 780
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Mount Tomaree",
+      "osm_id": 318545390,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Tomaree National Park",
+      "osm_id": 6055802,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "attraction",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

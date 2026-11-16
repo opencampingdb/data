@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,13 @@
       "name": "Neerim South",
       "osm_id": 2036116424,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Tarago Reservoir",
+      "osm_id": 193089788,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -31,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

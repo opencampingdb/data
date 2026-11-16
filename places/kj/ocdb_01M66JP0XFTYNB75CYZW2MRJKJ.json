@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 1384118266,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Greenways Landing",
+      "osm_id": 329601595,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Hunter Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Murray River",
+      "osm_id": 173241448
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

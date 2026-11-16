@@ -3,6 +3,7 @@
     "entry": "osm",
     "lga": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -13,6 +14,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 40
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Lake Dunn",
+      "osm_id": 176478669,
+      "osm_type": "way",
+      "type": "water"
     },
     "toilet_type": "flush"
   },
@@ -32,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

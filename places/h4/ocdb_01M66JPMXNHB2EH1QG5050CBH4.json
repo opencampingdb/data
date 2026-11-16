@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -32,9 +34,21 @@
     "nearest_boat_ramp": {
       "distance_m": 440
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Avalon Beach",
+      "osm_id": 5622266,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Old Barrenjoey Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Careel Creek",
+      "osm_id": 546735257
     }
   },
   "group": "services",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

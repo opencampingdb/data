@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Balranald Shire Council",
       "osm_id": 5897433
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Mungo",
+      "osm_id": 183253235,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Mungo National Park",
+      "osm_id": 6321578,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,9 +10,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -40,12 +42,24 @@
     "nearest_boat_ramp": {
       "distance_m": 1090
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Great Swanport",
+      "osm_id": 4039393,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Coles Bay Road"
     },
     "operator": "Parks and Wildlife Service",
-    "phone": "+61362567000"
+    "phone": "+61362567000",
+    "protected_area": {
+      "name": "Moulting Lagoon Game Reserve",
+      "osm_id": 16395383,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES90NMWS4ZKW4G50VHR1P",
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

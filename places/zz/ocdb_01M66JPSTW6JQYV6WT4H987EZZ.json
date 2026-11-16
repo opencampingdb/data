@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,18 @@
     "nearest_boat_ramp": {
       "distance_m": 3240,
       "name": "Canoe Launch"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Cootharaba",
+      "osm_id": 1507097,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Noosa River (Rev.2) Fish Habitat Area",
+      "osm_id": 16316582,
+      "osm_type": "relation"
     }
   },
   "group": "services",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

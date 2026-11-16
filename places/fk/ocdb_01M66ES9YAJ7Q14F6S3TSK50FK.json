@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of East Pilbara",
       "osm_id": 11690247
+    },
+    "nearest_feature": {
+      "distance_m": 740,
+      "name": "Carawine Gorge",
+      "osm_id": 5088400395,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Oakover River",
+      "osm_id": 186476331
     }
   },
   "group": "overnight",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

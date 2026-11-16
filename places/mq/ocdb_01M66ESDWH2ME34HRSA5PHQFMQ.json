@@ -1,9 +1,30 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 7560,
+      "name": "Sutton",
+      "osm_id": 113708481,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Federal Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": false
   },
@@ -11,23 +32,23 @@
   "id": "ocdb_01M66ESDWH2ME34HRSA5PHQFMQ",
   "kind": "rest_area",
   "location": {
-    "lat": -35.143357,
-    "lon": 149.33457
+    "lat": -35.143547,
+    "lon": 149.334513
   },
   "merged_osm": [
     {
-      "id": 157863159,
-      "type": "way"
+      "id": 12395007906,
+      "type": "node"
     }
   ],
   "name": "Newton VC Rest Area",
   "osm": {
-    "id": 12395007906,
-    "timestamp": "2025-02-26T02:37:24Z",
-    "type": "node",
-    "version": 2
+    "id": 157863159,
+    "timestamp": "2026-11-05T07:16:18Z",
+    "type": "way",
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

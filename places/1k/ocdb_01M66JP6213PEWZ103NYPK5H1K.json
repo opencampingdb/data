@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +20,26 @@
       "osm_id": 2018197599,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Moon Cave",
+      "osm_id": 10996586190,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 450,
       "name": "Gelantipy Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Spring Creek",
+      "osm_id": 737227445
+    },
+    "protected_area": {
+      "name": "Buchan (AT) Cave Reserve",
+      "osm_id": 9273633,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

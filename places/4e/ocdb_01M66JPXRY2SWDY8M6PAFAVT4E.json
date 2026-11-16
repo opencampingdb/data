@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm",
@@ -44,9 +46,21 @@
     "nearest_boat_ramp": {
       "distance_m": 930
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Beedhams Bay",
+      "osm_id": 10859691046,
+      "osm_type": "node",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Main Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Abbotsfield Rivulet",
+      "osm_id": 1202485048
     },
     "opening_hours": "Mo-Su 05:00-21:00",
     "phone": "+61 3 6249 1858",
@@ -69,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

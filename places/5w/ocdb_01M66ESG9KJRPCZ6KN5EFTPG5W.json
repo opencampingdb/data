@@ -1,12 +1,20 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm"
   },
   "facts": {
     "lga": {
       "name": "Balranald Shire Council",
       "osm_id": 5897433
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "House Dam",
+      "osm_id": 1464254570,
+      "osm_type": "way",
+      "type": "water"
     },
     "toilet_type": "pit"
   },
@@ -26,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

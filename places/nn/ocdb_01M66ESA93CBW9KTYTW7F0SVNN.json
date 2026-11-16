@@ -5,7 +5,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -22,7 +24,19 @@
       "osm_id": 117040742,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 810,
+      "name": "Odin Head",
+      "osm_id": 6180199791,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

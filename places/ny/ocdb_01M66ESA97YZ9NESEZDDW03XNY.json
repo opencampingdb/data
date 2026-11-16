@@ -7,6 +7,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -39,6 +40,13 @@
     "nearest_boat_ramp": {
       "distance_m": 460
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Balmoral Beach",
+      "osm_id": 179913855,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "toilet_type": "flush",
     "toilets": true,
     "website": "https://www.toiletmap.gov.au/8873",
@@ -60,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

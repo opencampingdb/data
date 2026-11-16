@@ -2,6 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +17,23 @@
       "name": "Cassilis",
       "osm_id": 115096530,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Norfolk Island Swamp",
+      "osm_id": 401598307,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Norfolk Island Creek",
+      "osm_id": 496294982
+    },
+    "protected_area": {
+      "name": "Coolah Tops National Park",
+      "osm_id": 6024502,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

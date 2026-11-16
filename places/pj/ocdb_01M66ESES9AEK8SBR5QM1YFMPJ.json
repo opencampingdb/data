@@ -6,8 +6,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -35,11 +37,23 @@
     "nearest_boat_ramp": {
       "distance_m": 2720
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Cook's Stream",
+      "osm_id": 995939363,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Cape Solander Drive"
     },
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Kamay Botany Bay National Park",
+      "osm_id": 1239917,
+      "osm_type": "relation"
+    },
     "website": "http://botanybayeec.nsw.edu.au/"
   },
   "group": "utility",
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

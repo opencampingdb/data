@@ -3,7 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -15,6 +17,18 @@
     "nearest_boat_ramp": {
       "distance_m": 530,
       "name": "Pontoon - House Ground Tank"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Lake Mungo",
+      "osm_id": 183253235,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Mungo National Park",
+      "osm_id": 6321578,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

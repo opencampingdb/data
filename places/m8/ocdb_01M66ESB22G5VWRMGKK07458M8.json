@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,9 +18,21 @@
       "osm_id": 589409513,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Witheren",
+      "osm_id": 4343881909,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Beechmont Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Coomera River",
+      "osm_id": 151801299
     },
     "toilet_type": "flush"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,15 +2,36 @@
   "fact_sources": {
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "showers": "osm",
     "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
     "fee": false,
+    "lga": {
+      "name": "Richmond Valley Council",
+      "osm_id": 6143221
+    },
+    "locality": {
+      "distance_m": 1410,
+      "name": "Evans Head",
+      "osm_id": 25988466,
+      "type": "village"
+    },
     "nearest_beach": {
       "distance_m": 120
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2010
+    },
+    "nearest_major_road": {
+      "distance_m": 160,
+      "name": "26"
     },
     "showers": true,
     "wheelchair": true
@@ -19,17 +40,23 @@
   "id": "ocdb_01M66ESBFBNNA22JV27AAZXB5S",
   "kind": "public_toilet",
   "location": {
-    "lat": -29.104709,
-    "lon": 153.431524
+    "lat": -29.104691,
+    "lon": 153.431442
   },
+  "merged_osm": [
+    {
+      "id": 5231640760,
+      "type": "node"
+    }
+  ],
   "name": null,
   "osm": {
-    "id": 5231640760,
-    "timestamp": "2025-11-19T22:57:00Z",
-    "type": "node",
-    "version": 3
+    "id": 1576950844,
+    "timestamp": "2026-11-09T05:29:03Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

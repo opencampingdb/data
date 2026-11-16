@@ -12,6 +12,8 @@
     "locality": "osm",
     "name": "overture",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -36,6 +38,18 @@
     "nearest_boat_ramp": {
       "distance_m": 170
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Myall River",
+      "osm_id": 170933869,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Myall River",
+      "osm_id": 320895020
+    },
     "phone": "+61434555796"
   },
   "group": "services",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

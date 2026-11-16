@@ -3,7 +3,8 @@
     "address": "osm",
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -20,6 +21,13 @@
       "name": "Biloela",
       "osm_id": 247805969,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Lake Callide",
+      "osm_id": 7244174,
+      "osm_type": "relation",
+      "type": "water"
     }
   },
   "group": "overnight",
@@ -38,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "private",
@@ -15,6 +16,11 @@
       "name": "Kookaburra",
       "osm_id": 115070927,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Werrikimbe National Park",
+      "osm_id": 6089187,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

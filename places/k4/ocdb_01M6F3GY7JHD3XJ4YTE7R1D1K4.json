@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -30,9 +32,21 @@
       "osm_id": 113751328,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Mulwala Canal",
+      "osm_id": 380018600,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Riverina Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Mulwala Canal",
+      "osm_id": 173384563
     },
     "phone": "+61358826225"
   },
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "private",
@@ -19,6 +21,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 300
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Hawkesbury River",
+      "osm_id": 1256220,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Mullet Creek",
+      "osm_id": 1185605538
     }
   },
   "group": "attraction",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

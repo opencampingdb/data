@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -21,6 +23,16 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Omeo Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Bundara River",
+      "osm_id": 167584446
+    },
+    "protected_area": {
+      "name": "Mitta Mitta River Heritage River",
+      "osm_id": 16506844,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

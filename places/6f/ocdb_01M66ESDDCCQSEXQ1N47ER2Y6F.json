@@ -4,7 +4,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -16,9 +18,21 @@
       "name": "Murweh Shire",
       "osm_id": 11674879
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Langlo Crossing",
+      "osm_id": 3606259399,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Adavale Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Langlo River",
+      "osm_id": 354460964
     },
     "tents": true,
     "toilets": false
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

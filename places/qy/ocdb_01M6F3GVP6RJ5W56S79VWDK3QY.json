@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -32,9 +34,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1760
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Theoga Lagoon",
+      "osm_id": 12822458,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Adams Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Darling River",
+      "osm_id": 174949765
     },
     "phone": "+61350273268",
     "website": "http://www.tworiversmotel.com/"
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

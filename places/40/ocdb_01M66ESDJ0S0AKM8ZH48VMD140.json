@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Dargo",
       "osm_id": 456874812,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Scotts",
+      "osm_id": 11228351022,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Mitchell River",
+      "osm_id": 38605177
+    },
+    "protected_area": {
+      "name": "Mitchell and Wonnangatta Rivers Heritage River",
+      "osm_id": 16570361,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

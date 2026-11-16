@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,6 +20,18 @@
     },
     "nearest_beach": {
       "distance_m": 100
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Cape Vlamingh",
+      "osm_id": 3553591093,
+      "osm_type": "node",
+      "type": "cape"
+    },
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

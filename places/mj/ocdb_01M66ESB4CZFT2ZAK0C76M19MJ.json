@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -21,6 +22,11 @@
     "nearest_major_road": {
       "distance_m": 370,
       "name": "Hyde Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Bellinger River",
+      "osm_id": 173416682
     },
     "operator": "Bellingten Shire Council"
   },
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

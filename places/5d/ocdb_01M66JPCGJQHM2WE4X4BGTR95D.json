@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -27,6 +29,16 @@
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Pacific Motorway"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Seymours Creek",
+      "osm_id": 1274321130
+    },
+    "protected_area": {
+      "name": "Ku-ring-gai Chase National Park",
+      "osm_id": 5989782,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -45,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

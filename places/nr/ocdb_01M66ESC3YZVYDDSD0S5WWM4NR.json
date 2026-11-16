@@ -4,7 +4,9 @@
     "locality": "osm",
     "motorbikes": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2480
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Cottadidda Lagoon",
+      "osm_id": 5867056,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "River Murray Reserve",
+      "osm_id": 7115294,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

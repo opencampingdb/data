@@ -8,7 +8,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/234206760007848",
@@ -25,7 +27,19 @@
     "nearest_boat_ramp": {
       "distance_m": 5000
     },
-    "phone": "+61892199000"
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Leschenault Estuary",
+      "osm_id": 17058920,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "phone": "+61892199000",
+    "protected_area": {
+      "name": "Leschenault Peninsula Conservation Park",
+      "osm_id": 12948131,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES8XD7YDHYSBKG90A3F0J",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

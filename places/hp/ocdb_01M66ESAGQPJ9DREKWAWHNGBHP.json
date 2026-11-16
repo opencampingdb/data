@@ -4,6 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -23,6 +26,23 @@
     "nearest_boat_ramp": {
       "distance_m": 470
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Canning River",
+      "osm_id": 9931627,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Canning River",
+      "osm_id": 17360291
+    },
+    "protected_area": {
+      "name": "Canning River Regional Park",
+      "osm_id": 22372179,
+      "osm_type": "way"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }
