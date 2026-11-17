@@ -2,6 +2,7 @@
 
 import json
 import math
+from pathlib import Path
 
 from pipeline.place_geometry import build
 from pipeline.tests.place_geometry_fixtures import OSM, lines, run, tiles, water_polygons, with_lake
