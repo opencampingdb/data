@@ -1,12 +1,34 @@
 {
+  "fact_dates": {
+    "access": "2026-11-17T12:25:11Z",
+    "caravans": "2026-11-17T12:25:11Z",
+    "drinking_water": "2026-11-17T12:25:11Z",
+    "fee": "2026-11-17T12:25:11Z",
+    "motorhomes": "2026-11-17T12:25:11Z",
+    "power": "2026-11-17T12:25:11Z",
+    "showers": "2026-11-17T12:25:11Z",
+    "toilets": "2026-11-17T12:25:11Z"
+  },
   "fact_sources": {
+    "access": "feedback",
+    "caravans": "feedback",
+    "drinking_water": "feedback",
+    "fee": "feedback",
     "lga": "osm",
     "locality": "osm",
+    "motorhomes": "feedback",
     "nearest_beach": "osm",
     "nearest_feature": "osm",
-    "protected_area": "osm"
+    "power": "feedback",
+    "protected_area": "osm",
+    "showers": "feedback",
+    "toilets": "feedback"
   },
   "facts": {
+    "access": "4wd",
+    "caravans": false,
+    "drinking_water": false,
+    "fee": true,
     "lga": {
       "name": "Pastoral Unincorporated Area",
       "osm_id": 6804541
@@ -17,6 +39,7 @@
       "osm_id": 1782120597,
       "type": "village"
     },
+    "motorhomes": false,
     "nearest_beach": {
       "distance_m": 250
     },
@@ -27,11 +50,14 @@
       "osm_type": "relation",
       "type": "bay"
     },
+    "power": false,
     "protected_area": {
       "name": "Fowlers Bay Conservation Park",
       "osm_id": 1421738,
       "osm_type": "relation"
-    }
+    },
+    "showers": false,
+    "toilets": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESD7BX9HVCQ9VSYBPEAVJ",
@@ -49,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-17T12:25:11Z"
 }
