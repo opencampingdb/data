@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Downloads tiles.json and manifest.json from the place geometry release
+# <tag> to <dir>, for the geometry workflow's diff and checks.
+#
+# A release that does not exist yet ("release not found" from gh) is not an
+# error: the run goes on with no lists, so every tile is put. Any other gh
+# error (a network failure, an outage, a token without access) fails the
+# step, so the run never builds without the lists and never switches off
+# the 50% guard or the deletes by accident.
+#
+# Writes exists=true or exists=false to $GITHUB_OUTPUT when it is set.
+#
+# Usage: tools/geometry-previous <tag> <dir>
+# Env: GH_TOKEN and GH_REPO, as gh reads them.
+set -euo pipefail
+
+tag="${1:?usage: tools/geometry-previous <tag> <dir>}"
+dir="${2:?usage: tools/geometry-previous <tag> <dir>}"
+err="$(mktemp)"
+trap 'rm -f "$err"' EXIT
+
+output() { if [ -n "${GITHUB_OUTPUT:-}" ]; then echo "$1" >> "$GITHUB_OUTPUT"; fi; }
+
+if ! assets="$(gh release view "$tag" --json assets --jq '.assets[].name' 2>"$err")"; then
+  if grep -q "release not found" "$err"; then
+    echo "No $tag release yet: every tile will be put."
+    mkdir -p "$dir"
+    output "exists=false"
+    exit 0
+  fi
+  cat "$err" >&2
+  echo "::error::gh release view $tag failed, so the current lists cannot be read. Stopping before the build."
+  exit 1
+fi
+
+mkdir -p "$dir"
+for name in tiles.json manifest.json; do
+  if grep -qx "$name" <<<"$assets"; then
+    gh release download "$tag" --dir "$dir" --pattern "$name"
+  else
+    echo "The $tag release has no $name."
+  fi
+done
+output "exists=true"

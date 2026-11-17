@@ -1152,8 +1152,11 @@ hand. It:
    <https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip>,
    unpacked to `water_polygons.shp`. The shapefile carries no date, so the
    download's `Last-Modified` header is kept for the manifest;
-2. downloads `tiles.json` and `manifest.json` from the `geometry` release,
-   when there is one;
+2. downloads `tiles.json` and `manifest.json` from the `geometry` release
+   with `tools/geometry-previous`, when there is one. Only gh's "release
+   not found" counts as no release: any other gh error fails the run here,
+   before the build, so a passing outage never switches off the guard in
+   step 4 or makes every tile look new;
 3. runs Place geometry with `--previous-tiles` set to that `tiles.json`
    (without it, every tile is put);
 4. runs Geometry release, which checks the build and packs it. A build is

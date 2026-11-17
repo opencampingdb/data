@@ -89,23 +89,13 @@ jobs:
           echo "modified=$modified" >> "$GITHUB_OUTPUT"
           echo "Water polygons: $shp, last modified ${modified:-unknown}"
 
+      # Only "release not found" counts as no release. Any other gh error stops
+      # the run here, before the build, so the guard and the deletes stay on.
       - name: Fetch the current geometry release's lists
+        id: previous
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/previous"
-          if ! assets="$(gh release view "$RELEASE_TAG" --json assets --jq '.assets[].name' 2>/dev/null)"; then
-            echo "No $RELEASE_TAG release yet: every tile will be put."
-            exit 0
-          fi
-          for name in tiles.json manifest.json; do
-            if grep -qx "$name" <<<"$assets"; then
-              gh release download "$RELEASE_TAG" --dir "$RUNNER_TEMP/previous" --pattern "$name"
-            else
-              echo "The $RELEASE_TAG release has no $name."
-            fi
-          done
+        run: tools/geometry-previous "$RELEASE_TAG" "$RUNNER_TEMP/previous"
 
       - name: Build
         env:
@@ -163,9 +153,10 @@ jobs:
       - name: Publish the water, roads and manifest
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_EXISTS: ${{ steps.previous.outputs.exists }}
         run: |
           set -euo pipefail
-          if ! gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+          if [ "$RELEASE_EXISTS" != true ]; then
             notes="Place geometry for the feedback engine's plausibility check: water.ndjson.gz, roads.ndjson.gz and the tile list, rebuilt weekly from OpenStreetMap. Licence: ODbL 1.0. Attribution: © OpenStreetMap contributors, Open Camping DB."
             gh release create "$RELEASE_TAG" --target "$(git rev-parse HEAD)" --title "Place geometry" \
               --notes "$notes" --latest=false
