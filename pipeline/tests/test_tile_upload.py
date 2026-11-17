@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 from pipeline.common import sha256_of
-from pipeline.tests.place_geometry_fixtures import OSM, run
+from pipeline.tests.place_geometry_fixtures import run, with_lake
 from pipeline.tile_upload import UploadFailed, upload
 
 CONTENT_TYPE = "application/x-ndjson"
@@ -179,20 +179,6 @@ def test_a_key_that_is_not_a_tile_is_refused_before_any_call(tmp_path, key):
     assert s3.puts == [] and s3.list_calls == 0
 
 
-# A second lake, in tile -332/1512, which the fixtures do not have.
-SECOND_LAKE = """
-  <node id="91" version="1" lat="-33.15" lon="151.25"/>
-  <node id="92" version="1" lat="-33.15" lon="151.252"/>
-  <node id="93" version="1" lat="-33.148" lon="151.252"/>
-  <node id="94" version="1" lat="-33.148" lon="151.25"/>
-  <way id="901" version="1">
-    <nd ref="91"/><nd ref="92"/><nd ref="93"/><nd ref="94"/><nd ref="91"/>
-    <tag k="natural" v="water"/>
-    <tag k="name" v="Second Lake"/>
-  </way>
-</osm>"""
-
-
 def test_a_run_that_failed_half_way_is_repaired_by_the_next(tmp_path):
     # The release's tiles.json lists build a, and the bucket holds it.
     a = run(tmp_path, name="a")
@@ -202,9 +188,7 @@ def test_a_run_that_failed_half_way_is_repaired_by_the_next(tmp_path):
     # the run fails and the release keeps a's tiles.json.
     osm = tmp_path / "b.osm"
     osm.write_text(
-        OSM.read_text()
-        .replace('<node id="3" version="1" lat="-33.248"', '<node id="3" version="2" lat="-33.2475"')
-        .replace("</osm>", SECOND_LAKE)
+        with_lake("Second Lake").replace('<node id="3" version="1" lat="-33.248"', '<node id="3" version="2" lat="-33.2475"')
     )
     b = run(tmp_path, osm=osm, previous=a / "tiles.json", name="b")
     s3.fail_put = {"water/-333/1511.ndjson"}

@@ -32,6 +32,9 @@ from .water import METRES_PER_DEGREE
 MIN_LAKE_M2 = 10_000
 # natural=water with one of these water values is not a lake.
 NOT_LAKES = frozenset({"river", "canal", "stream", "ditch", "drain", "wastewater"})
+# Nor is water tagged intermittent=yes: a dry salt lake such as Kati
+# Thanda-Lake Eyre or Lake Torrens, where a camp on or beside the dry bed
+# must not be held as pinned in water.
 # Shapes are simplified to about 5 m, in degrees.
 SIMPLIFY = 5 / METRES_PER_DEGREE
 # Sea is kept only in tiles this many tiles (about 55 km) or fewer from a
@@ -110,7 +113,7 @@ def square_metres(geometry) -> float:
 
 
 def is_lake(tags) -> bool:
-    return tags.get("natural") == "water" and tags.get("water") not in NOT_LAKES
+    return tags.get("natural") == "water" and tags.get("water") not in NOT_LAKES and tags.get("intermittent") != "yes"
 
 
 def polygons_of(geometry) -> list:

@@ -1110,7 +1110,9 @@ It writes, in `DIR`:
   land in it, so the open ocean is left out. A lake is `natural=water`
   (closed ways and multipolygons) of at least 1 ha, leaving out
   `water=river`, `canal`, `stream`, `ditch`, `drain` and `wastewater`, so a
-  creek never holds a camp beside it. Each shape is simplified to about 5 m
+  creek never holds a camp beside it, and water tagged `intermittent=yes`,
+  so a dry salt lake such as Kati Thanda-Lake Eyre or Lake Torrens never
+  holds a camp on or beside its bed. Each shape is simplified to about 5 m
   (keeping its topology), then cut along the 0.1 degree grid, so no piece
   is larger than a grid square and the pieces either side of a cut meet
   exactly. The engine counts any water in its shore test, so a cut edge is

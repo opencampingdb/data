@@ -4,7 +4,7 @@ import json
 import math
 
 from pipeline.place_geometry import build
-from pipeline.tests.place_geometry_fixtures import OSM, lines, run, tiles, water_polygons
+from pipeline.tests.place_geometry_fixtures import OSM, lines, run, tiles, water_polygons, with_lake
 
 
 def test_the_lake_is_in_the_water_file(tmp_path):
@@ -149,3 +149,20 @@ def test_a_tile_over_the_engines_limit_fails_the_build(tmp_path, monkeypatch, ca
     assert code == 1
     assert "over 100 bytes" in capsys.readouterr().err
     assert not (tmp_path / "out" / "changed.json").exists()
+
+
+def test_a_lake_tagged_intermittent_is_left_out(tmp_path):
+    # A dry salt lake, like Kati Thanda-Lake Eyre or Lake Torrens: a camp on
+    # or beside its bed must not be held as pinned in water.
+    dry = tmp_path / "salt.osm"
+    dry.write_text(with_lake("Fixture Salt Lake", water="lake", intermittent="yes", salt="yes"))
+    out = run(tmp_path, osm=dry)
+    assert "Fixture Salt Lake" not in {line.get("name") for line in lines(out / "water.ndjson")}
+    assert "water/-332/1512.ndjson" not in tiles(out)
+    assert json.loads((out / "summary.json").read_text())["water"]["lakes"] == 1
+
+
+def test_the_same_lake_without_intermittent_is_kept(tmp_path):
+    wet = tmp_path / "wet.osm"
+    wet.write_text(with_lake("Fixture Salt Lake", water="lake", salt="yes"))
+    assert [line["name"] for line in tiles(run(tmp_path, osm=wet))["water/-332/1512.ndjson"]] == ["Fixture Salt Lake"]

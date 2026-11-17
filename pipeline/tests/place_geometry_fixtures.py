@@ -18,6 +18,22 @@ SEA = [
 ]
 
 
+def with_lake(name: str, **tags: str) -> str:
+    """The fixture OSM file with one more lake of about 3.7 ha, in tile -332/1512, which it has no water in."""
+    extra = "".join(f'\n    <tag k="{k}" v="{v}"/>' for k, v in tags.items())
+    return OSM.read_text().replace("</osm>", f"""
+  <node id="91" version="1" lat="-33.15" lon="151.25"/>
+  <node id="92" version="1" lat="-33.15" lon="151.252"/>
+  <node id="93" version="1" lat="-33.148" lon="151.252"/>
+  <node id="94" version="1" lat="-33.148" lon="151.25"/>
+  <way id="901" version="1">
+    <nd ref="91"/><nd ref="92"/><nd ref="93"/><nd ref="94"/><nd ref="91"/>
+    <tag k="natural" v="water"/>{extra}
+    <tag k="name" v="{name}"/>
+  </way>
+</osm>""")
+
+
 def water_polygons(folder: Path, rings=SEA) -> Path:
     """A water polygons shapefile like OSM's split WGS 84 file, one ring per polygon."""
     folder.mkdir(parents=True, exist_ok=True)
