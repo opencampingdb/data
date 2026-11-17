@@ -150,11 +150,18 @@ def polygons_of(geometry) -> list:
     return out
 
 
+# The bounds Geofabrik's Australia extract carries in its header. The mirror the
+# download falls back to writes no bounds, so a build of its file uses these.
+AUSTRALIA_EXTRACT_BOUNDS = (68.133419, -57.092814, 169.001567, -8.809565)
+
+
 def extract_bounds(path: Path) -> tuple[float, float, float, float]:
-    """(min lon, min lat, max lon, max lat) from the extract's header."""
+    """(min lon, min lat, max lon, max lat) from the extract's header, or
+    AUSTRALIA_EXTRACT_BOUNDS when the header has none."""
     box = osmium.io.Reader(str(path), osmium.osm.osm_entity_bits.NOTHING).header().box()
     if not box.valid():
-        raise SystemExit(f"{path} has no bounds in its header")
+        print(f"{path} has no bounds in its header, so the Australia extract's bounds are used", file=sys.stderr)
+        return AUSTRALIA_EXTRACT_BOUNDS
     return box.bottom_left.lon, box.bottom_left.lat, box.top_right.lon, box.top_right.lat
 
 
