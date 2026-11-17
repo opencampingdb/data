@@ -32,7 +32,6 @@ so a manifest never points at files that have since changed.
 
 import argparse
 import gzip
-import hashlib
 import io
 import json
 import math
@@ -51,6 +50,7 @@ from .common import (
     iter_review_files,
     load_blocked,
     load_places,
+    sha256_of,
     with_osm_dates,
     with_rule_facts,
     write_text,
@@ -241,7 +241,7 @@ def write_asset(out_dir: Path, name: str, raw: bytes, count: int, url: str) -> d
     return {
         "file": name,
         "url": url,
-        "sha256": hashlib.sha256(data).hexdigest(),
+        "sha256": sha256_of(data),
         "bytes": len(data),
         "count": count,
     }

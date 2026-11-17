@@ -2,15 +2,21 @@
   "fact_dates": {
     "address": "2026-11-15T00:00:00Z",
     "facebook": "2026-11-15T00:00:00Z",
-    "phone": "2026-11-15T00:00:00Z"
+    "fee": "2026-11-17T09:24:20Z",
+    "pets": "2026-11-17T09:24:20Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "self_contained_only": "2026-11-17T09:24:20Z"
   },
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
+    "fee": "feedback",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "phone": "overture"
+    "pets": "feedback",
+    "phone": "overture",
+    "self_contained_only": "feedback"
   },
   "facts": {
     "address": {
@@ -21,6 +27,7 @@
       "suburb": "Fowlers Bay"
     },
     "facebook": "https://www.facebook.com/344509515417506",
+    "fee": true,
     "lga": {
       "name": "Pastoral Unincorporated Area",
       "osm_id": 6804541
@@ -34,7 +41,9 @@
     "nearest_beach": {
       "distance_m": 1610
     },
-    "phone": "+61438563031"
+    "pets": "yes",
+    "phone": "+61438563031",
+    "self_contained_only": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG17087ENQD7CAPGG2K5",
@@ -52,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-17T09:24:20Z"
 }
