@@ -43,6 +43,7 @@ from pathlib import Path
 
 from .commons import load_do_not_match, without_listed
 from .labels import labels_for, with_label
+from .localities import load_localities
 from .common import (
     ATTRIBUTION,
     LICENCE,
@@ -135,7 +136,7 @@ def places_ndjson(root: Path) -> tuple[bytes, int]:
         if places[place_id].get("status") != "merged"
         and places[place_id].get("standing") not in UNRELEASED_STANDINGS
     ]
-    labels = labels_for(kept)
+    labels = labels_for(kept, localities=load_localities(root))
     lines = [dump_line(with_label(record, labels.get(record["id"]))) + "\n" for record in kept]
     return "".join(lines).encode("utf-8"), len(lines)
 

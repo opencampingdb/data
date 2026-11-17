@@ -1250,8 +1250,13 @@ then the first of these that applies:
 A place with none of these has no label. When two or more labelled places
 in the same state (`pipeline.states`) have the same text, each adds ", "
 and the name of its `locality`, unless the text already holds it; one with
-no `locality` keeps the plain text. `from` names the fact the text came
-from. Files in `places/` never hold a label (validation refuses one that
+no `locality` keeps the plain text. Places that still share a text then
+take ", " and their distance (to 100 m) and eight-point compass direction
+from their `locality`'s town in `localities/localities.ndjson`, or from the
+nearest town there when they have no `locality`: "Reserve campsite on the
+Murray River, 1.8 km NE of Merbein". Places within about 100 m of each
+other, such as the unnamed cabins of one lodge, can still share a text.
+`from` names the fact the text came from. Files in `places/` never hold a label (validation refuses one that
 does), and the place index leaves it out.
 
 `place-index.ndjson.gz` is for feedback intakes, not apps: it is not a release
