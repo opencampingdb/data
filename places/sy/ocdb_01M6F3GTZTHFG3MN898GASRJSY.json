@@ -1,12 +1,11 @@
 {
   "fact_dates": {
-    "address": "2026-11-15T00:00:00Z",
     "facebook": "2026-11-15T00:00:00Z",
     "phone": "2026-11-15T00:00:00Z",
     "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
-    "address": "overture",
+    "address": "osm",
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
@@ -19,10 +18,7 @@
   "facts": {
     "address": {
       "housenumber": "165",
-      "postcode": "3068",
-      "state": "VIC",
-      "street": "Rae St",
-      "suburb": "Melbourne"
+      "street": "Rae Street"
     },
     "facebook": "https://www.facebook.com/100913575755306",
     "lga": {
@@ -30,7 +26,7 @@
       "osm_id": 2404491
     },
     "locality": {
-      "distance_m": 3190,
+      "distance_m": 3180,
       "name": "Melbourne",
       "osm_id": 21579127,
       "type": "city"
@@ -54,17 +50,23 @@
   "id": "ocdb_01M6F3GTZTHFG3MN898GASRJSY",
   "kind": "food_and_drink",
   "location": {
-    "lat": -37.788487,
-    "lon": 144.979031
+    "lat": -37.78853,
+    "lon": 144.978973
   },
+  "merged_osm": [
+    {
+      "id": 243151934,
+      "type": "node"
+    }
+  ],
   "name": "Tramway Hotel",
   "osm": {
-    "id": 243151934,
-    "timestamp": "2021-10-17T07:41:05Z",
-    "type": "node",
-    "version": 2
+    "id": 1580170921,
+    "timestamp": "2026-11-16T13:02:21Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

@@ -1,0 +1,60 @@
+{
+  "fact_sources": {
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "hot_water": false,
+    "lga": {
+      "name": "City of Warrnambool",
+      "osm_id": 3347796
+    },
+    "locality": {
+      "distance_m": 1170,
+      "name": "Warrnambool",
+      "osm_id": 2321683713,
+      "type": "city"
+    },
+    "nearest_beach": {
+      "distance_m": 80
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1000
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Lake Pertobe",
+      "osm_id": 7564426,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Pertobe Road"
+    },
+    "wheelchair": true
+  },
+  "group": "utility",
+  "id": "ocdb_01M7KMEWZXM878206M6RNEEDHP",
+  "kind": "public_shower",
+  "location": {
+    "lat": -38.393176,
+    "lon": 142.48112
+  },
+  "name": null,
+  "osm": {
+    "id": 14382737577,
+    "timestamp": "2026-11-16T06:08:59Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-17T02:12:31Z"
+}

@@ -1,0 +1,69 @@
+{
+  "fact_sources": {
+    "caravans": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "pets": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "caravans": true,
+    "entry": "public",
+    "fee": true,
+    "lga": {
+      "name": "Shire of Yarriambiack",
+      "osm_id": 3345545
+    },
+    "locality": {
+      "distance_m": 1050,
+      "name": "Brim",
+      "osm_id": 1294551022,
+      "type": "village"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 170
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Brim Weir Pool",
+      "osm_id": 10228607,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Yarriambiack Creek",
+      "osm_id": 262182973
+    },
+    "pets": "leashed",
+    "power": true,
+    "showers": true,
+    "tents": true,
+    "toilets": true
+  },
+  "group": "overnight",
+  "id": "ocdb_01M7KMEXYR30Z2K41AFS9K0NPA",
+  "kind": "paid_campground",
+  "location": {
+    "lat": -36.077015,
+    "lon": 142.40532
+  },
+  "name": "Reddas Park Brim",
+  "osm": {
+    "id": 1580275255,
+    "timestamp": "2026-11-16T20:16:10Z",
+    "type": "way",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-17T02:12:31Z"
+}
