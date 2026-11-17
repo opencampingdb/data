@@ -14,7 +14,9 @@
     "lga": "osm",
     "locality": "osm",
     "motorhomes": "contributed",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "contributed"
   },
@@ -35,7 +37,17 @@
       "type": "town"
     },
     "motorhomes": true,
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Target Gully",
+      "osm_id": 1365841338
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Maldon Historic Reserve",
+      "osm_id": 9296577,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/butts-bushland-reserve"
   },
@@ -61,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

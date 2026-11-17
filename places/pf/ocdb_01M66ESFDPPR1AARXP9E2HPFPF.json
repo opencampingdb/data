@@ -18,10 +18,12 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "nudist": "osm",
     "phone": "overture",
     "picnic_tables": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -56,10 +58,20 @@
       "distance_m": 310,
       "name": "Springbrook Road"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Carricks Creek",
+      "osm_id": 97795213
+    },
     "nudist": false,
     "phone": "+61137468",
     "picnic_tables": true,
     "power": false,
+    "protected_area": {
+      "name": "Springbrook National Park",
+      "osm_id": 306431,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -82,5 +94,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

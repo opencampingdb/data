@@ -11,6 +11,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -39,6 +41,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1090
     },
+    "nearest_feature": {
+      "distance_m": 830,
+      "name": "Powers Bend",
+      "osm_id": 7540061970,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Deakin Main Drain",
+      "osm_id": 911430162
+    },
     "phone": "+61354800999",
     "website": "https://richrivertouristpark.com.au/"
   },
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

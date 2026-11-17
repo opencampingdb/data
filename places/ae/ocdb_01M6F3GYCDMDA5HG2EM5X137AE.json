@@ -11,8 +11,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -40,11 +42,23 @@
     "nearest_boat_ramp": {
       "distance_m": 530
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Horseshoe Bay Lagoon",
+      "osm_id": 718607628,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Horseshoe Bay Road"
     },
-    "phone": "+61400555956"
+    "phone": "+61400555956",
+    "protected_area": {
+      "name": "Great Barrier Reef World Heritage Area",
+      "osm_id": 10156269,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYCDMDA5HG2EM5X137AE",
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

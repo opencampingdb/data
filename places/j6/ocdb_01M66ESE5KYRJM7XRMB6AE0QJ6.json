@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +19,19 @@
       "osm_id": 3786827513,
       "type": "village"
     },
-    "operator": "Parks and Wildlife Commission"
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Main Pool",
+      "osm_id": 847010927,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "operator": "Parks and Wildlife Commission",
+    "protected_area": {
+      "name": "Territory Wildlife Park/Berry Springs Nature Park",
+      "osm_id": 13006060,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESE5KYRJM7XRMB6AE0QJ6",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -14,6 +14,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
     "toilets": "osm",
@@ -49,6 +51,18 @@
       "distance_m": 740,
       "name": "VRO/Fishing Club Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Woolgoolga Lake",
+      "osm_id": 3906008,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Woolgoolga Creek",
+      "osm_id": 125120271
+    },
     "phone": "+61266541499",
     "power": true,
     "toilets": true,
@@ -70,5 +84,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

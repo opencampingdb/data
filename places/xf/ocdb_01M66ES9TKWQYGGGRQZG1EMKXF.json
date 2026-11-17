@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -20,7 +22,17 @@
       "osm_id": 163564024,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Mitta Mitta River",
+      "osm_id": 241190678
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Mitta Mitta River Heritage River",
+      "osm_id": 16506844,
+      "osm_type": "relation"
+    },
     "wifi": false
   },
   "group": "overnight",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

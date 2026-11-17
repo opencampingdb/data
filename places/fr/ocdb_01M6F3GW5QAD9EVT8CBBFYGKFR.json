@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "wifi": "osm"
   },
@@ -15,6 +16,11 @@
       "name": "Pemberton",
       "osm_id": 82359265,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Donnelly River",
+      "osm_id": 345473223
     },
     "operator": "David & Jan Haynes",
     "wifi": false
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

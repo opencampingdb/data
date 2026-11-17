@@ -3,6 +3,7 @@
     "bins": "osm",
     "entry": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -11,6 +12,13 @@
     "lga": {
       "name": "Longreach Regional",
       "osm_id": 11676693
+    },
+    "nearest_feature": {
+      "distance_m": 640,
+      "name": "Morella",
+      "osm_id": 3608204745,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

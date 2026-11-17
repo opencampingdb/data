@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "website": "overture"
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 560
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Port River",
+      "osm_id": 15655412,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Nelson Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Port River",
+      "osm_id": 466225212
     },
     "opening_hours": "Mo-Su,PH 08:00-23:00",
     "phone": "+61882402286",
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

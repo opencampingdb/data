@@ -3,7 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -21,7 +23,17 @@
       "osm_id": 82359265,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Beedelup Brook",
+      "osm_id": 409086490
+    },
     "operator": "Department of Parks & Wildlife",
+    "protected_area": {
+      "name": "Greater Beedelup National Park",
+      "osm_id": 11995803,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

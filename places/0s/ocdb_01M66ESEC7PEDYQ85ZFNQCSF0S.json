@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -18,9 +20,21 @@
       "osm_id": 4954631631,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "River Torrens",
+      "osm_id": 8325149,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Darley Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Karrawirra Parri (River Torrens)",
+      "osm_id": 174742688
     },
     "wheelchair": true
   },
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

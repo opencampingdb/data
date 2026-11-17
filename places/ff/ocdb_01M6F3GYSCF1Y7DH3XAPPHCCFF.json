@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -33,9 +35,21 @@
       "osm_id": 172987017,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Lake Spencer",
+      "osm_id": 512559682,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 370,
       "name": "Durham Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Jordan Creek",
+      "osm_id": 41047315
     },
     "opening_hours": "Mo-Sa 10:00-03:00; Su 12:00-22:00",
     "phone": "+61 2 6331 2712",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

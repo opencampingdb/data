@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,6 +19,16 @@
       "name": "Rawson",
       "osm_id": 171095813,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Tyers River East Branch",
+      "osm_id": 1382272099
+    },
+    "protected_area": {
+      "name": "Baw Baw National Park",
+      "osm_id": 9204809,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": false
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

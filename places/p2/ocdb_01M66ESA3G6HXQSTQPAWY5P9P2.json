@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "dump_station": true,
@@ -23,9 +25,21 @@
       "osm_id": 1882969315,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 650,
+      "name": "Glanmire",
+      "osm_id": 6035839625,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Old Bruce Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Boundary Creek",
+      "osm_id": 726007672
     }
   },
   "group": "overnight",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

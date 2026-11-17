@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,16 @@
     "nearest_major_road": {
       "distance_m": 470,
       "name": "Arnhem Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "South Aligator River",
+      "osm_id": 25907852
+    },
+    "protected_area": {
+      "name": "Kakadu National Park World Heritage Site",
+      "osm_id": 2386081,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

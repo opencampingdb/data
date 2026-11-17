@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +19,19 @@
       "osm_id": 271886065,
       "type": "village"
     },
-    "operator": "Parks Victoria"
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Mud Brick Dam",
+      "osm_id": 955509675,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Mount Alexander Regional Park",
+      "osm_id": 28841104,
+      "osm_type": "way"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESD0BWTE96WV93E8C7JZA",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

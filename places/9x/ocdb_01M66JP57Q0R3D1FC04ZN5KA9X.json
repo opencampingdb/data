@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Marulan",
       "osm_id": 251724227,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Paddys Castle",
+      "osm_id": 2859289589,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Jerrara Creek",
+      "osm_id": 281971992
+    },
+    "protected_area": {
+      "name": "Bungonia State Conservation Area",
+      "osm_id": 6044266,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

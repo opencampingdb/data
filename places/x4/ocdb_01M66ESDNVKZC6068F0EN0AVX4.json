@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Tablelands Regional",
       "osm_id": 11677293
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Burdekin River",
+      "osm_id": 700036941
+    },
+    "protected_area": {
+      "name": "Girringun National Park",
+      "osm_id": 1518815,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -24,9 +25,15 @@
     "nearest_boat_ramp": {
       "distance_m": 4560
     },
+    "nearest_feature": {
+      "distance_m": 630,
+      "name": "The Spot",
+      "osm_id": 59845170,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
-      "distance_m": 170,
-      "name": "Carr Street"
+      "distance_m": 110
     }
   },
   "group": "utility",
@@ -45,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +16,16 @@
       "name": "Cambroon",
       "osm_id": 324609419,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Booloumba Creek",
+      "osm_id": 142227125
+    },
+    "protected_area": {
+      "name": "Conondale National Park",
+      "osm_id": 1506584,
+      "osm_type": "relation"
     },
     "water_type": "tank_fill"
   },
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

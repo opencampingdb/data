@@ -15,8 +15,11 @@
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -42,8 +45,25 @@
       "type": "village"
     },
     "motorbikes": true,
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Roly Whalans Swamp",
+      "osm_id": 467678350,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Morong Creek",
+      "osm_id": 446019052
+    },
     "operator": "National Parks and Wildlife Service",
     "phone": "+61263361972",
+    "protected_area": {
+      "name": "Kanangra-Boyd National Park",
+      "osm_id": 5909870,
+      "osm_type": "relation"
+    },
     "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/boyd-river-campground/Visitor-Info#Accessibility"
   },
   "group": "overnight",
@@ -62,5 +82,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

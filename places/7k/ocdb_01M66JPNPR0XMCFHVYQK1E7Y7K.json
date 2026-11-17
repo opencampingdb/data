@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -33,6 +35,18 @@
       "distance_m": 3860,
       "name": "Lunawanna Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 630,
+      "name": "South Bruny",
+      "osm_id": 6054203766,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Saintys Creek",
+      "osm_id": 238048095
+    },
     "website": "https://inalanature.com.au/"
   },
   "group": "attraction",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

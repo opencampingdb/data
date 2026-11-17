@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,16 @@
     "nearest_major_road": {
       "distance_m": 230,
       "name": "Fitzsimons Lane"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Kestrel Creek",
+      "osm_id": 283725298
+    },
+    "protected_area": {
+      "name": "Yarra Valley Parklands",
+      "osm_id": 17915341,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

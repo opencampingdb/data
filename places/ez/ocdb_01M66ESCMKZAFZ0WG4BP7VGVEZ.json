@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -17,6 +18,11 @@
       "name": "Killarney",
       "osm_id": 21386961,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Condamine River",
+      "osm_id": 142320051
     }
   },
   "group": "overnight",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

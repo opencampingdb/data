@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 113254359,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Narira Creek",
+      "osm_id": 760792141,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Wilgo Creek",
+      "osm_id": 444250825
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

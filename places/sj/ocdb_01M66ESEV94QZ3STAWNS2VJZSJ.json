@@ -1,12 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
     "website": "osm"
   },
   "facts": {
+    "facebook": "https://www.facebook.com/234050759984144",
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -20,10 +29,23 @@
     "nearest_boat_ramp": {
       "distance_m": 2170
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Saltwater Creek",
+      "osm_id": 932918,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Pacific Motorway"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Saltwater Creek",
+      "osm_id": 147529986
+    },
+    "phone": "+61755144400",
     "website": "https://www.goldcoastholidaypark.com.au/"
   },
   "group": "overnight",
@@ -42,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

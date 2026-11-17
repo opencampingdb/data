@@ -3,7 +3,8 @@
     "entry": "osm",
     "hot_water": "osm",
     "lga": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -14,6 +15,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 40
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Dunn",
+      "osm_id": 176478669,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -32,5 +40,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,16 +1,30 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
       "name": "Winton Shire",
       "osm_id": 11676713
     },
+    "nearest_feature": {
+      "distance_m": 670,
+      "name": "Diamantina Causeway",
+      "osm_id": 2398931918,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Kennedy Developmental Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Diamantina River",
+      "osm_id": 1373009319
     }
   },
   "group": "attraction",
@@ -29,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

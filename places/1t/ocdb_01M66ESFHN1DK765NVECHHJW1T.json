@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,16 @@
       "name": "Benambra",
       "osm_id": 163564024,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Mitta Mitta River",
+      "osm_id": 237469257
+    },
+    "protected_area": {
+      "name": "Mitta Mitta River Heritage River",
+      "osm_id": 16506844,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

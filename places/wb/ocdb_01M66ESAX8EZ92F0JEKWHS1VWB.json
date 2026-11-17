@@ -2,6 +2,7 @@
   "fact_sources": {
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "water_type": "osm"
   },
@@ -14,6 +15,13 @@
     },
     "nearest_beach": {
       "distance_m": 4650
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Yerrabi Pond",
+      "osm_id": 331482,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 170,
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Lithgow",
       "osm_id": 78078822,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Fallen Rocks",
+      "osm_id": 2859673198,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "protected_area": {
+      "name": "Gardens of Stone State Conservation Area",
+      "osm_id": 16320869,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

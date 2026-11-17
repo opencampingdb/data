@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm"
   },
@@ -19,6 +21,18 @@
       "name": "Hillgrove",
       "osm_id": 113736656,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 920,
+      "name": "Devils Elbow",
+      "osm_id": 113735958,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Bakers Creek",
+      "osm_id": 446979280
     },
     "opening_hours": "24/7",
     "toilet_type": "pit"
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,10 @@
     "lga": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -16,9 +19,26 @@
     "nearest_boat_ramp": {
       "distance_m": 240
     },
+    "nearest_feature": {
+      "distance_m": 310,
+      "name": "Yardie Creek Gorge",
+      "osm_id": 1978586883,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Yardie Creek Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Yardie Creek",
+      "osm_id": 327921642
+    },
+    "protected_area": {
+      "name": "Cape Range National Park",
+      "osm_id": 3490402,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

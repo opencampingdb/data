@@ -8,6 +8,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -25,6 +26,13 @@
       "name": "Norseman",
       "osm_id": 5432456986,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Bromus Dam",
+      "osm_id": 189772714,
+      "osm_type": "way",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 160,
@@ -49,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -7,10 +7,12 @@
   "fact_sources": {
     "address": "osm",
     "facebook": "overture",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "overture",
@@ -24,6 +26,7 @@
       "street": "Stanley Place"
     },
     "facebook": "https://www.facebook.com/216987171665420",
+    "fee": false,
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -39,6 +42,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 840
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Brisbane River",
+      "osm_id": 7642164,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 100,
@@ -60,11 +70,11 @@
   "name": "Queensland Art Gallery",
   "osm": {
     "id": 7698202,
-    "timestamp": "2022-10-09T01:29:09Z",
+    "timestamp": "2026-11-13T23:00:37Z",
     "type": "relation",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

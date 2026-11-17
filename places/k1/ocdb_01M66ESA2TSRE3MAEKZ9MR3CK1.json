@@ -10,6 +10,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -33,6 +35,18 @@
       "distance_m": 270,
       "name": "Plush's Bend Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Nelwort Swamp",
+      "osm_id": 329690261,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bookmark Creek",
+      "osm_id": 684761217
+    },
     "phone": "+611300661704"
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

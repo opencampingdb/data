@@ -3,6 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,6 +19,23 @@
       "name": "Lynchs Creek",
       "osm_id": 114644355,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 480,
+      "name": "Forest Top",
+      "osm_id": 114643968,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Brindle Creek",
+      "osm_id": 395017069
+    },
+    "protected_area": {
+      "name": "Border Ranges National Park",
+      "osm_id": 5816906,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

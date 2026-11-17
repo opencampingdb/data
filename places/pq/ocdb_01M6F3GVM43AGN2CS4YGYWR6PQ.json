@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -31,9 +33,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1630
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Norman Creek",
+      "osm_id": 5325731,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Old Cleveland Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Norman Creek",
+      "osm_id": 33699385
     },
     "operator": "ALH Group",
     "website": "https://www.stonescornerhotel.com.au/"
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

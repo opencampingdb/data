@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -24,9 +27,26 @@
     "nearest_boat_ramp": {
       "distance_m": 290
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Stephens Mountain",
+      "osm_id": 174123290,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Pacific Motorway"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Norman Creek",
+      "osm_id": 17298688
+    },
+    "protected_area": {
+      "name": "Stephens Mountain Reserve",
+      "osm_id": 11047993,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

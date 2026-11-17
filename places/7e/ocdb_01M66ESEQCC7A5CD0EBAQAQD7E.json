@@ -6,7 +6,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm",
     "wheelchair": "osm",
     "wifi": "osm"
@@ -26,7 +28,19 @@
       "osm_id": 289619307,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Blue Haze Peak",
+      "osm_id": 4487794792,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Cathedral Range State Park",
+      "osm_id": 38948,
+      "osm_type": "relation"
+    },
     "website": "https://parkweb.vic.gov.au/explore/parks/cathedral-range-state-park/things-to-do/the-farmyard",
     "wheelchair": false,
     "wifi": false
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -14,6 +17,23 @@
       "name": "Thredbo",
       "osm_id": 113373977,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Cowombat Flat",
+      "osm_id": 2561074091,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Murray River",
+      "osm_id": 249856044
+    },
+    "protected_area": {
+      "name": "Cobberas Wilderness Zone",
+      "osm_id": 16487237,
+      "osm_type": "relation"
     },
     "toilets": false
   },
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

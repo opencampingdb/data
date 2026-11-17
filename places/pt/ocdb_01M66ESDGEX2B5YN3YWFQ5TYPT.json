@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -26,7 +28,19 @@
     "nearest_boat_ramp": {
       "distance_m": 1750
     },
-    "operator": "NSW National Parks and Wildlife Service"
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Brou Beach",
+      "osm_id": 379893070,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Eurobodalla National Park",
+      "osm_id": 6052866,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESDGEX2B5YN3YWFQ5TYPT",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

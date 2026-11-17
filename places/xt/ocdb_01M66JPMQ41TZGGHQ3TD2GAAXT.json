@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -23,6 +24,13 @@
     },
     "nearest_beach": {
       "distance_m": 790
+    },
+    "nearest_feature": {
+      "distance_m": 300,
+      "name": "Burke Square",
+      "osm_id": 12093450480,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

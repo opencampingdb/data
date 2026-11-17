@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -25,7 +27,17 @@
     "nearest_boat_ramp": {
       "distance_m": 4850
     },
-    "operator": "Parks Victoria"
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Geary River",
+      "osm_id": 1471524401
+    },
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFA3NJWJBZFJS3ECZ16W",
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

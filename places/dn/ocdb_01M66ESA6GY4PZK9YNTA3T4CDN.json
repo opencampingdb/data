@@ -8,8 +8,11 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -29,8 +32,25 @@
       "osm_id": 1003754272,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Horse Swamp",
+      "osm_id": 409506656,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Polblue Creek",
+      "osm_id": 409502052
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0265451128",
+    "protected_area": {
+      "name": "Barrington Tops State Conservation Area",
+      "osm_id": 6112244,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/horse-swamp-campground?utm_source=bing&utm_medium=organic&utm_campaign=Bing+Places&utm_content=Horse+Swamp+campground+-+Moonan+Brook&utm_term=plcid_9677840317988261055"
   },
   "group": "overnight",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

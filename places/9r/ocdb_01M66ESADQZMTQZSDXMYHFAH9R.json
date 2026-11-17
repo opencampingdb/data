@@ -8,7 +8,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -32,7 +34,17 @@
       "osm_id": 113237603,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Yarrunga Creek",
+      "osm_id": 235119076
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Morton National Park",
+      "osm_id": 1356411,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

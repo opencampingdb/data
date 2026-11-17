@@ -12,7 +12,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -37,7 +40,24 @@
     "nearest_boat_ramp": {
       "distance_m": 80
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Blanket Bay",
+      "osm_id": 353143300,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Blanket Bay Creek",
+      "osm_id": 130361192
+    },
     "phone": "+61131963",
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
+    },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground"
   },
   "group": "overnight",
@@ -56,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

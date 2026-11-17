@@ -3,6 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -17,6 +20,23 @@
       "name": "Dwellingup",
       "osm_id": 83353490,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 480,
+      "name": "Nanga Brook",
+      "osm_id": 217692395,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Nanga Brook",
+      "osm_id": 660123830
+    },
+    "protected_area": {
+      "name": "Lane Poole Reserve",
+      "osm_id": 12936746,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

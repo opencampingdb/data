@@ -6,7 +6,9 @@
     "dump_station": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -26,7 +28,19 @@
       "osm_id": 287497593,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Green Lake",
+      "osm_id": 167776411,
+      "osm_type": "way",
+      "type": "water"
+    },
     "power": true,
+    "protected_area": {
+      "name": "Green Lake Regional Park",
+      "osm_id": 9209884,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

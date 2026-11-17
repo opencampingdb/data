@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -18,7 +20,19 @@
       "distance_m": 70,
       "name": "Yokinup Beach"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Yokinup Beach",
+      "osm_id": 156335022,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "operator": "Parks & Wildlife",
+    "protected_area": {
+      "name": "Cape Arid National Park",
+      "osm_id": 8144456,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

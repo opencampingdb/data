@@ -1,14 +1,22 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "address": "osm",
     "charge": "osm",
     "entry": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
-    "power": "osm"
+    "phone": "overture",
+    "power": "osm",
+    "website": "overture"
   },
   "facts": {
     "address": {
@@ -17,6 +25,7 @@
     },
     "charge": "$10/n",
     "entry": "customers",
+    "facebook": "https://www.facebook.com/104285834985694",
     "fee": true,
     "lga": {
       "name": "Coomalie Shire",
@@ -33,7 +42,9 @@
       "name": "Litchfield Park Road"
     },
     "operator": "Zebra Rock Mine",
-    "power": false
+    "phone": "+61400767650",
+    "power": false,
+    "website": "http://www.zebrastone.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCGD47T6JQADZ6A50H4T",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

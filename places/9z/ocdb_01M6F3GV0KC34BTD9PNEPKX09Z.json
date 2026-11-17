@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -30,9 +32,21 @@
       "distance_m": 4840,
       "name": "Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 590,
+      "name": "Cobblers Hill",
+      "osm_id": 5307630350,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "American Creek",
+      "osm_id": 88784568
     }
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

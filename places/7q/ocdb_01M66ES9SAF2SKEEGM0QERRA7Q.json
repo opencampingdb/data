@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -17,7 +19,17 @@
       "osm_id": 2074381065,
       "type": "village"
     },
-    "operator": "Victoria Parks"
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Lindsay River",
+      "osm_id": 546097839
+    },
+    "operator": "Victoria Parks",
+    "protected_area": {
+      "name": "Murray-Sunset National Park",
+      "osm_id": 5470870,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9SAF2SKEEGM0QERRA7Q",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

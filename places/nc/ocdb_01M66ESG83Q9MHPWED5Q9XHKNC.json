@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "phone": "osm",
     "picnic_tables": "osm",
@@ -47,9 +49,21 @@
       "distance_m": 250,
       "name": "Slipway"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Mary River",
+      "osm_id": 222125,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Wharf Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Mary River",
+      "osm_id": 67502682
     },
     "pets": "leashed",
     "phone": "+61 427 233 081",
@@ -76,5 +90,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

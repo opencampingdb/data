@@ -1,16 +1,30 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "email": "osm",
+    "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "4",
+      "postcode": "4610",
+      "state": "QLD",
+      "street": "King Street",
+      "suburb": "Kingaroy"
+    },
+    "email": "kry_admin@cqhg.com.au",
+    "facebook": "https://www.facebook.com/CarrolleeHotel",
     "lga": {
       "name": "South Burnett Regional",
       "osm_id": 11675024
     },
     "locality": {
-      "distance_m": 250,
+      "distance_m": 260,
       "name": "Kingaroy",
       "osm_id": 364652062,
       "type": "town"
@@ -18,23 +32,25 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Haly Street"
-    }
+    },
+    "opening_hours": "Mo-Su 19:00-00:00",
+    "phone": "+61 7 4162 1055"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVF6VKT8TW1E30ZMVH94",
   "kind": "food_and_drink",
   "location": {
-    "lat": -26.539143,
-    "lon": 151.840405
+    "lat": -26.539134,
+    "lon": 151.840451
   },
   "name": "Carrollee Hotel",
   "osm": {
     "id": 1749142238,
-    "timestamp": "2013-12-28T08:14:32Z",
+    "timestamp": "2026-11-16T12:29:44Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

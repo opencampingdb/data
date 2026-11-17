@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture",
     "wheelchair": "osm"
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 590
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Cooks River",
+      "osm_id": 2023911,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "M8 Motorway Tunnel"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Cooks River",
+      "osm_id": 161420810
     },
     "phone": "+61295991932",
     "website": "http://www.rowersoncooksriver.com.au",
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

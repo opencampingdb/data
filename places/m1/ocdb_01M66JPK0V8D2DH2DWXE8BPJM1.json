@@ -11,6 +11,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -39,6 +40,11 @@
       "distance_m": 20,
       "name": "Blake Street"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Broken Creek",
+      "osm_id": 50532451
+    },
     "phone": "+61358662660"
   },
   "group": "services",
@@ -57,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,7 @@
 
 Usage:
     python -m pipeline.validate --root .
+    python -m pipeline.validate --root . --release-dir dist
 
 Exits 0 when everything is valid. Otherwise prints one line per problem and
 exits 1. Checks:
@@ -21,6 +22,10 @@ exits 1. Checks:
   the source osm: no fact report sets them
 - fact_dates has a date for exactly the fact_sources entries whose source is
   not osm, none of them later than updated
+- with --release-dir, every released record in places.ndjson.gz against
+  schema/place.schema.json, and its fact_dates: the dates the files hold,
+  plus osm.timestamp for each fact_sources entry that is osm when the record
+  has one (pipeline.common.with_osm_dates)
 - last_confirmed is not in the future. It may be later than updated, which
   a confirmation does not move
 - standing and moderator are only on a place with osm null (a place a
@@ -58,6 +63,7 @@ exits 1. Checks:
 """
 
 import argparse
+import gzip
 import json
 import re
 import sys
@@ -236,6 +242,41 @@ def fact_date_errors(record: dict, where: str) -> list[str]:
     later = sorted(k for k, when in dates.items() if when > record["updated"])
     if later:
         errors.append(f"{where}: fact_dates later than updated for {later}")
+    return errors
+
+
+def released_fact_date_errors(record: dict, where: str) -> list[str]:
+    """A released record dates every value not from OSM or a rule, and each OSM value with osm.timestamp."""
+    dates = record.get("fact_dates", {})
+    sources = record["fact_sources"]
+    stamp = (record.get("osm") or {}).get("timestamp")
+    dated = {k for k, source in sources.items() if source != RULE and (source != "osm" or stamp is not None)}
+    errors = []
+    if set(dates) != dated:
+        differ = sorted(set(dates) ^ dated)
+        errors.append(
+            f"{where}: fact_dates must have an entry for every fact_sources entry that is "
+            f"not rule, and for osm only when osm.timestamp is set, differ on {differ}"
+        )
+    wrong = sorted(k for k, when in dates.items() if sources.get(k) == "osm" and stamp is not None and when != stamp)
+    if wrong:
+        errors.append(f"{where}: fact_dates of an osm value must be osm.timestamp, differ on {wrong}")
+    return errors
+
+
+def validate_release(release_dir: Path) -> list[str]:
+    """Every problem found in the released places file, as readable lines. Empty means valid."""
+    validator = load_validator("place.schema.json")
+    errors = []
+    path = Path(release_dir) / "places.ndjson.gz"
+    with gzip.open(path, "rt", encoding="utf-8") as f:
+        for number, line in enumerate(f, start=1):
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            where = f"{path.name} line {number} ({record.get('id')})"
+            found = schema_errors(validator, record, where)
+            errors += found or released_fact_date_errors(record, where)
     return errors
 
 
@@ -616,9 +657,12 @@ def validate_repo(root: Path, now: str | None = None) -> list[str]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--root", type=Path, default=Path("."), help="data repository root")
+    parser.add_argument("--release-dir", type=Path, help="also check the release built into this directory")
     args = parser.parse_args(argv)
 
     errors = validate_repo(args.root)
+    if args.release_dir is not None:
+        errors += validate_release(args.release_dir)
     for error in errors:
         print(error)
     if errors:

@@ -5,7 +5,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -29,7 +32,24 @@
       "distance_m": 1110,
       "name": "Bundeena Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Horderns Beach",
+      "osm_id": 23141277,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bundeena Gully",
+      "osm_id": 23141199
+    },
     "opening_hours": "Mo-Su,PH 06:00-20:00",
+    "protected_area": {
+      "name": "Bundeena Reserve",
+      "osm_id": 172811491,
+      "osm_type": "way"
+    },
     "toilet_type": "flush",
     "wheelchair": true
   },
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

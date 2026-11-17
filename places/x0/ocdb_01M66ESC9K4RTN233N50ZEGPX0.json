@@ -1,25 +1,47 @@
 {
   "fact_sources": {
-    "entry": "osm"
+    "entry": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
-    "entry": "public"
+    "entry": "public",
+    "lga": {
+      "name": "Uralla Shire Council",
+      "osm_id": 6260188
+    },
+    "locality": {
+      "distance_m": 210,
+      "name": "Kentucky",
+      "osm_id": 114658057,
+      "type": "village"
+    },
+    "toilet_type": "pit",
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ESC9K4RTN233N50ZEGPX0",
   "kind": "public_toilet",
   "location": {
-    "lat": -30.760696,
-    "lon": 151.450155
+    "lat": -30.760703,
+    "lon": 151.450177
   },
-  "name": "Kentucky Reserve",
+  "merged_osm": [
+    {
+      "id": 8291961348,
+      "type": "node"
+    }
+  ],
+  "name": null,
   "osm": {
-    "id": 8291961348,
-    "timestamp": "2023-08-14T05:05:39Z",
-    "type": "node",
-    "version": 2
+    "id": 1574168080,
+    "timestamp": "2026-11-01T11:45:13Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -17,9 +19,21 @@
       "osm_id": 113708481,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Lake George",
+      "osm_id": 8060816,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Federal Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Nerrin Nerrin Creek",
+      "osm_id": 1294884307
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

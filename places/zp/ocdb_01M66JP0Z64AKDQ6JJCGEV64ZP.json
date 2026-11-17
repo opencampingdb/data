@@ -2,6 +2,7 @@
   "fact_sources": {
     "fuels": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -11,6 +12,13 @@
     "lga": {
       "name": "Anangu Pitjantjatjara Yankunytjatjara",
       "osm_id": 6792088
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Umuwa",
+      "osm_id": 4283685991,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "operator": "APY Lands Council"
   },
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

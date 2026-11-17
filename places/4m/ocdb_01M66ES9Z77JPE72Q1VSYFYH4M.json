@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Hermannsburg",
       "osm_id": 2365278670,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Ellery Creek Big Hole",
+      "osm_id": 208044897,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Ellery Creek",
+      "osm_id": 229171985
+    },
+    "protected_area": {
+      "name": "Tjoritja / West MacDonnell National Park",
+      "osm_id": 8329105,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

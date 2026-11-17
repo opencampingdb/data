@@ -5,7 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -26,6 +27,11 @@
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Seal Bay Road"
+    },
+    "protected_area": {
+      "name": "Seal Bay Conservation Park",
+      "osm_id": 1013440,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,8 +3,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -18,11 +21,28 @@
       "osm_id": 324884969,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 580,
+      "name": "National Park",
+      "osm_id": 4293047115,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 430,
       "name": "Gordon River Road"
     },
-    "operator": "National Parks Tasmania"
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Russell Falls Creek",
+      "osm_id": 606503537
+    },
+    "operator": "National Parks Tasmania",
+    "protected_area": {
+      "name": "Mount Field National Park",
+      "osm_id": 3004976,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES98HBN6WD3AC2ZSRY35R",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

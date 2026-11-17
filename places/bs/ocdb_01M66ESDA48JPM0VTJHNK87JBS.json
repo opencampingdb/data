@@ -3,6 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -19,6 +22,23 @@
       "name": "Tumut",
       "osm_id": 113713214,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 950,
+      "name": "Goobarragandra",
+      "osm_id": 113712689,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Goobagandra River",
+      "osm_id": 16128342
+    },
+    "protected_area": {
+      "name": "Goobarragandra Reserve",
+      "osm_id": 1056321171,
+      "osm_type": "way"
     },
     "showers": false,
     "tents": true,
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

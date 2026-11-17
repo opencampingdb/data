@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1170
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Logan River",
+      "osm_id": 95772715,
+      "osm_type": "way",
+      "type": "water"
     },
     "water_type": "fountain"
   },
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

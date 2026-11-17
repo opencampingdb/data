@@ -1,25 +1,33 @@
 {
   "fact_dates": {
-    "pets": "2026-09-01T00:00:00Z"
+    "facebook": "2026-11-15T00:00:00Z",
+    "pets": "2026-09-01T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
     "caravans": "osm",
     "drinking_water": "osm",
     "dump_station": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report",
+    "phone": "overture",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
+    "website": "overture",
     "wifi": "osm"
   },
   "facts": {
     "caravans": true,
     "drinking_water": true,
     "dump_station": true,
+    "facebook": "https://www.facebook.com/187202224637792",
     "lga": {
       "name": "Gympie Regional",
       "osm_id": 11675079
@@ -33,11 +41,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2590
     },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Yabba Creek",
+      "osm_id": 138712493
+    },
     "pets": "yes",
+    "phone": "+61754845196",
     "power": true,
     "showers": true,
     "tents": true,
     "toilets": true,
+    "website": "http://www.borumbadeerpark.com",
     "wifi": false
   },
   "group": "overnight",
@@ -56,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

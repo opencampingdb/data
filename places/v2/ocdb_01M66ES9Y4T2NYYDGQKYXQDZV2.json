@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Burraga",
       "osm_id": 5003065749,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Burraga Dam",
+      "osm_id": 7431395,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Thompsons Creek",
+      "osm_id": 452045550
     }
   },
   "group": "overnight",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

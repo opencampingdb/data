@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Benarkin",
       "osm_id": 1634843647,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Emu Creek",
+      "osm_id": 608742190,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Emu Creek",
+      "osm_id": 1441536165
+    },
+    "protected_area": {
+      "name": "Benarkin State Forest",
+      "osm_id": 8681576,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

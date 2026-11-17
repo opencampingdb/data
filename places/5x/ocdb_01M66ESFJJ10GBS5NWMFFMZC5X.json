@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,6 +20,13 @@
     },
     "nearest_beach": {
       "distance_m": 130
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Green Bay",
+      "osm_id": 102537788,
+      "osm_type": "way",
+      "type": "beach"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

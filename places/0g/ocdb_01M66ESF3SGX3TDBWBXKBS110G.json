@@ -11,7 +11,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -37,7 +40,24 @@
     "nearest_boat_ramp": {
       "distance_m": 1830
     },
-    "phone": "+611300072757"
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Birdie Lagoon",
+      "osm_id": 14703221,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Birdie Creek",
+      "osm_id": 24158381
+    },
+    "phone": "+611300072757",
+    "protected_area": {
+      "name": "Munmorah State Conservation Area",
+      "osm_id": 5932455,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESF3SGX3TDBWBXKBS110G",
@@ -55,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

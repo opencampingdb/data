@@ -10,7 +10,9 @@
     "locality": "osm",
     "name": "overture",
     "nearest_beach": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -32,7 +34,19 @@
     "nearest_beach": {
       "distance_m": 60
     },
-    "phone": "+61892925011"
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Government House Lake",
+      "osm_id": 25375784,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "phone": "+61892925011",
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYYXX1W6HCEMG1A2ZY5P",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

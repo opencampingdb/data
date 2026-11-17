@@ -12,7 +12,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -35,9 +37,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Moonee Ponds Creek",
+      "osm_id": 27950082,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Racecourse Road Offramp"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Moonee Ponds Creek",
+      "osm_id": 176331265
     },
     "phone": "+61370340271",
     "website": "http://www.rumblecoffee.com.au"
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

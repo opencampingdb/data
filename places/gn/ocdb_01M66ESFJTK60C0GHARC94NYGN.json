@@ -6,7 +6,9 @@
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
@@ -27,9 +29,21 @@
       "osm_id": 113237857,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 360,
+      "name": "Hoddles Cross Roads",
+      "osm_id": 113237965,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Hume Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Black Bobs Creek",
+      "osm_id": 264288426
     },
     "operator": "Transport for NSW",
     "picnic_tables": true,
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

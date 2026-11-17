@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
       "osm_id": 120750632,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 400,
+      "name": "Yarrowyck",
+      "osm_id": 114658121,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Thunderbolts Way"
+    },
+    "protected_area": {
+      "name": "Bulagaranda (Mt Yarrowyck) Aboriginal Area",
+      "osm_id": 6020160,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

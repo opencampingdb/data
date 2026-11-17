@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Derby-West Kimberley",
       "osm_id": 11690291
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Lennard River",
+      "osm_id": 142757284
+    },
+    "protected_area": {
+      "name": "Bandilngan (Windjana Gorge) National Park",
+      "osm_id": 8351352,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

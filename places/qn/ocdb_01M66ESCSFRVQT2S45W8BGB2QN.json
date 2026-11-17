@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +19,17 @@
       "osm_id": 1701813096,
       "type": "town"
     },
-    "operator": "DELWP Alexandra"
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Taponga River",
+      "osm_id": 1390372922
+    },
+    "operator": "DELWP Alexandra",
+    "protected_area": {
+      "name": "Lake Eildon National Park",
+      "osm_id": 1176681,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCSFRVQT2S45W8BGB2QN",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

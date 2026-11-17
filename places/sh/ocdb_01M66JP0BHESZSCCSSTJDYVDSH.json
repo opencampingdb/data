@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +21,23 @@
     "nearest_beach": {
       "distance_m": 230,
       "name": "Bournda Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Bournda Lagoon",
+      "osm_id": 2238883,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Sandy Beach Creek",
+      "osm_id": 141609998
+    },
+    "protected_area": {
+      "name": "Bournda National Park",
+      "osm_id": 2105810,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

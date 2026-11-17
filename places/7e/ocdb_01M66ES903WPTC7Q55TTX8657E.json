@@ -11,7 +11,8 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -37,7 +38,12 @@
       "distance_m": 230,
       "name": "Victoria Highway"
     },
-    "phone": "+61889750888"
+    "phone": "+61889750888",
+    "protected_area": {
+      "name": "Judbarra / Gregory National Park",
+      "osm_id": 8340969,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES903WPTC7Q55TTX8657E",
@@ -55,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

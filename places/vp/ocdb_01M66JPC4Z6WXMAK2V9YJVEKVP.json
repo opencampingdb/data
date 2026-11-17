@@ -8,7 +8,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -32,7 +33,12 @@
       "distance_m": 330,
       "name": "Jabiru Road"
     },
-    "phone": "0889792001"
+    "phone": "0889792001",
+    "protected_area": {
+      "name": "Kakadu National Park World Heritage Site",
+      "osm_id": 2386081,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JPC4Z6WXMAK2V9YJVEKVP",
@@ -50,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

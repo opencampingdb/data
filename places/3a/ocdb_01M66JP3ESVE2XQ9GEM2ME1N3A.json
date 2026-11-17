@@ -2,7 +2,9 @@
   "fact_sources": {
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -14,7 +16,19 @@
     "nearest_beach": {
       "distance_m": 120
     },
-    "operator": "Maria Island Ferry"
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Bernacchis Creek",
+      "osm_id": 688553845,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "operator": "Maria Island Ferry",
+    "protected_area": {
+      "name": "Maria Island National Park Marine Nature Reserve",
+      "osm_id": 6209676,
+      "osm_type": "relation"
+    }
   },
   "group": "transport",
   "id": "ocdb_01M66JP3ESVE2XQ9GEM2ME1N3A",
@@ -32,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

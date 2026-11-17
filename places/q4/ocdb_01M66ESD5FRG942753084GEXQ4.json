@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilets": "osm"
   },
@@ -21,9 +23,21 @@
       "type": "town"
     },
     "max_stay": "24h",
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Dewars Pool",
+      "osm_id": 6138579845,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bindoon-Dewars Pool Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Toodyay Brook",
+      "osm_id": 172011989
     },
     "operator": "Shire of Toodyay",
     "toilets": false
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

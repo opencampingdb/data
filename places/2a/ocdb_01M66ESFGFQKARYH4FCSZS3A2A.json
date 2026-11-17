@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -24,9 +26,21 @@
       "osm_id": 1480760534,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Targa",
+      "osm_id": 4290202341,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Tasman Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "St Patricks River",
+      "osm_id": 317079208
     },
     "pets": "leashed",
     "showers": true,
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

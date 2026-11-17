@@ -7,6 +7,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -30,6 +32,18 @@
     "nearest_boat_ramp": {
       "distance_m": 310
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Bombah Broadwater",
+      "osm_id": 8364729,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Myall Lakes National Park",
+      "osm_id": 3215560,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

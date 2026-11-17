@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Mossman",
       "osm_id": 169580856,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Mossman River",
+      "osm_id": 173324047
+    },
+    "protected_area": {
+      "name": "Daintree National Park",
+      "osm_id": 8478278,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -35,6 +37,16 @@
     },
     "nearest_major_road": {
       "distance_m": 290
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Goulburn River",
+      "osm_id": 146991147
+    },
+    "protected_area": {
+      "name": "Goulburn River Heritage River",
+      "osm_id": 16354539,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

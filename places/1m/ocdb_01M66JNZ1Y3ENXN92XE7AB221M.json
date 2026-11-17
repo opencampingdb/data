@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,16 @@
     },
     "nearest_beach": {
       "distance_m": 2040
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Bernacchis Creek",
+      "osm_id": 369091907
+    },
+    "protected_area": {
+      "name": "Maria Island National Park",
+      "osm_id": 3045017,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

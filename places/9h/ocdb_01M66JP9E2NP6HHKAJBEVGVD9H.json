@@ -6,7 +6,8 @@
     "locality": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -34,7 +35,12 @@
       "name": "McLaren Flat Road"
     },
     "opening_hours": "Mo-Su 07:30-20:30",
-    "phone": "+61 8 8383 7025"
+    "phone": "+61 8 8383 7025",
+    "protected_area": {
+      "name": "McLaren Vale District",
+      "osm_id": 5261959,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JP9E2NP6HHKAJBEVGVD9H",
@@ -52,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

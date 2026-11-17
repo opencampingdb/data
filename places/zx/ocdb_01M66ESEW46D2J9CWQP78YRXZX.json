@@ -1,11 +1,56 @@
 {
+  "fact_dates": {
+    "bbq": "2026-11-17T00:33:49Z",
+    "big_rigs": "2026-11-17T00:33:49Z",
+    "bins": "2026-11-17T00:33:49Z",
+    "camper_trailers": "2026-11-17T00:33:49Z",
+    "caravans": "2026-11-17T00:33:49Z",
+    "charge_powered": "2026-11-17T00:33:49Z",
+    "games_room": "2026-11-17T00:33:49Z",
+    "kitchen": "2026-11-17T00:33:49Z",
+    "laundry": "2026-11-17T00:33:49Z",
+    "motorbikes": "2026-11-17T00:33:49Z",
+    "motorhomes": "2026-11-17T00:33:49Z",
+    "near_road": "2026-11-17T00:33:49Z",
+    "pets": "2026-11-17T00:33:49Z",
+    "picnic_tables": "2026-11-17T00:33:49Z",
+    "shade": "2026-11-17T00:33:49Z",
+    "tents": "2026-11-17T00:33:49Z",
+    "wheelchair": "2026-11-17T00:33:49Z"
+  },
   "fact_sources": {
+    "bbq": "feedback",
+    "big_rigs": "feedback",
+    "bins": "feedback",
+    "camper_trailers": "feedback",
+    "caravans": "feedback",
+    "charge_powered": "feedback",
+    "games_room": "feedback",
+    "kitchen": "feedback",
+    "laundry": "feedback",
     "lga": "osm",
     "locality": "osm",
+    "motorbikes": "feedback",
+    "motorhomes": "feedback",
+    "near_road": "feedback",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "pets": "feedback",
+    "picnic_tables": "feedback",
+    "shade": "feedback",
+    "tents": "feedback",
+    "wheelchair": "feedback"
   },
   "facts": {
+    "bbq": true,
+    "big_rigs": true,
+    "bins": true,
+    "camper_trailers": true,
+    "caravans": true,
+    "charge_powered": "40 AUD/night",
+    "games_room": true,
+    "kitchen": true,
+    "laundry": true,
     "lga": {
       "name": "Shire of Esperance",
       "osm_id": 11689020
@@ -16,13 +61,21 @@
       "osm_id": 1918583620,
       "type": "town"
     },
+    "motorbikes": true,
+    "motorhomes": true,
+    "near_road": true,
     "nearest_beach": {
       "distance_m": 4250,
       "name": "Bow Park"
     },
     "nearest_boat_ramp": {
       "distance_m": 4380
-    }
+    },
+    "pets": "yes",
+    "picnic_tables": true,
+    "shade": true,
+    "tents": true,
+    "wheelchair": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEW46D2J9CWQP78YRXZX",
@@ -40,5 +93,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:33:49Z"
 }

@@ -2,6 +2,7 @@
   "fact_sources": {
     "entry": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -12,6 +13,11 @@
       "name": "Hall",
       "osm_id": 249060149,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Halls Creek",
+      "osm_id": 387987275
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -32,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

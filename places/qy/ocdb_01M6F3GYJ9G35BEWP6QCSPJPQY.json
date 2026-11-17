@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1170
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Moorabool River",
+      "osm_id": 188167224,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Hamilton Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Moorabool River",
+      "osm_id": 248949885
     },
     "phone": "+61352216654",
     "website": "https://www.eventbrite.com.au/e/afl-grand-final-2026-tickets-1999443917581"
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

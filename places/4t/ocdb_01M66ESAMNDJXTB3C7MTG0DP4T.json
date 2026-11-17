@@ -10,8 +10,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "overture",
@@ -36,8 +38,18 @@
       "osm_id": 2997428966,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Spirey Creek",
+      "osm_id": 296187997
+    },
     "phone": "0268254364",
     "power": false,
+    "protected_area": {
+      "name": "Warrumbungle National Park",
+      "osm_id": 5836978,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": false,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/camp-pincham",
@@ -59,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

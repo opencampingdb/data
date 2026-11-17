@@ -11,8 +11,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -39,11 +41,23 @@
       "osm_id": 1493309476,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 660,
+      "name": "Portagabra",
+      "osm_id": 6040940850,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Mundaring Weir Road"
     },
     "phone": "+61892952244",
+    "protected_area": {
+      "name": "Beelu National Park",
+      "osm_id": 12926727,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

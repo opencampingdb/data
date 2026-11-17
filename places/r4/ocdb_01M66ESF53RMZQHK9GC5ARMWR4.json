@@ -11,9 +11,11 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -35,12 +37,24 @@
       "osm_id": 4316622215,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Green Mountains",
+      "osm_id": 4343834892,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Lamington National Park Road"
     },
     "operator": "O'Reilly's",
     "phone": "+61137468",
+    "protected_area": {
+      "name": "Lamington National Park",
+      "osm_id": 306382,
+      "osm_type": "relation"
+    },
     "website": "https://oreillys.com.au/oreillys-campground/"
   },
   "group": "overnight",
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

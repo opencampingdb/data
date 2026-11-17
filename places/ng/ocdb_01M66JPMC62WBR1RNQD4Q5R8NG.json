@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1590
     },
+    "nearest_feature": {
+      "distance_m": 930,
+      "name": "Homestead Corner",
+      "osm_id": 12164544531,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Sussex Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Cabramatta Creek",
+      "osm_id": 220417719
     },
     "phone": "+61297263555",
     "website": "http://www.camr.com.au"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

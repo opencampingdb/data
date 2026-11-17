@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,16 @@
     "nearest_boat_ramp": {
       "distance_m": 840,
       "name": "Wittons Reserve Canoe Launch"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Yarra River",
+      "osm_id": 42790254
+    },
+    "protected_area": {
+      "name": "Warrandyte State Park",
+      "osm_id": 9267544,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

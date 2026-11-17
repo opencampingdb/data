@@ -4,8 +4,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -26,8 +29,25 @@
       "distance_m": 0,
       "name": "Summerland Beach"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Summerland Beach",
+      "osm_id": 28186464,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Swan Lake Drain",
+      "osm_id": 891206217
+    },
     "opening_hours": "Mo-Su 10:00-18:00",
     "phone": "+61 3 5951 2800",
+    "protected_area": {
+      "name": "Phillip Island Nature Park",
+      "osm_id": 9261379,
+      "osm_type": "relation"
+    },
     "website": "https://www.penguins.org.au/"
   },
   "group": "attraction",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

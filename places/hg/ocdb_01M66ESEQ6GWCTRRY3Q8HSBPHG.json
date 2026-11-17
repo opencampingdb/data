@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -36,6 +37,11 @@
       "distance_m": 140,
       "name": "Grampians Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Stony Creek",
+      "osm_id": 36715412
+    },
     "phone": "+61353564251",
     "website": "https://hallsgapcaravanpark.com.au/"
   },
@@ -46,6 +52,7 @@
     "lat": -37.139644,
     "lon": 142.517438
   },
+  "merged_into": "ocdb_01M66ES99Q85XCN4BX38AZJ9GX",
   "name": "Halls Gap Caravan Park",
   "osm": {
     "id": 12810646,
@@ -54,6 +61,6 @@
     "version": 3
   },
   "rating": null,
-  "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "status": "merged",
+  "updated": "2026-11-16T21:51:41Z"
 }

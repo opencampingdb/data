@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1550
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Erskine River",
+      "osm_id": 3763749,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mountjoy Parade"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Erskine River",
+      "osm_id": 283768387
     },
     "phone": "+61352891891",
     "website": "http://anchoragemotel.com.au"
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

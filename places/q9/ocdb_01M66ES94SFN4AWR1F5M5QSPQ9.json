@@ -1,11 +1,27 @@
 {
   "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
     "website": "osm"
   },
   "facts": {
+    "lga": {
+      "name": "Clarence Valley Council",
+      "osm_id": 6143220
+    },
+    "locality": {
+      "distance_m": 1700,
+      "name": "Yamba",
+      "osm_id": 2351725421,
+      "type": "town"
+    },
     "nearest_beach": {
-      "distance_m": 1260
+      "distance_m": 1380
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 750
     },
     "website": "https://www.yambawaters.com.au"
   },
@@ -13,23 +29,23 @@
   "id": "ocdb_01M66ES94SFN4AWR1F5M5QSPQ9",
   "kind": "caravan_park",
   "location": {
-    "lat": -29.439364,
-    "lon": 153.341574
+    "lat": -29.440822,
+    "lon": 153.341907
   },
   "merged_osm": [
     {
-      "id": 618108230,
-      "type": "way"
+      "id": 408838698,
+      "type": "node"
     }
   ],
   "name": "Yamba Waters Caravan Park",
   "osm": {
-    "id": 408838698,
-    "timestamp": "2015-01-24T11:27:14Z",
-    "type": "node",
+    "id": 618108230,
+    "timestamp": "2026-11-11T06:44:17Z",
+    "type": "way",
     "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,16 @@
       "name": "Wingello",
       "osm_id": 3979389809,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Wildfire Gully",
+      "osm_id": 445293134
+    },
+    "protected_area": {
+      "name": "Wingello State Forest",
+      "osm_id": 6305380,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

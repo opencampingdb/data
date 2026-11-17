@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,9 +22,26 @@
     "nearest_boat_ramp": {
       "distance_m": 2080
     },
+    "nearest_feature": {
+      "distance_m": 740,
+      "name": "Camerons Bend",
+      "osm_id": 8256270402,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Murray Valley Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Ovens River",
+      "osm_id": 32249940
+    },
+    "protected_area": {
+      "name": "Ovens River Heritage River",
+      "osm_id": 16534355,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "overture"
   },
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4620
     },
+    "nearest_feature": {
+      "distance_m": 970,
+      "name": "Leura Cascades",
+      "osm_id": 20976363,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Lovel Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Leura Falls Creek",
+      "osm_id": 756115826
     },
     "phone": "+61 2 4782 2397",
     "website": "http://www.kbcs.com.au"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

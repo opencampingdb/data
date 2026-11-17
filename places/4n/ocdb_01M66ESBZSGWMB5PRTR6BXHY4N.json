@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -28,9 +30,21 @@
     "nearest_boat_ramp": {
       "distance_m": 670
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Sandy Bay",
+      "osm_id": 797775303,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 500,
       "name": "Yardie Creek Road"
+    },
+    "protected_area": {
+      "name": "Cape Range National Park",
+      "osm_id": 3490402,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

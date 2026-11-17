@@ -9,7 +9,9 @@
     "caravans": "osm",
     "facebook": "overture",
     "lga": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -26,7 +28,19 @@
       "name": "Shire of Shark Bay",
       "osm_id": 11689946
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Hamelin",
+      "osm_id": 3899132246,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "+61899485145",
+    "protected_area": {
+      "name": "Hamelin Station Conservation Reserve",
+      "osm_id": 8366840,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.hamelinstationstay.com.au/"
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

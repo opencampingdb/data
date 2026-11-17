@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "toilets": "osm",
     "website": "osm"
   },
@@ -33,7 +35,19 @@
     "nearest_boat_ramp": {
       "distance_m": 770
     },
+    "nearest_feature": {
+      "distance_m": 520,
+      "name": "Palm Valley",
+      "osm_id": 113765223,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "phone": "+61 2 6639 8300",
+    "protected_area": {
+      "name": "Walgun Cape Byron State Conservation Area",
+      "osm_id": 5937627,
+      "osm_type": "relation"
+    },
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/visitor-centres/cape-byron-information-centre"
   },
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

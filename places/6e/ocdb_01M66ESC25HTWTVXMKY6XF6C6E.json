@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Mount Tamborine",
       "osm_id": 207089354,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 750,
+      "name": "Tamborine Mountain",
+      "osm_id": 6036336836,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Kelso Creek",
+      "osm_id": 1188219736
     },
     "water_type": "fountain"
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

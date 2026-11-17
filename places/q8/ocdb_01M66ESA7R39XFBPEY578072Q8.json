@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -18,7 +20,17 @@
       "osm_id": 171095813,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Tyers River East Branch",
+      "osm_id": 1382271544
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Baw Baw National Park",
+      "osm_id": 9204809,
+      "osm_type": "relation"
+    },
     "website": "https://www.parks.vic.gov.au/places-to-see/sites/eastern-tyers-camping-area"
   },
   "group": "overnight",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

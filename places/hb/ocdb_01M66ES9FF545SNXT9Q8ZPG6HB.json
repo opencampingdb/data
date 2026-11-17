@@ -12,6 +12,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -40,6 +42,18 @@
     "nearest_boat_ramp": {
       "distance_m": 50
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Hastings River",
+      "osm_id": 173018018,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Hastings River",
+      "osm_id": 206510037
+    },
     "phone": "+61265831005",
     "website": "http://www.jordans.com.au"
   },
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

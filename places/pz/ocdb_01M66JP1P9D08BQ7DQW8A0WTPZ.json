@@ -9,7 +9,8 @@
     "locality": "osm",
     "name": "overture",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -35,6 +36,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 440
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Sarina Beach",
+      "osm_id": 266251578,
+      "osm_type": "way",
+      "type": "beach"
     }
   },
   "group": "services",
@@ -53,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

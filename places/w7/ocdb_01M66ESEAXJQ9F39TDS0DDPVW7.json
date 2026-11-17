@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -28,7 +30,19 @@
       "distance_m": 1760,
       "name": "Cowes Boat Ramp"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Western Port",
+      "osm_id": 13053988,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Phillip Island Coastal Reserve",
+      "osm_id": 9278060,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESEAXJQ9F39TDS0DDPVW7",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

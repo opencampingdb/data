@@ -1,24 +1,56 @@
 {
   "fact_sources": {
-    "fee": "osm"
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
-    "fee": false
+    "fee": false,
+    "lga": {
+      "name": "City of Brimbank",
+      "osm_id": 3327554
+    },
+    "locality": {
+      "distance_m": 17160,
+      "name": "Melton",
+      "osm_id": 78094548,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 370,
+      "name": "Tamar Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Kororoit Creek",
+      "osm_id": 514683544
+    },
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ESARHMMPVZVJPJG0CYMN5",
   "kind": "public_toilet",
   "location": {
-    "lat": -37.751492,
-    "lon": 144.758009
+    "lat": -37.751504,
+    "lon": 144.758039
   },
+  "merged_osm": [
+    {
+      "id": 3426353057,
+      "type": "node"
+    }
+  ],
   "name": null,
   "osm": {
-    "id": 3426353057,
-    "type": "node",
+    "id": 1573932239,
+    "timestamp": "2026-10-31T14:13:47Z",
+    "type": "way",
     "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

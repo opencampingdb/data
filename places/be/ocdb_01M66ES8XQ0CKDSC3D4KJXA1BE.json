@@ -43,7 +43,13 @@
     "fishing": "feedback",
     "kitchen": "feedback",
     "laundry": "feedback",
+    "lga": "osm",
+    "locality": "osm",
     "motorhomes": "feedback",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "feedback",
     "picnic_tables": "feedback",
     "playground": "feedback",
@@ -74,7 +80,36 @@
     "fishing": true,
     "kitchen": true,
     "laundry": true,
+    "lga": {
+      "name": "Shire of Indigo",
+      "osm_id": 3365369
+    },
+    "locality": {
+      "distance_m": 1140,
+      "name": "Beechworth",
+      "osm_id": 161252527,
+      "type": "town"
+    },
     "motorhomes": true,
+    "nearest_beach": {
+      "distance_m": 400,
+      "name": "Sandy Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 540
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Lake Sambell",
+      "osm_id": 372291059,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Silver Creek",
+      "osm_id": 410553765
+    },
     "phone": "03 5728 1421",
     "picnic_tables": true,
     "playground": true,
@@ -93,23 +128,23 @@
   "id": "ocdb_01M66ES8XQ0CKDSC3D4KJXA1BE",
   "kind": "caravan_park",
   "location": {
-    "lat": -36.359035,
-    "lon": 146.69965
+    "lat": -36.358209,
+    "lon": 146.69959
   },
   "merged_osm": [
     {
-      "id": 22781470,
-      "type": "way"
+      "id": 244768900,
+      "type": "node"
     }
   ],
   "name": "Lake Sambell Caravan Park",
   "osm": {
-    "id": 244768900,
-    "timestamp": "2023-10-21T03:04:52Z",
-    "type": "node",
-    "version": 6
+    "id": 22781470,
+    "timestamp": "2026-11-05T07:43:55Z",
+    "type": "way",
+    "version": 15
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-06T01:27:31Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

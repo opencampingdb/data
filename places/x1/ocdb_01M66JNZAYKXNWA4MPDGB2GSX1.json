@@ -9,7 +9,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -40,9 +42,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4230
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Cable Ski Cairns Lake",
+      "osm_id": 233860311,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kudakai Crossland Connection"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Avondale Creek",
+      "osm_id": 1305351570
     },
     "phone": "+61 7 4285 9569",
     "website": "https://www.shell.com.au/"
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

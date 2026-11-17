@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "St Andrews",
       "osm_id": 75040965,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Fourth Hill",
+      "osm_id": 9091155919,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "nearest_waterway": {
+      "distance_m": 0,
+      "name": "Andersons Creek",
+      "osm_id": 42918821
+    },
+    "protected_area": {
+      "name": "Warrandyte State Park",
+      "osm_id": 9267544,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

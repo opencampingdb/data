@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,6 +18,18 @@
       "name": "Williams",
       "osm_id": 266801477,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Congelin",
+      "osm_id": 6152531809,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Dryandra Woodland National Park",
+      "osm_id": 8765978,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

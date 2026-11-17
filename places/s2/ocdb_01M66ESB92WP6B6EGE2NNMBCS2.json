@@ -6,7 +6,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm",
     "toilets": "osm"
   },
@@ -27,9 +29,21 @@
       "osm_id": 129243089,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 580,
+      "name": "Blaxlands Flat",
+      "osm_id": 114202654,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Armidale Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Goolang Creek",
+      "osm_id": 477793806
     },
     "tents": true,
     "toilets": false
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

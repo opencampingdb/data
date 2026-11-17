@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture"
   },
@@ -35,6 +36,13 @@
     "nearest_boat_ramp": {
       "distance_m": 730
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Balonne River",
+      "osm_id": 35024623,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Victoria Street"
@@ -57,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

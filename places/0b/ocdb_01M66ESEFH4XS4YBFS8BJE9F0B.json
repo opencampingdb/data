@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -18,6 +19,13 @@
       "name": "Millmerran Downs",
       "osm_id": 10561417060,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 840,
+      "name": "The Pines",
+      "osm_id": 6035838561,
+      "osm_type": "node",
+      "type": "locality"
     }
   },
   "group": "overnight",
@@ -36,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

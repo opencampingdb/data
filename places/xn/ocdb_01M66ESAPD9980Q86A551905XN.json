@@ -6,6 +6,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "showers": "osm"
   },
@@ -27,6 +29,18 @@
       "distance_m": 1200,
       "name": "Denison Beach"
     },
+    "nearest_feature": {
+      "distance_m": 1000,
+      "name": "Douglas River",
+      "osm_id": 2405964702,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Douglas River",
+      "osm_id": 641020061
+    },
     "power": false,
     "showers": false
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

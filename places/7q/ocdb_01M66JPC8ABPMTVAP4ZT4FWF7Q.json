@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1660
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Hanging Swamp",
+      "osm_id": 228790461,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "protected_area": {
+      "name": "North Head Private Nature Reserve",
+      "osm_id": 16327967,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

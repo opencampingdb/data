@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 246008270,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 1000,
+      "name": "Booroorban",
+      "osm_id": 113580364,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Cobb Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Coleambally Outfall Drain",
+      "osm_id": 450327105
     }
   },
   "group": "services",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

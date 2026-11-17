@@ -7,8 +7,10 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -29,8 +31,20 @@
       "osm_id": 255420350,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Lake Jindabyne",
+      "osm_id": 66850,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "NSW Parks and Wildlife Service",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/kosciuszko-national-park/creel-lodge/accommodation"
   },
   "group": "overnight",
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -27,6 +29,18 @@
       "distance_m": 40,
       "name": "Westaway Parade"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Currimundi Lake",
+      "osm_id": 186383590,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Currimundi Creek",
+      "osm_id": 719342792
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

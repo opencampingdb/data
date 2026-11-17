@@ -1,11 +1,25 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Bourke Shire Council",
       "osm_id": 5892186
+    },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Little Mountain",
+      "osm_id": 13247815391,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Gundabooka National Park",
+      "osm_id": 6142898,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -24,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

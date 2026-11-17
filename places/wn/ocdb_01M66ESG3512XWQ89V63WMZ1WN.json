@@ -12,7 +12,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -39,7 +42,24 @@
     "nearest_boat_ramp": {
       "distance_m": 4010
     },
+    "nearest_feature": {
+      "distance_m": 870,
+      "name": "Station Creek",
+      "osm_id": 114205114,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Station Creek",
+      "osm_id": 256409812
+    },
     "phone": "+61266411500",
+    "protected_area": {
+      "name": "Yuraygir National Park",
+      "osm_id": 5911645,
+      "osm_type": "relation"
+    },
     "website": "http://www.environment.nsw.gov.au"
   },
   "group": "overnight",
@@ -58,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

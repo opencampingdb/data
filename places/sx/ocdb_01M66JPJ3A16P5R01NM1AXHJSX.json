@@ -12,6 +12,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "website": "osm"
@@ -47,6 +48,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1920
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lammermoor Beach",
+      "osm_id": 959006334,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Yeppoon-Emu Park Road (Scenic Highway)"
@@ -70,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

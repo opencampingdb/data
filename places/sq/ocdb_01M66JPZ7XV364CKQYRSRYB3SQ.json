@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -23,9 +24,15 @@
     "nearest_boat_ramp": {
       "distance_m": 360
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Shell Harbour",
+      "osm_id": 1311662997,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
-      "distance_m": 40,
-      "name": "Addison Street"
+      "distance_m": 40
     }
   },
   "group": "services",
@@ -44,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

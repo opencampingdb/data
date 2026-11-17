@@ -9,8 +9,11 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "overture"
@@ -33,11 +36,28 @@
       "osm_id": 113373977,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 870,
+      "name": "Artists Bend",
+      "osm_id": 2088165156,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 200,
       "name": "Barry Way"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Jacobs River",
+      "osm_id": 198715803
+    },
     "phone": "0264505600",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/jacobs-river-tongaroo-campground"
@@ -58,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

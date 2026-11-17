@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,8 +26,25 @@
     "nearest_boat_ramp": {
       "distance_m": 570
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Coombabah Lake",
+      "osm_id": 14428031,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 500
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Coombabah Creek",
+      "osm_id": 59915399
+    },
+    "protected_area": {
+      "name": "Coombabah Fish Habitat Area",
+      "osm_id": 16318013,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -27,9 +29,21 @@
       "distance_m": 960,
       "name": "Isle of Capri Public Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Rover's Beach",
+      "osm_id": 1576946526,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Ferny Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Nerang River",
+      "osm_id": 593943553
     },
     "operator": "RiverCity Ferries",
     "website": "https://hopo.com.au/destinations/surfers-paradise/"
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

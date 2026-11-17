@@ -5,6 +5,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -17,6 +20,23 @@
       "name": "Cann River",
       "osm_id": 59634128,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Mueller Inlet",
+      "osm_id": 167619314,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Mueller River",
+      "osm_id": 51970020
+    },
+    "protected_area": {
+      "name": "Croajingolong National Park",
+      "osm_id": 9202648,
+      "osm_type": "relation"
     },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/mueller-inlet-campground"
   },
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

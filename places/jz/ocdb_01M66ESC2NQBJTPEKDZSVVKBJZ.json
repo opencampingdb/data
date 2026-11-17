@@ -7,7 +7,8 @@
     "locality": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
-    "picnic_tables": "osm"
+    "picnic_tables": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "bins": true,
@@ -28,7 +29,12 @@
       "name": "Hume Highway"
     },
     "operator": "Forestry Corporation (NSW)",
-    "picnic_tables": true
+    "picnic_tables": true,
+    "protected_area": {
+      "name": "Penrose State Forest",
+      "osm_id": 6305256,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESC2NQBJTPEKDZSVVKBJZ",
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

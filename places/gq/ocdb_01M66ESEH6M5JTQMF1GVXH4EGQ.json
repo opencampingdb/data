@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -23,6 +24,11 @@
     "nearest_major_road": {
       "distance_m": 370
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Freshwater Creek",
+      "osm_id": 294298939
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

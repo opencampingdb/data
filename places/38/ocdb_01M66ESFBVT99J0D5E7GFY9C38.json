@@ -3,6 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -19,6 +22,23 @@
     "nearest_beach": {
       "distance_m": 170,
       "name": "North Era Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "North Era Beach",
+      "osm_id": 23784597,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Stockyard Gully",
+      "osm_id": 528007169
+    },
+    "protected_area": {
+      "name": "Royal National Park",
+      "osm_id": 285416,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

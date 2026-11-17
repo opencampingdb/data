@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +18,26 @@
       "osm_id": 113373977,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 730,
+      "name": "Suggan Buggan",
+      "osm_id": 453039026,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Snowy River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Suggan Buggan River",
+      "osm_id": 198710149
+    },
+    "protected_area": {
+      "name": "Suggan Buggan and Berrima Rivers Heritage River",
+      "osm_id": 16487227,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

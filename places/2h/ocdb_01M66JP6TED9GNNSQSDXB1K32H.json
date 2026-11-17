@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,11 @@
       "name": "Glen Huon",
       "osm_id": 4293050118,
       "type": "village"
+    },
+    "protected_area": {
+      "name": "Mount Misery Reserve #1 Conservation Covenant",
+      "osm_id": 16399836,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

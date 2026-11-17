@@ -1,11 +1,19 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Menzies",
       "osm_id": 11690211
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Niagara Dam",
+      "osm_id": 155516962,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "overnight",
@@ -24,5 +32,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

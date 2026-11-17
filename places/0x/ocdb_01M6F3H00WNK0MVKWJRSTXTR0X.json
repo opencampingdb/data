@@ -13,7 +13,9 @@
     "locality": "osm",
     "name": "overture",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -38,7 +40,19 @@
       "distance_m": 40,
       "name": "Palm Beach"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Palm Beach",
+      "osm_id": 1058419970,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "+61748601760",
+    "protected_area": {
+      "name": "Great Barrier Reef World Heritage Area",
+      "osm_id": 10156269,
+      "osm_type": "relation"
+    },
     "website": "http://www.palmbayresort.com.au"
   },
   "group": "overnight",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -22,9 +24,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1230
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Tweed River",
+      "osm_id": 8356866,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Alma Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Tweed River",
+      "osm_id": 174944929
     },
     "wheelchair": true
   },
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

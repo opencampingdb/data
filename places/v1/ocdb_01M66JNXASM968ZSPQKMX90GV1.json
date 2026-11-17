@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +26,24 @@
     "nearest_boat_ramp": {
       "distance_m": 2170
     },
-    "operator": "Noosa North Shore Ferries"
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Weyba / Noosa River Estuary",
+      "osm_id": 67742,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Wooroi Creek",
+      "osm_id": 193857968
+    },
+    "operator": "Noosa North Shore Ferries",
+    "protected_area": {
+      "name": "Noosa River (Rev.2) Fish Habitat Area",
+      "osm_id": 16316582,
+      "osm_type": "relation"
+    }
   },
   "group": "transport",
   "id": "ocdb_01M66JNXASM968ZSPQKMX90GV1",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

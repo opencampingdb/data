@@ -8,7 +8,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "toilets": "osm",
     "website": "osm",
@@ -39,9 +41,21 @@
     "nearest_boat_ramp": {
       "distance_m": 210
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Ulladulla Harbour",
+      "osm_id": 959619877,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Princes Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Millards Creek",
+      "osm_id": 384469291
     },
     "phone": "+61 2 4444 8819",
     "toilets": true,
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

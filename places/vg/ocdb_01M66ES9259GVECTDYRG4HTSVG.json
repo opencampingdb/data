@@ -6,7 +6,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/525009644199262",
@@ -22,6 +24,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 3710
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Wongi Waterholes",
+      "osm_id": 891420240,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Wongi State Forest",
+      "osm_id": 8814794,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

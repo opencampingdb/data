@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 2280,
       "name": "Strathgordon Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Pedder",
+      "osm_id": 86893,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Gordon River Road"
+    },
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

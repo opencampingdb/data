@@ -3,7 +3,9 @@
     "email": "osm",
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "email": "kv.gp@bigpond.com",
@@ -17,6 +19,18 @@
       "name": "Robertson",
       "osm_id": 113238201,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Flatrock Waterhole",
+      "osm_id": 1017009678,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Kangaroo River",
+      "osm_id": 424694131
     }
   },
   "group": "overnight",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

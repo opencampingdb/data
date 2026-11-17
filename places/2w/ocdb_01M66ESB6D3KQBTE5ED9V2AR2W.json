@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -33,7 +35,17 @@
       "distance_m": 350,
       "name": "Araluen Road"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Moruya River",
+      "osm_id": 71707142
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Deua National Park",
+      "osm_id": 5849996,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/dry-creek-campground"
   },
   "group": "overnight",
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,7 @@
   "fact_sources": {
     "fuels": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "website": "osm"
   },
@@ -14,6 +15,13 @@
     "lga": {
       "name": "Macdonnell Region",
       "osm_id": 11716646
+    },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Stuarts Well",
+      "osm_id": 2353455971,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 70,
@@ -37,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

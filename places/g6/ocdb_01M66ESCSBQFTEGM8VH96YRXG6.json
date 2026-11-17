@@ -2,7 +2,9 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +17,16 @@
       "name": "Marysville",
       "osm_id": 99490721,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Keppel Hut Creek",
+      "osm_id": 1387161947
+    },
+    "protected_area": {
+      "name": "Rubicon State Forest",
+      "osm_id": 20304260,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

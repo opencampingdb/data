@@ -5,7 +5,9 @@
   "fact_sources": {
     "fee": "community_report",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -18,6 +20,16 @@
       "name": "Briagolong",
       "osm_id": 11384987822,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Freestone Creek",
+      "osm_id": 1418828586
+    },
+    "protected_area": {
+      "name": "George Creek Streamside Reserve",
+      "osm_id": 666583921,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

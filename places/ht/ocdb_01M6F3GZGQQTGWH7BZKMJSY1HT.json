@@ -13,7 +13,9 @@
     "locality": "osm",
     "name": "overture",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -39,9 +41,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1010
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Pat's Puddle",
+      "osm_id": 12530805,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Fitzroy Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Mcfarlanes Creek",
+      "osm_id": 446813913
     },
     "phone": "+61269471335",
     "website": "http://www.themonarchtumut.com/"
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

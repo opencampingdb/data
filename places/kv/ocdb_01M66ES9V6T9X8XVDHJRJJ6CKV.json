@@ -9,7 +9,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -30,7 +32,17 @@
       "osm_id": 1661795387,
       "type": "village"
     },
-    "operator": "DELWP Hayfield"
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Avon River",
+      "osm_id": 38799638
+    },
+    "operator": "DELWP Hayfield",
+    "protected_area": {
+      "name": "Ben Cruachan State Forest",
+      "osm_id": 20306081,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9V6T9X8XVDHJRJJ6CKV",
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

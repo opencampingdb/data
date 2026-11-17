@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,7 +21,17 @@
     "nearest_beach": {
       "distance_m": 680
     },
-    "operator": "QLNP"
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Davies Creek",
+      "osm_id": 610096781
+    },
+    "operator": "QLNP",
+    "protected_area": {
+      "name": "Dinden National Park",
+      "osm_id": 8466819,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESD56PZ2AHD7XACKF14D7",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,21 +1,54 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "lga": {
+      "name": "City of Canada Bay Council",
+      "osm_id": 6217271
+    },
+    "locality": {
+      "distance_m": 5310,
+      "name": "North Sydney",
+      "osm_id": 18370040,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 510
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 530
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Lyons Road"
+    }
+  },
   "group": "utility",
   "id": "ocdb_01M66ES9G6ZTYZNHRAGXKSM4GP",
   "kind": "public_toilet",
   "location": {
-    "lat": -33.851728,
-    "lon": 151.154286
+    "lat": -33.851792,
+    "lon": 151.15423
   },
+  "merged_osm": [
+    {
+      "id": 1024826540,
+      "type": "node"
+    }
+  ],
   "name": "Formosa Street Toilets",
   "osm": {
-    "id": 1024826540,
-    "timestamp": "2015-08-22T10:00:59Z",
-    "type": "node",
-    "version": 2
+    "id": 1576295901,
+    "timestamp": "2026-11-07T06:59:36Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

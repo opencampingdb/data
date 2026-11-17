@@ -4,7 +4,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,7 +25,12 @@
       "distance_m": 60,
       "name": "Cape Du Couedic Road"
     },
-    "phone": "+61 8 8559 7249"
+    "phone": "+61 8 8559 7249",
+    "protected_area": {
+      "name": "Flinders Chase National Park",
+      "osm_id": 812876,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M6F3GYNV18PBQ6WM1PD86C9Y",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

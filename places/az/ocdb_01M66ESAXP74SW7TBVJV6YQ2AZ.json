@@ -10,7 +10,9 @@
     "locality": "osm",
     "name": "overture",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "overture"
@@ -32,7 +34,19 @@
       "distance_m": 120,
       "name": "Cooks Beach"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Cooks Beach",
+      "osm_id": 195596,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "operator": "Parks and Wildlife Service Tasmania",
+    "protected_area": {
+      "name": "Freycinet National Park",
+      "osm_id": 3044789,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/freycinet-national-park/freycinet-peninsula-circuit/freycinet-overnight-walker-camping"
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

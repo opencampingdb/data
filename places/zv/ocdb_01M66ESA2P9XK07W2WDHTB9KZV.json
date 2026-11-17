@@ -1,12 +1,20 @@
 {
   "fact_sources": {
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Yalgoo",
       "osm_id": 11690064
+    },
+    "nearest_feature": {
+      "distance_m": 330,
+      "name": "Paynes Find",
+      "osm_id": 2572608925,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 180,
@@ -29,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

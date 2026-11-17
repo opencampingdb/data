@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "wheelchair": "osm"
   },
@@ -31,6 +32,13 @@
       "distance_m": 700,
       "name": "Ettalong Beach Dinghy Launch"
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Brisbane Water",
+      "osm_id": 1237298,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "Central Coast Council",
     "wheelchair": true
   },
@@ -50,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,9 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "facebook": "https://www.facebook.com/166537240223010",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -13,7 +23,14 @@
       "name": "Villeneuve",
       "osm_id": 298692573,
       "type": "village"
-    }
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Wyangy Creek",
+      "osm_id": 713599165
+    },
+    "phone": "+61754260126",
+    "website": "http://www.campsomerset.org.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQZ8DC9YNTYHYY4QM7N",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

@@ -3,7 +3,11 @@
     "address": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
-    "address": "overture"
+    "address": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
   },
   "facts": {
     "address": {
@@ -12,23 +16,44 @@
       "state": "QLD",
       "street": "Teviot Rd Cnr Pub Lane",
       "suburb": "Greenbank"
-    }
+    },
+    "lga": {
+      "name": "Logan City",
+      "osm_id": 11675411
+    },
+    "locality": {
+      "distance_m": 5140,
+      "name": "North Maclean",
+      "osm_id": 150533298,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Teviot Road"
+    },
+    "operator": "EG Australia"
   },
   "group": "services",
   "id": "ocdb_01M66JPR6P1E26A886V82SV4B6",
   "kind": "fuel",
   "location": {
-    "lat": -27.736691,
-    "lon": 152.984208
+    "lat": -27.736676,
+    "lon": 152.984215
   },
+  "merged_osm": [
+    {
+      "id": 45767749,
+      "type": "way"
+    }
+  ],
   "name": "EG Ampol Greenbank",
   "osm": {
-    "id": 45767749,
-    "timestamp": "2023-01-04T14:32:59Z",
-    "type": "way",
-    "version": 5
+    "id": 14340607577,
+    "timestamp": "2026-11-02T11:33:20Z",
+    "type": "node",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

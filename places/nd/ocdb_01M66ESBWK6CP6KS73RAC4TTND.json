@@ -4,6 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -18,6 +21,23 @@
       "name": "Katoomba",
       "osm_id": 20968413,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Chinamans Cave",
+      "osm_id": 2763940605,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Chinamans Gully",
+      "osm_id": 486965931
+    },
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
     },
     "wifi": false
   },
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

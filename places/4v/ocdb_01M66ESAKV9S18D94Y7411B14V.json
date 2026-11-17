@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Mataranka",
       "osm_id": 32620998,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 790,
+      "name": "Wabalarr",
+      "osm_id": 3624259228,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Roper River",
+      "osm_id": 230171403
+    },
+    "protected_area": {
+      "name": "Elsey National Park",
+      "osm_id": 13007105,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

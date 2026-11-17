@@ -1,10 +1,24 @@
 {
   "fact_sources": {
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "nearest_beach": {
       "distance_m": 180
+    },
+    "nearest_feature": {
+      "distance_m": 450,
+      "name": "Macquarie Island Station",
+      "osm_id": 1715565298,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Macquarie Island Nature Reserve",
+      "osm_id": 8649631,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -23,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-08T20:06:35Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

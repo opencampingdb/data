@@ -2,6 +2,7 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -15,6 +16,13 @@
       "name": "Warwick",
       "osm_id": 1817489924,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Connolly Dam",
+      "osm_id": 191198952,
+      "osm_type": "way",
+      "type": "water"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

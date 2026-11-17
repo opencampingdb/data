@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,7 +25,19 @@
     "nearest_boat_ramp": {
       "distance_m": 1580
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Hamersley Inlet",
+      "osm_id": 22719464,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Fitzgerald River National Park",
+      "osm_id": 8135128,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESC1HPTP4K4AW2GKQZY3C",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

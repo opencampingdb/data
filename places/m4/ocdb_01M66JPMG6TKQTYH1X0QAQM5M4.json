@@ -8,6 +8,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -35,6 +36,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1620
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Newport Beach",
+      "osm_id": 14041635,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Barrenjoey Road"
@@ -56,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

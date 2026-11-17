@@ -6,6 +6,9 @@
   },
   "fact_sources": {
     "address": "overture",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -17,6 +20,20 @@
       "street": "River Road",
       "suburb": "Gympie"
     },
+    "lga": {
+      "name": "Gympie Regional",
+      "osm_id": 11675079
+    },
+    "locality": {
+      "distance_m": 1010,
+      "name": "Gympie",
+      "osm_id": 1882969315,
+      "type": "city"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Old Bruce Highway"
+    },
     "phone": "+61 7 5343 4048",
     "website": "https://find.shell.com/au/fuel/10111294-shell-reddy-express-gympie/en_AU"
   },
@@ -24,17 +41,23 @@
   "id": "ocdb_01M66JPB5AWM5X4X4N82A4NDZ3",
   "kind": "fuel",
   "location": {
-    "lat": -26.19767,
-    "lon": 152.665543
+    "lat": -26.197653,
+    "lon": 152.665594
   },
+  "merged_osm": [
+    {
+      "id": 6146798337,
+      "type": "node"
+    }
+  ],
   "name": "Shell",
   "osm": {
-    "id": 6146798337,
-    "timestamp": "2024-12-23T18:41:40Z",
-    "type": "node",
+    "id": 998031138,
+    "timestamp": "2026-11-11T11:17:39Z",
+    "type": "way",
     "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

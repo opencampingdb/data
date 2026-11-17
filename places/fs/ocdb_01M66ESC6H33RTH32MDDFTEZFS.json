@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +20,26 @@
       "osm_id": 113373977,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 570,
+      "name": "Friday Flat Camp",
+      "osm_id": 113372942,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Alpine Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Merritts Creek",
+      "osm_id": 466517123
+    },
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

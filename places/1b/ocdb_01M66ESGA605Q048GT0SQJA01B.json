@@ -7,8 +7,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -33,11 +36,28 @@
       "distance_m": 70,
       "name": "Catamaran Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 710,
+      "name": "Catamaran",
+      "osm_id": 13680569273,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Cockle Creek Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Catamaran River",
+      "osm_id": 238048190
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Recherche Bay Nature Recreation Area",
+      "osm_id": 6177558,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -56,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

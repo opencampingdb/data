@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
       "distance_m": 1530,
       "name": "RSL Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Nambucca River",
+      "osm_id": 2353972,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Giinagay Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bellwood Creek",
+      "osm_id": 428852030
     },
     "phone": "+61265686647",
     "website": "http://aukakacaravanpark.com.au/"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

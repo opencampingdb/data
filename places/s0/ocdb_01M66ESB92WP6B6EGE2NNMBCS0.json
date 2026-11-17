@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -23,6 +24,13 @@
     "nearest_boat_ramp": {
       "distance_m": 4260,
       "name": "Hawke Street Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Copacabana Beach",
+      "osm_id": 12720746158,
+      "osm_type": "node",
+      "type": "beach"
     },
     "nearest_major_road": {
       "distance_m": 40,
@@ -45,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

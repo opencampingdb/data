@@ -4,7 +4,9 @@
     "fee": "osm",
     "hot_water": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -15,7 +17,17 @@
       "name": "Bourke Shire Council",
       "osm_id": 5892186
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Cuttaburra Creek",
+      "osm_id": 765610172
+    },
     "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Cuttaburra National Park",
+      "osm_id": 18555840,
+      "osm_type": "relation"
+    },
     "wheelchair": false
   },
   "group": "utility",
@@ -34,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

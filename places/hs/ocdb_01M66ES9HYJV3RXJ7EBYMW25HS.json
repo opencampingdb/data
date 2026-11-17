@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -22,7 +23,12 @@
       "distance_m": 130,
       "name": "Mundaring Weir Road"
     },
-    "operator": "DEC"
+    "operator": "DEC",
+    "protected_area": {
+      "name": "Beelu National Park",
+      "osm_id": 12926727,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9HYJV3RXJ7EBYMW25HS",
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

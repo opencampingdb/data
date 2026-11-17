@@ -5,8 +5,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -33,8 +35,18 @@
       "distance_m": 210,
       "name": "Ventnor Road"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Swan Lake Drain",
+      "osm_id": 891206218
+    },
     "opening_hours": "Mo-Su 10:00-18:00",
     "phone": "+61 3 5951 2800",
+    "protected_area": {
+      "name": "Phillip Island Nature Park",
+      "osm_id": 9261379,
+      "osm_type": "relation"
+    },
     "website": "https://www.penguins.org.au/"
   },
   "group": "services",
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

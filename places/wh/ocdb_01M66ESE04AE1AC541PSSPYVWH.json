@@ -7,9 +7,11 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -30,12 +32,24 @@
       "type": "town"
     },
     "max_stay": "overnight",
+    "nearest_feature": {
+      "distance_m": 690,
+      "name": "Laurel Hill",
+      "osm_id": 113712894,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Batlow Road"
     },
     "operator": "Forestry Corporation of NSW",
     "power": false,
+    "protected_area": {
+      "name": "Green Hills State Forest",
+      "osm_id": 5996096,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

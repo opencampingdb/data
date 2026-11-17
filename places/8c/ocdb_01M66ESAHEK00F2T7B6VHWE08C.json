@@ -5,7 +5,9 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -31,7 +33,17 @@
       "distance_m": 110,
       "name": "Yarra Bend Road"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Yarra River",
+      "osm_id": 8065262
+    },
     "pets": "yes",
+    "protected_area": {
+      "name": "Yarra Bend Park",
+      "osm_id": 9278415,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -25,6 +26,13 @@
       "distance_m": 290,
       "name": "Ettalong Beach Dinghy Launch"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Ettalong Beach",
+      "osm_id": 7966481,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Barrenjoey Road"
@@ -34,8 +42,8 @@
   "id": "ocdb_01M66ESFBBMN1H8R49ZE4H1CK1",
   "kind": "public_toilet",
   "location": {
-    "lat": -33.518977,
-    "lon": 151.33172
+    "lat": -33.518983,
+    "lon": 151.331726
   },
   "name": null,
   "osm": {
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

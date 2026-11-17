@@ -1,12 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Eurobodalla Shire Council",
       "osm_id": 6239661
@@ -23,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 80
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Clyde River",
+      "osm_id": 1244878,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Wharf Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Clyde River",
+      "osm_id": 445653539
     }
   },
   "group": "utility",
@@ -38,11 +54,11 @@
   "name": null,
   "osm": {
     "id": 4738971022,
-    "timestamp": "2022-11-02T09:30:02Z",
+    "timestamp": "2026-11-16T20:04:46Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

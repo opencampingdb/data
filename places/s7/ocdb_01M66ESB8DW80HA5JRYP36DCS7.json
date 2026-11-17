@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,16 @@
     },
     "nearest_beach": {
       "distance_m": 3720
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Noosa River",
+      "osm_id": 193855949
+    },
+    "protected_area": {
+      "name": "Johns Landing Nature Refuge",
+      "osm_id": 955522707,
+      "osm_type": "way"
     }
   },
   "group": "overnight",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,19 @@
       "osm_id": 30480122,
       "type": "town"
     },
-    "operator": "Keep River National Park"
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Gurrandalng",
+      "osm_id": 7494312812,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "operator": "Keep River National Park",
+    "protected_area": {
+      "name": "Keep River National Park",
+      "osm_id": 8328874,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES903WPTC7Q55TTX8657D",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

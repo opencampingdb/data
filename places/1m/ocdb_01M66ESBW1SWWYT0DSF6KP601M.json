@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -27,9 +29,21 @@
       "distance_m": 750,
       "name": "Scylla Bay Boat Ramp, Como"
     },
+    "nearest_feature": {
+      "distance_m": 960,
+      "name": "Como West",
+      "osm_id": 2292269947,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Georges River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Carina Creek",
+      "osm_id": 798760179
     },
     "water_type": "fountain"
   },
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

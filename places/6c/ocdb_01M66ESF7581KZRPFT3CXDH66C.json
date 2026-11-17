@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "tents": "osm",
     "website": "osm"
@@ -27,6 +28,11 @@
       "distance_m": 100,
       "name": "New England Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Severn River",
+      "osm_id": 333032480
+    },
     "power": true,
     "tents": true,
     "website": "https://stanthorpeholidaypark.com.au/"
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

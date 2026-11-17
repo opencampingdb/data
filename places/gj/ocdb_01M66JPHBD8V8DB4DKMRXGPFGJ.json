@@ -8,7 +8,8 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -31,6 +32,11 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Bradman Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Stable Swamp Creek",
+      "osm_id": 32967574
     }
   },
   "group": "services",
@@ -49,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

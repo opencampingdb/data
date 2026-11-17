@@ -4,6 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -20,6 +23,23 @@
       "name": "Manypeaks",
       "osm_id": 2680325209,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Waychinicup Inlet",
+      "osm_id": 243645300,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Waychinicup River",
+      "osm_id": 167052403
+    },
+    "protected_area": {
+      "name": "Waychinicup National Park",
+      "osm_id": 12930450,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true,
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

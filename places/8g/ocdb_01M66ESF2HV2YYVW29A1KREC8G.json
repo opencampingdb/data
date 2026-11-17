@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -13,6 +15,18 @@
     },
     "nearest_beach": {
       "distance_m": 4190
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Stokes Inlet",
+      "osm_id": 22894686,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Stokes National Park",
+      "osm_id": 8162409,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -32,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

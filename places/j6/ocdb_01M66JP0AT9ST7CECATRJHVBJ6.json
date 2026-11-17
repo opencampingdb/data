@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Linton",
       "osm_id": 608665084,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Flagstaff Hill",
+      "osm_id": 3008902239,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Mount Bute Scenic Reserve",
+      "osm_id": 666422100,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

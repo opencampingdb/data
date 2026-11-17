@@ -13,8 +13,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -41,8 +44,25 @@
       "osm_id": 114632737,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Platypus Hole",
+      "osm_id": 340372404,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Boonoo Boonoo River",
+      "osm_id": 95539881
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61267364298",
+    "protected_area": {
+      "name": "Boonoo Boonoo National Park",
+      "osm_id": 5971495,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -65,5 +85,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

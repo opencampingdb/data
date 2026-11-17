@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 283286686,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Jack Emmett Billabong",
+      "osm_id": 2933083,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Wimmera Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Dunmunkle Creek",
+      "osm_id": 1132143570
     },
     "phone": "+61427159154",
     "website": "https://woodsmuseum.com.au/"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

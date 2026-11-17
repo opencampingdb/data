@@ -4,8 +4,10 @@
     "email": "osm",
     "lga": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -24,8 +26,20 @@
       "distance_m": 550,
       "name": "Pontoon - House Ground Tank"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Lake Mungo",
+      "osm_id": 183253235,
+      "osm_type": "way",
+      "type": "water"
+    },
     "opening_hours": "Mo-Su 08:30-16:30",
     "phone": "+61 3 5021 8900",
+    "protected_area": {
+      "name": "Mungo National Park",
+      "osm_id": 6321578,
+      "osm_type": "relation"
+    },
     "showers": true,
     "toilets": true,
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/visitor-centres/mungo-visitor-centre"
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

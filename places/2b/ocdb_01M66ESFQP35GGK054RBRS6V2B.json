@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -21,6 +24,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 200
+    },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Murrumbidgee River",
+      "osm_id": 2723484,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Murrumbidgee River",
+      "osm_id": 179754041
+    },
+    "protected_area": {
+      "name": "Wiradjuri Reserve",
+      "osm_id": 472245718,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

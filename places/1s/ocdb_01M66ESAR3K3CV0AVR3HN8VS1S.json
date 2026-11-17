@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Hotham Village",
       "osm_id": 11271236430,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Dry River",
+      "osm_id": 1415136590
+    },
+    "protected_area": {
+      "name": "Mitchell and Wonnangatta Rivers Heritage River",
+      "osm_id": 16570361,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

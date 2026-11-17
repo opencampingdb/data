@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm",
     "wheelchair": "osm"
   },
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 370
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Tallebudgera Creek",
+      "osm_id": 4580501,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Gold Coast Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Tallebudgera Creek",
+      "osm_id": 700272738
     },
     "showers": true,
     "wheelchair": true
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

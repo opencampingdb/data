@@ -5,7 +5,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "drinking_water": false,
@@ -21,7 +24,24 @@
       "osm_id": 2270203043,
       "type": "village"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 740,
+      "name": "Glory Hole Caves",
+      "osm_id": 6348581043,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Yarrangobilly River",
+      "osm_id": 92374957
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPRCM0ZQVTXQV7RC3X4B7",
@@ -39,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

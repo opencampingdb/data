@@ -3,6 +3,8 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -11,6 +13,16 @@
     "lga": {
       "name": "Macdonnell Region",
       "osm_id": 11716646
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Hugh River",
+      "osm_id": 226560838
+    },
+    "protected_area": {
+      "name": "Owen Springs Reserve",
+      "osm_id": 8328986,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -30,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

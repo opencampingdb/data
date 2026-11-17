@@ -4,7 +4,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "wifi": "osm"
@@ -22,7 +24,17 @@
       "osm_id": 114651524,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Repentance Creek",
+      "osm_id": 94551304
+    },
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Whian Whian State Conservation Area",
+      "osm_id": 5928964,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "wifi": false
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

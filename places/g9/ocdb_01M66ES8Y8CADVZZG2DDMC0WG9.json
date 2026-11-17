@@ -6,7 +6,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -28,7 +31,24 @@
       "distance_m": 30,
       "name": "Sealers Beach"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Sealers Beach",
+      "osm_id": 45283770,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Sealers Creek",
+      "osm_id": 45283535
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Southern Wilsons Promontory Remote and Natural Area",
+      "osm_id": 16321671,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": false
   },
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +21,23 @@
     "nearest_boat_ramp": {
       "distance_m": 3130,
       "name": "Lock 6 Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Boat Creek Swamp",
+      "osm_id": 10101111,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Salt Creek",
+      "osm_id": 224955616
+    },
+    "protected_area": {
+      "name": "Chowilla Game Reserve",
+      "osm_id": 568849,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -36,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

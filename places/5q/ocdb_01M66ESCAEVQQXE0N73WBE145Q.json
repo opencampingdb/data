@@ -9,6 +9,11 @@
     "entry": "osm",
     "facebook": "overture",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -25,6 +30,26 @@
     "entry": "public",
     "facebook": "https://www.facebook.com/472330959638886",
     "fee": false,
+    "lga": {
+      "name": "Tamworth Regional Council",
+      "osm_id": 6365595
+    },
+    "locality": {
+      "distance_m": 580,
+      "name": "Woolomin",
+      "osm_id": 114638867,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 260,
+      "name": "Nundle Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Peel River",
+      "osm_id": 204194334
+    },
+    "operator": "Tamworth Regional Council",
     "power": true,
     "showers": false,
     "tents": true,
@@ -34,23 +59,23 @@
   "id": "ocdb_01M66ESCAEVQQXE0N73WBE145Q",
   "kind": "free_camp",
   "location": {
-    "lat": -31.303884,
-    "lon": 151.147286
+    "lat": -31.303825,
+    "lon": 151.147332
   },
   "merged_osm": [
     {
-      "id": 699154001,
-      "type": "way"
+      "id": 8320322785,
+      "type": "node"
     }
   ],
   "name": "Woolomin Reserve",
   "osm": {
-    "id": 8320322785,
-    "timestamp": "2023-09-25T03:52:26Z",
-    "type": "node",
-    "version": 4
+    "id": 699154001,
+    "timestamp": "2026-11-11T07:57:03Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Stirling",
       "osm_id": 205379654,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 800,
+      "name": "Australian & American Forces Memorial Plantation",
+      "osm_id": 11108806185,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Belair National Park",
+      "osm_id": 1421712,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

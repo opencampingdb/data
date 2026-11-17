@@ -8,7 +8,9 @@
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "overture"
   },
@@ -29,9 +31,21 @@
       "osm_id": 1682720009,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 420,
+      "name": "Many Peaks",
+      "osm_id": 11201600113,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Gladstone-Monto Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Deception Creek",
+      "osm_id": 1209966225
     },
     "phone": "+61 7 4974 1186",
     "website": "http://www.members.optusnet.com.au/grandhotel1"
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

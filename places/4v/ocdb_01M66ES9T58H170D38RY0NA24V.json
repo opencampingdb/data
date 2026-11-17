@@ -3,7 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -16,7 +18,19 @@
     "nearest_beach": {
       "distance_m": 30
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Freney Lagoon",
+      "osm_id": 16533780,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true
   },
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

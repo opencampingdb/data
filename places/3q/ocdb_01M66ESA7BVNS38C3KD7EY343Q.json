@@ -5,8 +5,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -31,11 +33,23 @@
       "distance_m": 940,
       "name": "Tyrone Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Port Phillip",
+      "osm_id": 1221199,
+      "osm_type": "relation",
+      "type": "bay"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Point Nepean Road"
     },
     "phone": "+61 3 5981 7100",
+    "protected_area": {
+      "name": "Port Phillip Bay Coastal Reserve (COM)",
+      "osm_id": 9278055,
+      "osm_type": "relation"
+    },
     "website": "https://www.whitecliffs.com.au/"
   },
   "group": "overnight",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

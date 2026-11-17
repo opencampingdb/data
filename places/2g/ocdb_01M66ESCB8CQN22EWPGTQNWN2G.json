@@ -4,7 +4,9 @@
     "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
       "osm_id": 113716358,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 750,
+      "name": "Brooklands",
+      "osm_id": 113716352,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Goulburn Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Kiamma Creek",
+      "osm_id": 380748221
     },
     "wheelchair": false
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

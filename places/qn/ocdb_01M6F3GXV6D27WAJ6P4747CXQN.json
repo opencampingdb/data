@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -33,9 +35,21 @@
       "osm_id": 19949789,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 560,
+      "name": "Toowoomba City",
+      "osm_id": 6036336822,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Margaret Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "East Creek",
+      "osm_id": 350561780
     },
     "phone": "+61746313700",
     "website": "http://www.fitzys.com/book-a-table"
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

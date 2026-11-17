@@ -12,6 +12,7 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -40,6 +41,11 @@
       "type": "town"
     },
     "max_stay": "21 days in 12 months",
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Burrows Creek",
+      "osm_id": 446229918
+    },
     "operator": "Tamworth Regional Council",
     "showers": false,
     "tents": true,
@@ -61,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

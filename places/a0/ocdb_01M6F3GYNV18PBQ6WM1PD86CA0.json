@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "wifi": "osm"
   },
@@ -32,9 +34,21 @@
     "nearest_boat_ramp": {
       "distance_m": 430
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Port River",
+      "osm_id": 15655412,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Commercial Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Port River",
+      "osm_id": 466225212
     },
     "opening_hours": "Mo-Sa 10:30-18:00+,PH,Su 09:00-18:00+",
     "wifi": true
@@ -55,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

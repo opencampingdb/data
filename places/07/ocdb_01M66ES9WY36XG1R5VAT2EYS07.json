@@ -1,9 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "facebook": "overture",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "facebook": "https://www.facebook.com/245673415904545",
     "lga": {
       "name": "Pastoral Unincorporated Area",
       "osm_id": 6804541
@@ -11,7 +21,14 @@
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Flinders Ranges Way"
-    }
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Alpana Creek",
+      "osm_id": 837358117
+    },
+    "phone": "+61886484626",
+    "website": "http://www.alpanastation.com"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9WY36XG1R5VAT2EYS07",
@@ -29,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

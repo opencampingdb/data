@@ -1,9 +1,19 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "facebook": "https://www.facebook.com/314589855219638",
     "lga": {
       "name": "Mid-Coast Council",
       "osm_id": 6249291
@@ -13,7 +23,14 @@
       "name": "Barrington",
       "osm_id": 39093056,
       "type": "village"
-    }
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Manning River",
+      "osm_id": 38308346
+    },
+    "phone": "+61265507565",
+    "website": "http://www.cundleflatfarm.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9YTAT3FE8SDXWCAYFWZ",
@@ -31,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

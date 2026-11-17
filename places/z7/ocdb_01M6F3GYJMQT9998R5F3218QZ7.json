@@ -1,13 +1,18 @@
 {
-  "fact_dates": {
-    "facebook": "2026-11-15T00:00:00Z"
-  },
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "email": "osm",
-    "facebook": "overture",
+    "facebook": "osm",
+    "fee": "osm",
+    "instagram": "osm",
+    "lga": "osm",
+    "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -18,31 +23,59 @@
       "street": "Beach Road",
       "suburb": "Torquay"
     },
+    "charge": "12 AUD",
     "email": "ansm@surfcoast.vic.gov.au",
-    "facebook": "https://www.facebook.com/107174989307448",
+    "facebook": "https://www.facebook.com/ANSMTorquay/",
+    "fee": true,
+    "instagram": "https://www.instagram.com/australianationalsurfingmuseum/",
+    "lga": {
+      "name": "Surf Coast Shire",
+      "osm_id": 3290432
+    },
+    "locality": {
+      "distance_m": 230,
+      "name": "Torquay",
+      "osm_id": 2615845781,
+      "type": "town"
+    },
     "nearest_beach": {
       "distance_m": 990,
       "name": "Fishermans Beach"
     },
-    "opening_hours": "Mo-Su,PH 09:00-17:00; Dec 25 off",
+    "nearest_boat_ramp": {
+      "distance_m": 1000,
+      "name": "Torquay Boat Ramp"
+    },
+    "nearest_major_road": {
+      "distance_m": 130,
+      "name": "Surf Coast Highway"
+    },
+    "opening_hours": "Mo-Su 09:00-17:00,Dec 24 off",
+    "operator": "Surf Coast Shire Council",
     "phone": "+61 3 5261 4606",
-    "website": "https://ansmtorquay.wordpress.com/"
+    "website": "https://australiannationalsurfingmuseum.com.au"
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GYJMQT9998R5F3218QZ7",
   "kind": "heritage",
   "location": {
-    "lat": -38.326629,
-    "lon": 144.315987
+    "lat": -38.326605,
+    "lon": 144.315995
   },
+  "merged_osm": [
+    {
+      "id": 71071344,
+      "type": "way"
+    }
+  ],
   "name": "Australian National Surfing Museum",
   "osm": {
-    "id": 71071344,
-    "timestamp": "2025-03-04T08:04:04Z",
-    "type": "way",
-    "version": 11
+    "id": 14357491978,
+    "timestamp": "2026-11-07T23:50:37Z",
+    "type": "node",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

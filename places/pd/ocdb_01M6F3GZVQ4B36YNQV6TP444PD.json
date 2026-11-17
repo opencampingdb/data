@@ -3,6 +3,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
     "website": "osm"
   },
@@ -19,6 +20,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 150
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Sydney Harbour",
+      "osm_id": 1252425,
+      "osm_type": "relation",
+      "type": "water"
     },
     "opening_hours": "\"Special events only. Not generally open to the public.\"",
     "website": "https://seaheritagefoundation.org.au"
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,7 +8,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -31,9 +33,21 @@
       "distance_m": 60,
       "name": "Peggs Beach"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Peggs Beach",
+      "osm_id": 11060763,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Bass Highway"
+    },
+    "protected_area": {
+      "name": "Peggs Beach Conservation Area",
+      "osm_id": 6240119,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true,
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

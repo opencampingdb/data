@@ -11,8 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -36,8 +38,20 @@
     "nearest_boat_ramp": {
       "distance_m": 70
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Two Mile Lake",
+      "osm_id": 8364730,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "operator": "NSW National Parks",
     "phone": "+61265910300",
+    "protected_area": {
+      "name": "Myall Lakes National Park",
+      "osm_id": 3215560,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/korsmans-landing-campground-and-picnic-area"
   },
   "group": "overnight",
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

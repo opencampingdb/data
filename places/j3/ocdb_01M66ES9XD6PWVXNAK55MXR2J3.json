@@ -8,7 +8,8 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -31,6 +32,13 @@
     "nearest_beach": {
       "distance_m": 50,
       "name": "Berry Bay"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Berry Bay",
+      "osm_id": 858379833,
+      "osm_type": "way",
+      "type": "beach"
     }
   },
   "group": "overnight",
@@ -49,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

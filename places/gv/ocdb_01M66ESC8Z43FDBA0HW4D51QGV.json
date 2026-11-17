@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "showers": "osm"
   },
   "facts": {
@@ -21,6 +22,11 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "New England Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Crows Nest Creek",
+      "osm_id": 353804980
     },
     "showers": true
   },
@@ -40,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

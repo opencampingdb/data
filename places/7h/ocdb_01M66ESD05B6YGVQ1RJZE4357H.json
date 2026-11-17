@@ -3,6 +3,7 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -19,6 +20,13 @@
       "name": "Yallourn North",
       "osm_id": 1604746406,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Lake Narracan",
+      "osm_id": 2205421,
+      "osm_type": "relation",
+      "type": "water"
     },
     "operator": "Victorian Department of Education and Training"
   },
@@ -38,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

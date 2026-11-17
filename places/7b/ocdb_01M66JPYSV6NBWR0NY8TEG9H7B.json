@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "website": "osm"
@@ -47,9 +49,21 @@
       "distance_m": 1100,
       "name": "Currumbin RSL"
     },
+    "nearest_feature": {
+      "distance_m": 980,
+      "name": "Tugun Heights",
+      "osm_id": 4316630777,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Stewart Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Saltwater Creek",
+      "osm_id": 316895103
     },
     "opening_hours": "24/7",
     "phone": "+61 7 5601 6754",
@@ -71,5 +85,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -18,6 +19,11 @@
       "name": "Amamoor",
       "osm_id": 213500096,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Amamoor Creek",
+      "osm_id": 58045698
     },
     "operator": "Amamoor General Store"
   },
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

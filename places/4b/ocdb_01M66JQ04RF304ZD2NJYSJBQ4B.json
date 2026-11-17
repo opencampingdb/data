@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 1821324177,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 580,
+      "name": "Rannes",
+      "osm_id": 12914845266,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Leichhardt Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Don River",
+      "osm_id": 1216662576
     }
   },
   "group": "attraction",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

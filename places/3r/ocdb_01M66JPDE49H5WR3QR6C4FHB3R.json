@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -21,9 +23,21 @@
       "osm_id": 300589996,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Bannister",
+      "osm_id": 6052074112,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Albany Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bannister River",
+      "osm_id": 187665442
     },
     "opening_hours": "Mo-Su 06:30-17:00"
   },
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

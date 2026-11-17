@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "fee": true,
@@ -15,6 +16,13 @@
       "name": "Lithgow",
       "osm_id": 78078822,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Lyell",
+      "osm_id": 12086222,
+      "osm_type": "relation",
+      "type": "water"
     }
   },
   "group": "attraction",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

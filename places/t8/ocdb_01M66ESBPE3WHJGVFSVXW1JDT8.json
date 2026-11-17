@@ -3,6 +3,8 @@
     "drinking_water": "osm",
     "entry": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -13,6 +15,16 @@
       "name": "Batchelor",
       "osm_id": 31432758,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Walker Creek",
+      "osm_id": 608017529
+    },
+    "protected_area": {
+      "name": "Litchfield National Park",
+      "osm_id": 2614041,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -32,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

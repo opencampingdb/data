@@ -1,12 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -25,10 +29,18 @@
       "distance_m": 640,
       "name": "T E Peters Drive Boatramp"
     },
+    "nearest_feature": {
+      "distance_m": 340,
+      "name": "Kurrawa",
+      "osm_id": 4316621743,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Gold Coast Highway"
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESAHB9ZJZ2ATWCE10MYJR",
@@ -40,11 +52,11 @@
   "name": null,
   "osm": {
     "id": 2684761967,
-    "timestamp": "2014-02-22T09:19:30Z",
+    "timestamp": "2026-11-16T03:12:35Z",
     "type": "node",
-    "version": 1
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

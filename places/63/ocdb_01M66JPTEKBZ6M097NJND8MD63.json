@@ -4,7 +4,8 @@
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "air": true,
@@ -25,6 +26,11 @@
     },
     "nearest_major_road": {
       "distance_m": 20
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Grace Burn Creek",
+      "osm_id": 552095067
     }
   },
   "group": "services",
@@ -43,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

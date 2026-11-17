@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -16,9 +18,21 @@
       "osm_id": 36422054,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Derby Hill",
+      "osm_id": 303942317,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 10,
       "name": "High Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Spring Gully",
+      "osm_id": 1180679105
     },
     "water_type": "fountain"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

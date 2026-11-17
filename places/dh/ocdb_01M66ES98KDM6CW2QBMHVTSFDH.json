@@ -7,7 +7,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -24,7 +27,24 @@
       "osm_id": 324529175,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "White Bull Swamp",
+      "osm_id": 57036418,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Mount Rosea Creek",
+      "osm_id": 1174154697
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/boreang-campground"
   },
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

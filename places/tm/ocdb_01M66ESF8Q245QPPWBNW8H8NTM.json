@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -20,6 +22,16 @@
       "name": "Buxton",
       "osm_id": 289619307,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Keppel Creek",
+      "osm_id": 396316533
+    },
+    "protected_area": {
+      "name": "Marysville State Forest",
+      "osm_id": 721573,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

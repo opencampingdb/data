@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -12,6 +14,18 @@
     },
     "nearest_beach": {
       "distance_m": 1660
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Mount Bates",
+      "osm_id": 289559405,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Norfolk Island (Mt Pitt) National Park",
+      "osm_id": 8449575,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -30,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

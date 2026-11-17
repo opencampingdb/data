@@ -2,7 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +19,11 @@
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Shiptons Flat Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Annan River",
+      "osm_id": 173271429
     }
   },
   "group": "services",
@@ -36,5 +42,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

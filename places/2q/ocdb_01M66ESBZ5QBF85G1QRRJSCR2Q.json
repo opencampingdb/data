@@ -4,7 +4,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -22,9 +25,26 @@
     "nearest_boat_ramp": {
       "distance_m": 1790
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Frog's Hollow Wetlands",
+      "osm_id": 27880418,
+      "osm_type": "way",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Van Ness Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Maribyrnong River",
+      "osm_id": 20075452
+    },
+    "protected_area": {
+      "name": "Pipemakers, Burndap and Footscay Park Parklands (COM)",
+      "osm_id": 17914911,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

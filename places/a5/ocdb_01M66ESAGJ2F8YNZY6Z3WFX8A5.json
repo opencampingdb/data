@@ -9,7 +9,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -27,7 +30,24 @@
       "osm_id": 163564024,
       "type": "village"
     },
-    "phone": "+61421075860"
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Limestone Creek Caves",
+      "osm_id": 453051247,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Limestone Creek",
+      "osm_id": 317777563
+    },
+    "phone": "+61421075860",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESAGJ2F8YNZY6Z3WFX8A5",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

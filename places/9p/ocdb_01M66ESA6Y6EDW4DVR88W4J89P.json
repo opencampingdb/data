@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "website": "osm"
@@ -35,6 +36,13 @@
     "nearest_boat_ramp": {
       "distance_m": 510
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Sydney Harbour",
+      "osm_id": 1252425,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "opening_hours": "sunrise-sunset",
     "operator": "Inner West Council",
     "website": "https://www.toiletmap.gov.au/46579"
@@ -55,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

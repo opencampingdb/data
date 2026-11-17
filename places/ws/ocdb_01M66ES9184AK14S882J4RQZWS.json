@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -29,7 +31,17 @@
       "osm_id": 910283354,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "King River",
+      "osm_id": 1444114084
+    },
     "phone": "+61357757000",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    },
     "website": "http://www.mansfieldmtbuller.com.au/camping"
   },
   "group": "overnight",
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

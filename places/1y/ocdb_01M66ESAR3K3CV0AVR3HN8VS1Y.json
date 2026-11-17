@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,18 @@
       "name": "Kununurra",
       "osm_id": 30480122,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Cockatoo Lagoon",
+      "osm_id": 331457867,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Keep River National Park",
+      "osm_id": 8328874,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -14,7 +14,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
     "toilets": "osm",
@@ -50,9 +52,21 @@
     "nearest_boat_ramp": {
       "distance_m": 420
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Muddy Creek",
+      "osm_id": 2251666,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Bestic Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Muddy Creek",
+      "osm_id": 169059230
     },
     "phone": "+61295677161",
     "power": true,
@@ -76,5 +90,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

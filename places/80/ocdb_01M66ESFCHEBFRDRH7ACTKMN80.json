@@ -3,6 +3,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,6 +18,18 @@
       "name": "Spreyton",
       "osm_id": 2125923935,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Founder's Lake",
+      "osm_id": 12511231,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Melrose Creek",
+      "osm_id": 674546586
     },
     "toilet_type": "flush"
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

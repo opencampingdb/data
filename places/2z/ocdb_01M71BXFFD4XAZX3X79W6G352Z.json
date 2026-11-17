@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +23,26 @@
       "distance_m": 4420,
       "name": "Serpentine Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Lake Gordon",
+      "osm_id": 253876,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Gordon River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Gordon River",
+      "osm_id": 795461610
+    },
+    "protected_area": {
+      "name": "Southwest Conservation Area",
+      "osm_id": 3148684,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

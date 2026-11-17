@@ -9,6 +9,8 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "toilets": "osm"
@@ -31,6 +33,18 @@
       "osm_id": 113664248,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Bethungra Dam",
+      "osm_id": 110369065,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Wandalybingel Creek",
+      "osm_id": 448134863
+    },
     "operator": "Junee Shire Council",
     "showers": false,
     "toilets": true
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

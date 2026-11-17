@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +20,23 @@
     },
     "nearest_beach": {
       "distance_m": 0
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Blanket Bay",
+      "osm_id": 353143300,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Blanket Bay Creek",
+      "osm_id": 130361192
+    },
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

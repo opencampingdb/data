@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Willow Grove",
       "osm_id": 2390147132,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Tanjil River",
+      "osm_id": 254609062
+    },
+    "protected_area": {
+      "name": "Tanjil State Forest",
+      "osm_id": 20302087,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,6 +19,16 @@
       "name": "Crows Nest",
       "osm_id": 246272711,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Crows Nest Creek",
+      "osm_id": 568695612
+    },
+    "protected_area": {
+      "name": "Crows Nest National Park",
+      "osm_id": 8250088,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

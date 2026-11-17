@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Melbourne",
       "osm_id": 21579127,
       "type": "city"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Maribyrnong River",
+      "osm_id": 293262328
+    },
+    "protected_area": {
+      "name": "Maribyrnong Valley Parklands",
+      "osm_id": 9257210,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -15,9 +17,21 @@
       "name": "Maranoa Regional",
       "osm_id": 11674862
     },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Forestvale",
+      "osm_id": 2575428039,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mount Moffatt Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Maranoa River",
+      "osm_id": 240626887
     },
     "toilets": false
   },
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

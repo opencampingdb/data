@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 20,
       "name": "Cape Tribulation Beach"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Cape Tribulation Beach",
+      "osm_id": 483374348,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Rykers Road"
+    },
+    "protected_area": {
+      "name": "Daintree National Park",
+      "osm_id": 8478278,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

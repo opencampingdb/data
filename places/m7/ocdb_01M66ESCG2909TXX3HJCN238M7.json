@@ -2,7 +2,9 @@
   "fact_sources": {
     "caravans": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "caravans": false,
@@ -15,6 +17,18 @@
       "name": "Sawmill Settlement",
       "osm_id": 910283354,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Rocky Point",
+      "osm_id": 13900746882,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -36,9 +38,21 @@
       "distance_m": 320,
       "name": "Euston Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "A20"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Murray River",
+      "osm_id": 173259561
     },
     "phone": "+61350261543"
   },
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

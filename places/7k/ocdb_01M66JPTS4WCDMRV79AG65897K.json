@@ -2,6 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -14,6 +17,23 @@
       "name": "Hillston",
       "osm_id": 114176439,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 410,
+      "name": "Willandra",
+      "osm_id": 114176699,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Willandra Creek",
+      "osm_id": 320463983
+    },
+    "protected_area": {
+      "name": "Willandra National Park",
+      "osm_id": 6012316,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/Willandra-Homestead"
   },
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

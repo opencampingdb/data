@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -20,9 +22,21 @@
       "osm_id": 2603797837,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Abbotts Road Retarding Basin",
+      "osm_id": 853582994,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Abbotts Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Eumemmerring Creek",
+      "osm_id": 365809096
     }
   },
   "group": "services",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

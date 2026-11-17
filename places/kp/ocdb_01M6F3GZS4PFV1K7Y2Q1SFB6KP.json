@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 880
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Baronga Broadwater",
+      "osm_id": 776409101,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Brisbane Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Mayes Canal",
+      "osm_id": 884950291
     },
     "phone": "+61488692099",
     "website": "http://www.abodemooloolaba.com.au/"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

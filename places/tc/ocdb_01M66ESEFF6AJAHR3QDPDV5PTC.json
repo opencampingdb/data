@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,9 +19,21 @@
       "osm_id": 1402185166,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Loudoun Dam",
+      "osm_id": 164191109,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Herberton Petford Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "MacDonald Creek",
+      "osm_id": 792318416
     }
   },
   "group": "overnight",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -18,6 +20,16 @@
       "name": "Donnelly River",
       "osm_id": 260193221,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Donnelly River",
+      "osm_id": 532544159
+    },
+    "protected_area": {
+      "name": "Gordon State Forest",
+      "osm_id": 15583923,
+      "osm_type": "relation"
     },
     "tents": true,
     "toilets": true,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

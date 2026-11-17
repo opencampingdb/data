@@ -4,9 +4,11 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -22,12 +24,24 @@
       "osm_id": 2011700452,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "kunanyi / Mount Wellington",
+      "osm_id": 123026960,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Pinnacle Road"
     },
     "opening_hours": "Mo-Su 07:00-22:00",
     "operator": "Hobart City Council",
+    "protected_area": {
+      "name": "Wellington Park",
+      "osm_id": 3161685,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

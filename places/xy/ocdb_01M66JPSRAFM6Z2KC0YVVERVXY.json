@@ -14,7 +14,9 @@
     "name": "overture",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -43,9 +45,21 @@
     "nearest_boat_ramp": {
       "distance_m": 240
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Denison Canal",
+      "osm_id": 8366314,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Arthur Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Gilpins Creek",
+      "osm_id": 649111422
     },
     "phone": "+61362535246",
     "website": "https://find.shell.com/au/fuel/AU_H079-shell-dunalley"
@@ -66,5 +80,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -18,7 +20,17 @@
       "osm_id": 2140871545,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Lerderderg River",
+      "osm_id": 147242625
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Lerderderg River Heritage River",
+      "osm_id": 9195665,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +23,26 @@
       "distance_m": 140,
       "name": "Tandabiddi Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Tantabiddi",
+      "osm_id": 3347321962,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Yardie Creek Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Tantabiddi Creek",
+      "osm_id": 327530241
+    },
+    "protected_area": {
+      "name": "Jurabi Coastal Park",
+      "osm_id": 8385088,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

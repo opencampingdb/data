@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1100
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Tomaga River",
+      "osm_id": 4099135,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 90,
       "name": "George Bass Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Tomaga River",
+      "osm_id": 306992775
     },
     "phone": "+61244717500",
     "website": "http://www.themooringsresort.com.au/"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

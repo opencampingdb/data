@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -28,6 +29,11 @@
       "distance_m": 80,
       "name": "Scott Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Peel River",
+      "osm_id": 109329734
+    },
     "operator": "Australian Country Music Foundation"
   },
   "group": "attraction",
@@ -46,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

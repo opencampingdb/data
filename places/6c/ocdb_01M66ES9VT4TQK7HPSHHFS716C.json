@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -37,7 +39,19 @@
       "distance_m": 160,
       "name": "Killarney Beach"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Killarney Beach",
+      "osm_id": 548080052,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "+61428314823",
+    "protected_area": {
+      "name": "Port Fairy Coastal Reserve",
+      "osm_id": 9278049,
+      "osm_type": "relation"
+    },
     "website": "https://www.killarneybeachcaravanpark.com.au/"
   },
   "group": "overnight",
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

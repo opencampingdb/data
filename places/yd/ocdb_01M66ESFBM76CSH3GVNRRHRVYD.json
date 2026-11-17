@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -24,9 +26,21 @@
       "osm_id": 116980985,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Collies Waterhole",
+      "osm_id": 484309848,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 440,
       "name": "Hue Hue Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Wyong River",
+      "osm_id": 444212342
     },
     "website": "https://www.toiletmap.gov.au/12367"
   },
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

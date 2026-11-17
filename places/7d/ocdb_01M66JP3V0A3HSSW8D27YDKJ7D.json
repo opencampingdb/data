@@ -2,7 +2,10 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +20,23 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 3840
+    },
+    "nearest_feature": {
+      "distance_m": 930,
+      "name": "Galston Gorge",
+      "osm_id": 4380727401,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Berowra Creek",
+      "osm_id": 228027646
+    },
+    "protected_area": {
+      "name": "Berowra Valley National Park",
+      "osm_id": 5993629,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -17,6 +19,16 @@
       "name": "Hill Top",
       "osm_id": 1906712382,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Nattai River",
+      "osm_id": 281242234
+    },
+    "protected_area": {
+      "name": "Nattai National Park",
+      "osm_id": 5910128,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

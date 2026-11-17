@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "fee": false,
@@ -15,6 +16,13 @@
       "name": "Adaminaby",
       "osm_id": 113372218,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 480,
+      "name": "Denison",
+      "osm_id": 113372788,
+      "osm_type": "node",
+      "type": "locality"
     }
   },
   "group": "utility",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

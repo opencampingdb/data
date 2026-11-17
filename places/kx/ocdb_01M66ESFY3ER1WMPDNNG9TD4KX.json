@@ -5,6 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -27,6 +30,23 @@
       "distance_m": 50,
       "name": "Beachmere Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Caboolture River",
+      "osm_id": 142303,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Caboolture River",
+      "osm_id": 334140819
+    },
+    "protected_area": {
+      "name": "Moreton Bay Marine Park (IUCN Cat IV Parts)",
+      "osm_id": 7930278,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush",
     "wheelchair": false
   },
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

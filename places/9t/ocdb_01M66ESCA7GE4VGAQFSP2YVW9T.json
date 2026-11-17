@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -21,6 +22,13 @@
     "nearest_beach": {
       "distance_m": 280,
       "name": "Normans Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Normans Beach",
+      "osm_id": 166958380,
+      "osm_type": "way",
+      "type": "beach"
     },
     "toilet_type": "pit"
   },
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

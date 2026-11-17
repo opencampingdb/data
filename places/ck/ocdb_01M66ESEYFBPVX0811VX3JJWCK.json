@@ -2,6 +2,7 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -11,6 +12,13 @@
     "lga": {
       "name": "Cloncurry Shire",
       "osm_id": 11677395
+    },
+    "nearest_feature": {
+      "distance_m": 510,
+      "name": "Burke and Wills",
+      "osm_id": 2383900308,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 90,
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

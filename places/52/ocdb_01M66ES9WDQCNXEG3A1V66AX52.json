@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -24,6 +26,16 @@
       "osm_id": 145496386,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Campaspe River",
+      "osm_id": 185271589
+    },
+    "protected_area": {
+      "name": "Aysons Reserve",
+      "osm_id": 487250299,
+      "osm_type": "way"
+    },
     "wifi": false
   },
   "group": "overnight",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

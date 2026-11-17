@@ -6,6 +6,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -29,6 +31,18 @@
     "nearest_boat_ramp": {
       "distance_m": 4360
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Niigi Niigi",
+      "osm_id": 12503789944,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "protected_area": {
+      "name": "Bruxner Park Flora Reserve",
+      "osm_id": 16308794,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

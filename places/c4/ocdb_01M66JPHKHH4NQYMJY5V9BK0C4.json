@@ -1,11 +1,17 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Esperance",
       "osm_id": 11689020
+    },
+    "protected_area": {
+      "name": "Cascade Nature Reserve",
+      "osm_id": 8169890,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -24,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

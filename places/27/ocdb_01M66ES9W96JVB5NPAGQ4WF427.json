@@ -7,7 +7,9 @@
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -26,6 +28,16 @@
       "name": "Dargo",
       "osm_id": 456874812,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Two Mile Creek",
+      "osm_id": 1449941581
+    },
+    "protected_area": {
+      "name": "Boulung - Deera State Forest",
+      "osm_id": 20237930,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

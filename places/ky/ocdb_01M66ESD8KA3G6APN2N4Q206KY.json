@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,16 @@
     },
     "nearest_beach": {
       "distance_m": 60
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Jerusalem Creek",
+      "osm_id": 343223083
+    },
+    "protected_area": {
+      "name": "Bundjalung National Park",
+      "osm_id": 5815155,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

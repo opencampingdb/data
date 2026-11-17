@@ -7,6 +7,8 @@
     "fee": "community_report",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report"
   },
   "facts": {
@@ -20,6 +22,18 @@
       "name": "Wilmot",
       "osm_id": 2634782123,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake Gairdner",
+      "osm_id": 8356710,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Iris River",
+      "osm_id": 397553102
     },
     "pets": "yes"
   },
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

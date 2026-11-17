@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,17 @@
       "distance_m": 70,
       "name": "John Renshaw Parkway"
     },
-    "operator": "Warrumbungle NP"
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Wambelong Creek",
+      "osm_id": 441886863
+    },
+    "operator": "Warrumbungle NP",
+    "protected_area": {
+      "name": "Warrumbungle National Park",
+      "osm_id": 5836978,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESC3Q0VS8GZW250MX0ZB1",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

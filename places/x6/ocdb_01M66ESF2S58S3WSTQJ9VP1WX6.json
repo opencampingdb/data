@@ -11,7 +11,9 @@
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -35,7 +37,17 @@
       "osm_id": 114377163,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Kings Plains Creek",
+      "osm_id": 400960871
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Kings Plains National Park",
+      "osm_id": 6017703,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/kings-plains-creek-campground"
   },
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

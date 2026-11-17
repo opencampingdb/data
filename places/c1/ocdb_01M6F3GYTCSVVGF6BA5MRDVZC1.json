@@ -10,6 +10,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture"
   },
@@ -34,6 +35,13 @@
     "nearest_beach": {
       "distance_m": 4850
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Port Kenny",
+      "osm_id": 267102215,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Flinders Highway"
@@ -56,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

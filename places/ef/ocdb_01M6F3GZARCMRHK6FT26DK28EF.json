@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -20,6 +22,16 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Bridge Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Coal River",
+      "osm_id": 478242562
+    },
+    "protected_area": {
+      "name": "Richmond Gaol Historic Site",
+      "osm_id": 1210170753,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -38,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

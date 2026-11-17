@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -17,7 +19,17 @@
       "osm_id": 1918187511,
       "type": "village"
     },
-    "operator": "DELWP Noojee"
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Falls Creek",
+      "osm_id": 1380020261
+    },
+    "operator": "DELWP Noojee",
+    "protected_area": {
+      "name": "Noojee State Forest",
+      "osm_id": 20302079,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCS9G3NCFSKRHX1KRW40",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

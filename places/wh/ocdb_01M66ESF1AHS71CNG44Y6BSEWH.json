@@ -13,6 +13,8 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "power": "osm",
     "tents": "osm",
@@ -38,6 +40,18 @@
       "osm_id": 270477547,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Avon River",
+      "osm_id": 8337781,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Avon River",
+      "osm_id": 177183584
+    },
     "phone": "+61895742612",
     "power": true,
     "tents": true,
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,8 +8,10 @@
     "address": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -30,8 +32,20 @@
       "osm_id": 114371357,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Youngville",
+      "osm_id": 115098920,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0265745555",
+    "protected_area": {
+      "name": "Mount Royal National Park",
+      "osm_id": 6298500,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/youngville-campground"
   },
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

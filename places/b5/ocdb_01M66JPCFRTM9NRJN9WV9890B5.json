@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1060
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Aikenhead Point",
+      "osm_id": 30606412,
+      "osm_type": "node",
+      "type": "cape"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Mersey River",
+      "osm_id": 39753175
     }
   },
   "group": "attraction",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

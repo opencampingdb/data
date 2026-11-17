@@ -3,6 +3,7 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,6 +17,11 @@
       "name": "Peak Crossing",
       "osm_id": 1653846284,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Sandy Creek",
+      "osm_id": 371098097
     },
     "toilet_type": "flush"
   },
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

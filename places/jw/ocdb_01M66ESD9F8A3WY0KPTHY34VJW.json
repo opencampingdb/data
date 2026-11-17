@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -21,6 +23,16 @@
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Sherbrooke Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Swamp Creek",
+      "osm_id": 58404165
+    },
+    "protected_area": {
+      "name": "Dandenong Ranges National Park",
+      "osm_id": 9212909,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

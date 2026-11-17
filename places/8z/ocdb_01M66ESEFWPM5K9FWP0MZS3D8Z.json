@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -20,7 +22,17 @@
       "osm_id": 595501874,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Briggs Creek",
+      "osm_id": 1039483912
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "water_type": "fountain"
   },
   "group": "utility",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

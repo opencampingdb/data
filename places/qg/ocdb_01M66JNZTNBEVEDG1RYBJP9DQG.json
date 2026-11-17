@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 50,
       "name": "Powlett River West"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Powlett River West",
+      "osm_id": 376067688,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Bass Highway"
+    },
+    "protected_area": {
+      "name": "Yallock-Bulluk Marine and Coastal Park",
+      "osm_id": 16534758,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,21 +1,87 @@
 {
-  "fact_sources": {},
-  "facts": {},
+  "fact_sources": {
+    "address": "osm",
+    "cabins": "osm",
+    "campfires": "osm",
+    "caravans": "osm",
+    "dump_station": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "max_stay": "osm",
+    "nearest_major_road": "osm",
+    "nudist": "osm",
+    "opening_hours": "osm",
+    "operator": "osm",
+    "pets": "osm",
+    "picnic_tables": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm",
+    "website": "osm",
+    "wifi": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "3217",
+      "street": "Esk Hampton Road"
+    },
+    "cabins": false,
+    "campfires": false,
+    "caravans": true,
+    "dump_station": false,
+    "entry": "public",
+    "fee": false,
+    "lga": {
+      "name": "Toowoomba Regional",
+      "osm_id": 11675821
+    },
+    "locality": {
+      "distance_m": 14190,
+      "name": "Pechey",
+      "osm_id": 1824107708,
+      "type": "village"
+    },
+    "max_stay": "24h",
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Esk Hampton Road"
+    },
+    "nudist": false,
+    "opening_hours": "24/7",
+    "operator": "Toowoomba City Council",
+    "pets": "leashed",
+    "picnic_tables": true,
+    "power": false,
+    "showers": false,
+    "tents": false,
+    "toilets": true,
+    "website": "https://www.tr.qld.gov.au/Places-and-activities/Sport-and-recreation/Lakes-dams-and-camping/Camping",
+    "wifi": false
+  },
   "group": "overnight",
   "id": "ocdb_01M66ESA32KW57NABE5BRJDN9D",
-  "kind": "campground",
+  "kind": "free_camp",
   "location": {
-    "lat": -27.35778,
-    "lon": 152.17639
+    "lat": -27.36084,
+    "lon": 152.176541
   },
+  "merged_osm": [
+    {
+      "id": 1811193487,
+      "type": "node"
+    }
+  ],
   "name": "Ravensbourne Rest Area",
   "osm": {
-    "id": 1811193487,
-    "timestamp": "2012-07-03T12:12:10Z",
+    "id": 14353764552,
+    "timestamp": "2026-11-07T06:56:14Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-10-30T14:16:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

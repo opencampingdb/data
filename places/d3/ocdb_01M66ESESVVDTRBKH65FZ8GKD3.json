@@ -7,6 +7,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -19,6 +22,23 @@
       "name": "Bell",
       "osm_id": 117040729,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Deep Pass",
+      "osm_id": 116990603,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Nayook Creek",
+      "osm_id": 403820074
+    },
+    "protected_area": {
+      "name": "Wollemi National Park",
+      "osm_id": 5901253,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/deep-pass-campground"
   },
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

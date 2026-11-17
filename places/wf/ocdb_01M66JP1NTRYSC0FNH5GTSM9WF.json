@@ -3,8 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -21,11 +23,23 @@
     "nearest_beach": {
       "distance_m": 1320
     },
+    "nearest_feature": {
+      "distance_m": 450,
+      "name": "Cape Otway",
+      "osm_id": 1454639875,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lighthouse Road"
     },
     "opening_hours": "Mo-Su 09:00-10:50, 14:40-16:30",
+    "protected_area": {
+      "name": "Great Otway National Park",
+      "osm_id": 9212144,
+      "osm_type": "relation"
+    },
     "website": "https://www.lightstation.com/"
   },
   "group": "services",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2580,
       "name": "Euston Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Murray River",
+      "osm_id": 173259561
     }
   },
   "group": "utility",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

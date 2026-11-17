@@ -1,11 +1,23 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
       "name": "Shire of Halls Creek",
       "osm_id": 11690294
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Bellburn Creek",
+      "osm_id": 116794285
+    },
+    "protected_area": {
+      "name": "Purnululu National Park",
+      "osm_id": 8328742,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -24,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

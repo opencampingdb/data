@@ -1,0 +1,70 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "water_type": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": false,
+    "lga": {
+      "name": "City of Parramatta Council",
+      "osm_id": 6217262
+    },
+    "locality": {
+      "distance_m": 980,
+      "name": "Parramatta",
+      "osm_id": 19160869,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 2940
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1230
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Parramatta River",
+      "osm_id": 1249186,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "George Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Parramatta River",
+      "osm_id": 903054961
+    },
+    "water_type": "fountain",
+    "wheelchair": true
+  },
+  "group": "utility",
+  "id": "ocdb_01M7K5W24V8K7V8PXVDH4YEBZB",
+  "kind": "drinking_water_point",
+  "location": {
+    "lat": -33.816486,
+    "lon": 151.012829
+  },
+  "name": null,
+  "osm": {
+    "id": 14379570701,
+    "timestamp": "2026-11-15T03:57:51Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-16T21:51:41Z"
+}

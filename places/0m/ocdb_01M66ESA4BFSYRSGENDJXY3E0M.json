@@ -7,7 +7,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1336687736421190",
@@ -21,7 +23,19 @@
       "osm_id": 3421293709,
       "type": "village"
     },
-    "phone": "+61892906100"
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Avon River",
+      "osm_id": 8338307,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "phone": "+61892906100",
+    "protected_area": {
+      "name": "Avon Valley National Park",
+      "osm_id": 12925901,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA4BFSYRSGENDJXY3E0M",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

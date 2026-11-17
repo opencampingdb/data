@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -21,6 +22,13 @@
     "nearest_boat_ramp": {
       "distance_m": 110,
       "name": "Cabbage Tree Point Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Cabbage Tree Point Conservation Park",
+      "osm_id": 8245290,
+      "osm_type": "relation",
+      "type": "wetland"
     },
     "operator": "City of Gold Coast"
   },
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

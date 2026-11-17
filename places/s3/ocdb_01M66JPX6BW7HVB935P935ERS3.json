@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture",
     "wheelchair": "osm"
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 240
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Breakfast Creek",
+      "osm_id": 1627026,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Sandgate Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Breakfast Creek",
+      "osm_id": 207260184
     },
     "phone": "+61732627332",
     "website": "https://autoports.bapnet.com.au/",
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

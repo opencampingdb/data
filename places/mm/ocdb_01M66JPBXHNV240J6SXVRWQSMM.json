@@ -3,7 +3,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -18,9 +20,21 @@
     "nearest_boat_ramp": {
       "distance_m": 890
     },
+    "nearest_feature": {
+      "distance_m": 770,
+      "name": "Bates’ Landing",
+      "osm_id": 14211235574,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 240,
       "name": "Bay Terrace"
+    },
+    "protected_area": {
+      "name": "Encounter Marine Park",
+      "osm_id": 13946236,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

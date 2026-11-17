@@ -4,23 +4,19 @@
     "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
-    "address": "osm",
     "email": "osm",
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
-    "address": {
-      "housenumber": "1",
-      "postcode": "3227",
-      "street": "Ewing Blyth Drive"
-    },
     "email": "bookings@barwoncoast.com.au",
     "facebook": "https://www.facebook.com/147831175263796",
     "lga": {
@@ -28,39 +24,57 @@
       "osm_id": 2646730
     },
     "locality": {
-      "distance_m": 3280,
+      "distance_m": 3370,
       "name": "Ocean Grove",
       "osm_id": 3136698236,
       "type": "town"
     },
     "nearest_beach": {
-      "distance_m": 80
+      "distance_m": 230
     },
     "nearest_boat_ramp": {
-      "distance_m": 280
+      "distance_m": 590
+    },
+    "nearest_feature": {
+      "distance_m": 420,
+      "name": "The Corner",
+      "osm_id": 13657285823,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
-      "distance_m": 70,
+      "distance_m": 410,
       "name": "Ewing Blyth Drive"
     },
     "phone": "+61 3 5254 1115",
+    "protected_area": {
+      "name": "Lorne - Queenscliff Coastal Reserve",
+      "osm_id": 9212148,
+      "osm_type": "relation"
+    },
     "website": "https://barwoncoastcaravanparks.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9AQ7RPH0NMZA2NT0GWY",
   "kind": "caravan_park",
   "location": {
-    "lat": -38.283695,
-    "lon": 144.493848
+    "lat": -38.286514,
+    "lon": 144.495281
   },
+  "merged_osm": [
+    {
+      "id": 600598671,
+      "type": "node"
+    }
+  ],
   "name": "Barwon Heads Caravan Park",
   "osm": {
-    "id": 600598671,
-    "timestamp": "2024-05-17T05:51:44Z",
-    "type": "node",
+    "id": 142104879,
+    "timestamp": "2026-11-16T09:19:37Z",
+    "type": "way",
     "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

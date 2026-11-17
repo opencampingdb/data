@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 540
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Sussex Inlet",
+      "osm_id": 2117286,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Jacobs Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Sussex Inlet",
+      "osm_id": 176535295
     },
     "phone": "+61244412146",
     "website": "http://www.badgeepark.com.au"
@@ -72,5 +86,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -16,6 +17,13 @@
       "name": "Dereel",
       "osm_id": 3861750500,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Berringa",
+      "osm_id": 560386474,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "wheelchair": false
   },
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

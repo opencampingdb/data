@@ -13,8 +13,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "website": "osm"
@@ -42,8 +45,25 @@
       "distance_m": 210,
       "name": "Kylie's Beach"
     },
+    "nearest_feature": {
+      "distance_m": 210,
+      "name": "Kylie's Beach",
+      "osm_id": 382435198,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Mineral Creek",
+      "osm_id": 345715944
+    },
     "pets": "no",
     "phone": "+61265885555",
+    "protected_area": {
+      "name": "Crowdy Bay National Park",
+      "osm_id": 6047323,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/kylies-beach-campground"
@@ -64,5 +84,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

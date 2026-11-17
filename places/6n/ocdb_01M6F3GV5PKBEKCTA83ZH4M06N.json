@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -37,9 +39,21 @@
     "nearest_boat_ramp": {
       "distance_m": 960
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Lake Macquarie",
+      "osm_id": 1319504,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "The Esplanade"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "South Creek",
+      "osm_id": 7194219
     },
     "phone": "+61249489666",
     "website": "http://www.ecoinn.com.au"
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

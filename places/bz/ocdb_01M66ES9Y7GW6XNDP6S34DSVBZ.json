@@ -12,6 +12,8 @@
     "kitchen": "community_report",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report",
     "power": "community_report",
     "showers": "community_report",
@@ -30,6 +32,18 @@
       "name": "Camooweal",
       "osm_id": 310203338,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Lake Francis",
+      "osm_id": 658453856,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Georgina River",
+      "osm_id": 182320994
     },
     "pets": "yes",
     "power": false,
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

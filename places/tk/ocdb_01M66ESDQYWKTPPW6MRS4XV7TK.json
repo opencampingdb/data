@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 90
     },
+    "nearest_feature": {
+      "distance_m": 940,
+      "name": "Garrison Point",
+      "osm_id": 10307664991,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Henry Lawson Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Georges River",
+      "osm_id": 222585007
     },
     "water_type": "fountain"
   },
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

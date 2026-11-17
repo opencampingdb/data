@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -12,7 +13,7 @@
       "osm_id": 6195207
     },
     "locality": {
-      "distance_m": 640,
+      "distance_m": 630,
       "name": "Gosford",
       "osm_id": 116961349,
       "type": "city"
@@ -24,6 +25,13 @@
       "distance_m": 150,
       "name": "Gosford City Park Dane Drv Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Brisbane Water",
+      "osm_id": 1237298,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Dane Drive"
@@ -33,17 +41,17 @@
   "id": "ocdb_01M66ESCESF0GH4Y6H88MFHQCH",
   "kind": "picnic_site",
   "location": {
-    "lat": -33.430556,
-    "lon": 151.340078
+    "lat": -33.430525,
+    "lon": 151.340061
   },
   "name": null,
   "osm": {
     "id": 8591709334,
-    "timestamp": "2021-04-04T04:38:50Z",
+    "timestamp": "2026-11-16T04:47:35Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

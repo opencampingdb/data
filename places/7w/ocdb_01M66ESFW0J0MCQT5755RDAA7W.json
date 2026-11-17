@@ -4,6 +4,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -22,6 +23,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2770
+    },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Lake Samsonvale",
+      "osm_id": 50216,
+      "osm_type": "relation",
+      "type": "water"
     },
     "operator": "Seqwater",
     "toilet_type": "flush",
@@ -43,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

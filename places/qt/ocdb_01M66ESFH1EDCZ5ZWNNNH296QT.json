@@ -4,6 +4,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -20,6 +21,13 @@
       "name": "Sale",
       "osm_id": 1751005346,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Lake Guthridge",
+      "osm_id": 1965485,
+      "osm_type": "relation",
+      "type": "water"
     },
     "nearest_major_road": {
       "distance_m": 100,
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

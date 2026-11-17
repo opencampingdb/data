@@ -11,7 +11,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -35,7 +38,24 @@
       "osm_id": 1634843647,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Clancy's",
+      "osm_id": 608741376,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Emu Creek",
+      "osm_id": 1441536165
+    },
     "phone": "+61746394599",
+    "protected_area": {
+      "name": "Benarkin State Forest",
+      "osm_id": 8681576,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "http://www.derm.qld.gov.au/parks/benarkin/camping.html#clancys_camping_area"
   },
@@ -55,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "campfires": "osm",
     "caravans": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -13,9 +15,21 @@
       "name": "Winton Shire",
       "osm_id": 11676713
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Old Cork Waterhole",
+      "osm_id": 404384189,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Diamantina River Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Diamantina River",
+      "osm_id": 1383091369
     },
     "tents": true
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

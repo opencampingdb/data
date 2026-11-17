@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -17,6 +19,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2800
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Lake Wilks",
+      "osm_id": 9358209,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Cradle Mountain-Lake St Clair National Park",
+      "osm_id": 3000260,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,6 +10,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "osm",
     "website": "osm"
@@ -39,6 +40,13 @@
     "nearest_boat_ramp": {
       "distance_m": 340
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Mission Beach",
+      "osm_id": 8353704853,
+      "osm_type": "node",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Porter Promenade"
@@ -62,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -40,9 +42,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1100
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Hunter River",
+      "osm_id": 1240053,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Elizabeth Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Throsby Creek",
+      "osm_id": 1075261621
     },
     "phone": "+61249693319",
     "website": "https://map.bp.com/en-AU/AU/gas-station/tighes-hill/bp-tighes-hill/9777"
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

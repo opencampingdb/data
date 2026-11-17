@@ -10,7 +10,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -34,9 +36,21 @@
       "distance_m": 4120,
       "name": "Sandridge Beach"
     },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Moonee Ponds Creek",
+      "osm_id": 27950082,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Dynon Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Dynon Rd Tidal Canal",
+      "osm_id": 506659397
     },
     "phone": "+61393721883",
     "website": "http://www.pringleauto.com.au/"
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

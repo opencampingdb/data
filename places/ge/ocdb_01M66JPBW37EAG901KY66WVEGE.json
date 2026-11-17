@@ -10,8 +10,11 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -33,11 +36,28 @@
       "osm_id": 30917754,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 910,
+      "name": "Charing Cross",
+      "osm_id": 13588782341,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "High Street"
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Bendigo Creek",
+      "osm_id": 179581149
+    },
     "phone": "+61344442810",
+    "protected_area": {
+      "name": "Central Deborah Gold Mine",
+      "osm_id": 179733135,
+      "osm_type": "way"
+    },
     "website": "http://www.central-deborah.com"
   },
   "group": "attraction",
@@ -56,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fuel": true,
@@ -24,6 +25,11 @@
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Wynter Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Cedar Party Creek",
+      "osm_id": 550416914
     }
   },
   "group": "services",
@@ -42,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

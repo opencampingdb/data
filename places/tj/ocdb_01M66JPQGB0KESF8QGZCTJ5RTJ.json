@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -23,6 +24,13 @@
     "nearest_boat_ramp": {
       "distance_m": 480
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Middle Harbour",
+      "osm_id": 2068779,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Warringah Road"
@@ -35,7 +43,7 @@
     "lat": -33.771369,
     "lon": 151.205752
   },
-  "name": null,
+  "name": "Roseville Bridge Lookout",
   "osm": {
     "id": 14152851900,
     "timestamp": "2026-10-09T01:04:09Z",
@@ -44,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

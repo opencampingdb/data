@@ -4,6 +4,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "pets": "osm",
     "water_type": "osm"
@@ -24,6 +25,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 660
+    },
+    "nearest_feature": {
+      "distance_m": 460,
+      "name": "Clifton Gardens",
+      "osm_id": 117124009,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
       "distance_m": 230,
@@ -48,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

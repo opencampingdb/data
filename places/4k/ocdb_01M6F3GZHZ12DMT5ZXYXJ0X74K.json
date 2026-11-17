@@ -8,8 +8,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -34,8 +36,20 @@
       "distance_m": 340,
       "name": "Penders"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Wapengo Lake",
+      "osm_id": 38131075,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "NSW National Parks",
     "phone": "+61 2 4476 0800",
+    "protected_area": {
+      "name": "Mimosa Rocks National Park",
+      "osm_id": 5947723,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/accommodation/myer-house"
   },
   "group": "overnight",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

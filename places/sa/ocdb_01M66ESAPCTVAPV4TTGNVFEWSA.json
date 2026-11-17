@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -19,6 +21,18 @@
     },
     "nearest_beach": {
       "distance_m": 2150
+    },
+    "nearest_feature": {
+      "distance_m": 360,
+      "name": "Mulimburra Point",
+      "osm_id": 3193160670,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Eurobodalla National Park",
+      "osm_id": 6052866,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -37,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

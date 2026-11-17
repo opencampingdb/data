@@ -10,8 +10,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
-    "phone": "overture"
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -33,8 +35,18 @@
     "nearest_beach": {
       "distance_m": 110
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Chapman River",
+      "osm_id": 317733796
+    },
     "operator": "NPWS SA",
-    "phone": "+61885534444"
+    "phone": "+61885534444",
+    "protected_area": {
+      "name": "Lashmar Conservation Park",
+      "osm_id": 1013450,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9X0323FK35DE43MGJB6",
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

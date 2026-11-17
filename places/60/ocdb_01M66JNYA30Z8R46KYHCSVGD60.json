@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 39093056,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Koolkuna",
+      "osm_id": 5279183986,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Thunderbolts Way"
+    },
+    "protected_area": {
+      "name": "Giro State Forest",
+      "osm_id": 5761179,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +19,17 @@
       "osm_id": 11384987822,
       "type": "village"
     },
-    "operator": "DELWP Briagolong"
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Freestone Creek",
+      "osm_id": 1418828742
+    },
+    "operator": "DELWP Briagolong",
+    "protected_area": {
+      "name": "Freestone / Wurrundyan'garla State Forest",
+      "osm_id": 20311377,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCS5KJNCM5EZ9QRGWV8J",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -11,7 +11,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "website": "contributed",
     "wifi": "osm"
   },
@@ -30,7 +32,17 @@
       "osm_id": 335617920,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Gellibrand River",
+      "osm_id": 168386014
+    },
     "power": false,
+    "protected_area": {
+      "name": "Otway Forest Park",
+      "osm_id": 9212139,
+      "osm_type": "relation"
+    },
     "website": "https://www.exploreoutdoors.vic.gov.au/activities/camping/stevensons-falls",
     "wifi": false
   },
@@ -50,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

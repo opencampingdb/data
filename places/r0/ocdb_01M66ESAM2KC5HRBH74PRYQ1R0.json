@@ -2,6 +2,9 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +12,23 @@
     "lga": {
       "name": "Longreach Regional",
       "osm_id": 11676693
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Broadwater Waterhole",
+      "osm_id": 293023521,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Thomson River",
+      "osm_id": 1339741912
+    },
+    "protected_area": {
+      "name": "Lochern National Park",
+      "osm_id": 8205724,
+      "osm_type": "relation"
     },
     "website": "https://parks.des.qld.gov.au/parks/lochern/camping/broadwater-waterhole"
   },
@@ -28,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

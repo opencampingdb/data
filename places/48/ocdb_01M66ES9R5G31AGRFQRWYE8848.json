@@ -7,7 +7,9 @@
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -23,6 +25,16 @@
       "name": "Injune",
       "osm_id": 423605433,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Dawson River",
+      "osm_id": 251732501
+    },
+    "protected_area": {
+      "name": "Expedition (Limited Depth) National Park",
+      "osm_id": 8272737,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

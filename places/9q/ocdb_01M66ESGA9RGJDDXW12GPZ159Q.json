@@ -4,8 +4,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -26,11 +29,28 @@
       "distance_m": 650,
       "name": "Catamaran Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Finns Beach",
+      "osm_id": 155059326,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Cockle Creek Road"
     },
-    "operator": "Tasmania Parks and Wildlife Service"
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Driscolls Creek",
+      "osm_id": 238048101
+    },
+    "operator": "Tasmania Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Recherche Bay Nature Recreation Area",
+      "osm_id": 6177558,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESGA9RGJDDXW12GPZ159Q",
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

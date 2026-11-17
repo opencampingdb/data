@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "phone_2": "osm"
   },
@@ -15,6 +17,18 @@
       "name": "Paringa",
       "osm_id": 2074381065,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Murray River",
+      "osm_id": 165400269
     },
     "phone": "+61 3 5027 8188",
     "phone_2": "+61 408 522 193"
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

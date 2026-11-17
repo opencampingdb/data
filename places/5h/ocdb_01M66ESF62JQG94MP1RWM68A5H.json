@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +26,21 @@
       "distance_m": 1700,
       "name": "Loders Creek Public Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 910,
+      "name": "Chirn Park",
+      "osm_id": 4316620982,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Musgrave Avenue"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Biggera Creek",
+      "osm_id": 192615947
     }
   },
   "group": "utility",
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

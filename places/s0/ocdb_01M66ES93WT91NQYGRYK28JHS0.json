@@ -8,6 +8,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -30,6 +32,16 @@
       "distance_m": 2580,
       "name": "Boatramp"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Bivouac Creek",
+      "osm_id": 238169130
+    },
+    "protected_area": {
+      "name": "Tasman National Park",
+      "osm_id": 3045026,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parks.tas.gov.au/explore-our-parks/tasman-national-park/bivouac-bay-camping"
   },
@@ -49,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

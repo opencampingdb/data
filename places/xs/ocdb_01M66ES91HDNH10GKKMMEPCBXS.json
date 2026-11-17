@@ -9,7 +9,9 @@
     "caravans": "contributed",
     "email": "contributed",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -30,6 +32,18 @@
       "name": "Blackwood",
       "osm_id": 2140871545,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Soda Spring",
+      "osm_id": 11880967603,
+      "osm_type": "node",
+      "type": "spring"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Lerderderg River",
+      "osm_id": 147242625
     }
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

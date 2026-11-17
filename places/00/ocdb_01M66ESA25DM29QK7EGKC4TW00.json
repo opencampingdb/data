@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
     "nearest_beach": {
       "distance_m": 0,
       "name": "Hinches Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Hinches Beach",
+      "osm_id": 11002790,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Murray River",
+      "osm_id": 173309632
     },
     "toilets": false
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

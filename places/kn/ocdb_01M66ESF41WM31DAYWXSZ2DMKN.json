@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -25,9 +27,21 @@
       "distance_m": 210,
       "name": "Loders Creek Public Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 660,
+      "name": "Chirn Park",
+      "osm_id": 4316620982,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Frank Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Loders Creek",
+      "osm_id": 26599742
     },
     "website": "https://www.southporttouristpark.com.au/"
   },
@@ -134,5 +148,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

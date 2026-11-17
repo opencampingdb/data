@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,18 @@
     "nearest_beach": {
       "distance_m": 70,
       "name": "East Lady Edeline Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "East Lady Edeline Beach",
+      "osm_id": 8378174,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Rottnest Island State Reserve",
+      "osm_id": 12950458,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,6 +12,7 @@
     "locality": "osm",
     "max_stay": "community_report",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "community_report"
   },
   "facts": {
@@ -31,6 +32,11 @@
     "nearest_major_road": {
       "distance_m": 350,
       "name": "Brooke Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Woady Yaloak River",
+      "osm_id": 185945123
     },
     "pets": "yes"
   },
@@ -56,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

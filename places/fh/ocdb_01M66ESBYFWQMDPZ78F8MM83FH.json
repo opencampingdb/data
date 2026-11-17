@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -10,6 +11,11 @@
       "name": "Batchelor",
       "osm_id": 31432758,
       "type": "town"
+    },
+    "protected_area": {
+      "name": "Litchfield National Park",
+      "osm_id": 2614041,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

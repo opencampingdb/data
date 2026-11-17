@@ -3,7 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": true,
@@ -17,7 +18,12 @@
       "osm_id": 6952999044,
       "type": "village"
     },
-    "operator": "Department of Parks & Wildlife"
+    "operator": "Department of Parks & Wildlife",
+    "protected_area": {
+      "name": "Dirk Hartog Island National Park",
+      "osm_id": 8387068,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBQ6KZ7F97ZX4KM2TF94",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

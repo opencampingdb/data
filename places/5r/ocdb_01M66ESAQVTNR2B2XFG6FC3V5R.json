@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +27,26 @@
       "distance_m": 2740,
       "name": "Brodribb Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 280,
+      "name": "Lake Wat Wat",
+      "osm_id": 151034383,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Marlo Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Snowy River",
+      "osm_id": 179902964
+    },
+    "protected_area": {
+      "name": "Snowy River Heritage River",
+      "osm_id": 16487232,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

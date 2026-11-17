@@ -4,6 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -23,6 +26,23 @@
     "nearest_boat_ramp": {
       "distance_m": 130
     },
+    "nearest_feature": {
+      "distance_m": 540,
+      "name": "Angas Inlet",
+      "osm_id": 477221401,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Port River",
+      "osm_id": 466225213
+    },
+    "protected_area": {
+      "name": "Adelaide Dolphin Sanctuary",
+      "osm_id": 1205462504,
+      "osm_type": "way"
+    },
     "website": "https://dolphinsanctuarykayaktours.com.au/"
   },
   "group": "attraction",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

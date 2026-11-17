@@ -9,7 +9,10 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -28,7 +31,24 @@
       "osm_id": 326110624,
       "type": "town"
     },
-    "phone": "+61137468"
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Stony Creek",
+      "osm_id": 417978903,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Stony Creek",
+      "osm_id": 1166318078
+    },
+    "phone": "+61137468",
+    "protected_area": {
+      "name": "Byfield State Forest",
+      "osm_id": 1503400,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQ91HS1DDGDR20EFWKY",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

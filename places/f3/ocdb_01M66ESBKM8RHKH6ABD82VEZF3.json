@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -28,9 +30,21 @@
     "nearest_boat_ramp": {
       "distance_m": 600
     },
+    "nearest_feature": {
+      "distance_m": 650,
+      "name": "Mcloughlins Beach",
+      "osm_id": 5693901730,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Beach Drive"
+    },
+    "protected_area": {
+      "name": "Nooramunga Marine and Coastal Park",
+      "osm_id": 9267533,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,8 +6,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -31,8 +34,25 @@
     "nearest_boat_ramp": {
       "distance_m": 870
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Moyne River",
+      "osm_id": 46709692,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Moyne River",
+      "osm_id": 12010753
+    },
     "phone": "+61 3 5568 1060",
     "power": true,
+    "protected_area": {
+      "name": "Port Fairy Coastal Reserve",
+      "osm_id": 9278049,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.portfairycaravanparks.com/",
     "wheelchair": true
@@ -53,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

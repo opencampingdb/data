@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Mathinna",
       "osm_id": 2620633328,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "South George River",
+      "osm_id": 834032832
+    },
+    "protected_area": {
+      "name": "St Columba Falls State Reserve",
+      "osm_id": 6214096,
+      "osm_type": "relation"
     },
     "wheelchair": true
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,6 +9,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -45,6 +46,11 @@
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Adelong Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Tumut River",
+      "osm_id": 200570143
     },
     "power": true,
     "showers": true,
@@ -222,5 +228,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

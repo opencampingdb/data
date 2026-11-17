@@ -3,39 +3,75 @@
     "caravans": "osm",
     "drinking_water": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wifi": "osm"
   },
   "facts": {
     "caravans": false,
     "drinking_water": false,
     "fee": false,
+    "lga": {
+      "name": "Oberon Council",
+      "osm_id": 6307911
+    },
+    "locality": {
+      "distance_m": 25910,
+      "name": "Wombeyan Caves",
+      "osm_id": 84321801,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 410,
+      "name": "Mount Werong",
+      "osm_id": 6042481228,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Ruby Creek",
+      "osm_id": 444065228
+    },
+    "operator": "National Parks and Wildlife",
+    "protected_area": {
+      "name": "Blue Mountains National Park",
+      "osm_id": 5909718,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true,
-    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mount-werong-campground"
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mount-werong-campground",
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESB8W27SVAXD2431175WD",
   "kind": "national_park_campsite",
   "location": {
-    "lat": -34.079734,
-    "lon": 149.927111
+    "lat": -34.078087,
+    "lon": 149.926597
   },
   "merged_osm": [
     {
-      "id": 444245457,
-      "type": "way"
+      "id": 4797405128,
+      "type": "node"
     }
   ],
   "name": "Mount Werong Campground",
   "osm": {
-    "id": 4797405128,
-    "timestamp": "2019-02-13T00:54:00Z",
-    "type": "node",
-    "version": 2
+    "id": 444245457,
+    "timestamp": "2026-11-05T07:22:36Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T12:37:21Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

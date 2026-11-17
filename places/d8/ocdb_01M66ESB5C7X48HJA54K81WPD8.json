@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Tamban",
       "osm_id": 114655993,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 530,
+      "name": "Cedar Crossing",
+      "osm_id": 114655868,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Stockyard Creek",
+      "osm_id": 918175479
+    },
+    "protected_area": {
+      "name": "Ngambaa Nature Reserve",
+      "osm_id": 6069014,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

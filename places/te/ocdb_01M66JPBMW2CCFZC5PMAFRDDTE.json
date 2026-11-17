@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,18 @@
     "nearest_boat_ramp": {
       "distance_m": 3640,
       "name": "Canoe slipway"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "West Barwon Dam",
+      "osm_id": 14632141,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Barwon River West Branch",
+      "osm_id": 45689176
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

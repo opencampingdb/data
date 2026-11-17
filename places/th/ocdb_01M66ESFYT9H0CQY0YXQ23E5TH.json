@@ -9,8 +9,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -31,8 +33,20 @@
       "osm_id": 1791370902,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Martins Tank Lake",
+      "osm_id": 232538019,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "DBCA",
     "phone": "0899037750",
+    "protected_area": {
+      "name": "Yalgorup National Park",
+      "osm_id": 12936861,
+      "osm_type": "relation"
+    },
     "website": "https://exploreparks.dbca.wa.gov.au/site/martins-tank-campground"
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

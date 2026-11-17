@@ -6,6 +6,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -28,6 +30,18 @@
     "nearest_boat_ramp": {
       "distance_m": 4370
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "South Smoky Beach",
+      "osm_id": 5141614,
+      "osm_type": "relation",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Hat Head National Park",
+      "osm_id": 6054206,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

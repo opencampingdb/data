@@ -5,6 +5,8 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -24,6 +26,16 @@
       "osm_id": 1665456278,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Wellington River",
+      "osm_id": 23198990
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

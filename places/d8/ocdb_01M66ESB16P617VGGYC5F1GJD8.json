@@ -6,7 +6,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -29,7 +32,24 @@
       "distance_m": 1720,
       "name": "Torquay Boat Ramp"
     },
-    "opening_hours": "24/7"
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Torquay Back Beach (Surf Beach)",
+      "osm_id": 419700637,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Spring Creek",
+      "osm_id": 71222422
+    },
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Lorne - Queenscliff Coastal Reserve",
+      "osm_id": 9212148,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESB16P617VGGYC5F1GJD8",
@@ -47,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,8 +5,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "toilet_type": "osm"
+    "nearest_waterway": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
     "entry": "public",
@@ -28,10 +31,23 @@
       "distance_m": 490,
       "name": "T E Peters Drive Boatramp"
     },
+    "nearest_feature": {
+      "distance_m": 420,
+      "name": "Kurrawa",
+      "osm_id": 4316621743,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 70
     },
-    "toilet_type": "flush"
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Little Tallebudgera Creek",
+      "osm_id": 728920060
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESF6AZ7F5EXKQ5KMA692Q",
@@ -43,11 +59,11 @@
   "name": null,
   "osm": {
     "id": 386629594,
-    "timestamp": "2022-11-14T09:51:39Z",
+    "timestamp": "2026-11-16T04:43:57Z",
     "type": "way",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

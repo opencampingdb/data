@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "power": "osm",
     "tents": "osm"
   },
@@ -19,6 +21,18 @@
       "name": "Devon North",
       "osm_id": 13271551140,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Hiawatha",
+      "osm_id": 3582383971,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Albert River",
+      "osm_id": 608072653
     },
     "power": false,
     "tents": false
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

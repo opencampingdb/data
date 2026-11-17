@@ -3,7 +3,8 @@
     "entry": "osm",
     "hot_water": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,6 +18,13 @@
       "name": "Dowerin",
       "osm_id": 2428936154,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Minnivale",
+      "osm_id": 5106465754,
+      "osm_type": "node",
+      "type": "hamlet"
     }
   },
   "group": "utility",
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

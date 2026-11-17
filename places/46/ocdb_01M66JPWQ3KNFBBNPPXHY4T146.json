@@ -8,7 +8,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm",
     "website": "osm",
     "wheelchair": "osm",
@@ -39,9 +41,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2230
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Murrumbidgee River",
+      "osm_id": 2723485,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "Baylis Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Murrumbidgee River",
+      "osm_id": 179754041
     },
     "toilets": false,
     "website": "https://www.visitwagga.com/",
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

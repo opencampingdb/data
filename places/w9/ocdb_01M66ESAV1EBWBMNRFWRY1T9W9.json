@@ -11,7 +11,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -35,9 +37,21 @@
       "osm_id": 31432426,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 710,
+      "name": "Amangal",
+      "osm_id": 3744653690,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Stuart Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Adelaide River",
+      "osm_id": 183240127
     },
     "phone": "+61889767047",
     "website": "http://www.adelaideriverinn.com.au"
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

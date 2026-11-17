@@ -2,6 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -14,6 +16,18 @@
       "name": "Kirwans Bridge",
       "osm_id": 12148538566,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Goulburn Weir",
+      "osm_id": 24909230,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Goulburn River",
+      "osm_id": 146991146
     },
     "toilet_type": "flush"
   },
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

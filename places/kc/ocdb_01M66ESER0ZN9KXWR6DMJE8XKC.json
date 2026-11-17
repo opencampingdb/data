@@ -6,7 +6,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/938434792921059",
@@ -23,6 +25,16 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Main Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Stringers Creek West Branch",
+      "osm_id": 182135446
+    },
+    "protected_area": {
+      "name": "Walhalla Historic Area",
+      "osm_id": 5482569,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

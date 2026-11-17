@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +23,26 @@
       "distance_m": 90,
       "name": "Launching Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Cowan Water",
+      "osm_id": 5578664,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Ku-Ring-Gai Chase Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Apple Tree Creek",
+      "osm_id": 377445956
+    },
+    "protected_area": {
+      "name": "Ku-ring-gai Chase National Park",
+      "osm_id": 5989782,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

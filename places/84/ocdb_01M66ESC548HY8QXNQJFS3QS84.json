@@ -3,7 +3,9 @@
     "campfires": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "campfires": false,
@@ -17,7 +19,17 @@
       "osm_id": 1918187511,
       "type": "village"
     },
-    "operator": "Thomson River Forest Reserve"
+    "nearest_waterway": {
+      "distance_m": 0,
+      "name": "Thomson River",
+      "osm_id": 1383540786
+    },
+    "operator": "Thomson River Forest Reserve",
+    "protected_area": {
+      "name": "Thomson River Forest Reserve",
+      "osm_id": 20306075,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESC548HY8QXNQJFS3QS84",
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

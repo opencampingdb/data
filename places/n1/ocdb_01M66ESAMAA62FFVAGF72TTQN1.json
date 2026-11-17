@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -18,6 +20,16 @@
       "name": "Yalwal",
       "osm_id": 113136033,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Tullyangela Creek",
+      "osm_id": 294893907
+    },
+    "protected_area": {
+      "name": "Morton National Park",
+      "osm_id": 1356411,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

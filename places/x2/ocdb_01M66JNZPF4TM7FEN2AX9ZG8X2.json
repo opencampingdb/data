@@ -2,7 +2,9 @@
   "fact_sources": {
     "fuels": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fuels": [
@@ -17,6 +19,18 @@
       "name": "Hermannsburg",
       "osm_id": 2365278670,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 980,
+      "name": "Glen Helen",
+      "osm_id": 4448596850,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Finke River",
+      "osm_id": 74453542
     }
   },
   "group": "services",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -41,8 +43,20 @@
     "nearest_boat_ramp": {
       "distance_m": 110
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Lamerough Canal",
+      "osm_id": 95605668,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 60
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Lamerough Canal",
+      "osm_id": 719521076
     },
     "phone": "+61754921288",
     "website": "http://www.militaryjettycaravanpark.com/"
@@ -69,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T06:07:58Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

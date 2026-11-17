@@ -3,7 +3,9 @@
     "address": "osm",
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -19,6 +21,16 @@
       "name": "Badger Creek",
       "osm_id": 3441792546,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Badger Creek",
+      "osm_id": 744618473
+    },
+    "protected_area": {
+      "name": "Yarra Ranges National Park",
+      "osm_id": 5891684,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

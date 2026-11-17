@@ -11,6 +11,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -35,6 +37,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2270
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Gunbower Creek",
+      "osm_id": 52015087
     },
     "phone": "+61354532300",
     "website": "http://www.murraywatersmotel.com.au"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

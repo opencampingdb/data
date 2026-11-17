@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Elmore",
       "osm_id": 145496386,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Campaspe River",
+      "osm_id": 185271589
+    },
+    "protected_area": {
+      "name": "Aysons Reserve",
+      "osm_id": 487250299,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

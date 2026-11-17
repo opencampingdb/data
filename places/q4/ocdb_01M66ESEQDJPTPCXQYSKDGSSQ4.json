@@ -12,8 +12,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -39,8 +41,20 @@
       "distance_m": 60,
       "name": "Main Beach"
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Main Beach",
+      "osm_id": 725872976,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61266430800",
+    "protected_area": {
+      "name": "Yuraygir National Park",
+      "osm_id": 5911645,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

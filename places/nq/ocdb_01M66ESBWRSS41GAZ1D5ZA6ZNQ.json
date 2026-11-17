@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -20,9 +22,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2010
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Sullivans Creek",
+      "osm_id": 4688019,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 400,
       "name": "Clunies Ross Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Sullivans Creek",
+      "osm_id": 437514378
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

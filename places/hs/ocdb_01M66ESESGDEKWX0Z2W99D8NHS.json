@@ -11,6 +11,8 @@
     "locality": "osm",
     "max_stay": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "showers": "osm",
@@ -42,6 +44,18 @@
       "distance_m": 270,
       "name": "Swimming and Kayak Launch"
     },
+    "nearest_feature": {
+      "distance_m": 130,
+      "name": "Lake Yarrunga",
+      "osm_id": 5448831,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Kangaroo River",
+      "osm_id": 424694139
+    },
     "opening_hours": "24/7",
     "operator": "WaterNSW",
     "showers": false,
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

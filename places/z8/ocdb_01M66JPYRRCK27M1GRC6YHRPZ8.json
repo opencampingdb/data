@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +16,13 @@
       "name": "Laidley",
       "osm_id": 286923839,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Lake Dyer",
+      "osm_id": 151690515,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "attraction",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

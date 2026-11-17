@@ -6,7 +6,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -27,9 +29,21 @@
       "osm_id": 115055373,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 830,
+      "name": "Wallangra",
+      "osm_id": 8797849243,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "Yetman Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Macintyre River",
+      "osm_id": 186841896
     },
     "operator": "Wallangra Recreation Reserve Trust",
     "showers": false,
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

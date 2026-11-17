@@ -3,7 +3,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +23,24 @@
       "distance_m": 180,
       "name": "Boat Ramp"
     },
-    "operator": "ParksVic"
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Murray River",
+      "osm_id": 165400300
+    },
+    "operator": "ParksVic",
+    "protected_area": {
+      "name": "River Murray Reserve",
+      "osm_id": 7115294,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFQVEDWRK47YCT84J80V",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

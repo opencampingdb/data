@@ -11,6 +11,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -37,6 +39,18 @@
       "distance_m": 160,
       "name": "Lake Yambuk Boatramp"
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Lake Yambuk",
+      "osm_id": 4024607,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Eumeralla River",
+      "osm_id": 305934379
+    },
     "phone": "+61419006201",
     "website": "https://www.yambukcaravanpark.com.au/"
   },
@@ -56,5 +70,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

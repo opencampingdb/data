@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -17,9 +19,21 @@
       "osm_id": 51186351,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 200,
+      "name": "Crystal Cave",
+      "osm_id": 4068621552,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
     "nearest_major_road": {
       "distance_m": 310,
       "name": "Indian Ocean Drive"
+    },
+    "protected_area": {
+      "name": "Yanchep National Park",
+      "osm_id": 12949368,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

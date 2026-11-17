@@ -9,9 +9,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
     "power": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -34,12 +36,24 @@
       "distance_m": 3990,
       "name": "Port Sorell Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Bakers Beach",
+      "osm_id": 6054204046,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Bakers Beach Road"
     },
     "phone": "+61364286277",
     "power": true,
+    "protected_area": {
+      "name": "Narawntapu National Park",
+      "osm_id": 6170308,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

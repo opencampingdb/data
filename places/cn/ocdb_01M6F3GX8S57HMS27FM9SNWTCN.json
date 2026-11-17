@@ -4,6 +4,7 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -18,6 +19,13 @@
       "name": "Giru",
       "osm_id": 2214196739,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Pink Lily Lagoon",
+      "osm_id": 627635951,
+      "osm_type": "way",
+      "type": "wetland"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

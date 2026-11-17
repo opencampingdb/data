@@ -11,6 +11,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -38,6 +40,18 @@
       "distance_m": 4590,
       "name": "Calymea Kayak Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Shoalhaven River",
+      "osm_id": 3682825,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Shoalhaven River",
+      "osm_id": 166170679
+    },
     "phone": "+61244213282",
     "website": "http://www.gradys.com.au/"
   },
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

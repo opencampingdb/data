@@ -11,8 +11,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -38,8 +40,18 @@
       "osm_id": 114203415,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Boundary Creek",
+      "osm_id": 850763843
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "0267390700",
+    "protected_area": {
+      "name": "Gibraltar Range National Park",
+      "osm_id": 5926112,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -62,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

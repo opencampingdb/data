@@ -6,6 +6,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -28,6 +29,13 @@
     "nearest_boat_ramp": {
       "distance_m": 2020
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Freshwater Headland",
+      "osm_id": 14335385187,
+      "osm_type": "node",
+      "type": "cape"
+    },
     "operator": "Northern Beaches Council"
   },
   "group": "attraction",
@@ -46,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

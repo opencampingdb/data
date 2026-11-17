@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +19,19 @@
       "osm_id": 4074574918,
       "type": "village"
     },
-    "operator": "Queensland Parks and Wildlife Service"
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Trezkinn Cave",
+      "osm_id": 11647241587,
+      "osm_type": "node",
+      "type": "cave_entrance"
+    },
+    "operator": "Queensland Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Chillagoe-Mungana Caves National Park",
+      "osm_id": 8669528,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESF7B3GWREMX5H7C6YG4S",
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

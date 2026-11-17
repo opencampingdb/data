@@ -3,7 +3,9 @@
     "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/mittamittacp/",
@@ -17,9 +19,21 @@
       "osm_id": 1241535291,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 320,
+      "name": "Mitta Mitta",
+      "osm_id": 2839144074,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Omeo Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Mitta Mitta River",
+      "osm_id": 239029200
     }
   },
   "group": "overnight",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

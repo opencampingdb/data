@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -38,7 +40,19 @@
       "distance_m": 310,
       "name": "Hobart Beach"
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Wallagoot Lake",
+      "osm_id": 13655301,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "NPWS",
+    "protected_area": {
+      "name": "Bournda National Park",
+      "osm_id": 2105810,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true
   },
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

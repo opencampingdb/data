@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -32,9 +34,21 @@
       "distance_m": 790,
       "name": "Curlew Street canoe launching ramp"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Einbunpin Lagoon",
+      "osm_id": 18073223,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Rainbow Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Gasworks Creek",
+      "osm_id": 599928233
     }
   },
   "group": "services",
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

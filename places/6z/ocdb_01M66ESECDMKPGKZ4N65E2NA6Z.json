@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -30,9 +32,21 @@
       "distance_m": 4790,
       "name": "Clarence Point Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "York Town",
+      "osm_id": 319943614,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 270,
       "name": "Greens Beach Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "York Town Rivulet",
+      "osm_id": 678337112
     }
   },
   "group": "overnight",
@@ -51,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

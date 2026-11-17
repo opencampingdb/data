@@ -7,7 +7,8 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -32,7 +33,12 @@
       "distance_m": 50,
       "name": "Great Ocean Road"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "protected_area": {
+      "name": "Apollo Bay Coastal Reserve",
+      "osm_id": 9212160,
+      "osm_type": "relation"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M76BFNSY471FMWMDM57Z7764",
@@ -50,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

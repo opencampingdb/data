@@ -8,6 +8,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -25,6 +26,11 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Koolunga Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Broughton River",
+      "osm_id": 188157823
     },
     "phone": "+61888466181"
   },
@@ -44,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

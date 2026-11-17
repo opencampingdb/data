@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -12,7 +14,17 @@
       "distance_m": 21920,
       "name": "Bulla",
       "osm_id": 3450255725,
-      "type": "town"
+      "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Barrabarrac Creek",
+      "osm_id": 100034123
+    },
+    "protected_area": {
+      "name": "Judbarra / Gregory National Park",
+      "osm_id": 8340969,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

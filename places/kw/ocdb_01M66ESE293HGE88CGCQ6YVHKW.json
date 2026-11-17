@@ -2,7 +2,8 @@
   "fact_sources": {
     "caravans": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "caravans": true,
@@ -15,6 +16,13 @@
       "name": "Yangan",
       "osm_id": 1277936430,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Maryvale",
+      "osm_id": 1740974188,
+      "osm_type": "node",
+      "type": "hamlet"
     }
   },
   "group": "overnight",

@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,9 +23,21 @@
       "osm_id": 113465471,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Darling River Flood Plain",
+      "osm_id": 10732201,
+      "osm_type": "relation",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Reid Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Darling River",
+      "osm_id": 174889524
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,9 +10,11 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nudist": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -40,9 +42,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3300
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Samurai Beach",
+      "osm_id": 54680278,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nudist": true,
     "operator": "National Park",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Tomaree National Park",
+      "osm_id": 6055802,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/samurai-beach-campground"
   },
   "group": "overnight",
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -6,7 +6,8 @@
     "lga": "osm",
     "nearest_beach": "osm",
     "operator": "osm",
-    "phone": "osm"
+    "phone": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "charge": "Adult 16 AUD, Child 10 AUD",
@@ -21,7 +22,12 @@
       "name": "Ravine Des Casoars"
     },
     "operator": "AMSA",
-    "phone": "+61 8 8553 4465"
+    "phone": "+61 8 8553 4465",
+    "protected_area": {
+      "name": "Flinders Chase National Park",
+      "osm_id": 812876,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPVYX6N1M2Q3PYYZZFM5S",
@@ -39,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

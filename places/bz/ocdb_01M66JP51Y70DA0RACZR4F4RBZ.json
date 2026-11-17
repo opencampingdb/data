@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "address": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "address": {
@@ -12,6 +13,13 @@
       "name": "Narrung",
       "osm_id": 2665856833,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Lake Albert",
+      "osm_id": 3309746,
+      "osm_type": "relation",
+      "type": "water"
     }
   },
   "group": "transport",
@@ -30,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -42,9 +44,21 @@
     "nearest_boat_ramp": {
       "distance_m": 820
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Wagonga Inlet",
+      "osm_id": 1252165,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Campbell Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Burrimbidgee Creek",
+      "osm_id": 78160554
     },
     "phone": "(02) 4476 4346",
     "website": "https://www.naroomahotel.com.au"
@@ -65,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

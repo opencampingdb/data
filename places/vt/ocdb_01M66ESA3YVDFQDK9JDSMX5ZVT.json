@@ -9,6 +9,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "swimming": "feedback",
     "tents": "feedback"
   },
@@ -27,6 +28,11 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Peninsula Developmental Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Coen River",
+      "osm_id": 218578158
     },
     "swimming": true,
     "tents": true
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T13:38:52Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

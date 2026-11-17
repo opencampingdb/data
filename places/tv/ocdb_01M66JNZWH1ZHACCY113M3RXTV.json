@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -21,6 +23,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 540
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Poulton Park Wetlands",
+      "osm_id": 343653358,
+      "osm_type": "way",
+      "type": "wetland"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Oatley Bay Creek",
+      "osm_id": 73323311
     }
   },
   "group": "attraction",
@@ -39,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

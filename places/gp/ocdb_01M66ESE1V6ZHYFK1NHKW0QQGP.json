@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -24,6 +26,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 330
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "South Terrace Beach",
+      "osm_id": 383426043,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Wooli Wooli River",
+      "osm_id": 189453914
     }
   },
   "group": "utility",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

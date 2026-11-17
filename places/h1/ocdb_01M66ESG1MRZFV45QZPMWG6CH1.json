@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Peak Crossing",
       "osm_id": 1653846284,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Purga Nature Reserve Frog Pond",
+      "osm_id": 510968895,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Purga Nature Reserve",
+      "osm_id": 510969885,
+      "osm_type": "way"
     }
   },
   "group": "utility",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

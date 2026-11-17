@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -22,6 +24,16 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1990
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Tommy Owens Creek",
+      "osm_id": 267020772
+    },
+    "protected_area": {
+      "name": "Brimbin Nature Reserve",
+      "osm_id": 6322114,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

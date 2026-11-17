@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -26,9 +28,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1470
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Queenscliff Beach",
+      "osm_id": 8238628,
+      "osm_type": "relation",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "North Steyne"
+    },
+    "nearest_waterway": {
+      "distance_m": 10,
+      "name": "Manly Creek",
+      "osm_id": 1254278290
     }
   },
   "group": "attraction",
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

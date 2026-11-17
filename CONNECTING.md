@@ -25,7 +25,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 13,
-  "format_minor": 3,
+  "format_minor": 4,
   "layout_version": 3,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -103,6 +103,10 @@ separately.
 
 What each format changed, newest first:
 
+- **13.4**: `fact_dates` also dates each value from OSM (each `fact_sources`
+  entry that is `osm`) with the place's `osm.timestamp`, when it has one
+  (section 4). An app that took any `fact_dates` entry to mean a value not
+  from OSM should read the source from `fact_sources`.
 - **13.3** (`layout_version` 3): the source `overture` in `fact_sources`, a
   gap fill from Overture Maps (section 4), and Overture candidates: places
   with `osm: null`, `overture` as the source of their name and location, and
@@ -540,15 +544,18 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   was last edited by anyone, in UTC. `fact_dates` gives, for each value that
   did not come from OSM (each `fact_sources` entry that is `feedback`,
   `contributed`, `owner`, `community_report` or `overture`), when it was accepted, or for
-  `community_report` when it was reported. The newest of these is
-  when someone last said something about the place. `updated` is when the
+  `community_report` when it was reported. For each value from OSM it holds
+  `osm.timestamp`, the last edit of the object, which is the newest that
+  value can be: OSM does not say when each tag was set. A place without
+  `osm.timestamp` has no date for its OSM values. A rule value has none. The
+  newest of these is when someone last said something about the place. `updated` is when the
   record's content last changed in Open Camping DB, which is not the same:
   it moves when OSM data is refreshed, whatever its age. Older records may
   lack `osm.timestamp` until the next OSM sync. Prices change, so show when
   a charge was checked: `fact_dates` for a value from feedback, the owner or
   a contributor, and for a value from OSM `osm.check_dates.charge` (or
   `.charge_conditional`), from the object's `check_date:charge` tag, when
-  OSM has one, else `osm.timestamp`.
+  OSM has one, else its `fact_dates` entry (`osm.timestamp`).
 - `last_confirmed` is when a traveller last checked the place in an app and
   found it there, in UTC. It is the time the check was accepted, usually
   within the hour after it was sent. One traveller's check is enough to set it, and it

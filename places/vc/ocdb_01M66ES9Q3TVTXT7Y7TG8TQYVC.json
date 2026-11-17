@@ -1,13 +1,25 @@
 {
   "fact_sources": {
     "fee": "osm",
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
     "lga": {
       "name": "Central Highlands Regional",
       "osm_id": 11676571
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Carnarvon Creek",
+      "osm_id": 184276646
+    },
+    "protected_area": {
+      "name": "Carnarvon National Park",
+      "osm_id": 1483563,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -26,5 +38,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

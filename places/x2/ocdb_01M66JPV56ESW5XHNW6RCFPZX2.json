@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "overture",
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 380
     },
+    "nearest_feature": {
+      "distance_m": 160,
+      "name": "Brisbane River",
+      "osm_id": 7642164,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Gailey Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Toowong Creek",
+      "osm_id": 1426028191
     },
     "opening_hours": "24/7",
     "operator": "Shell",
@@ -67,5 +81,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,7 @@
     "entry": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -15,6 +16,11 @@
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Barrier Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Springs Creek",
+      "osm_id": 1396483595
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -1,9 +1,38 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
     "picnic_tables": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "bins": true,
+    "lga": {
+      "name": "Queanbeyan-Palerang Regional Council",
+      "osm_id": 6137309
+    },
+    "locality": {
+      "distance_m": 10140,
+      "name": "Gundaroo",
+      "osm_id": 30201112,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Lake George",
+      "osm_id": 8060816,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Federal Highway"
+    },
+    "operator": "Transport for NSW",
     "picnic_tables": true,
     "toilets": false
   },
@@ -11,23 +40,23 @@
   "id": "ocdb_01M66ESDWWDZF2BSNN5WEAFKNC",
   "kind": "rest_area",
   "location": {
-    "lat": -35.035185,
-    "lon": 149.377933
+    "lat": -35.035363,
+    "lon": 149.377894
   },
   "merged_osm": [
     {
-      "id": 764005990,
-      "type": "way"
+      "id": 12405911552,
+      "type": "node"
     }
   ],
   "name": "Badcoe VC Rest Area",
   "osm": {
-    "id": 12405911552,
-    "timestamp": "2025-03-27T04:06:23Z",
-    "type": "node",
-    "version": 3
+    "id": 764005990,
+    "timestamp": "2026-11-05T07:19:05Z",
+    "type": "way",
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-02T21:44:17Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

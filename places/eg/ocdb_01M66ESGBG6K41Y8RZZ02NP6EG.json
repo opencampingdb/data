@@ -1,8 +1,11 @@
 {
   "fact_sources": {
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -12,11 +15,28 @@
       "osm_id": 186947418,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Murrumbidgee River",
+      "osm_id": 589990349,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Tharwa Drive"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Murrumbidgee River",
+      "osm_id": 360846552
+    },
     "pets": "no",
+    "protected_area": {
+      "name": "Tharwa Bridge Recreation Area",
+      "osm_id": 9417653,
+      "osm_type": "relation"
+    },
     "website": "https://www.parks.act.gov.au/find-a-nature-park/murrumbidgee-river-corridor/tharwa-bridge"
   },
   "group": "utility",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

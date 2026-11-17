@@ -4,7 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +27,26 @@
     "nearest_boat_ramp": {
       "distance_m": 500
     },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Currarong Creek",
+      "osm_id": 5953434,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Currarong Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Currarong Creek",
+      "osm_id": 446470488
+    },
+    "protected_area": {
+      "name": "Jervis Bay Marine Park",
+      "osm_id": 16221353,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -45,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

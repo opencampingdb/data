@@ -18,7 +18,7 @@ Place index.
 |---|---|---|---|
 | Extract | `python -m pipeline.extract FILE --out extract.ndjson [--geometry geometry.ndjson] [--localities localities/localities.ndjson]` | `.osm.pbf` or `.osm` XML | one line per place, sorted by OSM type and id, with `--geometry` the outlines, signals and major roads the duplicate rules need (see "Opposite sides of a road"), and with `--localities` every town and its council area (see "Towns and council areas") |
 | Sync | `python -m pipeline.sync extract.ndjson --root . --report sync-report.md --summary sync-summary.json [--geometry geometry.ndjson]` | the extract and `places/` | changed files in `places/`, the report, a JSON summary |
-| Validate | `python -m pipeline.validate --root .` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/` | a list of problems, exit code 1 if there are any |
+| Validate | `python -m pipeline.validate --root . [--release-dir dist]` | `places/`, `reviews/`, `moderation/`, `commons/`, `schema/`, with `--release-dir` the built `dist/places.ndjson.gz` | a list of problems, exit code 1 if there are any |
 | Release | `python -m pipeline.release --root . --out dist [--repository opencampingdb/data] [--data-version V] [--generated T]` | `places/`, `reviews/`, `moderation/`, `commons/` | `dist/places.ndjson.gz`, `dist/reviews.ndjson.gz`, `dist/merged.ndjson.gz`, `dist/commons.ndjson.gz`, `dist/manifest.json`, `dist/place-index.ndjson.gz`, and the licence texts and `NOTICE` copied into `dist/` |
 | Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `localities/localities.ndjson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
@@ -511,6 +511,25 @@ source: an Overture place with a name that lies inside the place's outline from 
 within 100 m of it (of its location when it has no outline), whose category
 fits, at confidence 0.8 or more, when it is the only one.
 
+**Wide match.** A named camping place (an overnight kind other than
+`roofed_accommodation` and `backpacker_hostel`) with no Overture match can
+take values from its wide match: an Overture camping place (`campground`,
+`rv_park` or `holiday_park`) within 500 m, at confidence 0.7 or more, when it
+is the only one, whose name agrees with the place's or whose own website has
+the place's website host when no other place gives that host. Two names
+agree when the core words of one are all in the other and the shorter has at
+least half the longer's words. The core words are the name normalised as
+above, with a leading chain name from `overture/chains.json` taken off,
+generic words left out (holiday, park, caravan, tourist, camping, campground,
+camp, campsite, ground, area, and, at, the, of and the states) and a plural
+s dropped. So "BIG4 Breeze Holiday Parks - Rainbow Beach" agrees with "BIG4
+Rainbow Beach Holiday Park", and "Crosslands Youth & Convention Centre" does
+not agree with "Crosslands Reserve". A wide match is dropped when another place
+takes the same Overture place. When the wide match is the Overture place a
+published candidate came from, the place takes nothing from it and the
+report lists the pair for a person to merge with `pipeline.merge`, keeping
+the place.
+
 **Gap fills.** A name source gives an unnamed place its name. An Overture
 match or a name source gives the website, phone and address where no other
 source has a value:
@@ -609,6 +628,9 @@ pool is dropped, with no one involved, by the first of these rules it breaks
 5. `near_place`: a place of any kind (not merged) lies within 250 m. This
    also drops the Overture place of every match, and of every candidate
    already published.
+6. `same_place`: a named camping place within 500 m has a name that agrees
+   with its own (see "Wide match" above). It is that place under a fuller or
+   chain-branded name.
 
 An Overture place linked to a place in this run (an Overture match, a name
 source anywhere in an outline, or a published candidate) is never a
@@ -638,7 +660,8 @@ name and location and of any website, phone and address Overture gives,
 each dated the run, and its GERS id in the link file. A GERS id already in
 the link file is not published again, and an approved candidate within 250 m
 of a place, or of a candidate published earlier in the same run (Overture
-lists some parks twice), waits for a person.
+lists some parks twice), or within 500 m of a camping place whose name
+agrees with its own, waits for a person.
 
 A published candidate keeps its name and location on later runs. Its other
 Overture values refresh from the Overture place it is linked to, and come off
@@ -778,8 +801,8 @@ release.
   `owner` and the person opening the PR for `contributed`. A
   `community_report` value is dated the first day of the month the report
   was made. Sync keeps the dates of the
-  values it keeps and never adds one. Values from OSM are as fresh as
-  `osm.timestamp`.
+  values it keeps and never adds one. Files in `places/` hold no date for a
+  value from OSM: the release gives each one `osm.timestamp` (see "Release").
 - `last_confirmed` is kept as it is. Only the feedback engine sets it, when
   a traveller's check finds an open place still there.
 - `updated` is set to the time of the run only when the record's content
@@ -1105,6 +1128,13 @@ stays the main safeguard. ISO dates (`2026-10-30`, `2026-10`) are blanked out
 before the checks run, so a date is never taken for a phone number. The
 feedback engine's moderation does the same.
 
+`python -m pipeline.validate --root . --release-dir dist` also checks a
+built release: every record in `dist/places.ndjson.gz` against
+`schema/place.schema.json`, and that its `fact_dates` has a date for exactly
+the `fact_sources` entries that are not `rule`, leaving out the `osm` ones
+when the record has no `osm.timestamp`, with each `osm` entry's date equal to
+`osm.timestamp`. The validate workflow runs it on the release it builds.
+
 ## Release
 
 `places.ndjson.gz` holds every record except tombstones on one line each,
@@ -1113,7 +1143,11 @@ tombstone, sorted by `id`.
 `reviews.ndjson.gz` holds every visible review, grouped by place in id
 order: lines with `hidden` and lines from a contributor in
 `moderation/blocked_contributors.json` stay in the repository and are left
-out. Lines
+out. Each released record dates its values from OSM: every `fact_sources`
+entry that is `osm` gets `osm.timestamp`, the last edit of the OSM object, in
+`fact_dates` (`pipeline.common.with_osm_dates`). OSM does not say when each
+tag was set, so this is the newest the value can be. A record without
+`osm.timestamp` gets no such dates, and a rule fact never has one. Lines
 use compact JSON with sorted keys. Gzip is written with no file name and a
 zero timestamp.
 
@@ -1259,6 +1293,8 @@ file and the manifest leaves it out. It holds one line for each place
 `places.ndjson.gz` holds, sorted by `id`: `{"cell", "fact_dates",
 "fact_sources", "facts", "id"}`, where `cell` is the whole-degree map cell
 `[floor(lon), floor(lat)]` and `fact_dates` is `{}` when the record has none.
+Its `fact_dates` are the file's, without the dates the release gives values
+from OSM, so an intake decides feedback on an OSM value as before.
 Its facts and sources include the rule facts, as the released record does.
 An intake decides feedback against it at send time.
 

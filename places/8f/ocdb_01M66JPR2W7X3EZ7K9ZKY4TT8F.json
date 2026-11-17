@@ -7,10 +7,12 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "pets": "osm",
     "phone": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -32,6 +34,13 @@
     "nearest_boat_ramp": {
       "distance_m": 1350
     },
+    "nearest_feature": {
+      "distance_m": 980,
+      "name": "West Lake",
+      "osm_id": 2172869981,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 480,
       "name": "Clunies Ross Street"
@@ -39,6 +48,11 @@
     "opening_hours": "08:30-17:00",
     "pets": "no",
     "phone": "+61 2 6250 9588",
+    "protected_area": {
+      "name": "Australian National Botanic Gardens",
+      "osm_id": 16343988,
+      "osm_type": "relation"
+    },
     "website": "https://www.anbg.gov.au/gardens/"
   },
   "group": "attraction",
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

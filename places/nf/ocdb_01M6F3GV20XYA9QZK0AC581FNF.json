@@ -2,8 +2,11 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "phone": "osm"
+    "nearest_waterway": "osm",
+    "phone": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -16,11 +19,28 @@
       "osm_id": 161302593,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Anglers Rest",
+      "osm_id": 324832783,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Omeo Highway"
     },
-    "phone": "+61 3 5159 7220"
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Cobungra River",
+      "osm_id": 62286271
+    },
+    "phone": "+61 3 5159 7220",
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
+    }
   },
   "group": "services",
   "id": "ocdb_01M6F3GV20XYA9QZK0AC581FNF",
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

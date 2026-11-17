@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -25,6 +27,16 @@
       "distance_m": 380,
       "name": "Mount Victory Road"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Stony Creek",
+      "osm_id": 36715412
+    },
+    "protected_area": {
+      "name": "Grampians (Gariwerd) National Park",
+      "osm_id": 2703380,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit",
     "wheelchair": true
   },
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

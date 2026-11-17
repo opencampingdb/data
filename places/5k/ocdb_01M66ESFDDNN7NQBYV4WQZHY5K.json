@@ -11,7 +11,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "phone": "overture"
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -35,7 +37,17 @@
     "nearest_boat_ramp": {
       "distance_m": 90
     },
-    "phone": "+61131963"
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Aire River",
+      "osm_id": 355867372
+    },
+    "phone": "+61131963",
+    "protected_area": {
+      "name": "Aire River Heritage River",
+      "osm_id": 16763338,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFDDNN7NQBYV4WQZHY5K",
@@ -53,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

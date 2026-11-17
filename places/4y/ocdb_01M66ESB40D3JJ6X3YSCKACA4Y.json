@@ -5,6 +5,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -26,6 +28,16 @@
       "distance_m": 2510,
       "name": "Donnybrook Boat Ramp"
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Poverty Creek",
+      "osm_id": 720081974
+    },
+    "protected_area": {
+      "name": "CPZ02",
+      "osm_id": 2744387,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -10,6 +10,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -39,6 +41,18 @@
     "nearest_boat_ramp": {
       "distance_m": 280
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Wonboyn Lake",
+      "osm_id": 5813862,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Wonboyn River",
+      "osm_id": 166482435
+    },
     "phone": "+61 2 6496 9162",
     "website": "https://www.wonboynlakeresort.com.au/"
   },
@@ -58,5 +72,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

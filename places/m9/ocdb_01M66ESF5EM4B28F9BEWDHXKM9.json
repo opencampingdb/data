@@ -3,6 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -19,6 +21,18 @@
     "nearest_beach": {
       "distance_m": 40,
       "name": "Little Shelley Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Little Shelley Beach",
+      "osm_id": 725872978,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "protected_area": {
+      "name": "Yuraygir National Park",
+      "osm_id": 5911645,
+      "osm_type": "relation"
     },
     "website": "https://www.nationalparks.nsw.gov.au/"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

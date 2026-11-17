@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,18 @@
       "name": "Strahan",
       "osm_id": 252829255,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Macquarie Harbour",
+      "osm_id": 11205233,
+      "osm_type": "relation",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Macquarie Harbour Historic Site",
+      "osm_id": 16358276,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

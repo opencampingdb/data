@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -33,7 +35,17 @@
       "distance_m": 1440,
       "name": "Wallingat Boat Ramp"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Wallingat River",
+      "osm_id": 321423783
+    },
     "phone": "0265910300",
+    "protected_area": {
+      "name": "Wallingat National Park",
+      "osm_id": 6014632,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/wallingat-river-campground"
   },
   "group": "overnight",
@@ -52,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

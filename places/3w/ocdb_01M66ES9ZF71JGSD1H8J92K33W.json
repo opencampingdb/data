@@ -12,6 +12,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -36,6 +38,18 @@
     "nearest_boat_ramp": {
       "distance_m": 70
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Murray River",
+      "osm_id": 12018525,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Murray River",
+      "osm_id": 165400300
+    },
     "phone": "+61350273097"
   },
   "group": "overnight",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -31,9 +33,21 @@
       "osm_id": 30917754,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 320,
+      "name": "Charing Cross",
+      "osm_id": 13588782341,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Pall Mall"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Bendigo Creek",
+      "osm_id": 174740274
     },
     "phone": "+61354445885",
     "website": "https://dispensarybendigo.com/"
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

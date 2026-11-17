@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 700,
       "name": "Bulimba Creek Canoe Trail"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Bulimba Creek",
+      "osm_id": 799523110,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 160,
       "name": "Meadowlands Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 190,
+      "name": "Bulimba Creek",
+      "osm_id": 17158941
     }
   },
   "group": "utility",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

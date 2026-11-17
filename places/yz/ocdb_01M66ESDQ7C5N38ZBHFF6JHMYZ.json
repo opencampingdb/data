@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -20,9 +22,21 @@
     "nearest_boat_ramp": {
       "distance_m": 3750
     },
+    "nearest_feature": {
+      "distance_m": 810,
+      "name": "Bona Vista",
+      "osm_id": 2047275755,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Bruce Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Goosepond Creek",
+      "osm_id": 1210709633
     },
     "water_type": "fountain"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "name": "overture",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -30,9 +32,21 @@
       "osm_id": 181304750,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 240,
+      "name": "Stirk Park Pond",
+      "osm_id": 479479978,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Kalamunda Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Poison Gully",
+      "osm_id": 741166412
     },
     "phone": "0892573258"
   },
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -41,9 +43,21 @@
     "nearest_boat_ramp": {
       "distance_m": 930
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Norman Creek",
+      "osm_id": 5325731,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 500,
       "name": "Stanley Street East"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Norman Creek",
+      "osm_id": 33699385
     },
     "phone": "+61738919818",
     "website": "http://www.cityautorepairs.com.au/"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

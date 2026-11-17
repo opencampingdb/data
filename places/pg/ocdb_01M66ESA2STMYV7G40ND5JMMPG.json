@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "showers": "osm",
     "toilets": "osm"
   },
@@ -19,6 +20,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 760
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Pindari Lake",
+      "osm_id": 3616791,
+      "osm_type": "relation",
+      "type": "water"
     },
     "showers": false,
     "toilets": true
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

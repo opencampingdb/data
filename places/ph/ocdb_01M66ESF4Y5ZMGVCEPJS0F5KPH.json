@@ -10,8 +10,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -38,8 +40,18 @@
       "osm_id": 113237603,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Coal Creek",
+      "osm_id": 23797320
+    },
     "operator": "NSW Parks and Wildlife Service",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Morton National Park",
+      "osm_id": 1356411,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -61,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

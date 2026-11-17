@@ -2,7 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,7 +14,12 @@
       "distance_m": 4570,
       "name": "Ravine Des Casoars"
     },
-    "operator": "National Parks"
+    "operator": "National Parks",
+    "protected_area": {
+      "name": "Flinders Chase National Park",
+      "osm_id": 812876,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M6F3GW97AJ8QED8M89ZQWT36",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

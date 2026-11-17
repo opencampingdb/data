@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -24,6 +26,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 230
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Enoggera Creek",
+      "osm_id": 20643754,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Enoggera Creek",
+      "osm_id": 49833657
     }
   },
   "group": "utility",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

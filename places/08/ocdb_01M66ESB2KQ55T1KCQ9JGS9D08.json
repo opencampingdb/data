@@ -1,11 +1,17 @@
 {
   "fact_sources": {
-    "lga": "osm"
+    "lga": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
       "name": "Walcha Council",
       "osm_id": 6180603
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Cooplacurripa River",
+      "osm_id": 441579664
     }
   },
   "group": "overnight",
@@ -24,5 +30,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

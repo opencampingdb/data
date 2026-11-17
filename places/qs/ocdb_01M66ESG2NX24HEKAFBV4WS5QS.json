@@ -3,6 +3,7 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -16,6 +17,13 @@
       "name": "Woodford",
       "osm_id": 298692557,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "The Pond",
+      "osm_id": 57912903,
+      "osm_type": "way",
+      "type": "water"
     },
     "toilet_type": "flush"
   },
@@ -35,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

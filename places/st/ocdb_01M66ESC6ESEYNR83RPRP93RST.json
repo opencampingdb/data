@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -30,9 +32,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1400
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Brisbane River",
+      "osm_id": 7642164,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Sir Fred Schonell Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Brisbane River",
+      "osm_id": 27459370
     },
     "opening_hours": "24/7",
     "toilet_type": "flush",
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

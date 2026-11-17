@@ -4,7 +4,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,9 +23,21 @@
       "osm_id": 5948952360,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 760,
+      "name": "Galena",
+      "osm_id": 5975148106,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 250,
       "name": "North West Coastal Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Murchison River",
+      "osm_id": 134884802
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

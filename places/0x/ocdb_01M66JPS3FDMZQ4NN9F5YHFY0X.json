@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -20,9 +22,21 @@
       "distance_m": 50,
       "name": "Turners Beach"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Turners Beach",
+      "osm_id": 226334792,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 470,
       "name": "Bass Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "River Forth",
+      "osm_id": 421442160
     }
   },
   "group": "attraction",
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

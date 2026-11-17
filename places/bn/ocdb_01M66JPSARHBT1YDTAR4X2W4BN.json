@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "osm",
@@ -36,6 +37,13 @@
       "distance_m": 880,
       "name": "Public Boat Ramp (fees apply)"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Administration Bay",
+      "osm_id": 7111450,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mandurah Terrace"
@@ -60,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

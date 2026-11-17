@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -16,6 +18,16 @@
       "name": "Wards River",
       "osm_id": 114995602,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Wards River",
+      "osm_id": 921654944
+    },
+    "protected_area": {
+      "name": "The Glen Nature Reserve",
+      "osm_id": 6072188,
+      "osm_type": "relation"
     },
     "tents": true
   },
@@ -35,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

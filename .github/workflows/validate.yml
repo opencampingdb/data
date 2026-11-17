@@ -54,3 +54,6 @@ jobs:
           python -m pipeline.release --root . --out dist
           python -m pipeline.database --release-dir dist
           ls -l dist
+
+      - name: Validate the built release
+        run: python -m pipeline.validate --root . --release-dir dist

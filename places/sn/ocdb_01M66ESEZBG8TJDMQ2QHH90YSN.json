@@ -3,6 +3,7 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm"
   },
@@ -17,6 +18,13 @@
       "name": "Bellbrae",
       "osm_id": 822487955,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Freshwater Creek",
+      "osm_id": 324205052,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 160,
@@ -40,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

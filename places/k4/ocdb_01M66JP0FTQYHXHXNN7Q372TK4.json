@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -15,9 +17,21 @@
       "osm_id": 114203415,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 430,
+      "name": "Newbold",
+      "osm_id": 6042481272,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 60,
       "name": "Clarence Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Clarence River",
+      "osm_id": 96780425
     }
   },
   "group": "attraction",
@@ -36,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

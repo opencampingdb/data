@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -19,9 +22,26 @@
       "osm_id": 252839015,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 620,
+      "name": "Nelson Valley",
+      "osm_id": 4294350206,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Lyell Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Nelson River",
+      "osm_id": 303538706
+    },
+    "protected_area": {
+      "name": "Franklin-Gordon Wild Rivers National Park",
+      "osm_id": 6206896,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

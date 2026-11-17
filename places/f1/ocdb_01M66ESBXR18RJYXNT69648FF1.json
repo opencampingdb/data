@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "public",
@@ -17,7 +20,24 @@
       "osm_id": 11384987822,
       "type": "village"
     },
-    "operator": "DELWP Hayfield"
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Avon River",
+      "osm_id": 10154504,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Avon River",
+      "osm_id": 38799638
+    },
+    "operator": "DELWP Hayfield",
+    "protected_area": {
+      "name": "Avon - Mt Hedrick Natural Features and Scenic Reserve",
+      "osm_id": 9267115,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBXR18RJYXNT69648FF1",
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

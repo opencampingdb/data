@@ -8,7 +8,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -29,6 +31,16 @@
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Mansfield - Woods Point Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Goulburn River",
+      "osm_id": 503331935
+    },
+    "protected_area": {
+      "name": "Upper Goulburn State Forest",
+      "osm_id": 20306077,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -47,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

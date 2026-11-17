@@ -9,7 +9,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -36,9 +38,21 @@
     "nearest_boat_ramp": {
       "distance_m": 120
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Kananook Creek",
+      "osm_id": 37926940,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Nepean Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Kananook Creek",
+      "osm_id": 146185041
     },
     "opening_hours": "Su-We 11:30-22:00; Th-Sa 11:30-00:00",
     "phone": "+61 3 9783 7255",
@@ -60,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

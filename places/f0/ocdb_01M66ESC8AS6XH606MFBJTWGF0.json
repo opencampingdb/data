@@ -6,8 +6,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
-    "picnic_tables": "osm"
+    "picnic_tables": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "bbq": true,
@@ -27,8 +30,25 @@
       "distance_m": 3710,
       "name": "Short Beach"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Upper Reservoir",
+      "osm_id": 23297833,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Sandy Bay Rivulet",
+      "osm_id": 164554985
+    },
     "operator": "City of Hobart",
-    "picnic_tables": true
+    "picnic_tables": true,
+    "protected_area": {
+      "name": "Waterworks Reserve",
+      "osm_id": 696308468,
+      "osm_type": "way"
+    }
   },
   "group": "utility",
   "id": "ocdb_01M66ESC8AS6XH606MFBJTWGF0",
@@ -46,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

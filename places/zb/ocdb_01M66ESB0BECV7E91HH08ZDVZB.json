@@ -15,7 +15,9 @@
     "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
     "power": "osm",
@@ -47,9 +49,21 @@
       "osm_id": 113716358,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 780,
+      "name": "Brooklands",
+      "osm_id": 113716352,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Goulburn Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Kiamma Creek",
+      "osm_id": 380747951
     },
     "operator": "Upper Lachlan Shire Council",
     "phone": "+61248321988",
@@ -75,5 +89,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

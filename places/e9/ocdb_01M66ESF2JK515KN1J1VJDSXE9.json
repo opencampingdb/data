@@ -3,6 +3,7 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "power": "osm",
     "showers": "osm",
@@ -14,6 +15,13 @@
     "lga": {
       "name": "Shire of Dundas",
       "osm_id": 11690221
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Madura",
+      "osm_id": 2257536429,
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 250,
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

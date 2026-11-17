@@ -5,9 +5,12 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -27,12 +30,29 @@
       "distance_m": 110,
       "name": "Little Beach"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Little Beach",
+      "osm_id": 275855312,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 180,
       "name": "Tasman Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Little Beach Creek",
+      "osm_id": 303367321
+    },
     "opening_hours": "24/7",
     "operator": "Parks And Wildlife",
+    "protected_area": {
+      "name": "Little Beach Conservation Area",
+      "osm_id": 6253456,
+      "osm_type": "relation"
+    },
     "wheelchair": true
   },
   "group": "utility",
@@ -51,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -15,6 +16,13 @@
       "name": "Stokers Siding",
       "osm_id": 114632958,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Hosanna Dam",
+      "osm_id": 1501588883,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "utility",
@@ -33,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

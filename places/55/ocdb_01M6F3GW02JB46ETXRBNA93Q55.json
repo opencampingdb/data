@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -34,9 +36,21 @@
       "distance_m": 4750,
       "name": "Swimming and Kayak Launch"
     },
+    "nearest_feature": {
+      "distance_m": 970,
+      "name": "Barrengarry",
+      "osm_id": 31000577,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Moss Vale Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Kangaroo River",
+      "osm_id": 424694139
     },
     "phone": "+61 2 4465 1306",
     "website": "https://kangaroovalleymuseum.com"
@@ -57,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

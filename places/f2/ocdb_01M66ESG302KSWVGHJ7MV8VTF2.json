@@ -6,7 +6,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "picnic_tables": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "osm",
     "website": "osm"
@@ -28,7 +30,17 @@
       "osm_id": 456874812,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Dargo River",
+      "osm_id": 282816676
+    },
     "picnic_tables": true,
+    "protected_area": {
+      "name": "Boulung - Deera State Forest",
+      "osm_id": 20237930,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true,
     "website": "https://www.exploreoutdoors.vic.gov.au/activities/camping/italian-flat"
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

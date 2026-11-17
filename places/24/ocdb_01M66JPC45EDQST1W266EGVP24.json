@@ -1,6 +1,9 @@
 {
   "fact_sources": {
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -8,6 +11,23 @@
       "name": "Tharwa",
       "osm_id": 186947418,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Murrumbidgee River",
+      "osm_id": 8318610,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Murrumbidgee River",
+      "osm_id": 358357956
+    },
+    "protected_area": {
+      "name": "Gigerline Nature Reserve",
+      "osm_id": 9417652,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -26,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,8 +4,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -25,8 +27,20 @@
     "nearest_boat_ramp": {
       "distance_m": 470
     },
+    "nearest_feature": {
+      "distance_m": 600,
+      "name": "The Pines",
+      "osm_id": 9518259280,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "opening_hours": "Fr 10:30+",
-    "operator": "LHI Board"
+    "operator": "LHI Board",
+    "protected_area": {
+      "name": "Lord Howe Island Group World Heritage Area",
+      "osm_id": 46150262,
+      "osm_type": "way"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JP1E772CG7N725H4YBD67",
@@ -44,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

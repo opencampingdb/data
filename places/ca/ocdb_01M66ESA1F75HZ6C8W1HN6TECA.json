@@ -7,6 +7,7 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "operator": "osm",
     "tents": "osm",
@@ -28,6 +29,13 @@
       "type": "village"
     },
     "max_stay": "3d",
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Farm dam",
+      "osm_id": 546480866,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Hill Street"
@@ -52,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

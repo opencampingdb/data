@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -23,6 +25,16 @@
     "nearest_major_road": {
       "distance_m": 220,
       "name": "Montagu Crescent"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "River Derwent",
+      "osm_id": 252843463
+    },
+    "protected_area": {
+      "name": "Derwent Cliffs State Reserve",
+      "osm_id": 10654173,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

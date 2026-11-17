@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,6 +23,18 @@
     },
     "nearest_beach": {
       "distance_m": 1510
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Barolin Point Dive Site",
+      "osm_id": 1984208164,
+      "osm_type": "node",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Great Sandy Marine Park",
+      "osm_id": 16298529,
+      "osm_type": "relation"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

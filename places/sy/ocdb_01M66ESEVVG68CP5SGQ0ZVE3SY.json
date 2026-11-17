@@ -5,7 +5,10 @@
   "fact_sources": {
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/1805568876439273",
@@ -18,6 +21,23 @@
       "name": "Rawson",
       "osm_id": 171095813,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 520,
+      "name": "Coopers Creek",
+      "osm_id": 1966020985,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Thomson River",
+      "osm_id": 234235405
+    },
+    "protected_area": {
+      "name": "Coopers Ck Copper Mine Historic and Cultural Features Res.",
+      "osm_id": 9204808,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -43,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

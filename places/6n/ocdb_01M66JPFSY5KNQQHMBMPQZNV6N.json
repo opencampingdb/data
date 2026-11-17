@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "locality": "osm",
-    "nearest_beach": "osm"
+    "nearest_beach": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "locality": {
@@ -12,6 +13,11 @@
     },
     "nearest_beach": {
       "distance_m": 2440
+    },
+    "protected_area": {
+      "name": "Ginninderry Conservation Corridor",
+      "osm_id": 776892159,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -30,5 +36,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

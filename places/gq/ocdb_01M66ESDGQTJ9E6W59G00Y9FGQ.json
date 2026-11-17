@@ -4,7 +4,8 @@
     "fee": "osm",
     "hot_water": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -19,6 +20,11 @@
       "name": "Ensay",
       "osm_id": 2310539086,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Tambo River",
+      "osm_id": 743278465
     }
   },
   "group": "utility",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

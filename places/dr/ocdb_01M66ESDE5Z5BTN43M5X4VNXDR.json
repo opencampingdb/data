@@ -3,7 +3,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -20,7 +22,19 @@
       "osm_id": 1573380057,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lonley Tarns",
+      "osm_id": 226179503,
+      "osm_type": "way",
+      "type": "water"
+    },
     "operator": "Parks and Wildlife",
+    "protected_area": {
+      "name": "Southwest National Park",
+      "osm_id": 6187193,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": false
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

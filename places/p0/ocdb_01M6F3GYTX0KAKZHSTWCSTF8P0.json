@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "website": "osm"
   },
@@ -19,6 +20,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 90
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Lake Boondooma",
+      "osm_id": 240951775,
+      "osm_type": "way",
+      "type": "water"
     },
     "operator": "Wondai Shire Council",
     "website": "http://www.wondai.qld.gov.au/lakeboondooma.php"
@@ -39,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

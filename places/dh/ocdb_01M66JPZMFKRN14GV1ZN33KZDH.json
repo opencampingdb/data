@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "website": "osm"
@@ -26,9 +28,21 @@
       "osm_id": 321896626,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 950,
+      "name": "Ravenswood",
+      "osm_id": 322464268,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 280,
       "name": "Calder Alternative Highway Onramp"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Bullock Creek",
+      "osm_id": 226244183
     },
     "operator": "The Grounds Ravenswood",
     "phone": "+61 3 5435 4135",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

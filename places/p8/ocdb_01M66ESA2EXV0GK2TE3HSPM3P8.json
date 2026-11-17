@@ -11,6 +11,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture"
   },
@@ -33,6 +35,18 @@
       "osm_id": 298324219,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 610,
+      "name": "Wainui",
+      "osm_id": 6036337364,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Oakey Creek",
+      "osm_id": 1233985640
+    },
     "operator": "Toowoomba Regional Council",
     "phone": "+61746886611"
   },
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

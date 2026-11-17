@@ -2,6 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -14,6 +17,23 @@
       "name": "Campbelltown",
       "osm_id": 81330490,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Sedgwick",
+      "osm_id": 158312167,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Sydney Water Supply Canal",
+      "osm_id": 5077831
+    },
+    "protected_area": {
+      "name": "Mount Annan Botanic Garden",
+      "osm_id": 158313255,
+      "osm_type": "way"
     },
     "water_type": "fountain"
   },
@@ -33,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,6 +23,16 @@
     },
     "nearest_beach": {
       "distance_m": 1370
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Lerderderg River",
+      "osm_id": 270275976
+    },
+    "protected_area": {
+      "name": "Wombat - Lerderderg National Park",
+      "osm_id": 21814105,
+      "osm_type": "relation"
     },
     "toilet_type": "pit",
     "wheelchair": true
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

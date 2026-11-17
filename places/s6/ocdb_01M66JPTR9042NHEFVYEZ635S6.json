@@ -6,16 +6,16 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
     "operator": "osm",
+    "phone": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "12",
-      "postcode": "3890",
-      "state": "VIC",
-      "street": "Princes Highway",
-      "suburb": "Cann River"
+      "street": "Princes Highway"
     },
     "air": true,
     "fuels": [
@@ -40,7 +40,14 @@
       "distance_m": 60,
       "name": "Princes Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Cann River",
+      "osm_id": 167619248
+    },
+    "opening_hours": "Mo-Su 06:00-22:00",
     "operator": "United",
+    "phone": "+61 3 5158 6234",
     "website": "https://servicestations.unitedpetroleum.com.au/location/united-cann-river"
   },
   "group": "services",
@@ -53,11 +60,11 @@
   "name": "United",
   "osm": {
     "id": 450909647,
-    "timestamp": "2026-09-17T09:46:58Z",
+    "timestamp": "2026-11-16T21:16:27Z",
     "type": "way",
-    "version": 8
+    "version": 10
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

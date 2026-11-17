@@ -4,6 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -21,6 +23,16 @@
     "nearest_boat_ramp": {
       "distance_m": 160,
       "name": "Ramornie Put In"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Nymboida River",
+      "osm_id": 38172628
+    },
+    "protected_area": {
+      "name": "Nymboida National Park",
+      "osm_id": 5926113,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

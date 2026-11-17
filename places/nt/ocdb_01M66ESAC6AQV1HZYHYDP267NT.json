@@ -2,7 +2,8 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "fee": false,
@@ -13,6 +14,11 @@
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Stuart Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Finke River",
+      "osm_id": 74453542
     }
   },
   "group": "utility",
@@ -31,5 +37,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

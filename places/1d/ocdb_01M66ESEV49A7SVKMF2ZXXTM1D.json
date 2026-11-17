@@ -10,7 +10,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "osm",
     "power": "osm",
@@ -38,9 +40,21 @@
       "osm_id": 1823918044,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Bakers Creek",
+      "osm_id": 2304683,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Bruce Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Bakers Creek",
+      "osm_id": 1210652884
     },
     "operator": "Mycow Pty Ltd",
     "phone": "+61 7 4952 2806",
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

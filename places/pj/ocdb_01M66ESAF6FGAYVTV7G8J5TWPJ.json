@@ -5,6 +5,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -20,6 +22,16 @@
       "name": "Tyalgum",
       "osm_id": 1573432792,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Byrrill Creek",
+      "osm_id": 341062561
+    },
+    "protected_area": {
+      "name": "Mebbin National Park",
+      "osm_id": 5928172,
+      "osm_type": "relation"
     },
     "toilet_type": "pit"
   },
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

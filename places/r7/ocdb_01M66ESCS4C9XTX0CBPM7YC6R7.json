@@ -4,6 +4,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
     "wifi": "osm"
@@ -20,6 +22,16 @@
       "name": "Hotham Village",
       "osm_id": 11271236430,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Humffray River",
+      "osm_id": 1424939206
+    },
+    "protected_area": {
+      "name": "Tea Tree Range State Forest",
+      "osm_id": 1480619122,
+      "osm_type": "way"
     },
     "showers": false,
     "toilets": false,
@@ -41,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

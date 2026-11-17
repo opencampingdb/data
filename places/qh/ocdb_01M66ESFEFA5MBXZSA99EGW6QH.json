@@ -11,8 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -38,8 +40,18 @@
     "nearest_boat_ramp": {
       "distance_m": 4240
     },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Coochin Creek",
+      "osm_id": 30409536
+    },
     "operator": "Queensland Parks and Wildlife Service",
     "phone": "+61137468",
+    "protected_area": {
+      "name": "Beerwah State Forest",
+      "osm_id": 19773039,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parks.des.qld.gov.au/parks/beerburrum-beerwah/camping/coochin-creek"
   },
@@ -59,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

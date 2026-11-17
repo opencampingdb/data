@@ -6,6 +6,8 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -37,6 +39,16 @@
       "distance_m": 170,
       "name": "Henry Lawson Drive"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Morgans Creek",
+      "osm_id": 24429842
+    },
+    "protected_area": {
+      "name": "Georges River National Park",
+      "osm_id": 6052939,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/things-to-do/picnic-areas/morgans-creek-picnic-area"
   },
   "group": "utility",
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

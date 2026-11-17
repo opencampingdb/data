@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -18,6 +20,16 @@
       "name": "Thredbo",
       "osm_id": 113373977,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Snowy River",
+      "osm_id": 446944019
+    },
+    "protected_area": {
+      "name": "Snowy River Heritage River",
+      "osm_id": 16487232,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true,
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

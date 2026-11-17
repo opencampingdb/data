@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilets": "osm"
   },
   "facts": {
@@ -16,9 +18,21 @@
       "osm_id": 298692557,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 800,
+      "name": "Stony Creek",
+      "osm_id": 6036337175,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "D'Aguilar Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Stony Creek",
+      "osm_id": 301606414
     },
     "toilets": false
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

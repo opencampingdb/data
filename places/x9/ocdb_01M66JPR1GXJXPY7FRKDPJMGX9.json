@@ -2,7 +2,8 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +16,12 @@
       "osm_id": 36422054,
       "type": "town"
     },
-    "operator": "Parks Victoria"
+    "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Maldon Historic Reserve",
+      "osm_id": 9296577,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPR1GXJXPY7FRKDPJMGX9",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

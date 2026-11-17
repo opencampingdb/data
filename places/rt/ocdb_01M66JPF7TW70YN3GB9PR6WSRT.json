@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -22,6 +24,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 4220
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Long Nose Point",
+      "osm_id": 910343354,
+      "osm_type": "node",
+      "type": "cape"
+    },
+    "protected_area": {
+      "name": "Kamay Botany Bay National Park",
+      "osm_id": 1239917,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -40,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

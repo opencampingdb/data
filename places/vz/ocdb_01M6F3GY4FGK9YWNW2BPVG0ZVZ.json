@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -26,9 +28,21 @@
       "osm_id": 97564451,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Lake Joanna",
+      "osm_id": 4024595,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 320,
       "name": "Barker Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Barkers Creek",
+      "osm_id": 28757703
     },
     "opening_hours": "Tu-We 12:00-21:00; Th 12:00-22:00; Fr-Sa 12:00-23:00; Su 12:00-20:00",
     "phone": "+61 487 860 060",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

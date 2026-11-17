@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -41,7 +43,17 @@
       "distance_m": 490,
       "name": "Snowy Mountains Highway"
     },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Jounama Creek",
+      "osm_id": 250079097
+    },
     "phone": "0269477025",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -63,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

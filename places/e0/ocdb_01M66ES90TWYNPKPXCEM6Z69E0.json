@@ -5,6 +5,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm"
@@ -26,6 +28,18 @@
       "distance_m": 400,
       "name": "Peggs Beach"
     },
+    "nearest_feature": {
+      "distance_m": 880,
+      "name": "Black River",
+      "osm_id": 4258404385,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "protected_area": {
+      "name": "Peggs Beach Conservation Area",
+      "osm_id": 6240119,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

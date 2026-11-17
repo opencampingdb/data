@@ -10,6 +10,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm",
     "phone": "overture",
     "website": "osm"
@@ -32,6 +33,13 @@
     "nearest_boat_ramp": {
       "distance_m": 740
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Lake Burley Griffin",
+      "osm_id": 3400115,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "opening_hours": "Mo-Su 09:00-17:00",
     "phone": "+61262085000",
     "website": "https://nma.gov.au"
@@ -52,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

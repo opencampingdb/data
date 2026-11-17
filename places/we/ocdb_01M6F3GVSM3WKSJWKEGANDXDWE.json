@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "phone": "osm"
@@ -26,9 +28,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1620
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Canning River",
+      "osm_id": 263797196,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 150,
       "name": "Nicholson Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Canning River",
+      "osm_id": 17360291
     },
     "opening_hours": "Su[1] 14:00-17:00, Su[3] 14:00-17:00",
     "operator": "City of Canning",
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

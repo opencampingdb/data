@@ -4,7 +4,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "entry": "public",
@@ -24,6 +25,13 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1040
+    },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Nobby's Beach",
+      "osm_id": 251280062,
+      "osm_type": "way",
+      "type": "beach"
     }
   },
   "group": "utility",
@@ -42,5 +50,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

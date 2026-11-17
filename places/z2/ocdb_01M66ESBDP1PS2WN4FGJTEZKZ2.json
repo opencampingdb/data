@@ -3,7 +3,10 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -18,7 +21,24 @@
       "osm_id": 2036586545,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 180,
+      "name": "Charnley River Station",
+      "osm_id": 3272864331,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Screwdriver Creek",
+      "osm_id": 315271557
+    },
     "operator": "Charnley River Station",
+    "protected_area": {
+      "name": "Charnley River Private Nature Reserve",
+      "osm_id": 8350974,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -37,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

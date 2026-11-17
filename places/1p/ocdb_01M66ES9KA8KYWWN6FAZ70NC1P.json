@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "operator": "osm"
+    "nearest_waterway": "osm",
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -15,7 +17,17 @@
       "osm_id": 60819338,
       "type": "village"
     },
-    "operator": "Seqwater"
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Cabbage Tree Creek",
+      "osm_id": 113391890
+    },
+    "operator": "Seqwater",
+    "protected_area": {
+      "name": "Lake Manchester Reservoir",
+      "osm_id": 7012377,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9KA8KYWWN6FAZ70NC1P",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

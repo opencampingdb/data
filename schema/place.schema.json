@@ -83,7 +83,7 @@
             "id": {"type": "integer", "minimum": 1},
             "version": {"type": "integer", "minimum": 0},
             "check_dates": {
-              "description": "When a mapper last checked a value OSM holds, from its check_date:<tag> (for example check_date:charge), YYYY-MM-DD, by fact. Only for the charge facts for now. fact_dates does not hold these: it dates values that did not come from OSM.",
+              "description": "When a mapper last checked a value OSM holds, from its check_date:<tag> (for example check_date:charge), YYYY-MM-DD, by fact. Only for the charge facts for now. In a released record fact_dates dates each OSM value with osm.timestamp instead.",
               "type": "object",
               "additionalProperties": false,
               "minProperties": 1,
@@ -460,7 +460,7 @@
       }
     },
     "fact_dates": {
-      "description": "When each value that did not come from OSM was accepted, UTC: one entry for every fact_sources entry whose source is feedback, contributed, owner, community_report or overture, and no other: a rule value has none. For overture it is the day of the import run that took the value. For community_report it is the first day of the month the report was made, not when it was imported. Left out when there are none. Values from OSM are as fresh as osm.timestamp.",
+      "description": "When each value that did not come from OSM was accepted, UTC: one entry for every fact_sources entry whose source is feedback, contributed, owner, community_report or overture, and no other: a rule value has none. For overture it is the day of the import run that took the value. For community_report it is the first day of the month the report was made, not when it was imported. Left out when there are none. Files in places/ hold no date for a value from OSM. A released record also has one entry, osm.timestamp, for every fact_sources entry that is osm when osm.timestamp is set (pipeline.common.with_osm_dates).",
       "type": "object",
       "additionalProperties": false,
       "minProperties": 1,

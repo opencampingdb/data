@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -27,6 +28,11 @@
       "distance_m": 100,
       "name": "Normanby Avenue"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Bracken Creek",
+      "osm_id": 210566854
+    },
     "operator": "Darebin City Council"
   },
   "group": "utility",
@@ -45,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

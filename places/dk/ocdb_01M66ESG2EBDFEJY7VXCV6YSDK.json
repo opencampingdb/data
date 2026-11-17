@@ -15,7 +15,9 @@
     "locality": "osm",
     "motorbikes": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -49,7 +51,17 @@
       "distance_m": 200,
       "name": "Abercrombie Road"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Abercrombie River",
+      "osm_id": 425895405
+    },
     "phone": "+61263361972",
+    "protected_area": {
+      "name": "Abercrombie River National Park",
+      "osm_id": 2469186,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -72,5 +84,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

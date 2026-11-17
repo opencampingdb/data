@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,18 @@
       "name": "Kenilworth",
       "osm_id": 137104451,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 940,
+      "name": "Zap track",
+      "osm_id": 13720227886,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Imbil State Forest 1",
+      "osm_id": 1506575,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

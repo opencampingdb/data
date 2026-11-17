@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -29,6 +30,11 @@
       "distance_m": 110,
       "name": "Mitchell Drive"
     },
+    "nearest_waterway": {
+      "distance_m": 200,
+      "name": "Two Mile Creek",
+      "osm_id": 240334059
+    },
     "opening_hours": "Mo-We,Fr 09:00-17:30; Su 10:00-16:00; Sa 09:00-17:00; Th 09:00-21:00"
   },
   "group": "services",
@@ -47,5 +53,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

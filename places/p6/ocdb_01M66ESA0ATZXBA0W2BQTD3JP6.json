@@ -2,6 +2,7 @@
   "fact_sources": {
     "fee": "osm",
     "lga": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -9,6 +10,11 @@
     "lga": {
       "name": "Diamantina Shire",
       "osm_id": 11676755
+    },
+    "protected_area": {
+      "name": "Diamantina National Park",
+      "osm_id": 8178054,
+      "osm_type": "relation"
     },
     "website": "https://parks.des.qld.gov.au/parks/diamantina/camping/hunters-gorge"
   },
@@ -28,5 +34,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

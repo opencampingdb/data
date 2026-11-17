@@ -10,8 +10,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -38,8 +40,20 @@
       "osm_id": 120578048,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 880,
+      "name": "Yerranderie",
+      "osm_id": 113238407,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "operator": "Private",
     "phone": "0263361972",
+    "protected_area": {
+      "name": "Yerranderie Regional Park",
+      "osm_id": 7132814,
+      "osm_type": "relation"
+    },
     "showers": true,
     "tents": true,
     "toilets": true,
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

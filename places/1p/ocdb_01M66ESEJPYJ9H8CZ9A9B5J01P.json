@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -21,9 +23,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4120
     },
+    "nearest_feature": {
+      "distance_m": 890,
+      "name": "Eastwood Five Ways",
+      "osm_id": 4861281221,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Blaxland Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Terrys Creek",
+      "osm_id": 418274995
     }
   },
   "group": "utility",
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

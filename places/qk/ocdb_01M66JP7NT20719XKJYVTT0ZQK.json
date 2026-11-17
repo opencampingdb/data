@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -24,9 +26,21 @@
       "distance_m": 2030,
       "name": "Isle of Capri Public Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 660,
+      "name": "Miami Keys",
+      "osm_id": 4313886103,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 120,
       "name": "T E Peters Drive"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Little Tallebudgera Creek",
+      "osm_id": 728920060
     }
   },
   "group": "attraction",
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "protected_area": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -27,9 +29,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2350
     },
+    "nearest_feature": {
+      "distance_m": 70,
+      "name": "Castle Hill",
+      "osm_id": 60428127,
+      "osm_type": "node",
+      "type": "peak"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Castle Hill Road"
+    },
+    "protected_area": {
+      "name": "Castle Hill",
+      "osm_id": 17331463,
+      "osm_type": "relation"
     },
     "wheelchair": false
   },
@@ -49,5 +63,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

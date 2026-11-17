@@ -4,6 +4,8 @@
     "drinking_water": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
@@ -21,6 +23,18 @@
       "name": "Lismore",
       "osm_id": 114651471,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 360,
+      "name": "Leycester",
+      "osm_id": 114651474,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Back Creek",
+      "osm_id": 915758313
     },
     "opening_hours": "24/7",
     "operator": "Northern Rivers Rail Trail",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

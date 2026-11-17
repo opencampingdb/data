@@ -11,8 +11,10 @@
     "lga": "osm",
     "locality": "osm",
     "max_stay": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -39,8 +41,18 @@
       "type": "village"
     },
     "max_stay": "4w",
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Wildfire Gully",
+      "osm_id": 445293134
+    },
     "opening_hours": "24/7",
     "operator": "Forestry Corporation of NSW",
+    "protected_area": {
+      "name": "Wingello State Forest",
+      "osm_id": 6305380,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -62,5 +74,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

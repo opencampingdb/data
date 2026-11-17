@@ -10,7 +10,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -41,9 +43,21 @@
       "distance_m": 850,
       "name": "Winders Park Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Flat Rock Creek",
+      "osm_id": 28109150,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Tomewin Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Flat Rock Creek",
+      "osm_id": 436651525
     },
     "phone": "+61 7 5525 6380",
     "website": "https://www.surfworldgoldcoast.com.au/"
@@ -64,5 +78,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

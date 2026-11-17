@@ -9,6 +9,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -30,6 +32,18 @@
     "nearest_boat_ramp": {
       "distance_m": 1080
     },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Western River",
+      "osm_id": 329594885,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Western River",
+      "osm_id": 317733984
+    },
     "phone": "+61885534500"
   },
   "group": "overnight",
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

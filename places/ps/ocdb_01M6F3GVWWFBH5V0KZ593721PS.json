@@ -11,6 +11,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "phone": "overture"
   },
   "facts": {
@@ -39,6 +40,13 @@
     "nearest_boat_ramp": {
       "distance_m": 570
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Keppel Sands Main Beach",
+      "osm_id": 326475597,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "phone": "+61749344917"
   },
   "group": "services",
@@ -57,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

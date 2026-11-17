@@ -6,7 +6,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm"
   },
@@ -29,9 +31,21 @@
     "nearest_boat_ramp": {
       "distance_m": 60
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Tallebudgera Creek",
+      "osm_id": 2748444,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Tallebudgera Creek Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Tallebudgera Creek",
+      "osm_id": 700272738
     },
     "operator": "City of Gold Coast",
     "toilet_type": "flush"
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

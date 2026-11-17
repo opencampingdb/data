@@ -3,7 +3,9 @@
     "address": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm"
   },
@@ -22,9 +24,21 @@
       "osm_id": 300589996,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Quindanning",
+      "osm_id": 10560490006,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Pinjarra - Williams Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Williams River",
+      "osm_id": 189029437
     },
     "phone": "+61 8 9885 7053",
     "website": "https://www.quindanninghotel.com.au"
@@ -45,5 +59,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

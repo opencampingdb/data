@@ -9,8 +9,10 @@
     "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "wifi": "osm"
   },
   "facts": {
@@ -22,8 +24,18 @@
       "name": "Cook Shire",
       "osm_id": 11677441
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Eliot Creek",
+      "osm_id": 48563035
+    },
     "operator": "Queensland National Parks",
     "phone": "+61740603241",
+    "protected_area": {
+      "name": "Apudthama National Park Aboriginal",
+      "osm_id": 8644795,
+      "osm_type": "relation"
+    },
     "wifi": false
   },
   "group": "overnight",
@@ -42,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -4,7 +4,9 @@
     "email": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -28,9 +30,21 @@
       "osm_id": 30917754,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 260,
+      "name": "Charing Cross",
+      "osm_id": 13588782341,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Pall Mall"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Bendigo Creek",
+      "osm_id": 174740274
     },
     "opening_hours": "Mo-Su 10:00-03:00",
     "phone": "+61 3 5443 0333",
@@ -52,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

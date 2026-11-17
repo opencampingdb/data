@@ -10,8 +10,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -34,8 +36,18 @@
       "osm_id": 129243089,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Chandlers Creek",
+      "osm_id": 335327149
+    },
     "operator": "NPWS",
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Chaelundi National Park",
+      "osm_id": 5926026,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/doon-goonge-campground"
   },
   "group": "overnight",
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

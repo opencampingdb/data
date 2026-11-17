@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "website": "osm"
   },
   "facts": {
@@ -32,9 +34,21 @@
     "nearest_boat_ramp": {
       "distance_m": 4280
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Cable Ski Cairns Lake",
+      "osm_id": 233860311,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 50,
       "name": "Kudakai Crossland Connection"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Avondale Creek",
+      "osm_id": 1305351570
     },
     "website": "https://www.cairnswakepark.com/"
   },
@@ -54,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

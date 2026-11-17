@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -18,6 +20,16 @@
     "nearest_boat_ramp": {
       "distance_m": 160,
       "name": "Canoe Ramp (rollers)"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Gunbower Creek",
+      "osm_id": 1051208388
+    },
+    "protected_area": {
+      "name": "Gunbower State Forest",
+      "osm_id": 2994083,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -36,5 +48,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

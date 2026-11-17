@@ -12,7 +12,9 @@
     "lga": "osm",
     "locality": "osm",
     "motorhomes": "contributed",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm",
     "wheelchair": "osm"
@@ -33,7 +35,17 @@
       "type": "village"
     },
     "motorhomes": true,
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Little River",
+      "osm_id": 551653942
+    },
     "operator": "Parks Victoria",
+    "protected_area": {
+      "name": "Cathedral Range State Park",
+      "osm_id": 38948,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parkweb.vic.gov.au/explore/parks/cathedral-range-state-park",
     "wheelchair": true
@@ -54,5 +66,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,6 +5,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -32,6 +33,11 @@
       "distance_m": 90,
       "name": "Emily Street"
     },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Goulburn River",
+      "osm_id": 146991147
+    },
     "operator": "Choice Hotels"
   },
   "group": "overnight",
@@ -50,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

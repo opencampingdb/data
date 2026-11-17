@@ -10,7 +10,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "website": "osm"
   },
@@ -35,7 +37,17 @@
       "osm_id": 117051118,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Wheeny Creek",
+      "osm_id": 373870731
+    },
     "phone": "0245882400",
+    "protected_area": {
+      "name": "Wollemi National Park",
+      "osm_id": 5901253,
+      "osm_type": "relation"
+    },
     "showers": false,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/wheeny-creek-campground"
   },
@@ -55,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

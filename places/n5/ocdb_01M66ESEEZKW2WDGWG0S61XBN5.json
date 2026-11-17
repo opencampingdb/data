@@ -2,7 +2,9 @@
   "fact_sources": {
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -16,9 +18,21 @@
       "osm_id": 21579127,
       "type": "city"
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Surrey Hills Service Reservoir No.1",
+      "osm_id": 28615962,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Canterbury Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Back Creek",
+      "osm_id": 1287336390
     },
     "water_type": "fountain"
   },
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

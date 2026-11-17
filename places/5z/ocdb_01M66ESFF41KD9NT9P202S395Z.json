@@ -4,7 +4,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "fee": false,
@@ -22,9 +24,21 @@
       "distance_m": 20,
       "name": "San Remo Beach"
     },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "San Remo Beach",
+      "osm_id": 1009424474,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Phillip Island Road"
+    },
+    "protected_area": {
+      "name": "San Remo Coastal Reserve",
+      "osm_id": 9278066,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -43,5 +57,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

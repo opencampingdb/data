@@ -3,6 +3,8 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm"
   },
@@ -17,6 +19,16 @@
       "name": "Thredbo",
       "osm_id": 113373977,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Buckwong Creek",
+      "osm_id": 200061035
+    },
+    "protected_area": {
+      "name": "Alpine National Park",
+      "osm_id": 2248617,
+      "osm_type": "relation"
     },
     "showers": false,
     "tents": true
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm"
   },
   "facts": {
@@ -21,7 +23,17 @@
       "distance_m": 250,
       "name": "Jingellic Road"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Mannus Creek",
+      "osm_id": 448289666
+    },
     "operator": "Manus State Forest",
+    "protected_area": {
+      "name": "Mannus State Forest",
+      "osm_id": 5833752,
+      "osm_type": "relation"
+    },
     "tents": true
   },
   "group": "overnight",
@@ -40,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

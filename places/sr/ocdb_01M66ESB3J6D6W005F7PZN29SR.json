@@ -3,7 +3,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -17,9 +19,21 @@
       "osm_id": 2300367350,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 270,
+      "name": "Mena Creek",
+      "osm_id": 880369147,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 110,
       "name": "Innisfail Japoon Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Mena Creek",
+      "osm_id": 144329454
     }
   },
   "group": "utility",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

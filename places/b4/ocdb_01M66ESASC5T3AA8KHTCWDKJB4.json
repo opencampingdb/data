@@ -6,6 +6,8 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -23,6 +25,18 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1290
+    },
+    "nearest_feature": {
+      "distance_m": 290,
+      "name": "Cresswell Bay",
+      "osm_id": 289558907,
+      "osm_type": "node",
+      "type": "bay"
+    },
+    "protected_area": {
+      "name": "Bumbora Reserve",
+      "osm_id": 681850038,
+      "osm_type": "way"
     },
     "toilet_type": "flush"
   },
@@ -42,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

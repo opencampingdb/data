@@ -4,7 +4,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm"
   },
@@ -25,9 +27,21 @@
     "nearest_boat_ramp": {
       "distance_m": 980
     },
+    "nearest_feature": {
+      "distance_m": 220,
+      "name": "Carters Wetland",
+      "osm_id": 11211224120,
+      "osm_type": "node",
+      "type": "wetland"
+    },
     "nearest_major_road": {
       "distance_m": 140,
       "name": "King William Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Bayswater Brook",
+      "osm_id": 8024802
     },
     "opening_hours": "Feb-Nov: Su[4] 13:00-16:00",
     "operator": "Bayswater Historical Society"
@@ -48,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

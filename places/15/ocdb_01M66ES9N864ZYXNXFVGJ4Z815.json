@@ -4,7 +4,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
   },
@@ -21,9 +24,26 @@
       "osm_id": 60570255,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 190,
+      "name": "Maroondah Reservoir",
+      "osm_id": 161023291,
+      "osm_type": "way",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 460,
       "name": "Maroondah Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Watts River",
+      "osm_id": 146976716
+    },
+    "protected_area": {
+      "name": "Maroondah Reservoir Park",
+      "osm_id": 9212968,
+      "osm_type": "relation"
     },
     "toilet_type": "flush",
     "wheelchair": true
@@ -44,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

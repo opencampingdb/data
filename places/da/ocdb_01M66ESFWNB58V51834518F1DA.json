@@ -13,8 +13,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "pets": "community_report",
+    "protected_area": "osm",
     "tents": "osm",
     "toilets": "community_report"
   },
@@ -36,8 +39,25 @@
       "distance_m": 40,
       "name": "boat ramp"
     },
+    "nearest_feature": {
+      "distance_m": 30,
+      "name": "Mannus Lake",
+      "osm_id": 916182856,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Mannus Creek",
+      "osm_id": 448289666
+    },
     "operator": "Manus State Forest",
     "pets": "yes",
+    "protected_area": {
+      "name": "Mannus State Forest",
+      "osm_id": 5833752,
+      "osm_type": "relation"
+    },
     "tents": true,
     "toilets": true
   },
@@ -63,5 +83,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

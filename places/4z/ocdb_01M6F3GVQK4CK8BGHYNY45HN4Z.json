@@ -10,7 +10,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -30,9 +32,21 @@
       "osm_id": 1701813096,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Kevington",
+      "osm_id": 12082934215,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 20,
       "name": "Mansfield - Woods Point Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Goulburn River",
+      "osm_id": 503331935
     },
     "phone": "+61437367740",
     "website": "http://www.kevingtonhotel.com.au"
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

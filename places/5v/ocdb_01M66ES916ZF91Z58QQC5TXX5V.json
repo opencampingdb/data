@@ -6,6 +6,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -22,6 +24,18 @@
     "nearest_beach": {
       "distance_m": 980,
       "name": "Wingan Inlet"
+    },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Wingan Inlet",
+      "osm_id": 167619395,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "protected_area": {
+      "name": "Croajingolong National Park",
+      "osm_id": 9202648,
+      "osm_type": "relation"
     },
     "website": "https://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/wingan-inlet-campground"
   },
@@ -41,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -5,13 +5,20 @@
   },
   "fact_sources": {
     "address": "osm",
+    "charge": "osm",
     "entry": "osm",
     "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "operator": "osm",
     "pets": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "toilets": "osm",
-    "website": "overture"
+    "website": "overture",
+    "wifi": "osm"
   },
   "facts": {
     "address": {
@@ -20,35 +27,58 @@
       "street": "Old Grafton Road",
       "suburb": "Diehard"
     },
+    "charge": "6 AUD",
     "entry": "public",
     "fee": true,
+    "lga": {
+      "name": "Glen Innes Severn Council",
+      "osm_id": 6163165
+    },
+    "locality": {
+      "distance_m": 35490,
+      "name": "Glen Innes",
+      "osm_id": 59848698,
+      "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Mann River",
+      "osm_id": 223120774
+    },
+    "operator": "NSW National Parks & Wildlife Service",
     "pets": "no",
     "phone": "0267390700",
+    "protected_area": {
+      "name": "Mann River Nature Reserve",
+      "osm_id": 5927947,
+      "osm_type": "relation"
+    },
     "showers": false,
     "toilets": true,
-    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mann-river-campground-and-picnic-area"
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/mann-river-campground-and-picnic-area",
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA1GDEHRERV4W9WCRNRF",
   "kind": "reserve_campsite",
   "location": {
-    "lat": -29.6875,
-    "lon": 152.098615
+    "lat": -29.68781,
+    "lon": 152.098528
   },
   "merged_osm": [
     {
-      "id": 982254877,
-      "type": "way"
+      "id": 1811185242,
+      "type": "node"
     }
   ],
   "name": "Mann River Campground & Picnic Area",
   "osm": {
-    "id": 1811185242,
-    "timestamp": "2026-02-24T07:13:11Z",
-    "type": "node",
-    "version": 4
+    "id": 982254877,
+    "timestamp": "2026-11-09T09:11:27Z",
+    "type": "way",
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

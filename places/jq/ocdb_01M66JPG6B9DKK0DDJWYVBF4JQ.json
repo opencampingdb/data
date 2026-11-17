@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Milne Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 170,
+      "name": "Dry Creek",
+      "osm_id": 598992681
     },
     "opening_hours": "Mo-Su 06:00-22:00"
   },
@@ -38,5 +44,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

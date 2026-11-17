@@ -12,7 +12,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -40,9 +42,21 @@
     "nearest_boat_ramp": {
       "distance_m": 1690
     },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Humpybong Creek",
+      "osm_id": 14383964,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Prince Edward Parade"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Humpybong Creek",
+      "osm_id": 1080895677
     },
     "phone": "+61738976000",
     "website": "http://www.redcliffersl.com.au"
@@ -63,5 +77,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

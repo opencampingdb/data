@@ -9,7 +9,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -30,7 +33,24 @@
       "osm_id": 113238201,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Blue Pool",
+      "osm_id": 773693107,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Missingham Creek",
+      "osm_id": 445413631
+    },
     "phone": "1300072757",
+    "protected_area": {
+      "name": "Budderoo National Park",
+      "osm_id": 3682824,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/carrington-falls-campground"
   },
   "group": "overnight",
@@ -49,5 +69,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

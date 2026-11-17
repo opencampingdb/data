@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +17,18 @@
       "name": "Melton",
       "osm_id": 78094548,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Stony Hill Creek",
+      "osm_id": 5007727,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Stony Hill Creek",
+      "osm_id": 852648262
     }
   },
   "group": "attraction",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

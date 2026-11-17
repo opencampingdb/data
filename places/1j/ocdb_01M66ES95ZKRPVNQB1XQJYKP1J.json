@@ -3,7 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -18,7 +20,17 @@
       "osm_id": 21385974,
       "type": "town"
     },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Barney Gorge Creek",
+      "osm_id": 37624440
+    },
     "operator": "Department of National Parks, Sport and Racing",
+    "protected_area": {
+      "name": "Mount Barney National Park",
+      "osm_id": 8257022,
+      "osm_type": "relation"
+    },
     "website": "https://parks.qld.gov.au/parks/mount-barney/camping/rum-jungle-remote"
   },
   "group": "overnight",
@@ -37,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

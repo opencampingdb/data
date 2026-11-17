@@ -1,13 +1,23 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "brand": "osm",
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
     "brand": "big4",
+    "facebook": "https://www.facebook.com/103911042774288",
     "lga": {
       "name": "Gladstone Regional",
       "osm_id": 11676351
@@ -23,7 +33,16 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 2320
-    }
+    },
+    "nearest_feature": {
+      "distance_m": 350,
+      "name": "Rules Beach",
+      "osm_id": 3100212384,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "phone": "+61743356521",
+    "website": "https://rulesbeach.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESG7QSFJVFEV1X37A1JCM",
@@ -41,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

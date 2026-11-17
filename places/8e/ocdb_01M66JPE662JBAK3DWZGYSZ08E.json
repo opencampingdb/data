@@ -2,7 +2,8 @@
   "fact_sources": {
     "address": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "address": {
@@ -17,6 +18,11 @@
       "name": "Mudgee",
       "osm_id": 114608650,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Grattai Creek",
+      "osm_id": 459153657
     }
   },
   "group": "attraction",
@@ -35,5 +41,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

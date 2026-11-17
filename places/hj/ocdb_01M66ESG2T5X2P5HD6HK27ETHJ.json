@@ -9,7 +9,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "overture"
   },
@@ -28,7 +31,24 @@
       "osm_id": 116990408,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 600,
+      "name": "Airly",
+      "osm_id": 116990292,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Gap Creek",
+      "osm_id": 1179751951
+    },
     "operator": "National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Mugii Murum-ban State Conservation Area",
+      "osm_id": 5910436,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/airly-gap-campground"
   },
@@ -48,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

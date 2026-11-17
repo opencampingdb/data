@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -15,6 +16,11 @@
       "name": "Woolbrook",
       "osm_id": 1947370543,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "MacDonald River",
+      "osm_id": 428182393
     }
   },
   "group": "utility",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

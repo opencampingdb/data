@@ -9,7 +9,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -28,7 +30,19 @@
       "distance_m": 520,
       "name": "Picnic Point South"
     },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Picnic Point",
+      "osm_id": 13133160151,
+      "osm_type": "node",
+      "type": "cape"
+    },
     "phone": "+61244760800",
+    "protected_area": {
+      "name": "Mimosa Rocks National Park",
+      "osm_id": 5947723,
+      "osm_type": "relation"
+    },
     "website": "http://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/picnic-point-campground/visitor-info"
   },
   "group": "overnight",
@@ -47,5 +61,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -7,7 +7,9 @@
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "address": {
@@ -26,6 +28,16 @@
       "name": "Creswick",
       "osm_id": 301983645,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Slaty Creek",
+      "osm_id": 129146049
+    },
+    "protected_area": {
+      "name": "Creswick Regional Park",
+      "osm_id": 20171453,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

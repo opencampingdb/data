@@ -3,6 +3,7 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "opening_hours": "osm"
   },
   "facts": {
@@ -19,6 +20,13 @@
     "nearest_beach": {
       "distance_m": 100,
       "name": "Locks Well Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Locks Well Beach",
+      "osm_id": 215665877,
+      "osm_type": "way",
+      "type": "beach"
     },
     "opening_hours": "24/7"
   },
@@ -38,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

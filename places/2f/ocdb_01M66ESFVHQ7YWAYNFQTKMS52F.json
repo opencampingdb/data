@@ -7,7 +7,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "phone": "overture"
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "protected_area": "osm"
   },
   "facts": {
     "facebook": "https://www.facebook.com/120392964712899",
@@ -21,7 +23,17 @@
       "osm_id": 113713214,
       "type": "town"
     },
-    "phone": "+61407931753"
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Goobagandra River",
+      "osm_id": 16128342
+    },
+    "phone": "+61407931753",
+    "protected_area": {
+      "name": "Kosciuszko National Park",
+      "osm_id": 2363804,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESFVHQ7YWAYNFQTKMS52F",
@@ -39,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

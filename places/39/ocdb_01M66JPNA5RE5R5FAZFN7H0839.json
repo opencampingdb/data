@@ -2,7 +2,9 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -15,6 +17,18 @@
       "name": "Kelmscott",
       "osm_id": 181304750,
       "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Bickley Brook Reservoir",
+      "osm_id": 22717223,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Bickley Brook",
+      "osm_id": 468564861
     }
   },
   "group": "attraction",
@@ -33,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

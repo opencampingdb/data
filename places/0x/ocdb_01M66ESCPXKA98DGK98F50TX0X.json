@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "operator": "osm"
+    "operator": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -19,7 +20,12 @@
     "nearest_beach": {
       "distance_m": 40
     },
-    "operator": "SA NPWS"
+    "operator": "SA NPWS",
+    "protected_area": {
+      "name": "Lincoln National Park",
+      "osm_id": 954175,
+      "osm_type": "relation"
+    }
   },
   "group": "overnight",
   "id": "ocdb_01M66ESCPXKA98DGK98F50TX0X",
@@ -37,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

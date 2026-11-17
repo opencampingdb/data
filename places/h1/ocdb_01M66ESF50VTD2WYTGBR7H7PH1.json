@@ -7,7 +7,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "picnic_tables": "osm",
     "showers": "osm",
@@ -34,9 +36,21 @@
       "osm_id": 589409513,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 150,
+      "name": "Witheren",
+      "osm_id": 4343881909,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 100,
       "name": "Beechmont Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 80,
+      "name": "Coomera River",
+      "osm_id": 151801299
     },
     "phone": "+61 409 550 745",
     "picnic_tables": true,
@@ -61,5 +75,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

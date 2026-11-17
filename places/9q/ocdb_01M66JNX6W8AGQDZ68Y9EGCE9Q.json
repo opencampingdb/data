@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Warmun",
       "osm_id": 1963381155,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Bellburn Creek",
+      "osm_id": 116794285
+    },
+    "protected_area": {
+      "name": "Purnululu Conservation Reserve",
+      "osm_id": 8328770,
+      "osm_type": "relation"
     }
   },
   "group": "services",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

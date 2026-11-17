@@ -5,7 +5,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -28,9 +30,21 @@
       "distance_m": 1760,
       "name": "Adventure Bay Boat Ramp"
     },
+    "nearest_feature": {
+      "distance_m": 110,
+      "name": "Adventure Bay Beach",
+      "osm_id": 1019426878,
+      "osm_type": "way",
+      "type": "beach"
+    },
     "nearest_major_road": {
       "distance_m": 70,
       "name": "Adventure Bay Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Captain Cook Creek",
+      "osm_id": 641131874
     },
     "toilet_type": "flush"
   },
@@ -50,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -3,6 +3,9 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "website": "osm"
   },
   "facts": {
@@ -16,6 +19,23 @@
       "name": "Bambaroo",
       "osm_id": 4074288167,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 790,
+      "name": "Yuruga",
+      "osm_id": 6036336043,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Waterview Creek",
+      "osm_id": 643242475
+    },
+    "protected_area": {
+      "name": "Paluma Range National Park",
+      "osm_id": 1478696,
+      "osm_type": "relation"
     },
     "website": "https://parks.des.qld.gov.au/parks/jourama-falls-paluma/camping/jourama-falls"
   },
@@ -35,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

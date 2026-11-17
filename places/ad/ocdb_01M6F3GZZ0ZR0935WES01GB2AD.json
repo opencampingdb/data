@@ -7,7 +7,9 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "phone": "osm",
     "website": "osm"
@@ -38,9 +40,21 @@
     "nearest_boat_ramp": {
       "distance_m": 2490
     },
+    "nearest_feature": {
+      "distance_m": 680,
+      "name": "Moreton Bay",
+      "osm_id": 6038708866,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 470,
       "name": "Wellington Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Ross Creek",
+      "osm_id": 635909514
     },
     "opening_hours": "Mo-Su 10:00-15:30; PH off",
     "phone": "+61 7 3286 3494",
@@ -62,5 +76,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

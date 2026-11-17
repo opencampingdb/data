@@ -1,10 +1,20 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "nearest_boat_ramp": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "phone": "overture",
+    "website": "overture"
   },
   "facts": {
+    "facebook": "https://www.facebook.com/710532015486337",
     "lga": {
       "name": "Somerset Regional",
       "osm_id": 11677661
@@ -17,7 +27,16 @@
     },
     "nearest_boat_ramp": {
       "distance_m": 1210
-    }
+    },
+    "nearest_feature": {
+      "distance_m": 90,
+      "name": "Atkinson Dam",
+      "osm_id": 6273221,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "phone": "+61754264151",
+    "website": "http://www.lakeatkinson.com.au"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQ0ZZ80WCZ2Q4BHNEC6",
@@ -35,5 +54,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

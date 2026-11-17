@@ -15,8 +15,10 @@
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "phone": "contributed",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -38,8 +40,18 @@
       "name": "Bourke Shire Council",
       "osm_id": 5892186
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Cuttaburra Creek",
+      "osm_id": 765610172
+    },
     "operator": "NSW National Parks and Wildlife Service",
     "phone": "+61 2 6830 0200",
+    "protected_area": {
+      "name": "Cuttaburra National Park",
+      "osm_id": 18555840,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/comeroo-campground"
   },
@@ -59,5 +71,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

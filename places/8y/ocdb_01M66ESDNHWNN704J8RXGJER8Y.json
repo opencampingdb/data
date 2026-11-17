@@ -3,6 +3,8 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -16,6 +18,18 @@
       "name": "Tremont",
       "osm_id": 2603797837,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 510,
+      "name": "Dulcie Domum",
+      "osm_id": 12896160077,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "protected_area": {
+      "name": "Dandenong Ranges Botanic Gardens",
+      "osm_id": 9212913,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -35,5 +49,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

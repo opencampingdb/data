@@ -4,7 +4,9 @@
     "entry": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "toilet_type": "osm",
     "wheelchair": "osm"
@@ -22,9 +24,21 @@
       "osm_id": 686358262,
       "type": "village"
     },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Tooma",
+      "osm_id": 2148869825,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
     "nearest_major_road": {
       "distance_m": 80,
       "name": "Tooma Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Tumbarumba Creek",
+      "osm_id": 448289873
     },
     "operator": "Snowy Valley Council",
     "toilet_type": "pit",
@@ -46,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

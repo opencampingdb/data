@@ -9,6 +9,7 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm"
   },
   "facts": {
@@ -36,6 +37,11 @@
       "distance_m": 50,
       "name": "Molly Morgan Drive"
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Two Mile Creek",
+      "osm_id": 240334059
+    },
     "operator": "EG Australia"
   },
   "group": "services",
@@ -54,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

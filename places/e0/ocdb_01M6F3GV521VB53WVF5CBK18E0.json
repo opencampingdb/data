@@ -11,6 +11,7 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -26,13 +27,13 @@
       "osm_id": 2404491
     },
     "locality": {
-      "distance_m": 4250,
+      "distance_m": 4240,
       "name": "Melbourne",
       "osm_id": 21579127,
       "type": "city"
     },
     "nearest_beach": {
-      "distance_m": 2330,
+      "distance_m": 2340,
       "name": "Horse Arena"
     },
     "nearest_boat_ramp": {
@@ -43,6 +44,11 @@
       "distance_m": 30,
       "name": "Queens Parade"
     },
+    "nearest_waterway": {
+      "distance_m": 110,
+      "name": "Merri Creek",
+      "osm_id": 13763077
+    },
     "phone": "+61394813182",
     "website": "https://www.terminus.com.au/"
   },
@@ -50,17 +56,23 @@
   "id": "ocdb_01M6F3GV521VB53WVF5CBK18E0",
   "kind": "food_and_drink",
   "location": {
-    "lat": -37.785213,
-    "lon": 144.994546
+    "lat": -37.785225,
+    "lon": 144.994438
   },
+  "merged_osm": [
+    {
+      "id": 582302916,
+      "type": "node"
+    }
+  ],
   "name": "Terminus Hotel",
   "osm": {
-    "id": 582302916,
-    "timestamp": "2023-11-02T11:07:35Z",
-    "type": "node",
-    "version": 5
+    "id": 1579137073,
+    "timestamp": "2026-11-14T06:24:37Z",
+    "type": "way",
+    "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

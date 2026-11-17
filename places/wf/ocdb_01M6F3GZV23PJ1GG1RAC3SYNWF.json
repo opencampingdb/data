@@ -3,6 +3,7 @@
     "bins": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm"
   },
   "facts": {
@@ -16,6 +17,13 @@
       "name": "Cann River",
       "osm_id": 59634128,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 670,
+      "name": "Wingan River",
+      "osm_id": 2409838127,
+      "osm_type": "node",
+      "type": "locality"
     },
     "nearest_major_road": {
       "distance_m": 30,
@@ -38,5 +46,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

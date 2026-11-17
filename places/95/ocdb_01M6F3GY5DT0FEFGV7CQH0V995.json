@@ -11,6 +11,7 @@
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -39,6 +40,11 @@
     "nearest_major_road": {
       "distance_m": 90
     },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Macquarie River",
+      "osm_id": 197794550
+    },
     "phone": "+61268130997",
     "website": "https://www.thewam.com.au/"
   },
@@ -58,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

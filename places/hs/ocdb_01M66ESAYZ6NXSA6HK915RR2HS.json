@@ -4,8 +4,10 @@
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "pets": "osm",
+    "protected_area": "osm",
     "tents": "osm",
     "website": "osm"
   },
@@ -22,8 +24,18 @@
       "osm_id": 2508333835,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 40,
+      "name": "Pandanus Creek",
+      "osm_id": 230954656
+    },
     "operator": "Queensland Parks and Wildlife Services",
     "pets": "no",
+    "protected_area": {
+      "name": "Cathu State Forest",
+      "osm_id": 8411768,
+      "osm_type": "relation"
+    },
     "tents": true,
     "website": "https://parks.des.qld.gov.au/parks/cathu/camping/jaxut"
   },
@@ -43,5 +55,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

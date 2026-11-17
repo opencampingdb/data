@@ -3,6 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm",
     "water_type": "osm"
   },
   "facts": {
@@ -19,6 +22,23 @@
     "nearest_beach": {
       "distance_m": 120,
       "name": "Norman Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 120,
+      "name": "Norman Beach",
+      "osm_id": 44948474,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_waterway": {
+      "distance_m": 120,
+      "name": "Tidal River",
+      "osm_id": 1444851484
+    },
+    "protected_area": {
+      "name": "Wilsons Promontory National Park",
+      "osm_id": 554585,
+      "osm_type": "relation"
     },
     "water_type": "fountain"
   },
@@ -38,5 +58,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

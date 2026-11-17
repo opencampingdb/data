@@ -1,7 +1,9 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +15,16 @@
       "name": "Omeo",
       "osm_id": 161302593,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 20,
+      "name": "Victoria River",
+      "osm_id": 197892589
+    },
+    "protected_area": {
+      "name": "Victoria Falls Historic Area",
+      "osm_id": 668207365,
+      "osm_type": "way"
     }
   },
   "group": "attraction",
@@ -31,5 +43,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

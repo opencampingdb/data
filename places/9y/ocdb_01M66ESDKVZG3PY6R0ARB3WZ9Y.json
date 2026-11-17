@@ -5,8 +5,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -28,8 +30,18 @@
     "nearest_boat_ramp": {
       "distance_m": 2270
     },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Arm Creek",
+      "osm_id": 258599636
+    },
     "opening_hours": "24/7",
     "operator": "Tasmania Parks & Wildlife Service",
+    "protected_area": {
+      "name": "Scamander Regional Reserve",
+      "osm_id": 6212670,
+      "osm_type": "relation"
+    },
     "toilet_type": "pit"
   },
   "group": "utility",
@@ -48,5 +60,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

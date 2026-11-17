@@ -9,7 +9,9 @@
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "osm"
   },
@@ -30,9 +32,21 @@
       "osm_id": 78078822,
       "type": "town"
     },
+    "nearest_feature": {
+      "distance_m": 820,
+      "name": "Mount Walker Road Traihead",
+      "osm_id": 2413814411,
+      "osm_type": "node",
+      "type": "locality"
+    },
     "nearest_major_road": {
       "distance_m": 380,
       "name": "Great Western Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 160,
+      "name": "Farmers Creek",
+      "osm_id": 166159089
     },
     "phone": "+61263512334",
     "website": "https://www.lithgowvalleymotel.com.au"
@@ -53,5 +67,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

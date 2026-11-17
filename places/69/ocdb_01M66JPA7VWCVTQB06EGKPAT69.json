@@ -3,7 +3,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "opening_hours": "osm"
+    "nearest_feature": "osm",
+    "opening_hours": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -20,7 +22,19 @@
       "distance_m": 10,
       "name": "Jasper Beach"
     },
-    "opening_hours": "sunrise-sunset"
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Jasper Beach",
+      "osm_id": 574752015,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "opening_hours": "sunrise-sunset",
+    "protected_area": {
+      "name": "D'Entrecasteaux National Park",
+      "osm_id": 7743426,
+      "osm_type": "relation"
+    }
   },
   "group": "attraction",
   "id": "ocdb_01M66JPA7VWCVTQB06EGKPAT69",
@@ -38,5 +52,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -8,7 +8,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "osm",
     "website": "osm",
     "wifi": "osm"
@@ -35,9 +37,21 @@
     "nearest_boat_ramp": {
       "distance_m": 500
     },
+    "nearest_feature": {
+      "distance_m": 60,
+      "name": "Tweed River",
+      "osm_id": 8356866,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
       "distance_m": 30,
       "name": "Tweed Valley Way"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Tweed River",
+      "osm_id": 174944929
     },
     "phone": "+61 2 6672 3666",
     "website": "http://www.poinciana.com.au/",
@@ -59,5 +73,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

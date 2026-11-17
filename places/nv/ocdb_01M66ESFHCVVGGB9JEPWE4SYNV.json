@@ -1,7 +1,8 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +14,13 @@
       "name": "Bathurst",
       "osm_id": 172987017,
       "type": "city"
+    },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Flood area",
+      "osm_id": 1106031271,
+      "osm_type": "way",
+      "type": "water"
     }
   },
   "group": "overnight",
@@ -25,11 +33,11 @@
   "name": "Motorhome Park Campground",
   "osm": {
     "id": 694835593,
-    "timestamp": "2023-12-23T00:23:50Z",
+    "timestamp": "2026-11-16T00:23:53Z",
     "type": "way",
-    "version": 9
+    "version": 10
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

@@ -3,8 +3,11 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "opening_hours": "osm",
     "operator": "osm",
+    "protected_area": "osm",
     "toilet_type": "osm"
   },
   "facts": {
@@ -22,8 +25,25 @@
       "distance_m": 100,
       "name": "Pedro Beach"
     },
+    "nearest_feature": {
+      "distance_m": 50,
+      "name": "Congo Creek",
+      "osm_id": 236799410,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Congo Creek",
+      "osm_id": 236799411
+    },
     "opening_hours": "24/7",
     "operator": "NSW National Parks and Wildlife Service",
+    "protected_area": {
+      "name": "Eurobodalla National Park",
+      "osm_id": 6052866,
+      "osm_type": "relation"
+    },
     "toilet_type": "flush"
   },
   "group": "utility",
@@ -42,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

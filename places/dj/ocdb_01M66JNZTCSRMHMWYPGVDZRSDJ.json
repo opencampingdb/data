@@ -1,7 +1,10 @@
 {
   "fact_sources": {
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "lga": {
@@ -13,6 +16,23 @@
       "name": "Evelyn",
       "osm_id": 6035839519,
       "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 250,
+      "name": "Mount Hypipamee",
+      "osm_id": 2842152670,
+      "osm_type": "node",
+      "type": "peak"
+    },
+    "nearest_waterway": {
+      "distance_m": 90,
+      "name": "Barron River",
+      "osm_id": 712574377
+    },
+    "protected_area": {
+      "name": "Mount Hypipamee National Park",
+      "osm_id": 8672116,
+      "osm_type": "relation"
     }
   },
   "group": "attraction",
@@ -31,5 +51,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

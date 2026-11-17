@@ -11,7 +11,10 @@
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "website": "overture"
   },
   "facts": {
@@ -40,7 +43,24 @@
       "distance_m": 1600,
       "name": "Wharf - Tamboy"
     },
+    "nearest_feature": {
+      "distance_m": 530,
+      "name": "Brambles Green",
+      "osm_id": 114993590,
+      "osm_type": "node",
+      "type": "hamlet"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Myall River",
+      "osm_id": 11785582
+    },
     "phone": "0265910300",
+    "protected_area": {
+      "name": "Myall Lakes National Park",
+      "osm_id": 3215560,
+      "osm_type": "relation"
+    },
     "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/brambles-green-campground"
   },
   "group": "overnight",
@@ -59,5 +79,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

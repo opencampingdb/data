@@ -9,7 +9,9 @@
     "caravans": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
+    "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
     "toilets": "osm",
@@ -34,7 +36,17 @@
       "osm_id": 2813049267,
       "type": "village"
     },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Flea Creek",
+      "osm_id": 447180393
+    },
     "phone": "0262297166",
+    "protected_area": {
+      "name": "Brindabella National Park",
+      "osm_id": 5828870,
+      "osm_type": "relation"
+    },
     "showers": false,
     "tents": true,
     "toilets": true,
@@ -56,5 +68,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

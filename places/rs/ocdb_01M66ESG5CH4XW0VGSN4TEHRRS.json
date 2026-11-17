@@ -2,7 +2,8 @@
   "fact_sources": {
     "entry": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "entry": "public",
@@ -15,6 +16,11 @@
       "name": "Logan Village",
       "osm_id": 206242925,
       "type": "town"
+    },
+    "nearest_waterway": {
+      "distance_m": 130,
+      "name": "Scrubby Creek",
+      "osm_id": 570631135
     }
   },
   "group": "utility",
@@ -33,5 +39,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

@@ -2,7 +2,9 @@
   "fact_sources": {
     "campfires": "osm",
     "lga": "osm",
-    "locality": "osm"
+    "locality": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "campfires": false,
@@ -15,6 +17,16 @@
       "name": "Yanakie",
       "osm_id": 1218301284,
       "type": "village"
+    },
+    "nearest_waterway": {
+      "distance_m": 30,
+      "name": "Barry Creek",
+      "osm_id": 742850455
+    },
+    "protected_area": {
+      "name": "Wilsons Promontory Wilderness Zone",
+      "osm_id": 16321750,
+      "osm_type": "relation"
     }
   },
   "group": "overnight",
@@ -33,5 +45,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

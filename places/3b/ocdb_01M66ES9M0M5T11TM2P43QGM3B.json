@@ -4,6 +4,7 @@
     "bins": "osm",
     "lga": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "operator": "osm",
     "picnic_tables": "osm",
     "playground": "osm",
@@ -19,6 +20,11 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Barrier Highway"
+    },
+    "nearest_waterway": {
+      "distance_m": 50,
+      "name": "Springs Creek",
+      "osm_id": 1396483595
     },
     "operator": "Transport for NSW",
     "picnic_tables": true,
@@ -41,5 +47,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }

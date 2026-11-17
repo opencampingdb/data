@@ -5,7 +5,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
+    "protected_area": "osm"
   },
   "facts": {
     "entry": "customers",
@@ -26,6 +28,16 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Great Ocean Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Port Campbell Creek",
+      "osm_id": 103276343
+    },
+    "protected_area": {
+      "name": "Port Campbell Recreation and Camping Reserve",
+      "osm_id": 9212166,
+      "osm_type": "relation"
     }
   },
   "group": "utility",
@@ -44,5 +56,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-16T21:51:41Z"
 }
