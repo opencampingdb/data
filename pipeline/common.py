@@ -175,6 +175,23 @@ def with_rule_facts(record: dict) -> dict:
         released["fact_rules"][rule["fact"]] = rule["rule"]
     return released
 
+def with_osm_dates(record: dict) -> dict:
+    """The record as released: each fact_sources entry that is osm dated with osm.timestamp.
+
+    osm.timestamp is when the OSM object was last edited, so it is the newest an
+    OSM value can be. Returns a new record with those fact_dates entries, or the
+    same record when it has no osm.timestamp or no OSM values. The record passed
+    in is not changed. Files in places/ never hold these dates.
+    """
+    stamp = (record.get("osm") or {}).get("timestamp")
+    from_osm = [key for key, source in record.get("fact_sources", {}).items() if source == "osm"]
+    if stamp is None or not from_osm:
+        return record
+    released = dict(record)
+    released["fact_dates"] = {**record.get("fact_dates", {}), **{key: stamp for key in from_osm}}
+    return released
+
+
 # The source of values imported from anonymous community reports. A place
 # whose name or location has this source is never passed to OSM at all.
 COMMUNITY_REPORT = "community_report"

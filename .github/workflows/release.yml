@@ -144,6 +144,10 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: python -m pipeline.release --root . --out dist --repository "$GH_REPO"
 
+      - name: Validate the built release
+        if: steps.check.outputs.changed == 'true'
+        run: python -m pipeline.validate --root . --release-dir dist
+
       # ocdb.sqlite.gz, the release as an SQLite database, and changesets to it
       # from the databases of the release just before and of the last release
       # of the previous UTC day (pipeline/database.py). A release without a
