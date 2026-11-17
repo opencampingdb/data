@@ -1,0 +1,188 @@
+name: Place geometry
+
+# Weekly on Mondays at 04:00 UTC, after that day's OSM sync, and by hand.
+# Builds the water mask and every major road (pipeline.place_geometry) from
+# the Geofabrik extract for Australia (tools/download-extract) and OSM's
+# water polygons, checks and packs the build (pipeline.geometry_release),
+# replaces the files on the fixed `geometry` release, then puts the changed
+# tiles in the R2 bucket and deletes the removed ones (pipeline.tile_upload).
+# See pipeline/README.md, "Geometry workflow".
+#
+# Any build or check failure stops the run before anything is published, so
+# the release and the bucket keep the last good set. The release's tiles.json
+# is the list of tiles the bucket holds: it is replaced only after every
+# changed tile is uploaded, so a failed upload leaves the old list and the
+# next run sends the same changes again. Without the R2 settings the run still
+# publishes the release, skips the tiles with a warning and leaves tiles.json
+# as it was.
+#
+# The `geometry` release is never marked Latest, so the data release stays at
+# releases/latest, and the release workflow reads only data- tags.
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: geometry
+  cancel-in-progress: false
+
+env:
+  USER_AGENT: OpenCampingDB-pipeline (+https://github.com/opencampingdb/data)
+  WATER_POLYGONS_URL: https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip
+  RELEASE_TAG: geometry
+
+jobs:
+  geometry:
+    name: Build and publish place geometry
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt -r requirements-geometry.txt
+
+      - name: Download the Australia extract
+        run: |
+          set -euo pipefail
+          tools/download-extract "$RUNNER_TEMP"
+
+      # The shapefile carries no date, so the server's Last-Modified goes in the manifest.
+      - name: Download OSM's water polygons
+        id: water
+        run: |
+          set -euo pipefail
+          zip="$RUNNER_TEMP/water-polygons.zip"
+          curl -fsSL -A "$USER_AGENT" --retry 3 --retry-delay 30 --retry-all-errors \
+            -D "$RUNNER_TEMP/water-polygons.headers" -o "$zip" "$WATER_POLYGONS_URL"
+          header="$(tr -d '\r' < "$RUNNER_TEMP/water-polygons.headers" | sed -n 's/^[Ll]ast-[Mm]odified: *//p' | tail -n 1)"
+          modified=""
+          if [ -n "$header" ]; then
+            modified="$(date -u -d "$header" +%Y-%m-%dT%H:%M:%SZ)"
+          else
+            echo "::warning::The water polygons came without a Last-Modified header."
+          fi
+          unzip -q "$zip" -d "$RUNNER_TEMP/water-polygons"
+          rm "$zip"
+          shp="$(find "$RUNNER_TEMP/water-polygons" -name water_polygons.shp | head -n 1)"
+          [ -n "$shp" ] || { echo "::error::No water_polygons.shp in the download."; exit 1; }
+          echo "shp=$shp" >> "$GITHUB_OUTPUT"
+          echo "modified=$modified" >> "$GITHUB_OUTPUT"
+          echo "Water polygons: $shp, last modified ${modified:-unknown}"
+
+      - name: Fetch the current geometry release's lists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/previous"
+          if ! assets="$(gh release view "$RELEASE_TAG" --json assets --jq '.assets[].name' 2>/dev/null)"; then
+            echo "No $RELEASE_TAG release yet: every tile will be put."
+            exit 0
+          fi
+          for name in tiles.json manifest.json; do
+            if grep -qx "$name" <<<"$assets"; then
+              gh release download "$RELEASE_TAG" --dir "$RUNNER_TEMP/previous" --pattern "$name"
+            else
+              echo "The $RELEASE_TAG release has no $name."
+            fi
+          done
+
+      - name: Build
+        env:
+          WATER_POLYGONS: ${{ steps.water.outputs.shp }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ -f "$RUNNER_TEMP/previous/tiles.json" ]; then
+            args+=(--previous-tiles "$RUNNER_TEMP/previous/tiles.json")
+          fi
+          python -m pipeline.place_geometry --extract "$RUNNER_TEMP/australia-latest.osm.pbf" \
+            --water-polygons "$WATER_POLYGONS" --out "$RUNNER_TEMP/build" "${args[@]}"
+
+      - name: Check and pack
+        env:
+          WATER_POLYGONS_MODIFIED: ${{ steps.water.outputs.modified }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ -f "$RUNNER_TEMP/previous/manifest.json" ]; then
+            args+=(--previous-manifest "$RUNNER_TEMP/previous/manifest.json")
+          fi
+          if [ -n "$WATER_POLYGONS_MODIFIED" ]; then
+            args+=(--water-polygons-modified "$WATER_POLYGONS_MODIFIED")
+          fi
+          python -m pipeline.geometry_release --build "$RUNNER_TEMP/build" --out "$RUNNER_TEMP/publish" \
+            --extract-source "$(cat "$RUNNER_TEMP/extract-source.txt")" "${args[@]}" > /dev/null
+          jq -r '"## Place geometry",
+            "",
+            "| | |",
+            "| --- | --- |",
+            "| Extract | \(.sources.extract.source), \(.sources.extract.timestamp // "no timestamp") |",
+            "| Water polygons | last modified \(.sources.water_polygons.last_modified // "unknown") |",
+            "| Water | \(.water.sea_lines) sea and \(.water.lake_lines) lake lines, \(.assets["water.ndjson.gz"].bytes) bytes gzipped |",
+            "| Roads | \(.roads.roads) roads, \(.assets["roads.ndjson.gz"].bytes) bytes gzipped |",
+            "| Tiles | \(.tiles.count) tiles, \(.tiles.put) to put, \(.tiles.delete) to delete, largest \(.tiles.largest) |"' \
+            "$RUNNER_TEMP/publish/manifest.json" >> "$GITHUB_STEP_SUMMARY"
+
+      # Only whether each setting is there reaches this step, never a secret.
+      - name: Check the R2 settings
+        id: r2
+        env:
+          HAS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID != '' }}
+          HAS_SECRET: ${{ secrets.R2_SECRET_ACCESS_KEY != '' }}
+          HAS_ACCOUNT: ${{ vars.R2_ACCOUNT_ID != '' }}
+          HAS_BUCKET: ${{ vars.R2_GEOMETRY_BUCKET != '' }}
+        run: |
+          if [ "$HAS_KEY_ID" = true ] && [ "$HAS_SECRET" = true ] && [ "$HAS_ACCOUNT" = true ] && [ "$HAS_BUCKET" = true ]; then
+            echo "tiles=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tiles=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ACCOUNT_ID or R2_GEOMETRY_BUCKET is not set. Publishing the release without uploading tiles, and leaving its tiles.json as it was."
+          fi
+
+      - name: Publish the water, roads and manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if ! gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            notes="Place geometry for the feedback engine's plausibility check: water.ndjson.gz, roads.ndjson.gz and the tile list, rebuilt weekly from OpenStreetMap. Licence: ODbL 1.0. Attribution: © OpenStreetMap contributors, Open Camping DB."
+            gh release create "$RELEASE_TAG" --target "$(git rev-parse HEAD)" --title "Place geometry" \
+              --notes "$notes" --latest=false
+          fi
+          publish="$RUNNER_TEMP/publish"
+          gh release upload "$RELEASE_TAG" --clobber \
+            "$publish/water.ndjson.gz" "$publish/roads.ndjson.gz" "$publish/summary.json" "$publish/manifest.json"
+
+      - name: Upload the changed tiles
+        if: steps.r2.outputs.tiles == 'true'
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ACCOUNT_ID: ${{ vars.R2_ACCOUNT_ID }}
+          R2_GEOMETRY_BUCKET: ${{ vars.R2_GEOMETRY_BUCKET }}
+        run: python -m pipeline.tile_upload --build "$RUNNER_TEMP/build"
+
+      - name: Publish the tile list
+        if: steps.r2.outputs.tiles == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$RELEASE_TAG" --clobber "$RUNNER_TEMP/publish/tiles.json"
