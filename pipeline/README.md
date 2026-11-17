@@ -11,8 +11,9 @@ npm ci --ignore-scripts --prefix tools/oh-check   # opening_hours.js, for the ou
 The nightly sync runs Extract, Sync and MapRoulette in that order, the
 monthly Overture workflow runs Extract (for the geometry sidecar), Merge
 `--auto`, Overture pull and Overture import (see "Monthly Overture
-workflow"), and the release workflow runs Validate, Release, Database and
-Place index.
+workflow"), the release workflow runs Validate, Release, Database and
+Place index, and the weekly geometry workflow runs Place geometry, Geometry
+release and Tile upload (see "Geometry workflow").
 
 | Step | Command | Reads | Writes |
 |---|---|---|---|
@@ -23,6 +24,9 @@ Place index.
 | Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `localities/localities.ndjson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
+| Place geometry | `python -m pipeline.place_geometry --extract FILE --water-polygons water-polygons-split-4326.zip [--previous-tiles tiles.json] --out DIR` | `.osm.pbf` or `.osm` XML, OSM's water polygons (split, WGS 84), the previous build's tile list | `water.ndjson`, `roads.ndjson`, the tile tree in `tiles/`, `tiles.json`, `changed.json` and `summary.json` in `DIR`, for the feedback engine's plausibility check (see "Place geometry") |
+| Geometry release | `python -m pipeline.geometry_release --build DIR --out publish --extract-source TEXT [--water-polygons-modified T] [--previous-manifest manifest.json] [--allow-shrink]` | a Place geometry build, the current `geometry` release's `manifest.json` | `water.ndjson.gz`, `roads.ndjson.gz`, `tiles.json`, `summary.json` and `manifest.json` in `publish`, or exit code 1 and nothing written when the build fails a check (see "Geometry workflow") |
+| Tile upload | `python -m pipeline.tile_upload --build DIR`, after `pip install -r requirements-geometry.txt` (boto3), with `R2_ACCOUNT_ID`, `R2_GEOMETRY_BUCKET`, `R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY` set | `DIR/tiles.json`, `DIR/changed.json`, `DIR/tiles/` and the bucket's own listing | the bucket holding exactly the build's tiles: the changed and missing ones put, every other tile key deleted (see "Geometry workflow") |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews. With `--auto`, every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, never by a workflow |
@@ -1074,6 +1078,175 @@ GitHub support to purge cached views; say so on the takedown request.
 Each command recalculates the rating of every place it touches and sets
 that place's `updated`, so validation passes. Commit the result on a branch
 and open a PR.
+
+## Place geometry
+
+The feedback engine holds a new place pinned in the sea, in a lake or on a
+major road's carriageway for its reviewer, and lets the reviewer merge two
+places only when no major road runs between them. `pipeline.place_geometry`
+builds what it reads, in the formats its self-hosting guide gives under
+"Plausible locations":
+
+```sh
+python -m pipeline.place_geometry --extract australia-latest.osm.pbf \
+  --water-polygons water-polygons-split-4326.zip \
+  --previous-tiles previous/tiles.json --out build
+```
+
+`--water-polygons` takes OSM's water polygons as published at
+<https://osmdata.openstreetmap.de/data/water-polygons.html>, the split
+WGS 84 file (`water-polygons-split-4326.zip`), as the zip or its unpacked
+`water_polygons.shp` (reading the zip copies the 1.3 GB shapefile to the
+temporary folder first, so unpack it where space is short). They are the
+water side of `natural=coastline`, so a coastline error is fixed the way
+OSM fixes it. The extract's header gives the bounds the sea is clipped to,
+and a file without bounds is refused.
+
+It writes, in `DIR`:
+
+- `water.ndjson`: one line per piece of water, `{"water": "sea" | "lake",
+  "name"?: ..., "polygons": [...]}`, each polygon an outer ring followed by
+  its holes. The sea is every water polygon within the bounds, kept only in
+  0.1 degree tiles within `SEA_MARGIN_TILES` (5, about 55 km) of a tile with
+  land in it, so the open ocean is left out. A lake is `natural=water`
+  (closed ways and multipolygons) of at least 1 ha, leaving out
+  `water=river`, `canal`, `stream`, `ditch`, `drain` and `wastewater`, so a
+  creek never holds a camp beside it, and water tagged `intermittent=yes`,
+  so a dry salt lake such as Kati Thanda-Lake Eyre or Lake Torrens never
+  holds a camp on or beside its bed. Each shape is simplified to about 5 m
+  (keeping its topology), then cut along the 0.1 degree grid, so no piece
+  is larger than a grid square and the pieces either side of a cut meet
+  exactly. The engine counts any water in its shore test, so a cut edge is
+  never taken for a shore. Sorted by grid square, then by line.
+- `roads.ndjson`: every major road in the extract (`pipeline.geometry.is_major_road`,
+  the rule the sidecar uses) as a whole way, in the sidecar's road line
+  shape `{"road": <way id>, "highway": ..., "name"?: ..., "ref"?: ...,
+  "coords": [[lon, lat], ...]}`, sorted by way id.
+- `tiles/water/<row>/<col>.ndjson` and `tiles/roads/<row>/<col>.ndjson`:
+  0.1 degree tiles, `row` = `floor(lat * 10)` and `col` = `floor(lon * 10)`.
+  A tile holds every line whose bounds, grown by 100 m, touch it: the rule
+  of `tileKeys` in the engine's `packages/intake/src/place-geometry.ts`. A
+  road tile holds only the runs of a road's segments that come near it, so
+  a long road is not copied whole into every tile it passes. A tile with
+  nothing in it is not written. Lines are sorted, so the same input gives
+  the same bytes.
+- `tiles.json`: `{"tiles": {<key>: {"sha256": ..., "bytes": ...}}}` for every
+  tile.
+- `changed.json`: `{"put": [...], "delete": [...]}`, the tiles whose hash
+  differs from `--previous-tiles` (every tile without it) and the tiles in
+  `--previous-tiles` that no longer exist. Tile upload puts the `put` list,
+  but works out what to delete from the bucket itself.
+- `summary.json`: the extract's date and bounds, and the lines, bytes, tiles
+  and largest tile of each layer, with the count to put and delete.
+
+Coordinates are `[lon, lat]` in WGS 84, to 6 decimal places, and lines use
+compact JSON with sorted keys. The intake does not read a tile over 4 MiB,
+so a tile over that stops the build with exit code 1, before `tiles.json`,
+`changed.json` and `summary.json` are written. No building footprints are
+built. The files are ODbL, from OSM, like the rest of the data.
+
+Known limit: the open sea is kept only in tiles within `SEA_MARGIN_TILES`
+(5) tiles of a tile with land in it. That is about 55 km north to south,
+and 40 to 55 km east to west at Australian latitudes, counted from the
+edge of the tile that holds the coast, so a place pinned more than about
+55 km offshore is not held as pinned in the sea. The reason is size: the
+extract's bounds take in a great deal of open ocean, and keeping it would
+add a tile for every 0.1 degree square of it, each to build, upload and
+keep in step, for pins that far out to sea. An island has land in its
+tile, so the sea around it gets the same margin.
+
+## Geometry workflow
+
+`.github/workflows/geometry.yml` runs every Monday at 04:00 UTC and by
+hand. It:
+
+1. downloads the Australia extract with `tools/download-extract`, as the
+   nightly sync does, and OSM's water polygons from
+   <https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip>,
+   unpacked to `water_polygons.shp`. The shapefile carries no date, so the
+   download's `Last-Modified` header is kept for the manifest;
+2. downloads `tiles.json` and `manifest.json` from the `geometry` release
+   with `tools/geometry-previous`, when there is one. Only gh's "release
+   not found" counts as no release: any other gh error fails the run here,
+   before the build, so a passing outage never switches off the guard in
+   step 4 or makes every tile look new;
+3. runs Place geometry with `--previous-tiles` set to that `tiles.json`
+   (without it, every tile is put);
+4. runs Geometry release, which checks the build and packs it. A build is
+   refused when `summary.json`, `tiles.json`, `changed.json`, `water.ndjson`
+   or `roads.ndjson` is missing; when it has no sea, no lakes, no roads or no
+   tiles; when any of those counts is under half the current release's
+   (unless the run was started by hand with `allow-shrink` ticked, which
+   passes `--allow-shrink` and lists each fall it let through in the
+   manifest's `allowed_shrink` and the run summary);
+   when a tile in `tiles.json` is missing from `tiles/` or differs from its
+   `sha256` and `bytes`, or a file in `tiles/` is not in `tiles.json`; or when
+   `changed.json` would put a tile not in `tiles.json` or delete one still in
+   it. The water and roads files are gzipped with no name or time in the
+   header, so the same build packs to the same bytes. The run summary shows
+   the counts and sizes, or the reason a build was rejected. Lakes are
+   counted as distinct lakes (`water.lakes`), not the pieces the grid cuts
+   them into. The sea has no count of its own, because OSM's water polygons
+   come already split, so it is counted in pieces (`water.sea_lines`), and a
+   change in how the sea is split moves that count;
+5. replaces `water.ndjson.gz`, `roads.ndjson.gz`, `summary.json` and
+   `manifest.json` on the `geometry` release, creating it (never marked
+   Latest) the first time;
+6. runs Tile upload, which lists the bucket (ListObjectsV2, page by page),
+   puts every tile in `changed.json`'s `put` list and every tile in
+   `tiles.json` the bucket lacks (32 at a time), and then deletes, in
+   batches of 1,000, every tile key in the bucket that is not in
+   `tiles.json`. Keys that are not tile keys are left alone;
+7. replaces `tiles.json` on the release.
+
+Any failure in steps 1 to 4 stops the run before anything is published, so
+the release and the bucket keep the last good set. The release's `tiles.json`
+is the list of tiles the bucket holds. It is replaced only after every
+changed tile is in the bucket, so a failed upload leaves the old list and
+the next run sends the same changes again. A failed put stops before any
+delete. Every put and delete can be repeated safely. Because the deletes
+come from the bucket's own listing and a missing tile is put whether or not
+it changed, a run that failed part of the way, after some puts or deletes
+the old list does not know about, is put right by the next run.
+
+`manifest.json` holds:
+
+```json
+{
+  "release": "geometry",
+  "built_at": "2026-11-17T04:21:09Z",
+  "sources": {
+    "extract": {"source": "Geofabrik", "timestamp": "2026-11-16T21:22:20Z", "bounds": [...], "path": "australia-latest.osm.pbf"},
+    "water_polygons": {"url": "https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip", "last_modified": "2026-11-10T03:12:00Z"}
+  },
+  "assets": {"water.ndjson.gz": {"bytes": ..., "sha256": ..., "ndjson_bytes": ...}, "roads.ndjson.gz": {...}},
+  "water": {...}, "roads": {...}, "tiles": {...},
+  "allowed_shrink": [],
+  "licence": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors"
+}
+```
+
+`water`, `roads` and `tiles` are the build's `summary.json` sections.
+`last_modified` is null when the server sent no `Last-Modified`.
+`allowed_shrink` is empty unless `--allow-shrink` let a fall through.
+
+The tiles go to a private Cloudflare R2 bucket through its S3 endpoint,
+`https://<R2_ACCOUNT_ID>.r2.cloudflarestorage.com`, with boto3 (pinned in
+`requirements-geometry.txt`), each as `<layer>/<row>/<col>.ndjson` with
+the content type `application/x-ndjson`. Tile upload refuses any key that
+is not a tile key. The workflow reads:
+
+| Name | Kind | What it is |
+|---|---|---|
+| `R2_ACCESS_KEY_ID` | secret | an R2 API token's access key, with Object Read and Write on the bucket only |
+| `R2_SECRET_ACCESS_KEY` | secret | that token's secret |
+| `R2_ACCOUNT_ID` | variable | the Cloudflare account id |
+| `R2_GEOMETRY_BUCKET` | variable | the bucket, `ocdb-place-geometry` |
+
+Without all four the run still builds, checks and publishes the release,
+skips the tiles with a warning and leaves the release's `tiles.json` as it
+was, so the first run with them in place puts every tile the bucket lacks.
 
 ## Validate
 
