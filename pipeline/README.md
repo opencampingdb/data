@@ -511,6 +511,25 @@ source: an Overture place with a name that lies inside the place's outline from 
 within 100 m of it (of its location when it has no outline), whose category
 fits, at confidence 0.8 or more, when it is the only one.
 
+**Wide match.** A named camping place (an overnight kind other than
+`roofed_accommodation` and `backpacker_hostel`) with no Overture match can
+take values from its wide match: an Overture camping place (`campground`,
+`rv_park` or `holiday_park`) within 500 m, at confidence 0.7 or more, when it
+is the only one, whose name agrees with the place's or whose own website has
+the place's website host when no other place gives that host. Two names
+agree when the core words of one are all in the other and the shorter has at
+least half the longer's words. The core words are the name normalised as
+above, with a leading chain name from `overture/chains.json` taken off,
+generic words left out (holiday, park, caravan, tourist, camping, campground,
+camp, campsite, ground, area, and, at, the, of and the states) and a plural
+s dropped. So "BIG4 Breeze Holiday Parks - Rainbow Beach" agrees with "BIG4
+Rainbow Beach Holiday Park", and "Crosslands Youth & Convention Centre" does
+not agree with "Crosslands Reserve". A wide match is dropped when another place
+takes the same Overture place. When the wide match is the Overture place a
+published candidate came from, the place takes nothing from it and the
+report lists the pair for a person to merge with `pipeline.merge`, keeping
+the place.
+
 **Gap fills.** A name source gives an unnamed place its name. An Overture
 match or a name source gives the website, phone and address where no other
 source has a value:
@@ -609,6 +628,9 @@ pool is dropped, with no one involved, by the first of these rules it breaks
 5. `near_place`: a place of any kind (not merged) lies within 250 m. This
    also drops the Overture place of every match, and of every candidate
    already published.
+6. `same_place`: a named camping place within 500 m has a name that agrees
+   with its own (see "Wide match" above). It is that place under a fuller or
+   chain-branded name.
 
 An Overture place linked to a place in this run (an Overture match, a name
 source anywhere in an outline, or a published candidate) is never a
@@ -638,7 +660,8 @@ name and location and of any website, phone and address Overture gives,
 each dated the run, and its GERS id in the link file. A GERS id already in
 the link file is not published again, and an approved candidate within 250 m
 of a place, or of a candidate published earlier in the same run (Overture
-lists some parks twice), waits for a person.
+lists some parks twice), or within 500 m of a camping place whose name
+agrees with its own, waits for a person.
 
 A published candidate keeps its name and location on later runs. Its other
 Overture values refresh from the Overture place it is linked to, and come off

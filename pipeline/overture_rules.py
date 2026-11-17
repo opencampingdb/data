@@ -62,6 +62,26 @@ SHARED_PAGE_LIMIT = 5
 MATCH_DISTANCE_M = 100
 MATCH_NAME_SIMILARITY = 0.85
 MATCH_CONFIDENCE = 0.7
+# The wide match, for a named camping place with no Overture match: an
+# Overture camping place up to 500 m away that is the same place under a
+# fuller or chain-branded name ("BIG4 Breeze Holiday Parks - Rainbow Beach"
+# for "BIG4 Rainbow Beach Holiday Park"), or that gives the place's own
+# website. Cabins, motels and hostels are left out: a caravan park beside a
+# lodge is a place of its own.
+WIDE_MATCH_DISTANCE_M = 500
+WIDE_MATCH_KINDS = tuple(sorted(
+    kind for kind, group in KIND_GROUP.items()
+    if group == "overnight" and kind not in ("roofed_accommodation", "backpacker_hostel")
+))
+# The words a camping place's name says nothing with, left out before two
+# names are compared, with the states and "and", "at", "the" and "of".
+GENERIC_WORDS = frozenset(
+    "holiday holidays park parks caravan caravans tourist camping campground campgrounds camp camps "
+    "campsite campsites ground grounds area areas and at the of "
+    "nsw qld vic tas sa wa nt act".split()
+)
+# Of two core names, the shorter must be at least this share of the longer's words.
+WIDE_MATCH_WORD_SHARE = 0.5
 # The name source, for an unnamed place.
 NAME_DISTANCE_M = 100
 NAME_CONFIDENCE = 0.8
@@ -372,6 +392,85 @@ def strong_match(record: dict, overture: Overture, lists: KeptLists, fresh_only:
         and (record["id"], row["id"]) not in lists.do_not_match
     ]
     return only_one(passing, fresh_only)
+
+
+def core_words(name: str | None, chains: Iterable[str] = ()) -> list[str]:
+    """A name's words that say which place it is: normalised, a leading chain
+    name taken off (the longest that fits), generic words left out, and a
+    plural s dropped, so "Drummonds Cove" and "Drummond Cove" agree."""
+    text = normalised_name(name)
+    for chain in sorted(chains, key=len, reverse=True):
+        if chain and (text == chain or text.startswith(chain + " ")):
+            text = text[len(chain):].strip()
+            break
+    words = [word for word in text.split() if word not in GENERIC_WORDS]
+    return [word[:-1] if len(word) > 3 and word.endswith("s") else word for word in words]
+
+
+def names_agree(a: str | None, b: str | None, chains: Iterable[str] = ()) -> bool:
+    """True when two names say the same place: the core words of one are all
+    in the other, and the shorter has at least WIDE_MATCH_WORD_SHARE of the
+    longer's words. "Crosslands" does not agree with "Crosslands Youth &
+    Convention Centre", a camp of its own beside the reserve."""
+    one, other = set(core_words(a, chains)), set(core_words(b, chains))
+    if not one or not other:
+        return False
+    small, large = sorted((one, other), key=len)
+    return small <= large and len(small) >= WIDE_MATCH_WORD_SHARE * len(large)
+
+
+def website_host(url) -> str | None:
+    """A website's host, lower case, without www."""
+    if not isinstance(url, str) or not url.strip():
+        return None
+    return host_of(url) or None
+
+
+def wide_match(
+    record: dict,
+    overture: Overture,
+    lists: KeptLists,
+    hosts: dict[str, int],
+    fresh_only: bool = False,
+) -> dict | None:
+    """A named camping place's wide match, or None (see WIDE_MATCH_DISTANCE_M).
+
+    The Overture place must be a camping place (a category that makes an
+    Overture candidate) within 500 m and not on the do-not-match list. Its
+    name must agree with the place's (names_agree), or its own website's host
+    must be the place's and no other place's (hosts: places per website
+    host). Only one may pass.
+    """
+    if record.get("kind") not in WIDE_MATCH_KINDS or not normalised_name(record.get("name")):
+        return None
+    loc = record["location"]
+    host = website_host(record.get("facts", {}).get("website"))
+    own_host = host if host and hosts.get(host) == 1 else None
+    passing = [
+        row
+        for _, row in near(overture, loc["lat"], loc["lon"], WIDE_MATCH_DISTANCE_M)
+        if (row.get("basic_category") in lists.candidate_kinds or row.get("taxonomy_primary") in lists.candidate_kinds)
+        and (row.get("confidence") or 0) >= MATCH_CONFIDENCE
+        and (record["id"], row["id"]) not in lists.do_not_match
+        and (
+            names_agree(record["name"], row.get("name"), lists.chains)
+            or (own_host is not None and own_host in {website_host(url) for url in own_websites(row, lists)})
+        )
+    ]
+    return only_one(passing, fresh_only)
+
+
+def website_hosts(places: dict[str, dict]) -> dict[str, int]:
+    """How many live places give each website host, leaving out published
+    candidates and Overture's own gap fills."""
+    counts = {}
+    for record in places.values():
+        if record.get("status") == "merged" or is_candidate(record):
+            continue
+        host = website_host(strip_overture(record).get("facts", {}).get("website"))
+        if host:
+            counts[host] = counts.get(host, 0) + 1
+    return counts
 
 
 def only_one(passing: list[dict], fresh_only: bool) -> dict | None:
