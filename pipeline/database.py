@@ -70,7 +70,6 @@ apps download the whole database once and refuse a layout they cannot read.
 
 import argparse
 import gzip
-import hashlib
 import json
 import shutil
 import sys
@@ -80,7 +79,7 @@ from pathlib import Path
 
 import apsw
 
-from .common import load_removed, write_text
+from .common import load_removed, sha256_of, write_text
 from .localities import load_localities
 from .release import asset_url, gzip_bytes, release_tag
 from .states import StateLookup
@@ -178,14 +177,6 @@ def read_lines(path: Path) -> list[tuple[dict, str]]:
     """(record, line) for each line of a gzipped NDJSON file."""
     with gzip.open(path, "rt", encoding="utf-8") as f:
         return [(json.loads(line), line.rstrip("\n")) for line in f if line.strip()]
-
-
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with open(path, "rb") as f:
-        for block in iter(lambda: f.read(1 << 20), b""):
-            digest.update(block)
-    return digest.hexdigest()
 
 
 def build_database(
@@ -400,7 +391,7 @@ def previous_database(directory: Path, work: Path) -> tuple[str, Path] | None:
     if manifest.get("layout_version") != LAYOUT_VERSION:
         print(f"{directory}: layout {manifest.get('layout_version')} is not {LAYOUT_VERSION}, skipped")
         return None
-    if packed.stat().st_size != entry["bytes"] or sha256_file(packed) != entry["sha256"]:
+    if packed.stat().st_size != entry["bytes"] or sha256_of(packed) != entry["sha256"]:
         raise ChangesetError(f"{packed} does not match its manifest")
     unpacked = work / f"{manifest['data_version']}.sqlite"
     with gzip.open(packed, "rb") as source, open(unpacked, "wb") as target:
@@ -522,7 +513,7 @@ def build(
         manifest["database"] = {
             "file": DATABASE_FILE,
             "url": asset_url(repository, release, DATABASE_FILE),
-            "sha256": hashlib.sha256(packed).hexdigest(),
+            "sha256": sha256_of(packed),
             "bytes": len(packed),
         }
 
@@ -549,7 +540,7 @@ def build(
             entries.append({
                 "file": name,
                 "url": asset_url(repository, release, name),
-                "sha256": hashlib.sha256(changeset).hexdigest(),
+                "sha256": sha256_of(changeset),
                 "bytes": len(changeset),
                 "from": from_version,
                 "to": manifest["data_version"],

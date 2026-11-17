@@ -4,6 +4,7 @@ Everything that decides how a file looks on disk lives here, so that sync,
 release and validate all agree on one canonical form.
 """
 
+import hashlib
 import json
 from datetime import datetime, timezone
 from decimal import ROUND_HALF_UP, Decimal
@@ -245,6 +246,18 @@ COORD_PLACES = 6
 def utc_now() -> str:
     """Current time as an ISO 8601 UTC string with whole seconds."""
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def sha256_of(data: bytes | Path) -> str:
+    """The hex sha256 of some bytes, or of a file's contents read 1 MiB at a time."""
+    digest = hashlib.sha256()
+    if isinstance(data, Path):
+        with data.open("rb") as f:
+            while block := f.read(1 << 20):
+                digest.update(block)
+    else:
+        digest.update(data)
+    return digest.hexdigest()
 
 
 def round_coord(value: float) -> float:

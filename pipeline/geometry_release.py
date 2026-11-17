@@ -13,11 +13,12 @@ last good files. See "Geometry workflow" in pipeline/README.md.
 
 import argparse
 import gzip
-import hashlib
 import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+from .common import sha256_of
 
 WATER_POLYGONS_URL = "https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip"
 # A build with fewer than this share of any count in the previous release's
@@ -64,7 +65,7 @@ def check(build: Path, previous_manifest: Path | None = None) -> dict:
         if key not in on_disk:
             raise BuildRejected(f"tile {key} is in tiles.json but missing from tiles/")
         data = (root / key).read_bytes()
-        if hashlib.sha256(data).hexdigest() != tile["sha256"] or len(data) != tile["bytes"]:
+        if sha256_of(data) != tile["sha256"] or len(data) != tile["bytes"]:
             raise BuildRejected(f"tile {key} does not match its sha256 and bytes in tiles.json")
     extra = sorted(on_disk - set(listing))
     if extra:
@@ -84,14 +85,6 @@ def gzip_file(source: Path, target: Path) -> None:
         with gzip.GzipFile(filename="", mode="wb", fileobj=out, mtime=0, compresslevel=9) as packed:
             while chunk := raw.read(1 << 20):
                 packed.write(chunk)
-
-
-def sha256_of(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as f:
-        while chunk := f.read(1 << 20):
-            digest.update(chunk)
-    return digest.hexdigest()
 
 
 def pack(

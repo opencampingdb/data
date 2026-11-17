@@ -16,7 +16,6 @@ sends the token only to its configured intake. A redirect is not followed.
 
 import argparse
 import gzip
-import hashlib
 import json
 import os
 import sys
@@ -26,7 +25,7 @@ import urllib.request
 from collections.abc import Callable
 from pathlib import Path
 
-from .common import dump_line
+from .common import dump_line, sha256_of
 from .release import PLACE_INDEX_FILE, gzip_bytes
 
 # Uncompressed bytes of place lines in one call, so each call parses within a
@@ -53,7 +52,7 @@ def lines_by_cell(text: str) -> dict[Cell, list[str]]:
 
 
 def cell_hash(lines: list[str]) -> str:
-    return hashlib.sha256("".join(lines).encode("utf-8")).hexdigest()
+    return sha256_of("".join(lines).encode("utf-8"))
 
 
 def changed_parts(cells: dict[Cell, list[str]], held: dict[Cell, str]) -> list[bytes]:

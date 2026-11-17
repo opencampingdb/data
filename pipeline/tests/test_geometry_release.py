@@ -9,7 +9,7 @@ from pathlib import Path
 import pytest
 
 from pipeline.geometry_release import BuildRejected, pack
-from pipeline.tests.test_place_geometry import run
+from pipeline.tests.place_geometry_fixtures import run
 
 SOURCES = {"extract_source": "Geofabrik", "water_polygons_modified": "2026-11-10T03:12:00Z"}
 

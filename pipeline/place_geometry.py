@@ -12,7 +12,6 @@ in the formats its self-hosting guide gives under "Plausible locations"
 """
 
 import argparse
-import hashlib
 import json
 import math
 import shutil
@@ -25,6 +24,7 @@ import shapefile
 import shapely
 from shapely import MultiPolygon, Polygon
 
+from .common import sha256_of
 from .roads import MajorRoads
 from .water import METRES_PER_DEGREE
 
@@ -308,7 +308,7 @@ def write_tiles(root: Path, tiles: dict[str, list[str]]) -> dict[str, dict]:
         path = root / key
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
-        listing[key] = {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)}
+        listing[key] = {"sha256": sha256_of(data), "bytes": len(data)}
     return listing
 
 
