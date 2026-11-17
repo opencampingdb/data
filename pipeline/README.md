@@ -26,7 +26,7 @@ release and Tile upload (see "Geometry workflow").
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
 | Place geometry | `python -m pipeline.place_geometry --extract FILE --water-polygons water-polygons-split-4326.zip [--previous-tiles tiles.json] --out DIR` | `.osm.pbf` or `.osm` XML, OSM's water polygons (split, WGS 84), the previous build's tile list | `water.ndjson`, `roads.ndjson`, the tile tree in `tiles/`, `tiles.json`, `changed.json` and `summary.json` in `DIR`, for the feedback engine's plausibility check (see "Place geometry") |
 | Geometry release | `python -m pipeline.geometry_release --build DIR --out publish --extract-source TEXT [--water-polygons-modified T] [--previous-manifest manifest.json]` | a Place geometry build, the current `geometry` release's `manifest.json` | `water.ndjson.gz`, `roads.ndjson.gz`, `tiles.json`, `summary.json` and `manifest.json` in `publish`, or exit code 1 and nothing written when the build fails a check (see "Geometry workflow") |
-| Tile upload | `python -m pipeline.tile_upload --build DIR`, after `pip install -r requirements-geometry.txt` (boto3), with `R2_ACCOUNT_ID`, `R2_GEOMETRY_BUCKET`, `R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY` set | `DIR/changed.json` and `DIR/tiles/` | the changed tiles put in the bucket and the removed ones deleted (see "Geometry workflow") |
+| Tile upload | `python -m pipeline.tile_upload --build DIR`, after `pip install -r requirements-geometry.txt` (boto3), with `R2_ACCOUNT_ID`, `R2_GEOMETRY_BUCKET`, `R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY` set | `DIR/tiles.json`, `DIR/changed.json`, `DIR/tiles/` and the bucket's own listing | the bucket holding exactly the build's tiles: the changed and missing ones put, every other tile key deleted (see "Geometry workflow") |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews. With `--auto`, every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, never by a workflow |
@@ -1131,7 +1131,8 @@ It writes, in `DIR`:
   tile.
 - `changed.json`: `{"put": [...], "delete": [...]}`, the tiles whose hash
   differs from `--previous-tiles` (every tile without it) and the tiles in
-  `--previous-tiles` that no longer exist.
+  `--previous-tiles` that no longer exist. Tile upload puts the `put` list,
+  but works out what to delete from the bucket itself.
 - `summary.json`: the extract's date and bounds, and the lines, bytes, tiles
   and largest tile of each layer, with the count to put and delete.
 
@@ -1168,8 +1169,11 @@ hand. It:
 5. replaces `water.ndjson.gz`, `roads.ndjson.gz`, `summary.json` and
    `manifest.json` on the `geometry` release, creating it (never marked
    Latest) the first time;
-6. runs Tile upload, which puts every tile in `changed.json`'s `put` list
-   (32 at a time) and then deletes its `delete` list in batches of 1,000;
+6. runs Tile upload, which lists the bucket (ListObjectsV2, page by page),
+   puts every tile in `changed.json`'s `put` list and every tile in
+   `tiles.json` the bucket lacks (32 at a time), and then deletes, in
+   batches of 1,000, every tile key in the bucket that is not in
+   `tiles.json`. Keys that are not tile keys are left alone;
 7. replaces `tiles.json` on the release.
 
 Any failure in steps 1 to 4 stops the run before anything is published, so
@@ -1177,7 +1181,10 @@ the release and the bucket keep the last good set. The release's `tiles.json`
 is the list of tiles the bucket holds. It is replaced only after every
 changed tile is in the bucket, so a failed upload leaves the old list and
 the next run sends the same changes again. A failed put stops before any
-delete. Every put and delete can be repeated safely.
+delete. Every put and delete can be repeated safely. Because the deletes
+come from the bucket's own listing and a missing tile is put whether or not
+it changed, a run that failed part of the way, after some puts or deletes
+the old list does not know about, is put right by the next run.
 
 `manifest.json` holds:
 

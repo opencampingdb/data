@@ -1,11 +1,17 @@
-"""Changed place geometry tiles to an S3-compatible bucket (Cloudflare R2).
+"""Place geometry tiles to an S3-compatible bucket (Cloudflare R2).
 
     python -m pipeline.tile_upload --build build/
 
-Reads build/changed.json from pipeline.place_geometry, puts each tile in
-its "put" list from build/tiles/ and then deletes each key in its "delete"
-list. Tiles that did not change are not sent, so a weekly rebuild makes
-few calls. The bucket and its credentials come from the environment:
+Makes the bucket hold exactly the build's tiles (build/tiles.json and
+build/tiles/ from pipeline.place_geometry). It lists the bucket, page by
+page, then puts each tile in build/changed.json's "put" list (the tiles
+whose sha256 differs from the previous tile list) and each tile the bucket
+lacks, then deletes every tile key in the bucket that the build does not
+have. Tiles that did not change are not sent, so a weekly rebuild makes few
+calls, and a run that failed part of the way is finished by the next one,
+whatever the previous tile list says. Keys in the bucket that are not tile
+keys are left alone. The bucket and its credentials come from the
+environment, named in ENV:
 
     R2_ACCOUNT_ID         the account, for https://<account>.r2.cloudflarestorage.com
     R2_GEOMETRY_BUCKET    the bucket
@@ -13,8 +19,7 @@ few calls. The bucket and its credentials come from the environment:
     R2_SECRET_ACCESS_KEY  and its secret
 
 Any failed put or delete exits with code 1 after the rest have been tried.
-A failed put stops before the deletes. Every call can be repeated, so the
-next run, which diffs against the same previous tile list, finishes the job.
+A failed put stops before the deletes. Every call can be repeated.
 """
 
 import argparse
@@ -31,6 +36,8 @@ DELETE_BATCH = 1000
 WORKERS = 32
 CONTENT_TYPE = "application/x-ndjson"
 TILE_KEY = re.compile(r"(water|roads)/-?\d+/-?\d+\.ndjson")
+# The settings the upload reads from the environment. The geometry workflow
+# sets these four and no others (pipeline/tests/test_tile_upload.py checks).
 ENV = ("R2_ACCOUNT_ID", "R2_GEOMETRY_BUCKET", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY")
 
 
@@ -38,17 +45,33 @@ class UploadFailed(Exception):
     """A tile the bucket did not take, or a key that is not a tile."""
 
 
-def upload(build: Path, client, bucket: str, workers: int = WORKERS) -> dict:
-    """Put the changed tiles in build and delete the removed ones. Returns the counts.
+def bucket_keys(client, bucket: str) -> set[str]:
+    """Every key in the bucket, read with ListObjectsV2 one page at a time."""
+    keys: set[str] = set()
+    token = None
+    while True:
+        page = client.list_objects_v2(Bucket=bucket, **({"ContinuationToken": token} if token else {}))
+        keys.update(item["Key"] for item in page.get("Contents", []))
+        if not page.get("IsTruncated"):
+            return keys
+        token = page["NextContinuationToken"]
 
-    client is an S3 client (boto3's, or a fake in tests): put_object and
-    delete_objects are the only calls made.
+
+def upload(build: Path, client, bucket: str, workers: int = WORKERS) -> dict:
+    """Make the bucket hold the build's tiles: put the changed and missing ones, delete the rest.
+
+    Returns the counts. client is an S3 client (boto3's, or a fake in tests):
+    list_objects_v2, put_object and delete_objects are the only calls made.
     """
-    changes = json.loads((build / "changed.json").read_text())
-    put, delete = list(changes["put"]), list(changes["delete"])
-    bad = [key for key in put + delete if not TILE_KEY.fullmatch(key)]
+    listing = json.loads((build / "tiles.json").read_text())["tiles"]
+    changed = json.loads((build / "changed.json").read_text())["put"]
+    bad = [key for key in [*changed, *listing] if not TILE_KEY.fullmatch(key)]
     if bad:
         raise UploadFailed(f"not a tile key: {', '.join(bad[:5])}")
+
+    held = bucket_keys(client, bucket)
+    put = sorted(set(changed) | (set(listing) - held))
+    delete = sorted(key for key in held - set(listing) if TILE_KEY.fullmatch(key))
 
     def put_one(key: str) -> str | None:
         try:

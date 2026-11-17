@@ -4,15 +4,17 @@ name: Place geometry
 # Builds the water mask and every major road (pipeline.place_geometry) from
 # the Geofabrik extract for Australia (tools/download-extract) and OSM's
 # water polygons, checks and packs the build (pipeline.geometry_release),
-# replaces the files on the fixed `geometry` release, then puts the changed
-# tiles in the R2 bucket and deletes the removed ones (pipeline.tile_upload).
+# replaces the files on the fixed `geometry` release, then makes the R2
+# bucket hold exactly the build's tiles (pipeline.tile_upload).
 # See pipeline/README.md, "Geometry workflow".
 #
 # Any build or check failure stops the run before anything is published, so
 # the release and the bucket keep the last good set. The release's tiles.json
 # is the list of tiles the bucket holds: it is replaced only after every
 # changed tile is uploaded, so a failed upload leaves the old list and the
-# next run sends the same changes again. Without the R2 settings the run still
+# next run sends the same changes again. The upload reads the bucket's own
+# listing for what to delete and puts any tile it lacks, so a run that failed
+# part of the way is put right by the next. Without the R2 settings the run still
 # publishes the release, skips the tiles with a warning and leaves tiles.json
 # as it was.
 #
@@ -172,7 +174,7 @@ jobs:
           gh release upload "$RELEASE_TAG" --clobber \
             "$publish/water.ndjson.gz" "$publish/roads.ndjson.gz" "$publish/summary.json" "$publish/manifest.json"
 
-      - name: Upload the changed tiles
+      - name: Upload the tiles
         if: steps.r2.outputs.tiles == 'true'
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
