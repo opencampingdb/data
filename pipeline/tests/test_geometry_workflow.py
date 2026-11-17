@@ -123,3 +123,12 @@ def test_the_upload_step_sets_exactly_the_settings_tile_upload_reads():
 @pytest.mark.parametrize("name", ENV)
 def test_the_r2_settings_come_from_secrets_or_variables(name):
     assert re.search(rf"{name}: \$\{{\{{ (secrets|vars)\.{name} \}}\}}", step("Upload the tiles"))
+
+
+def test_a_run_by_hand_can_allow_a_shrink_and_a_scheduled_run_cannot():
+    dispatch = WORKFLOW[WORKFLOW.index("  workflow_dispatch:") : WORKFLOW.index("\npermissions:")]
+    assert re.search(r"allow-shrink:\n(?:\s+\w+: .*\n)*?\s+type: boolean", dispatch)
+    assert re.search(r"allow-shrink:\n(?:\s+\w+: .*\n)*?\s+default: false", dispatch)
+    check = step("Check and pack")
+    assert "ALLOW_SHRINK: ${{ inputs.allow-shrink }}" in check
+    assert re.search(r'if \[ "\$ALLOW_SHRINK" = true \]; then\n\s+args\+=\(--allow-shrink\)', check)

@@ -24,6 +24,11 @@ on:
   schedule:
     - cron: "0 4 * * 1"
   workflow_dispatch:
+    inputs:
+      allow-shrink:
+        description: Publish a build under half the current release's counts. Only after checking why it fell.
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -109,12 +114,18 @@ jobs:
           python -m pipeline.place_geometry --extract "$RUNNER_TEMP/australia-latest.osm.pbf" \
             --water-polygons "$WATER_POLYGONS" --out "$RUNNER_TEMP/build" "${args[@]}"
 
+      # A rejected build writes its reason to the run summary. A scheduled run
+      # has no inputs, so it never allows a shrink.
       - name: Check and pack
         env:
           WATER_POLYGONS_MODIFIED: ${{ steps.water.outputs.modified }}
+          ALLOW_SHRINK: ${{ inputs.allow-shrink }}
         run: |
           set -euo pipefail
           args=()
+          if [ "$ALLOW_SHRINK" = true ]; then
+            args+=(--allow-shrink)
+          fi
           if [ -f "$RUNNER_TEMP/previous/manifest.json" ]; then
             args+=(--previous-manifest "$RUNNER_TEMP/previous/manifest.json")
           fi
@@ -129,7 +140,7 @@ jobs:
             "| --- | --- |",
             "| Extract | \(.sources.extract.source), \(.sources.extract.timestamp // "no timestamp") |",
             "| Water polygons | last modified \(.sources.water_polygons.last_modified // "unknown") |",
-            "| Water | \(.water.sea_lines) sea and \(.water.lake_lines) lake lines, \(.assets["water.ndjson.gz"].bytes) bytes gzipped |",
+            "| Water | \(.water.sea_lines) sea lines, \(.water.lakes) lakes in \(.water.lake_lines) lines, \(.assets["water.ndjson.gz"].bytes) bytes gzipped |",
             "| Roads | \(.roads.roads) roads, \(.assets["roads.ndjson.gz"].bytes) bytes gzipped |",
             "| Tiles | \(.tiles.count) tiles, \(.tiles.put) to put, \(.tiles.delete) to delete, largest \(.tiles.largest) |"' \
             "$RUNNER_TEMP/publish/manifest.json" >> "$GITHUB_STEP_SUMMARY"

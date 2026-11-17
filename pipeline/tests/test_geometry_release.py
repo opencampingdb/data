@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-from pipeline.geometry_release import BuildRejected, pack
+from pipeline.geometry_release import BuildRejected, main, pack
 from pipeline.tests.place_geometry_fixtures import run
 
 SOURCES = {"extract_source": "Geofabrik", "water_polygons_modified": "2026-11-10T03:12:00Z"}
@@ -45,6 +45,7 @@ def test_packs_the_gzipped_files_the_lists_and_a_manifest(build, tmp_path):
     assert manifest["roads"] == summary["roads"]
     assert manifest["water"] == summary["water"]
     assert manifest["licence"] == "ODbL-1.0"
+    assert manifest["allowed_shrink"] == []
 
 
 def test_the_same_build_packs_to_the_same_bytes(build, tmp_path):
@@ -96,7 +97,7 @@ def test_a_delete_of_a_tile_still_in_the_list_is_rejected(build, tmp_path):
     rejected(build, tmp_path, "delete")
 
 
-@pytest.mark.parametrize("layer, field", [("water", "sea_lines"), ("water", "lake_lines"), ("roads", "roads")])
+@pytest.mark.parametrize("layer, field", [("water", "sea_lines"), ("water", "lakes"), ("roads", "roads")])
 def test_a_build_with_no_sea_lakes_or_roads_is_rejected(build, tmp_path, layer, field):
     summary = json.loads((build / "summary.json").read_text())
     summary[layer][field] = 0
@@ -119,3 +120,66 @@ def test_a_build_under_half_the_previous_release_is_rejected(build, tmp_path):
 def test_a_build_like_the_previous_release_passes(build, tmp_path):
     pack(build, tmp_path / "previous", **SOURCES)
     pack(build, tmp_path / "publish", **SOURCES, previous_manifest=tmp_path / "previous" / "manifest.json")
+
+
+def previous_with(build: Path, tmp_path: Path, layer: str, field: str, times: int) -> Path:
+    """A previous release like this build, with one count times larger."""
+    previous = pack(build, tmp_path / "previous", **SOURCES)
+    previous[layer][field] *= times
+    path = tmp_path / "previous" / "manifest.json"
+    path.write_text(json.dumps(previous))
+    return path
+
+
+def test_the_lake_guard_counts_lakes_not_their_pieces(build, tmp_path):
+    rejected(build, tmp_path, "lakes", previous_manifest=previous_with(build, tmp_path, "water", "lakes", 3))
+
+
+def test_more_lake_pieces_in_the_previous_release_with_as_many_lakes_passes(build, tmp_path):
+    pack(build, tmp_path / "publish", **SOURCES, previous_manifest=previous_with(build, tmp_path, "water", "lake_lines", 3))
+
+
+def test_allow_shrink_lets_a_build_under_half_the_previous_release_through(build, tmp_path):
+    previous = previous_with(build, tmp_path, "roads", "roads", 3)
+    manifest = pack(build, tmp_path / "publish", **SOURCES, previous_manifest=previous, allow_shrink=True)
+    assert manifest["roads"]["roads"] == 1
+    assert manifest["allowed_shrink"] == ["roads roads fell from 3 to 1, under 50% of the previous release"]
+
+
+def test_allow_shrink_still_rejects_a_build_with_no_roads(build, tmp_path):
+    summary = json.loads((build / "summary.json").read_text())
+    summary["roads"]["roads"] = 0
+    (build / "summary.json").write_text(json.dumps(summary))
+    rejected(build, tmp_path, "roads", allow_shrink=True)
+
+
+def cli(build: Path, tmp_path: Path, *extra: str) -> int:
+    return main([
+        "--build", str(build), "--out", str(tmp_path / "publish"), "--extract-source", "Geofabrik", *extra,
+    ])
+
+
+def test_a_rejected_build_writes_its_reason_to_the_run_summary(build, tmp_path, monkeypatch, capsys):
+    run_summary = tmp_path / "step-summary.md"
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(run_summary))
+    previous = previous_with(build, tmp_path, "roads", "roads", 3)
+    assert cli(build, tmp_path, "--previous-manifest", str(previous)) == 1
+    reason = capsys.readouterr().err.strip().removeprefix("geometry release: ")
+    assert "roads roads fell from 3 to 1" in reason
+    text = run_summary.read_text()
+    assert "rejected" in text and reason in text and "allow-shrink" in text
+
+
+def test_a_rejected_build_with_no_run_summary_only_logs(build, tmp_path, monkeypatch, capsys):
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    (build / "roads.ndjson").unlink()
+    assert cli(build, tmp_path) == 1
+    assert "roads.ndjson is missing" in capsys.readouterr().err
+
+
+def test_allow_shrink_on_the_command_line_passes_and_says_so_in_the_run_summary(build, tmp_path, monkeypatch, capsys):
+    run_summary = tmp_path / "step-summary.md"
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(run_summary))
+    previous = previous_with(build, tmp_path, "roads", "roads", 3)
+    assert cli(build, tmp_path, "--previous-manifest", str(previous), "--allow-shrink") == 0
+    assert "roads roads fell from 3 to 1" in run_summary.read_text()
