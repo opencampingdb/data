@@ -1,12 +1,15 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "City of Bayside",
       "osm_id": 3333042
@@ -27,7 +30,8 @@
     "nearest_major_road": {
       "distance_m": 210,
       "name": "Dendy Street"
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESBMZVH1G22JJ6DH56AMR",
@@ -39,11 +43,11 @@
   "name": null,
   "osm": {
     "id": 5623228161,
-    "timestamp": "2018-05-16T22:41:25Z",
+    "timestamp": "2026-11-16T04:08:23Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

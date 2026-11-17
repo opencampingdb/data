@@ -1,0 +1,59 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": true,
+    "hot_water": true,
+    "lga": {
+      "name": "Shire of Yarriambiack",
+      "osm_id": 3345545
+    },
+    "locality": {
+      "distance_m": 1020,
+      "name": "Brim",
+      "osm_id": 1294551022,
+      "type": "village"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 80
+    },
+    "nearest_feature": {
+      "distance_m": 80,
+      "name": "Brim Weir Pool",
+      "osm_id": 10228607,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Yarriambiack Creek",
+      "osm_id": 262182973
+    }
+  },
+  "group": "utility",
+  "id": "ocdb_01M7KMEX00117EBJX9B36Z66P6",
+  "kind": "public_shower",
+  "location": {
+    "lat": -36.076235,
+    "lon": 142.405676
+  },
+  "name": "Reddas Park Brim",
+  "osm": {
+    "id": 14384558227,
+    "timestamp": "2026-11-16T20:16:10Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-17T02:12:31Z"
+}

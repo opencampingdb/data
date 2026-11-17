@@ -10,9 +10,11 @@
     "drive_through": "2026-11-06T05:09:26Z",
     "dump_station": "2026-11-06T05:09:26Z",
     "entry": "2026-11-06T05:09:26Z",
+    "facebook": "2026-11-15T00:00:00Z",
     "motorbikes": "2026-11-06T05:09:26Z",
     "motorhomes": "2026-11-06T05:09:26Z",
     "pets": "2026-11-06T05:09:26Z",
+    "phone": "2026-11-15T00:00:00Z",
     "power": "2026-11-06T05:09:26Z",
     "showers": "2026-11-06T05:09:26Z",
     "telstra_signal": "2026-11-06T05:09:26Z",
@@ -33,18 +35,22 @@
     "drive_through": "feedback",
     "dump_station": "feedback",
     "entry": "feedback",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "motorbikes": "feedback",
     "motorhomes": "feedback",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "pets": "feedback",
+    "phone": "overture",
     "power": "feedback",
     "showers": "feedback",
     "telstra_signal": "feedback",
     "tents": "feedback",
     "toilets": "feedback",
+    "website": "osm",
     "wheelchair": "feedback",
     "wifi": "feedback"
   },
@@ -60,13 +66,14 @@
     "drive_through": true,
     "dump_station": true,
     "entry": "public",
+    "facebook": "https://www.facebook.com/203961329644404",
     "fee": true,
     "lga": {
       "name": "Shire of Northern Grampians",
       "osm_id": 3348880
     },
     "locality": {
-      "distance_m": 170,
+      "distance_m": 340,
       "name": "Halls Gap",
       "osm_id": 324529175,
       "type": "village"
@@ -74,15 +81,22 @@
     "motorbikes": true,
     "motorhomes": true,
     "nearest_major_road": {
-      "distance_m": 30,
+      "distance_m": 140,
       "name": "Grampians Road"
     },
+    "nearest_waterway": {
+      "distance_m": 100,
+      "name": "Stony Creek",
+      "osm_id": 36715412
+    },
     "pets": "yes",
+    "phone": "+61353564251",
     "power": true,
     "showers": true,
     "telstra_signal": true,
     "tents": true,
     "toilets": true,
+    "website": "https://hallsgapcaravanpark.com.au/",
     "wheelchair": true,
     "wifi": true
   },
@@ -90,17 +104,23 @@
   "id": "ocdb_01M66ES99Q85XCN4BX38AZJ9GX",
   "kind": "caravan_park",
   "location": {
-    "lat": -37.141236,
-    "lon": 142.518505
+    "lat": -37.139644,
+    "lon": 142.517438
   },
+  "merged_osm": [
+    {
+      "id": 595572962,
+      "type": "node"
+    }
+  ],
   "name": "Halls Gap Caravan Park",
   "osm": {
-    "id": 595572962,
-    "timestamp": "2025-12-29T07:27:36Z",
-    "type": "node",
+    "id": 12810646,
+    "timestamp": "2026-11-16T09:13:53Z",
+    "type": "relation",
     "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-17T02:12:31Z"
 }

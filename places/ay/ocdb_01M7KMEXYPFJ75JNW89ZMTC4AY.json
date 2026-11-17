@@ -1,0 +1,42 @@
+{
+  "fact_sources": {
+    "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "lga": {
+      "name": "Ballina Shire Council",
+      "osm_id": 6168644
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Alstonville",
+      "osm_id": 113745328,
+      "type": "town"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "Main Street"
+    }
+  },
+  "group": "services",
+  "id": "ocdb_01M7KMEXYPFJ75JNW89ZMTC4AY",
+  "kind": "fuel",
+  "location": {
+    "lat": -28.841154,
+    "lon": 153.438873
+  },
+  "name": null,
+  "osm": {
+    "id": 1580056163,
+    "timestamp": "2026-11-16T06:30:58Z",
+    "type": "way",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-17T02:12:31Z"
+}
