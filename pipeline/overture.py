@@ -51,6 +51,8 @@ from .overture_rules import (
     taken_values,
     value_of,
     values_from,
+    website_hosts,
+    wide_match,
     with_values,
     write_links,
 )
@@ -71,8 +73,10 @@ class ImportResult:
     links: the new link file, place id to {gers, release}. candidates: Overture candidates by tier (TIERS).
     dropped: the camping places each junk rule dropped, by rule. shared: each
     shared page left out (SHARED_PAGE_LIMIT) and how many places it was given for.
-    matches and name_sources: the places that got an Overture match or a name
-    source in this run.
+    matches, wide_matches and name_sources: the places that got an Overture
+    match, a wide match or a name source in this run. twins: places whose wide
+    match is the Overture place a published candidate came from, {place,
+    candidate}, for a person to merge (pipeline.merge, keeping the place).
     """
 
     release: str
@@ -86,7 +90,9 @@ class ImportResult:
     shared: dict[str, int] = field(default_factory=dict)
     checked: int = 0
     matches: int = 0
+    wide_matches: int = 0
     name_sources: int = 0
+    twins: list[dict] = field(default_factory=list)
 
 
 def import_overture(
@@ -122,6 +128,12 @@ def import_overture(
     # Places with a value taken in "Overture differs", always checked so a
     # value taken since the last run is written.
     with_taken = {place_id for place_id, _ in lists.taken}
+    hosts = website_hosts(places)
+    # The Overture places published candidates came from, by GERS id.
+    candidate_of = {
+        link["gers"]: place_id for place_id, link in links.items() if place_id in places and is_candidate(places[place_id])
+    }
+    wide = set()
     for place_id in sorted(places):
         record = places[place_id]
         if record.get("status") == "merged":
@@ -148,13 +160,30 @@ def import_overture(
             if link and not row:
                 result.links[place_id] = link
         elif record.get("kind") in OVERTURE_KINDS:
-            row = overture_place_for(base, overture, lists, geometry, fresh_only=changelog_only and not link)
+            fresh_only = changelog_only and not link
+            row = overture_place_for(base, overture, lists, geometry, fresh_only=fresh_only)
             if row and base.get("name"):
                 result.matches += 1
             elif row:
                 result.name_sources += 1
+            elif base.get("name"):
+                row = wide_match(base, overture, lists, hosts, fresh_only=fresh_only)
+                if row and row["id"] in candidate_of:
+                    result.twins.append({"place": place_id, "candidate": candidate_of[row["id"]]})
+                    row = None
+                elif row:
+                    wide.add(place_id)
         result.checked += 1
         checks.append((place_id, record, base, row))
+    # A wide match is only kept when no other place takes the same Overture place.
+    taken_by = {}
+    for place_id, _, _, row in checks:
+        if row:
+            taken_by[row["id"]] = taken_by.get(row["id"], 0) + 1
+    for i, (place_id, record, base, row) in enumerate(checks):
+        if place_id in wide and taken_by[row["id"]] > 1:
+            checks[i] = (place_id, record, base, None)
+    result.wide_matches = sum(1 for place_id, *_, row in checks if place_id in wide and row)
     # The Overture places linked to a place are never candidates. A
     # candidate's pages count towards SHARED_PAGE_LIMIT too, so publishing it
     # never makes a page shared that was not, and a shared page is not its own.
@@ -247,6 +276,8 @@ def summary_of(result: ImportResult, places: dict[str, dict]) -> dict:
         "differs": len(result.differs),
         "shared_pages": len(result.shared),
         "matches": result.matches,
+        "wide_matches": result.wide_matches,
+        "twins": len(result.twins),
         "name_sources": result.name_sources,
         "links": len(result.links),
         "candidates": {tier: len(rows) for tier, rows in result.candidates.items()},

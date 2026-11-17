@@ -65,6 +65,7 @@ def _render_report(result: ImportResult, summary: dict, limit: int) -> str:
         f"| Places | {summary['places']} |",
         f"| Checked | {summary['checked']} |",
         f"| Overture matches | {summary['matches']} |",
+        f"| Wide matches | {summary.get('wide_matches', 0)} |",
         f"| Name sources | {summary['name_sources']} |",
         f"| Places in the link file | {summary['links']} |",
         f"| Records changed | {summary['changed']} |",
@@ -139,6 +140,19 @@ def _render_report(result: ImportResult, summary: dict, limit: int) -> str:
         lines += more(len(result.removals), limit)
     else:
         lines.append("None.")
+    if result.twins:
+        lines += [
+            "",
+            "## Published candidates that are places we have",
+            "",
+            "Each place's wide match is the Overture place a published candidate came from. A person merges the",
+            "candidate into the place: `python -m pipeline.merge <place> <candidate>`.",
+            "",
+            "| Place | Candidate |",
+            "|---|---|",
+        ]
+        lines += [f"| {place_label(result, t['place'])} | `{t['candidate']}` |" for t in result.twins[:limit]]
+        lines += more(len(result.twins), limit)
     lines += ["", "## Candidates", ""]
     if any(result.candidates.values()):
         lines += [

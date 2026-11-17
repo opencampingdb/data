@@ -19,6 +19,8 @@ from .overture_socials import page_key, social_page
 from .overture_rules import (
     DO_NOT_MATCH_FILE,
     STATES,
+    WIDE_MATCH_DISTANCE_M,
+    WIDE_MATCH_KINDS,
     KeptLists,
     Overture,
     cell_of,
@@ -26,6 +28,7 @@ from .overture_rules import (
     load_kept_lists,
     load_links,
     metres_apart,
+    names_agree,
     normalised_name,
     own_websites,
     phones_of,
@@ -111,7 +114,32 @@ def place_within(grid: dict, lat: float, lon: float, metres: float) -> bool:
     )
 
 
-def junk_rule(row: dict, grid: dict, lists: KeptLists) -> str | None:
+def camping_grid(places: dict[str, dict]) -> dict[tuple[int, int], list[dict]]:
+    """Every live named camping place (WIDE_MATCH_KINDS), filed by grid cell."""
+    grid = {}
+    for record in places.values():
+        if record.get("status") == "merged" or not record.get("location") or record.get("kind") not in WIDE_MATCH_KINDS:
+            continue
+        if not normalised_name(record.get("name")):
+            continue
+        loc = record["location"]
+        grid.setdefault(cell_of(loc["lat"], loc["lon"]), []).append(record)
+    return grid
+
+
+def same_place_within(camping: dict, name: str | None, lat: float, lon: float, lists: KeptLists) -> bool:
+    """True when a camping place within WIDE_MATCH_DISTANCE_M has a name that
+    agrees with this one (names_agree): it is that place, under a fuller or
+    chain-branded name."""
+    return any(
+        names_agree(record["name"], name, lists.chains)
+        and metres_apart(lat, lon, record["location"]["lat"], record["location"]["lon"]) <= WIDE_MATCH_DISTANCE_M
+        for cell in cells_within(lat, lon, WIDE_MATCH_DISTANCE_M)
+        for record in camping.get(cell, ())
+    )
+
+
+def junk_rule(row: dict, grid: dict, lists: KeptLists, camping: dict | None = None) -> str | None:
     """The first junk rule a camping place breaks, or None when it is a candidate."""
     name = normalised_name(row.get("name"))
     if row["id"] in lists.rejected:
@@ -124,6 +152,8 @@ def junk_rule(row: dict, grid: dict, lists: KeptLists) -> str | None:
         return "scout_school_church"
     if place_within(grid, row["lat"], row["lon"], CANDIDATE_CLEARANCE_M):
         return "near_place"
+    if camping and same_place_within(camping, row.get("name"), row["lat"], row["lon"], lists):
+        return "same_place"
     return None
 
 
@@ -138,13 +168,14 @@ def find_candidates(
     found = {tier: [] for tier in TIERS}
     dropped = {}
     grid = places_grid(places)
+    camping = camping_grid(places)
     for gers in sorted(overture.places):
         row = overture.places[gers]
         kind = candidate_kind(row, lists)
         if kind is None:
             continue
         entry = candidate_entry(row, kind, overture.release, lists)
-        rule = junk_rule(row, grid, lists)
+        rule = junk_rule(row, grid, lists, camping)
         if rule:
             dropped.setdefault(rule, []).append(entry)
         elif gers not in linked:
@@ -265,7 +296,8 @@ def apply_decisions(
     None); otherwise it is held. A candidate whose GERS id is
     already linked to a place is not published again, and one within 250 m
     of a place (including one published in the same run, such as an
-    Overture duplicate) waits for a person. A new place never takes the id of
+    Overture duplicate), or within 500 m of a camping place whose name
+    agrees with its own (same_place_within), waits for a person. A new place never takes the id of
     a place already in places/.
 
     A line that is not a JSON object (the decide command passes such a line
@@ -284,6 +316,7 @@ def apply_decisions(
     linked = {link["gers"] for link in links.values()}
     places = load_places(root) if publish else {}
     grid = places_grid(places)
+    camping = camping_grid(places)
     used_ids = set(places)
     outcome = {"published": [], "held": [], "rejected": [], "flagged": [], "already": [], "near": [], "skipped": []}
     for line, entry in enumerate(decisions, start=1):
@@ -301,7 +334,9 @@ def apply_decisions(
             outcome["already"].append(gers)
         elif not publish or entry.get("tier") not in allowed:
             outcome["held"].append(gers)
-        elif place_within(grid, entry["location"]["lat"], entry["location"]["lon"], CANDIDATE_CLEARANCE_M):
+        elif place_within(grid, entry["location"]["lat"], entry["location"]["lon"], CANDIDATE_CLEARANCE_M) or (
+            same_place_within(camping, entry["name"], entry["location"]["lat"], entry["location"]["lon"], lists)
+        ):
             outcome["near"].append(gers)
         else:
             place_id = make_id()
@@ -319,6 +354,8 @@ def apply_decisions(
             grid.setdefault(cell_of(record["location"]["lat"], record["location"]["lon"]), []).append(
                 (record["location"]["lat"], record["location"]["lon"])
             )
+            if record["kind"] in WIDE_MATCH_KINDS:
+                camping.setdefault(cell_of(record["location"]["lat"], record["location"]["lon"]), []).append(record)
             outcome["published"].append(record["id"])
     if outcome["rejected"]:
         path = root / DO_NOT_MATCH_FILE

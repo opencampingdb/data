@@ -1,10 +1,16 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
     "caravans": "osm",
+    "facebook": "overture",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
+    "phone": "overture",
     "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -13,6 +19,7 @@
   },
   "facts": {
     "caravans": false,
+    "facebook": "https://www.facebook.com/958524890890404",
     "fee": false,
     "lga": {
       "name": "Blue Mountains City Council",
@@ -31,6 +38,7 @@
       "osm_type": "node",
       "type": "locality"
     },
+    "phone": "+61245882400",
     "protected_area": {
       "name": "Blue Mountains National Park",
       "osm_id": 5909718,
@@ -57,5 +65,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-17T00:00:00Z"
 }

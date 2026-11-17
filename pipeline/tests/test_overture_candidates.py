@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 import pytest
 
-from pipeline.common import dump_line, dump_record, load_places, place_path
+from pipeline.common import dump_line, dump_record, load_places, place_path, write_text
 from pipeline.maproulette import DOUBLE_MAPPING, TRAVELLER_REPORTS, out_of_spec_tasks, write_challenges
 from pipeline.overture import import_overture
 from pipeline.overture_candidates import apply_decisions
@@ -17,7 +17,7 @@ from pipeline.overture_rules import SHARED_PAGE_LIMIT, load_kept_lists, load_lin
 from pipeline.overture import main as overture_main
 from pipeline.overture_decide import main as decide_main
 from pipeline.tests.test_overture_source import inbox_with
-from pipeline.tests.test_overture_import import A, G1, G2, LISTS, REPO, extract, ov, place, run
+from pipeline.tests.test_overture_import import A, G1, G2, LISTS, RELEASE, REPO, extract, ov, place, run
 from pipeline.validate import validate_repo
 
 KM = 1000  # metres
@@ -540,3 +540,100 @@ def test_the_example_decision_line_is_in_the_form_the_reviewer_writes_and_overtu
     assert (record["name"], record["kind"], record["standing"]) == ("Sheepskin Hut Campground", "campground", "shown")
     assert load_links(repo)[record["id"]] == {"gers": line["gers"], "release": "2026-10-21.0"}
     assert validate_repo(repo, now=RUN) == []
+
+
+# ------------------------------------------------------------ wide match
+
+
+WIDE_LISTS = LISTS.__class__(
+    categories=LISTS.categories,
+    directory_hosts=LISTS.directory_hosts,
+    do_not_match=LISTS.do_not_match,
+    candidate_kinds=CANDIDATE_LISTS.candidate_kinds,
+    chains=("big4", "big4 breeze holiday parks", "big4 holiday parks"),
+)
+C = "ocdb_01M66CKP2X55A8CVGR95ZFJ1C0"
+
+
+def rainbow_beach(place_id=A, name="BIG4 Rainbow Beach Holiday Park", **changes):
+    """The OSM park, as in release 20261117T021811Z: a chain website, no phone."""
+    return place(place_id, name=name, facts={"website": "https://www.big4.com.au/caravan-parks/qld/rainbow-beach"}, **changes)
+
+
+def breeze(metres_north=264, name="BIG4 Breeze Holiday Parks - Rainbow Beach", websites=("https://big4rainbowbeach.com.au/",)):
+    """The same park in Overture, under the chain's brand, 264 m away."""
+    return ov(G1, name=name, category="campground", metres_north=metres_north, websites=list(websites), phones=["(07) 5486 3222"])
+
+
+def test_a_chain_branded_overture_place_up_to_500_m_away_fills_the_park_and_is_no_candidate():
+    result = run([rainbow_beach()], [breeze()], lists=WIDE_LISTS)
+    assert all_gers(result) == [] and dropped_by(result, "same_place") == [G1]
+    record = result.records[A]
+    assert record["facts"]["phone"] == "(07) 5486 3222"
+    assert record["fact_sources"]["phone"] == "overture"
+    assert record["facts"]["website"] == "https://www.big4.com.au/caravan-parks/qld/rainbow-beach"  # OSM's stays
+    assert result.links[A]["gers"] == G1
+    assert (result.matches, result.wide_matches) == (0, 1)
+
+
+@pytest.mark.parametrize("ours, theirs", [
+    ("BIG4 Rainbow Beach Holiday Park", "BIG4 Breeze Holiday Parks - Rainbow Beach"),
+    ("Drummonds Cove Holiday Park", "Drummond Cove Holiday Park"),
+    ("Cobb & Co Nine Mile Campgrounds", "Cobb & Co Nine Mile Camping Grounds"),
+    ("Gold Coast Holiday Park & Motel", "BIG4 Gold Coast Holiday Park"),
+    ("Mullumbimby Leagues Club", "Mullumbimby Campground at the leagues club"),
+])
+def test_names_that_say_the_same_place_agree(ours, theirs):
+    result = run([place(name=ours)], [breeze(name=theirs, metres_north=400)], lists=WIDE_LISTS)
+    assert result.wide_matches == 1 and all_gers(result) == []
+
+
+@pytest.mark.parametrize("ours, theirs", [
+    ("Crosslands Reserve", "Crosslands Youth & Convention Centre"),
+    ("Cowell Motorhome Park", "Cowell Foreshore Caravan Park"),
+    ("Koonawarra Family Holiday Park", "Riviera Country Caravan Park"),
+    ("Camping Ground", "Holiday Park"),
+])
+def test_names_that_do_not_say_the_same_place_leave_the_candidate(ours, theirs):
+    result = run([place(name=ours)], [breeze(name=theirs)], lists=WIDE_LISTS)
+    assert result.wide_matches == 0 and A not in result.links
+    assert all_gers(result) == [G1]
+
+
+def test_a_place_over_500_m_away_or_a_cabin_or_motel_takes_no_wide_match():
+    for record, metres in [(rainbow_beach(), 501), (rainbow_beach(kind="roofed_accommodation"), 264)]:
+        result = run([record], [breeze(metres_north=metres)], lists=WIDE_LISTS)
+        assert result.wide_matches == 0 and all_gers(result) == [G1]
+
+
+def test_the_places_own_website_matches_when_no_other_place_gives_its_host():
+    own = place(name="Lakeside Holiday Park", facts={"website": "https://lakeside.example.au/"})
+    row = breeze(name="Lakeside Leisure Resort", websites=["https://www.lakeside.example.au/book"])
+    assert run([own], [row], lists=WIDE_LISTS).wide_matches == 1
+    other = place(C, name="Lakeside Kiosk", kind="food_and_drink", metres_north=5 * KM, facts={"website": "https://lakeside.example.au/"})
+    assert run([own, other], [row], lists=WIDE_LISTS).wide_matches == 0
+
+
+def test_an_overture_place_two_places_take_by_wide_match_goes_to_neither():
+    second = rainbow_beach(place_id=C, name="Rainbow Beach Holiday Park", metres_north=500)
+    result = run([rainbow_beach(), second], [breeze()], lists=WIDE_LISTS)
+    assert result.wide_matches == 0 and result.links == {}
+
+
+def test_a_wide_match_on_a_published_candidates_overture_place_is_listed_for_a_person(repo):
+    kept_repo(repo)
+    candidate = place(C, kind="campground", name="BIG4 Breeze Holiday Parks - Rainbow Beach", metres_north=264, osm=None,
+                      sources={"name": "overture", "location": "overture"})
+    links = {C: {"gers": G1, "release": RELEASE}}
+    result = import_overture({A: rainbow_beach(), C: candidate}, extract(breeze()), links, WIDE_LISTS, now=RUN)
+    assert result.twins == [{"place": A, "candidate": C}]
+    assert A not in result.links and "phone" not in result.records.get(A, rainbow_beach())["facts"]
+
+
+def test_an_approved_candidate_whose_name_agrees_with_a_camping_place_within_500_m_waits(repo):
+    kept_repo(repo)
+    entry = strong_candidate(name="Sheepskin Hut Holiday Park")
+    write_place = place(name="Sheepskin Hut Campground", metres_north=5 * KM + 400)
+    write_text(place_path(repo, write_place["id"]), dump_record(write_place))
+    outcome = decide(repo, (entry, "approve"), publish=True)
+    assert outcome["published"] == [] and outcome["near"] == [G2]

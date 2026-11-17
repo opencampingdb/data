@@ -1,12 +1,21 @@
 {
+  "fact_dates": {
+    "facebook": "2026-11-15T00:00:00Z",
+    "phone": "2026-11-15T00:00:00Z",
+    "website": "2026-11-15T00:00:00Z"
+  },
   "fact_sources": {
+    "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
     "nearest_waterway": "osm",
-    "protected_area": "osm"
+    "phone": "overture",
+    "protected_area": "osm",
+    "website": "overture"
   },
   "facts": {
+    "facebook": "https://www.facebook.com/1705378723007431",
     "lga": {
       "name": "Bathurst Regional Council",
       "osm_id": 6330866
@@ -29,11 +38,13 @@
       "name": "Grove Creek",
       "osm_id": 452045448
     },
+    "phone": "+61263688603",
     "protected_area": {
       "name": "Abercrombie Karst Conservation Reserve",
       "osm_id": 6041324,
       "osm_type": "relation"
-    }
+    },
+    "website": "https://www.nationalparks.nsw.gov.au/camping-and-accommodation/campgrounds/abercrombie-caves-cam"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9WWDAW0F7VNCCYMGX72",
@@ -51,5 +62,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-17T00:00:00Z"
 }
