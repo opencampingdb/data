@@ -152,7 +152,7 @@ def polygons_of(geometry) -> list:
 
 # The bounds Geofabrik's Australia extract carries in its header. The mirror the
 # download falls back to writes no bounds, so a build of its file uses these.
-AUSTRALIA_EXTRACT_BOUNDS = (68.0, -57.0, 169.0, -8.8)
+AUSTRALIA_EXTRACT_BOUNDS = (68.133419, -57.092814, 169.001567, -8.809565)
 
 
 def extract_bounds(path: Path) -> tuple[float, float, float, float]:
