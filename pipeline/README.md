@@ -23,6 +23,7 @@ Place index.
 | Database | `python -m pipeline.database --release-dir dist [--previous <folder>] [--day <folder>] [--root .]` | `dist/`, `boundaries/au-states.geojson`, `localities/localities.ndjson`, `moderation/removed_reviews.json`, earlier releases' `manifest.json` and `ocdb.sqlite.gz` | `dist/ocdb.sqlite.gz`, `dist/changeset-*.bin.gz`, and their entries in `dist/manifest.json` |
 | Place index | `INTAKE_PLACES_TOKEN=... python -m pipeline.place_index --url <intake> [--file dist/place-index.ndjson.gz]` | `dist/place-index.ndjson.gz` | the changed map cells, sent to a feedback intake (the release workflow runs this) |
 | Commons | `python -m pipeline.commons --root . [--max-places N] [--stale-days 30]` | `places/` and the Wikimedia Commons API | `commons/matches.ndjson`, freely licensed Commons photos matched to places to stay (the nightly Commons photos workflow runs it), never a place and file pair on `moderation/commons-do-not-match.json` ([schema](../schema/commons_do_not_match.schema.json)). See the module docstring |
+| Place geometry | `python -m pipeline.place_geometry --extract FILE --water-polygons water-polygons-split-4326.zip [--previous-tiles tiles.json] --out DIR` | `.osm.pbf` or `.osm` XML, OSM's water polygons (split, WGS 84), the previous build's tile list | `water.ndjson`, `roads.ndjson`, the tile tree in `tiles/`, `tiles.json`, `changed.json` and `summary.json` in `DIR`, for the feedback engine's plausibility check (see "Place geometry") |
 | Duplicates | `python -m pipeline.duplicates --root . [--geometry geometry.ndjson]` | `places/`, `moderation/distinct_places.json`, the geometry sidecar | likely duplicate pairs, one JSON object per line (sync runs this too) |
 | Split | `python -m pipeline.split extract.ndjson --geometry geometry.ndjson --root .` | the extract and its sidecar, `places/` | records split where merged OSM objects are separate places, new pairs on the distinct list, `moderation/opposite-side-splits.csv`. Run by a person only |
 | Merge | `python -m pipeline.merge <keep_id> <drop_id> --root . [--part]`, or `python -m pipeline.merge --auto --geometry geometry.ndjson --root . [--summary merges.json]` | `places/`, `reviews/`, with `--auto` the geometry sidecar | the kept record, a tombstone and moved reviews. With `--auto`, every pair the automatic merge rule accepts, `moderation/automatic-merges.csv` and, with `--summary`, the merges made as JSON. Run by a person, never by a workflow |
@@ -1074,6 +1075,68 @@ GitHub support to purge cached views; say so on the takedown request.
 Each command recalculates the rating of every place it touches and sets
 that place's `updated`, so validation passes. Commit the result on a branch
 and open a PR.
+
+## Place geometry
+
+The feedback engine holds a new place pinned in the sea, in a lake or on a
+major road's carriageway for its reviewer, and lets the reviewer merge two
+places only when no major road runs between them. `pipeline.place_geometry`
+builds what it reads, in the formats its self-hosting guide gives under
+"Plausible locations":
+
+```sh
+python -m pipeline.place_geometry --extract australia-latest.osm.pbf \
+  --water-polygons water-polygons-split-4326.zip \
+  --previous-tiles previous/tiles.json --out build
+```
+
+`--water-polygons` takes OSM's water polygons as published at
+<https://osmdata.openstreetmap.de/data/water-polygons.html>, the split
+WGS 84 file (`water-polygons-split-4326.zip`), as the zip or its unpacked
+`water_polygons.shp` (reading the zip copies the 1.3 GB shapefile to the
+temporary folder first, so unpack it where space is short). They are the water side of `natural=coastline`, so a
+coastline error is fixed the way OSM fixes it. The extract's header gives
+the bounds the sea is clipped to, and a file without bounds is refused.
+
+It writes, in `DIR`:
+
+- `water.ndjson`: one line per piece of water, `{"water": "sea" | "lake",
+  "name"?: ..., "polygons": [...]}`, each polygon an outer ring followed by
+  its holes. The sea is every water polygon within the bounds, kept only in
+  0.1 degree tiles within `SEA_MARGIN_TILES` (5, about 55 km) of a tile with
+  land in it, so the open ocean is left out. A lake is `natural=water`
+  (closed ways and multipolygons) of at least 1 ha, leaving out
+  `water=river`, `canal`, `stream`, `ditch`, `drain` and `wastewater`, so a
+  creek never holds a camp beside it. Each shape is simplified to about 5 m
+  (keeping its topology), then cut along the 0.1 degree grid, so no piece
+  is larger than a grid square and the pieces either side of a cut meet
+  exactly. The engine counts any water in its shore test, so a cut edge is
+  never taken for a shore. Sorted by grid square, then by line.
+- `roads.ndjson`: every major road in the extract (`pipeline.geometry.is_major_road`,
+  the rule the sidecar uses) as a whole way, in the sidecar's road line
+  shape `{"road": <way id>, "highway": ..., "name"?: ..., "ref"?: ...,
+  "coords": [[lon, lat], ...]}`, sorted by way id.
+- `tiles/water/<row>/<col>.ndjson` and `tiles/roads/<row>/<col>.ndjson`:
+  0.1 degree tiles, `row` = `floor(lat * 10)` and `col` = `floor(lon * 10)`.
+  A tile holds every line whose bounds, grown by 100 m, touch it: the rule
+  of `tileKeys` in the engine's `packages/intake/src/place-geometry.ts`. A
+  road tile holds only the runs of a road's segments that come near it, so
+  a long road is not copied whole into every tile it passes. A tile with
+  nothing in it is not written. Lines are sorted, so the same input gives
+  the same bytes.
+- `tiles.json`: `{"tiles": {<key>: {"sha256": ..., "bytes": ...}}}` for every
+  tile.
+- `changed.json`: `{"put": [...], "delete": [...]}`, the tiles whose hash
+  differs from `--previous-tiles` (every tile without it) and the tiles in
+  `--previous-tiles` that no longer exist.
+- `summary.json`: the extract's date and bounds, and the lines, bytes, tiles
+  and largest tile of each layer, with the count to put and delete.
+
+Coordinates are `[lon, lat]` in WGS 84, to 6 decimal places, and lines use
+compact JSON with sorted keys. The intake does not read a tile over 4 MiB,
+so a tile over that stops the build with exit code 1, before `tiles.json`,
+`changed.json` and `summary.json` are written. No building footprints are
+built. The files are ODbL, from OSM, like the rest of the data.
 
 ## Validate
 

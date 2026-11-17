@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+OSM objects for pipeline.place_geometry: water and major roads for the
+plausibility check. The bounds are five by five tiles of 0.1 degree.
+At latitude -33.25 one degree of latitude is 111,195 m and one degree of
+longitude about 92,986 m (111,195 m times cos 33.25).
+-->
+<osm version="0.6" generator="fixture">
+  <bounds minlat="-33.5" minlon="151.0" maxlat="-33.0" maxlon="151.5"/>
+
+  <!-- A lake of about 3.7 ha (0.002 by 0.002 degrees, 186 m by 222 m). -->
+  <node id="1" version="1" lat="-33.25" lon="151.15"/>
+  <node id="2" version="1" lat="-33.25" lon="151.152"/>
+  <node id="3" version="1" lat="-33.248" lon="151.152"/>
+  <node id="4" version="1" lat="-33.248" lon="151.15"/>
+  <way id="601" version="1">
+    <nd ref="1"/><nd ref="2"/><nd ref="3"/><nd ref="4"/><nd ref="1"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="lake"/>
+    <tag k="name" v="Fixture Lake"/>
+  </way>
+
+  <!-- A pond of about 0.26 ha (0.0005 by 0.0005 degrees), under 1 ha. -->
+  <node id="11" version="1" lat="-33.25" lon="151.16"/>
+  <node id="12" version="1" lat="-33.25" lon="151.1605"/>
+  <node id="13" version="1" lat="-33.2495" lon="151.1605"/>
+  <node id="14" version="1" lat="-33.2495" lon="151.16"/>
+  <way id="602" version="1">
+    <nd ref="11"/><nd ref="12"/><nd ref="13"/><nd ref="14"/><nd ref="11"/>
+    <tag k="natural" v="water"/>
+    <tag k="name" v="Fixture Pond"/>
+  </way>
+
+  <!-- A river's water area, as large as the lake. -->
+  <node id="21" version="1" lat="-33.25" lon="151.25"/>
+  <node id="22" version="1" lat="-33.25" lon="151.252"/>
+  <node id="23" version="1" lat="-33.248" lon="151.252"/>
+  <node id="24" version="1" lat="-33.248" lon="151.25"/>
+  <way id="603" version="1">
+    <nd ref="21"/><nd ref="22"/><nd ref="23"/><nd ref="24"/><nd ref="21"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="river"/>
+    <tag k="name" v="Fixture River"/>
+  </way>
+
+  <!-- A drain's water area, as large as the lake. -->
+  <node id="31" version="1" lat="-33.35" lon="151.25"/>
+  <node id="32" version="1" lat="-33.35" lon="151.252"/>
+  <node id="33" version="1" lat="-33.348" lon="151.252"/>
+  <node id="34" version="1" lat="-33.348" lon="151.25"/>
+  <way id="604" version="1">
+    <nd ref="31"/><nd ref="32"/><nd ref="33"/><nd ref="34"/><nd ref="31"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="drain"/>
+    <tag k="name" v="Fixture Drain"/>
+  </way>
+
+  <!-- A motorway running east from 151.12 to 151.25 at latitude -33.45, across two tiles. -->
+  <node id="41" version="1" lat="-33.45" lon="151.12"/>
+  <node id="42" version="1" lat="-33.45" lon="151.15"/>
+  <node id="43" version="1" lat="-33.45" lon="151.18"/>
+  <node id="44" version="1" lat="-33.45" lon="151.25"/>
+  <way id="701" version="1">
+    <nd ref="41"/><nd ref="42"/><nd ref="43"/><nd ref="44"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="name" v="Fixture Motorway"/>
+    <tag k="ref" v="M1"/>
+  </way>
+
+  <!-- A residential street. -->
+  <node id="51" version="1" lat="-33.42" lon="151.12"/>
+  <node id="52" version="1" lat="-33.42" lon="151.13"/>
+  <way id="702" version="1">
+    <nd ref="51"/><nd ref="52"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Fixture Street"/>
+  </way>
+
+  <!-- The coast at longitude 151.35, land to the west. The sea comes from the water polygons, not this line. -->
+  <node id="61" version="1" lat="-33.1" lon="151.35"/>
+  <node id="62" version="1" lat="-33.0" lon="151.35"/>
+  <way id="801" version="1">
+    <nd ref="61"/><nd ref="62"/>
+    <tag k="natural" v="coastline"/>
+  </way>
+</osm>
