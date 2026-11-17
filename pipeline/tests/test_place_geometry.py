@@ -167,3 +167,15 @@ def test_the_same_lake_without_intermittent_is_kept(tmp_path):
     wet = tmp_path / "wet.osm"
     wet.write_text(with_lake("Fixture Salt Lake", water="lake", salt="yes"))
     assert [line["name"] for line in tiles(run(tmp_path, osm=wet))["water/-332/1512.ndjson"]] == ["Fixture Salt Lake"]
+
+
+def test_an_extract_without_header_bounds_uses_the_australia_extract_bounds(tmp_path):
+    # The fallback mirror's file has no bounds in its header.
+    from pipeline.place_geometry import AUSTRALIA_EXTRACT_BOUNDS, extract_bounds
+
+    text = OSM.read_text(encoding="utf-8")
+    start = text.index("<bounds")
+    unbounded = tmp_path / "no-bounds.osm"
+    unbounded.write_text(text[:start] + text[text.index("/>", start) + 2 :], encoding="utf-8")
+    assert extract_bounds(unbounded) == AUSTRALIA_EXTRACT_BOUNDS
+    assert extract_bounds(OSM) == (151.0, -33.5, 151.5, -33.0)
