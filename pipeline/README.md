@@ -1097,9 +1097,10 @@ python -m pipeline.place_geometry --extract australia-latest.osm.pbf \
 <https://osmdata.openstreetmap.de/data/water-polygons.html>, the split
 WGS 84 file (`water-polygons-split-4326.zip`), as the zip or its unpacked
 `water_polygons.shp` (reading the zip copies the 1.3 GB shapefile to the
-temporary folder first, so unpack it where space is short). They are the water side of `natural=coastline`, so a
-coastline error is fixed the way OSM fixes it. The extract's header gives
-the bounds the sea is clipped to, and a file without bounds is refused.
+temporary folder first, so unpack it where space is short). They are the
+water side of `natural=coastline`, so a coastline error is fixed the way
+OSM fixes it. The extract's header gives the bounds the sea is clipped to,
+and a file without bounds is refused.
 
 It writes, in `DIR`:
 
@@ -1143,6 +1144,16 @@ compact JSON with sorted keys. The intake does not read a tile over 4 MiB,
 so a tile over that stops the build with exit code 1, before `tiles.json`,
 `changed.json` and `summary.json` are written. No building footprints are
 built. The files are ODbL, from OSM, like the rest of the data.
+
+Known limit: the open sea is kept only in tiles within `SEA_MARGIN_TILES`
+(5) tiles of a tile with land in it. That is about 55 km north to south,
+and 40 to 55 km east to west at Australian latitudes, counted from the
+edge of the tile that holds the coast, so a place pinned more than about
+55 km offshore is not held as pinned in the sea. The reason is size: the
+extract's bounds take in a great deal of open ocean, and keeping it would
+add a tile for every 0.1 degree square of it, each to build, upload and
+keep in step, for pins that far out to sea. An island has land in its
+tile, so the sea around it gets the same margin.
 
 ## Geometry workflow
 

@@ -39,7 +39,8 @@ NOT_LAKES = frozenset({"river", "canal", "stream", "ditch", "drain", "wastewater
 SIMPLIFY = 5 / METRES_PER_DEGREE
 # Sea is kept only in tiles this many tiles (about 55 km) or fewer from a
 # tile with land in it, so the open ocean inside the extract's bounds is
-# not cut into tiles nobody pins a place in.
+# not cut into tiles nobody pins a place in. A known limit: a pin further
+# out than that is not held (see "Place geometry" in pipeline/README.md).
 SEA_MARGIN_TILES = 5
 # Coordinates are written to this many decimal places (about 0.1 m).
 DECIMALS = 6
@@ -58,6 +59,11 @@ MARGIN_METRES_PER_DEGREE_LON = 111_320
 WKB = osmium.geom.WKBFactory()
 
 
+def grid_index(degrees: float) -> int:
+    """The row of a latitude or the column of a longitude on the tile grid."""
+    return math.floor(degrees * TILES_PER_DEGREE)
+
+
 def tile_cells(min_lon: float, min_lat: float, max_lon: float, max_lat: float) -> list[tuple[int, int]]:
     """(row, col) of every tile a shape with these bounds belongs in.
 
@@ -65,14 +71,13 @@ def tile_cells(min_lon: float, min_lat: float, max_lon: float, max_lat: float) -
     listed: the rule of tileKeys in the feedback engine's
     packages/intake/src/place-geometry.ts, worked the same way.
     """
-    n = TILES_PER_DEGREE
     d_lat = TILE_MARGIN_M / MARGIN_METRES_PER_DEGREE_LAT
     widest = max(abs(min_lat), abs(max_lat)) + d_lat
     d_lon = TILE_MARGIN_M / (MARGIN_METRES_PER_DEGREE_LON * math.cos(min(widest, 89) * math.pi / 180))
     return [
         (row, col)
-        for row in range(math.floor((min_lat - d_lat) * n), math.floor((max_lat + d_lat) * n) + 1)
-        for col in range(math.floor((min_lon - d_lon) * n), math.floor((max_lon + d_lon) * n) + 1)
+        for row in range(grid_index(min_lat - d_lat), grid_index(max_lat + d_lat) + 1)
+        for col in range(grid_index(min_lon - d_lon), grid_index(max_lon + d_lon) + 1)
     ]
 
 
@@ -81,18 +86,16 @@ def tile_key(layer: str, cell: tuple[int, int]) -> str:
 
 
 def cell_box(row: int, col: int):
-    n = TILES_PER_DEGREE
-    return shapely.box(col / n, row / n, (col + 1) / n, (row + 1) / n)
+    return shapely.box(*(edge / TILES_PER_DEGREE for edge in (col, row, col + 1, row + 1)))
 
 
 def cut(shape) -> list[tuple[tuple[int, int], object]]:
     """The pieces of a shape in each grid cell: ((row, col), piece), by cell."""
-    n = TILES_PER_DEGREE
     minx, miny, maxx, maxy = shape.bounds
     shapely.prepare(shape)
     pieces = []
-    for row in range(math.floor(miny * n), math.floor(maxy * n) + 1):
-        for col in range(math.floor(minx * n), math.floor(maxx * n) + 1):
+    for row in range(grid_index(miny), grid_index(maxy) + 1):
+        for col in range(grid_index(minx), grid_index(maxx) + 1):
             box = cell_box(row, col)
             if not shape.intersects(box):
                 continue
@@ -218,7 +221,7 @@ def water_pieces(shape) -> list[tuple[tuple[int, int], object]]:
     return cut(shapely.simplify(shape, SIMPLIFY, preserve_topology=True))
 
 
-def piece_line(piece, fields: dict) -> list[dict]:
+def lines_of_piece(piece, fields: dict) -> list[dict]:
     """The water line of a piece, or none when rounding leaves nothing of it."""
     polygons = polygons_of(piece)
     return [{**fields, "polygons": polygons}] if polygons else []
@@ -226,18 +229,17 @@ def piece_line(piece, fields: dict) -> list[dict]:
 
 def water_lines(shape, fields: dict) -> list[tuple[tuple[int, int], dict]]:
     """One line per piece of a shape cut along the grid, with its cell."""
-    return [(cell, line) for cell, piece in water_pieces(shape) for line in piece_line(piece, fields)]
+    return [(cell, line) for cell, piece in water_pieces(shape) for line in lines_of_piece(piece, fields)]
 
 
-def near_land(sea: list[tuple[tuple[int, int], object]], bounds) -> set[tuple[int, int]]:
+def cells_near_land(sea: list[tuple[tuple[int, int], object]], bounds) -> set[tuple[int, int]]:
     """The cells within bounds that are SEA_MARGIN_TILES or fewer from a cell with land.
 
     A cell has land unless the sea covers all of it that lies within bounds.
     """
-    n = TILES_PER_DEGREE
     min_lon, min_lat, max_lon, max_lat = bounds
-    row0, col0 = math.floor(min_lat * n), math.floor(min_lon * n)
-    rows, cols = math.ceil(max_lat * n) - row0, math.ceil(max_lon * n) - col0
+    row0, col0 = grid_index(min_lat), grid_index(min_lon)
+    rows, cols = math.ceil(max_lat * TILES_PER_DEGREE) - row0, math.ceil(max_lon * TILES_PER_DEGREE) - col0
     covered: dict[tuple[int, int], float] = {}
     for cell, piece in sea:
         covered[cell] = covered.get(cell, 0.0) + piece.area
@@ -247,13 +249,15 @@ def near_land(sea: list[tuple[tuple[int, int], object]], bounds) -> set[tuple[in
         inside = shapely.intersection(cell_box(row, col), frame).area
         if area >= inside * (1 - 1e-9):
             land[row - row0, col - col0] = False
-    near = land.copy()
-    m = SEA_MARGIN_TILES
-    padded = np.pad(land, m)
-    for dr in range(-m, m + 1):
-        for dc in range(-m, m + 1):
-            near |= padded[m + dr : m + dr + rows, m + dc : m + dc + cols]
-    return {(int(r) + row0, int(c) + col0) for r, c in zip(*np.nonzero(near))}
+    # Grow the land by the margin: a cell is kept when any cell within
+    # SEA_MARGIN_TILES rows and columns of it has land.
+    within_margin = land.copy()
+    margin = SEA_MARGIN_TILES
+    padded = np.pad(land, margin)
+    for dr in range(-margin, margin + 1):
+        for dc in range(-margin, margin + 1):
+            within_margin |= padded[margin + dr : margin + dr + rows, margin + dc : margin + dc + cols]
+    return {(int(r) + row0, int(c) + col0) for r, c in zip(*np.nonzero(within_margin))}
 
 
 def road_line(road_id: int, highway: str, name: str | None, ref: str | None, coords: list) -> dict:
@@ -334,8 +338,8 @@ def build(extract: Path, water_polygons: Path, out: Path, previous_tiles: Path |
         (out / name).unlink(missing_ok=True)
     bounds = extract_bounds(extract)
     sea = [item for shape in read_sea(water_polygons, bounds) for item in water_pieces(shape)]
-    near = near_land(sea, bounds)
-    water = [(cell, line) for cell, piece in sea if cell in near for line in piece_line(piece, {"water": "sea"})]
+    coastal = cells_near_land(sea, bounds)
+    water = [(cell, line) for cell, piece in sea if cell in coastal for line in lines_of_piece(piece, {"water": "sea"})]
     sea_lines = len(water)
     lakes, major_roads = read_extract(extract)
     for name, shape in lakes:
