@@ -1,11 +1,15 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Shire of Yarriambiack",
       "osm_id": 3345545
@@ -22,7 +26,9 @@
     "nearest_major_road": {
       "distance_m": 420,
       "name": "Henty Highway"
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ES9KEMSQEYHASN878V8M9",
@@ -31,14 +37,14 @@
     "lat": -36.075835,
     "lon": 142.416391
   },
-  "name": null,
+  "name": "Brim Memorial Hall",
   "osm": {
     "id": 1294551304,
-    "timestamp": "2016-01-05T02:09:43Z",
+    "timestamp": "2026-11-16T23:01:43Z",
     "type": "node",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-17T02:12:31Z"
+  "updated": "2026-11-18T02:07:16Z"
 }
