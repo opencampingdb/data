@@ -1,12 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Shire of Buloke",
       "osm_id": 3345547
@@ -32,7 +36,9 @@
       "distance_m": 170,
       "name": "Tyrrell Creek",
       "osm_id": 227330740
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESF4H7R05GXAT4H6234F0",
@@ -41,14 +47,14 @@
     "lat": -35.716398,
     "lon": 143.106017
   },
-  "name": null,
+  "name": "Culgoa Public Hall",
   "osm": {
     "id": 368613342,
-    "timestamp": "2015-09-01T12:06:20Z",
+    "timestamp": "2026-11-18T08:12:35Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

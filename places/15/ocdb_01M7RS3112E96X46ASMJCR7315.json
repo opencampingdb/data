@@ -1,0 +1,52 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": true,
+    "hot_water": true,
+    "lga": {
+      "name": "Rural City of Swan Hill",
+      "osm_id": 3345551
+    },
+    "locality": {
+      "distance_m": 170,
+      "name": "Piangil",
+      "osm_id": 11549244513,
+      "type": "village"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3680
+    },
+    "nearest_major_road": {
+      "distance_m": 170,
+      "name": "Murray Street"
+    },
+    "operator": "Swan Hill Rural City Council"
+  },
+  "group": "utility",
+  "id": "ocdb_01M7RS3112E96X46ASMJCR7315",
+  "kind": "public_shower",
+  "location": {
+    "lat": -35.055273,
+    "lon": 143.312781
+  },
+  "name": null,
+  "osm": {
+    "id": 14388517153,
+    "timestamp": "2026-11-17T22:23:30Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-19T02:09:46Z"
+}

@@ -1,10 +1,21 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "facebook": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "phone": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1",
+      "postcode": "3544",
+      "state": "VIC",
+      "street": "Breen Street",
+      "suburb": "Ultima"
+    },
+    "facebook": "https://www.facebook.com/TheUltimaHotel/",
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -18,7 +29,8 @@
     "nearest_major_road": {
       "distance_m": 300,
       "name": "Sea Lake - Swan Hill Road"
-    }
+    },
+    "phone": "+61 438 600 800"
   },
   "group": "services",
   "id": "ocdb_01M6F3GYVWKNWFQF5GMF56K60Z",
@@ -30,11 +42,11 @@
   "name": "Ultima Hotel",
   "osm": {
     "id": 304590692,
-    "timestamp": "2021-08-03T05:17:55Z",
+    "timestamp": "2026-11-18T06:22:25Z",
     "type": "way",
-    "version": 2
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

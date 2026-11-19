@@ -1,46 +1,50 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "toilets": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Shire of Buloke",
       "osm_id": 3345547
     },
     "locality": {
-      "distance_m": 16160,
+      "distance_m": 16140,
       "name": "Berriwillock",
       "osm_id": 312681507,
       "type": "village"
     },
     "nearest_major_road": {
-      "distance_m": 20,
+      "distance_m": 50,
       "name": "Calder Highway"
     },
     "nearest_waterway": {
-      "distance_m": 60,
+      "distance_m": 30,
       "name": "Tyrrell Creek",
       "osm_id": 227330740
-    }
+    },
+    "toilets": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9WTB7KSKMPCWQGC6HXK",
   "kind": "campground",
   "location": {
-    "lat": -35.73944,
-    "lon": 143.11639
+    "lat": -35.739461,
+    "lon": 143.116068
   },
   "name": "Torneys Tank Bushland Reserve",
   "osm": {
     "id": 1808394647,
-    "timestamp": "2012-07-01T04:32:19Z",
+    "timestamp": "2026-11-18T08:12:35Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

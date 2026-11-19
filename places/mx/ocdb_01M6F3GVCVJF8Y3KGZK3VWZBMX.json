@@ -1,40 +1,54 @@
 {
   "fact_sources": {
+    "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
+    "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "17",
+      "postcode": "5251",
+      "state": "SA",
+      "street": "Adelaide Road",
+      "suburb": "Mount Barker"
+    },
     "lga": {
       "name": "Mount Barker District Council",
       "osm_id": 7294250
     },
     "locality": {
-      "distance_m": 480,
+      "distance_m": 490,
       "name": "Mount Barker",
       "osm_id": 141109870,
       "type": "town"
     },
     "nearest_major_road": {
-      "distance_m": 60,
+      "distance_m": 70,
       "name": "Adelaide Road"
-    }
+    },
+    "opening_hours": "Mo-Sa 10:00-24:00",
+    "phone": "+61 8 8391 6100",
+    "website": "https://www.auchendarroch.com.au/oak-and-iron"
   },
   "group": "services",
   "id": "ocdb_01M6F3GVCVJF8Y3KGZK3VWZBMX",
   "kind": "food_and_drink",
   "location": {
-    "lat": -35.068072,
-    "lon": 138.856402
+    "lat": -35.068138,
+    "lon": 138.856321
   },
-  "name": null,
+  "name": "Oak and Iron Tavern",
   "osm": {
     "id": 1454559826,
-    "timestamp": "2011-10-04T02:06:43Z",
+    "timestamp": "2026-11-17T07:17:02Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

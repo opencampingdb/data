@@ -1,48 +1,66 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "caravans": "osm",
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "toilets": "osm",
+    "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "24",
+      "postcode": "3530",
+      "state": "VIC",
+      "street": "Main Street",
+      "suburb": "Culgoa"
+    },
+    "caravans": true,
+    "entry": "customers",
     "lga": {
       "name": "Shire of Buloke",
       "osm_id": 3345547
     },
     "locality": {
-      "distance_m": 13810,
+      "distance_m": 13790,
       "name": "Berriwillock",
       "osm_id": 312681507,
       "type": "village"
     },
     "nearest_feature": {
-      "distance_m": 100,
+      "distance_m": 120,
       "name": "Culgoa",
       "osm_id": 312681182,
       "osm_type": "node",
       "type": "hamlet"
     },
     "nearest_major_road": {
-      "distance_m": 160,
+      "distance_m": 170,
       "name": "Calder Highway"
-    }
+    },
+    "showers": true,
+    "toilets": true,
+    "website": "https://www.kaneirahotelculgoa.com/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESBVEB8GRQ11AA8QMEEA1",
   "kind": "campground",
   "location": {
-    "lat": -35.716862,
-    "lon": 143.10701
+    "lat": -35.716712,
+    "lon": 143.106954
   },
-  "name": "Free Camping",
+  "name": "Kaneira Hotel Free Camping",
   "osm": {
     "id": 6263374485,
-    "timestamp": "2019-02-07T09:20:28Z",
+    "timestamp": "2026-11-18T06:22:25Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }
