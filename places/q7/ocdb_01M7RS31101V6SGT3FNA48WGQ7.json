@@ -1,0 +1,61 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": false,
+    "hot_water": false,
+    "lga": {
+      "name": "Sunshine Coast Regional",
+      "osm_id": 11675192
+    },
+    "locality": {
+      "distance_m": 7360,
+      "name": "Caloundra",
+      "osm_id": 1942250410,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 220
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3390
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Kawana",
+      "osm_id": 11018636,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 410
+    }
+  },
+  "group": "utility",
+  "id": "ocdb_01M7RS31101V6SGT3FNA48WGQ7",
+  "kind": "public_shower",
+  "location": {
+    "lat": -26.732663,
+    "lon": 153.124702
+  },
+  "name": "Open shower",
+  "osm": {
+    "id": 14388504737,
+    "timestamp": "2026-11-17T22:00:53Z",
+    "type": "node",
+    "version": 4
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-19T02:09:46Z"
+}

@@ -1,11 +1,14 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
+    "entry": "private",
     "lga": {
       "name": "Shire of Buloke",
       "osm_id": 3345547
@@ -26,7 +29,8 @@
     "nearest_major_road": {
       "distance_m": 10,
       "name": "Calder Highway"
-    }
+    },
+    "toilet_type": "flush"
   },
   "group": "utility",
   "id": "ocdb_01M66ESBHYBTYTNSN3GTDFND37",
@@ -38,11 +42,11 @@
   "name": null,
   "osm": {
     "id": 5360012327,
-    "timestamp": "2018-01-25T01:04:52Z",
+    "timestamp": "2026-11-18T08:12:35Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

@@ -5,14 +5,22 @@
     "website": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
+    "booking_required": "osm",
+    "dump_station": "osm",
     "facebook": "overture",
     "lga": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "phone": "overture",
-    "website": "overture"
+    "power": "osm",
+    "tents": "osm",
+    "toilets": "osm",
+    "website": "overture",
+    "wifi": "osm"
   },
   "facts": {
+    "booking_required": true,
+    "dump_station": false,
     "facebook": "https://www.facebook.com/739512479720852",
     "lga": {
       "name": "Pastoral Unincorporated Area",
@@ -30,7 +38,11 @@
       "name": "Oodnadatta Track"
     },
     "phone": "+61886758336",
-    "website": "http://www.cowardsprings.com.au"
+    "power": false,
+    "tents": true,
+    "toilets": true,
+    "website": "http://www.cowardsprings.com.au",
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ES95MGCC027ANSTZV3SG9",
@@ -42,11 +54,11 @@
   "name": "Coward Springs",
   "osm": {
     "id": 430096355,
-    "timestamp": "2011-10-16T10:53:16Z",
+    "timestamp": "2026-11-17T21:46:13Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

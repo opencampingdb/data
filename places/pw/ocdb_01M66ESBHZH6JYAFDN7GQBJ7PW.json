@@ -1,13 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "toilet_type": "osm",
     "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
     "lga": {
       "name": "Shire of Buloke",
@@ -30,6 +33,7 @@
       "distance_m": 30,
       "name": "Calder Highway"
     },
+    "toilet_type": "flush",
     "wheelchair": true
   },
   "group": "utility",
@@ -39,14 +43,14 @@
     "lat": -35.853438,
     "lon": 143.177906
   },
-  "name": null,
+  "name": "Hall Corner Park",
   "osm": {
     "id": 5360312753,
-    "timestamp": "2026-04-15T22:52:14Z",
+    "timestamp": "2026-11-18T08:12:35Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }
