@@ -1,17 +1,22 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
+    "operator": "osm",
     "water_type": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
     "lga": {
       "name": "Toowoomba Regional",
       "osm_id": 11675821
     },
     "locality": {
-      "distance_m": 3120,
+      "distance_m": 3110,
       "name": "Toowoomba",
       "osm_id": 19949789,
       "type": "city"
@@ -20,23 +25,24 @@
       "distance_m": 230,
       "name": "Bridge Street"
     },
+    "operator": "Toowoomba Regional Council",
     "water_type": "fountain"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEBE217MNF4E3JW0TGJQ",
   "kind": "drinking_water_point",
   "location": {
-    "lat": -27.547299,
-    "lon": 151.925805
+    "lat": -27.547282,
+    "lon": 151.925832
   },
   "name": null,
   "osm": {
     "id": 13478252999,
-    "timestamp": "2026-01-23T04:12:01Z",
+    "timestamp": "2026-11-17T05:22:15Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

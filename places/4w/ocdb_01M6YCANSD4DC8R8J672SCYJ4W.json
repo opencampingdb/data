@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
@@ -7,9 +8,11 @@
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
+    "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "fee": false,
     "lga": {
       "name": "City of Parramatta Council",
       "osm_id": 6217262
@@ -42,6 +45,7 @@
       "name": "Parramatta River",
       "osm_id": 903054965
     },
+    "toilets": true,
     "website": "https://powerhouse.com.au/visit/parramatta"
   },
   "group": "attraction",
@@ -54,11 +58,11 @@
   "name": "Parramatta Powerhouse",
   "osm": {
     "id": 907626857,
-    "timestamp": "2026-11-07T11:04:24Z",
+    "timestamp": "2026-11-17T06:03:08Z",
     "type": "way",
-    "version": 11
+    "version": 13
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

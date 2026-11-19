@@ -1,40 +1,46 @@
 {
   "fact_sources": {
+    "caravans": "osm",
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "toilets": "osm"
   },
   "facts": {
+    "caravans": true,
+    "entry": "public",
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
     },
     "locality": {
-      "distance_m": 8580,
+      "distance_m": 8560,
       "name": "Piangil",
       "osm_id": 11549244513,
       "type": "village"
     },
     "nearest_major_road": {
-      "distance_m": 50,
+      "distance_m": 80,
       "name": "Mallee Highway"
-    }
+    },
+    "toilets": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9W13YZRTNGFW98XK0A9",
   "kind": "campground",
   "location": {
-    "lat": -35.05694,
-    "lon": 143.21694
+    "lat": -35.05717,
+    "lon": 143.217184
   },
   "name": "Piangil West Rest Area",
   "osm": {
     "id": 1808392052,
-    "timestamp": "2012-07-01T04:20:56Z",
+    "timestamp": "2026-11-17T20:31:26Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

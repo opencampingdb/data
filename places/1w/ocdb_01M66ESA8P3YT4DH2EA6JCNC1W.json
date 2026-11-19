@@ -1,12 +1,17 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
     "lga": {
       "name": "Rural City of Swan Hill",
@@ -24,7 +29,10 @@
     "nearest_major_road": {
       "distance_m": 130,
       "name": "Murray Street"
-    }
+    },
+    "operator": "Swan Hill Rural City Council",
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESA8P3YT4DH2EA6JCNC1W",
@@ -33,14 +41,14 @@
     "lat": -35.055056,
     "lon": 143.312106
   },
-  "name": null,
+  "name": "Piangel Memorial Park - Disabled",
   "osm": {
     "id": 2108659844,
-    "timestamp": "2025-02-12T14:34:37Z",
+    "timestamp": "2026-11-17T22:23:30Z",
     "type": "node",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

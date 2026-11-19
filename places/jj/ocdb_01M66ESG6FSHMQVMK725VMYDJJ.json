@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "bins": "osm",
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
@@ -8,6 +10,8 @@
     "nearest_waterway": "osm"
   },
   "facts": {
+    "bins": true,
+    "entry": "public",
     "lga": {
       "name": "Rural City of Swan Hill",
       "osm_id": 3345551
@@ -41,19 +45,19 @@
   },
   "group": "utility",
   "id": "ocdb_01M66ESG6FSHMQVMK725VMYDJJ",
-  "kind": "rest_area",
+  "kind": "long_vehicle_parking",
   "location": {
     "lat": -35.104206,
     "lon": 143.346057
   },
-  "name": "Wood Wood Rest Area",
+  "name": null,
   "osm": {
     "id": 1356369015,
-    "timestamp": "2025-02-03T10:03:38Z",
+    "timestamp": "2026-11-18T00:55:27Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-19T02:09:46Z"
 }

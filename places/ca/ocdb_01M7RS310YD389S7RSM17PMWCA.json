@@ -1,0 +1,65 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "operator": "osm",
+    "toilet_type": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": false,
+    "lga": {
+      "name": "City of Sydney",
+      "osm_id": 1251066
+    },
+    "locality": {
+      "distance_m": 2490,
+      "name": "Sydney",
+      "osm_id": 13766899,
+      "type": "city"
+    },
+    "nearest_beach": {
+      "distance_m": 3430
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 2940,
+      "name": "Sayonara Slipway"
+    },
+    "nearest_feature": {
+      "distance_m": 390,
+      "name": "Poet's Corner",
+      "osm_id": 4160321912,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_major_road": {
+      "distance_m": 60,
+      "name": "Cleveland Street"
+    },
+    "operator": "Surrey Hills Village Strata Management",
+    "toilet_type": "flush"
+  },
+  "group": "utility",
+  "id": "ocdb_01M7RS310YD389S7RSM17PMWCA",
+  "kind": "public_toilet",
+  "location": {
+    "lat": -33.891997,
+    "lon": 151.212284
+  },
+  "name": null,
+  "osm": {
+    "id": 14385513699,
+    "timestamp": "2026-11-17T07:51:59Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-19T02:09:46Z"
+}
