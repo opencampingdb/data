@@ -156,6 +156,71 @@ def test_a_town_already_in_the_text_is_not_added_again(repo, tmp_path):
     ]
 
 
+MERBEIN = {"lat": -34.17, "lon": 142.06}
+
+
+def write_localities(repo, *rows):
+    path = repo / "localities" / "localities.ndjson"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8", newline="\n")
+
+
+def locality_row(name, osm_id, location):
+    return {"name": name, "osm_id": osm_id, "type": "town", "population": 1000, **location}
+
+
+def moved(location, north_m=0.0, east_m=0.0):
+    import math
+
+    return {
+        "lat": round(location["lat"] + north_m / 111_195, 6),
+        "lon": round(location["lon"] + east_m / (111_195 * math.cos(math.radians(location["lat"]))), 6),
+    }
+
+
+def test_places_that_share_a_town_say_how_far_and_which_way_from_it(repo, tmp_path):
+    river = {"name": "Murray River", "osm_id": 405, "distance_m": 40}
+    write_localities(repo, locality_row("Merbein", 3, MERBEIN))
+    assert labels(
+        repo, tmp_path,
+        place(1, {"nearest_waterway": river, "locality": town("Merbein", 3)}, kind="reserve_campsite",
+              location=moved(MERBEIN, north_m=1270, east_m=1270)),
+        place(2, {"nearest_waterway": river, "locality": town("Merbein", 3)}, kind="reserve_campsite",
+              location=moved(MERBEIN, east_m=-800)),
+        place(3, {"nearest_waterway": river, "locality": town("Merbein", 3)}, kind="reserve_campsite",
+              location=moved(MERBEIN, north_m=-4000)),
+    ) == [
+        {"text": "Reserve campsite on the Murray River, 1.8 km NE of Merbein", "from": "nearest_waterway"},
+        {"text": "Reserve campsite on the Murray River, 800 m W of Merbein", "from": "nearest_waterway"},
+        {"text": "Reserve campsite on the Murray River, 4.0 km S of Merbein", "from": "nearest_waterway"},
+    ]
+
+
+def test_places_with_no_town_measure_from_the_nearest_locality(repo, tmp_path):
+    river = {"name": "Pentecost River", "osm_id": 407, "distance_m": 40}
+    wyndham = {"lat": -15.49, "lon": 128.12}
+    write_localities(repo, locality_row("Wyndham", 4, wyndham), locality_row("Kununurra", 5, {"lat": -15.77, "lon": 128.74}))
+    assert labels(
+        repo, tmp_path,
+        place(1, {"nearest_waterway": river}, location=moved(wyndham, north_m=-52_000)),
+        place(2, {"nearest_waterway": river}, location=moved(wyndham, north_m=-56_000, east_m=-3000)),
+    ) == [
+        {"text": "Campground on the Pentecost River, 52.0 km S of Wyndham", "from": "nearest_waterway"},
+        {"text": "Campground on the Pentecost River, 56.1 km S of Wyndham", "from": "nearest_waterway"},
+    ]
+
+
+def test_places_within_100_m_of_each_other_keep_the_same_text(repo, tmp_path):
+    lake = feature("Lake Burrinjuck", "water", 12)
+    write_localities(repo, locality_row("Wee Jasper", 6, MERBEIN))
+    cabin = {"nearest_feature": lake, "locality": town("Wee Jasper", 6)}
+    assert labels(
+        repo, tmp_path,
+        place(1, cabin, kind="roofed_accommodation", location=moved(MERBEIN, north_m=15_010)),
+        place(2, cabin, kind="roofed_accommodation", location=moved(MERBEIN, north_m=15_040)),
+    ) == [{"text": "Roofed accommodation by Lake Burrinjuck, 15.0 km N of Wee Jasper", "from": "nearest_feature"}] * 2
+
+
 def test_a_released_record_with_a_label_matches_the_schema(repo, tmp_path):
     from jsonschema import Draft202012Validator
 

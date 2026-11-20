@@ -688,7 +688,12 @@ The schemas in [schema/](schema/) are the contract. Some points to keep in mind:
   else "at" a beach, "by" water, a bay, spring, waterfall or wetland, or
   "near" any other feature, a locality or hamlet included, else "in" the
   protected area. Two places in one state with the same text each add their
-  `locality`, as in "Campsite on the Murray River, Corowa". `from` names the
+  `locality`, as in "Campsite on the Murray River, Corowa". Places that
+  still share a text say where they are instead: the distance to 100 m and
+  the point of the eight-point compass from their `locality`, or from the
+  nearest town when they have none, as in "Reserve campsite on the Murray
+  River, 1.8 km NE of Merbein". Places within about 100 m of each other,
+  such as the cabins of one lodge, can still share a text. `from` names the
   fact the text came from. It is a description, not a name: show it in
   place of a name if you like, but never as the place's name, never in a
   report as a name, and never send it to OpenStreetMap. A place with none
