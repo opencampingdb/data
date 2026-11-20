@@ -1,15 +1,29 @@
 {
   "fact_dates": {
     "address": "2026-11-15T00:00:00Z",
-    "facebook": "2026-11-15T00:00:00Z"
+    "caravans": "2026-11-16T14:09:56Z",
+    "facebook": "2026-11-15T00:00:00Z",
+    "scenery": "2026-11-16T14:09:56Z",
+    "shade": "2026-11-16T14:09:56Z",
+    "swimming": "2026-11-16T14:09:56Z",
+    "toilets": "2026-11-16T14:09:56Z",
+    "walking_tracks": "2026-11-16T14:09:56Z",
+    "wildlife": "2026-11-16T14:09:56Z"
   },
   "fact_sources": {
     "address": "overture",
+    "caravans": "feedback",
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
     "nearest_waterway": "osm",
-    "protected_area": "osm"
+    "protected_area": "osm",
+    "scenery": "feedback",
+    "shade": "feedback",
+    "swimming": "feedback",
+    "toilets": "feedback",
+    "walking_tracks": "feedback",
+    "wildlife": "feedback"
   },
   "facts": {
     "address": {
@@ -18,6 +32,7 @@
       "street": "Omeo Valley Rd",
       "suburb": "Omeo Valley"
     },
+    "caravans": true,
     "facebook": "https://www.facebook.com/1425959254175736",
     "lga": {
       "name": "Shire of East Gippsland",
@@ -38,7 +53,13 @@
       "name": "Mitta Mitta River Heritage River",
       "osm_id": 16506844,
       "osm_type": "relation"
-    }
+    },
+    "scenery": true,
+    "shade": true,
+    "swimming": true,
+    "toilets": true,
+    "walking_tracks": true,
+    "wildlife": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESDHF85ZS2N7N46JQ07SA",
