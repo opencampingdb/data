@@ -159,7 +159,10 @@ Anything that shows this data must show:
    workflow in the private `inbox` repository applies them every hour and
    keeps at most two pull requests open here: `feedback/auto` for changes
    the automatic rules made, which merges itself once CI passes, and
-   `feedback/review` for anything a person must check. Facts, names,
+   `feedback/review` for anything a person must check. The review PR's
+   body lists every place it changes, with each field's value now and in
+   the PR, what OpenStreetMap holds, why it was held and who reported it as
+   counts, and is written again each run. Facts, names,
    positions, kinds and descriptions set by feedback are marked `"feedback"`
    in `fact_sources`, and the OSM sync leaves them alone. A check that finds
    an open place still there sets `last_confirmed`.
