@@ -1,0 +1,54 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "hot_water": true,
+    "lga": {
+      "name": "Shire of Glenelg",
+      "osm_id": 3357380
+    },
+    "locality": {
+      "distance_m": 380,
+      "name": "Portland",
+      "osm_id": 60796195,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 30
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 250
+    },
+    "nearest_major_road": {
+      "distance_m": 310,
+      "name": "Percy Street"
+    },
+    "opening_hours": "24/7"
+  },
+  "group": "utility",
+  "id": "ocdb_01M7XXSTFYF5XPB2EPQH7TVT81",
+  "kind": "public_shower",
+  "location": {
+    "lat": -38.343274,
+    "lon": 141.607448
+  },
+  "name": null,
+  "osm": {
+    "id": 14399687769,
+    "timestamp": "2026-11-20T14:49:18Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-21T02:08:16Z"
+}

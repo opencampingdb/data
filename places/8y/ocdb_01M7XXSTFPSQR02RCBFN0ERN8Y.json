@@ -1,0 +1,63 @@
+{
+  "fact_sources": {
+    "fee": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "fee": false,
+    "hot_water": false,
+    "lga": {
+      "name": "Shire of Moyne",
+      "osm_id": 3347615
+    },
+    "locality": {
+      "distance_m": 520,
+      "name": "Port Fairy",
+      "osm_id": 2321687663,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 40
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 130
+    },
+    "nearest_feature": {
+      "distance_m": 100,
+      "name": "Moyne River",
+      "osm_id": 46709692,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 140,
+      "name": "Moyne River",
+      "osm_id": 12010753
+    },
+    "wheelchair": true
+  },
+  "group": "utility",
+  "id": "ocdb_01M7XXSTFPSQR02RCBFN0ERN8Y",
+  "kind": "public_shower",
+  "location": {
+    "lat": -38.386111,
+    "lon": 142.242631
+  },
+  "name": null,
+  "osm": {
+    "id": 14394576529,
+    "timestamp": "2026-11-19T05:33:39Z",
+    "type": "node",
+    "version": 2
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-21T02:08:16Z"
+}
