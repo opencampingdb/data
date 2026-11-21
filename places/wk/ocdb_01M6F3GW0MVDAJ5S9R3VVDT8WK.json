@@ -1,12 +1,10 @@
 {
   "fact_dates": {
-    "address": "2026-11-15T00:00:00Z",
     "facebook": "2026-11-15T00:00:00Z",
-    "phone": "2026-11-15T00:00:00Z",
-    "website": "2026-11-15T00:00:00Z"
+    "phone": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
-    "address": "overture",
+    "address": "osm",
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
@@ -15,7 +13,7 @@
     "nearest_major_road": "osm",
     "opening_hours": "osm",
     "phone": "overture",
-    "website": "overture",
+    "website": "osm",
     "wheelchair": "osm"
   },
   "facts": {
@@ -23,8 +21,8 @@
       "housenumber": "327",
       "postcode": "3121",
       "state": "VIC",
-      "street": "Punt Rd",
-      "suburb": "Melbourne"
+      "street": "Punt Road",
+      "suburb": "Richmond"
     },
     "facebook": "https://www.facebook.com/154604837894653",
     "lga": {
@@ -42,7 +40,7 @@
       "name": "Horse Arena"
     },
     "nearest_boat_ramp": {
-      "distance_m": 2320
+      "distance_m": 2310
     },
     "nearest_major_road": {
       "distance_m": 20,
@@ -50,24 +48,30 @@
     },
     "opening_hours": "We,Th 16:00-23:00+; Fr,Sa 13:00-23:00+; Su 14:00-23:00+",
     "phone": "+61394287471",
-    "website": "http://cricketersarms.com.au/",
+    "website": "https://www.cricketersarms.com.au/",
     "wheelchair": false
   },
   "group": "services",
   "id": "ocdb_01M6F3GW0MVDAJ5S9R3VVDT8WK",
   "kind": "food_and_drink",
   "location": {
-    "lat": -37.822751,
-    "lon": 144.989422
+    "lat": -37.82276,
+    "lon": 144.989436
   },
-  "name": "Cricketers Arms Hotel",
+  "merged_osm": [
+    {
+      "id": 3979090377,
+      "type": "node"
+    }
+  ],
+  "name": "The Cricketer's Arms",
   "osm": {
-    "id": 3979090377,
-    "timestamp": "2024-10-07T20:51:58Z",
-    "type": "node",
-    "version": 4
+    "id": 60793462,
+    "timestamp": "2026-11-20T09:19:16Z",
+    "type": "way",
+    "version": 11
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-21T02:08:16Z"
 }
