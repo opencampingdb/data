@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "address": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,9 +9,18 @@
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
     "opening_hours": "osm",
+    "operator": "osm",
+    "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "133",
+      "postcode": "3537",
+      "state": "VIC",
+      "street": "Godfrey Street",
+      "suburb": "Boort"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -47,11 +57,13 @@
       "osm_id": 190401255
     },
     "opening_hours": "24/7",
+    "operator": "Bowser Bound Boort",
+    "phone": "+61 3 5455 2139",
     "website": "https://map.bp.com/en-AU/AU/gas-station/boort/bp-boort/5451"
   },
   "group": "services",
   "id": "ocdb_01M66JPRX4CF0HWMQQCAJVJ9PC",
-  "kind": "fuel",
+  "kind": "lpg_refill_swap",
   "location": {
     "lat": -36.116193,
     "lon": 143.72892
@@ -59,11 +71,11 @@
   "name": "BP Boort",
   "osm": {
     "id": 190405246,
-    "timestamp": "2024-04-07T21:39:32Z",
+    "timestamp": "2026-11-19T06:13:35Z",
     "type": "way",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-21T02:08:16Z"
 }

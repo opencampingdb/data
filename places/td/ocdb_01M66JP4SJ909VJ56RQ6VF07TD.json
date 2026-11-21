@@ -1,11 +1,24 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm"
   },
   "facts": {
+    "address": {
+      "postcode": "3737",
+      "state": "VIC",
+      "street": "Myrtle Street",
+      "suburb": "Myrtleford"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "lga": {
       "name": "Alpine Shire",
       "osm_id": 3361217
@@ -33,14 +46,14 @@
     "lat": -36.564751,
     "lon": 146.728318
   },
-  "name": "Caltex",
+  "name": "Shell",
   "osm": {
     "id": 2614541350,
-    "timestamp": "2025-05-28T08:50:25Z",
+    "timestamp": "2026-11-20T01:24:53Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-21T02:08:16Z"
 }

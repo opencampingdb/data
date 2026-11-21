@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "caravans": "osm",
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
@@ -9,9 +10,11 @@
     "operator": "osm",
     "protected_area": "osm",
     "showers": "osm",
+    "tents": "osm",
     "toilets": "osm"
   },
   "facts": {
+    "caravans": true,
     "entry": "public",
     "fee": false,
     "lga": {
@@ -43,6 +46,7 @@
       "osm_type": "relation"
     },
     "showers": false,
+    "tents": true,
     "toilets": true
   },
   "group": "overnight",
@@ -55,11 +59,11 @@
   "name": "Greens Campground - Whroo Historical Area",
   "osm": {
     "id": 1808391865,
-    "timestamp": "2025-03-23T04:24:50Z",
+    "timestamp": "2026-11-20T09:51:51Z",
     "type": "node",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-21T02:08:16Z"
 }

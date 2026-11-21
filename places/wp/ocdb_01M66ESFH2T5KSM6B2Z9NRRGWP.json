@@ -1,12 +1,15 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_feature": "osm"
+    "nearest_feature": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "City of Clarence",
       "osm_id": 10625764
@@ -31,7 +34,8 @@
       "osm_id": 279934434,
       "osm_type": "way",
       "type": "beach"
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESFH2T5KSM6B2Z9NRRGWP",
@@ -43,11 +47,11 @@
   "name": null,
   "osm": {
     "id": 685751094,
-    "timestamp": "2019-04-24T22:46:03Z",
+    "timestamp": "2026-11-19T07:53:42Z",
     "type": "way",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-21T02:08:16Z"
 }

@@ -1,0 +1,53 @@
+{
+  "fact_sources": {
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "locality": {
+      "distance_m": 1720,
+      "name": "Sydney",
+      "osm_id": 13766899,
+      "type": "city"
+    },
+    "nearest_beach": {
+      "distance_m": 770
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 290
+    },
+    "nearest_feature": {
+      "distance_m": 0,
+      "name": "Sydney Harbour",
+      "osm_id": 1252425,
+      "osm_type": "relation",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 100,
+      "name": "Hickson Road"
+    },
+    "wheelchair": true
+  },
+  "group": "transport",
+  "id": "ocdb_01M7XXSTFR5Y2E822XBEYDQ7XW",
+  "kind": "ferry_terminal",
+  "location": {
+    "lat": -33.854408,
+    "lon": 151.207045
+  },
+  "name": "Walsh Bay Wharf",
+  "osm": {
+    "id": 14397716127,
+    "timestamp": "2026-11-19T23:16:57Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-21T02:08:16Z"
+}
