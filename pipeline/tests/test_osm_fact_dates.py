@@ -130,4 +130,4 @@ def test_release_validation_checks_the_schema(tmp_path):
 
 def test_the_manifest_is_format_13_4(repo, tmp_path):
     manifest = build_release(repo, tmp_path / "dist", data_version=VERSION, generated=GENERATED)
-    assert (manifest["format_version"], manifest["format_minor"]) == (13, 4)
+    assert (manifest["format_version"], manifest["format_minor"]) == (13, 5)

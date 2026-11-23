@@ -85,13 +85,15 @@ from .common import (
 # candidates are released: places with osm null whose name and location come from
 # overture, with standing. Raised as a minor change by decision (opencampingdb/data#187).
 # 13.4: fact_dates also dates each value from OSM, with osm.timestamp, when the record has one.
+# 13.5: the manifest's database and changesets entries carry unpacked_bytes, and a changeset
+# at least as large unpacked as the database is not listed (pipeline.database).
 # Raise FORMAT_VERSION only when a reader of the previous format would misread the
 # records: a field removed or renamed, a meaning changed, or a new value in an
 # existing field. Announce it in an issue first (CONNECTING.md section 1). An
 # additive change (a new optional field or file, records left out, a new kind)
 # raises FORMAT_MINOR instead, and FORMAT_MINOR goes back to 0 when FORMAT_VERSION rises.
 FORMAT_VERSION = 13
-FORMAT_MINOR = 4
+FORMAT_MINOR = 5
 # New places with these standings wait for a person or were taken down.
 UNRELEASED_STANDINGS = {"held", "hidden"}
 DEFAULT_REPOSITORY = "opencampingdb/data"

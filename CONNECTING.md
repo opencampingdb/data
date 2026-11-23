@@ -25,7 +25,7 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
 ```json
 {
   "format_version": 13,
-  "format_minor": 4,
+  "format_minor": 5,
   "layout_version": 3,
   "data_version": "20261030T160000Z-abc1234",
   "release": "data-20261030T160000Z",
@@ -53,19 +53,19 @@ GET https://github.com/opencampingdb/data/releases/latest/download/manifest.json
   "database": {
     "file": "ocdb.sqlite.gz",
     "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/ocdb.sqlite.gz",
-    "sha256": "...", "bytes": 14337061
+    "sha256": "...", "bytes": 14337061, "unpacked_bytes": 93212672
   },
   "changesets": [
     {
       "file": "changeset-20261030T090000Z-0a1b2c3.bin.gz",
       "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/changeset-20261030T090000Z-0a1b2c3.bin.gz",
-      "sha256": "...", "bytes": 10948,
+      "sha256": "...", "bytes": 10948, "unpacked_bytes": 61820,
       "from": "20261030T090000Z-0a1b2c3", "to": "20261030T160000Z-abc1234", "day": false
     },
     {
       "file": "changeset-day-2026-10-29.bin.gz",
       "url": "https://github.com/opencampingdb/data/releases/download/data-20261030T160000Z/changeset-day-2026-10-29.bin.gz",
-      "sha256": "...", "bytes": 104957,
+      "sha256": "...", "bytes": 104957, "unpacked_bytes": 702316,
       "from": "20261029T231500Z-9f8e7d6", "to": "20261030T160000Z-abc1234", "day": true
     }
   ],
@@ -103,6 +103,10 @@ separately.
 
 What each format changed, newest first:
 
+- **13.5**: the manifest's `database` and `changesets` entries carry
+  `unpacked_bytes`, the file's size once gunzipped, and a changeset at least
+  as large unpacked as the database is no longer listed (section 3). An app
+  on its `from` release finds no path and downloads the whole database.
 - **13.4**: `fact_dates` also dates each value from OSM (each `fact_sources`
   entry that is `osm`) with the place's `osm.timestamp`, when it has one
   (section 4). An app that took any `fact_dates` entry to mean a value not
@@ -373,6 +377,10 @@ the path from any of those releases to the newest one. Each entry has:
 - `file`, `url`, `sha256` and `bytes`. The `url` points at the release that
   made the changeset (the one tagged for `to`), so it stays valid for as long
   as that release is kept.
+- `unpacked_bytes`, the changeset's size once gunzipped. The `database` entry
+  has one too. Use them to choose between a path and the whole database
+  before downloading anything, for example on a phone whose SQLite library
+  needs the whole changeset in memory to apply it.
 - `day`, `true` for a daily changeset (below).
 
 Each file is a gzipped changeset in SQLite's standard session extension
@@ -397,6 +405,9 @@ changeset holds the old values of a row it deletes. The full rule is in
 [pipeline/README.md](pipeline/README.md#database-and-changesets). An app on
 that release finds no path and downloads the whole database (step 3 below).
 
+No changeset is listed that is at least as large unpacked as the release's
+database: applying it would need more memory than taking the whole database.
+
 The list starts again, empty, when there is no earlier database to start
 from: the first release with a database, and the first release after a
 `layout_version` rise.
@@ -411,7 +422,9 @@ To update the database you have:
    start from the entries whose `from` is yours and follow `to` into `from`.
    Prefer the path with the fewest files, which uses the daily changesets.
    If there is none, because your release is older than the list, download
-   the whole database.
+   the whole database. Download the whole database too when the path's
+   `unpacked_bytes` add up to at least the database's, or when one changeset
+   on it is larger unpacked than your app can apply.
 4. Download each changeset on the path, check its `bytes` and `sha256`, and
    apply them in order with `sqlite3changeset_apply`, aborting on any
    conflict, in one transaction.
