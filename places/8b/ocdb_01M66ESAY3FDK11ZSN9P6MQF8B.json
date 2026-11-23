@@ -1,23 +1,28 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_waterway": "osm",
-    "protected_area": "osm"
+    "protected_area": "osm",
+    "toilet_type": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
     "lga": {
       "name": "Goulburn Mulwaree Council",
       "osm_id": 6310493
     },
     "locality": {
-      "distance_m": 10810,
+      "distance_m": 10820,
       "name": "Marulan",
       "osm_id": 251724227,
       "type": "town"
     },
     "nearest_waterway": {
-      "distance_m": 190,
+      "distance_m": 180,
       "name": "Bungonia Creek",
       "osm_id": 5083343
     },
@@ -25,23 +30,24 @@
       "name": "Bungonia State Conservation Area",
       "osm_id": 6044266,
       "osm_type": "relation"
-    }
+    },
+    "toilet_type": "pit"
   },
   "group": "utility",
   "id": "ocdb_01M66ESAY3FDK11ZSN9P6MQF8B",
   "kind": "public_toilet",
   "location": {
-    "lat": -34.808273,
-    "lon": 149.999932
+    "lat": -34.808363,
+    "lon": 149.999887
   },
   "name": null,
   "osm": {
     "id": 3902770230,
-    "timestamp": "2015-12-21T11:20:59Z",
+    "timestamp": "2026-11-21T11:59:16Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

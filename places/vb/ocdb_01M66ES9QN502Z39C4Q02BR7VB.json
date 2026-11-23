@@ -1,12 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
-    "protected_area": "osm"
+    "protected_area": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "City of Greater Shepparton",
       "osm_id": 3365116
@@ -30,7 +34,9 @@
       "name": "Goulburn River Heritage River",
       "osm_id": 16354539,
       "osm_type": "relation"
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ES9QN502Z39C4Q02BR7VB",
@@ -39,14 +45,14 @@
     "lat": -36.615812,
     "lon": 145.216577
   },
-  "name": null,
+  "name": "River Bank Gardens",
   "osm": {
     "id": 1574807341,
-    "timestamp": "2017-11-26T10:38:15Z",
+    "timestamp": "2026-11-22T04:05:47Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

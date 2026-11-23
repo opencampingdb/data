@@ -1,42 +1,50 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "water_type": "osm"
+    "pets": "osm",
+    "water_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
     "lga": {
       "name": "City of Gosnells",
       "osm_id": 11689370
     },
     "locality": {
-      "distance_m": 8680,
+      "distance_m": 8670,
       "name": "Kelmscott",
       "osm_id": 181304750,
       "type": "town"
     },
     "nearest_major_road": {
-      "distance_m": 60,
+      "distance_m": 40,
       "name": "Alexandria Boulevard"
     },
-    "water_type": "fountain"
+    "pets": "yes",
+    "water_type": "fountain",
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M7RS310Z38W5Y8JP8FVF7P3J",
   "kind": "drinking_water_point",
   "location": {
-    "lat": -32.097028,
-    "lon": 115.926997
+    "lat": -32.09719,
+    "lon": 115.927106
   },
   "name": null,
   "osm": {
     "id": 14386373204,
-    "timestamp": "2026-11-17T12:31:19Z",
+    "timestamp": "2026-11-22T23:51:22Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-19T02:09:46Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

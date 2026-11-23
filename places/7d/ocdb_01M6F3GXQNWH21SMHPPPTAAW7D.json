@@ -11,7 +11,9 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "nearest_waterway": "osm",
     "phone": "overture",
     "website": "overture"
   },
@@ -37,9 +39,21 @@
     "nearest_beach": {
       "distance_m": 1630
     },
+    "nearest_feature": {
+      "distance_m": 140,
+      "name": "Lake Forbes",
+      "osm_id": 7337996,
+      "osm_type": "relation",
+      "type": "water"
+    },
     "nearest_major_road": {
-      "distance_m": 90,
+      "distance_m": 100,
       "name": "Parkes Road"
+    },
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Lake Forbes",
+      "osm_id": 1582681368
     },
     "phone": "+61268523444",
     "website": "http://www.forbesmotel.net.au"
@@ -48,17 +62,17 @@
   "id": "ocdb_01M6F3GXQNWH21SMHPPPTAAW7D",
   "kind": "roofed_accommodation",
   "location": {
-    "lat": -33.377384,
-    "lon": 148.015206
+    "lat": -33.37743,
+    "lon": 148.015283
   },
   "name": "Town & Country Motor Inn",
   "osm": {
     "id": 11553095648,
-    "timestamp": "2024-01-26T05:20:28Z",
+    "timestamp": "2026-11-21T10:16:56Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

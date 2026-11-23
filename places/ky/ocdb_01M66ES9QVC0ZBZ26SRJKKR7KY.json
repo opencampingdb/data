@@ -1,16 +1,20 @@
 {
   "fact_sources": {
     "caravans": "osm",
+    "dump_station": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_waterway": "osm",
     "protected_area": "osm",
     "showers": "osm",
-    "tents": "osm"
+    "tents": "osm",
+    "toilets": "osm",
+    "wifi": "osm"
   },
   "facts": {
     "caravans": false,
+    "dump_station": false,
     "fee": false,
     "lga": {
       "name": "Snowy Valleys Council",
@@ -33,7 +37,9 @@
       "osm_type": "relation"
     },
     "showers": false,
-    "tents": true
+    "tents": true,
+    "toilets": true,
+    "wifi": false
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9QVC0ZBZ26SRJKKR7KY",
@@ -51,11 +57,11 @@
   "name": "Long Plain Hut Camping Area",
   "osm": {
     "id": 893877136,
-    "timestamp": "2026-11-05T07:38:00Z",
+    "timestamp": "2026-11-22T03:15:18Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

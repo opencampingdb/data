@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "address": "osm",
     "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -7,11 +8,17 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "opening_hours": "osm",
-    "operator": "osm",
     "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "1500",
+      "postcode": "3179",
+      "state": "VIC",
+      "street": "EastLink",
+      "suburb": "Scoresby"
+    },
     "fuels": [
       "diesel",
       "unleaded_91",
@@ -40,7 +47,6 @@
       "name": "Eastlink Onramp"
     },
     "opening_hours": "24/7",
-    "operator": "AA Holdings",
     "phone": "+61 3 9753 2924",
     "website": "https://map.bp.com/en-AU/AU/gas-station/scoresby/aa-eastlink-inbound/7325"
   },
@@ -54,11 +60,11 @@
   "name": "BP AA Eastlink Inbound",
   "osm": {
     "id": 1561057381,
-    "timestamp": "2024-11-23T00:30:20Z",
+    "timestamp": "2026-11-22T23:52:08Z",
     "type": "node",
-    "version": 7
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

@@ -1,6 +1,9 @@
 {
   "fact_sources": {
     "brand": "osm",
+    "cabins": "osm",
+    "drinking_water": "osm",
+    "dump_station": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,11 +11,16 @@
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
     "power": "osm",
+    "showers": "osm",
     "tents": "osm",
+    "toilets": "osm",
     "wifi": "osm"
   },
   "facts": {
     "brand": "big4",
+    "cabins": true,
+    "drinking_water": true,
+    "dump_station": true,
     "fee": true,
     "lga": {
       "name": "Cassowary Coast Regional",
@@ -38,7 +46,9 @@
       "type": "hamlet"
     },
     "power": true,
+    "showers": true,
     "tents": true,
+    "toilets": true,
     "wifi": true
   },
   "group": "overnight",
@@ -51,11 +61,11 @@
   "name": "BIG 4 Beachcomber Coconut Holiday Park",
   "osm": {
     "id": 238534263,
-    "timestamp": "2026-04-16T14:58:38Z",
+    "timestamp": "2026-11-21T11:33:51Z",
     "type": "way",
-    "version": 6
+    "version": 11
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }
