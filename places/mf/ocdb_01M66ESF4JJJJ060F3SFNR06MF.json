@@ -1,11 +1,13 @@
 {
   "fact_sources": {
+    "bins": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm"
   },
   "facts": {
+    "bins": true,
     "lga": {
       "name": "Shire of Strathbogie",
       "osm_id": 3345839
@@ -28,19 +30,19 @@
   },
   "group": "utility",
   "id": "ocdb_01M66ESF4JJJJ060F3SFNR06MF",
-  "kind": "rest_area",
+  "kind": "long_vehicle_parking",
   "location": {
     "lat": -36.695198,
     "lon": 145.214409
   },
-  "name": "Nagambie North Rest Area",
+  "name": null,
   "osm": {
     "id": 369241403,
-    "timestamp": "2023-09-20T11:18:00Z",
+    "timestamp": "2026-11-22T09:17:37Z",
     "type": "way",
-    "version": 4
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

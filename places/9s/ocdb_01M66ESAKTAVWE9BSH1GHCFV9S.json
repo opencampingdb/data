@@ -1,11 +1,15 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_feature": "osm"
+    "nearest_feature": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Shire of Campaspe",
       "osm_id": 3347273
@@ -26,7 +30,9 @@
       "osm_id": 5165608,
       "osm_type": "relation",
       "type": "water"
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESAKTAVWE9BSH1GHCFV9S",
@@ -35,14 +41,14 @@
     "lat": -36.575587,
     "lon": 145.10818
   },
-  "name": null,
+  "name": "Harrimans Point",
   "osm": {
     "id": 2930906808,
-    "timestamp": "2014-06-24T12:08:09Z",
+    "timestamp": "2026-11-22T05:37:46Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

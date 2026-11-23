@@ -4,6 +4,7 @@
     "email": "osm",
     "lga": "osm",
     "locality": "osm",
+    "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
     "operator": "osm",
@@ -22,10 +23,17 @@
       "osm_id": 3359337
     },
     "locality": {
+      "distance_m": 13790,
+      "name": "Glenorchy",
+      "osm_id": 283287084,
+      "type": "village"
+    },
+    "nearest_feature": {
       "distance_m": 450,
       "name": "Dadswells Bridge",
       "osm_id": 595501874,
-      "type": "village"
+      "osm_type": "node",
+      "type": "hamlet"
     },
     "nearest_major_road": {
       "distance_m": 240,
@@ -56,5 +64,5 @@
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

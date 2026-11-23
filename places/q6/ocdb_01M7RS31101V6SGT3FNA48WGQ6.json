@@ -1,11 +1,17 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "water_type": "osm"
+    "pets": "osm",
+    "water_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
     "lga": {
       "name": "City of Gosnells",
       "osm_id": 11689370
@@ -20,7 +26,9 @@
       "distance_m": 10,
       "name": "Roebuck Avenue"
     },
-    "water_type": "fountain"
+    "pets": "no",
+    "water_type": "fountain",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M7RS31101V6SGT3FNA48WGQ6",
@@ -32,11 +40,11 @@
   "name": null,
   "osm": {
     "id": 14386383702,
-    "timestamp": "2026-11-17T12:31:25Z",
+    "timestamp": "2026-11-22T23:51:22Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-19T02:09:46Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

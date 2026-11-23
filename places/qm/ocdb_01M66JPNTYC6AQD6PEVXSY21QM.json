@@ -1,13 +1,18 @@
 {
   "fact_sources": {
+    "drinking_water": "osm",
     "entry": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
+    "picnic_tables": "osm",
+    "showers": "osm",
+    "toilets": "osm",
     "website": "osm"
   },
   "facts": {
+    "drinking_water": true,
     "entry": "public",
     "locality": {
       "distance_m": 7790,
@@ -28,6 +33,9 @@
       "osm_type": "relation",
       "type": "water"
     },
+    "picnic_tables": true,
+    "showers": true,
+    "toilets": false,
     "website": "https://www.ryde.nsw.gov.au/Recreation/Parks-and-Sportsgrounds/Find-a-Park-or-Sportsground/Putney-Park/Putney-Beach-Swim-Site"
   },
   "group": "attraction",
@@ -40,11 +48,11 @@
   "name": "Putney Beach Swim Site",
   "osm": {
     "id": 13140233461,
-    "timestamp": "2025-09-13T02:35:24Z",
+    "timestamp": "2026-11-21T18:47:35Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

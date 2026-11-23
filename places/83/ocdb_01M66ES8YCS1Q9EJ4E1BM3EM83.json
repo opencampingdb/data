@@ -1,46 +1,52 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Shire of Strathbogie",
       "osm_id": 3345839
     },
     "locality": {
-      "distance_m": 8650,
+      "distance_m": 8610,
       "name": "Murchison",
       "osm_id": 246992759,
       "type": "town"
     },
     "nearest_major_road": {
-      "distance_m": 30,
-      "name": "Goulburn Valley Freeway"
+      "distance_m": 10,
+      "name": "Nagambie North Rest Area"
     },
     "nearest_waterway": {
-      "distance_m": 40,
+      "distance_m": 50,
       "name": "East Goulburn Main Channel",
       "osm_id": 53057231
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ES8YCS1Q9EJ4E1BM3EM83",
   "kind": "public_toilet",
   "location": {
-    "lat": -36.695156,
-    "lon": 145.21464
+    "lat": -36.694753,
+    "lon": 145.215276
   },
-  "name": null,
+  "name": "Nagambie North Rest Area",
   "osm": {
     "id": 270846440,
-    "timestamp": "2008-06-17T01:49:38Z",
+    "timestamp": "2026-11-22T04:05:47Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-23T02:07:14Z"
 }

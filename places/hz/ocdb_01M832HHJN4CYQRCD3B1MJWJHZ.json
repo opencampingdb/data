@@ -1,0 +1,61 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": false,
+    "hot_water": true,
+    "lga": {
+      "name": "Shire of Glenelg",
+      "osm_id": 3357380
+    },
+    "locality": {
+      "distance_m": 17440,
+      "name": "Portland",
+      "osm_id": 60796195,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 20,
+      "name": "Bridgewater Bay Surf Beach"
+    },
+    "nearest_feature": {
+      "distance_m": 20,
+      "name": "Bridgewater Bay Surf Beach",
+      "osm_id": 1008267325,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Bridgewater Road"
+    },
+    "wheelchair": true
+  },
+  "group": "utility",
+  "id": "ocdb_01M832HHJN4CYQRCD3B1MJWJHZ",
+  "kind": "public_shower",
+  "location": {
+    "lat": -38.369141,
+    "lon": 141.406537
+  },
+  "name": null,
+  "osm": {
+    "id": 14400984532,
+    "timestamp": "2026-11-21T03:06:59Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-23T02:07:14Z"
+}
