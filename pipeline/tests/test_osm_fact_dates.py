@@ -128,6 +128,6 @@ def test_release_validation_checks_the_schema(tmp_path):
     assert any("last week" in error for error in errors)
 
 
-def test_the_manifest_is_format_13_4(repo, tmp_path):
+def test_the_manifest_is_format_13_5(repo, tmp_path):
     manifest = build_release(repo, tmp_path / "dist", data_version=VERSION, generated=GENERATED)
     assert (manifest["format_version"], manifest["format_minor"]) == (13, 5)
