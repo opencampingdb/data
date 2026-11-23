@@ -65,7 +65,7 @@ def test_release_files_and_manifest(repo, v1_osm, tmp_path):
     assert manifest["format_version"] == 13
     # 13.2: the facts protected_area, nearest_waterway and nearest_feature, and label.
     # 13.3: the source overture, and Overture candidates (osm null, standing).
-    assert manifest["format_minor"] == 4
+    assert manifest["format_minor"] == 5
     assert "fees" not in manifest
     assert manifest["data_version"] == VERSION
     assert manifest["generated"] == GENERATED
@@ -219,7 +219,7 @@ def test_release_carries_overture_values_and_candidates(repo, v1_osm, tmp_path):
     assert released[filled["id"]]["fact_sources"]["phone"] == "overture"
     assert released[candidate["id"]]["fact_sources"] == {"name": "overture", "location": "overture"}
     assert released[candidate["id"]]["standing"] == "shown"
-    assert (manifest["format_version"], manifest["format_minor"]) == (13, 4)
+    assert (manifest["format_version"], manifest["format_minor"]) == (13, 5)
 
 
 def test_commons_lines_are_released_matches_only(tmp_path, v1_osm):
