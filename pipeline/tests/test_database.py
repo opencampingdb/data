@@ -115,6 +115,7 @@ def test_manifest_lists_the_database_and_changeset(releases):
         "url": "https://github.com/opencampingdb/data/releases/download/data-20261031T020000Z/ocdb.sqlite.gz",
         "sha256": hashlib.sha256(packed).hexdigest(),
         "bytes": len(packed),
+        "unpacked_bytes": len(gzip.decompress(packed)),
     }
     name = f"changeset-{FIRST}.bin.gz"
     changeset = (second / name).read_bytes()
@@ -123,6 +124,7 @@ def test_manifest_lists_the_database_and_changeset(releases):
         "url": f"https://github.com/opencampingdb/data/releases/download/data-20261031T020000Z/{name}",
         "sha256": hashlib.sha256(changeset).hexdigest(),
         "bytes": len(changeset),
+        "unpacked_bytes": len(gzip.decompress(changeset)),
         "from": FIRST,
         "to": SECOND,
         "day": False,
@@ -396,6 +398,57 @@ def test_day_changesets_stay_in_the_list_marked_day(releases, repo, tmp_path):
         (SECOND, THIRD, False),
         (THIRD, "20261031T100000Z-1111111", False),
     ]
+
+
+def test_a_changeset_as_large_as_the_database_is_not_listed(releases, monkeypatch, capsys):
+    first, second = releases
+    database.build(first)
+    # A changeset exactly the database's size unpacked: applying it needs as much memory as the whole file.
+    monkeypatch.setattr(database, "checked_changeset", lambda old_db, new_db: b"x" * new_db.stat().st_size)
+    manifest = database.build(second, previous=[first])
+    assert manifest["changesets"] == []
+    assert not list(second.glob("changeset-*"))
+    assert f"no changeset-{FIRST}.bin.gz" in capsys.readouterr().out
+
+
+def test_a_changeset_just_under_the_database_is_listed(releases, monkeypatch):
+    first, second = releases
+    database.build(first)
+    monkeypatch.setattr(database, "checked_changeset", lambda old_db, new_db: b"x" * (new_db.stat().st_size - 1))
+    manifest = database.build(second, previous=[first])
+    assert [entry["unpacked_bytes"] for entry in manifest["changesets"]] == [manifest["database"]["unpacked_bytes"] - 1]
+
+
+def test_carried_entries_need_unpacked_bytes(repo, v1_osm, tmp_path, capsys):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    built = chain(repo, tmp_path, 3)
+    # As a release from before 13.5 listed them.
+    tamper(built[-1][0], lambda entries: [{k: v for k, v in entry.items() if k != "unpacked_bytes"} for entry in entries])
+    folder, version = release_folder(repo, tmp_path, 3)
+    manifest = database.build(folder, previous=[built[-1][0]])
+    assert [(e["from"], e["to"]) for e in manifest["changesets"]] == [(built[2][1], version)]
+    assert "no unpacked_bytes" in capsys.readouterr().out
+
+
+def test_a_carried_entry_as_large_as_this_database_is_left_out(repo, v1_osm, tmp_path, capsys):
+    sync(repo, extract_file(v1_osm), now="2026-10-01T16:00:00Z")
+    built = chain(repo, tmp_path, 3)
+    huge = 10**12
+    tamper(built[-1][0], lambda entries: [forged(entries[0], unpacked_bytes=huge)] + entries[1:])
+    folder, version = release_folder(repo, tmp_path, 3)
+    manifest = database.build(folder, previous=[built[-1][0]])
+    assert [(e["from"], e["to"]) for e in manifest["changesets"]] == [(built[1][1], built[2][1]), (built[2][1], version)]
+    assert all(e["unpacked_bytes"] < manifest["database"]["unpacked_bytes"] for e in manifest["changesets"])
+    assert f"not carrying {built[-1][2]['changesets'][0]['file']}: {huge} bytes unpacked" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("value", [None, "12", -1, True, 1.5])
+def test_carried_entry_problem_refuses_a_bad_unpacked_bytes(releases, value):
+    first, second = releases
+    database.build(first)
+    entry = database.build(second, previous=[first])["changesets"][0]
+    assert database.carried_entry_problem(entry, database.DEFAULT_REPOSITORY, SECOND) is None
+    assert database.carried_entry_problem({**entry, "unpacked_bytes": value}, database.DEFAULT_REPOSITORY, SECOND) == "no unpacked_bytes"
 
 
 # ---------------------------------------------------- audit run-2: OCDB-NV-02

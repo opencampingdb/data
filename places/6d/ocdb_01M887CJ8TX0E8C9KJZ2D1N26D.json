@@ -1,0 +1,42 @@
+{
+  "fact_sources": {
+    "fuel": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "fuel": true,
+    "lga": {
+      "name": "City of Mitcham",
+      "osm_id": 9102859
+    },
+    "locality": {
+      "distance_m": 7710,
+      "name": "Adelaide",
+      "osm_id": 941125358,
+      "type": "city"
+    },
+    "nearest_major_road": {
+      "distance_m": 30,
+      "name": "South Road"
+    }
+  },
+  "group": "services",
+  "id": "ocdb_01M887CJ8TX0E8C9KJZ2D1N26D",
+  "kind": "fuel",
+  "location": {
+    "lat": -34.994496,
+    "lon": 138.575329
+  },
+  "name": null,
+  "osm": {
+    "id": 238917840,
+    "timestamp": "2026-11-24T02:50:46Z",
+    "type": "way",
+    "version": 4
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-25T02:08:07Z"
+}

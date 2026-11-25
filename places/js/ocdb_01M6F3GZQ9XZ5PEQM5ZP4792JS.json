@@ -1,11 +1,10 @@
 {
   "fact_dates": {
-    "facebook": "2026-11-15T00:00:00Z",
-    "phone": "2026-11-15T00:00:00Z",
-    "website": "2026-11-15T00:00:00Z"
+    "facebook": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
     "address": "osm",
+    "entry": "osm",
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
@@ -13,17 +12,18 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
-    "phone": "overture",
-    "website": "overture"
+    "opening_hours": "osm",
+    "phone": "osm",
+    "toilets": "osm",
+    "website": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "30-32",
-      "postcode": "3138",
-      "state": "VIC",
-      "street": "Brice Avenue",
-      "suburb": "Mooroolbark"
+      "street": "Brice Avenue"
     },
+    "entry": "public",
     "facebook": "https://www.facebook.com/318088068371151",
     "lga": {
       "name": "Shire of Yarra Ranges",
@@ -50,8 +50,11 @@
       "name": "Brushy Creek",
       "osm_id": 202621428
     },
-    "phone": "+61397270600",
-    "website": "http://www.bryceestavern.com"
+    "opening_hours": "Mo 12:00-20:30; Tu-Th 12:00-21:30; Fr-Sa 12:00-24:00; Su 12:00-20:00",
+    "phone": "+61 3 9727 0600",
+    "toilets": true,
+    "website": "https://bryceestavern.com/",
+    "wheelchair": true
   },
   "group": "services",
   "id": "ocdb_01M6F3GZQ9XZ5PEQM5ZP4792JS",
@@ -60,14 +63,14 @@
     "lat": -37.785382,
     "lon": 145.312163
   },
-  "name": "Brycces Tavern",
+  "name": "Brycees Tavern",
   "osm": {
     "id": 1105415153,
-    "timestamp": "2024-10-26T04:23:31Z",
+    "timestamp": "2026-11-23T03:54:02Z",
     "type": "way",
-    "version": 3
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

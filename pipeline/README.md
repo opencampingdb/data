@@ -1354,8 +1354,16 @@ workflow keeps 60 releases, so every listed file is still there.
 An earlier release is a download, so its list is checked before it is
 carried: an entry stays only when its file is the name the module gives a
 changeset from its `from`, its `url` is this repository's download url for
-that file in the release its `to` names, and its `to` is not later than the
-release just before. Anything else is left out and logged. The release
+that file in the release its `to` names, its `to` is not later than the
+release just before, and it has `unpacked_bytes`. Anything else is left out
+and logged.
+
+Each entry, and the `database` entry, carries `unpacked_bytes`, the file's
+size once gunzipped. A changeset at least as large unpacked as this
+release's database is never listed, whether it is new or carried, and is
+logged: applying it needs more memory than the whole database, and on
+Android an app's SQLite library holds the whole changeset on the Java heap.
+Apps on its `from` release find no path and download the whole database. The release
 workflow also picks the earlier releases only from releases it published
 itself (author `github-actions[bot]`, not a draft), made before this one,
 whose tag is on `main`'s history, so a release or tag made another way is

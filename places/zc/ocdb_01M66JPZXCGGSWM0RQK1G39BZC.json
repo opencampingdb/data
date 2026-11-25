@@ -1,10 +1,27 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm",
+    "website": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "626",
+      "street": "Dorset Road"
+    },
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "lga": {
       "name": "City of Maroondah",
       "osm_id": 3333992
@@ -18,7 +35,11 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Dorset Road"
-    }
+    },
+    "opening_hours": "Mo-Sa 05:00-23:00; Su 06:00-22:00",
+    "operator": "JASBE Petroleum",
+    "website": "https://www.libertyoil.com.au/",
+    "wheelchair": true
   },
   "group": "services",
   "id": "ocdb_01M66JPZXCGGSWM0RQK1G39BZC",
@@ -30,11 +51,11 @@
   "name": "Liberty",
   "osm": {
     "id": 1485160240,
-    "timestamp": "2026-03-04T02:16:19Z",
+    "timestamp": "2026-11-23T01:21:35Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

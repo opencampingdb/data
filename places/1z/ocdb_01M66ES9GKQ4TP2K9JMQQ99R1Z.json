@@ -1,18 +1,18 @@
 {
   "fact_dates": {
     "address": "2026-11-15T00:00:00Z",
-    "facebook": "2026-11-15T00:00:00Z",
-    "name": "2026-11-15T00:00:00Z",
-    "phone": "2026-11-15T00:00:00Z"
+    "facebook": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
     "address": "overture",
     "facebook": "overture",
     "lga": "osm",
     "locality": "osm",
-    "name": "overture",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "phone": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "toilets": "osm"
   },
   "facts": {
     "address": {
@@ -37,7 +37,10 @@
       "distance_m": 190,
       "name": "Talbot - Avoca Road"
     },
-    "phone": "+61458632828"
+    "phone": "+61 458 532 828",
+    "power": true,
+    "showers": true,
+    "toilets": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9GKQ4TP2K9JMQQ99R1Z",
@@ -46,14 +49,14 @@
     "lat": -37.168823,
     "lon": 143.694149
   },
-  "name": "Talbot Recreation Reserve",
+  "name": "Talbot Recreational Reserve",
   "osm": {
     "id": 1080408439,
-    "timestamp": "2015-02-13T02:34:18Z",
+    "timestamp": "2026-11-24T06:17:08Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

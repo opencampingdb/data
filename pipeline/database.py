@@ -45,7 +45,15 @@ this module gives a changeset from its "from", its url is this repository's
 download url for that file in the release named by its "to", and its "to"
 is not later than the release just before. Any other entry is left out and
 named in the log, so a forged entry can neither point apps at another host
-nor stay in the list for ever with a far-future "to".
+nor stay in the list for ever with a far-future "to". An entry without
+"unpacked_bytes" (from before the list carried it) is left out too, so
+every listed changeset says how large it is unpacked.
+
+Every entry, and the database, carries "unpacked_bytes", the size of the
+file once gunzipped. A changeset at least as large unpacked as this
+release's database is never listed, new or carried: an app needs more
+memory to apply it than to take the whole database, so an app on its
+"from" release finds no path through it and downloads the whole database.
 
     python -m pipeline.database --day-base <data_version>
 
@@ -447,6 +455,9 @@ def carried_entry_problem(entry, repository: str, before: str) -> str | None:
         return f"url {entry.get('url')!r} is not this repository's release asset"
     if not isinstance(entry.get("sha256"), str) or not isinstance(entry.get("bytes"), int):
         return "no sha256 or bytes"
+    unpacked = entry.get("unpacked_bytes")
+    if not isinstance(unpacked, int) or isinstance(unpacked, bool) or unpacked < 0:
+        return "no unpacked_bytes"
     return None
 
 
@@ -507,6 +518,7 @@ def build(
         work = Path(work)
         database = work / "ocdb.sqlite"
         build_database(release_dir, database, states, localities)
+        unpacked_size = database.stat().st_size
         packed = gzip_bytes(database.read_bytes())
         (release_dir / DATABASE_FILE).write_bytes(packed)
         manifest["layout_version"] = LAYOUT_VERSION
@@ -515,6 +527,7 @@ def build(
             "url": asset_url(repository, release, DATABASE_FILE),
             "sha256": sha256_of(packed),
             "bytes": len(packed),
+            "unpacked_bytes": unpacked_size,
         }
 
         sources = [(path, False) for path in previous] + ([(day, True)] if day else [])
@@ -526,7 +539,11 @@ def build(
             from_version, old_db = found
             done.add(from_version)
             if index == 0 and not is_day:
-                entries.extend(carried(directory, repository))
+                for entry in carried(directory, repository):
+                    if entry["unpacked_bytes"] >= unpacked_size:
+                        print(f"{directory}: not carrying {entry['file']}: {entry['unpacked_bytes']} bytes unpacked, the database is {unpacked_size}")
+                        continue
+                    entries.append(entry)
             name = changeset_name(from_version, is_day)
             blocking = blocking_review_id(old_db, database, removed)
             if blocking in removed:
@@ -535,13 +552,18 @@ def build(
             if blocking:
                 print(f"{directory}: review {blocking} of {from_version} left with no newer review by its contributor, no {name}")
                 continue
-            changeset = gzip_bytes(checked_changeset(old_db, database))
+            raw = checked_changeset(old_db, database)
+            if len(raw) >= unpacked_size:
+                print(f"{directory}: no {name}: {len(raw)} bytes unpacked, the database is {unpacked_size}")
+                continue
+            changeset = gzip_bytes(raw)
             (release_dir / name).write_bytes(changeset)
             entries.append({
                 "file": name,
                 "url": asset_url(repository, release, name),
                 "sha256": sha256_of(changeset),
                 "bytes": len(changeset),
+                "unpacked_bytes": len(raw),
                 "from": from_version,
                 "to": manifest["data_version"],
                 "day": is_day,

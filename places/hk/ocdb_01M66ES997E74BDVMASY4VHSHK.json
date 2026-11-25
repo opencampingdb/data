@@ -1,43 +1,56 @@
 {
   "fact_sources": {
+    "drinking_water": "osm",
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_feature": "osm"
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "drinking_water": false,
+    "entry": "public",
     "lga": {
       "name": "Shire of Central Goldfields",
       "osm_id": 3351397
     },
     "locality": {
-      "distance_m": 5980,
+      "distance_m": 6040,
       "name": "Majorca",
       "osm_id": 573255140,
       "type": "village"
     },
+    "nearest_boat_ramp": {
+      "distance_m": 220,
+      "name": "Tullaroop Reservoir"
+    },
     "nearest_feature": {
-      "distance_m": 130,
+      "distance_m": 100,
       "name": "Tullaroop Reservoir",
       "osm_id": 25132022,
       "osm_type": "way",
       "type": "water"
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ES997E74BDVMASY4VHSHK",
   "kind": "public_toilet",
   "location": {
-    "lat": -37.092721,
-    "lon": 143.861862
+    "lat": -37.093013,
+    "lon": 143.862672
   },
-  "name": null,
+  "name": "Tullaroop Reservoir",
   "osm": {
     "id": 573186862,
-    "timestamp": "2012-03-17T06:03:42Z",
+    "timestamp": "2026-11-24T06:17:08Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

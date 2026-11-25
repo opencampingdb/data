@@ -1,13 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Mid Murray Council",
       "osm_id": 6811114
@@ -36,7 +39,8 @@
       "distance_m": 150,
       "name": "Murray River",
       "osm_id": 173241448
-    }
+    },
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ES9N4MKJD5S6ARTXCRNSQ",
@@ -48,11 +52,11 @@
   "name": null,
   "osm": {
     "id": 1384147215,
-    "timestamp": "2011-08-03T09:05:54Z",
+    "timestamp": "2026-11-23T07:32:31Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-25T02:08:07Z"
 }
