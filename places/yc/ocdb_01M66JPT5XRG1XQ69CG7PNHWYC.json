@@ -1,15 +1,30 @@
 {
   "fact_sources": {
+    "address": "osm",
     "air": "osm",
+    "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
     "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "street": "Manchester Road"
+    },
     "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "e10",
+      "unleaded_95",
+      "unleaded_98"
+    ],
     "lga": {
       "name": "Shire of Yarra Ranges",
       "osm_id": 3333996
@@ -30,6 +45,8 @@
       "distance_m": 30,
       "name": "Manchester Road"
     },
+    "opening_hours": "24/7",
+    "phone": "+61 3 9727 3710",
     "website": "https://www.7eleven.com.au/"
   },
   "group": "services",
@@ -42,11 +59,11 @@
   "name": "7-Eleven",
   "osm": {
     "id": 380034278,
-    "timestamp": "2023-03-23T03:56:19Z",
+    "timestamp": "2026-11-23T03:54:02Z",
     "type": "way",
-    "version": 7
+    "version": 8
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

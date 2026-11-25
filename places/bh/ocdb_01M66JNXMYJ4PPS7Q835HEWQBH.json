@@ -1,50 +1,54 @@
 {
   "fact_sources": {
+    "fuels": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
-    "nearest_major_road": "osm",
-    "operator": "osm"
+    "nearest_major_road": "osm"
   },
   "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_98"
+    ],
     "lga": {
       "name": "Shire of Mount Alexander",
       "osm_id": 3339104
     },
     "locality": {
-      "distance_m": 2840,
+      "distance_m": 2790,
       "name": "Castlemaine",
       "osm_id": 97564451,
       "type": "town"
     },
     "nearest_feature": {
-      "distance_m": 160,
+      "distance_m": 140,
       "name": "Iron Hill",
       "osm_id": 9860331401,
       "osm_type": "node",
       "type": "peak"
     },
     "nearest_major_road": {
-      "distance_m": 40,
+      "distance_m": 20,
       "name": "Main Road"
-    },
-    "operator": "Shell"
+    }
   },
   "group": "services",
   "id": "ocdb_01M66JNXMYJ4PPS7Q835HEWQBH",
   "kind": "fuel",
   "location": {
-    "lat": -37.07822,
-    "lon": 144.248429
+    "lat": -37.077927,
+    "lon": 144.247976
   },
-  "name": null,
+  "name": "Chewton Servo",
   "osm": {
     "id": 294318218,
-    "timestamp": "2009-12-14T17:06:15Z",
+    "timestamp": "2026-11-24T01:53:44Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "address": "osm",
+    "email": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
@@ -8,10 +10,18 @@
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
+    "phone": "osm",
     "toilets": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wheelchair": "osm",
+    "wifi": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "34",
+      "street": "Phillip Street"
+    },
+    "email": "info@powerhouse.com.au",
     "fee": false,
     "lga": {
       "name": "City of Parramatta Council",
@@ -45,8 +55,11 @@
       "name": "Parramatta River",
       "osm_id": 903054965
     },
+    "phone": "+61 2 9217 0222",
     "toilets": true,
-    "website": "https://powerhouse.com.au/visit/parramatta"
+    "website": "https://powerhouse.com.au/visit/parramatta",
+    "wheelchair": true,
+    "wifi": true
   },
   "group": "attraction",
   "id": "ocdb_01M6YCANSD4DC8R8J672SCYJ4W",
@@ -58,11 +71,11 @@
   "name": "Parramatta Powerhouse",
   "osm": {
     "id": 907626857,
-    "timestamp": "2026-11-17T06:03:08Z",
+    "timestamp": "2026-11-24T09:23:09Z",
     "type": "way",
-    "version": 13
+    "version": 14
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-19T02:09:46Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

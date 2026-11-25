@@ -1,0 +1,56 @@
+{
+  "fact_sources": {
+    "air": "osm",
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_major_road": "osm",
+    "website": "osm"
+  },
+  "facts": {
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98",
+      "lpg"
+    ],
+    "lga": {
+      "name": "Gold Coast City",
+      "osm_id": 11675459
+    },
+    "locality": {
+      "distance_m": 10530,
+      "name": "Mount Cotton",
+      "osm_id": 6036336569,
+      "type": "village"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 3880
+    },
+    "nearest_major_road": {
+      "distance_m": 90,
+      "name": "Henry Hester Drive"
+    },
+    "website": "https://map.bp.com/en-AU/AU/gas-station/stapylton/bp-stapylton/1937"
+  },
+  "group": "services",
+  "id": "ocdb_01M887CJ4SVE7CC1E44G2HCXP6",
+  "kind": "fuel",
+  "location": {
+    "lat": -27.732579,
+    "lon": 153.227968
+  },
+  "name": "BP Stapylton",
+  "osm": {
+    "id": 14411223552,
+    "timestamp": "2026-11-24T05:45:32Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-25T02:08:07Z"
+}
