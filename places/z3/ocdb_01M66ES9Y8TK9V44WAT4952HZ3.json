@@ -6,12 +6,20 @@
   },
   "fact_sources": {
     "address": "overture",
+    "bbq": "osm",
+    "caravans": "osm",
     "facebook": "overture",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "nearest_waterway": "osm",
+    "phone": "overture",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm",
+    "website": "osm"
   },
   "facts": {
     "address": {
@@ -21,45 +29,63 @@
       "street": "Tilga St",
       "suburb": "Canowindra"
     },
+    "bbq": true,
+    "caravans": true,
     "facebook": "https://www.facebook.com/1784119255167565",
+    "fee": true,
     "lga": {
       "name": "Cabonne Council",
       "osm_id": 6268804
     },
     "locality": {
-      "distance_m": 720,
+      "distance_m": 810,
       "name": "Canowindra",
       "osm_id": 113763726,
       "type": "town"
     },
     "nearest_feature": {
-      "distance_m": 660,
+      "distance_m": 680,
       "name": "South Canowindra",
       "osm_id": 2382002421,
       "osm_type": "node",
       "type": "locality"
     },
     "nearest_major_road": {
-      "distance_m": 10,
+      "distance_m": 110,
       "name": "Tilga Street"
     },
-    "phone": "+61428634410"
+    "nearest_waterway": {
+      "distance_m": 150,
+      "name": "Belubula River",
+      "osm_id": 431796534
+    },
+    "phone": "+61428634410",
+    "showers": true,
+    "tents": true,
+    "toilets": true,
+    "website": "https://www.cabonne.nsw.gov.au/Services/Council-Facilities/Caravan-Parks/Canowindra-Caravan-Park"
   },
   "group": "overnight",
   "id": "ocdb_01M66ES9Y8TK9V44WAT4952HZ3",
-  "kind": "campground",
+  "kind": "paid_campground",
   "location": {
-    "lat": -33.56889,
-    "lon": 148.66389
+    "lat": -33.569314,
+    "lon": 148.664937
   },
+  "merged_osm": [
+    {
+      "id": 1811163879,
+      "type": "node"
+    }
+  ],
   "name": "Canowindra Caravan Park",
   "osm": {
-    "id": 1811163879,
-    "timestamp": "2012-07-03T11:46:05Z",
-    "type": "node",
+    "id": 1583588513,
+    "timestamp": "2026-11-23T06:47:19Z",
+    "type": "way",
     "version": 1
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

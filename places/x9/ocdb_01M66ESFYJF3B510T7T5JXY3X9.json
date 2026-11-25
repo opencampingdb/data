@@ -1,5 +1,6 @@
 {
   "fact_sources": {
+    "address": "osm",
     "entry": "osm",
     "fee": "osm",
     "lga": "osm",
@@ -8,9 +9,15 @@
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
     "nearest_waterway": "osm",
-    "toilet_type": "osm"
+    "opening_hours": "osm",
+    "operator": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "address": {
+      "street": "Brice Avenue"
+    },
     "entry": "public",
     "fee": false,
     "lga": {
@@ -38,7 +45,10 @@
       "name": "Brushy Creek",
       "osm_id": 1337635802
     },
-    "toilet_type": "flush"
+    "opening_hours": "24/7",
+    "operator": "Yarra Ranges Council",
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESFYJF3B510T7T5JXY3X9",
@@ -50,11 +60,11 @@
   "name": null,
   "osm": {
     "id": 1118567381,
-    "timestamp": "2023-02-28T01:37:01Z",
+    "timestamp": "2026-11-23T03:54:02Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

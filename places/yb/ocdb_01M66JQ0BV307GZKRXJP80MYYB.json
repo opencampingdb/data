@@ -1,10 +1,18 @@
 {
   "fact_sources": {
+    "address": "osm",
     "lga": "osm",
     "locality": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "phone": "osm",
+    "website": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "20",
+      "street": "Bonds Lane"
+    },
     "lga": {
       "name": "City of Hume",
       "osm_id": 3327634
@@ -18,7 +26,10 @@
     "nearest_major_road": {
       "distance_m": 40,
       "name": "Mickleham Road"
-    }
+    },
+    "opening_hours": "24/7",
+    "phone": "+61 499 111 803",
+    "website": "https://7eleven.com.au/"
   },
   "group": "services",
   "id": "ocdb_01M66JQ0BV307GZKRXJP80MYYB",
@@ -30,11 +41,11 @@
   "name": "7-Eleven",
   "osm": {
     "id": 1571493337,
-    "timestamp": "2026-10-25T01:19:24Z",
+    "timestamp": "2026-11-24T06:01:28Z",
     "type": "way",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

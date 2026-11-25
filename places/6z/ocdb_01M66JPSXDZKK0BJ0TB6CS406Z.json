@@ -7,20 +7,21 @@
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm",
     "phone": "osm",
-    "website": "osm"
+    "website": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "242-244",
-      "postcode": "3116",
-      "state": "VIC",
-      "street": "Maroondah Highway",
-      "suburb": "Chirnside Park"
+      "street": "Maroondah Highway"
     },
     "fuels": [
       "diesel",
       "unleaded_91",
+      "e10",
       "unleaded_95",
       "unleaded_98"
     ],
@@ -44,8 +45,11 @@
       "distance_m": 70,
       "name": "Maroondah Highway"
     },
+    "opening_hours": "24/7",
+    "operator": "7-Eleven Stores Pty Ltd",
     "phone": "+61 3 9726 0165",
-    "website": "https://www.7eleven.com.au/"
+    "website": "https://www.7eleven.com.au/",
+    "wheelchair": true
   },
   "group": "services",
   "id": "ocdb_01M66JPSXDZKK0BJ0TB6CS406Z",
@@ -57,11 +61,11 @@
   "name": "7-Eleven",
   "osm": {
     "id": 334666068,
-    "timestamp": "2026-02-20T10:55:48Z",
+    "timestamp": "2026-11-23T04:43:00Z",
     "type": "way",
-    "version": 5
+    "version": 6
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-25T02:08:07Z"
 }

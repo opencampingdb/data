@@ -1,0 +1,64 @@
+{
+  "fact_sources": {
+    "address": "osm",
+    "air": "osm",
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "opening_hours": "osm"
+  },
+  "facts": {
+    "address": {
+      "housenumber": "260",
+      "street": "Canterbury Road"
+    },
+    "air": true,
+    "fuels": [
+      "diesel",
+      "unleaded_91",
+      "unleaded_95",
+      "unleaded_98"
+    ],
+    "lga": {
+      "name": "City of Whitehorse",
+      "osm_id": 2406273
+    },
+    "locality": {
+      "distance_m": 15580,
+      "name": "Tremont",
+      "osm_id": 2603797837,
+      "type": "village"
+    },
+    "nearest_feature": {
+      "distance_m": 170,
+      "name": "Masons Road Flood Retarding Basin",
+      "osm_id": 66209379,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 20,
+      "name": "Canterbury Road"
+    },
+    "opening_hours": "24/7"
+  },
+  "group": "services",
+  "id": "ocdb_01M887CJV431J576VJ79DENYKX",
+  "kind": "fuel",
+  "location": {
+    "lat": -37.833985,
+    "lon": 145.1638
+  },
+  "name": "Shell Express",
+  "osm": {
+    "id": 1421927186,
+    "timestamp": "2026-11-23T04:58:23Z",
+    "type": "way",
+    "version": 2
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-25T02:08:07Z"
+}
