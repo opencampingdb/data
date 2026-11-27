@@ -1,0 +1,62 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "hot_water": false,
+    "lga": {
+      "name": "Wattle Range Council",
+      "osm_id": 3795329
+    },
+    "locality": {
+      "distance_m": 340,
+      "name": "Beachport",
+      "osm_id": 177929783,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 40,
+      "name": "Beachport Front Beach"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 220,
+      "name": "Beachport Boat Ramp"
+    },
+    "nearest_feature": {
+      "distance_m": 40,
+      "name": "Beachport Front Beach",
+      "osm_id": 1329301402,
+      "osm_type": "way",
+      "type": "beach"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Railway Terrace"
+    }
+  },
+  "group": "utility",
+  "id": "ocdb_01M8DCGX8FHFMQVFBA0EMF1ZTF",
+  "kind": "public_shower",
+  "location": {
+    "lat": -37.482539,
+    "lon": 140.014468
+  },
+  "name": null,
+  "osm": {
+    "id": 14418997523,
+    "timestamp": "2026-11-26T04:21:54Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-27T02:13:56Z"
+}

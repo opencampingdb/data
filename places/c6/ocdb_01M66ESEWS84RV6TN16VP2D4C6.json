@@ -1,12 +1,16 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "toilet_type": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "fee": false,
     "lga": {
       "name": "Shire of Pyrenees",
@@ -26,7 +30,9 @@
       "distance_m": 100,
       "name": "Burnbank Creek",
       "osm_id": 191691070
-    }
+    },
+    "toilet_type": "flush",
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ESEWS84RV6TN16VP2D4C6",
@@ -35,14 +41,14 @@
     "lat": -37.274846,
     "lon": 143.515909
   },
-  "name": null,
+  "name": "Toll Bar Park",
   "osm": {
     "id": 191691087,
-    "timestamp": "2025-11-18T05:34:13Z",
+    "timestamp": "2026-11-25T23:35:15Z",
     "type": "way",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-27T02:13:56Z"
 }
