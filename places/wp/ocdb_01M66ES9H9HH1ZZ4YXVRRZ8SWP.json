@@ -1,13 +1,17 @@
 {
   "fact_sources": {
+    "entry": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "entry": "public",
     "lga": {
       "name": "Wattle Range Council",
       "osm_id": 3795329
@@ -36,7 +40,9 @@
     "nearest_major_road": {
       "distance_m": 190,
       "name": "Railway Terrace"
-    }
+    },
+    "opening_hours": "24/7",
+    "wheelchair": false
   },
   "group": "utility",
   "id": "ocdb_01M66ES9H9HH1ZZ4YXVRRZ8SWP",
@@ -48,11 +54,11 @@
   "name": null,
   "osm": {
     "id": 1129169289,
-    "timestamp": "2020-01-04T11:29:41Z",
+    "timestamp": "2026-11-26T06:16:41Z",
     "type": "node",
-    "version": 2
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-27T02:13:56Z"
 }

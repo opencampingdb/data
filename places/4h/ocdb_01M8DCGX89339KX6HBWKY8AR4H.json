@@ -1,0 +1,67 @@
+{
+  "fact_sources": {
+    "caravans": "osm",
+    "charge": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_feature": "osm",
+    "operator": "osm",
+    "phone": "osm",
+    "protected_area": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
+  },
+  "facts": {
+    "caravans": true,
+    "charge": "Payment Box",
+    "entry": "customers",
+    "fee": true,
+    "lga": {
+      "name": "Rural City of Ararat",
+      "osm_id": 3347614
+    },
+    "locality": {
+      "distance_m": 1030,
+      "name": "Lake Bolac",
+      "osm_id": 598180807,
+      "type": "town"
+    },
+    "nearest_feature": {
+      "distance_m": 10,
+      "name": "Lake Bolac",
+      "osm_id": 28842795,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "operator": "Lake Bolac Foreshore Committee",
+    "phone": "+61 408 393 287",
+    "protected_area": {
+      "name": "Lake Bolac Foreshore Reserve",
+      "osm_id": 1305915148,
+      "osm_type": "way"
+    },
+    "showers": true,
+    "tents": true,
+    "toilets": true
+  },
+  "group": "overnight",
+  "id": "ocdb_01M8DCGX89339KX6HBWKY8AR4H",
+  "kind": "paid_campground",
+  "location": {
+    "lat": -37.720189,
+    "lon": 142.846353
+  },
+  "name": "Lake Bolac Foreshore Reserve (All of)",
+  "osm": {
+    "id": 14415977279,
+    "timestamp": "2026-11-26T09:45:27Z",
+    "type": "node",
+    "version": 2
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-27T02:13:56Z"
+}

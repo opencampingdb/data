@@ -1,5 +1,7 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
@@ -7,6 +9,8 @@
     "water_type": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -28,17 +32,17 @@
   "id": "ocdb_01M66ESE6P240PTTHXJPSXJ5EY",
   "kind": "drinking_water_point",
   "location": {
-    "lat": -27.944397,
-    "lon": 153.323964
+    "lat": -27.94439,
+    "lon": 153.323979
   },
   "name": "Water Bubbler",
   "osm": {
     "id": 13204221401,
-    "timestamp": "2026-09-15T05:27:14Z",
+    "timestamp": "2026-11-25T06:40:31Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-27T02:13:56Z"
 }

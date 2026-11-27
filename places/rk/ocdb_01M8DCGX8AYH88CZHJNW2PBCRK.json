@@ -1,0 +1,58 @@
+{
+  "fact_sources": {
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm"
+  },
+  "facts": {
+    "hot_water": false,
+    "lga": {
+      "name": "Wattle Range Council",
+      "osm_id": 3795329
+    },
+    "locality": {
+      "distance_m": 1960,
+      "name": "Beachport",
+      "osm_id": 177929783,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 100
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 1790
+    },
+    "nearest_feature": {
+      "distance_m": 230,
+      "name": "Lake George",
+      "osm_id": 12063643,
+      "osm_type": "way",
+      "type": "water"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Millicent Road"
+    }
+  },
+  "group": "utility",
+  "id": "ocdb_01M8DCGX8AYH88CZHJNW2PBCRK",
+  "kind": "public_shower",
+  "location": {
+    "lat": -37.474136,
+    "lon": 140.030613
+  },
+  "name": null,
+  "osm": {
+    "id": 14416836078,
+    "timestamp": "2026-11-25T15:51:19Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-27T02:13:56Z"
+}

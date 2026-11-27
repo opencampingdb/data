@@ -8,6 +8,7 @@
     "address": "overture",
     "caravans": "osm",
     "charge": "osm",
+    "dump_station": "osm",
     "entry": "osm",
     "facebook": "overture",
     "fee": "osm",
@@ -15,6 +16,7 @@
     "locality": "osm",
     "nearest_feature": "osm",
     "phone": "overture",
+    "power": "osm",
     "protected_area": "osm",
     "showers": "osm",
     "tents": "osm",
@@ -29,7 +31,8 @@
     },
     "caravans": true,
     "charge": "Payment Box",
-    "entry": "public",
+    "dump_station": false,
+    "entry": "customers",
     "facebook": "https://www.facebook.com/585735111574793",
     "fee": true,
     "lga": {
@@ -43,13 +46,14 @@
       "type": "town"
     },
     "nearest_feature": {
-      "distance_m": 50,
+      "distance_m": 60,
       "name": "Lake Bolac",
       "osm_id": 28842795,
       "osm_type": "way",
       "type": "water"
     },
     "phone": "+61353502204",
+    "power": false,
     "protected_area": {
       "name": "Lake Bolac Foreshore Reserve",
       "osm_id": 1305915148,
@@ -64,17 +68,17 @@
   "id": "ocdb_01M66ESDJ3KXFFSHP4RW7K5C3Z",
   "kind": "paid_campground",
   "location": {
-    "lat": -37.721818,
-    "lon": 142.851383
+    "lat": -37.721688,
+    "lon": 142.851637
   },
   "name": "Lake Bolac Foreshore - Picnic Point",
   "osm": {
     "id": 11532511181,
-    "timestamp": "2024-01-19T22:21:10Z",
+    "timestamp": "2026-11-26T09:45:27Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-27T02:13:56Z"
 }

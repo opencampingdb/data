@@ -1,19 +1,27 @@
 {
   "fact_sources": {
     "address": "osm",
+    "cabins": "osm",
+    "kitchen": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
+    "power": "osm",
+    "tents": "osm",
+    "toilets": "osm",
     "website": "osm"
   },
   "facts": {
     "address": {
       "housenumber": "115",
+      "postcode": "3351",
       "state": "VIC",
       "street": "Frontage Road",
       "suburb": "Lake Bolac"
     },
+    "cabins": true,
+    "kitchen": true,
     "lga": {
       "name": "Rural City of Ararat",
       "osm_id": 3347614
@@ -35,6 +43,9 @@
       "distance_m": 320,
       "name": "Montgomery Street"
     },
+    "power": true,
+    "tents": true,
+    "toilets": true,
     "website": "https://lakebolac.holiday/"
   },
   "group": "overnight",
@@ -47,11 +58,11 @@
   "name": "Lake Bolac Caravan Park",
   "osm": {
     "id": 769366815,
-    "timestamp": "2020-02-03T13:24:21Z",
+    "timestamp": "2026-11-25T11:14:12Z",
     "type": "way",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-27T02:13:56Z"
 }

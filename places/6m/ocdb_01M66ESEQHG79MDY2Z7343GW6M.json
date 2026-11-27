@@ -1,12 +1,20 @@
 {
   "fact_sources": {
+    "caravans": "osm",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm",
+    "website": "osm"
   },
   "facts": {
+    "caravans": true,
+    "fee": true,
     "lga": {
       "name": "Sutherland Shire Council",
       "osm_id": 6206752
@@ -27,23 +35,27 @@
     "nearest_major_road": {
       "distance_m": 90,
       "name": "Port Hacking Road"
-    }
+    },
+    "showers": true,
+    "tents": true,
+    "toilets": true,
+    "website": "https://www.sydneytouristpark.com.au/"
   },
   "group": "overnight",
   "id": "ocdb_01M66ESEQHG79MDY2Z7343GW6M",
   "kind": "caravan_park",
   "location": {
-    "lat": -34.026899,
-    "lon": 151.105292
+    "lat": -34.026884,
+    "lon": 151.105277
   },
   "name": "Sydney Tourist Park",
   "osm": {
     "id": 23256165,
-    "timestamp": "2024-08-09T12:27:19Z",
+    "timestamp": "2026-11-25T03:46:08Z",
     "type": "way",
-    "version": 4
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-14T04:44:16Z"
+  "updated": "2026-11-27T02:13:56Z"
 }

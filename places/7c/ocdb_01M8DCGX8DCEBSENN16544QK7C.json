@@ -1,0 +1,58 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_boat_ramp": "osm",
+    "nearest_feature": "osm",
+    "nearest_major_road": "osm",
+    "water_type": "osm"
+  },
+  "facts": {
+    "entry": "public",
+    "fee": false,
+    "lga": {
+      "name": "Gold Coast City",
+      "osm_id": 11675459
+    },
+    "locality": {
+      "distance_m": 12190,
+      "name": "Gold Coast",
+      "osm_id": 145620822,
+      "type": "city"
+    },
+    "nearest_boat_ramp": {
+      "distance_m": 4250
+    },
+    "nearest_feature": {
+      "distance_m": 990,
+      "name": "Studio Village",
+      "osm_id": 4316601521,
+      "osm_type": "node",
+      "type": "locality"
+    },
+    "nearest_major_road": {
+      "distance_m": 50,
+      "name": "Pacific Boulevard"
+    },
+    "water_type": "fountain"
+  },
+  "group": "utility",
+  "id": "ocdb_01M8DCGX8DCEBSENN16544QK7C",
+  "kind": "drinking_water_point",
+  "location": {
+    "lat": -27.927198,
+    "lon": 153.324267
+  },
+  "name": null,
+  "osm": {
+    "id": 14418859937,
+    "timestamp": "2026-11-26T01:11:50Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-27T02:13:56Z"
+}
