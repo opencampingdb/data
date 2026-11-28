@@ -1,14 +1,22 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
+    "hot_water": false,
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -40,7 +48,9 @@
       "distance_m": 130,
       "name": "Tallebudgera Creek",
       "osm_id": 700272738
-    }
+    },
+    "opening_hours": "24/7",
+    "operator": "City of Gold Coast"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEFZVGMH00TPASS5E97K",
@@ -52,11 +62,11 @@
   "name": null,
   "osm": {
     "id": 13851315813,
-    "timestamp": "2026-09-18T08:21:31Z",
+    "timestamp": "2026-11-27T04:29:53Z",
     "type": "node",
-    "version": 2
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

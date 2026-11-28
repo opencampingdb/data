@@ -3,7 +3,8 @@
     "lga": "osm",
     "locality": "osm",
     "nearest_boat_ramp": "osm",
-    "nearest_feature": "osm"
+    "nearest_feature": "osm",
+    "nearest_waterway": "osm"
   },
   "facts": {
     "lga": {
@@ -11,37 +12,42 @@
       "osm_id": 11676441
     },
     "locality": {
-      "distance_m": 1700,
+      "distance_m": 1750,
       "name": "Mount Morgan",
       "osm_id": 264601784,
       "type": "town"
     },
     "nearest_boat_ramp": {
-      "distance_m": 130
+      "distance_m": 100
     },
     "nearest_feature": {
-      "distance_m": 100,
+      "distance_m": 60,
       "name": "Number 7 Dam",
       "osm_id": 197509842,
       "osm_type": "way",
       "type": "water"
+    },
+    "nearest_waterway": {
+      "distance_m": 180,
+      "name": "Dee River",
+      "osm_id": 38965043
     }
   },
   "group": "utility",
   "id": "ocdb_01M66ES9FTCCT25YVJJ0T7VYC5",
   "kind": "public_toilet",
   "location": {
-    "lat": -23.643469,
-    "lon": 150.404857
+    "lat": -23.643001,
+    "lon": 150.405325
   },
   "name": null,
   "osm": {
     "id": 1000680795,
-    "timestamp": "2010-11-23T09:15:25Z",
+    "timestamp": "2026-11-27T12:08:59Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

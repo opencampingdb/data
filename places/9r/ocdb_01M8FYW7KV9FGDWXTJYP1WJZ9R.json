@@ -1,0 +1,50 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
+  },
+  "facts": {
+    "entry": "customers",
+    "hot_water": true,
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 60,
+      "name": "Landsborough",
+      "osm_id": 1707829686,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 40,
+      "name": "Burke Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 70,
+      "name": "Native Youth Creek",
+      "osm_id": 367886367
+    }
+  },
+  "group": "utility",
+  "id": "ocdb_01M8FYW7KV9FGDWXTJYP1WJZ9R",
+  "kind": "public_shower",
+  "location": {
+    "lat": -37.008438,
+    "lon": 143.134406
+  },
+  "name": "Landsborough Caravan Park",
+  "osm": {
+    "id": 14424689993,
+    "timestamp": "2026-11-27T20:30:59Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-28T02:13:26Z"
+}

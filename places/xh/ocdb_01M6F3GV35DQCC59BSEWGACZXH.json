@@ -1,11 +1,20 @@
 {
   "fact_sources": {
+    "address": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "phone": "osm"
   },
   "facts": {
+    "address": {
+      "housenumber": "22",
+      "postcode": "3478",
+      "state": "VIC",
+      "street": "Brooke Street",
+      "suburb": "Moonambel"
+    },
     "lga": {
       "name": "Shire of Pyrenees",
       "osm_id": 3291903
@@ -24,7 +33,8 @@
       "distance_m": 150,
       "name": "Mountain Creek",
       "osm_id": 383369709
-    }
+    },
+    "phone": "+61 3 5467 2273"
   },
   "group": "services",
   "id": "ocdb_01M6F3GV35DQCC59BSEWGACZXH",
@@ -33,14 +43,14 @@
     "lat": -36.987991,
     "lon": 143.319126
   },
-  "name": "Moonambel Pub",
+  "name": "Moonambel Hotel",
   "osm": {
     "id": 427443608,
-    "timestamp": "2009-06-21T02:48:25Z",
+    "timestamp": "2026-11-27T20:47:54Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

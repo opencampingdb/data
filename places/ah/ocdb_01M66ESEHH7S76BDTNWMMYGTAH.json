@@ -1,16 +1,21 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "opening_hours": "osm"
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
     "entry": "public",
+    "fee": false,
+    "hot_water": false,
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -39,7 +44,8 @@
       "distance_m": 100,
       "name": "Gold Coast Highway"
     },
-    "opening_hours": "24/7"
+    "opening_hours": "24/7",
+    "operator": "City of Gold Coast"
   },
   "group": "utility",
   "id": "ocdb_01M66ESEHH7S76BDTNWMMYGTAH",
@@ -51,11 +57,11 @@
   "name": null,
   "osm": {
     "id": 13969803391,
-    "timestamp": "2026-06-27T05:23:58Z",
+    "timestamp": "2026-11-27T04:02:03Z",
     "type": "node",
-    "version": 2
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

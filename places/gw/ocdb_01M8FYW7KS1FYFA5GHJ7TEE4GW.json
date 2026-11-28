@@ -1,0 +1,50 @@
+{
+  "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_beach": "osm",
+    "nearest_major_road": "osm",
+    "water_type": "osm"
+  },
+  "facts": {
+    "entry": "customers",
+    "fee": false,
+    "lga": {
+      "name": "City of Joondalup",
+      "osm_id": 11689618
+    },
+    "locality": {
+      "distance_m": 510,
+      "name": "Joondalup",
+      "osm_id": 5705053184,
+      "type": "town"
+    },
+    "nearest_beach": {
+      "distance_m": 4250
+    },
+    "nearest_major_road": {
+      "distance_m": 110,
+      "name": "Collier Pass"
+    },
+    "water_type": "fountain"
+  },
+  "group": "utility",
+  "id": "ocdb_01M8FYW7KS1FYFA5GHJ7TEE4GW",
+  "kind": "drinking_water_point",
+  "location": {
+    "lat": -31.745415,
+    "lon": 115.767457
+  },
+  "name": null,
+  "osm": {
+    "id": 14424291001,
+    "timestamp": "2026-11-27T17:01:12Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-28T02:13:26Z"
+}
