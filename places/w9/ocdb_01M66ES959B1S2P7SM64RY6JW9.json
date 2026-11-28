@@ -1,14 +1,17 @@
 {
   "fact_sources": {
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
     "nearest_major_road": "osm",
-    "nearest_waterway": "osm"
+    "nearest_waterway": "osm",
+    "wheelchair": "osm"
   },
   "facts": {
+    "fee": false,
     "lga": {
       "name": "City of Brisbane",
       "osm_id": 11677792
@@ -40,7 +43,8 @@
       "distance_m": 100,
       "name": "Norman Creek",
       "osm_id": 33699385
-    }
+    },
+    "wheelchair": true
   },
   "group": "utility",
   "id": "ocdb_01M66ES959B1S2P7SM64RY6JW9",
@@ -52,11 +56,11 @@
   "name": null,
   "osm": {
     "id": 424798988,
-    "timestamp": "2009-06-19T03:47:09Z",
+    "timestamp": "2026-11-27T08:21:25Z",
     "type": "node",
-    "version": 1
+    "version": 4
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

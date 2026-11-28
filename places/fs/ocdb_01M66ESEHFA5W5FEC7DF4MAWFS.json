@@ -1,6 +1,8 @@
 {
   "fact_sources": {
     "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
     "lga": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
@@ -12,6 +14,8 @@
   },
   "facts": {
     "entry": "public",
+    "fee": false,
+    "hot_water": false,
     "lga": {
       "name": "Gold Coast City",
       "osm_id": 11675459
@@ -54,11 +58,11 @@
   "name": null,
   "osm": {
     "id": 13967465531,
-    "timestamp": "2026-09-09T11:29:34Z",
+    "timestamp": "2026-11-27T04:29:53Z",
     "type": "node",
-    "version": 3
+    "version": 5
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

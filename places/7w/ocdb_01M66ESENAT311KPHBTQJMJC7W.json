@@ -1,12 +1,20 @@
 {
   "fact_sources": {
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
     "locality": "osm",
     "nearest_beach": "osm",
     "nearest_boat_ramp": "osm",
     "nearest_feature": "osm",
-    "nearest_major_road": "osm"
+    "nearest_major_road": "osm",
+    "opening_hours": "osm",
+    "operator": "osm"
   },
   "facts": {
+    "entry": "public",
+    "fee": false,
+    "hot_water": false,
     "locality": {
       "distance_m": 9350,
       "name": "Tweed Heads",
@@ -31,7 +39,9 @@
     "nearest_major_road": {
       "distance_m": 170,
       "name": "Gold Coast Highway"
-    }
+    },
+    "opening_hours": "24/7",
+    "operator": "City of Gold Coast"
   },
   "group": "utility",
   "id": "ocdb_01M66ESENAT311KPHBTQJMJC7W",
@@ -43,11 +53,11 @@
   "name": null,
   "osm": {
     "id": 14205942039,
-    "timestamp": "2026-09-22T08:27:14Z",
+    "timestamp": "2026-11-27T04:02:03Z",
     "type": "node",
-    "version": 1
+    "version": 2
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-16T21:51:41Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

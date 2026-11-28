@@ -1,0 +1,50 @@
+{
+  "fact_sources": {
+    "charge": "osm",
+    "entry": "osm",
+    "fee": "osm",
+    "hot_water": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "wheelchair": "osm"
+  },
+  "facts": {
+    "charge": "5",
+    "entry": "customers",
+    "fee": true,
+    "hot_water": true,
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 1490,
+      "name": "Moonambel",
+      "osm_id": 427443606,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 190,
+      "name": "Stawell - Avoca Road"
+    },
+    "wheelchair": true
+  },
+  "group": "utility",
+  "id": "ocdb_01M8FYW7KYZCFEFKESQGB2YADJ",
+  "kind": "public_shower",
+  "location": {
+    "lat": -36.99156,
+    "lon": 143.335631
+  },
+  "name": "Moonambel Recreation Reserve - Camping/Events/Keycode",
+  "osm": {
+    "id": 14424696757,
+    "timestamp": "2026-11-27T20:30:59Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-28T02:13:26Z"
+}

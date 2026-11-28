@@ -1,56 +1,71 @@
 {
   "fact_dates": {
     "address": "2026-11-15T00:00:00Z",
-    "facebook": "2026-11-15T00:00:00Z",
-    "name": "2026-11-15T00:00:00Z",
-    "phone": "2026-11-15T00:00:00Z"
+    "facebook": "2026-11-15T00:00:00Z"
   },
   "fact_sources": {
     "address": "overture",
+    "caravans": "osm",
+    "charge": "osm",
+    "email": "osm",
+    "entry": "osm",
     "facebook": "overture",
+    "fee": "osm",
     "lga": "osm",
     "locality": "osm",
-    "name": "overture",
     "nearest_major_road": "osm",
-    "phone": "overture"
+    "phone": "osm",
+    "power": "osm",
+    "showers": "osm",
+    "tents": "osm",
+    "toilets": "osm"
   },
   "facts": {
     "address": {
       "postcode": "3478",
       "street": "Moonambel Road"
     },
+    "caravans": true,
+    "charge": "15p/10np",
+    "email": "moonambelrec@gmail.com",
+    "entry": "customers",
     "facebook": "https://www.facebook.com/925187180950427",
+    "fee": true,
     "lga": {
       "name": "Shire of Pyrenees",
       "osm_id": 3291903
     },
     "locality": {
-      "distance_m": 1470,
+      "distance_m": 1540,
       "name": "Moonambel",
       "osm_id": 427443606,
       "type": "village"
     },
     "nearest_major_road": {
-      "distance_m": 180,
+      "distance_m": 200,
       "name": "Stawell - Avoca Road"
     },
-    "phone": "+61354672204"
+    "phone": "+61 3 5467 2211",
+    "power": true,
+    "showers": true,
+    "tents": true,
+    "toilets": true
   },
   "group": "overnight",
   "id": "ocdb_01M66ESA8YMZS4YK514ATEY6GK",
-  "kind": "campground",
+  "kind": "paid_campground",
   "location": {
-    "lat": -36.99148,
-    "lon": 143.335523
+    "lat": -36.991671,
+    "lon": 143.336277
   },
   "name": "Moonambel Recreation Reserve",
   "osm": {
     "id": 2135501909,
-    "timestamp": "2013-01-31T00:25:18Z",
+    "timestamp": "2026-11-27T20:47:54Z",
     "type": "node",
-    "version": 1
+    "version": 3
   },
   "rating": null,
   "status": "open",
-  "updated": "2026-11-15T00:00:00Z"
+  "updated": "2026-11-28T02:13:26Z"
 }

@@ -1,0 +1,51 @@
+{
+  "fact_sources": {
+    "fuels": "osm",
+    "lga": "osm",
+    "locality": "osm",
+    "nearest_major_road": "osm",
+    "nearest_waterway": "osm"
+  },
+  "facts": {
+    "fuels": [
+      "diesel",
+      "unleaded_91"
+    ],
+    "lga": {
+      "name": "Shire of Pyrenees",
+      "osm_id": 3291903
+    },
+    "locality": {
+      "distance_m": 270,
+      "name": "Landsborough",
+      "osm_id": 1707829686,
+      "type": "village"
+    },
+    "nearest_major_road": {
+      "distance_m": 10,
+      "name": "Burke Street"
+    },
+    "nearest_waterway": {
+      "distance_m": 60,
+      "name": "Native Youth Creek",
+      "osm_id": 367886367
+    }
+  },
+  "group": "services",
+  "id": "ocdb_01M8FYW7KWZJE1HQQC8E0HNG1E",
+  "kind": "fuel",
+  "location": {
+    "lat": -37.006662,
+    "lon": 143.131427
+  },
+  "name": null,
+  "osm": {
+    "id": 14424689995,
+    "timestamp": "2026-11-27T20:30:59Z",
+    "type": "node",
+    "version": 1
+  },
+  "rating": null,
+  "status": "open",
+  "updated": "2026-11-28T02:13:26Z"
+}
